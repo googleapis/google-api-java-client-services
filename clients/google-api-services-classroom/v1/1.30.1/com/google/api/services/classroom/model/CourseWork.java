@@ -59,7 +59,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    * Whether this course work item is associated with the Developer Console project making the
    * request.
    *
-   * See google.classroom.Work.CreateCourseWork for more details.
+   * See CreateCourseWork for more details.
    *
    * Read-only.
    * The value may be {@code null}.
@@ -130,7 +130,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   /**
    * Identifiers of students with access to the coursework. This field is set only if `assigneeMode`
    * is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then only students
-   * specified in this field will be assigned the coursework.
+   * specified in this field are assigned the coursework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,7 +284,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    * Whether this course work item is associated with the Developer Console project making the
    * request.
    *
-   * See google.classroom.Work.CreateCourseWork for more details.
+   * See CreateCourseWork for more details.
    *
    * Read-only.
    * @return value or {@code null} for none
@@ -297,7 +297,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    * Whether this course work item is associated with the Developer Console project making the
    * request.
    *
-   * See google.classroom.Work.CreateCourseWork for more details.
+   * See CreateCourseWork for more details.
    *
    * Read-only.
    * @param associatedWithDeveloper associatedWithDeveloper or {@code null} for none
@@ -451,7 +451,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   /**
    * Identifiers of students with access to the coursework. This field is set only if `assigneeMode`
    * is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then only students
-   * specified in this field will be assigned the coursework.
+   * specified in this field are assigned the coursework.
    * @return value or {@code null} for none
    */
   public IndividualStudentsOptions getIndividualStudentsOptions() {
@@ -461,7 +461,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   /**
    * Identifiers of students with access to the coursework. This field is set only if `assigneeMode`
    * is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then only students
-   * specified in this field will be assigned the coursework.
+   * specified in this field are assigned the coursework.
    * @param individualStudentsOptions individualStudentsOptions or {@code null} for none
    */
   public CourseWork setIndividualStudentsOptions(IndividualStudentsOptions individualStudentsOptions) {

@@ -83,7 +83,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   /**
    * Represents whether a G Suite for Education user's domain administrator has explicitly verified
    * them as being a teacher. If the user is not a member of a G Suite for Education domain, than
-   * this field will always be false.
+   * this field is always false.
    *
    * Read-only
    * The value may be {@code null}.
@@ -199,7 +199,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   /**
    * Represents whether a G Suite for Education user's domain administrator has explicitly verified
    * them as being a teacher. If the user is not a member of a G Suite for Education domain, than
-   * this field will always be false.
+   * this field is always false.
    *
    * Read-only
    * @return value or {@code null} for none
@@ -211,7 +211,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   /**
    * Represents whether a G Suite for Education user's domain administrator has explicitly verified
    * them as being a teacher. If the user is not a member of a G Suite for Education domain, than
-   * this field will always be false.
+   * this field is always false.
    *
    * Read-only
    * @param verifiedTeacher verifiedTeacher or {@code null} for none

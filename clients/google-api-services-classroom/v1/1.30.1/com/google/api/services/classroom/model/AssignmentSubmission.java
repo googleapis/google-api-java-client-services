@@ -34,7 +34,8 @@ public final class AssignmentSubmission extends com.google.api.client.json.Gener
    * STUDENT_COPY may not exist yet if the student has not accessed the assignment in Classroom.
    *
    * Some attachment metadata is only populated if the requesting user has permission to access it.
-   * Identifier and alternate_link fields are always available, but others (e.g. title) may not be.
+   * Identifier and alternate_link fields are always available, but others (for example, title) may
+   * not be.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class AssignmentSubmission extends com.google.api.client.json.Gener
    * STUDENT_COPY may not exist yet if the student has not accessed the assignment in Classroom.
    *
    * Some attachment metadata is only populated if the requesting user has permission to access it.
-   * Identifier and alternate_link fields are always available, but others (e.g. title) may not be.
+   * Identifier and alternate_link fields are always available, but others (for example, title) may
+   * not be.
    * @return value or {@code null} for none
    */
   public java.util.List<Attachment> getAttachments() {
@@ -57,7 +59,8 @@ public final class AssignmentSubmission extends com.google.api.client.json.Gener
    * STUDENT_COPY may not exist yet if the student has not accessed the assignment in Classroom.
    *
    * Some attachment metadata is only populated if the requesting user has permission to access it.
-   * Identifier and alternate_link fields are always available, but others (e.g. title) may not be.
+   * Identifier and alternate_link fields are always available, but others (for example, title) may
+   * not be.
    * @param attachments attachments or {@code null} for none
    */
   public AssignmentSubmission setAttachments(java.util.List<Attachment> attachments) {

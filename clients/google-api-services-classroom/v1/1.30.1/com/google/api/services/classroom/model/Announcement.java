@@ -85,7 +85,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   /**
    * Identifiers of students with access to the announcement. This field is set only if
    * `assigneeMode` is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then
-   * only students specified in this field will be able to see the announcement.
+   * only students specified in this field can see the announcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   /**
    * Identifiers of students with access to the announcement. This field is set only if
    * `assigneeMode` is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then
-   * only students specified in this field will be able to see the announcement.
+   * only students specified in this field can see the announcement.
    * @return value or {@code null} for none
    */
   public IndividualStudentsOptions getIndividualStudentsOptions() {
@@ -268,7 +268,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   /**
    * Identifiers of students with access to the announcement. This field is set only if
    * `assigneeMode` is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then
-   * only students specified in this field will be able to see the announcement.
+   * only students specified in this field can see the announcement.
    * @param individualStudentsOptions individualStudentsOptions or {@code null} for none
    */
   public Announcement setIndividualStudentsOptions(IndividualStudentsOptions individualStudentsOptions) {

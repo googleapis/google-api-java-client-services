@@ -30,7 +30,7 @@ package com.google.api.services.classroom.model;
 public final class StateHistory extends com.google.api.client.json.GenericJson {
 
   /**
-   * The teacher or student who made the change
+   * The teacher or student who made the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class StateHistory extends com.google.api.client.json.GenericJson {
   private String stateTimestamp;
 
   /**
-   * The teacher or student who made the change
+   * The teacher or student who made the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getActorUserId() {
@@ -59,7 +59,7 @@ public final class StateHistory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The teacher or student who made the change
+   * The teacher or student who made the change.
    * @param actorUserId actorUserId or {@code null} for none
    */
   public StateHistory setActorUserId(java.lang.String actorUserId) {

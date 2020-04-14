@@ -31,21 +31,21 @@ package com.google.api.services.classroom.model;
 public final class ModifyIndividualStudentsOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Ids of students to be added as having access to this coursework/announcement.
+   * IDs of students to be added as having access to this coursework/announcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> addStudentIds;
 
   /**
-   * Ids of students to be removed from having access to this coursework/announcement.
+   * IDs of students to be removed from having access to this coursework/announcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> removeStudentIds;
 
   /**
-   * Ids of students to be added as having access to this coursework/announcement.
+   * IDs of students to be added as having access to this coursework/announcement.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAddStudentIds() {
@@ -53,7 +53,7 @@ public final class ModifyIndividualStudentsOptions extends com.google.api.client
   }
 
   /**
-   * Ids of students to be added as having access to this coursework/announcement.
+   * IDs of students to be added as having access to this coursework/announcement.
    * @param addStudentIds addStudentIds or {@code null} for none
    */
   public ModifyIndividualStudentsOptions setAddStudentIds(java.util.List<java.lang.String> addStudentIds) {
@@ -62,7 +62,7 @@ public final class ModifyIndividualStudentsOptions extends com.google.api.client
   }
 
   /**
-   * Ids of students to be removed from having access to this coursework/announcement.
+   * IDs of students to be removed from having access to this coursework/announcement.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRemoveStudentIds() {
@@ -70,7 +70,7 @@ public final class ModifyIndividualStudentsOptions extends com.google.api.client
   }
 
   /**
-   * Ids of students to be removed from having access to this coursework/announcement.
+   * IDs of students to be removed from having access to this coursework/announcement.
    * @param removeStudentIds removeStudentIds or {@code null} for none
    */
   public ModifyIndividualStudentsOptions setRemoveStudentIds(java.util.List<java.lang.String> removeStudentIds) {

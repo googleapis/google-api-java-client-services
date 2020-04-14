@@ -30,7 +30,7 @@ package com.google.api.services.classroom.model;
 public final class ModifyAnnouncementAssigneesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Mode of the announcement describing whether it will be accessible by all students or specified
+   * Mode of the announcement describing whether it is accessible by all students or specified
    * individual students.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class ModifyAnnouncementAssigneesRequest extends com.google.api.cli
   private ModifyIndividualStudentsOptions modifyIndividualStudentsOptions;
 
   /**
-   * Mode of the announcement describing whether it will be accessible by all students or specified
+   * Mode of the announcement describing whether it is accessible by all students or specified
    * individual students.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class ModifyAnnouncementAssigneesRequest extends com.google.api.cli
   }
 
   /**
-   * Mode of the announcement describing whether it will be accessible by all students or specified
+   * Mode of the announcement describing whether it is accessible by all students or specified
    * individual students.
    * @param assigneeMode assigneeMode or {@code null} for none
    */

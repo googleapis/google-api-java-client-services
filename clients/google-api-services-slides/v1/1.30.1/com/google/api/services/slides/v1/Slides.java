@@ -848,14 +848,14 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * The optional mime type of the thumbnail image.
          *
-         * If you don't specify the mime type, the default mime type will be PNG.
+         * If you don't specify the mime type, the mime type defaults to PNG.
          */
         @com.google.api.client.util.Key("thumbnailProperties.mimeType")
         private java.lang.String thumbnailPropertiesMimeType;
 
         /** The optional mime type of the thumbnail image.
 
-       If you don't specify the mime type, the default mime type will be PNG.
+       If you don't specify the mime type, the mime type defaults to PNG.
          */
         public java.lang.String getThumbnailPropertiesMimeType() {
           return thumbnailPropertiesMimeType;
@@ -864,7 +864,7 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * The optional mime type of the thumbnail image.
          *
-         * If you don't specify the mime type, the default mime type will be PNG.
+         * If you don't specify the mime type, the mime type defaults to PNG.
          */
         public GetThumbnail setThumbnailPropertiesMimeType(java.lang.String thumbnailPropertiesMimeType) {
           this.thumbnailPropertiesMimeType = thumbnailPropertiesMimeType;

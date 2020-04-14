@@ -56,7 +56,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    *
    * - Placeholder shapes on a master contain the default text styles and shape   properties of all
    * placeholder shapes on pages that use that master. - The master page properties define the
-   * common page properties inherited by   its layouts. - Any other shapes on the master slide will
+   * common page properties inherited by   its layouts. - Any other shapes on the master slide
    * appear on all slides using that   master, regardless of their layout.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    * of all placeholder shapes on notes pages. Specifically,   a `SLIDE_IMAGE` placeholder shape
    * contains the slide thumbnail, and a   `BODY` placeholder shape contains the speaker notes. -
    * The notes master page properties define the common page properties   inherited by all notes
-   * pages. - Any other shapes on the notes master will appear on all notes pages.
+   * pages. - Any other shapes on the notes master appears on all notes pages.
    *
    * The notes master is read-only.
    * The value may be {@code null}.
@@ -176,7 +176,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    *
    * - Placeholder shapes on a master contain the default text styles and shape   properties of all
    * placeholder shapes on pages that use that master. - The master page properties define the
-   * common page properties inherited by   its layouts. - Any other shapes on the master slide will
+   * common page properties inherited by   its layouts. - Any other shapes on the master slide
    * appear on all slides using that   master, regardless of their layout.
    * @return value or {@code null} for none
    */
@@ -190,7 +190,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    *
    * - Placeholder shapes on a master contain the default text styles and shape   properties of all
    * placeholder shapes on pages that use that master. - The master page properties define the
-   * common page properties inherited by   its layouts. - Any other shapes on the master slide will
+   * common page properties inherited by   its layouts. - Any other shapes on the master slide
    * appear on all slides using that   master, regardless of their layout.
    * @param masters masters or {@code null} for none
    */
@@ -206,7 +206,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    * of all placeholder shapes on notes pages. Specifically,   a `SLIDE_IMAGE` placeholder shape
    * contains the slide thumbnail, and a   `BODY` placeholder shape contains the speaker notes. -
    * The notes master page properties define the common page properties   inherited by all notes
-   * pages. - Any other shapes on the notes master will appear on all notes pages.
+   * pages. - Any other shapes on the notes master appears on all notes pages.
    *
    * The notes master is read-only.
    * @return value or {@code null} for none
@@ -222,7 +222,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    * of all placeholder shapes on notes pages. Specifically,   a `SLIDE_IMAGE` placeholder shape
    * contains the slide thumbnail, and a   `BODY` placeholder shape contains the speaker notes. -
    * The notes master page properties define the common page properties   inherited by all notes
-   * pages. - Any other shapes on the notes master will appear on all notes pages.
+   * pages. - Any other shapes on the notes master appears on all notes pages.
    *
    * The notes master is read-only.
    * @param notesMaster notesMaster or {@code null} for none

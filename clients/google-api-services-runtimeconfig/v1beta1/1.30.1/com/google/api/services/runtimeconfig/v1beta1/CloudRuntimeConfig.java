@@ -1024,7 +1024,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
        *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "configs.setIamPolicy".
        *
@@ -1053,7 +1053,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
          *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "configs.setIamPolicy".
          *
@@ -1169,7 +1169,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error.
        *
        * Note: This operation is designed to be used for building permission-aware UIs and command-line
        * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -1200,7 +1200,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
          *
          * Note: This operation is designed to be used for building permission-aware UIs and command-line
          * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -1623,7 +1623,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error.
          *
          * Note: This operation is designed to be used for building permission-aware UIs and command-line
          * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -1654,7 +1654,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
            *
            * Note: This operation is designed to be used for building permission-aware UIs and command-line
            * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -2574,7 +2574,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error.
          *
          * Note: This operation is designed to be used for building permission-aware UIs and command-line
          * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -2605,7 +2605,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
            *
            * Note: This operation is designed to be used for building permission-aware UIs and command-line
            * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -3745,7 +3745,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error.
          *
          * Note: This operation is designed to be used for building permission-aware UIs and command-line
          * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -3776,7 +3776,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
            *
            * Note: This operation is designed to be used for building permission-aware UIs and command-line
            * tools, not for authorization checking. This operation may "fail open" without warning.

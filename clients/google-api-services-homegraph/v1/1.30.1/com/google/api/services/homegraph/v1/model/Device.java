@@ -80,7 +80,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   /**
    * Alternate IDs associated with this device. This is used to identify cloud synced devices
    * enabled for [local
-   * execution](https://developers.google.com/assistant/smarthome/concepts/local).
+   * fulfillment](https://developers.google.com/assistant/smarthome/concepts/local).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +249,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   /**
    * Alternate IDs associated with this device. This is used to identify cloud synced devices
    * enabled for [local
-   * execution](https://developers.google.com/assistant/smarthome/concepts/local).
+   * fulfillment](https://developers.google.com/assistant/smarthome/concepts/local).
    * @return value or {@code null} for none
    */
   public java.util.List<AgentOtherDeviceId> getOtherDeviceIds() {
@@ -259,7 +259,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   /**
    * Alternate IDs associated with this device. This is used to identify cloud synced devices
    * enabled for [local
-   * execution](https://developers.google.com/assistant/smarthome/concepts/local).
+   * fulfillment](https://developers.google.com/assistant/smarthome/concepts/local).
    * @param otherDeviceIds otherDeviceIds or {@code null} for none
    */
   public Device setOtherDeviceIds(java.util.List<AgentOtherDeviceId> otherDeviceIds) {

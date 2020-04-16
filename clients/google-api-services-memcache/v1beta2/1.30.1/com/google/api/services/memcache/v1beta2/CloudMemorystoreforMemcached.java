@@ -838,7 +838,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Memcached instance resource name in the format:
+         * @param name Required. Memcached instance resource name in the format:
          *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
         where
          *        `location_id` refers to a GCP region
@@ -868,7 +868,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Memcached instance resource name in the format:
+           * @param name Required. Memcached instance resource name in the format:
          *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
         where
          *        `location_id` refers to a GCP region
@@ -940,14 +940,14 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
 
           /**
-           * Memcached instance resource name in the format:
+           * Required. Memcached instance resource name in the format:
            * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
            * `location_id` refers to a GCP region
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Memcached instance resource name in the format:
+          /** Required. Memcached instance resource name in the format:
          `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
          to a GCP region
            */
@@ -956,7 +956,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
 
           /**
-           * Memcached instance resource name in the format:
+           * Required. Memcached instance resource name in the format:
            * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
            * `location_id` refers to a GCP region
            */

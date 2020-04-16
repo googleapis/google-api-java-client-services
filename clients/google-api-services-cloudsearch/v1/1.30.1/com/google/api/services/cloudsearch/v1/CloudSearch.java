@@ -3260,6 +3260,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          *
          * @param name Name of the Item to start a resumable upload.
         Format: datasources/{source_id}/items/{item_id}.
+        The
+         *        maximum length is 1536 bytes.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
          * @return the request
          */
@@ -3293,6 +3295,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            *
            * @param name Name of the Item to start a resumable upload.
         Format: datasources/{source_id}/items/{item_id}.
+        The
+         *        maximum length is 1536 bytes.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
            * @since 1.13
            */
@@ -3363,12 +3367,13 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Name of the Item to start a resumable upload. Format:
-           * datasources/{source_id}/items/{item_id}.
+           * datasources/{source_id}/items/{item_id}. The maximum length is 1536 bytes.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}.
+          /** Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}. The
+         maximum length is 1536 bytes.
            */
           public java.lang.String getName() {
             return name;
@@ -3376,7 +3381,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Name of the Item to start a resumable upload. Format:
-           * datasources/{source_id}/items/{item_id}.
+           * datasources/{source_id}/items/{item_id}. The maximum length is 1536 bytes.
            */
           public Upload setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

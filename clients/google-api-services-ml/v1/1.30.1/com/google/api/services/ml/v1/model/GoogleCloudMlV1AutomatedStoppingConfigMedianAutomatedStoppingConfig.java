@@ -34,18 +34,18 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if median automated stopping rule applies on measurement.use_elapsed_time. it means that
-   * elapsed_time field of latest measurement of current trial is used to compute median objective
-   * value for each completed trials.
+   * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which
+   * means the elapsed_time field of the current trial's latest measurement is used to compute the
+   * median objective value for each completed trial.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useElapsedTime;
 
   /**
-   * True if median automated stopping rule applies on measurement.use_elapsed_time. it means that
-   * elapsed_time field of latest measurement of current trial is used to compute median objective
-   * value for each completed trials.
+   * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which
+   * means the elapsed_time field of the current trial's latest measurement is used to compute the
+   * median objective value for each completed trial.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseElapsedTime() {
@@ -53,9 +53,9 @@ public final class GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStopping
   }
 
   /**
-   * True if median automated stopping rule applies on measurement.use_elapsed_time. it means that
-   * elapsed_time field of latest measurement of current trial is used to compute median objective
-   * value for each completed trials.
+   * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which
+   * means the elapsed_time field of the current trial's latest measurement is used to compute the
+   * median objective value for each completed trial.
    * @param useElapsedTime useElapsedTime or {@code null} for none
    */
   public GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig setUseElapsedTime(java.lang.Boolean useElapsedTime) {

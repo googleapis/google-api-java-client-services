@@ -17,7 +17,7 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * A message representing a Trial.
+ * A message representing a trial.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -38,21 +38,21 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   private java.lang.String clientId;
 
   /**
-   * Output only. Time the Trial's status changed to COMPLETED.
+   * Output only. Time at which the trial's status changed to COMPLETED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The final Measurement containing the objective value.
+   * The final measurement containing the objective value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudMlV1Measurement finalMeasurement;
 
   /**
-   * Output only. A human readable string describing why the Trial is infeasible. This should only
+   * Output only. A human readable string describing why the trial is infeasible. This should only
    * be set if trial_infeasible is true.
    * The value may be {@code null}.
    */
@@ -81,7 +81,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * The parameters of the Trial.
+   * The parameters of the trial.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Time the Trial was started.
+   * Output only. Time at which the trial was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   private java.lang.String state;
 
   /**
-   * Output only. True if the parameters in this trial should not be attempted again.
+   * Output only. If true, the parameters in this trial are not attempted again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Time the Trial's status changed to COMPLETED.
+   * Output only. Time at which the trial's status changed to COMPLETED.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -140,7 +140,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Time the Trial's status changed to COMPLETED.
+   * Output only. Time at which the trial's status changed to COMPLETED.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudMlV1Trial setEndTime(String endTime) {
@@ -149,7 +149,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * The final Measurement containing the objective value.
+   * The final measurement containing the objective value.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1Measurement getFinalMeasurement() {
@@ -157,7 +157,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * The final Measurement containing the objective value.
+   * The final measurement containing the objective value.
    * @param finalMeasurement finalMeasurement or {@code null} for none
    */
   public GoogleCloudMlV1Trial setFinalMeasurement(GoogleCloudMlV1Measurement finalMeasurement) {
@@ -166,7 +166,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. A human readable string describing why the Trial is infeasible. This should only
+   * Output only. A human readable string describing why the trial is infeasible. This should only
    * be set if trial_infeasible is true.
    * @return value or {@code null} for none
    */
@@ -175,7 +175,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. A human readable string describing why the Trial is infeasible. This should only
+   * Output only. A human readable string describing why the trial is infeasible. This should only
    * be set if trial_infeasible is true.
    * @param infeasibleReason infeasibleReason or {@code null} for none
    */
@@ -221,7 +221,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * The parameters of the Trial.
+   * The parameters of the trial.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudMlV1TrialParameter> getParameters() {
@@ -229,7 +229,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * The parameters of the Trial.
+   * The parameters of the trial.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudMlV1Trial setParameters(java.util.List<GoogleCloudMlV1TrialParameter> parameters) {
@@ -238,7 +238,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Time the Trial was started.
+   * Output only. Time at which the trial was started.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -246,7 +246,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Time the Trial was started.
+   * Output only. Time at which the trial was started.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudMlV1Trial setStartTime(String startTime) {
@@ -272,7 +272,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. True if the parameters in this trial should not be attempted again.
+   * Output only. If true, the parameters in this trial are not attempted again.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrialInfeasible() {
@@ -280,7 +280,7 @@ public final class GoogleCloudMlV1Trial extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. True if the parameters in this trial should not be attempted again.
+   * Output only. If true, the parameters in this trial are not attempted again.
    * @param trialInfeasible trialInfeasible or {@code null} for none
    */
   public GoogleCloudMlV1Trial setTrialInfeasible(java.lang.Boolean trialInfeasible) {

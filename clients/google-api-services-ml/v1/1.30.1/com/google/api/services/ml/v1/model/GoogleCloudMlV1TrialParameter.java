@@ -17,7 +17,8 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * A message representing a parameter to be tuned.
+ * A message representing a parameter to be tuned. Contains the name of the parameter and the
+ * suggested value to use for this trial.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed

@@ -45,6 +45,7 @@ public final class GoogleCloudMlV1StudyConfig extends com.google.api.client.json
   private GoogleCloudMlV1AutomatedStoppingConfig automatedStoppingConfig;
 
   /**
+   * Metric specs for the study.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,6 +105,7 @@ public final class GoogleCloudMlV1StudyConfig extends com.google.api.client.json
   }
 
   /**
+   * Metric specs for the study.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudMlV1StudyConfigMetricSpec> getMetrics() {
@@ -111,6 +113,7 @@ public final class GoogleCloudMlV1StudyConfig extends com.google.api.client.json
   }
 
   /**
+   * Metric specs for the study.
    * @param metrics metrics or {@code null} for none
    */
   public GoogleCloudMlV1StudyConfig setMetrics(java.util.List<GoogleCloudMlV1StudyConfigMetricSpec> metrics) {

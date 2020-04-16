@@ -32,14 +32,14 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time operation processing completed.
+   * The time at which operation processing completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The time operation was started.
+   * The time at which the operation was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,14 +53,14 @@ public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.c
   private java.lang.String studyState;
 
   /**
-   * A list of Trials.
+   * A list of trials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1Trial> trials;
 
   /**
-   * The time operation processing completed.
+   * The time at which operation processing completed.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -68,7 +68,7 @@ public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.c
   }
 
   /**
-   * The time operation processing completed.
+   * The time at which operation processing completed.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudMlV1SuggestTrialsResponse setEndTime(String endTime) {
@@ -77,7 +77,7 @@ public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.c
   }
 
   /**
-   * The time operation was started.
+   * The time at which the operation was started.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -85,7 +85,7 @@ public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.c
   }
 
   /**
-   * The time operation was started.
+   * The time at which the operation was started.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudMlV1SuggestTrialsResponse setStartTime(String startTime) {
@@ -111,7 +111,7 @@ public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.c
   }
 
   /**
-   * A list of Trials.
+   * A list of trials.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudMlV1Trial> getTrials() {
@@ -119,7 +119,7 @@ public final class GoogleCloudMlV1SuggestTrialsResponse extends com.google.api.c
   }
 
   /**
-   * A list of Trials.
+   * A list of trials.
    * @param trials trials or {@code null} for none
    */
   public GoogleCloudMlV1SuggestTrialsResponse setTrials(java.util.List<GoogleCloudMlV1Trial> trials) {

@@ -39,7 +39,7 @@ public final class GoogleCloudMlV1CompleteTrialRequest extends com.google.api.cl
   private GoogleCloudMlV1Measurement finalMeasurement;
 
   /**
-   * Optional. A human readable reason why the Trial was infeasible. This should only be provided if
+   * Optional. A human readable reason why the trial was infeasible. This should only be provided if
    * `trial_infeasible` is true.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudMlV1CompleteTrialRequest extends com.google.api.cl
   }
 
   /**
-   * Optional. A human readable reason why the Trial was infeasible. This should only be provided if
+   * Optional. A human readable reason why the trial was infeasible. This should only be provided if
    * `trial_infeasible` is true.
    * @return value or {@code null} for none
    */
@@ -83,7 +83,7 @@ public final class GoogleCloudMlV1CompleteTrialRequest extends com.google.api.cl
   }
 
   /**
-   * Optional. A human readable reason why the Trial was infeasible. This should only be provided if
+   * Optional. A human readable reason why the trial was infeasible. This should only be provided if
    * `trial_infeasible` is true.
    * @param infeasibleReason infeasibleReason or {@code null} for none
    */

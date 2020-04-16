@@ -17,7 +17,7 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * A message representing a Measurement.
+ * A message representing a measurement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1Measurement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time that the Trial has been running at the point of this Measurement.
+   * Output only. Time that the trial has been running at the point of this measurement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1Measurement extends com.google.api.client.json
   private java.lang.Long stepCount;
 
   /**
-   * Time that the Trial has been running at the point of this Measurement.
+   * Output only. Time that the trial has been running at the point of this measurement.
    * @return value or {@code null} for none
    */
   public String getElapsedTime() {
@@ -66,7 +66,7 @@ public final class GoogleCloudMlV1Measurement extends com.google.api.client.json
   }
 
   /**
-   * Time that the Trial has been running at the point of this Measurement.
+   * Output only. Time that the trial has been running at the point of this measurement.
    * @param elapsedTime elapsedTime or {@code null} for none
    */
   public GoogleCloudMlV1Measurement setElapsedTime(String elapsedTime) {

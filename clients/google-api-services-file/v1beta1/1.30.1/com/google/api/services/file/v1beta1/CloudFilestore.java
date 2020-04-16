@@ -535,10 +535,10 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The instance's project and location, in the format
-        projects/{project_id}/locations/{location}. In
-         *        Cloud Filestore,
-        locations map to GCP zones, for example **us-west1-b**.
+         * @param parent Required. The instance's project and location, in the format
+         *        projects/{project_id}/locations/{location}. In Cloud Filestore,
+        locations map to GCP
+         *        zones, for example **us-west1-b**.
          * @param content the {@link com.google.api.services.file.v1beta1.model.Instance}
          * @return the request
          */
@@ -565,10 +565,10 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The instance's project and location, in the format
-        projects/{project_id}/locations/{location}. In
-         *        Cloud Filestore,
-        locations map to GCP zones, for example **us-west1-b**.
+           * @param parent Required. The instance's project and location, in the format
+         *        projects/{project_id}/locations/{location}. In Cloud Filestore,
+        locations map to GCP
+         *        zones, for example **us-west1-b**.
            * @param content the {@link com.google.api.services.file.v1beta1.model.Instance}
            * @since 1.13
            */
@@ -638,22 +638,23 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The instance's project and location, in the format
+           * Required. The instance's project and location, in the format
            * projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
            * zones, for example **us-west1-b**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The instance's project and location, in the format projects/{project_id}/locations/{location}. In
-         Cloud Filestore, locations map to GCP zones, for example **us-west1-b**.
+          /** Required. The instance's project and location, in the format
+         projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP zones, for
+         example **us-west1-b**.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The instance's project and location, in the format
+           * Required. The instance's project and location, in the format
            * projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
            * zones, for example **us-west1-b**.
            */
@@ -668,21 +669,31 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The name of the instance to create. The name must be unique for the specified project
-           * and location.
+           * Required. The ID of the instance to create. The ID must be unique within the specified
+           * project and location.
+           *
+           * This value must start with a lowercase letter followed by up to 62 lowercase letters,
+           * numbers, or hyphens, and cannot end with a hyphen.
            */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
-          /** The name of the instance to create. The name must be unique for the specified project and location.
+          /** Required. The ID of the instance to create. The ID must be unique within the specified project and
+         location.
+
+         This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+         hyphens, and cannot end with a hyphen.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
           }
 
           /**
-           * The name of the instance to create. The name must be unique for the specified project
-           * and location.
+           * Required. The ID of the instance to create. The ID must be unique within the specified
+           * project and location.
+           *
+           * This value must start with a lowercase letter followed by up to 62 lowercase letters,
+           * numbers, or hyphens, and cannot end with a hyphen.
            */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
@@ -702,7 +713,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The instance resource name, in the format
+         * @param name Required. The instance resource name, in the format
          *        projects/{project_id}/locations/{location}/instances/{instance_id}
          * @return the request
          */
@@ -729,7 +740,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The instance resource name, in the format
+           * @param name Required. The instance resource name, in the format
          *        projects/{project_id}/locations/{location}/instances/{instance_id}
            * @since 1.13
            */
@@ -799,13 +810,13 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The instance resource name, in the format
+           * Required. The instance resource name, in the format
            * projects/{project_id}/locations/{location}/instances/{instance_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The instance resource name, in the format
+          /** Required. The instance resource name, in the format
          projects/{project_id}/locations/{location}/instances/{instance_id}
            */
           public java.lang.String getName() {
@@ -813,7 +824,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The instance resource name, in the format
+           * Required. The instance resource name, in the format
            * projects/{project_id}/locations/{location}/instances/{instance_id}
            */
           public Delete setName(java.lang.String name) {
@@ -839,7 +850,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The instance resource name, in the format
+         * @param name Required. The instance resource name, in the format
          *        projects/{project_id}/locations/{location}/instances/{instance_id}.
          * @return the request
          */
@@ -866,7 +877,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The instance resource name, in the format
+           * @param name Required. The instance resource name, in the format
          *        projects/{project_id}/locations/{location}/instances/{instance_id}.
            * @since 1.13
            */
@@ -946,13 +957,13 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The instance resource name, in the format
+           * Required. The instance resource name, in the format
            * projects/{project_id}/locations/{location}/instances/{instance_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The instance resource name, in the format
+          /** Required. The instance resource name, in the format
          projects/{project_id}/locations/{location}/instances/{instance_id}.
            */
           public java.lang.String getName() {
@@ -960,7 +971,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The instance resource name, in the format
+           * Required. The instance resource name, in the format
            * projects/{project_id}/locations/{location}/instances/{instance_id}.
            */
           public Get setName(java.lang.String name) {
@@ -986,7 +997,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and location for which to retrieve instance information,
+         * @param parent Required. The project and location for which to retrieve instance information,
         in the format
          *        projects/{project_id}/locations/{location}. In Cloud
         Filestore, locations map to GCP
@@ -1019,7 +1030,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and location for which to retrieve instance information,
+           * @param parent Required. The project and location for which to retrieve instance information,
         in the format
          *        projects/{project_id}/locations/{location}. In Cloud
         Filestore, locations map to GCP
@@ -1105,15 +1116,15 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location for which to retrieve instance information, in the format
-           * projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
-           * zones, for example **us-west1-b**. To retrieve instance information for all locations,
-           * use "-" for the {location} value.
+           * Required. The project and location for which to retrieve instance information, in the
+           * format projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to
+           * GCP zones, for example **us-west1-b**. To retrieve instance information for all
+           * locations, use "-" for the {location} value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project and location for which to retrieve instance information, in the format
+          /** Required. The project and location for which to retrieve instance information, in the format
          projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP zones, for
          example **us-west1-b**. To retrieve instance information for all locations, use "-" for the
          {location} value.
@@ -1123,10 +1134,10 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location for which to retrieve instance information, in the format
-           * projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
-           * zones, for example **us-west1-b**. To retrieve instance information for all locations,
-           * use "-" for the {location} value.
+           * Required. The project and location for which to retrieve instance information, in the
+           * format projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to
+           * GCP zones, for example **us-west1-b**. To retrieve instance information for all
+           * locations, use "-" for the {location} value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1348,16 +1359,16 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Mask of fields to update.  At least one path must be supplied in this field.  The
-           * elements of the repeated paths field may only include these fields:
+           * Required. Mask of fields to update.  At least one path must be supplied in this field.
+           * The elements of the repeated paths field may only include these fields:
            *
            * * "description" * "file_shares" * "labels"
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Mask of fields to update.  At least one path must be supplied in this field.  The elements of the
-         repeated paths field may only include these fields:
+          /** Required. Mask of fields to update.  At least one path must be supplied in this field.  The
+         elements of the repeated paths field may only include these fields:
 
          * "description" * "file_shares" * "labels"
            */
@@ -1366,8 +1377,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Mask of fields to update.  At least one path must be supplied in this field.  The
-           * elements of the repeated paths field may only include these fields:
+           * Required. Mask of fields to update.  At least one path must be supplied in this field.
+           * The elements of the repeated paths field may only include these fields:
            *
            * * "description" * "file_shares" * "labels"
            */

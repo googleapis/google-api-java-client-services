@@ -37,7 +37,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. The description of the instance (2048 characters or less).
+   * The description of the instance (2048 characters or less).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The description of the instance (2048 characters or less).
+   * The description of the instance (2048 characters or less).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -134,7 +134,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The description of the instance (2048 characters or less).
+   * The description of the instance (2048 characters or less).
    * @param description description or {@code null} for none
    */
   public Instance setDescription(java.lang.String description) {

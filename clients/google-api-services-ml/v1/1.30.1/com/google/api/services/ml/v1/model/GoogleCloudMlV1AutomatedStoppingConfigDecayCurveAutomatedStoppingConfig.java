@@ -31,7 +31,7 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise,
+   * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise,
    * Measurement.steps will be used as the x-axis.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStop
   private java.lang.Boolean useElapsedTime;
 
   /**
-   * True if measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise,
+   * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise,
    * Measurement.steps will be used as the x-axis.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStop
   }
 
   /**
-   * True if measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise,
+   * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise,
    * Measurement.steps will be used as the x-axis.
    * @param useElapsedTime useElapsedTime or {@code null} for none
    */

@@ -31,7 +31,7 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1Study extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time that the study was created.
+   * Output only. Time at which the study was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleCloudMlV1Study extends com.google.api.client.json.Gener
   private GoogleCloudMlV1StudyConfig studyConfig;
 
   /**
-   * Output only. Time that the study was created.
+   * Output only. Time at which the study was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -75,7 +75,7 @@ public final class GoogleCloudMlV1Study extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Time that the study was created.
+   * Output only. Time at which the study was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudMlV1Study setCreateTime(String createTime) {

@@ -32,7 +32,7 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time operation was submitted.
+   * The time at which the operation was submitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata extends 
   private java.lang.String study;
 
   /**
-   * The Trial name.
+   * The trial name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trial;
 
   /**
-   * The time operation was submitted.
+   * The time at which the operation was submitted.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -61,7 +61,7 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata extends 
   }
 
   /**
-   * The time operation was submitted.
+   * The time at which the operation was submitted.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata setCreateTime(String createTime) {
@@ -87,7 +87,7 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata extends 
   }
 
   /**
-   * The Trial name.
+   * The trial name.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrial() {
@@ -95,7 +95,7 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata extends 
   }
 
   /**
-   * The Trial name.
+   * The trial name.
    * @param trial trial or {@code null} for none
    */
   public GoogleCloudMlV1CheckTrialEarlyStoppingStateMetatdata setTrial(java.lang.String trial) {

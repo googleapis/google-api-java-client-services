@@ -32,7 +32,7 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time operation processing completed.
+   * The time at which operation processing completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse extends c
   private java.lang.Boolean shouldStop;
 
   /**
-   * The time operation was started.
+   * The time at which the operation was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The time operation processing completed.
+   * The time at which operation processing completed.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -61,7 +61,7 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse extends c
   }
 
   /**
-   * The time operation processing completed.
+   * The time at which operation processing completed.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse setEndTime(String endTime) {
@@ -87,7 +87,7 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse extends c
   }
 
   /**
-   * The time operation was started.
+   * The time at which the operation was started.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -95,7 +95,7 @@ public final class GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse extends c
   }
 
   /**
-   * The time operation was started.
+   * The time at which the operation was started.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudMlV1CheckTrialEarlyStoppingStateResponse setStartTime(String startTime) {

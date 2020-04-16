@@ -3200,8 +3200,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         public class Trials {
 
           /**
-           * Adds a measurement of the objective metrics to a Trial. This measurement is assumed to have been
-           * taken before the Trial is complete.
+           * Adds a measurement of the objective metrics to a trial. This measurement is assumed to have been
+           * taken before the trial is complete.
            *
            * Create a request for the method "trials.addMeasurement".
            *
@@ -3226,8 +3226,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Adds a measurement of the objective metrics to a Trial. This measurement is assumed to have
-             * been taken before the Trial is complete.
+             * Adds a measurement of the objective metrics to a trial. This measurement is assumed to have
+             * been taken before the trial is complete.
              *
              * Create a request for the method "trials.addMeasurement".
              *
@@ -3333,7 +3333,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Checks whether a trial should stop or not.
+           * Checks  whether a trial should stop or not. Returns a long-running operation. When the operation
+           * is successful, it will contain a CheckTrialEarlyStoppingStateResponse.
            *
            * Create a request for the method "trials.checkEarlyStoppingState".
            *
@@ -3359,7 +3360,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Checks whether a trial should stop or not.
+             * Checks  whether a trial should stop or not. Returns a long-running operation. When the
+             * operation is successful, it will contain a CheckTrialEarlyStoppingStateResponse.
              *
              * Create a request for the method "trials.checkEarlyStoppingState".
              *
@@ -3465,14 +3467,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Marks a Trial as complete.
+           * Marks a trial as complete.
            *
            * Create a request for the method "trials.complete".
            *
            * This request holds the parameters needed by the ml server.  After setting any optional
            * parameters, call the {@link Complete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The trial name.
+           * @param name Required. The trial name.metat
            * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest}
            * @return the request
            */
@@ -3490,7 +3492,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Marks a Trial as complete.
+             * Marks a trial as complete.
              *
              * Create a request for the method "trials.complete".
              *
@@ -3500,7 +3502,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
              * Complete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The trial name.
+             * @param name Required. The trial name.metat
              * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest}
              * @since 1.13
              */
@@ -3569,17 +3571,17 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               return (Complete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The trial name. */
+            /** Required. The trial name.metat */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The trial name.
+            /** Required. The trial name.metat
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The trial name. */
+            /** Required. The trial name.metat */
             public Complete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3596,7 +3598,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Adds a user provided trial to a Study.
+           * Adds a user provided trial to a study.
            *
            * Create a request for the method "trials.create".
            *
@@ -3621,7 +3623,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Adds a user provided trial to a Study.
+             * Adds a user provided trial to a study.
              *
              * Create a request for the method "trials.create".
              *
@@ -3726,7 +3728,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Deletes a Trial.
+           * Deletes a trial.
            *
            * Create a request for the method "trials.delete".
            *
@@ -3750,7 +3752,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Deletes a Trial.
+             * Deletes a trial.
              *
              * Create a request for the method "trials.delete".
              *
@@ -3854,7 +3856,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Gets a Trial.
+           * Gets a trial.
            *
            * Create a request for the method "trials.get".
            *
@@ -3878,7 +3880,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Gets a Trial.
+             * Gets a trial.
              *
              * Create a request for the method "trials.get".
              *
@@ -3992,7 +3994,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Lists the trials associated with a Study.
+           * Lists the trials associated with a study.
            *
            * Create a request for the method "trials.list".
            *
@@ -4016,7 +4018,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Lists the trials associated with a Study.
+             * Lists the trials associated with a study.
              *
              * Create a request for the method "trials.list".
              *
@@ -4260,7 +4262,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Returns a long-running operation associated with the generation of trial suggestions.
+           * Adds one or more trials to a study, with parameter values suggested by AI Platform Optimizer.
+           * Returns a long-running operation associated with the generation of trial suggestions. When this
+           * long-running operation succeeds, it will contain a SuggestTrialsResponse.
            *
            * Create a request for the method "trials.suggest".
            *
@@ -4285,7 +4289,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Returns a long-running operation associated with the generation of trial suggestions.
+             * Adds one or more trials to a study, with parameter values suggested by AI Platform Optimizer.
+             * Returns a long-running operation associated with the generation of trial suggestions. When this
+             * long-running operation succeeds, it will contain a SuggestTrialsResponse.
              *
              * Create a request for the method "trials.suggest".
              *

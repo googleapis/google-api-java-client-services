@@ -31,18 +31,18 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1EncryptionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Cloud KMS resource identifier of the customer managed encryption key used to protect a
-   * resource, such as a training job. Has the form: `projects/my-project/locations/my-
-   * region/keyRings/my-kr/cryptoKeys/my-key`.
+   * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a
+   * resource, such as a training job. It has the following format:
+   * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
 
   /**
-   * The Cloud KMS resource identifier of the customer managed encryption key used to protect a
-   * resource, such as a training job. Has the form: `projects/my-project/locations/my-
-   * region/keyRings/my-kr/cryptoKeys/my-key`.
+   * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a
+   * resource, such as a training job. It has the following format:
+   * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -50,9 +50,9 @@ public final class GoogleCloudMlV1EncryptionConfig extends com.google.api.client
   }
 
   /**
-   * The Cloud KMS resource identifier of the customer managed encryption key used to protect a
-   * resource, such as a training job. Has the form: `projects/my-project/locations/my-
-   * region/keyRings/my-kr/cryptoKeys/my-key`.
+   * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a
+   * resource, such as a training job. It has the following format:
+   * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public GoogleCloudMlV1EncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {

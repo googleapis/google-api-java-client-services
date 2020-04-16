@@ -31,14 +31,14 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1ListStudiesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Studies associated with the project.
+   * The studies associated with the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1Study> studies;
 
   /**
-   * The Studies associated with the project.
+   * The studies associated with the project.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudMlV1Study> getStudies() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1ListStudiesResponse extends com.google.api.cli
   }
 
   /**
-   * The Studies associated with the project.
+   * The studies associated with the project.
    * @param studies studies or {@code null} for none
    */
   public GoogleCloudMlV1ListStudiesResponse setStudies(java.util.List<GoogleCloudMlV1Study> studies) {

@@ -34,17 +34,21 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Arguments passed to the training. - If it is a python package training:   It will be
-   * passed as command line argument to the program. - If it is a custom container training,   It
-   * will be passed as an argument to the custom container   image.
+   * Optional. Command-line arguments passed to the training application when it starts. If your job
+   * uses a custom container, then the arguments are passed to the container's  `ENTRYPOINT`
+   * command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
 
   /**
-   * Custom encryption key options for a training job. If this is set, then all resources created by
-   * the training job will be encrypted with the provided encryption key.
+   * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
+   * created by a training job, instead of using Google's default encryption. If this is set, then
+   * all resources created by the training job will be encrypted with the customer-managed
+   * encryption key that you specify.
+   *
+   * [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +63,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
    * `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of
-   * `masterConfig.imageUri` . Learn more about [configuring custom containers](/ai-
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * The value may be {@code null}.
    */
@@ -176,7 +180,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
    * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
-   * `masterConfig.imageUri` . Learn more about [configuring custom containers](/ai-
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * The value may be {@code null}.
    */
@@ -290,9 +294,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`
-   * . Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-
-   * training-containers).
+   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
+   * platform/training/docs/distributed-training-containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -330,9 +334,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String workerType;
 
   /**
-   * Optional. Arguments passed to the training. - If it is a python package training:   It will be
-   * passed as command line argument to the program. - If it is a custom container training,   It
-   * will be passed as an argument to the custom container   image.
+   * Optional. Command-line arguments passed to the training application when it starts. If your job
+   * uses a custom container, then the arguments are passed to the container's  `ENTRYPOINT`
+   * command.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -340,9 +344,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. Arguments passed to the training. - If it is a python package training:   It will be
-   * passed as command line argument to the program. - If it is a custom container training,   It
-   * will be passed as an argument to the custom container   image.
+   * Optional. Command-line arguments passed to the training application when it starts. If your job
+   * uses a custom container, then the arguments are passed to the container's  `ENTRYPOINT`
+   * command.
    * @param args args or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setArgs(java.util.List<java.lang.String> args) {
@@ -351,8 +355,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Custom encryption key options for a training job. If this is set, then all resources created by
-   * the training job will be encrypted with the provided encryption key.
+   * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
+   * created by a training job, instead of using Google's default encryption. If this is set, then
+   * all resources created by the training job will be encrypted with the customer-managed
+   * encryption key that you specify.
+   *
+   * [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1EncryptionConfig getEncryptionConfig() {
@@ -360,8 +368,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Custom encryption key options for a training job. If this is set, then all resources created by
-   * the training job will be encrypted with the provided encryption key.
+   * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
+   * created by a training job, instead of using Google's default encryption. If this is set, then
+   * all resources created by the training job will be encrypted with the customer-managed
+   * encryption key that you specify.
+   *
+   * [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setEncryptionConfig(GoogleCloudMlV1EncryptionConfig encryptionConfig) {
@@ -378,7 +390,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
    * `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of
-   * `masterConfig.imageUri` . Learn more about [configuring custom containers](/ai-
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @return value or {@code null} for none
    */
@@ -395,7 +407,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
    * `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of
-   * `masterConfig.imageUri` . Learn more about [configuring custom containers](/ai-
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @param evaluatorConfig evaluatorConfig or {@code null} for none
    */
@@ -636,7 +648,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
    * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
-   * `masterConfig.imageUri` . Learn more about [configuring custom containers](/ai-
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @return value or {@code null} for none
    */
@@ -653,7 +665,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
    * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
-   * `masterConfig.imageUri` . Learn more about [configuring custom containers](/ai-
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @param parameterServerConfig parameterServerConfig or {@code null} for none
    */
@@ -895,9 +907,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`
-   * . Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-
-   * training-containers).
+   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
+   * platform/training/docs/distributed-training-containers).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig getWorkerConfig() {
@@ -912,9 +924,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`
-   * . Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-
-   * training-containers).
+   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
+   * platform/training/docs/distributed-training-containers).
    * @param workerConfig workerConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setWorkerConfig(GoogleCloudMlV1ReplicaConfig workerConfig) {

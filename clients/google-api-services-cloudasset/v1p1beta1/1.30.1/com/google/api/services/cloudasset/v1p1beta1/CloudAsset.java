@@ -161,6 +161,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     * Folder
      *        number(such as "folders/1234")
     * Project number (such as "projects/12345")
+    * Project id
+     *        (such as "projects/abc")
      * @return the request
      */
     public SearchAll searchAll(java.lang.String scope) throws java.io.IOException {
@@ -198,6 +200,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     * Folder
      *        number(such as "folders/1234")
     * Project number (such as "projects/12345")
+    * Project id
+     *        (such as "projects/abc")
        * @since 1.13
        */
       protected SearchAll(java.lang.String scope) {
@@ -278,14 +282,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
-     as "folders/1234") * Project number (such as "projects/12345")
+     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     "projects/abc")
        */
       public java.lang.String getScope() {
         return scope;
@@ -294,7 +300,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -430,6 +437,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     * Folder
      *        number(such as "folders/1234")
     * Project number (such as "projects/12345")
+    * Project id
+     *        (such as "projects/abc")
      * @return the request
      */
     public SearchAll searchAll(java.lang.String scope) throws java.io.IOException {
@@ -467,6 +476,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     * Folder
      *        number(such as "folders/1234")
     * Project number (such as "projects/12345")
+    * Project id
+     *        (such as "projects/abc")
        * @since 1.13
        */
       protected SearchAll(java.lang.String scope) {
@@ -547,14 +558,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
-     as "folders/1234") * Project number (such as "projects/12345")
+     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     "projects/abc")
        */
       public java.lang.String getScope() {
         return scope;
@@ -563,7 +576,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {

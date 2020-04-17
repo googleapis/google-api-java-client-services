@@ -39,7 +39,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Details on how to consolidate related actions that make up the activity. If not set, then
-   * related actions will not be consolidated.
+   * related actions are not consolidated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   private java.lang.String itemName;
 
   /**
-   * The requested number of activity to return. If not set, a default value will be used.
+   * The requested number of activities to return. If not set, a default value is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Details on how to consolidate related actions that make up the activity. If not set, then
-   * related actions will not be consolidated.
+   * related actions are not consolidated.
    * @return value or {@code null} for none
    */
   public ConsolidationStrategy getConsolidationStrategy() {
@@ -116,7 +116,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Details on how to consolidate related actions that make up the activity. If not set, then
-   * related actions will not be consolidated.
+   * related actions are not consolidated.
    * @param consolidationStrategy consolidationStrategy or {@code null} for none
    */
   public QueryDriveActivityRequest setConsolidationStrategy(ConsolidationStrategy consolidationStrategy) {
@@ -185,7 +185,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The requested number of activity to return. If not set, a default value will be used.
+   * The requested number of activities to return. If not set, a default value is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -193,7 +193,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The requested number of activity to return. If not set, a default value will be used.
+   * The requested number of activities to return. If not set, a default value is used.
    * @param pageSize pageSize or {@code null} for none
    */
   public QueryDriveActivityRequest setPageSize(java.lang.Integer pageSize) {

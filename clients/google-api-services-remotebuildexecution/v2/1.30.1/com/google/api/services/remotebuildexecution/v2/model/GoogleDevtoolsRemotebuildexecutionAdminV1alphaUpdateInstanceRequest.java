@@ -31,28 +31,59 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to enable Stackdriver logging for this instance.
+   * Specifies the instance to update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance instance;
+
+  /**
+   * Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging for
+   * this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean loggingEnabled;
 
   /**
-   * Name of the instance to update. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+   * Deprecated, use instance.Name instead. Name of the instance to update. Format:
+   * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The fields to update.
+   * The update mask applies to instance. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If an
+   * empty update_mask is provided, only the non-default valued field in the worker pool field will
+   * be updated. Note that in order to update a field to the default value (zero, false, empty
+   * string) an explicit update_mask must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * Whether to enable Stackdriver logging for this instance.
+   * Specifies the instance to update.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance getInstance() {
+    return instance;
+  }
+
+  /**
+   * Specifies the instance to update.
+   * @param instance instance or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceRequest setInstance(GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance instance) {
+    this.instance = instance;
+    return this;
+  }
+
+  /**
+   * Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging for
+   * this instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLoggingEnabled() {
@@ -60,7 +91,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceR
   }
 
   /**
-   * Whether to enable Stackdriver logging for this instance.
+   * Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging for
+   * this instance.
    * @param loggingEnabled loggingEnabled or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceRequest setLoggingEnabled(java.lang.Boolean loggingEnabled) {
@@ -69,7 +101,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceR
   }
 
   /**
-   * Name of the instance to update. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+   * Deprecated, use instance.Name instead. Name of the instance to update. Format:
+   * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,7 +110,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceR
   }
 
   /**
-   * Name of the instance to update. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+   * Deprecated, use instance.Name instead. Name of the instance to update. Format:
+   * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
    * @param name name or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceRequest setName(java.lang.String name) {
@@ -86,7 +120,11 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceR
   }
 
   /**
-   * The fields to update.
+   * The update mask applies to instance. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If an
+   * empty update_mask is provided, only the non-default valued field in the worker pool field will
+   * be updated. Note that in order to update a field to the default value (zero, false, empty
+   * string) an explicit update_mask must be provided.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -94,7 +132,11 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceR
   }
 
   /**
-   * The fields to update.
+   * The update mask applies to instance. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If an
+   * empty update_mask is provided, only the non-default valued field in the worker pool field will
+   * be updated. Note that in order to update a field to the default value (zero, false, empty
+   * string) an explicit update_mask must be provided.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateInstanceRequest setUpdateMask(String updateMask) {

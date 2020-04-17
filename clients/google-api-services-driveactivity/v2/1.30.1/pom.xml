@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-driveactivity</artifactId>
-  <version>v2-rev20200218-1.30.9</version>
-  <name>Drive Activity API v2-rev20200218-1.30.9</name>
+  <version>v2-rev20200415-1.30.9</version>
+  <name>Drive Activity API v2-rev20200415-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

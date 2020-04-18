@@ -30,6 +30,14 @@ package com.google.api.services.clouddebugger.v2.model;
 public final class RegisterDebuggeeResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * A unique ID generated for the agent. Each RegisterDebuggee request will generate a new agent
+   * ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentId;
+
+  /**
    * Debuggee resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
    * If the field `is_disabled` is set to `true`, the agent should disable itself by removing all
    * breakpoints and detaching from the application. It should however continue to poll
@@ -38,6 +46,25 @@ public final class RegisterDebuggeeResponse extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private Debuggee debuggee;
+
+  /**
+   * A unique ID generated for the agent. Each RegisterDebuggee request will generate a new agent
+   * ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentId() {
+    return agentId;
+  }
+
+  /**
+   * A unique ID generated for the agent. Each RegisterDebuggee request will generate a new agent
+   * ID.
+   * @param agentId agentId or {@code null} for none
+   */
+  public RegisterDebuggeeResponse setAgentId(java.lang.String agentId) {
+    this.agentId = agentId;
+    return this;
+  }
 
   /**
    * Debuggee resource. The field `id` is guaranteed to be set (in addition to the echoed fields).

@@ -440,6 +440,26 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           }
 
           /**
+           * Identifies the agent. This is the ID returned in the RegisterDebuggee response.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String agentId;
+
+          /** Identifies the agent. This is the ID returned in the RegisterDebuggee response.
+           */
+          public java.lang.String getAgentId() {
+            return agentId;
+          }
+
+          /**
+           * Identifies the agent. This is the ID returned in the RegisterDebuggee response.
+           */
+          public List setAgentId(java.lang.String agentId) {
+            this.agentId = agentId;
+            return this;
+          }
+
+          /**
            * If set to `true` (recommended), returns `google.rpc.Code.OK` status and sets the
            * `wait_expired` response field to `true` when the server-selected timeout has expired.
            *
@@ -1583,6 +1603,22 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           /** Required. ID of the debuggee where the breakpoint is to be set. */
           public Set setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
+            return this;
+          }
+
+          /** The canary option set by the user upon setting breakpoint. */
+          @com.google.api.client.util.Key
+          private java.lang.String canaryOption;
+
+          /** The canary option set by the user upon setting breakpoint.
+           */
+          public java.lang.String getCanaryOption() {
+            return canaryOption;
+          }
+
+          /** The canary option set by the user upon setting breakpoint. */
+          public Set setCanaryOption(java.lang.String canaryOption) {
+            this.canaryOption = canaryOption;
             return this;
           }
 

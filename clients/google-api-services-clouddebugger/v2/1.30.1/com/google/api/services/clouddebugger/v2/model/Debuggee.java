@@ -41,6 +41,13 @@ public final class Debuggee extends com.google.api.client.json.GenericJson {
   private java.lang.String agentVersion;
 
   /**
+   * Used when setting breakpoint canary for this debuggee.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canaryMode;
+
+  /**
    * Human readable description of the debuggee. Including a human-readable project name,
    * environment name and version information is recommended.
    * The value may be {@code null}.
@@ -134,6 +141,23 @@ public final class Debuggee extends com.google.api.client.json.GenericJson {
    */
   public Debuggee setAgentVersion(java.lang.String agentVersion) {
     this.agentVersion = agentVersion;
+    return this;
+  }
+
+  /**
+   * Used when setting breakpoint canary for this debuggee.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanaryMode() {
+    return canaryMode;
+  }
+
+  /**
+   * Used when setting breakpoint canary for this debuggee.
+   * @param canaryMode canaryMode or {@code null} for none
+   */
+  public Debuggee setCanaryMode(java.lang.String canaryMode) {
+    this.canaryMode = canaryMode;
     return this;
   }
 

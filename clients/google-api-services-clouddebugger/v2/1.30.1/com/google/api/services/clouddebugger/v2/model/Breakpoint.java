@@ -40,6 +40,14 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String action;
 
   /**
+   * The deadline for the breakpoint to stay in CANARY_ACTIVE state. The value is meaningless when
+   * the breakpoint is not in CANARY_ACTIVE state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String canaryExpireTime;
+
+  /**
    * Condition that triggers the breakpoint. The condition is a compound boolean expression composed
    * using expressions in a programming language at the source location.
    * The value may be {@code null}.
@@ -139,6 +147,13 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
   private java.util.List<StackFrame> stackFrames;
 
   /**
+   * The current state of the breakpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Breakpoint status.
    *
    * The status includes an error flag and a human readable message. This field is usually unset.
@@ -194,6 +209,25 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    */
   public Breakpoint setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * The deadline for the breakpoint to stay in CANARY_ACTIVE state. The value is meaningless when
+   * the breakpoint is not in CANARY_ACTIVE state.
+   * @return value or {@code null} for none
+   */
+  public String getCanaryExpireTime() {
+    return canaryExpireTime;
+  }
+
+  /**
+   * The deadline for the breakpoint to stay in CANARY_ACTIVE state. The value is meaningless when
+   * the breakpoint is not in CANARY_ACTIVE state.
+   * @param canaryExpireTime canaryExpireTime or {@code null} for none
+   */
+  public Breakpoint setCanaryExpireTime(String canaryExpireTime) {
+    this.canaryExpireTime = canaryExpireTime;
     return this;
   }
 
@@ -428,6 +462,23 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    */
   public Breakpoint setStackFrames(java.util.List<StackFrame> stackFrames) {
     this.stackFrames = stackFrames;
+    return this;
+  }
+
+  /**
+   * The current state of the breakpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * The current state of the breakpoint.
+   * @param state state or {@code null} for none
+   */
+  public Breakpoint setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -31,14 +31,14 @@ package com.google.api.services.content.model;
 public final class AccountsCustomBatchRequestEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The account to create or update. Only defined if the method is insert or update.
+   * The account to create or update. Only defined if the method is `insert` or `update`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Account account;
 
   /**
-   * The ID of the targeted account. Only defined if the method is not insert.
+   * The ID of the targeted account. Only defined if the method is not `insert`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -53,14 +53,14 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
 
   /**
    * Whether the account should be deleted if the account has offers. Only applicable if the method
-   * is delete.
+   * is `delete`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
 
   /**
-   * Details about the link request.
+   * Details about the `link` request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,23 +76,23 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "claimWebsite"  - "delete"  - "get"  - "insert"  - "link"  -
-   * "update"
+   * Acceptable values are:   - "`claimWebsite`"  - "`delete`"  - "`get`"  - "`insert`"  - "`link`"
+   * - "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * Only applicable if the method is claimwebsite. Indicates whether or not to take the claim from
-   * another account in case there is a conflict.
+   * Only applicable if the method is `claimwebsite`. Indicates whether or not to take the claim
+   * from another account in case there is a conflict.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean overwrite;
 
   /**
-   * The account to create or update. Only defined if the method is insert or update.
+   * The account to create or update. Only defined if the method is `insert` or `update`.
    * @return value or {@code null} for none
    */
   public Account getAccount() {
@@ -100,7 +100,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The account to create or update. Only defined if the method is insert or update.
+   * The account to create or update. Only defined if the method is `insert` or `update`.
    * @param account account or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setAccount(Account account) {
@@ -109,7 +109,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The ID of the targeted account. Only defined if the method is not insert.
+   * The ID of the targeted account. Only defined if the method is not `insert`.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getAccountId() {
@@ -117,7 +117,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The ID of the targeted account. Only defined if the method is not insert.
+   * The ID of the targeted account. Only defined if the method is not `insert`.
    * @param accountId accountId or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setAccountId(java.math.BigInteger accountId) {
@@ -144,7 +144,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
 
   /**
    * Whether the account should be deleted if the account has offers. Only applicable if the method
-   * is delete.
+   * is `delete`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -153,7 +153,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
 
   /**
    * Whether the account should be deleted if the account has offers. Only applicable if the method
-   * is delete.
+   * is `delete`.
    * @param force force or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setForce(java.lang.Boolean force) {
@@ -162,7 +162,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * Details about the link request.
+   * Details about the `link` request.
    * @return value or {@code null} for none
    */
   public AccountsCustomBatchRequestEntryLinkRequest getLinkRequest() {
@@ -170,7 +170,7 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * Details about the link request.
+   * Details about the `link` request.
    * @param linkRequest linkRequest or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setLinkRequest(AccountsCustomBatchRequestEntryLinkRequest linkRequest) {
@@ -198,8 +198,8 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "claimWebsite"  - "delete"  - "get"  - "insert"  - "link"  -
-   * "update"
+   * Acceptable values are:   - "`claimWebsite`"  - "`delete`"  - "`get`"  - "`insert`"  - "`link`"
+   * - "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -209,8 +209,8 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "claimWebsite"  - "delete"  - "get"  - "insert"  - "link"  -
-   * "update"
+   * Acceptable values are:   - "`claimWebsite`"  - "`delete`"  - "`get`"  - "`insert`"  - "`link`"
+   * - "`update`"
    * @param method method or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setMethod(java.lang.String method) {
@@ -219,8 +219,8 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * Only applicable if the method is claimwebsite. Indicates whether or not to take the claim from
-   * another account in case there is a conflict.
+   * Only applicable if the method is `claimwebsite`. Indicates whether or not to take the claim
+   * from another account in case there is a conflict.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOverwrite() {
@@ -228,8 +228,8 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * Only applicable if the method is claimwebsite. Indicates whether or not to take the claim from
-   * another account in case there is a conflict.
+   * Only applicable if the method is `claimwebsite`. Indicates whether or not to take the claim
+   * from another account in case there is a conflict.
    * @param overwrite overwrite or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setOverwrite(java.lang.Boolean overwrite) {

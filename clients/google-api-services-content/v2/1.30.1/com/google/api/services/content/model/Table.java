@@ -52,7 +52,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private Headers rowHeaders;
 
   /**
-   * The list of rows that constitute the table. Must have the same length as rowHeaders. Required.
+   * The list of rows that constitute the table. Must have the same length as `rowHeaders`.
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +117,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of rows that constitute the table. Must have the same length as rowHeaders. Required.
+   * The list of rows that constitute the table. Must have the same length as `rowHeaders`.
+   * Required.
    * @return value or {@code null} for none
    */
   public java.util.List<Row> getRows() {
@@ -124,7 +126,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of rows that constitute the table. Must have the same length as rowHeaders. Required.
+   * The list of rows that constitute the table. Must have the same length as `rowHeaders`.
+   * Required.
    * @param rows rows or {@code null} for none
    */
   public Table setRows(java.util.List<Row> rows) {

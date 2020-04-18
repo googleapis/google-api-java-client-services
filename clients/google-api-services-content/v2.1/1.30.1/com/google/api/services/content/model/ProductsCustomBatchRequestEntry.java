@@ -54,21 +54,21 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "delete"  - "get"  - "insert"
+   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * The product to insert. Only required if the method is insert.
+   * The product to insert. Only required if the method is `insert`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Product product;
 
   /**
-   * The ID of the product to get or delete. Only defined if the method is get or delete.
+   * The ID of the product to get or delete. Only defined if the method is `get` or `delete`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "delete"  - "get"  - "insert"
+   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -138,7 +138,7 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "delete"  - "get"  - "insert"
+   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"
    * @param method method or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setMethod(java.lang.String method) {
@@ -147,7 +147,7 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The product to insert. Only required if the method is insert.
+   * The product to insert. Only required if the method is `insert`.
    * @return value or {@code null} for none
    */
   public Product getProduct() {
@@ -155,7 +155,7 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The product to insert. Only required if the method is insert.
+   * The product to insert. Only required if the method is `insert`.
    * @param product product or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setProduct(Product product) {
@@ -164,7 +164,7 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The ID of the product to get or delete. Only defined if the method is get or delete.
+   * The ID of the product to get or delete. Only defined if the method is `get` or `delete`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -172,7 +172,7 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The ID of the product to get or delete. Only defined if the method is get or delete.
+   * The ID of the product to get or delete. Only defined if the method is `get` or `delete`.
    * @param productId productId or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setProductId(java.lang.String productId) {

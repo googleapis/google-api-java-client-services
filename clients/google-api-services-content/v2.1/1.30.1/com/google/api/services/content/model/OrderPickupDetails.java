@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class OrderPickupDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Address of the pickup location where the shipment should be sent. Note that recipientName in
+   * Address of the pickup location where the shipment should be sent. Note that `recipientName` in
    * the address is the name of the business at the pickup location.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
   private java.lang.String locationId;
 
   /**
-   * Address of the pickup location where the shipment should be sent. Note that recipientName in
+   * Address of the pickup location where the shipment should be sent. Note that `recipientName` in
    * the address is the name of the business at the pickup location.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Address of the pickup location where the shipment should be sent. Note that recipientName in
+   * Address of the pickup location where the shipment should be sent. Note that `recipientName` in
    * the address is the name of the business at the pickup location.
    * @param address address or {@code null} for none
    */

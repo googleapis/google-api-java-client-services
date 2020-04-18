@@ -38,7 +38,7 @@ public final class AccounttaxCustomBatchRequestEntry extends com.google.api.clie
   private java.math.BigInteger accountId;
 
   /**
-   * The account tax settings to update. Only defined if the method is update.
+   * The account tax settings to update. Only defined if the method is `update`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class AccounttaxCustomBatchRequestEntry extends com.google.api.clie
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"  - "update"
+   * Acceptable values are:   - "`get`"  - "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class AccounttaxCustomBatchRequestEntry extends com.google.api.clie
   }
 
   /**
-   * The account tax settings to update. Only defined if the method is update.
+   * The account tax settings to update. Only defined if the method is `update`.
    * @return value or {@code null} for none
    */
   public AccountTax getAccountTax() {
@@ -93,7 +93,7 @@ public final class AccounttaxCustomBatchRequestEntry extends com.google.api.clie
   }
 
   /**
-   * The account tax settings to update. Only defined if the method is update.
+   * The account tax settings to update. Only defined if the method is `update`.
    * @param accountTax accountTax or {@code null} for none
    */
   public AccounttaxCustomBatchRequestEntry setAccountTax(AccountTax accountTax) {
@@ -138,7 +138,7 @@ public final class AccounttaxCustomBatchRequestEntry extends com.google.api.clie
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"  - "update"
+   * Acceptable values are:   - "`get`"  - "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -148,7 +148,7 @@ public final class AccounttaxCustomBatchRequestEntry extends com.google.api.clie
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"  - "update"
+   * Acceptable values are:   - "`get`"  - "`update`"
    * @param method method or {@code null} for none
    */
   public AccounttaxCustomBatchRequestEntry setMethod(java.lang.String method) {

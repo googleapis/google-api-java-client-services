@@ -68,8 +68,8 @@ public final class OrderPaymentMethod extends com.google.api.client.json.Generic
   /**
    * The type of instrument.
    *
-   * Acceptable values are:   - "AMEX"  - "DISCOVER"  - "JCB"  - "MASTERCARD"  - "UNIONPAY"  -
-   * "VISA"  - ""
+   * Acceptable values are:   - "`AMEX`"  - "`DISCOVER`"  - "`JCB`"  - "`MASTERCARD`"  -
+   * "`UNIONPAY`"  - "`VISA`"  - "``"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +163,8 @@ public final class OrderPaymentMethod extends com.google.api.client.json.Generic
   /**
    * The type of instrument.
    *
-   * Acceptable values are:   - "AMEX"  - "DISCOVER"  - "JCB"  - "MASTERCARD"  - "UNIONPAY"  -
-   * "VISA"  - ""
+   * Acceptable values are:   - "`AMEX`"  - "`DISCOVER`"  - "`JCB`"  - "`MASTERCARD`"  -
+   * "`UNIONPAY`"  - "`VISA`"  - "``"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -174,8 +174,8 @@ public final class OrderPaymentMethod extends com.google.api.client.json.Generic
   /**
    * The type of instrument.
    *
-   * Acceptable values are:   - "AMEX"  - "DISCOVER"  - "JCB"  - "MASTERCARD"  - "UNIONPAY"  -
-   * "VISA"  - ""
+   * Acceptable values are:   - "`AMEX`"  - "`DISCOVER`"  - "`JCB`"  - "`MASTERCARD`"  -
+   * "`UNIONPAY`"  - "`VISA`"  - "``"
    * @param type type or {@code null} for none
    */
   public OrderPaymentMethod setType(java.lang.String type) {

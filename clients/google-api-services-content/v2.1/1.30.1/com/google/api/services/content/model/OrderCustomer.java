@@ -38,8 +38,6 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   private java.lang.String fullName;
 
   /**
-   * Email address for the merchant to send value-added tax or invoice documentation of the order.
-   * This documentation is made available to the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +77,6 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Email address for the merchant to send value-added tax or invoice documentation of the order.
-   * This documentation is made available to the customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvoiceReceivingEmail() {
@@ -88,8 +84,6 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Email address for the merchant to send value-added tax or invoice documentation of the order.
-   * This documentation is made available to the customer.
    * @param invoiceReceivingEmail invoiceReceivingEmail or {@code null} for none
    */
   public OrderCustomer setInvoiceReceivingEmail(java.lang.String invoiceReceivingEmail) {

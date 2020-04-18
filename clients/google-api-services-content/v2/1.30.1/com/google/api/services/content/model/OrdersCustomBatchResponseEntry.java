@@ -46,9 +46,9 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
 
   /**
    * The status of the execution. Only defined if - the request was successful; and  - the method is
-   * not get, getByMerchantOrderId, or one of the test methods.
+   * not `get`, `getByMerchantOrderId`, or one of the test methods.
    *
-   * Acceptable values are:   - "duplicate"  - "executed"
+   * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,14 +56,14 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCustomBatchResponseEntry".
+   * "`content#ordersCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The retrieved order. Only defined if the method is get and if the request was successful.
+   * The retrieved order. Only defined if the method is `get` and if the request was successful.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +105,9 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
 
   /**
    * The status of the execution. Only defined if - the request was successful; and  - the method is
-   * not get, getByMerchantOrderId, or one of the test methods.
+   * not `get`, `getByMerchantOrderId`, or one of the test methods.
    *
-   * Acceptable values are:   - "duplicate"  - "executed"
+   * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionStatus() {
@@ -116,9 +116,9 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
 
   /**
    * The status of the execution. Only defined if - the request was successful; and  - the method is
-   * not get, getByMerchantOrderId, or one of the test methods.
+   * not `get`, `getByMerchantOrderId`, or one of the test methods.
    *
-   * Acceptable values are:   - "duplicate"  - "executed"
+   * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * @param executionStatus executionStatus or {@code null} for none
    */
   public OrdersCustomBatchResponseEntry setExecutionStatus(java.lang.String executionStatus) {
@@ -128,7 +128,7 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCustomBatchResponseEntry".
+   * "`content#ordersCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -137,7 +137,7 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCustomBatchResponseEntry".
+   * "`content#ordersCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public OrdersCustomBatchResponseEntry setKind(java.lang.String kind) {
@@ -146,7 +146,7 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
   }
 
   /**
-   * The retrieved order. Only defined if the method is get and if the request was successful.
+   * The retrieved order. Only defined if the method is `get` and if the request was successful.
    * @return value or {@code null} for none
    */
   public Order getOrder() {
@@ -154,7 +154,7 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
   }
 
   /**
-   * The retrieved order. Only defined if the method is get and if the request was successful.
+   * The retrieved order. Only defined if the method is `get` and if the request was successful.
    * @param order order or {@code null} for none
    */
   public OrdersCustomBatchResponseEntry setOrder(Order order) {

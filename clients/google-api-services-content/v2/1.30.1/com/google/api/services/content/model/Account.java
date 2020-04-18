@@ -40,9 +40,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * List of linked AdWords accounts that are active or pending approval. To create a new link
-   * request, add a new link with status active to the list. It will remain in a pending state until
-   * approved or rejected either in the AdWords interface or through the  AdWords API. To delete an
-   * active link, or to cancel a link request, remove it from the list.
+   * request, add a new link with status `active` to the list. It will remain in a `pending` state
+   * until approved or rejected either in the AdWords interface or through the  AdWords API. To
+   * delete an active link, or to cancel a link request, remove it from the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#account".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#account`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,9 +115,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * List of linked YouTube channels that are active or pending approval. To create a new link
-   * request, add a new link with status active to the list. It will remain in a pending state until
-   * approved or rejected in the YT Creator Studio interface. To delete an active link, or to cancel
-   * a link request, remove it from the list.
+   * request, add a new link with status `active` to the list. It will remain in a `pending` state
+   * until approved or rejected in the YT Creator Studio interface. To delete an active link, or to
+   * cancel a link request, remove it from the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,9 +142,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * List of linked AdWords accounts that are active or pending approval. To create a new link
-   * request, add a new link with status active to the list. It will remain in a pending state until
-   * approved or rejected either in the AdWords interface or through the  AdWords API. To delete an
-   * active link, or to cancel a link request, remove it from the list.
+   * request, add a new link with status `active` to the list. It will remain in a `pending` state
+   * until approved or rejected either in the AdWords interface or through the  AdWords API. To
+   * delete an active link, or to cancel a link request, remove it from the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountAdwordsLink> getAdwordsLinks() {
@@ -153,9 +153,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * List of linked AdWords accounts that are active or pending approval. To create a new link
-   * request, add a new link with status active to the list. It will remain in a pending state until
-   * approved or rejected either in the AdWords interface or through the  AdWords API. To delete an
-   * active link, or to cancel a link request, remove it from the list.
+   * request, add a new link with status `active` to the list. It will remain in a `pending` state
+   * until approved or rejected either in the AdWords interface or through the  AdWords API. To
+   * delete an active link, or to cancel a link request, remove it from the list.
    * @param adwordsLinks adwordsLinks or {@code null} for none
    */
   public Account setAdwordsLinks(java.util.List<AccountAdwordsLink> adwordsLinks) {
@@ -217,7 +217,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#account".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#account`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -225,7 +225,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#account".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#account`"
    * @param kind kind or {@code null} for none
    */
   public Account setKind(java.lang.String kind) {
@@ -322,9 +322,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * List of linked YouTube channels that are active or pending approval. To create a new link
-   * request, add a new link with status active to the list. It will remain in a pending state until
-   * approved or rejected in the YT Creator Studio interface. To delete an active link, or to cancel
-   * a link request, remove it from the list.
+   * request, add a new link with status `active` to the list. It will remain in a `pending` state
+   * until approved or rejected in the YT Creator Studio interface. To delete an active link, or to
+   * cancel a link request, remove it from the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountYouTubeChannelLink> getYoutubeChannelLinks() {
@@ -333,9 +333,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * List of linked YouTube channels that are active or pending approval. To create a new link
-   * request, add a new link with status active to the list. It will remain in a pending state until
-   * approved or rejected in the YT Creator Studio interface. To delete an active link, or to cancel
-   * a link request, remove it from the list.
+   * request, add a new link with status `active` to the list. It will remain in a `pending` state
+   * until approved or rejected in the YT Creator Studio interface. To delete an active link, or to
+   * cancel a link request, remove it from the list.
    * @param youtubeChannelLinks youtubeChannelLinks or {@code null} for none
    */
   public Account setYoutubeChannelLinks(java.util.List<AccountYouTubeChannelLink> youtubeChannelLinks) {

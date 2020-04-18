@@ -40,10 +40,10 @@ public final class CustomerReturnReason extends com.google.api.client.json.Gener
   /**
    * Code of the return reason.
    *
-   * Acceptable values are:   - "betterPriceFound"  - "changedMind"  - "damagedOrDefectiveItem"  -
-   * "didNotMatchDescription"  - "doesNotFit"  - "expiredItem"  - "incorrectItemReceived"  -
-   * "noLongerNeeded"  - "notSpecified"  - "orderedWrongItem"  - "other"  - "qualityNotExpected"  -
-   * "receivedTooLate"  - "undeliverable"
+   * Acceptable values are:   - "`betterPriceFound`"  - "`changedMind`"  -
+   * "`damagedOrDefectiveItem`"  - "`didNotMatchDescription`"  - "`doesNotFit`"  - "`expiredItem`"
+   * - "`incorrectItemReceived`"  - "`noLongerNeeded`"  - "`notSpecified`"  - "`orderedWrongItem`"
+   * - "`other`"  - "`qualityNotExpected`"  - "`receivedTooLate`"  - "`undeliverable`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +69,10 @@ public final class CustomerReturnReason extends com.google.api.client.json.Gener
   /**
    * Code of the return reason.
    *
-   * Acceptable values are:   - "betterPriceFound"  - "changedMind"  - "damagedOrDefectiveItem"  -
-   * "didNotMatchDescription"  - "doesNotFit"  - "expiredItem"  - "incorrectItemReceived"  -
-   * "noLongerNeeded"  - "notSpecified"  - "orderedWrongItem"  - "other"  - "qualityNotExpected"  -
-   * "receivedTooLate"  - "undeliverable"
+   * Acceptable values are:   - "`betterPriceFound`"  - "`changedMind`"  -
+   * "`damagedOrDefectiveItem`"  - "`didNotMatchDescription`"  - "`doesNotFit`"  - "`expiredItem`"
+   * - "`incorrectItemReceived`"  - "`noLongerNeeded`"  - "`notSpecified`"  - "`orderedWrongItem`"
+   * - "`other`"  - "`qualityNotExpected`"  - "`receivedTooLate`"  - "`undeliverable`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReasonCode() {
@@ -82,10 +82,10 @@ public final class CustomerReturnReason extends com.google.api.client.json.Gener
   /**
    * Code of the return reason.
    *
-   * Acceptable values are:   - "betterPriceFound"  - "changedMind"  - "damagedOrDefectiveItem"  -
-   * "didNotMatchDescription"  - "doesNotFit"  - "expiredItem"  - "incorrectItemReceived"  -
-   * "noLongerNeeded"  - "notSpecified"  - "orderedWrongItem"  - "other"  - "qualityNotExpected"  -
-   * "receivedTooLate"  - "undeliverable"
+   * Acceptable values are:   - "`betterPriceFound`"  - "`changedMind`"  -
+   * "`damagedOrDefectiveItem`"  - "`didNotMatchDescription`"  - "`doesNotFit`"  - "`expiredItem`"
+   * - "`incorrectItemReceived`"  - "`noLongerNeeded`"  - "`notSpecified`"  - "`orderedWrongItem`"
+   * - "`other`"  - "`qualityNotExpected`"  - "`receivedTooLate`"  - "`undeliverable`"
    * @param reasonCode reasonCode or {@code null} for none
    */
   public CustomerReturnReason setReasonCode(java.lang.String reasonCode) {

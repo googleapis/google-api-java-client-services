@@ -31,16 +31,16 @@ package com.google.api.services.content.model;
 public final class Row extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of cells that constitute the row. Must have the same length as columnHeaders for two-
-   * dimensional tables, a length of 1 for one-dimensional tables. Required.
+   * The list of cells that constitute the row. Must have the same length as `columnHeaders` for
+   * two-dimensional tables, a length of 1 for one-dimensional tables. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Value> cells;
 
   /**
-   * The list of cells that constitute the row. Must have the same length as columnHeaders for two-
-   * dimensional tables, a length of 1 for one-dimensional tables. Required.
+   * The list of cells that constitute the row. Must have the same length as `columnHeaders` for
+   * two-dimensional tables, a length of 1 for one-dimensional tables. Required.
    * @return value or {@code null} for none
    */
   public java.util.List<Value> getCells() {
@@ -48,8 +48,8 @@ public final class Row extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of cells that constitute the row. Must have the same length as columnHeaders for two-
-   * dimensional tables, a length of 1 for one-dimensional tables. Required.
+   * The list of cells that constitute the row. Must have the same length as `columnHeaders` for
+   * two-dimensional tables, a length of 1 for one-dimensional tables. Required.
    * @param cells cells or {@code null} for none
    */
   public Row setCells(java.util.List<Value> cells) {

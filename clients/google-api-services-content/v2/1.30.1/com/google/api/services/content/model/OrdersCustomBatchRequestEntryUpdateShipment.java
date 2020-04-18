@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The carrier handling the shipment. Not updated if missing. See shipments[].carrier in the
+   * The carrier handling the shipment. Not updated if missing. See `shipments[].carrier` in the
    * Orders resource representation for a list of acceptable values.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
 
   /**
    * Date on which the shipment has been delivered, in ISO 8601 format. Optional and can be provided
-   * only if status is delivered.
+   * only if `status` is `delivered`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   /**
    * New status for the shipment. Not updated if missing.
    *
-   * Acceptable values are:   - "delivered"  - "undeliverable"
+   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   private java.lang.String trackingId;
 
   /**
-   * The carrier handling the shipment. Not updated if missing. See shipments[].carrier in the
+   * The carrier handling the shipment. Not updated if missing. See `shipments[].carrier` in the
    * Orders resource representation for a list of acceptable values.
    * @return value or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   }
 
   /**
-   * The carrier handling the shipment. Not updated if missing. See shipments[].carrier in the
+   * The carrier handling the shipment. Not updated if missing. See `shipments[].carrier` in the
    * Orders resource representation for a list of acceptable values.
    * @param carrier carrier or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
 
   /**
    * Date on which the shipment has been delivered, in ISO 8601 format. Optional and can be provided
-   * only if status is delivered.
+   * only if `status` is `delivered`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliveryDate() {
@@ -99,7 +99,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
 
   /**
    * Date on which the shipment has been delivered, in ISO 8601 format. Optional and can be provided
-   * only if status is delivered.
+   * only if `status` is `delivered`.
    * @param deliveryDate deliveryDate or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateShipment setDeliveryDate(java.lang.String deliveryDate) {
@@ -127,7 +127,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   /**
    * New status for the shipment. Not updated if missing.
    *
-   * Acceptable values are:   - "delivered"  - "undeliverable"
+   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -137,7 +137,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   /**
    * New status for the shipment. Not updated if missing.
    *
-   * Acceptable values are:   - "delivered"  - "undeliverable"
+   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"
    * @param status status or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateShipment setStatus(java.lang.String status) {

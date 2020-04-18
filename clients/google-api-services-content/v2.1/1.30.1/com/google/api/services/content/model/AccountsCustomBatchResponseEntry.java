@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class AccountsCustomBatchResponseEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The retrieved, created, or updated account. Not defined if the method was delete, claimwebsite
-   * or link.
+   * The retrieved, created, or updated account. Not defined if the method was `delete`,
+   * `claimwebsite` or `link`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,15 +54,15 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsCustomBatchResponseEntry".
+   * "`content#accountsCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The retrieved, created, or updated account. Not defined if the method was delete, claimwebsite
-   * or link.
+   * The retrieved, created, or updated account. Not defined if the method was `delete`,
+   * `claimwebsite` or `link`.
    * @return value or {@code null} for none
    */
   public Account getAccount() {
@@ -70,8 +70,8 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
   }
 
   /**
-   * The retrieved, created, or updated account. Not defined if the method was delete, claimwebsite
-   * or link.
+   * The retrieved, created, or updated account. Not defined if the method was `delete`,
+   * `claimwebsite` or `link`.
    * @param account account or {@code null} for none
    */
   public AccountsCustomBatchResponseEntry setAccount(Account account) {
@@ -115,7 +115,7 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsCustomBatchResponseEntry".
+   * "`content#accountsCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -124,7 +124,7 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsCustomBatchResponseEntry".
+   * "`content#accountsCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public AccountsCustomBatchResponseEntry setKind(java.lang.String kind) {

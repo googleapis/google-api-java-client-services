@@ -46,14 +46,14 @@ public final class ProductsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productsCustomBatchResponseEntry".
+   * "`content#productsCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The inserted product. Only defined if the method is insert and if the request was successful.
+   * The inserted product. Only defined if the method is `insert` and if the request was successful.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class ProductsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productsCustomBatchResponseEntry".
+   * "`content#productsCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -104,7 +104,7 @@ public final class ProductsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productsCustomBatchResponseEntry".
+   * "`content#productsCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public ProductsCustomBatchResponseEntry setKind(java.lang.String kind) {
@@ -113,7 +113,7 @@ public final class ProductsCustomBatchResponseEntry extends com.google.api.clien
   }
 
   /**
-   * The inserted product. Only defined if the method is insert and if the request was successful.
+   * The inserted product. Only defined if the method is `insert` and if the request was successful.
    * @return value or {@code null} for none
    */
   public Product getProduct() {
@@ -121,7 +121,7 @@ public final class ProductsCustomBatchResponseEntry extends com.google.api.clien
   }
 
   /**
-   * The inserted product. Only defined if the method is insert and if the request was successful.
+   * The inserted product. Only defined if the method is `insert` and if the request was successful.
    * @param product product or {@code null} for none
    */
   public ProductsCustomBatchResponseEntry setProduct(Product product) {

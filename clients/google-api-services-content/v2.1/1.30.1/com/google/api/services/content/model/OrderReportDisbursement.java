@@ -17,7 +17,8 @@
 package com.google.api.services.content.model;
 
 /**
- * Order disbursement. All methods require the payment analyst role.
+ * Order disbursement. All methods require the payment analyst role. (== resource_for
+ * v2.orderreports ==) (== resource_for v2.1.orderreports ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

@@ -52,7 +52,7 @@ public final class PosSale extends com.google.api.client.json.GenericJson {
   private java.lang.String itemId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posSale".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posSale`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class PosSale extends com.google.api.client.json.GenericJson {
   private java.lang.String saleId;
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * The value may be {@code null}.
    */
@@ -153,7 +153,7 @@ public final class PosSale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posSale".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posSale`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -161,7 +161,7 @@ public final class PosSale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posSale".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posSale`"
    * @param kind kind or {@code null} for none
    */
   public PosSale setKind(java.lang.String kind) {
@@ -221,7 +221,7 @@ public final class PosSale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @return value or {@code null} for none
    */
@@ -230,7 +230,7 @@ public final class PosSale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @param storeCode storeCode or {@code null} for none
    */

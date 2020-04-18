@@ -18,7 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * The single value of a rate group or the value of a rate group table's cell. Exactly one of
- * noShipping, flatRate, pricePercentage, carrierRateName, subtableName must be set.
+ * `noShipping`, `flatRate`, `pricePercentage`, `carrierRateName`, `subtableName` must be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -55,7 +55,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean noShipping;
 
   /**
-   * A percentage of the price represented as a number in decimal notation (e.g., "5.4"). Can only
+   * A percentage of the price represented as a number in decimal notation (e.g., `"5.4"`). Can only
    * be set if all other fields are not set.
    * The value may be {@code null}.
    */
@@ -126,7 +126,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A percentage of the price represented as a number in decimal notation (e.g., "5.4"). Can only
+   * A percentage of the price represented as a number in decimal notation (e.g., `"5.4"`). Can only
    * be set if all other fields are not set.
    * @return value or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A percentage of the price represented as a number in decimal notation (e.g., "5.4"). Can only
+   * A percentage of the price represented as a number in decimal notation (e.g., `"5.4"`). Can only
    * be set if all other fields are not set.
    * @param pricePercentage pricePercentage or {@code null} for none
    */

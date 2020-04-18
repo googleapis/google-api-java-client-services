@@ -41,7 +41,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
    * online stores, are supported.
    *
-   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
+   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private java.lang.Long id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#datafeed".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#datafeed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
    * online stores, are supported.
    *
-   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
+   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -128,7 +128,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
    * online stores, are supported.
    *
-   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
+   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
    * @param contentType contentType or {@code null} for none
    */
   public Datafeed setContentType(java.lang.String contentType) {
@@ -205,7 +205,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#datafeed".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#datafeed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -213,7 +213,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#datafeed".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#datafeed`"
    * @param kind kind or {@code null} for none
    */
   public Datafeed setKind(java.lang.String kind) {

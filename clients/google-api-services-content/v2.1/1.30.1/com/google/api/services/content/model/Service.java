@@ -62,8 +62,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   /**
    * Eligibility for this service.
    *
-   * Acceptable values are:   - "All scenarios"  - "All scenarios except Shopping Actions"  -
-   * "Shopping Actions"
+   * Acceptable values are:   - "`All scenarios`"  - "`All scenarios except Shopping Actions`"  -
+   * "`Shopping Actions`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,11 +71,20 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum order value for this service. If set, indicates that customers will have to spend at
-   * least this amount. All prices within a service must have the same currency.
+   * least this amount. All prices within a service must have the same currency. Cannot be set
+   * together with minimum_order_value_table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price minimumOrderValue;
+
+  /**
+   * Table of per store minimum order values for the pickup fulfillment type. Cannot be set together
+   * with minimum_order_value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MinimumOrderValueTable minimumOrderValueTable;
 
   /**
    * Free-form name of the service. Must be unique within target account. Required.
@@ -86,8 +95,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The carrier-service pair delivering items to collection points. The list of supported pickup
-   * services can be retrieved via the getSupportedPickupServices method. Required if and only if
-   * the service delivery type is pickup.
+   * services can be retrieved via the `getSupportedPickupServices` method. Required if and only if
+   * the service delivery type is `pickup`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +104,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Shipping rate group definitions. Only the last one is allowed to have an empty
-   * applicableShippingLabels, which means "everything else". The other applicableShippingLabels
+   * `applicableShippingLabels`, which means "everything else". The other `applicableShippingLabels`
    * must not overlap.
    * The value may be {@code null}.
    */
@@ -111,7 +120,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   /**
    * Type of locations this service ships orders to.
    *
-   * Acceptable values are:   - "delivery"  - "pickup"
+   * Acceptable values are:   - "`delivery`"  - "`pickup`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,8 +199,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   /**
    * Eligibility for this service.
    *
-   * Acceptable values are:   - "All scenarios"  - "All scenarios except Shopping Actions"  -
-   * "Shopping Actions"
+   * Acceptable values are:   - "`All scenarios`"  - "`All scenarios except Shopping Actions`"  -
+   * "`Shopping Actions`"
    * @return value or {@code null} for none
    */
   public java.lang.String getEligibility() {
@@ -201,8 +210,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   /**
    * Eligibility for this service.
    *
-   * Acceptable values are:   - "All scenarios"  - "All scenarios except Shopping Actions"  -
-   * "Shopping Actions"
+   * Acceptable values are:   - "`All scenarios`"  - "`All scenarios except Shopping Actions`"  -
+   * "`Shopping Actions`"
    * @param eligibility eligibility or {@code null} for none
    */
   public Service setEligibility(java.lang.String eligibility) {
@@ -212,7 +221,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum order value for this service. If set, indicates that customers will have to spend at
-   * least this amount. All prices within a service must have the same currency.
+   * least this amount. All prices within a service must have the same currency. Cannot be set
+   * together with minimum_order_value_table.
    * @return value or {@code null} for none
    */
   public Price getMinimumOrderValue() {
@@ -221,11 +231,31 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum order value for this service. If set, indicates that customers will have to spend at
-   * least this amount. All prices within a service must have the same currency.
+   * least this amount. All prices within a service must have the same currency. Cannot be set
+   * together with minimum_order_value_table.
    * @param minimumOrderValue minimumOrderValue or {@code null} for none
    */
   public Service setMinimumOrderValue(Price minimumOrderValue) {
     this.minimumOrderValue = minimumOrderValue;
+    return this;
+  }
+
+  /**
+   * Table of per store minimum order values for the pickup fulfillment type. Cannot be set together
+   * with minimum_order_value.
+   * @return value or {@code null} for none
+   */
+  public MinimumOrderValueTable getMinimumOrderValueTable() {
+    return minimumOrderValueTable;
+  }
+
+  /**
+   * Table of per store minimum order values for the pickup fulfillment type. Cannot be set together
+   * with minimum_order_value.
+   * @param minimumOrderValueTable minimumOrderValueTable or {@code null} for none
+   */
+  public Service setMinimumOrderValueTable(MinimumOrderValueTable minimumOrderValueTable) {
+    this.minimumOrderValueTable = minimumOrderValueTable;
     return this;
   }
 
@@ -248,8 +278,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The carrier-service pair delivering items to collection points. The list of supported pickup
-   * services can be retrieved via the getSupportedPickupServices method. Required if and only if
-   * the service delivery type is pickup.
+   * services can be retrieved via the `getSupportedPickupServices` method. Required if and only if
+   * the service delivery type is `pickup`.
    * @return value or {@code null} for none
    */
   public PickupCarrierService getPickupService() {
@@ -258,8 +288,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The carrier-service pair delivering items to collection points. The list of supported pickup
-   * services can be retrieved via the getSupportedPickupServices method. Required if and only if
-   * the service delivery type is pickup.
+   * services can be retrieved via the `getSupportedPickupServices` method. Required if and only if
+   * the service delivery type is `pickup`.
    * @param pickupService pickupService or {@code null} for none
    */
   public Service setPickupService(PickupCarrierService pickupService) {
@@ -269,7 +299,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Shipping rate group definitions. Only the last one is allowed to have an empty
-   * applicableShippingLabels, which means "everything else". The other applicableShippingLabels
+   * `applicableShippingLabels`, which means "everything else". The other `applicableShippingLabels`
    * must not overlap.
    * @return value or {@code null} for none
    */
@@ -279,7 +309,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Shipping rate group definitions. Only the last one is allowed to have an empty
-   * applicableShippingLabels, which means "everything else". The other applicableShippingLabels
+   * `applicableShippingLabels`, which means "everything else". The other `applicableShippingLabels`
    * must not overlap.
    * @param rateGroups rateGroups or {@code null} for none
    */
@@ -291,7 +321,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   /**
    * Type of locations this service ships orders to.
    *
-   * Acceptable values are:   - "delivery"  - "pickup"
+   * Acceptable values are:   - "`delivery`"  - "`pickup`"
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentType() {
@@ -301,7 +331,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   /**
    * Type of locations this service ships orders to.
    *
-   * Acceptable values are:   - "delivery"  - "pickup"
+   * Acceptable values are:   - "`delivery`"  - "`pickup`"
    * @param shipmentType shipmentType or {@code null} for none
    */
   public Service setShipmentType(java.lang.String shipmentType) {

@@ -66,7 +66,7 @@ public final class PosInventoryRequest extends com.google.api.client.json.Generi
   private java.lang.Long quantity;
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * The value may be {@code null}.
    */
@@ -173,7 +173,7 @@ public final class PosInventoryRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @return value or {@code null} for none
    */
@@ -182,7 +182,7 @@ public final class PosInventoryRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @param storeCode storeCode or {@code null} for none
    */

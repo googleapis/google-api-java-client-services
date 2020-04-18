@@ -33,7 +33,7 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   /**
    * The availability of the product.
    *
-   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
+   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +101,9 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   private LoyaltyPoints loyaltyPoints;
 
   /**
-   * Store pickup information. Only supported for local inventory. Not setting pickup means "don't
-   * update" while setting it to the empty value ({} in JSON) means "delete". Otherwise,
-   * pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
+   * Store pickup information. Only supported for local inventory. Not setting `pickup` means "don't
+   * update" while setting it to the empty value (`{}` in JSON) means "delete". Otherwise,
+   * `pickupMethod` and `pickupSla` must be set together, unless `pickupMethod` is "not supported".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   private java.lang.Long quantity;
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   /**
    * The availability of the product.
    *
-   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
+   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -160,7 +160,7 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   /**
    * The availability of the product.
    *
-   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
+   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
    * @param availability availability or {@code null} for none
    */
   public InventorySetRequest setAvailability(java.lang.String availability) {
@@ -315,9 +315,9 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Store pickup information. Only supported for local inventory. Not setting pickup means "don't
-   * update" while setting it to the empty value ({} in JSON) means "delete". Otherwise,
-   * pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
+   * Store pickup information. Only supported for local inventory. Not setting `pickup` means "don't
+   * update" while setting it to the empty value (`{}` in JSON) means "delete". Otherwise,
+   * `pickupMethod` and `pickupSla` must be set together, unless `pickupMethod` is "not supported".
    * @return value or {@code null} for none
    */
   public InventoryPickup getPickup() {
@@ -325,9 +325,9 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Store pickup information. Only supported for local inventory. Not setting pickup means "don't
-   * update" while setting it to the empty value ({} in JSON) means "delete". Otherwise,
-   * pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
+   * Store pickup information. Only supported for local inventory. Not setting `pickup` means "don't
+   * update" while setting it to the empty value (`{}` in JSON) means "delete". Otherwise,
+   * `pickupMethod` and `pickupSla` must be set together, unless `pickupMethod` is "not supported".
    * @param pickup pickup or {@code null} for none
    */
   public InventorySetRequest setPickup(InventoryPickup pickup) {
@@ -372,7 +372,7 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @return value or {@code null} for none
    */
   public Price getSalePrice() {
@@ -380,7 +380,7 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @param salePrice salePrice or {@code null} for none
    */
   public InventorySetRequest setSalePrice(Price salePrice) {

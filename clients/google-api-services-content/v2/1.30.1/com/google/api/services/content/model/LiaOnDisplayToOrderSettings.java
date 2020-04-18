@@ -40,7 +40,7 @@ public final class LiaOnDisplayToOrderSettings extends com.google.api.client.jso
   /**
    * The status of the ?On display to order? feature.
    *
-   * Acceptable values are:   - "active"  - "inactive"  - "pending"
+   * Acceptable values are:   - "`active`"  - "`inactive`"  - "`pending`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class LiaOnDisplayToOrderSettings extends com.google.api.client.jso
   /**
    * The status of the ?On display to order? feature.
    *
-   * Acceptable values are:   - "active"  - "inactive"  - "pending"
+   * Acceptable values are:   - "`active`"  - "`inactive`"  - "`pending`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -76,7 +76,7 @@ public final class LiaOnDisplayToOrderSettings extends com.google.api.client.jso
   /**
    * The status of the ?On display to order? feature.
    *
-   * Acceptable values are:   - "active"  - "inactive"  - "pending"
+   * Acceptable values are:   - "`active`"  - "`inactive`"  - "`pending`"
    * @param status status or {@code null} for none
    */
   public LiaOnDisplayToOrderSettings setStatus(java.lang.String status) {

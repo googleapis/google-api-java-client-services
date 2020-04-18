@@ -47,7 +47,7 @@ public final class OrderLineItemAdjustment extends com.google.api.client.json.Ge
   /**
    * Type of this adjustment.
    *
-   * Acceptable values are:   - "promotion"
+   * Acceptable values are:   - "`promotion`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class OrderLineItemAdjustment extends com.google.api.client.json.Ge
   /**
    * Type of this adjustment.
    *
-   * Acceptable values are:   - "promotion"
+   * Acceptable values are:   - "`promotion`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -100,7 +100,7 @@ public final class OrderLineItemAdjustment extends com.google.api.client.json.Ge
   /**
    * Type of this adjustment.
    *
-   * Acceptable values are:   - "promotion"
+   * Acceptable values are:   - "`promotion`"
    * @param type type or {@code null} for none
    */
   public OrderLineItemAdjustment setType(java.lang.String type) {

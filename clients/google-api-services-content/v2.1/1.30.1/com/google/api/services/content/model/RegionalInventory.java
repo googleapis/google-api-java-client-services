@@ -74,7 +74,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   private java.lang.String regionId;
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @return value or {@code null} for none
    */
   public Price getSalePrice() {
@@ -184,7 +184,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @param salePrice salePrice or {@code null} for none
    */
   public RegionalInventory setSalePrice(Price salePrice) {

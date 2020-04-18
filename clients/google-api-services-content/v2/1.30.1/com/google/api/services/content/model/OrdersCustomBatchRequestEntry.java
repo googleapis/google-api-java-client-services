@@ -38,21 +38,21 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   private java.lang.Long batchId;
 
   /**
-   * Required for cancel method.
+   * Required for `cancel` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryCancel cancel;
 
   /**
-   * Required for cancelLineItem method.
+   * Required for `cancelLineItem` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryCancelLineItem cancelLineItem;
 
   /**
-   * Required for inStoreReturnLineItem method.
+   * Required for `inStoreReturnLineItem` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   private java.math.BigInteger merchantId;
 
   /**
-   * The merchant order ID. Required for updateMerchantOrderId and getByMerchantOrderId methods.
+   * The merchant order ID. Required for `updateMerchantOrderId` and `getByMerchantOrderId` methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +75,11 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "acknowledge"  - "cancel"  - "cancelLineItem"  - "get"  -
-   * "getByMerchantOrderId"  - "inStoreRefundLineItem"  - "refund"  - "rejectReturnLineItem"  -
-   * "returnLineItem"  - "returnRefundLineItem"  - "setLineItemMetadata"  - "shipLineItems"  -
-   * "updateLineItemShippingDetails"  - "updateMerchantOrderId"  - "updateShipment"
+   * Acceptable values are:   - "`acknowledge`"  - "`cancel`"  - "`cancelLineItem`"  - "`get`"  -
+   * "`getByMerchantOrderId`"  - "`inStoreRefundLineItem`"  - "`refund`"  - "`rejectReturnLineItem`"
+   * - "`returnLineItem`"  - "`returnRefundLineItem`"  - "`setLineItemMetadata`"  -
+   * "`shipLineItems`"  - "`updateLineItemShippingDetails`"  - "`updateMerchantOrderId`"  -
+   * "`updateShipment`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,70 +87,70 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
 
   /**
    * The ID of the operation. Unique across all operations for a given order. Required for all
-   * methods beside get and getByMerchantOrderId.
+   * methods beside `get` and `getByMerchantOrderId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operationId;
 
   /**
-   * The ID of the order. Required for all methods beside getByMerchantOrderId.
+   * The ID of the order. Required for all methods beside `getByMerchantOrderId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orderId;
 
   /**
-   * Required for refund method.
+   * Required for `refund` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryRefund refund;
 
   /**
-   * Required for rejectReturnLineItem method.
+   * Required for `rejectReturnLineItem` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryRejectReturnLineItem rejectReturnLineItem;
 
   /**
-   * Required for returnLineItem method.
+   * Required for `returnLineItem` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryReturnLineItem returnLineItem;
 
   /**
-   * Required for returnRefundLineItem method.
+   * Required for `returnRefundLineItem` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryReturnRefundLineItem returnRefundLineItem;
 
   /**
-   * Required for setLineItemMetadata method.
+   * Required for `setLineItemMetadata` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntrySetLineItemMetadata setLineItemMetadata;
 
   /**
-   * Required for shipLineItems method.
+   * Required for `shipLineItems` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryShipLineItems shipLineItems;
 
   /**
-   * Required for updateLineItemShippingDate method.
+   * Required for `updateLineItemShippingDate` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails updateLineItemShippingDetails;
 
   /**
-   * Required for updateShipment method.
+   * Required for `updateShipment` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +174,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for cancel method.
+   * Required for `cancel` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryCancel getCancel() {
@@ -181,7 +182,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for cancel method.
+   * Required for `cancel` method.
    * @param cancel cancel or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setCancel(OrdersCustomBatchRequestEntryCancel cancel) {
@@ -190,7 +191,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for cancelLineItem method.
+   * Required for `cancelLineItem` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryCancelLineItem getCancelLineItem() {
@@ -198,7 +199,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for cancelLineItem method.
+   * Required for `cancelLineItem` method.
    * @param cancelLineItem cancelLineItem or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setCancelLineItem(OrdersCustomBatchRequestEntryCancelLineItem cancelLineItem) {
@@ -207,7 +208,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for inStoreReturnLineItem method.
+   * Required for `inStoreReturnLineItem` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryInStoreRefundLineItem getInStoreRefundLineItem() {
@@ -215,7 +216,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for inStoreReturnLineItem method.
+   * Required for `inStoreReturnLineItem` method.
    * @param inStoreRefundLineItem inStoreRefundLineItem or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setInStoreRefundLineItem(OrdersCustomBatchRequestEntryInStoreRefundLineItem inStoreRefundLineItem) {
@@ -241,7 +242,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The merchant order ID. Required for updateMerchantOrderId and getByMerchantOrderId methods.
+   * The merchant order ID. Required for `updateMerchantOrderId` and `getByMerchantOrderId` methods.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantOrderId() {
@@ -249,7 +250,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The merchant order ID. Required for updateMerchantOrderId and getByMerchantOrderId methods.
+   * The merchant order ID. Required for `updateMerchantOrderId` and `getByMerchantOrderId` methods.
    * @param merchantOrderId merchantOrderId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setMerchantOrderId(java.lang.String merchantOrderId) {
@@ -260,10 +261,11 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "acknowledge"  - "cancel"  - "cancelLineItem"  - "get"  -
-   * "getByMerchantOrderId"  - "inStoreRefundLineItem"  - "refund"  - "rejectReturnLineItem"  -
-   * "returnLineItem"  - "returnRefundLineItem"  - "setLineItemMetadata"  - "shipLineItems"  -
-   * "updateLineItemShippingDetails"  - "updateMerchantOrderId"  - "updateShipment"
+   * Acceptable values are:   - "`acknowledge`"  - "`cancel`"  - "`cancelLineItem`"  - "`get`"  -
+   * "`getByMerchantOrderId`"  - "`inStoreRefundLineItem`"  - "`refund`"  - "`rejectReturnLineItem`"
+   * - "`returnLineItem`"  - "`returnRefundLineItem`"  - "`setLineItemMetadata`"  -
+   * "`shipLineItems`"  - "`updateLineItemShippingDetails`"  - "`updateMerchantOrderId`"  -
+   * "`updateShipment`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -273,10 +275,11 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "acknowledge"  - "cancel"  - "cancelLineItem"  - "get"  -
-   * "getByMerchantOrderId"  - "inStoreRefundLineItem"  - "refund"  - "rejectReturnLineItem"  -
-   * "returnLineItem"  - "returnRefundLineItem"  - "setLineItemMetadata"  - "shipLineItems"  -
-   * "updateLineItemShippingDetails"  - "updateMerchantOrderId"  - "updateShipment"
+   * Acceptable values are:   - "`acknowledge`"  - "`cancel`"  - "`cancelLineItem`"  - "`get`"  -
+   * "`getByMerchantOrderId`"  - "`inStoreRefundLineItem`"  - "`refund`"  - "`rejectReturnLineItem`"
+   * - "`returnLineItem`"  - "`returnRefundLineItem`"  - "`setLineItemMetadata`"  -
+   * "`shipLineItems`"  - "`updateLineItemShippingDetails`"  - "`updateMerchantOrderId`"  -
+   * "`updateShipment`"
    * @param method method or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setMethod(java.lang.String method) {
@@ -286,7 +289,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
 
   /**
    * The ID of the operation. Unique across all operations for a given order. Required for all
-   * methods beside get and getByMerchantOrderId.
+   * methods beside `get` and `getByMerchantOrderId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationId() {
@@ -295,7 +298,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
 
   /**
    * The ID of the operation. Unique across all operations for a given order. Required for all
-   * methods beside get and getByMerchantOrderId.
+   * methods beside `get` and `getByMerchantOrderId`.
    * @param operationId operationId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setOperationId(java.lang.String operationId) {
@@ -304,7 +307,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The ID of the order. Required for all methods beside getByMerchantOrderId.
+   * The ID of the order. Required for all methods beside `getByMerchantOrderId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderId() {
@@ -312,7 +315,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The ID of the order. Required for all methods beside getByMerchantOrderId.
+   * The ID of the order. Required for all methods beside `getByMerchantOrderId`.
    * @param orderId orderId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setOrderId(java.lang.String orderId) {
@@ -321,7 +324,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for refund method.
+   * Required for `refund` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRefund getRefund() {
@@ -329,7 +332,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for refund method.
+   * Required for `refund` method.
    * @param refund refund or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setRefund(OrdersCustomBatchRequestEntryRefund refund) {
@@ -338,7 +341,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for rejectReturnLineItem method.
+   * Required for `rejectReturnLineItem` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRejectReturnLineItem getRejectReturnLineItem() {
@@ -346,7 +349,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for rejectReturnLineItem method.
+   * Required for `rejectReturnLineItem` method.
    * @param rejectReturnLineItem rejectReturnLineItem or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setRejectReturnLineItem(OrdersCustomBatchRequestEntryRejectReturnLineItem rejectReturnLineItem) {
@@ -355,7 +358,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for returnLineItem method.
+   * Required for `returnLineItem` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryReturnLineItem getReturnLineItem() {
@@ -363,7 +366,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for returnLineItem method.
+   * Required for `returnLineItem` method.
    * @param returnLineItem returnLineItem or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setReturnLineItem(OrdersCustomBatchRequestEntryReturnLineItem returnLineItem) {
@@ -372,7 +375,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for returnRefundLineItem method.
+   * Required for `returnRefundLineItem` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryReturnRefundLineItem getReturnRefundLineItem() {
@@ -380,7 +383,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for returnRefundLineItem method.
+   * Required for `returnRefundLineItem` method.
    * @param returnRefundLineItem returnRefundLineItem or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setReturnRefundLineItem(OrdersCustomBatchRequestEntryReturnRefundLineItem returnRefundLineItem) {
@@ -389,7 +392,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for setLineItemMetadata method.
+   * Required for `setLineItemMetadata` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntrySetLineItemMetadata getSetLineItemMetadata() {
@@ -397,7 +400,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for setLineItemMetadata method.
+   * Required for `setLineItemMetadata` method.
    * @param setLineItemMetadata setLineItemMetadata or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setSetLineItemMetadata(OrdersCustomBatchRequestEntrySetLineItemMetadata setLineItemMetadata) {
@@ -406,7 +409,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for shipLineItems method.
+   * Required for `shipLineItems` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryShipLineItems getShipLineItems() {
@@ -414,7 +417,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for shipLineItems method.
+   * Required for `shipLineItems` method.
    * @param shipLineItems shipLineItems or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setShipLineItems(OrdersCustomBatchRequestEntryShipLineItems shipLineItems) {
@@ -423,7 +426,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for updateLineItemShippingDate method.
+   * Required for `updateLineItemShippingDate` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails getUpdateLineItemShippingDetails() {
@@ -431,7 +434,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for updateLineItemShippingDate method.
+   * Required for `updateLineItemShippingDate` method.
    * @param updateLineItemShippingDetails updateLineItemShippingDetails or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setUpdateLineItemShippingDetails(OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails updateLineItemShippingDetails) {
@@ -440,7 +443,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for updateShipment method.
+   * Required for `updateShipment` method.
    * @return value or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateShipment getUpdateShipment() {
@@ -448,7 +451,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * Required for updateShipment method.
+   * Required for `updateShipment` method.
    * @param updateShipment updateShipment or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setUpdateShipment(OrdersCustomBatchRequestEntryUpdateShipment updateShipment) {

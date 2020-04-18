@@ -38,7 +38,7 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
   private Price taxAmount;
 
   /**
-   * Optional name of the tax type. This should only be provided if taxType is otherFeeTax.
+   * Optional name of the tax type. This should only be provided if `taxType` is `otherFeeTax`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
   /**
    * [required] Type of the tax.
    *
-   * Acceptable values are:   - "otherFee"  - "otherFeeTax"  - "sales"
+   * Acceptable values are:   - "`otherFee`"  - "`otherFeeTax`"  - "`sales`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional name of the tax type. This should only be provided if taxType is otherFeeTax.
+   * Optional name of the tax type. This should only be provided if `taxType` is `otherFeeTax`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxName() {
@@ -79,7 +79,7 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional name of the tax type. This should only be provided if taxType is otherFeeTax.
+   * Optional name of the tax type. This should only be provided if `taxType` is `otherFeeTax`.
    * @param taxName taxName or {@code null} for none
    */
   public UnitInvoiceTaxLine setTaxName(java.lang.String taxName) {
@@ -90,7 +90,7 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
   /**
    * [required] Type of the tax.
    *
-   * Acceptable values are:   - "otherFee"  - "otherFeeTax"  - "sales"
+   * Acceptable values are:   - "`otherFee`"  - "`otherFeeTax`"  - "`sales`"
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxType() {
@@ -100,7 +100,7 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
   /**
    * [required] Type of the tax.
    *
-   * Acceptable values are:   - "otherFee"  - "otherFeeTax"  - "sales"
+   * Acceptable values are:   - "`otherFee`"  - "`otherFeeTax`"  - "`sales`"
    * @param taxType taxType or {@code null} for none
    */
   public UnitInvoiceTaxLine setTaxType(java.lang.String taxType) {

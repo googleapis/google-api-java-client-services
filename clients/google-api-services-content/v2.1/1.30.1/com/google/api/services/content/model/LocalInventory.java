@@ -46,7 +46,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.String instoreProductLocation;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#localInventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#localInventory`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
-   * submitted together with pickupSla.
+   * submitted together with `pickupSla`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Expected date that an order will be ready for pickup relative to the order date. Must be
-   * submitted together with pickupMethod.
+   * submitted together with `pickupMethod`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.Long quantity;
 
   /**
-   * Sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * Sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#localInventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#localInventory`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -147,7 +147,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#localInventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#localInventory`"
    * @param kind kind or {@code null} for none
    */
   public LocalInventory setKind(java.lang.String kind) {
@@ -157,7 +157,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
-   * submitted together with pickupSla.
+   * submitted together with `pickupSla`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupMethod() {
@@ -166,7 +166,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
-   * submitted together with pickupSla.
+   * submitted together with `pickupSla`.
    * @param pickupMethod pickupMethod or {@code null} for none
    */
   public LocalInventory setPickupMethod(java.lang.String pickupMethod) {
@@ -176,7 +176,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Expected date that an order will be ready for pickup relative to the order date. Must be
-   * submitted together with pickupMethod.
+   * submitted together with `pickupMethod`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupSla() {
@@ -185,7 +185,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Expected date that an order will be ready for pickup relative to the order date. Must be
-   * submitted together with pickupMethod.
+   * submitted together with `pickupMethod`.
    * @param pickupSla pickupSla or {@code null} for none
    */
   public LocalInventory setPickupSla(java.lang.String pickupSla) {
@@ -228,7 +228,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * Sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @return value or {@code null} for none
    */
   public Price getSalePrice() {
@@ -236,7 +236,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * Sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @param salePrice salePrice or {@code null} for none
    */
   public LocalInventory setSalePrice(Price salePrice) {

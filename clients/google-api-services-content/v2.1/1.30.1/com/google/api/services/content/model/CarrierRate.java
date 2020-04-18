@@ -31,24 +31,24 @@ package com.google.api.services.content.model;
 public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Carrier service, such as "UPS" or "Fedex". The list of supported carriers can be retrieved via
-   * the getSupportedCarriers method. Required.
+   * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be retrieved
+   * via the `getSupportedCarriers` method. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String carrierName;
 
   /**
-   * Carrier service, such as "ground" or "2 days". The list of supported services for a carrier can
-   * be retrieved via the getSupportedCarriers method. Required.
+   * Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for a carrier
+   * can be retrieved via the `getSupportedCarriers` method. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String carrierService;
 
   /**
-   * Additive shipping rate modifier. Can be negative. For example { "value": "1", "currency" :
-   * "USD" } adds $1 to the rate, { "value": "-3", "currency" : "USD" } removes $3 from the rate.
+   * Additive shipping rate modifier. Can be negative. For example `{ "value": "1", "currency" :
+   * "USD" }` adds $1 to the rate, `{ "value": "-3", "currency" : "USD" }` removes $3 from the rate.
    * Optional.
    * The value may be {@code null}.
    */
@@ -71,15 +71,15 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Multiplicative shipping rate modifier as a number in decimal notation. Can be negative. For
-   * example "5.4" increases the rate by 5.4%, "-3" decreases the rate by 3%. Optional.
+   * example `"5.4"` increases the rate by 5.4%, `"-3"` decreases the rate by 3%. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String percentageAdjustment;
 
   /**
-   * Carrier service, such as "UPS" or "Fedex". The list of supported carriers can be retrieved via
-   * the getSupportedCarriers method. Required.
+   * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be retrieved
+   * via the `getSupportedCarriers` method. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierName() {
@@ -87,8 +87,8 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Carrier service, such as "UPS" or "Fedex". The list of supported carriers can be retrieved via
-   * the getSupportedCarriers method. Required.
+   * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be retrieved
+   * via the `getSupportedCarriers` method. Required.
    * @param carrierName carrierName or {@code null} for none
    */
   public CarrierRate setCarrierName(java.lang.String carrierName) {
@@ -97,8 +97,8 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Carrier service, such as "ground" or "2 days". The list of supported services for a carrier can
-   * be retrieved via the getSupportedCarriers method. Required.
+   * Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for a carrier
+   * can be retrieved via the `getSupportedCarriers` method. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierService() {
@@ -106,8 +106,8 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Carrier service, such as "ground" or "2 days". The list of supported services for a carrier can
-   * be retrieved via the getSupportedCarriers method. Required.
+   * Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for a carrier
+   * can be retrieved via the `getSupportedCarriers` method. Required.
    * @param carrierService carrierService or {@code null} for none
    */
   public CarrierRate setCarrierService(java.lang.String carrierService) {
@@ -116,8 +116,8 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additive shipping rate modifier. Can be negative. For example { "value": "1", "currency" :
-   * "USD" } adds $1 to the rate, { "value": "-3", "currency" : "USD" } removes $3 from the rate.
+   * Additive shipping rate modifier. Can be negative. For example `{ "value": "1", "currency" :
+   * "USD" }` adds $1 to the rate, `{ "value": "-3", "currency" : "USD" }` removes $3 from the rate.
    * Optional.
    * @return value or {@code null} for none
    */
@@ -126,8 +126,8 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additive shipping rate modifier. Can be negative. For example { "value": "1", "currency" :
-   * "USD" } adds $1 to the rate, { "value": "-3", "currency" : "USD" } removes $3 from the rate.
+   * Additive shipping rate modifier. Can be negative. For example `{ "value": "1", "currency" :
+   * "USD" }` adds $1 to the rate, `{ "value": "-3", "currency" : "USD" }` removes $3 from the rate.
    * Optional.
    * @param flatAdjustment flatAdjustment or {@code null} for none
    */
@@ -172,7 +172,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Multiplicative shipping rate modifier as a number in decimal notation. Can be negative. For
-   * example "5.4" increases the rate by 5.4%, "-3" decreases the rate by 3%. Optional.
+   * example `"5.4"` increases the rate by 5.4%, `"-3"` decreases the rate by 3%. Optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getPercentageAdjustment() {
@@ -181,7 +181,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Multiplicative shipping rate modifier as a number in decimal notation. Can be negative. For
-   * example "5.4" increases the rate by 5.4%, "-3" decreases the rate by 3%. Optional.
+   * example `"5.4"` increases the rate by 5.4%, `"-3"` decreases the rate by 3%. Optional.
    * @param percentageAdjustment percentageAdjustment or {@code null} for none
    */
   public CarrierRate setPercentageAdjustment(java.lang.String percentageAdjustment) {

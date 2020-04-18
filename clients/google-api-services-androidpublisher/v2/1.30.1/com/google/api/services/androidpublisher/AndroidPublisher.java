@@ -2546,15 +2546,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Deobfuscationfiles {
 
       /**
-       * Uploads the deobfuscation file of the specified APK. If a deobfuscation file already exists, it
-       * will be replaced.
+       * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
+       * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
+       * to learn more about deobfuscation files.
        *
        * Create a request for the method "deobfuscationfiles.upload".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier of the Android app for which the deobfuscatiuon files are being uploaded; for
+       * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
        *        example, "com.spiffygame".
        * @param editId Unique identifier for this edit.
        * @param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.
@@ -2568,8 +2569,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * Uploads the deobfuscation file of the specified APK. If a deobfuscation file already exists, it
-       * will be replaced.
+       * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
+       * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
+       * to learn more about deobfuscation files.
        *
        * Create a request for the method "deobfuscationfiles.upload".
        *
@@ -2580,7 +2582,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier of the Android app for which the deobfuscatiuon files are being uploaded; for
+       * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
        *        example, "com.spiffygame".@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.@param deobfuscationFileType
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
@@ -2597,8 +2599,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}";
 
         /**
-         * Uploads the deobfuscation file of the specified APK. If a deobfuscation file already exists, it
-         * will be replaced.
+         * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
+         * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
+         * to learn more about deobfuscation files.
          *
          * Create a request for the method "deobfuscationfiles.upload".
          *
@@ -2608,7 +2611,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier of the Android app for which the deobfuscatiuon files are being uploaded; for
+         * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
        *        example, "com.spiffygame".
          * @param editId Unique identifier for this edit.
          * @param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.
@@ -2624,8 +2627,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Uploads the deobfuscation file of the specified APK. If a deobfuscation file already exists, it
-         * will be replaced.
+         * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
+         * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
+         * to learn more about deobfuscation files.
          *
          * Create a request for the method "deobfuscationfiles.upload".
          *
@@ -2639,7 +2643,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier of the Android app for which the deobfuscatiuon files are being uploaded; for
+         * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
        *        example, "com.spiffygame".@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.@param deobfuscationFileType
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
@@ -2689,13 +2693,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Unique identifier of the Android app for which the deobfuscatiuon files are being
+         * Unique identifier of the Android app for which the deobfuscation files are being
          * uploaded; for example, "com.spiffygame".
          */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier of the Android app for which the deobfuscatiuon files are being uploaded; for
+        /** Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
        example, "com.spiffygame".
          */
         public java.lang.String getPackageName() {
@@ -2703,7 +2707,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Unique identifier of the Android app for which the deobfuscatiuon files are being
+         * Unique identifier of the Android app for which the deobfuscation files are being
          * uploaded; for example, "com.spiffygame".
          */
         public Upload setPackageName(java.lang.String packageName) {

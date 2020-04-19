@@ -30,16 +30,14 @@ package com.google.api.services.cloudtasks.v2.model;
 public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GetPolicyOptions options;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * @return value or {@code null} for none
    */
   public GetPolicyOptions getOptions() {
@@ -47,8 +45,7 @@ public final class GetIamPolicyRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * @param options options or {@code null} for none
    */
   public GetIamPolicyRequest setOptions(GetPolicyOptions options) {

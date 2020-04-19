@@ -20,8 +20,8 @@ package com.google.api.services.datacatalog.v1beta1.model;
  * Tags are used to attach custom metadata to Data Catalog resources. Tags conform to the
  * specifications within their tag template.
  *
- * See [Data Catalog IAM](/data-catalog/docs/concepts/iam) for information on the permissions needed
- * to create or view tags.
+ * See [Data Catalog IAM](https://cloud.google.com/data-catalog/docs/concepts/iam) for information
+ * on the permissions needed to create or view tags.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed

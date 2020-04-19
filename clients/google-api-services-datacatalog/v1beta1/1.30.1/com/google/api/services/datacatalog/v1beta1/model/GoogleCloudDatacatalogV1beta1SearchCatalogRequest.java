@@ -67,8 +67,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
    * * name:x * column:x * description:y
    *
    * Note: Query tokens need to have a minimum of 3 characters for substring matching to work
-   * correctly. See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for
-   * more information.
+   * correctly. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to
+   * /search-reference) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +158,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
    * * name:x * column:x * description:y
    *
    * Note: Query tokens need to have a minimum of 3 characters for substring matching to work
-   * correctly. See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for
-   * more information.
+   * correctly. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to
+   * /search-reference) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -174,8 +174,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
    * * name:x * column:x * description:y
    *
    * Note: Query tokens need to have a minimum of 3 characters for substring matching to work
-   * correctly. See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for
-   * more information.
+   * correctly. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to
+   * /search-reference) for more information.
    * @param query query or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequest setQuery(java.lang.String query) {

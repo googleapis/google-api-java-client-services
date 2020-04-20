@@ -33,11 +33,11 @@ public final class ShipmentTrackingInfo extends com.google.api.client.json.Gener
   /**
    * The shipping carrier that handles the package.
    *
-   * Acceptable values are:   - "boxtal"  - "bpost"  - "chronopost"  - "colisPrive"  - "colissimo"
-   * - "cxt"  - "deliv"  - "dhl"  - "dpd"  - "dynamex"  - "eCourier"  - "easypost"  - "efw"  -
-   * "fedex"  - "fedexSmartpost"  - "geodis"  - "gls"  - "googleCourier"  - "gsx"  - "jdLogistics"
-   * - "laPoste"  - "lasership"  - "manual"  - "mpx"  - "onTrac"  - "other"  - "tnt"  - "uds"  -
-   * "ups"  - "usps"
+   * Acceptable values are:   - "`boxtal`"  - "`bpost`"  - "`chronopost`"  - "`colisPrive`"  -
+   * "`colissimo`"  - "`cxt`"  - "`deliv`"  - "`dhl`"  - "`dpd`"  - "`dynamex`"  - "`eCourier`"  -
+   * "`easypost`"  - "`efw`"  - "`fedex`"  - "`fedexSmartpost`"  - "`geodis`"  - "`gls`"  -
+   * "`googleCourier`"  - "`gsx`"  - "`jdLogistics`"  - "`laPoste`"  - "`lasership`"  - "`manual`"
+   * - "`mpx`"  - "`onTrac`"  - "`other`"  - "`tnt`"  - "`uds`"  - "`ups`"  - "`usps`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,11 +53,11 @@ public final class ShipmentTrackingInfo extends com.google.api.client.json.Gener
   /**
    * The shipping carrier that handles the package.
    *
-   * Acceptable values are:   - "boxtal"  - "bpost"  - "chronopost"  - "colisPrive"  - "colissimo"
-   * - "cxt"  - "deliv"  - "dhl"  - "dpd"  - "dynamex"  - "eCourier"  - "easypost"  - "efw"  -
-   * "fedex"  - "fedexSmartpost"  - "geodis"  - "gls"  - "googleCourier"  - "gsx"  - "jdLogistics"
-   * - "laPoste"  - "lasership"  - "manual"  - "mpx"  - "onTrac"  - "other"  - "tnt"  - "uds"  -
-   * "ups"  - "usps"
+   * Acceptable values are:   - "`boxtal`"  - "`bpost`"  - "`chronopost`"  - "`colisPrive`"  -
+   * "`colissimo`"  - "`cxt`"  - "`deliv`"  - "`dhl`"  - "`dpd`"  - "`dynamex`"  - "`eCourier`"  -
+   * "`easypost`"  - "`efw`"  - "`fedex`"  - "`fedexSmartpost`"  - "`geodis`"  - "`gls`"  -
+   * "`googleCourier`"  - "`gsx`"  - "`jdLogistics`"  - "`laPoste`"  - "`lasership`"  - "`manual`"
+   * - "`mpx`"  - "`onTrac`"  - "`other`"  - "`tnt`"  - "`uds`"  - "`ups`"  - "`usps`"
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -67,11 +67,11 @@ public final class ShipmentTrackingInfo extends com.google.api.client.json.Gener
   /**
    * The shipping carrier that handles the package.
    *
-   * Acceptable values are:   - "boxtal"  - "bpost"  - "chronopost"  - "colisPrive"  - "colissimo"
-   * - "cxt"  - "deliv"  - "dhl"  - "dpd"  - "dynamex"  - "eCourier"  - "easypost"  - "efw"  -
-   * "fedex"  - "fedexSmartpost"  - "geodis"  - "gls"  - "googleCourier"  - "gsx"  - "jdLogistics"
-   * - "laPoste"  - "lasership"  - "manual"  - "mpx"  - "onTrac"  - "other"  - "tnt"  - "uds"  -
-   * "ups"  - "usps"
+   * Acceptable values are:   - "`boxtal`"  - "`bpost`"  - "`chronopost`"  - "`colisPrive`"  -
+   * "`colissimo`"  - "`cxt`"  - "`deliv`"  - "`dhl`"  - "`dpd`"  - "`dynamex`"  - "`eCourier`"  -
+   * "`easypost`"  - "`efw`"  - "`fedex`"  - "`fedexSmartpost`"  - "`geodis`"  - "`gls`"  -
+   * "`googleCourier`"  - "`gsx`"  - "`jdLogistics`"  - "`laPoste`"  - "`lasership`"  - "`manual`"
+   * - "`mpx`"  - "`onTrac`"  - "`other`"  - "`tnt`"  - "`uds`"  - "`ups`"  - "`usps`"
    * @param carrier carrier or {@code null} for none
    */
   public ShipmentTrackingInfo setCarrier(java.lang.String carrier) {

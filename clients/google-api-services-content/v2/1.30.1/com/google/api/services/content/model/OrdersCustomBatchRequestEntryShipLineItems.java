@@ -32,7 +32,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItems extends com.google
 
   /**
    * Deprecated. Please use shipmentInfo instead. The carrier handling the shipment. See
-   * shipments[].carrier in the  Orders resource representation for a list of acceptable values.
+   * `shipments[].carrier` in the  Orders resource representation for a list of acceptable values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItems extends com.google
 
   /**
    * Deprecated. Please use shipmentInfo instead. The carrier handling the shipment. See
-   * shipments[].carrier in the  Orders resource representation for a list of acceptable values.
+   * `shipments[].carrier` in the  Orders resource representation for a list of acceptable values.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -91,7 +91,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItems extends com.google
 
   /**
    * Deprecated. Please use shipmentInfo instead. The carrier handling the shipment. See
-   * shipments[].carrier in the  Orders resource representation for a list of acceptable values.
+   * `shipments[].carrier` in the  Orders resource representation for a list of acceptable values.
    * @param carrier carrier or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryShipLineItems setCarrier(java.lang.String carrier) {

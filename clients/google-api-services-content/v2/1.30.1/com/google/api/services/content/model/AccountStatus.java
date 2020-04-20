@@ -53,7 +53,7 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   private java.util.List<AccountStatusDataQualityIssue> dataQualityIssues;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#accountStatus".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#accountStatus`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#accountStatus".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#accountStatus`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -134,7 +134,7 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#accountStatus".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#accountStatus`"
    * @param kind kind or {@code null} for none
    */
   public AccountStatus setKind(java.lang.String kind) {

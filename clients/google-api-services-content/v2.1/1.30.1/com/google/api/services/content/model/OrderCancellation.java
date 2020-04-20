@@ -33,8 +33,8 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
   /**
    * The actor that created the cancellation.
    *
-   * Acceptable values are:   - "customer"  - "googleBot"  - "googleCustomerService"  -
-   * "googlePayments"  - "googleSabre"  - "merchant"
+   * Acceptable values are:   - "`customer`"  - "`googleBot`"  - "`googleCustomerService`"  -
+   * "`googlePayments`"  - "`googleSabre`"  - "`merchant`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,15 +59,16 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
    * to the removal of the product from Shopping Actions until you make an update to that product.
    * This will not affect your Shopping ads.
    *
-   * Acceptable values are:   - "autoPostInternal"  - "autoPostInvalidBillingAddress"  -
-   * "autoPostNoInventory"  - "autoPostPriceError"  - "autoPostUndeliverableShippingAddress"  -
-   * "couponAbuse"  - "customerCanceled"  - "customerInitiatedCancel"  - "customerSupportRequested"
-   * - "failToPushOrderGoogleError"  - "failToPushOrderMerchantError"  -
-   * "failToPushOrderMerchantFulfillmentError"  - "failToPushOrderToMerchant"  -
-   * "failToPushOrderToMerchantOutOfStock"  - "invalidCoupon"  - "malformedShippingAddress"  -
-   * "merchantDidNotShipOnTime"  - "noInventory"  - "orderTimeout"  - "other"  - "paymentAbuse"  -
-   * "paymentDeclined"  - "priceError"  - "returnRefundAbuse"  - "shippingPriceError"  - "taxError"
-   * - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
+   * Acceptable values are:   - "`autoPostInternal`"  - "`autoPostInvalidBillingAddress`"  -
+   * "`autoPostNoInventory`"  - "`autoPostPriceError`"  - "`autoPostUndeliverableShippingAddress`"
+   * - "`couponAbuse`"  - "`customerCanceled`"  - "`customerInitiatedCancel`"  -
+   * "`customerSupportRequested`"  - "`failToPushOrderGoogleError`"  -
+   * "`failToPushOrderMerchantError`"  - "`failToPushOrderMerchantFulfillmentError`"  -
+   * "`failToPushOrderToMerchant`"  - "`failToPushOrderToMerchantOutOfStock`"  - "`invalidCoupon`"
+   * - "`malformedShippingAddress`"  - "`merchantDidNotShipOnTime`"  - "`noInventory`"  -
+   * "`orderTimeout`"  - "`other`"  - "`paymentAbuse`"  - "`paymentDeclined`"  - "`priceError`"  -
+   * "`returnRefundAbuse`"  - "`shippingPriceError`"  - "`taxError`"  -
+   * "`undeliverableShippingAddress`"  - "`unsupportedPoBoxAddress`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +84,8 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
   /**
    * The actor that created the cancellation.
    *
-   * Acceptable values are:   - "customer"  - "googleBot"  - "googleCustomerService"  -
-   * "googlePayments"  - "googleSabre"  - "merchant"
+   * Acceptable values are:   - "`customer`"  - "`googleBot`"  - "`googleCustomerService`"  -
+   * "`googlePayments`"  - "`googleSabre`"  - "`merchant`"
    * @return value or {@code null} for none
    */
   public java.lang.String getActor() {
@@ -94,8 +95,8 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
   /**
    * The actor that created the cancellation.
    *
-   * Acceptable values are:   - "customer"  - "googleBot"  - "googleCustomerService"  -
-   * "googlePayments"  - "googleSabre"  - "merchant"
+   * Acceptable values are:   - "`customer`"  - "`googleBot`"  - "`googleCustomerService`"  -
+   * "`googlePayments`"  - "`googleSabre`"  - "`merchant`"
    * @param actor actor or {@code null} for none
    */
   public OrderCancellation setActor(java.lang.String actor) {
@@ -142,15 +143,16 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
    * to the removal of the product from Shopping Actions until you make an update to that product.
    * This will not affect your Shopping ads.
    *
-   * Acceptable values are:   - "autoPostInternal"  - "autoPostInvalidBillingAddress"  -
-   * "autoPostNoInventory"  - "autoPostPriceError"  - "autoPostUndeliverableShippingAddress"  -
-   * "couponAbuse"  - "customerCanceled"  - "customerInitiatedCancel"  - "customerSupportRequested"
-   * - "failToPushOrderGoogleError"  - "failToPushOrderMerchantError"  -
-   * "failToPushOrderMerchantFulfillmentError"  - "failToPushOrderToMerchant"  -
-   * "failToPushOrderToMerchantOutOfStock"  - "invalidCoupon"  - "malformedShippingAddress"  -
-   * "merchantDidNotShipOnTime"  - "noInventory"  - "orderTimeout"  - "other"  - "paymentAbuse"  -
-   * "paymentDeclined"  - "priceError"  - "returnRefundAbuse"  - "shippingPriceError"  - "taxError"
-   * - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
+   * Acceptable values are:   - "`autoPostInternal`"  - "`autoPostInvalidBillingAddress`"  -
+   * "`autoPostNoInventory`"  - "`autoPostPriceError`"  - "`autoPostUndeliverableShippingAddress`"
+   * - "`couponAbuse`"  - "`customerCanceled`"  - "`customerInitiatedCancel`"  -
+   * "`customerSupportRequested`"  - "`failToPushOrderGoogleError`"  -
+   * "`failToPushOrderMerchantError`"  - "`failToPushOrderMerchantFulfillmentError`"  -
+   * "`failToPushOrderToMerchant`"  - "`failToPushOrderToMerchantOutOfStock`"  - "`invalidCoupon`"
+   * - "`malformedShippingAddress`"  - "`merchantDidNotShipOnTime`"  - "`noInventory`"  -
+   * "`orderTimeout`"  - "`other`"  - "`paymentAbuse`"  - "`paymentDeclined`"  - "`priceError`"  -
+   * "`returnRefundAbuse`"  - "`shippingPriceError`"  - "`taxError`"  -
+   * "`undeliverableShippingAddress`"  - "`unsupportedPoBoxAddress`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -162,15 +164,16 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
    * to the removal of the product from Shopping Actions until you make an update to that product.
    * This will not affect your Shopping ads.
    *
-   * Acceptable values are:   - "autoPostInternal"  - "autoPostInvalidBillingAddress"  -
-   * "autoPostNoInventory"  - "autoPostPriceError"  - "autoPostUndeliverableShippingAddress"  -
-   * "couponAbuse"  - "customerCanceled"  - "customerInitiatedCancel"  - "customerSupportRequested"
-   * - "failToPushOrderGoogleError"  - "failToPushOrderMerchantError"  -
-   * "failToPushOrderMerchantFulfillmentError"  - "failToPushOrderToMerchant"  -
-   * "failToPushOrderToMerchantOutOfStock"  - "invalidCoupon"  - "malformedShippingAddress"  -
-   * "merchantDidNotShipOnTime"  - "noInventory"  - "orderTimeout"  - "other"  - "paymentAbuse"  -
-   * "paymentDeclined"  - "priceError"  - "returnRefundAbuse"  - "shippingPriceError"  - "taxError"
-   * - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
+   * Acceptable values are:   - "`autoPostInternal`"  - "`autoPostInvalidBillingAddress`"  -
+   * "`autoPostNoInventory`"  - "`autoPostPriceError`"  - "`autoPostUndeliverableShippingAddress`"
+   * - "`couponAbuse`"  - "`customerCanceled`"  - "`customerInitiatedCancel`"  -
+   * "`customerSupportRequested`"  - "`failToPushOrderGoogleError`"  -
+   * "`failToPushOrderMerchantError`"  - "`failToPushOrderMerchantFulfillmentError`"  -
+   * "`failToPushOrderToMerchant`"  - "`failToPushOrderToMerchantOutOfStock`"  - "`invalidCoupon`"
+   * - "`malformedShippingAddress`"  - "`merchantDidNotShipOnTime`"  - "`noInventory`"  -
+   * "`orderTimeout`"  - "`other`"  - "`paymentAbuse`"  - "`paymentDeclined`"  - "`priceError`"  -
+   * "`returnRefundAbuse`"  - "`shippingPriceError`"  - "`taxError`"  -
+   * "`undeliverableShippingAddress`"  - "`unsupportedPoBoxAddress`"
    * @param reason reason or {@code null} for none
    */
   public OrderCancellation setReason(java.lang.String reason) {

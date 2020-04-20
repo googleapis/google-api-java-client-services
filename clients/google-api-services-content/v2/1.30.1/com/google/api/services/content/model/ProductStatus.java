@@ -66,7 +66,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   private java.util.List<ProductStatusItemLevelIssue> itemLevelIssues;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#productStatus".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#productStatus`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +193,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#productStatus".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#productStatus`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -201,7 +201,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#productStatus".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#productStatus`"
    * @param kind kind or {@code null} for none
    */
   public ProductStatus setKind(java.lang.String kind) {

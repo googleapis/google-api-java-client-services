@@ -40,7 +40,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> applicableShippingLabels;
 
   /**
-   * A list of carrier rates that can be referred to by mainTable or singleValue.
+   * A list of carrier rates that can be referred to by `mainTable` or `singleValue`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A table defining the rate group, when singleValue is not expressive enough. Can only be set if
-   * singleValue is not set.
+   * A table defining the rate group, when `singleValue` is not expressive enough. Can only be set
+   * if `singleValue` is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,15 +68,15 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The value of the rate group (e.g. flat rate $10). Can only be set if mainTable and subtables
-   * are not set.
+   * The value of the rate group (e.g. flat rate $10). Can only be set if `mainTable` and
+   * `subtables` are not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Value singleValue;
 
   /**
-   * A list of subtables referred to by mainTable. Can only be set if mainTable is set.
+   * A list of subtables referred to by `mainTable`. Can only be set if `mainTable` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of carrier rates that can be referred to by mainTable or singleValue.
+   * A list of carrier rates that can be referred to by `mainTable` or `singleValue`.
    * @return value or {@code null} for none
    */
   public java.util.List<CarrierRate> getCarrierRates() {
@@ -112,7 +112,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of carrier rates that can be referred to by mainTable or singleValue.
+   * A list of carrier rates that can be referred to by `mainTable` or `singleValue`.
    * @param carrierRates carrierRates or {@code null} for none
    */
   public RateGroup setCarrierRates(java.util.List<CarrierRate> carrierRates) {
@@ -121,8 +121,8 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A table defining the rate group, when singleValue is not expressive enough. Can only be set if
-   * singleValue is not set.
+   * A table defining the rate group, when `singleValue` is not expressive enough. Can only be set
+   * if `singleValue` is not set.
    * @return value or {@code null} for none
    */
   public Table getMainTable() {
@@ -130,8 +130,8 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A table defining the rate group, when singleValue is not expressive enough. Can only be set if
-   * singleValue is not set.
+   * A table defining the rate group, when `singleValue` is not expressive enough. Can only be set
+   * if `singleValue` is not set.
    * @param mainTable mainTable or {@code null} for none
    */
   public RateGroup setMainTable(Table mainTable) {
@@ -157,8 +157,8 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the rate group (e.g. flat rate $10). Can only be set if mainTable and subtables
-   * are not set.
+   * The value of the rate group (e.g. flat rate $10). Can only be set if `mainTable` and
+   * `subtables` are not set.
    * @return value or {@code null} for none
    */
   public Value getSingleValue() {
@@ -166,8 +166,8 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the rate group (e.g. flat rate $10). Can only be set if mainTable and subtables
-   * are not set.
+   * The value of the rate group (e.g. flat rate $10). Can only be set if `mainTable` and
+   * `subtables` are not set.
    * @param singleValue singleValue or {@code null} for none
    */
   public RateGroup setSingleValue(Value singleValue) {
@@ -176,7 +176,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of subtables referred to by mainTable. Can only be set if mainTable is set.
+   * A list of subtables referred to by `mainTable`. Can only be set if `mainTable` is set.
    * @return value or {@code null} for none
    */
   public java.util.List<Table> getSubtables() {
@@ -184,7 +184,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of subtables referred to by mainTable. Can only be set if mainTable is set.
+   * A list of subtables referred to by `mainTable`. Can only be set if `mainTable` is set.
    * @param subtables subtables or {@code null} for none
    */
   public RateGroup setSubtables(java.util.List<Table> subtables) {

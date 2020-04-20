@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for Inventory.
+ * (== resource_for v2.inventory ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -33,7 +33,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   /**
    * The availability of the product.
    *
-   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
+   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   private java.lang.String instoreProductLocation;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#inventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#inventory`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,9 +108,9 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   private LoyaltyPoints loyaltyPoints;
 
   /**
-   * Store pickup information. Only supported for local inventory. Not setting pickup means "don't
-   * update" while setting it to the empty value ({} in JSON) means "delete". Otherwise,
-   * pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
+   * Store pickup information. Only supported for local inventory. Not setting `pickup` means "don't
+   * update" while setting it to the empty value (`{}` in JSON) means "delete". Otherwise,
+   * `pickupMethod` and `pickupSla` must be set together, unless `pickupMethod` is "not supported".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   private java.lang.Long quantity;
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   /**
    * The availability of the product.
    *
-   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
+   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -167,7 +167,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   /**
    * The availability of the product.
    *
-   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
+   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
    * @param availability availability or {@code null} for none
    */
   public Inventory setAvailability(java.lang.String availability) {
@@ -305,7 +305,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#inventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#inventory`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -313,7 +313,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#inventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#inventory`"
    * @param kind kind or {@code null} for none
    */
   public Inventory setKind(java.lang.String kind) {
@@ -339,9 +339,9 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Store pickup information. Only supported for local inventory. Not setting pickup means "don't
-   * update" while setting it to the empty value ({} in JSON) means "delete". Otherwise,
-   * pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
+   * Store pickup information. Only supported for local inventory. Not setting `pickup` means "don't
+   * update" while setting it to the empty value (`{}` in JSON) means "delete". Otherwise,
+   * `pickupMethod` and `pickupSla` must be set together, unless `pickupMethod` is "not supported".
    * @return value or {@code null} for none
    */
   public InventoryPickup getPickup() {
@@ -349,9 +349,9 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Store pickup information. Only supported for local inventory. Not setting pickup means "don't
-   * update" while setting it to the empty value ({} in JSON) means "delete". Otherwise,
-   * pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
+   * Store pickup information. Only supported for local inventory. Not setting `pickup` means "don't
+   * update" while setting it to the empty value (`{}` in JSON) means "delete". Otherwise,
+   * `pickupMethod` and `pickupSla` must be set together, unless `pickupMethod` is "not supported".
    * @param pickup pickup or {@code null} for none
    */
   public Inventory setPickup(InventoryPickup pickup) {
@@ -396,7 +396,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @return value or {@code null} for none
    */
   public Price getSalePrice() {
@@ -404,7 +404,7 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The sale price of the product. Mandatory if sale_price_effective_date is defined.
+   * The sale price of the product. Mandatory if `sale_price_effective_date` is defined.
    * @param salePrice salePrice or {@code null} for none
    */
   public Inventory setSalePrice(Price salePrice) {

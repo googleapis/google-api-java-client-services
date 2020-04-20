@@ -73,7 +73,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   private java.lang.String gmbEmail;
 
   /**
-   * The account Lia settings to update. Only defined if the method is update.
+   * The account Lia settings to update. Only defined if the method is `update`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"  - "getAccessibleGmbAccounts"  - "requestGmbAccess"  -
-   * "requestInventoryVerification"  - "setInventoryVerificationContact"  - "update"
+   * Acceptable values are:   - "`get`"  - "`getAccessibleGmbAccounts`"  - "`requestGmbAccess`"  -
+   * "`requestInventoryVerification`"  - "`setInventoryVerificationContact`"  - "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +213,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   }
 
   /**
-   * The account Lia settings to update. Only defined if the method is update.
+   * The account Lia settings to update. Only defined if the method is `update`.
    * @return value or {@code null} for none
    */
   public LiaSettings getLiaSettings() {
@@ -221,7 +221,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   }
 
   /**
-   * The account Lia settings to update. Only defined if the method is update.
+   * The account Lia settings to update. Only defined if the method is `update`.
    * @param liaSettings liaSettings or {@code null} for none
    */
   public LiasettingsCustomBatchRequestEntry setLiaSettings(LiaSettings liaSettings) {
@@ -249,8 +249,8 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"  - "getAccessibleGmbAccounts"  - "requestGmbAccess"  -
-   * "requestInventoryVerification"  - "setInventoryVerificationContact"  - "update"
+   * Acceptable values are:   - "`get`"  - "`getAccessibleGmbAccounts`"  - "`requestGmbAccess`"  -
+   * "`requestInventoryVerification`"  - "`setInventoryVerificationContact`"  - "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -260,8 +260,8 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"  - "getAccessibleGmbAccounts"  - "requestGmbAccess"  -
-   * "requestInventoryVerification"  - "setInventoryVerificationContact"  - "update"
+   * Acceptable values are:   - "`get`"  - "`getAccessibleGmbAccounts`"  - "`requestGmbAccess`"  -
+   * "`requestInventoryVerification`"  - "`setInventoryVerificationContact`"  - "`update`"
    * @param method method or {@code null} for none
    */
   public LiasettingsCustomBatchRequestEntry setMethod(java.lang.String method) {

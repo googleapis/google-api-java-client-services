@@ -18,6 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * Order. Production access (all methods) requires the order manager role. Sandbox access does not.
+ * (== resource_for v2.orders ==) (== resource_for v2.1.orders ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -40,7 +41,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated.
    *
-   * Acceptable values are:   - "googleExpress"  - "purchasesOnGoogle"
+   * Acceptable values are:   - "`googleExpress`"  - "`purchasesOnGoogle`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private OrderCustomer customer;
 
   /**
-   * Delivery details for shipments of type delivery.
+   * Delivery details for shipments of type `delivery`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#order".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#order`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,15 +113,15 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The status of the payment.
    *
-   * Acceptable values are:   - "paymentCaptured"  - "paymentRejected"  - "paymentSecured"  -
-   * "pendingAuthorization"
+   * Acceptable values are:   - "`paymentCaptured`"  - "`paymentRejected`"  - "`paymentSecured`"  -
+   * "`pendingAuthorization`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String paymentStatus;
 
   /**
-   * Pickup details for shipments of type pickup.
+   * Pickup details for shipments of type `pickup`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,16 +138,16 @@ public final class Order extends com.google.api.client.json.GenericJson {
    * The details of the merchant provided promotions applied to the order.
    *
    * To determine which promotions apply to which products, check the
-   * Promotions[].Benefits[].OfferIds field against the LineItems[].Product.OfferId field for each
-   * promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the
-   * number of affected offers to determine how much discount to apply to each offerId.
+   * `Promotions[].Benefits[].OfferIds` field against the `LineItems[].Product.OfferId` field for
+   * each promotion. If a promotion is applied to more than 1 `offerId`, divide the discount value
+   * by the number of affected offers to determine how much discount to apply to each `offerId`.
    *
    * Examples:   - To calculate the line item level discount for a single specific item: For each
-   * promotion, subtract the Promotions[].Benefits[].Discount.value amount from the
-   * LineItems[].Price.value.  - To calculate the line item level discount for multiple quantity of
-   * a specific item: For each promotion, divide the Promotions[].Benefits[].Discount.value by the
-   * quantity of products and substract it from LineItems[].Product.Price.value for each quantity
-   * item.
+   * promotion, subtract the `Promotions[].Benefits[].Discount.value` amount from the
+   * `LineItems[].Price.value`.  - To calculate the line item level discount for multiple quantity
+   * of a specific item: For each promotion, divide the `Promotions[].Benefits[].Discount.value` by
+   * the quantity of products and substract it from `LineItems[].Product.Price.value` for each
+   * quantity item.
    *
    * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
    * promotion applied to it, make sure to refund the amount after first subtracting the promotion
@@ -189,8 +190,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated. Shipping details are provided with line items instead.
    *
-   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
-   * "twoDay"
+   * Acceptable values are:   - "`economy`"  - "`expedited`"  - "`oneDay`"  - "`sameDay`"  -
+   * "`standard`"  - "`twoDay`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,8 +200,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The status of the order.
    *
-   * Acceptable values are:   - "canceled"  - "delivered"  - "inProgress"  - "partiallyDelivered"  -
-   * "partiallyReturned"  - "partiallyShipped"  - "pendingShipment"  - "returned"  - "shipped"
+   * Acceptable values are:   - "`canceled`"  - "`delivered`"  - "`inProgress`"  -
+   * "`partiallyDelivered`"  - "`partiallyReturned`"  - "`partiallyShipped`"  - "`pendingShipment`"
+   * - "`returned`"  - "`shipped`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +211,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The party responsible for collecting and remitting taxes.
    *
-   * Acceptable values are:   - "marketplaceFacilitator"  - "merchant"
+   * Acceptable values are:   - "`marketplaceFacilitator`"  - "`merchant`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,7 +237,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated.
    *
-   * Acceptable values are:   - "googleExpress"  - "purchasesOnGoogle"
+   * Acceptable values are:   - "`googleExpress`"  - "`purchasesOnGoogle`"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelType() {
@@ -245,7 +247,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated.
    *
-   * Acceptable values are:   - "googleExpress"  - "purchasesOnGoogle"
+   * Acceptable values are:   - "`googleExpress`"  - "`purchasesOnGoogle`"
    * @param channelType channelType or {@code null} for none
    */
   public Order setChannelType(java.lang.String channelType) {
@@ -271,7 +273,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Delivery details for shipments of type delivery.
+   * Delivery details for shipments of type `delivery`.
    * @return value or {@code null} for none
    */
   public OrderDeliveryDetails getDeliveryDetails() {
@@ -279,7 +281,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Delivery details for shipments of type delivery.
+   * Delivery details for shipments of type `delivery`.
    * @param deliveryDetails deliveryDetails or {@code null} for none
    */
   public Order setDeliveryDetails(OrderDeliveryDetails deliveryDetails) {
@@ -305,7 +307,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#order".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#order`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -313,7 +315,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#order".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#order`"
    * @param kind kind or {@code null} for none
    */
   public Order setKind(java.lang.String kind) {
@@ -409,8 +411,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The status of the payment.
    *
-   * Acceptable values are:   - "paymentCaptured"  - "paymentRejected"  - "paymentSecured"  -
-   * "pendingAuthorization"
+   * Acceptable values are:   - "`paymentCaptured`"  - "`paymentRejected`"  - "`paymentSecured`"  -
+   * "`pendingAuthorization`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPaymentStatus() {
@@ -420,8 +422,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The status of the payment.
    *
-   * Acceptable values are:   - "paymentCaptured"  - "paymentRejected"  - "paymentSecured"  -
-   * "pendingAuthorization"
+   * Acceptable values are:   - "`paymentCaptured`"  - "`paymentRejected`"  - "`paymentSecured`"  -
+   * "`pendingAuthorization`"
    * @param paymentStatus paymentStatus or {@code null} for none
    */
   public Order setPaymentStatus(java.lang.String paymentStatus) {
@@ -430,7 +432,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Pickup details for shipments of type pickup.
+   * Pickup details for shipments of type `pickup`.
    * @return value or {@code null} for none
    */
   public OrderPickupDetails getPickupDetails() {
@@ -438,7 +440,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Pickup details for shipments of type pickup.
+   * Pickup details for shipments of type `pickup`.
    * @param pickupDetails pickupDetails or {@code null} for none
    */
   public Order setPickupDetails(OrderPickupDetails pickupDetails) {
@@ -467,16 +469,16 @@ public final class Order extends com.google.api.client.json.GenericJson {
    * The details of the merchant provided promotions applied to the order.
    *
    * To determine which promotions apply to which products, check the
-   * Promotions[].Benefits[].OfferIds field against the LineItems[].Product.OfferId field for each
-   * promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the
-   * number of affected offers to determine how much discount to apply to each offerId.
+   * `Promotions[].Benefits[].OfferIds` field against the `LineItems[].Product.OfferId` field for
+   * each promotion. If a promotion is applied to more than 1 `offerId`, divide the discount value
+   * by the number of affected offers to determine how much discount to apply to each `offerId`.
    *
    * Examples:   - To calculate the line item level discount for a single specific item: For each
-   * promotion, subtract the Promotions[].Benefits[].Discount.value amount from the
-   * LineItems[].Price.value.  - To calculate the line item level discount for multiple quantity of
-   * a specific item: For each promotion, divide the Promotions[].Benefits[].Discount.value by the
-   * quantity of products and substract it from LineItems[].Product.Price.value for each quantity
-   * item.
+   * promotion, subtract the `Promotions[].Benefits[].Discount.value` amount from the
+   * `LineItems[].Price.value`.  - To calculate the line item level discount for multiple quantity
+   * of a specific item: For each promotion, divide the `Promotions[].Benefits[].Discount.value` by
+   * the quantity of products and substract it from `LineItems[].Product.Price.value` for each
+   * quantity item.
    *
    * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
    * promotion applied to it, make sure to refund the amount after first subtracting the promotion
@@ -493,16 +495,16 @@ public final class Order extends com.google.api.client.json.GenericJson {
    * The details of the merchant provided promotions applied to the order.
    *
    * To determine which promotions apply to which products, check the
-   * Promotions[].Benefits[].OfferIds field against the LineItems[].Product.OfferId field for each
-   * promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the
-   * number of affected offers to determine how much discount to apply to each offerId.
+   * `Promotions[].Benefits[].OfferIds` field against the `LineItems[].Product.OfferId` field for
+   * each promotion. If a promotion is applied to more than 1 `offerId`, divide the discount value
+   * by the number of affected offers to determine how much discount to apply to each `offerId`.
    *
    * Examples:   - To calculate the line item level discount for a single specific item: For each
-   * promotion, subtract the Promotions[].Benefits[].Discount.value amount from the
-   * LineItems[].Price.value.  - To calculate the line item level discount for multiple quantity of
-   * a specific item: For each promotion, divide the Promotions[].Benefits[].Discount.value by the
-   * quantity of products and substract it from LineItems[].Product.Price.value for each quantity
-   * item.
+   * promotion, subtract the `Promotions[].Benefits[].Discount.value` amount from the
+   * `LineItems[].Price.value`.  - To calculate the line item level discount for multiple quantity
+   * of a specific item: For each promotion, divide the `Promotions[].Benefits[].Discount.value` by
+   * the quantity of products and substract it from `LineItems[].Product.Price.value` for each
+   * quantity item.
    *
    * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
    * promotion applied to it, make sure to refund the amount after first subtracting the promotion
@@ -587,8 +589,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated. Shipping details are provided with line items instead.
    *
-   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
-   * "twoDay"
+   * Acceptable values are:   - "`economy`"  - "`expedited`"  - "`oneDay`"  - "`sameDay`"  -
+   * "`standard`"  - "`twoDay`"
    * @return value or {@code null} for none
    */
   public java.lang.String getShippingOption() {
@@ -598,8 +600,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * Deprecated. Shipping details are provided with line items instead.
    *
-   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
-   * "twoDay"
+   * Acceptable values are:   - "`economy`"  - "`expedited`"  - "`oneDay`"  - "`sameDay`"  -
+   * "`standard`"  - "`twoDay`"
    * @param shippingOption shippingOption or {@code null} for none
    */
   public Order setShippingOption(java.lang.String shippingOption) {
@@ -610,8 +612,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The status of the order.
    *
-   * Acceptable values are:   - "canceled"  - "delivered"  - "inProgress"  - "partiallyDelivered"  -
-   * "partiallyReturned"  - "partiallyShipped"  - "pendingShipment"  - "returned"  - "shipped"
+   * Acceptable values are:   - "`canceled`"  - "`delivered`"  - "`inProgress`"  -
+   * "`partiallyDelivered`"  - "`partiallyReturned`"  - "`partiallyShipped`"  - "`pendingShipment`"
+   * - "`returned`"  - "`shipped`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -621,8 +624,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The status of the order.
    *
-   * Acceptable values are:   - "canceled"  - "delivered"  - "inProgress"  - "partiallyDelivered"  -
-   * "partiallyReturned"  - "partiallyShipped"  - "pendingShipment"  - "returned"  - "shipped"
+   * Acceptable values are:   - "`canceled`"  - "`delivered`"  - "`inProgress`"  -
+   * "`partiallyDelivered`"  - "`partiallyReturned`"  - "`partiallyShipped`"  - "`pendingShipment`"
+   * - "`returned`"  - "`shipped`"
    * @param status status or {@code null} for none
    */
   public Order setStatus(java.lang.String status) {
@@ -633,7 +637,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The party responsible for collecting and remitting taxes.
    *
-   * Acceptable values are:   - "marketplaceFacilitator"  - "merchant"
+   * Acceptable values are:   - "`marketplaceFacilitator`"  - "`merchant`"
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxCollector() {
@@ -643,7 +647,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   /**
    * The party responsible for collecting and remitting taxes.
    *
-   * Acceptable values are:   - "marketplaceFacilitator"  - "merchant"
+   * Acceptable values are:   - "`marketplaceFacilitator`"  - "`merchant`"
    * @param taxCollector taxCollector or {@code null} for none
    */
   public Order setTaxCollector(java.lang.String taxCollector) {

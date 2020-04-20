@@ -46,7 +46,7 @@ public final class InventoryCustomBatchResponseEntry extends com.google.api.clie
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#inventoryCustomBatchResponseEntry".
+   * "`content#inventoryCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class InventoryCustomBatchResponseEntry extends com.google.api.clie
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#inventoryCustomBatchResponseEntry".
+   * "`content#inventoryCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -97,7 +97,7 @@ public final class InventoryCustomBatchResponseEntry extends com.google.api.clie
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#inventoryCustomBatchResponseEntry".
+   * "`content#inventoryCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public InventoryCustomBatchResponseEntry setKind(java.lang.String kind) {

@@ -39,7 +39,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
 
   /**
    * [DEPRECATED] Please use targets[].language instead. The two-letter ISO 639-1 language of the
-   * items in the feed. Must be a valid language for targetCountry.
+   * items in the feed. Must be a valid language for `targetCountry`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
    * online stores, are supported.
    *
-   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
+   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> intendedDestinations;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#datafeed".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#datafeed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
 
   /**
    * [DEPRECATED] Please use targets[].language instead. The two-letter ISO 639-1 language of the
-   * items in the feed. Must be a valid language for targetCountry.
+   * items in the feed. Must be a valid language for `targetCountry`.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -148,7 +148,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
 
   /**
    * [DEPRECATED] Please use targets[].language instead. The two-letter ISO 639-1 language of the
-   * items in the feed. Must be a valid language for targetCountry.
+   * items in the feed. Must be a valid language for `targetCountry`.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public Datafeed setContentLanguage(java.lang.String contentLanguage) {
@@ -160,7 +160,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
    * online stores, are supported.
    *
-   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
+   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -171,7 +171,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
    * online stores, are supported.
    *
-   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
+   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
    * @param contentType contentType or {@code null} for none
    */
   public Datafeed setContentType(java.lang.String contentType) {
@@ -267,7 +267,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#datafeed".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#datafeed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -275,7 +275,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#datafeed".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#datafeed`"
    * @param kind kind or {@code null} for none
    */
   public Datafeed setKind(java.lang.String kind) {

@@ -38,7 +38,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String country;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#returnPolicy".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#returnPolicy`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#returnPolicy".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#returnPolicy`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -113,7 +113,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#returnPolicy".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#returnPolicy`"
    * @param kind kind or {@code null} for none
    */
   public ReturnPolicy setKind(java.lang.String kind) {

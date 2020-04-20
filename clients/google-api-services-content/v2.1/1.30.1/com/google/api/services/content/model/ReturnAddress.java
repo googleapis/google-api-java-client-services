@@ -45,7 +45,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   private java.lang.String country;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#returnAddress".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#returnAddress`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#returnAddress".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#returnAddress`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -116,7 +116,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#returnAddress".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#returnAddress`"
    * @param kind kind or {@code null} for none
    */
   public ReturnAddress setKind(java.lang.String kind) {

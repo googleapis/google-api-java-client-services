@@ -38,14 +38,15 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   private java.lang.String country;
 
   /**
-   * The name of the carrier (e.g., "UPS"). Always present.
+   * The name of the carrier (e.g., `"UPS"`). Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * A list of supported services (e.g., "ground") for that carrier. Contains at least one service.
+   * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
+   * service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the carrier (e.g., "UPS"). Always present.
+   * The name of the carrier (e.g., `"UPS"`). Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,7 +78,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the carrier (e.g., "UPS"). Always present.
+   * The name of the carrier (e.g., `"UPS"`). Always present.
    * @param name name or {@code null} for none
    */
   public CarriersCarrier setName(java.lang.String name) {
@@ -86,7 +87,8 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of supported services (e.g., "ground") for that carrier. Contains at least one service.
+   * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
+   * service.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -94,7 +96,8 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of supported services (e.g., "ground") for that carrier. Contains at least one service.
+   * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
+   * service.
    * @param services services or {@code null} for none
    */
   public CarriersCarrier setServices(java.util.List<java.lang.String> services) {

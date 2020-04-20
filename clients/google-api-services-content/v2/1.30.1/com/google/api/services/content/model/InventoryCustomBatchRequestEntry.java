@@ -59,7 +59,7 @@ public final class InventoryCustomBatchRequestEntry extends com.google.api.clien
   private java.lang.String productId;
 
   /**
-   * The code of the store for which to update price and availability. Use online to update price
+   * The code of the store for which to update price and availability. Use `online` to update price
    * and availability of an online product.
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class InventoryCustomBatchRequestEntry extends com.google.api.clien
   }
 
   /**
-   * The code of the store for which to update price and availability. Use online to update price
+   * The code of the store for which to update price and availability. Use `online` to update price
    * and availability of an online product.
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class InventoryCustomBatchRequestEntry extends com.google.api.clien
   }
 
   /**
-   * The code of the store for which to update price and availability. Use online to update price
+   * The code of the store for which to update price and availability. Use `online` to update price
    * and availability of an online product.
    * @param storeCode storeCode or {@code null} for none
    */

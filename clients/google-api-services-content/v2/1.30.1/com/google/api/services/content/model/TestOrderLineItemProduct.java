@@ -40,7 +40,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Deprecated.
    *
-   * Acceptable values are:   - "online"
+   * Acceptable values are:   - "`online`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Required. Condition or state of the item.
    *
-   * Acceptable values are:   - "new"
+   * Acceptable values are:   - "`new`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Required. The two-letter ISO 639-1 language code for the item.
    *
-   * Acceptable values are:   - "en"  - "fr"
+   * Acceptable values are:   - "`en`"  - "`fr`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +168,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Deprecated.
    *
-   * Acceptable values are:   - "online"
+   * Acceptable values are:   - "`online`"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -178,7 +178,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Deprecated.
    *
-   * Acceptable values are:   - "online"
+   * Acceptable values are:   - "`online`"
    * @param channel channel or {@code null} for none
    */
   public TestOrderLineItemProduct setChannel(java.lang.String channel) {
@@ -189,7 +189,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Required. Condition or state of the item.
    *
-   * Acceptable values are:   - "new"
+   * Acceptable values are:   - "`new`"
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -199,7 +199,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Required. Condition or state of the item.
    *
-   * Acceptable values are:   - "new"
+   * Acceptable values are:   - "`new`"
    * @param condition condition or {@code null} for none
    */
   public TestOrderLineItemProduct setCondition(java.lang.String condition) {
@@ -210,7 +210,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Required. The two-letter ISO 639-1 language code for the item.
    *
-   * Acceptable values are:   - "en"  - "fr"
+   * Acceptable values are:   - "`en`"  - "`fr`"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -220,7 +220,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   /**
    * Required. The two-letter ISO 639-1 language code for the item.
    *
-   * Acceptable values are:   - "en"  - "fr"
+   * Acceptable values are:   - "`en`"  - "`fr`"
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public TestOrderLineItemProduct setContentLanguage(java.lang.String contentLanguage) {

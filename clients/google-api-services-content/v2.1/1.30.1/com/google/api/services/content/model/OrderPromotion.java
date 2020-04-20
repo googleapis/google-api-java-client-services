@@ -39,7 +39,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.util.List<OrderPromotionItem> applicableItems;
 
   /**
-   * Items which this promotion have been applied to. Do not provide for orders.createtestorder.
+   * Items which this promotion have been applied to. Do not provide for `orders.createtestorder`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,10 +54,10 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String endTime;
 
   /**
-   * Required. The party funding the promotion. Only merchant is supported for
-   * orders.createtestorder.
+   * Required. The party funding the promotion. Only `merchant` is supported for
+   * `orders.createtestorder`.
    *
-   * Acceptable values are:   - "google"  - "merchant"
+   * Acceptable values are:   - "`google`"  - "`merchant`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
 
   /**
    * A short title of the promotion to be shown on the checkout page. Do not provide for
-   * orders.createtestorder.
+   * `orders.createtestorder`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,12 +95,13 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String startTime;
 
   /**
-   * Required. The category of the promotion. Only moneyOff is supported for orders.createtestorder.
+   * Required. The category of the promotion. Only `moneyOff` is supported for
+   * `orders.createtestorder`.
    *
-   * Acceptable values are:   - "buyMGetMoneyOff"  - "buyMGetNMoneyOff"  - "buyMGetNPercentOff"  -
-   * "buyMGetPercentOff"  - "freeGift"  - "freeGiftWithItemId"  - "freeGiftWithValue"  -
-   * "freeShippingOvernight"  - "freeShippingStandard"  - "freeShippingTwoDay"  - "moneyOff"  -
-   * "percentOff"  - "rewardPoints"  - "salePrice"
+   * Acceptable values are:   - "`buyMGetMoneyOff`"  - "`buyMGetNMoneyOff`"  -
+   * "`buyMGetNPercentOff`"  - "`buyMGetPercentOff`"  - "`freeGift`"  - "`freeGiftWithItemId`"  -
+   * "`freeGiftWithValue`"  - "`freeShippingOvernight`"  - "`freeShippingStandard`"  -
+   * "`freeShippingTwoDay`"  - "`moneyOff`"  - "`percentOff`"  - "`rewardPoints`"  - "`salePrice`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
 
   /**
    * Estimated discount applied to tax (if allowed by law). Do not provide for
-   * orders.createtestorder.
+   * `orders.createtestorder`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,9 +123,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String title;
 
   /**
-   * Required. The scope of the promotion. Only product is supported for orders.createtestorder.
+   * Required. The scope of the promotion. Only `product` is supported for `orders.createtestorder`.
    *
-   * Acceptable values are:   - "product"  - "shipping"
+   * Acceptable values are:   - "`product`"  - "`shipping`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +151,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion have been applied to. Do not provide for orders.createtestorder.
+   * Items which this promotion have been applied to. Do not provide for `orders.createtestorder`.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderPromotionItem> getAppliedItems() {
@@ -158,7 +159,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion have been applied to. Do not provide for orders.createtestorder.
+   * Items which this promotion have been applied to. Do not provide for `orders.createtestorder`.
    * @param appliedItems appliedItems or {@code null} for none
    */
   public OrderPromotion setAppliedItems(java.util.List<OrderPromotionItem> appliedItems) {
@@ -186,10 +187,10 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The party funding the promotion. Only merchant is supported for
-   * orders.createtestorder.
+   * Required. The party funding the promotion. Only `merchant` is supported for
+   * `orders.createtestorder`.
    *
-   * Acceptable values are:   - "google"  - "merchant"
+   * Acceptable values are:   - "`google`"  - "`merchant`"
    * @return value or {@code null} for none
    */
   public java.lang.String getFunder() {
@@ -197,10 +198,10 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The party funding the promotion. Only merchant is supported for
-   * orders.createtestorder.
+   * Required. The party funding the promotion. Only `merchant` is supported for
+   * `orders.createtestorder`.
    *
-   * Acceptable values are:   - "google"  - "merchant"
+   * Acceptable values are:   - "`google`"  - "`merchant`"
    * @param funder funder or {@code null} for none
    */
   public OrderPromotion setFunder(java.lang.String funder) {
@@ -246,7 +247,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
 
   /**
    * A short title of the promotion to be shown on the checkout page. Do not provide for
-   * orders.createtestorder.
+   * `orders.createtestorder`.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortTitle() {
@@ -255,7 +256,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
 
   /**
    * A short title of the promotion to be shown on the checkout page. Do not provide for
-   * orders.createtestorder.
+   * `orders.createtestorder`.
    * @param shortTitle shortTitle or {@code null} for none
    */
   public OrderPromotion setShortTitle(java.lang.String shortTitle) {
@@ -283,12 +284,13 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The category of the promotion. Only moneyOff is supported for orders.createtestorder.
+   * Required. The category of the promotion. Only `moneyOff` is supported for
+   * `orders.createtestorder`.
    *
-   * Acceptable values are:   - "buyMGetMoneyOff"  - "buyMGetNMoneyOff"  - "buyMGetNPercentOff"  -
-   * "buyMGetPercentOff"  - "freeGift"  - "freeGiftWithItemId"  - "freeGiftWithValue"  -
-   * "freeShippingOvernight"  - "freeShippingStandard"  - "freeShippingTwoDay"  - "moneyOff"  -
-   * "percentOff"  - "rewardPoints"  - "salePrice"
+   * Acceptable values are:   - "`buyMGetMoneyOff`"  - "`buyMGetNMoneyOff`"  -
+   * "`buyMGetNPercentOff`"  - "`buyMGetPercentOff`"  - "`freeGift`"  - "`freeGiftWithItemId`"  -
+   * "`freeGiftWithValue`"  - "`freeShippingOvernight`"  - "`freeShippingStandard`"  -
+   * "`freeShippingTwoDay`"  - "`moneyOff`"  - "`percentOff`"  - "`rewardPoints`"  - "`salePrice`"
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtype() {
@@ -296,12 +298,13 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The category of the promotion. Only moneyOff is supported for orders.createtestorder.
+   * Required. The category of the promotion. Only `moneyOff` is supported for
+   * `orders.createtestorder`.
    *
-   * Acceptable values are:   - "buyMGetMoneyOff"  - "buyMGetNMoneyOff"  - "buyMGetNPercentOff"  -
-   * "buyMGetPercentOff"  - "freeGift"  - "freeGiftWithItemId"  - "freeGiftWithValue"  -
-   * "freeShippingOvernight"  - "freeShippingStandard"  - "freeShippingTwoDay"  - "moneyOff"  -
-   * "percentOff"  - "rewardPoints"  - "salePrice"
+   * Acceptable values are:   - "`buyMGetMoneyOff`"  - "`buyMGetNMoneyOff`"  -
+   * "`buyMGetNPercentOff`"  - "`buyMGetPercentOff`"  - "`freeGift`"  - "`freeGiftWithItemId`"  -
+   * "`freeGiftWithValue`"  - "`freeShippingOvernight`"  - "`freeShippingStandard`"  -
+   * "`freeShippingTwoDay`"  - "`moneyOff`"  - "`percentOff`"  - "`rewardPoints`"  - "`salePrice`"
    * @param subtype subtype or {@code null} for none
    */
   public OrderPromotion setSubtype(java.lang.String subtype) {
@@ -311,7 +314,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
 
   /**
    * Estimated discount applied to tax (if allowed by law). Do not provide for
-   * orders.createtestorder.
+   * `orders.createtestorder`.
    * @return value or {@code null} for none
    */
   public Price getTaxValue() {
@@ -320,7 +323,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
 
   /**
    * Estimated discount applied to tax (if allowed by law). Do not provide for
-   * orders.createtestorder.
+   * `orders.createtestorder`.
    * @param taxValue taxValue or {@code null} for none
    */
   public OrderPromotion setTaxValue(Price taxValue) {
@@ -346,9 +349,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The scope of the promotion. Only product is supported for orders.createtestorder.
+   * Required. The scope of the promotion. Only `product` is supported for `orders.createtestorder`.
    *
-   * Acceptable values are:   - "product"  - "shipping"
+   * Acceptable values are:   - "`product`"  - "`shipping`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -356,9 +359,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The scope of the promotion. Only product is supported for orders.createtestorder.
+   * Required. The scope of the promotion. Only `product` is supported for `orders.createtestorder`.
    *
-   * Acceptable values are:   - "product"  - "shipping"
+   * Acceptable values are:   - "`product`"  - "`shipping`"
    * @param type type or {@code null} for none
    */
   public OrderPromotion setType(java.lang.String type) {

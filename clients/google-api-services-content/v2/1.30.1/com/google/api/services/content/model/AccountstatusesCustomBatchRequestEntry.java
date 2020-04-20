@@ -62,7 +62,7 @@ public final class AccountstatusesCustomBatchRequestEntry extends com.google.api
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"
+   * Acceptable values are:   - "`get`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class AccountstatusesCustomBatchRequestEntry extends com.google.api
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"
+   * Acceptable values are:   - "`get`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -151,7 +151,7 @@ public final class AccountstatusesCustomBatchRequestEntry extends com.google.api
   /**
    * The method of the batch entry.
    *
-   * Acceptable values are:   - "get"
+   * Acceptable values are:   - "`get`"
    * @param method method or {@code null} for none
    */
   public AccountstatusesCustomBatchRequestEntry setMethod(java.lang.String method) {

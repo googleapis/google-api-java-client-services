@@ -40,7 +40,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   /**
    * The item's channel (online or local).
    *
-   * Acceptable values are:   - "local"  - "online"
+   * Acceptable values are:   - "`local`"  - "`online`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   /**
    * Condition or state of the item.
    *
-   * Acceptable values are:   - "new"  - "refurbished"  - "used"
+   * Acceptable values are:   - "`new`"  - "`refurbished`"  - "`used`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   /**
    * The item's channel (online or local).
    *
-   * Acceptable values are:   - "local"  - "online"
+   * Acceptable values are:   - "`local`"  - "`online`"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -177,7 +177,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   /**
    * The item's channel (online or local).
    *
-   * Acceptable values are:   - "local"  - "online"
+   * Acceptable values are:   - "`local`"  - "`online`"
    * @param channel channel or {@code null} for none
    */
   public OrderLineItemProduct setChannel(java.lang.String channel) {
@@ -188,7 +188,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   /**
    * Condition or state of the item.
    *
-   * Acceptable values are:   - "new"  - "refurbished"  - "used"
+   * Acceptable values are:   - "`new`"  - "`refurbished`"  - "`used`"
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -198,7 +198,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   /**
    * Condition or state of the item.
    *
-   * Acceptable values are:   - "new"  - "refurbished"  - "used"
+   * Acceptable values are:   - "`new`"  - "`refurbished`"  - "`used`"
    * @param condition condition or {@code null} for none
    */
   public OrderLineItemProduct setCondition(java.lang.String condition) {

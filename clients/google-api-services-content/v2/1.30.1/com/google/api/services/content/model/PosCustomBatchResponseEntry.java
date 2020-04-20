@@ -53,7 +53,7 @@ public final class PosCustomBatchResponseEntry extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#posCustomBatchResponseEntry".
+   * "`content#posCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class PosCustomBatchResponseEntry extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#posCustomBatchResponseEntry".
+   * "`content#posCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -135,7 +135,7 @@ public final class PosCustomBatchResponseEntry extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#posCustomBatchResponseEntry".
+   * "`content#posCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public PosCustomBatchResponseEntry setKind(java.lang.String kind) {

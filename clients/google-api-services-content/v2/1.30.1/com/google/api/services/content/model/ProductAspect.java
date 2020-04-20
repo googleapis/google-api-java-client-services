@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class ProductAspect extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the aspect.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aspectName;
 
   /**
-   * The name of the destination. Leave out to apply to all destinations.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationName;
 
   /**
-   * Whether the aspect is required, excluded or should be validated.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intention;
 
   /**
-   * The name of the aspect.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAspectName() {
@@ -60,7 +60,7 @@ public final class ProductAspect extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the aspect.
+   * Deprecated.
    * @param aspectName aspectName or {@code null} for none
    */
   public ProductAspect setAspectName(java.lang.String aspectName) {
@@ -69,7 +69,7 @@ public final class ProductAspect extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the destination. Leave out to apply to all destinations.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationName() {
@@ -77,7 +77,7 @@ public final class ProductAspect extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the destination. Leave out to apply to all destinations.
+   * Deprecated.
    * @param destinationName destinationName or {@code null} for none
    */
   public ProductAspect setDestinationName(java.lang.String destinationName) {
@@ -86,7 +86,7 @@ public final class ProductAspect extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the aspect is required, excluded or should be validated.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntention() {
@@ -94,7 +94,7 @@ public final class ProductAspect extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the aspect is required, excluded or should be validated.
+   * Deprecated.
    * @param intention intention or {@code null} for none
    */
   public ProductAspect setIntention(java.lang.String intention) {

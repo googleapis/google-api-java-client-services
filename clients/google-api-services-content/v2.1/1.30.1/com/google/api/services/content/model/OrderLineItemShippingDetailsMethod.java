@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class OrderLineItemShippingDetailsMethod extends com.google.api.client.json.GenericJson {
 
   /**
-   * The carrier for the shipping. Optional. See shipments[].carrier for a list of acceptable
+   * The carrier for the shipping. Optional. See `shipments[].carrier` for a list of acceptable
    * values.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   private java.lang.Long minDaysInTransit;
 
   /**
-   * The carrier for the shipping. Optional. See shipments[].carrier for a list of acceptable
+   * The carrier for the shipping. Optional. See `shipments[].carrier` for a list of acceptable
    * values.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * The carrier for the shipping. Optional. See shipments[].carrier for a list of acceptable
+   * The carrier for the shipping. Optional. See `shipments[].carrier` for a list of acceptable
    * values.
    * @param carrier carrier or {@code null} for none
    */

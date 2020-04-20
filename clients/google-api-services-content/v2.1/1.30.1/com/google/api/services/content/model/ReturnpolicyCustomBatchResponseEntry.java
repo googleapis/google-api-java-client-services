@@ -46,7 +46,7 @@ public final class ReturnpolicyCustomBatchResponseEntry extends com.google.api.c
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnpolicyCustomBatchResponseEntry".
+   * "`content#returnpolicyCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class ReturnpolicyCustomBatchResponseEntry extends com.google.api.c
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnpolicyCustomBatchResponseEntry".
+   * "`content#returnpolicyCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -104,7 +104,7 @@ public final class ReturnpolicyCustomBatchResponseEntry extends com.google.api.c
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnpolicyCustomBatchResponseEntry".
+   * "`content#returnpolicyCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public ReturnpolicyCustomBatchResponseEntry setKind(java.lang.String kind) {

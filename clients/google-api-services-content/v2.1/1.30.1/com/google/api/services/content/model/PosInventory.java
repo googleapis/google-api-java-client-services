@@ -52,7 +52,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
   private java.lang.String itemId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posInventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posInventory`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
   private java.lang.Long quantity;
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * The value may be {@code null}.
    */
@@ -146,7 +146,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posInventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posInventory`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -154,7 +154,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posInventory".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posInventory`"
    * @param kind kind or {@code null} for none
    */
   public PosInventory setKind(java.lang.String kind) {
@@ -197,7 +197,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @return value or {@code null} for none
    */
@@ -206,7 +206,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @param storeCode storeCode or {@code null} for none
    */

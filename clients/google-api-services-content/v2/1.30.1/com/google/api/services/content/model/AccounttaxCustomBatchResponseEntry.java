@@ -53,7 +53,7 @@ public final class AccounttaxCustomBatchResponseEntry extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxCustomBatchResponseEntry".
+   * "`content#accounttaxCustomBatchResponseEntry`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class AccounttaxCustomBatchResponseEntry extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxCustomBatchResponseEntry".
+   * "`content#accounttaxCustomBatchResponseEntry`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -121,7 +121,7 @@ public final class AccounttaxCustomBatchResponseEntry extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxCustomBatchResponseEntry".
+   * "`content#accounttaxCustomBatchResponseEntry`"
    * @param kind kind or {@code null} for none
    */
   public AccounttaxCustomBatchResponseEntry setKind(java.lang.String kind) {

@@ -154,8 +154,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
      * query may not be returned, even in subsequent result pages. Also note that results returned (and
      * not returned) can vary across repeated search queries.
      *
-     * See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for more
-     * information.
+     * See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-
+     * reference) for more information.
      *
      * Create a request for the method "catalog.search".
      *
@@ -186,8 +186,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * your query may not be returned, even in subsequent result pages. Also note that results
        * returned (and not returned) can vary across repeated search queries.
        *
-       * See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for more
-       * information.
+       * See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-
+       * reference) for more information.
        *
        * Create a request for the method "catalog.search".
        *
@@ -437,7 +437,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        *
        * Examples:
        *
-       * * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
+       * * `pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
        * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
        * * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
        *
@@ -451,7 +451,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
      Examples:
 
-     * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
+     * `pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
      `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id` *
      `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
 
@@ -467,7 +467,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        *
        * Examples:
        *
-       * * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
+       * * `pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
        * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
        * * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
        *
@@ -551,8 +551,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * A maximum of 10,000 entry groups may be created per organization across all locations.
          *
          * Users should enable the Data Catalog API in the project identified by the `parent` parameter (see
-         * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-         * information).
+         * [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-
+         * project) for more information).
          *
          * Create a request for the method "entryGroups.create".
          *
@@ -585,8 +585,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * A maximum of 10,000 entry groups may be created per organization across all locations.
            *
            * Users should enable the Data Catalog API in the project identified by the `parent` parameter
-           * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-           * information).
+           * (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts
+           * /resource-project) for more information).
            *
            * Create a request for the method "entryGroups.create".
            *
@@ -743,7 +743,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         /**
          * Deletes an EntryGroup. Only entry groups that do not contain entries can be deleted. Users should
          * enable the Data Catalog API in the project identified by the `name` parameter (see [Data Catalog
-         * Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
+         * Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
+         * information).
          *
          * Create a request for the method "entryGroups.delete".
          *
@@ -770,7 +771,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Deletes an EntryGroup. Only entry groups that do not contain entries can be deleted. Users
            * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
-           * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
+           * Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-
+           * project) for more information).
            *
            * Create a request for the method "entryGroups.delete".
            *
@@ -1427,8 +1429,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Updates an EntryGroup. The user should enable the Data Catalog API in the project identified by
-         * the `entry_group.name` parameter (see [Data Catalog Resource Project] (/data-
-         * catalog/docs/concepts/resource-project) for more information).
+         * the `entry_group.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com
+         * /data-catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "entryGroups.patch".
          *
@@ -1460,8 +1462,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * Updates an EntryGroup. The user should enable the Data Catalog API in the project identified by
-           * the `entry_group.name` parameter (see [Data Catalog Resource Project] (/data-
-           * catalog/docs/concepts/resource-project) for more information).
+           * the `entry_group.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com
+           * /data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "entryGroups.patch".
            *
@@ -1950,8 +1952,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * Creates an entry. Only entries of 'FILESET' type or user-specified type can be created.
            *
            * Users should enable the Data Catalog API in the project identified by the `parent` parameter (see
-           * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-           * information).
+           * [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-
+           * project) for more information).
            *
            * A maximum of 100,000 entries may be created per entry group.
            *
@@ -1986,8 +1988,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Creates an entry. Only entries of 'FILESET' type or user-specified type can be created.
              *
              * Users should enable the Data Catalog API in the project identified by the `parent` parameter
-             * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-             * information).
+             * (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts
+             * /resource-project) for more information).
              *
              * A maximum of 100,000 entries may be created per entry group.
              *
@@ -2137,7 +2139,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Deletes an existing entry. Only entries created through CreateEntry method can be deleted. Users
            * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
-           * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
+           * Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+           * for more information).
            *
            * Create a request for the method "entries.delete".
            *
@@ -2165,8 +2168,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             /**
              * Deletes an existing entry. Only entries created through CreateEntry method can be deleted.
              * Users should enable the Data Catalog API in the project identified by the `name` parameter (see
-             * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-             * information).
+             * [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-
+             * project) for more information).
              *
              * Create a request for the method "entries.delete".
              *
@@ -2828,8 +2831,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Updates an existing entry. Users should enable the Data Catalog API in the project identified by
-           * the `entry.name` parameter (see [Data Catalog Resource Project] (/data-catalog/docs/concepts
-           * /resource-project) for more information).
+           * the `entry.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-
+           * catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "entries.patch".
            *
@@ -2860,8 +2863,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Updates an existing entry. Users should enable the Data Catalog API in the project identified
-             * by the `entry.name` parameter (see [Data Catalog Resource Project] (/data-catalog/docs/concepts
-             * /resource-project) for more information).
+             * by the `entry.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com
+             * /data-catalog/docs/concepts/resource-project) for more information).
              *
              * Create a request for the method "entries.patch".
              *
@@ -3212,9 +3215,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           public class Tags {
 
             /**
-             * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag
-             * ](/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create
-             * #path-parameters) and the [tag template](/data-
+             * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the
+             * [tag](https://cloud.google.com/data-
+             * catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-
+             * parameters) and the [tag template](https://cloud.google.com/data-
              * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters) used
              * to create the tag must be from the same organization.
              *
@@ -3247,9 +3251,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
 
               /**
-               * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag
-               * ](/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create
-               * #path-parameters) and the [tag template](/data-
+               * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the
+               * [tag](https://cloud.google.com/data-
+               * catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-
+               * parameters) and the [tag template](https://cloud.google.com/data-
                * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters)
                * used to create the tag must be from the same organization.
                *
@@ -3954,9 +3959,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         public class Tags {
 
           /**
-           * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag
-           * ](/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create
-           * #path-parameters) and the [tag template](/data-
+           * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the
+           * [tag](https://cloud.google.com/data-
+           * catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-
+           * parameters) and the [tag template](https://cloud.google.com/data-
            * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters) used
            * to create the tag must be from the same organization.
            *
@@ -3989,9 +3995,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag
-             * ](/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create
-             * #path-parameters) and the [tag template](/data-
+             * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the
+             * [tag](https://cloud.google.com/data-
+             * catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-
+             * parameters) and the [tag template](https://cloud.google.com/data-
              * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters)
              * used to create the tag must be from the same organization.
              *
@@ -4697,8 +4704,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
         /**
          * Creates a tag template. The user should enable the Data Catalog API in the project identified by
-         * the `parent` parameter (see [Data Catalog Resource Project](/data-catalog/docs/concepts/resource-
-         * project) for more information).
+         * the `parent` parameter (see [Data Catalog Resource Project](https://cloud.google.com/data-
+         * catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "tagTemplates.create".
          *
@@ -4706,12 +4713,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The name of the project and the template location
-        [region](/compute/docs/regions-
-         *        zones/#available).
-        NOTE: Currently, only the `us-central1 region` is supported.
+        [region](https://cloud.google.com/data-
+         *        catalog/docs/concepts/regions.
         Example:
-        *
-         *        projects/{project_id}/locations/us-central1
+        * projects/{project_id}/locations/us-central1
          * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1TagTemplate}
          * @return the request
          */
@@ -4730,8 +4735,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * Creates a tag template. The user should enable the Data Catalog API in the project identified
-           * by the `parent` parameter (see [Data Catalog Resource Project](/data-catalog/docs/concepts
-           * /resource-project) for more information).
+           * by the `parent` parameter (see [Data Catalog Resource Project](https://cloud.google.com/data-
+           * catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "tagTemplates.create".
            *
@@ -4742,12 +4747,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The name of the project and the template location
-        [region](/compute/docs/regions-
-         *        zones/#available).
-        NOTE: Currently, only the `us-central1 region` is supported.
+        [region](https://cloud.google.com/data-
+         *        catalog/docs/concepts/regions.
         Example:
-        *
-         *        projects/{project_id}/locations/us-central1
+        * projects/{project_id}/locations/us-central1
            * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1TagTemplate}
            * @since 1.13
            */
@@ -4817,9 +4820,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The name of the project and the template location [region](/compute/docs
-           * /regions-zones/#available). NOTE: Currently, only the `us-central1 region` is
-           * supported.
+           * Required. The name of the project and the template location
+           * [region](https://cloud.google.com/data-catalog/docs/concepts/regions.
            *
            * Example:
            *
@@ -4828,8 +4830,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The name of the project and the template location [region](/compute/docs/regions-
-         zones/#available). NOTE: Currently, only the `us-central1 region` is supported.
+          /** Required. The name of the project and the template location [region](https://cloud.google.com/data-
+         catalog/docs/concepts/regions.
 
          Example:
 
@@ -4840,9 +4842,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The name of the project and the template location [region](/compute/docs
-           * /regions-zones/#available). NOTE: Currently, only the `us-central1 region` is
-           * supported.
+           * Required. The name of the project and the template location
+           * [region](https://cloud.google.com/data-catalog/docs/concepts/regions.
            *
            * Example:
            *
@@ -4881,8 +4882,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Deletes a tag template and all tags using the template. Users should enable the Data Catalog API
-         * in the project identified by the `name` parameter (see [Data Catalog Resource Project] (/data-
-         * catalog/docs/concepts/resource-project) for more information).
+         * in the project identified by the `name` parameter (see [Data Catalog Resource Project]
+         * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "tagTemplates.delete".
          *
@@ -4910,7 +4911,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Deletes a tag template and all tags using the template. Users should enable the Data Catalog
            * API in the project identified by the `name` parameter (see [Data Catalog Resource Project]
-           * (/data-catalog/docs/concepts/resource-project) for more information).
+           * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "tagTemplates.delete".
            *
@@ -5369,8 +5370,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * Updates a tag template. This method cannot be used to update the fields of a template. The tag
          * template fields are represented as separate resources and should be updated using their own
          * create/update/delete methods. Users should enable the Data Catalog API in the project identified
-         * by the `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
-         * catalog/docs/concepts/resource-project) for more information).
+         * by the `tag_template.name` parameter (see [Data Catalog Resource Project]
+         * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "tagTemplates.patch".
          *
@@ -5404,8 +5405,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * Updates a tag template. This method cannot be used to update the fields of a template. The tag
            * template fields are represented as separate resources and should be updated using their own
            * create/update/delete methods. Users should enable the Data Catalog API in the project
-           * identified by the `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
-           * catalog/docs/concepts/resource-project) for more information).
+           * identified by the `tag_template.name` parameter (see [Data Catalog Resource Project]
+           * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "tagTemplates.patch".
            *
@@ -5908,8 +5909,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * Creates a field in a tag template. The user should enable the Data Catalog API in the project
-           * identified by the `parent` parameter (see [Data Catalog Resource Project](/data-
-           * catalog/docs/concepts/resource-project) for more information).
+           * identified by the `parent` parameter (see [Data Catalog Resource
+           * Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
+           * information).
            *
            * Create a request for the method "fields.create".
            *
@@ -5917,12 +5919,11 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The name of the project and the template location
-          [region](/compute/docs/regions-
-           *        zones/#available).
-          NOTE: Currently, only the `us-central1 region` is supported.
+          [region](https://cloud.google.com/data-
+           *        catalog/docs/concepts/regions).
           Example:
-          *
-           *        projects/{project_id}/locations/us-central1/tagTemplates/{tag_template_id}
+          * projects/{project_id}/locations/us-
+           *        central1/tagTemplates/{tag_template_id}
            * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1TagTemplateField}
            * @return the request
            */
@@ -5941,8 +5942,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Creates a field in a tag template. The user should enable the Data Catalog API in the project
-             * identified by the `parent` parameter (see [Data Catalog Resource Project](/data-
-             * catalog/docs/concepts/resource-project) for more information).
+             * identified by the `parent` parameter (see [Data Catalog Resource
+             * Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
+             * information).
              *
              * Create a request for the method "fields.create".
              *
@@ -5953,12 +5955,11 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The name of the project and the template location
-          [region](/compute/docs/regions-
-           *        zones/#available).
-          NOTE: Currently, only the `us-central1 region` is supported.
+          [region](https://cloud.google.com/data-
+           *        catalog/docs/concepts/regions).
           Example:
-          *
-           *        projects/{project_id}/locations/us-central1/tagTemplates/{tag_template_id}
+          * projects/{project_id}/locations/us-
+           *        central1/tagTemplates/{tag_template_id}
              * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1TagTemplateField}
              * @since 1.13
              */
@@ -6028,9 +6029,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The name of the project and the template location [region](/compute/docs
-             * /regions-zones/#available). NOTE: Currently, only the `us-central1 region` is
-             * supported.
+             * Required. The name of the project and the template location
+             * [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
              *
              * Example:
              *
@@ -6039,8 +6039,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The name of the project and the template location [region](/compute/docs/regions-
-           zones/#available). NOTE: Currently, only the `us-central1 region` is supported.
+            /** Required. The name of the project and the template location [region](https://cloud.google.com/data-
+           catalog/docs/concepts/regions).
 
            Example:
 
@@ -6051,9 +6051,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The name of the project and the template location [region](/compute/docs
-             * /regions-zones/#available). NOTE: Currently, only the `us-central1 region` is
-             * supported.
+             * Required. The name of the project and the template location
+             * [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
              *
              * Example:
              *
@@ -6106,7 +6105,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Deletes a field in a tag template and all uses of that field. Users should enable the Data
            * Catalog API in the project identified by the `name` parameter (see [Data Catalog Resource
-           * Project] (/data-catalog/docs/concepts/resource-project) for more information).
+           * Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
+           * information).
            *
            * Create a request for the method "fields.delete".
            *
@@ -6134,7 +6134,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             /**
              * Deletes a field in a tag template and all uses of that field. Users should enable the Data
              * Catalog API in the project identified by the `name` parameter (see [Data Catalog Resource
-             * Project] (/data-catalog/docs/concepts/resource-project) for more information).
+             * Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
+             * information).
              *
              * Create a request for the method "fields.delete".
              *
@@ -6281,7 +6282,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Updates a field in a tag template. This method cannot be used to update the field type. Users
            * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
-           * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
+           * Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+           * for more information).
            *
            * Create a request for the method "fields.patch".
            *
@@ -6310,7 +6312,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             /**
              * Updates a field in a tag template. This method cannot be used to update the field type. Users
              * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
-             * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
+             * Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-
+             * project) for more information).
              *
              * Create a request for the method "fields.patch".
              *
@@ -6482,8 +6485,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Renames a field in a tag template. The user should enable the Data Catalog API in the project
-           * identified by the `name` parameter (see [Data Catalog Resource Project](/data-
-           * catalog/docs/concepts/resource-project) for more information).
+           * identified by the `name` parameter (see [Data Catalog Resource Project](https://cloud.google.com
+           * /data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "fields.rename".
            *
@@ -6511,8 +6514,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Renames a field in a tag template. The user should enable the Data Catalog API in the project
-             * identified by the `name` parameter (see [Data Catalog Resource Project](/data-
-             * catalog/docs/concepts/resource-project) for more information).
+             * identified by the `name` parameter (see [Data Catalog Resource
+             * Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
+             * information).
              *
              * Create a request for the method "fields.rename".
              *

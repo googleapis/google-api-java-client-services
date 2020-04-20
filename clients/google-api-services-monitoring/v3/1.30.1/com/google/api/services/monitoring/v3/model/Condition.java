@@ -45,14 +45,6 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private MetricThreshold conditionThreshold;
 
   /**
-   * A condition that uses the Monitoring Query Language to define alerts. If set, no other
-   * conditions can be present.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TimeSeriesQueryLanguageCondition conditionTimeSeriesQueryLanguage;
-
-  /**
    * A short name or phrase used to identify the condition in dashboards, notifications, and
    * incidents. To avoid confusion, don't use the same display name for multiple conditions in the
    * same policy.
@@ -110,25 +102,6 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   public Condition setConditionThreshold(MetricThreshold conditionThreshold) {
     this.conditionThreshold = conditionThreshold;
-    return this;
-  }
-
-  /**
-   * A condition that uses the Monitoring Query Language to define alerts. If set, no other
-   * conditions can be present.
-   * @return value or {@code null} for none
-   */
-  public TimeSeriesQueryLanguageCondition getConditionTimeSeriesQueryLanguage() {
-    return conditionTimeSeriesQueryLanguage;
-  }
-
-  /**
-   * A condition that uses the Monitoring Query Language to define alerts. If set, no other
-   * conditions can be present.
-   * @param conditionTimeSeriesQueryLanguage conditionTimeSeriesQueryLanguage or {@code null} for none
-   */
-  public Condition setConditionTimeSeriesQueryLanguage(TimeSeriesQueryLanguageCondition conditionTimeSeriesQueryLanguage) {
-    this.conditionTimeSeriesQueryLanguage = conditionTimeSeriesQueryLanguage;
     return this;
   }
 

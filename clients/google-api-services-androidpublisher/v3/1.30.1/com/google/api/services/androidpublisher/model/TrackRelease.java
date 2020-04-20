@@ -51,8 +51,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   /**
    * In-app update priority of the release. All newly added APKs in the release will be considered
    * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
-   * priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-
-   * updates.
+   * priority. Default priority is 0. in_app_update_priority can not be updated once the release is
+   * rolled out. See https://developer.android.com/guide/playcore/in-app-updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +154,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   /**
    * In-app update priority of the release. All newly added APKs in the release will be considered
    * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
-   * priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-
-   * updates.
+   * priority. Default priority is 0. in_app_update_priority can not be updated once the release is
+   * rolled out. See https://developer.android.com/guide/playcore/in-app-updates.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInAppUpdatePriority() {
@@ -165,8 +165,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   /**
    * In-app update priority of the release. All newly added APKs in the release will be considered
    * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
-   * priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-
-   * updates.
+   * priority. Default priority is 0. in_app_update_priority can not be updated once the release is
+   * rolled out. See https://developer.android.com/guide/playcore/in-app-updates.
    * @param inAppUpdatePriority inAppUpdatePriority or {@code null} for none
    */
   public TrackRelease setInAppUpdatePriority(java.lang.Integer inAppUpdatePriority) {

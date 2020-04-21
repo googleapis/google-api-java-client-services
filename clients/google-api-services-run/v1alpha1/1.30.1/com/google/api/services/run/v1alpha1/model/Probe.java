@@ -31,15 +31,6 @@ package com.google.api.services.run.v1alpha1.model;
 public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
-   * One and only one of the following should be specified. Exec specifies the action to take.
-   *
-   * A field inlined from the Handler message.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ExecAction exec;
-
-  /**
    * Minimum consecutive failures for the probe to be considered failed after having succeeded.
    * Defaults to 3. Minimum value is 1. +optional
    * The value may be {@code null}.
@@ -48,13 +39,11 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   private java.lang.Integer failureThreshold;
 
   /**
-   * HTTPGet specifies the http request to perform.
-   *
-   * A field inlined from the Handler message.
+   * The action taken to determine the health of a container
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private HTTPGetAction httpGet;
+  private Handler handler;
 
   /**
    * Number of seconds after the container has started before liveness probes are initiated. More
@@ -82,15 +71,6 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   private java.lang.Integer successThreshold;
 
   /**
-   * TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
-   *
-   * A field inlined from the Handler message.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TCPSocketAction tcpSocket;
-
-  /**
    * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
    * More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * +optional
@@ -98,27 +78,6 @@ public final class Probe extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSeconds;
-
-  /**
-   * One and only one of the following should be specified. Exec specifies the action to take.
-   *
-   * A field inlined from the Handler message.
-   * @return value or {@code null} for none
-   */
-  public ExecAction getExec() {
-    return exec;
-  }
-
-  /**
-   * One and only one of the following should be specified. Exec specifies the action to take.
-   *
-   * A field inlined from the Handler message.
-   * @param exec exec or {@code null} for none
-   */
-  public Probe setExec(ExecAction exec) {
-    this.exec = exec;
-    return this;
-  }
 
   /**
    * Minimum consecutive failures for the probe to be considered failed after having succeeded.
@@ -140,23 +99,19 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTPGet specifies the http request to perform.
-   *
-   * A field inlined from the Handler message.
+   * The action taken to determine the health of a container
    * @return value or {@code null} for none
    */
-  public HTTPGetAction getHttpGet() {
-    return httpGet;
+  public Handler getHandler() {
+    return handler;
   }
 
   /**
-   * HTTPGet specifies the http request to perform.
-   *
-   * A field inlined from the Handler message.
-   * @param httpGet httpGet or {@code null} for none
+   * The action taken to determine the health of a container
+   * @param handler handler or {@code null} for none
    */
-  public Probe setHttpGet(HTTPGetAction httpGet) {
-    this.httpGet = httpGet;
+  public Probe setHandler(Handler handler) {
+    this.handler = handler;
     return this;
   }
 
@@ -216,27 +171,6 @@ public final class Probe extends com.google.api.client.json.GenericJson {
    */
   public Probe setSuccessThreshold(java.lang.Integer successThreshold) {
     this.successThreshold = successThreshold;
-    return this;
-  }
-
-  /**
-   * TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
-   *
-   * A field inlined from the Handler message.
-   * @return value or {@code null} for none
-   */
-  public TCPSocketAction getTcpSocket() {
-    return tcpSocket;
-  }
-
-  /**
-   * TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
-   *
-   * A field inlined from the Handler message.
-   * @param tcpSocket tcpSocket or {@code null} for none
-   */
-  public Probe setTcpSocket(TCPSocketAction tcpSocket) {
-    this.tcpSocket = tcpSocket;
     return this;
   }
 

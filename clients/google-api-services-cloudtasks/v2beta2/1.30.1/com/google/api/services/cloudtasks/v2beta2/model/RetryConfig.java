@@ -62,8 +62,7 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * The time between retries will double `max_doublings` times.
    *
    * A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then
-   * increases linearly, and finally retries retries at intervals of max_backoff up to max_attempts
-   * times.
+   * increases linearly, and finally retries at intervals of max_backoff up to max_attempts times.
    *
    * For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a
    * task will first be retried in 10s. The retry interval will double three times, and then
@@ -191,8 +190,7 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * The time between retries will double `max_doublings` times.
    *
    * A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then
-   * increases linearly, and finally retries retries at intervals of max_backoff up to max_attempts
-   * times.
+   * increases linearly, and finally retries at intervals of max_backoff up to max_attempts times.
    *
    * For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a
    * task will first be retried in 10s. The retry interval will double three times, and then
@@ -216,8 +214,7 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * The time between retries will double `max_doublings` times.
    *
    * A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then
-   * increases linearly, and finally retries retries at intervals of max_backoff up to max_attempts
-   * times.
+   * increases linearly, and finally retries at intervals of max_backoff up to max_attempts times.
    *
    * For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a
    * task will first be retried in 10s. The retry interval will double three times, and then

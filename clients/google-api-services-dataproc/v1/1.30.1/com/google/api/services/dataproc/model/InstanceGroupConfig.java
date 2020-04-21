@@ -86,8 +86,9 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the
-   * Dataproc Auto Zone Placement feature, you must use the short name of the machine type resource,
-   * for example, n1-standard-2.
+   * Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the
+   * machine type resource, for example, n1-standard-2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +103,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private ManagedGroupConfig managedGroupConfig;
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See DataprocMinimum CPU
-   * Platform.
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc - Minimum CPU
+   * Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,8 +236,9 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the
-   * Dataproc Auto Zone Placement feature, you must use the short name of the machine type resource,
-   * for example, n1-standard-2.
+   * Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the
+   * machine type resource, for example, n1-standard-2.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineTypeUri() {
@@ -249,8 +251,9 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the
-   * Dataproc Auto Zone Placement feature, you must use the short name of the machine type resource,
-   * for example, n1-standard-2.
+   * Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the
+   * machine type resource, for example, n1-standard-2.
    * @param machineTypeUri machineTypeUri or {@code null} for none
    */
   public InstanceGroupConfig setMachineTypeUri(java.lang.String machineTypeUri) {
@@ -278,8 +281,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See DataprocMinimum CPU
-   * Platform.
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc - Minimum CPU
+   * Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -287,8 +290,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See DataprocMinimum CPU
-   * Platform.
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc - Minimum CPU
+   * Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstanceGroupConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {

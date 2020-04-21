@@ -18,8 +18,8 @@ package com.google.api.services.dataproc.v1beta2.model;
 
 /**
  * A Dataproc job for running Presto (https://prestosql.io/) queries. IMPORTANT: The Dataproc Presto
- * Optional Component must be enabled when the cluster is created to submit a Presto job to the
- * cluster.
+ * Optional Component (https://cloud.google.com/dataproc/docs/concepts/components/presto) must be
+ * enabled when the cluster is created to submit a Presto job to the cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

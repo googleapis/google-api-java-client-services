@@ -31,8 +31,11 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The version of software inside the cluster. It must be one of the supported Dataproc
-   * Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview"
-   * version. If unspecified, it defaults to the latest Debian version.
+   * Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-
+   * versions#supported_cloud_dataproc_versions), such as "1.2" (including a subminor version, such
+   * as "1.2.29"), or the "preview" version
+   * (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+   * If unspecified, it defaults to the latest Debian version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +54,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp:
    * distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig:
    * pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster
-   * properties.
+   * properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +62,11 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The version of software inside the cluster. It must be one of the supported Dataproc
-   * Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview"
-   * version. If unspecified, it defaults to the latest Debian version.
+   * Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-
+   * versions#supported_cloud_dataproc_versions), such as "1.2" (including a subminor version, such
+   * as "1.2.29"), or the "preview" version
+   * (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+   * If unspecified, it defaults to the latest Debian version.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageVersion() {
@@ -69,8 +75,11 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The version of software inside the cluster. It must be one of the supported Dataproc
-   * Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview"
-   * version. If unspecified, it defaults to the latest Debian version.
+   * Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-
+   * versions#supported_cloud_dataproc_versions), such as "1.2" (including a subminor version, such
+   * as "1.2.29"), or the "preview" version
+   * (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+   * If unspecified, it defaults to the latest Debian version.
    * @param imageVersion imageVersion or {@code null} for none
    */
   public SoftwareConfig setImageVersion(java.lang.String imageVersion) {
@@ -101,7 +110,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp:
    * distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig:
    * pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster
-   * properties.
+   * properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -114,7 +123,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp:
    * distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig:
    * pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster
-   * properties.
+   * properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
    * @param properties properties or {@code null} for none
    */
   public SoftwareConfig setProperties(java.util.Map<String, java.lang.String> properties) {

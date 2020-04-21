@@ -30,12 +30,14 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class OrderedJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Job is a Hadoop job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HadoopJob hadoopJob;
 
   /**
+   * Optional. Job is a Hive job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +54,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Job is a Pig job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,13 +69,14 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> prerequisiteStepIds;
 
   /**
-   * Presto job
+   * Optional. Job is a Presto job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrestoJob prestoJob;
 
   /**
+   * Optional. Job is a PySpark job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,19 +90,21 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   private JobScheduling scheduling;
 
   /**
+   * Optional. Job is a Spark job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SparkJob sparkJob;
 
   /**
-   * Spark R job
+   * Optional. Job is a SparkR job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SparkRJob sparkRJob;
 
   /**
+   * Optional. Job is a SparkSql job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,6 +122,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   private java.lang.String stepId;
 
   /**
+   * Optional. Job is a Hadoop job.
    * @return value or {@code null} for none
    */
   public HadoopJob getHadoopJob() {
@@ -123,6 +130,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Hadoop job.
    * @param hadoopJob hadoopJob or {@code null} for none
    */
   public OrderedJob setHadoopJob(HadoopJob hadoopJob) {
@@ -131,6 +139,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Hive job.
    * @return value or {@code null} for none
    */
   public HiveJob getHiveJob() {
@@ -138,6 +147,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Hive job.
    * @param hiveJob hiveJob or {@code null} for none
    */
   public OrderedJob setHiveJob(HiveJob hiveJob) {
@@ -169,6 +179,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Pig job.
    * @return value or {@code null} for none
    */
   public PigJob getPigJob() {
@@ -176,6 +187,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Pig job.
    * @param pigJob pigJob or {@code null} for none
    */
   public OrderedJob setPigJob(PigJob pigJob) {
@@ -203,7 +215,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Presto job
+   * Optional. Job is a Presto job.
    * @return value or {@code null} for none
    */
   public PrestoJob getPrestoJob() {
@@ -211,7 +223,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Presto job
+   * Optional. Job is a Presto job.
    * @param prestoJob prestoJob or {@code null} for none
    */
   public OrderedJob setPrestoJob(PrestoJob prestoJob) {
@@ -220,6 +232,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a PySpark job.
    * @return value or {@code null} for none
    */
   public PySparkJob getPysparkJob() {
@@ -227,6 +240,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a PySpark job.
    * @param pysparkJob pysparkJob or {@code null} for none
    */
   public OrderedJob setPysparkJob(PySparkJob pysparkJob) {
@@ -252,6 +266,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Spark job.
    * @return value or {@code null} for none
    */
   public SparkJob getSparkJob() {
@@ -259,6 +274,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a Spark job.
    * @param sparkJob sparkJob or {@code null} for none
    */
   public OrderedJob setSparkJob(SparkJob sparkJob) {
@@ -267,7 +283,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Spark R job
+   * Optional. Job is a SparkR job.
    * @return value or {@code null} for none
    */
   public SparkRJob getSparkRJob() {
@@ -275,7 +291,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Spark R job
+   * Optional. Job is a SparkR job.
    * @param sparkRJob sparkRJob or {@code null} for none
    */
   public OrderedJob setSparkRJob(SparkRJob sparkRJob) {
@@ -284,6 +300,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a SparkSql job.
    * @return value or {@code null} for none
    */
   public SparkSqlJob getSparkSqlJob() {
@@ -291,6 +308,7 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Job is a SparkSql job.
    * @param sparkSqlJob sparkSqlJob or {@code null} for none
    */
   public OrderedJob setSparkSqlJob(SparkSqlJob sparkSqlJob) {

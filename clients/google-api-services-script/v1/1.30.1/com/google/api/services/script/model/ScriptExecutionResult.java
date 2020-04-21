@@ -17,8 +17,7 @@
 package com.google.api.services.script.model;
 
 /**
- * The result of an execution Based on ScriptExecutionResult at:
- * google3/apps/maestro/api/frontend_execution_common.proto?q=message%5c%20ScriptExecutionResult
+ * The result of an execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apps Script API. For a detailed explanation see:
@@ -31,16 +30,14 @@ package com.google.api.services.script.model;
 public final class ScriptExecutionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The returned value of the execution. TODO (johnlattin): Add HtmlResponse TODO (johnlattin): Add
-   * ExceptionResponse TODO (johlnattin): Add TextResponse
+   * The returned value of the execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Value returnValue;
 
   /**
-   * The returned value of the execution. TODO (johnlattin): Add HtmlResponse TODO (johnlattin): Add
-   * ExceptionResponse TODO (johlnattin): Add TextResponse
+   * The returned value of the execution.
    * @return value or {@code null} for none
    */
   public Value getReturnValue() {
@@ -48,8 +45,7 @@ public final class ScriptExecutionResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The returned value of the execution. TODO (johnlattin): Add HtmlResponse TODO (johnlattin): Add
-   * ExceptionResponse TODO (johlnattin): Add TextResponse
+   * The returned value of the execution.
    * @param returnValue returnValue or {@code null} for none
    */
   public ScriptExecutionResult setReturnValue(Value returnValue) {

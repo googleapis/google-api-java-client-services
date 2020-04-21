@@ -17,8 +17,7 @@
 package com.google.api.services.script.model;
 
 /**
- * `Value` represents a dynamically typed value which is the outcome of an executed script Based on
- * Value at: google3/apps/maestro/api/struct.proto?q=message%5c%20Value
+ * `Value` represents a dynamically typed value which is the outcome of an executed script.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apps Script API. For a detailed explanation see:

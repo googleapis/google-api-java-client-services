@@ -30,14 +30,14 @@ package com.google.api.services.script.model;
 public final class ExecuteStreamResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The result of the execution. TODO (johnlattin): Add debugging and logging.
+   * The result of the execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ScriptExecutionResult result;
 
   /**
-   * The result of the execution. TODO (johnlattin): Add debugging and logging.
+   * The result of the execution.
    * @return value or {@code null} for none
    */
   public ScriptExecutionResult getResult() {
@@ -45,7 +45,7 @@ public final class ExecuteStreamResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The result of the execution. TODO (johnlattin): Add debugging and logging.
+   * The result of the execution.
    * @param result result or {@code null} for none
    */
   public ExecuteStreamResponse setResult(ScriptExecutionResult result) {

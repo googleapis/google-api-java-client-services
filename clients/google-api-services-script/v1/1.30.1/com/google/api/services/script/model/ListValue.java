@@ -17,8 +17,7 @@
 package com.google.api.services.script.model;
 
 /**
- * `ListValue` is a wrapper around a repeated field of values. Based on LustValue at:
- * google3/apps/maestro/api/struct.proto?q=message%5c%20ListValue
+ * `ListValue` is a wrapper around a repeated field of values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apps Script API. For a detailed explanation see:

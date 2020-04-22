@@ -117,7 +117,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * The FHIR specification version that this FHIR store supports natively. This field is immutable
    * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. An empty value is treated as STU3.
+   * version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,7 +317,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * The FHIR specification version that this FHIR store supports natively. This field is immutable
    * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. An empty value is treated as STU3.
+   * version.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -327,7 +327,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * The FHIR specification version that this FHIR store supports natively. This field is immutable
    * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. An empty value is treated as STU3.
+   * version.
    * @param version version or {@code null} for none
    */
   public FhirStore setVersion(java.lang.String version) {

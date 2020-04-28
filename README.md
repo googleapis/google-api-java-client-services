@@ -45,8 +45,7 @@ packages on [Maven Central][maven-search].
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
 | BigQuery Reservation API | [v1](clients/google-api-services-bigqueryreservation/v1), [v1alpha2](clients/google-api-services-bigqueryreservation/v1alpha2), [v1beta1](clients/google-api-services-bigqueryreservation/v1beta1) |
 | Binary Authorization API | [v1](clients/google-api-services-binaryauthorization/v1), [v1beta1](clients/google-api-services-binaryauthorization/v1beta1) |
-| Blogger API | [v3](clients/google-api-services-blogger/v3) |
-| Blogger API v3 | [v2](clients/google-api-services-blogger/v2) |
+| Blogger API v3 | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
 | Books API | [v1](clients/google-api-services-books/v1) |
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
 | Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1) |

@@ -34,7 +34,13 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.Object> connectionProperties;
+  private java.util.List<ConnectionProperty> connectionProperties;
+
+  static {
+    // hack to force ProGuard to consider ConnectionProperty used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConnectionProperty.class);
+  }
 
   /**
    * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table
@@ -149,7 +155,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * Connection properties.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.Object> getConnectionProperties() {
+  public java.util.List<ConnectionProperty> getConnectionProperties() {
     return connectionProperties;
   }
 
@@ -157,7 +163,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * Connection properties.
    * @param connectionProperties connectionProperties or {@code null} for none
    */
-  public QueryRequest setConnectionProperties(java.util.List<java.lang.Object> connectionProperties) {
+  public QueryRequest setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
     this.connectionProperties = connectionProperties;
     return this;
   }

@@ -44,11 +44,32 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
   private ArimaFittingMetrics arimaFittingMetrics;
 
   /**
+   * Whether Arima model fitted with drift or not. It is always false when d is not 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasDrift;
+
+  /**
    * Non-seasonal order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ArimaOrder nonSeasonalOrder;
+
+  /**
+   * Seasonal periods. Repeated because multiple periods are supported for one time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> seasonalPeriods;
+
+  /**
+   * The id to indicate different time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeSeriesId;
 
   /**
    * Arima coefficients.
@@ -85,6 +106,23 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Whether Arima model fitted with drift or not. It is always false when d is not 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasDrift() {
+    return hasDrift;
+  }
+
+  /**
+   * Whether Arima model fitted with drift or not. It is always false when d is not 1.
+   * @param hasDrift hasDrift or {@code null} for none
+   */
+  public ArimaModelInfo setHasDrift(java.lang.Boolean hasDrift) {
+    this.hasDrift = hasDrift;
+    return this;
+  }
+
+  /**
    * Non-seasonal order.
    * @return value or {@code null} for none
    */
@@ -98,6 +136,40 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
    */
   public ArimaModelInfo setNonSeasonalOrder(ArimaOrder nonSeasonalOrder) {
     this.nonSeasonalOrder = nonSeasonalOrder;
+    return this;
+  }
+
+  /**
+   * Seasonal periods. Repeated because multiple periods are supported for one time series.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSeasonalPeriods() {
+    return seasonalPeriods;
+  }
+
+  /**
+   * Seasonal periods. Repeated because multiple periods are supported for one time series.
+   * @param seasonalPeriods seasonalPeriods or {@code null} for none
+   */
+  public ArimaModelInfo setSeasonalPeriods(java.util.List<java.lang.String> seasonalPeriods) {
+    this.seasonalPeriods = seasonalPeriods;
+    return this;
+  }
+
+  /**
+   * The id to indicate different time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeSeriesId() {
+    return timeSeriesId;
+  }
+
+  /**
+   * The id to indicate different time series.
+   * @param timeSeriesId timeSeriesId or {@code null} for none
+   */
+  public ArimaModelInfo setTimeSeriesId(java.lang.String timeSeriesId) {
+    this.timeSeriesId = timeSeriesId;
     return this;
   }
 

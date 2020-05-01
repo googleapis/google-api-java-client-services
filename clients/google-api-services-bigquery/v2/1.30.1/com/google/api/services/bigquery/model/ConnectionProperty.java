@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * ARIMA model fitting metrics.
+ * Model definition for ConnectionProperty.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -27,88 +27,64 @@ package com.google.api.services.bigquery.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ArimaFittingMetrics extends com.google.api.client.json.GenericJson {
+public final class ConnectionProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * AIC.
+   * [Required] Name of the connection property to set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double aic;
+  private java.lang.String key;
 
   /**
-   * Log-likelihood.
+   * [Required] Value of the connection property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double logLikelihood;
+  private java.lang.String value;
 
   /**
-   * Variance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double variance;
-
-  /**
-   * AIC.
+   * [Required] Name of the connection property to set.
    * @return value or {@code null} for none
    */
-  public java.lang.Double getAic() {
-    return aic;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * AIC.
-   * @param aic aic or {@code null} for none
+   * [Required] Name of the connection property to set.
+   * @param key key or {@code null} for none
    */
-  public ArimaFittingMetrics setAic(java.lang.Double aic) {
-    this.aic = aic;
+  public ConnectionProperty setKey(java.lang.String key) {
+    this.key = key;
     return this;
   }
 
   /**
-   * Log-likelihood.
+   * [Required] Value of the connection property.
    * @return value or {@code null} for none
    */
-  public java.lang.Double getLogLikelihood() {
-    return logLikelihood;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * Log-likelihood.
-   * @param logLikelihood logLikelihood or {@code null} for none
+   * [Required] Value of the connection property.
+   * @param value value or {@code null} for none
    */
-  public ArimaFittingMetrics setLogLikelihood(java.lang.Double logLikelihood) {
-    this.logLikelihood = logLikelihood;
-    return this;
-  }
-
-  /**
-   * Variance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getVariance() {
-    return variance;
-  }
-
-  /**
-   * Variance.
-   * @param variance variance or {@code null} for none
-   */
-  public ArimaFittingMetrics setVariance(java.lang.Double variance) {
-    this.variance = variance;
+  public ConnectionProperty setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public ArimaFittingMetrics set(String fieldName, Object value) {
-    return (ArimaFittingMetrics) super.set(fieldName, value);
+  public ConnectionProperty set(String fieldName, Object value) {
+    return (ConnectionProperty) super.set(fieldName, value);
   }
 
   @Override
-  public ArimaFittingMetrics clone() {
-    return (ArimaFittingMetrics) super.clone();
+  public ConnectionProperty clone() {
+    return (ConnectionProperty) super.clone();
   }
 
 }

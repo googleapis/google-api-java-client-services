@@ -68,13 +68,6 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private GoogleSheetsOptions googleSheetsOptions;
 
   /**
-   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String hivePartitioningMode;
-
-  /**
    * [Optional, Trusted Tester] Options to configure hive partitioning support.
    * The value may be {@code null}.
    */
@@ -223,23 +216,6 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setGoogleSheetsOptions(GoogleSheetsOptions googleSheetsOptions) {
     this.googleSheetsOptions = googleSheetsOptions;
-    return this;
-  }
-
-  /**
-   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHivePartitioningMode() {
-    return hivePartitioningMode;
-  }
-
-  /**
-   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
-   * @param hivePartitioningMode hivePartitioningMode or {@code null} for none
-   */
-  public ExternalDataConfiguration setHivePartitioningMode(java.lang.String hivePartitioningMode) {
-    this.hivePartitioningMode = hivePartitioningMode;
     return this;
   }
 

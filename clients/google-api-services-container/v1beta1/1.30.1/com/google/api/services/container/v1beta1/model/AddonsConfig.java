@@ -40,6 +40,14 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private CloudRunConfig cloudRunConfig;
 
   /**
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
+   * services through the Kubernetes API
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigConnectorConfig configConnectorConfig;
+
+  /**
    * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
    * The value may be {@code null}.
    */
@@ -118,6 +126,25 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setCloudRunConfig(CloudRunConfig cloudRunConfig) {
     this.cloudRunConfig = cloudRunConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
+   * services through the Kubernetes API
+   * @return value or {@code null} for none
+   */
+  public ConfigConnectorConfig getConfigConnectorConfig() {
+    return configConnectorConfig;
+  }
+
+  /**
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
+   * services through the Kubernetes API
+   * @param configConnectorConfig configConnectorConfig or {@code null} for none
+   */
+  public AddonsConfig setConfigConnectorConfig(ConfigConnectorConfig configConnectorConfig) {
+    this.configConnectorConfig = configConnectorConfig;
     return this;
   }
 

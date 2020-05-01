@@ -72,8 +72,8 @@ public final class SetNodePoolSizeRequest extends com.google.api.client.json.Gen
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,8 +176,8 @@ public final class SetNodePoolSizeRequest extends com.google.api.client.json.Gen
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -186,8 +186,8 @@ public final class SetNodePoolSizeRequest extends com.google.api.client.json.Gen
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public SetNodePoolSizeRequest setZone(java.lang.String zone) {

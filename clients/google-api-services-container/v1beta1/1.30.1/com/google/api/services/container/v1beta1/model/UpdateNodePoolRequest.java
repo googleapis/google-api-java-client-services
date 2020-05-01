@@ -46,10 +46,11 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String imageType;
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * node pool's nodes should be located. Changing the locations for a node pool will result in
-   * nodes being either created or removed from the node pool, depending on whether locations are
-   * being added or removed.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
+   * should be located. Changing the locations for a node pool will result in nodes being either
+   * created or removed from the node pool, depending on whether locations are being added or
+   * removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +112,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,10 +156,11 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * node pool's nodes should be located. Changing the locations for a node pool will result in
-   * nodes being either created or removed from the node pool, depending on whether locations are
-   * being added or removed.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
+   * should be located. Changing the locations for a node pool will result in nodes being either
+   * created or removed from the node pool, depending on whether locations are being added or
+   * removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -166,10 +168,11 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * node pool's nodes should be located. Changing the locations for a node pool will result in
-   * nodes being either created or removed from the node pool, depending on whether locations are
-   * being added or removed.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
+   * should be located. Changing the locations for a node pool will result in nodes being either
+   * created or removed from the node pool, depending on whether locations are being added or
+   * removed.
    * @param locations locations or {@code null} for none
    */
   public UpdateNodePoolRequest setLocations(java.util.List<java.lang.String> locations) {
@@ -305,8 +308,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -315,8 +318,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public UpdateNodePoolRequest setZone(java.lang.String zone) {

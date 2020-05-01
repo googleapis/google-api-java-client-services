@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * Defines an object to declare an in-toto artifact rule
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -28,40 +28,37 @@ package com.google.api.services.containeranalysis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class ArtifactRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.util.List<java.lang.String> artifactRule;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.util.List<java.lang.String> getArtifactRule() {
+    return artifactRule;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
-   * @param options options or {@code null} for none
+   * @param artifactRule artifactRule or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public ArtifactRule setArtifactRule(java.util.List<java.lang.String> artifactRule) {
+    this.artifactRule = artifactRule;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public ArtifactRule set(String fieldName, Object value) {
+    return (ArtifactRule) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public ArtifactRule clone() {
+    return (ArtifactRule) super.clone();
   }
 
 }

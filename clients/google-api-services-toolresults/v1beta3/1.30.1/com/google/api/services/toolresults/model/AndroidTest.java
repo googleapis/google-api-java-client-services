@@ -52,6 +52,13 @@ public final class AndroidTest extends com.google.api.client.json.GenericJson {
   private AndroidRoboTest androidRoboTest;
 
   /**
+   * An Android test loop.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AndroidTestLoop androidTestLoop;
+
+  /**
    * Max time a test is allowed to run before it is automatically cancelled.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class AndroidTest extends com.google.api.client.json.GenericJson {
    */
   public AndroidTest setAndroidRoboTest(AndroidRoboTest androidRoboTest) {
     this.androidRoboTest = androidRoboTest;
+    return this;
+  }
+
+  /**
+   * An Android test loop.
+   * @return value or {@code null} for none
+   */
+  public AndroidTestLoop getAndroidTestLoop() {
+    return androidTestLoop;
+  }
+
+  /**
+   * An Android test loop.
+   * @param androidTestLoop androidTestLoop or {@code null} for none
+   */
+  public AndroidTest setAndroidTestLoop(AndroidTestLoop androidTestLoop) {
+    this.androidTestLoop = androidTestLoop;
     return this;
   }
 

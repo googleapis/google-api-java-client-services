@@ -27,8 +27,8 @@ package com.google.api.services.toolresults.model;
  * Here is an example, let's consider that we have a continuous build is executing a test runner for
  * each iteration. The workflow would look like: - user creates a Execution with id 1 - user creates
  * an TestExecutionStep with id 100 for Execution 1 - user update TestExecutionStep with id 100 to
- * add a raw xml log + the service parses the xml logs and returns a TestExecutionStep with updated
- * TestResult(s). - user update the status of TestExecutionStep with id 100 to COMPLETE
+ * add a raw xml log     + the service parses the xml logs and returns a TestExecutionStep with
+ * updated TestResult(s). - user update the status of TestExecutionStep with id 100 to COMPLETE
  *
  * A Step can be updated until its state is set to COMPLETE at which points it becomes immutable.
  *
@@ -143,8 +143,8 @@ public final class Step extends com.google.api.client.json.GenericJson {
    * any of the keys or values exceeds 100 characters.
    *
    * - In response: always set - In create request: optional - In update request: optional; any new
-   * key/value pair will be added to the map, and any new value for an existing key will update that
-   * key's value
+   * key/value pair will be added to the   map, and any new value for an existing key will update
+   * that key's value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -450,8 +450,8 @@ public final class Step extends com.google.api.client.json.GenericJson {
    * any of the keys or values exceeds 100 characters.
    *
    * - In response: always set - In create request: optional - In update request: optional; any new
-   * key/value pair will be added to the map, and any new value for an existing key will update that
-   * key's value
+   * key/value pair will be added to the   map, and any new value for an existing key will update
+   * that key's value
    * @return value or {@code null} for none
    */
   public java.util.List<StepLabelsEntry> getLabels() {
@@ -467,8 +467,8 @@ public final class Step extends com.google.api.client.json.GenericJson {
    * any of the keys or values exceeds 100 characters.
    *
    * - In response: always set - In create request: optional - In update request: optional; any new
-   * key/value pair will be added to the map, and any new value for an existing key will update that
-   * key's value
+   * key/value pair will be added to the   map, and any new value for an existing key will update
+   * that key's value
    * @param labels labels or {@code null} for none
    */
   public Step setLabels(java.util.List<StepLabelsEntry> labels) {

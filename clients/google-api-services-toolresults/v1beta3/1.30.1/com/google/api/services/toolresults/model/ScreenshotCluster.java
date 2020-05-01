@@ -38,7 +38,7 @@ public final class ScreenshotCluster extends com.google.api.client.json.GenericJ
   private java.lang.String activity;
 
   /**
-   * A unique identifier for the cluster.
+   * A unique identifier for the cluster. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class ScreenshotCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique identifier for the cluster.
+   * A unique identifier for the cluster. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -92,7 +92,7 @@ public final class ScreenshotCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique identifier for the cluster.
+   * A unique identifier for the cluster. @OutputOnly
    * @param clusterId clusterId or {@code null} for none
    */
   public ScreenshotCluster setClusterId(java.lang.String clusterId) {

@@ -41,8 +41,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * The end time of the test case.
-   *
-   * Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +74,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * The start time of the test case.
-   *
-   * Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,6 +106,8 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * References to opaque files of any format output by the tool execution.
+   *
+   * @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +136,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * The end time of the test case.
-   *
-   * Optional.
    * @return value or {@code null} for none
    */
   public Timestamp getEndTime() {
@@ -148,8 +144,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * The end time of the test case.
-   *
-   * Optional.
    * @param endTime endTime or {@code null} for none
    */
   public TestCase setEndTime(Timestamp endTime) {
@@ -205,8 +199,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * The start time of the test case.
-   *
-   * Optional.
    * @return value or {@code null} for none
    */
   public Timestamp getStartTime() {
@@ -215,8 +207,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * The start time of the test case.
-   *
-   * Optional.
    * @param startTime startTime or {@code null} for none
    */
   public TestCase setStartTime(Timestamp startTime) {
@@ -285,6 +275,8 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * References to opaque files of any format output by the tool execution.
+   *
+   * @OutputOnly
    * @return value or {@code null} for none
    */
   public java.util.List<ToolOutputReference> getToolOutputs() {
@@ -293,6 +285,8 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * References to opaque files of any format output by the tool execution.
+   *
+   * @OutputOnly
    * @param toolOutputs toolOutputs or {@code null} for none
    */
   public TestCase setToolOutputs(java.util.List<ToolOutputReference> toolOutputs) {

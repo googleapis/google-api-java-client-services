@@ -49,7 +49,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
    * package_name.class_name#method_name"
    *
    * If empty, all targets in the module will be run.
@@ -101,7 +101,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
    * package_name.class_name#method_name"
    *
    * If empty, all targets in the module will be run.
@@ -113,7 +113,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
    * package_name.class_name#method_name"
    *
    * If empty, all targets in the module will be run.

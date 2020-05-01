@@ -45,7 +45,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * Tool execution exit code. This field will be set once the tool has exited.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is
+   * update request: optional, a FAILED_PRECONDITION error will be   returned if an exit_code is
    * already set.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * The maximum allowed number of tool logs per step is 1000.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, any value provided will be appended to the existing list
+   * update request: optional, any value provided will be appended to the   existing list
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * The maximum allowed number of tool outputs per step is 1000.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, any value provided will be appended to the existing list
+   * update request: optional, any value provided will be appended to the   existing list
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * Tool execution exit code. This field will be set once the tool has exited.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is
+   * update request: optional, a FAILED_PRECONDITION error will be   returned if an exit_code is
    * already set.
    * @return value or {@code null} for none
    */
@@ -124,7 +124,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * Tool execution exit code. This field will be set once the tool has exited.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is
+   * update request: optional, a FAILED_PRECONDITION error will be   returned if an exit_code is
    * already set.
    * @param exitCode exitCode or {@code null} for none
    */
@@ -142,7 +142,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * The maximum allowed number of tool logs per step is 1000.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, any value provided will be appended to the existing list
+   * update request: optional, any value provided will be appended to the   existing list
    * @return value or {@code null} for none
    */
   public java.util.List<FileReference> getToolLogs() {
@@ -158,7 +158,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * The maximum allowed number of tool logs per step is 1000.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, any value provided will be appended to the existing list
+   * update request: optional, any value provided will be appended to the   existing list
    * @param toolLogs toolLogs or {@code null} for none
    */
   public ToolExecution setToolLogs(java.util.List<FileReference> toolLogs) {
@@ -172,7 +172,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * The maximum allowed number of tool outputs per step is 1000.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, any value provided will be appended to the existing list
+   * update request: optional, any value provided will be appended to the   existing list
    * @return value or {@code null} for none
    */
   public java.util.List<ToolOutputReference> getToolOutputs() {
@@ -185,7 +185,7 @@ public final class ToolExecution extends com.google.api.client.json.GenericJson 
    * The maximum allowed number of tool outputs per step is 1000.
    *
    * - In response: present if set by create/update request - In create request: optional - In
-   * update request: optional, any value provided will be appended to the existing list
+   * update request: optional, any value provided will be appended to the   existing list
    * @param toolOutputs toolOutputs or {@code null} for none
    */
   public ToolExecution setToolOutputs(java.util.List<ToolOutputReference> toolOutputs) {

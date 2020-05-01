@@ -37,29 +37,23 @@ package com.google.api.services.toolresults.model;
 public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status code, which should be an enum value of [google.rpc.Code][].
+   * The status code, which should be an enum value of google.rpc.Code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer code;
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
+   * A list of messages that carry the error details.  There is a common set of message types for
    * APIs to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Any> details;
-
-  static {
-    // hack to force ProGuard to consider Any used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Any.class);
-  }
+  private java.util.List<java.util.Map<String, java.lang.Object>> details;
 
   /**
    * A developer-facing error message, which should be in English. Any user-facing error message
-   * should be localized and sent in the [google.rpc.Status.details][] field, or localized by the
+   * should be localized and sent in the google.rpc.Status.details field, or localized by the
    * client.
    * The value may be {@code null}.
    */
@@ -67,7 +61,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
-   * The status code, which should be an enum value of [google.rpc.Code][].
+   * The status code, which should be an enum value of google.rpc.Code.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCode() {
@@ -75,7 +69,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status code, which should be an enum value of [google.rpc.Code][].
+   * The status code, which should be an enum value of google.rpc.Code.
    * @param code code or {@code null} for none
    */
   public Status setCode(java.lang.Integer code) {
@@ -84,27 +78,27 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
+   * A list of messages that carry the error details.  There is a common set of message types for
    * APIs to use.
    * @return value or {@code null} for none
    */
-  public java.util.List<Any> getDetails() {
+  public java.util.List<java.util.Map<String, java.lang.Object>> getDetails() {
     return details;
   }
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
+   * A list of messages that carry the error details.  There is a common set of message types for
    * APIs to use.
    * @param details details or {@code null} for none
    */
-  public Status setDetails(java.util.List<Any> details) {
+  public Status setDetails(java.util.List<java.util.Map<String, java.lang.Object>> details) {
     this.details = details;
     return this;
   }
 
   /**
    * A developer-facing error message, which should be in English. Any user-facing error message
-   * should be localized and sent in the [google.rpc.Status.details][] field, or localized by the
+   * should be localized and sent in the google.rpc.Status.details field, or localized by the
    * client.
    * @return value or {@code null} for none
    */
@@ -114,7 +108,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
    * A developer-facing error message, which should be in English. Any user-facing error message
-   * should be localized and sent in the [google.rpc.Status.details][] field, or localized by the
+   * should be localized and sent in the google.rpc.Status.details field, or localized by the
    * client.
    * @param message message or {@code null} for none
    */

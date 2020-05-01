@@ -38,35 +38,35 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   private BasicPerfSampleSeries basicPerfSampleSeries;
 
   /**
-   * A tool results execution ID.
+   * A tool results execution ID. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String executionId;
 
   /**
-   * A tool results history ID.
+   * A tool results history ID. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String historyId;
 
   /**
-   * The cloud project
+   * The cloud project @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * A sample series id
+   * A sample series id @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sampleSeriesId;
 
   /**
-   * A tool results step ID.
+   * A tool results step ID. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A tool results execution ID.
+   * A tool results execution ID. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionId() {
@@ -98,7 +98,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A tool results execution ID.
+   * A tool results execution ID. @OutputOnly
    * @param executionId executionId or {@code null} for none
    */
   public PerfSampleSeries setExecutionId(java.lang.String executionId) {
@@ -107,7 +107,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A tool results history ID.
+   * A tool results history ID. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getHistoryId() {
@@ -115,7 +115,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A tool results history ID.
+   * A tool results history ID. @OutputOnly
    * @param historyId historyId or {@code null} for none
    */
   public PerfSampleSeries setHistoryId(java.lang.String historyId) {
@@ -124,7 +124,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cloud project
+   * The cloud project @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -132,7 +132,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cloud project
+   * The cloud project @OutputOnly
    * @param projectId projectId or {@code null} for none
    */
   public PerfSampleSeries setProjectId(java.lang.String projectId) {
@@ -141,7 +141,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A sample series id
+   * A sample series id @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getSampleSeriesId() {
@@ -149,7 +149,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A sample series id
+   * A sample series id @OutputOnly
    * @param sampleSeriesId sampleSeriesId or {@code null} for none
    */
   public PerfSampleSeries setSampleSeriesId(java.lang.String sampleSeriesId) {
@@ -158,7 +158,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A tool results step ID.
+   * A tool results step ID. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getStepId() {
@@ -166,7 +166,7 @@ public final class PerfSampleSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A tool results step ID.
+   * A tool results step ID. @OutputOnly
    * @param stepId stepId or {@code null} for none
    */
   public PerfSampleSeries setStepId(java.lang.String stepId) {

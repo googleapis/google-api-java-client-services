@@ -17,7 +17,8 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Result summary for a shard in an environment.
+ * This insight is a recommendation to upgrade a given library to the specified version, in order to
+ * avoid dependencies on non-SDK APIs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,73 +29,67 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ShardSummary extends com.google.api.client.json.GenericJson {
+public final class UpgradeInsight extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * The name of the package to be upgraded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StepSummary> runs;
+  private java.lang.String packageName;
 
   /**
-   * Merged result of the shard.
+   * The suggested version to upgrade to. Optional: In case we are not sure which version solves
+   * this problem
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MergedResult shardResult;
+  private java.lang.String upgradeToVersion;
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * The name of the package to be upgraded.
    * @return value or {@code null} for none
    */
-  public java.util.List<StepSummary> getRuns() {
-    return runs;
+  public java.lang.String getPackageName() {
+    return packageName;
   }
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
-   * @param runs runs or {@code null} for none
+   * The name of the package to be upgraded.
+   * @param packageName packageName or {@code null} for none
    */
-  public ShardSummary setRuns(java.util.List<StepSummary> runs) {
-    this.runs = runs;
+  public UpgradeInsight setPackageName(java.lang.String packageName) {
+    this.packageName = packageName;
     return this;
   }
 
   /**
-   * Merged result of the shard.
+   * The suggested version to upgrade to. Optional: In case we are not sure which version solves
+   * this problem
    * @return value or {@code null} for none
    */
-  public MergedResult getShardResult() {
-    return shardResult;
+  public java.lang.String getUpgradeToVersion() {
+    return upgradeToVersion;
   }
 
   /**
-   * Merged result of the shard.
-   * @param shardResult shardResult or {@code null} for none
+   * The suggested version to upgrade to. Optional: In case we are not sure which version solves
+   * this problem
+   * @param upgradeToVersion upgradeToVersion or {@code null} for none
    */
-  public ShardSummary setShardResult(MergedResult shardResult) {
-    this.shardResult = shardResult;
+  public UpgradeInsight setUpgradeToVersion(java.lang.String upgradeToVersion) {
+    this.upgradeToVersion = upgradeToVersion;
     return this;
   }
 
   @Override
-  public ShardSummary set(String fieldName, Object value) {
-    return (ShardSummary) super.set(fieldName, value);
+  public UpgradeInsight set(String fieldName, Object value) {
+    return (UpgradeInsight) super.set(fieldName, value);
   }
 
   @Override
-  public ShardSummary clone() {
-    return (ShardSummary) super.clone();
+  public UpgradeInsight clone() {
+    return (UpgradeInsight) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Result summary for a shard in an environment.
+ * Additional details for a non-sdk API usage violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,73 +28,64 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ShardSummary extends com.google.api.client.json.GenericJson {
+public final class NonSdkApiUsageViolation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Signatures of a subset of those hidden API's.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StepSummary> runs;
+  private java.util.List<java.lang.String> apiSignatures;
 
   /**
-   * Merged result of the shard.
+   * Total number of unique hidden API's accessed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MergedResult shardResult;
+  private java.lang.Integer uniqueApis;
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Signatures of a subset of those hidden API's.
    * @return value or {@code null} for none
    */
-  public java.util.List<StepSummary> getRuns() {
-    return runs;
+  public java.util.List<java.lang.String> getApiSignatures() {
+    return apiSignatures;
   }
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
-   * @param runs runs or {@code null} for none
+   * Signatures of a subset of those hidden API's.
+   * @param apiSignatures apiSignatures or {@code null} for none
    */
-  public ShardSummary setRuns(java.util.List<StepSummary> runs) {
-    this.runs = runs;
+  public NonSdkApiUsageViolation setApiSignatures(java.util.List<java.lang.String> apiSignatures) {
+    this.apiSignatures = apiSignatures;
     return this;
   }
 
   /**
-   * Merged result of the shard.
+   * Total number of unique hidden API's accessed.
    * @return value or {@code null} for none
    */
-  public MergedResult getShardResult() {
-    return shardResult;
+  public java.lang.Integer getUniqueApis() {
+    return uniqueApis;
   }
 
   /**
-   * Merged result of the shard.
-   * @param shardResult shardResult or {@code null} for none
+   * Total number of unique hidden API's accessed.
+   * @param uniqueApis uniqueApis or {@code null} for none
    */
-  public ShardSummary setShardResult(MergedResult shardResult) {
-    this.shardResult = shardResult;
+  public NonSdkApiUsageViolation setUniqueApis(java.lang.Integer uniqueApis) {
+    this.uniqueApis = uniqueApis;
     return this;
   }
 
   @Override
-  public ShardSummary set(String fieldName, Object value) {
-    return (ShardSummary) super.set(fieldName, value);
+  public NonSdkApiUsageViolation set(String fieldName, Object value) {
+    return (NonSdkApiUsageViolation) super.set(fieldName, value);
   }
 
   @Override
-  public ShardSummary clone() {
-    return (ShardSummary) super.clone();
+  public NonSdkApiUsageViolation clone() {
+    return (NonSdkApiUsageViolation) super.clone();
   }
 
 }

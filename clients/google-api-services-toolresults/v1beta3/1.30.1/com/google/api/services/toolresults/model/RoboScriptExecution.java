@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Result summary for a shard in an environment.
+ * Execution stats for a user-provided Robo script.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,73 +28,64 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ShardSummary extends com.google.api.client.json.GenericJson {
+public final class RoboScriptExecution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * The number of Robo script actions executed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StepSummary> runs;
+  private java.lang.Integer successfulActions;
 
   /**
-   * Merged result of the shard.
+   * The total number of actions in the Robo script.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MergedResult shardResult;
+  private java.lang.Integer totalActions;
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * The number of Robo script actions executed successfully.
    * @return value or {@code null} for none
    */
-  public java.util.List<StepSummary> getRuns() {
-    return runs;
+  public java.lang.Integer getSuccessfulActions() {
+    return successfulActions;
   }
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
-   * @param runs runs or {@code null} for none
+   * The number of Robo script actions executed successfully.
+   * @param successfulActions successfulActions or {@code null} for none
    */
-  public ShardSummary setRuns(java.util.List<StepSummary> runs) {
-    this.runs = runs;
+  public RoboScriptExecution setSuccessfulActions(java.lang.Integer successfulActions) {
+    this.successfulActions = successfulActions;
     return this;
   }
 
   /**
-   * Merged result of the shard.
+   * The total number of actions in the Robo script.
    * @return value or {@code null} for none
    */
-  public MergedResult getShardResult() {
-    return shardResult;
+  public java.lang.Integer getTotalActions() {
+    return totalActions;
   }
 
   /**
-   * Merged result of the shard.
-   * @param shardResult shardResult or {@code null} for none
+   * The total number of actions in the Robo script.
+   * @param totalActions totalActions or {@code null} for none
    */
-  public ShardSummary setShardResult(MergedResult shardResult) {
-    this.shardResult = shardResult;
+  public RoboScriptExecution setTotalActions(java.lang.Integer totalActions) {
+    this.totalActions = totalActions;
     return this;
   }
 
   @Override
-  public ShardSummary set(String fieldName, Object value) {
-    return (ShardSummary) super.set(fieldName, value);
+  public RoboScriptExecution set(String fieldName, Object value) {
+    return (RoboScriptExecution) super.set(fieldName, value);
   }
 
   @Override
-  public ShardSummary clone() {
-    return (ShardSummary) super.clone();
+  public RoboScriptExecution clone() {
+    return (RoboScriptExecution) super.clone();
   }
 
 }

@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/GjI2omdOwgKoGt8qh6sRE2-sK44\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/S1k5CCqh8gSKiLsFzL6-jUaTWIQ\"",
  "discoveryVersion": "v1",
  "id": "content:v2",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2",
- "revision": "20200407",
+ "revision": "20200414",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -3592,7 +3592,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -3636,7 +3636,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -3754,7 +3754,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -3823,7 +3823,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -3856,7 +3856,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4502,7 +4502,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4568,7 +4568,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4614,7 +4614,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4660,7 +4660,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4714,7 +4714,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4753,7 +4753,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4808,7 +4808,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4849,7 +4849,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4878,7 +4878,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -4923,7 +4923,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
     },
     "kind": {
      "type": "string",
@@ -7557,14 +7557,14 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
       },
       "overwrite": {
        "type": "boolean",
-       "description": "Only available to selected merchants. When set to True, this flag removes any existing claim on the requested website by another account and replaces it with a claim from this account.",
+       "description": "Only available to selected merchants. When set to `True`, this flag removes any existing claim on the requested website by another account and replaces it with a claim from this account.",
        "location": "query"
       }
      },
@@ -7656,7 +7656,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -7720,7 +7720,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -7795,7 +7795,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -7855,7 +7855,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -7954,7 +7954,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8026,7 +8026,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8430,7 +8430,7 @@
       },
       "storeCode": {
        "type": "string",
-       "description": "The code of the store for which to update price and availability. Use online to update price and availability of an online product.",
+       "description": "The code of the store for which to update price and availability. Use `online` to update price and availability of an online product.",
        "required": true,
        "location": "path"
       }
@@ -8491,7 +8491,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8523,7 +8523,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8608,7 +8608,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8647,7 +8647,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8704,7 +8704,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8746,7 +8746,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8795,7 +8795,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -8857,7 +8857,7 @@
      "id": "content.orderinvoices.createrefundinvoice",
      "path": "{merchantId}/orderinvoices/{orderId}/createRefundInvoice",
      "httpMethod": "POST",
-     "description": "Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using createChargeInvoice. All amounts (except for the summary) are incremental with respect to the previous invoice.",
+     "description": "Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.",
      "parameters": {
       "merchantId": {
        "type": "string",
@@ -9127,7 +9127,7 @@
      "id": "content.orders.advancetestorder",
      "path": "{merchantId}/testorders/{orderId}/advance",
      "httpMethod": "POST",
-     "description": "Sandbox only. Moves a test order from state \"inProgress\" to state \"pendingShipment\".",
+     "description": "Sandbox only. Moves a test order from state \"`inProgress`\" to state \"`pendingShipment`\".",
      "parameters": {
       "merchantId": {
        "type": "string",
@@ -9402,7 +9402,7 @@
      "parameters": {
       "country": {
        "type": "string",
-       "description": "The country of the template to retrieve. Defaults to US.",
+       "description": "The country of the template to retrieve. Defaults to `US`.",
        "location": "query"
       },
       "merchantId": {
@@ -9486,7 +9486,7 @@
      "parameters": {
       "acknowledged": {
        "type": "boolean",
-       "description": "Obtains orders that match the acknowledgement status. When set to true, obtains orders that have been acknowledged. When false, obtains orders that have not been acknowledged.\nWe recommend using this filter set to false, in conjunction with the acknowledge call, such that only un-acknowledged orders are returned.",
+       "description": "Obtains orders that match the acknowledgement status. When set to true, obtains orders that have been acknowledged. When false, obtains orders that have not been acknowledged.\nWe recommend using this filter set to `false`, in conjunction with the `acknowledge` call, such that only un-acknowledged orders are returned.",
        "location": "query"
       },
       "maxResults": {
@@ -9524,7 +9524,7 @@
       },
       "statuses": {
        "type": "string",
-       "description": "Obtains orders that match any of the specified statuses. Please note that active is a shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered, delivered, partiallyReturned, returned, and canceled.",
+       "description": "Obtains orders that match any of the specified statuses. Please note that `active` is a shortcut for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for `shipped`, `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and `canceled`.",
        "enum": [
         "active",
         "canceled",
@@ -10451,7 +10451,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"
@@ -10595,7 +10595,7 @@
       },
       "merchantId": {
        "type": "string",
-       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.",
        "required": true,
        "format": "uint64",
        "location": "path"

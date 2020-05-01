@@ -238,7 +238,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Claimwebsite#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account whose website is claimed.
      * @return the request
@@ -265,7 +265,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account whose website is claimed.
        * @since 1.13
@@ -313,14 +313,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -328,7 +328,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Claimwebsite setMerchantId(java.math.BigInteger merchantId) {
@@ -353,22 +353,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Only available to selected merchants. When set to True, this flag removes any existing
+       * Only available to selected merchants. When set to `True`, this flag removes any existing
        * claim on the requested website by another account and replaces it with a claim from this
        * account.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean overwrite;
 
-      /** Only available to selected merchants. When set to True, this flag removes any existing claim on the
-     requested website by another account and replaces it with a claim from this account.
+      /** Only available to selected merchants. When set to `True`, this flag removes any existing claim on
+     the requested website by another account and replaces it with a claim from this account.
        */
       public java.lang.Boolean getOverwrite() {
         return overwrite;
       }
 
       /**
-       * Only available to selected merchants. When set to True, this flag removes any existing
+       * Only available to selected merchants. When set to `True`, this flag removes any existing
        * claim on the requested website by another account and replaces it with a claim from this
        * account.
        */
@@ -638,7 +638,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account.
      * @return the request
@@ -664,7 +664,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account.
        * @since 1.13
@@ -722,14 +722,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -737,7 +737,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Get setMerchantId(java.math.BigInteger merchantId) {
@@ -875,7 +875,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Link#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account that should be linked.
      * @param content the {@link com.google.api.services.content.model.AccountsLinkRequest}
@@ -903,7 +903,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account that should be linked.
        * @param content the {@link com.google.api.services.content.model.AccountsLinkRequest}
@@ -952,14 +952,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -967,7 +967,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Link setMerchantId(java.math.BigInteger merchantId) {
@@ -1142,7 +1142,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Listlinks#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to list links.
      * @return the request
@@ -1169,7 +1169,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to list links.
        * @since 1.13
@@ -1227,14 +1227,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -1242,7 +1242,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Listlinks setMerchantId(java.math.BigInteger merchantId) {
@@ -1312,7 +1312,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account.
      * @param content the {@link com.google.api.services.content.model.Account}
@@ -1339,7 +1339,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account.
        * @param content the {@link com.google.api.services.content.model.Account}
@@ -1392,14 +1392,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -1407,7 +1407,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Update setMerchantId(java.math.BigInteger merchantId) {
@@ -1548,7 +1548,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account.
      * @return the request
@@ -1575,7 +1575,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account.
        * @since 1.13
@@ -1633,14 +1633,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -1648,7 +1648,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Get setMerchantId(java.math.BigInteger merchantId) {
@@ -1971,7 +1971,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to get/update account tax settings.
      * @return the request
@@ -1997,7 +1997,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to get/update account tax settings.
        * @since 1.13
@@ -2055,14 +2055,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -2070,7 +2070,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Get setMerchantId(java.math.BigInteger merchantId) {
@@ -2245,7 +2245,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to get/update account tax settings.
      * @param content the {@link com.google.api.services.content.model.AccountTax}
@@ -2272,7 +2272,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to get/update account tax settings.
        * @param content the {@link com.google.api.services.content.model.AccountTax}
@@ -2323,14 +2323,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -2338,7 +2338,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Update setMerchantId(java.math.BigInteger merchantId) {
@@ -3758,7 +3758,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to get or update LIA settings.
      * @return the request
@@ -3784,7 +3784,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to get or update LIA settings.
        * @since 1.13
@@ -3842,14 +3842,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -3857,7 +3857,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Get setMerchantId(java.math.BigInteger merchantId) {
@@ -3896,7 +3896,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
      * @return the request
@@ -3923,7 +3923,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
        * @since 1.13
@@ -3981,14 +3981,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -3996,7 +3996,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Getaccessiblegmbaccounts setMerchantId(java.math.BigInteger merchantId) {
@@ -4261,7 +4261,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Requestgmbaccess#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which GMB access is requested.
      * @param gmbEmail The email of the Google My Business account.
@@ -4289,7 +4289,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which GMB access is requested.
        * @param gmbEmail The email of the Google My Business account.
@@ -4339,14 +4339,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -4354,7 +4354,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Requestgmbaccess setMerchantId(java.math.BigInteger merchantId) {
@@ -4409,7 +4409,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
      * @param country The country for which inventory validation is requested.
@@ -4437,7 +4437,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
        * @param country The country for which inventory validation is requested.
@@ -4487,14 +4487,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -4502,7 +4502,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Requestinventoryverification setMerchantId(java.math.BigInteger merchantId) {
@@ -4557,7 +4557,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
      * @param contactEmail The email of the inventory verification contact.
@@ -4588,7 +4588,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
        * @param contactEmail The email of the inventory verification contact.
@@ -4644,14 +4644,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -4659,7 +4659,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Setinventoryverificationcontact setMerchantId(java.math.BigInteger merchantId) {
@@ -4761,7 +4761,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Setposdataprovider#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
      * @param country The country for which the POS data provider is selected.
@@ -4789,7 +4789,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
        * @param country The country for which the POS data provider is selected.
@@ -4839,14 +4839,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -4854,7 +4854,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Setposdataprovider setMerchantId(java.math.BigInteger merchantId) {
@@ -4940,7 +4940,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to get or update LIA settings.
      * @param content the {@link com.google.api.services.content.model.LiaSettings}
@@ -4967,7 +4967,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to get or update LIA settings.
        * @param content the {@link com.google.api.services.content.model.LiaSettings}
@@ -5016,14 +5016,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -5031,7 +5031,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Update setMerchantId(java.math.BigInteger merchantId) {
@@ -5429,7 +5429,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     /**
      * Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice
      * enabled orders. This can only be used for line items that have previously been charged using
-     * createChargeInvoice. All amounts (except for the summary) are incremental with respect to the
+     * `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the
      * previous invoice.
      *
      * Create a request for the method "orderinvoices.createrefundinvoice".
@@ -5455,7 +5455,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * Creates a refund invoice for one or more shipment groups, and triggers a refund for
        * orderinvoice enabled orders. This can only be used for line items that have previously been
-       * charged using createChargeInvoice. All amounts (except for the summary) are incremental with
+       * charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with
        * respect to the previous invoice.
        *
        * Create a request for the method "orderinvoices.createrefundinvoice".
@@ -6421,7 +6421,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Sandbox only. Moves a test order from state "inProgress" to state "pendingShipment".
+     * Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
      *
      * Create a request for the method "orders.advancetestorder".
      *
@@ -6443,7 +6443,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/testorders/{orderId}/advance";
 
       /**
-       * Sandbox only. Moves a test order from state "inProgress" to state "pendingShipment".
+       * Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
        *
        * Create a request for the method "orders.advancetestorder".
        *
@@ -7482,17 +7482,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The country of the template to retrieve. Defaults to US. */
+      /** The country of the template to retrieve. Defaults to `US`. */
       @com.google.api.client.util.Key
       private java.lang.String country;
 
-      /** The country of the template to retrieve. Defaults to US.
+      /** The country of the template to retrieve. Defaults to `US`.
        */
       public java.lang.String getCountry() {
         return country;
       }
 
-      /** The country of the template to retrieve. Defaults to US. */
+      /** The country of the template to retrieve. Defaults to `US`. */
       public Gettestordertemplate setCountry(java.lang.String country) {
         this.country = country;
         return this;
@@ -7736,16 +7736,16 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * Obtains orders that match the acknowledgement status. When set to true, obtains orders that
        * have been acknowledged. When false, obtains orders that have not been acknowledged. We
-       * recommend using this filter set to false, in conjunction with the acknowledge call, such
-       * that only un-acknowledged orders are returned.
+       * recommend using this filter set to `false`, in conjunction with the `acknowledge` call,
+       * such that only un-acknowledged orders are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean acknowledged;
 
       /** Obtains orders that match the acknowledgement status. When set to true, obtains orders that have
      been acknowledged. When false, obtains orders that have not been acknowledged. We recommend using
-     this filter set to false, in conjunction with the acknowledge call, such that only un-acknowledged
-     orders are returned.
+     this filter set to `false`, in conjunction with the `acknowledge` call, such that only un-
+     acknowledged orders are returned.
        */
       public java.lang.Boolean getAcknowledged() {
         return acknowledged;
@@ -7754,8 +7754,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * Obtains orders that match the acknowledgement status. When set to true, obtains orders that
        * have been acknowledged. When false, obtains orders that have not been acknowledged. We
-       * recommend using this filter set to false, in conjunction with the acknowledge call, such
-       * that only un-acknowledged orders are returned.
+       * recommend using this filter set to `false`, in conjunction with the `acknowledge` call,
+       * such that only un-acknowledged orders are returned.
        */
       public List setAcknowledged(java.lang.Boolean acknowledged) {
         this.acknowledged = acknowledged;
@@ -7860,25 +7860,27 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Please note that active is a
-       * shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
-       * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
+       * Obtains orders that match any of the specified statuses. Please note that `active` is a
+       * shortcut for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for
+       * `shipped`, `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and
+       * `canceled`.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> statuses;
 
-      /** Obtains orders that match any of the specified statuses. Please note that active is a shortcut for
-     pendingShipment and partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered,
-     delivered, partiallyReturned, returned, and canceled.
+      /** Obtains orders that match any of the specified statuses. Please note that `active` is a shortcut
+     for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for `shipped`,
+     `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and `canceled`.
        */
       public java.util.List<java.lang.String> getStatuses() {
         return statuses;
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Please note that active is a
-       * shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
-       * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
+       * Obtains orders that match any of the specified statuses. Please note that `active` is a
+       * shortcut for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for
+       * `shipped`, `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and
+       * `canceled`.
        */
       public List setStatuses(java.util.List<java.lang.String> statuses) {
         this.statuses = statuses;
@@ -12919,7 +12921,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to get/update shipping settings.
      * @return the request
@@ -12945,7 +12947,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to get/update shipping settings.
        * @since 1.13
@@ -13003,14 +13005,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -13018,7 +13020,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Get setMerchantId(java.math.BigInteger merchantId) {
@@ -13514,7 +13516,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to get/update shipping settings.
      * @param content the {@link com.google.api.services.content.model.ShippingSettings}
@@ -13541,7 +13543,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
-     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to get/update shipping settings.
        * @param content the {@link com.google.api.services.content.model.ShippingSettings}
@@ -13590,14 +13592,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger merchantId;
 
       /** The ID of the managing account. If this parameter is not the same as accountId, then this account
-     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
        */
       public java.math.BigInteger getMerchantId() {
         return merchantId;
@@ -13605,7 +13607,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The ID of the managing account. If this parameter is not the same as accountId, then this
-       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
        * this account.
        */
       public Update setMerchantId(java.math.BigInteger merchantId) {

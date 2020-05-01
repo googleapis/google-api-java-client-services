@@ -32,6 +32,8 @@ public final class ListCreativesResponse extends com.google.api.client.json.Gene
 
   /**
    * The list of creatives.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,6 +56,8 @@ public final class ListCreativesResponse extends com.google.api.client.json.Gene
 
   /**
    * The list of creatives.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Creative> getCreatives() {
@@ -62,6 +66,8 @@ public final class ListCreativesResponse extends com.google.api.client.json.Gene
 
   /**
    * The list of creatives.
+   *
+   * This list will be absent if empty.
    * @param creatives creatives or {@code null} for none
    */
   public ListCreativesResponse setCreatives(java.util.List<Creative> creatives) {

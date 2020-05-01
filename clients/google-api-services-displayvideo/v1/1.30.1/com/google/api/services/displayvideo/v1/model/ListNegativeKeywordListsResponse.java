@@ -32,6 +32,8 @@ public final class ListNegativeKeywordListsResponse extends com.google.api.clien
 
   /**
    * The list of negative keyword lists.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +51,8 @@ public final class ListNegativeKeywordListsResponse extends com.google.api.clien
 
   /**
    * The list of negative keyword lists.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<NegativeKeywordList> getNegativeKeywordLists() {
@@ -57,6 +61,8 @@ public final class ListNegativeKeywordListsResponse extends com.google.api.clien
 
   /**
    * The list of negative keyword lists.
+   *
+   * This list will be absent if empty.
    * @param negativeKeywordLists negativeKeywordLists or {@code null} for none
    */
   public ListNegativeKeywordListsResponse setNegativeKeywordLists(java.util.List<NegativeKeywordList> negativeKeywordLists) {

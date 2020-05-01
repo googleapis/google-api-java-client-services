@@ -32,6 +32,8 @@ public final class BulkEditLineItemAssignedTargetingOptionsResponse extends com.
 
   /**
    * The list of assigned targeting options that have been successfully created.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +47,8 @@ public final class BulkEditLineItemAssignedTargetingOptionsResponse extends com.
 
   /**
    * The list of assigned targeting options that have been successfully created.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<AssignedTargetingOption> getCreatedAssignedTargetingOptions() {
@@ -53,6 +57,8 @@ public final class BulkEditLineItemAssignedTargetingOptionsResponse extends com.
 
   /**
    * The list of assigned targeting options that have been successfully created.
+   *
+   * This list will be absent if empty.
    * @param createdAssignedTargetingOptions createdAssignedTargetingOptions or {@code null} for none
    */
   public BulkEditLineItemAssignedTargetingOptionsResponse setCreatedAssignedTargetingOptions(java.util.List<AssignedTargetingOption> createdAssignedTargetingOptions) {

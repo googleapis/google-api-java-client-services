@@ -32,6 +32,8 @@ public final class ListGoogleAudiencesResponse extends com.google.api.client.jso
 
   /**
    * The list of Google audiences.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListGoogleAudiencesResponse extends com.google.api.client.jso
 
   /**
    * The list of Google audiences.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAudience> getGoogleAudiences() {
@@ -61,6 +65,8 @@ public final class ListGoogleAudiencesResponse extends com.google.api.client.jso
 
   /**
    * The list of Google audiences.
+   *
+   * This list will be absent if empty.
    * @param googleAudiences googleAudiences or {@code null} for none
    */
   public ListGoogleAudiencesResponse setGoogleAudiences(java.util.List<GoogleAudience> googleAudiences) {

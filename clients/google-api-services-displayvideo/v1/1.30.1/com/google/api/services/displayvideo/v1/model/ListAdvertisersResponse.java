@@ -32,6 +32,8 @@ public final class ListAdvertisersResponse extends com.google.api.client.json.Ge
 
   /**
    * The list of advertisers.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListAdvertisersResponse extends com.google.api.client.json.Ge
 
   /**
    * The list of advertisers.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Advertiser> getAdvertisers() {
@@ -61,6 +65,8 @@ public final class ListAdvertisersResponse extends com.google.api.client.json.Ge
 
   /**
    * The list of advertisers.
+   *
+   * This list will be absent if empty.
    * @param advertisers advertisers or {@code null} for none
    */
   public ListAdvertisersResponse setAdvertisers(java.util.List<Advertiser> advertisers) {

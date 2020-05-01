@@ -33,16 +33,14 @@ package com.google.api.services.displayvideo.v1.model;
 public final class DigitalContentLabelTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. An enum for the content label brand safety tiers. Values from content-labels.txt.
-   * Must be kept in sync with //contentads/bidder/proto/video_ratings.proto
+   * Output only. An enum for the content label brand safety tiers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentRatingTier;
 
   /**
-   * Output only. An enum for the content label brand safety tiers. Values from content-labels.txt.
-   * Must be kept in sync with //contentads/bidder/proto/video_ratings.proto
+   * Output only. An enum for the content label brand safety tiers.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentRatingTier() {
@@ -50,8 +48,7 @@ public final class DigitalContentLabelTargetingOptionDetails extends com.google.
   }
 
   /**
-   * Output only. An enum for the content label brand safety tiers. Values from content-labels.txt.
-   * Must be kept in sync with //contentads/bidder/proto/video_ratings.proto
+   * Output only. An enum for the content label brand safety tiers.
    * @param contentRatingTier contentRatingTier or {@code null} for none
    */
   public DigitalContentLabelTargetingOptionDetails setContentRatingTier(java.lang.String contentRatingTier) {

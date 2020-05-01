@@ -32,6 +32,8 @@ public final class ListInsertionOrdersResponse extends com.google.api.client.jso
 
   /**
    * The list of insertion orders.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListInsertionOrdersResponse extends com.google.api.client.jso
 
   /**
    * The list of insertion orders.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<InsertionOrder> getInsertionOrders() {
@@ -61,6 +65,8 @@ public final class ListInsertionOrdersResponse extends com.google.api.client.jso
 
   /**
    * The list of insertion orders.
+   *
+   * This list will be absent if empty.
    * @param insertionOrders insertionOrders or {@code null} for none
    */
   public ListInsertionOrdersResponse setInsertionOrders(java.util.List<InsertionOrder> insertionOrders) {

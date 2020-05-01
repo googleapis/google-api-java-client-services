@@ -32,6 +32,8 @@ public final class ListLocationListsResponse extends com.google.api.client.json.
 
   /**
    * The list of location lists.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +51,8 @@ public final class ListLocationListsResponse extends com.google.api.client.json.
 
   /**
    * The list of location lists.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<LocationList> getLocationLists() {
@@ -57,6 +61,8 @@ public final class ListLocationListsResponse extends com.google.api.client.json.
 
   /**
    * The list of location lists.
+   *
+   * This list will be absent if empty.
    * @param locationLists locationLists or {@code null} for none
    */
   public ListLocationListsResponse setLocationLists(java.util.List<LocationList> locationLists) {

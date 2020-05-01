@@ -38,7 +38,8 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   private java.lang.String keyId;
 
   /**
-   * The signed JWT.
+   * The signed JWT. Contains the automatically generated header; the client-supplied payload; and
+   * the signature, which is generated using the key referenced by the `kid` field in the header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The signed JWT.
+   * The signed JWT. Contains the automatically generated header; the client-supplied payload; and
+   * the signature, which is generated using the key referenced by the `kid` field in the header.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignedJwt() {
@@ -70,7 +72,8 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The signed JWT.
+   * The signed JWT. Contains the automatically generated header; the client-supplied payload; and
+   * the signature, which is generated using the key referenced by the `kid` field in the header.
    * @param signedJwt signedJwt or {@code null} for none
    */
   public SignJwtResponse setSignedJwt(java.lang.String signedJwt) {

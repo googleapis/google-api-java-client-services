@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/pojeTTIIYC5DgmWgumRjk5quG4k\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/d1DsaGZzUpO_VvaChZpAEzGh6JA\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v2",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v2",
- "revision": "20200414",
+ "revision": "20200421",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -1751,7 +1751,7 @@
         "accept": [
          "application/octet-stream"
         ],
-        "maxSize": "2GB",
+        "maxSize": "10GB",
         "protocols": {
          "simple": {
           "multipart": true,

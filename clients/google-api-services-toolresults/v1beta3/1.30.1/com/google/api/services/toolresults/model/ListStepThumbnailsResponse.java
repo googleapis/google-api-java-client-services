@@ -44,10 +44,10 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
    * A list of image data.
    *
    * Images are returned in a deterministic order; they are ordered by these factors, in order of
-   * importance: * First, by their associated test case. Images without a test case are considered
+   * importance: * First, by their associated test case. Images without a test case are   considered
    * greater than images with one. * Second, by their creation time. Images without a creation time
-   * are greater than images with one. * Third, by the order in which they were added to the step
-   * (by calls to CreateStep or UpdateStep).
+   * are   greater than images with one. * Third, by the order in which they were added to the step
+   * (by calls to   CreateStep or UpdateStep).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,10 +86,10 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
    * A list of image data.
    *
    * Images are returned in a deterministic order; they are ordered by these factors, in order of
-   * importance: * First, by their associated test case. Images without a test case are considered
+   * importance: * First, by their associated test case. Images without a test case are   considered
    * greater than images with one. * Second, by their creation time. Images without a creation time
-   * are greater than images with one. * Third, by the order in which they were added to the step
-   * (by calls to CreateStep or UpdateStep).
+   * are   greater than images with one. * Third, by the order in which they were added to the step
+   * (by calls to   CreateStep or UpdateStep).
    * @return value or {@code null} for none
    */
   public java.util.List<Image> getThumbnails() {
@@ -100,10 +100,10 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
    * A list of image data.
    *
    * Images are returned in a deterministic order; they are ordered by these factors, in order of
-   * importance: * First, by their associated test case. Images without a test case are considered
+   * importance: * First, by their associated test case. Images without a test case are   considered
    * greater than images with one. * Second, by their creation time. Images without a creation time
-   * are greater than images with one. * Third, by the order in which they were added to the step
-   * (by calls to CreateStep or UpdateStep).
+   * are   greater than images with one. * Third, by the order in which they were added to the step
+   * (by calls to   CreateStep or UpdateStep).
    * @param thumbnails thumbnails or {@code null} for none
    */
   public ListStepThumbnailsResponse setThumbnails(java.util.List<Image> thumbnails) {

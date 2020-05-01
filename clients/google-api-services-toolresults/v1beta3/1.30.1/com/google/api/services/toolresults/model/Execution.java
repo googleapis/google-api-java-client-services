@@ -17,9 +17,9 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * An Execution represents a collection of Steps. For instance, it could represent: - a mobile test
- * executed across a range of device configurations - a jenkins job with a build step followed by a
- * test step
+ * An Execution represents a collection of Steps. For instance, it could represent:    - a mobile
+ * test executed across a range of device configurations    - a jenkins job with a build step
+ * followed by a test step
  *
  * The maximum size of an execution message is 1 MiB.
  *
@@ -58,6 +58,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Timestamp creationTime;
+
+  /**
+   * The dimensions along which different steps in this execution may vary. This must remain fixed
+   * over the life of the execution.
+   *
+   * Returns INVALID_ARGUMENT if this field is set in an update request.
+   *
+   * Returns INVALID_ARGUMENT if the same name occurs in more than one dimension_definition.
+   *
+   * Returns INVALID_ARGUMENT if the size of the list is over 100.
+   *
+   * - In response: present if set by create - In create request: optional - In update request:
+   * never set
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MatrixDimensionDefinition> dimensionDefinitions;
 
   /**
    * A unique identifier within a History for this Execution.
@@ -163,6 +180,43 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setCreationTime(Timestamp creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * The dimensions along which different steps in this execution may vary. This must remain fixed
+   * over the life of the execution.
+   *
+   * Returns INVALID_ARGUMENT if this field is set in an update request.
+   *
+   * Returns INVALID_ARGUMENT if the same name occurs in more than one dimension_definition.
+   *
+   * Returns INVALID_ARGUMENT if the size of the list is over 100.
+   *
+   * - In response: present if set by create - In create request: optional - In update request:
+   * never set
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MatrixDimensionDefinition> getDimensionDefinitions() {
+    return dimensionDefinitions;
+  }
+
+  /**
+   * The dimensions along which different steps in this execution may vary. This must remain fixed
+   * over the life of the execution.
+   *
+   * Returns INVALID_ARGUMENT if this field is set in an update request.
+   *
+   * Returns INVALID_ARGUMENT if the same name occurs in more than one dimension_definition.
+   *
+   * Returns INVALID_ARGUMENT if the size of the list is over 100.
+   *
+   * - In response: present if set by create - In create request: optional - In update request:
+   * never set
+   * @param dimensionDefinitions dimensionDefinitions or {@code null} for none
+   */
+  public Execution setDimensionDefinitions(java.util.List<MatrixDimensionDefinition> dimensionDefinitions) {
+    this.dimensionDefinitions = dimensionDefinitions;
     return this;
   }
 

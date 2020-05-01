@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Result summary for a shard in an environment.
+ * Additional details about encountered login screens.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,73 +28,64 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ShardSummary extends com.google.api.client.json.GenericJson {
+public final class EncounteredLoginScreen extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Number of encountered distinct login screens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StepSummary> runs;
+  private java.lang.Integer distinctScreens;
 
   /**
-   * Merged result of the shard.
+   * Subset of login screens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MergedResult shardResult;
+  private java.util.List<java.lang.String> screenIds;
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Number of encountered distinct login screens.
    * @return value or {@code null} for none
    */
-  public java.util.List<StepSummary> getRuns() {
-    return runs;
+  public java.lang.Integer getDistinctScreens() {
+    return distinctScreens;
   }
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
-   * @param runs runs or {@code null} for none
+   * Number of encountered distinct login screens.
+   * @param distinctScreens distinctScreens or {@code null} for none
    */
-  public ShardSummary setRuns(java.util.List<StepSummary> runs) {
-    this.runs = runs;
+  public EncounteredLoginScreen setDistinctScreens(java.lang.Integer distinctScreens) {
+    this.distinctScreens = distinctScreens;
     return this;
   }
 
   /**
-   * Merged result of the shard.
+   * Subset of login screens.
    * @return value or {@code null} for none
    */
-  public MergedResult getShardResult() {
-    return shardResult;
+  public java.util.List<java.lang.String> getScreenIds() {
+    return screenIds;
   }
 
   /**
-   * Merged result of the shard.
-   * @param shardResult shardResult or {@code null} for none
+   * Subset of login screens.
+   * @param screenIds screenIds or {@code null} for none
    */
-  public ShardSummary setShardResult(MergedResult shardResult) {
-    this.shardResult = shardResult;
+  public EncounteredLoginScreen setScreenIds(java.util.List<java.lang.String> screenIds) {
+    this.screenIds = screenIds;
     return this;
   }
 
   @Override
-  public ShardSummary set(String fieldName, Object value) {
-    return (ShardSummary) super.set(fieldName, value);
+  public EncounteredLoginScreen set(String fieldName, Object value) {
+    return (EncounteredLoginScreen) super.set(fieldName, value);
   }
 
   @Override
-  public ShardSummary clone() {
-    return (ShardSummary) super.clone();
+  public EncounteredLoginScreen clone() {
+    return (EncounteredLoginScreen) super.clone();
   }
 
 }

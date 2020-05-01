@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Result summary for a shard in an environment.
+ * User provided intent failed to resolve to an activity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,73 +28,58 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ShardSummary extends com.google.api.client.json.GenericJson {
+public final class StartActivityNotFound extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StepSummary> runs;
+  private java.lang.String action;
 
   /**
-   * Merged result of the shard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MergedResult shardResult;
+  private java.lang.String uri;
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
    * @return value or {@code null} for none
    */
-  public java.util.List<StepSummary> getRuns() {
-    return runs;
+  public java.lang.String getAction() {
+    return action;
   }
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
-   * @param runs runs or {@code null} for none
+   * @param action action or {@code null} for none
    */
-  public ShardSummary setRuns(java.util.List<StepSummary> runs) {
-    this.runs = runs;
+  public StartActivityNotFound setAction(java.lang.String action) {
+    this.action = action;
     return this;
   }
 
   /**
-   * Merged result of the shard.
    * @return value or {@code null} for none
    */
-  public MergedResult getShardResult() {
-    return shardResult;
+  public java.lang.String getUri() {
+    return uri;
   }
 
   /**
-   * Merged result of the shard.
-   * @param shardResult shardResult or {@code null} for none
+   * @param uri uri or {@code null} for none
    */
-  public ShardSummary setShardResult(MergedResult shardResult) {
-    this.shardResult = shardResult;
+  public StartActivityNotFound setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public ShardSummary set(String fieldName, Object value) {
-    return (ShardSummary) super.set(fieldName, value);
+  public StartActivityNotFound set(String fieldName, Object value) {
+    return (StartActivityNotFound) super.set(fieldName, value);
   }
 
   @Override
-  public ShardSummary clone() {
-    return (ShardSummary) super.clone();
+  public StartActivityNotFound clone() {
+    return (StartActivityNotFound) super.clone();
   }
 
 }

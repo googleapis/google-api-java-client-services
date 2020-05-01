@@ -37,7 +37,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   private AppStartTime appStartTime;
 
   /**
-   * A tool results execution ID.
+   * A tool results execution ID. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   private GraphicsStats graphicsStats;
 
   /**
-   * A tool results history ID.
+   * A tool results history ID. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,14 +73,14 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> perfMetrics;
 
   /**
-   * The cloud project
+   * The cloud project @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * A tool results step ID.
+   * A tool results step ID. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results execution ID.
+   * A tool results execution ID. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionId() {
@@ -110,7 +110,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results execution ID.
+   * A tool results execution ID. @OutputOnly
    * @param executionId executionId or {@code null} for none
    */
   public PerfMetricsSummary setExecutionId(java.lang.String executionId) {
@@ -138,7 +138,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results history ID.
+   * A tool results history ID. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getHistoryId() {
@@ -146,7 +146,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results history ID.
+   * A tool results history ID. @OutputOnly
    * @param historyId historyId or {@code null} for none
    */
   public PerfMetricsSummary setHistoryId(java.lang.String historyId) {
@@ -189,7 +189,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * The cloud project
+   * The cloud project @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -197,7 +197,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * The cloud project
+   * The cloud project @OutputOnly
    * @param projectId projectId or {@code null} for none
    */
   public PerfMetricsSummary setProjectId(java.lang.String projectId) {
@@ -206,7 +206,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results step ID.
+   * A tool results step ID. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getStepId() {
@@ -214,7 +214,7 @@ public final class PerfMetricsSummary extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results step ID.
+   * A tool results step ID. @OutputOnly
    * @param stepId stepId or {@code null} for none
    */
   public PerfMetricsSummary setStepId(java.lang.String stepId) {

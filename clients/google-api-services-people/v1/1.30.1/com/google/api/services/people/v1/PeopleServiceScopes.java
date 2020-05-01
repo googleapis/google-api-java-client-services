@@ -29,6 +29,9 @@ public class PeopleServiceScopes {
   /** See and download your contacts. */
   public static final String CONTACTS_READONLY = "https://www.googleapis.com/auth/contacts.readonly";
 
+  /** See and download your organization's GSuite directory. */
+  public static final String DIRECTORY_READONLY = "https://www.googleapis.com/auth/directory.readonly";
+
   /** View your street addresses. */
   public static final String USER_ADDRESSES_READ = "https://www.googleapis.com/auth/user.addresses.read";
 
@@ -37,6 +40,9 @@ public class PeopleServiceScopes {
 
   /** View your email addresses. */
   public static final String USER_EMAILS_READ = "https://www.googleapis.com/auth/user.emails.read";
+
+  /** See your gender. */
+  public static final String USER_GENDER_READ = "https://www.googleapis.com/auth/user.gender.read";
 
   /** See your education, work history and org info. */
   public static final String USER_ORGANIZATION_READ = "https://www.googleapis.com/auth/user.organization.read";
@@ -59,9 +65,11 @@ public class PeopleServiceScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CONTACTS);
     set.add(CONTACTS_READONLY);
+    set.add(DIRECTORY_READONLY);
     set.add(USER_ADDRESSES_READ);
     set.add(USER_BIRTHDAY_READ);
     set.add(USER_EMAILS_READ);
+    set.add(USER_GENDER_READ);
     set.add(USER_ORGANIZATION_READ);
     set.add(USER_PHONENUMBERS_READ);
     set.add(USERINFO_EMAIL);

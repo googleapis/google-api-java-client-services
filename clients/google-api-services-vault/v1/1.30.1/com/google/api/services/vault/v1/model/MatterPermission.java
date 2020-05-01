@@ -31,7 +31,7 @@ package com.google.api.services.vault.v1.model;
 public final class MatterPermission extends com.google.api.client.json.GenericJson {
 
   /**
-   * The account id, as provided by Admin SDK.
+   * The account ID, as provided by Admin SDK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class MatterPermission extends com.google.api.client.json.GenericJs
   private java.lang.String role;
 
   /**
-   * The account id, as provided by Admin SDK.
+   * The account ID, as provided by Admin SDK.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -53,7 +53,7 @@ public final class MatterPermission extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The account id, as provided by Admin SDK.
+   * The account ID, as provided by Admin SDK.
    * @param accountId accountId or {@code null} for none
    */
   public MatterPermission setAccountId(java.lang.String accountId) {

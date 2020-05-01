@@ -30,7 +30,7 @@ package com.google.api.services.vault.v1.model;
 public final class AddHeldAccountsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Account ids to identify which accounts to add. Only account_ids or only emails should be
+   * Account IDs to identify which accounts to add. Only account_ids or only emails should be
    * specified, but not both.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class AddHeldAccountsRequest extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> emails;
 
   /**
-   * Account ids to identify which accounts to add. Only account_ids or only emails should be
+   * Account IDs to identify which accounts to add. Only account_ids or only emails should be
    * specified, but not both.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class AddHeldAccountsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Account ids to identify which accounts to add. Only account_ids or only emails should be
+   * Account IDs to identify which accounts to add. Only account_ids or only emails should be
    * specified, but not both.
    * @param accountIds accountIds or {@code null} for none
    */

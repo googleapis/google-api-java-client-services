@@ -32,6 +32,8 @@ public final class ListCustomListsResponse extends com.google.api.client.json.Ge
 
   /**
    * The list of custom lists.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListCustomListsResponse extends com.google.api.client.json.Ge
 
   /**
    * The list of custom lists.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomList> getCustomLists() {
@@ -61,6 +65,8 @@ public final class ListCustomListsResponse extends com.google.api.client.json.Ge
 
   /**
    * The list of custom lists.
+   *
+   * This list will be absent if empty.
    * @param customLists customLists or {@code null} for none
    */
   public ListCustomListsResponse setCustomLists(java.util.List<CustomList> customLists) {

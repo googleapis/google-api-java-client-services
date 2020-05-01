@@ -19,7 +19,8 @@ package com.google.api.services.displayvideo.v1.model;
 /**
  * Represents a targetable collection of apps. A collection lets you target dynamic groups of
  * related apps that are maintained by the platform, for example `All Apps/Google Play/Games`. This
- * will be populated in the app_category field when targeting_type is `TARGETING_TYPE_APP_CATEGORY`.
+ * will be populated in the app_category_details field when targeting_type is
+ * `TARGETING_TYPE_APP_CATEGORY`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

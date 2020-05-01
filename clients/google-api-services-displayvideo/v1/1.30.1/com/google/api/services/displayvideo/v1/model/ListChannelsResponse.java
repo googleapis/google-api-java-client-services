@@ -32,6 +32,8 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
 
   /**
    * The list of channels.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
 
   /**
    * The list of channels.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Channel> getChannels() {
@@ -61,6 +65,8 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
 
   /**
    * The list of channels.
+   *
+   * This list will be absent if empty.
    * @param channels channels or {@code null} for none
    */
   public ListChannelsResponse setChannels(java.util.List<Channel> channels) {

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Represents a targetable viewability. This will be populated in the details field of a
+ * Represents a targetable viewability. This will be populated in the viewability_details field of a
  * TargetingOption when targeting_type is `TARGETING_TYPE_VIEWABILITY`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

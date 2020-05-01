@@ -31,7 +31,9 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ListFirstAndThirdPartyAudiencesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of first and third party audiences.
+   * The list of first and third party audiences. Audience size properties will not be included.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,9 @@ public final class ListFirstAndThirdPartyAudiencesResponse extends com.google.ap
   private java.lang.String nextPageToken;
 
   /**
-   * The list of first and third party audiences.
+   * The list of first and third party audiences. Audience size properties will not be included.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<FirstAndThirdPartyAudience> getFirstAndThirdPartyAudiences() {
@@ -61,7 +65,9 @@ public final class ListFirstAndThirdPartyAudiencesResponse extends com.google.ap
   }
 
   /**
-   * The list of first and third party audiences.
+   * The list of first and third party audiences. Audience size properties will not be included.
+   *
+   * This list will be absent if empty.
    * @param firstAndThirdPartyAudiences firstAndThirdPartyAudiences or {@code null} for none
    */
   public ListFirstAndThirdPartyAudiencesResponse setFirstAndThirdPartyAudiences(java.util.List<FirstAndThirdPartyAudience> firstAndThirdPartyAudiences) {

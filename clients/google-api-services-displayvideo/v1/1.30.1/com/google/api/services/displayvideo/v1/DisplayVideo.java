@@ -3941,7 +3941,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *
          * * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE`
          * or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" or entityStatus="ENTITY_STATUS_PAUSED")`
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
          *
          * The length of this field should be no more than 500 characters.
          */
@@ -3961,7 +3961,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
        * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or
        `ENTITY_STATUS_PAUSED` insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE"
-       or entityStatus="ENTITY_STATUS_PAUSED")`
+       OR entityStatus="ENTITY_STATUS_PAUSED")`
 
        The length of this field should be no more than 500 characters.
          */
@@ -3983,7 +3983,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *
          * * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE`
          * or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" or entityStatus="ENTITY_STATUS_PAUSED")`
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
          *
          * The length of this field should be no more than 500 characters.
          */
@@ -5277,7 +5277,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *
          * * All line items under an insertion order: `insertionOrderId="1234"` * All
          * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
-         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" or
+         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
          * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
          *
          * The length of this field should be no more than 500 characters.
@@ -5298,7 +5298,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
        * All line items under an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE`
        or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
-       `(entityStatus="ENTITY_STATUS_ACTIVE" or entityStatus="ENTITY_STATUS_PAUSED") AND
+       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
        lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
 
        The length of this field should be no more than 500 characters.
@@ -5322,7 +5322,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *
          * * All line items under an insertion order: `insertionOrderId="1234"` * All
          * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
-         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" or
+         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
          * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
          *
          * The length of this field should be no more than 500 characters.

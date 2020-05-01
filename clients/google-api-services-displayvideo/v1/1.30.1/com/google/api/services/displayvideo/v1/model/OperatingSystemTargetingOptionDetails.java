@@ -18,7 +18,7 @@ package com.google.api.services.displayvideo.v1.model;
 
 /**
  * Represents a targetable operating system. This will be populated in the operating_system_details
- * field of a TargetingOption when targeting_type is `TAREGTING_TYPE_OPERATING_SYSTEM`.
+ * field of a TargetingOption when targeting_type is `TARGETING_TYPE_OPERATING_SYSTEM`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

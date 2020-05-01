@@ -32,6 +32,8 @@ public final class ListCampaignsResponse extends com.google.api.client.json.Gene
 
   /**
    * The list of campaigns.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListCampaignsResponse extends com.google.api.client.json.Gene
 
   /**
    * The list of campaigns.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Campaign> getCampaigns() {
@@ -61,6 +65,8 @@ public final class ListCampaignsResponse extends com.google.api.client.json.Gene
 
   /**
    * The list of campaigns.
+   *
+   * This list will be absent if empty.
    * @param campaigns campaigns or {@code null} for none
    */
   public ListCampaignsResponse setCampaigns(java.util.List<Campaign> campaigns) {

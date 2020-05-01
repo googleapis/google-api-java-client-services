@@ -32,6 +32,8 @@ public final class ListCombinedAudiencesResponse extends com.google.api.client.j
 
   /**
    * The list of combined audiences.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListCombinedAudiencesResponse extends com.google.api.client.j
 
   /**
    * The list of combined audiences.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<CombinedAudience> getCombinedAudiences() {
@@ -61,6 +65,8 @@ public final class ListCombinedAudiencesResponse extends com.google.api.client.j
 
   /**
    * The list of combined audiences.
+   *
+   * This list will be absent if empty.
    * @param combinedAudiences combinedAudiences or {@code null} for none
    */
   public ListCombinedAudiencesResponse setCombinedAudiences(java.util.List<CombinedAudience> combinedAudiences) {

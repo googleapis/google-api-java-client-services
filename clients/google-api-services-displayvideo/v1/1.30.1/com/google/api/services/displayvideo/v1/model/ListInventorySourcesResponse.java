@@ -32,6 +32,8 @@ public final class ListInventorySourcesResponse extends com.google.api.client.js
 
   /**
    * The list of inventory sources.
+   *
+   * This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class ListInventorySourcesResponse extends com.google.api.client.js
 
   /**
    * The list of inventory sources.
+   *
+   * This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<InventorySource> getInventorySources() {
@@ -61,6 +65,8 @@ public final class ListInventorySourcesResponse extends com.google.api.client.js
 
   /**
    * The list of inventory sources.
+   *
+   * This list will be absent if empty.
    * @param inventorySources inventorySources or {@code null} for none
    */
   public ListInventorySourcesResponse setInventorySources(java.util.List<InventorySource> inventorySources) {

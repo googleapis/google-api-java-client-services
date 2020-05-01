@@ -18,7 +18,7 @@ package com.google.api.services.displayvideo.v1.model;
 
 /**
  * Represents a targetable exchange. This will be populated in the exchange_details field of a
- * TargetingOption when targeting_type is `TAREGTING_TYPE_EXCHANGE`.
+ * TargetingOption when targeting_type is `TARGETING_TYPE_EXCHANGE`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

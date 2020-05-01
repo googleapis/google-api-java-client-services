@@ -38,7 +38,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   private java.lang.String keyId;
 
   /**
-   * The signed blob.
+   * The signature for the blob. Does not include the original blob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signed blob.
+   * The signature for the blob. Does not include the original blob.
    * @see #decodeSignedBlob()
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signed blob.
+   * The signature for the blob. Does not include the original blob.
    * @see #getSignedBlob()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -82,7 +82,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signed blob.
+   * The signature for the blob. Does not include the original blob.
    * @see #encodeSignedBlob()
    * @param signedBlob signedBlob or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signed blob.
+   * The signature for the blob. Does not include the original blob.
    * @see #setSignedBlob()
    *
    * <p>

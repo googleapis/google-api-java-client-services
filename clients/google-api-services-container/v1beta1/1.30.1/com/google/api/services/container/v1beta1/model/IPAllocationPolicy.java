@@ -178,11 +178,22 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String tpuIpv4CidrBlock;
 
   /**
-   * Whether alias IPs will be used for pod IPs in the cluster.
+   * Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with
+   * use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are
+   * false, then the server picks the default IP allocation mode
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useIpAliases;
+
+  /**
+   * Whether routes will be used for pod IPs in the cluster. This is used in conjunction with
+   * use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and
+   * use_routes are false, then the server picks the default IP allocation mode
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useRoutes;
 
   /**
    * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network
@@ -515,7 +526,9 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether alias IPs will be used for pod IPs in the cluster.
+   * Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with
+   * use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are
+   * false, then the server picks the default IP allocation mode
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseIpAliases() {
@@ -523,11 +536,34 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether alias IPs will be used for pod IPs in the cluster.
+   * Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with
+   * use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are
+   * false, then the server picks the default IP allocation mode
    * @param useIpAliases useIpAliases or {@code null} for none
    */
   public IPAllocationPolicy setUseIpAliases(java.lang.Boolean useIpAliases) {
     this.useIpAliases = useIpAliases;
+    return this;
+  }
+
+  /**
+   * Whether routes will be used for pod IPs in the cluster. This is used in conjunction with
+   * use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and
+   * use_routes are false, then the server picks the default IP allocation mode
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseRoutes() {
+    return useRoutes;
+  }
+
+  /**
+   * Whether routes will be used for pod IPs in the cluster. This is used in conjunction with
+   * use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and
+   * use_routes are false, then the server picks the default IP allocation mode
+   * @param useRoutes useRoutes or {@code null} for none
+   */
+  public IPAllocationPolicy setUseRoutes(java.lang.Boolean useRoutes) {
+    this.useRoutes = useRoutes;
     return this;
   }
 

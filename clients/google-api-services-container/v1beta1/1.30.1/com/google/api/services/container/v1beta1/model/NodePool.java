@@ -66,16 +66,18 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.Integer initialNodeCount;
 
   /**
-   * [Output only] The resource URLs of the [managed instance groups](/compute/docs/instance-groups
-   * /creating-groups-of-managed-instances) associated with this node pool.
+   * [Output only] The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> instanceGroupUrls;
 
   /**
-   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * NodePool's nodes should be located.
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,8 +223,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The resource URLs of the [managed instance groups](/compute/docs/instance-groups
-   * /creating-groups-of-managed-instances) associated with this node pool.
+   * [Output only] The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceGroupUrls() {
@@ -230,8 +233,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The resource URLs of the [managed instance groups](/compute/docs/instance-groups
-   * /creating-groups-of-managed-instances) associated with this node pool.
+   * [Output only] The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool.
    * @param instanceGroupUrls instanceGroupUrls or {@code null} for none
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
@@ -240,8 +244,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * NodePool's nodes should be located.
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -249,8 +254,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * NodePool's nodes should be located.
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located.
    * @param locations locations or {@code null} for none
    */
   public NodePool setLocations(java.util.List<java.lang.String> locations) {

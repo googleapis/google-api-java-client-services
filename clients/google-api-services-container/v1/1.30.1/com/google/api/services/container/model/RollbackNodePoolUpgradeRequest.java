@@ -65,8 +65,9 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
   private java.lang.String projectId;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +152,9 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -160,8 +162,9 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public RollbackNodePoolUpgradeRequest setZone(java.lang.String zone) {

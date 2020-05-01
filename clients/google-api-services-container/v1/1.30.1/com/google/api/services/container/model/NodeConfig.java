@@ -94,8 +94,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer localSsdCount;
 
   /**
-   * The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
-   * `n1-standard-1`).
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types) (e.g. `n1-standard-1`).
    *
    * If unspecified, the default machine type is `n1-standard-1`.
    * The value may be {@code null}.
@@ -144,7 +144,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    *
    * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
    * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](/container-registry/)).
+   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
+   * registry/)).
    *
    * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
    * which case their required scopes will be added.
@@ -164,7 +165,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
+   * node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -352,8 +354,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
-   * `n1-standard-1`).
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types) (e.g. `n1-standard-1`).
    *
    * If unspecified, the default machine type is `n1-standard-1`.
    * @return value or {@code null} for none
@@ -363,8 +365,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
-   * `n1-standard-1`).
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types) (e.g. `n1-standard-1`).
    *
    * If unspecified, the default machine type is `n1-standard-1`.
    * @param machineType machineType or {@code null} for none
@@ -454,7 +456,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    *
    * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
    * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](/container-registry/)).
+   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
+   * registry/)).
    *
    * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
    * which case their required scopes will be added.
@@ -472,7 +475,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    *
    * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
    * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](/container-registry/)).
+   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
+   * registry/)).
    *
    * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
    * which case their required scopes will be added.
@@ -506,7 +510,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
+   * node pool.
    * @return value or {@code null} for none
    */
   public ReservationAffinity getReservationAffinity() {
@@ -515,7 +520,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
+   * node pool.
    * @param reservationAffinity reservationAffinity or {@code null} for none
    */
   public NodeConfig setReservationAffinity(ReservationAffinity reservationAffinity) {

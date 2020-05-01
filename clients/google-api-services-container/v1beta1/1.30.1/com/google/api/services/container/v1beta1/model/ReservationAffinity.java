@@ -17,8 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * [ReservationAffinity](/compute/docs/instances/reserving-zonal-resources) is the configuration of
- * desired reservation which instances could take capacity from.
+ * [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
+ * is the configuration of desired reservation which instances could take capacity from.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

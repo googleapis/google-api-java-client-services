@@ -39,10 +39,10 @@ public final class SetLocationsRequest extends com.google.api.client.json.Generi
   private java.lang.String clusterId;
 
   /**
-   * Required. The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in
-   * which the cluster's nodes should be located. Changing the locations a cluster is in will result
-   * in nodes being either created or removed from the cluster, depending on whether locations are
-   * being added or removed.
+   * Required. The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. Changing the locations a cluster is in will result in nodes being either
+   * created or removed from the cluster, depending on whether locations are being added or removed.
    *
    * This list must always include the cluster's primary zone.
    * The value may be {@code null}.
@@ -69,8 +69,8 @@ public final class SetLocationsRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +96,10 @@ public final class SetLocationsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in
-   * which the cluster's nodes should be located. Changing the locations a cluster is in will result
-   * in nodes being either created or removed from the cluster, depending on whether locations are
-   * being added or removed.
+   * Required. The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. Changing the locations a cluster is in will result in nodes being either
+   * created or removed from the cluster, depending on whether locations are being added or removed.
    *
    * This list must always include the cluster's primary zone.
    * @return value or {@code null} for none
@@ -109,10 +109,10 @@ public final class SetLocationsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in
-   * which the cluster's nodes should be located. Changing the locations a cluster is in will result
-   * in nodes being either created or removed from the cluster, depending on whether locations are
-   * being added or removed.
+   * Required. The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. Changing the locations a cluster is in will result in nodes being either
+   * created or removed from the cluster, depending on whether locations are being added or removed.
    *
    * This list must always include the cluster's primary zone.
    * @param locations locations or {@code null} for none
@@ -164,8 +164,8 @@ public final class SetLocationsRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -174,8 +174,8 @@ public final class SetLocationsRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
+   * This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public SetLocationsRequest setZone(java.lang.String zone) {

@@ -14,13 +14,13 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.containeranalysis.v1beta1.model;
+package com.google.api.services.container.v1beta1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * Configuration options for the Config Connector add-on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
+ * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
  * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -28,40 +28,40 @@ package com.google.api.services.containeranalysis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class ConfigConnectorConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
+   * Whether Cloud Connector is enabled for this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.lang.Boolean enabled;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
+   * Whether Cloud Connector is enabled for this cluster.
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
-   * @param options options or {@code null} for none
+   * Whether Cloud Connector is enabled for this cluster.
+   * @param enabled enabled or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public ConfigConnectorConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public ConfigConnectorConfig set(String fieldName, Object value) {
+    return (ConfigConnectorConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public ConfigConnectorConfig clone() {
+    return (ConfigConnectorConfig) super.clone();
   }
 
 }

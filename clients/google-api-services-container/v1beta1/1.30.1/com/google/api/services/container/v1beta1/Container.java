@@ -601,14 +601,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String zone;
 
-        /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-       to return operations for. This field has been deprecated and replaced by the name field.
+        /** Required. Deprecated. The name of the Google Compute Engine
+       [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for. This field
+       has been deprecated and replaced by the name field.
          */
         public java.lang.String getZone() {
           return zone;
@@ -616,8 +617,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         public GetServerConfig setZone(java.lang.String zone) {
           this.zone = zone;
@@ -942,8 +943,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * Creates a cluster, consisting of the specified number and type of Google Compute Engine
          * instances.
          *
-         * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
-         * firewalls#networks).
+         * By default, the cluster is created in the project's [default
+         * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
          *
          * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
          * each node to allow the containers on that node to communicate with all other instances in the
@@ -980,8 +981,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Creates a cluster, consisting of the specified number and type of Google Compute Engine
            * instances.
            *
-           * By default, the cluster is created in the project's [default network](/compute/docs/networks-
-           * and-firewalls#networks).
+           * By default, the cluster is created in the project's [default
+           * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
            *
            * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
            * each node to allow the containers on that node to communicate with all other instances in the
@@ -1299,14 +1300,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -1314,8 +1316,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1522,14 +1524,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -1537,8 +1540,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1876,15 +1879,16 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides, or "-" for all zones. This field has been deprecated and replaced by
-         the parent field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides, or "-"
+         for all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -1892,8 +1896,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -2190,8 +2195,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-         * ](/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
+         * Sets the locations for a specific cluster. Deprecated. Use
+         * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+         * engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
          *
          * Create a request for the method "clusters.setLocations".
          *
@@ -2218,8 +2224,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-           * ](/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
+           * Sets the locations for a specific cluster. Deprecated. Use
+           * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+           * engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
            *
            * Create a request for the method "clusters.setLocations".
            *
@@ -3992,14 +3999,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -4007,8 +4015,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Delete setZone(java.lang.String zone) {
               this.zone = zone;
@@ -4238,14 +4246,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -4253,8 +4262,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Get setZone(java.lang.String zone) {
               this.zone = zone;
@@ -4461,14 +4470,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -4476,8 +4486,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             public List setZone(java.lang.String zone) {
               this.zone = zone;
@@ -5748,14 +5758,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -5763,8 +5774,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -5950,15 +5961,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         to return operations for, or `-` for all zones. This field has been deprecated and replaced by the
-         parent field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
+         all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -5966,8 +5977,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6015,9 +6026,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
       This field has been deprecated
        *        and replaced by the name field.
        * @param zone Required. Deprecated. The name of the Google Compute Engine
-      [zone](/compute/docs/zones#available) to
-       *        return operations for.
-      This field has been deprecated and replaced by the name field.
+       *        [zone](https://cloud.google.com/compute/docs/zones#available) to return
+      operations for.
+       *        This field has been deprecated and replaced by the name
+      field.
        * @return the request
        */
       public GetServerconfig getServerconfig(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -6046,9 +6058,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
       This field has been deprecated
        *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-      [zone](/compute/docs/zones#available) to
-       *        return operations for.
-      This field has been deprecated and replaced by the name field.
+       *        [zone](https://cloud.google.com/compute/docs/zones#available) to return
+      operations for.
+       *        This field has been deprecated and replaced by the name
+      field.
          * @since 1.13
          */
         protected GetServerconfig(java.lang.String projectId, java.lang.String zone) {
@@ -6150,14 +6163,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String zone;
 
-        /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-       to return operations for. This field has been deprecated and replaced by the name field.
+        /** Required. Deprecated. The name of the Google Compute Engine
+       [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for. This field
+       has been deprecated and replaced by the name field.
          */
         public java.lang.String getZone() {
           return zone;
@@ -6165,8 +6179,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         public GetServerconfig setZone(java.lang.String zone) {
           this.zone = zone;
@@ -6235,10 +6249,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -6271,10 +6285,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -6371,14 +6385,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -6386,8 +6401,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Addons setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6435,10 +6450,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -6471,10 +6486,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -6571,14 +6586,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -6586,8 +6602,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public CompleteIpRotation setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6626,8 +6642,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * Creates a cluster, consisting of the specified number and type of Google Compute Engine
          * instances.
          *
-         * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
-         * firewalls#networks).
+         * By default, the cluster is created in the project's [default
+         * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
          *
          * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
          * each node to allow the containers on that node to communicate with all other instances in the
@@ -6646,11 +6662,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the parent field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the parent
-         *        field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the parent
+        field.
          * @param content the {@link com.google.api.services.container.v1beta1.model.CreateClusterRequest}
          * @return the request
          */
@@ -6668,8 +6683,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Creates a cluster, consisting of the specified number and type of Google Compute Engine
            * instances.
            *
-           * By default, the cluster is created in the project's [default network](/compute/docs/networks-
-           * and-firewalls#networks).
+           * By default, the cluster is created in the project's [default
+           * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
            *
            * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
            * each node to allow the containers on that node to communicate with all other instances in the
@@ -6691,11 +6706,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the parent field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the parent
-         *        field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the parent
+        field.
            * @param content the {@link com.google.api.services.container.v1beta1.model.CreateClusterRequest}
            * @since 1.13
            */
@@ -6788,14 +6802,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the parent field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -6803,8 +6818,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the parent field.
            */
           public Create setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6834,10 +6849,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to delete.
         This field has been deprecated and replaced
          *        by the name field.
@@ -6875,10 +6890,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to delete.
         This field has been deprecated and replaced
          *        by the name field.
@@ -6974,14 +6989,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -6989,8 +7005,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7061,10 +7077,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to retrieve.
         This field has been deprecated and
          *        replaced by the name field.
@@ -7095,10 +7111,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to retrieve.
         This field has been deprecated and
          *        replaced by the name field.
@@ -7204,14 +7220,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -7219,8 +7236,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7291,10 +7308,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to update.
         This field has been deprecated and replaced
          *        by the name field.
@@ -7327,10 +7344,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to update.
         This field has been deprecated and replaced
          *        by the name field.
@@ -7427,14 +7444,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -7442,8 +7460,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public LegacyAbac setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7491,11 +7509,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the parent field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides, or "-" for all zones.
-        This field has been deprecated and
-         *        replaced by the parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides, or "-" for all zones. This field has been deprecated and
+        replaced by the parent
+         *        field.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -7523,11 +7541,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the parent field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides, or "-" for all zones.
-        This field has been deprecated and
-         *        replaced by the parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides, or "-" for all zones. This field has been deprecated and
+        replaced by the parent
+         *        field.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String zone) {
@@ -7629,15 +7647,16 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides, or "-" for all zones. This field has been deprecated and replaced by
-         the parent field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides, or "-"
+         for all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -7645,8 +7664,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7682,8 +7702,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-         * ](/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
+         * Sets the locations for a specific cluster. Deprecated. Use
+         * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+         * engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
          *
          * Create a request for the method "clusters.locations".
          *
@@ -7695,10 +7716,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -7716,8 +7737,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations";
 
           /**
-           * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-           * ](/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
+           * Sets the locations for a specific cluster. Deprecated. Use
+           * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+           * engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
            *
            * Create a request for the method "clusters.locations".
            *
@@ -7732,10 +7754,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -7832,14 +7854,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -7847,8 +7870,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Locations setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7896,10 +7919,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -7932,10 +7955,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -8032,14 +8055,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -8047,8 +8071,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Logging setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8096,10 +8120,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -8132,10 +8156,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -8232,14 +8256,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -8247,8 +8272,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Master setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8296,10 +8321,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -8332,10 +8357,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -8432,14 +8457,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -8447,8 +8473,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Monitoring setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8496,10 +8522,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -8532,10 +8558,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -8632,14 +8658,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -8647,8 +8674,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public ResourceLabels setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8695,9 +8722,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * @param projectId Required. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
          * @param zone Required. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides.
          * @param clusterId Required. The name of the cluster to update.
          * @param content the {@link com.google.api.services.container.v1beta1.model.SetMaintenancePolicyRequest}
          * @return the request
@@ -8726,9 +8753,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * @param projectId Required. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
            * @param zone Required. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides.
            * @param clusterId Required. The name of the cluster to update.
            * @param content the {@link com.google.api.services.container.v1beta1.model.SetMaintenancePolicyRequest}
            * @since 1.13
@@ -8819,22 +8846,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides.
+           * Required. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which the
-         cluster resides.
+          /** Required. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides.
+           * Required. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides.
            */
           public SetMaintenancePolicy setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8876,10 +8905,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -8913,10 +8942,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -9013,14 +9042,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -9028,8 +9058,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public SetMasterAuth setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9077,10 +9107,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -9113,10 +9143,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -9213,14 +9243,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -9228,8 +9259,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public SetNetworkPolicy setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9277,10 +9308,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -9313,10 +9344,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has
          *        been deprecated and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster.
         This field has been deprecated and replaced by the
          *        name field.
@@ -9413,14 +9444,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -9428,8 +9460,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public StartIpRotation setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9477,10 +9509,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -9513,10 +9545,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
         This field has been deprecated and
          *        replaced by the name field.
@@ -9613,14 +9645,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -9628,8 +9661,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Update setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9698,10 +9731,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
           This field has been deprecated and
            *        replaced by the name field.
@@ -9737,10 +9770,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
           This field has been deprecated and
            *        replaced by the name field.
@@ -9841,14 +9874,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -9856,8 +9890,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Autoscaling setZone(java.lang.String zone) {
               this.zone = zone;
@@ -9928,11 +9962,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the parent field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the parent
-           *        field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the parent
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        parent field.
@@ -9965,11 +9998,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the parent field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the parent
-           *        field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the parent
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        parent field.
@@ -10066,14 +10098,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10081,8 +10114,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             public Create setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10130,10 +10163,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        name field.
@@ -10168,10 +10201,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        name field.
@@ -10271,14 +10304,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10286,8 +10320,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Delete setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10381,10 +10415,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        name field.
@@ -10418,10 +10452,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        name field.
@@ -10531,14 +10565,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10546,8 +10581,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Get setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10641,11 +10676,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the parent field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the parent
-           *        field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the parent
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        parent field.
@@ -10676,11 +10710,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has
            *        been deprecated and replaced by the parent field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the parent
-           *        field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the parent
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the
            *        parent field.
@@ -10786,14 +10819,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10801,8 +10835,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             public List setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10874,10 +10908,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster to rollback.
           This field has been deprecated and
            *        replaced by the name field.
@@ -10914,10 +10948,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster to rollback.
           This field has been deprecated and
            *        replaced by the name field.
@@ -11018,14 +11052,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11033,8 +11068,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Rollback setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11105,10 +11140,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster to update.
           This field has been deprecated and replaced
            *        by the name field.
@@ -11144,10 +11179,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster to update.
           This field has been deprecated and replaced
            *        by the name field.
@@ -11248,14 +11283,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11263,8 +11299,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public SetManagement setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11335,10 +11371,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster to update.
           This field has been deprecated and replaced
            *        by the name field.
@@ -11374,10 +11410,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster to update.
           This field has been deprecated and replaced
            *        by the name field.
@@ -11478,14 +11514,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11493,8 +11530,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public SetSize setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11565,10 +11602,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
            * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
           This field has been deprecated and
            *        replaced by the name field.
@@ -11604,10 +11641,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           This field has been deprecated
            *        and replaced by the name field.
              * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+          cluster
+           *        resides. This field has been deprecated and replaced by the name
+          field.
              * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
           This field has been deprecated and
            *        replaced by the name field.
@@ -11708,14 +11745,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Required. Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11723,8 +11761,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Update setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11818,10 +11856,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the operation resides.
-        This field has been deprecated and replaced by the name
-         *        field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        operation
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
         This field has been deprecated
          *        and replaced by the name field.
@@ -11854,10 +11892,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the operation resides.
-        This field has been deprecated and replaced by the name
-         *        field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        operation
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
         This field has been deprecated
          *        and replaced by the name field.
@@ -11954,14 +11992,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the operation resides. This field has
-           * been deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the operation resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -11969,8 +12008,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the operation resides. This field has
-           * been deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Cancel setZone(java.lang.String zone) {
             this.zone = zone;
@@ -12018,10 +12057,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
          * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
         This field has been deprecated
          *        and replaced by the name field.
@@ -12052,10 +12091,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the name field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+        cluster
+         *        resides. This field has been deprecated and replaced by the name
+        field.
            * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
         This field has been deprecated
          *        and replaced by the name field.
@@ -12161,14 +12200,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -12176,8 +12216,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -12248,10 +12288,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the parent field.
          * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) to
-         *        return operations for, or `-` for
-        all zones. This field has been deprecated and replaced
-         *        by the parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) to return
+        operations for, or
+         *        `-` for all zones. This field has been deprecated and
+        replaced by the parent field.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -12279,10 +12319,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         This field has been deprecated
          *        and replaced by the parent field.
            * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) to
-         *        return operations for, or `-` for
-        all zones. This field has been deprecated and replaced
-         *        by the parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) to return
+        operations for, or
+         *        `-` for all zones. This field has been deprecated and
+        replaced by the parent field.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String zone) {
@@ -12384,15 +12424,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         to return operations for, or `-` for all zones. This field has been deprecated and replaced by the
-         parent field.
+          /** Required. Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
+         all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
@@ -12400,8 +12440,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;

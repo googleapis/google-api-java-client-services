@@ -74,10 +74,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
-   * being either created or removed from the cluster, depending on whether locations are being
-   * added or removed.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. Changing the locations a cluster is in will result in nodes being either
+   * created or removed from the cluster, depending on whether locations are being added or removed.
    *
    * This list must always include the cluster's primary zone.
    * The value may be {@code null}.
@@ -299,10 +299,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
-   * being either created or removed from the cluster, depending on whether locations are being
-   * added or removed.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. Changing the locations a cluster is in will result in nodes being either
+   * created or removed from the cluster, depending on whether locations are being added or removed.
    *
    * This list must always include the cluster's primary zone.
    * @return value or {@code null} for none
@@ -312,10 +312,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
-   * being either created or removed from the cluster, depending on whether locations are being
-   * added or removed.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. Changing the locations a cluster is in will result in nodes being either
+   * created or removed from the cluster, depending on whether locations are being added or removed.
    *
    * This list must always include the cluster's primary zone.
    * @param desiredLocations desiredLocations or {@code null} for none

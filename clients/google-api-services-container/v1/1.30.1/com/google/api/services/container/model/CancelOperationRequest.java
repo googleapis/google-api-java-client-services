@@ -56,8 +56,9 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   private java.lang.String projectId;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the operation resides. This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
+   * This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +124,9 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the operation resides. This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
+   * This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -132,8 +134,9 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the operation resides. This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides.
+   * This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public CancelOperationRequest setZone(java.lang.String zone) {

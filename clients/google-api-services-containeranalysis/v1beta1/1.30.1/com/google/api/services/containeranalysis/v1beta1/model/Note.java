@@ -81,6 +81,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private String expirationTime;
 
   /**
+   * A note describing an in-toto link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InToto intoto;
+
+  /**
    * Output only. The type of analysis. This field can be used as a filter in list requests.
    * The value may be {@code null}.
    */
@@ -262,6 +269,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setExpirationTime(String expirationTime) {
     this.expirationTime = expirationTime;
+    return this;
+  }
+
+  /**
+   * A note describing an in-toto link.
+   * @return value or {@code null} for none
+   */
+  public InToto getIntoto() {
+    return intoto;
+  }
+
+  /**
+   * A note describing an in-toto link.
+   * @param intoto intoto or {@code null} for none
+   */
+  public Note setIntoto(InToto intoto) {
+    this.intoto = intoto;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * Defines an object for the byproducts field in in-toto links. The suggested fields are "stderr",
+ * "stdout", and "return-value".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -28,40 +29,37 @@ package com.google.api.services.containeranalysis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class ByProducts extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.util.Map<String, java.lang.String> customValues;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.util.Map<String, java.lang.String> getCustomValues() {
+    return customValues;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
-   * @param options options or {@code null} for none
+   * @param customValues customValues or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public ByProducts setCustomValues(java.util.Map<String, java.lang.String> customValues) {
+    this.customValues = customValues;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public ByProducts set(String fieldName, Object value) {
+    return (ByProducts) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public ByProducts clone() {
+    return (ByProducts) super.clone();
   }
 
 }

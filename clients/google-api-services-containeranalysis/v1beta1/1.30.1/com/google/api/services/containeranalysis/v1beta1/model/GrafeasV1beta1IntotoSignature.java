@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * A signature object consists of the KeyID used and the signature itself.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -28,40 +28,58 @@ package com.google.api.services.containeranalysis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class GrafeasV1beta1IntotoSignature extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.lang.String keyid;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sig;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.lang.String getKeyid() {
+    return keyid;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
-   * @param options options or {@code null} for none
+   * @param keyid keyid or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public GrafeasV1beta1IntotoSignature setKeyid(java.lang.String keyid) {
+    this.keyid = keyid;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSig() {
+    return sig;
+  }
+
+  /**
+   * @param sig sig or {@code null} for none
+   */
+  public GrafeasV1beta1IntotoSignature setSig(java.lang.String sig) {
+    this.sig = sig;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public GrafeasV1beta1IntotoSignature set(String fieldName, Object value) {
+    return (GrafeasV1beta1IntotoSignature) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public GrafeasV1beta1IntotoSignature clone() {
+    return (GrafeasV1beta1IntotoSignature) super.clone();
   }
 
 }

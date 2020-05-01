@@ -17,7 +17,8 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * This corresponds to a signed in-toto link - it is made up of one or more signatures and the in-
+ * toto link itself. This is used for occurrences of a Grafeas in-toto note.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -28,40 +29,58 @@ package com.google.api.services.containeranalysis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class GrafeasV1beta1IntotoDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.util.List<GrafeasV1beta1IntotoSignature> signatures;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Link signed;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.util.List<GrafeasV1beta1IntotoSignature> getSignatures() {
+    return signatures;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
-   * @param options options or {@code null} for none
+   * @param signatures signatures or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public GrafeasV1beta1IntotoDetails setSignatures(java.util.List<GrafeasV1beta1IntotoSignature> signatures) {
+    this.signatures = signatures;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public Link getSigned() {
+    return signed;
+  }
+
+  /**
+   * @param signed signed or {@code null} for none
+   */
+  public GrafeasV1beta1IntotoDetails setSigned(Link signed) {
+    this.signed = signed;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public GrafeasV1beta1IntotoDetails set(String fieldName, Object value) {
+    return (GrafeasV1beta1IntotoDetails) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public GrafeasV1beta1IntotoDetails clone() {
+    return (GrafeasV1beta1IntotoDetails) super.clone();
   }
 
 }

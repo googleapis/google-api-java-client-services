@@ -80,6 +80,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private GrafeasV1beta1PackageDetails installation;
 
   /**
+   * Describes a specific in-toto link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GrafeasV1beta1IntotoDetails intoto;
+
+  /**
    * Output only. This explicitly denotes which of the occurrence details are specified. This field
    * can be used as a filter in list requests.
    * The value may be {@code null}.
@@ -247,6 +254,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setInstallation(GrafeasV1beta1PackageDetails installation) {
     this.installation = installation;
+    return this;
+  }
+
+  /**
+   * Describes a specific in-toto link.
+   * @return value or {@code null} for none
+   */
+  public GrafeasV1beta1IntotoDetails getIntoto() {
+    return intoto;
+  }
+
+  /**
+   * Describes a specific in-toto link.
+   * @param intoto intoto or {@code null} for none
+   */
+  public Occurrence setIntoto(GrafeasV1beta1IntotoDetails intoto) {
+    this.intoto = intoto;
     return this;
   }
 

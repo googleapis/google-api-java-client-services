@@ -20,7 +20,8 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
  * Note: this resource requires whitelisting for access. Please contact your account manager for
  * access to Marketplace resources.
  *
- * Represents a publisher profile in Marketplace.
+ * Represents a publisher profile (https://support.google.com/admanager/answer/6035806?hl=en) in
+ * Marketplace.
  *
  * All fields are read only. All string fields are free-form text entered by the publisher unless
  * noted otherwise.
@@ -81,6 +82,18 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String googlePlusUrl;
+
+  /**
+   * Indicates if this profile is the parent profile of the seller. A parent profile represents all
+   * the inventory from the seller, as opposed to child profile that is created to brand a portion
+   * of inventory. One seller should have only one parent publisher profile, and can have multiple
+   * child profiles. Publisher profiles for the same seller will have same value of field
+   * google.ads.adexchange.buyer.v2beta1.PublisherProfile.seller. See
+   * https://support.google.com/admanager/answer/6035806?hl=en for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isParent;
 
   /**
    * A Google public URL to the logo for this publisher profile. The logo is stored as a PNG, JPG,
@@ -255,6 +268,33 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
    */
   public PublisherProfile setGooglePlusUrl(java.lang.String googlePlusUrl) {
     this.googlePlusUrl = googlePlusUrl;
+    return this;
+  }
+
+  /**
+   * Indicates if this profile is the parent profile of the seller. A parent profile represents all
+   * the inventory from the seller, as opposed to child profile that is created to brand a portion
+   * of inventory. One seller should have only one parent publisher profile, and can have multiple
+   * child profiles. Publisher profiles for the same seller will have same value of field
+   * google.ads.adexchange.buyer.v2beta1.PublisherProfile.seller. See
+   * https://support.google.com/admanager/answer/6035806?hl=en for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsParent() {
+    return isParent;
+  }
+
+  /**
+   * Indicates if this profile is the parent profile of the seller. A parent profile represents all
+   * the inventory from the seller, as opposed to child profile that is created to brand a portion
+   * of inventory. One seller should have only one parent publisher profile, and can have multiple
+   * child profiles. Publisher profiles for the same seller will have same value of field
+   * google.ads.adexchange.buyer.v2beta1.PublisherProfile.seller. See
+   * https://support.google.com/admanager/answer/6035806?hl=en for details.
+   * @param isParent isParent or {@code null} for none
+   */
+  public PublisherProfile setIsParent(java.lang.Boolean isParent) {
+    this.isParent = isParent;
     return this;
   }
 

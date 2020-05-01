@@ -31,14 +31,20 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2TableLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The zero-based index of the row where the finding is located.
+   * The zero-based index of the row where the finding is located. Only populated for resources that
+   * have a natural ordering, not BigQuery. In BigQuery, to identify the row a finding came from,
+   * populate BigQueryOptions.identifying_fields with your primary key column names and when you
+   * store the findings the value of those columns will be stored inside of Finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long rowIndex;
 
   /**
-   * The zero-based index of the row where the finding is located.
+   * The zero-based index of the row where the finding is located. Only populated for resources that
+   * have a natural ordering, not BigQuery. In BigQuery, to identify the row a finding came from,
+   * populate BigQueryOptions.identifying_fields with your primary key column names and when you
+   * store the findings the value of those columns will be stored inside of Finding.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRowIndex() {
@@ -46,7 +52,10 @@ public final class GooglePrivacyDlpV2TableLocation extends com.google.api.client
   }
 
   /**
-   * The zero-based index of the row where the finding is located.
+   * The zero-based index of the row where the finding is located. Only populated for resources that
+   * have a natural ordering, not BigQuery. In BigQuery, to identify the row a finding came from,
+   * populate BigQueryOptions.identifying_fields with your primary key column names and when you
+   * store the findings the value of those columns will be stored inside of Finding.
    * @param rowIndex rowIndex or {@code null} for none
    */
   public GooglePrivacyDlpV2TableLocation setRowIndex(java.lang.Long rowIndex) {

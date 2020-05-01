@@ -116,13 +116,6 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String hivePartitioningMode;
-
-  /**
    * [Optional, Trusted Tester] Options to configure hive partitioning support.
    * The value may be {@code null}.
    */
@@ -489,23 +482,6 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setFieldDelimiter(java.lang.String fieldDelimiter) {
     this.fieldDelimiter = fieldDelimiter;
-    return this;
-  }
-
-  /**
-   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHivePartitioningMode() {
-    return hivePartitioningMode;
-  }
-
-  /**
-   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
-   * @param hivePartitioningMode hivePartitioningMode or {@code null} for none
-   */
-  public JobConfigurationLoad setHivePartitioningMode(java.lang.String hivePartitioningMode) {
-    this.hivePartitioningMode = hivePartitioningMode;
     return this;
   }
 

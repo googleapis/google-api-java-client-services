@@ -185,7 +185,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels to apply to this resource. These can be later modified by the setLabels method. Each
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
    * label key/value pair must comply with RFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
@@ -759,7 +759,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Labels to apply to this resource. These can be later modified by the setLabels method. Each
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
    * label key/value pair must comply with RFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
@@ -768,7 +768,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Labels to apply to this resource. These can be later modified by the setLabels method. Each
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
    * label key/value pair must comply with RFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */

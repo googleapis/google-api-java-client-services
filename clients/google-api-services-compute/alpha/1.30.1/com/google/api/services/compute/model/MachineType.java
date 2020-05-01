@@ -34,6 +34,19 @@ package com.google.api.services.compute.model;
 public final class MachineType extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] A list of accelerator configurations assigned to this machine type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Accelerators> accelerators;
+
+  static {
+    // hack to force ProGuard to consider Accelerators used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Accelerators.class);
+  }
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -131,6 +144,23 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * [Output Only] A list of accelerator configurations assigned to this machine type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Accelerators> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * [Output Only] A list of accelerator configurations assigned to this machine type.
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public MachineType setAccelerators(java.util.List<Accelerators> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -380,6 +410,71 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   @Override
   public MachineType clone() {
     return (MachineType) super.clone();
+  }
+
+  /**
+   * Model definition for MachineTypeAccelerators.
+   */
+  public static final class Accelerators extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Number of accelerator cards exposed to the guest.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Integer guestAcceleratorCount;
+
+    /**
+     * The accelerator type resource name, not a full URL, e.g. 'nvidia-tesla-k80'.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String guestAcceleratorType;
+
+    /**
+     * Number of accelerator cards exposed to the guest.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Integer getGuestAcceleratorCount() {
+      return guestAcceleratorCount;
+    }
+
+    /**
+     * Number of accelerator cards exposed to the guest.
+     * @param guestAcceleratorCount guestAcceleratorCount or {@code null} for none
+     */
+    public Accelerators setGuestAcceleratorCount(java.lang.Integer guestAcceleratorCount) {
+      this.guestAcceleratorCount = guestAcceleratorCount;
+      return this;
+    }
+
+    /**
+     * The accelerator type resource name, not a full URL, e.g. 'nvidia-tesla-k80'.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getGuestAcceleratorType() {
+      return guestAcceleratorType;
+    }
+
+    /**
+     * The accelerator type resource name, not a full URL, e.g. 'nvidia-tesla-k80'.
+     * @param guestAcceleratorType guestAcceleratorType or {@code null} for none
+     */
+    public Accelerators setGuestAcceleratorType(java.lang.String guestAcceleratorType) {
+      this.guestAcceleratorType = guestAcceleratorType;
+      return this;
+    }
+
+    @Override
+    public Accelerators set(String fieldName, Object value) {
+      return (Accelerators) super.set(fieldName, value);
+    }
+
+    @Override
+    public Accelerators clone() {
+      return (Accelerators) super.clone();
+    }
+
   }
 
 }

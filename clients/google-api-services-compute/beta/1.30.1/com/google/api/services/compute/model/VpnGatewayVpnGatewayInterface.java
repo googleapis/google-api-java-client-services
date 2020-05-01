@@ -37,7 +37,7 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   private java.lang.Long id;
 
   /**
-   * The external IP address for this VPN gateway interface.
+   * [Output Only] The external IP address for this VPN gateway interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * The external IP address for this VPN gateway interface.
+   * [Output Only] The external IP address for this VPN gateway interface.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -69,7 +69,7 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * The external IP address for this VPN gateway interface.
+   * [Output Only] The external IP address for this VPN gateway interface.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setIpAddress(java.lang.String ipAddress) {

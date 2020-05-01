@@ -107,6 +107,13 @@ public final class ClientState extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The owner of the ClientState
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ownerType;
+
+  /**
    * A descriptive cause of the health score.
    * The value may be {@code null}.
    */
@@ -294,6 +301,23 @@ public final class ClientState extends com.google.api.client.json.GenericJson {
    */
   public ClientState setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The owner of the ClientState
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOwnerType() {
+    return ownerType;
+  }
+
+  /**
+   * Output only. The owner of the ClientState
+   * @param ownerType ownerType or {@code null} for none
+   */
+  public ClientState setOwnerType(java.lang.String ownerType) {
+    this.ownerType = ownerType;
     return this;
   }
 

@@ -71,8 +71,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels to apply to this VpnGateway resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] A list of interfaces on this VPN gateway.
+   * A list of interfaces on this VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,8 +256,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels to apply to this VpnGateway resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -265,8 +265,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels to apply to this VpnGateway resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */
   public VpnGateway setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -353,7 +353,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of interfaces on this VPN gateway.
+   * A list of interfaces on this VPN gateway.
    * @return value or {@code null} for none
    */
   public java.util.List<VpnGatewayVpnGatewayInterface> getVpnInterfaces() {
@@ -361,7 +361,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of interfaces on this VPN gateway.
+   * A list of interfaces on this VPN gateway.
    * @param vpnInterfaces vpnInterfaces or {@code null} for none
    */
   public VpnGateway setVpnInterfaces(java.util.List<VpnGatewayVpnGatewayInterface> vpnInterfaces) {

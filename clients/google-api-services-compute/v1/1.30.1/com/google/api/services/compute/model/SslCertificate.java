@@ -67,6 +67,13 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * [Output Only] Expire time of the certificate. RFC3339
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expireTime;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -79,6 +86,13 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Configuration and status of a managed SSL certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslCertificateManagedSslCertificate managed;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -112,6 +126,28 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Configuration and status of a self-managed SSL certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslCertificateSelfManagedSslCertificate selfManaged;
+
+  /**
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subjectAlternativeNames;
+
+  /**
+   * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
+   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * A local certificate file. The certificate must be in PEM format. The certificate chain must be
@@ -167,6 +203,23 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] Expire time of the certificate. RFC3339
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * [Output Only] Expire time of the certificate. RFC3339
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public SslCertificate setExpireTime(java.lang.String expireTime) {
+    this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -197,6 +250,23 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
    */
   public SslCertificate setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Configuration and status of a managed SSL certificate.
+   * @return value or {@code null} for none
+   */
+  public SslCertificateManagedSslCertificate getManaged() {
+    return managed;
+  }
+
+  /**
+   * Configuration and status of a managed SSL certificate.
+   * @param managed managed or {@code null} for none
+   */
+  public SslCertificate setManaged(SslCertificateManagedSslCertificate managed) {
+    this.managed = managed;
     return this;
   }
 
@@ -275,6 +345,59 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
    */
   public SslCertificate setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Configuration and status of a self-managed SSL certificate.
+   * @return value or {@code null} for none
+   */
+  public SslCertificateSelfManagedSslCertificate getSelfManaged() {
+    return selfManaged;
+  }
+
+  /**
+   * Configuration and status of a self-managed SSL certificate.
+   * @param selfManaged selfManaged or {@code null} for none
+   */
+  public SslCertificate setSelfManaged(SslCertificateSelfManagedSslCertificate selfManaged) {
+    this.selfManaged = selfManaged;
+    return this;
+  }
+
+  /**
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubjectAlternativeNames() {
+    return subjectAlternativeNames;
+  }
+
+  /**
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
+   * @param subjectAlternativeNames subjectAlternativeNames or {@code null} for none
+   */
+  public SslCertificate setSubjectAlternativeNames(java.util.List<java.lang.String> subjectAlternativeNames) {
+    this.subjectAlternativeNames = subjectAlternativeNames;
+    return this;
+  }
+
+  /**
+   * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
+   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
+   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * @param type type or {@code null} for none
+   */
+  public SslCertificate setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

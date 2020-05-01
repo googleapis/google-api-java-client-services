@@ -44,7 +44,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only. The matter id of the associated matter. The server does not look at this field
+   * Output only. The matter ID of the associated matter. The server does not look at this field
    * during create and always uses matter id in the URL.
    * The value may be {@code null}.
    */
@@ -100,7 +100,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The matter id of the associated matter. The server does not look at this field
+   * Output only. The matter ID of the associated matter. The server does not look at this field
    * during create and always uses matter id in the URL.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The matter id of the associated matter. The server does not look at this field
+   * Output only. The matter ID of the associated matter. The server does not look at this field
    * during create and always uses matter id in the URL.
    * @param matterId matterId or {@code null} for none
    */

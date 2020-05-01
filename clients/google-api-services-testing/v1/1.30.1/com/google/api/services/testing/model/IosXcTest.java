@@ -41,6 +41,15 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
   private java.lang.String appBundleId;
 
   /**
+   * The option to test special app entitlements. Setting this would re-sign the app having special
+   * entitlements with an explicit application-identifier. Currently supports testing aps-
+   * environment entitlement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean testSpecialEntitlements;
+
+  /**
    * Required. The .zip containing the .xctestrun file and the contents of the
    * DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the
    * xctestrun field is specified.
@@ -80,6 +89,27 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
    */
   public IosXcTest setAppBundleId(java.lang.String appBundleId) {
     this.appBundleId = appBundleId;
+    return this;
+  }
+
+  /**
+   * The option to test special app entitlements. Setting this would re-sign the app having special
+   * entitlements with an explicit application-identifier. Currently supports testing aps-
+   * environment entitlement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTestSpecialEntitlements() {
+    return testSpecialEntitlements;
+  }
+
+  /**
+   * The option to test special app entitlements. Setting this would re-sign the app having special
+   * entitlements with an explicit application-identifier. Currently supports testing aps-
+   * environment entitlement.
+   * @param testSpecialEntitlements testSpecialEntitlements or {@code null} for none
+   */
+  public IosXcTest setTestSpecialEntitlements(java.lang.Boolean testSpecialEntitlements) {
+    this.testSpecialEntitlements = testSpecialEntitlements;
     return this;
   }
 

@@ -40,9 +40,9 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   private java.lang.String conferenceId;
 
   /**
-   * The conference solution, such as Hangouts or Hangouts Meet. Unset for a conference with a
-   * failed create request. Either conferenceSolution and at least one entryPoint, or createRequest
-   * is required.
+   * The conference solution, such as Hangouts or Google Meet. Unset for a conference with a failed
+   * create request. Either conferenceSolution and at least one entryPoint, or createRequest is
+   * required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,9 +116,9 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The conference solution, such as Hangouts or Hangouts Meet. Unset for a conference with a
-   * failed create request. Either conferenceSolution and at least one entryPoint, or createRequest
-   * is required.
+   * The conference solution, such as Hangouts or Google Meet. Unset for a conference with a failed
+   * create request. Either conferenceSolution and at least one entryPoint, or createRequest is
+   * required.
    * @return value or {@code null} for none
    */
   public ConferenceSolution getConferenceSolution() {
@@ -126,9 +126,9 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The conference solution, such as Hangouts or Hangouts Meet. Unset for a conference with a
-   * failed create request. Either conferenceSolution and at least one entryPoint, or createRequest
-   * is required.
+   * The conference solution, such as Hangouts or Google Meet. Unset for a conference with a failed
+   * create request. Either conferenceSolution and at least one entryPoint, or createRequest is
+   * required.
    * @param conferenceSolution conferenceSolution or {@code null} for none
    */
   public ConferenceData setConferenceSolution(ConferenceSolution conferenceSolution) {

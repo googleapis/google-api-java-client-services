@@ -30,7 +30,7 @@ package com.google.api.services.calendar.model;
 public final class CreateConferenceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The conference solution, such as Hangouts or Hangouts Meet.
+   * The conference solution, such as Hangouts or Google Meet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class CreateConferenceRequest extends com.google.api.client.json.Ge
   private ConferenceRequestStatus status;
 
   /**
-   * The conference solution, such as Hangouts or Hangouts Meet.
+   * The conference solution, such as Hangouts or Google Meet.
    * @return value or {@code null} for none
    */
   public ConferenceSolutionKey getConferenceSolutionKey() {
@@ -60,7 +60,7 @@ public final class CreateConferenceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The conference solution, such as Hangouts or Hangouts Meet.
+   * The conference solution, such as Hangouts or Google Meet.
    * @param conferenceSolutionKey conferenceSolutionKey or {@code null} for none
    */
   public CreateConferenceRequest setConferenceSolutionKey(ConferenceSolutionKey conferenceSolutionKey) {

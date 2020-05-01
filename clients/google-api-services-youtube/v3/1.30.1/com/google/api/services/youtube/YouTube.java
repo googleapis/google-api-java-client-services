@@ -3884,7 +3884,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       /** Set this parameter to limit the returned comment threads to a particular moderation state.
 
      Note: This parameter is not supported for use in conjunction with the id parameter. [default:
-     MODERATION_STATUS_PUBLISHED]
+     published]
        */
       public java.lang.String getModerationStatus() {
         return moderationStatus;
@@ -3912,7 +3912,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       /** The order parameter specifies the order in which the API response should list comment threads.
      Valid values are: - time - Comment threads are ordered by time. This is the default behavior. -
      relevance - Comment threads are ordered by relevance.Note: This parameter is not supported for use
-     in conjunction with the id parameter. [default: true]
+     in conjunction with the id parameter. [default: time]
        */
       public java.lang.String getOrder() {
         return order;
@@ -3998,7 +3998,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String textFormat;
 
       /** Set this parameter's value to html or plainText to instruct the API to return the comments left by
-     users in html formatted or in plain text. [default: FORMAT_HTML]
+     users in html formatted or in plain text. [default: html]
        */
       public java.lang.String getTextFormat() {
         return textFormat;
@@ -4613,7 +4613,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String textFormat;
 
       /** This parameter indicates whether the API should return comments formatted as HTML or as plain text.
-     [default: FORMAT_HTML]
+     [default: html]
        */
       public java.lang.String getTextFormat() {
         return textFormat;
@@ -6771,7 +6771,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String broadcastType;
 
       /** The broadcastType parameter filters the API response to only include broadcasts with the specified
-     type. This is only compatible with the mine filter for now. [default: BROADCAST_TYPE_FILTER_EVENT]
+     type. This is only compatible with the mine filter for now. [default: event]
        */
       public java.lang.String getBroadcastType() {
         return broadcastType;
@@ -9939,8 +9939,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       @com.google.api.client.util.Key
       private java.lang.String mode;
 
-      /** The mode parameter specifies which channel members to return. [default:
-     LIST_MEMBERS_MODE_ALL_CURRENT]
+      /** The mode parameter specifies which channel members to return. [default: all_current]
        */
       public java.lang.String getMode() {
         return mode;
@@ -12349,7 +12348,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String order;
 
       /** The order parameter specifies the method that will be used to order resources in the API response.
-     [default: SEARCH_SORT_RELEVANCE]
+     [default: relevance]
        */
       public java.lang.String getOrder() {
         return order;
@@ -12574,7 +12573,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String safeSearch;
 
       /** The safeSearch parameter indicates whether the search results should include restricted content as
-     well as standard content. [default: SAFE_SEARCH_MODERATE_FILTERING]
+     well as standard content. [default: moderate]
        */
       public java.lang.String getSafeSearch() {
         return safeSearch;
@@ -13006,7 +13005,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** The filter parameter specifies which channel sponsors to return. [default: POLL_NEWEST]
+      /** The filter parameter specifies which channel sponsors to return. [default: newest]
        */
       public java.lang.String getFilter() {
         return filter;
@@ -13716,7 +13715,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String order;
 
       /** The order parameter specifies the method that will be used to sort resources in the API response.
-     [default: SUBSCRIPTION_ORDER_RELEVANCE]
+     [default: relevance]
        */
       public java.lang.String getOrder() {
         return order;

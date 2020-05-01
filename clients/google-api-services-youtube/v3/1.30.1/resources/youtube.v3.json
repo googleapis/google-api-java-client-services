@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/VfSXoeTZJSDEPlJ9LkqjGCjn5wo\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/IBbZJC0-42113frcDb-NKLWyDMs\"",
  "discoveryVersion": "v1",
  "id": "youtube:v3",
  "name": "youtube",
  "canonicalName": "YouTube",
  "version": "v3",
- "revision": "20200402",
+ "revision": "20200423",
  "title": "YouTube Data API",
  "description": "Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.",
  "ownerDomain": "google.com",
@@ -8524,7 +8524,7 @@
       "moderationStatus": {
        "type": "string",
        "description": "Set this parameter to limit the returned comment threads to a particular moderation state.\n\nNote: This parameter is not supported for use in conjunction with the id parameter.",
-       "default": "MODERATION_STATUS_PUBLISHED",
+       "default": "published",
        "enum": [
         "heldForReview",
         "likelySpam",
@@ -8540,7 +8540,7 @@
       "order": {
        "type": "string",
        "description": "The order parameter specifies the order in which the API response should list comment threads. Valid values are: \n- time - Comment threads are ordered by time. This is the default behavior.\n- relevance - Comment threads are ordered by relevance.Note: This parameter is not supported for use in conjunction with the id parameter.",
-       "default": "true",
+       "default": "time",
        "enum": [
         "relevance",
         "time"
@@ -8570,7 +8570,7 @@
       "textFormat": {
        "type": "string",
        "description": "Set this parameter's value to html or plainText to instruct the API to return the comments left by users in html formatted or in plain text.",
-       "default": "FORMAT_HTML",
+       "default": "html",
        "enum": [
         "html",
         "plainText"
@@ -8712,7 +8712,7 @@
       "textFormat": {
        "type": "string",
        "description": "This parameter indicates whether the API should return comments formatted as HTML or as plain text.",
-       "default": "FORMAT_HTML",
+       "default": "html",
        "enum": [
         "html",
         "plainText"
@@ -9143,7 +9143,7 @@
       "broadcastType": {
        "type": "string",
        "description": "The broadcastType parameter filters the API response to only include broadcasts with the specified type. This is only compatible with the mine filter for now.",
-       "default": "BROADCAST_TYPE_FILTER_EVENT",
+       "default": "event",
        "enum": [
         "all",
         "event",
@@ -9765,7 +9765,7 @@
       "mode": {
        "type": "string",
        "description": "The mode parameter specifies which channel members to return.",
-       "default": "LIST_MEMBERS_MODE_ALL_CURRENT",
+       "default": "all_current",
        "enum": [
         "all_current",
         "updates"
@@ -10248,7 +10248,7 @@
       "order": {
        "type": "string",
        "description": "The order parameter specifies the method that will be used to order resources in the API response.",
-       "default": "SEARCH_SORT_RELEVANCE",
+       "default": "relevance",
        "enum": [
         "date",
         "rating",
@@ -10313,7 +10313,7 @@
       "safeSearch": {
        "type": "string",
        "description": "The safeSearch parameter indicates whether the search results should include restricted content as well as standard content.",
-       "default": "SAFE_SEARCH_MODERATE_FILTERING",
+       "default": "moderate",
        "enum": [
         "moderate",
         "none",
@@ -10487,7 +10487,7 @@
       "filter": {
        "type": "string",
        "description": "The filter parameter specifies which channel sponsors to return.",
-       "default": "POLL_NEWEST",
+       "default": "newest",
        "enum": [
         "all",
         "newest"
@@ -10643,7 +10643,7 @@
       "order": {
        "type": "string",
        "description": "The order parameter specifies the method that will be used to sort resources in the API response.",
-       "default": "SUBSCRIPTION_ORDER_RELEVANCE",
+       "default": "relevance",
        "enum": [
         "alphabetical",
         "relevance",

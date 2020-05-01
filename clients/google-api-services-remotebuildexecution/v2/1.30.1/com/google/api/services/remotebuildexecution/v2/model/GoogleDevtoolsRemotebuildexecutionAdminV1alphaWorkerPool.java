@@ -31,6 +31,13 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
+   * The autoscale policy to apply on a pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale autoscale;
+
+  /**
    * WorkerPool resource name formatted as:
    * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be
    * populated when creating a worker pool since it is provided in the `poolId` field.
@@ -60,6 +67,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool exte
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long workerCount;
+
+  /**
+   * The autoscale policy to apply on a pool.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale getAutoscale() {
+    return autoscale;
+  }
+
+  /**
+   * The autoscale policy to apply on a pool.
+   * @param autoscale autoscale or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool setAutoscale(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale autoscale) {
+    this.autoscale = autoscale;
+    return this;
+  }
 
   /**
    * WorkerPool resource name formatted as:

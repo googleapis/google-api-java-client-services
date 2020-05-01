@@ -1417,6 +1417,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private com.google.api.client.util.DateTime createdBefore;
 
         /**
+         * A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object
+         * is before this timestamp.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private com.google.api.client.util.DateTime customTimeBefore;
+
+        /**
+         * Number of days elapsed since the user-specified timestamp set on an object. The condition is
+         * satisfied if the days elapsed is at least this number. If no custom timestamp is specified on
+         * an object, the condition does not apply.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer daysSinceCustomTime;
+
+        /**
          * Relevant only for versioned objects. If the value is true, this condition matches live objects;
          * if the value is false, it matches archived objects.
          * The value may be {@code null}.
@@ -1486,6 +1503,46 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
          */
         public Condition setCreatedBefore(com.google.api.client.util.DateTime createdBefore) {
           this.createdBefore = createdBefore;
+          return this;
+        }
+
+        /**
+         * A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object
+         * is before this timestamp.
+         * @return value or {@code null} for none
+         */
+        public com.google.api.client.util.DateTime getCustomTimeBefore() {
+          return customTimeBefore;
+        }
+
+        /**
+         * A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object
+         * is before this timestamp.
+         * @param customTimeBefore customTimeBefore or {@code null} for none
+         */
+        public Condition setCustomTimeBefore(com.google.api.client.util.DateTime customTimeBefore) {
+          this.customTimeBefore = customTimeBefore;
+          return this;
+        }
+
+        /**
+         * Number of days elapsed since the user-specified timestamp set on an object. The condition is
+         * satisfied if the days elapsed is at least this number. If no custom timestamp is specified on
+         * an object, the condition does not apply.
+         * @return value or {@code null} for none
+         */
+        public java.lang.Integer getDaysSinceCustomTime() {
+          return daysSinceCustomTime;
+        }
+
+        /**
+         * Number of days elapsed since the user-specified timestamp set on an object. The condition is
+         * satisfied if the days elapsed is at least this number. If no custom timestamp is specified on
+         * an object, the condition does not apply.
+         * @param daysSinceCustomTime daysSinceCustomTime or {@code null} for none
+         */
+        public Condition setDaysSinceCustomTime(java.lang.Integer daysSinceCustomTime) {
+          this.daysSinceCustomTime = daysSinceCustomTime;
           return this;
         }
 

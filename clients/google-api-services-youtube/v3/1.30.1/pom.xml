@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-youtube</artifactId>
-  <version>v3-rev20200402-1.30.9</version>
-  <name>YouTube Data API v3-rev20200402-1.30.9</name>
+  <version>v3-rev20200423-1.30.9</version>
+  <name>YouTube Data API v3-rev20200423-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -58,7 +58,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
    *
    *   - detail.action_detail_case: Uses the "has" operator (:) and     either a singular value or a
    * list of allowed action types enclosed in     parentheses.     Examples:       -
-   * detail.action_detail_case: RENAME       - detail.action_detail_case:(CREATE UPLOAD)       -
+   * detail.action_detail_case: RENAME       - detail.action_detail_case:(CREATE EDIT)       -
    * -detail.action_detail_case:MOVE
    * The value may be {@code null}.
    */
@@ -73,14 +73,18 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   private java.lang.String itemName;
 
   /**
-   * The requested number of activities to return. If not set, a default value is used.
+   * The miminum number of activities desired in the response; the server will attempt to return at
+   * least this quanitity. The server may also return fewer activities if it has a partial response
+   * ready before the request times out. If not set, a default value is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * The next_page_token value returned from a previous QueryDriveActivity request, if any.
+   * The token identifying which page of results to return. Set this to the next_page_token value
+   * returned from a previous query to obtain the following page of results. If not set, the first
+   * page of results will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +141,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
    *
    *   - detail.action_detail_case: Uses the "has" operator (:) and     either a singular value or a
    * list of allowed action types enclosed in     parentheses.     Examples:       -
-   * detail.action_detail_case: RENAME       - detail.action_detail_case:(CREATE UPLOAD)       -
+   * detail.action_detail_case: RENAME       - detail.action_detail_case:(CREATE EDIT)       -
    * -detail.action_detail_case:MOVE
    * @return value or {@code null} for none
    */
@@ -158,7 +162,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
    *
    *   - detail.action_detail_case: Uses the "has" operator (:) and     either a singular value or a
    * list of allowed action types enclosed in     parentheses.     Examples:       -
-   * detail.action_detail_case: RENAME       - detail.action_detail_case:(CREATE UPLOAD)       -
+   * detail.action_detail_case: RENAME       - detail.action_detail_case:(CREATE EDIT)       -
    * -detail.action_detail_case:MOVE
    * @param filter filter or {@code null} for none
    */
@@ -185,7 +189,9 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The requested number of activities to return. If not set, a default value is used.
+   * The miminum number of activities desired in the response; the server will attempt to return at
+   * least this quanitity. The server may also return fewer activities if it has a partial response
+   * ready before the request times out. If not set, a default value is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -193,7 +199,9 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The requested number of activities to return. If not set, a default value is used.
+   * The miminum number of activities desired in the response; the server will attempt to return at
+   * least this quanitity. The server may also return fewer activities if it has a partial response
+   * ready before the request times out. If not set, a default value is used.
    * @param pageSize pageSize or {@code null} for none
    */
   public QueryDriveActivityRequest setPageSize(java.lang.Integer pageSize) {
@@ -202,7 +210,9 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The next_page_token value returned from a previous QueryDriveActivity request, if any.
+   * The token identifying which page of results to return. Set this to the next_page_token value
+   * returned from a previous query to obtain the following page of results. If not set, the first
+   * page of results will be returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -210,7 +220,9 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * The next_page_token value returned from a previous QueryDriveActivity request, if any.
+   * The token identifying which page of results to return. Set this to the next_page_token value
+   * returned from a previous query to obtain the following page of results. If not set, the first
+   * page of results will be returned.
    * @param pageToken pageToken or {@code null} for none
    */
   public QueryDriveActivityRequest setPageToken(java.lang.String pageToken) {

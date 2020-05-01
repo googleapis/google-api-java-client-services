@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/LOAKB2Nh9hEBRsvPxpYLUp0jQMg\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/C5CHYADOZaafQbTc7o94aRPcExs\"",
  "discoveryVersion": "v1",
  "id": "calendar:v3",
  "name": "calendar",
  "version": "v3",
- "revision": "20200315",
+ "revision": "20200426",
  "title": "Calendar API",
  "description": "Manipulates events and other calendar data.",
  "ownerDomain": "google.com",
@@ -472,7 +472,7 @@
     },
     "conferenceSolution": {
      "$ref": "ConferenceSolution",
-     "description": "The conference solution, such as Hangouts or Hangouts Meet.\nUnset for a conference with a failed create request.\nEither conferenceSolution and at least one entryPoint, or createRequest is required."
+     "description": "The conference solution, such as Hangouts or Google Meet.\nUnset for a conference with a failed create request.\nEither conferenceSolution and at least one entryPoint, or createRequest is required."
     },
     "createRequest": {
      "$ref": "CreateConferenceRequest",
@@ -578,7 +578,7 @@
    "properties": {
     "conferenceSolutionKey": {
      "$ref": "ConferenceSolutionKey",
-     "description": "The conference solution, such as Hangouts or Hangouts Meet."
+     "description": "The conference solution, such as Hangouts or Google Meet."
     },
     "requestId": {
      "type": "string",
@@ -687,7 +687,7 @@
     },
     "conferenceData": {
      "$ref": "ConferenceData",
-     "description": "The conference-related information, such as details of a Hangouts Meet conference. To create new conference details use the createRequest field. To persist your changes, remember to set the conferenceDataVersion request parameter to 1 for all event modification requests."
+     "description": "The conference-related information, such as details of a Google Meet conference. To create new conference details use the createRequest field. To persist your changes, remember to set the conferenceDataVersion request parameter to 1 for all event modification requests."
     },
     "created": {
      "type": "string",

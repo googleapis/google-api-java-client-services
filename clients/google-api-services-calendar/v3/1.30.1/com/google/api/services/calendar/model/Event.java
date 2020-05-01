@@ -73,9 +73,9 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String colorId;
 
   /**
-   * The conference-related information, such as details of a Hangouts Meet conference. To create
-   * new conference details use the createRequest field. To persist your changes, remember to set
-   * the conferenceDataVersion request parameter to 1 for all event modification requests.
+   * The conference-related information, such as details of a Google Meet conference. To create new
+   * conference details use the createRequest field. To persist your changes, remember to set the
+   * conferenceDataVersion request parameter to 1 for all event modification requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -523,9 +523,9 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The conference-related information, such as details of a Hangouts Meet conference. To create
-   * new conference details use the createRequest field. To persist your changes, remember to set
-   * the conferenceDataVersion request parameter to 1 for all event modification requests.
+   * The conference-related information, such as details of a Google Meet conference. To create new
+   * conference details use the createRequest field. To persist your changes, remember to set the
+   * conferenceDataVersion request parameter to 1 for all event modification requests.
    * @return value or {@code null} for none
    */
   public ConferenceData getConferenceData() {
@@ -533,9 +533,9 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The conference-related information, such as details of a Hangouts Meet conference. To create
-   * new conference details use the createRequest field. To persist your changes, remember to set
-   * the conferenceDataVersion request parameter to 1 for all event modification requests.
+   * The conference-related information, such as details of a Google Meet conference. To create new
+   * conference details use the createRequest field. To persist your changes, remember to set the
+   * conferenceDataVersion request parameter to 1 for all event modification requests.
    * @param conferenceData conferenceData or {@code null} for none
    */
   public Event setConferenceData(ConferenceData conferenceData) {

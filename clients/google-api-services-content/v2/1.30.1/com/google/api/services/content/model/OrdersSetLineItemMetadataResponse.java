@@ -33,7 +33,7 @@ public final class OrdersSetLineItemMetadataResponse extends com.google.api.clie
   /**
    * The status of the execution.
    *
-   * Acceptable values are:   - "duplicate"  - "executed"
+   * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class OrdersSetLineItemMetadataResponse extends com.google.api.clie
   /**
    * The status of the execution.
    *
-   * Acceptable values are:   - "duplicate"  - "executed"
+   * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionStatus() {
@@ -60,7 +60,7 @@ public final class OrdersSetLineItemMetadataResponse extends com.google.api.clie
   /**
    * The status of the execution.
    *
-   * Acceptable values are:   - "duplicate"  - "executed"
+   * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * @param executionStatus executionStatus or {@code null} for none
    */
   public OrdersSetLineItemMetadataResponse setExecutionStatus(java.lang.String executionStatus) {

@@ -954,22 +954,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Override used only by built-in games in Play Games application. */
-      @com.google.api.client.util.Key
-      private java.lang.String builtinGameId;
-
-      /** Override used only by built-in games in Play Games application.
-       */
-      public java.lang.String getBuiltinGameId() {
-        return builtinGameId;
-      }
-
-      /** Override used only by built-in games in Play Games application. */
-      public Unlock setBuiltinGameId(java.lang.String builtinGameId) {
-        this.builtinGameId = builtinGameId;
-        return this;
-      }
-
       @Override
       public Unlock set(String parameterName, Object value) {
         return (Unlock) super.set(parameterName, value);
@@ -1047,22 +1031,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public UpdateMultiple setUserIp(java.lang.String userIp) {
         return (UpdateMultiple) super.setUserIp(userIp);
-      }
-
-      /** Override used only by built-in games in Play Games application. */
-      @com.google.api.client.util.Key
-      private java.lang.String builtinGameId;
-
-      /** Override used only by built-in games in Play Games application.
-       */
-      public java.lang.String getBuiltinGameId() {
-        return builtinGameId;
-      }
-
-      /** Override used only by built-in games in Play Games application. */
-      public UpdateMultiple setBuiltinGameId(java.lang.String builtinGameId) {
-        this.builtinGameId = builtinGameId;
-        return this;
       }
 
       @Override
@@ -1303,22 +1271,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Played setUserIp(java.lang.String userIp) {
         return (Played) super.setUserIp(userIp);
-      }
-
-      /** Override used only by built-in games in Play Games application. */
-      @com.google.api.client.util.Key
-      private java.lang.String builtinGameId;
-
-      /** Override used only by built-in games in Play Games application.
-       */
-      public java.lang.String getBuiltinGameId() {
-        return builtinGameId;
-      }
-
-      /** Override used only by built-in games in Play Games application. */
-      public Played setBuiltinGameId(java.lang.String builtinGameId) {
-        this.builtinGameId = builtinGameId;
-        return this;
       }
 
       @Override

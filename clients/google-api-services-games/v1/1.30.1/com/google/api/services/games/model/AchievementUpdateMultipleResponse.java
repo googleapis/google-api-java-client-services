@@ -32,7 +32,7 @@ public final class AchievementUpdateMultipleResponse extends com.google.api.clie
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementUpdateListResponse.
+   * games#achievementUpdateMultipleResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class AchievementUpdateMultipleResponse extends com.google.api.clie
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementUpdateListResponse.
+   * games#achievementUpdateMultipleResponse.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -56,7 +56,7 @@ public final class AchievementUpdateMultipleResponse extends com.google.api.clie
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementUpdateListResponse.
+   * games#achievementUpdateMultipleResponse.
    * @param kind kind or {@code null} for none
    */
   public AchievementUpdateMultipleResponse setKind(java.lang.String kind) {

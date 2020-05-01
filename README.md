@@ -48,7 +48,7 @@ packages on [Maven Central][maven-search].
 | Blogger API v3 | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
 | Books API | [v1](clients/google-api-services-books/v1) |
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
-| Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1) |
+| Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1), [v1p4beta1](clients/google-api-services-cloudasset/v1p4beta1) |
 | Cloud Bigtable Admin API | [v1](clients/google-api-services-bigtableadmin/v1), [v2](clients/google-api-services-bigtableadmin/v2) |
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
 | Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
@@ -115,6 +115,7 @@ packages on [Maven Central][maven-search].
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |
 | Firebase Hosting API | [v1beta1](clients/google-api-services-firebasehosting/v1beta1) |
+| Firebase ML API | [v1beta2](clients/google-api-services-firebaseml/v1beta2) |
 | Firebase Management API | [v1beta1](clients/google-api-services-firebase/v1beta1) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness | [v1](clients/google-api-services-fitness/v1) |

@@ -731,17 +731,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The shared drive from which the change will be returned. */
+      /** The shared drive from which the change is returned. */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
-      /** The shared drive from which the change will be returned.
+      /** The shared drive from which the change is returned.
        */
       public java.lang.String getDriveId() {
         return driveId;
       }
 
-      /** The shared drive from which the change will be returned. */
+      /** The shared drive from which the change is returned. */
       public Get setDriveId(java.lang.String driveId) {
         this.driveId = driveId;
         return this;
@@ -950,13 +950,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The ID of the shared drive for which the starting pageToken for listing future changes from
-       * that shared drive will be returned.
+       * that shared drive is returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
       /** The ID of the shared drive for which the starting pageToken for listing future changes from that
-     shared drive will be returned.
+     shared drive is returned.
        */
       public java.lang.String getDriveId() {
         return driveId;
@@ -964,7 +964,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The ID of the shared drive for which the starting pageToken for listing future changes from
-       * that shared drive will be returned.
+       * that shared drive is returned.
        */
       public GetStartPageToken setDriveId(java.lang.String driveId) {
         this.driveId = driveId;
@@ -1172,21 +1172,21 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * The shared drive from which changes are returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
-      /** The shared drive from which changes will be returned. If specified the change IDs will be
-     reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+      /** The shared drive from which changes are returned. If specified the change IDs will be reflective of
+     the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public java.lang.String getDriveId() {
         return driveId;
       }
 
       /**
-       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * The shared drive from which changes are returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public List setDriveId(java.lang.String driveId) {
@@ -1302,15 +1302,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deprecated - Whether both My Drive and shared drive items should be included in results.
-       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
-       * will be included in the results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items are
+       * included in the results.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeItemsFromAllDrives;
 
       /** Deprecated - Whether both My Drive and shared drive items should be included in results. This
-     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
-     in the results. [default: false]
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items are included in
+     the results. [default: false]
        */
       public java.lang.Boolean getIncludeItemsFromAllDrives() {
         return includeItemsFromAllDrives;
@@ -1318,8 +1318,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deprecated - Whether both My Drive and shared drive items should be included in results.
-       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
-       * will be included in the results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items are
+       * included in the results.
        */
       public List setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
         this.includeItemsFromAllDrives = includeItemsFromAllDrives;
@@ -1344,8 +1344,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Deprecated - Whether both My Drive and shared drive items should be included in results. This
-     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
-     in the results.
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items are included in
+     the results.
        * </p>
        */
       public boolean isIncludeItemsFromAllDrives() {
@@ -1358,14 +1358,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive will be omitted from the result.
+       * not been added to My Drive are omitted from the result.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeSubscribed;
 
       /** Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive will be omitted from the result. [default: true]
+     My Drive are omitted from the result. [default: true]
        */
       public java.lang.Boolean getIncludeSubscribed() {
         return includeSubscribed;
@@ -1374,7 +1374,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive will be omitted from the result.
+       * not been added to My Drive are omitted from the result.
        */
       public List setIncludeSubscribed(java.lang.Boolean includeSubscribed) {
         this.includeSubscribed = includeSubscribed;
@@ -1400,7 +1400,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * <p>
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive will be omitted from the result.
+     My Drive are omitted from the result.
        * </p>
        */
       public boolean isIncludeSubscribed() {
@@ -1726,21 +1726,21 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * The shared drive from which changes are returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
-      /** The shared drive from which changes will be returned. If specified the change IDs will be
-     reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+      /** The shared drive from which changes are returned. If specified the change IDs will be reflective of
+     the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public java.lang.String getDriveId() {
         return driveId;
       }
 
       /**
-       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * The shared drive from which changes are returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public Watch setDriveId(java.lang.String driveId) {
@@ -1856,15 +1856,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deprecated - Whether both My Drive and shared drive items should be included in results.
-       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
-       * will be included in the results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items are
+       * included in the results.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeItemsFromAllDrives;
 
       /** Deprecated - Whether both My Drive and shared drive items should be included in results. This
-     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
-     in the results. [default: false]
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items are included in
+     the results. [default: false]
        */
       public java.lang.Boolean getIncludeItemsFromAllDrives() {
         return includeItemsFromAllDrives;
@@ -1872,8 +1872,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deprecated - Whether both My Drive and shared drive items should be included in results.
-       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
-       * will be included in the results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items are
+       * included in the results.
        */
       public Watch setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
         this.includeItemsFromAllDrives = includeItemsFromAllDrives;
@@ -1898,8 +1898,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Deprecated - Whether both My Drive and shared drive items should be included in results. This
-     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
-     in the results.
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items are included in
+     the results.
        * </p>
        */
       public boolean isIncludeItemsFromAllDrives() {
@@ -1912,14 +1912,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive will be omitted from the result.
+       * not been added to My Drive are omitted from the result.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeSubscribed;
 
       /** Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive will be omitted from the result. [default: true]
+     My Drive are omitted from the result. [default: true]
        */
       public java.lang.Boolean getIncludeSubscribed() {
         return includeSubscribed;
@@ -1928,7 +1928,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive will be omitted from the result.
+       * not been added to My Drive are omitted from the result.
        */
       public Watch setIncludeSubscribed(java.lang.Boolean includeSubscribed) {
         this.includeSubscribed = includeSubscribed;
@@ -1954,7 +1954,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * <p>
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive will be omitted from the result.
+     My Drive are omitted from the result.
        * </p>
        */
       public boolean isIncludeSubscribed() {
@@ -2441,15 +2441,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * last parent is removed, the item will be placed under its owner's root.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's last
+       * parent is removed, the item is placed under its owner's root.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
-     removed, the item will be placed under its owner's root. [default: false]
+     parameter only takes effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item is placed under its owner's root. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
@@ -2457,8 +2457,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * last parent is removed, the item will be placed under its owner's root.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's last
+       * parent is removed, the item is placed under its owner's root.
        */
       public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -2483,8 +2483,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
-     removed, the item will be placed under its owner's root.
+     parameter only takes effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item is placed under its owner's root.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -2719,19 +2719,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the child's
-       * owner makes the request, the child will be removed from all current folders and placed in
-       * the requested folder. Any other requests that increase the number of the child's parents
-       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
-       * is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the child's owner
+       * makes the request, the child is removed from all current folders and placed in the
+       * requested folder. Any other requests that increase the number of the child's parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
-     the request, the child will be removed from all current folders and placed in the requested folder.
-     Any other requests that increase the number of the child's parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the child's owner makes the
+     request, the child is removed from all current folders and placed in the requested folder. Any
+     other requests that increase the number of the child's parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -2740,11 +2740,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the child's
-       * owner makes the request, the child will be removed from all current folders and placed in
-       * the requested folder. Any other requests that increase the number of the child's parents
-       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
-       * is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the child's owner
+       * makes the request, the child is removed from all current folders and placed in the
+       * requested folder. Any other requests that increase the number of the child's parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -2769,9 +2769,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
-     the request, the child will be removed from all current folders and placed in the requested folder.
-     Any other requests that increase the number of the child's parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the child's owner makes the
+     request, the child is removed from all current folders and placed in the requested folder. Any
+     other requests that increase the number of the child's parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added.
        * </p>
        */
@@ -5020,15 +5020,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. Requests that
-       * specify more than one parent will fail.
+       * This parameter only takes effect if the item is not in a shared drive. Requests that
+       * specify more than one parent fail.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. Requests that specify more
-     than one parent will fail. [default: false]
+     parameter only takes effect if the item is not in a shared drive. Requests that specify more than
+     one parent fail. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
@@ -5036,8 +5036,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. Requests that
-       * specify more than one parent will fail.
+       * This parameter only takes effect if the item is not in a shared drive. Requests that
+       * specify more than one parent fail.
        */
       public Copy setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -5062,8 +5062,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. Requests that specify more
-     than one parent will fail.
+     parameter only takes effect if the item is not in a shared drive. Requests that specify more than
+     one parent fail.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -6411,15 +6411,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. Requests that
-       * specify more than one parent will fail.
+       * This parameter only takes effect if the item is not in a shared drive. Requests that
+       * specify more than one parent fail.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. Requests that specify more
-     than one parent will fail. [default: false]
+     parameter only takes effect if the item is not in a shared drive. Requests that specify more than
+     one parent fail. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
@@ -6427,8 +6427,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. Requests that
-       * specify more than one parent will fail.
+       * This parameter only takes effect if the item is not in a shared drive. Requests that
+       * specify more than one parent fail.
        */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -6453,8 +6453,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. Requests that specify more
-     than one parent will fail.
+     parameter only takes effect if the item is not in a shared drive. Requests that specify more than
+     one parent fail.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -7412,19 +7412,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * owner makes a request to add a single parent, the item will be removed from all current
-       * folders and placed in the requested folder. Other requests that increase the number of
-       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
-       * parent is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's owner
+       * makes a request to add a single parent, the item is removed from all current folders and
+       * placed in the requested folder. Other requests that increase the number of parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
-     request to add a single parent, the item will be removed from all current folders and placed in the
-     requested folder. Other requests that increase the number of parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item is removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -7433,11 +7433,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * owner makes a request to add a single parent, the item will be removed from all current
-       * folders and placed in the requested folder. Other requests that increase the number of
-       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
-       * parent is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's owner
+       * makes a request to add a single parent, the item is removed from all current folders and
+       * placed in the requested folder. Other requests that increase the number of parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       public Patch setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -7462,9 +7462,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
-     request to add a single parent, the item will be removed from all current folders and placed in the
-     requested folder. Other requests that increase the number of parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item is removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added.
        * </p>
        */
@@ -8741,19 +8741,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * owner makes a request to add a single parent, the item will be removed from all current
-       * folders and placed in the requested folder. Other requests that increase the number of
-       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
-       * parent is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's owner
+       * makes a request to add a single parent, the item is removed from all current folders and
+       * placed in the requested folder. Other requests that increase the number of parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
-     request to add a single parent, the item will be removed from all current folders and placed in the
-     requested folder. Other requests that increase the number of parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item is removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -8762,11 +8762,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * owner makes a request to add a single parent, the item will be removed from all current
-       * folders and placed in the requested folder. Other requests that increase the number of
-       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
-       * parent is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's owner
+       * makes a request to add a single parent, the item is removed from all current folders and
+       * placed in the requested folder. Other requests that increase the number of parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       public Update setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -8791,9 +8791,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
-     request to add a single parent, the item will be removed from all current folders and placed in the
-     requested folder. Other requests that increase the number of parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item is removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added.
        * </p>
        */
@@ -9776,15 +9776,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * last parent is removed, the item will be placed under its owner's root.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's last
+       * parent is removed, the item is placed under its owner's root.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
-     removed, the item will be placed under its owner's root. [default: false]
+     parameter only takes effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item is placed under its owner's root. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
@@ -9792,8 +9792,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the item's
-       * last parent is removed, the item will be placed under its owner's root.
+       * This parameter only takes effect if the item is not in a shared drive. If the item's last
+       * parent is removed, the item is placed under its owner's root.
        */
       public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -9818,8 +9818,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
-     removed, the item will be placed under its owner's root.
+     parameter only takes effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item is placed under its owner's root.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -10054,19 +10054,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the child's
-       * owner makes the request, the child will be removed from all current folders and placed in
-       * the requested folder. Any other requests that increase the number of the child's parents
-       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
-       * is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the child's owner
+       * makes the request, the child is removed from all current folders and placed in the
+       * requested folder. Any other requests that increase the number of the child's parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
-     the request, the child will be removed from all current folders and placed in the requested folder.
-     Any other requests that increase the number of the child's parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the child's owner makes the
+     request, the child is removed from all current folders and placed in the requested folder. Any
+     other requests that increase the number of the child's parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -10075,11 +10075,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. If the child's
-       * owner makes the request, the child will be removed from all current folders and placed in
-       * the requested folder. Any other requests that increase the number of the child's parents
-       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
-       * is being added.
+       * This parameter only takes effect if the item is not in a shared drive. If the child's owner
+       * makes the request, the child is removed from all current folders and placed in the
+       * requested folder. Any other requests that increase the number of the child's parents fail,
+       * except when the canAddMyDriveParent file capability is true and a single parent is being
+       * added.
        */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -10104,9 +10104,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
-     the request, the child will be removed from all current folders and placed in the requested folder.
-     Any other requests that increase the number of the child's parents will fail, except when the
+     parameter only takes effect if the item is not in a shared drive. If the child's owner makes the
+     request, the child is removed from all current folders and placed in the requested folder. Any
+     other requests that increase the number of the child's parents fail, except when the
      canAddMyDriveParent file capability is true and a single parent is being added.
        * </p>
        */
@@ -11112,14 +11112,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. See
+       * This parameter only takes effect if the item is not in a shared drive. See
        * moveToNewOwnersRoot for details.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
       /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. See moveToNewOwnersRoot for
+     parameter only takes effect if the item is not in a shared drive. See moveToNewOwnersRoot for
      details. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -11128,7 +11128,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
-       * This parameter will only take effect if the item is not in a shared drive. See
+       * This parameter only takes effect if the item is not in a shared drive. See
        * moveToNewOwnersRoot for details.
        */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
@@ -11154,7 +11154,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
-     parameter will only take effect if the item is not in a shared drive. See moveToNewOwnersRoot for
+     parameter only takes effect if the item is not in a shared drive. See moveToNewOwnersRoot for
      details.
        * </p>
        */
@@ -11166,10 +11166,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * This parameter will only take effect if the item is not in a shared drive and the request
-       * is attempting to transfer the ownership of the item. When set to true, the item will be
-       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
-       * false, when enforceSingleParent=true, parents are not changed. If set to false, when
+       * This parameter only takes effect if the item is not in a shared drive and the request is
+       * attempting to transfer the ownership of the item. When set to true, the item will be moved
+       * to the new owner's My Drive root folder and all prior parents removed. If set to false,
+       * when enforceSingleParent=true, parents are not changed. If set to false, when
        * enforceSingleParent=false, existing parents are not changed; however, the file will be
        * added to the new owner's My Drive root folder, unless it is already in the new owner's My
        * Drive.
@@ -11177,22 +11177,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       @com.google.api.client.util.Key
       private java.lang.Boolean moveToNewOwnersRoot;
 
-      /** This parameter will only take effect if the item is not in a shared drive and the request is
-     attempting to transfer the ownership of the item. When set to true, the item will be moved to the
-     new owner's My Drive root folder and all prior parents removed. If set to false, when
-     enforceSingleParent=true, parents are not changed. If set to false, when enforceSingleParent=false,
-     existing parents are not changed; however, the file will be added to the new owner's My Drive root
-     folder, unless it is already in the new owner's My Drive. [default: false]
+      /** This parameter only takes effect if the item is not in a shared drive and the request is attempting
+     to transfer the ownership of the item. When set to true, the item will be moved to the new owner's
+     My Drive root folder and all prior parents removed. If set to false, when enforceSingleParent=true,
+     parents are not changed. If set to false, when enforceSingleParent=false, existing parents are not
+     changed; however, the file will be added to the new owner's My Drive root folder, unless it is
+     already in the new owner's My Drive. [default: false]
        */
       public java.lang.Boolean getMoveToNewOwnersRoot() {
         return moveToNewOwnersRoot;
       }
 
       /**
-       * This parameter will only take effect if the item is not in a shared drive and the request
-       * is attempting to transfer the ownership of the item. When set to true, the item will be
-       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
-       * false, when enforceSingleParent=true, parents are not changed. If set to false, when
+       * This parameter only takes effect if the item is not in a shared drive and the request is
+       * attempting to transfer the ownership of the item. When set to true, the item will be moved
+       * to the new owner's My Drive root folder and all prior parents removed. If set to false,
+       * when enforceSingleParent=true, parents are not changed. If set to false, when
        * enforceSingleParent=false, existing parents are not changed; however, the file will be
        * added to the new owner's My Drive root folder, unless it is already in the new owner's My
        * Drive.
@@ -11219,12 +11219,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * This parameter will only take effect if the item is not in a shared drive and the request is
-     attempting to transfer the ownership of the item. When set to true, the item will be moved to the
-     new owner's My Drive root folder and all prior parents removed. If set to false, when
-     enforceSingleParent=true, parents are not changed. If set to false, when enforceSingleParent=false,
-     existing parents are not changed; however, the file will be added to the new owner's My Drive root
-     folder, unless it is already in the new owner's My Drive.
+       * This parameter only takes effect if the item is not in a shared drive and the request is attempting
+     to transfer the ownership of the item. When set to true, the item will be moved to the new owner's
+     My Drive root folder and all prior parents removed. If set to false, when enforceSingleParent=true,
+     parents are not changed. If set to false, when enforceSingleParent=false, existing parents are not
+     changed; however, the file will be added to the new owner's My Drive root folder, unless it is
+     already in the new owner's My Drive.
        * </p>
        */
       public boolean isMoveToNewOwnersRoot() {

@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Hs4LXeoJXbMtbcM0DbLgg3CHzL4\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/ZrOuv2jlHS6Z6zwtpAqNzM6FbAU\"",
  "discoveryVersion": "v1",
  "id": "storage:v1",
  "name": "storage",
  "version": "v1",
- "revision": "20200326",
+ "revision": "20200410",
  "title": "Cloud Storage JSON API",
  "description": "Stores and retrieves potentially large, immutable data objects.",
  "ownerDomain": "google.com",
@@ -268,6 +268,16 @@
             "type": "string",
             "description": "A date in RFC 3339 format with only the date part (for instance, \"2013-01-15\"). This condition is satisfied when an object is created before midnight of the specified date in UTC.",
             "format": "date"
+           },
+           "customTimeBefore": {
+            "type": "string",
+            "description": "A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object is before this timestamp.",
+            "format": "date-time"
+           },
+           "daysSinceCustomTime": {
+            "type": "integer",
+            "description": "Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.",
+            "format": "int32"
            },
            "isLive": {
             "type": "boolean",
@@ -893,6 +903,11 @@
     "crc32c": {
      "type": "string",
      "description": "CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices."
+    },
+    "customTime": {
+     "type": "string",
+     "description": "A timestamp in RFC 3339 format specified by the user for an object.",
+     "format": "date-time"
     },
     "customerEncryption": {
      "type": "object",

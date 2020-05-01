@@ -99,6 +99,13 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private java.lang.String crc32c;
 
   /**
+   * A timestamp in RFC 3339 format specified by the user for an object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime customTime;
+
+  /**
    * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
    * The value may be {@code null}.
    */
@@ -432,6 +439,23 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
    */
   public StorageObject setCrc32c(java.lang.String crc32c) {
     this.crc32c = crc32c;
+    return this;
+  }
+
+  /**
+   * A timestamp in RFC 3339 format specified by the user for an object.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getCustomTime() {
+    return customTime;
+  }
+
+  /**
+   * A timestamp in RFC 3339 format specified by the user for an object.
+   * @param customTime customTime or {@code null} for none
+   */
+  public StorageObject setCustomTime(com.google.api.client.util.DateTime customTime) {
+    this.customTime = customTime;
     return this;
   }
 

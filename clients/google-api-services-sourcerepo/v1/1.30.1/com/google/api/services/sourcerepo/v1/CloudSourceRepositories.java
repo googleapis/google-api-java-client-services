@@ -609,7 +609,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Deletes a repo.
@@ -632,7 +632,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -710,7 +710,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -744,7 +744,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Returns information about a repo.
@@ -766,7 +766,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -854,7 +854,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -890,7 +890,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
 
         private final java.util.regex.Pattern RESOURCE_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists
@@ -915,7 +915,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1006,7 +1006,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.resource = resource;
           return this;
@@ -1270,7 +1270,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Updates information about a repo.
@@ -1294,7 +1294,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1372,7 +1372,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -1408,7 +1408,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
 
         private final java.util.regex.Pattern RESOURCE_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
@@ -1433,7 +1433,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1514,7 +1514,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.resource = resource;
           return this;
@@ -1551,7 +1551,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}:sync";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Synchronize a connected repo.
@@ -1576,7 +1576,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1654,7 +1654,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -1691,7 +1691,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
 
         private final java.util.regex.Pattern RESOURCE_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
@@ -1717,7 +1717,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1798,7 +1798,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.resource = resource;
           return this;

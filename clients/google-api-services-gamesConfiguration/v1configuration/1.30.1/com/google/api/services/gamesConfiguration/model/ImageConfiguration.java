@@ -39,7 +39,7 @@ public final class ImageConfiguration extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#imageConfiguration.
+   * `gamesConfiguration#imageConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class ImageConfiguration extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#imageConfiguration.
+   * `gamesConfiguration#imageConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -87,7 +87,7 @@ public final class ImageConfiguration extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#imageConfiguration.
+   * `gamesConfiguration#imageConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public ImageConfiguration setKind(java.lang.String kind) {

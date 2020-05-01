@@ -32,7 +32,7 @@ public final class LocalizedString extends com.google.api.client.json.GenericJso
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#localizedString.
+   * `gamesConfiguration#localizedString`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class LocalizedString extends com.google.api.client.json.GenericJso
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#localizedString.
+   * `gamesConfiguration#localizedString`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -63,7 +63,7 @@ public final class LocalizedString extends com.google.api.client.json.GenericJso
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#localizedString.
+   * `gamesConfiguration#localizedString`.
    * @param kind kind or {@code null} for none
    */
   public LocalizedString setKind(java.lang.String kind) {

@@ -32,7 +32,7 @@ public final class LocalizedStringBundle extends com.google.api.client.json.Gene
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#localizedStringBundle.
+   * `gamesConfiguration#localizedStringBundle`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class LocalizedStringBundle extends com.google.api.client.json.Gene
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#localizedStringBundle.
+   * `gamesConfiguration#localizedStringBundle`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -62,7 +62,7 @@ public final class LocalizedStringBundle extends com.google.api.client.json.Gene
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#localizedStringBundle.
+   * `gamesConfiguration#localizedStringBundle`.
    * @param kind kind or {@code null} for none
    */
   public LocalizedStringBundle setKind(java.lang.String kind) {

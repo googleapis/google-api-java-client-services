@@ -626,13 +626,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       /**
        * The maximum number of resource configurations to return in the response, used for paging.
        * For any response, the actual number of resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of resource configurations to return in the response, used for paging. For any
-     response, the actual number of resources returned may be less than the specified maxResults.
+     response, the actual number of resources returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -641,7 +641,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       /**
        * The maximum number of resource configurations to return in the response, used for paging.
        * For any response, the actual number of resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -1501,13 +1501,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       /**
        * The maximum number of resource configurations to return in the response, used for paging.
        * For any response, the actual number of resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of resource configurations to return in the response, used for paging. For any
-     response, the actual number of resources returned may be less than the specified maxResults.
+     response, the actual number of resources returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -1516,7 +1516,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       /**
        * The maximum number of resource configurations to return in the response, used for paging.
        * For any response, the actual number of resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;

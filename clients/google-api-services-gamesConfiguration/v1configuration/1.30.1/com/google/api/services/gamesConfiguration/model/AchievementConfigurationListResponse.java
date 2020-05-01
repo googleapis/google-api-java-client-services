@@ -45,7 +45,7 @@ public final class AchievementConfigurationListResponse extends com.google.api.c
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#achievementConfigurationListResponse.
+   * `gamesConfiguration#achievementConfigurationListResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class AchievementConfigurationListResponse extends com.google.api.c
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#achievementConfigurationListResponse.
+   * `gamesConfiguration#achievementConfigurationListResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -86,7 +86,7 @@ public final class AchievementConfigurationListResponse extends com.google.api.c
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#achievementConfigurationListResponse.
+   * `gamesConfiguration#achievementConfigurationListResponse`.
    * @param kind kind or {@code null} for none
    */
   public AchievementConfigurationListResponse setKind(java.lang.String kind) {

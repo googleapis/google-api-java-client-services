@@ -39,7 +39,7 @@ public final class LeaderboardConfigurationDetail extends com.google.api.client.
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#leaderboardConfigurationDetail.
+   * `gamesConfiguration#leaderboardConfigurationDetail`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class LeaderboardConfigurationDetail extends com.google.api.client.
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#leaderboardConfigurationDetail.
+   * `gamesConfiguration#leaderboardConfigurationDetail`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -94,7 +94,7 @@ public final class LeaderboardConfigurationDetail extends com.google.api.client.
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesConfiguration#leaderboardConfigurationDetail.
+   * `gamesConfiguration#leaderboardConfigurationDetail`.
    * @param kind kind or {@code null} for none
    */
   public LeaderboardConfigurationDetail setKind(java.lang.String kind) {

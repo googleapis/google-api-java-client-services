@@ -31,6 +31,14 @@ package com.google.api.services.content.model;
 public final class AccountGoogleMyBusinessLink extends com.google.api.client.json.GenericJson {
 
   /**
+   * The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this
+   * field should match the `accountId` used by the GMB API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gmbAccountId;
+
+  /**
    * The GMB email address of which a specific account within a GMB account. A sample account within
    * a GMB account could be a business account with set of locations, managed under the GMB account.
    * The value may be {@code null}.
@@ -46,6 +54,25 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this
+   * field should match the `accountId` used by the GMB API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGmbAccountId() {
+    return gmbAccountId;
+  }
+
+  /**
+   * The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this
+   * field should match the `accountId` used by the GMB API.
+   * @param gmbAccountId gmbAccountId or {@code null} for none
+   */
+  public AccountGoogleMyBusinessLink setGmbAccountId(java.lang.String gmbAccountId) {
+    this.gmbAccountId = gmbAccountId;
+    return this;
+  }
 
   /**
    * The GMB email address of which a specific account within a GMB account. A sample account within

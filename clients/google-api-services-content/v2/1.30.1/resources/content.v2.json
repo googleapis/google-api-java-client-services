@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/S1k5CCqh8gSKiLsFzL6-jUaTWIQ\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/rgSkg8lMwYWw6t8zxIovlBT9JjA\"",
  "discoveryVersion": "v1",
  "id": "content:v2",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2",
- "revision": "20200414",
+ "revision": "20200421",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -1212,7 +1212,7 @@
     },
     "intendedDestinations": {
      "type": "array",
-     "description": "[DEPRECATED] Please use targets[].includedDestinations instead. The list of intended destinations (corresponds to checked check boxes in Merchant Center).",
+     "description": "[DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended destinations (corresponds to checked check boxes in Merchant Center).",
      "items": {
       "type": "string"
      }
@@ -1756,7 +1756,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account.",
+     "description": "The ID of the Merchant Center account.",
      "format": "uint64"
     },
     "gmbAccounts": {
@@ -2351,7 +2351,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account for which to get/update account shipping settings.",
+     "description": "The ID of the account for which to get/update account LIA settings.",
      "format": "uint64"
     },
     "batchId": {
@@ -2458,7 +2458,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account.",
+     "description": "The ID of the Merchant Center account.",
      "format": "uint64"
     },
     "gmbAccounts": {
@@ -2887,7 +2887,8 @@
      "description": "Full name of the customer."
     },
     "invoiceReceivingEmail": {
-     "type": "string"
+     "type": "string",
+     "description": "Email address for the merchant to send value-added tax or invoice documentation of the order. Only the last document sent is made available to the customer. For more information, see  About automated VAT invoicing for Shopping Actions."
     },
     "marketingRightsInfo": {
      "$ref": "OrderCustomerMarketingRightsInfo",
@@ -5860,7 +5861,7 @@
     },
     "id": {
      "type": "string",
-     "description": "The REST ID of the product. Content API methods that operate on products take this as their `productId` parameter.\nThe REST ID for a product is of the form channel:contentLanguage:targetCountry:offerId."
+     "description": "The REST ID of the product. Content API methods that operate on products take this as their `productId` parameter.\nThe REST ID for a product is of the form channel:contentLanguage:targetCountry: offerId."
     },
     "identifierExists": {
      "type": "boolean",

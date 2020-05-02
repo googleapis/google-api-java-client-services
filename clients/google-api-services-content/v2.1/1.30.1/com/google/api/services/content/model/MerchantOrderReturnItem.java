@@ -46,6 +46,13 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   private java.lang.String itemId;
 
   /**
+   * The reason that the merchant chose to reject an item return.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MerchantRejectionReason merchantRejectionReason;
+
+  /**
    * The reason that merchant chooses to accept a return item.
    * The value may be {@code null}.
    */
@@ -60,11 +67,39 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   private OrderLineItemProduct product;
 
   /**
+   * Maximum amount that can be refunded for this return item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MonetaryAmount refundableAmount;
+
+  /**
+   * Unit level ID for the return item. Different units of the same product will have different IDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String returnItemId;
+
+  /**
    * IDs of the return shipments that this return item belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> returnShipmentIds;
+
+  /**
+   * ID of the original shipment group. Provided for shipments with invoice support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shipmentGroupId;
+
+  /**
+   * ID of the shipment unit assigned by the merchant. Provided for shipments with invoice support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shipmentUnitId;
 
   /**
    * State of the item.
@@ -113,6 +148,23 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * The reason that the merchant chose to reject an item return.
+   * @return value or {@code null} for none
+   */
+  public MerchantRejectionReason getMerchantRejectionReason() {
+    return merchantRejectionReason;
+  }
+
+  /**
+   * The reason that the merchant chose to reject an item return.
+   * @param merchantRejectionReason merchantRejectionReason or {@code null} for none
+   */
+  public MerchantOrderReturnItem setMerchantRejectionReason(MerchantRejectionReason merchantRejectionReason) {
+    this.merchantRejectionReason = merchantRejectionReason;
+    return this;
+  }
+
+  /**
    * The reason that merchant chooses to accept a return item.
    * @return value or {@code null} for none
    */
@@ -147,6 +199,40 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * Maximum amount that can be refunded for this return item.
+   * @return value or {@code null} for none
+   */
+  public MonetaryAmount getRefundableAmount() {
+    return refundableAmount;
+  }
+
+  /**
+   * Maximum amount that can be refunded for this return item.
+   * @param refundableAmount refundableAmount or {@code null} for none
+   */
+  public MerchantOrderReturnItem setRefundableAmount(MonetaryAmount refundableAmount) {
+    this.refundableAmount = refundableAmount;
+    return this;
+  }
+
+  /**
+   * Unit level ID for the return item. Different units of the same product will have different IDs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReturnItemId() {
+    return returnItemId;
+  }
+
+  /**
+   * Unit level ID for the return item. Different units of the same product will have different IDs.
+   * @param returnItemId returnItemId or {@code null} for none
+   */
+  public MerchantOrderReturnItem setReturnItemId(java.lang.String returnItemId) {
+    this.returnItemId = returnItemId;
+    return this;
+  }
+
+  /**
    * IDs of the return shipments that this return item belongs to.
    * @return value or {@code null} for none
    */
@@ -160,6 +246,40 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
    */
   public MerchantOrderReturnItem setReturnShipmentIds(java.util.List<java.lang.String> returnShipmentIds) {
     this.returnShipmentIds = returnShipmentIds;
+    return this;
+  }
+
+  /**
+   * ID of the original shipment group. Provided for shipments with invoice support.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShipmentGroupId() {
+    return shipmentGroupId;
+  }
+
+  /**
+   * ID of the original shipment group. Provided for shipments with invoice support.
+   * @param shipmentGroupId shipmentGroupId or {@code null} for none
+   */
+  public MerchantOrderReturnItem setShipmentGroupId(java.lang.String shipmentGroupId) {
+    this.shipmentGroupId = shipmentGroupId;
+    return this;
+  }
+
+  /**
+   * ID of the shipment unit assigned by the merchant. Provided for shipments with invoice support.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShipmentUnitId() {
+    return shipmentUnitId;
+  }
+
+  /**
+   * ID of the shipment unit assigned by the merchant. Provided for shipments with invoice support.
+   * @param shipmentUnitId shipmentUnitId or {@code null} for none
+   */
+  public MerchantOrderReturnItem setShipmentUnitId(java.lang.String shipmentUnitId) {
+    this.shipmentUnitId = shipmentUnitId;
     return this;
   }
 

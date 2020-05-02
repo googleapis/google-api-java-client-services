@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/LNVDXWhUWjL42z9rVSE1bNdVBAQ\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/wHt23iZe8Ye_ZkSeIpNeFO568Sc\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v1.1",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v1.1",
- "revision": "20190618",
+ "revision": "20200428",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -116,32 +116,6 @@
      "format": "int32"
     }
    }
-  },
-  "SubscriptionPurchase": {
-   "id": "SubscriptionPurchase",
-   "type": "object",
-   "description": "A SubscriptionPurchase resource indicates the status of a user's subscription purchase.",
-   "properties": {
-    "autoRenewing": {
-     "type": "boolean",
-     "description": "Whether the subscription will automatically be renewed when it reaches its current expiry time."
-    },
-    "initiationTimestampMsec": {
-     "type": "string",
-     "description": "Time at which the subscription was granted, in milliseconds since the Epoch.",
-     "format": "int64"
-    },
-    "kind": {
-     "type": "string",
-     "description": "This kind represents a subscriptionPurchase object in the androidpublisher service.",
-     "default": "androidpublisher#subscriptionPurchase"
-    },
-    "validUntilTimestampMsec": {
-     "type": "string",
-     "description": "Time at which the subscription will expire, in milliseconds since the Epoch.",
-     "format": "int64"
-    }
-   }
   }
  },
  "resources": {
@@ -179,81 +153,6 @@
      ],
      "response": {
       "$ref": "InappPurchase"
-     },
-     "scopes": [
-      "https://www.googleapis.com/auth/androidpublisher"
-     ]
-    }
-   }
-  },
-  "purchases": {
-   "methods": {
-    "cancel": {
-     "id": "androidpublisher.purchases.cancel",
-     "path": "{packageName}/subscriptions/{subscriptionId}/purchases/{token}/cancel",
-     "httpMethod": "POST",
-     "description": "Cancels a user's subscription purchase. The subscription remains valid until its expiration time.",
-     "parameters": {
-      "packageName": {
-       "type": "string",
-       "description": "The package name of the application for which this subscription was purchased (for example, 'com.some.thing').",
-       "required": true,
-       "location": "path"
-      },
-      "subscriptionId": {
-       "type": "string",
-       "description": "The purchased subscription ID (for example, 'monthly001').",
-       "required": true,
-       "location": "path"
-      },
-      "token": {
-       "type": "string",
-       "description": "The token provided to the user's device when the subscription was purchased.",
-       "required": true,
-       "location": "path"
-      }
-     },
-     "parameterOrder": [
-      "packageName",
-      "subscriptionId",
-      "token"
-     ],
-     "scopes": [
-      "https://www.googleapis.com/auth/androidpublisher"
-     ]
-    },
-    "get": {
-     "id": "androidpublisher.purchases.get",
-     "path": "{packageName}/subscriptions/{subscriptionId}/purchases/{token}",
-     "httpMethod": "GET",
-     "description": "Checks whether a user's subscription purchase is valid and returns its expiry time.",
-     "parameters": {
-      "packageName": {
-       "type": "string",
-       "description": "The package name of the application for which this subscription was purchased (for example, 'com.some.thing').",
-       "required": true,
-       "location": "path"
-      },
-      "subscriptionId": {
-       "type": "string",
-       "description": "The purchased subscription ID (for example, 'monthly001').",
-       "required": true,
-       "location": "path"
-      },
-      "token": {
-       "type": "string",
-       "description": "The token provided to the user's device when the subscription was purchased.",
-       "required": true,
-       "location": "path"
-      }
-     },
-     "parameterOrder": [
-      "packageName",
-      "subscriptionId",
-      "token"
-     ],
-     "response": {
-      "$ref": "SubscriptionPurchase"
      },
      "scopes": [
       "https://www.googleapis.com/auth/androidpublisher"

@@ -67,6 +67,13 @@ public final class MerchantOrderReturn extends com.google.api.client.json.Generi
   private java.util.List<MerchantOrderReturnItem> returnItems;
 
   /**
+   * Information about shipping costs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReturnPricingInfo returnPricingInfo;
+
+  /**
    * Shipments of the return.
    * The value may be {@code null}.
    */
@@ -155,6 +162,23 @@ public final class MerchantOrderReturn extends com.google.api.client.json.Generi
    */
   public MerchantOrderReturn setReturnItems(java.util.List<MerchantOrderReturnItem> returnItems) {
     this.returnItems = returnItems;
+    return this;
+  }
+
+  /**
+   * Information about shipping costs.
+   * @return value or {@code null} for none
+   */
+  public ReturnPricingInfo getReturnPricingInfo() {
+    return returnPricingInfo;
+  }
+
+  /**
+   * Information about shipping costs.
+   * @param returnPricingInfo returnPricingInfo or {@code null} for none
+   */
+  public MerchantOrderReturn setReturnPricingInfo(ReturnPricingInfo returnPricingInfo) {
+    this.returnPricingInfo = returnPricingInfo;
     return this;
   }
 

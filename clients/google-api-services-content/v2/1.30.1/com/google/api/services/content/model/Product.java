@@ -317,7 +317,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * The REST ID of the product. Content API methods that operate on products take this as their
    * `productId` parameter. The REST ID for a product is of the form
-   * channel:contentLanguage:targetCountry:offerId.
+   * channel:contentLanguage:targetCountry: offerId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1283,7 +1283,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * The REST ID of the product. Content API methods that operate on products take this as their
    * `productId` parameter. The REST ID for a product is of the form
-   * channel:contentLanguage:targetCountry:offerId.
+   * channel:contentLanguage:targetCountry: offerId.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -1293,7 +1293,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * The REST ID of the product. Content API methods that operate on products take this as their
    * `productId` parameter. The REST ID for a product is of the form
-   * channel:contentLanguage:targetCountry:offerId.
+   * channel:contentLanguage:targetCountry: offerId.
    * @param id id or {@code null} for none
    */
   public Product setId(java.lang.String id) {

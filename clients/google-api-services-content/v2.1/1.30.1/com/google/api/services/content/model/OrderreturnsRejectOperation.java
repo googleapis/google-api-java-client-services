@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for GmbAccounts.
+ * Model definition for OrderreturnsRejectOperation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GmbAccounts extends com.google.api.client.json.GenericJson {
+public final class OrderreturnsRejectOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Merchant Center account.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger accountId;
-
-  /**
-   * A list of GMB accounts which are available to the merchant.
+   * The reason for the return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GmbAccountsGmbAccount> gmbAccounts;
+  private java.lang.String reason;
 
   /**
-   * The ID of the Merchant Center account.
+   * The explanation of the reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reasonText;
+
+  /**
+   * The reason for the return.
    * @return value or {@code null} for none
    */
-  public java.math.BigInteger getAccountId() {
-    return accountId;
+  public java.lang.String getReason() {
+    return reason;
   }
 
   /**
-   * The ID of the Merchant Center account.
-   * @param accountId accountId or {@code null} for none
+   * The reason for the return.
+   * @param reason reason or {@code null} for none
    */
-  public GmbAccounts setAccountId(java.math.BigInteger accountId) {
-    this.accountId = accountId;
+  public OrderreturnsRejectOperation setReason(java.lang.String reason) {
+    this.reason = reason;
     return this;
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * The explanation of the reason.
    * @return value or {@code null} for none
    */
-  public java.util.List<GmbAccountsGmbAccount> getGmbAccounts() {
-    return gmbAccounts;
+  public java.lang.String getReasonText() {
+    return reasonText;
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
-   * @param gmbAccounts gmbAccounts or {@code null} for none
+   * The explanation of the reason.
+   * @param reasonText reasonText or {@code null} for none
    */
-  public GmbAccounts setGmbAccounts(java.util.List<GmbAccountsGmbAccount> gmbAccounts) {
-    this.gmbAccounts = gmbAccounts;
+  public OrderreturnsRejectOperation setReasonText(java.lang.String reasonText) {
+    this.reasonText = reasonText;
     return this;
   }
 
   @Override
-  public GmbAccounts set(String fieldName, Object value) {
-    return (GmbAccounts) super.set(fieldName, value);
+  public OrderreturnsRejectOperation set(String fieldName, Object value) {
+    return (OrderreturnsRejectOperation) super.set(fieldName, value);
   }
 
   @Override
-  public GmbAccounts clone() {
-    return (GmbAccounts) super.clone();
+  public OrderreturnsRejectOperation clone() {
+    return (OrderreturnsRejectOperation) super.clone();
   }
 
 }

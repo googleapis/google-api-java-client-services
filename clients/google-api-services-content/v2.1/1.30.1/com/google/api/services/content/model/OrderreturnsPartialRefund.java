@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for GmbAccounts.
+ * Model definition for OrderreturnsPartialRefund.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,64 +28,67 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GmbAccounts extends com.google.api.client.json.GenericJson {
+public final class OrderreturnsPartialRefund extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Merchant Center account.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger accountId;
-
-  /**
-   * A list of GMB accounts which are available to the merchant.
+   * The pre-tax or post-tax amount to be refunded, depending on the location of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GmbAccountsGmbAccount> gmbAccounts;
+  private Price priceAmount;
 
   /**
-   * The ID of the Merchant Center account.
+   * Tax amount to be refunded. Note: This has different meaning depending on the location of the
+   * order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price taxAmount;
+
+  /**
+   * The pre-tax or post-tax amount to be refunded, depending on the location of the order.
    * @return value or {@code null} for none
    */
-  public java.math.BigInteger getAccountId() {
-    return accountId;
+  public Price getPriceAmount() {
+    return priceAmount;
   }
 
   /**
-   * The ID of the Merchant Center account.
-   * @param accountId accountId or {@code null} for none
+   * The pre-tax or post-tax amount to be refunded, depending on the location of the order.
+   * @param priceAmount priceAmount or {@code null} for none
    */
-  public GmbAccounts setAccountId(java.math.BigInteger accountId) {
-    this.accountId = accountId;
+  public OrderreturnsPartialRefund setPriceAmount(Price priceAmount) {
+    this.priceAmount = priceAmount;
     return this;
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * Tax amount to be refunded. Note: This has different meaning depending on the location of the
+   * order.
    * @return value or {@code null} for none
    */
-  public java.util.List<GmbAccountsGmbAccount> getGmbAccounts() {
-    return gmbAccounts;
+  public Price getTaxAmount() {
+    return taxAmount;
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
-   * @param gmbAccounts gmbAccounts or {@code null} for none
+   * Tax amount to be refunded. Note: This has different meaning depending on the location of the
+   * order.
+   * @param taxAmount taxAmount or {@code null} for none
    */
-  public GmbAccounts setGmbAccounts(java.util.List<GmbAccountsGmbAccount> gmbAccounts) {
-    this.gmbAccounts = gmbAccounts;
+  public OrderreturnsPartialRefund setTaxAmount(Price taxAmount) {
+    this.taxAmount = taxAmount;
     return this;
   }
 
   @Override
-  public GmbAccounts set(String fieldName, Object value) {
-    return (GmbAccounts) super.set(fieldName, value);
+  public OrderreturnsPartialRefund set(String fieldName, Object value) {
+    return (OrderreturnsPartialRefund) super.set(fieldName, value);
   }
 
   @Override
-  public GmbAccounts clone() {
-    return (GmbAccounts) super.clone();
+  public OrderreturnsPartialRefund clone() {
+    return (OrderreturnsPartialRefund) super.clone();
   }
 
 }

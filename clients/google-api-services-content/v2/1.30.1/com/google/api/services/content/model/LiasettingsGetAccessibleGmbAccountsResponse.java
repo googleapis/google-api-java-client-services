@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the account.
+   * The ID of the Merchant Center account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,7 +59,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
   private java.lang.String kind;
 
   /**
-   * The ID of the account.
+   * The ID of the Merchant Center account.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getAccountId() {
@@ -67,7 +67,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
   }
 
   /**
-   * The ID of the account.
+   * The ID of the Merchant Center account.
    * @param accountId accountId or {@code null} for none
    */
   public LiasettingsGetAccessibleGmbAccountsResponse setAccountId(java.math.BigInteger accountId) {

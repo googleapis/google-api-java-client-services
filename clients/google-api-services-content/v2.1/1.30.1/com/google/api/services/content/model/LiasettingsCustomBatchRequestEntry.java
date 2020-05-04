@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class LiasettingsCustomBatchRequestEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the account for which to get/update account shipping settings.
+   * The ID of the account for which to get/update account LIA settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -111,7 +111,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   private java.lang.String posExternalAccountId;
 
   /**
-   * The ID of the account for which to get/update account shipping settings.
+   * The ID of the account for which to get/update account LIA settings.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getAccountId() {
@@ -119,7 +119,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   }
 
   /**
-   * The ID of the account for which to get/update account shipping settings.
+   * The ID of the account for which to get/update account LIA settings.
    * @param accountId accountId or {@code null} for none
    */
   public LiasettingsCustomBatchRequestEntry setAccountId(java.math.BigInteger accountId) {

@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/K0GOxlF5xi8sztjOdKELUYWjlUU\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/q87MOfWk98inmRTn0zaIDzGrAuU\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200414",
+ "revision": "20200421",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -231,6 +231,10 @@
    "id": "AccountGoogleMyBusinessLink",
    "type": "object",
    "properties": {
+    "gmbAccountId": {
+     "type": "string",
+     "description": "The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this field should match the `accountId` used by the GMB API."
+    },
     "gmbEmail": {
      "type": "string",
      "description": "The GMB email address of which a specific account within a GMB account. A sample account within a GMB account could be a business account with set of locations, managed under the GMB account."
@@ -1679,7 +1683,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account.",
+     "description": "The ID of the Merchant Center account.",
      "format": "uint64"
     },
     "gmbAccounts": {
@@ -2007,7 +2011,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account for which to get/update account shipping settings.",
+     "description": "The ID of the account for which to get/update account LIA settings.",
      "format": "uint64"
     },
     "batchId": {
@@ -2114,7 +2118,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account.",
+     "description": "The ID of the Merchant Center account.",
      "format": "uint64"
     },
     "gmbAccounts": {
@@ -2436,6 +2440,10 @@
       "$ref": "MerchantOrderReturnItem"
      }
     },
+    "returnPricingInfo": {
+     "$ref": "ReturnPricingInfo",
+     "description": "Information about shipping costs."
+    },
     "returnShipments": {
      "type": "array",
      "description": "Shipments of the return.",
@@ -2457,6 +2465,10 @@
      "type": "string",
      "description": "Product level item ID. If the returned items are of the same product, they will have the same ID."
     },
+    "merchantRejectionReason": {
+     "$ref": "MerchantRejectionReason",
+     "description": "The reason that the merchant chose to reject an item return."
+    },
     "merchantReturnReason": {
      "$ref": "RefundReason",
      "description": "The reason that merchant chooses to accept a return item."
@@ -2465,6 +2477,14 @@
      "$ref": "OrderLineItemProduct",
      "description": "Product data from the time of the order placement."
     },
+    "refundableAmount": {
+     "$ref": "MonetaryAmount",
+     "description": "Maximum amount that can be refunded for this return item."
+    },
+    "returnItemId": {
+     "type": "string",
+     "description": "Unit level ID for the return item. Different units of the same product will have different IDs."
+    },
     "returnShipmentIds": {
      "type": "array",
      "description": "IDs of the return shipments that this return item belongs to.",
@@ -2472,9 +2492,31 @@
       "type": "string"
      }
     },
+    "shipmentGroupId": {
+     "type": "string",
+     "description": "ID of the original shipment group. Provided for shipments with invoice support."
+    },
+    "shipmentUnitId": {
+     "type": "string",
+     "description": "ID of the shipment unit assigned by the merchant. Provided for shipments with invoice support."
+    },
     "state": {
      "type": "string",
      "description": "State of the item.\n\nAcceptable values are:  \n- \"`canceled`\" \n- \"`new`\" \n- \"`received`\" \n- \"`refunded`\" \n- \"`rejected`\""
+    }
+   }
+  },
+  "MerchantRejectionReason": {
+   "id": "MerchantRejectionReason",
+   "type": "object",
+   "properties": {
+    "description": {
+     "type": "string",
+     "description": "Description of the reason."
+    },
+    "reasonCode": {
+     "type": "string",
+     "description": "Code of the rejection reason."
     }
    }
   },
@@ -2505,6 +2547,20 @@
     "value": {
      "$ref": "Price",
      "description": "The minimum order value for the given stores."
+    }
+   }
+  },
+  "MonetaryAmount": {
+   "id": "MonetaryAmount",
+   "type": "object",
+   "properties": {
+    "priceAmount": {
+     "$ref": "Price",
+     "description": "The pre-tax or post-tax price depends on the location of the order. - For countries (e.g. US) where price attribute excludes tax, this field corresponds to the pre-tax value. - For coutries (e.g. France) where price attribute includes tax, this field corresponds to the post-tax value ."
+    },
+    "taxAmount": {
+     "$ref": "Price",
+     "description": "Tax value, present only for countries where price attribute excludes tax (e.g. US). No tax is referenced as 0 value with the corresponding `currency`."
     }
    }
   },
@@ -2692,7 +2748,8 @@
      "description": "Full name of the customer."
     },
     "invoiceReceivingEmail": {
-     "type": "string"
+     "type": "string",
+     "description": "Email address for the merchant to send value-added tax or invoice documentation of the order. Only the last document sent is made available to the customer. For more information, see  About automated VAT invoicing for Shopping Actions."
     },
     "loyaltyInfo": {
      "$ref": "OrderCustomerLoyaltyInfo",
@@ -3582,6 +3639,31 @@
     }
    }
   },
+  "OrderreturnsAcknowledgeRequest": {
+   "id": "OrderreturnsAcknowledgeRequest",
+   "type": "object",
+   "properties": {
+    "operationId": {
+     "type": "string",
+     "description": "[required] The ID of the operation, unique across all operations for a given order return."
+    }
+   }
+  },
+  "OrderreturnsAcknowledgeResponse": {
+   "id": "OrderreturnsAcknowledgeResponse",
+   "type": "object",
+   "properties": {
+    "executionStatus": {
+     "type": "string",
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#orderreturnsAcknowledgeResponse\".",
+     "default": "content#orderreturnsAcknowledgeResponse"
+    }
+   }
+  },
   "OrderreturnsListResponse": {
    "id": "OrderreturnsListResponse",
    "type": "object",
@@ -3600,6 +3682,114 @@
      "items": {
       "$ref": "MerchantOrderReturn"
      }
+    }
+   }
+  },
+  "OrderreturnsPartialRefund": {
+   "id": "OrderreturnsPartialRefund",
+   "type": "object",
+   "properties": {
+    "priceAmount": {
+     "$ref": "Price",
+     "description": "The pre-tax or post-tax amount to be refunded, depending on the location of the order."
+    },
+    "taxAmount": {
+     "$ref": "Price",
+     "description": "Tax amount to be refunded. Note: This has different meaning depending on the location of the order."
+    }
+   }
+  },
+  "OrderreturnsProcessRequest": {
+   "id": "OrderreturnsProcessRequest",
+   "type": "object",
+   "properties": {
+    "fullChargeReturnShippingCost": {
+     "type": "boolean",
+     "description": "Option to charge the customer return shipping cost."
+    },
+    "operationId": {
+     "type": "string",
+     "description": "[required] The ID of the operation, unique across all operations for a given order return."
+    },
+    "refundShippingFee": {
+     "$ref": "OrderreturnsRefundOperation",
+     "description": "Refunds for original shipping fee."
+    },
+    "returnItems": {
+     "type": "array",
+     "description": "The list of items to return.",
+     "items": {
+      "$ref": "OrderreturnsReturnItem"
+     }
+    }
+   }
+  },
+  "OrderreturnsProcessResponse": {
+   "id": "OrderreturnsProcessResponse",
+   "type": "object",
+   "properties": {
+    "executionStatus": {
+     "type": "string",
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#orderreturnsProcessResponse\".",
+     "default": "content#orderreturnsProcessResponse"
+    }
+   }
+  },
+  "OrderreturnsRefundOperation": {
+   "id": "OrderreturnsRefundOperation",
+   "type": "object",
+   "properties": {
+    "fullRefund": {
+     "type": "boolean",
+     "description": "If true, the item will be fully refunded."
+    },
+    "partialRefund": {
+     "$ref": "OrderreturnsPartialRefund",
+     "description": "If this is set, the item will be partially refunded."
+    },
+    "reasonText": {
+     "type": "string",
+     "description": "The explanation of the reason."
+    },
+    "returnRefundReason": {
+     "type": "string",
+     "description": "Code of the refund reason."
+    }
+   }
+  },
+  "OrderreturnsRejectOperation": {
+   "id": "OrderreturnsRejectOperation",
+   "type": "object",
+   "properties": {
+    "reason": {
+     "type": "string",
+     "description": "The reason for the return."
+    },
+    "reasonText": {
+     "type": "string",
+     "description": "The explanation of the reason."
+    }
+   }
+  },
+  "OrderreturnsReturnItem": {
+   "id": "OrderreturnsReturnItem",
+   "type": "object",
+   "properties": {
+    "refund": {
+     "$ref": "OrderreturnsRefundOperation",
+     "description": "Refunds the item."
+    },
+    "reject": {
+     "$ref": "OrderreturnsRejectOperation",
+     "description": "Rejects the item."
+    },
+    "returnItemId": {
+     "type": "string",
+     "description": "Unit level ID for the return item. Different units of the same product will have different IDs."
     }
    }
   },
@@ -5147,7 +5337,7 @@
     },
     "id": {
      "type": "string",
-     "description": "The REST ID of the product. Content API methods that operate on products take this as their `productId` parameter.\nThe REST ID for a product is of the form channel:contentLanguage:targetCountry:offerId."
+     "description": "The REST ID of the product. Content API methods that operate on products take this as their `productId` parameter.\nThe REST ID for a product is of the form channel:contentLanguage:targetCountry: offerId."
     },
     "identifierExists": {
      "type": "boolean",
@@ -6235,6 +6425,32 @@
        "content.returnpolicy.insert"
       ]
      }
+    }
+   }
+  },
+  "ReturnPricingInfo": {
+   "id": "ReturnPricingInfo",
+   "type": "object",
+   "properties": {
+    "chargeReturnShippingFee": {
+     "type": "boolean",
+     "description": "Default option for whether merchant should charge the customer for return shipping costs, based on customer selected return reason and merchant's return policy for the items being returned."
+    },
+    "maxReturnShippingFee": {
+     "$ref": "MonetaryAmount",
+     "description": "Maximum return shipping costs that may be charged to the customer depending on merchant's assessment of the return reason and the merchant's return policy for the items being returned."
+    },
+    "refundableItemsTotalAmount": {
+     "$ref": "MonetaryAmount",
+     "description": "Total amount that can be refunded for the items in this return. It represents the total amount received by the merchant for the items, after applying merchant coupons."
+    },
+    "refundableShippingAmount": {
+     "$ref": "MonetaryAmount",
+     "description": "Maximum amount that can be refunded for the original shipping fee."
+    },
+    "totalRefundedAmount": {
+     "$ref": "MonetaryAmount",
+     "description": "Total amount already refunded by the merchant. It includes all types of refunds (items, shipping, etc.) Not provided if no refund has been applied yet."
     }
    }
   },
@@ -8805,6 +9021,40 @@
   },
   "orderreturns": {
    "methods": {
+    "acknowledge": {
+     "id": "content.orderreturns.acknowledge",
+     "path": "{merchantId}/orderreturns/{returnId}/acknowledge",
+     "httpMethod": "POST",
+     "description": "Acks an order return in your Merchant Center account.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account that manages the order. This cannot be a multi-client account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "returnId": {
+       "type": "string",
+       "description": "The ID of the return.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId",
+      "returnId"
+     ],
+     "request": {
+      "$ref": "OrderreturnsAcknowledgeRequest"
+     },
+     "response": {
+      "$ref": "OrderreturnsAcknowledgeResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
     "get": {
      "id": "content.orderreturns.get",
      "path": "{merchantId}/orderreturns/{returnId}",
@@ -8842,6 +9092,11 @@
      "httpMethod": "GET",
      "description": "Lists order returns in your Merchant Center account.",
      "parameters": {
+      "acknowledged": {
+       "type": "boolean",
+       "description": "Obtains order returns that match the acknowledgement status. When set to true, obtains order returns that have been acknowledged. When false, obtains order returns that have not been acknowledged. When not provided, obtains order returns regardless of their acknowledgement status.\nWe recommend using this filter set to `false`, in conjunction with the `acknowledge` call, such that only un-acknowledged order returns are returned.",
+       "location": "query"
+      },
       "createdEndDate": {
        "type": "string",
        "description": "Obtains order returns created before this date (inclusively), in ISO 8601 format.",
@@ -8850,6 +9105,12 @@
       "createdStartDate": {
        "type": "string",
        "description": "Obtains order returns created after this date (inclusively), in ISO 8601 format.",
+       "location": "query"
+      },
+      "googleOrderIds": {
+       "type": "string",
+       "description": "Obtains order returns with the specified order ids. If this parameter is provided, createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and acknowledged parameters must be not set.\nNote: if googleOrderId and shipmentTrackingNumber parameters are provided, the obtained results will include all order returns that either match the specified order id or the specified tracking number.",
+       "repeated": true,
        "location": "query"
       },
       "maxResults": {
@@ -8882,6 +9143,62 @@
        "type": "string",
        "description": "The token returned by the previous request.",
        "location": "query"
+      },
+      "shipmentStates": {
+       "type": "string",
+       "description": "Obtains order returns that match any shipment state provided in this parameter. When this parameter is not provided, order returns are obtained regardless of their shipment states.",
+       "enum": [
+        "completed",
+        "new",
+        "shipped",
+        "undeliverable"
+       ],
+       "enumDescriptions": [
+        "",
+        "",
+        "",
+        ""
+       ],
+       "repeated": true,
+       "location": "query"
+      },
+      "shipmentStatus": {
+       "type": "string",
+       "description": "Obtains order returns that match any shipment status provided in this parameter. When this parameter is not provided, order returns are obtained regardless of their shipment statuses.",
+       "enum": [
+        "inProgress",
+        "new",
+        "processed"
+       ],
+       "enumDescriptions": [
+        "",
+        "",
+        ""
+       ],
+       "repeated": true,
+       "location": "query"
+      },
+      "shipmentTrackingNumbers": {
+       "type": "string",
+       "description": "Obtains order returns with the specified tracking numbers. If this parameter is provided, createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and acknowledged parameters must be not set.\nNote: if googleOrderId and shipmentTrackingNumber parameters are provided, the obtained results will include all order returns that either match the specified order id or the specified tracking number.",
+       "repeated": true,
+       "location": "query"
+      },
+      "shipmentTypes": {
+       "type": "string",
+       "description": "Obtains order returns that match any shipment type provided in this parameter. When this parameter is not provided, order returns are obtained regardless of their shipment types.",
+       "enum": [
+        "byMail",
+        "contactCustomerSupport",
+        "returnless"
+       ],
+       "enumDescriptions": [
+        "",
+        "",
+        ""
+       ],
+       "repeated": true,
+       "location": "query"
       }
      },
      "parameterOrder": [
@@ -8889,6 +9206,40 @@
      ],
      "response": {
       "$ref": "OrderreturnsListResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "process": {
+     "id": "content.orderreturns.process",
+     "path": "{merchantId}/orderreturns/{returnId}/process",
+     "httpMethod": "POST",
+     "description": "Processes return in your Merchant Center account.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account that manages the order. This cannot be a multi-client account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "returnId": {
+       "type": "string",
+       "description": "The ID of the return.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId",
+      "returnId"
+     ],
+     "request": {
+      "$ref": "OrderreturnsProcessRequest"
+     },
+     "response": {
+      "$ref": "OrderreturnsProcessResponse"
      },
      "scopes": [
       "https://www.googleapis.com/auth/content"

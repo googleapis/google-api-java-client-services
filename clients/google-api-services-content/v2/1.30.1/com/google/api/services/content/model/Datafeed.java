@@ -84,7 +84,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private java.lang.Long id;
 
   /**
-   * [DEPRECATED] Please use targets[].includedDestinations instead. The list of intended
+   * [DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended
    * destinations (corresponds to checked check boxes in Merchant Center).
    * The value may be {@code null}.
    */
@@ -248,7 +248,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [DEPRECATED] Please use targets[].includedDestinations instead. The list of intended
+   * [DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended
    * destinations (corresponds to checked check boxes in Merchant Center).
    * @return value or {@code null} for none
    */
@@ -257,7 +257,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [DEPRECATED] Please use targets[].includedDestinations instead. The list of intended
+   * [DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended
    * destinations (corresponds to checked check boxes in Merchant Center).
    * @param intendedDestinations intendedDestinations or {@code null} for none
    */

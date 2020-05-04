@@ -5965,6 +5965,123 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Orderreturns {
 
     /**
+     * Acks an order return in your Merchant Center account.
+     *
+     * Create a request for the method "orderreturns.acknowledge".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Acknowledge#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param returnId The ID of the return.
+     * @param content the {@link com.google.api.services.content.model.OrderreturnsAcknowledgeRequest}
+     * @return the request
+     */
+    public Acknowledge acknowledge(java.math.BigInteger merchantId, java.lang.String returnId, com.google.api.services.content.model.OrderreturnsAcknowledgeRequest content) throws java.io.IOException {
+      Acknowledge result = new Acknowledge(merchantId, returnId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Acknowledge extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsAcknowledgeResponse> {
+
+      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/acknowledge";
+
+      /**
+       * Acks an order return in your Merchant Center account.
+       *
+       * Create a request for the method "orderreturns.acknowledge".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Acknowledge#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param returnId The ID of the return.
+       * @param content the {@link com.google.api.services.content.model.OrderreturnsAcknowledgeRequest}
+       * @since 1.13
+       */
+      protected Acknowledge(java.math.BigInteger merchantId, java.lang.String returnId, com.google.api.services.content.model.OrderreturnsAcknowledgeRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.OrderreturnsAcknowledgeResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.returnId = com.google.api.client.util.Preconditions.checkNotNull(returnId, "Required parameter returnId must be specified.");
+      }
+
+      @Override
+      public Acknowledge setAlt(java.lang.String alt) {
+        return (Acknowledge) super.setAlt(alt);
+      }
+
+      @Override
+      public Acknowledge setFields(java.lang.String fields) {
+        return (Acknowledge) super.setFields(fields);
+      }
+
+      @Override
+      public Acknowledge setKey(java.lang.String key) {
+        return (Acknowledge) super.setKey(key);
+      }
+
+      @Override
+      public Acknowledge setOauthToken(java.lang.String oauthToken) {
+        return (Acknowledge) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Acknowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Acknowledge) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Acknowledge setQuotaUser(java.lang.String quotaUser) {
+        return (Acknowledge) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Acknowledge setUserIp(java.lang.String userIp) {
+        return (Acknowledge) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      public Acknowledge setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the return. */
+      @com.google.api.client.util.Key
+      private java.lang.String returnId;
+
+      /** The ID of the return.
+       */
+      public java.lang.String getReturnId() {
+        return returnId;
+      }
+
+      /** The ID of the return. */
+      public Acknowledge setReturnId(java.lang.String returnId) {
+        this.returnId = returnId;
+        return this;
+      }
+
+      @Override
+      public Acknowledge set(String parameterName, Object value) {
+        return (Acknowledge) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves an order return from your Merchant Center account.
      *
      * Create a request for the method "orderreturns.get".
@@ -6188,6 +6305,38 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /**
+       * Obtains order returns that match the acknowledgement status. When set to true, obtains
+       * order returns that have been acknowledged. When false, obtains order returns that have not
+       * been acknowledged. When not provided, obtains order returns regardless of their
+       * acknowledgement status. We recommend using this filter set to `false`, in conjunction with
+       * the `acknowledge` call, such that only un-acknowledged order returns are returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean acknowledged;
+
+      /** Obtains order returns that match the acknowledgement status. When set to true, obtains order
+     returns that have been acknowledged. When false, obtains order returns that have not been
+     acknowledged. When not provided, obtains order returns regardless of their acknowledgement status.
+     We recommend using this filter set to `false`, in conjunction with the `acknowledge` call, such
+     that only un-acknowledged order returns are returned.
+       */
+      public java.lang.Boolean getAcknowledged() {
+        return acknowledged;
+      }
+
+      /**
+       * Obtains order returns that match the acknowledgement status. When set to true, obtains
+       * order returns that have been acknowledged. When false, obtains order returns that have not
+       * been acknowledged. When not provided, obtains order returns regardless of their
+       * acknowledgement status. We recommend using this filter set to `false`, in conjunction with
+       * the `acknowledge` call, such that only un-acknowledged order returns are returned.
+       */
+      public List setAcknowledged(java.lang.Boolean acknowledged) {
+        this.acknowledged = acknowledged;
+        return this;
+      }
+
       /** Obtains order returns created before this date (inclusively), in ISO 8601 format. */
       @com.google.api.client.util.Key
       private java.lang.String createdEndDate;
@@ -6217,6 +6366,38 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /** Obtains order returns created after this date (inclusively), in ISO 8601 format. */
       public List setCreatedStartDate(java.lang.String createdStartDate) {
         this.createdStartDate = createdStartDate;
+        return this;
+      }
+
+      /**
+       * Obtains order returns with the specified order ids. If this parameter is provided,
+       * createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and
+       * acknowledged parameters must be not set. Note: if googleOrderId and shipmentTrackingNumber
+       * parameters are provided, the obtained results will include all order returns that either
+       * match the specified order id or the specified tracking number.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> googleOrderIds;
+
+      /** Obtains order returns with the specified order ids. If this parameter is provided,
+     createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and acknowledged
+     parameters must be not set. Note: if googleOrderId and shipmentTrackingNumber parameters are
+     provided, the obtained results will include all order returns that either match the specified order
+     id or the specified tracking number.
+       */
+      public java.util.List<java.lang.String> getGoogleOrderIds() {
+        return googleOrderIds;
+      }
+
+      /**
+       * Obtains order returns with the specified order ids. If this parameter is provided,
+       * createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and
+       * acknowledged parameters must be not set. Note: if googleOrderId and shipmentTrackingNumber
+       * parameters are provided, the obtained results will include all order returns that either
+       * match the specified order id or the specified tracking number.
+       */
+      public List setGoogleOrderIds(java.util.List<java.lang.String> googleOrderIds) {
+        this.googleOrderIds = googleOrderIds;
         return this;
       }
 
@@ -6275,9 +6456,229 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /**
+       * Obtains order returns that match any shipment state provided in this parameter. When this
+       * parameter is not provided, order returns are obtained regardless of their shipment states.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> shipmentStates;
+
+      /** Obtains order returns that match any shipment state provided in this parameter. When this parameter
+     is not provided, order returns are obtained regardless of their shipment states.
+       */
+      public java.util.List<java.lang.String> getShipmentStates() {
+        return shipmentStates;
+      }
+
+      /**
+       * Obtains order returns that match any shipment state provided in this parameter. When this
+       * parameter is not provided, order returns are obtained regardless of their shipment states.
+       */
+      public List setShipmentStates(java.util.List<java.lang.String> shipmentStates) {
+        this.shipmentStates = shipmentStates;
+        return this;
+      }
+
+      /**
+       * Obtains order returns that match any shipment status provided in this parameter. When this
+       * parameter is not provided, order returns are obtained regardless of their shipment
+       * statuses.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> shipmentStatus;
+
+      /** Obtains order returns that match any shipment status provided in this parameter. When this
+     parameter is not provided, order returns are obtained regardless of their shipment statuses.
+       */
+      public java.util.List<java.lang.String> getShipmentStatus() {
+        return shipmentStatus;
+      }
+
+      /**
+       * Obtains order returns that match any shipment status provided in this parameter. When this
+       * parameter is not provided, order returns are obtained regardless of their shipment
+       * statuses.
+       */
+      public List setShipmentStatus(java.util.List<java.lang.String> shipmentStatus) {
+        this.shipmentStatus = shipmentStatus;
+        return this;
+      }
+
+      /**
+       * Obtains order returns with the specified tracking numbers. If this parameter is provided,
+       * createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and
+       * acknowledged parameters must be not set. Note: if googleOrderId and shipmentTrackingNumber
+       * parameters are provided, the obtained results will include all order returns that either
+       * match the specified order id or the specified tracking number.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> shipmentTrackingNumbers;
+
+      /** Obtains order returns with the specified tracking numbers. If this parameter is provided,
+     createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and acknowledged
+     parameters must be not set. Note: if googleOrderId and shipmentTrackingNumber parameters are
+     provided, the obtained results will include all order returns that either match the specified order
+     id or the specified tracking number.
+       */
+      public java.util.List<java.lang.String> getShipmentTrackingNumbers() {
+        return shipmentTrackingNumbers;
+      }
+
+      /**
+       * Obtains order returns with the specified tracking numbers. If this parameter is provided,
+       * createdStartDate, createdEndDate, shipmentType, shipmentStatus, shipmentState and
+       * acknowledged parameters must be not set. Note: if googleOrderId and shipmentTrackingNumber
+       * parameters are provided, the obtained results will include all order returns that either
+       * match the specified order id or the specified tracking number.
+       */
+      public List setShipmentTrackingNumbers(java.util.List<java.lang.String> shipmentTrackingNumbers) {
+        this.shipmentTrackingNumbers = shipmentTrackingNumbers;
+        return this;
+      }
+
+      /**
+       * Obtains order returns that match any shipment type provided in this parameter. When this
+       * parameter is not provided, order returns are obtained regardless of their shipment types.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> shipmentTypes;
+
+      /** Obtains order returns that match any shipment type provided in this parameter. When this parameter
+     is not provided, order returns are obtained regardless of their shipment types.
+       */
+      public java.util.List<java.lang.String> getShipmentTypes() {
+        return shipmentTypes;
+      }
+
+      /**
+       * Obtains order returns that match any shipment type provided in this parameter. When this
+       * parameter is not provided, order returns are obtained regardless of their shipment types.
+       */
+      public List setShipmentTypes(java.util.List<java.lang.String> shipmentTypes) {
+        this.shipmentTypes = shipmentTypes;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Processes return in your Merchant Center account.
+     *
+     * Create a request for the method "orderreturns.process".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Process#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param returnId The ID of the return.
+     * @param content the {@link com.google.api.services.content.model.OrderreturnsProcessRequest}
+     * @return the request
+     */
+    public Process process(java.math.BigInteger merchantId, java.lang.String returnId, com.google.api.services.content.model.OrderreturnsProcessRequest content) throws java.io.IOException {
+      Process result = new Process(merchantId, returnId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Process extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsProcessResponse> {
+
+      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/process";
+
+      /**
+       * Processes return in your Merchant Center account.
+       *
+       * Create a request for the method "orderreturns.process".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Process#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Process#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param returnId The ID of the return.
+       * @param content the {@link com.google.api.services.content.model.OrderreturnsProcessRequest}
+       * @since 1.13
+       */
+      protected Process(java.math.BigInteger merchantId, java.lang.String returnId, com.google.api.services.content.model.OrderreturnsProcessRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.OrderreturnsProcessResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.returnId = com.google.api.client.util.Preconditions.checkNotNull(returnId, "Required parameter returnId must be specified.");
+      }
+
+      @Override
+      public Process setAlt(java.lang.String alt) {
+        return (Process) super.setAlt(alt);
+      }
+
+      @Override
+      public Process setFields(java.lang.String fields) {
+        return (Process) super.setFields(fields);
+      }
+
+      @Override
+      public Process setKey(java.lang.String key) {
+        return (Process) super.setKey(key);
+      }
+
+      @Override
+      public Process setOauthToken(java.lang.String oauthToken) {
+        return (Process) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Process setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Process) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Process setQuotaUser(java.lang.String quotaUser) {
+        return (Process) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Process setUserIp(java.lang.String userIp) {
+        return (Process) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      public Process setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the return. */
+      @com.google.api.client.util.Key
+      private java.lang.String returnId;
+
+      /** The ID of the return.
+       */
+      public java.lang.String getReturnId() {
+        return returnId;
+      }
+
+      /** The ID of the return. */
+      public Process setReturnId(java.lang.String returnId) {
+        this.returnId = returnId;
+        return this;
+      }
+
+      @Override
+      public Process set(String parameterName, Object value) {
+        return (Process) super.set(parameterName, value);
       }
     }
 

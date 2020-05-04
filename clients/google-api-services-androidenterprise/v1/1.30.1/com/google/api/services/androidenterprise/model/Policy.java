@@ -65,7 +65,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String productAvailabilityPolicy;
 
   /**
-   * The list of product policies.
+   * The list of product policies. The productAvailabilityPolicy needs to be set to WHITELIST or ALL
+   * for the product policies to be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +155,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of product policies.
+   * The list of product policies. The productAvailabilityPolicy needs to be set to WHITELIST or ALL
+   * for the product policies to be applied.
    * @return value or {@code null} for none
    */
   public java.util.List<ProductPolicy> getProductPolicy() {
@@ -162,7 +164,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of product policies.
+   * The list of product policies. The productAvailabilityPolicy needs to be set to WHITELIST or ALL
+   * for the product policies to be applied.
    * @param productPolicy productPolicy or {@code null} for none
    */
   public Policy setProductPolicy(java.util.List<ProductPolicy> productPolicy) {

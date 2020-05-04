@@ -107,7 +107,8 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
   private java.lang.String foregroundColor;
 
   /**
-   * Whether the calendar has been hidden from the list. Optional. The default is False.
+   * Whether the calendar has been hidden from the list. Optional. The attribute is only returned
+   * when the calendar is hidden, in which case the value is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -387,7 +388,8 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether the calendar has been hidden from the list. Optional. The default is False.
+   * Whether the calendar has been hidden from the list. Optional. The attribute is only returned
+   * when the calendar is hidden, in which case the value is true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHidden() {
@@ -395,7 +397,8 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether the calendar has been hidden from the list. Optional. The default is False.
+   * Whether the calendar has been hidden from the list. Optional. The attribute is only returned
+   * when the calendar is hidden, in which case the value is true.
    * @param hidden hidden or {@code null} for none
    */
   public CalendarListEntry setHidden(java.lang.Boolean hidden) {
@@ -420,7 +423,8 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    * </p>
    *
    * <p>
-   * Whether the calendar has been hidden from the list. Optional. The default is False.
+   * Whether the calendar has been hidden from the list. Optional. The attribute is only returned when
+ the calendar is hidden, in which case the value is true.
    * </p>
    */
   public boolean isHidden() {

@@ -4303,17 +4303,24 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
-        /** Id of the application created using SearchApplicationsService. */
+        /**
+         * The ID generated when you create a search application using the [admin
+         * console](https://support.google.com/a/answer/9043922).
+         */
         @com.google.api.client.util.Key("requestOptions.searchApplicationId")
         private java.lang.String requestOptionsSearchApplicationId;
 
-        /** Id of the application created using SearchApplicationsService.
+        /** The ID generated when you create a search application using the [admin
+       console](https://support.google.com/a/answer/9043922).
          */
         public java.lang.String getRequestOptionsSearchApplicationId() {
           return requestOptionsSearchApplicationId;
         }
 
-        /** Id of the application created using SearchApplicationsService. */
+        /**
+         * The ID generated when you create a search application using the [admin
+         * console](https://support.google.com/a/answer/9043922).
+         */
         public List setRequestOptionsSearchApplicationId(java.lang.String requestOptionsSearchApplicationId) {
           this.requestOptionsSearchApplicationId = requestOptionsSearchApplicationId;
           return this;

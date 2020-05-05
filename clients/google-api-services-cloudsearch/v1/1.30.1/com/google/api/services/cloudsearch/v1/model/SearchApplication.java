@@ -78,7 +78,8 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
+   * Output only. IDs of the Long Running Operations (LROs) currently running for this schema.
+   * Output only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,7 +187,8 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
+   * Output only. IDs of the Long Running Operations (LROs) currently running for this schema.
+   * Output only field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOperationIds() {
@@ -194,7 +196,8 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
+   * Output only. IDs of the Long Running Operations (LROs) currently running for this schema.
+   * Output only field.
    * @param operationIds operationIds or {@code null} for none
    */
   public SearchApplication setOperationIds(java.util.List<java.lang.String> operationIds) {

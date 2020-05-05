@@ -31,6 +31,13 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class SiteConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether or not web requests made by site visitors are logged via Cloud Logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean cloudLoggingEnabled;
+
+  /**
    * The number of FINALIZED versions that will be held for a site before automatic deletion. When a
    * new version is deployed, content for versions in storage in excess of this number will be
    * deleted, and will no longer be billed for storage usage. Oldest versions will be deleted first;
@@ -39,6 +46,23 @@ public final class SiteConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxVersions;
+
+  /**
+   * Whether or not web requests made by site visitors are logged via Cloud Logging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCloudLoggingEnabled() {
+    return cloudLoggingEnabled;
+  }
+
+  /**
+   * Whether or not web requests made by site visitors are logged via Cloud Logging.
+   * @param cloudLoggingEnabled cloudLoggingEnabled or {@code null} for none
+   */
+  public SiteConfig setCloudLoggingEnabled(java.lang.Boolean cloudLoggingEnabled) {
+    this.cloudLoggingEnabled = cloudLoggingEnabled;
+    return this;
+  }
 
   /**
    * The number of FINALIZED versions that will be held for a site before automatic deletion. When a

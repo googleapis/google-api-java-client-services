@@ -40,6 +40,19 @@ public final class StartEnvironmentRequest extends com.google.api.client.json.Ge
   private java.lang.String accessToken;
 
   /**
+   * Public keys that should be added to the environment before it is started.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PublicKey> publicKeys;
+
+  static {
+    // hack to force ProGuard to consider PublicKey used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PublicKey.class);
+  }
+
+  /**
    * The initial access token passed to the environment. If this is present and valid, the
    * environment will be pre-authenticated with gcloud so that the user can run gcloud commands in
    * Cloud Shell without having to log in. This code can be updated later by calling
@@ -59,6 +72,23 @@ public final class StartEnvironmentRequest extends com.google.api.client.json.Ge
    */
   public StartEnvironmentRequest setAccessToken(java.lang.String accessToken) {
     this.accessToken = accessToken;
+    return this;
+  }
+
+  /**
+   * Public keys that should be added to the environment before it is started.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PublicKey> getPublicKeys() {
+    return publicKeys;
+  }
+
+  /**
+   * Public keys that should be added to the environment before it is started.
+   * @param publicKeys publicKeys or {@code null} for none
+   */
+  public StartEnvironmentRequest setPublicKeys(java.util.List<PublicKey> publicKeys) {
+    this.publicKeys = publicKeys;
     return this;
   }
 

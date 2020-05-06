@@ -40,6 +40,13 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
   private java.lang.Long budgetAmountMicros;
 
   /**
+   * The ID of the campaign budget linked to this insertion order budget segment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long campaignBudgetId;
+
+  /**
    * Required. The start and end date settings of the budget segment. They are resolved relative to
    * the parent advertiser's time zone.
    *
@@ -80,6 +87,23 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
    */
   public InsertionOrderBudgetSegment setBudgetAmountMicros(java.lang.Long budgetAmountMicros) {
     this.budgetAmountMicros = budgetAmountMicros;
+    return this;
+  }
+
+  /**
+   * The ID of the campaign budget linked to this insertion order budget segment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCampaignBudgetId() {
+    return campaignBudgetId;
+  }
+
+  /**
+   * The ID of the campaign budget linked to this insertion order budget segment.
+   * @param campaignBudgetId campaignBudgetId or {@code null} for none
+   */
+  public InsertionOrderBudgetSegment setCampaignBudgetId(java.lang.Long campaignBudgetId) {
+    this.campaignBudgetId = campaignBudgetId;
     return this;
   }
 

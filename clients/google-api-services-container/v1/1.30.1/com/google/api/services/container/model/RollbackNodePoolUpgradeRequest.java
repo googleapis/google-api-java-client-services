@@ -41,7 +41,7 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * The name (project, location, cluster, node pool id) of the node poll to rollback upgrade.
-   * Specified in the format 'projects/locations/clusters/nodePools'.
+   * Specified in the format `projects/locations/clusters/nodePools`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * The name (project, location, cluster, node pool id) of the node poll to rollback upgrade.
-   * Specified in the format 'projects/locations/clusters/nodePools'.
+   * Specified in the format `projects/locations/clusters/nodePools`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +103,7 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * The name (project, location, cluster, node pool id) of the node poll to rollback upgrade.
-   * Specified in the format 'projects/locations/clusters/nodePools'.
+   * Specified in the format `projects/locations/clusters/nodePools`.
    * @param name name or {@code null} for none
    */
   public RollbackNodePoolUpgradeRequest setName(java.lang.String name) {

@@ -47,7 +47,7 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
 
   /**
    * The name (project, location, cluster, node pool) of the node pool to set autoscaler settings.
-   * Specified in the format 'projects/locations/clusters/nodePools'.
+   * Specified in the format `projects/locations/clusters/nodePools`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
 
   /**
    * The name (project, location, cluster, node pool) of the node pool to set autoscaler settings.
-   * Specified in the format 'projects/locations/clusters/nodePools'.
+   * Specified in the format `projects/locations/clusters/nodePools`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -126,7 +126,7 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
 
   /**
    * The name (project, location, cluster, node pool) of the node pool to set autoscaler settings.
-   * Specified in the format 'projects/locations/clusters/nodePools'.
+   * Specified in the format `projects/locations/clusters/nodePools`.
    * @param name name or {@code null} for none
    */
   public SetNodePoolAutoscalingRequest setName(java.lang.String name) {

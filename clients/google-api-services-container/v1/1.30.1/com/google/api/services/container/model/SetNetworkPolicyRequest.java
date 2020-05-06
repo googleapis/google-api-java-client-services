@@ -40,7 +40,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
 
   /**
    * The name (project, location, cluster id) of the cluster to set networking policy. Specified in
-   * the format 'projects/locations/clusters'.
+   * the format `projects/locations/clusters`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
 
   /**
    * The name (project, location, cluster id) of the cluster to set networking policy. Specified in
-   * the format 'projects/locations/clusters'.
+   * the format `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +101,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
 
   /**
    * The name (project, location, cluster id) of the cluster to set networking policy. Specified in
-   * the format 'projects/locations/clusters'.
+   * the format `projects/locations/clusters`.
    * @param name name or {@code null} for none
    */
   public SetNetworkPolicyRequest setName(java.lang.String name) {

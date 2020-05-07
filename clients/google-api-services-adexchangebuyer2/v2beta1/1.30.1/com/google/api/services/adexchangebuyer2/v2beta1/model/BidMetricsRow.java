@@ -68,6 +68,13 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   private MetricValue measurableImpressions;
 
   /**
+   * The number of bids that won the auction and also won the mediation waterfall (if any).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetricValue reachedQueries;
+
+  /**
    * The values of all dimensions associated with metric values in this row.
    * The value may be {@code null}.
    */
@@ -166,6 +173,23 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
    */
   public BidMetricsRow setMeasurableImpressions(MetricValue measurableImpressions) {
     this.measurableImpressions = measurableImpressions;
+    return this;
+  }
+
+  /**
+   * The number of bids that won the auction and also won the mediation waterfall (if any).
+   * @return value or {@code null} for none
+   */
+  public MetricValue getReachedQueries() {
+    return reachedQueries;
+  }
+
+  /**
+   * The number of bids that won the auction and also won the mediation waterfall (if any).
+   * @param reachedQueries reachedQueries or {@code null} for none
+   */
+  public BidMetricsRow setReachedQueries(MetricValue reachedQueries) {
+    this.reachedQueries = reachedQueries;
     return this;
   }
 

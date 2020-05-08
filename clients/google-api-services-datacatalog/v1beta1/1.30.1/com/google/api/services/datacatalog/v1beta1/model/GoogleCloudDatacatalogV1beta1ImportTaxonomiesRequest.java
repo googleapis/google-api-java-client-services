@@ -31,14 +31,14 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inline source used for taxonomies import
+   * Inline source used for taxonomies to be imported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1beta1InlineSource inlineSource;
 
   /**
-   * Inline source used for taxonomies import
+   * Inline source used for taxonomies to be imported.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1InlineSource getInlineSource() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest extends 
   }
 
   /**
-   * Inline source used for taxonomies import
+   * Inline source used for taxonomies to be imported.
    * @param inlineSource inlineSource or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest setInlineSource(GoogleCloudDatacatalogV1beta1InlineSource inlineSource) {

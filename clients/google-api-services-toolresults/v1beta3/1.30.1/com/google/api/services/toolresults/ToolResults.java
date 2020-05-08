@@ -71,7 +71,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch";
+  public static final String DEFAULT_BATCH_PATH = "batch/toolresults/v1beta3";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

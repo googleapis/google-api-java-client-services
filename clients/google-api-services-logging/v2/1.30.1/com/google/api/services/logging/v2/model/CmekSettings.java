@@ -20,7 +20,8 @@ package com.google.api.services.logging.v2.model;
  * Describes the customer-managed encryption key (CMEK) settings associated with a project, folder,
  * organization, billing account, or flexible resource.Note: CMEK for the Logs Router can currently
  * only be configured for GCP organizations. Once configured, it applies to all projects and folders
- * in the GCP organization.See Enabling CMEK for Logs Router for more information.
+ * in the GCP organization.See Enabling CMEK for Logs Router
+ * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -42,8 +43,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * new valid key name. Encryption operations that are in progress will be completed with the key
    * that was in use when they started. Decryption operations will be completed using the key that
    * was used at the time of encryption unless access to that key has been revoked.To disable CMEK
-   * for the Logs Router, set this field to an empty string.See Enabling CMEK for Logs Router for
-   * more information.
+   * for the Logs Router, set this field to an empty string.See Enabling CMEK for Logs Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * key.Before enabling CMEK for Logs Router, you must first assign the role
    * roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that the Logs Router will use
    * to access your Cloud KMS key. Use GetCmekSettings to obtain the service account ID.See Enabling
-   * CMEK for Logs Router for more information.
+   * CMEK for Logs Router (https://cloud.google.com/logging/docs/routing/managed-encryption) for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +79,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * new valid key name. Encryption operations that are in progress will be completed with the key
    * that was in use when they started. Decryption operations will be completed using the key that
    * was used at the time of encryption unless access to that key has been revoked.To disable CMEK
-   * for the Logs Router, set this field to an empty string.See Enabling CMEK for Logs Router for
-   * more information.
+   * for the Logs Router, set this field to an empty string.See Enabling CMEK for Logs Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -95,8 +97,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * new valid key name. Encryption operations that are in progress will be completed with the key
    * that was in use when they started. Decryption operations will be completed using the key that
    * was used at the time of encryption unless access to that key has been revoked.To disable CMEK
-   * for the Logs Router, set this field to an empty string.See Enabling CMEK for Logs Router for
-   * more information.
+   * for the Logs Router, set this field to an empty string.See Enabling CMEK for Logs Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public CmekSettings setKmsKeyName(java.lang.String kmsKeyName) {
@@ -126,7 +128,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * key.Before enabling CMEK for Logs Router, you must first assign the role
    * roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that the Logs Router will use
    * to access your Cloud KMS key. Use GetCmekSettings to obtain the service account ID.See Enabling
-   * CMEK for Logs Router for more information.
+   * CMEK for Logs Router (https://cloud.google.com/logging/docs/routing/managed-encryption) for
+   * more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountId() {
@@ -138,7 +141,8 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * key.Before enabling CMEK for Logs Router, you must first assign the role
    * roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that the Logs Router will use
    * to access your Cloud KMS key. Use GetCmekSettings to obtain the service account ID.See Enabling
-   * CMEK for Logs Router for more information.
+   * CMEK for Logs Router (https://cloud.google.com/logging/docs/routing/managed-encryption) for
+   * more information.
    * @param serviceAccountId serviceAccountId or {@code null} for none
    */
   public CmekSettings setServiceAccountId(java.lang.String serviceAccountId) {

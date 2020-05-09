@@ -59,9 +59,9 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Required. An advanced logs filter which is used to match log entries. Example:
-   * "resource.type=gae_app AND severity>=ERROR" The maximum length of the filter is 20000
-   * characters.
+   * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced_filters)
+   * which is used to match log entries. Example: "resource.type=gae_app AND severity>=ERROR" The
+   * maximum length of the filter is 20000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,9 +206,9 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. An advanced logs filter which is used to match log entries. Example:
-   * "resource.type=gae_app AND severity>=ERROR" The maximum length of the filter is 20000
-   * characters.
+   * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced_filters)
+   * which is used to match log entries. Example: "resource.type=gae_app AND severity>=ERROR" The
+   * maximum length of the filter is 20000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -216,9 +216,9 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. An advanced logs filter which is used to match log entries. Example:
-   * "resource.type=gae_app AND severity>=ERROR" The maximum length of the filter is 20000
-   * characters.
+   * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced_filters)
+   * which is used to match log entries. Example: "resource.type=gae_app AND severity>=ERROR" The
+   * maximum length of the filter is 20000 characters.
    * @param filter filter or {@code null} for none
    */
   public LogMetric setFilter(java.lang.String filter) {

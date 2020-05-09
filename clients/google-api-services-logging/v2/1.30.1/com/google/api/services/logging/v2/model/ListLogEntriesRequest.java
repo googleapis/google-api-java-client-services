@@ -30,11 +30,11 @@ package com.google.api.services.logging.v2.model;
 public final class ListLogEntriesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries. Only
-   * log entries that match the filter are returned. An empty filter matches all log entries in the
-   * resources listed in resource_names. Referencing a parent resource that is not listed in
-   * resource_names will cause the filter to return no results. The maximum length of the filter is
-   * 20000 characters.
+   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries
+   * (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the
+   * filter are returned. An empty filter matches all log entries in the resources listed in
+   * resource_names. Referencing a parent resource that is not listed in resource_names will cause
+   * the filter to return no results. The maximum length of the filter is 20000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,11 +88,11 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> resourceNames;
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries. Only
-   * log entries that match the filter are returned. An empty filter matches all log entries in the
-   * resources listed in resource_names. Referencing a parent resource that is not listed in
-   * resource_names will cause the filter to return no results. The maximum length of the filter is
-   * 20000 characters.
+   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries
+   * (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the
+   * filter are returned. An empty filter matches all log entries in the resources listed in
+   * resource_names. Referencing a parent resource that is not listed in resource_names will cause
+   * the filter to return no results. The maximum length of the filter is 20000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -100,11 +100,11 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries. Only
-   * log entries that match the filter are returned. An empty filter matches all log entries in the
-   * resources listed in resource_names. Referencing a parent resource that is not listed in
-   * resource_names will cause the filter to return no results. The maximum length of the filter is
-   * 20000 characters.
+   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries
+   * (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the
+   * filter are returned. An empty filter matches all log entries in the resources listed in
+   * resource_names. Referencing a parent resource that is not listed in resource_names will cause
+   * the filter to return no results. The maximum length of the filter is 20000 characters.
    * @param filter filter or {@code null} for none
    */
   public ListLogEntriesRequest setFilter(java.lang.String filter) {

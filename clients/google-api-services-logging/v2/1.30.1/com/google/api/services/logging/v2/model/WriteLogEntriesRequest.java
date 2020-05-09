@@ -46,11 +46,13 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * entries, then this method supplies the current time or a unique identifier, respectively. The
    * supplied values are chosen so that, among the log entries that did not supply their own values,
    * the entries earlier in the list will sort before the entries later in the list. See the
-   * entries.list method.Log entries with timestamps that are more than the logs retention period in
-   * the past or more than 24 hours in the future will not be available when calling entries.list.
-   * However, those log entries can still be exported with LogSinks.To improve throughput and to
-   * avoid exceeding the quota limit for calls to entries.write, you should try to include several
-   * log entries in this list, rather than calling this method for each individual log entry.
+   * entries.list method.Log entries with timestamps that are more than the logs retention period
+   * (https://cloud.google.com/logging/quota-policy) in the past or more than 24 hours in the future
+   * will not be available when calling entries.list. However, those log entries can still be
+   * exported with LogSinks (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).To
+   * improve throughput and to avoid exceeding the quota limit (https://cloud.google.com/logging
+   * /quota-policy) for calls to entries.write, you should try to include several log entries in
+   * this list, rather than calling this method for each individual log entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,11 +136,13 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * entries, then this method supplies the current time or a unique identifier, respectively. The
    * supplied values are chosen so that, among the log entries that did not supply their own values,
    * the entries earlier in the list will sort before the entries later in the list. See the
-   * entries.list method.Log entries with timestamps that are more than the logs retention period in
-   * the past or more than 24 hours in the future will not be available when calling entries.list.
-   * However, those log entries can still be exported with LogSinks.To improve throughput and to
-   * avoid exceeding the quota limit for calls to entries.write, you should try to include several
-   * log entries in this list, rather than calling this method for each individual log entry.
+   * entries.list method.Log entries with timestamps that are more than the logs retention period
+   * (https://cloud.google.com/logging/quota-policy) in the past or more than 24 hours in the future
+   * will not be available when calling entries.list. However, those log entries can still be
+   * exported with LogSinks (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).To
+   * improve throughput and to avoid exceeding the quota limit (https://cloud.google.com/logging
+   * /quota-policy) for calls to entries.write, you should try to include several log entries in
+   * this list, rather than calling this method for each individual log entry.
    * @return value or {@code null} for none
    */
   public java.util.List<LogEntry> getEntries() {
@@ -153,11 +157,13 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * entries, then this method supplies the current time or a unique identifier, respectively. The
    * supplied values are chosen so that, among the log entries that did not supply their own values,
    * the entries earlier in the list will sort before the entries later in the list. See the
-   * entries.list method.Log entries with timestamps that are more than the logs retention period in
-   * the past or more than 24 hours in the future will not be available when calling entries.list.
-   * However, those log entries can still be exported with LogSinks.To improve throughput and to
-   * avoid exceeding the quota limit for calls to entries.write, you should try to include several
-   * log entries in this list, rather than calling this method for each individual log entry.
+   * entries.list method.Log entries with timestamps that are more than the logs retention period
+   * (https://cloud.google.com/logging/quota-policy) in the past or more than 24 hours in the future
+   * will not be available when calling entries.list. However, those log entries can still be
+   * exported with LogSinks (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).To
+   * improve throughput and to avoid exceeding the quota limit (https://cloud.google.com/logging
+   * /quota-policy) for calls to entries.write, you should try to include several log entries in
+   * this list, rather than calling this method for each individual log entry.
    * @param entries entries or {@code null} for none
    */
   public WriteLogEntriesRequest setEntries(java.util.List<LogEntry> entries) {

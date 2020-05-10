@@ -36,6 +36,9 @@ public final class GetPolicyOptions extends com.google.api.client.json.GenericJs
    *
    * Requests for policies with any conditional bindings must specify version 3. Policies without
    * any conditional bindings may specify any valid value or leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,6 +51,9 @@ public final class GetPolicyOptions extends com.google.api.client.json.GenericJs
    *
    * Requests for policies with any conditional bindings must specify version 3. Policies without
    * any conditional bindings may specify any valid value or leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRequestedPolicyVersion() {
@@ -61,6 +67,9 @@ public final class GetPolicyOptions extends com.google.api.client.json.GenericJs
    *
    * Requests for policies with any conditional bindings must specify version 3. Policies without
    * any conditional bindings may specify any valid value or leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @param requestedPolicyVersion requestedPolicyVersion or {@code null} for none
    */
   public GetPolicyOptions setRequestedPolicyVersion(java.lang.Integer requestedPolicyVersion) {

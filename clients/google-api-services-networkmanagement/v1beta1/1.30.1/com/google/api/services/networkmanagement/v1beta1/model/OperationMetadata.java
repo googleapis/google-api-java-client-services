@@ -66,7 +66,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String statusDetail;
 
   /**
-   * Target of the operation - for example projects/project-1/connectivityTests/test-1
+   * Target of the operation - for example
+   * projects/project-1/locations/global/connectivityTests/test-1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +166,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Target of the operation - for example projects/project-1/connectivityTests/test-1
+   * Target of the operation - for example
+   * projects/project-1/locations/global/connectivityTests/test-1
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -173,7 +175,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Target of the operation - for example projects/project-1/connectivityTests/test-1
+   * Target of the operation - for example
+   * projects/project-1/locations/global/connectivityTests/test-1
    * @param target target or {@code null} for none
    */
   public OperationMetadata setTarget(java.lang.String target) {

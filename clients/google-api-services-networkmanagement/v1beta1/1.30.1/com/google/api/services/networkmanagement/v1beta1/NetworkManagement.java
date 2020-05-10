@@ -729,7 +729,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. Connectivity Test resource name using the form:
-           *        `projects/{project_id}/connectivityTests/{test_id}`
+           *        `projects/{project_id}/locations/global/connectivityTests/{test_id}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -757,7 +757,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Connectivity Test resource name using the form:
-           *        `projects/{project_id}/connectivityTests/{test_id}`
+           *        `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -827,13 +827,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. Connectivity Test resource name using the form:
-             * `projects/{project_id}/connectivityTests/{test_id}`
+             * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Connectivity Test resource name using the form:
-           `projects/{project_id}/connectivityTests/{test_id}`
+           `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -841,7 +841,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. Connectivity Test resource name using the form:
-             * `projects/{project_id}/connectivityTests/{test_id}`
+             * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1162,6 +1162,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * Requests for policies with any conditional bindings must specify version 3. Policies
              * without any conditional bindings may specify any valid value or leave the field
              * unset.
+             *
+             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
@@ -1172,6 +1175,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
            Requests for policies with any conditional bindings must specify version 3. Policies without any
            conditional bindings may specify any valid value or leave the field unset.
+
+           To learn which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
@@ -1185,6 +1191,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * Requests for policies with any conditional bindings must specify version 3. Policies
              * without any conditional bindings may specify any valid value or leave the field
              * unset.
+             *
+             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1346,7 +1355,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * proto or JSON field, or a synthetic field. Field names can be camelCase or
              * snake_case.
              *
-             * Examples: - Filter by name: name = "projects/proj-1/connectivityTests/test-1
+             * Examples: - Filter by name: name =
+             * "projects/proj-1/locations/global/connectivityTests/test-1
              *
              * - Filter by labels: - Resources that have a key called `foo` labels.foo:* - Resources
              * that have a key called `foo` whose value is `bar` labels.foo = bar
@@ -1360,7 +1370,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            synonymous with equality).  can refer to a proto or JSON field, or a synthetic field. Field names
            can be camelCase or snake_case.
 
-           Examples: - Filter by name: name = "projects/proj-1/connectivityTests/test-1
+           Examples: - Filter by name: name = "projects/proj-1/locations/global/connectivityTests/test-1
 
            - Filter by labels: - Resources that have a key called `foo` labels.foo:* - Resources that have a
            key called `foo` whose value is `bar` labels.foo = bar
@@ -1377,7 +1387,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * proto or JSON field, or a synthetic field. Field names can be camelCase or
              * snake_case.
              *
-             * Examples: - Filter by name: name = "projects/proj-1/connectivityTests/test-1
+             * Examples: - Filter by name: name =
+             * "projects/proj-1/locations/global/connectivityTests/test-1
              *
              * - Filter by labels: - Resources that have a key called `foo` labels.foo:* - Resources
              * that have a key called `foo` whose value is `bar` labels.foo = bar
@@ -1459,7 +1470,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Required. Unique name of the resource using the form:
-              `projects/{project_id}/tests/{test_id}`
+           *        `projects/{project_id}/locations/global/connectivityTests/{test}`
            * @param content the {@link com.google.api.services.networkmanagement.v1beta1.model.ConnectivityTest}
            * @return the request
            */
@@ -1500,7 +1511,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Unique name of the resource using the form:
-              `projects/{project_id}/tests/{test_id}`
+           *        `projects/{project_id}/locations/global/connectivityTests/{test}`
              * @param content the {@link com.google.api.services.networkmanagement.v1beta1.model.ConnectivityTest}
              * @since 1.13
              */
@@ -1571,12 +1582,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. Unique name of the resource using the form:
-             * `projects/{project_id}/tests/{test_id}`
+             * `projects/{project_id}/locations/global/connectivityTests/{test}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Unique name of the resource using the form: `projects/{project_id}/tests/{test_id}`
+            /** Required. Unique name of the resource using the form:
+           `projects/{project_id}/locations/global/connectivityTests/{test}`
              */
             public java.lang.String getName() {
               return name;
@@ -1584,7 +1596,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. Unique name of the resource using the form:
-             * `projects/{project_id}/tests/{test_id}`
+             * `projects/{project_id}/locations/global/connectivityTests/{test}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1639,7 +1651,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Rerun#execute()} method to invoke the remote operation.
            *
            * @param name Required. Connectivity Test resource name using the form:
-           *        `projects/{project_id}/connectivityTests/{test_id}`
+           *        `projects/{project_id}/locations/global/connectivityTests/{test_id}`
            * @param content the {@link com.google.api.services.networkmanagement.v1beta1.model.RerunConnectivityTestRequest}
            * @return the request
            */
@@ -1677,7 +1689,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Connectivity Test resource name using the form:
-           *        `projects/{project_id}/connectivityTests/{test_id}`
+           *        `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              * @param content the {@link com.google.api.services.networkmanagement.v1beta1.model.RerunConnectivityTestRequest}
              * @since 1.13
              */
@@ -1748,13 +1760,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. Connectivity Test resource name using the form:
-             * `projects/{project_id}/connectivityTests/{test_id}`
+             * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Connectivity Test resource name using the form:
-           `projects/{project_id}/connectivityTests/{test_id}`
+           `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -1762,7 +1774,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. Connectivity Test resource name using the form:
-             * `projects/{project_id}/connectivityTests/{test_id}`
+             * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
              */
             public Rerun setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1782,7 +1794,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "connectivityTests.setIamPolicy".
            *
@@ -1812,7 +1824,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy.
              *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "connectivityTests.setIamPolicy".
              *
@@ -1928,7 +1940,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error.
            *
            * Note: This operation is designed to be used for building permission-aware UIs and command-line
            * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -1960,7 +1972,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
              *
              * Note: This operation is designed to be used for building permission-aware UIs and command-line
              * tools, not for authorization checking. This operation may "fail open" without warning.

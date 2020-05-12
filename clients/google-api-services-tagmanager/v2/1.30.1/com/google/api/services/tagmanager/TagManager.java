@@ -72,7 +72,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch";
+  public static final String DEFAULT_BATCH_PATH = "batch/tagmanager/v2";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

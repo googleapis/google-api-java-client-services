@@ -63,7 +63,7 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
-   * might use "https://example.com/push".
+   * might use `https://example.com/push`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
-   * might use "https://example.com/push".
+   * might use `https://example.com/push`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPushEndpoint() {
@@ -150,7 +150,7 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
-   * might use "https://example.com/push".
+   * might use `https://example.com/push`.
    * @param pushEndpoint pushEndpoint or {@code null} for none
    */
   public PushConfig setPushEndpoint(java.lang.String pushEndpoint) {

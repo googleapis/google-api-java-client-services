@@ -58,9 +58,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    *
    * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
    * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
-   * Acknowledge() messages on this subscription. EXPERIMENTAL: This feature is part of a closed
-   * alpha release. This API might be changed in backward-incompatible ways and is not recommended
-   * for production use. It is not subject to any SLA or deprecation policy.
+   * Acknowledge() messages on this subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,6 +74,17 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ExpirationPolicy expirationPolicy;
+
+  /**
+   * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
+   * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
+   * subscription. If empty, then no messages are filtered out. EXPERIMENTAL: This feature is part
+   * of a closed alpha release. This API might be changed in backward-incompatible ways and is not
+   * recommended for production use. It is not subject to any SLA or deprecation policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
 
   /**
    * See  Creating and managing labels.
@@ -188,9 +197,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    *
    * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
    * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
-   * Acknowledge() messages on this subscription. EXPERIMENTAL: This feature is part of a closed
-   * alpha release. This API might be changed in backward-incompatible ways and is not recommended
-   * for production use. It is not subject to any SLA or deprecation policy.
+   * Acknowledge() messages on this subscription.
    * @return value or {@code null} for none
    */
   public DeadLetterPolicy getDeadLetterPolicy() {
@@ -203,9 +210,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    *
    * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
    * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
-   * Acknowledge() messages on this subscription. EXPERIMENTAL: This feature is part of a closed
-   * alpha release. This API might be changed in backward-incompatible ways and is not recommended
-   * for production use. It is not subject to any SLA or deprecation policy.
+   * Acknowledge() messages on this subscription.
    * @param deadLetterPolicy deadLetterPolicy or {@code null} for none
    */
   public Subscription setDeadLetterPolicy(DeadLetterPolicy deadLetterPolicy) {
@@ -235,6 +240,31 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setExpirationPolicy(ExpirationPolicy expirationPolicy) {
     this.expirationPolicy = expirationPolicy;
+    return this;
+  }
+
+  /**
+   * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
+   * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
+   * subscription. If empty, then no messages are filtered out. EXPERIMENTAL: This feature is part
+   * of a closed alpha release. This API might be changed in backward-incompatible ways and is not
+   * recommended for production use. It is not subject to any SLA or deprecation policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
+   * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
+   * subscription. If empty, then no messages are filtered out. EXPERIMENTAL: This feature is part
+   * of a closed alpha release. This API might be changed in backward-incompatible ways and is not
+   * recommended for production use. It is not subject to any SLA or deprecation policy.
+   * @param filter filter or {@code null} for none
+   */
+  public Subscription setFilter(java.lang.String filter) {
+    this.filter = filter;
     return this;
   }
 

@@ -1048,7 +1048,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -1075,7 +1075,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -2829,7 +2829,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -2856,7 +2856,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *
@@ -4194,7 +4194,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -4221,7 +4221,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -6047,7 +6047,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "clusters.setIamPolicy".
          *
@@ -6074,7 +6074,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "clusters.setIamPolicy".
            *
@@ -7428,7 +7428,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "jobs.setIamPolicy".
          *
@@ -7455,7 +7455,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "jobs.setIamPolicy".
            *
@@ -8766,7 +8766,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "operations.setIamPolicy".
          *
@@ -8793,7 +8793,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "operations.setIamPolicy".
            *
@@ -10377,7 +10377,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -10404,7 +10404,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *

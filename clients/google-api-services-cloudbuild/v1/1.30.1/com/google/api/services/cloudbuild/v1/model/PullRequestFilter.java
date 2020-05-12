@@ -40,7 +40,7 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   private java.lang.String branch;
 
   /**
-   * Whether to block builds on a "/gcbrun" comment from a repository admin or collaborator.
+   * Configure builds to run only when a repository owner or collaborator comments `/gcbrun`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether to block builds on a "/gcbrun" comment from a repository admin or collaborator.
+   * Configure builds to run only when a repository owner or collaborator comments `/gcbrun`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentControl() {
@@ -85,7 +85,7 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether to block builds on a "/gcbrun" comment from a repository admin or collaborator.
+   * Configure builds to run only when a repository owner or collaborator comments `/gcbrun`.
    * @param commentControl commentControl or {@code null} for none
    */
   public PullRequestFilter setCommentControl(java.lang.String commentControl) {

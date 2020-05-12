@@ -37,6 +37,23 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private BasicAuthentication authInfo;
 
   /**
+   * The request body associated with the HTTP request. If content_type is URL_ENCODED, the body
+   * passed in must be URL-encoded. Users can provide a Content-Length header via the headers field
+   * or the API will do so. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * representations are base64 encoded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String body;
+
+  /**
+   * The content type to use for the check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentType;
+
+  /**
    * The list of headers to send as part of the Uptime check request. If two headers have the same
    * key and different values, they should be entered as a single header, with the value being a
    * comma-separated list of all the desired values as described at
@@ -77,6 +94,14 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
+   * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method
+   * defaults to GET.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestMethod;
+
+  /**
    * If true, use HTTPS instead of HTTP to run the check.
    * The value may be {@code null}.
    */
@@ -106,6 +131,80 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   public HttpCheck setAuthInfo(BasicAuthentication authInfo) {
     this.authInfo = authInfo;
+    return this;
+  }
+
+  /**
+   * The request body associated with the HTTP request. If content_type is URL_ENCODED, the body
+   * passed in must be URL-encoded. Users can provide a Content-Length header via the headers field
+   * or the API will do so. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * representations are base64 encoded.
+   * @see #decodeBody()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBody() {
+    return body;
+  }
+
+  /**
+   * The request body associated with the HTTP request. If content_type is URL_ENCODED, the body
+   * passed in must be URL-encoded. Users can provide a Content-Length header via the headers field
+   * or the API will do so. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * representations are base64 encoded.
+   * @see #getBody()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeBody() {
+    return com.google.api.client.util.Base64.decodeBase64(body);
+  }
+
+  /**
+   * The request body associated with the HTTP request. If content_type is URL_ENCODED, the body
+   * passed in must be URL-encoded. Users can provide a Content-Length header via the headers field
+   * or the API will do so. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * representations are base64 encoded.
+   * @see #encodeBody()
+   * @param body body or {@code null} for none
+   */
+  public HttpCheck setBody(java.lang.String body) {
+    this.body = body;
+    return this;
+  }
+
+  /**
+   * The request body associated with the HTTP request. If content_type is URL_ENCODED, the body
+   * passed in must be URL-encoded. Users can provide a Content-Length header via the headers field
+   * or the API will do so. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * representations are base64 encoded.
+   * @see #setBody()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public HttpCheck encodeBody(byte[] body) {
+    this.body = com.google.api.client.util.Base64.encodeBase64URLSafeString(body);
+    return this;
+  }
+
+  /**
+   * The content type to use for the check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentType() {
+    return contentType;
+  }
+
+  /**
+   * The content type to use for the check.
+   * @param contentType contentType or {@code null} for none
+   */
+  public HttpCheck setContentType(java.lang.String contentType) {
+    this.contentType = contentType;
     return this;
   }
 
@@ -198,6 +297,25 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   public HttpCheck setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method
+   * defaults to GET.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestMethod() {
+    return requestMethod;
+  }
+
+  /**
+   * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method
+   * defaults to GET.
+   * @param requestMethod requestMethod or {@code null} for none
+   */
+  public HttpCheck setRequestMethod(java.lang.String requestMethod) {
+    this.requestMethod = requestMethod;
     return this;
   }
 

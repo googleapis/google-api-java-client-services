@@ -26,12 +26,12 @@ package com.google.api.services.speech.v1p1beta1.model;
  * List items can also include pre-built or custom classes containing groups of words that represent
  * common concepts that occur in natural language. For example, rather than providing a phrase hint
  * for every month of the year (e.g. "i was born in january", "i was born in febuary", ...), use the
- * pre-built $MONTH class improves the likelihood of correctly transcribing audio that includes
+ * pre-built `$MONTH` class improves the likelihood of correctly transcribing audio that includes
  * months (e.g. "i was born in $month"). To refer to pre-built classes, use the class' symbol
- * prepended with $ e.g. $MONTH. To refer to custom classes that were defined inline in the request,
- * set the class's `custom_class_id` to a string unique to all class resources and inline classes.
- * Then use the class' id wrapped in ${...} e.g. "${my-months}". To refer to custom classes
- * resources, use the class' id wrapped in ${} (e.g. ${my-months}).
+ * prepended with `$` e.g. `$MONTH`. To refer to custom classes that were defined inline in the
+ * request, set the class's `custom_class_id` to a string unique to all class resources and inline
+ * classes. Then use the class' id wrapped in $`{...}` e.g. "${my-months}". To refer to custom
+ * classes resources, use the class' id wrapped in `${}` (e.g. `${my-months}`).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech-to-Text API. For a detailed explanation

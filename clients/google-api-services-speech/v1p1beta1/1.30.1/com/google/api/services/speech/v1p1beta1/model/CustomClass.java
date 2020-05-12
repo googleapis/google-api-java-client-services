@@ -34,6 +34,7 @@ public final class CustomClass extends com.google.api.client.json.GenericJson {
 
   /**
    * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass.
+   * Case sensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,6 +62,7 @@ public final class CustomClass extends com.google.api.client.json.GenericJson {
 
   /**
    * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass.
+   * Case sensitive.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomClassId() {
@@ -69,6 +71,7 @@ public final class CustomClass extends com.google.api.client.json.GenericJson {
 
   /**
    * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass.
+   * Case sensitive.
    * @param customClassId customClassId or {@code null} for none
    */
   public CustomClass setCustomClassId(java.lang.String customClassId) {

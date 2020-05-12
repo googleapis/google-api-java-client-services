@@ -46,7 +46,21 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The type of a space.
+   * Whether the space is a DM between a bot and a single human.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean singleUserBotDm;
+
+  /**
+   * Whether the messages are threaded in this space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean threaded;
+
+  /**
+   * Output only. The type of a space. This is deprecated. Use `single_user_bot_dm` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +105,41 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of a space.
+   * Whether the space is a DM between a bot and a single human.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSingleUserBotDm() {
+    return singleUserBotDm;
+  }
+
+  /**
+   * Whether the space is a DM between a bot and a single human.
+   * @param singleUserBotDm singleUserBotDm or {@code null} for none
+   */
+  public Space setSingleUserBotDm(java.lang.Boolean singleUserBotDm) {
+    this.singleUserBotDm = singleUserBotDm;
+    return this;
+  }
+
+  /**
+   * Whether the messages are threaded in this space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getThreaded() {
+    return threaded;
+  }
+
+  /**
+   * Whether the messages are threaded in this space.
+   * @param threaded threaded or {@code null} for none
+   */
+  public Space setThreaded(java.lang.Boolean threaded) {
+    this.threaded = threaded;
+    return this;
+  }
+
+  /**
+   * Output only. The type of a space. This is deprecated. Use `single_user_bot_dm` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -99,7 +147,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of a space.
+   * Output only. The type of a space. This is deprecated. Use `single_user_bot_dm` instead.
    * @param type type or {@code null} for none
    */
   public Space setType(java.lang.String type) {

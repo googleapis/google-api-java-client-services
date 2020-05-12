@@ -47,7 +47,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * The parent (project, location, cluster id) where the node pool will be created. Specified in
-   * the format 'projects/locations/clusters'.
+   * the format `projects/locations/clusters`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * The parent (project, location, cluster id) where the node pool will be created. Specified in
-   * the format 'projects/locations/clusters'.
+   * the format `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -118,7 +118,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * The parent (project, location, cluster id) where the node pool will be created. Specified in
-   * the format 'projects/locations/clusters'.
+   * the format `projects/locations/clusters`.
    * @param parent parent or {@code null} for none
    */
   public CreateNodePoolRequest setParent(java.lang.String parent) {

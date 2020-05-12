@@ -45,6 +45,15 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
   private java.util.List<GoogleCloudDatacatalogV1beta1SearchCatalogResult> results;
 
   /**
+   * Unreachable locations. Search result does not include data from those locations. Users can get
+   * additional information on the error by repeating the search request with a more restrictive
+   * parameter -- setting the value for `SearchDataCatalogRequest.scope.include_locations`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The token that can be used to retrieve the next page of results.
    * @return value or {@code null} for none
    */
@@ -75,6 +84,27 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogResponse setResults(java.util.List<GoogleCloudDatacatalogV1beta1SearchCatalogResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * Unreachable locations. Search result does not include data from those locations. Users can get
+   * additional information on the error by repeating the search request with a more restrictive
+   * parameter -- setting the value for `SearchDataCatalogRequest.scope.include_locations`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unreachable locations. Search result does not include data from those locations. Users can get
+   * additional information on the error by repeating the search request with a more restrictive
+   * parameter -- setting the value for `SearchDataCatalogRequest.scope.include_locations`.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1SearchCatalogResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

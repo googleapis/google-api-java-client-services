@@ -7405,8 +7405,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the datacatalog server.  After setting any optional
          * parameters, call the {@link DataCatalogImport#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of project that the newly created taxonomies will
-        belong to.
+         * @param parent Required. Resource name of project that the imported taxonomies will belong to.
          * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest}
          * @return the request
          */
@@ -7436,8 +7435,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of project that the newly created taxonomies will
-        belong to.
+           * @param parent Required. Resource name of project that the imported taxonomies will belong to.
            * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest}
            * @since 1.13
            */
@@ -7506,21 +7504,17 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (DataCatalogImport) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of project that the newly created taxonomies will belong to.
-           */
+          /** Required. Resource name of project that the imported taxonomies will belong to. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of project that the newly created taxonomies will belong to.
+          /** Required. Resource name of project that the imported taxonomies will belong to.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Resource name of project that the newly created taxonomies will belong to.
-           */
+          /** Required. Resource name of project that the imported taxonomies will belong to. */
           public DataCatalogImport setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

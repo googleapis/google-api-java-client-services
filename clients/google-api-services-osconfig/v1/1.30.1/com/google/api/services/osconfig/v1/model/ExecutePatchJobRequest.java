@@ -17,7 +17,7 @@
 package com.google.api.services.osconfig.v1.model;
 
 /**
- * A request message to initiate patching across Google Compute Engine instances.
+ * A request message to initiate patching across Compute Engine instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:

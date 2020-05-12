@@ -17,7 +17,7 @@
 package com.google.api.services.osconfig.v1.model;
 
 /**
- * Google Cloud Storage object representation.
+ * Cloud Storage object representation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.osconfig.v1.model;
 public final class GcsObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Bucket of the Google Cloud Storage object.
+   * Required. Bucket of the Cloud Storage object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bucket;
 
   /**
-   * Required. Generation number of the Google Cloud Storage object. This is used to ensure that the
+   * Required. Generation number of the Cloud Storage object. This is used to ensure that the
    * ExecStep specified by this PatchJob does not change.
    * The value may be {@code null}.
    */
@@ -45,14 +45,14 @@ public final class GcsObject extends com.google.api.client.json.GenericJson {
   private java.lang.Long generationNumber;
 
   /**
-   * Required. Name of the Google Cloud Storage object.
+   * Required. Name of the Cloud Storage object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
   private java.lang.String object__;
 
   /**
-   * Required. Bucket of the Google Cloud Storage object.
+   * Required. Bucket of the Cloud Storage object.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucket() {
@@ -60,7 +60,7 @@ public final class GcsObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Bucket of the Google Cloud Storage object.
+   * Required. Bucket of the Cloud Storage object.
    * @param bucket bucket or {@code null} for none
    */
   public GcsObject setBucket(java.lang.String bucket) {
@@ -69,7 +69,7 @@ public final class GcsObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Generation number of the Google Cloud Storage object. This is used to ensure that the
+   * Required. Generation number of the Cloud Storage object. This is used to ensure that the
    * ExecStep specified by this PatchJob does not change.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class GcsObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Generation number of the Google Cloud Storage object. This is used to ensure that the
+   * Required. Generation number of the Cloud Storage object. This is used to ensure that the
    * ExecStep specified by this PatchJob does not change.
    * @param generationNumber generationNumber or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class GcsObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the Google Cloud Storage object.
+   * Required. Name of the Cloud Storage object.
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -96,7 +96,7 @@ public final class GcsObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the Google Cloud Storage object.
+   * Required. Name of the Cloud Storage object.
    * @param object__ object__ or {@code null} for none
    */
   public GcsObject setObject(java.lang.String object__) {

@@ -17,7 +17,8 @@
 package com.google.api.services.osconfig.v1beta.model;
 
 /**
- * Sets the time for a one time patch deployment. Timestamp is in RFC3339 text format.
+ * Sets the time for a one time patch deployment. Timestamp is in
+ * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:

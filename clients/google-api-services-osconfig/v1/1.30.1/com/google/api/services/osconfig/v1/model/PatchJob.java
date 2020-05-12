@@ -22,8 +22,8 @@ package com.google.api.services.osconfig.v1.model;
  * Instances details are not included in the job. To paginate through instance details, use
  * ListPatchJobInstanceDetails.
  *
- * For more information about patch jobs, see [Creating patch jobs](/compute/docs/os-patch-
- * management/create-patch-job).
+ * For more information about patch jobs, see [Creating patch
+ * jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:

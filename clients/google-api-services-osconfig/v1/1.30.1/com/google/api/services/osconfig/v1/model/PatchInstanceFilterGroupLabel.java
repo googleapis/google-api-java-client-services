@@ -17,8 +17,13 @@
 package com.google.api.services.osconfig.v1.model;
 
 /**
- * Represents a group of VMs that can be identified as having all these labels, for example
- * "env=prod and app=web".
+ * Targets a group of VM instances by using their [assigned
+ * labels](https://cloud.google.com/compute/docs/labeling-resources). Labels are key-value pairs. A
+ * `GroupLabel` is a combination of labels that is used to target VMs for a patch job.
+ *
+ * For example, a patch job can target VMs that have the following `GroupLabel`: `{"env":"test",
+ * "app":"web"}`. This means that the patch job is applied to VMs that have both the labels
+ * `env=test` and `app=web`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:
@@ -31,16 +36,16 @@ package com.google.api.services.osconfig.v1.model;
 public final class PatchInstanceFilterGroupLabel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Compute Engine instance labels that must be present for a VM instance to be targeted by
-   * this filter.
+   * Compute Engine instance labels that must be present for a VM instance to be targeted by this
+   * filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Google Compute Engine instance labels that must be present for a VM instance to be targeted by
-   * this filter.
+   * Compute Engine instance labels that must be present for a VM instance to be targeted by this
+   * filter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -48,8 +53,8 @@ public final class PatchInstanceFilterGroupLabel extends com.google.api.client.j
   }
 
   /**
-   * Google Compute Engine instance labels that must be present for a VM instance to be targeted by
-   * this filter.
+   * Compute Engine instance labels that must be present for a VM instance to be targeted by this
+   * filter.
    * @param labels labels or {@code null} for none
    */
   public PatchInstanceFilterGroupLabel setLabels(java.util.Map<String, java.lang.String> labels) {

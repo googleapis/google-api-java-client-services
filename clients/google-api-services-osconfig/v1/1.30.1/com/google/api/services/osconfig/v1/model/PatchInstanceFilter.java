@@ -39,8 +39,8 @@ public final class PatchInstanceFilter extends com.google.api.client.json.Generi
   private java.lang.Boolean all;
 
   /**
-   * Targets VM instances matching at least one of these label sets. This allows targeting of
-   * disparate groups, for example "env=prod or env=staging".
+   * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate
+   * groups of VM instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class PatchInstanceFilter extends com.google.api.client.json.Generi
   }
 
   /**
-   * Targets VM instances matching at least one of these label sets. This allows targeting of
-   * disparate groups, for example "env=prod or env=staging".
+   * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate
+   * groups of VM instances.
    * @return value or {@code null} for none
    */
   public java.util.List<PatchInstanceFilterGroupLabel> getGroupLabels() {
@@ -98,8 +98,8 @@ public final class PatchInstanceFilter extends com.google.api.client.json.Generi
   }
 
   /**
-   * Targets VM instances matching at least one of these label sets. This allows targeting of
-   * disparate groups, for example "env=prod or env=staging".
+   * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate
+   * groups of VM instances.
    * @param groupLabels groupLabels or {@code null} for none
    */
   public PatchInstanceFilter setGroupLabels(java.util.List<PatchInstanceFilterGroupLabel> groupLabels) {

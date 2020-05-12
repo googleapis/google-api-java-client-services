@@ -30,8 +30,8 @@ package com.google.api.services.osconfig.v1beta.model;
  * Updating a software recipe
  *
  * If a recipe is assigned to an instance and there is a recipe with the same name but a lower
- * version already installed and the assigned state of the recipe is `INSTALLED_KEEP_UPDATED`, then
- * the recipe is updated to the new version.
+ * version already installed and the assigned state of the recipe is `UPDATED`, then the recipe is
+ * updated to the new version.
  *
  * Script Working Directories
  *
@@ -59,11 +59,10 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
    * Default is INSTALLED. The desired state the agent should maintain for this recipe.
    *
    * INSTALLED: The software recipe is installed on the instance but            won't be updated to
-   * new versions. INSTALLED_KEEP_UPDATED: The software recipe is installed on the
-   * instance. The recipe is updated to a higher                         version, if a higher
-   * version of the recipe is                         assigned to this instance. REMOVE: Remove is
-   * unsupported for software recipes and attempts to         create or update a recipe to the
-   * REMOVE state is rejected.
+   * new versions. UPDATED: The software recipe is installed on the instance. The recipe is
+   * updated to a higher version, if a higher version of the recipe is          assigned to this
+   * instance. REMOVE: Remove is unsupported for software recipes and attempts to         create or
+   * update a recipe to the REMOVE state is rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,11 +127,10 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
    * Default is INSTALLED. The desired state the agent should maintain for this recipe.
    *
    * INSTALLED: The software recipe is installed on the instance but            won't be updated to
-   * new versions. INSTALLED_KEEP_UPDATED: The software recipe is installed on the
-   * instance. The recipe is updated to a higher                         version, if a higher
-   * version of the recipe is                         assigned to this instance. REMOVE: Remove is
-   * unsupported for software recipes and attempts to         create or update a recipe to the
-   * REMOVE state is rejected.
+   * new versions. UPDATED: The software recipe is installed on the instance. The recipe is
+   * updated to a higher version, if a higher version of the recipe is          assigned to this
+   * instance. REMOVE: Remove is unsupported for software recipes and attempts to         create or
+   * update a recipe to the REMOVE state is rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredState() {
@@ -143,11 +141,10 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
    * Default is INSTALLED. The desired state the agent should maintain for this recipe.
    *
    * INSTALLED: The software recipe is installed on the instance but            won't be updated to
-   * new versions. INSTALLED_KEEP_UPDATED: The software recipe is installed on the
-   * instance. The recipe is updated to a higher                         version, if a higher
-   * version of the recipe is                         assigned to this instance. REMOVE: Remove is
-   * unsupported for software recipes and attempts to         create or update a recipe to the
-   * REMOVE state is rejected.
+   * new versions. UPDATED: The software recipe is installed on the instance. The recipe is
+   * updated to a higher version, if a higher version of the recipe is          assigned to this
+   * instance. REMOVE: Remove is unsupported for software recipes and attempts to         create or
+   * update a recipe to the REMOVE state is rejected.
    * @param desiredState desiredState or {@code null} for none
    */
   public SoftwareRecipe setDesiredState(java.lang.String desiredState) {

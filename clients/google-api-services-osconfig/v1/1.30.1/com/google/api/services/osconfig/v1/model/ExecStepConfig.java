@@ -38,7 +38,7 @@ public final class ExecStepConfig extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Integer> allowedSuccessCodes;
 
   /**
-   * A Google Cloud Storage object containing the executable.
+   * A Cloud Storage object containing the executable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class ExecStepConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Google Cloud Storage object containing the executable.
+   * A Cloud Storage object containing the executable.
    * @return value or {@code null} for none
    */
   public GcsObject getGcsObject() {
@@ -88,7 +88,7 @@ public final class ExecStepConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Google Cloud Storage object containing the executable.
+   * A Cloud Storage object containing the executable.
    * @param gcsObject gcsObject or {@code null} for none
    */
   public ExecStepConfig setGcsObject(GcsObject gcsObject) {

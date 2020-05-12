@@ -30,7 +30,9 @@ package com.google.api.services.vault.v1.model;
 public final class CloudStorageFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API.
+   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
+   * but not to list the bucket contents. Instead, you can  get individual export files by object
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +60,9 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   private java.lang.Long size;
 
   /**
-   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API.
+   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
+   * but not to list the bucket contents. Instead, you can  get individual export files by object
+   * name.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucketName() {
@@ -66,7 +70,9 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API.
+   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
+   * but not to list the bucket contents. Instead, you can  get individual export files by object
+   * name.
    * @param bucketName bucketName or {@code null} for none
    */
   public CloudStorageFile setBucketName(java.lang.String bucketName) {

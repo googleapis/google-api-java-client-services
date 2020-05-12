@@ -53,7 +53,8 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   private java.lang.String languageCode;
 
   /**
-   * Id of the application created using SearchApplicationsService.
+   * The ID generated when you create a search application using the [admin
+   * console](https://support.google.com/a/answer/9043922).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +125,8 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Id of the application created using SearchApplicationsService.
+   * The ID generated when you create a search application using the [admin
+   * console](https://support.google.com/a/answer/9043922).
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchApplicationId() {
@@ -132,7 +134,8 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Id of the application created using SearchApplicationsService.
+   * The ID generated when you create a search application using the [admin
+   * console](https://support.google.com/a/answer/9043922).
    * @param searchApplicationId searchApplicationId or {@code null} for none
    */
   public RequestOptions setSearchApplicationId(java.lang.String searchApplicationId) {

@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Access control list information for the item. For more information see
- * https://developers.google.com/cloud-search/docs/guides/index-your-data#acls
+ * Access control list information for the item. For more information see [Map ACLs](/cloud-
+ * search/docs/guides/acls).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

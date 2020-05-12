@@ -38,6 +38,13 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool exte
   private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale autoscale;
 
   /**
+   * Channel specifies the release channel of the pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * WorkerPool resource name formatted as:
    * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be
    * populated when creating a worker pool since it is provided in the `poolId` field.
@@ -82,6 +89,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool exte
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool setAutoscale(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale autoscale) {
     this.autoscale = autoscale;
+    return this;
+  }
+
+  /**
+   * Channel specifies the release channel of the pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * Channel specifies the release channel of the pool.
+   * @param channel channel or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool setChannel(java.lang.String channel) {
+    this.channel = channel;
     return this;
   }
 

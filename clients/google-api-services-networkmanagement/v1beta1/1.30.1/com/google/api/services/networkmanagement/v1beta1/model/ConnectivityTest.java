@@ -80,7 +80,7 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
 
   /**
    * Required. Unique name of the resource using the form:
-   * `projects/{project_id}/tests/{test_id}`
+   * `projects/{project_id}/locations/global/connectivityTests/{test}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +254,7 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
 
   /**
    * Required. Unique name of the resource using the form:
-   * `projects/{project_id}/tests/{test_id}`
+   * `projects/{project_id}/locations/global/connectivityTests/{test}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -263,7 +263,7 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
 
   /**
    * Required. Unique name of the resource using the form:
-   * `projects/{project_id}/tests/{test_id}`
+   * `projects/{project_id}/locations/global/connectivityTests/{test}`
    * @param name name or {@code null} for none
    */
   public ConnectivityTest setName(java.lang.String name) {

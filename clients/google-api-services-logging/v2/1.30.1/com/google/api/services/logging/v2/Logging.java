@@ -3351,7 +3351,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Lists log entries. Use this method to retrieve log entries that originated from a
-     * project/folder/organization/billing account. For ways to export log entries, see Exporting Logs.
+     * project/folder/organization/billing account. For ways to export log entries, see Exporting Logs
+     * (https://cloud.google.com/logging/docs/export).
      *
      * Create a request for the method "entries.list".
      *
@@ -3373,8 +3374,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Lists log entries. Use this method to retrieve log entries that originated from a
-       * project/folder/organization/billing account. For ways to export log entries, see Exporting
-       * Logs.
+       * project/folder/organization/billing account. For ways to export log entries, see Exporting Logs
+       * (https://cloud.google.com/logging/docs/export).
        *
        * Create a request for the method "entries.list".
        *
@@ -8890,7 +8891,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
      * currently only be configured for GCP organizations. Once configured, it applies to all projects
-     * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+     * and folders in the GCP organization.See Enabling CMEK for Logs Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "organizations.getCmekSettings".
      *
@@ -8923,7 +8925,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
        * currently only be configured for GCP organizations. Once configured, it applies to all projects
-       * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+       * and folders in the GCP organization.See Enabling CMEK for Logs Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "organizations.getCmekSettings".
        *
@@ -9068,7 +9071,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
      * or 2) the associated service account does not have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled.See Enabling CMEK for Logs Router for more information.
+     * disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * /managed-encryption) for more information.
      *
      * Create a request for the method "organizations.updateCmekSettings".
      *
@@ -9105,7 +9109,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
        * or 2) the associated service account does not have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled.See Enabling CMEK for Logs Router for more information.
+       * is disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * /managed-encryption) for more information.
        *
        * Create a request for the method "organizations.updateCmekSettings".
        *
@@ -17406,7 +17411,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
      * currently only be configured for GCP organizations. Once configured, it applies to all projects
-     * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+     * and folders in the GCP organization.See Enabling CMEK for Logs Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "v2.getCmekSettings".
      *
@@ -17439,7 +17445,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
        * currently only be configured for GCP organizations. Once configured, it applies to all projects
-       * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+       * and folders in the GCP organization.See Enabling CMEK for Logs Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "v2.getCmekSettings".
        *
@@ -17584,7 +17591,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
      * or 2) the associated service account does not have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled.See Enabling CMEK for Logs Router for more information.
+     * disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * /managed-encryption) for more information.
      *
      * Create a request for the method "v2.updateCmekSettings".
      *
@@ -17621,7 +17629,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
        * or 2) the associated service account does not have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled.See Enabling CMEK for Logs Router for more information.
+       * is disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * /managed-encryption) for more information.
        *
        * Create a request for the method "v2.updateCmekSettings".
        *

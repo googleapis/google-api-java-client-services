@@ -87,7 +87,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
-   * field with a key prefix of k8s-pod/. The Stackdriver system labels that were present in the
+   * field with a key prefix of k8s-pod/. The system labels that were present in the
    * metadata.systemLabels field will no longer be available in the LogEntry.
    * The value may be {@code null}.
    */
@@ -163,8 +163,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
    * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
-   * in the past, and that don't exceed 24 hours in the future. Log entries outside those time
-   * boundaries aren't ingested by Logging.
+   * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
+   * exceed 24 hours in the future. Log entries outside those time boundaries aren't ingested by
+   * Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -316,7 +317,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
-   * field with a key prefix of k8s-pod/. The Stackdriver system labels that were present in the
+   * field with a key prefix of k8s-pod/. The system labels that were present in the
    * metadata.systemLabels field will no longer be available in the LogEntry.
    * @return value or {@code null} for none
    */
@@ -329,7 +330,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
-   * field with a key prefix of k8s-pod/. The Stackdriver system labels that were present in the
+   * field with a key prefix of k8s-pod/. The system labels that were present in the
    * metadata.systemLabels field will no longer be available in the LogEntry.
    * @param metadata metadata or {@code null} for none
    */
@@ -494,8 +495,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
    * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
-   * in the past, and that don't exceed 24 hours in the future. Log entries outside those time
-   * boundaries aren't ingested by Logging.
+   * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
+   * exceed 24 hours in the future. Log entries outside those time boundaries aren't ingested by
+   * Logging.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -508,8 +510,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
    * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
-   * in the past, and that don't exceed 24 hours in the future. Log entries outside those time
-   * boundaries aren't ingested by Logging.
+   * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
+   * exceed 24 hours in the future. Log entries outside those time boundaries aren't ingested by
+   * Logging.
    * @param timestamp timestamp or {@code null} for none
    */
   public LogEntry setTimestamp(String timestamp) {

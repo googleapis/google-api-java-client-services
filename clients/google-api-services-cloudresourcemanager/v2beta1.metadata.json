@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-cloudresourcemanager",
-    "version": "v2beta1-rev20200415-1.30.9"
+    "version": "v2beta1-rev20200504-1.30.9"
   }
 }

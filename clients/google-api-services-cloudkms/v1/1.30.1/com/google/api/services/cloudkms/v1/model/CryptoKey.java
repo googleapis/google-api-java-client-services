@@ -19,7 +19,7 @@ package com.google.api.services.cloudkms.v1.model;
 /**
  * A CryptoKey represents a logical key that can be used for cryptographic operations.
  *
- * A CryptoKey is made up of one or more versions, which represent the actual key material used in
+ * A CryptoKey is made up of zero or more versions, which represent the actual key material used in
  * cryptographic operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

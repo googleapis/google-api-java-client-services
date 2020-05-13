@@ -40,7 +40,7 @@ public final class SetNodePoolSizeRequest extends com.google.api.client.json.Gen
 
   /**
    * The name (project, location, cluster, node pool id) of the node pool to set size. Specified in
-   * the format 'projects/locations/clusters/nodePools'.
+   * the format `projects/locations/clusters/nodePools`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class SetNodePoolSizeRequest extends com.google.api.client.json.Gen
 
   /**
    * The name (project, location, cluster, node pool id) of the node pool to set size. Specified in
-   * the format 'projects/locations/clusters/nodePools'.
+   * the format `projects/locations/clusters/nodePools`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,7 +109,7 @@ public final class SetNodePoolSizeRequest extends com.google.api.client.json.Gen
 
   /**
    * The name (project, location, cluster, node pool id) of the node pool to set size. Specified in
-   * the format 'projects/locations/clusters/nodePools'.
+   * the format `projects/locations/clusters/nodePools`.
    * @param name name or {@code null} for none
    */
   public SetNodePoolSizeRequest setName(java.lang.String name) {

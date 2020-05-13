@@ -40,7 +40,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
 
   /**
    * The parent (project and location) where the cluster will be created. Specified in the format
-   * 'projects/locations'.
+   * `projects/locations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
 
   /**
    * The parent (project and location) where the cluster will be created. Specified in the format
-   * 'projects/locations'.
+   * `projects/locations`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -94,7 +94,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
 
   /**
    * The parent (project and location) where the cluster will be created. Specified in the format
-   * 'projects/locations'.
+   * `projects/locations`.
    * @param parent parent or {@code null} for none
    */
   public CreateClusterRequest setParent(java.lang.String parent) {

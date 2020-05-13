@@ -32,7 +32,7 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
 
   /**
    * The name (project, location, operation id) of the operation to cancel. Specified in the format
-   * 'projects/locations/operations'.
+   * `projects/locations/operations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
 
   /**
    * The name (project, location, operation id) of the operation to cancel. Specified in the format
-   * 'projects/locations/operations'.
+   * `projects/locations/operations`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -75,7 +75,7 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
 
   /**
    * The name (project, location, operation id) of the operation to cancel. Specified in the format
-   * 'projects/locations/operations'.
+   * `projects/locations/operations`.
    * @param name name or {@code null} for none
    */
   public CancelOperationRequest setName(java.lang.String name) {

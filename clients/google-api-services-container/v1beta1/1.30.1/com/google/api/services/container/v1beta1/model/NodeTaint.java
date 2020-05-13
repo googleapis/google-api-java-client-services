@@ -20,8 +20,8 @@ package com.google.api.services.container.v1beta1.model;
  * Kubernetes taint is comprised of three fields: key, value, and effect. Effect can only be one of
  * three types:  NoSchedule, PreferNoSchedule or NoExecute.
  *
- * For more information, including usage and the valid values, see:
- * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+ * See [here](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration) for more
+ * information, including usage and the valid values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

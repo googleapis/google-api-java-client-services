@@ -47,7 +47,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
 
   /**
    * The name (project, location, cluster) of the cluster to set auth. Specified in the format
-   * 'projects/locations/clusters'.
+   * `projects/locations/clusters`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
 
   /**
    * The name (project, location, cluster) of the cluster to set auth. Specified in the format
-   * 'projects/locations/clusters'.
+   * `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -125,7 +125,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
 
   /**
    * The name (project, location, cluster) of the cluster to set auth. Specified in the format
-   * 'projects/locations/clusters'.
+   * `projects/locations/clusters`.
    * @param name name or {@code null} for none
    */
   public SetMasterAuthRequest setName(java.lang.String name) {

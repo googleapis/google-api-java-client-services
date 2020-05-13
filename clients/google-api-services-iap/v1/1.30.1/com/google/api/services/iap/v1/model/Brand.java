@@ -46,7 +46,7 @@ public final class Brand extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Whether the brand is only intended for usage inside the GSuite organization only.
+   * Output only. Whether the brand is only intended for usage inside the G Suite organization only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class Brand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the brand is only intended for usage inside the GSuite organization only.
+   * Output only. Whether the brand is only intended for usage inside the G Suite organization only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOrgInternalOnly() {
@@ -104,7 +104,7 @@ public final class Brand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the brand is only intended for usage inside the GSuite organization only.
+   * Output only. Whether the brand is only intended for usage inside the G Suite organization only.
    * @param orgInternalOnly orgInternalOnly or {@code null} for none
    */
   public Brand setOrgInternalOnly(java.lang.Boolean orgInternalOnly) {

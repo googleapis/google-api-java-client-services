@@ -639,7 +639,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * @param parent Required. Path to create the client in.
         In the following format:
          *        projects/{project_number/id}/brands/{brand}.
-        The project must belong to a GSuite account.
+        The project must belong to a G Suite account.
          * @param content the {@link com.google.api.services.iap.v1.model.IdentityAwareProxyClient}
          * @return the request
          */
@@ -670,7 +670,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * @param parent Required. Path to create the client in.
         In the following format:
          *        projects/{project_number/id}/brands/{brand}.
-        The project must belong to a GSuite account.
+        The project must belong to a G Suite account.
            * @param content the {@link com.google.api.services.iap.v1.model.IdentityAwareProxyClient}
            * @since 1.13
            */
@@ -741,14 +741,14 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. Path to create the client in. In the following format:
-           * projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite
+           * projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite
            * account.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Path to create the client in. In the following format:
-         projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite account.
+         projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite account.
            */
           public java.lang.String getParent() {
             return parent;
@@ -756,7 +756,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. Path to create the client in. In the following format:
-           * projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite
+           * projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite
            * account.
            */
           public Create setParent(java.lang.String parent) {

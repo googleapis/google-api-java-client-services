@@ -47,6 +47,13 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String codeBucket;
 
   /**
+   * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseType;
+
+  /**
    * Google Cloud Storage bucket that can be used by this application to store content.@OutputOnly
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   public Application setCodeBucket(java.lang.String codeBucket) {
     this.codeBucket = codeBucket;
+    return this;
+  }
+
+  /**
+   * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseType() {
+    return databaseType;
+  }
+
+  /**
+   * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+   * @param databaseType databaseType or {@code null} for none
+   */
+  public Application setDatabaseType(java.lang.String databaseType) {
+    this.databaseType = databaseType;
     return this;
   }
 

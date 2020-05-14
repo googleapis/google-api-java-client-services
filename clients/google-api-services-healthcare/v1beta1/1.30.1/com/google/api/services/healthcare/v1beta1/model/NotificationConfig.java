@@ -35,14 +35,13 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
    * topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications
    * are only sent if the topic is non-empty. [Topic
-   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
-   * healthcare@system.gserviceaccount.com must have publisher permissions on the given Cloud
-   * Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to
-   * fail.
+   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
+   * Healthcare API service account must have publisher permissions on the given Cloud Pub/Sub
+   * topic. Not having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Stackdriver (see
-   * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). If the number of errors exceeds
-   * a certain rate, some aren't submitted.
+   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging (see
+   * [Viewing logs](/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain
+   * rate, some aren't submitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +53,13 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
    * topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications
    * are only sent if the topic is non-empty. [Topic
-   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
-   * healthcare@system.gserviceaccount.com must have publisher permissions on the given Cloud
-   * Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to
-   * fail.
+   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
+   * Healthcare API service account must have publisher permissions on the given Cloud Pub/Sub
+   * topic. Not having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Stackdriver (see
-   * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). If the number of errors exceeds
-   * a certain rate, some aren't submitted.
+   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging (see
+   * [Viewing logs](/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain
+   * rate, some aren't submitted.
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -74,14 +72,13 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
    * topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications
    * are only sent if the topic is non-empty. [Topic
-   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
-   * healthcare@system.gserviceaccount.com must have publisher permissions on the given Cloud
-   * Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to
-   * fail.
+   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
+   * Healthcare API service account must have publisher permissions on the given Cloud Pub/Sub
+   * topic. Not having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Stackdriver (see
-   * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). If the number of errors exceeds
-   * a certain rate, some aren't submitted.
+   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging (see
+   * [Viewing logs](/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain
+   * rate, some aren't submitted.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

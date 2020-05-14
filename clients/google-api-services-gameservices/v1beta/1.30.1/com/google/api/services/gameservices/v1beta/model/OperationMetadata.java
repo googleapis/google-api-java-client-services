@@ -51,7 +51,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private String endTime;
 
   /**
-   * Output only. Operation status for gameservices API operations. Operation status is in the form
+   * Output only. Operation status for Game Services API operations. Operation status is in the form
    * of key-value pairs where keys are resource IDs and the values show the status of the operation.
    * In case of failures, the value includes an error code and error message.
    * The value may be {@code null}.
@@ -148,7 +148,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Operation status for gameservices API operations. Operation status is in the form
+   * Output only. Operation status for Game Services API operations. Operation status is in the form
    * of key-value pairs where keys are resource IDs and the values show the status of the operation.
    * In case of failures, the value includes an error code and error message.
    * @return value or {@code null} for none
@@ -158,7 +158,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Operation status for gameservices API operations. Operation status is in the form
+   * Output only. Operation status for Game Services API operations. Operation status is in the form
    * of key-value pairs where keys are resource IDs and the values show the status of the operation.
    * In case of failures, the value includes an error code and error message.
    * @param operationStatus operationStatus or {@code null} for none

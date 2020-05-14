@@ -17,7 +17,7 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * A Realm resource.
+ * A realm resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Human readable description of the Realm.
+   * Human readable description of the realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,14 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The labels associated with this Realm. Each label is a key-value pair.
+   * The labels associated with this realm. Each label is a key-value pair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name of the Realm. Uses the form:
+   * The resource name of the realm. Uses the form:
    * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
    * project/locations/{location}/realms/my-realm`.
    * The value may be {@code null}.
@@ -67,7 +67,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. Time zone where all policies targeting this Realm are evaluated. The value of this
+   * Required. Time zone where all policies targeting this realm are evaluated. The value of this
    * field must be from the IANA time zone database: https://www.iana.org/time-zones.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable description of the Realm.
+   * Human readable description of the realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -107,7 +107,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable description of the Realm.
+   * Human readable description of the realm.
    * @param description description or {@code null} for none
    */
   public Realm setDescription(java.lang.String description) {
@@ -133,7 +133,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The labels associated with this Realm. Each label is a key-value pair.
+   * The labels associated with this realm. Each label is a key-value pair.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -141,7 +141,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The labels associated with this Realm. Each label is a key-value pair.
+   * The labels associated with this realm. Each label is a key-value pair.
    * @param labels labels or {@code null} for none
    */
   public Realm setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -150,7 +150,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the Realm. Uses the form:
+   * The resource name of the realm. Uses the form:
    * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
    * project/locations/{location}/realms/my-realm`.
    * @return value or {@code null} for none
@@ -160,7 +160,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the Realm. Uses the form:
+   * The resource name of the realm. Uses the form:
    * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
    * project/locations/{location}/realms/my-realm`.
    * @param name name or {@code null} for none
@@ -171,7 +171,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Time zone where all policies targeting this Realm are evaluated. The value of this
+   * Required. Time zone where all policies targeting this realm are evaluated. The value of this
    * field must be from the IANA time zone database: https://www.iana.org/time-zones.
    * @return value or {@code null} for none
    */
@@ -180,7 +180,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Time zone where all policies targeting this Realm are evaluated. The value of this
+   * Required. Time zone where all policies targeting this realm are evaluated. The value of this
    * field must be from the IANA time zone database: https://www.iana.org/time-zones.
    * @param timeZone timeZone or {@code null} for none
    */

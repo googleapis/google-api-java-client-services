@@ -45,7 +45,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec
-   * specifies the local time as defined by the Realm.
+   * specifies the local time as defined by the realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec
-   * specifies the local time as defined by the Realm.
+   * specifies the local time as defined by the realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getCronSpec() {
@@ -95,7 +95,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
    * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec
-   * specifies the local time as defined by the Realm.
+   * specifies the local time as defined by the realm.
    * @param cronSpec cronSpec or {@code null} for none
    */
   public Schedule setCronSpec(java.lang.String cronSpec) {

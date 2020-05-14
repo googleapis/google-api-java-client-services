@@ -30,7 +30,7 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class ListGameServerDeploymentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Game Server Delpoyments.
+   * The list of game server deployments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class ListGameServerDeploymentsResponse extends com.google.api.clie
   private java.lang.String nextPageToken;
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Game Server Delpoyments.
+   * The list of game server deployments.
    * @return value or {@code null} for none
    */
   public java.util.List<GameServerDeployment> getGameServerDeployments() {
@@ -65,7 +65,7 @@ public final class ListGameServerDeploymentsResponse extends com.google.api.clie
   }
 
   /**
-   * The list of Game Server Delpoyments.
+   * The list of game server deployments.
    * @param gameServerDeployments gameServerDeployments or {@code null} for none
    */
   public ListGameServerDeploymentsResponse setGameServerDeployments(java.util.List<GameServerDeployment> gameServerDeployments) {
@@ -91,7 +91,7 @@ public final class ListGameServerDeploymentsResponse extends com.google.api.clie
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -99,7 +99,7 @@ public final class ListGameServerDeploymentsResponse extends com.google.api.clie
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListGameServerDeploymentsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

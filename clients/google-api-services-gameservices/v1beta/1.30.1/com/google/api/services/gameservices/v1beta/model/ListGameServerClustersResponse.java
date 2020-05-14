@@ -30,7 +30,7 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class ListGameServerClustersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Game Server Clusters.
+   * The list of game server clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class ListGameServerClustersResponse extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Game Server Clusters.
+   * The list of game server clusters.
    * @return value or {@code null} for none
    */
   public java.util.List<GameServerCluster> getGameServerClusters() {
@@ -65,7 +65,7 @@ public final class ListGameServerClustersResponse extends com.google.api.client.
   }
 
   /**
-   * The list of Game Server Clusters.
+   * The list of game server clusters.
    * @param gameServerClusters gameServerClusters or {@code null} for none
    */
   public ListGameServerClustersResponse setGameServerClusters(java.util.List<GameServerCluster> gameServerClusters) {
@@ -91,7 +91,7 @@ public final class ListGameServerClustersResponse extends com.google.api.client.
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -99,7 +99,7 @@ public final class ListGameServerClustersResponse extends com.google.api.client.
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListGameServerClustersResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

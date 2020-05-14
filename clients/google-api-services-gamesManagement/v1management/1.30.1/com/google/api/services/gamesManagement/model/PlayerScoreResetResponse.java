@@ -17,11 +17,11 @@
 package com.google.api.services.gamesManagement.model;
 
 /**
- * This is a JSON template for a list of reset leaderboard entry resources.
+ * A list of reset leaderboard entry resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services Management API. For a
- * detailed explanation see:
+ * transmitted over HTTP when working with the Google Play Game Management. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,15 +39,15 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#playerScoreResetResponse.
+   * `gamesManagement#playerScoreResetResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The time spans of the updated score. Possible values are:   - "ALL_TIME" - The score is an all-
-   * time score.  - "WEEKLY" - The score is a weekly score.  - "DAILY" - The score is a daily score.
+   * The time spans of the updated score. Possible values are: "`ALL_TIME`" - The score is an all-
+   * time score. "`WEEKLY`" - The score is a weekly score. "`DAILY`" - The score is a daily score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#playerScoreResetResponse.
+   * `gamesManagement#playerScoreResetResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -81,7 +81,7 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#playerScoreResetResponse.
+   * `gamesManagement#playerScoreResetResponse`.
    * @param kind kind or {@code null} for none
    */
   public PlayerScoreResetResponse setKind(java.lang.String kind) {
@@ -90,8 +90,8 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The time spans of the updated score. Possible values are:   - "ALL_TIME" - The score is an all-
-   * time score.  - "WEEKLY" - The score is a weekly score.  - "DAILY" - The score is a daily score.
+   * The time spans of the updated score. Possible values are: "`ALL_TIME`" - The score is an all-
+   * time score. "`WEEKLY`" - The score is a weekly score. "`DAILY`" - The score is a daily score.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResetScoreTimeSpans() {
@@ -99,8 +99,8 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The time spans of the updated score. Possible values are:   - "ALL_TIME" - The score is an all-
-   * time score.  - "WEEKLY" - The score is a weekly score.  - "DAILY" - The score is a daily score.
+   * The time spans of the updated score. Possible values are: "`ALL_TIME`" - The score is an all-
+   * time score. "`WEEKLY`" - The score is a weekly score. "`DAILY`" - The score is a daily score.
    * @param resetScoreTimeSpans resetScoreTimeSpans or {@code null} for none
    */
   public PlayerScoreResetResponse setResetScoreTimeSpans(java.util.List<java.lang.String> resetScoreTimeSpans) {

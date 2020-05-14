@@ -17,11 +17,11 @@
 package com.google.api.services.gamesManagement.model;
 
 /**
- * This is a JSON template for a Player resource.
+ * A Player resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services Management API. For a
- * detailed explanation see:
+ * transmitted over HTTP when working with the Google Play Game Management. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -66,28 +66,12 @@ public final class Player extends com.google.api.client.json.GenericJson {
   private GamesPlayerExperienceInfoResource experienceInfo;
 
   /**
-   * The friend status of the given player, relative to the requester. This is unset if the player
-   * is not sharing their friends list with the game.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String friendStatus;
-
-  /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#player.
+   * `gamesManagement#player`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
-
-  /**
-   * Details about the last time this player played a multiplayer game with the currently
-   * authenticated player. Populated for PLAYED_WITH player collection members.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GamesPlayedResource lastPlayedWith;
 
   /**
    * An object representation of the individual components of the player's name. For some players,
@@ -214,27 +198,8 @@ public final class Player extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The friend status of the given player, relative to the requester. This is unset if the player
-   * is not sharing their friends list with the game.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFriendStatus() {
-    return friendStatus;
-  }
-
-  /**
-   * The friend status of the given player, relative to the requester. This is unset if the player
-   * is not sharing their friends list with the game.
-   * @param friendStatus friendStatus or {@code null} for none
-   */
-  public Player setFriendStatus(java.lang.String friendStatus) {
-    this.friendStatus = friendStatus;
-    return this;
-  }
-
-  /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#player.
+   * `gamesManagement#player`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -243,30 +208,11 @@ public final class Player extends com.google.api.client.json.GenericJson {
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#player.
+   * `gamesManagement#player`.
    * @param kind kind or {@code null} for none
    */
   public Player setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * Details about the last time this player played a multiplayer game with the currently
-   * authenticated player. Populated for PLAYED_WITH player collection members.
-   * @return value or {@code null} for none
-   */
-  public GamesPlayedResource getLastPlayedWith() {
-    return lastPlayedWith;
-  }
-
-  /**
-   * Details about the last time this player played a multiplayer game with the currently
-   * authenticated player. Populated for PLAYED_WITH player collection members.
-   * @param lastPlayedWith lastPlayedWith or {@code null} for none
-   */
-  public Player setLastPlayedWith(GamesPlayedResource lastPlayedWith) {
-    this.lastPlayedWith = lastPlayedWith;
     return this;
   }
 

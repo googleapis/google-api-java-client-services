@@ -53,10 +53,13 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
    *
    * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
    * Name must be an IANA_SVC_NAME.
+   *
+   * This field is currently limited to integer types only because of proto's inability to properly
+   * support the IntOrString golang type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private IntOrString port;
+  private java.lang.Integer port;
 
   /**
    * (Optional)
@@ -94,9 +97,12 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
    *
    * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
    * Name must be an IANA_SVC_NAME.
+   *
+   * This field is currently limited to integer types only because of proto's inability to properly
+   * support the IntOrString golang type.
    * @return value or {@code null} for none
    */
-  public IntOrString getPort() {
+  public java.lang.Integer getPort() {
     return port;
   }
 
@@ -107,9 +113,12 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
    *
    * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
    * Name must be an IANA_SVC_NAME.
+   *
+   * This field is currently limited to integer types only because of proto's inability to properly
+   * support the IntOrString golang type.
    * @param port port or {@code null} for none
    */
-  public TCPSocketAction setPort(IntOrString port) {
+  public TCPSocketAction setPort(java.lang.Integer port) {
     this.port = port;
     return this;
   }

@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * The details about how to run the execution.
+ * A game loop test of an iOS application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,64 +28,40 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Specification extends com.google.api.client.json.GenericJson {
+public final class IosTestLoop extends com.google.api.client.json.GenericJson {
 
   /**
-   * An Android mobile test execution specification.
+   * Bundle ID of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AndroidTest androidTest;
+  private java.lang.String bundleId;
 
   /**
-   * An iOS mobile test execution specification.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IosTest iosTest;
-
-  /**
-   * An Android mobile test execution specification.
+   * Bundle ID of the app.
    * @return value or {@code null} for none
    */
-  public AndroidTest getAndroidTest() {
-    return androidTest;
+  public java.lang.String getBundleId() {
+    return bundleId;
   }
 
   /**
-   * An Android mobile test execution specification.
-   * @param androidTest androidTest or {@code null} for none
+   * Bundle ID of the app.
+   * @param bundleId bundleId or {@code null} for none
    */
-  public Specification setAndroidTest(AndroidTest androidTest) {
-    this.androidTest = androidTest;
-    return this;
-  }
-
-  /**
-   * An iOS mobile test execution specification.
-   * @return value or {@code null} for none
-   */
-  public IosTest getIosTest() {
-    return iosTest;
-  }
-
-  /**
-   * An iOS mobile test execution specification.
-   * @param iosTest iosTest or {@code null} for none
-   */
-  public Specification setIosTest(IosTest iosTest) {
-    this.iosTest = iosTest;
+  public IosTestLoop setBundleId(java.lang.String bundleId) {
+    this.bundleId = bundleId;
     return this;
   }
 
   @Override
-  public Specification set(String fieldName, Object value) {
-    return (Specification) super.set(fieldName, value);
+  public IosTestLoop set(String fieldName, Object value) {
+    return (IosTestLoop) super.set(fieldName, value);
   }
 
   @Override
-  public Specification clone() {
-    return (Specification) super.clone();
+  public IosTestLoop clone() {
+    return (IosTestLoop) super.clone();
   }
 
 }

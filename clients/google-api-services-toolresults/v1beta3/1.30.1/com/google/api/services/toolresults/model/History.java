@@ -64,6 +64,15 @@ public final class History extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The platform of the test history.
+   *
+   * - In response: always set. Returns the platform of the last execution if unknown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testPlatform;
+
+  /**
    * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters.
    *
    * - In response: present if set during create. - In create request: optional
@@ -127,6 +136,27 @@ public final class History extends com.google.api.client.json.GenericJson {
    */
   public History setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The platform of the test history.
+   *
+   * - In response: always set. Returns the platform of the last execution if unknown.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestPlatform() {
+    return testPlatform;
+  }
+
+  /**
+   * The platform of the test history.
+   *
+   * - In response: always set. Returns the platform of the last execution if unknown.
+   * @param testPlatform testPlatform or {@code null} for none
+   */
+  public History setTestPlatform(java.lang.String testPlatform) {
+    this.testPlatform = testPlatform;
     return this;
   }
 

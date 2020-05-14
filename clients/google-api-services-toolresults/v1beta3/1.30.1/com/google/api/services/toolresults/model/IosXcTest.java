@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * The details about how to run the execution.
+ * A test of an iOS application that uses the XCTest framework.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Specification extends com.google.api.client.json.GenericJson {
+public final class IosXcTest extends com.google.api.client.json.GenericJson {
 
   /**
-   * An Android mobile test execution specification.
+   * Bundle ID of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AndroidTest androidTest;
+  private java.lang.String bundleId;
 
   /**
-   * An iOS mobile test execution specification.
+   * Xcode version that the test was run with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private IosTest iosTest;
+  private java.lang.String xcodeVersion;
 
   /**
-   * An Android mobile test execution specification.
+   * Bundle ID of the app.
    * @return value or {@code null} for none
    */
-  public AndroidTest getAndroidTest() {
-    return androidTest;
+  public java.lang.String getBundleId() {
+    return bundleId;
   }
 
   /**
-   * An Android mobile test execution specification.
-   * @param androidTest androidTest or {@code null} for none
+   * Bundle ID of the app.
+   * @param bundleId bundleId or {@code null} for none
    */
-  public Specification setAndroidTest(AndroidTest androidTest) {
-    this.androidTest = androidTest;
+  public IosXcTest setBundleId(java.lang.String bundleId) {
+    this.bundleId = bundleId;
     return this;
   }
 
   /**
-   * An iOS mobile test execution specification.
+   * Xcode version that the test was run with.
    * @return value or {@code null} for none
    */
-  public IosTest getIosTest() {
-    return iosTest;
+  public java.lang.String getXcodeVersion() {
+    return xcodeVersion;
   }
 
   /**
-   * An iOS mobile test execution specification.
-   * @param iosTest iosTest or {@code null} for none
+   * Xcode version that the test was run with.
+   * @param xcodeVersion xcodeVersion or {@code null} for none
    */
-  public Specification setIosTest(IosTest iosTest) {
-    this.iosTest = iosTest;
+  public IosXcTest setXcodeVersion(java.lang.String xcodeVersion) {
+    this.xcodeVersion = xcodeVersion;
     return this;
   }
 
   @Override
-  public Specification set(String fieldName, Object value) {
-    return (Specification) super.set(fieldName, value);
+  public IosXcTest set(String fieldName, Object value) {
+    return (IosXcTest) super.set(fieldName, value);
   }
 
   @Override
-  public Specification clone() {
-    return (Specification) super.clone();
+  public IosXcTest clone() {
+    return (IosXcTest) super.clone();
   }
 
 }

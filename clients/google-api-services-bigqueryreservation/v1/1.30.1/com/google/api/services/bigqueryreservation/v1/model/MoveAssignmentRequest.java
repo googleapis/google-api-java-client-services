@@ -17,9 +17,12 @@
 package com.google.api.services.bigqueryreservation.v1.model;
 
 /**
- * The request for ReservationService.MoveAssignment. Note: "bigquery.reservationAssignments.create"
- * permission is required on the destination_id. Note: "bigquery.reservationAssignments.create" and
- * "bigquery.reservationAssignments.delete" permission is required on the related assignee.
+ * The request for ReservationService.MoveAssignment.
+ *
+ * **Note**: "bigquery.reservationAssignments.create" permission is required on the destination_id.
+ *
+ * **Note**: "bigquery.reservationAssignments.create" and "bigquery.reservationAssignments.delete"
+ * permission are required on the related assignee.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery Reservation API. For a detailed explanation
@@ -33,14 +36,14 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class MoveAssignmentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new reservation ID, e.g.:   projects/myotherproject/locations/US/reservations/team2-prod
+   * The new reservation ID, e.g.:   `projects/myotherproject/locations/US/reservations/team2-prod`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationId;
 
   /**
-   * The new reservation ID, e.g.:   projects/myotherproject/locations/US/reservations/team2-prod
+   * The new reservation ID, e.g.:   `projects/myotherproject/locations/US/reservations/team2-prod`
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationId() {
@@ -48,7 +51,7 @@ public final class MoveAssignmentRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The new reservation ID, e.g.:   projects/myotherproject/locations/US/reservations/team2-prod
+   * The new reservation ID, e.g.:   `projects/myotherproject/locations/US/reservations/team2-prod`
    * @param destinationId destinationId or {@code null} for none
    */
   public MoveAssignmentRequest setDestinationId(java.lang.String destinationId) {

@@ -19,8 +19,9 @@ package com.google.api.services.bigqueryreservation.v1.model;
 /**
  * Capacity commitment is a way to purchase compute capacity for BigQuery jobs (in the form of
  * slots) with some committed period of usage. Annual commitments renew by default. Commitments can
- * be removed after their commitment end time passes. In order to remove annual commitment, its plan
- * needs to be changed to monthly or flex first.
+ * be removed after their commitment end time passes.
+ *
+ * In order to remove annual commitment, its plan needs to be changed to monthly or flex first.
  *
  * A capacity commitment resource exists as a child resource of the admin project.
  *
@@ -52,7 +53,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * projects/myproject/locations/US/capacityCommitments/123
+   * `projects/myproject/locations/US/capacityCommitments/123`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   /**
    * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
    * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * ANNUAL commitments.
+   * ANNUAL and TRIAL commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * projects/myproject/locations/US/capacityCommitments/123
+   * `projects/myproject/locations/US/capacityCommitments/123`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -135,7 +136,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * projects/myproject/locations/US/capacityCommitments/123
+   * `projects/myproject/locations/US/capacityCommitments/123`
    * @param name name or {@code null} for none
    */
   public CapacityCommitment setName(java.lang.String name) {
@@ -163,7 +164,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   /**
    * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
    * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * ANNUAL commitments.
+   * ANNUAL and TRIAL commitments.
    * @return value or {@code null} for none
    */
   public java.lang.String getRenewalPlan() {
@@ -173,7 +174,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   /**
    * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
    * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * ANNUAL commitments.
+   * ANNUAL and TRIAL commitments.
    * @param renewalPlan renewalPlan or {@code null} for none
    */
   public CapacityCommitment setRenewalPlan(java.lang.String renewalPlan) {

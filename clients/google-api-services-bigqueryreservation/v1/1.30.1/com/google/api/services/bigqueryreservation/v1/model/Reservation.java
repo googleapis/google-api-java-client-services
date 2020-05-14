@@ -40,7 +40,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ignoreIdleSlots;
 
   /**
-   * The resource name of the reservation, e.g., "projects/locations/reservations/team1-prod".
+   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,11 +48,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
-   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
-   * its siblings exceeds the parent's slot capacity, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`.
+   * BigQuery, and serves as the unit of parallelism.
+   *
+   * Queries using this reservation might use more slots during runtime if ignore_idle_slots is set
+   * to false.
+   *
+   * If the new reservation's slot capacity exceed the parent's slot capacity or if total slot
+   * capacity of the new reservation and its siblings exceeds the parent's slot capacity, the
+   * request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -80,7 +83,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reservation, e.g., "projects/locations/reservations/team1-prod".
+   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -88,7 +91,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reservation, e.g., "projects/locations/reservations/team1-prod".
+   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`.
    * @param name name or {@code null} for none
    */
   public Reservation setName(java.lang.String name) {
@@ -98,11 +101,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
-   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
-   * its siblings exceeds the parent's slot capacity, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`.
+   * BigQuery, and serves as the unit of parallelism.
+   *
+   * Queries using this reservation might use more slots during runtime if ignore_idle_slots is set
+   * to false.
+   *
+   * If the new reservation's slot capacity exceed the parent's slot capacity or if total slot
+   * capacity of the new reservation and its siblings exceeds the parent's slot capacity, the
+   * request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSlotCapacity() {
@@ -111,11 +117,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
-   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
-   * its siblings exceeds the parent's slot capacity, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`.
+   * BigQuery, and serves as the unit of parallelism.
+   *
+   * Queries using this reservation might use more slots during runtime if ignore_idle_slots is set
+   * to false.
+   *
+   * If the new reservation's slot capacity exceed the parent's slot capacity or if total slot
+   * capacity of the new reservation and its siblings exceeds the parent's slot capacity, the
+   * request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * @param slotCapacity slotCapacity or {@code null} for none
    */
   public Reservation setSlotCapacity(java.lang.Long slotCapacity) {

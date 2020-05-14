@@ -2,7 +2,7 @@
 
 This repository contains the generated source for individual APIs that utilize
 [Google APIs Client Library for Java][google-api-java-client].  We recommend using the
-[Google Auth Library for Java](google-auth-library-java) for handling authentication.
+[Google Auth Library for Java][google-auth-library-java] for handling authentication.
 
 ## Requirements
 

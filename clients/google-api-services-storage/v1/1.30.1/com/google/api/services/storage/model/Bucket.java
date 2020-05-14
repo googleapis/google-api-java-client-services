@@ -1434,6 +1434,16 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private java.lang.Integer daysSinceCustomTime;
 
         /**
+         * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied
+         * if the days elapsed is at least this number. This condition is relevant only for versioned
+         * objects. The value of the field must be a nonnegative integer. If it's zero, the object version
+         * will become eligible for Lifecycle action as soon as it becomes noncurrent.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer daysSinceNoncurrentTime;
+
+        /**
          * Relevant only for versioned objects. If the value is true, this condition matches live objects;
          * if the value is false, it matches archived objects.
          * The value may be {@code null}.
@@ -1459,6 +1469,14 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> matchesStorageClass;
+
+        /**
+         * A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an
+         * object is before this timestamp. This condition is relevant only for versioned objects.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private com.google.api.client.util.DateTime noncurrentTimeBefore;
 
         /**
          * Relevant only for versioned objects. If the value is N, this condition is satisfied when there
@@ -1547,6 +1565,29 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied
+         * if the days elapsed is at least this number. This condition is relevant only for versioned
+         * objects. The value of the field must be a nonnegative integer. If it's zero, the object version
+         * will become eligible for Lifecycle action as soon as it becomes noncurrent.
+         * @return value or {@code null} for none
+         */
+        public java.lang.Integer getDaysSinceNoncurrentTime() {
+          return daysSinceNoncurrentTime;
+        }
+
+        /**
+         * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied
+         * if the days elapsed is at least this number. This condition is relevant only for versioned
+         * objects. The value of the field must be a nonnegative integer. If it's zero, the object version
+         * will become eligible for Lifecycle action as soon as it becomes noncurrent.
+         * @param daysSinceNoncurrentTime daysSinceNoncurrentTime or {@code null} for none
+         */
+        public Condition setDaysSinceNoncurrentTime(java.lang.Integer daysSinceNoncurrentTime) {
+          this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
+          return this;
+        }
+
+        /**
          * Relevant only for versioned objects. If the value is true, this condition matches live objects;
          * if the value is false, it matches archived objects.
          * @return value or {@code null} for none
@@ -1606,6 +1647,25 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
          */
         public Condition setMatchesStorageClass(java.util.List<java.lang.String> matchesStorageClass) {
           this.matchesStorageClass = matchesStorageClass;
+          return this;
+        }
+
+        /**
+         * A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an
+         * object is before this timestamp. This condition is relevant only for versioned objects.
+         * @return value or {@code null} for none
+         */
+        public com.google.api.client.util.DateTime getNoncurrentTimeBefore() {
+          return noncurrentTimeBefore;
+        }
+
+        /**
+         * A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an
+         * object is before this timestamp. This condition is relevant only for versioned objects.
+         * @param noncurrentTimeBefore noncurrentTimeBefore or {@code null} for none
+         */
+        public Condition setNoncurrentTimeBefore(com.google.api.client.util.DateTime noncurrentTimeBefore) {
+          this.noncurrentTimeBefore = noncurrentTimeBefore;
           return this;
         }
 

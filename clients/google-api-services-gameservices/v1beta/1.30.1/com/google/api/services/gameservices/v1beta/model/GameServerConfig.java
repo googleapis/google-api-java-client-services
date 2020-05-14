@@ -17,7 +17,7 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * A Game Server Config resource.
+ * A game server config resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * The description of the Game Server Config.
+   * The description of the game server config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,14 +57,14 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The labels associated with this Game Server Config. Each label is a key-value pair.
+   * The labels associated with this game server config. Each label is a key-value pair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name of the Game Server Config. Uses the form:
+   * The resource name of the game server config. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
    * For example,
@@ -107,7 +107,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The description of the Game Server Config.
+   * The description of the game server config.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -115,7 +115,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The description of the Game Server Config.
+   * The description of the game server config.
    * @param description description or {@code null} for none
    */
   public GameServerConfig setDescription(java.lang.String description) {
@@ -141,7 +141,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The labels associated with this Game Server Config. Each label is a key-value pair.
+   * The labels associated with this game server config. Each label is a key-value pair.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -149,7 +149,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The labels associated with this Game Server Config. Each label is a key-value pair.
+   * The labels associated with this game server config. Each label is a key-value pair.
    * @param labels labels or {@code null} for none
    */
   public GameServerConfig setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -158,7 +158,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the Game Server Config. Uses the form:
+   * The resource name of the game server config. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
    * For example,
@@ -171,7 +171,7 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the Game Server Config. Uses the form:
+   * The resource name of the game server config. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
    * For example,

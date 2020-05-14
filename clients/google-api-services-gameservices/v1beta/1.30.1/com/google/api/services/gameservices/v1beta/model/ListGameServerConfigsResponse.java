@@ -30,7 +30,7 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class ListGameServerConfigsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Game Server Configs.
+   * The list of game server configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class ListGameServerConfigsResponse extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Game Server Configs.
+   * The list of game server configs.
    * @return value or {@code null} for none
    */
   public java.util.List<GameServerConfig> getGameServerConfigs() {
@@ -65,7 +65,7 @@ public final class ListGameServerConfigsResponse extends com.google.api.client.j
   }
 
   /**
-   * The list of Game Server Configs.
+   * The list of game server configs.
    * @param gameServerConfigs gameServerConfigs or {@code null} for none
    */
   public ListGameServerConfigsResponse setGameServerConfigs(java.util.List<GameServerConfig> gameServerConfigs) {
@@ -91,7 +91,7 @@ public final class ListGameServerConfigsResponse extends com.google.api.client.j
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -99,7 +99,7 @@ public final class ListGameServerConfigsResponse extends com.google.api.client.j
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListGameServerConfigsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

@@ -30,7 +30,7 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class FetchDeploymentStateResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The state of the Game Server Deployment in each Game Server Cluster.
+   * The state of the game server deployment in each game server cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,14 @@ public final class FetchDeploymentStateResponse extends com.google.api.client.js
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unavailable;
 
   /**
-   * The state of the Game Server Deployment in each Game Server Cluster.
+   * The state of the game server deployment in each game server cluster.
    * @return value or {@code null} for none
    */
   public java.util.List<DeployedClusterState> getClusterState() {
@@ -58,7 +58,7 @@ public final class FetchDeploymentStateResponse extends com.google.api.client.js
   }
 
   /**
-   * The state of the Game Server Deployment in each Game Server Cluster.
+   * The state of the game server deployment in each game server cluster.
    * @param clusterState clusterState or {@code null} for none
    */
   public FetchDeploymentStateResponse setClusterState(java.util.List<DeployedClusterState> clusterState) {
@@ -67,7 +67,7 @@ public final class FetchDeploymentStateResponse extends com.google.api.client.js
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnavailable() {
@@ -75,7 +75,7 @@ public final class FetchDeploymentStateResponse extends com.google.api.client.js
   }
 
   /**
-   * List of Locations that could not be reached.
+   * List of locations that could not be reached.
    * @param unavailable unavailable or {@code null} for none
    */
   public FetchDeploymentStateResponse setUnavailable(java.util.List<java.lang.String> unavailable) {

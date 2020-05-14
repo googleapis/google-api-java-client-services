@@ -31,7 +31,7 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class PreviewGameServerDeploymentRolloutResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * ETag of the Game Server Deployment.
+   * ETag of the game server deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class PreviewGameServerDeploymentRolloutResponse extends com.google
   private java.util.List<java.lang.String> unavailable;
 
   /**
-   * ETag of the Game Server Deployment.
+   * ETag of the game server deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -60,7 +60,7 @@ public final class PreviewGameServerDeploymentRolloutResponse extends com.google
   }
 
   /**
-   * ETag of the Game Server Deployment.
+   * ETag of the game server deployment.
    * @param etag etag or {@code null} for none
    */
   public PreviewGameServerDeploymentRolloutResponse setEtag(java.lang.String etag) {

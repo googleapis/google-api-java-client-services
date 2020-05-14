@@ -17,7 +17,7 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * The Game Server Deployment Rollout which represents the desired rollout state.
+ * The game server deployment rollout which represents the desired rollout state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   private String createTime;
 
   /**
-   * The default Game Server Config is applied to all Realms unless overridden in the Rollout. For
+   * The default game server config is applied to all realms unless overridden in the rollout. For
    * example,
    *
    * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
@@ -54,8 +54,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   private java.lang.String etag;
 
   /**
-   * Contains the Game Server Config Rollout overrides. Overrides are processed in the order they
-   * are listed. Once a match is found for a Realm, the rest of the list is not processed.
+   * Contains the game server config rollout overrides. Overrides are processed in the order they
+   * are listed. Once a match is found for a realm, the rest of the list is not processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * The resource name of the Game Server Deployment Rollout. Uses the form:
+   * The resource name of the game server deployment rollout. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
    * example,
@@ -104,7 +104,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * The default Game Server Config is applied to all Realms unless overridden in the Rollout. For
+   * The default game server config is applied to all realms unless overridden in the rollout. For
    * example,
    *
    * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
@@ -115,7 +115,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * The default Game Server Config is applied to all Realms unless overridden in the Rollout. For
+   * The default game server config is applied to all realms unless overridden in the rollout. For
    * example,
    *
    * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
@@ -144,8 +144,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * Contains the Game Server Config Rollout overrides. Overrides are processed in the order they
-   * are listed. Once a match is found for a Realm, the rest of the list is not processed.
+   * Contains the game server config rollout overrides. Overrides are processed in the order they
+   * are listed. Once a match is found for a realm, the rest of the list is not processed.
    * @return value or {@code null} for none
    */
   public java.util.List<GameServerConfigOverride> getGameServerConfigOverrides() {
@@ -153,8 +153,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * Contains the Game Server Config Rollout overrides. Overrides are processed in the order they
-   * are listed. Once a match is found for a Realm, the rest of the list is not processed.
+   * Contains the game server config rollout overrides. Overrides are processed in the order they
+   * are listed. Once a match is found for a realm, the rest of the list is not processed.
    * @param gameServerConfigOverrides gameServerConfigOverrides or {@code null} for none
    */
   public GameServerDeploymentRollout setGameServerConfigOverrides(java.util.List<GameServerConfigOverride> gameServerConfigOverrides) {
@@ -163,7 +163,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * The resource name of the Game Server Deployment Rollout. Uses the form:
+   * The resource name of the game server deployment rollout. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
    * example,
@@ -176,7 +176,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
   }
 
   /**
-   * The resource name of the Game Server Deployment Rollout. Uses the form:
+   * The resource name of the game server deployment rollout. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
    * example,

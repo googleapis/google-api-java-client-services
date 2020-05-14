@@ -30,14 +30,14 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class TargetDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Agones fleet details for Game Server Clusters and Game Server Deployments.
+   * Agones fleet details for game server clusters and game server deployments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TargetFleetDetails> fleetDetails;
 
   /**
-   * The Game Server Cluster name. Uses the form:
+   * The game server cluster name. Uses the form:
    *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
    * The value may be {@code null}.
@@ -46,7 +46,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   private java.lang.String gameServerClusterName;
 
   /**
-   * The Game Server Deployment name. Uses the form:
+   * The game server deployment name. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
    * The value may be {@code null}.
@@ -55,7 +55,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   private java.lang.String gameServerDeploymentName;
 
   /**
-   * Agones fleet details for Game Server Clusters and Game Server Deployments.
+   * Agones fleet details for game server clusters and game server deployments.
    * @return value or {@code null} for none
    */
   public java.util.List<TargetFleetDetails> getFleetDetails() {
@@ -63,7 +63,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Agones fleet details for Game Server Clusters and Game Server Deployments.
+   * Agones fleet details for game server clusters and game server deployments.
    * @param fleetDetails fleetDetails or {@code null} for none
    */
   public TargetDetails setFleetDetails(java.util.List<TargetFleetDetails> fleetDetails) {
@@ -72,7 +72,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Game Server Cluster name. Uses the form:
+   * The game server cluster name. Uses the form:
    *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
    * @return value or {@code null} for none
@@ -82,7 +82,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Game Server Cluster name. Uses the form:
+   * The game server cluster name. Uses the form:
    *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
    * @param gameServerClusterName gameServerClusterName or {@code null} for none
@@ -93,7 +93,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Game Server Deployment name. Uses the form:
+   * The game server deployment name. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
    * @return value or {@code null} for none
@@ -103,7 +103,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Game Server Deployment name. Uses the form:
+   * The game server deployment name. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
    * @param gameServerDeploymentName gameServerDeploymentName or {@code null} for none

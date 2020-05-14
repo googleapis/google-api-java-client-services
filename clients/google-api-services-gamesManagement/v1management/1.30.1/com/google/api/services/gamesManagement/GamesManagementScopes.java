@@ -17,7 +17,7 @@
 package com.google.api.services.gamesManagement;
 
 /**
- * Available OAuth 2.0 scopes for use with the Google Play Game Services Management API.
+ * Available OAuth 2.0 scopes for use with the Google Play Game Management.
  *
  * @since 1.4
  */

@@ -17,7 +17,7 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * A Game Server Cluster resource.
+ * A game server cluster resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class GameServerCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Game Server Cluster connection information. This information is used to manage Game Server
-   * Clusters.
+   * The game server cluster connection information. This information is used to manage game server
+   * clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +59,14 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private java.lang.String etag;
 
   /**
-   * The labels associated with this Game Server Cluster. Each label is a key-value pair.
+   * The labels associated with this game server cluster. Each label is a key-value pair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The resource name of the Game Server Cluster. Uses the form:
+   * Required. The resource name of the game server cluster. Uses the form:
    *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
    * example,
@@ -86,8 +86,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
-   * Game Server Cluster connection information. This information is used to manage Game Server
-   * Clusters.
+   * The game server cluster connection information. This information is used to manage game server
+   * clusters.
    * @return value or {@code null} for none
    */
   public GameServerClusterConnectionInfo getConnectionInfo() {
@@ -95,8 +95,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Game Server Cluster connection information. This information is used to manage Game Server
-   * Clusters.
+   * The game server cluster connection information. This information is used to manage game server
+   * clusters.
    * @param connectionInfo connectionInfo or {@code null} for none
    */
   public GameServerCluster setConnectionInfo(GameServerClusterConnectionInfo connectionInfo) {
@@ -156,7 +156,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The labels associated with this Game Server Cluster. Each label is a key-value pair.
+   * The labels associated with this game server cluster. Each label is a key-value pair.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -164,7 +164,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The labels associated with this Game Server Cluster. Each label is a key-value pair.
+   * The labels associated with this game server cluster. Each label is a key-value pair.
    * @param labels labels or {@code null} for none
    */
   public GameServerCluster setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -173,7 +173,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the Game Server Cluster. Uses the form:
+   * Required. The resource name of the game server cluster. Uses the form:
    *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
    * example,
@@ -187,7 +187,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the Game Server Cluster. Uses the form:
+   * Required. The resource name of the game server cluster. Uses the form:
    *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
    * example,

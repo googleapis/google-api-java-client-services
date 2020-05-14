@@ -17,7 +17,7 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * The Game Server Cluster connection information.
+ * The game server cluster connection information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GameServerClusterConnectionInfo extends com.google.api.client
   private GkeClusterReference gkeClusterReference;
 
   /**
-   * Namespace designated on the Game Server Cluster where the Agones game server instances will be
+   * Namespace designated on the game server cluster where the Agones game server instances will be
    * created. Existence of the namespace will be validated during creation.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GameServerClusterConnectionInfo extends com.google.api.client
   }
 
   /**
-   * Namespace designated on the Game Server Cluster where the Agones game server instances will be
+   * Namespace designated on the game server cluster where the Agones game server instances will be
    * created. Existence of the namespace will be validated during creation.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GameServerClusterConnectionInfo extends com.google.api.client
   }
 
   /**
-   * Namespace designated on the Game Server Cluster where the Agones game server instances will be
+   * Namespace designated on the game server cluster where the Agones game server instances will be
    * created. Existence of the namespace will be validated during creation.
    * @param namespace namespace or {@code null} for none
    */

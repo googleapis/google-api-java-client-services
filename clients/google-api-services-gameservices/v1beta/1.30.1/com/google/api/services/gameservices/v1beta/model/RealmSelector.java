@@ -17,7 +17,7 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * The Realm selector, used to match Realm resources.
+ * The realm selector, used to match realm resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class RealmSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Realms to match.
+   * List of realms to match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> realms;
 
   /**
-   * List of Realms to match.
+   * List of realms to match.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRealms() {
@@ -45,7 +45,7 @@ public final class RealmSelector extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of Realms to match.
+   * List of realms to match.
    * @param realms realms or {@code null} for none
    */
   public RealmSelector setRealms(java.util.List<java.lang.String> realms) {

@@ -30,7 +30,7 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class SpecSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Game Server Config resource. Uses the form:
+   * The game server config resource. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_
    * id}`.
@@ -48,7 +48,7 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The Game Server Config resource. Uses the form:
+   * The game server config resource. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_
    * id}`.
@@ -59,7 +59,7 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Game Server Config resource. Uses the form:
+   * The game server config resource. Uses the form:
    *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_
    * id}`.

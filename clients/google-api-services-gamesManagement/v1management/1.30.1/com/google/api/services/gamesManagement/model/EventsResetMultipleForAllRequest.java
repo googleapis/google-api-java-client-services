@@ -17,11 +17,11 @@
 package com.google.api.services.gamesManagement.model;
 
 /**
- * This is a JSON template for multiple events reset all request.
+ * Multiple events reset all request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services Management API. For a
- * detailed explanation see:
+ * transmitted over HTTP when working with the Google Play Game Management. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,7 +39,7 @@ public final class EventsResetMultipleForAllRequest extends com.google.api.clien
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#eventsResetMultipleForAllRequest.
+   * `gamesManagement#eventsResetMultipleForAllRequest`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class EventsResetMultipleForAllRequest extends com.google.api.clien
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#eventsResetMultipleForAllRequest.
+   * `gamesManagement#eventsResetMultipleForAllRequest`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class EventsResetMultipleForAllRequest extends com.google.api.clien
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#eventsResetMultipleForAllRequest.
+   * `gamesManagement#eventsResetMultipleForAllRequest`.
    * @param kind kind or {@code null} for none
    */
   public EventsResetMultipleForAllRequest setKind(java.lang.String kind) {

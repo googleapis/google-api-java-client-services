@@ -17,11 +17,11 @@
 package com.google.api.services.gamesManagement.model;
 
 /**
- * This is a JSON template for an achievement reset response.
+ * An achievement reset response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services Management API. For a
- * detailed explanation see:
+ * transmitted over HTTP when working with the Google Play Game Management. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,9 +31,9 @@ package com.google.api.services.gamesManagement.model;
 public final class AchievementResetResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current state of the achievement. This is the same as the initial state of the achievement.
-   * Possible values are:   - "HIDDEN"- Achievement is hidden.  - "REVEALED" - Achievement is
-   * revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The current state of the achievement.  This is the same as the initial state of the
+   * achievement. Possible values are:  "`HIDDEN`"- Achievement is hidden. "`REVEALED`" -
+   * Achievement is revealed. "`UNLOCKED`" - Achievement is unlocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#achievementResetResponse.
+   * `gamesManagement#achievementResetResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +62,9 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
   private java.lang.Boolean updateOccurred;
 
   /**
-   * The current state of the achievement. This is the same as the initial state of the achievement.
-   * Possible values are:   - "HIDDEN"- Achievement is hidden.  - "REVEALED" - Achievement is
-   * revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The current state of the achievement.  This is the same as the initial state of the
+   * achievement. Possible values are:  "`HIDDEN`"- Achievement is hidden. "`REVEALED`" -
+   * Achievement is revealed. "`UNLOCKED`" - Achievement is unlocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentState() {
@@ -72,9 +72,9 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The current state of the achievement. This is the same as the initial state of the achievement.
-   * Possible values are:   - "HIDDEN"- Achievement is hidden.  - "REVEALED" - Achievement is
-   * revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The current state of the achievement.  This is the same as the initial state of the
+   * achievement. Possible values are:  "`HIDDEN`"- Achievement is hidden. "`REVEALED`" -
+   * Achievement is revealed. "`UNLOCKED`" - Achievement is unlocked.
    * @param currentState currentState or {@code null} for none
    */
   public AchievementResetResponse setCurrentState(java.lang.String currentState) {
@@ -101,7 +101,7 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#achievementResetResponse.
+   * `gamesManagement#achievementResetResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -110,7 +110,7 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * gamesManagement#achievementResetResponse.
+   * `gamesManagement#achievementResetResponse`.
    * @param kind kind or {@code null} for none
    */
   public AchievementResetResponse setKind(java.lang.String kind) {

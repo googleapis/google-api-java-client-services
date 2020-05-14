@@ -52,8 +52,8 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<Schedule> schedules;
 
   /**
-   * Labels used to identify the Game Server Clusters to which this Agones scaling config applies. A
-   * Game Server Cluster is subject to this Agones scaling config if its labels match any of the
+   * Labels used to identify the game server clusters to which this Agones scaling config applies. A
+   * game server cluster is subject to this Agones scaling config if its labels match any of the
    * selector entries.
    * The value may be {@code null}.
    */
@@ -120,8 +120,8 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Labels used to identify the Game Server Clusters to which this Agones scaling config applies. A
-   * Game Server Cluster is subject to this Agones scaling config if its labels match any of the
+   * Labels used to identify the game server clusters to which this Agones scaling config applies. A
+   * game server cluster is subject to this Agones scaling config if its labels match any of the
    * selector entries.
    * @return value or {@code null} for none
    */
@@ -130,8 +130,8 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Labels used to identify the Game Server Clusters to which this Agones scaling config applies. A
-   * Game Server Cluster is subject to this Agones scaling config if its labels match any of the
+   * Labels used to identify the game server clusters to which this Agones scaling config applies. A
+   * game server cluster is subject to this Agones scaling config if its labels match any of the
    * selector entries.
    * @param selectors selectors or {@code null} for none
    */

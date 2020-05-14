@@ -55,8 +55,14 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * convenience, the server also creates one view per table of the same name containing only the
    * current resource version.
    *
-   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Stackdriver
-   * (see [Viewing logs](/healthcare/docs/how- tos/stackdriver-logging)).
+   * The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The
+   * combination of the id and meta.versionId columns should ideally identify a single unique row.
+   * But in rare cases, duplicates may exist. At query time, users may use the SQL select statement
+   * to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the
+   * server created view mentioned above also filters out duplicates.
+   *
+   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging
+   * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +103,14 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * convenience, the server also creates one view per table of the same name containing only the
    * current resource version.
    *
-   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Stackdriver
-   * (see [Viewing logs](/healthcare/docs/how- tos/stackdriver-logging)).
+   * The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The
+   * combination of the id and meta.versionId columns should ideally identify a single unique row.
+   * But in rare cases, duplicates may exist. At query time, users may use the SQL select statement
+   * to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the
+   * server created view mentioned above also filters out duplicates.
+   *
+   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging
+   * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1FhirBigQueryDestination getBigqueryDestination() {
@@ -131,8 +143,14 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * convenience, the server also creates one view per table of the same name containing only the
    * current resource version.
    *
-   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Stackdriver
-   * (see [Viewing logs](/healthcare/docs/how- tos/stackdriver-logging)).
+   * The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The
+   * combination of the id and meta.versionId columns should ideally identify a single unique row.
+   * But in rare cases, duplicates may exist. At query time, users may use the SQL select statement
+   * to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the
+   * server created view mentioned above also filters out duplicates.
+   *
+   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging
+   * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public StreamConfig setBigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestination bigqueryDestination) {

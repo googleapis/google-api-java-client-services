@@ -52,7 +52,7 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   private java.lang.String filter;
 
   /**
-   * The [Cloud Pubsub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
+   * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
    * are published on. Supplied by the client. The notification is a `PubsubMessage` with the
    * following fields:
    *
@@ -61,12 +61,12 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * `PubsubMessage.PublishTime` is the time at which the message was published.
    *
    * Note that notifications are only sent if the topic is non-empty. [Topic
-   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
-   * healthcare@system.gserviceaccount.com must have publisher permissions on the given Pubsub
-   * topic. Not having adequate permissions causes the calls that send notifications to fail.
+   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
+   * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
+   * having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
-   * (see [Viewing logs](/healthcare/docs/how- tos/stackdriver-logging)).
+   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Cloud Logging
+   * (see [Viewing logs](/healthcare/docs/how- tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +120,7 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The [Cloud Pubsub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
+   * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
    * are published on. Supplied by the client. The notification is a `PubsubMessage` with the
    * following fields:
    *
@@ -129,12 +129,12 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * `PubsubMessage.PublishTime` is the time at which the message was published.
    *
    * Note that notifications are only sent if the topic is non-empty. [Topic
-   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
-   * healthcare@system.gserviceaccount.com must have publisher permissions on the given Pubsub
-   * topic. Not having adequate permissions causes the calls that send notifications to fail.
+   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
+   * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
+   * having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
-   * (see [Viewing logs](/healthcare/docs/how- tos/stackdriver-logging)).
+   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Cloud Logging
+   * (see [Viewing logs](/healthcare/docs/how- tos/logging)).
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -142,7 +142,7 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The [Cloud Pubsub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
+   * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
    * are published on. Supplied by the client. The notification is a `PubsubMessage` with the
    * following fields:
    *
@@ -151,12 +151,12 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * `PubsubMessage.PublishTime` is the time at which the message was published.
    *
    * Note that notifications are only sent if the topic is non-empty. [Topic
-   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
-   * healthcare@system.gserviceaccount.com must have publisher permissions on the given Pubsub
-   * topic. Not having adequate permissions causes the calls that send notifications to fail.
+   * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
+   * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
+   * having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Stackdriver
-   * (see [Viewing logs](/healthcare/docs/how- tos/stackdriver-logging)).
+   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Cloud Logging
+   * (see [Viewing logs](/healthcare/docs/how- tos/logging)).
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public Hl7V2NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

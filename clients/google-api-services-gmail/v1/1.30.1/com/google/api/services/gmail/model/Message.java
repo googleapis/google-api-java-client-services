@@ -44,8 +44,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox.
-   * For normal SMTP-received email, this represents the time the message was originally accepted by
+   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox. For
+   * normal SMTP-received email, this represents the time the message was originally accepted by
    * Google, which is more reliable than the Date header. However, for API-migrated mail, it can be
    * configured by client to be based on the Date header.
    * The value may be {@code null}.
@@ -54,8 +54,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.Long internalDate;
 
   /**
-   * List of IDs of labels applied to this message. @mutable gmail.users.messages.insert
-   * gmail.users.messages.modify
+   * List of IDs of labels applied to this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +69,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
-   * messages.get and drafts.get responses when the format=RAW parameter is supplied. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * messages.get and drafts.get responses when the format=RAW parameter is supplied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,11 +91,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the thread the message belongs to. To add a message or draft to a thread, the
-   * following criteria must be met: The requested threadId must be specified on the Message or
-   * Draft.Message you supply with your request. The References and In-Reply-To headers must be set
-   * in compliance with the RFC 2822 standard. The Subject headers must match. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * following criteria must be met: - The requested threadId must be specified on the Message or
+   * Draft.Message you supply with your request.  - The References and In-Reply-To headers must be
+   * set in compliance with the RFC 2822 standard.  - The Subject headers must match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +134,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox.
-   * For normal SMTP-received email, this represents the time the message was originally accepted by
+   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox. For
+   * normal SMTP-received email, this represents the time the message was originally accepted by
    * Google, which is more reliable than the Date header. However, for API-migrated mail, it can be
    * configured by client to be based on the Date header.
    * @return value or {@code null} for none
@@ -150,8 +145,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox.
-   * For normal SMTP-received email, this represents the time the message was originally accepted by
+   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox. For
+   * normal SMTP-received email, this represents the time the message was originally accepted by
    * Google, which is more reliable than the Date header. However, for API-migrated mail, it can be
    * configured by client to be based on the Date header.
    * @param internalDate internalDate or {@code null} for none
@@ -162,8 +157,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of IDs of labels applied to this message. @mutable gmail.users.messages.insert
-   * gmail.users.messages.modify
+   * List of IDs of labels applied to this message.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLabelIds() {
@@ -171,8 +165,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of IDs of labels applied to this message. @mutable gmail.users.messages.insert
-   * gmail.users.messages.modify
+   * List of IDs of labels applied to this message.
    * @param labelIds labelIds or {@code null} for none
    */
   public Message setLabelIds(java.util.List<java.lang.String> labelIds) {
@@ -199,9 +192,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
-   * messages.get and drafts.get responses when the format=RAW parameter is supplied. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * messages.get and drafts.get responses when the format=RAW parameter is supplied.
    * @see #decodeRaw()
    * @return value or {@code null} for none
    */
@@ -211,9 +202,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
-   * messages.get and drafts.get responses when the format=RAW parameter is supplied. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * messages.get and drafts.get responses when the format=RAW parameter is supplied.
    * @see #getRaw()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -225,9 +214,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
-   * messages.get and drafts.get responses when the format=RAW parameter is supplied. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * messages.get and drafts.get responses when the format=RAW parameter is supplied.
    * @see #encodeRaw()
    * @param raw raw or {@code null} for none
    */
@@ -238,9 +225,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
-   * messages.get and drafts.get responses when the format=RAW parameter is supplied. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * messages.get and drafts.get responses when the format=RAW parameter is supplied.
    * @see #setRaw()
    *
    * <p>
@@ -290,11 +275,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the thread the message belongs to. To add a message or draft to a thread, the
-   * following criteria must be met: The requested threadId must be specified on the Message or
-   * Draft.Message you supply with your request. The References and In-Reply-To headers must be set
-   * in compliance with the RFC 2822 standard. The Subject headers must match. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * following criteria must be met: - The requested threadId must be specified on the Message or
+   * Draft.Message you supply with your request.  - The References and In-Reply-To headers must be
+   * set in compliance with the RFC 2822 standard.  - The Subject headers must match.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreadId() {
@@ -303,11 +286,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the thread the message belongs to. To add a message or draft to a thread, the
-   * following criteria must be met: The requested threadId must be specified on the Message or
-   * Draft.Message you supply with your request. The References and In-Reply-To headers must be set
-   * in compliance with the RFC 2822 standard. The Subject headers must match. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * following criteria must be met: - The requested threadId must be specified on the Message or
+   * Draft.Message you supply with your request.  - The References and In-Reply-To headers must be
+   * set in compliance with the RFC 2822 standard.  - The Subject headers must match.
    * @param threadId threadId or {@code null} for none
    */
   public Message setThreadId(java.lang.String threadId) {

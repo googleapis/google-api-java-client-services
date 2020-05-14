@@ -65,7 +65,7 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String issuerCn;
 
   /**
-   * PEM formatted X509 concatenated certificate string (standard base64 encoding).  Format used for
+   * PEM formatted X509 concatenated certificate string (standard base64 encoding). Format used for
    * returning key, which includes public key as well as certificate chain (not private key).
    * The value may be {@code null}.
    */
@@ -73,9 +73,9 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String pem;
 
   /**
-   * PKCS#12 format containing a single private/public key pair and certificate chain.  This format
+   * PKCS#12 format containing a single private/public key pair and certificate chain. This format
    * is only accepted from client for creating a new SmimeInfo and is never returned, because the
-   * private key is not intended to be exported.  PKCS#12 may be encrypted, in which case
+   * private key is not intended to be exported. PKCS#12 may be encrypted, in which case
    * encryptedKeyPassword should be set appropriately.
    * The value may be {@code null}.
    */
@@ -168,7 +168,7 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PEM formatted X509 concatenated certificate string (standard base64 encoding).  Format used for
+   * PEM formatted X509 concatenated certificate string (standard base64 encoding). Format used for
    * returning key, which includes public key as well as certificate chain (not private key).
    * @return value or {@code null} for none
    */
@@ -177,7 +177,7 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PEM formatted X509 concatenated certificate string (standard base64 encoding).  Format used for
+   * PEM formatted X509 concatenated certificate string (standard base64 encoding). Format used for
    * returning key, which includes public key as well as certificate chain (not private key).
    * @param pem pem or {@code null} for none
    */
@@ -187,9 +187,9 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PKCS#12 format containing a single private/public key pair and certificate chain.  This format
+   * PKCS#12 format containing a single private/public key pair and certificate chain. This format
    * is only accepted from client for creating a new SmimeInfo and is never returned, because the
-   * private key is not intended to be exported.  PKCS#12 may be encrypted, in which case
+   * private key is not intended to be exported. PKCS#12 may be encrypted, in which case
    * encryptedKeyPassword should be set appropriately.
    * @see #decodePkcs12()
    * @return value or {@code null} for none
@@ -199,9 +199,9 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PKCS#12 format containing a single private/public key pair and certificate chain.  This format
+   * PKCS#12 format containing a single private/public key pair and certificate chain. This format
    * is only accepted from client for creating a new SmimeInfo and is never returned, because the
-   * private key is not intended to be exported.  PKCS#12 may be encrypted, in which case
+   * private key is not intended to be exported. PKCS#12 may be encrypted, in which case
    * encryptedKeyPassword should be set appropriately.
    * @see #getPkcs12()
    * @return Base64 decoded value or {@code null} for none
@@ -213,9 +213,9 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PKCS#12 format containing a single private/public key pair and certificate chain.  This format
+   * PKCS#12 format containing a single private/public key pair and certificate chain. This format
    * is only accepted from client for creating a new SmimeInfo and is never returned, because the
-   * private key is not intended to be exported.  PKCS#12 may be encrypted, in which case
+   * private key is not intended to be exported. PKCS#12 may be encrypted, in which case
    * encryptedKeyPassword should be set appropriately.
    * @see #encodePkcs12()
    * @param pkcs12 pkcs12 or {@code null} for none
@@ -226,9 +226,9 @@ public final class SmimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PKCS#12 format containing a single private/public key pair and certificate chain.  This format
+   * PKCS#12 format containing a single private/public key pair and certificate chain. This format
    * is only accepted from client for creating a new SmimeInfo and is never returned, because the
-   * private key is not intended to be exported.  PKCS#12 may be encrypted, in which case
+   * private key is not intended to be exported. PKCS#12 may be encrypted, in which case
    * encryptedKeyPassword should be set appropriately.
    * @see #setPkcs12()
    *

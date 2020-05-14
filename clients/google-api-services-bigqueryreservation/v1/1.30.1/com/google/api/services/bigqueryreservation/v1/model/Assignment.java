@@ -32,8 +32,8 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource which will use the reservation. E.g. projects/myproject, folders/123,
-   * organizations/456.
+   * The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or
+   * `organizations/456`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * projects/myproject/locations/US/reservations/team1-prod/assignments/123.
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * The resource which will use the reservation. E.g. projects/myproject, folders/123,
-   * organizations/456.
+   * The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or
+   * `organizations/456`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssignee() {
@@ -71,8 +71,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource which will use the reservation. E.g. projects/myproject, folders/123,
-   * organizations/456.
+   * The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or
+   * `organizations/456`.
    * @param assignee assignee or {@code null} for none
    */
   public Assignment setAssignee(java.lang.String assignee) {
@@ -99,7 +99,7 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * projects/myproject/locations/US/reservations/team1-prod/assignments/123.
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +108,7 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * projects/myproject/locations/US/reservations/team1-prod/assignments/123.
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
    * @param name name or {@code null} for none
    */
   public Assignment setName(java.lang.String name) {

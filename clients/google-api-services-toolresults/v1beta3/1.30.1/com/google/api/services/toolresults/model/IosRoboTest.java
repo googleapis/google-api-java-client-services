@@ -17,8 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Test Loops are tests that can be launched by the app itself, determining when to run by listening
- * for an intent.
+ * A Robo test for an iOS application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -29,16 +28,16 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AndroidTestLoop extends com.google.api.client.json.GenericJson {
+public final class IosRoboTest extends com.google.api.client.json.GenericJson {
 
   @Override
-  public AndroidTestLoop set(String fieldName, Object value) {
-    return (AndroidTestLoop) super.set(fieldName, value);
+  public IosRoboTest set(String fieldName, Object value) {
+    return (IosRoboTest) super.set(fieldName, value);
   }
 
   @Override
-  public AndroidTestLoop clone() {
-    return (AndroidTestLoop) super.clone();
+  public IosRoboTest clone() {
+    return (IosRoboTest) super.clone();
   }
 
 }

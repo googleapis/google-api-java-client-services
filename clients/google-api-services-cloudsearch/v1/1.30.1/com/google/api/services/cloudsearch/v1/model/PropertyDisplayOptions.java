@@ -36,7 +36,7 @@ public final class PropertyDisplayOptions extends com.google.api.client.json.Gen
    * property value is '1', the value by itself may not be useful context for the user. If the
    * display name given was 'priority', then the user sees 'priority : 1' in the search results
    * which provides clear context to search users. This is OPTIONAL; if not given, only the property
-   * values are displayed. The maximum length is 32 characters.
+   * values are displayed. The maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class PropertyDisplayOptions extends com.google.api.client.json.Gen
    * property value is '1', the value by itself may not be useful context for the user. If the
    * display name given was 'priority', then the user sees 'priority : 1' in the search results
    * which provides clear context to search users. This is OPTIONAL; if not given, only the property
-   * values are displayed. The maximum length is 32 characters.
+   * values are displayed. The maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayLabel() {
@@ -63,7 +63,7 @@ public final class PropertyDisplayOptions extends com.google.api.client.json.Gen
    * property value is '1', the value by itself may not be useful context for the user. If the
    * display name given was 'priority', then the user sees 'priority : 1' in the search results
    * which provides clear context to search users. This is OPTIONAL; if not given, only the property
-   * values are displayed. The maximum length is 32 characters.
+   * values are displayed. The maximum length is 64 characters.
    * @param displayLabel displayLabel or {@code null} for none
    */
   public PropertyDisplayOptions setDisplayLabel(java.lang.String displayLabel) {

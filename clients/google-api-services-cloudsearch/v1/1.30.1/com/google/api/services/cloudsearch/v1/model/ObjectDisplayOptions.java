@@ -49,7 +49,7 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
   /**
    * The user friendly label to display in the search result to indicate the type of the item. This
    * is OPTIONAL; if not provided, an object label isn't displayed on the context line of the search
-   * results. The maximum length is 32 characters.
+   * results. The maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
   /**
    * The user friendly label to display in the search result to indicate the type of the item. This
    * is OPTIONAL; if not provided, an object label isn't displayed on the context line of the search
-   * results. The maximum length is 32 characters.
+   * results. The maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectDisplayLabel() {
@@ -93,7 +93,7 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
   /**
    * The user friendly label to display in the search result to indicate the type of the item. This
    * is OPTIONAL; if not provided, an object label isn't displayed on the context line of the search
-   * results. The maximum length is 32 characters.
+   * results. The maximum length is 64 characters.
    * @param objectDisplayLabel objectDisplayLabel or {@code null} for none
    */
   public ObjectDisplayOptions setObjectDisplayLabel(java.lang.String objectDisplayLabel) {

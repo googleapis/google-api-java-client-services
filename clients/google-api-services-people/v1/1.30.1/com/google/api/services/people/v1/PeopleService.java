@@ -2547,13 +2547,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. The number of connections to include in the response. Valid values are between
-         * 1 and 2000, inclusive. Defaults to 100 if not set or set to 0.
+         * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The number of connections to include in the response. Valid values are between 1 and
-       2000, inclusive. Defaults to 100 if not set or set to 0.
+       1000, inclusive. Defaults to 100 if not set or set to 0.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -2561,7 +2561,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. The number of connections to include in the response. Valid values are between
-         * 1 and 2000, inclusive. Defaults to 100 if not set or set to 0.
+         * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

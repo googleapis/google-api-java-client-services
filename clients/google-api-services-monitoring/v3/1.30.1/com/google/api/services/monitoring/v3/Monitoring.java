@@ -5930,8 +5930,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Queries time series using the time series query language. This method does not require a
-       * Workspace.
+       * Queries time series using Monitoring Query Language. This method does not require a Workspace.
        *
        * Create a request for the method "timeSeries.query".
        *
@@ -5957,8 +5956,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Queries time series using the time series query language. This method does not require a
-         * Workspace.
+         * Queries time series using Monitoring Query Language. This method does not require a Workspace.
          *
          * Create a request for the method "timeSeries.query".
          *

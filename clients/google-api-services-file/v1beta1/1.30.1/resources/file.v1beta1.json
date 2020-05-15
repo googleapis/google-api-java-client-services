@@ -1,168 +1,14 @@
 {
-  "basePath": "",
-  "id": "file:v1beta1",
+  "revision": "20200513",
   "documentationLink": "https://cloud.google.com/filestore/",
-  "revision": "20200413",
+  "id": "file:v1beta1",
   "discoveryVersion": "v1",
   "version_module": true,
   "schemas": {
-    "Instance": {
-      "description": "A Cloud Filestore instance.",
-      "type": "object",
-      "properties": {
-        "tier": {
-          "enumDescriptions": [
-            "Not set.",
-            "STANDARD tier. BASIC_HDD is the preferred term for this tier.",
-            "PREMIUM tier. BASIC_SSD is the preferred term for this tier.",
-            "BASIC instances offer a maximum capacity of 63.9 TB.\nBASIC_HDD is an alias for STANDARD Tier, offering economical\nperformance backed by HDD.",
-            "BASIC instances offer a maximum capacity of 63.9 TB.\nBASIC_SSD is an alias for PREMIUM Tier, and offers improved\nperformance backed by SSD.",
-            "HIGH_SCALE instances offer expanded capacity and performance scaling\ncapabilities."
-          ],
-          "enum": [
-            "TIER_UNSPECIFIED",
-            "STANDARD",
-            "PREMIUM",
-            "BASIC_HDD",
-            "BASIC_SSD",
-            "HIGH_SCALE_SSD"
-          ],
-          "description": "The service tier of the instance.",
-          "type": "string"
-        },
-        "description": {
-          "type": "string",
-          "description": "The description of the instance (2048 characters or less)."
-        },
-        "etag": {
-          "type": "string",
-          "description": "Server-specified ETag for the instance resource to prevent simultaneous\nupdates from overwriting each other."
-        },
-        "createTime": {
-          "description": "Output only. The time when the instance was created.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "labels": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Resource labels to represent user provided metadata.",
-          "type": "object"
-        },
-        "state": {
-          "description": "Output only. The instance state.",
-          "type": "string",
-          "enumDescriptions": [
-            "State not set.",
-            "The instance is being created.",
-            "The instance is available for use.",
-            "Work is being done on the instance. You can get further details from the\n`statusMessage` field of the `Instance` resource.",
-            "The instance is shutting down.",
-            "The instance is experiencing an issue and might be unusable. You can get\nfurther details from the `statusMessage` field of the `Instance`\nresource.",
-            "The instance is restoring a snapshot or backup to an existing file share\nand may be unusable during this time."
-          ],
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "CREATING",
-            "READY",
-            "REPAIRING",
-            "DELETING",
-            "ERROR",
-            "RESTORING"
-          ]
-        },
-        "name": {
-          "description": "Output only. The resource name of the instance, in the format\nprojects/{project_id}/locations/{location_id}/instances/{instance_id}.",
-          "type": "string"
-        },
-        "statusMessage": {
-          "description": "Output only. Additional information about the instance state, if available.",
-          "type": "string"
-        },
-        "networks": {
-          "description": "VPC networks to which the instance is connected.\nFor this version, only a single network is supported.",
-          "type": "array",
-          "items": {
-            "$ref": "NetworkConfig"
-          }
-        },
-        "fileShares": {
-          "description": "File system shares on the instance.\nFor this version, only a single file share is supported.",
-          "type": "array",
-          "items": {
-            "$ref": "FileShareConfig"
-          }
-        }
-      },
-      "id": "Instance"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule": {
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule",
-      "description": "Maintenance schedule which is exposed to customer and potentially end user,\nindicating published upcoming future maintenance schedule",
-      "type": "object",
-      "properties": {
-        "rolloutManagementPolicy": {
-          "description": "The rollout management policy this maintenance schedule is associated\nwith. When doing reschedule update request, the reschedule should be\nagainst this given policy.",
-          "type": "string"
-        },
-        "canReschedule": {
-          "description": "Can this scheduled update be rescheduled?\nBy default, it's true and API needs to do explicitly check whether it's\nset, if it's set as false explicitly, it's false",
-          "type": "boolean"
-        },
-        "endTime": {
-          "description": "The scheduled end time for the maintenance.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "startTime": {
-          "description": "The scheduled start time for the maintenance.",
-          "format": "google-datetime",
-          "type": "string"
-        }
-      }
-    },
-    "Status": {
-      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "format": "int32"
-        },
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client.",
-          "type": "string"
-        },
-        "details": {
-          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
-          "type": "array",
-          "items": {
-            "additionalProperties": {
-              "description": "Properties of the object. Contains field @type with type URL.",
-              "type": "any"
-            },
-            "type": "object"
-          }
-        }
-      },
-      "id": "Status"
-    },
-    "Empty": {
-      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`.",
-      "type": "object",
-      "properties": {},
-      "id": "Empty"
-    },
     "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata": {
       "description": "SloMetadata contains resources required for proper SLO classification of the\ninstance.",
       "type": "object",
       "properties": {
-        "eligibility": {
-          "description": "Optional. User-defined instance eligibility.",
-          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility"
-        },
         "nodes": {
           "description": "Optional. List of nodes.\nSome producers need to use per-node metadata to calculate SLO.\nThis field allows such producers to publish per-node SLO meta data,\nwhich will be consumed by SSA Eligibility Exporter and published in the\nform of per node metric to Monarch.",
           "type": "array",
@@ -180,115 +26,268 @@
         "tier": {
           "description": "Name of the SLO tier the Instance belongs to. This name will be expected to\nmatch the tiers specified in the service SLO configuration.\n\nField is mandatory and must not be empty.",
           "type": "string"
+        },
+        "eligibility": {
+          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility",
+          "description": "Optional. User-defined instance eligibility."
         }
       },
       "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata"
     },
-    "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata": {
-      "description": "Node information for custom per-node SLO implementations.\nSSA does not support per-node SLO, but producers can populate per-node\ninformation in SloMetadata for custom precomputations.\nSSA Eligibility Exporter will emit per-node metric based on this information.",
+    "LogEntry": {
+      "id": "LogEntry",
+      "description": "An individual log entry.",
       "type": "object",
       "properties": {
-        "nodeId": {
-          "description": "The id of the node.\nThis should be equal to SaasInstanceNode.node_id.",
+        "severity": {
+          "enum": [
+            "DEFAULT",
+            "DEBUG",
+            "INFO",
+            "NOTICE",
+            "WARNING",
+            "ERROR",
+            "CRITICAL",
+            "ALERT",
+            "EMERGENCY"
+          ],
+          "description": "The severity of the log entry. The default value is\n`LogSeverity.DEFAULT`.",
+          "type": "string",
+          "enumDescriptions": [
+            "(0) The log entry has no assigned severity level.",
+            "(100) Debug or trace information.",
+            "(200) Routine information, such as ongoing status or performance.",
+            "(300) Normal but significant events, such as start up, shut down, or\na configuration change.",
+            "(400) Warning events might cause problems.",
+            "(500) Error events are likely to cause problems.",
+            "(600) Critical events cause more severe problems or outages.",
+            "(700) A person must take an action immediately.",
+            "(800) One or more systems are unusable."
+          ]
+        },
+        "sourceLocation": {
+          "$ref": "LogEntrySourceLocation",
+          "description": "Optional. Source code location information associated with the log entry,\nif any."
+        },
+        "structPayload": {
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object."
+          },
+          "description": "The log entry payload, represented as a structure that\nis expressed as a JSON object.",
+          "type": "object"
+        },
+        "timestamp": {
+          "description": "The time the event described by the log entry occurred. If\nomitted, defaults to operation start time.",
+          "format": "google-datetime",
           "type": "string"
         },
-        "exclusions": {
-          "description": "By default node is eligible if instance is eligible.\nBut individual node might be excluded from SLO by adding entry here.\nFor semantic see SloMetadata.exclusions.\nIf both instance and node level exclusions are present for time period,\nthe node level's reason will be reported by Eligibility Exporter.",
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
-          }
+        "httpRequest": {
+          "$ref": "HttpRequest",
+          "description": "Optional. Information about the HTTP request associated with this\nlog entry, if applicable."
         },
-        "location": {
-          "description": "The location of the node, if different from instance location.",
-          "type": "string"
-        }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
-    },
-    "Location": {
-      "description": "A resource that represents Google Cloud Platform location.",
-      "type": "object",
-      "properties": {
-        "locationId": {
-          "description": "The canonical id for this location. For example: `\"us-east1\"`.",
+        "name": {
+          "description": "Required. The log to which this log entry belongs. Examples: `\"syslog\"`,\n`\"book_log\"`.",
           "type": "string"
         },
-        "displayName": {
-          "description": "The friendly name for this location, typically a nearby city name.\nFor example, \"Tokyo\".",
+        "insertId": {
+          "description": "A unique ID for the log entry used for deduplication. If omitted,\nthe implementation will generate one based on operation_id.",
           "type": "string"
         },
-        "metadata": {
+        "operation": {
+          "description": "Optional. Information about an operation associated with the log entry, if\napplicable.",
+          "$ref": "LogEntryOperation"
+        },
+        "textPayload": {
+          "description": "The log entry payload, represented as a Unicode string (UTF-8).",
+          "type": "string"
+        },
+        "protoPayload": {
+          "description": "The log entry payload, represented as a protocol buffer that is\nexpressed as a JSON object. The only accepted type currently is\nAuditLog.",
           "type": "object",
           "additionalProperties": {
             "description": "Properties of the object. Contains field @type with type URL.",
             "type": "any"
-          },
-          "description": "Service-specific metadata. For example the available capacity at the given\nlocation."
+          }
         },
         "labels": {
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Cross-service attributes for the location. For example\n\n    {\"cloud.googleapis.com/region\": \"us-east1\"}",
+          "description": "A set of user-defined (key, value) data that provides additional\ninformation about the log entry.",
           "type": "object"
         },
-        "name": {
-          "description": "Resource name for the location, which may vary between implementations.\nFor example: `\"projects/example-project/locations/us-east1\"`",
-          "type": "string"
-        }
-      },
-      "id": "Location"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion": {
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion",
-      "description": "SloExclusion represents an exclusion in SLI calculation applies to all SLOs.",
-      "type": "object",
-      "properties": {
-        "sliName": {
-          "description": "Name of an SLI that this exclusion applies to. Can be left empty,\nsignaling that the instance should be excluded from all SLIs defined\nin the service SLO configuration.",
-          "type": "string"
-        },
-        "duration": {
-          "description": "Exclusion duration. No restrictions on the possible values.\n\nWhen an ongoing operation is taking longer than initially expected,\nan existing entry in the exclusion list can be updated by extending the\nduration. This is supported by the subsystem exporting eligibility data\nas long as such extension is committed at least 10 minutes before the\noriginal exclusion expiration - otherwise it is possible that there will\nbe \"gaps\" in the exclusion application in the exported timeseries.",
-          "format": "google-duration",
-          "type": "string"
-        },
-        "startTime": {
-          "description": "Start time of the exclusion. No alignment (e.g. to a full minute) needed.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "reason": {
-          "description": "Human-readable reason for the exclusion.\nThis should be a static string (e.g. \"Disruptive update in progress\")\nand should not contain dynamically generated data (e.g. instance name).\nCan be left empty.",
+        "trace": {
+          "description": "Optional. Resource name of the trace associated with the log entry, if any.\nIf this field contains a relative resource name, you can assume the name is\nrelative to `//tracing.googleapis.com`. Example:\n`projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`",
           "type": "string"
         }
       }
     },
-    "FileShareConfig": {
-      "description": "File share configuration for the instance.",
+    "MetricValue": {
+      "description": "Represents a single metric value.",
       "type": "object",
       "properties": {
-        "name": {
-          "description": "The name of the file share (must be 16 characters or less).",
-          "type": "string"
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "The labels describing the metric value.\nSee comments on google.api.servicecontrol.v1.Operation.labels for\nthe overriding relationship.\nNote that this map must not contain monitored resource labels.",
+          "type": "object"
         },
-        "capacityGb": {
-          "description": "File share capacity in gigabytes (GB).\nCloud Filestore defines 1 GB as 1024^3 bytes.",
+        "stringValue": {
+          "type": "string",
+          "description": "A text string value."
+        },
+        "doubleValue": {
+          "description": "A double precision floating point value.",
+          "format": "double",
+          "type": "number"
+        },
+        "int64Value": {
+          "description": "A signed 64-bit integer value.",
           "format": "int64",
           "type": "string"
+        },
+        "distributionValue": {
+          "$ref": "Distribution",
+          "description": "A distribution value."
+        },
+        "boolValue": {
+          "description": "A boolean value.",
+          "type": "boolean"
+        },
+        "endTime": {
+          "description": "The end of the time period over which this metric value's measurement\napplies.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "startTime": {
+          "description": "The start of the time period over which this metric value's measurement\napplies. The time period has different semantics for different metric\ntypes (cumulative, delta, and gauge). See the metric definition\ndocumentation in the service configuration for details.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "moneyValue": {
+          "$ref": "Money",
+          "description": "A money value."
         }
       },
-      "id": "FileShareConfig"
+      "id": "MetricValue"
+    },
+    "Attributes": {
+      "description": "A set of attributes, each in the format `[KEY]:[VALUE]`.",
+      "type": "object",
+      "properties": {
+        "droppedAttributesCount": {
+          "description": "The number of attributes that were discarded. Attributes can be discarded\nbecause their keys are too long or because there are too many attributes.\nIf this value is 0 then all attributes are valid.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "attributeMap": {
+          "additionalProperties": {
+            "$ref": "AttributeValue"
+          },
+          "description": "The set of attributes. Each attribute's key can be up to 128 bytes\nlong. The value can be a string up to 256 bytes, a signed 64-bit integer,\nor the Boolean values `true` and `false`. For example:\n\n    \"/instance_id\": \"my-instance\"\n    \"/http/user_agent\": \"\"\n    \"/http/request_bytes\": 300\n    \"abc.com/myattribute\": true",
+          "type": "object"
+        }
+      },
+      "id": "Attributes"
+    },
+    "GoogleApiServicecontrolV1Operation": {
+      "type": "object",
+      "properties": {
+        "traceSpans": {
+          "description": "Unimplemented. A list of Cloud Trace spans. The span names shall contain\nthe id of the destination project which can be either the produce or the\nconsumer project.",
+          "type": "array",
+          "items": {
+            "$ref": "TraceSpan"
+          }
+        },
+        "quotaProperties": {
+          "$ref": "QuotaProperties",
+          "description": "Represents the properties needed for quota check. Applicable only if this\noperation is for a quota check request. If this is not specified, no quota\ncheck will be performed."
+        },
+        "consumerId": {
+          "description": "Identity of the consumer who is using the service.\nThis field should be filled in for the operations initiated by a\nconsumer, but not for service-initiated operations that are\nnot related to a specific consumer.\n\n- This can be in one of the following formats:\n    - project:PROJECT_ID,\n    - project`_`number:PROJECT_NUMBER,\n    - projects/PROJECT_ID or PROJECT_NUMBER,\n    - folders/FOLDER_NUMBER,\n    - organizations/ORGANIZATION_NUMBER,\n    - api`_`key:API_KEY.",
+          "type": "string"
+        },
+        "operationId": {
+          "description": "Identity of the operation. This must be unique within the scope of the\nservice that generated the operation. If the service calls\nCheck() and Report() on the same operation, the two calls should carry\nthe same id.\n\nUUID version 4 is recommended, though not required.\nIn scenarios where an operation is computed from existing information\nand an idempotent id is desirable for deduplication purpose, UUID version 5\nis recommended. See RFC 4122 for details.",
+          "type": "string"
+        },
+        "operationName": {
+          "description": "Fully qualified name of the operation. Reserved for future use.",
+          "type": "string"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "End time of the operation.\nRequired when the operation is used in ServiceController.Report,\nbut optional when the operation is used in ServiceController.Check.",
+          "format": "google-datetime"
+        },
+        "startTime": {
+          "description": "Required. Start time of the operation.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "importance": {
+          "enum": [
+            "LOW",
+            "HIGH",
+            "DEBUG"
+          ],
+          "description": "DO NOT USE. This is an experimental field.",
+          "type": "string",
+          "enumDescriptions": [
+            "The API implementation may cache and aggregate the data.\nThe data may be lost when rare and unexpected system failures occur.",
+            "The API implementation doesn't cache and aggregate the data.\nIf the method returns successfully, it's guaranteed that the data has\nbeen persisted in durable storage.",
+            "In addition to the behavior described in HIGH, DEBUG enables\nadditional validation logic that is only useful during the onboarding\nprocess. This is only available to Google internal services and\nthe service must be whitelisted by chemist-dev@google.com in order\nto use this level."
+          ]
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Labels describing the operation. Only the following labels are allowed:\n\n- Labels describing monitored resources as defined in\n  the service configuration.\n- Default labels of metric values. When specified, labels defined in the\n  metric value override these default.\n- The following labels defined by Google Cloud Platform:\n    - `cloud.googleapis.com/location` describing the location where the\n       operation happened,\n    - `servicecontrol.googleapis.com/user_agent` describing the user agent\n       of the API request,\n    - `servicecontrol.googleapis.com/service_agent` describing the service\n       used to handle the API request (e.g. ESP),\n    - `servicecontrol.googleapis.com/platform` describing the platform\n       where the API is served, such as App Engine, Compute Engine, or\n       Kubernetes Engine.",
+          "type": "object"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "ResourceInfo"
+          },
+          "description": "The resources that are involved in the operation.\nThe maximum supported number of entries in this field is 100."
+        },
+        "logEntries": {
+          "description": "Represents information to be logged.",
+          "type": "array",
+          "items": {
+            "$ref": "LogEntry"
+          }
+        },
+        "userLabels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "User defined labels for the resource that this operation is associated\nwith. Only a combination of 1000 user labels per consumer project are\nallowed.",
+          "type": "object"
+        },
+        "metricValueSets": {
+          "description": "Represents information about this operation. Each MetricValueSet\ncorresponds to a metric defined in the service configuration.\nThe data type used in the MetricValueSet must agree with\nthe data type specified in the metric definition.\n\nWithin a single operation, it is not allowed to have more than one\nMetricValue instances that have the same metric names and identical\nlabel value combinations. If a request has such duplicated MetricValue\ninstances, the entire request is rejected with\nan invalid argument error.",
+          "type": "array",
+          "items": {
+            "$ref": "MetricValueSet"
+          }
+        }
+      },
+      "id": "GoogleApiServicecontrolV1Operation",
+      "description": "Represents information regarding an operation."
     },
     "ListOperationsResponse": {
-      "id": "ListOperationsResponse",
       "description": "The response message for Operations.ListOperations.",
       "type": "object",
       "properties": {
         "nextPageToken": {
-          "type": "string",
-          "description": "The standard List next-page token."
+          "description": "The standard List next-page token.",
+          "type": "string"
         },
         "operations": {
           "description": "A list of operations that matches the specified filter in the request.",
@@ -297,64 +296,42 @@
             "$ref": "Operation"
           }
         }
-      }
+      },
+      "id": "ListOperationsResponse"
     },
     "GoogleCloudSaasacceleratorManagementProvidersV1Instance": {
       "type": "object",
       "properties": {
-        "softwareVersions": {
-          "description": "Software versions that are used to deploy this instance. This can be\nmutated by rollout services.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "createTime": {
-          "type": "string",
-          "description": "Output only. Timestamp when the resource was created.",
-          "format": "google-datetime"
-        },
-        "labels": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Optional. Resource labels to represent user provided metadata. Each label\nis a key-value pair, where both the key and the value are arbitrary strings\nprovided by the user.",
-          "type": "object"
+        "consumerDefinedName": {
+          "description": "consumer_defined_name is the name that is set by the consumer. On the other\nhand Name field represents system-assigned id of an instance so consumers\nare not necessarily aware of it.\nconsumer_defined_name is used for notification/UI purposes for consumer to\nrecognize their instances.",
+          "type": "string"
         },
         "updateTime": {
           "description": "Output only. Timestamp when the resource was last modified.",
           "format": "google-datetime",
           "type": "string"
         },
-        "consumerDefinedName": {
-          "description": "consumer_defined_name is the name that is set by the consumer. On the other\nhand Name field represents system-assigned id of an instance so consumers\nare not necessarily aware of it.\nconsumer_defined_name is used for notification/UI purposes for consumer to\nrecognize their instances.",
+        "tenantProjectId": {
+          "description": "Output only. ID of the associated GCP tenant project.\nSee go/get-instance-metadata.",
           "type": "string"
         },
-        "tenantProjectId": {
-          "type": "string",
-          "description": "Output only. ID of the associated GCP tenant project.\nSee go/get-instance-metadata."
-        },
         "producerMetadata": {
-          "description": "Output only. Custom string attributes used primarily to expose\nproducer-specific information in monitoring dashboards.\nSee go/get-instance-metadata.",
-          "type": "object",
           "additionalProperties": {
             "type": "string"
-          }
+          },
+          "description": "Output only. Custom string attributes used primarily to expose\nproducer-specific information in monitoring dashboards.\nSee go/get-instance-metadata.",
+          "type": "object"
         },
         "maintenanceSchedules": {
-          "description": "The MaintenanceSchedule contains the scheduling information of published\nmaintenance schedule.",
-          "type": "object",
           "additionalProperties": {
             "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule"
-          }
+          },
+          "description": "The MaintenanceSchedule contains the scheduling information of published\nmaintenance schedule.",
+          "type": "object"
         },
         "sloMetadata": {
           "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
           "description": "Output only. SLO metadata for instance classification in the\nStandardized dataplane SLO platform.\nSee go/cloud-ssa-standard-slo for feature description."
-        },
-        "slmInstanceTemplate": {
-          "description": "Link to the SLM instance template. Only populated when updating SLM\ninstances via SSA's Actuation service adaptor.\nService producers with custom control plane (e.g. Cloud SQL) doesn't\nneed to populate this field. Instead they should use software_versions.",
-          "type": "string"
         },
         "state": {
           "description": "Output only. Current lifecycle state of the resource (e.g. if it's being\ncreated or ready to use).",
@@ -378,6 +355,10 @@
             "ERROR"
           ]
         },
+        "slmInstanceTemplate": {
+          "description": "Link to the SLM instance template. Only populated when updating SLM\ninstances via SSA's Actuation service adaptor.\nService producers with custom control plane (e.g. Cloud SQL) doesn't\nneed to populate this field. Instead they should use software_versions.",
+          "type": "string"
+        },
         "name": {
           "description": "Unique name of the resource. It uses the form:\n `projects/{project_id}/locations/{location_id}/instances/{instance_id}`",
           "type": "string"
@@ -395,27 +376,31 @@
           },
           "description": "The MaintenancePolicies that have been attached to the instance.\nThe key must be of the type name of the oneof policy name defined in\nMaintenancePolicy, and the referenced policy must define the same policy\ntype. For complete details of MaintenancePolicy, please refer to\ngo/cloud-saas-mw-ug.",
           "type": "object"
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Optional. Resource labels to represent user provided metadata. Each label\nis a key-value pair, where both the key and the value are arbitrary strings\nprovided by the user.",
+          "type": "object"
+        },
+        "createTime": {
+          "description": "Output only. Timestamp when the resource was created.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "softwareVersions": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Software versions that are used to deploy this instance. This can be\nmutated by rollout services.",
+          "type": "object"
         }
       },
       "id": "GoogleCloudSaasacceleratorManagementProvidersV1Instance"
     },
     "OperationMetadata": {
-      "description": "Represents the metadata of the long-running operation.",
-      "type": "object",
       "properties": {
-        "endTime": {
-          "description": "[Output only] The time the operation finished running.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "cancelRequested": {
-          "description": "[Output only] Identifies whether the user has requested cancellation\nof the operation. Operations that have successfully been cancelled\nhave Operation.error value with a google.rpc.Status.code of 1,\ncorresponding to `Code.CANCELLED`.",
-          "type": "boolean"
-        },
-        "verb": {
-          "description": "[Output only] Name of the verb executed by the operation.",
-          "type": "string"
-        },
         "createTime": {
           "description": "[Output only] The time the operation was created.",
           "format": "google-datetime",
@@ -430,57 +415,278 @@
           "type": "string"
         },
         "target": {
-          "type": "string",
-          "description": "[Output only] Server-defined resource path for the target of the operation."
-        }
-      },
-      "id": "OperationMetadata"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource": {
-      "properties": {
-        "resourceType": {
-          "description": "Type of the resource. This can be either a GCP resource or a custom one\n(e.g. another cloud provider's VM). For GCP compute resources use singular\nform of the names listed in GCP compute API documentation\n(https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with\n'compute-', for example: 'compute-instance', 'compute-disk',\n'compute-autoscaler'.",
+          "description": "[Output only] Server-defined resource path for the target of the operation.",
           "type": "string"
         },
-        "resourceUrl": {
-          "description": "URL identifying the resource, e.g.\n\"https://www.googleapis.com/compute/v1/projects/...)\".",
+        "endTime": {
+          "type": "string",
+          "description": "[Output only] The time the operation finished running.",
+          "format": "google-datetime"
+        },
+        "cancelRequested": {
+          "description": "[Output only] Identifies whether the user has requested cancellation\nof the operation. Operations that have successfully been cancelled\nhave Operation.error value with a google.rpc.Status.code of 1,\ncorresponding to `Code.CANCELLED`.",
+          "type": "boolean"
+        },
+        "verb": {
+          "description": "[Output only] Name of the verb executed by the operation.",
           "type": "string"
         }
       },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource",
-      "description": "Describes provisioned dataplane resources.",
+      "id": "OperationMetadata",
+      "description": "Represents the metadata of the long-running operation.",
       "type": "object"
     },
-    "ListLocationsResponse": {
+    "Money": {
+      "description": "Represents an amount of money with its currency type.",
       "type": "object",
       "properties": {
-        "nextPageToken": {
-          "description": "The standard List next-page token.",
+        "currencyCode": {
+          "description": "The 3-letter currency code defined in ISO 4217.",
           "type": "string"
         },
-        "locations": {
-          "description": "A list of locations that matches the specified filter in the request.",
+        "nanos": {
+          "description": "Number of nano (10^-9) units of the amount.\nThe value must be between -999,999,999 and +999,999,999 inclusive.\nIf `units` is positive, `nanos` must be positive or zero.\nIf `units` is zero, `nanos` can be positive, zero, or negative.\nIf `units` is negative, `nanos` must be negative or zero.\nFor example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "units": {
+          "description": "The whole units of the amount.\nFor example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
+          "format": "int64",
+          "type": "string"
+        }
+      },
+      "id": "Money"
+    },
+    "TruncatableString": {
+      "description": "Represents a string that might be shortened to a specified length.",
+      "type": "object",
+      "properties": {
+        "truncatedByteCount": {
+          "description": "The number of bytes removed from the original string. If this\nvalue is 0, then the string was not shortened.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "value": {
+          "description": "The shortened string. For example, if the original string is 500\nbytes long and the limit of the string is 128 bytes, then\n`value` contains the first 128 bytes of the 500-byte string.\n\nTruncation always happens on a UTF8 character boundary. If there\nare multi-byte characters in the string, then the length of the\nshortened string might be less than the size limit.",
+          "type": "string"
+        }
+      },
+      "id": "TruncatableString"
+    },
+    "LogEntryOperation": {
+      "description": "Additional information about a potentially long-running operation with which\na log entry is associated.",
+      "type": "object",
+      "properties": {
+        "last": {
+          "description": "Optional. Set this to True if this is the last log entry in the operation.",
+          "type": "boolean"
+        },
+        "id": {
+          "description": "Optional. An arbitrary operation identifier. Log entries with the\nsame identifier are assumed to be part of the same operation.",
+          "type": "string"
+        },
+        "producer": {
+          "description": "Optional. An arbitrary producer identifier. The combination of\n`id` and `producer` must be globally unique.  Examples for `producer`:\n`\"MyDivision.MyBigCompany.com\"`, `\"github.com/MyProject/MyApplication\"`.",
+          "type": "string"
+        },
+        "first": {
+          "description": "Optional. Set this to True if this is the first log entry in the operation.",
+          "type": "boolean"
+        }
+      },
+      "id": "LogEntryOperation"
+    },
+    "Distribution": {
+      "description": "Distribution represents a frequency distribution of double-valued sample\npoints. It contains the size of the population of sample points plus\nadditional optional information:\n\n  - the arithmetic mean of the samples\n  - the minimum and maximum of the samples\n  - the sum-squared-deviation of the samples, used to compute variance\n  - a histogram of the values of the sample points",
+      "type": "object",
+      "properties": {
+        "explicitBuckets": {
+          "$ref": "ExplicitBuckets",
+          "description": "Buckets with arbitrary user-provided width."
+        },
+        "maximum": {
+          "description": "The maximum of the population of values. Ignored if `count` is zero.",
+          "format": "double",
+          "type": "number"
+        },
+        "sumOfSquaredDeviation": {
+          "description": "The sum of squared deviations from the mean:\n  Sum[i=1..count]((x_i - mean)^2)\nwhere each x_i is a sample values. If `count` is zero then this field\nmust be zero, otherwise validation of the request fails.",
+          "format": "double",
+          "type": "number"
+        },
+        "exemplars": {
+          "description": "Example points. Must be in increasing order of `value` field.",
           "type": "array",
           "items": {
-            "$ref": "Location"
+            "$ref": "Exemplar"
+          }
+        },
+        "exponentialBuckets": {
+          "description": "Buckets with exponentially growing width.",
+          "$ref": "ExponentialBuckets"
+        },
+        "linearBuckets": {
+          "$ref": "LinearBuckets",
+          "description": "Buckets with constant width."
+        },
+        "minimum": {
+          "description": "The minimum of the population of values. Ignored if `count` is zero.",
+          "format": "double",
+          "type": "number"
+        },
+        "mean": {
+          "description": "The arithmetic mean of the samples in the distribution. If `count` is\nzero then this field must be zero.",
+          "format": "double",
+          "type": "number"
+        },
+        "count": {
+          "description": "The total number of samples in the distribution. Must be \u003e= 0.",
+          "format": "int64",
+          "type": "string"
+        },
+        "bucketCounts": {
+          "type": "array",
+          "items": {
+            "format": "int64",
+            "type": "string"
+          },
+          "description": "The number of samples in each histogram bucket. `bucket_counts` are\noptional. If present, they must sum to the `count` value.\n\nThe buckets are defined below in `bucket_option`. There are N buckets.\n`bucket_counts[0]` is the number of samples in the underflow bucket.\n`bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples\nin each of the finite buckets. And `bucket_counts[N] is the number\nof samples in the overflow bucket. See the comments of `bucket_option`\nbelow for more details.\n\nAny suffix of trailing zeros may be omitted."
+        }
+      },
+      "id": "Distribution"
+    },
+    "ExplicitBuckets": {
+      "properties": {
+        "bounds": {
+          "description": "'bound' is a list of strictly increasing boundaries between\nbuckets. Note that a list of length N-1 defines N buckets because\nof fenceposting. See comments on `bucket_options` for details.\n\nThe i'th finite bucket covers the interval\n  [bound[i-1], bound[i])\nwhere i ranges from 1 to bound_size() - 1. Note that there are no\nfinite buckets at all if 'bound' only contains a single element; in\nthat special case the single bound defines the boundary between the\nunderflow and overflow buckets.\n\nbucket number                   lower bound    upper bound\n i == 0 (underflow)              -inf           bound[i]\n 0 \u003c i \u003c bound_size()            bound[i-1]     bound[i]\n i == bound_size() (overflow)    bound[i-1]     +inf",
+          "type": "array",
+          "items": {
+            "format": "double",
+            "type": "number"
           }
         }
       },
-      "id": "ListLocationsResponse",
-      "description": "The response message for Locations.ListLocations."
+      "id": "ExplicitBuckets",
+      "description": "Describing buckets with arbitrary user-provided width.",
+      "type": "object"
+    },
+    "HttpRequest": {
+      "description": "A common proto for logging HTTP requests. Only contains semantics\ndefined by the HTTP specification. Product-specific logging\ninformation MUST be defined in a separate message.",
+      "type": "object",
+      "properties": {
+        "userAgent": {
+          "description": "The user agent sent by the client. Example:\n`\"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET\nCLR 1.0.3705)\"`.",
+          "type": "string"
+        },
+        "latency": {
+          "description": "The request processing latency on the server, from the time the request was\nreceived until the response was sent.",
+          "format": "google-duration",
+          "type": "string"
+        },
+        "cacheFillBytes": {
+          "description": "The number of HTTP response bytes inserted into cache. Set only when a\ncache fill was attempted.",
+          "format": "int64",
+          "type": "string"
+        },
+        "requestMethod": {
+          "description": "The request method. Examples: `\"GET\"`, `\"HEAD\"`, `\"PUT\"`, `\"POST\"`.",
+          "type": "string"
+        },
+        "requestSize": {
+          "description": "The size of the HTTP request message in bytes, including the request\nheaders and the request body.",
+          "format": "int64",
+          "type": "string"
+        },
+        "protocol": {
+          "description": "Protocol used for the request. Examples: \"HTTP/1.1\", \"HTTP/2\", \"websocket\"",
+          "type": "string"
+        },
+        "responseSize": {
+          "description": "The size of the HTTP response message sent back to the client, in bytes,\nincluding the response headers and the response body.",
+          "format": "int64",
+          "type": "string"
+        },
+        "requestUrl": {
+          "type": "string",
+          "description": "The scheme (http, https), the host name, the path, and the query\nportion of the URL that was requested.\nExample: `\"http://example.com/some/info?color=red\"`."
+        },
+        "serverIp": {
+          "type": "string",
+          "description": "The IP address (IPv4 or IPv6) of the origin server that the request was\nsent to."
+        },
+        "remoteIp": {
+          "type": "string",
+          "description": "The IP address (IPv4 or IPv6) of the client that issued the HTTP\nrequest. Examples: `\"192.168.1.1\"`, `\"FE80::0202:B3FF:FE1E:8329\"`."
+        },
+        "cacheLookup": {
+          "description": "Whether or not a cache lookup was attempted.",
+          "type": "boolean"
+        },
+        "cacheHit": {
+          "description": "Whether or not an entity was served from cache\n(with or without validation).",
+          "type": "boolean"
+        },
+        "cacheValidatedWithOriginServer": {
+          "type": "boolean",
+          "description": "Whether or not the response was validated with the origin server before\nbeing served from cache. This field is only meaningful if `cache_hit` is\nTrue."
+        },
+        "status": {
+          "description": "The response code indicating the status of the response.\nExamples: 200, 404.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "referer": {
+          "description": "The referer URL of the request, as defined in\n[HTTP/1.1 Header Field\nDefinitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).",
+          "type": "string"
+        }
+      },
+      "id": "HttpRequest"
+    },
+    "ExponentialBuckets": {
+      "type": "object",
+      "properties": {
+        "growthFactor": {
+          "description": "The i'th exponential bucket covers the interval\n  [scale * growth_factor^(i-1), scale * growth_factor^i)\nwhere i ranges from 1 to num_finite_buckets inclusive.\nMust be larger than 1.0.",
+          "format": "double",
+          "type": "number"
+        },
+        "scale": {
+          "description": "The i'th exponential bucket covers the interval\n  [scale * growth_factor^(i-1), scale * growth_factor^i)\nwhere i ranges from 1 to num_finite_buckets inclusive.\nMust be \u003e 0.",
+          "format": "double",
+          "type": "number"
+        },
+        "numFiniteBuckets": {
+          "description": "The number of finite buckets. With the underflow and overflow buckets,\nthe total number of buckets is `num_finite_buckets` + 2.\nSee comments on `bucket_options` for details.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "id": "ExponentialBuckets",
+      "description": "Describing buckets with exponentially growing width."
+    },
+    "ResourceInfo": {
+      "description": "Describes a resource associated with this operation.",
+      "type": "object",
+      "properties": {
+        "resourceContainer": {
+          "description": "The identifier of the parent of this resource instance.\nMust be in one of the following formats:\n    - “projects/\u003cproject-id or project-number\u003e”\n    - “folders/\u003cfolder-id\u003e”\n    - “organizations/\u003corganization-id\u003e”",
+          "type": "string"
+        },
+        "resourceName": {
+          "description": "Name of the resource. This is used for auditing purposes.",
+          "type": "string"
+        },
+        "resourceLocation": {
+          "description": "The location of the resource. If not empty, the resource will be checked\nagainst location policy. The value must be a valid zone, region or\nmultiregion. For example: \"europe-west4\" or \"northamerica-northeast1-a\"",
+          "type": "string"
+        }
+      },
+      "id": "ResourceInfo"
     },
     "ListInstancesResponse": {
-      "id": "ListInstancesResponse",
       "description": "ListInstancesResponse is the result of ListInstancesRequest.",
       "type": "object",
       "properties": {
-        "instances": {
-          "type": "array",
-          "items": {
-            "$ref": "Instance"
-          },
-          "description": "A list of instances in the project for the specified location.\n\nIf the {location} value in the request is \"-\", the response contains a list\nof instances from all locations. If any location is unreachable, the\nresponse will only return instances in reachable locations and the\n\"unreachable\" field will be populated with a list of unreachable locations."
-        },
         "nextPageToken": {
           "description": "The token you can use to retrieve the next page of results. Not returned\nif there are no more results in the list.",
           "type": "string"
@@ -491,38 +697,508 @@
           "items": {
             "type": "string"
           }
+        },
+        "instances": {
+          "description": "A list of instances in the project for the specified location.\n\nIf the {location} value in the request is \"-\", the response contains a list\nof instances from all locations. If any location is unreachable, the\nresponse will only return instances in reachable locations and the\n\"unreachable\" field will be populated with a list of unreachable locations.",
+          "type": "array",
+          "items": {
+            "$ref": "Instance"
+          }
+        }
+      },
+      "id": "ListInstancesResponse"
+    },
+    "LogEntrySourceLocation": {
+      "properties": {
+        "file": {
+          "description": "Optional. Source file name. Depending on the runtime environment, this\nmight be a simple name or a fully-qualified name.",
+          "type": "string"
+        },
+        "function": {
+          "description": "Optional. Human-readable name of the function or method being invoked, with\noptional context such as the class or package name. This information may be\nused in contexts such as the logs viewer, where a file and line number are\nless meaningful. The format can vary by language. For example:\n`qual.if.ied.Class.method` (Java), `dir/package.func` (Go), `function`\n(Python).",
+          "type": "string"
+        },
+        "line": {
+          "type": "string",
+          "description": "Optional. Line within the source file. 1-based; 0 indicates no line number\navailable.",
+          "format": "int64"
+        }
+      },
+      "id": "LogEntrySourceLocation",
+      "description": "Additional information about the source code location that produced the log\nentry.",
+      "type": "object"
+    },
+    "QuotaProperties": {
+      "description": "Represents the properties needed for quota operations.",
+      "type": "object",
+      "properties": {
+        "quotaMode": {
+          "enum": [
+            "ACQUIRE",
+            "ACQUIRE_BEST_EFFORT",
+            "CHECK",
+            "RELEASE"
+          ],
+          "description": "Quota mode for this operation.",
+          "type": "string",
+          "enumDescriptions": [
+            "Decreases available quota by the cost specified for the operation.\nIf cost is higher than available quota, operation fails and returns\nerror.",
+            "Decreases available quota by the cost specified for the operation.\nIf cost is higher than available quota, operation does not fail and\navailable quota goes down to zero but it returns error.",
+            "Does not change any available quota. Only checks if there is enough\nquota.\nNo lock is placed on the checked tokens neither.",
+            "Increases available quota by the operation cost specified for the\noperation."
+          ]
+        }
+      },
+      "id": "QuotaProperties"
+    },
+    "LinearBuckets": {
+      "description": "Describing buckets with constant width.",
+      "type": "object",
+      "properties": {
+        "numFiniteBuckets": {
+          "type": "integer",
+          "description": "The number of finite buckets. With the underflow and overflow buckets,\nthe total number of buckets is `num_finite_buckets` + 2.\nSee comments on `bucket_options` for details.",
+          "format": "int32"
+        },
+        "width": {
+          "type": "number",
+          "description": "The i'th linear bucket covers the interval\n  [offset + (i-1) * width, offset + i * width)\nwhere i ranges from 1 to num_finite_buckets, inclusive.\nMust be strictly positive.",
+          "format": "double"
+        },
+        "offset": {
+          "description": "The i'th linear bucket covers the interval\n  [offset + (i-1) * width, offset + i * width)\nwhere i ranges from 1 to num_finite_buckets, inclusive.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "id": "LinearBuckets"
+    },
+    "Instance": {
+      "properties": {
+        "tier": {
+          "enum": [
+            "TIER_UNSPECIFIED",
+            "STANDARD",
+            "PREMIUM",
+            "BASIC_HDD",
+            "BASIC_SSD",
+            "HIGH_SCALE_SSD"
+          ],
+          "description": "The service tier of the instance.",
+          "type": "string",
+          "enumDescriptions": [
+            "Not set.",
+            "STANDARD tier. BASIC_HDD is the preferred term for this tier.",
+            "PREMIUM tier. BASIC_SSD is the preferred term for this tier.",
+            "BASIC instances offer a maximum capacity of 63.9 TB.\nBASIC_HDD is an alias for STANDARD Tier, offering economical\nperformance backed by HDD.",
+            "BASIC instances offer a maximum capacity of 63.9 TB.\nBASIC_SSD is an alias for PREMIUM Tier, and offers improved\nperformance backed by SSD.",
+            "HIGH_SCALE instances offer expanded capacity and performance scaling\ncapabilities."
+          ]
+        },
+        "description": {
+          "description": "The description of the instance (2048 characters or less).",
+          "type": "string"
+        },
+        "etag": {
+          "description": "Server-specified ETag for the instance resource to prevent simultaneous\nupdates from overwriting each other.",
+          "type": "string"
+        },
+        "createTime": {
+          "description": "Output only. The time when the instance was created.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Resource labels to represent user provided metadata.",
+          "type": "object"
+        },
+        "state": {
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "CREATING",
+            "READY",
+            "REPAIRING",
+            "DELETING",
+            "ERROR",
+            "RESTORING"
+          ],
+          "description": "Output only. The instance state.",
+          "type": "string",
+          "enumDescriptions": [
+            "State not set.",
+            "The instance is being created.",
+            "The instance is available for use.",
+            "Work is being done on the instance. You can get further details from the\n`statusMessage` field of the `Instance` resource.",
+            "The instance is shutting down.",
+            "The instance is experiencing an issue and might be unusable. You can get\nfurther details from the `statusMessage` field of the `Instance`\nresource.",
+            "The instance is restoring a snapshot or backup to an existing file share\nand may be unusable during this time."
+          ]
+        },
+        "statusMessage": {
+          "description": "Output only. Additional information about the instance state, if available.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Output only. The resource name of the instance, in the format\nprojects/{project_id}/locations/{location_id}/instances/{instance_id}.",
+          "type": "string"
+        },
+        "networks": {
+          "description": "VPC networks to which the instance is connected.\nFor this version, only a single network is supported.",
+          "type": "array",
+          "items": {
+            "$ref": "NetworkConfig"
+          }
+        },
+        "fileShares": {
+          "type": "array",
+          "items": {
+            "$ref": "FileShareConfig"
+          },
+          "description": "File system shares on the instance.\nFor this version, only a single file share is supported."
+        }
+      },
+      "id": "Instance",
+      "description": "A Cloud Filestore instance.",
+      "type": "object"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule": {
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule",
+      "description": "Maintenance schedule which is exposed to customer and potentially end user,\nindicating published upcoming future maintenance schedule",
+      "type": "object",
+      "properties": {
+        "canReschedule": {
+          "description": "Can this scheduled update be rescheduled?\nBy default, it's true and API needs to do explicitly check whether it's\nset, if it's set as false explicitly, it's false",
+          "type": "boolean"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "The scheduled end time for the maintenance.",
+          "format": "google-datetime"
+        },
+        "startTime": {
+          "description": "The scheduled start time for the maintenance.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "rolloutManagementPolicy": {
+          "description": "The rollout management policy this maintenance schedule is associated\nwith. When doing reschedule update request, the reschedule should be\nagainst this given policy.",
+          "type": "string"
         }
       }
     },
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility": {
+    "Exemplar": {
+      "description": "Exemplars are example points that may be used to annotate aggregated\ndistribution values. They are metadata that gives information about a\nparticular value added to a Distribution bucket, such as a trace ID that\nwas active when a value was added. They may contain further information,\nsuch as a example values and timestamps, origin, etc.",
       "type": "object",
       "properties": {
-        "eligible": {
-          "type": "boolean",
-          "description": "Whether an instance is eligible or ineligible."
+        "timestamp": {
+          "description": "The observation (sampling) time of the above value.",
+          "format": "google-datetime",
+          "type": "string"
         },
-        "reason": {
-          "description": "User-defined reason for the current value of instance eligibility. Usually,\nthis can be directly mapped to the internal state. An empty reason is\nallowed.",
+        "attachments": {
+          "description": "Contextual information about the example value. Examples are:\n\n  Trace: type.googleapis.com/google.monitoring.v3.SpanContext\n\n  Literal string: type.googleapis.com/google.protobuf.StringValue\n\n  Labels dropped during aggregation:\n    type.googleapis.com/google.monitoring.v3.DroppedLabels\n\nThere may be only a single attachment of any given message type in a\nsingle exemplar, and this is enforced by the system.",
+          "type": "array",
+          "items": {
+            "additionalProperties": {
+              "description": "Properties of the object. Contains field @type with type URL.",
+              "type": "any"
+            },
+            "type": "object"
+          }
+        },
+        "value": {
+          "description": "Value of the exemplar point. This value determines to which bucket the\nexemplar belongs.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "id": "Exemplar"
+    },
+    "Empty": {
+      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`.",
+      "type": "object",
+      "properties": {},
+      "id": "Empty"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata": {
+      "description": "Node information for custom per-node SLO implementations.\nSSA does not support per-node SLO, but producers can populate per-node\ninformation in SloMetadata for custom precomputations.\nSSA Eligibility Exporter will emit per-node metric based on this information.",
+      "type": "object",
+      "properties": {
+        "nodeId": {
+          "description": "The id of the node.\nThis should be equal to SaasInstanceNode.node_id.",
+          "type": "string"
+        },
+        "exclusions": {
+          "description": "By default node is eligible if instance is eligible.\nBut individual node might be excluded from SLO by adding entry here.\nFor semantic see SloMetadata.exclusions.\nIf both instance and node level exclusions are present for time period,\nthe node level's reason will be reported by Eligibility Exporter.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
+          }
+        },
+        "location": {
+          "description": "The location of the node, if different from instance location.",
           "type": "string"
         }
       },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility",
-      "description": "SloEligibility is a tuple containing eligibility value: true if an instance\nis eligible for SLO calculation or false if it should be excluded from all\nSLO-related calculations along with a user-defined reason."
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
     },
-    "CancelOperationRequest": {
-      "properties": {},
-      "id": "CancelOperationRequest",
-      "description": "The request message for Operations.CancelOperation.",
-      "type": "object"
-    },
-    "Operation": {
-      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
+    "AttributeValue": {
+      "description": "The allowed types for [VALUE] in a `[KEY]:[VALUE]` attribute.",
       "type": "object",
       "properties": {
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
+        "stringValue": {
+          "description": "A string up to 256 bytes long.",
+          "$ref": "TruncatableString"
+        },
+        "boolValue": {
+          "description": "A Boolean value represented by `true` or `false`.",
           "type": "boolean"
         },
+        "intValue": {
+          "description": "A 64-bit signed integer.",
+          "format": "int64",
+          "type": "string"
+        }
+      },
+      "id": "AttributeValue"
+    },
+    "Location": {
+      "properties": {
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Cross-service attributes for the location. For example\n\n    {\"cloud.googleapis.com/region\": \"us-east1\"}",
+          "type": "object"
+        },
+        "name": {
+          "description": "Resource name for the location, which may vary between implementations.\nFor example: `\"projects/example-project/locations/us-east1\"`",
+          "type": "string"
+        },
+        "locationId": {
+          "type": "string",
+          "description": "The canonical id for this location. For example: `\"us-east1\"`."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The friendly name for this location, typically a nearby city name.\nFor example, \"Tokyo\"."
+        },
+        "metadata": {
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "description": "Service-specific metadata. For example the available capacity at the given\nlocation.",
+          "type": "object"
+        }
+      },
+      "id": "Location",
+      "description": "A resource that represents Google Cloud Platform location.",
+      "type": "object"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion": {
+      "properties": {
+        "sliName": {
+          "description": "Name of an SLI that this exclusion applies to. Can be left empty,\nsignaling that the instance should be excluded from all SLIs defined\nin the service SLO configuration.",
+          "type": "string"
+        },
+        "duration": {
+          "description": "Exclusion duration. No restrictions on the possible values.\n\nWhen an ongoing operation is taking longer than initially expected,\nan existing entry in the exclusion list can be updated by extending the\nduration. This is supported by the subsystem exporting eligibility data\nas long as such extension is committed at least 10 minutes before the\noriginal exclusion expiration - otherwise it is possible that there will\nbe \"gaps\" in the exclusion application in the exported timeseries.",
+          "format": "google-duration",
+          "type": "string"
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Start time of the exclusion. No alignment (e.g. to a full minute) needed.",
+          "format": "google-datetime"
+        },
+        "reason": {
+          "description": "Human-readable reason for the exclusion.\nThis should be a static string (e.g. \"Disruptive update in progress\")\nand should not contain dynamically generated data (e.g. instance name).\nCan be left empty.",
+          "type": "string"
+        }
+      },
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion",
+      "description": "SloExclusion represents an exclusion in SLI calculation applies to all SLOs.",
+      "type": "object"
+    },
+    "MetricValueSet": {
+      "properties": {
+        "metricValues": {
+          "description": "The values in this metric.",
+          "type": "array",
+          "items": {
+            "$ref": "MetricValue"
+          }
+        },
+        "metricName": {
+          "description": "The metric name defined in the service configuration.",
+          "type": "string"
+        }
+      },
+      "id": "MetricValueSet",
+      "description": "Represents a set of metric values in the same metric.\nEach metric value in the set should have a unique combination of start time,\nend time, and label values.",
+      "type": "object"
+    },
+    "FileShareConfig": {
+      "description": "File share configuration for the instance.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "The name of the file share (must be 16 characters or less).",
+          "type": "string"
+        },
+        "capacityGb": {
+          "description": "File share capacity in gigabytes (GB).\nCloud Filestore defines 1 GB as 1024^3 bytes.",
+          "format": "int64",
+          "type": "string"
+        }
+      },
+      "id": "FileShareConfig"
+    },
+    "TraceSpan": {
+      "type": "object",
+      "properties": {
+        "sameProcessAsParentSpan": {
+          "type": "boolean",
+          "description": "(Optional) Set this parameter to indicate whether this span is in\nthe same process as its parent. If you do not set this parameter,\nStackdriver Trace is unable to take advantage of this helpful\ninformation."
+        },
+        "status": {
+          "$ref": "Status",
+          "description": "An optional final status for this span."
+        },
+        "name": {
+          "description": "The resource name of the span in the following format:\n\n    projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within a project;\nit is a 32-character hexadecimal encoding of a 16-byte array.\n\n[SPAN_ID] is a unique identifier for a span within a trace; it\nis a 16-character hexadecimal encoding of an 8-byte array.",
+          "type": "string"
+        },
+        "attributes": {
+          "description": "A set of attributes on the span. You can have up to 32 attributes per\nspan.",
+          "$ref": "Attributes"
+        },
+        "spanId": {
+          "description": "The [SPAN_ID] portion of the span's resource name.",
+          "type": "string"
+        },
+        "parentSpanId": {
+          "description": "The [SPAN_ID] of this span's parent span. If this is a root span,\nthen this field must be empty.",
+          "type": "string"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "The end time of the span. On the client side, this is the time kept by\nthe local machine where the span execution ends. On the server side, this\nis the time when the server application handler stops running.",
+          "format": "google-datetime"
+        },
+        "startTime": {
+          "description": "The start time of the span. On the client side, this is the time kept by\nthe local machine where the span execution starts. On the server side, this\nis the time when the server's application handler starts running.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "spanKind": {
+          "enumDescriptions": [
+            "Unspecified. Do NOT use as default.\nImplementations MAY assume SpanKind.INTERNAL to be default.",
+            "Indicates that the span is used internally. Default value.",
+            "Indicates that the span covers server-side handling of an RPC or other\nremote network request.",
+            "Indicates that the span covers the client-side wrapper around an RPC or\nother remote request.",
+            "Indicates that the span describes producer sending a message to a broker.\nUnlike client and  server, there is no direct critical path latency\nrelationship between producer and consumer spans (e.g. publishing a\nmessage to a pubsub service).",
+            "Indicates that the span describes consumer receiving a message from a\nbroker. Unlike client and  server, there is no direct critical path\nlatency relationship between producer and consumer spans (e.g. receiving\na message from a pubsub service subscription)."
+          ],
+          "enum": [
+            "SPAN_KIND_UNSPECIFIED",
+            "INTERNAL",
+            "SERVER",
+            "CLIENT",
+            "PRODUCER",
+            "CONSUMER"
+          ],
+          "description": "Distinguishes between spans generated in a particular context. For example,\ntwo spans with the same name may be distinguished using `CLIENT` (caller)\nand `SERVER` (callee) to identify an RPC call.",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "A description of the span's operation (up to 128 bytes).\nStackdriver Trace displays the description in the\nGoogle Cloud Platform Console.\nFor example, the display name can be a qualified method name or a file name\nand a line number where the operation is called. A best practice is to use\nthe same display name within an application and at the same call point.\nThis makes it easier to correlate spans in different traces.",
+          "$ref": "TruncatableString"
+        },
+        "childSpanCount": {
+          "description": "An optional number of child spans that were generated while this span\nwas active. If set, allows implementation to detect missing child spans.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "id": "TraceSpan",
+      "description": "A span represents a single operation within a trace. Spans can be\nnested to form a trace tree. Often, a trace contains a root span\nthat describes the end-to-end latency, and one or more subspans for\nits sub-operations. A trace can also contain multiple root spans,\nor none at all. Spans do not need to be contiguous&mdash;there may be\ngaps or overlaps between spans in a trace."
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource": {
+      "properties": {
+        "resourceUrl": {
+          "description": "URL identifying the resource, e.g.\n\"https://www.googleapis.com/compute/v1/projects/...)\".",
+          "type": "string"
+        },
+        "resourceType": {
+          "description": "Type of the resource. This can be either a GCP resource or a custom one\n(e.g. another cloud provider's VM). For GCP compute resources use singular\nform of the names listed in GCP compute API documentation\n(https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with\n'compute-', for example: 'compute-instance', 'compute-disk',\n'compute-autoscaler'.",
+          "type": "string"
+        }
+      },
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource",
+      "description": "Describes provisioned dataplane resources.",
+      "type": "object"
+    },
+    "BillingView": {
+      "description": "Message for reporting billing requests through Eventstream.",
+      "type": "object",
+      "properties": {
+        "reportRequests": {
+          "type": "array",
+          "items": {
+            "$ref": "ReportRequest"
+          },
+          "description": "Billing requests to be reported for an [Eventstream\nresource](http://google3/cloud/eventstream/v2/resource_event.proto).\n\nEach request contains billing operations to be reported under a service\nname. See go/billing-view-construction for documentation on constructing\nbilling view report requests."
+        }
+      },
+      "id": "BillingView"
+    },
+    "ListLocationsResponse": {
+      "description": "The response message for Locations.ListLocations.",
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "The standard List next-page token.",
+          "type": "string"
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "$ref": "Location"
+          },
+          "description": "A list of locations that matches the specified filter in the request."
+        }
+      },
+      "id": "ListLocationsResponse"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility": {
+      "description": "SloEligibility is a tuple containing eligibility value: true if an instance\nis eligible for SLO calculation or false if it should be excluded from all\nSLO-related calculations along with a user-defined reason.",
+      "type": "object",
+      "properties": {
+        "reason": {
+          "type": "string",
+          "description": "User-defined reason for the current value of instance eligibility. Usually,\nthis can be directly mapped to the internal state. An empty reason is\nallowed."
+        },
+        "eligible": {
+          "description": "Whether an instance is eligible or ineligible.",
+          "type": "boolean"
+        }
+      },
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility"
+    },
+    "CancelOperationRequest": {
+      "type": "object",
+      "properties": {},
+      "id": "CancelOperationRequest",
+      "description": "The request message for Operations.CancelOperation."
+    },
+    "Operation": {
+      "type": "object",
+      "properties": {
         "response": {
           "additionalProperties": {
             "description": "Properties of the object. Contains field @type with type URL.",
@@ -536,8 +1212,8 @@
           "type": "string"
         },
         "error": {
-          "description": "The error result of the operation in case of failure or cancellation.",
-          "$ref": "Status"
+          "$ref": "Status",
+          "description": "The error result of the operation in case of failure or cancellation."
         },
         "metadata": {
           "additionalProperties": {
@@ -546,46 +1222,100 @@
           },
           "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any.",
           "type": "object"
+        },
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
+          "type": "boolean"
         }
       },
-      "id": "Operation"
+      "id": "Operation",
+      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call."
     },
     "NetworkConfig": {
+      "id": "NetworkConfig",
+      "description": "Network configuration for the instance.",
       "type": "object",
       "properties": {
-        "network": {
-          "type": "string",
-          "description": "The name of the Google Compute Engine\n[VPC network](/compute/docs/networks-and-firewalls#networks) to which the\ninstance is connected."
-        },
         "modes": {
+          "description": "Internet protocol versions for which the instance has IP addresses\nassigned. For this version, only MODE_IPV4 is supported.",
           "type": "array",
           "items": {
+            "type": "string",
             "enum": [
               "ADDRESS_MODE_UNSPECIFIED",
               "MODE_IPV4"
-            ],
-            "type": "string"
+            ]
           },
           "enumDescriptions": [
             "Internet protocol not set.",
             "Use the IPv4 internet protocol."
-          ],
-          "description": "Internet protocol versions for which the instance has IP addresses\nassigned. For this version, only MODE_IPV4 is supported."
+          ]
         },
         "reservedIpRange": {
           "description": "A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the\n[internal IP address\nranges](https://www.arin.net/knowledge/address_filters.html) that\nidentifies the range of IP addresses reserved for this instance. For\nexample, 10.0.0.0/29 or 192.168.0.0/23. The range you specify can't overlap\nwith either existing subnets or assigned IP address ranges for other Cloud\nFilestore instances in the selected VPC network.",
           "type": "string"
         },
         "ipAddresses": {
+          "description": "Output only. IPv4 addresses in the format\n{octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6 addresses in the format\n{block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block\n7}:{block 8}.",
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "description": "Output only. IPv4 addresses in the format\n{octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6 addresses in the format\n{block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block\n7}:{block 8}."
+          }
+        },
+        "network": {
+          "description": "The name of the Google Compute Engine\n[VPC network](/compute/docs/networks-and-firewalls#networks) to which the\ninstance is connected.",
+          "type": "string"
+        }
+      }
+    },
+    "ReportRequest": {
+      "description": "Request message for the Report method.",
+      "type": "object",
+      "properties": {
+        "serviceName": {
+          "description": "The service name as specified in its service configuration. For example,\n`\"pubsub.googleapis.com\"`.\n\nSee\n[google.api.Service](https://cloud.google.com/service-management/reference/rpc/google.api#google.api.Service)\nfor the definition of a service name.",
+          "type": "string"
+        },
+        "operations": {
+          "description": "Operations to be reported.\n\nTypically the service should report one operation per request.\nPutting multiple operations into a single request is allowed, but should\nbe used only when multiple operations are natually available at the time\nof the report.\n\nThere is no limit on the number of operations in the same ReportRequest,\nhowever the ReportRequest size should be no larger than 1MB. See\nReportResponse.report_errors for partial failure behavior.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleApiServicecontrolV1Operation"
+          }
+        },
+        "serviceConfigId": {
+          "description": "Specifies which version of service config should be used to process the\nrequest.\n\nIf unspecified or no matching version can be found, the\nlatest one will be used.",
+          "type": "string"
         }
       },
-      "id": "NetworkConfig",
-      "description": "Network configuration for the instance."
+      "id": "ReportRequest"
+    },
+    "Status": {
+      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "The status code, which should be an enum value of google.rpc.Code.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "message": {
+          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client.",
+          "type": "string"
+        },
+        "details": {
+          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
+          "type": "array",
+          "items": {
+            "additionalProperties": {
+              "type": "any",
+              "description": "Properties of the object. Contains field @type with type URL."
+            },
+            "type": "object"
+          }
+        }
+      },
+      "id": "Status"
     }
   },
   "protocol": "rest",
@@ -606,8 +1336,8 @@
   "rootUrl": "https://file.googleapis.com/",
   "ownerDomain": "google.com",
   "name": "file",
-  "mtlsRootUrl": "https://file.mtls.googleapis.com/",
   "batchPath": "batch",
+  "mtlsRootUrl": "https://file.mtls.googleapis.com/",
   "fullyEncodeReservedExpansion": true,
   "title": "Cloud Filestore API",
   "ownerName": "Google",
@@ -617,7 +1347,6 @@
         "locations": {
           "methods": {
             "list": {
-              "description": "Lists information about the supported locations for this service.",
               "response": {
                 "$ref": "ListLocationsResponse"
               },
@@ -629,12 +1358,6 @@
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "parameters": {
-                "pageSize": {
-                  "location": "query",
-                  "description": "The standard list page size.",
-                  "format": "int32",
-                  "type": "integer"
-                },
                 "filter": {
                   "description": "The standard list filter.",
                   "type": "string",
@@ -656,14 +1379,20 @@
                   "description": "The standard list page token.",
                   "type": "string",
                   "location": "query"
+                },
+                "pageSize": {
+                  "description": "The standard list page size.",
+                  "format": "int32",
+                  "type": "integer",
+                  "location": "query"
                 }
               },
               "flatPath": "v1beta1/projects/{projectsId}/locations",
               "path": "v1beta1/{+name}/locations",
-              "id": "file.projects.locations.list"
+              "id": "file.projects.locations.list",
+              "description": "Lists information about the supported locations for this service."
             },
             "get": {
-              "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}",
               "path": "v1beta1/{+name}",
               "id": "file.projects.locations.get",
               "description": "Gets information about a location.",
@@ -685,15 +1414,14 @@
               },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
-              ]
+              ],
+              "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}"
             }
           },
           "resources": {
             "operations": {
               "methods": {
                 "cancel": {
-                  "id": "file.projects.locations.operations.cancel",
-                  "path": "v1beta1/{+name}:cancel",
                   "description": "Starts asynchronous cancellation on a long-running operation.  The server\nmakes a best effort to cancel the operation, but success is not\nguaranteed.  If the server doesn't support this method, it returns\n`google.rpc.Code.UNIMPLEMENTED`.  Clients can use\nOperations.GetOperation or\nother methods to check whether the cancellation succeeded or whether the\noperation completed despite cancellation. On successful cancellation,\nthe operation is not deleted; instead, it becomes an operation with\nan Operation.error value with a google.rpc.Status.code of 1,\ncorresponding to `Code.CANCELLED`.",
                   "request": {
                     "$ref": "CancelOperationRequest"
@@ -707,31 +1435,8 @@
                   },
                   "parameters": {
                     "name": {
-                      "description": "The name of the operation resource to be cancelled.",
-                      "required": true,
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
-                      "location": "path"
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel"
-                },
-                "delete": {
-                  "description": "Deletes a long-running operation. This method indicates that the client is\nno longer interested in the operation result. It does not cancel the\noperation. If the server doesn't support this method, it returns\n`google.rpc.Code.UNIMPLEMENTED`.",
-                  "response": {
-                    "$ref": "Empty"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "httpMethod": "DELETE",
-                  "parameters": {
-                    "name": {
                       "location": "path",
-                      "description": "The name of the operation resource to be deleted.",
+                      "description": "The name of the operation resource to be cancelled.",
                       "required": true,
                       "type": "string",
                       "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$"
@@ -740,11 +1445,37 @@
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel",
+                  "id": "file.projects.locations.operations.cancel",
+                  "path": "v1beta1/{+name}:cancel"
+                },
+                "delete": {
+                  "description": "Deletes a long-running operation. This method indicates that the client is\nno longer interested in the operation result. It does not cancel the\noperation. If the server doesn't support this method, it returns\n`google.rpc.Code.UNIMPLEMENTED`.",
+                  "httpMethod": "DELETE",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "response": {
+                    "$ref": "Empty"
+                  },
+                  "parameters": {
+                    "name": {
+                      "required": true,
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "location": "path",
+                      "description": "The name of the operation resource to be deleted."
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
-                  "path": "v1beta1/{+name}",
-                  "id": "file.projects.locations.operations.delete"
+                  "id": "file.projects.locations.operations.delete",
+                  "path": "v1beta1/{+name}"
                 },
                 "list": {
+                  "description": "Lists operations that match the specified filter in the request. If the\nserver doesn't support this method, it returns `UNIMPLEMENTED`.\n\nNOTE: the `name` binding allows API services to override the binding\nto use different resource name schemes, such as `users/*/operations`. To\noverride the binding, API services can add a binding such as\n`\"/v1/{name=users/*}/operations\"` to their service configuration.\nFor backwards compatibility, the default name includes the operations\ncollection id, however overriding users must ensure the name binding\nis the parent resource, without the operations collection id.",
                   "response": {
                     "$ref": "ListOperationsResponse"
                   },
@@ -757,9 +1488,9 @@
                   ],
                   "parameters": {
                     "filter": {
-                      "location": "query",
                       "description": "The standard list filter.",
-                      "type": "string"
+                      "type": "string",
+                      "location": "query"
                     },
                     "name": {
                       "pattern": "^projects/[^/]+/locations/[^/]+$",
@@ -774,18 +1505,18 @@
                       "type": "string"
                     },
                     "pageSize": {
-                      "location": "query",
                       "description": "The standard list page size.",
                       "format": "int32",
-                      "type": "integer"
+                      "type": "integer",
+                      "location": "query"
                     }
                   },
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/operations",
                   "path": "v1beta1/{+name}/operations",
-                  "id": "file.projects.locations.operations.list",
-                  "description": "Lists operations that match the specified filter in the request. If the\nserver doesn't support this method, it returns `UNIMPLEMENTED`.\n\nNOTE: the `name` binding allows API services to override the binding\nto use different resource name schemes, such as `users/*/operations`. To\noverride the binding, API services can add a binding such as\n`\"/v1/{name=users/*}/operations\"` to their service configuration.\nFor backwards compatibility, the default name includes the operations\ncollection id, however overriding users must ensure the name binding\nis the parent resource, without the operations collection id."
+                  "id": "file.projects.locations.operations.list"
                 },
                 "get": {
+                  "description": "Gets the latest state of a long-running operation.  Clients can use this\nmethod to poll the operation result at intervals as recommended by the API\nservice.",
                   "response": {
                     "$ref": "Operation"
                   },
@@ -798,31 +1529,29 @@
                   ],
                   "parameters": {
                     "name": {
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "location": "path",
                       "description": "The name of the operation resource.",
                       "required": true,
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
-                      "location": "path"
+                      "type": "string"
                     }
                   },
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
                   "path": "v1beta1/{+name}",
-                  "id": "file.projects.locations.operations.get",
-                  "description": "Gets the latest state of a long-running operation.  Clients can use this\nmethod to poll the operation result at intervals as recommended by the API\nservice."
+                  "id": "file.projects.locations.operations.get"
                 }
               }
             },
             "instances": {
               "methods": {
                 "delete": {
-                  "description": "Deletes an instance.",
-                  "response": {
-                    "$ref": "Operation"
-                  },
+                  "httpMethod": "DELETE",
                   "parameterOrder": [
                     "name"
                   ],
-                  "httpMethod": "DELETE",
+                  "response": {
+                    "$ref": "Operation"
+                  },
                   "parameters": {
                     "name": {
                       "description": "Required. The instance resource name, in the format\nprojects/{project_id}/locations/{location}/instances/{instance_id}",
@@ -836,43 +1565,11 @@
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
+                  "id": "file.projects.locations.instances.delete",
                   "path": "v1beta1/{+name}",
-                  "id": "file.projects.locations.instances.delete"
+                  "description": "Deletes an instance."
                 },
                 "list": {
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "pageToken": {
-                      "location": "query",
-                      "description": "The next_page_token value to use if there are additional\nresults to retrieve for this list request.",
-                      "type": "string"
-                    },
-                    "orderBy": {
-                      "location": "query",
-                      "description": "Sort results. Supported values are \"name\", \"name desc\" or \"\" (unsorted).",
-                      "type": "string"
-                    },
-                    "pageSize": {
-                      "location": "query",
-                      "description": "The maximum number of items to return.",
-                      "format": "int32",
-                      "type": "integer"
-                    },
-                    "parent": {
-                      "description": "Required. The project and location for which to retrieve instance information,\nin the format projects/{project_id}/locations/{location}. In Cloud\nFilestore, locations map to GCP zones, for example **us-west1-b**. To\nretrieve instance information for all locations, use \"-\" for the {location}\nvalue.",
-                      "required": true,
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "location": "path"
-                    },
-                    "filter": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "List filter."
-                    }
-                  },
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/instances",
                   "path": "v1beta1/{+parent}/instances",
                   "id": "file.projects.locations.instances.list",
@@ -883,7 +1580,40 @@
                   "parameterOrder": [
                     "parent"
                   ],
-                  "httpMethod": "GET"
+                  "httpMethod": "GET",
+                  "parameters": {
+                    "parent": {
+                      "pattern": "^projects/[^/]+/locations/[^/]+$",
+                      "location": "path",
+                      "description": "Required. The project and location for which to retrieve instance information,\nin the format projects/{project_id}/locations/{location}. In Cloud\nFilestore, locations map to GCP zones, for example **us-west1-b**. To\nretrieve instance information for all locations, use \"-\" for the {location}\nvalue.",
+                      "required": true,
+                      "type": "string"
+                    },
+                    "filter": {
+                      "location": "query",
+                      "description": "List filter.",
+                      "type": "string"
+                    },
+                    "pageToken": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "The next_page_token value to use if there are additional\nresults to retrieve for this list request."
+                    },
+                    "orderBy": {
+                      "description": "Sort results. Supported values are \"name\", \"name desc\" or \"\" (unsorted).",
+                      "type": "string",
+                      "location": "query"
+                    },
+                    "pageSize": {
+                      "location": "query",
+                      "description": "The maximum number of items to return.",
+                      "format": "int32",
+                      "type": "integer"
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
                 },
                 "get": {
                   "response": {
@@ -895,11 +1625,11 @@
                   "httpMethod": "GET",
                   "parameters": {
                     "name": {
-                      "location": "path",
                       "description": "Required. The instance resource name, in the format\nprojects/{project_id}/locations/{location}/instances/{instance_id}.",
                       "required": true,
                       "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$"
+                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
+                      "location": "path"
                     }
                   },
                   "scopes": [
@@ -911,57 +1641,61 @@
                   "description": "Gets the details of a specific instance."
                 },
                 "patch": {
-                  "response": {
-                    "$ref": "Operation"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "httpMethod": "PATCH",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "name": {
-                      "location": "path",
-                      "description": "Output only. The resource name of the instance, in the format\nprojects/{project_id}/locations/{location_id}/instances/{instance_id}.",
-                      "required": true,
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$"
-                    },
-                    "updateMask": {
-                      "location": "query",
-                      "description": "Required. Mask of fields to update.  At least one path must be supplied in this\nfield.  The elements of the repeated paths field may only include these\nfields:\n\n* \"description\"\n* \"file_shares\"\n* \"labels\"",
-                      "format": "google-fieldmask",
-                      "type": "string"
-                    }
-                  },
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
-                  "path": "v1beta1/{+name}",
                   "id": "file.projects.locations.instances.patch",
+                  "path": "v1beta1/{+name}",
+                  "description": "Updates the settings of a specific instance.",
                   "request": {
                     "$ref": "Instance"
                   },
-                  "description": "Updates the settings of a specific instance."
-                },
-                "create": {
+                  "httpMethod": "PATCH",
+                  "parameterOrder": [
+                    "name"
+                  ],
                   "response": {
                     "$ref": "Operation"
                   },
+                  "parameters": {
+                    "name": {
+                      "description": "Output only. The resource name of the instance, in the format\nprojects/{project_id}/locations/{location_id}/instances/{instance_id}.",
+                      "required": true,
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
+                      "location": "path"
+                    },
+                    "updateMask": {
+                      "description": "Required. Mask of fields to update.  At least one path must be supplied in this\nfield.  The elements of the repeated paths field may only include these\nfields:\n\n* \"description\"\n* \"file_shares\"\n* \"labels\"",
+                      "format": "google-fieldmask",
+                      "type": "string",
+                      "location": "query"
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
+                },
+                "create": {
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/instances",
+                  "id": "file.projects.locations.instances.create",
+                  "path": "v1beta1/{+parent}/instances",
+                  "description": "Creates an instance.",
+                  "request": {
+                    "$ref": "Instance"
+                  },
+                  "httpMethod": "POST",
                   "parameterOrder": [
                     "parent"
                   ],
-                  "httpMethod": "POST",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
+                  "response": {
+                    "$ref": "Operation"
+                  },
                   "parameters": {
                     "parent": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "location": "path",
                       "description": "Required. The instance's project and location, in the format\nprojects/{project_id}/locations/{location}. In Cloud Filestore,\nlocations map to GCP zones, for example **us-west1-b**.",
                       "required": true,
-                      "type": "string"
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/locations/[^/]+$",
+                      "location": "path"
                     },
                     "instanceId": {
                       "description": "Required. The ID of the instance to create.\nThe ID must be unique within the specified project and location.\n\nThis value must start with a lowercase letter followed by up to 62\nlowercase letters, numbers, or hyphens, and cannot end with a hyphen.",
@@ -969,13 +1703,9 @@
                       "location": "query"
                     }
                   },
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/instances",
-                  "path": "v1beta1/{+parent}/instances",
-                  "id": "file.projects.locations.instances.create",
-                  "request": {
-                    "$ref": "Instance"
-                  },
-                  "description": "Creates an instance."
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
                 }
               }
             }
@@ -1004,11 +1734,17 @@
       "type": "string"
     },
     "callback": {
-      "location": "query",
       "description": "JSONP",
-      "type": "string"
+      "type": "string",
+      "location": "query"
     },
     "alt": {
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "location": "query",
       "description": "Data format for response.",
       "default": "json",
       "enum": [
@@ -1016,18 +1752,12 @@
         "media",
         "proto"
       ],
-      "type": "string",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "location": "query"
+      "type": "string"
     },
     "key": {
+      "location": "query",
       "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string",
-      "location": "query"
+      "type": "string"
     },
     "access_token": {
       "type": "string",
@@ -1035,9 +1765,9 @@
       "description": "OAuth access token."
     },
     "upload_protocol": {
-      "location": "query",
       "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
+      "type": "string",
+      "location": "query"
     },
     "prettyPrint": {
       "description": "Returns response with indentations and line breaks.",
@@ -1046,9 +1776,9 @@
       "location": "query"
     },
     "quotaUser": {
+      "location": "query",
       "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "type": "string",
-      "location": "query"
+      "type": "string"
     },
     "uploadType": {
       "location": "query",
@@ -1056,14 +1786,15 @@
       "type": "string"
     },
     "fields": {
+      "location": "query",
       "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
+      "type": "string"
     }
   },
   "version": "v1beta1",
   "baseUrl": "https://file.googleapis.com/",
   "kind": "discovery#restDescription",
   "description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
-  "servicePath": ""
+  "servicePath": "",
+  "basePath": ""
 }

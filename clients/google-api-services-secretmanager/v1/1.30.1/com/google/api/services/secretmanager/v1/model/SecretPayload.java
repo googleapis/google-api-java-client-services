@@ -17,8 +17,8 @@
 package com.google.api.services.secretmanager.v1.model;
 
 /**
- * A secret payload resource in the Secret Manager API. This contains the sensitive secret data that
- * is associated with a SecretVersion.
+ * A secret payload resource in the Secret Manager API. This contains the sensitive secret payload
+ * that is associated with a SecretVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:

@@ -40,9 +40,11 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
   private java.lang.Integer count;
 
   /**
-   * Percent of results that match the bucket value. This value is between (0-100]. Percentages are
-   * returned for all searches, but are an estimate. Because percentages are always returned, you
-   * should render percentages instead of counts.
+   * Percent of results that match the bucket value. The returned value is between (0-100], and is
+   * rounded down to an integer if fractional. If the value is not explicitly returned, it
+   * represents a percentage value that rounds to 0. Percentages are returned for all searches, but
+   * are an estimate. Because percentages are always returned, you should render percentages instead
+   * of counts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,9 +76,11 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Percent of results that match the bucket value. This value is between (0-100]. Percentages are
-   * returned for all searches, but are an estimate. Because percentages are always returned, you
-   * should render percentages instead of counts.
+   * Percent of results that match the bucket value. The returned value is between (0-100], and is
+   * rounded down to an integer if fractional. If the value is not explicitly returned, it
+   * represents a percentage value that rounds to 0. Percentages are returned for all searches, but
+   * are an estimate. Because percentages are always returned, you should render percentages instead
+   * of counts.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercentage() {
@@ -84,9 +88,11 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Percent of results that match the bucket value. This value is between (0-100]. Percentages are
-   * returned for all searches, but are an estimate. Because percentages are always returned, you
-   * should render percentages instead of counts.
+   * Percent of results that match the bucket value. The returned value is between (0-100], and is
+   * rounded down to an integer if fractional. If the value is not explicitly returned, it
+   * represents a percentage value that rounds to 0. Percentages are returned for all searches, but
+   * are an estimate. Because percentages are always returned, you should render percentages instead
+   * of counts.
    * @param percentage percentage or {@code null} for none
    */
   public FacetBucket setPercentage(java.lang.Integer percentage) {

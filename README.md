@@ -141,8 +141,8 @@ packages on [Maven Central][maven-search].
 | Google Play Custom App Publishing API | [v1](clients/google-api-services-playcustomapp/v1) |
 | Google Play Developer API | [v1](clients/google-api-services-androidpublisher/v1), [v1.1](clients/google-api-services-androidpublisher/v1.1), [v2](clients/google-api-services-androidpublisher/v2), [v3](clients/google-api-services-androidpublisher/v3) |
 | Google Play EMM API | [v1](clients/google-api-services-androidenterprise/v1) |
+| Google Play Game Management | [v1management](clients/google-api-services-gamesManagement/v1management) |
 | Google Play Game Services API | [v1](clients/google-api-services-games/v1) |
-| Google Play Game Services Management API | [v1management](clients/google-api-services-gamesManagement/v1management) |
 | Google Play Game Services Publishing API | [v1configuration](clients/google-api-services-gamesConfiguration/v1configuration) |
 | Google Search Console URL Testing Tools API | [v1](clients/google-api-services-searchconsole/v1) |
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |

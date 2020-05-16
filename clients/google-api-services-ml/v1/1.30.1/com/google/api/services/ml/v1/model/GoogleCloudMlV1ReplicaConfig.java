@@ -40,6 +40,31 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   private GoogleCloudMlV1AcceleratorConfig acceleratorConfig;
 
   /**
+   * Arguments to the entrypoint command. The following rules apply for container_command and
+   * container_args: - If you do not supply command or args:   The defaults defined in the Docker
+   * image are used. - If you supply a command but no args:   The default EntryPoint and the default
+   * Cmd defined in the Docker image   are ignored. Your command is run without any arguments. - If
+   * you supply only args:   The default Entrypoint defined in the Docker image is run with the args
+   * that you supplied. - If you supply a command and args:   The default Entrypoint and the default
+   * Cmd defined in the Docker image   are ignored. Your command is run with your args. It cannot be
+   * set if custom container image is not provided. Note that this field and [TrainingInput.args]
+   * are mutually exclusive, i.e., both cannot be set at the same time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> containerArgs;
+
+  /**
+   * The command with which the replica's custom container is run. If provided, it will override
+   * default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used.
+   * It cannot be set if custom container image is not provided. Note that this field and
+   * [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> containerCommand;
+
+  /**
    * The Docker image to run on the replica. This image must be in Container Registry. Learn more
    * about [configuring custom containers](/ai-platform/training/docs/distributed-training-
    * containers).
@@ -82,6 +107,62 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
    */
   public GoogleCloudMlV1ReplicaConfig setAcceleratorConfig(GoogleCloudMlV1AcceleratorConfig acceleratorConfig) {
     this.acceleratorConfig = acceleratorConfig;
+    return this;
+  }
+
+  /**
+   * Arguments to the entrypoint command. The following rules apply for container_command and
+   * container_args: - If you do not supply command or args:   The defaults defined in the Docker
+   * image are used. - If you supply a command but no args:   The default EntryPoint and the default
+   * Cmd defined in the Docker image   are ignored. Your command is run without any arguments. - If
+   * you supply only args:   The default Entrypoint defined in the Docker image is run with the args
+   * that you supplied. - If you supply a command and args:   The default Entrypoint and the default
+   * Cmd defined in the Docker image   are ignored. Your command is run with your args. It cannot be
+   * set if custom container image is not provided. Note that this field and [TrainingInput.args]
+   * are mutually exclusive, i.e., both cannot be set at the same time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getContainerArgs() {
+    return containerArgs;
+  }
+
+  /**
+   * Arguments to the entrypoint command. The following rules apply for container_command and
+   * container_args: - If you do not supply command or args:   The defaults defined in the Docker
+   * image are used. - If you supply a command but no args:   The default EntryPoint and the default
+   * Cmd defined in the Docker image   are ignored. Your command is run without any arguments. - If
+   * you supply only args:   The default Entrypoint defined in the Docker image is run with the args
+   * that you supplied. - If you supply a command and args:   The default Entrypoint and the default
+   * Cmd defined in the Docker image   are ignored. Your command is run with your args. It cannot be
+   * set if custom container image is not provided. Note that this field and [TrainingInput.args]
+   * are mutually exclusive, i.e., both cannot be set at the same time.
+   * @param containerArgs containerArgs or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig setContainerArgs(java.util.List<java.lang.String> containerArgs) {
+    this.containerArgs = containerArgs;
+    return this;
+  }
+
+  /**
+   * The command with which the replica's custom container is run. If provided, it will override
+   * default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used.
+   * It cannot be set if custom container image is not provided. Note that this field and
+   * [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getContainerCommand() {
+    return containerCommand;
+  }
+
+  /**
+   * The command with which the replica's custom container is run. If provided, it will override
+   * default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used.
+   * It cannot be set if custom container image is not provided. Note that this field and
+   * [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.
+   * @param containerCommand containerCommand or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig setContainerCommand(java.util.List<java.lang.String> containerCommand) {
+    this.containerCommand = containerCommand;
     return this;
   }
 

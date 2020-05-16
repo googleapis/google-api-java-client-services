@@ -19,7 +19,7 @@ package com.google.api.services.ml.v1.model;
 /**
  * Message holding configuration options for explaining model predictions. There are two feature
  * attribution methods supported for TensorFlow models: integrated gradients and sampled Shapley.
- * [Learn more about feature attributions.](/ml-engine/docs/ai-explanations/overview)
+ * [Learn more about feature attributions.](/ai-platform/prediction/docs/ai-explanations/overview)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed

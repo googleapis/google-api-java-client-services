@@ -18,8 +18,7 @@ package com.google.api.services.ml.v1.model;
 
 /**
  * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
- * differentiable structure. Refer to this paper for more details:
- * http://proceedings.mlr.press/v70/sundararajan17a.html
+ * differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed

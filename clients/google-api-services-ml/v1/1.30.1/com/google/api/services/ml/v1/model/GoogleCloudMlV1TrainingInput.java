@@ -164,6 +164,21 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String masterType;
 
   /**
+   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * firewalls#networks) to which the Job is peered. For example,
+   * projects/12345/global/networks/myVPC. Format is of the form
+   * projects/{project}/global/networks/{network}. Where {project} is a project number, as in
+   * '12345', and {network} is network name.".
+   *
+   * Private services access must already be configured for the network. If left unspecified, the
+   * Job is not peered with any network. Learn more - Connecting Job to user network over private
+   * IP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Required. The Google Cloud Storage location of the packages with the training program and any
    * additional dependencies. The maximum number of package URIs is 100.
    * The value may be {@code null}.
@@ -617,6 +632,39 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setMasterType(java.lang.String masterType) {
     this.masterType = masterType;
+    return this;
+  }
+
+  /**
+   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * firewalls#networks) to which the Job is peered. For example,
+   * projects/12345/global/networks/myVPC. Format is of the form
+   * projects/{project}/global/networks/{network}. Where {project} is a project number, as in
+   * '12345', and {network} is network name.".
+   *
+   * Private services access must already be configured for the network. If left unspecified, the
+   * Job is not peered with any network. Learn more - Connecting Job to user network over private
+   * IP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * firewalls#networks) to which the Job is peered. For example,
+   * projects/12345/global/networks/myVPC. Format is of the form
+   * projects/{project}/global/networks/{network}. Where {project} is a project number, as in
+   * '12345', and {network} is network name.".
+   *
+   * Private services access must already be configured for the network. If left unspecified, the
+   * Job is not peered with any network. Learn more - Connecting Job to user network over private
+   * IP.
+   * @param network network or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

@@ -53,7 +53,9 @@ public final class CheckError extends com.google.api.client.json.GenericJson {
 
   /**
    * Subject to whom this error applies. See the specific code enum for more details on this field.
-   * For example:     - “project:”     - “folder:”     - “organization:”
+   * For example:
+   *
+   * - "project:" - "folder:" - "organization:"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +116,9 @@ public final class CheckError extends com.google.api.client.json.GenericJson {
 
   /**
    * Subject to whom this error applies. See the specific code enum for more details on this field.
-   * For example:     - “project:”     - “folder:”     - “organization:”
+   * For example:
+   *
+   * - "project:" - "folder:" - "organization:"
    * @return value or {@code null} for none
    */
   public java.lang.String getSubject() {
@@ -123,7 +127,9 @@ public final class CheckError extends com.google.api.client.json.GenericJson {
 
   /**
    * Subject to whom this error applies. See the specific code enum for more details on this field.
-   * For example:     - “project:”     - “folder:”     - “organization:”
+   * For example:
+   *
+   * - "project:" - "folder:" - "organization:"
    * @param subject subject or {@code null} for none
    */
   public CheckError setSubject(java.lang.String subject) {

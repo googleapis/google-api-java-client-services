@@ -19,8 +19,10 @@ package com.google.api.services.compute.model;
 /**
  * Represents a collection of network endpoints.
  *
- * For more information read Network endpoint groups overview. (== resource_for
- * {$api_version}.networkEndpointGroups ==) Next ID: 21
+ * A network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are
+ * reachable, and where they are located. For more information about using NEGs, see  Setting up
+ * internet NEGs or  Setting up zonal NEGs. (== resource_for {$api_version}.networkEndpointGroups
+ * ==) (== resource_for {$api_version}.globalNetworkEndpointGroups ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

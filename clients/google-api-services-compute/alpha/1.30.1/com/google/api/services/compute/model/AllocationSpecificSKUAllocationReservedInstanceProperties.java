@@ -64,6 +64,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   private java.lang.String locationHint;
 
   /**
+   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
    * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
    * release (internal: stable fleet) VMs.
    *
@@ -147,6 +148,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
+   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
    * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
    * release (internal: stable fleet) VMs.
    *
@@ -162,6 +164,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
+   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
    * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
    * release (internal: stable fleet) VMs.
    *

@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Sets the scheduling options for an Instance. NextID: 10
+ * Sets the scheduling options for an Instance. NextID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,6 +59,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
+   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
    * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
    * release (internal: stable fleet) VMs.
    *
@@ -173,6 +174,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
    * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
    * release (internal: stable fleet) VMs.
    *
@@ -188,6 +190,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
    * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
    * release (internal: stable fleet) VMs.
    *

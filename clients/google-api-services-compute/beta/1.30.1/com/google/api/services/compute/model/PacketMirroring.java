@@ -17,7 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a PacketMirroring resource.
+ * Represents a Packet Mirroring resource.
+ *
+ * Packet Mirroring clones the traffic of specified instances in your Virtual Private Cloud (VPC)
+ * network and forwards it to a collector destination, such as an instance group of an internal
+ * TCP/UDP load balancer, for analysis or examination. For more information about setting up Packet
+ * Mirroring, see Using Packet Mirroring. (== resource_for {$api_version}.packetMirrorings ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

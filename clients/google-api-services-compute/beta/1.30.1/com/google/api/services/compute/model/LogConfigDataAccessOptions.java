@@ -30,20 +30,12 @@ package com.google.api.services.compute.model;
 public final class LogConfigDataAccessOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether Gin logging should happen in a fail-closed manner at the caller. This is currently
-   * supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see
-   * go/af-audit-logging#failclosed. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387):
-   * Add support for Scaffolding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logMode;
 
   /**
-   * Whether Gin logging should happen in a fail-closed manner at the caller. This is currently
-   * supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see
-   * go/af-audit-logging#failclosed. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387):
-   * Add support for Scaffolding.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogMode() {
@@ -51,10 +43,6 @@ public final class LogConfigDataAccessOptions extends com.google.api.client.json
   }
 
   /**
-   * Whether Gin logging should happen in a fail-closed manner at the caller. This is currently
-   * supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see
-   * go/af-audit-logging#failclosed. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387):
-   * Add support for Scaffolding.
    * @param logMode logMode or {@code null} for none
    */
   public LogConfigDataAccessOptions setLogMode(java.lang.String logMode) {

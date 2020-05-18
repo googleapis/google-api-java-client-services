@@ -32,7 +32,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
 
   /**
    * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
-   * fractional digits, terminated by `s`. By default there is no limit to the running time.
+   * fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven
+   * days).
    *
    * If the training job is still running after this duration, AI Platform Training cancels it.
    *
@@ -50,8 +51,15 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
   private String maxRunningTime;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxWaitTime;
+
+  /**
    * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
-   * fractional digits, terminated by `s`. By default there is no limit to the running time.
+   * fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven
+   * days).
    *
    * If the training job is still running after this duration, AI Platform Training cancels it.
    *
@@ -71,7 +79,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
 
   /**
    * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
-   * fractional digits, terminated by `s`. By default there is no limit to the running time.
+   * fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven
+   * days).
    *
    * If the training job is still running after this duration, AI Platform Training cancels it.
    *
@@ -87,6 +96,21 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
    */
   public GoogleCloudMlV1Scheduling setMaxRunningTime(String maxRunningTime) {
     this.maxRunningTime = maxRunningTime;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public String getMaxWaitTime() {
+    return maxWaitTime;
+  }
+
+  /**
+   * @param maxWaitTime maxWaitTime or {@code null} for none
+   */
+  public GoogleCloudMlV1Scheduling setMaxWaitTime(String maxWaitTime) {
+    this.maxWaitTime = maxWaitTime;
     return this;
   }
 

@@ -980,6 +980,9 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * config.nodeCount Horizontally scale the number of nodes in the environment. An integer
            * greater than or equal to 3 must be provided in the `config.nodeCount` field.
            *
+           * config.webServerNetworkAccessControl Replace the environment's current
+           * WebServerNetworkAccessControl.
+           *
            * config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow config
            * overrides. If a replacement config overrides map is not included in `environment`, all
            * config overrides are cleared. It is an error to provide both this mask and a mask
@@ -1064,6 +1067,9 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
 
          config.nodeCount Horizontally scale the number of nodes in the environment. An integer greater than
          or equal to 3 must be provided in the `config.nodeCount` field.
+
+         config.webServerNetworkAccessControl Replace the environment's current
+         WebServerNetworkAccessControl.
 
          config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow config overrides. If a
          replacement config overrides map is not included in `environment`, all config overrides are
@@ -1153,6 +1159,9 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            *
            * config.nodeCount Horizontally scale the number of nodes in the environment. An integer
            * greater than or equal to 3 must be provided in the `config.nodeCount` field.
+           *
+           * config.webServerNetworkAccessControl Replace the environment's current
+           * WebServerNetworkAccessControl.
            *
            * config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow config
            * overrides. If a replacement config overrides map is not included in `environment`, all

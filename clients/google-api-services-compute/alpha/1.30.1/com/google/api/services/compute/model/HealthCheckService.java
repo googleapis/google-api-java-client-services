@@ -17,8 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * A HealthCheckService defines a set of backends on which to perform periodic health checks and an
- * endpoint to which to send notification of changes in the health status of the backends.
+ * Represents a Health-Check as a Service resource.
+ *
+ * (== resource_for {$api_version}.regionHealthCheckServices ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

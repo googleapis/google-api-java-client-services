@@ -31,7 +31,7 @@ public final class NetworkEndpointGroupsListEndpointsRequest extends com.google.
 
   /**
    * Optional query parameter for showing the health status of each network endpoint. Valid options
-   * are SKIP or SHOW. If you don't specifiy this parameter, the health status of network endpoints
+   * are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints
    * will not be provided.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class NetworkEndpointGroupsListEndpointsRequest extends com.google.
 
   /**
    * Optional query parameter for showing the health status of each network endpoint. Valid options
-   * are SKIP or SHOW. If you don't specifiy this parameter, the health status of network endpoints
+   * are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints
    * will not be provided.
    * @return value or {@code null} for none
    */
@@ -50,7 +50,7 @@ public final class NetworkEndpointGroupsListEndpointsRequest extends com.google.
 
   /**
    * Optional query parameter for showing the health status of each network endpoint. Valid options
-   * are SKIP or SHOW. If you don't specifiy this parameter, the health status of network endpoints
+   * are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints
    * will not be provided.
    * @param healthStatus healthStatus or {@code null} for none
    */

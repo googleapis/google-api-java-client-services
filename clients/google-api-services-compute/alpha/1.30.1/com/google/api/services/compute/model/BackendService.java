@@ -275,7 +275,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
    * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -914,7 +914,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
    * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * @return value or {@code null} for none
    */
   public java.lang.String getPortName() {
@@ -927,7 +927,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
    * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * @param portName portName or {@code null} for none
    */
   public BackendService setPortName(java.lang.String portName) {

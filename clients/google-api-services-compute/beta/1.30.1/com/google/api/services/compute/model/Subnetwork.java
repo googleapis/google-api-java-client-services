@@ -70,6 +70,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is to disable flow logging.
+   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,7 +189,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
-   * the purpose defaults to PRIVATE_RFC_1918.
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,6 +323,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is to disable flow logging.
+   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFlowLogs() {
@@ -330,6 +333,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is to disable flow logging.
+   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @param enableFlowLogs enableFlowLogs or {@code null} for none
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {
@@ -633,7 +637,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
-   * the purpose defaults to PRIVATE_RFC_1918.
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -644,7 +649,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
-   * the purpose defaults to PRIVATE_RFC_1918.
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @param purpose purpose or {@code null} for none
    */
   public Subnetwork setPurpose(java.lang.String purpose) {

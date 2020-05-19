@@ -121,39 +121,6 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.String protocol;
 
   /**
-   * Unimplemented. Do not use.
-   *
-   * The new name the selected proto elements should be renamed to.
-   *
-   * The package, the service and the method can all be renamed. The backend server should implement
-   * the renamed proto. However, clients should call the original method, and ESF routes the traffic
-   * to the renamed method.
-   *
-   * HTTP clients should call the URL mapped to the original method. gRPC and Stubby clients should
-   * call the original method with package name.
-   *
-   * For legacy reasons, ESF allows Stubby clients to call with the short name (without the package
-   * name). However, for API Versioning(or multiple methods mapped to the same short name), all
-   * Stubby clients must call the method's full name with the package name, otherwise the first one
-   * (selector) wins.
-   *
-   * If this `rename_to` is specified with a trailing `*`, the `selector` must be specified with a
-   * trailing `*` as well. The all element short names matched by the `*` in the selector will be
-   * kept in the `rename_to`.
-   *
-   * For example,     rename_rules:     - selector: |-         google.example.library.v1.*
-   * rename_to: google.example.library.*
-   *
-   * The selector matches `google.example.library.v1.Library.CreateShelf` and
-   * `google.example.library.v1.Library.CreateBook`, they will be renamed to
-   * `google.example.library.Library.CreateShelf` and `google.example.library.Library.CreateBook`.
-   * It essentially renames the proto package name section of the matched proto service and methods.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String renameTo;
-
-  /**
    * Selects the methods to which this rule applies.
    *
    * Refer to selector for syntax details.
@@ -363,75 +330,6 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   public BackendRule setProtocol(java.lang.String protocol) {
     this.protocol = protocol;
-    return this;
-  }
-
-  /**
-   * Unimplemented. Do not use.
-   *
-   * The new name the selected proto elements should be renamed to.
-   *
-   * The package, the service and the method can all be renamed. The backend server should implement
-   * the renamed proto. However, clients should call the original method, and ESF routes the traffic
-   * to the renamed method.
-   *
-   * HTTP clients should call the URL mapped to the original method. gRPC and Stubby clients should
-   * call the original method with package name.
-   *
-   * For legacy reasons, ESF allows Stubby clients to call with the short name (without the package
-   * name). However, for API Versioning(or multiple methods mapped to the same short name), all
-   * Stubby clients must call the method's full name with the package name, otherwise the first one
-   * (selector) wins.
-   *
-   * If this `rename_to` is specified with a trailing `*`, the `selector` must be specified with a
-   * trailing `*` as well. The all element short names matched by the `*` in the selector will be
-   * kept in the `rename_to`.
-   *
-   * For example,     rename_rules:     - selector: |-         google.example.library.v1.*
-   * rename_to: google.example.library.*
-   *
-   * The selector matches `google.example.library.v1.Library.CreateShelf` and
-   * `google.example.library.v1.Library.CreateBook`, they will be renamed to
-   * `google.example.library.Library.CreateShelf` and `google.example.library.Library.CreateBook`.
-   * It essentially renames the proto package name section of the matched proto service and methods.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRenameTo() {
-    return renameTo;
-  }
-
-  /**
-   * Unimplemented. Do not use.
-   *
-   * The new name the selected proto elements should be renamed to.
-   *
-   * The package, the service and the method can all be renamed. The backend server should implement
-   * the renamed proto. However, clients should call the original method, and ESF routes the traffic
-   * to the renamed method.
-   *
-   * HTTP clients should call the URL mapped to the original method. gRPC and Stubby clients should
-   * call the original method with package name.
-   *
-   * For legacy reasons, ESF allows Stubby clients to call with the short name (without the package
-   * name). However, for API Versioning(or multiple methods mapped to the same short name), all
-   * Stubby clients must call the method's full name with the package name, otherwise the first one
-   * (selector) wins.
-   *
-   * If this `rename_to` is specified with a trailing `*`, the `selector` must be specified with a
-   * trailing `*` as well. The all element short names matched by the `*` in the selector will be
-   * kept in the `rename_to`.
-   *
-   * For example,     rename_rules:     - selector: |-         google.example.library.v1.*
-   * rename_to: google.example.library.*
-   *
-   * The selector matches `google.example.library.v1.Library.CreateShelf` and
-   * `google.example.library.v1.Library.CreateBook`, they will be renamed to
-   * `google.example.library.Library.CreateShelf` and `google.example.library.Library.CreateBook`.
-   * It essentially renames the proto package name section of the matched proto service and methods.
-   * @param renameTo renameTo or {@code null} for none
-   */
-  public BackendRule setRenameTo(java.lang.String renameTo) {
-    this.renameTo = renameTo;
     return this;
   }
 

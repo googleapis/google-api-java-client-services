@@ -17,7 +17,7 @@
 package com.google.api.services.verifiedaccess.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Verified Access API.
+ * Available OAuth 2.0 scopes for use with the Chrome Verified Access API.
  *
  * @since 1.4
  */

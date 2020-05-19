@@ -38,6 +38,15 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   private java.lang.String creditTypesTreatment;
 
   /**
+   * Optional. A single label and value pair specifying that usage from only this set of labeled
+   * resources should be included in the budget. Multiple entries or multiple values per entry are
+   * not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.List<java.lang.Object>> labels;
+
+  /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report will include all
    * usage for the billing account, regardless of which project the usage occurred on. Only zero or
@@ -58,6 +67,17 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   private java.util.List<java.lang.String> services;
 
   /**
+   * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
+   * usage from only this set of subaccounts should be included in the budget. If a subaccount is
+   * set to the name of the master account, usage from the master account will be included. If
+   * omitted, the report will include usage from the master account and all subaccounts, if they
+   * exist.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subaccounts;
+
+  /**
    * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
    * @return value or {@code null} for none
    */
@@ -71,6 +91,27 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
    */
   public GoogleCloudBillingBudgetsV1beta1Filter setCreditTypesTreatment(java.lang.String creditTypesTreatment) {
     this.creditTypesTreatment = creditTypesTreatment;
+    return this;
+  }
+
+  /**
+   * Optional. A single label and value pair specifying that usage from only this set of labeled
+   * resources should be included in the budget. Multiple entries or multiple values per entry are
+   * not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.List<java.lang.Object>> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. A single label and value pair specifying that usage from only this set of labeled
+   * resources should be included in the budget. Multiple entries or multiple values per entry are
+   * not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1beta1Filter setLabels(java.util.Map<String, java.util.List<java.lang.Object>> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -117,6 +158,31 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
    */
   public GoogleCloudBillingBudgetsV1beta1Filter setServices(java.util.List<java.lang.String> services) {
     this.services = services;
+    return this;
+  }
+
+  /**
+   * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
+   * usage from only this set of subaccounts should be included in the budget. If a subaccount is
+   * set to the name of the master account, usage from the master account will be included. If
+   * omitted, the report will include usage from the master account and all subaccounts, if they
+   * exist.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubaccounts() {
+    return subaccounts;
+  }
+
+  /**
+   * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
+   * usage from only this set of subaccounts should be included in the budget. If a subaccount is
+   * set to the name of the master account, usage from the master account will be included. If
+   * omitted, the report will include usage from the master account and all subaccounts, if they
+   * exist.
+   * @param subaccounts subaccounts or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1beta1Filter setSubaccounts(java.util.List<java.lang.String> subaccounts) {
+    this.subaccounts = subaccounts;
     return this;
   }
 

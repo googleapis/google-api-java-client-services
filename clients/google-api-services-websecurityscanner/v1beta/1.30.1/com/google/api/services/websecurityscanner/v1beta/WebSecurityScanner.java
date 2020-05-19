@@ -25,7 +25,7 @@ package com.google.api.services.websecurityscanner.v1beta;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/security-scanner/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

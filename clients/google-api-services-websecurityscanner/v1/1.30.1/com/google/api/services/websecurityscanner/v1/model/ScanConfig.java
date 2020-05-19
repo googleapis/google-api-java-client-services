@@ -39,8 +39,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private Authentication authentication;
 
   /**
-   * The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs
-   * /excluded-urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +54,14 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Controls export of scan configurations and results to Cloud Security Command Center.
+   * Controls export of scan configurations and results to Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exportToSecurityCommandCenter;
 
   /**
-   * Whether the scan config is managed by Cloud Web Security Scanner, output only.
+   * Whether the scan config is managed by Web Security Scanner, output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +141,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs
-   * /excluded-urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlacklistPatterns() {
@@ -150,8 +150,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs
-   * /excluded-urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * @param blacklistPatterns blacklistPatterns or {@code null} for none
    */
   public ScanConfig setBlacklistPatterns(java.util.List<java.lang.String> blacklistPatterns) {
@@ -177,7 +177,7 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls export of scan configurations and results to Cloud Security Command Center.
+   * Controls export of scan configurations and results to Security Command Center.
    * @return value or {@code null} for none
    */
   public java.lang.String getExportToSecurityCommandCenter() {
@@ -185,7 +185,7 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls export of scan configurations and results to Cloud Security Command Center.
+   * Controls export of scan configurations and results to Security Command Center.
    * @param exportToSecurityCommandCenter exportToSecurityCommandCenter or {@code null} for none
    */
   public ScanConfig setExportToSecurityCommandCenter(java.lang.String exportToSecurityCommandCenter) {
@@ -194,7 +194,7 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the scan config is managed by Cloud Web Security Scanner, output only.
+   * Whether the scan config is managed by Web Security Scanner, output only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getManagedScan() {
@@ -202,7 +202,7 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the scan config is managed by Cloud Web Security Scanner, output only.
+   * Whether the scan config is managed by Web Security Scanner, output only.
    * @param managedScan managedScan or {@code null} for none
    */
   public ScanConfig setManagedScan(java.lang.Boolean managedScan) {

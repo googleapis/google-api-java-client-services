@@ -53,7 +53,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the Finding. Detailed and up-to-date information on findings can be found here:
-   * https://cloud.google.com/security-scanner/docs/scan-result-details
+   * https://cloud.google.com/security-command-center/docs/how-to-remediate-web-security-scanner
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +209,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the Finding. Detailed and up-to-date information on findings can be found here:
-   * https://cloud.google.com/security-scanner/docs/scan-result-details
+   * https://cloud.google.com/security-command-center/docs/how-to-remediate-web-security-scanner
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingType() {
@@ -218,7 +218,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the Finding. Detailed and up-to-date information on findings can be found here:
-   * https://cloud.google.com/security-scanner/docs/scan-result-details
+   * https://cloud.google.com/security-command-center/docs/how-to-remediate-web-security-scanner
    * @param findingType findingType or {@code null} for none
    */
   public Finding setFindingType(java.lang.String findingType) {

@@ -39,8 +39,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private Authentication authentication;
 
   /**
-   * The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs
-   * /excluded-urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> startingUrls;
 
   /**
-   * Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
+   * Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +127,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs
-   * /excluded-urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlacklistPatterns() {
@@ -135,8 +136,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs
-   * /excluded-urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * @param blacklistPatterns blacklistPatterns or {@code null} for none
    */
   public ScanConfig setBlacklistPatterns(java.util.List<java.lang.String> blacklistPatterns) {
@@ -255,7 +256,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
+   * Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a
+   * default.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetPlatforms() {
@@ -263,7 +265,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
+   * Set of Google Cloud platforms targeted by the scan. If empty, APP_ENGINE will be used as a
+   * default.
    * @param targetPlatforms targetPlatforms or {@code null} for none
    */
   public ScanConfig setTargetPlatforms(java.util.List<java.lang.String> targetPlatforms) {

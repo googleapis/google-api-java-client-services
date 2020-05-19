@@ -113,7 +113,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
 
   /**
    * A UTF-8 encoded string value. When `exclude_from_indexes` is false (it is indexed) , may have
-   * at most 1500 bytes. Otherwise, may be set to at least 1,000,000 bytes.
+   * at most 1500 bytes. Otherwise, may be set to at most 1,000,000 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -356,7 +356,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
 
   /**
    * A UTF-8 encoded string value. When `exclude_from_indexes` is false (it is indexed) , may have
-   * at most 1500 bytes. Otherwise, may be set to at least 1,000,000 bytes.
+   * at most 1500 bytes. Otherwise, may be set to at most 1,000,000 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -365,7 +365,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
 
   /**
    * A UTF-8 encoded string value. When `exclude_from_indexes` is false (it is indexed) , may have
-   * at most 1500 bytes. Otherwise, may be set to at least 1,000,000 bytes.
+   * at most 1500 bytes. Otherwise, may be set to at most 1,000,000 bytes.
    * @param stringValue stringValue or {@code null} for none
    */
   public Value setStringValue(java.lang.String stringValue) {

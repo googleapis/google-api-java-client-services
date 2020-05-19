@@ -835,7 +835,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -843,7 +845,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -853,7 +856,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1082,7 +1087,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -1109,7 +1114,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -2261,7 +2266,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -2269,7 +2276,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -2279,7 +2287,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -2915,7 +2925,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -2942,7 +2952,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *
@@ -4067,7 +4077,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -4075,7 +4087,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -4085,7 +4098,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -4314,7 +4329,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -4341,7 +4356,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -5662,7 +5677,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -5670,7 +5687,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -5680,7 +5698,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -6239,7 +6259,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "clusters.setIamPolicy".
          *
@@ -6266,7 +6286,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "clusters.setIamPolicy".
            *
@@ -7490,7 +7510,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -7498,7 +7520,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -7508,7 +7531,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -7968,7 +7993,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "jobs.setIamPolicy".
          *
@@ -7995,7 +8020,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "jobs.setIamPolicy".
            *
@@ -9113,7 +9138,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -9121,7 +9148,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -9131,7 +9159,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -9343,7 +9373,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "operations.setIamPolicy".
          *
@@ -9370,7 +9400,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "operations.setIamPolicy".
            *
@@ -10352,7 +10382,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -10360,7 +10392,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The policy format version to be returned.Valid values are 0, 1, and 3. Requests
          specifying an invalid value will be rejected.Requests for policies with any conditional bindings
          must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset.
+         leave the field unset.To learn which resources support conditions in their IAM policies, see the
+         IAM documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -10370,7 +10403,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. The policy format version to be returned.Valid values are 0, 1, and 3.
            * Requests specifying an invalid value will be rejected.Requests for policies with any
            * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset.
+           * may specify any valid value or leave the field unset.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -11006,7 +11041,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -11033,7 +11068,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *

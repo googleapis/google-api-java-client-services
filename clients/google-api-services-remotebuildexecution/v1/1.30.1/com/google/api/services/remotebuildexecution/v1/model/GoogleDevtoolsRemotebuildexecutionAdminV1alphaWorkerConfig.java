@@ -109,6 +109,13 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.Boolean reserved;
 
   /**
+   * Output only. The name of the image used by each VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmImage;
+
+  /**
    * The accelerator card attached to each VM.
    * @return value or {@code null} for none
    */
@@ -288,6 +295,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setReserved(java.lang.Boolean reserved) {
     this.reserved = reserved;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the image used by each VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmImage() {
+    return vmImage;
+  }
+
+  /**
+   * Output only. The name of the image used by each VM.
+   * @param vmImage vmImage or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setVmImage(java.lang.String vmImage) {
+    this.vmImage = vmImage;
     return this;
   }
 

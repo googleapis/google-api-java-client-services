@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
   private GooglePrivacyDlpV2ContentItem item;
 
   /**
-   * The geographic location to process content reidentification.  Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
   }
 
   /**
-   * The geographic location to process content reidentification.  Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -151,7 +151,7 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
   }
 
   /**
-   * The geographic location to process content reidentification.  Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @param locationId locationId or {@code null} for none
    */
   public GooglePrivacyDlpV2ReidentifyContentRequest setLocationId(java.lang.String locationId) {

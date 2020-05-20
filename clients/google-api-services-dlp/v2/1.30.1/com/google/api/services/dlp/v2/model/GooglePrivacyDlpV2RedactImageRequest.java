@@ -66,8 +66,7 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * The geographic location to process the request. Reserved for future extensions. Location is
-   * restricted to 'global', 'us', 'asia', and 'europe'.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +141,7 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
   }
 
   /**
-   * The geographic location to process the request. Reserved for future extensions. Location is
-   * restricted to 'global', 'us', 'asia', and 'europe'.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -151,8 +149,7 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
   }
 
   /**
-   * The geographic location to process the request. Reserved for future extensions. Location is
-   * restricted to 'global', 'us', 'asia', and 'europe'.
+   * Deprecated. This field has no effect.
    * @param locationId locationId or {@code null} for none
    */
   public GooglePrivacyDlpV2RedactImageRequest setLocationId(java.lang.String locationId) {

@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   private GooglePrivacyDlpV2JobTrigger jobTrigger;
 
   /**
-   * The geographic location to store the job trigger. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   }
 
   /**
-   * The geographic location to store the job trigger. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -79,7 +79,7 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   }
 
   /**
-   * The geographic location to store the job trigger. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @param locationId locationId or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateJobTriggerRequest setLocationId(java.lang.String locationId) {

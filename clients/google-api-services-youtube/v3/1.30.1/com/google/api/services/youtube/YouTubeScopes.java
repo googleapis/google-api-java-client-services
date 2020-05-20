@@ -17,7 +17,7 @@
 package com.google.api.services.youtube;
 
 /**
- * Available OAuth 2.0 scopes for use with the YouTube Data API.
+ * Available OAuth 2.0 scopes for use with the YouTube Data API v3.
  *
  * @since 1.4
  */

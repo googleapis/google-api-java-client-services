@@ -17,10 +17,10 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for LiveBroadcastSnippet.
+ * Basic broadcast information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -36,7 +36,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime actualEndTime;
+  private java.lang.String actualEndTime;
 
   /**
    * The date and time that the broadcast actually started. This information is only available once
@@ -45,13 +45,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime actualStartTime;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String broadcastType;
+  private java.lang.String actualStartTime;
 
   /**
    * The ID that YouTube uses to uniquely identify the channel that is publishing the broadcast.
@@ -69,6 +63,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
+   * Indicates whether this broadcast is the default broadcast. Internal only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +82,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * The date and time that the broadcast is scheduled to end. The value is specified in ISO 8601
@@ -95,7 +90,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime scheduledEndTime;
+  private java.lang.String scheduledEndTime;
 
   /**
    * The date and time that the broadcast is scheduled to start. The value is specified in ISO 8601
@@ -103,7 +98,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime scheduledStartTime;
+  private java.lang.String scheduledStartTime;
 
   /**
    * A map of thumbnail images associated with the broadcast. For each nested object in this object,
@@ -129,7 +124,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getActualEndTime() {
+  public java.lang.String getActualEndTime() {
     return actualEndTime;
   }
 
@@ -139,7 +134,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * format.
    * @param actualEndTime actualEndTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setActualEndTime(com.google.api.client.util.DateTime actualEndTime) {
+  public LiveBroadcastSnippet setActualEndTime(java.lang.String actualEndTime) {
     this.actualEndTime = actualEndTime;
     return this;
   }
@@ -150,7 +145,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getActualStartTime() {
+  public java.lang.String getActualStartTime() {
     return actualStartTime;
   }
 
@@ -160,23 +155,8 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * format.
    * @param actualStartTime actualStartTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setActualStartTime(com.google.api.client.util.DateTime actualStartTime) {
+  public LiveBroadcastSnippet setActualStartTime(java.lang.String actualStartTime) {
     this.actualStartTime = actualStartTime;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBroadcastType() {
-    return broadcastType;
-  }
-
-  /**
-   * @param broadcastType broadcastType or {@code null} for none
-   */
-  public LiveBroadcastSnippet setBroadcastType(java.lang.String broadcastType) {
-    this.broadcastType = broadcastType;
     return this;
   }
 
@@ -217,6 +197,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
+   * Indicates whether this broadcast is the default broadcast. Internal only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDefaultBroadcast() {
@@ -224,6 +205,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
+   * Indicates whether this broadcast is the default broadcast. Internal only.
    * @param isDefaultBroadcast isDefaultBroadcast or {@code null} for none
    */
   public LiveBroadcastSnippet setIsDefaultBroadcast(java.lang.Boolean isDefaultBroadcast) {
@@ -253,7 +235,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -262,7 +244,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public LiveBroadcastSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public LiveBroadcastSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }
@@ -272,7 +254,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getScheduledEndTime() {
+  public java.lang.String getScheduledEndTime() {
     return scheduledEndTime;
   }
 
@@ -281,7 +263,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param scheduledEndTime scheduledEndTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setScheduledEndTime(com.google.api.client.util.DateTime scheduledEndTime) {
+  public LiveBroadcastSnippet setScheduledEndTime(java.lang.String scheduledEndTime) {
     this.scheduledEndTime = scheduledEndTime;
     return this;
   }
@@ -291,7 +273,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getScheduledStartTime() {
+  public java.lang.String getScheduledStartTime() {
     return scheduledStartTime;
   }
 
@@ -300,7 +282,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param scheduledStartTime scheduledStartTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setScheduledStartTime(com.google.api.client.util.DateTime scheduledStartTime) {
+  public LiveBroadcastSnippet setScheduledStartTime(java.lang.String scheduledStartTime) {
     this.scheduledStartTime = scheduledStartTime;
     return this;
   }

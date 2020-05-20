@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for MembershipsDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,7 +45,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   private java.lang.String highestAccessibleLevel;
 
   /**
-   * Display name of the highest level that the user has access to at the moment.
+   * Display name for the highest level that the user has access to at the moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Display name of the highest level that the user has access to at the moment.
+   * Display name for the highest level that the user has access to at the moment.
    * @return value or {@code null} for none
    */
   public java.lang.String getHighestAccessibleLevelDisplayName() {
@@ -110,7 +110,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Display name of the highest level that the user has access to at the moment.
+   * Display name for the highest level that the user has access to at the moment.
    * @param highestAccessibleLevelDisplayName highestAccessibleLevelDisplayName or {@code null} for none
    */
   public MembershipsDetails setHighestAccessibleLevelDisplayName(java.lang.String highestAccessibleLevelDisplayName) {

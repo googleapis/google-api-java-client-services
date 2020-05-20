@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Basic details about a video, including title, description, uploader, thumbnails and category.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -66,7 +66,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultLanguage;
 
   /**
-   * The video's description.
+   * The video's description. @mutable youtube.videos.insert youtube.videos.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * A list of keyword tags associated with the video. Tags may contain spaces.
@@ -113,7 +113,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   private ThumbnailDetails thumbnails;
 
   /**
-   * The video's title.
+   * The video's title. @mutable youtube.videos.insert youtube.videos.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +207,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's description.
+   * The video's description. @mutable youtube.videos.insert youtube.videos.update
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -215,7 +215,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's description.
+   * The video's description. @mutable youtube.videos.insert youtube.videos.update
    * @param description description or {@code null} for none
    */
   public VideoSnippet setDescription(java.lang.String description) {
@@ -266,7 +266,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
    * DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -275,7 +275,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
    * DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public VideoSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public VideoSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }
@@ -319,7 +319,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's title.
+   * The video's title. @mutable youtube.videos.insert youtube.videos.update
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -327,7 +327,7 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's title.
+   * The video's title. @mutable youtube.videos.insert youtube.videos.update
    * @param title title or {@code null} for none
    */
   public VideoSnippet setTitle(java.lang.String title) {

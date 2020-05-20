@@ -21,7 +21,7 @@ package com.google.api.services.youtube.model;
  * referenced by the search result.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -66,7 +66,7 @@ public final class SearchResultSnippet extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * A map of thumbnail images associated with the search result. For each object in the map, the
@@ -161,7 +161,7 @@ public final class SearchResultSnippet extends com.google.api.client.json.Generi
    * specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -170,7 +170,7 @@ public final class SearchResultSnippet extends com.google.api.client.json.Generi
    * specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public SearchResultSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public SearchResultSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

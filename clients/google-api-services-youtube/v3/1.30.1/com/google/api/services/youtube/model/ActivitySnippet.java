@@ -18,10 +18,10 @@ package com.google.api.services.youtube.model;
 
 /**
  * Basic details about an activity, including title, description, thumbnails, activity type and
- * group.
+ * group. Next ID: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,7 +45,8 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
   private java.lang.String channelTitle;
 
   /**
-   * The description of the resource primarily associated with the activity.
+   * The description of the resource primarily associated with the activity. @mutable
+   * youtube.activities.insert
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * A map of thumbnail images associated with the resource that is primarily associated with the
@@ -128,7 +129,8 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The description of the resource primarily associated with the activity.
+   * The description of the resource primarily associated with the activity. @mutable
+   * youtube.activities.insert
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -136,7 +138,8 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The description of the resource primarily associated with the activity.
+   * The description of the resource primarily associated with the activity. @mutable
+   * youtube.activities.insert
    * @param description description or {@code null} for none
    */
   public ActivitySnippet setDescription(java.lang.String description) {
@@ -174,7 +177,7 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
    * DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -183,7 +186,7 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
    * DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public ActivitySnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public ActivitySnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

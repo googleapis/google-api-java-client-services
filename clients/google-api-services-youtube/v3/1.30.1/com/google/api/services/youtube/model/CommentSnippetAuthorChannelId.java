@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for PlaylistContentDetails.
+ * The id of the author's YouTube channel, if any.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,40 +27,37 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PlaylistContentDetails extends com.google.api.client.json.GenericJson {
+public final class CommentSnippetAuthorChannelId extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of videos in the playlist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Long itemCount;
+  private java.lang.String value;
 
   /**
-   * The number of videos in the playlist.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getItemCount() {
-    return itemCount;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * The number of videos in the playlist.
-   * @param itemCount itemCount or {@code null} for none
+   * @param value value or {@code null} for none
    */
-  public PlaylistContentDetails setItemCount(java.lang.Long itemCount) {
-    this.itemCount = itemCount;
+  public CommentSnippetAuthorChannelId setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public PlaylistContentDetails set(String fieldName, Object value) {
-    return (PlaylistContentDetails) super.set(fieldName, value);
+  public CommentSnippetAuthorChannelId set(String fieldName, Object value) {
+    return (CommentSnippetAuthorChannelId) super.set(fieldName, value);
   }
 
   @Override
-  public PlaylistContentDetails clone() {
-    return (PlaylistContentDetails) super.clone();
+  public CommentSnippetAuthorChannelId clone() {
+    return (CommentSnippetAuthorChannelId) super.clone();
   }
 
 }

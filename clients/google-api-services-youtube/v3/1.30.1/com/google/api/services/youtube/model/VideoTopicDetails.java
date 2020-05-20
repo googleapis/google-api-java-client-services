@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Freebase topic information related to the video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -48,7 +48,8 @@ public final class VideoTopicDetails extends com.google.api.client.json.GenericJ
   /**
    * A list of Freebase topic IDs that are centrally associated with the video. These are topics
    * that are centrally featured in the video, and it can be said that the video is mainly about
-   * each of these. You can retrieve information about each topic using the Freebase Topic API.
+   * each of these. You can retrieve information about each topic using the < a
+   * href="http://wiki.freebase.com/wiki/Topic_API">Freebase Topic API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,8 @@ public final class VideoTopicDetails extends com.google.api.client.json.GenericJ
   /**
    * A list of Freebase topic IDs that are centrally associated with the video. These are topics
    * that are centrally featured in the video, and it can be said that the video is mainly about
-   * each of these. You can retrieve information about each topic using the Freebase Topic API.
+   * each of these. You can retrieve information about each topic using the < a
+   * href="http://wiki.freebase.com/wiki/Topic_API">Freebase Topic API.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTopicIds() {
@@ -105,7 +107,8 @@ public final class VideoTopicDetails extends com.google.api.client.json.GenericJ
   /**
    * A list of Freebase topic IDs that are centrally associated with the video. These are topics
    * that are centrally featured in the video, and it can be said that the video is mainly about
-   * each of these. You can retrieve information about each topic using the Freebase Topic API.
+   * each of these. You can retrieve information about each topic using the < a
+   * href="http://wiki.freebase.com/wiki/Topic_API">Freebase Topic API.
    * @param topicIds topicIds or {@code null} for none
    */
   public VideoTopicDetails setTopicIds(java.util.List<java.lang.String> topicIds) {

@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for PlaylistItemContentDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -69,7 +69,7 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime videoPublishedAt;
+  private java.lang.String videoPublishedAt;
 
   /**
    * The time, measured in seconds from the start of the video, when the video should stop playing.
@@ -156,7 +156,7 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getVideoPublishedAt() {
+  public java.lang.String getVideoPublishedAt() {
     return videoPublishedAt;
   }
 
@@ -165,7 +165,7 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param videoPublishedAt videoPublishedAt or {@code null} for none
    */
-  public PlaylistItemContentDetails setVideoPublishedAt(com.google.api.client.util.DateTime videoPublishedAt) {
+  public PlaylistItemContentDetails setVideoPublishedAt(java.lang.String videoPublishedAt) {
     this.videoPublishedAt = videoPublishedAt;
     return this;
   }

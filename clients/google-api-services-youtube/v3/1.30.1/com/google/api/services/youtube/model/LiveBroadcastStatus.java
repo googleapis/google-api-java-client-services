@@ -17,10 +17,10 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for LiveBroadcastStatus.
+ * Live broadcast state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,6 +45,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   private java.lang.String liveBroadcastPriority;
 
   /**
+   * Whether the broadcast is made for kids or not, decided by YouTube instead of the creator. This
+   * field is read only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +70,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   private java.lang.String recordingStatus;
 
   /**
+   * This field will be set to True if the creator declares the broadcast to be kids only: go/live-
+   * cw-work.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,6 +114,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   }
 
   /**
+   * Whether the broadcast is made for kids or not, decided by YouTube instead of the creator. This
+   * field is read only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMadeForKids() {
@@ -117,6 +123,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   }
 
   /**
+   * Whether the broadcast is made for kids or not, decided by YouTube instead of the creator. This
+   * field is read only.
    * @param madeForKids madeForKids or {@code null} for none
    */
   public LiveBroadcastStatus setMadeForKids(java.lang.Boolean madeForKids) {
@@ -165,6 +173,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   }
 
   /**
+   * This field will be set to True if the creator declares the broadcast to be kids only: go/live-
+   * cw-work.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSelfDeclaredMadeForKids() {
@@ -172,6 +182,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   }
 
   /**
+   * This field will be set to True if the creator declares the broadcast to be kids only: go/live-
+   * cw-work.
    * @param selfDeclaredMadeForKids selfDeclaredMadeForKids or {@code null} for none
    */
   public LiveBroadcastStatus setSelfDeclaredMadeForKids(java.lang.Boolean selfDeclaredMadeForKids) {

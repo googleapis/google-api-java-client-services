@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Details about the live streaming metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -46,7 +46,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime actualEndTime;
+  private java.lang.String actualEndTime;
 
   /**
    * The time that the broadcast actually started. The value is specified in ISO 8601 (YYYY-MM-
@@ -54,7 +54,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime actualStartTime;
+  private java.lang.String actualStartTime;
 
   /**
    * The number of viewers currently watching the broadcast. The property and its value will be
@@ -74,7 +74,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime scheduledEndTime;
+  private java.lang.String scheduledEndTime;
 
   /**
    * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 (YYYY-MM-
@@ -82,7 +82,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime scheduledStartTime;
+  private java.lang.String scheduledStartTime;
 
   /**
    * The ID of the currently active live chat attached to this video. This field is filled only if
@@ -114,7 +114,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast is over.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getActualEndTime() {
+  public java.lang.String getActualEndTime() {
     return actualEndTime;
   }
 
@@ -123,7 +123,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast is over.
    * @param actualEndTime actualEndTime or {@code null} for none
    */
-  public VideoLiveStreamingDetails setActualEndTime(com.google.api.client.util.DateTime actualEndTime) {
+  public VideoLiveStreamingDetails setActualEndTime(java.lang.String actualEndTime) {
     this.actualEndTime = actualEndTime;
     return this;
   }
@@ -133,7 +133,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast begins.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getActualStartTime() {
+  public java.lang.String getActualStartTime() {
     return actualStartTime;
   }
 
@@ -142,7 +142,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast begins.
    * @param actualStartTime actualStartTime or {@code null} for none
    */
-  public VideoLiveStreamingDetails setActualStartTime(com.google.api.client.util.DateTime actualStartTime) {
+  public VideoLiveStreamingDetails setActualStartTime(java.lang.String actualStartTime) {
     this.actualStartTime = actualStartTime;
     return this;
   }
@@ -178,7 +178,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * broadcast is scheduled to continue indefinitely.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getScheduledEndTime() {
+  public java.lang.String getScheduledEndTime() {
     return scheduledEndTime;
   }
 
@@ -188,7 +188,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * broadcast is scheduled to continue indefinitely.
    * @param scheduledEndTime scheduledEndTime or {@code null} for none
    */
-  public VideoLiveStreamingDetails setScheduledEndTime(com.google.api.client.util.DateTime scheduledEndTime) {
+  public VideoLiveStreamingDetails setScheduledEndTime(java.lang.String scheduledEndTime) {
     this.scheduledEndTime = scheduledEndTime;
     return this;
   }
@@ -198,7 +198,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getScheduledStartTime() {
+  public java.lang.String getScheduledStartTime() {
     return scheduledStartTime;
   }
 
@@ -207,7 +207,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
    * DDThh:mm:ss.sZ) format.
    * @param scheduledStartTime scheduledStartTime or {@code null} for none
    */
-  public VideoLiveStreamingDetails setScheduledStartTime(com.google.api.client.util.DateTime scheduledStartTime) {
+  public VideoLiveStreamingDetails setScheduledStartTime(java.lang.String scheduledStartTime) {
     this.scheduledStartTime = scheduledStartTime;
     return this;
   }

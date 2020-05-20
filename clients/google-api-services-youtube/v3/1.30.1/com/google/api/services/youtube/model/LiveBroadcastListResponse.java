@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for LiveBroadcastListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -73,6 +73,7 @@ public final class LiveBroadcastListResponse extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
+   * General pagination information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,6 +190,7 @@ public final class LiveBroadcastListResponse extends com.google.api.client.json.
   }
 
   /**
+   * General pagination information.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -196,6 +198,7 @@ public final class LiveBroadcastListResponse extends com.google.api.client.json.
   }
 
   /**
+   * General pagination information.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public LiveBroadcastListResponse setPageInfo(PageInfo pageInfo) {

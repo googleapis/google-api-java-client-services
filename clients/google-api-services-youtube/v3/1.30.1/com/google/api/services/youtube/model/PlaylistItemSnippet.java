@@ -17,10 +17,11 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Basic details about a playlist, including title, description and thumbnails.
+ * Basic details about a playlist, including title, description and thumbnails. Basic details of a
+ * YouTube Playlist item provided by the author. Next ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -51,7 +52,7 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * The ID that YouTube uses to uniquely identify the playlist that the playlist item is in.
+   * The ID that YouTube uses to uniquely identify thGe playlist that the playlist item is in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,7 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * The id object contains information that can be used to uniquely identify the resource that is
@@ -149,7 +150,7 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
   }
 
   /**
-   * The ID that YouTube uses to uniquely identify the playlist that the playlist item is in.
+   * The ID that YouTube uses to uniquely identify thGe playlist that the playlist item is in.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaylistId() {
@@ -157,7 +158,7 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
   }
 
   /**
-   * The ID that YouTube uses to uniquely identify the playlist that the playlist item is in.
+   * The ID that YouTube uses to uniquely identify thGe playlist that the playlist item is in.
    * @param playlistId playlistId or {@code null} for none
    */
   public PlaylistItemSnippet setPlaylistId(java.lang.String playlistId) {
@@ -189,7 +190,7 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -198,7 +199,7 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public PlaylistItemSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public PlaylistItemSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

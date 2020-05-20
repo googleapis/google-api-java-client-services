@@ -21,7 +21,7 @@ package com.google.api.services.youtube.model;
  * linked with the channel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -43,7 +43,7 @@ public final class ChannelContentOwnerDetails extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime timeLinked;
+  private java.lang.String timeLinked;
 
   /**
    * The ID of the content owner linked to the channel.
@@ -67,7 +67,7 @@ public final class ChannelContentOwnerDetails extends com.google.api.client.json
    * in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getTimeLinked() {
+  public java.lang.String getTimeLinked() {
     return timeLinked;
   }
 
@@ -76,7 +76,7 @@ public final class ChannelContentOwnerDetails extends com.google.api.client.json
    * in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param timeLinked timeLinked or {@code null} for none
    */
-  public ChannelContentOwnerDetails setTimeLinked(com.google.api.client.util.DateTime timeLinked) {
+  public ChannelContentOwnerDetails setTimeLinked(java.lang.String timeLinked) {
     this.timeLinked = timeLinked;
     return this;
   }

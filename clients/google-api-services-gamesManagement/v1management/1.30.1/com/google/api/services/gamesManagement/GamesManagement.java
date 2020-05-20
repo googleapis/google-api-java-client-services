@@ -72,7 +72,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch";
+  public static final String DEFAULT_BATCH_PATH = "batch/games/v1management";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

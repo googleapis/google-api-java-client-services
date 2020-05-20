@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/q87MOfWk98inmRTn0zaIDzGrAuU\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Yryi_j1si0UYSDrVQgsmKlmNp7Q\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200421",
+ "revision": "20200512",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -6874,6 +6874,10 @@
     "merchantOrderId": {
      "type": "string",
      "description": "The merchant provided order ID."
+    },
+    "orderItemId": {
+     "type": "string",
+     "description": "The identifier of the item."
     },
     "settlementEntryId": {
      "type": "string",

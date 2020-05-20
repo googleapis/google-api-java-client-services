@@ -37,6 +37,13 @@ public final class DeviceUser extends com.google.api.client.json.GenericJson {
   private java.lang.String compromisedState;
 
   /**
+   * When the user first signed in to the device
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. Most recent time when user registered with this service.
    * The value may be {@code null}.
    */
@@ -108,6 +115,23 @@ public final class DeviceUser extends com.google.api.client.json.GenericJson {
    */
   public DeviceUser setCompromisedState(java.lang.String compromisedState) {
     this.compromisedState = compromisedState;
+    return this;
+  }
+
+  /**
+   * When the user first signed in to the device
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * When the user first signed in to the device
+   * @param createTime createTime or {@code null} for none
+   */
+  public DeviceUser setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

@@ -37,7 +37,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> data;
 
   /**
-   * The URL of the discovery document containing the resource's JSON schema. For example:
+   * The URL of the discovery document containing the resource's JSON schema. Example:
    * "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"
    *
    * This value is unspecified for resources that do not have an API based on a discovery document,
@@ -48,7 +48,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String discoveryDocumentUri;
 
   /**
-   * The JSON schema name listed in the discovery document. For example: "Project"
+   * The JSON schema name listed in the discovery document. Example: "Project"
    *
    * This value is unspecified for resources that do not have an API based on a discovery document,
    * such as Cloud Bigtable.
@@ -58,12 +58,20 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String discoveryName;
 
   /**
+   * The location of the resource in Google Cloud, such as its zone and region. For more
+   * information, see https://cloud.google.com/about/locations/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The full name of the immediate parent of this resource. See [Resource
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
    * information.
    *
    * For Google Cloud assets, this value is the parent resource defined in the [Cloud IAM policy
-   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). For example:
+   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
    * "//cloudresourcemanager.googleapis.com/projects/my_project_123"
    *
    * For third-party assets, this field may be set differently.
@@ -74,7 +82,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The REST URL for accessing the resource. An HTTP `GET` request using this URL returns the
-   * resource itself. For example: "https://cloudresourcemanager.googleapis.com/v1/projects/my-
+   * resource itself. Example: "https://cloudresourcemanager.googleapis.com/v1/projects/my-
    * project-123"
    *
    * This value is unspecified for resources without a REST API.
@@ -84,7 +92,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceUrl;
 
   /**
-   * The API version. For example: "v1"
+   * The API version. Example: "v1"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +116,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the discovery document containing the resource's JSON schema. For example:
+   * The URL of the discovery document containing the resource's JSON schema. Example:
    * "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"
    *
    * This value is unspecified for resources that do not have an API based on a discovery document,
@@ -120,7 +128,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the discovery document containing the resource's JSON schema. For example:
+   * The URL of the discovery document containing the resource's JSON schema. Example:
    * "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"
    *
    * This value is unspecified for resources that do not have an API based on a discovery document,
@@ -133,7 +141,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The JSON schema name listed in the discovery document. For example: "Project"
+   * The JSON schema name listed in the discovery document. Example: "Project"
    *
    * This value is unspecified for resources that do not have an API based on a discovery document,
    * such as Cloud Bigtable.
@@ -144,7 +152,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The JSON schema name listed in the discovery document. For example: "Project"
+   * The JSON schema name listed in the discovery document. Example: "Project"
    *
    * This value is unspecified for resources that do not have an API based on a discovery document,
    * such as Cloud Bigtable.
@@ -156,12 +164,31 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The location of the resource in Google Cloud, such as its zone and region. For more
+   * information, see https://cloud.google.com/about/locations/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The location of the resource in Google Cloud, such as its zone and region. For more
+   * information, see https://cloud.google.com/about/locations/.
+   * @param location location or {@code null} for none
+   */
+  public Resource setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
    * The full name of the immediate parent of this resource. See [Resource
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
    * information.
    *
    * For Google Cloud assets, this value is the parent resource defined in the [Cloud IAM policy
-   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). For example:
+   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
    * "//cloudresourcemanager.googleapis.com/projects/my_project_123"
    *
    * For third-party assets, this field may be set differently.
@@ -177,7 +204,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * information.
    *
    * For Google Cloud assets, this value is the parent resource defined in the [Cloud IAM policy
-   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). For example:
+   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
    * "//cloudresourcemanager.googleapis.com/projects/my_project_123"
    *
    * For third-party assets, this field may be set differently.
@@ -190,7 +217,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The REST URL for accessing the resource. An HTTP `GET` request using this URL returns the
-   * resource itself. For example: "https://cloudresourcemanager.googleapis.com/v1/projects/my-
+   * resource itself. Example: "https://cloudresourcemanager.googleapis.com/v1/projects/my-
    * project-123"
    *
    * This value is unspecified for resources without a REST API.
@@ -202,7 +229,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The REST URL for accessing the resource. An HTTP `GET` request using this URL returns the
-   * resource itself. For example: "https://cloudresourcemanager.googleapis.com/v1/projects/my-
+   * resource itself. Example: "https://cloudresourcemanager.googleapis.com/v1/projects/my-
    * project-123"
    *
    * This value is unspecified for resources without a REST API.
@@ -214,7 +241,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version. For example: "v1"
+   * The API version. Example: "v1"
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -222,7 +249,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version. For example: "v1"
+   * The API version. Example: "v1"
    * @param version version or {@code null} for none
    */
   public Resource setVersion(java.lang.String version) {

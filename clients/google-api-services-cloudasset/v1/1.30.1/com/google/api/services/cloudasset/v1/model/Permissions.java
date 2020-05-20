@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * A Pub/Sub destination.
+ * IAM permissions
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.cloudasset.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PubsubDestination extends com.google.api.client.json.GenericJson {
+public final class Permissions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+   * A list of permissions. A sample permission string: "compute.disk.get".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String topic;
+  private java.util.List<java.lang.String> permissions;
 
   /**
-   * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+   * A list of permissions. A sample permission string: "compute.disk.get".
    * @return value or {@code null} for none
    */
-  public java.lang.String getTopic() {
-    return topic;
+  public java.util.List<java.lang.String> getPermissions() {
+    return permissions;
   }
 
   /**
-   * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
-   * @param topic topic or {@code null} for none
+   * A list of permissions. A sample permission string: "compute.disk.get".
+   * @param permissions permissions or {@code null} for none
    */
-  public PubsubDestination setTopic(java.lang.String topic) {
-    this.topic = topic;
+  public Permissions setPermissions(java.util.List<java.lang.String> permissions) {
+    this.permissions = permissions;
     return this;
   }
 
   @Override
-  public PubsubDestination set(String fieldName, Object value) {
-    return (PubsubDestination) super.set(fieldName, value);
+  public Permissions set(String fieldName, Object value) {
+    return (Permissions) super.set(fieldName, value);
   }
 
   @Override
-  public PubsubDestination clone() {
-    return (PubsubDestination) super.clone();
+  public Permissions clone() {
+    return (Permissions) super.clone();
   }
 
 }

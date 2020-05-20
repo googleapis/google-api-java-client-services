@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/A0StowLCk6_YQOwCP1AS7g6Vp58\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/kUE5ERHBaKgFUVRbuUNbc2vvqsA\"",
  "discoveryVersion": "v1",
  "id": "dfareporting:v3.3",
  "name": "dfareporting",
  "version": "v3.3",
- "revision": "20200326",
+ "revision": "20200514",
  "title": "DCM/DFA Reporting And Trafficking API",
  "description": "Manages your DoubleClick Campaign Manager ad campaigns and reports.",
  "ownerDomain": "google.com",
@@ -4972,7 +4972,8 @@
    "description": "Represents a File resource. A file contains the metadata for a report run. It shows the status of the run and holds the URLs to the generated report data if the run is finished and the status is \"REPORT_AVAILABLE\".",
    "properties": {
     "dateRange": {
-     "$ref": "DateRange"
+     "$ref": "DateRange",
+     "description": "The date range for which the file has report data. The date range will always be the absolute date range for which the report is run."
     },
     "etag": {
      "type": "string",
@@ -4984,7 +4985,15 @@
     },
     "format": {
      "type": "string",
-     "description": "The output format of the report. Only available once the file is available."
+     "description": "The output format of the report. Only available once the file is available.",
+     "enum": [
+      "CSV",
+      "EXCEL"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
     },
     "id": {
      "type": "string",
@@ -5008,7 +5017,19 @@
     },
     "status": {
      "type": "string",
-     "description": "The status of the report file."
+     "description": "The status of the report file.",
+     "enum": [
+      "CANCELLED",
+      "FAILED",
+      "PROCESSING",
+      "REPORT_AVAILABLE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      "",
+      ""
+     ]
     },
     "urls": {
      "type": "object",
@@ -5029,6 +5050,7 @@
   "FileList": {
    "id": "FileList",
    "type": "object",
+   "description": "List of files for a report.",
    "properties": {
     "etag": {
      "type": "string",
@@ -5036,6 +5058,7 @@
     },
     "items": {
      "type": "array",
+     "description": "The files returned in this response.",
      "items": {
       "$ref": "File"
      }
@@ -18468,14 +18491,14 @@
         },
         "profileId": {
          "type": "string",
-         "description": "The DFA user profile ID.",
+         "description": "The DFA profile ID.",
          "required": true,
          "format": "int64",
          "location": "path"
         },
         "reportId": {
          "type": "string",
-         "description": "The ID of the report.",
+         "description": "The ID of the parent report.",
          "required": true,
          "format": "int64",
          "location": "path"

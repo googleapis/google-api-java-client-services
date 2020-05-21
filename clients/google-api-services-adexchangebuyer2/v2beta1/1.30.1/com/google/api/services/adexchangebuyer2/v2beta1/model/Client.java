@@ -52,7 +52,8 @@ public final class Client extends com.google.api.client.json.GenericJson {
 
   /**
    * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an
-   * agency. This identifier is unique among all the entities with the same type.
+   * agency. This identifier is unique among all the entities with the same type. The value of this
+   * field is ignored if the entity type is not provided.
    *
    * A list of all known advertisers with their identifiers is available in the
    * [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file.
@@ -76,7 +77,8 @@ public final class Client extends com.google.api.client.json.GenericJson {
   private java.lang.String entityName;
 
   /**
-   * The type of the client entity: `ADVERTISER`, `BRAND`, or `AGENCY`.
+   * An optional field for specifying the type of the client entity: `ADVERTISER`, `BRAND`, or
+   * `AGENCY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +163,8 @@ public final class Client extends com.google.api.client.json.GenericJson {
 
   /**
    * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an
-   * agency. This identifier is unique among all the entities with the same type.
+   * agency. This identifier is unique among all the entities with the same type. The value of this
+   * field is ignored if the entity type is not provided.
    *
    * A list of all known advertisers with their identifiers is available in the
    * [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file.
@@ -179,7 +182,8 @@ public final class Client extends com.google.api.client.json.GenericJson {
 
   /**
    * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an
-   * agency. This identifier is unique among all the entities with the same type.
+   * agency. This identifier is unique among all the entities with the same type. The value of this
+   * field is ignored if the entity type is not provided.
    *
    * A list of all known advertisers with their identifiers is available in the
    * [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file.
@@ -216,7 +220,8 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the client entity: `ADVERTISER`, `BRAND`, or `AGENCY`.
+   * An optional field for specifying the type of the client entity: `ADVERTISER`, `BRAND`, or
+   * `AGENCY`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityType() {
@@ -224,7 +229,8 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the client entity: `ADVERTISER`, `BRAND`, or `AGENCY`.
+   * An optional field for specifying the type of the client entity: `ADVERTISER`, `BRAND`, or
+   * `AGENCY`.
    * @param entityType entityType or {@code null} for none
    */
   public Client setEntityType(java.lang.String entityType) {

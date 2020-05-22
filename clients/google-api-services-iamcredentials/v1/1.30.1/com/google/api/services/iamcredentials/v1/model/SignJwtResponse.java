@@ -31,7 +31,15 @@ package com.google.api.services.iamcredentials.v1.model;
 public final class SignJwtResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the key used to sign the JWT.
+   * The ID of the key used to sign the JWT. The key used for signing will remain valid for at least
+   * 12 hours after the JWT is signed. To verify the signature, you can retrieve the public key in
+   * several formats from the following endpoints:
+   *
+   * - RSA public key wrapped in an X.509 v3 certificate:
+   * `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` - Raw key in
+   * JSON format: `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` -
+   * JSON Web Key (JWK):
+   * `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,13 +48,25 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   /**
    * The signed JWT. Contains the automatically generated header; the client-supplied payload; and
    * the signature, which is generated using the key referenced by the `kid` field in the header.
+   *
+   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
+   * the public key that can be used to verify the JWT. As a result, the receiver can no longer
+   * verify the signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signedJwt;
 
   /**
-   * The ID of the key used to sign the JWT.
+   * The ID of the key used to sign the JWT. The key used for signing will remain valid for at least
+   * 12 hours after the JWT is signed. To verify the signature, you can retrieve the public key in
+   * several formats from the following endpoints:
+   *
+   * - RSA public key wrapped in an X.509 v3 certificate:
+   * `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` - Raw key in
+   * JSON format: `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` -
+   * JSON Web Key (JWK):
+   * `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyId() {
@@ -54,7 +74,15 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ID of the key used to sign the JWT.
+   * The ID of the key used to sign the JWT. The key used for signing will remain valid for at least
+   * 12 hours after the JWT is signed. To verify the signature, you can retrieve the public key in
+   * several formats from the following endpoints:
+   *
+   * - RSA public key wrapped in an X.509 v3 certificate:
+   * `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` - Raw key in
+   * JSON format: `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` -
+   * JSON Web Key (JWK):
+   * `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
    * @param keyId keyId or {@code null} for none
    */
   public SignJwtResponse setKeyId(java.lang.String keyId) {
@@ -65,6 +93,10 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   /**
    * The signed JWT. Contains the automatically generated header; the client-supplied payload; and
    * the signature, which is generated using the key referenced by the `kid` field in the header.
+   *
+   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
+   * the public key that can be used to verify the JWT. As a result, the receiver can no longer
+   * verify the signature.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignedJwt() {
@@ -74,6 +106,10 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   /**
    * The signed JWT. Contains the automatically generated header; the client-supplied payload; and
    * the signature, which is generated using the key referenced by the `kid` field in the header.
+   *
+   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
+   * the public key that can be used to verify the JWT. As a result, the receiver can no longer
+   * verify the signature.
    * @param signedJwt signedJwt or {@code null} for none
    */
   public SignJwtResponse setSignedJwt(java.lang.String signedJwt) {

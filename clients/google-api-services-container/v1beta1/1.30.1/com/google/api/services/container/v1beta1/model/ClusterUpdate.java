@@ -67,6 +67,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DatabaseEncryption desiredDatabaseEncryption;
 
   /**
+   * The desired status of whether to disable default sNAT for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultSnatStatus desiredDefaultSnatStatus;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
@@ -314,6 +321,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDatabaseEncryption(DatabaseEncryption desiredDatabaseEncryption) {
     this.desiredDatabaseEncryption = desiredDatabaseEncryption;
+    return this;
+  }
+
+  /**
+   * The desired status of whether to disable default sNAT for this cluster.
+   * @return value or {@code null} for none
+   */
+  public DefaultSnatStatus getDesiredDefaultSnatStatus() {
+    return desiredDefaultSnatStatus;
+  }
+
+  /**
+   * The desired status of whether to disable default sNAT for this cluster.
+   * @param desiredDefaultSnatStatus desiredDefaultSnatStatus or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDefaultSnatStatus(DefaultSnatStatus desiredDefaultSnatStatus) {
+    this.desiredDefaultSnatStatus = desiredDefaultSnatStatus;
     return this;
   }
 

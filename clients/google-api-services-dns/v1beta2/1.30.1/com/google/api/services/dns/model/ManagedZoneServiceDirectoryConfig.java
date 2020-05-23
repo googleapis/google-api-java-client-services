@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for ManagedZonePrivateVisibilityConfigNetwork.
+ * Model definition for ManagedZoneServiceDirectoryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -27,11 +27,11 @@ package com.google.api.services.dns.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.api.client.json.GenericJson {
+public final class ManagedZoneServiceDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePrivateVisibilityConfigNetwork".
+   * "dns#managedZoneServiceDirectoryConfig".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,11 +41,11 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String networkUrl;
+  private ManagedZoneServiceDirectoryConfigNamespace namespace;
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePrivateVisibilityConfigNetwork".
+   * "dns#managedZoneServiceDirectoryConfig".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -54,10 +54,10 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePrivateVisibilityConfigNetwork".
+   * "dns#managedZoneServiceDirectoryConfig".
    * @param kind kind or {@code null} for none
    */
-  public ManagedZonePrivateVisibilityConfigNetwork setKind(java.lang.String kind) {
+  public ManagedZoneServiceDirectoryConfig setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
@@ -65,26 +65,26 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getNetworkUrl() {
-    return networkUrl;
+  public ManagedZoneServiceDirectoryConfigNamespace getNamespace() {
+    return namespace;
   }
 
   /**
-   * @param networkUrl networkUrl or {@code null} for none
+   * @param namespace namespace or {@code null} for none
    */
-  public ManagedZonePrivateVisibilityConfigNetwork setNetworkUrl(java.lang.String networkUrl) {
-    this.networkUrl = networkUrl;
+  public ManagedZoneServiceDirectoryConfig setNamespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
+    this.namespace = namespace;
     return this;
   }
 
   @Override
-  public ManagedZonePrivateVisibilityConfigNetwork set(String fieldName, Object value) {
-    return (ManagedZonePrivateVisibilityConfigNetwork) super.set(fieldName, value);
+  public ManagedZoneServiceDirectoryConfig set(String fieldName, Object value) {
+    return (ManagedZoneServiceDirectoryConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ManagedZonePrivateVisibilityConfigNetwork clone() {
-    return (ManagedZonePrivateVisibilityConfigNetwork) super.clone();
+  public ManagedZoneServiceDirectoryConfig clone() {
+    return (ManagedZoneServiceDirectoryConfig) super.clone();
   }
 
 }

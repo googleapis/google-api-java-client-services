@@ -17,8 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A project resource. The project is a top level container for resources including Cloud DNS
- * ManagedZones. Projects can be created only in the APIs console.
+ * Model definition for Project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -31,7 +30,6 @@ package com.google.api.services.dns.model;
 public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
-   * User assigned unique identifier for the resource (output only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +43,18 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Unique numeric identifier for the resource; defined by the server (output only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger number;
 
   /**
-   * Quotas assigned to this project (output only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Quota quota;
 
   /**
-   * User assigned unique identifier for the resource (output only).
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -67,7 +62,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned unique identifier for the resource (output only).
    * @param id id or {@code null} for none
    */
   public Project setId(java.lang.String id) {
@@ -93,7 +87,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique numeric identifier for the resource; defined by the server (output only).
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getNumber() {
@@ -101,7 +94,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique numeric identifier for the resource; defined by the server (output only).
    * @param number number or {@code null} for none
    */
   public Project setNumber(java.math.BigInteger number) {
@@ -110,7 +102,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Quotas assigned to this project (output only).
    * @return value or {@code null} for none
    */
   public Quota getQuota() {
@@ -118,7 +109,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Quotas assigned to this project (output only).
    * @param quota quota or {@code null} for none
    */
   public Project setQuota(Quota quota) {

@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/ec22hi9jBIRxWxCoPiZbFINc_VE\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/FVULT6tDckHaeAz57eP2vl3pqKY\"",
  "discoveryVersion": "v1",
  "id": "calendar:v3",
  "name": "calendar",
  "version": "v3",
- "revision": "20200428",
+ "revision": "20200517",
  "title": "Calendar API",
  "description": "Manipulates events and other calendar data.",
  "ownerDomain": "google.com",
@@ -568,7 +568,7 @@
    "properties": {
     "type": {
      "type": "string",
-     "description": "The conference solution type.\nIf a client encounters an unfamiliar or empty type, it should still be able to display the entry points. However, it should disallow modifications.\nThe possible values are:  \n- \"eventHangout\" for Hangouts for consumers (http://hangouts.google.com)\n- \"eventNamedHangout\" for classic Hangouts for G Suite users (http://hangouts.google.com)\n- \"hangoutsMeet\" for Hangouts Meet (http://meet.google.com)\n- \"addOn\" for 3P conference providers"
+     "description": "The conference solution type.\nIf a client encounters an unfamiliar or empty type, it should still be able to display the entry points. However, it should disallow modifications.\nThe possible values are:  \n- \"eventHangout\" for Hangouts for consumers (http://hangouts.google.com)\n- \"eventNamedHangout\" for classic Hangouts for G Suite users (http://hangouts.google.com)\n- \"hangoutsMeet\" for Google Meet (http://meet.google.com)\n- \"addOn\" for 3P conference providers"
     }
    }
   },

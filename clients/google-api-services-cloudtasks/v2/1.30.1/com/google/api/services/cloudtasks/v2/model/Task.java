@@ -61,7 +61,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. Cloud
    * Tasks will retry the task according to the RetryConfig.
    *
-   * Note that when the request is cancelled, Cloud Tasks will stop listing for the response, but
+   * Note that when the request is cancelled, Cloud Tasks will stop listening for the response, but
    * whether the worker stops processing depends on the worker. For example, if the worker is stuck,
    * it may not react to cancelled requests.
    *
@@ -226,7 +226,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. Cloud
    * Tasks will retry the task according to the RetryConfig.
    *
-   * Note that when the request is cancelled, Cloud Tasks will stop listing for the response, but
+   * Note that when the request is cancelled, Cloud Tasks will stop listening for the response, but
    * whether the worker stops processing depends on the worker. For example, if the worker is stuck,
    * it may not react to cancelled requests.
    *
@@ -259,7 +259,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. Cloud
    * Tasks will retry the task according to the RetryConfig.
    *
-   * Note that when the request is cancelled, Cloud Tasks will stop listing for the response, but
+   * Note that when the request is cancelled, Cloud Tasks will stop listening for the response, but
    * whether the worker stops processing depends on the worker. For example, if the worker is stuck,
    * it may not react to cancelled requests.
    *

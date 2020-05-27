@@ -85,11 +85,11 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   private ParserConfig parserConfig;
 
   /**
-   * Determines whether duplicate messages should be rejected. A duplicate message is a message with
-   * the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The
-   * default value is false, meaning that the store accepts the duplicate messages and it also
-   * returns the same ACK message in the IngestMessageResponse as has been returned previously. Note
-   * that only one resource is created in the store. When this field is set to true,
+   * Determines whether to reject duplicate messages. A duplicate message is a message with the same
+   * raw bytes as a message that has already been ingested/created in this HL7v2 store. The default
+   * value is false, meaning that the store accepts the duplicate messages and it also returns the
+   * same ACK message in the IngestMessageResponse as has been returned previously. Note that only
+   * one resource is created in the store. When this field is set to true,
    * CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store,
    * and IngestMessageErrorDetail returns a NACK message upon rejection.
    * The value may be {@code null}.
@@ -211,11 +211,11 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determines whether duplicate messages should be rejected. A duplicate message is a message with
-   * the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The
-   * default value is false, meaning that the store accepts the duplicate messages and it also
-   * returns the same ACK message in the IngestMessageResponse as has been returned previously. Note
-   * that only one resource is created in the store. When this field is set to true,
+   * Determines whether to reject duplicate messages. A duplicate message is a message with the same
+   * raw bytes as a message that has already been ingested/created in this HL7v2 store. The default
+   * value is false, meaning that the store accepts the duplicate messages and it also returns the
+   * same ACK message in the IngestMessageResponse as has been returned previously. Note that only
+   * one resource is created in the store. When this field is set to true,
    * CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store,
    * and IngestMessageErrorDetail returns a NACK message upon rejection.
    * @return value or {@code null} for none
@@ -225,11 +225,11 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determines whether duplicate messages should be rejected. A duplicate message is a message with
-   * the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The
-   * default value is false, meaning that the store accepts the duplicate messages and it also
-   * returns the same ACK message in the IngestMessageResponse as has been returned previously. Note
-   * that only one resource is created in the store. When this field is set to true,
+   * Determines whether to reject duplicate messages. A duplicate message is a message with the same
+   * raw bytes as a message that has already been ingested/created in this HL7v2 store. The default
+   * value is false, meaning that the store accepts the duplicate messages and it also returns the
+   * same ACK message in the IngestMessageResponse as has been returned previously. Note that only
+   * one resource is created in the store. When this field is set to true,
    * CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store,
    * and IngestMessageErrorDetail returns a NACK message upon rejection.
    * @param rejectDuplicateMessage rejectDuplicateMessage or {@code null} for none

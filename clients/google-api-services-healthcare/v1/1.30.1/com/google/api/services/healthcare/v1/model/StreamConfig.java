@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * This structure contains configuration for streaming FHIR export.
+ * Contains configuration for streaming FHIR export.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -34,15 +34,15 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * schema config.
    *
    * The output is organized in one table per resource type. The server reuses the existing tables
-   * (if any) that are named after the resource types, e.g. "Patient", "Observation". When there is
-   * no existing table for a given resource type, the server attempts to create one.
+   * (if any) that are named after the resource types. For example, "Patient", "Observation". When
+   * there is no existing table for a given resource type, the server attempts to create one.
    *
    * When a table schema doesn't align with the schema config, either because of existing
    * incompatible schema or out of band incompatible modification, the server does not stream in new
    * data.
    *
    * BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation
-   * that generates more than 1 MB of BigQuery data will not be streamed.
+   * that generates more than 1 MB of BigQuery data is not streamed.
    *
    * One resolution in this case is to delete the incompatible table and let the server recreate
    * one, though the newly created table only contains data after the table recreation.
@@ -61,8 +61,8 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the
    * server created view mentioned above also filters out duplicates.
    *
-   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging
-   * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+   * If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For
+   * more information, see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,15 +82,15 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * schema config.
    *
    * The output is organized in one table per resource type. The server reuses the existing tables
-   * (if any) that are named after the resource types, e.g. "Patient", "Observation". When there is
-   * no existing table for a given resource type, the server attempts to create one.
+   * (if any) that are named after the resource types. For example, "Patient", "Observation". When
+   * there is no existing table for a given resource type, the server attempts to create one.
    *
    * When a table schema doesn't align with the schema config, either because of existing
    * incompatible schema or out of band incompatible modification, the server does not stream in new
    * data.
    *
    * BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation
-   * that generates more than 1 MB of BigQuery data will not be streamed.
+   * that generates more than 1 MB of BigQuery data is not streamed.
    *
    * One resolution in this case is to delete the incompatible table and let the server recreate
    * one, though the newly created table only contains data after the table recreation.
@@ -109,8 +109,8 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the
    * server created view mentioned above also filters out duplicates.
    *
-   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging
-   * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+   * If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For
+   * more information, see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging)).
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1FhirBigQueryDestination getBigqueryDestination() {
@@ -122,15 +122,15 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * schema config.
    *
    * The output is organized in one table per resource type. The server reuses the existing tables
-   * (if any) that are named after the resource types, e.g. "Patient", "Observation". When there is
-   * no existing table for a given resource type, the server attempts to create one.
+   * (if any) that are named after the resource types. For example, "Patient", "Observation". When
+   * there is no existing table for a given resource type, the server attempts to create one.
    *
    * When a table schema doesn't align with the schema config, either because of existing
    * incompatible schema or out of band incompatible modification, the server does not stream in new
    * data.
    *
    * BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation
-   * that generates more than 1 MB of BigQuery data will not be streamed.
+   * that generates more than 1 MB of BigQuery data is not streamed.
    *
    * One resolution in this case is to delete the incompatible table and let the server recreate
    * one, though the newly created table only contains data after the table recreation.
@@ -149,8 +149,8 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the
    * server created view mentioned above also filters out duplicates.
    *
-   * If a resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging
-   * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+   * If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For
+   * more information, see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging)).
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public StreamConfig setBigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestination bigqueryDestination) {

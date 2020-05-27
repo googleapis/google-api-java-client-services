@@ -17,9 +17,8 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Error response of importing resources. This structure will be included in the error details to
- * describe the detailed error. It will only be included when the operation finishes with some
- * failure.
+ * Error response of importing resources. This structure is included in the error details to
+ * describe the detailed error after the operation finishes with some failure.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

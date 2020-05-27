@@ -33,7 +33,7 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * Restricts notifications sent for messages matching a filter. If this is empty, all messages are
    * matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    *
-   * Fields/functions available for filtering are:
+   * The following fields and functions are available for filtering:
    *
    * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. *
    * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone,
@@ -58,15 +58,15 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    *
    * *  `PubsubMessage.Data` contains the resource name. *  `PubsubMessage.MessageId` is the ID of
    * this notification. It is guaranteed to be unique within the topic. *
-   * `PubsubMessage.PublishTime` is the time at which the message was published.
+   * `PubsubMessage.PublishTime` is the time when the message was published.
    *
    * Note that notifications are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
    * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
    * having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Cloud Logging
-   * (see [Viewing logs](/healthcare/docs/how- tos/logging)).
+   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging. For
+   * more information, see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * Restricts notifications sent for messages matching a filter. If this is empty, all messages are
    * matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    *
-   * Fields/functions available for filtering are:
+   * The following fields and functions are available for filtering:
    *
    * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. *
    * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone,
@@ -99,7 +99,7 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * Restricts notifications sent for messages matching a filter. If this is empty, all messages are
    * matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    *
-   * Fields/functions available for filtering are:
+   * The following fields and functions are available for filtering:
    *
    * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. *
    * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone,
@@ -126,15 +126,15 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    *
    * *  `PubsubMessage.Data` contains the resource name. *  `PubsubMessage.MessageId` is the ID of
    * this notification. It is guaranteed to be unique within the topic. *
-   * `PubsubMessage.PublishTime` is the time at which the message was published.
+   * `PubsubMessage.PublishTime` is the time when the message was published.
    *
    * Note that notifications are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
    * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
    * having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Cloud Logging
-   * (see [Viewing logs](/healthcare/docs/how- tos/logging)).
+   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging. For
+   * more information, see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging).
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -148,15 +148,15 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    *
    * *  `PubsubMessage.Data` contains the resource name. *  `PubsubMessage.MessageId` is the ID of
    * this notification. It is guaranteed to be unique within the topic. *
-   * `PubsubMessage.PublishTime` is the time at which the message was published.
+   * `PubsubMessage.PublishTime` is the time when the message was published.
    *
    * Note that notifications are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
    * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
    * having adequate permissions causes the calls that send notifications to fail.
    *
-   * If a notification cannot be published to Cloud Pub/Sub, errors will be logged to Cloud Logging
-   * (see [Viewing logs](/healthcare/docs/how- tos/logging)).
+   * If a notification can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging. For
+   * more information, see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging).
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public Hl7V2NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

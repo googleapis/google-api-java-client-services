@@ -17,9 +17,8 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Response when all resources export successfully. This structure will be included in the response
- * to describe the detailed outcome. It will only be included when the operation finishes
- * successfully.
+ * Response when all resources export successfully. This structure is included in the response to
+ * describe the detailed outcome after the operation finishes successfully.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

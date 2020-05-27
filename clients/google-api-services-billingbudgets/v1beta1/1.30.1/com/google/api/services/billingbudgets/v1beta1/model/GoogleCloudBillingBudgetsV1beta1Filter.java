@@ -39,8 +39,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
-   * resources should be included in the budget. Multiple entries or multiple values per entry are
-   * not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * resources should be included in the budget. Currently, multiple entries or multiple values per
+   * entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
-   * resources should be included in the budget. Multiple entries or multiple values per entry are
-   * not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * resources should be included in the budget. Currently, multiple entries or multiple values per
+   * entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.util.List<java.lang.Object>> getLabels() {
@@ -106,8 +106,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
-   * resources should be included in the budget. Multiple entries or multiple values per entry are
-   * not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * resources should be included in the budget. Currently, multiple entries or multiple values per
+   * entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1Filter setLabels(java.util.Map<String, java.util.List<java.lang.Object>> labels) {

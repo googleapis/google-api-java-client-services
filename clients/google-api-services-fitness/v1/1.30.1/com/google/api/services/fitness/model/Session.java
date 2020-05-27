@@ -20,7 +20,7 @@ package com.google.api.services.fitness.model;
  * Sessions contain metadata, such as a user-friendly name and time interval information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Fitness. For a detailed explanation see:
+ * transmitted over HTTP when working with the Fitness API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

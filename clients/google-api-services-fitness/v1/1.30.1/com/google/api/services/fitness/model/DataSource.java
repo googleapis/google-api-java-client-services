@@ -17,7 +17,7 @@
 package com.google.api.services.fitness.model;
 
 /**
- * Definition of a unique source of sensor data. Data sources can expose raw data coming from
+ * Definition of a unique source of sensor data.  Data sources can expose raw data coming from
  * hardware sensors on local or companion devices. They can also expose derived data, created by
  * transforming or merging other data sources. Multiple data sources can exist for the same data
  * type. Every data point inserted into or read from this service has an associated data source.
@@ -31,7 +31,7 @@ package com.google.api.services.fitness.model;
  * application/device can still be considered to belong to the same data stream.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Fitness. For a detailed explanation see:
+ * transmitted over HTTP when working with the Fitness API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -58,14 +58,15 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   /**
    * A unique identifier for the data stream produced by this data source. The identifier includes:
    *
-   *   - The physical device's manufacturer, model, and serial number (UID).  - The application's
-   * package name or name. Package name is used when the data source was created by an Android
-   * application. The developer project number is used when the data source was created by a REST
-   * client.  - The data source's type.  - The data source's stream name.  Note that not all
-   * attributes of the data source are used as part of the stream identifier. In particular, the
-   * version of the hardware/the application isn't used. This allows us to preserve the same stream
-   * through version updates. This also means that two DataSource objects may represent the same
-   * data stream even if they're not equal.
+   * The physical device's manufacturer, model, and serial number (UID). The application's package
+   * name or name. Package name is used when the data source was created by an Android application.
+   * The developer project number is used when the data source was created by a REST client. The
+   * data source's type. The data source's stream name.
+   *
+   * Note that not all attributes of the data source are used as part of the stream identifier. In
+   * particular, the version of the hardware/the application isn't used. This allows us to preserve
+   * the same stream through version updates. This also means that two DataSource objects may
+   * represent the same data stream even if they're not equal.
    *
    * The exact format of the data stream ID created by an Android application is: type:dataType.name
    * :application.packageName:device.manufacturer:device.model:device.uid:dataStreamName
@@ -166,14 +167,15 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   /**
    * A unique identifier for the data stream produced by this data source. The identifier includes:
    *
-   *   - The physical device's manufacturer, model, and serial number (UID).  - The application's
-   * package name or name. Package name is used when the data source was created by an Android
-   * application. The developer project number is used when the data source was created by a REST
-   * client.  - The data source's type.  - The data source's stream name.  Note that not all
-   * attributes of the data source are used as part of the stream identifier. In particular, the
-   * version of the hardware/the application isn't used. This allows us to preserve the same stream
-   * through version updates. This also means that two DataSource objects may represent the same
-   * data stream even if they're not equal.
+   * The physical device's manufacturer, model, and serial number (UID). The application's package
+   * name or name. Package name is used when the data source was created by an Android application.
+   * The developer project number is used when the data source was created by a REST client. The
+   * data source's type. The data source's stream name.
+   *
+   * Note that not all attributes of the data source are used as part of the stream identifier. In
+   * particular, the version of the hardware/the application isn't used. This allows us to preserve
+   * the same stream through version updates. This also means that two DataSource objects may
+   * represent the same data stream even if they're not equal.
    *
    * The exact format of the data stream ID created by an Android application is: type:dataType.name
    * :application.packageName:device.manufacturer:device.model:device.uid:dataStreamName
@@ -199,14 +201,15 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   /**
    * A unique identifier for the data stream produced by this data source. The identifier includes:
    *
-   *   - The physical device's manufacturer, model, and serial number (UID).  - The application's
-   * package name or name. Package name is used when the data source was created by an Android
-   * application. The developer project number is used when the data source was created by a REST
-   * client.  - The data source's type.  - The data source's stream name.  Note that not all
-   * attributes of the data source are used as part of the stream identifier. In particular, the
-   * version of the hardware/the application isn't used. This allows us to preserve the same stream
-   * through version updates. This also means that two DataSource objects may represent the same
-   * data stream even if they're not equal.
+   * The physical device's manufacturer, model, and serial number (UID). The application's package
+   * name or name. Package name is used when the data source was created by an Android application.
+   * The developer project number is used when the data source was created by a REST client. The
+   * data source's type. The data source's stream name.
+   *
+   * Note that not all attributes of the data source are used as part of the stream identifier. In
+   * particular, the version of the hardware/the application isn't used. This allows us to preserve
+   * the same stream through version updates. This also means that two DataSource objects may
+   * represent the same data stream even if they're not equal.
    *
    * The exact format of the data stream ID created by an Android application is: type:dataType.name
    * :application.packageName:device.manufacturer:device.model:device.uid:dataStreamName

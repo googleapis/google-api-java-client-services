@@ -74,6 +74,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean longTermRelease;
 
   /**
+   * Specifies the number of hours after instance creation where the instance won't be scheduled for
+   * maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maintenanceFreezeDurationHours;
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * The value may be {@code null}.
@@ -203,6 +211,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setLongTermRelease(java.lang.Boolean longTermRelease) {
     this.longTermRelease = longTermRelease;
+    return this;
+  }
+
+  /**
+   * Specifies the number of hours after instance creation where the instance won't be scheduled for
+   * maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaintenanceFreezeDurationHours() {
+    return maintenanceFreezeDurationHours;
+  }
+
+  /**
+   * Specifies the number of hours after instance creation where the instance won't be scheduled for
+   * maintenance.
+   * @param maintenanceFreezeDurationHours maintenanceFreezeDurationHours or {@code null} for none
+   */
+  public Scheduling setMaintenanceFreezeDurationHours(java.lang.Integer maintenanceFreezeDurationHours) {
+    this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
     return this;
   }
 

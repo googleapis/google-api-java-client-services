@@ -1,0 +1,293 @@
+{
+  "baseUrl": "https://chromeuxreport.googleapis.com/",
+  "schemas": {
+    "Record": {
+      "id": "Record",
+      "type": "object",
+      "description": "Record is a single Chrome UX report data record. It contains use experience\nstatistics for a single url pattern and set of dimensions.",
+      "properties": {
+        "key": {
+          "description": "Key defines all of the unique querying parameters needed to look up a user\nexperience record.",
+          "$ref": "Key"
+        },
+        "metrics": {
+          "type": "object",
+          "description": "Metrics is the map of user experience data available for the record defined\nin the key field. Metrics are keyed on the metric name.\n\nAllowed key values: [\"first_contentful_paint\",\n\"first_input_delay\", \"largest_contentful_paint\",\n\"cumulative_layout_shift\"]",
+          "additionalProperties": {
+            "$ref": "Metric"
+          }
+        }
+      }
+    },
+    "UrlNormalization": {
+      "id": "UrlNormalization",
+      "type": "object",
+      "description": "Object representing the normalization actions taken to normalize a url to\nachieve a higher chance of successful lookup. These are simple automated\nchanges that are taken when looking up the provided `url_patten` would be\nknown to fail. Complex actions like following redirects are not handled.",
+      "properties": {
+        "originalUrl": {
+          "type": "string",
+          "description": "The original requested URL prior to any normalization actions."
+        },
+        "normalizedUrl": {
+          "type": "string",
+          "description": "The URL after any normalization actions. This is a valid user experience\nURL that could reasonably be looked up."
+        }
+      }
+    },
+    "Key": {
+      "id": "Key",
+      "type": "object",
+      "description": "Key defines all the dimensions that identify this record as unique.",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "Url specifies a specific url that this record is for.\n\nNote: When specifying a \"url\" only data for that specific url will be\naggregated."
+        },
+        "formFactor": {
+          "enumDescriptions": [
+            "The default value, representing all device classes.",
+            "The device class representing a \"mobile\"/\"phone\" sized client.",
+            "The device class representing a \"desktop\"/\"laptop\" type full size client.",
+            "The device class representing a \"tablet\" type client."
+          ],
+          "enum": [
+            "ALL_FORM_FACTORS",
+            "PHONE",
+            "DESKTOP",
+            "TABLET"
+          ],
+          "type": "string",
+          "description": "The form factor is the device class that all users used to access the\nsite for this record.\n\nIf the form factor is unspecified, then aggregated data over all form\nfactors will be returned."
+        },
+        "origin": {
+          "type": "string",
+          "description": "Origin specifies the origin that this record is for.\n\nNote: When specifying an origin, data for loads under this origin over\nall pages are aggregated into origin level user experience data."
+        }
+      }
+    },
+    "Percentiles": {
+      "id": "Percentiles",
+      "type": "object",
+      "description": "Percentiles contains synthetic values of a metric at a given statistical\npercentile. These are used for estimating a metric's value as experienced\nby a percentage of users out of the total number of users.",
+      "properties": {
+        "p75": {
+          "type": "any",
+          "description": "75% of users experienced the given metric at or below this value."
+        }
+      }
+    },
+    "Metric": {
+      "id": "Metric",
+      "type": "object",
+      "description": "A `metric` is a set of user experience data for a single web performance\nmetric, like \"first contentful paint\". It contains a summary histogram of\nreal world Chrome usage as a series of `bins`.",
+      "properties": {
+        "percentiles": {
+          "description": "Common useful percentiles of the Metric. The value type for the\npercentiles will be the same as the value types given for the Histogram\nbins.",
+          "$ref": "Percentiles"
+        },
+        "histogram": {
+          "type": "array",
+          "description": "The histogram of user experiences for a metric. The histogram will have at\nleast one bin and the densities of all bins will add up to ~1.",
+          "items": {
+            "$ref": "Bin"
+          }
+        }
+      }
+    },
+    "Bin": {
+      "id": "Bin",
+      "type": "object",
+      "description": "A bin is a discrete portion of data spanning from start to end, or if no\nend is given, then from start to +inf.\n\nA bin's start and end values are given in the value type of the metric it\nrepresents. For example, \"first contentful paint\" is measured in\nmilliseconds and exposed as ints, therefore its metric bins will use int32s\nfor its start and end types. However, \"cumulative layout shift\" is measured\nin unitless decimals and is exposed as a decimal encoded as a string,\ntherefore its metric bins will use strings for its value type.",
+      "properties": {
+        "end": {
+          "type": "any",
+          "description": "End is the end of the data bin. If end is not populated, then the bin has\nno end and is valid from start to +inf."
+        },
+        "density": {
+          "type": "number",
+          "description": "The proportion of users that experienced this bin's value for the given\nmetric.",
+          "format": "double"
+        },
+        "start": {
+          "type": "any",
+          "description": "Start is the beginning of the data bin."
+        }
+      }
+    },
+    "QueryResponse": {
+      "id": "QueryResponse",
+      "type": "object",
+      "description": "Response payload sent back to a physical web client.\n\nThis response contains the record found based on the identiers present in a\n`QueryRequest`.  The returned response will have a record, and sometimes\ndetails on normalization actions taken on the request that were necessary to\nmake the request successful.",
+      "properties": {
+        "record": {
+          "description": "The record that was found.",
+          "$ref": "Record"
+        },
+        "urlNormalizationDetails": {
+          "description": "These are details about automated normalization actions that were taken in\norder to make the requested `url_pattern` valid.",
+          "$ref": "UrlNormalization"
+        }
+      }
+    },
+    "QueryRequest": {
+      "id": "QueryRequest",
+      "type": "object",
+      "description": "Request payload sent by a physical web client.\n\nThis request includes all necessary context to load a particular\nuser experience record.",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The url pattern \"url\" refers to a url pattern that is any arbitrary url.\n\nExamples: \"https://example.com/\",\n  \"https://cloud.google.com/why-google-cloud/\""
+        },
+        "metrics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "The metrics that should be included in the response.\nIf none are specified then any metrics found will be returned.\n\nAllowed values: [\"first_contentful_paint\",\n\"first_input_delay\", \"largest_contentful_paint\",\n\"cumulative_layout_shift\"]"
+        },
+        "formFactor": {
+          "type": "string",
+          "description": "The form factor is a query dimension that specifies the device class that\nthe record's data should belong to.\n\nNote: If no form factor is specified, then a special record with\naggregated data over all form factors will be returned.",
+          "enumDescriptions": [
+            "The default value, representing all device classes.",
+            "The device class representing a \"mobile\"/\"phone\" sized client.",
+            "The device class representing a \"desktop\"/\"laptop\" type full size client.",
+            "The device class representing a \"tablet\" type client."
+          ],
+          "enum": [
+            "ALL_FORM_FACTORS",
+            "PHONE",
+            "DESKTOP",
+            "TABLET"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "description": "The url pattern \"origin\" refers to a url pattern that is the origin of\na website.\n\nExamples: \"https://example.com\", \"https://cloud.google.com\""
+        }
+      }
+    }
+  },
+  "canonicalName": "Chrome UX Report",
+  "discoveryVersion": "v1",
+  "batchPath": "batch",
+  "servicePath": "",
+  "basePath": "",
+  "documentationLink": "https://developers.google.com/web/tools/chrome-user-experience-report/api/reference",
+  "name": "chromeuxreport",
+  "title": "Chrome UX Report API",
+  "ownerDomain": "google.com",
+  "ownerName": "Google",
+  "mtlsRootUrl": "https://chromeuxreport.mtls.googleapis.com/",
+  "version": "v1",
+  "fullyEncodeReservedExpansion": true,
+  "revision": "20200528",
+  "rootUrl": "https://chromeuxreport.googleapis.com/",
+  "id": "chromeuxreport:v1",
+  "protocol": "rest",
+  "resources": {
+    "records": {
+      "methods": {
+        "queryRecord": {
+          "id": "chromeuxreport.records.queryRecord",
+          "httpMethod": "POST",
+          "flatPath": "v1/records:queryRecord",
+          "parameterOrder": [],
+          "parameters": {},
+          "response": {
+            "$ref": "QueryResponse"
+          },
+          "description": "Queries the Chrome User Experience for a single `record` for a given site.\n\nReturns a `record` that contains one or more `metrics` corresponding to\nperformance data about the requested site.",
+          "request": {
+            "$ref": "QueryRequest"
+          },
+          "path": "v1/records:queryRecord"
+        }
+      }
+    }
+  },
+  "parameters": {
+    "prettyPrint": {
+      "type": "boolean",
+      "default": "true",
+      "location": "query",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "callback": {
+      "type": "string",
+      "location": "query",
+      "description": "JSONP"
+    },
+    "upload_protocol": {
+      "type": "string",
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
+    },
+    "uploadType": {
+      "type": "string",
+      "location": "query",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+    },
+    "access_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth access token."
+    },
+    "alt": {
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "location": "query",
+      "type": "string",
+      "default": "json",
+      "description": "Data format for response.",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ]
+    },
+    "key": {
+      "type": "string",
+      "location": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "fields": {
+      "type": "string",
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "$.xgafv": {
+      "enum": [
+        "1",
+        "2"
+      ],
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "type": "string",
+      "location": "query",
+      "description": "V1 error format."
+    },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+    },
+    "oauth_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user."
+    }
+  },
+  "kind": "discovery#restDescription",
+  "description": "The Chrome UX Report API lets you view real user experience data for millions of websites.\n",
+  "version_module": true,
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  }
+}

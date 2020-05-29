@@ -45,6 +45,13 @@ public final class SettlementTransactionIdentifiers extends com.google.api.clien
   private java.lang.String merchantOrderId;
 
   /**
+   * The identifier of the item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orderItemId;
+
+  /**
    * The unique ID of the settlement transaction entry.
    * The value may be {@code null}.
    */
@@ -96,6 +103,23 @@ public final class SettlementTransactionIdentifiers extends com.google.api.clien
    */
   public SettlementTransactionIdentifiers setMerchantOrderId(java.lang.String merchantOrderId) {
     this.merchantOrderId = merchantOrderId;
+    return this;
+  }
+
+  /**
+   * The identifier of the item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrderItemId() {
+    return orderItemId;
+  }
+
+  /**
+   * The identifier of the item.
+   * @param orderItemId orderItemId or {@code null} for none
+   */
+  public SettlementTransactionIdentifiers setOrderItemId(java.lang.String orderItemId) {
+    this.orderItemId = orderItemId;
     return this;
   }
 

@@ -39,11 +39,46 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
   private java.lang.String additionalAuthenticatedData;
 
   /**
+   * Optional. An optional CRC32C checksum of the DecryptRequest.additional_authenticated_data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * DecryptRequest.additional_authenticated_data using this checksum. KeyManagementService will
+   * report an error if the checksum verification fails. If you receive a checksum error, your
+   * client should verify that CRC32C(DecryptRequest.additional_authenticated_data) is equal to
+   * DecryptRequest.additional_authenticated_data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
+   * checksum. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long additionalAuthenticatedDataCrc32c;
+
+  /**
    * Required. The encrypted data originally returned in EncryptResponse.ciphertext.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ciphertext;
+
+  /**
+   * Optional. An optional CRC32C checksum of the DecryptRequest.ciphertext. If specified,
+   * KeyManagementService will verify the integrity of the received DecryptRequest.ciphertext using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(DecryptRequest.ciphertext)
+   * is equal to DecryptRequest.ciphertext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ciphertextCrc32c;
 
   /**
    * Optional. Optional data that must match the data originally supplied in
@@ -95,6 +130,45 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. An optional CRC32C checksum of the DecryptRequest.additional_authenticated_data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * DecryptRequest.additional_authenticated_data using this checksum. KeyManagementService will
+   * report an error if the checksum verification fails. If you receive a checksum error, your
+   * client should verify that CRC32C(DecryptRequest.additional_authenticated_data) is equal to
+   * DecryptRequest.additional_authenticated_data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
+   * checksum. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAdditionalAuthenticatedDataCrc32c() {
+    return additionalAuthenticatedDataCrc32c;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the DecryptRequest.additional_authenticated_data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * DecryptRequest.additional_authenticated_data using this checksum. KeyManagementService will
+   * report an error if the checksum verification fails. If you receive a checksum error, your
+   * client should verify that CRC32C(DecryptRequest.additional_authenticated_data) is equal to
+   * DecryptRequest.additional_authenticated_data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
+   * checksum. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param additionalAuthenticatedDataCrc32c additionalAuthenticatedDataCrc32c or {@code null} for none
+   */
+  public DecryptRequest setAdditionalAuthenticatedDataCrc32c(java.lang.Long additionalAuthenticatedDataCrc32c) {
+    this.additionalAuthenticatedDataCrc32c = additionalAuthenticatedDataCrc32c;
+    return this;
+  }
+
+  /**
    * Required. The encrypted data originally returned in EncryptResponse.ciphertext.
    * @see #decodeCiphertext()
    * @return value or {@code null} for none
@@ -136,6 +210,43 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
    */
   public DecryptRequest encodeCiphertext(byte[] ciphertext) {
     this.ciphertext = com.google.api.client.util.Base64.encodeBase64URLSafeString(ciphertext);
+    return this;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the DecryptRequest.ciphertext. If specified,
+   * KeyManagementService will verify the integrity of the received DecryptRequest.ciphertext using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(DecryptRequest.ciphertext)
+   * is equal to DecryptRequest.ciphertext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCiphertextCrc32c() {
+    return ciphertextCrc32c;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the DecryptRequest.ciphertext. If specified,
+   * KeyManagementService will verify the integrity of the received DecryptRequest.ciphertext using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(DecryptRequest.ciphertext)
+   * is equal to DecryptRequest.ciphertext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param ciphertextCrc32c ciphertextCrc32c or {@code null} for none
+   */
+  public DecryptRequest setCiphertextCrc32c(java.lang.Long ciphertextCrc32c) {
+    this.ciphertextCrc32c = ciphertextCrc32c;
     return this;
   }
 

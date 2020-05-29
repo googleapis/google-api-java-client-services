@@ -35,10 +35,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime completed;
+  private java.lang.String completed;
 
   /**
-   * Flag indicating whether the task has been deleted. The default if False.
+   * Flag indicating whether the task has been deleted. The default is False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime due;
+  private java.lang.String due;
 
   /**
    * ETag of the resource.
@@ -147,14 +147,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * Completion date of the task (as a RFC 3339 timestamp). This field is omitted if the task has
    * not been completed.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getCompleted() {
+  public java.lang.String getCompleted() {
     return completed;
   }
 
@@ -163,13 +163,13 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * not been completed.
    * @param completed completed or {@code null} for none
    */
-  public Task setCompleted(com.google.api.client.util.DateTime completed) {
+  public Task setCompleted(java.lang.String completed) {
     this.completed = completed;
     return this;
   }
 
   /**
-   * Flag indicating whether the task has been deleted. The default if False.
+   * Flag indicating whether the task has been deleted. The default is False.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -177,7 +177,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Flag indicating whether the task has been deleted. The default if False.
+   * Flag indicating whether the task has been deleted. The default is False.
    * @param deleted deleted or {@code null} for none
    */
   public Task setDeleted(java.lang.Boolean deleted) {
@@ -191,7 +191,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * possible to read or write the time that a task is due via the API.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getDue() {
+  public java.lang.String getDue() {
     return due;
   }
 
@@ -201,7 +201,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * possible to read or write the time that a task is due via the API.
    * @param due due or {@code null} for none
    */
-  public Task setDue(com.google.api.client.util.DateTime due) {
+  public Task setDue(java.lang.String due) {
     this.due = due;
     return this;
   }
@@ -409,7 +409,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * Last modification time of the task (as a RFC 3339 timestamp).
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
+  public java.lang.String getUpdated() {
     return updated;
   }
 
@@ -417,7 +417,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * Last modification time of the task (as a RFC 3339 timestamp).
    * @param updated updated or {@code null} for none
    */
-  public Task setUpdated(com.google.api.client.util.DateTime updated) {
+  public Task setUpdated(java.lang.String updated) {
     this.updated = updated;
     return this;
   }
@@ -438,7 +438,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   public static final class Links extends com.google.api.client.json.GenericJson {
 
     /**
-     * The description. In HTML speak: Everything between  and .
+     * The description. In HTML speak: Everything between a and /a.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -459,7 +459,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     private java.lang.String type;
 
     /**
-     * The description. In HTML speak: Everything between  and .
+     * The description. In HTML speak: Everything between a and /a.
      * @return value or {@code null} for none
      */
     public java.lang.String getDescription() {
@@ -467,7 +467,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The description. In HTML speak: Everything between  and .
+     * The description. In HTML speak: Everything between a and /a.
      * @param description description or {@code null} for none
      */
     public Links setDescription(java.lang.String description) {

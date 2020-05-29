@@ -69,7 +69,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * ETag of the resource.
@@ -160,7 +160,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
    * Last modification time of the task list (as a RFC 3339 timestamp).
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
+  public java.lang.String getUpdated() {
     return updated;
   }
 
@@ -168,7 +168,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
    * Last modification time of the task list (as a RFC 3339 timestamp).
    * @param updated updated or {@code null} for none
    */
-  public TaskList setUpdated(com.google.api.client.util.DateTime updated) {
+  public TaskList setUpdated(java.lang.String updated) {
     this.updated = updated;
     return this;
   }

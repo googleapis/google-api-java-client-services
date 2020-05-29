@@ -38,6 +38,24 @@ public final class AsymmetricDecryptRequest extends com.google.api.client.json.G
   private java.lang.String ciphertext;
 
   /**
+   * Optional. An optional CRC32C checksum of the AsymmetricDecryptRequest.ciphertext. If specified,
+   * KeyManagementService will verify the integrity of the received
+   * AsymmetricDecryptRequest.ciphertext using this checksum. KeyManagementService will report an
+   * error if the checksum verification fails. If you receive a checksum error, your client should
+   * verify that CRC32C(AsymmetricDecryptRequest.ciphertext) is equal to
+   * AsymmetricDecryptRequest.ciphertext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ciphertextCrc32c;
+
+  /**
    * Required. The data encrypted with the named CryptoKeyVersion's public key using OAEP.
    * @see #decodeCiphertext()
    * @return value or {@code null} for none
@@ -79,6 +97,45 @@ public final class AsymmetricDecryptRequest extends com.google.api.client.json.G
    */
   public AsymmetricDecryptRequest encodeCiphertext(byte[] ciphertext) {
     this.ciphertext = com.google.api.client.util.Base64.encodeBase64URLSafeString(ciphertext);
+    return this;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the AsymmetricDecryptRequest.ciphertext. If specified,
+   * KeyManagementService will verify the integrity of the received
+   * AsymmetricDecryptRequest.ciphertext using this checksum. KeyManagementService will report an
+   * error if the checksum verification fails. If you receive a checksum error, your client should
+   * verify that CRC32C(AsymmetricDecryptRequest.ciphertext) is equal to
+   * AsymmetricDecryptRequest.ciphertext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCiphertextCrc32c() {
+    return ciphertextCrc32c;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the AsymmetricDecryptRequest.ciphertext. If specified,
+   * KeyManagementService will verify the integrity of the received
+   * AsymmetricDecryptRequest.ciphertext using this checksum. KeyManagementService will report an
+   * error if the checksum verification fails. If you receive a checksum error, your client should
+   * verify that CRC32C(AsymmetricDecryptRequest.ciphertext) is equal to
+   * AsymmetricDecryptRequest.ciphertext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param ciphertextCrc32c ciphertextCrc32c or {@code null} for none
+   */
+  public AsymmetricDecryptRequest setCiphertextCrc32c(java.lang.Long ciphertextCrc32c) {
+    this.ciphertextCrc32c = ciphertextCrc32c;
     return this;
   }
 

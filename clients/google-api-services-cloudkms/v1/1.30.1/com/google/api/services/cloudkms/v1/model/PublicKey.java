@@ -38,6 +38,15 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String algorithm;
 
   /**
+   * The name of the CryptoKeyVersion public key. Provided here for verification.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject
@@ -46,6 +55,22 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String pem;
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned PublicKey.pem. An integrity
+   * check of PublicKey.pem can be performed by computing the CRC32C checksum of PublicKey.pem and
+   * comparing your results to this field. Discard the response in case of non-matching checksum
+   * values, and perform a limited number of retries. A persistent mismatch may indicate an issue in
+   * your computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative integer, which will
+   * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
+   * type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long pemCrc32c;
 
   /**
    * The Algorithm associated with this key.
@@ -61,6 +86,27 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    */
   public PublicKey setAlgorithm(java.lang.String algorithm) {
     this.algorithm = algorithm;
+    return this;
+  }
+
+  /**
+   * The name of the CryptoKeyVersion public key. Provided here for verification.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The name of the CryptoKeyVersion public key. Provided here for verification.
+   *
+   * NOTE: This field is in Beta.
+   * @param name name or {@code null} for none
+   */
+  public PublicKey setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
@@ -84,6 +130,41 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    */
   public PublicKey setPem(java.lang.String pem) {
     this.pem = pem;
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned PublicKey.pem. An integrity
+   * check of PublicKey.pem can be performed by computing the CRC32C checksum of PublicKey.pem and
+   * comparing your results to this field. Discard the response in case of non-matching checksum
+   * values, and perform a limited number of retries. A persistent mismatch may indicate an issue in
+   * your computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative integer, which will
+   * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
+   * type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPemCrc32c() {
+    return pemCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned PublicKey.pem. An integrity
+   * check of PublicKey.pem can be performed by computing the CRC32C checksum of PublicKey.pem and
+   * comparing your results to this field. Discard the response in case of non-matching checksum
+   * values, and perform a limited number of retries. A persistent mismatch may indicate an issue in
+   * your computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative integer, which will
+   * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
+   * type.
+   *
+   * NOTE: This field is in Beta.
+   * @param pemCrc32c pemCrc32c or {@code null} for none
+   */
+  public PublicKey setPemCrc32c(java.lang.Long pemCrc32c) {
+    this.pemCrc32c = pemCrc32c;
     return this;
   }
 

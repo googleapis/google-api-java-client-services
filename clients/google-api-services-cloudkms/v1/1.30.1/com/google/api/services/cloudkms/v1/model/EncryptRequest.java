@@ -43,6 +43,24 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   private java.lang.String additionalAuthenticatedData;
 
   /**
+   * Optional. An optional CRC32C checksum of the EncryptRequest.additional_authenticated_data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * EncryptRequest.additional_authenticated_data using this checksum. KeyManagementService will
+   * report an error if the checksum verification fails. If you receive a checksum error, your
+   * client should verify that CRC32C(EncryptRequest.additional_authenticated_data) is equal to
+   * EncryptRequest.additional_authenticated_data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
+   * checksum. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long additionalAuthenticatedDataCrc32c;
+
+  /**
    * Required. The data to encrypt. Must be no larger than 64KiB.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
@@ -52,6 +70,23 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String plaintext;
+
+  /**
+   * Optional. An optional CRC32C checksum of the EncryptRequest.plaintext. If specified,
+   * KeyManagementService will verify the integrity of the received EncryptRequest.plaintext using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(EncryptRequest.plaintext)
+   * is equal to EncryptRequest.plaintext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long plaintextCrc32c;
 
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
@@ -119,6 +154,45 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. An optional CRC32C checksum of the EncryptRequest.additional_authenticated_data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * EncryptRequest.additional_authenticated_data using this checksum. KeyManagementService will
+   * report an error if the checksum verification fails. If you receive a checksum error, your
+   * client should verify that CRC32C(EncryptRequest.additional_authenticated_data) is equal to
+   * EncryptRequest.additional_authenticated_data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
+   * checksum. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAdditionalAuthenticatedDataCrc32c() {
+    return additionalAuthenticatedDataCrc32c;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the EncryptRequest.additional_authenticated_data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * EncryptRequest.additional_authenticated_data using this checksum. KeyManagementService will
+   * report an error if the checksum verification fails. If you receive a checksum error, your
+   * client should verify that CRC32C(EncryptRequest.additional_authenticated_data) is equal to
+   * EncryptRequest.additional_authenticated_data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
+   * checksum. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param additionalAuthenticatedDataCrc32c additionalAuthenticatedDataCrc32c or {@code null} for none
+   */
+  public EncryptRequest setAdditionalAuthenticatedDataCrc32c(java.lang.Long additionalAuthenticatedDataCrc32c) {
+    this.additionalAuthenticatedDataCrc32c = additionalAuthenticatedDataCrc32c;
+    return this;
+  }
+
+  /**
    * Required. The data to encrypt. Must be no larger than 64KiB.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
@@ -176,6 +250,43 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    */
   public EncryptRequest encodePlaintext(byte[] plaintext) {
     this.plaintext = com.google.api.client.util.Base64.encodeBase64URLSafeString(plaintext);
+    return this;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the EncryptRequest.plaintext. If specified,
+   * KeyManagementService will verify the integrity of the received EncryptRequest.plaintext using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(EncryptRequest.plaintext)
+   * is equal to EncryptRequest.plaintext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPlaintextCrc32c() {
+    return plaintextCrc32c;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the EncryptRequest.plaintext. If specified,
+   * KeyManagementService will verify the integrity of the received EncryptRequest.plaintext using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(EncryptRequest.plaintext)
+   * is equal to EncryptRequest.plaintext_crc32c, and if so, perform a limited number of retries. A
+   * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param plaintextCrc32c plaintextCrc32c or {@code null} for none
+   */
+  public EncryptRequest setPlaintextCrc32c(java.lang.Long plaintextCrc32c) {
+    this.plaintextCrc32c = plaintextCrc32c;
     return this;
   }
 

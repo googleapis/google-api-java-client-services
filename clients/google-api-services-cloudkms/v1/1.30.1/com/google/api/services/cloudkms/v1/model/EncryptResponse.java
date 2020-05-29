@@ -38,12 +38,57 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
   private java.lang.String ciphertext;
 
   /**
+   * Integrity verification field. A CRC32C checksum of the returned EncryptResponse.ciphertext. An
+   * integrity check of EncryptResponse.ciphertext can be performed by computing the CRC32C checksum
+   * of EncryptResponse.ciphertext and comparing your results to this field. Discard the response in
+   * case of non-matching checksum values, and perform a limited number of retries. A persistent
+   * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
+   * defined as int64 for reasons of compatibility across different languages. However, it is a non-
+   * negative integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in
+   * languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ciphertextCrc32c;
+
+  /**
    * The resource name of the CryptoKeyVersion used in encryption. Check this field to verify that
    * the intended resource was used for encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Integrity verification field. A flag indicating whether
+   * EncryptRequest.additional_authenticated_data_crc32c was received by KeyManagementService and
+   * used for the integrity verification of the AAD. A false value of this field indicates either
+   * that EncryptRequest.additional_authenticated_data_crc32c was left unset or that it was not
+   * delivered to KeyManagementService. If you've set
+   * EncryptRequest.additional_authenticated_data_crc32c but this field is still false, discard the
+   * response and perform a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifiedAdditionalAuthenticatedDataCrc32c;
+
+  /**
+   * Integrity verification field. A flag indicating whether EncryptRequest.plaintext_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the plaintext. A
+   * false value of this field indicates either that EncryptRequest.plaintext_crc32c was left unset
+   * or that it was not delivered to KeyManagementService. If you've set
+   * EncryptRequest.plaintext_crc32c but this field is still false, discard the response and perform
+   * a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifiedPlaintextCrc32c;
 
   /**
    * The encrypted data.
@@ -91,6 +136,41 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Integrity verification field. A CRC32C checksum of the returned EncryptResponse.ciphertext. An
+   * integrity check of EncryptResponse.ciphertext can be performed by computing the CRC32C checksum
+   * of EncryptResponse.ciphertext and comparing your results to this field. Discard the response in
+   * case of non-matching checksum values, and perform a limited number of retries. A persistent
+   * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
+   * defined as int64 for reasons of compatibility across different languages. However, it is a non-
+   * negative integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in
+   * languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCiphertextCrc32c() {
+    return ciphertextCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned EncryptResponse.ciphertext. An
+   * integrity check of EncryptResponse.ciphertext can be performed by computing the CRC32C checksum
+   * of EncryptResponse.ciphertext and comparing your results to this field. Discard the response in
+   * case of non-matching checksum values, and perform a limited number of retries. A persistent
+   * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
+   * defined as int64 for reasons of compatibility across different languages. However, it is a non-
+   * negative integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in
+   * languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param ciphertextCrc32c ciphertextCrc32c or {@code null} for none
+   */
+  public EncryptResponse setCiphertextCrc32c(java.lang.Long ciphertextCrc32c) {
+    this.ciphertextCrc32c = ciphertextCrc32c;
+    return this;
+  }
+
+  /**
    * The resource name of the CryptoKeyVersion used in encryption. Check this field to verify that
    * the intended resource was used for encryption.
    * @return value or {@code null} for none
@@ -106,6 +186,70 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    */
   public EncryptResponse setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether
+   * EncryptRequest.additional_authenticated_data_crc32c was received by KeyManagementService and
+   * used for the integrity verification of the AAD. A false value of this field indicates either
+   * that EncryptRequest.additional_authenticated_data_crc32c was left unset or that it was not
+   * delivered to KeyManagementService. If you've set
+   * EncryptRequest.additional_authenticated_data_crc32c but this field is still false, discard the
+   * response and perform a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifiedAdditionalAuthenticatedDataCrc32c() {
+    return verifiedAdditionalAuthenticatedDataCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether
+   * EncryptRequest.additional_authenticated_data_crc32c was received by KeyManagementService and
+   * used for the integrity verification of the AAD. A false value of this field indicates either
+   * that EncryptRequest.additional_authenticated_data_crc32c was left unset or that it was not
+   * delivered to KeyManagementService. If you've set
+   * EncryptRequest.additional_authenticated_data_crc32c but this field is still false, discard the
+   * response and perform a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * @param verifiedAdditionalAuthenticatedDataCrc32c verifiedAdditionalAuthenticatedDataCrc32c or {@code null} for none
+   */
+  public EncryptResponse setVerifiedAdditionalAuthenticatedDataCrc32c(java.lang.Boolean verifiedAdditionalAuthenticatedDataCrc32c) {
+    this.verifiedAdditionalAuthenticatedDataCrc32c = verifiedAdditionalAuthenticatedDataCrc32c;
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether EncryptRequest.plaintext_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the plaintext. A
+   * false value of this field indicates either that EncryptRequest.plaintext_crc32c was left unset
+   * or that it was not delivered to KeyManagementService. If you've set
+   * EncryptRequest.plaintext_crc32c but this field is still false, discard the response and perform
+   * a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifiedPlaintextCrc32c() {
+    return verifiedPlaintextCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether EncryptRequest.plaintext_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the plaintext. A
+   * false value of this field indicates either that EncryptRequest.plaintext_crc32c was left unset
+   * or that it was not delivered to KeyManagementService. If you've set
+   * EncryptRequest.plaintext_crc32c but this field is still false, discard the response and perform
+   * a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * @param verifiedPlaintextCrc32c verifiedPlaintextCrc32c or {@code null} for none
+   */
+  public EncryptResponse setVerifiedPlaintextCrc32c(java.lang.Boolean verifiedPlaintextCrc32c) {
+    this.verifiedPlaintextCrc32c = verifiedPlaintextCrc32c;
     return this;
   }
 

@@ -38,6 +38,23 @@ public final class DecryptResponse extends com.google.api.client.json.GenericJso
   private java.lang.String plaintext;
 
   /**
+   * Integrity verification field. A CRC32C checksum of the returned DecryptResponse.plaintext. An
+   * integrity check of DecryptResponse.plaintext can be performed by computing the CRC32C checksum
+   * of DecryptResponse.plaintext and comparing your results to this field. Discard the response in
+   * case of non-matching checksum values, and perform a limited number of retries. A persistent
+   * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: receiving this
+   * response message indicates that KeyManagementService is able to successfully decrypt the
+   * ciphertext. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long plaintextCrc32c;
+
+  /**
    * The decrypted data originally supplied in EncryptRequest.plaintext.
    * @see #decodePlaintext()
    * @return value or {@code null} for none
@@ -79,6 +96,43 @@ public final class DecryptResponse extends com.google.api.client.json.GenericJso
    */
   public DecryptResponse encodePlaintext(byte[] plaintext) {
     this.plaintext = com.google.api.client.util.Base64.encodeBase64URLSafeString(plaintext);
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned DecryptResponse.plaintext. An
+   * integrity check of DecryptResponse.plaintext can be performed by computing the CRC32C checksum
+   * of DecryptResponse.plaintext and comparing your results to this field. Discard the response in
+   * case of non-matching checksum values, and perform a limited number of retries. A persistent
+   * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: receiving this
+   * response message indicates that KeyManagementService is able to successfully decrypt the
+   * ciphertext. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPlaintextCrc32c() {
+    return plaintextCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned DecryptResponse.plaintext. An
+   * integrity check of DecryptResponse.plaintext can be performed by computing the CRC32C checksum
+   * of DecryptResponse.plaintext and comparing your results to this field. Discard the response in
+   * case of non-matching checksum values, and perform a limited number of retries. A persistent
+   * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: receiving this
+   * response message indicates that KeyManagementService is able to successfully decrypt the
+   * ciphertext. Note: This field is defined as int64 for reasons of compatibility across different
+   * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
+   * safely downconverted to uint32 in languages that support this type.
+   *
+   * NOTE: This field is in Beta.
+   * @param plaintextCrc32c plaintextCrc32c or {@code null} for none
+   */
+  public DecryptResponse setPlaintextCrc32c(java.lang.Long plaintextCrc32c) {
+    this.plaintextCrc32c = plaintextCrc32c;
     return this;
   }
 

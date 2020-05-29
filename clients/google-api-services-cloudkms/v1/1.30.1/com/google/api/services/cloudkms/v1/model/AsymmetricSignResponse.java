@@ -31,11 +31,75 @@ package com.google.api.services.cloudkms.v1.model;
 public final class AsymmetricSignResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
+   * intended resource was used for signing.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The created signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signature;
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned
+   * AsymmetricSignResponse.signature. An integrity check of AsymmetricSignResponse.signature can be
+   * performed by computing the CRC32C checksum of AsymmetricSignResponse.signature and comparing
+   * your results to this field. Discard the response in case of non-matching checksum values, and
+   * perform a limited number of retries. A persistent mismatch may indicate an issue in your
+   * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative integer, which will
+   * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
+   * type.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long signatureCrc32c;
+
+  /**
+   * Integrity verification field. A flag indicating whether AsymmetricSignRequest.digest_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the digest. A false
+   * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
+   * that it was not delivered to KeyManagementService. If you've set
+   * AsymmetricSignRequest.digest_crc32c but this field is still false, discard the response and
+   * perform a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifiedDigestCrc32c;
+
+  /**
+   * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
+   * intended resource was used for signing.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
+   * intended resource was used for signing.
+   *
+   * NOTE: This field is in Beta.
+   * @param name name or {@code null} for none
+   */
+  public AsymmetricSignResponse setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
 
   /**
    * The created signature.
@@ -79,6 +143,74 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    */
   public AsymmetricSignResponse encodeSignature(byte[] signature) {
     this.signature = com.google.api.client.util.Base64.encodeBase64URLSafeString(signature);
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned
+   * AsymmetricSignResponse.signature. An integrity check of AsymmetricSignResponse.signature can be
+   * performed by computing the CRC32C checksum of AsymmetricSignResponse.signature and comparing
+   * your results to this field. Discard the response in case of non-matching checksum values, and
+   * perform a limited number of retries. A persistent mismatch may indicate an issue in your
+   * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative integer, which will
+   * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
+   * type.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSignatureCrc32c() {
+    return signatureCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A CRC32C checksum of the returned
+   * AsymmetricSignResponse.signature. An integrity check of AsymmetricSignResponse.signature can be
+   * performed by computing the CRC32C checksum of AsymmetricSignResponse.signature and comparing
+   * your results to this field. Discard the response in case of non-matching checksum values, and
+   * perform a limited number of retries. A persistent mismatch may indicate an issue in your
+   * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative integer, which will
+   * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
+   * type.
+   *
+   * NOTE: This field is in Beta.
+   * @param signatureCrc32c signatureCrc32c or {@code null} for none
+   */
+  public AsymmetricSignResponse setSignatureCrc32c(java.lang.Long signatureCrc32c) {
+    this.signatureCrc32c = signatureCrc32c;
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether AsymmetricSignRequest.digest_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the digest. A false
+   * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
+   * that it was not delivered to KeyManagementService. If you've set
+   * AsymmetricSignRequest.digest_crc32c but this field is still false, discard the response and
+   * perform a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifiedDigestCrc32c() {
+    return verifiedDigestCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether AsymmetricSignRequest.digest_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the digest. A false
+   * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
+   * that it was not delivered to KeyManagementService. If you've set
+   * AsymmetricSignRequest.digest_crc32c but this field is still false, discard the response and
+   * perform a limited number of retries.
+   *
+   * NOTE: This field is in Beta.
+   * @param verifiedDigestCrc32c verifiedDigestCrc32c or {@code null} for none
+   */
+  public AsymmetricSignResponse setVerifiedDigestCrc32c(java.lang.Boolean verifiedDigestCrc32c) {
+    this.verifiedDigestCrc32c = verifiedDigestCrc32c;
     return this;
   }
 

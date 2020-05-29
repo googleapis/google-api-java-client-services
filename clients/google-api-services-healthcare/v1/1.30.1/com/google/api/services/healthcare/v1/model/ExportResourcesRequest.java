@@ -35,7 +35,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * The BigQuery location requires two IAM roles: `roles/bigquery.dataEditor` and
    * `roles/bigquery.jobUser`.
    *
-   * The output will be one BigQuery table per resource type.
+   * The output is one BigQuery table per resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,8 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    *
    * The Cloud Storage location requires the `roles/storage.objectAdmin` Cloud IAM role.
    *
-   * The exported outputs are organized by FHIR resource types. The server will create one object
-   * per resource type. Each object contains newline delimited JSON, and each line is a FHIR
-   * resource.
+   * The exported outputs are organized by FHIR resource types. The server creates one object per
+   * resource type. Each object contains newline delimited JSON, and each line is a FHIR resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +59,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * The BigQuery location requires two IAM roles: `roles/bigquery.dataEditor` and
    * `roles/bigquery.jobUser`.
    *
-   * The output will be one BigQuery table per resource type.
+   * The output is one BigQuery table per resource type.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1FhirBigQueryDestination getBigqueryDestination() {
@@ -73,7 +72,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * The BigQuery location requires two IAM roles: `roles/bigquery.dataEditor` and
    * `roles/bigquery.jobUser`.
    *
-   * The output will be one BigQuery table per resource type.
+   * The output is one BigQuery table per resource type.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public ExportResourcesRequest setBigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestination bigqueryDestination) {
@@ -86,9 +85,8 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    *
    * The Cloud Storage location requires the `roles/storage.objectAdmin` Cloud IAM role.
    *
-   * The exported outputs are organized by FHIR resource types. The server will create one object
-   * per resource type. Each object contains newline delimited JSON, and each line is a FHIR
-   * resource.
+   * The exported outputs are organized by FHIR resource types. The server creates one object per
+   * resource type. Each object contains newline delimited JSON, and each line is a FHIR resource.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1FhirGcsDestination getGcsDestination() {
@@ -100,9 +98,8 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    *
    * The Cloud Storage location requires the `roles/storage.objectAdmin` Cloud IAM role.
    *
-   * The exported outputs are organized by FHIR resource types. The server will create one object
-   * per resource type. Each object contains newline delimited JSON, and each line is a FHIR
-   * resource.
+   * The exported outputs are organized by FHIR resource types. The server creates one object per
+   * resource type. Each object contains newline delimited JSON, and each line is a FHIR resource.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public ExportResourcesRequest setGcsDestination(GoogleCloudHealthcareV1FhirGcsDestination gcsDestination) {

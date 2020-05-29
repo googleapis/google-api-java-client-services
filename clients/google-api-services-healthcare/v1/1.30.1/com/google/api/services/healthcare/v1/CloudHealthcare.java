@@ -3098,8 +3098,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * SearchForInstances returns a list of matching instances. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+           * SearchForInstances returns a list of matching instances. See [Search Transaction]
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
            *
            * Create a request for the method "dicomStores.searchForInstances".
            *
@@ -3132,8 +3132,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^instances$");
 
             /**
-             * SearchForInstances returns a list of matching instances. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForInstances returns a list of matching instances. See [Search Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
              *
              * Create a request for the method "dicomStores.searchForInstances".
              *
@@ -3295,8 +3295,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * SearchForSeries returns a list of matching series. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+           * SearchForSeries returns a list of matching series. See [Search Transaction]
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
            *
            * Create a request for the method "dicomStores.searchForSeries".
            *
@@ -3327,8 +3327,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^series$");
 
             /**
-             * SearchForSeries returns a list of matching series. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForSeries returns a list of matching series. See [Search Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
              *
              * Create a request for the method "dicomStores.searchForSeries".
              *
@@ -3488,8 +3488,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * SearchForStudies returns a list of matching studies. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+           * SearchForStudies returns a list of matching studies. See [Search Transaction]
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
            *
            * Create a request for the method "dicomStores.searchForStudies".
            *
@@ -3519,8 +3519,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^studies$");
 
             /**
-             * SearchForStudies returns a list of matching studies. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForStudies returns a list of matching studies. See [Search Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
              *
              * Create a request for the method "dicomStores.searchForStudies".
              *
@@ -3819,7 +3819,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-           * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+           * See [Store Transaction]
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
            *
            * Create a request for the method "dicomStores.storeInstances".
            *
@@ -3853,7 +3854,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+             * See [Store Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
              *
              * Create a request for the method "dicomStores.storeInstances".
              *
@@ -4341,8 +4343,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * RetrieveStudyMetadata returns instance associated with the given study presented as metadata with
-             * the bulk data removed. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+             * the bulk data removed. See [RetrieveTransaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
              *
              * Create a request for the method "studies.retrieveMetadata".
              *
@@ -4374,8 +4376,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * RetrieveStudyMetadata returns instance associated with the given study presented as metadata
-               * with the bulk data removed. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * with the bulk data removed. See [RetrieveTransaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                *
                * Create a request for the method "studies.retrieveMetadata".
                *
@@ -4535,8 +4537,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * RetrieveStudy returns all instances within the given study. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+             * RetrieveStudy returns all instances within the given study. See [RetrieveTransaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
              *
              * Create a request for the method "studies.retrieveStudy".
              *
@@ -4567,8 +4569,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+$");
 
               /**
-               * RetrieveStudy returns all instances within the given study. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * RetrieveStudy returns all instances within the given study. See [RetrieveTransaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                *
                * Create a request for the method "studies.retrieveStudy".
                *
@@ -4725,8 +4727,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * SearchForInstances returns a list of matching instances. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForInstances returns a list of matching instances. See [Search Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
              *
              * Create a request for the method "studies.searchForInstances".
              *
@@ -4759,8 +4761,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+/instances$");
 
               /**
-               * SearchForInstances returns a list of matching instances. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+               * SearchForInstances returns a list of matching instances. See [Search Transaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
                *
                * Create a request for the method "studies.searchForInstances".
                *
@@ -4922,8 +4924,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * SearchForSeries returns a list of matching series. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForSeries returns a list of matching series. See [Search Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
              *
              * Create a request for the method "studies.searchForSeries".
              *
@@ -4954,8 +4956,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+/series$");
 
               /**
-               * SearchForSeries returns a list of matching series. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+               * SearchForSeries returns a list of matching series. See [Search Transaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
                *
                * Create a request for the method "studies.searchForSeries".
                *
@@ -5116,7 +5118,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+             * See [Store Transaction]
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
              *
              * Create a request for the method "studies.storeInstances".
              *
@@ -5150,7 +5153,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-               * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+               * See [Store Transaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
                *
                * Create a request for the method "studies.storeInstances".
                *
@@ -5510,8 +5514,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * RetrieveSeriesMetadata returns instance associated with the given study and series, presented as
-               * metadata with the bulk data removed. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * metadata with the bulk data removed. See [RetrieveTransaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                *
                * Create a request for the method "series.retrieveMetadata".
                *
@@ -5543,8 +5547,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * RetrieveSeriesMetadata returns instance associated with the given study and series, presented
-                 * as metadata with the bulk data removed. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * as metadata with the bulk data removed. See [RetrieveTransaction]
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                  *
                  * Create a request for the method "series.retrieveMetadata".
                  *
@@ -5706,8 +5710,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
-               * RetrieveSeries returns all instances within the given study and series. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * RetrieveSeries returns all instances within the given study and series. See [RetrieveTransaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                *
                * Create a request for the method "series.retrieveSeries".
                *
@@ -5739,7 +5743,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * RetrieveSeries returns all instances within the given study and series. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * [RetrieveTransaction]
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                  *
                  * Create a request for the method "series.retrieveSeries".
                  *
@@ -5901,8 +5906,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
-               * SearchForInstances returns a list of matching instances. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+               * SearchForInstances returns a list of matching instances. See [Search Transaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
                *
                * Create a request for the method "series.searchForInstances".
                *
@@ -5935,8 +5940,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+/instances$");
 
                 /**
-                 * SearchForInstances returns a list of matching instances. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+                 * SearchForInstances returns a list of matching instances. See [Search Transaction]
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
                  *
                  * Create a request for the method "series.searchForInstances".
                  *
@@ -6307,7 +6312,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstance returns instance associated with the given study, series, and SOP Instance UID.
-                 * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * See [RetrieveTransaction]
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                  *
                  * Create a request for the method "instances.retrieveInstance".
                  *
@@ -6339,7 +6345,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstance returns instance associated with the given study, series, and SOP Instance
-                   * UID. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * UID. See [RetrieveTransaction]
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                    *
                    * Create a request for the method "instances.retrieveInstance".
                    *
@@ -6502,8 +6509,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                 * Instance UID presented as metadata with the bulk data removed. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction]
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                  *
                  * Create a request for the method "instances.retrieveMetadata".
                  *
@@ -6535,8 +6542,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                   * Instance UID presented as metadata with the bulk data removed. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction]
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                    *
                    * Create a request for the method "instances.retrieveMetadata".
                    *
@@ -6699,8 +6706,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
-                 * Instance UID in an acceptable Rendered Media Type. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * Instance UID in an acceptable Rendered Media Type. See [RetrieveTransaction]
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                  *
                  * Create a request for the method "instances.retrieveRendered".
                  *
@@ -6732,8 +6739,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
-                   * Instance UID in an acceptable Rendered Media Type. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * Instance UID in an acceptable Rendered Media Type. See [RetrieveTransaction]
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                    *
                    * Create a request for the method "instances.retrieveRendered".
                    *
@@ -6917,7 +6924,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
-                   * frame numbers. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * frame numbers. See [RetrieveTransaction]
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4}.
                    *
                    * Create a request for the method "frames.retrieveFrames".
                    *
@@ -6949,8 +6957,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
-                     * frame numbers. See
-                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                     * frame numbers. See [RetrieveTransaction]
+                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4}.
                      *
                      * Create a request for the method "frames.retrieveFrames".
                      *
@@ -7113,8 +7121,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
                   /**
                    * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
-                   * UID and frame numbers in an acceptable Rendered Media Type. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * UID and frame numbers in an acceptable Rendered Media Type. See [RetrieveTransaction]
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                    *
                    * Create a request for the method "frames.retrieveRendered".
                    *
@@ -7147,8 +7155,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
-                     * UID and frame numbers in an acceptable Rendered Media Type. See
-                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                     * UID and frame numbers in an acceptable Rendered Media Type. See [RetrieveTransaction]
+                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                      *
                      * Create a request for the method "frames.retrieveRendered".
                      *
@@ -7785,8 +7793,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the FHIR store to export resource from. The name should be in
-          the format of
+           * @param name The name of the FHIR store to export resource from, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ExportResourcesRequest}
@@ -7824,8 +7831,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the FHIR store to export resource from. The name should be in
-          the format of
+             * @param name The name of the FHIR store to export resource from, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ExportResourcesRequest}
@@ -7897,14 +7903,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to export resource from. The name should be in the format
-             * of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{f
-             * hir_store_id}`.
+             * The name of the FHIR store to export resource from, in the format of `projects/{proje
+             * ct_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the FHIR store to export resource from. The name should be in the format of
+            /** The name of the FHIR store to export resource from, in the format of
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -7912,9 +7917,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to export resource from. The name should be in the format
-             * of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{f
-             * hir_store_id}`.
+             * The name of the FHIR store to export resource from, in the format of `projects/{proje
+             * ct_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8268,14 +8272,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Import resources to the FHIR store by loading data from the specified sources. This method is
+           * Imports resources to the FHIR store by loading data from the specified sources. This method is
            * optimized to load large quantities of data using import semantics that ignore some FHIR store
            * configuration options and are not suitable for all use cases. It is primarily intended to load
            * data into an empty FHIR store that is not being used by other clients. In cases where this method
            * is not appropriate, consider using ExecuteBundle to load data.
            *
-           * Every resource in the input must contain a client-supplied ID, and will be stored using that ID
-           * regardless of the enable_update_create setting on the FHIR store.
+           * Every resource in the input must contain a client-supplied ID. Each resource is stored using the
+           * supplied ID regardless of the enable_update_create setting on the FHIR store.
            *
            * The import process does not enforce referential integrity, regardless of the
            * disable_referential_integrity setting on the FHIR store. This allows the import of resources with
@@ -8289,16 +8293,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * If a resource with the specified ID already exists, the most recent version of the resource is
            * overwritten without creating a new historical version, regardless of the
            * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-           * import, it is possible that successfully imported resources will be overwritten more than once.
+           * import, it's possible that successfully imported resources will be overwritten more than once.
            *
            * The import operation is idempotent unless the input data contains multiple valid resources with
-           * the same ID but different contents. In that case, after the import completes, the store will
-           * contain exactly one resource with that ID but there is no ordering guarantee on which version of
-           * the contents it will have. The operation result counters do not count duplicate IDs as an error
-           * and will count one success for each resource in the input, which might result in a success count
-           * larger than the number of resources in the FHIR store. This often occurs when importing data
-           * organized in bundles produced by Patient-everything where each bundle contains its own copy of a
-           * resource such as Practitioner that might be referred to by many patients.
+           * the same ID but different contents. In that case, after the import completes, the store contains
+           * exactly one resource with that ID but there is no ordering guarantee on which version of the
+           * contents it will have. The operation result counters do not count duplicate IDs as an error and
+           * count one success for each resource in the input, which might result in a success count larger
+           * than the number of resources in the FHIR store. This often occurs when importing data organized
+           * in bundles produced by Patient-everything where each bundle contains its own copy of a resource
+           * such as Practitioner that might be referred to by many patients.
            *
            * If some resources fail to import, for example due to parsing errors, successfully imported
            * resources are not rolled back.
@@ -8326,8 +8330,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the FHIR store to import FHIR resources to. The name should be
-          in the format of
+           * @param name The name of the FHIR store to import FHIR resources to, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ImportResourcesRequest}
@@ -8347,14 +8350,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Import resources to the FHIR store by loading data from the specified sources. This method is
+             * Imports resources to the FHIR store by loading data from the specified sources. This method is
              * optimized to load large quantities of data using import semantics that ignore some FHIR store
              * configuration options and are not suitable for all use cases. It is primarily intended to load
              * data into an empty FHIR store that is not being used by other clients. In cases where this
              * method is not appropriate, consider using ExecuteBundle to load data.
              *
-             * Every resource in the input must contain a client-supplied ID, and will be stored using that ID
-             * regardless of the enable_update_create setting on the FHIR store.
+             * Every resource in the input must contain a client-supplied ID. Each resource is stored using
+             * the supplied ID regardless of the enable_update_create setting on the FHIR store.
              *
              * The import process does not enforce referential integrity, regardless of the
              * disable_referential_integrity setting on the FHIR store. This allows the import of resources
@@ -8368,16 +8371,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * If a resource with the specified ID already exists, the most recent version of the resource is
              * overwritten without creating a new historical version, regardless of the
              * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-             * import, it is possible that successfully imported resources will be overwritten more than once.
+             * import, it's possible that successfully imported resources will be overwritten more than once.
              *
              * The import operation is idempotent unless the input data contains multiple valid resources with
-             * the same ID but different contents. In that case, after the import completes, the store will
-             * contain exactly one resource with that ID but there is no ordering guarantee on which version
+             * the same ID but different contents. In that case, after the import completes, the store
+             * contains exactly one resource with that ID but there is no ordering guarantee on which version
              * of the contents it will have. The operation result counters do not count duplicate IDs as an
-             * error and will count one success for each resource in the input, which might result in a
-             * success count larger than the number of resources in the FHIR store. This often occurs when
-             * importing data organized in bundles produced by Patient-everything where each bundle contains
-             * its own copy of a resource such as Practitioner that might be referred to by many patients.
+             * error and count one success for each resource in the input, which might result in a success
+             * count larger than the number of resources in the FHIR store. This often occurs when importing
+             * data organized in bundles produced by Patient-everything where each bundle contains its own
+             * copy of a resource such as Practitioner that might be referred to by many patients.
              *
              * If some resources fail to import, for example due to parsing errors, successfully imported
              * resources are not rolled back.
@@ -8408,8 +8411,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the FHIR store to import FHIR resources to. The name should be
-          in the format of
+             * @param name The name of the FHIR store to import FHIR resources to, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ImportResourcesRequest}
@@ -8481,14 +8483,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to import FHIR resources to. The name should be in the
-             * format of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirSt
-             * ores/{fhir_store_id}`.
+             * The name of the FHIR store to import FHIR resources to, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the FHIR store to import FHIR resources to. The name should be in the format of
+            /** The name of the FHIR store to import FHIR resources to, in the format of
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -8496,9 +8497,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to import FHIR resources to. The name should be in the
-             * format of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirSt
-             * ores/{fhir_store_id}`.
+             * The name of the FHIR store to import FHIR resources to, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -11677,7 +11677,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Deletes the specified HL7v2 store and removes all messages that are contained within it.
+           * Deletes the specified HL7v2 store and removes all messages that it contains.
            *
            * Create a request for the method "hl7V2Stores.delete".
            *
@@ -11701,7 +11701,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
             /**
-             * Deletes the specified HL7v2 store and removes all messages that are contained within it.
+             * Deletes the specified HL7v2 store and removes all messages that it contains.
              *
              * Create a request for the method "hl7V2Stores.delete".
              *

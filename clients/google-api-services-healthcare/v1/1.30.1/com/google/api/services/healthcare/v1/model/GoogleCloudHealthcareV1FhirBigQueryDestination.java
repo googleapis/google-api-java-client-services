@@ -38,9 +38,9 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestination extends com.go
   private java.lang.String datasetUri;
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error.
+   * If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables
+   * are written. If the flag is not set and the destination dataset contains tables, the export
+   * call returns an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +73,9 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestination extends com.go
   }
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error.
+   * If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables
+   * are written. If the flag is not set and the destination dataset contains tables, the export
+   * call returns an error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -83,9 +83,9 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestination extends com.go
   }
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error.
+   * If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables
+   * are written. If the flag is not set and the destination dataset contains tables, the export
+   * call returns an error.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1FhirBigQueryDestination setForce(java.lang.Boolean force) {

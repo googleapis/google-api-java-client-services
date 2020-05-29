@@ -18,8 +18,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256.
- * Outputs a base64-encoded representation of the hashed output (for example,
- * `L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=`).
+ * Outputs a base64-encoded representation of the hashed output. For example,
+ * `L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

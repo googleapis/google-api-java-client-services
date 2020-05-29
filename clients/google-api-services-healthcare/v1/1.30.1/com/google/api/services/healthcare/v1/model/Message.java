@@ -17,8 +17,8 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * A complete HL7v2 message. See http://www.hl7.org/implement/standards/index.cfm?ref=common for
- * details on the standard.
+ * A complete HL7v2 message. See [Introduction to HL7 Standards]
+ * (https://www.hl7.org/implement/standards/index.cfm?ref=common) for details on the standard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

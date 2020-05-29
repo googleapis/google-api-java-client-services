@@ -40,7 +40,8 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
    * overrides the default optimizer version for query execution. The list of supported optimizer
    * versions can be queried from SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL
    * statement with an invalid optimizer version will fail with a syntax error (`INVALID_ARGUMENT`)
-   * status.
+   * status. See https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for
+   * more information on managing the query optimizer.
    *
    * The `optimizer_version` statement hint has precedence over this setting.
    * The value may be {@code null}.
@@ -59,7 +60,8 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
    * overrides the default optimizer version for query execution. The list of supported optimizer
    * versions can be queried from SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL
    * statement with an invalid optimizer version will fail with a syntax error (`INVALID_ARGUMENT`)
-   * status.
+   * status. See https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for
+   * more information on managing the query optimizer.
    *
    * The `optimizer_version` statement hint has precedence over this setting.
    * @return value or {@code null} for none
@@ -79,7 +81,8 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
    * overrides the default optimizer version for query execution. The list of supported optimizer
    * versions can be queried from SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL
    * statement with an invalid optimizer version will fail with a syntax error (`INVALID_ARGUMENT`)
-   * status.
+   * status. See https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for
+   * more information on managing the query optimizer.
    *
    * The `optimizer_version` statement hint has precedence over this setting.
    * @param optimizerVersion optimizerVersion or {@code null} for none

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-spanner",
-    "version": "v1-rev20200508-1.30.9"
+    "version": "v1-rev20200522-1.30.9"
   }
 }

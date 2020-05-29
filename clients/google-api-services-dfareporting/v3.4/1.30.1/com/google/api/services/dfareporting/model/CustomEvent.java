@@ -33,7 +33,7 @@ package com.google.api.services.dfareporting.model;
 public final class CustomEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * Annotate a click event. This field is mutually exclusive with insertEvent and
    * annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   private java.lang.Long floodlightConfigurationId;
 
   /**
-   * Annotate an impression. This field is mutually exclusive with annotateClickEvent and
+   * Insert custom event. This field is mutually exclusive with annotateClickEvent and
    * annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required
    * field.
    * The value may be {@code null}.
@@ -101,7 +101,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   private java.lang.Long timestampMicros;
 
   /**
-   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * Annotate a click event. This field is mutually exclusive with insertEvent and
    * annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * Annotate a click event. This field is mutually exclusive with insertEvent and
    * annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field.
    * @param annotateClickEvent annotateClickEvent or {@code null} for none
    */
@@ -192,7 +192,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotate an impression. This field is mutually exclusive with annotateClickEvent and
+   * Insert custom event. This field is mutually exclusive with annotateClickEvent and
    * annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required
    * field.
    * @return value or {@code null} for none
@@ -202,7 +202,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotate an impression. This field is mutually exclusive with annotateClickEvent and
+   * Insert custom event. This field is mutually exclusive with annotateClickEvent and
    * annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required
    * field.
    * @param insertEvent insertEvent or {@code null} for none

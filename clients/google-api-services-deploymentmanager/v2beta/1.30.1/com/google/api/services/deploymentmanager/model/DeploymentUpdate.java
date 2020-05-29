@@ -41,8 +41,8 @@ public final class DeploymentUpdate extends com.google.api.client.json.GenericJs
   /**
    * Output only. Map of labels; provided by the client when the resource is created or updated.
    * Specifically: Label keys must be between 1 and 63 characters long and must conform to the
-   * following regular expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63
-   * characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?
+   * following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and
+   * 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class DeploymentUpdate extends com.google.api.client.json.GenericJs
   /**
    * Output only. Map of labels; provided by the client when the resource is created or updated.
    * Specifically: Label keys must be between 1 and 63 characters long and must conform to the
-   * following regular expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63
-   * characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?
+   * following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and
+   * 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
    * @return value or {@code null} for none
    */
   public java.util.List<DeploymentUpdateLabelEntry> getLabels() {
@@ -88,8 +88,8 @@ public final class DeploymentUpdate extends com.google.api.client.json.GenericJs
   /**
    * Output only. Map of labels; provided by the client when the resource is created or updated.
    * Specifically: Label keys must be between 1 and 63 characters long and must conform to the
-   * following regular expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63
-   * characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?
+   * following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and
+   * 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
    * @param labels labels or {@code null} for none
    */
   public DeploymentUpdate setLabels(java.util.List<DeploymentUpdateLabelEntry> labels) {

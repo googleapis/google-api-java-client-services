@@ -17,48 +17,75 @@
 package com.google.api.services.deploymentmanager.model;
 
 /**
- * Write a Data Access (Gin) log
+ * Output object for Deployments
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
- * For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Cloud Deployment Manager Alpha API. For a
+ * detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LogConfigDataAccessOptions extends com.google.api.client.json.GenericJson {
+public final class DeploymentOutputEntry extends com.google.api.client.json.GenericJson {
 
   /**
+   * Key of the output
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String logMode;
+  private java.lang.String key;
 
   /**
+   * Value of the label
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String value;
+
+  /**
+   * Key of the output
    * @return value or {@code null} for none
    */
-  public java.lang.String getLogMode() {
-    return logMode;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * @param logMode logMode or {@code null} for none
+   * Key of the output
+   * @param key key or {@code null} for none
    */
-  public LogConfigDataAccessOptions setLogMode(java.lang.String logMode) {
-    this.logMode = logMode;
+  public DeploymentOutputEntry setKey(java.lang.String key) {
+    this.key = key;
+    return this;
+  }
+
+  /**
+   * Value of the label
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValue() {
+    return value;
+  }
+
+  /**
+   * Value of the label
+   * @param value value or {@code null} for none
+   */
+  public DeploymentOutputEntry setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public LogConfigDataAccessOptions set(String fieldName, Object value) {
-    return (LogConfigDataAccessOptions) super.set(fieldName, value);
+  public DeploymentOutputEntry set(String fieldName, Object value) {
+    return (DeploymentOutputEntry) super.set(fieldName, value);
   }
 
   @Override
-  public LogConfigDataAccessOptions clone() {
-    return (LogConfigDataAccessOptions) super.clone();
+  public DeploymentOutputEntry clone() {
+    return (DeploymentOutputEntry) super.clone();
   }
 
 }

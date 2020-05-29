@@ -81,8 +81,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String properties;
 
   /**
-   * Output only. The type of the resource, for example compute.v1.instance, or
-   * cloudfunctions.v1beta1.function.
+   * Output only. The type of the resource, for example `compute.v1.instance`, or
+   * `cloudfunctions.v1beta1.function`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +246,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of the resource, for example compute.v1.instance, or
-   * cloudfunctions.v1beta1.function.
+   * Output only. The type of the resource, for example `compute.v1.instance`, or
+   * `cloudfunctions.v1beta1.function`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -255,8 +255,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of the resource, for example compute.v1.instance, or
-   * cloudfunctions.v1beta1.function.
+   * Output only. The type of the resource, for example `compute.v1.instance`, or
+   * `cloudfunctions.v1beta1.function`.
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

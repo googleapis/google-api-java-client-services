@@ -46,7 +46,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String documentationLink;
 
   /**
-   * Output only. Type of the output. Always deploymentManager#TypeInfo for TypeInfo.
+   * Output only. Type of the output. Always `deploymentManager#TypeInfo` for TypeInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the output. Always deploymentManager#TypeInfo for TypeInfo.
+   * Output only. Type of the output. Always `deploymentManager#TypeInfo` for TypeInfo.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -124,7 +124,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the output. Always deploymentManager#TypeInfo for TypeInfo.
+   * Output only. Type of the output. Always `deploymentManager#TypeInfo` for TypeInfo.
    * @param kind kind or {@code null} for none
    */
   public TypeInfo setKind(java.lang.String kind) {

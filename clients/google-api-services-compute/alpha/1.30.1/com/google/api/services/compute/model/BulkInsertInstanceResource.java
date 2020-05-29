@@ -37,13 +37,6 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
-   * List of zones to exclude for regional requests.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> excludedZones;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,23 +82,6 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setCount(java.lang.Long count) {
     this.count = count;
-    return this;
-  }
-
-  /**
-   * List of zones to exclude for regional requests.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getExcludedZones() {
-    return excludedZones;
-  }
-
-  /**
-   * List of zones to exclude for regional requests.
-   * @param excludedZones excludedZones or {@code null} for none
-   */
-  public BulkInsertInstanceResource setExcludedZones(java.util.List<java.lang.String> excludedZones) {
-    this.excludedZones = excludedZones;
     return this;
   }
 

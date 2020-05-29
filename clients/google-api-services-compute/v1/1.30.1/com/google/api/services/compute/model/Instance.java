@@ -214,6 +214,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
+   * as default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateIpv6GoogleAccess;
+
+  /**
    * Specifies the reservations that this instance can consume from.
    * The value may be {@code null}.
    */
@@ -274,7 +282,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, STOPPED, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, and TERMINATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -777,6 +785,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
+   * as default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateIpv6GoogleAccess() {
+    return privateIpv6GoogleAccess;
+  }
+
+  /**
+   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
+   * as default.
+   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
+   */
+  public Instance setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
+    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+    return this;
+  }
+
+  /**
    * Specifies the reservations that this instance can consume from.
    * @return value or {@code null} for none
    */
@@ -920,7 +947,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, STOPPED, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, and TERMINATED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -929,7 +956,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, STOPPED, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, and TERMINATED.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(java.lang.String status) {

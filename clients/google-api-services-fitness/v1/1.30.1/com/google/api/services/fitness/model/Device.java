@@ -21,14 +21,16 @@ package com.google.api.services.fitness.model;
  * Each sensor is exposed as a data source.
  *
  * The main purpose of the device information contained in this class is to identify the hardware of
- * a particular data source. This can be useful in different ways, including:   - Distinguishing two
- * similar sensors on different devices (the step counter on two nexus 5 phones, for instance) -
- * Display the source of data to the user (by using the device make / model) - Treat data
- * differently depending on sensor type (accelerometers on a watch may give different patterns than
- * those on a phone) - Build different analysis models for each device/version.
+ * a particular data source.  This can be useful in different ways, including:
+ *
+ *   Distinguishing two similar sensors on different devices (the step       counter on two nexus 5
+ * phones, for instance)   Display the source of data to the user (by using the device make /
+ * model)   Treat data differently depending on sensor type (accelerometers on a       watch may
+ * give different patterns than those on a phone)   Build different analysis models for each
+ * device/version.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Fitness. For a detailed explanation see:
+ * transmitted over HTTP when working with the Fitness API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

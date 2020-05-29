@@ -20,12 +20,12 @@ package com.google.api.services.fitness;
  * Service definition for Fitness (v1).
  *
  * <p>
- * Stores and accesses user data in the fitness store from apps on any platform.
+ * The Fitness API for managing users' fitness tracking data.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/fit/rest/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/fit/rest/v1/get-started" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Fitness library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Fitness API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -63,7 +63,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "fitness/v1/users/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -196,8 +196,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param userId Create the data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+       * @param userId Create the data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
        * @param content the {@link com.google.api.services.fitness.model.DataSource}
        * @return the request
        */
@@ -209,7 +211,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Create extends FitnessRequest<com.google.api.services.fitness.model.DataSource> {
 
-        private static final String REST_PATH = "{userId}/dataSources";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources";
 
         /**
          * Creates a new data source that is unique across all data sources belonging to this user.
@@ -247,8 +249,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Create the data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+         * @param userId Create the data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
          * @param content the {@link com.google.api.services.fitness.model.DataSource}
          * @since 1.13
          */
@@ -260,8 +264,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
         }
 
         @Override
@@ -290,8 +309,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -331,8 +355,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param userId Retrieve a data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+       * @param userId Retrieve a data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
        * @param dataSourceId The data stream ID of the data source to delete.
        * @return the request
        */
@@ -344,7 +370,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Delete extends FitnessRequest<com.google.api.services.fitness.model.DataSource> {
 
-        private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}";
 
         /**
          * Deletes the specified data source. The request will fail if the data source contains any data
@@ -357,8 +383,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Retrieve a data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+         * @param userId Retrieve a data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
          * @param dataSourceId The data stream ID of the data source to delete.
          * @since 1.13
          */
@@ -369,8 +397,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -399,8 +442,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -455,8 +503,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param userId Retrieve a data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+       * @param userId Retrieve a data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
        * @param dataSourceId The data stream ID of the data source to retrieve.
        * @return the request
        */
@@ -468,7 +518,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Get extends FitnessRequest<com.google.api.services.fitness.model.DataSource> {
 
-        private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}";
 
         /**
          * Returns the specified data source.
@@ -480,8 +530,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Retrieve a data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+         * @param userId Retrieve a data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
          * @param dataSourceId The data stream ID of the data source to retrieve.
          * @since 1.13
          */
@@ -502,8 +554,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -532,8 +599,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -590,8 +662,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId List data sources for the person identified. Use me to indicate the authenticated user. Only me is
-       *        supported at this time.
+       * @param userId List data sources for the person identified. Use me to
+      indicate the authenticated user. Only me is
+       *        supported at this
+      time.
        * @return the request
        */
       public List list(java.lang.String userId) throws java.io.IOException {
@@ -602,7 +676,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class List extends FitnessRequest<com.google.api.services.fitness.model.ListDataSourcesResponse> {
 
-        private static final String REST_PATH = "{userId}/dataSources";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources";
 
         /**
          * Lists all data sources that are visible to the developer, using the OAuth scopes provided. The
@@ -616,8 +690,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId List data sources for the person identified. Use me to indicate the authenticated user. Only me is
-       *        supported at this time.
+         * @param userId List data sources for the person identified. Use me to
+      indicate the authenticated user. Only me is
+       *        supported at this
+      time.
          * @since 1.13
          */
         protected List(java.lang.String userId) {
@@ -636,8 +712,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -666,8 +757,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -732,8 +828,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param userId Update the data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+       * @param userId Update the data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
        * @param dataSourceId The data stream ID of the data source to update.
        * @param content the {@link com.google.api.services.fitness.model.DataSource}
        * @return the request
@@ -746,7 +844,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Update extends FitnessRequest<com.google.api.services.fitness.model.DataSource> {
 
-        private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}";
 
         /**
          * Updates the specified data source. The dataStreamId, dataType, type, dataStreamName, and device
@@ -761,8 +859,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Update the data source for the person identified. Use me to indicate the authenticated user. Only me
-       *        is supported at this time.
+         * @param userId Update the data source for the person identified. Use me to
+      indicate the authenticated user. Only me
+       *        is supported at this
+      time.
          * @param dataSourceId The data stream ID of the data source to update.
          * @param content the {@link com.google.api.services.fitness.model.DataSource}
          * @since 1.13
@@ -778,8 +878,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -808,8 +923,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -885,7 +1005,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the fitness server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param userId List data points for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId List data points for the person identified. Use me to indicate
+        the authenticated user. Only me is
          *        supported at this time.
          * @param dataSourceId The data stream ID of the data source that created the dataset.
          * @return the request
@@ -898,7 +1019,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         public class List extends FitnessRequest<com.google.api.services.fitness.model.ListDataPointChangesResponse> {
 
-          private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}/dataPointChanges";
+          private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}/dataPointChanges";
 
           /**
            * Queries for user's data point changes for a particular data source.
@@ -910,7 +1031,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param userId List data points for the person identified. Use me to indicate the authenticated user. Only me is
+           * @param userId List data points for the person identified. Use me to indicate
+        the authenticated user. Only me is
          *        supported at this time.
            * @param dataSourceId The data stream ID of the data source that created the dataset.
            * @since 1.13
@@ -932,8 +1054,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -962,8 +1099,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1091,12 +1233,16 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the fitness server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param userId Delete a dataset for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId Delete a dataset for the person identified. Use me to indicate
+        the authenticated user. Only me is
          *        supported at this time.
          * @param dataSourceId The data stream ID of the data source that created the dataset.
-         * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+         * @param datasetId Dataset identifier that is a composite of the minimum data point start time
+        and maximum data point
+         *        end time represented as nanoseconds from the epoch.
+        The ID is formatted like: "startTime-
+         *        endTime"
+        where startTime and endTime are 64 bit integers.
          * @return the request
          */
         public Delete delete(java.lang.String userId, java.lang.String dataSourceId, java.lang.String datasetId) throws java.io.IOException {
@@ -1107,7 +1253,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         public class Delete extends FitnessRequest<Void> {
 
-          private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}/datasets/{datasetId}";
+          private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}";
 
           /**
            * Performs an inclusive delete of all data points whose start and end times have any overlap with
@@ -1123,12 +1269,16 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param userId Delete a dataset for the person identified. Use me to indicate the authenticated user. Only me is
+           * @param userId Delete a dataset for the person identified. Use me to indicate
+        the authenticated user. Only me is
          *        supported at this time.
            * @param dataSourceId The data stream ID of the data source that created the dataset.
-           * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+           * @param datasetId Dataset identifier that is a composite of the minimum data point start time
+        and maximum data point
+         *        end time represented as nanoseconds from the epoch.
+        The ID is formatted like: "startTime-
+         *        endTime"
+        where startTime and endTime are 64 bit integers.
            * @since 1.13
            */
           protected Delete(java.lang.String userId, java.lang.String dataSourceId, java.lang.String datasetId) {
@@ -1139,8 +1289,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -1169,8 +1334,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1286,12 +1456,17 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the fitness server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param userId Retrieve a dataset for the person identified. Use me to indicate the authenticated user. Only me is
-         *        supported at this time.
+         * @param userId Retrieve a dataset for the person identified. Use me to
+        indicate the authenticated user. Only me is
+         *        supported at this
+        time.
          * @param dataSourceId The data stream ID of the data source that created the dataset.
-         * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+         * @param datasetId Dataset identifier that is a composite of the minimum data point start time
+        and maximum data point
+         *        end time represented as nanoseconds from the epoch.
+        The ID is formatted like: "startTime-
+         *        endTime"
+        where startTime and endTime are 64 bit integers.
          * @return the request
          */
         public Get get(java.lang.String userId, java.lang.String dataSourceId, java.lang.String datasetId) throws java.io.IOException {
@@ -1302,7 +1477,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         public class Get extends FitnessRequest<com.google.api.services.fitness.model.Dataset> {
 
-          private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}/datasets/{datasetId}";
+          private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}";
 
           /**
            * Returns a dataset containing all data points whose start and end times overlap with the
@@ -1317,12 +1492,17 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param userId Retrieve a dataset for the person identified. Use me to indicate the authenticated user. Only me is
-         *        supported at this time.
+           * @param userId Retrieve a dataset for the person identified. Use me to
+        indicate the authenticated user. Only me is
+         *        supported at this
+        time.
            * @param dataSourceId The data stream ID of the data source that created the dataset.
-           * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+           * @param datasetId Dataset identifier that is a composite of the minimum data point start time
+        and maximum data point
+         *        end time represented as nanoseconds from the epoch.
+        The ID is formatted like: "startTime-
+         *        endTime"
+        where startTime and endTime are 64 bit integers.
            * @since 1.13
            */
           protected Get(java.lang.String userId, java.lang.String dataSourceId, java.lang.String datasetId) {
@@ -1343,8 +1523,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -1373,8 +1568,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1511,12 +1711,16 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the fitness server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param userId Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId Patch a dataset for the person identified. Use me to indicate
+        the authenticated user. Only me is
          *        supported at this time.
          * @param dataSourceId The data stream ID of the data source that created the dataset.
-         * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+         * @param datasetId Dataset identifier that is a composite of the minimum data point start time
+        and maximum data point
+         *        end time represented as nanoseconds from the epoch.
+        The ID is formatted like: "startTime-
+         *        endTime"
+        where startTime and endTime are 64 bit integers.
          * @param content the {@link com.google.api.services.fitness.model.Dataset}
          * @return the request
          */
@@ -1528,7 +1732,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         public class Patch extends FitnessRequest<com.google.api.services.fitness.model.Dataset> {
 
-          private static final String REST_PATH = "{userId}/dataSources/{dataSourceId}/datasets/{datasetId}";
+          private static final String REST_PATH = "fitness/v1/users/{userId}/dataSources/{dataSourceId}/datasets/{datasetId}";
 
           /**
            * Adds data points to a dataset. The dataset need not be previously created. All points within
@@ -1542,12 +1746,16 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param userId Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is
+           * @param userId Patch a dataset for the person identified. Use me to indicate
+        the authenticated user. Only me is
          *        supported at this time.
            * @param dataSourceId The data stream ID of the data source that created the dataset.
-           * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+           * @param datasetId Dataset identifier that is a composite of the minimum data point start time
+        and maximum data point
+         *        end time represented as nanoseconds from the epoch.
+        The ID is formatted like: "startTime-
+         *        endTime"
+        where startTime and endTime are 64 bit integers.
            * @param content the {@link com.google.api.services.fitness.model.Dataset}
            * @since 1.13
            */
@@ -1565,8 +1773,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
           }
 
           @Override
@@ -1595,8 +1818,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           }
 
           @Override
-          public Patch setUserIp(java.lang.String userIp) {
-            return (Patch) super.setUserIp(userIp);
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1725,7 +1953,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Aggregate#execute()} method to invoke the remote operation.
        *
-       * @param userId Aggregate data for the person identified. Use me to indicate the authenticated user. Only me is
+       * @param userId Aggregate data for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
        * @param content the {@link com.google.api.services.fitness.model.AggregateRequest}
        * @return the request
@@ -1738,7 +1967,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Aggregate extends FitnessRequest<com.google.api.services.fitness.model.AggregateResponse> {
 
-        private static final String REST_PATH = "{userId}/dataset:aggregate";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/dataset:aggregate";
 
         /**
          * Aggregates data of a certain type or stream into buckets divided by a given type of boundary.
@@ -1753,7 +1982,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Aggregate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Aggregate data for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId Aggregate data for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
          * @param content the {@link com.google.api.services.fitness.model.AggregateRequest}
          * @since 1.13
@@ -1764,8 +1994,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Aggregate set$Xgafv(java.lang.String $Xgafv) {
+          return (Aggregate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Aggregate setAccessToken(java.lang.String accessToken) {
+          return (Aggregate) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Aggregate setAlt(java.lang.String alt) {
           return (Aggregate) super.setAlt(alt);
+        }
+
+        @Override
+        public Aggregate setCallback(java.lang.String callback) {
+          return (Aggregate) super.setCallback(callback);
         }
 
         @Override
@@ -1794,8 +2039,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Aggregate setUserIp(java.lang.String userIp) {
-          return (Aggregate) super.setUserIp(userIp);
+        public Aggregate setUploadType(java.lang.String uploadType) {
+          return (Aggregate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Aggregate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Aggregate) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -1856,7 +2106,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param userId Delete a session for the person identified. Use me to indicate the authenticated user. Only me is
+       * @param userId Delete a session for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
        * @param sessionId The ID of the session to be deleted.
        * @return the request
@@ -1869,7 +2120,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Delete extends FitnessRequest<Void> {
 
-        private static final String REST_PATH = "{userId}/sessions/{sessionId}";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/sessions/{sessionId}";
 
         /**
          * Deletes a session specified by the given session ID.
@@ -1881,7 +2132,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Delete a session for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId Delete a session for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
          * @param sessionId The ID of the session to be deleted.
          * @since 1.13
@@ -1893,8 +2145,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -1923,8 +2190,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -1995,7 +2267,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId List sessions for the person identified. Use me to indicate the authenticated user. Only me is
+       * @param userId List sessions for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
        * @return the request
        */
@@ -2007,7 +2280,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class List extends FitnessRequest<com.google.api.services.fitness.model.ListSessionsResponse> {
 
-        private static final String REST_PATH = "{userId}/sessions";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/sessions";
 
         /**
          * Lists sessions previously created.
@@ -2019,7 +2292,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId List sessions for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId List sessions for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
          * @since 1.13
          */
@@ -2039,8 +2313,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -2069,8 +2358,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -2114,13 +2408,15 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response.
+         * included in the response. If this time is omitted but startTime is specified, all
+         * sessions from startTime to the end of time will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String endTime;
 
         /** An RFC3339 timestamp. Only sessions ending between the start and end times will be included in the
-       response.
+       response. If this time is omitted but startTime is specified, all sessions from startTime to the
+       end of time will be returned.
          */
         public java.lang.String getEndTime() {
           return endTime;
@@ -2128,7 +2424,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response.
+         * included in the response. If this time is omitted but startTime is specified, all
+         * sessions from startTime to the end of time will be returned.
          */
         public List setEndTime(java.lang.String endTime) {
           this.endTime = endTime;
@@ -2136,22 +2433,21 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * If true, deleted sessions will be returned. When set to true, sessions returned in this
-         * response will only have an ID and will not have any other fields.
+         * If true, and if both startTime and endTime are omitted, session deletions will be
+         * returned.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeDeleted;
 
-        /** If true, deleted sessions will be returned. When set to true, sessions returned in this response
-       will only have an ID and will not have any other fields.
+        /** If true, and if both startTime and endTime are omitted, session deletions will be returned.
          */
         public java.lang.Boolean getIncludeDeleted() {
           return includeDeleted;
         }
 
         /**
-         * If true, deleted sessions will be returned. When set to true, sessions returned in this
-         * response will only have an ID and will not have any other fields.
+         * If true, and if both startTime and endTime are omitted, session deletions will be
+         * returned.
          */
         public List setIncludeDeleted(java.lang.Boolean includeDeleted) {
           this.includeDeleted = includeDeleted;
@@ -2160,20 +2456,18 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * The continuation token, which is used for incremental syncing. To get the next batch of
-         * changes, set this parameter to the value of nextPageToken from the previous response.
-         * This token is treated as a timestamp (in millis since epoch). If specified, the API
-         * returns sessions modified since this time. The page token is ignored if either start or
-         * end time is specified. If none of start time, end time, and the page token is specified,
-         * sessions modified in the last 30 days are returned.
+         * changes, set this parameter to the value of nextPageToken from the previous response. The
+         * page token is ignored if either start or end time is specified. If none of start time,
+         * end time, and the page token is specified, sessions modified in the last 30 days are
+         * returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** The continuation token, which is used for incremental syncing. To get the next batch of changes,
-       set this parameter to the value of nextPageToken from the previous response. This token is treated
-       as a timestamp (in millis since epoch). If specified, the API returns sessions modified since this
-       time. The page token is ignored if either start or end time is specified. If none of start time,
-       end time, and the page token is specified, sessions modified in the last 30 days are returned.
+       set this parameter to the value of nextPageToken from the previous response. The page token is
+       ignored if either start or end time is specified. If none of start time, end time, and the page
+       token is specified, sessions modified in the last 30 days are returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -2181,11 +2475,10 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * The continuation token, which is used for incremental syncing. To get the next batch of
-         * changes, set this parameter to the value of nextPageToken from the previous response.
-         * This token is treated as a timestamp (in millis since epoch). If specified, the API
-         * returns sessions modified since this time. The page token is ignored if either start or
-         * end time is specified. If none of start time, end time, and the page token is specified,
-         * sessions modified in the last 30 days are returned.
+         * changes, set this parameter to the value of nextPageToken from the previous response. The
+         * page token is ignored if either start or end time is specified. If none of start time,
+         * end time, and the page token is specified, sessions modified in the last 30 days are
+         * returned.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2194,13 +2487,15 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response.
+         * included in the response. If this time is omitted but endTime is specified, all sessions
+         * from the start of time up to endTime will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String startTime;
 
         /** An RFC3339 timestamp. Only sessions ending between the start and end times will be included in the
-       response.
+       response. If this time is omitted but endTime is specified, all sessions from the start of time up
+       to endTime will be returned.
          */
         public java.lang.String getStartTime() {
           return startTime;
@@ -2208,7 +2503,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response.
+         * included in the response. If this time is omitted but endTime is specified, all sessions
+         * from the start of time up to endTime will be returned.
          */
         public List setStartTime(java.lang.String startTime) {
           this.startTime = startTime;
@@ -2228,7 +2524,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the fitness server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param userId Create sessions for the person identified. Use me to indicate the authenticated user. Only me is
+       * @param userId Create sessions for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
        * @param sessionId The ID of the session to be created.
        * @param content the {@link com.google.api.services.fitness.model.Session}
@@ -2242,7 +2539,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       public class Update extends FitnessRequest<com.google.api.services.fitness.model.Session> {
 
-        private static final String REST_PATH = "{userId}/sessions/{sessionId}";
+        private static final String REST_PATH = "fitness/v1/users/{userId}/sessions/{sessionId}";
 
         /**
          * Updates or insert a given session.
@@ -2254,7 +2551,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId Create sessions for the person identified. Use me to indicate the authenticated user. Only me is
+         * @param userId Create sessions for the person identified. Use me to indicate
+      the authenticated user. Only me is
        *        supported at this time.
          * @param sessionId The ID of the session to be created.
          * @param content the {@link com.google.api.services.fitness.model.Session}
@@ -2277,8 +2575,23 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -2307,8 +2620,13 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /**

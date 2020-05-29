@@ -23,7 +23,7 @@ package com.google.api.services.fitness.model;
  * point value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Fitness. For a detailed explanation see:
+ * transmitted over HTTP when working with the Fitness API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -47,7 +47,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Integer intVal;
 
   /**
-   * Map value. The valid key space and units for the corresponding value of each entry should be
+   * Map value.  The valid key space and units for the corresponding value of each entry should be
    * documented as part of the data type definition. Keys should be kept small whenever possible.
    * Data streams with large keys and high data frequency may be down sampled.
    * The value may be {@code null}.
@@ -56,8 +56,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.util.List<ValueMapValEntry> mapVal;
 
   /**
-   * String value. When this is set, other values must not be set. Strings should be kept small
-   * whenever possible. Data streams with large string values and high data frequency may be down
+   * String value.  When this is set, other values must not be set. Strings should be kept small
+   * whenever possible.  Data streams with large string values and high data frequency may be down
    * sampled.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map value. The valid key space and units for the corresponding value of each entry should be
+   * Map value.  The valid key space and units for the corresponding value of each entry should be
    * documented as part of the data type definition. Keys should be kept small whenever possible.
    * Data streams with large keys and high data frequency may be down sampled.
    * @return value or {@code null} for none
@@ -109,7 +109,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map value. The valid key space and units for the corresponding value of each entry should be
+   * Map value.  The valid key space and units for the corresponding value of each entry should be
    * documented as part of the data type definition. Keys should be kept small whenever possible.
    * Data streams with large keys and high data frequency may be down sampled.
    * @param mapVal mapVal or {@code null} for none
@@ -120,8 +120,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value. When this is set, other values must not be set. Strings should be kept small
-   * whenever possible. Data streams with large string values and high data frequency may be down
+   * String value.  When this is set, other values must not be set. Strings should be kept small
+   * whenever possible.  Data streams with large string values and high data frequency may be down
    * sampled.
    * @return value or {@code null} for none
    */
@@ -130,8 +130,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value. When this is set, other values must not be set. Strings should be kept small
-   * whenever possible. Data streams with large string values and high data frequency may be down
+   * String value.  When this is set, other values must not be set. Strings should be kept small
+   * whenever possible.  Data streams with large string values and high data frequency may be down
    * sampled.
    * @param stringVal stringVal or {@code null} for none
    */

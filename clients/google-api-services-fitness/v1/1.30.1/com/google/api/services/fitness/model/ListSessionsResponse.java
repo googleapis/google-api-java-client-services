@@ -20,7 +20,7 @@ package com.google.api.services.fitness.model;
  * Model definition for ListSessionsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Fitness. For a detailed explanation see:
+ * transmitted over HTTP when working with the Fitness API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,23 +30,24 @@ package com.google.api.services.fitness.model;
 public final class ListSessionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If includeDeleted is set to true in the request, this list will contain sessions deleted with
-   * original end times that are within the startTime and endTime frame.
+   * If includeDeleted is set to true in the request, and startTime and endTime are omitted, this
+   * will include sessions which were deleted since the last sync.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Session> deletedSession;
 
   /**
-   * Flag to indicate server has more data to transfer
+   * Flag to indicate server has more data to transfer. DO NOT USE THIS FIELD. It is never populated
+   * in responses from the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasMoreData;
 
   /**
-   * The continuation token, which is used to page through large result sets. Provide this value in
-   * a subsequent request to return the next page of results.
+   * The sync token which is used to sync further changes. This will only be provided if both
+   * startTime and endTime are omitted from the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +61,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   private java.util.List<Session> session;
 
   /**
-   * If includeDeleted is set to true in the request, this list will contain sessions deleted with
-   * original end times that are within the startTime and endTime frame.
+   * If includeDeleted is set to true in the request, and startTime and endTime are omitted, this
+   * will include sessions which were deleted since the last sync.
    * @return value or {@code null} for none
    */
   public java.util.List<Session> getDeletedSession() {
@@ -69,8 +70,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * If includeDeleted is set to true in the request, this list will contain sessions deleted with
-   * original end times that are within the startTime and endTime frame.
+   * If includeDeleted is set to true in the request, and startTime and endTime are omitted, this
+   * will include sessions which were deleted since the last sync.
    * @param deletedSession deletedSession or {@code null} for none
    */
   public ListSessionsResponse setDeletedSession(java.util.List<Session> deletedSession) {
@@ -79,7 +80,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Flag to indicate server has more data to transfer
+   * Flag to indicate server has more data to transfer. DO NOT USE THIS FIELD. It is never populated
+   * in responses from the server.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasMoreData() {
@@ -87,7 +89,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Flag to indicate server has more data to transfer
+   * Flag to indicate server has more data to transfer. DO NOT USE THIS FIELD. It is never populated
+   * in responses from the server.
    * @param hasMoreData hasMoreData or {@code null} for none
    */
   public ListSessionsResponse setHasMoreData(java.lang.Boolean hasMoreData) {
@@ -96,8 +99,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The continuation token, which is used to page through large result sets. Provide this value in
-   * a subsequent request to return the next page of results.
+   * The sync token which is used to sync further changes. This will only be provided if both
+   * startTime and endTime are omitted from the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -105,8 +108,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The continuation token, which is used to page through large result sets. Provide this value in
-   * a subsequent request to return the next page of results.
+   * The sync token which is used to sync further changes. This will only be provided if both
+   * startTime and endTime are omitted from the request.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSessionsResponse setNextPageToken(java.lang.String nextPageToken) {

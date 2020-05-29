@@ -291,23 +291,35 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /**
-       * The geographic location to list info types. Reserved for future extensions.
-       */
+      /** Deprecated. This field has no effect. */
       @com.google.api.client.util.Key
       private java.lang.String locationId;
 
-      /** The geographic location to list info types. Reserved for future extensions.
+      /** Deprecated. This field has no effect.
        */
       public java.lang.String getLocationId() {
         return locationId;
       }
 
-      /**
-       * The geographic location to list info types. Reserved for future extensions.
-       */
+      /** Deprecated. This field has no effect. */
       public List setLocationId(java.lang.String locationId) {
         this.locationId = locationId;
+        return this;
+      }
+
+      /** The parent resource name, for example locations/{location_id}. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The parent resource name, for example locations/{location_id}.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** The parent resource name, for example locations/{location_id}. */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
         return this;
       }
 
@@ -368,19 +380,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param locationId The geographic location to list info types. Reserved for future
-      extensions.
+       * @param parent The parent resource name, for example locations/{location_id}.
        * @return the request
        */
-      public List list(java.lang.String locationId) throws java.io.IOException {
-        List result = new List(locationId);
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
         initialize(result);
         return result;
       }
 
       public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
 
-        private static final String REST_PATH = "v2/locations/{locationId}/infoTypes";
+        private static final String REST_PATH = "v2/{+parent}/infoTypes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^locations/[^/]+$");
 
         /**
          * Returns a list of the sensitive information types that the DLP API supports. See
@@ -393,13 +407,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param locationId The geographic location to list info types. Reserved for future
-      extensions.
+         * @param parent The parent resource name, for example locations/{location_id}.
          * @since 1.13
          */
-        protected List(java.lang.String locationId) {
+        protected List(java.lang.String parent) {
           super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
-          this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^locations/[^/]+$");
+          }
         }
 
         @Override
@@ -467,23 +485,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The geographic location to list info types. Reserved for future extensions.
-         */
+        /** The parent resource name, for example locations/{location_id}. */
         @com.google.api.client.util.Key
-        private java.lang.String locationId;
+        private java.lang.String parent;
 
-        /** The geographic location to list info types. Reserved for future extensions.
+        /** The parent resource name, for example locations/{location_id}.
          */
-        public java.lang.String getLocationId() {
-          return locationId;
+        public java.lang.String getParent() {
+          return parent;
         }
 
-        /**
-         * The geographic location to list info types. Reserved for future extensions.
-         */
-        public List setLocationId(java.lang.String locationId) {
-          this.locationId = locationId;
+        /** The parent resource name, for example locations/{location_id}. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^locations/[^/]+$");
+          }
+          this.parent = parent;
           return this;
         }
 
@@ -530,6 +549,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setLanguageCode(java.lang.String languageCode) {
           this.languageCode = languageCode;
+          return this;
+        }
+
+        /** Deprecated. This field has no effect. */
+        @com.google.api.client.util.Key
+        private java.lang.String locationId;
+
+        /** Deprecated. This field has no effect.
+         */
+        public java.lang.String getLocationId() {
+          return locationId;
+        }
+
+        /** Deprecated. This field has no effect. */
+        public List setLocationId(java.lang.String locationId) {
+          this.locationId = locationId;
           return this;
         }
 
@@ -1173,24 +1208,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -2050,24 +2078,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -2373,23 +2394,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a DeidentifyTemplate for re-using frequently used configuration for de-identifying
@@ -2405,20 +2424,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -2497,31 +2513,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the deidentification template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -2847,23 +2841,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
@@ -2878,20 +2869,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -2980,30 +2967,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -3290,23 +3270,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Creates an InspectTemplate for re-using frequently used configuration for inspecting content,
@@ -3321,20 +3299,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -3413,31 +3388,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the inspection template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -3761,23 +3714,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
@@ -3791,20 +3741,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -3893,30 +3839,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -4201,23 +4140,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a pre-built stored infoType to be used for inspection. See
@@ -4232,20 +4169,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -4324,29 +4258,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -4672,23 +4586,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
@@ -4703,20 +4614,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -4805,30 +4712,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-         Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -5694,24 +5594,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-       Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -7046,24 +6939,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -8104,24 +7990,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-         * Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where jobs will be retrieved from. Use `-` for all locations. Reserved for
-       future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-         * Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -9000,24 +8879,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -10065,24 +9937,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where job triggers will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where job triggers will be retrieved from. Use `-` for all locations.
-       Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where job triggers will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -10385,23 +10250,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
          *
          * @param parent The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to process de-identification. Reserved for future
-        extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @return the request
          */
-        public Deidentify deidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) throws java.io.IOException {
-          Deidentify result = new Deidentify(parent, locationId, content);
+        public Deidentify deidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) throws java.io.IOException {
+          Deidentify result = new Deidentify(parent, content);
           initialize(result);
           return result;
         }
 
         public class Deidentify extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/content:deidentify";
+          private static final String REST_PATH = "v2/{+parent}/content:deidentify";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
@@ -10421,20 +10284,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to process de-identification. Reserved for future
-        extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
            * @since 1.13
            */
-          protected Deidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) {
+          protected Deidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -10507,29 +10367,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process de-identification. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process de-identification. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process de-identification. Reserved for future extensions.
-           */
-          public Deidentify setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -10555,26 +10395,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
          *
          * @param parent The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to process content inspection. Reserved for future
-        extensions.
-        When
-         *        inspecting images location is restricted to 'global', 'us', 'asia',
-        and 'europe'.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @return the request
          */
-        public Inspect inspect(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) throws java.io.IOException {
-          Inspect result = new Inspect(parent, locationId, content);
+        public Inspect inspect(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) throws java.io.IOException {
+          Inspect result = new Inspect(parent, content);
           initialize(result);
           return result;
         }
 
         public class Inspect extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/content:inspect";
+          private static final String REST_PATH = "v2/{+parent}/content:inspect";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Finds potentially sensitive info in content. This method has limits on input size, processing
@@ -10596,23 +10431,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to process content inspection. Reserved for future
-        extensions.
-        When
-         *        inspecting images location is restricted to 'global', 'us', 'asia',
-        and 'europe'.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
            * @since 1.13
            */
-          protected Inspect(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) {
+          protected Inspect(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -10685,32 +10514,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process content inspection. Reserved for future extensions.
-           * When inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process content inspection. Reserved for future extensions. When
-         inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process content inspection. Reserved for future extensions.
-           * When inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public Inspect setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -10730,23 +10536,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name.
-         * @param locationId The geographic location to process content reidentification.  Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @return the request
          */
-        public Reidentify reidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) throws java.io.IOException {
-          Reidentify result = new Reidentify(parent, locationId, content);
+        public Reidentify reidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) throws java.io.IOException {
+          Reidentify result = new Reidentify(parent, content);
           initialize(result);
           return result;
         }
 
         public class Reidentify extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/content:reidentify";
+          private static final String REST_PATH = "v2/{+parent}/content:reidentify";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Re-identifies content that has been de-identified. See
@@ -10762,20 +10566,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name.
-           * @param locationId The geographic location to process content reidentification.  Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
            * @since 1.13
            */
-          protected Reidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) {
+          protected Reidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -10848,31 +10649,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process content reidentification.  Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process content reidentification.  Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process content reidentification.  Reserved for future
-           * extensions.
-           */
-          public Reidentify setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -10915,23 +10694,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a DeidentifyTemplate for re-using frequently used configuration for de-identifying
@@ -10947,20 +10724,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -11039,31 +10813,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the deidentification template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -11389,23 +11141,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
@@ -11420,20 +11169,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -11522,30 +11267,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -11970,23 +11708,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to store and process the job. Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DlpJob> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/dlpJobs";
+          private static final String REST_PATH = "v2/{+parent}/dlpJobs";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a new job to inspect storage or calculate risk metrics. See
@@ -12005,20 +11741,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to store and process the job. Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DlpJob.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -12091,29 +11824,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store and process the job. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store and process the job. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store and process the job. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -12689,23 +12402,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location where jobs will be retrieved from.
-        Use `-` for all locations. Reserved for
-         *        future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDlpJobsResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/dlpJobs";
+          private static final String REST_PATH = "v2/{+parent}/dlpJobs";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists DlpJobs that match the specified filter in the request. See
@@ -12720,20 +12430,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location where jobs will be retrieved from.
-        Use `-` for all locations. Reserved for
-         *        future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDlpJobsResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -12816,32 +12522,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-           * Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location where jobs will be retrieved from. Use `-` for all locations. Reserved for
-         future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-           * Reserved for future extensions.
-           */
-          public List setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -12924,6 +12607,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /** Deprecated. This field has no effect. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationId;
+
+          /** Deprecated. This field has no effect.
+           */
+          public java.lang.String getLocationId() {
+            return locationId;
+          }
+
+          /** Deprecated. This field has no effect. */
+          public List setLocationId(java.lang.String locationId) {
+            this.locationId = locationId;
             return this;
           }
 
@@ -13065,25 +12764,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
          *
          * @param parent The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to process the request. Reserved for future
-        extensions.
-        Location is
-         *        restricted to 'global', 'us', 'asia', and 'europe'.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @return the request
          */
-        public Redact redact(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) throws java.io.IOException {
-          Redact result = new Redact(parent, locationId, content);
+        public Redact redact(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) throws java.io.IOException {
+          Redact result = new Redact(parent, content);
           initialize(result);
           return result;
         }
 
         public class Redact extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/image:redact";
+          private static final String REST_PATH = "v2/{+parent}/image:redact";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Redacts potentially sensitive info from an image. This method has limits on input size,
@@ -13102,22 +12797,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to process the request. Reserved for future
-        extensions.
-        Location is
-         *        restricted to 'global', 'us', 'asia', and 'europe'.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
            * @since 1.13
            */
-          protected Redact(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) {
+          protected Redact(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -13190,32 +12880,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process the request. Reserved for future extensions.
-           * Location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process the request. Reserved for future extensions. Location is
-         restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process the request. Reserved for future extensions.
-           * Location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public Redact setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -13257,23 +12924,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates an InspectTemplate for re-using frequently used configuration for inspecting content,
@@ -13288,20 +12953,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -13380,31 +13042,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the inspection template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -13728,23 +13368,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
@@ -13758,20 +13395,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -13860,30 +13493,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -14311,23 +13937,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to store the job trigger. Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2JobTrigger> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/jobTriggers";
+          private static final String REST_PATH = "v2/{+parent}/jobTriggers";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on
@@ -14341,20 +13965,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to store the job trigger. Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2JobTrigger.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -14427,29 +14048,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the job trigger. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the job trigger. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the job trigger. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -14904,23 +14505,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name, for example `projects/my-project-id`.
-         * @param locationId The geographic location where job triggers will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListJobTriggersResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/jobTriggers";
+          private static final String REST_PATH = "v2/{+parent}/jobTriggers";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
@@ -14933,20 +14531,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name, for example `projects/my-project-id`.
-           * @param locationId The geographic location where job triggers will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListJobTriggersResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -15029,32 +14623,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location where job triggers will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location where job triggers will be retrieved from. Use `-` for all locations.
-         Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location where job triggers will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
-          public List setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -15131,6 +14702,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /** Deprecated. This field has no effect. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationId;
+
+          /** Deprecated. This field has no effect.
+           */
+          public java.lang.String getLocationId() {
+            return locationId;
+          }
+
+          /** Deprecated. This field has no effect. */
+          public List setLocationId(java.lang.String locationId) {
+            this.locationId = locationId;
             return this;
           }
 
@@ -15408,23 +14995,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a pre-built stored infoType to be used for inspection. See
@@ -15439,20 +15024,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -15531,29 +15113,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -15879,23 +15441,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-         * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
@@ -15910,20 +15469,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. The parent resource name, for example projects/my-project-id or
         organizations/my-org-id.
-           * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -16012,30 +15567,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-         Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -16901,24 +16449,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-       Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;

@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
   private GooglePrivacyDlpV2DeidentifyTemplate deidentifyTemplate;
 
   /**
-   * The geographic location to store the deidentification template. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
   }
 
   /**
-   * The geographic location to store the deidentification template. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -79,7 +79,7 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
   }
 
   /**
-   * The geographic location to store the deidentification template. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @param locationId locationId or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateDeidentifyTemplateRequest setLocationId(java.lang.String locationId) {

@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   private GooglePrivacyDlpV2InspectTemplate inspectTemplate;
 
   /**
-   * The geographic location to store the inspection template. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   }
 
   /**
-   * The geographic location to store the inspection template. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -79,7 +79,7 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   }
 
   /**
-   * The geographic location to store the inspection template. Reserved for future extensions.
+   * Deprecated. This field has no effect.
    * @param locationId locationId or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateInspectTemplateRequest setLocationId(java.lang.String locationId) {

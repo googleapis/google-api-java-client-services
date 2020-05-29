@@ -56,8 +56,7 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   private GooglePrivacyDlpV2ContentItem item;
 
   /**
-   * The geographic location to process content inspection. Reserved for future extensions. When
-   * inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +122,7 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   }
 
   /**
-   * The geographic location to process content inspection. Reserved for future extensions. When
-   * inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -132,8 +130,7 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   }
 
   /**
-   * The geographic location to process content inspection. Reserved for future extensions. When
-   * inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
+   * Deprecated. This field has no effect.
    * @param locationId locationId or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectContentRequest setLocationId(java.lang.String locationId) {

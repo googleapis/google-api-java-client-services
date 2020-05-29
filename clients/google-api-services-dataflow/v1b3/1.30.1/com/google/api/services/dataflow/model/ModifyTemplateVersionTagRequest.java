@@ -17,7 +17,9 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Response to the validation request.
+ * Add a tag to the current TemplateVersion. If tag exist in another TemplateVersion in the
+ * Template, remove the tag before add it to the current TemplateVersion. If remove_only set, remove
+ * the tag from the current TemplateVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -27,64 +29,64 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ValidateResponse extends com.google.api.client.json.GenericJson {
+public final class ModifyTemplateVersionTagRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Will be empty if validation succeeds.
+   * The flag that indicates if the request is only for remove tag from TemplateVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String errorMessage;
+  private java.lang.Boolean removeOnly;
 
   /**
-   * Information about the validated query. Not defined if validation fails.
+   * The tag for update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QueryInfo queryInfo;
+  private java.lang.String tag;
 
   /**
-   * Will be empty if validation succeeds.
+   * The flag that indicates if the request is only for remove tag from TemplateVersion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getErrorMessage() {
-    return errorMessage;
+  public java.lang.Boolean getRemoveOnly() {
+    return removeOnly;
   }
 
   /**
-   * Will be empty if validation succeeds.
-   * @param errorMessage errorMessage or {@code null} for none
+   * The flag that indicates if the request is only for remove tag from TemplateVersion.
+   * @param removeOnly removeOnly or {@code null} for none
    */
-  public ValidateResponse setErrorMessage(java.lang.String errorMessage) {
-    this.errorMessage = errorMessage;
+  public ModifyTemplateVersionTagRequest setRemoveOnly(java.lang.Boolean removeOnly) {
+    this.removeOnly = removeOnly;
     return this;
   }
 
   /**
-   * Information about the validated query. Not defined if validation fails.
+   * The tag for update.
    * @return value or {@code null} for none
    */
-  public QueryInfo getQueryInfo() {
-    return queryInfo;
+  public java.lang.String getTag() {
+    return tag;
   }
 
   /**
-   * Information about the validated query. Not defined if validation fails.
-   * @param queryInfo queryInfo or {@code null} for none
+   * The tag for update.
+   * @param tag tag or {@code null} for none
    */
-  public ValidateResponse setQueryInfo(QueryInfo queryInfo) {
-    this.queryInfo = queryInfo;
+  public ModifyTemplateVersionTagRequest setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 
   @Override
-  public ValidateResponse set(String fieldName, Object value) {
-    return (ValidateResponse) super.set(fieldName, value);
+  public ModifyTemplateVersionTagRequest set(String fieldName, Object value) {
+    return (ModifyTemplateVersionTagRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ValidateResponse clone() {
-    return (ValidateResponse) super.clone();
+  public ModifyTemplateVersionTagRequest clone() {
+    return (ModifyTemplateVersionTagRequest) super.clone();
   }
 
 }

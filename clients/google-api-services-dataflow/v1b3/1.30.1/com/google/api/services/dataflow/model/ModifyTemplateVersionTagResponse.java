@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Response to the validation request.
+ * Respond the current tags in the TemplateVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ValidateResponse extends com.google.api.client.json.GenericJson {
+public final class ModifyTemplateVersionTagResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Will be empty if validation succeeds.
+   * All the tags in the TemplateVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String errorMessage;
+  private java.util.List<java.lang.String> tags;
 
   /**
-   * Information about the validated query. Not defined if validation fails.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private QueryInfo queryInfo;
-
-  /**
-   * Will be empty if validation succeeds.
+   * All the tags in the TemplateVersion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getErrorMessage() {
-    return errorMessage;
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
   }
 
   /**
-   * Will be empty if validation succeeds.
-   * @param errorMessage errorMessage or {@code null} for none
+   * All the tags in the TemplateVersion.
+   * @param tags tags or {@code null} for none
    */
-  public ValidateResponse setErrorMessage(java.lang.String errorMessage) {
-    this.errorMessage = errorMessage;
-    return this;
-  }
-
-  /**
-   * Information about the validated query. Not defined if validation fails.
-   * @return value or {@code null} for none
-   */
-  public QueryInfo getQueryInfo() {
-    return queryInfo;
-  }
-
-  /**
-   * Information about the validated query. Not defined if validation fails.
-   * @param queryInfo queryInfo or {@code null} for none
-   */
-  public ValidateResponse setQueryInfo(QueryInfo queryInfo) {
-    this.queryInfo = queryInfo;
+  public ModifyTemplateVersionTagResponse setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 
   @Override
-  public ValidateResponse set(String fieldName, Object value) {
-    return (ValidateResponse) super.set(fieldName, value);
+  public ModifyTemplateVersionTagResponse set(String fieldName, Object value) {
+    return (ModifyTemplateVersionTagResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ValidateResponse clone() {
-    return (ValidateResponse) super.clone();
+  public ModifyTemplateVersionTagResponse clone() {
+    return (ModifyTemplateVersionTagResponse) super.clone();
   }
 
 }

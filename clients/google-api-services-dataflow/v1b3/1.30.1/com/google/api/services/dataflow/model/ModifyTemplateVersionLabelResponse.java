@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Response to the validation request.
+ * Respond the labels in the TemplateVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ValidateResponse extends com.google.api.client.json.GenericJson {
+public final class ModifyTemplateVersionLabelResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Will be empty if validation succeeds.
+   * All the label in the TemplateVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String errorMessage;
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Information about the validated query. Not defined if validation fails.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private QueryInfo queryInfo;
-
-  /**
-   * Will be empty if validation succeeds.
+   * All the label in the TemplateVersion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getErrorMessage() {
-    return errorMessage;
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
   }
 
   /**
-   * Will be empty if validation succeeds.
-   * @param errorMessage errorMessage or {@code null} for none
+   * All the label in the TemplateVersion.
+   * @param labels labels or {@code null} for none
    */
-  public ValidateResponse setErrorMessage(java.lang.String errorMessage) {
-    this.errorMessage = errorMessage;
-    return this;
-  }
-
-  /**
-   * Information about the validated query. Not defined if validation fails.
-   * @return value or {@code null} for none
-   */
-  public QueryInfo getQueryInfo() {
-    return queryInfo;
-  }
-
-  /**
-   * Information about the validated query. Not defined if validation fails.
-   * @param queryInfo queryInfo or {@code null} for none
-   */
-  public ValidateResponse setQueryInfo(QueryInfo queryInfo) {
-    this.queryInfo = queryInfo;
+  public ModifyTemplateVersionLabelResponse setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
   @Override
-  public ValidateResponse set(String fieldName, Object value) {
-    return (ValidateResponse) super.set(fieldName, value);
+  public ModifyTemplateVersionLabelResponse set(String fieldName, Object value) {
+    return (ModifyTemplateVersionLabelResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ValidateResponse clone() {
-    return (ValidateResponse) super.clone();
+  public ModifyTemplateVersionLabelResponse clone() {
+    return (ModifyTemplateVersionLabelResponse) super.clone();
   }
 
 }

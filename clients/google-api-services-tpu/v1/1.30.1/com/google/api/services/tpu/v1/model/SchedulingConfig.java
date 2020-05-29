@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v1.model;
 
 /**
- * Model definition for SchedulingConfig.
+ * Sets the scheduling options for this node.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:
@@ -30,6 +30,7 @@ package com.google.api.services.tpu.v1.model;
 public final class SchedulingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defines whether the node is preemptible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,6 +44,7 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean reserved;
 
   /**
+   * Defines whether the node is preemptible.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -50,6 +52,7 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Defines whether the node is preemptible.
    * @param preemptible preemptible or {@code null} for none
    */
   public SchedulingConfig setPreemptible(java.lang.Boolean preemptible) {

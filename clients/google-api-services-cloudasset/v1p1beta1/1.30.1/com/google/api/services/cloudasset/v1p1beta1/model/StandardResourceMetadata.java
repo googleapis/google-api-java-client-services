@@ -60,6 +60,15 @@ public final class StandardResourceMetadata extends com.google.api.client.json.G
   private java.lang.String displayName;
 
   /**
+   * Labels associated with this resource. See [Labelling and grouping GCP
+   * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
+   * platform-resources) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
    * The value may be {@code null}.
    */
@@ -75,6 +84,16 @@ public final class StandardResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Network tags associated with this resource. Like labels, network tags are a type of annotations
+   * used to group GCP resources. See [Labelling GCP
+   * resources](lhttps://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-
+   * cloud-platform-resources) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> networkTags;
 
   /**
    * The project that this resource belongs to, in the form of `projects/{project_number}`.
@@ -156,6 +175,27 @@ public final class StandardResourceMetadata extends com.google.api.client.json.G
   }
 
   /**
+   * Labels associated with this resource. See [Labelling and grouping GCP
+   * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
+   * platform-resources) for more information.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels associated with this resource. See [Labelling and grouping GCP
+   * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
+   * platform-resources) for more information.
+   * @param labels labels or {@code null} for none
+   */
+  public StandardResourceMetadata setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
    * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
    * @return value or {@code null} for none
    */
@@ -192,6 +232,29 @@ public final class StandardResourceMetadata extends com.google.api.client.json.G
    */
   public StandardResourceMetadata setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Network tags associated with this resource. Like labels, network tags are a type of annotations
+   * used to group GCP resources. See [Labelling GCP
+   * resources](lhttps://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-
+   * cloud-platform-resources) for more information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNetworkTags() {
+    return networkTags;
+  }
+
+  /**
+   * Network tags associated with this resource. Like labels, network tags are a type of annotations
+   * used to group GCP resources. See [Labelling GCP
+   * resources](lhttps://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-
+   * cloud-platform-resources) for more information.
+   * @param networkTags networkTags or {@code null} for none
+   */
+  public StandardResourceMetadata setNetworkTags(java.util.List<java.lang.String> networkTags) {
+    this.networkTags = networkTags;
     return this;
   }
 

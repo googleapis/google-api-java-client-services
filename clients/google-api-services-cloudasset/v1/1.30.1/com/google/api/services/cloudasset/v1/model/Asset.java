@@ -51,14 +51,14 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * root. If the asset is a project, folder, or organization, the ancestry path starts from the
    * asset itself.
    *
-   * For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ancestors;
 
   /**
-   * The type of the asset. For example: "compute.googleapis.com/Disk"
+   * The type of the asset. Example: "compute.googleapis.com/Disk"
    *
    * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types) for more information.
@@ -80,7 +80,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private Policy iamPolicy;
 
   /**
-   * The full name of the asset. For example:
+   * The full name of the asset. Example:
    * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
    *
    * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
@@ -149,7 +149,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * root. If the asset is a project, folder, or organization, the ancestry path starts from the
    * asset itself.
    *
-   * For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAncestors() {
@@ -163,7 +163,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * root. If the asset is a project, folder, or organization, the ancestry path starts from the
    * asset itself.
    *
-   * For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * @param ancestors ancestors or {@code null} for none
    */
   public Asset setAncestors(java.util.List<java.lang.String> ancestors) {
@@ -172,7 +172,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the asset. For example: "compute.googleapis.com/Disk"
+   * The type of the asset. Example: "compute.googleapis.com/Disk"
    *
    * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types) for more information.
@@ -183,7 +183,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the asset. For example: "compute.googleapis.com/Disk"
+   * The type of the asset. Example: "compute.googleapis.com/Disk"
    *
    * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types) for more information.
@@ -222,7 +222,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full name of the asset. For example:
+   * The full name of the asset. Example:
    * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
    *
    * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
@@ -234,7 +234,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full name of the asset. For example:
+   * The full name of the asset. Example:
    * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
    *
    * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)

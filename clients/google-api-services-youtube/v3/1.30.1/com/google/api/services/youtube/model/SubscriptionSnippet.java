@@ -21,7 +21,7 @@ package com.google.api.services.youtube.model;
  * item.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -57,7 +57,7 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * The id object contains information about the channel that the user subscribed to.
@@ -138,7 +138,7 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
    * MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -147,7 +147,7 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
    * MM-DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public SubscriptionSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public SubscriptionSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

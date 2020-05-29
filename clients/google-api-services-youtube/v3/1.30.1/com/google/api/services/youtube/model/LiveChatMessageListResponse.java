@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for LiveChatMessageListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,7 +44,6 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   private java.lang.String eventId;
 
   /**
-   * A list of live chat messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +64,6 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   private java.lang.String kind;
 
   /**
-   * The token that can be used as the value of the pageToken parameter to retrieve the next page in
-   * the result set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +75,10 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime offlineAt;
+  private java.lang.String offlineAt;
 
   /**
+   * General pagination information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +139,6 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * A list of live chat messages.
    * @return value or {@code null} for none
    */
   public java.util.List<LiveChatMessage> getItems() {
@@ -149,7 +146,6 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * A list of live chat messages.
    * @param items items or {@code null} for none
    */
   public LiveChatMessageListResponse setItems(java.util.List<LiveChatMessage> items) {
@@ -177,8 +173,6 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * The token that can be used as the value of the pageToken parameter to retrieve the next page in
-   * the result set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -186,8 +180,6 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * The token that can be used as the value of the pageToken parameter to retrieve the next page in
-   * the result set.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public LiveChatMessageListResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -200,7 +192,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getOfflineAt() {
+  public java.lang.String getOfflineAt() {
     return offlineAt;
   }
 
@@ -209,12 +201,13 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param offlineAt offlineAt or {@code null} for none
    */
-  public LiveChatMessageListResponse setOfflineAt(com.google.api.client.util.DateTime offlineAt) {
+  public LiveChatMessageListResponse setOfflineAt(java.lang.String offlineAt) {
     this.offlineAt = offlineAt;
     return this;
   }
 
   /**
+   * General pagination information.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -222,6 +215,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
+   * General pagination information.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public LiveChatMessageListResponse setPageInfo(PageInfo pageInfo) {

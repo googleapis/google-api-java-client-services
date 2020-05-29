@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for SearchListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,7 +44,7 @@ public final class SearchListResponse extends com.google.api.client.json.Generic
   private java.lang.String eventId;
 
   /**
-   * A list of results that match the search criteria.
+   * Pagination information for token pagination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +66,7 @@ public final class SearchListResponse extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
+   * General pagination information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +134,7 @@ public final class SearchListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of results that match the search criteria.
+   * Pagination information for token pagination.
    * @return value or {@code null} for none
    */
   public java.util.List<SearchResult> getItems() {
@@ -141,7 +142,7 @@ public final class SearchListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of results that match the search criteria.
+   * Pagination information for token pagination.
    * @param items items or {@code null} for none
    */
   public SearchListResponse setItems(java.util.List<SearchResult> items) {
@@ -186,6 +187,7 @@ public final class SearchListResponse extends com.google.api.client.json.Generic
   }
 
   /**
+   * General pagination information.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -193,6 +195,7 @@ public final class SearchListResponse extends com.google.api.client.json.Generic
   }
 
   /**
+   * General pagination information.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public SearchListResponse setPageInfo(PageInfo pageInfo) {

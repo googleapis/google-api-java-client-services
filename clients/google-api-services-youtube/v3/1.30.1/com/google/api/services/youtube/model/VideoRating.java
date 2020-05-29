@@ -17,10 +17,10 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for VideoRating.
+ * Basic details about rating of a video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,18 +30,21 @@ package com.google.api.services.youtube.model;
 public final class VideoRating extends com.google.api.client.json.GenericJson {
 
   /**
+   * Rating of a video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rating;
 
   /**
+   * The ID that YouTube uses to uniquely identify the video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String videoId;
 
   /**
+   * Rating of a video.
    * @return value or {@code null} for none
    */
   public java.lang.String getRating() {
@@ -49,6 +52,7 @@ public final class VideoRating extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Rating of a video.
    * @param rating rating or {@code null} for none
    */
   public VideoRating setRating(java.lang.String rating) {
@@ -57,6 +61,7 @@ public final class VideoRating extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The ID that YouTube uses to uniquely identify the video.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoId() {
@@ -64,6 +69,7 @@ public final class VideoRating extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The ID that YouTube uses to uniquely identify the video.
    * @param videoId videoId or {@code null} for none
    */
   public VideoRating setVideoId(java.lang.String videoId) {

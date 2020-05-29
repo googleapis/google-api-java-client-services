@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for LiveChatMessageSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -82,36 +82,12 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private LiveChatMessageRetractedDetails messageRetractedDetails;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LiveChatPollClosedDetails pollClosedDetails;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LiveChatPollEditedDetails pollEditedDetails;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LiveChatPollOpenedDetails pollOpenedDetails;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LiveChatPollVotedDetails pollVotedDetails;
-
-  /**
    * The date and time when the message was orignally published. The value is specified in ISO 8601
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * Details about the Super Chat event, this is only set if the type is 'superChatEvent'.
@@ -274,71 +250,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public LiveChatPollClosedDetails getPollClosedDetails() {
-    return pollClosedDetails;
-  }
-
-  /**
-   * @param pollClosedDetails pollClosedDetails or {@code null} for none
-   */
-  public LiveChatMessageSnippet setPollClosedDetails(LiveChatPollClosedDetails pollClosedDetails) {
-    this.pollClosedDetails = pollClosedDetails;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public LiveChatPollEditedDetails getPollEditedDetails() {
-    return pollEditedDetails;
-  }
-
-  /**
-   * @param pollEditedDetails pollEditedDetails or {@code null} for none
-   */
-  public LiveChatMessageSnippet setPollEditedDetails(LiveChatPollEditedDetails pollEditedDetails) {
-    this.pollEditedDetails = pollEditedDetails;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public LiveChatPollOpenedDetails getPollOpenedDetails() {
-    return pollOpenedDetails;
-  }
-
-  /**
-   * @param pollOpenedDetails pollOpenedDetails or {@code null} for none
-   */
-  public LiveChatMessageSnippet setPollOpenedDetails(LiveChatPollOpenedDetails pollOpenedDetails) {
-    this.pollOpenedDetails = pollOpenedDetails;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public LiveChatPollVotedDetails getPollVotedDetails() {
-    return pollVotedDetails;
-  }
-
-  /**
-   * @param pollVotedDetails pollVotedDetails or {@code null} for none
-   */
-  public LiveChatMessageSnippet setPollVotedDetails(LiveChatPollVotedDetails pollVotedDetails) {
-    this.pollVotedDetails = pollVotedDetails;
-    return this;
-  }
-
-  /**
    * The date and time when the message was orignally published. The value is specified in ISO 8601
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -347,7 +263,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public LiveChatMessageSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public LiveChatMessageSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Basic details about a comment, such as its author and text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,11 +30,10 @@ package com.google.api.services.youtube.model;
 public final class CommentSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the author's YouTube channel, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object authorChannelId;
+  private CommentSnippetAuthorChannelId authorChannelId;
 
   /**
    * Link to the author's YouTube channel, if any.
@@ -100,7 +99,7 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * The comment's text. The format is either plain text or HTML dependent on what has been
@@ -126,7 +125,7 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updatedAt;
+  private java.lang.String updatedAt;
 
   /**
    * The ID of the video the comment refers to, if any.
@@ -144,18 +143,16 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   private java.lang.String viewerRating;
 
   /**
-   * The id of the author's YouTube channel, if any.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getAuthorChannelId() {
+  public CommentSnippetAuthorChannelId getAuthorChannelId() {
     return authorChannelId;
   }
 
   /**
-   * The id of the author's YouTube channel, if any.
    * @param authorChannelId authorChannelId or {@code null} for none
    */
-  public CommentSnippet setAuthorChannelId(java.lang.Object authorChannelId) {
+  public CommentSnippet setAuthorChannelId(CommentSnippetAuthorChannelId authorChannelId) {
     this.authorChannelId = authorChannelId;
     return this;
   }
@@ -305,7 +302,7 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
@@ -314,7 +311,7 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    * (YYYY-MM-DDThh:mm:ss.sZ) format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public CommentSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public CommentSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }
@@ -366,7 +363,7 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    * DDThh:mm:ss.sZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdatedAt() {
+  public java.lang.String getUpdatedAt() {
     return updatedAt;
   }
 
@@ -375,7 +372,7 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    * DDThh:mm:ss.sZ) format.
    * @param updatedAt updatedAt or {@code null} for none
    */
-  public CommentSnippet setUpdatedAt(com.google.api.client.util.DateTime updatedAt) {
+  public CommentSnippet setUpdatedAt(java.lang.String updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }

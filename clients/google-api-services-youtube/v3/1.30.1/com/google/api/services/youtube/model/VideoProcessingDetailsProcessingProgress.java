@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Video processing progress and completion time estimate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,11 +32,10 @@ public final class VideoProcessingDetailsProcessingProgress extends com.google.a
   /**
    * The number of parts of the video that YouTube has already processed. You can estimate the
    * percentage of the video that YouTube has already processed by calculating: 100 *
-   * parts_processed / parts_total
-   *
-   * Note that since the estimated number of parts could increase without a corresponding increase
-   * in the number of parts that have already been processed, it is possible that the calculated
-   * progress could periodically decrease while YouTube processes a video.
+   * parts_processed / parts_total Note that since the estimated number of parts could increase
+   * without a corresponding increase in the number of parts that have already been processed, it is
+   * possible that the calculated progress could periodically decrease while YouTube processes a
+   * video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,11 +60,10 @@ public final class VideoProcessingDetailsProcessingProgress extends com.google.a
   /**
    * The number of parts of the video that YouTube has already processed. You can estimate the
    * percentage of the video that YouTube has already processed by calculating: 100 *
-   * parts_processed / parts_total
-   *
-   * Note that since the estimated number of parts could increase without a corresponding increase
-   * in the number of parts that have already been processed, it is possible that the calculated
-   * progress could periodically decrease while YouTube processes a video.
+   * parts_processed / parts_total Note that since the estimated number of parts could increase
+   * without a corresponding increase in the number of parts that have already been processed, it is
+   * possible that the calculated progress could periodically decrease while YouTube processes a
+   * video.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getPartsProcessed() {
@@ -75,11 +73,10 @@ public final class VideoProcessingDetailsProcessingProgress extends com.google.a
   /**
    * The number of parts of the video that YouTube has already processed. You can estimate the
    * percentage of the video that YouTube has already processed by calculating: 100 *
-   * parts_processed / parts_total
-   *
-   * Note that since the estimated number of parts could increase without a corresponding increase
-   * in the number of parts that have already been processed, it is possible that the calculated
-   * progress could periodically decrease while YouTube processes a video.
+   * parts_processed / parts_total Note that since the estimated number of parts could increase
+   * without a corresponding increase in the number of parts that have already been processed, it is
+   * possible that the calculated progress could periodically decrease while YouTube processes a
+   * video.
    * @param partsProcessed partsProcessed or {@code null} for none
    */
   public VideoProcessingDetailsProcessingProgress setPartsProcessed(java.math.BigInteger partsProcessed) {

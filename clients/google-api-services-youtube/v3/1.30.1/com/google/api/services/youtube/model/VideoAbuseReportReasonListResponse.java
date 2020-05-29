@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for VideoAbuseReportReasonListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,7 +44,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
   private java.lang.String eventId;
 
   /**
-   * A list of valid abuse reasons that are used with video.ReportAbuse.
+   * A list of valid abuse reasons that are used with `video.ReportAbuse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +58,14 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#videoAbuseReportReasonListResponse".
+   * `"youtube#videoAbuseReportReasonListResponse"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The visitorId identifies the visitor.
+   * The `visitorId` identifies the visitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
   }
 
   /**
-   * A list of valid abuse reasons that are used with video.ReportAbuse.
+   * A list of valid abuse reasons that are used with `video.ReportAbuse`.
    * @return value or {@code null} for none
    */
   public java.util.List<VideoAbuseReportReason> getItems() {
@@ -114,7 +114,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
   }
 
   /**
-   * A list of valid abuse reasons that are used with video.ReportAbuse.
+   * A list of valid abuse reasons that are used with `video.ReportAbuse`.
    * @param items items or {@code null} for none
    */
   public VideoAbuseReportReasonListResponse setItems(java.util.List<VideoAbuseReportReason> items) {
@@ -124,7 +124,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#videoAbuseReportReasonListResponse".
+   * `"youtube#videoAbuseReportReasonListResponse"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -133,7 +133,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#videoAbuseReportReasonListResponse".
+   * `"youtube#videoAbuseReportReasonListResponse"`.
    * @param kind kind or {@code null} for none
    */
   public VideoAbuseReportReasonListResponse setKind(java.lang.String kind) {
@@ -142,7 +142,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
   }
 
   /**
-   * The visitorId identifies the visitor.
+   * The `visitorId` identifies the visitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisitorId() {
@@ -150,7 +150,7 @@ public final class VideoAbuseReportReasonListResponse extends com.google.api.cli
   }
 
   /**
-   * The visitorId identifies the visitor.
+   * The `visitorId` identifies the visitor.
    * @param visitorId visitorId or {@code null} for none
    */
   public VideoAbuseReportReasonListResponse setVisitorId(java.lang.String visitorId) {

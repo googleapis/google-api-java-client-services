@@ -17,10 +17,10 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Basic details about a video category, such as its localized title.
+ * Basic details about a video category, such as its localized title. Next Id: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,8 @@ package com.google.api.services.youtube.model;
 public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * This value indicates if the video can be embedded on another website.
+   * This value indicates if the video can be embedded on another website. @mutable
+   * youtube.videos.insert youtube.videos.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String failureReason;
 
   /**
-   * The video's license.
+   * The video's license. @mutable youtube.videos.insert youtube.videos.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +68,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   /**
    * This value indicates if the extended video statistics on the watch page can be viewed by
    * everyone. Note that the view count, likes, etc will still be visible if this is disabled.
+   * @mutable youtube.videos.insert youtube.videos.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +81,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishAt;
+  private java.lang.String publishAt;
 
   /**
    * This value explains why YouTube rejected an uploaded video. This property is only present if
@@ -103,7 +105,8 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String uploadStatus;
 
   /**
-   * This value indicates if the video can be embedded on another website.
+   * This value indicates if the video can be embedded on another website. @mutable
+   * youtube.videos.insert youtube.videos.update
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEmbeddable() {
@@ -111,7 +114,8 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This value indicates if the video can be embedded on another website.
+   * This value indicates if the video can be embedded on another website. @mutable
+   * youtube.videos.insert youtube.videos.update
    * @param embeddable embeddable or {@code null} for none
    */
   public VideoStatus setEmbeddable(java.lang.Boolean embeddable) {
@@ -139,7 +143,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's license.
+   * The video's license. @mutable youtube.videos.insert youtube.videos.update
    * @return value or {@code null} for none
    */
   public java.lang.String getLicense() {
@@ -147,7 +151,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's license.
+   * The video's license. @mutable youtube.videos.insert youtube.videos.update
    * @param license license or {@code null} for none
    */
   public VideoStatus setLicense(java.lang.String license) {
@@ -190,6 +194,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   /**
    * This value indicates if the extended video statistics on the watch page can be viewed by
    * everyone. Note that the view count, likes, etc will still be visible if this is disabled.
+   * @mutable youtube.videos.insert youtube.videos.update
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPublicStatsViewable() {
@@ -199,6 +204,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   /**
    * This value indicates if the extended video statistics on the watch page can be viewed by
    * everyone. Note that the view count, likes, etc will still be visible if this is disabled.
+   * @mutable youtube.videos.insert youtube.videos.update
    * @param publicStatsViewable publicStatsViewable or {@code null} for none
    */
   public VideoStatus setPublicStatsViewable(java.lang.Boolean publicStatsViewable) {
@@ -212,7 +218,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    * format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishAt() {
+  public java.lang.String getPublishAt() {
     return publishAt;
   }
 
@@ -222,7 +228,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    * format.
    * @param publishAt publishAt or {@code null} for none
    */
-  public VideoStatus setPublishAt(com.google.api.client.util.DateTime publishAt) {
+  public VideoStatus setPublishAt(java.lang.String publishAt) {
     this.publishAt = publishAt;
     return this;
   }

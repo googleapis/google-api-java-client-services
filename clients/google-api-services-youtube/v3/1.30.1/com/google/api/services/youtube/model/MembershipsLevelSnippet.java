@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for MembershipsLevelSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -37,6 +37,7 @@ public final class MembershipsLevelSnippet extends com.google.api.client.json.Ge
   private java.lang.String creatorChannelId;
 
   /**
+   * Details about the pricing level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +61,7 @@ public final class MembershipsLevelSnippet extends com.google.api.client.json.Ge
   }
 
   /**
+   * Details about the pricing level.
    * @return value or {@code null} for none
    */
   public LevelDetails getLevelDetails() {
@@ -67,6 +69,7 @@ public final class MembershipsLevelSnippet extends com.google.api.client.json.Ge
   }
 
   /**
+   * Details about the pricing level.
    * @param levelDetails levelDetails or {@code null} for none
    */
   public MembershipsLevelSnippet setLevelDetails(LevelDetails levelDetails) {

@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Settings and Info of the monitor stream
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -48,11 +48,9 @@ public final class MonitorStreamInfo extends com.google.api.client.json.GenericJ
    * This value determines whether the monitor stream is enabled for the broadcast. If the monitor
    * stream is enabled, then YouTube will broadcast the event content on a special stream intended
    * only for the broadcaster's consumption. The broadcaster can use the stream to review the event
-   * content and also to identify the optimal times to insert cuepoints.
-   *
-   * You need to set this value to true if you intend to have a broadcast delay for your event.
-   *
-   * Note: This property cannot be updated once the broadcast is in the testing or live state.
+   * content and also to identify the optimal times to insert cuepoints. You need to set this value
+   * to true if you intend to have a broadcast delay for your event. Note: This property cannot be
+   * updated once the broadcast is in the testing or live state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,11 +96,9 @@ public final class MonitorStreamInfo extends com.google.api.client.json.GenericJ
    * This value determines whether the monitor stream is enabled for the broadcast. If the monitor
    * stream is enabled, then YouTube will broadcast the event content on a special stream intended
    * only for the broadcaster's consumption. The broadcaster can use the stream to review the event
-   * content and also to identify the optimal times to insert cuepoints.
-   *
-   * You need to set this value to true if you intend to have a broadcast delay for your event.
-   *
-   * Note: This property cannot be updated once the broadcast is in the testing or live state.
+   * content and also to identify the optimal times to insert cuepoints. You need to set this value
+   * to true if you intend to have a broadcast delay for your event. Note: This property cannot be
+   * updated once the broadcast is in the testing or live state.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableMonitorStream() {
@@ -113,11 +109,9 @@ public final class MonitorStreamInfo extends com.google.api.client.json.GenericJ
    * This value determines whether the monitor stream is enabled for the broadcast. If the monitor
    * stream is enabled, then YouTube will broadcast the event content on a special stream intended
    * only for the broadcaster's consumption. The broadcaster can use the stream to review the event
-   * content and also to identify the optimal times to insert cuepoints.
-   *
-   * You need to set this value to true if you intend to have a broadcast delay for your event.
-   *
-   * Note: This property cannot be updated once the broadcast is in the testing or live state.
+   * content and also to identify the optimal times to insert cuepoints. You need to set this value
+   * to true if you intend to have a broadcast delay for your event. Note: This property cannot be
+   * updated once the broadcast is in the testing or live state.
    * @param enableMonitorStream enableMonitorStream or {@code null} for none
    */
   public MonitorStreamInfo setEnableMonitorStream(java.lang.Boolean enableMonitorStream) {

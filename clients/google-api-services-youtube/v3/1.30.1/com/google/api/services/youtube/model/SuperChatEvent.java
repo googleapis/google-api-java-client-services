@@ -17,10 +17,10 @@
 package com.google.api.services.youtube.model;
 
 /**
- * A superChatEvent resource represents a Super Chat purchase on a YouTube channel.
+ * A `__superChatEvent__` resource represents a Super Chat purchase on a YouTube channel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,14 +44,14 @@ public final class SuperChatEvent extends com.google.api.client.json.GenericJson
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "youtube#superChatEvent".
+   * Identifies what kind of resource this is. Value: the fixed string `"youtube#superChatEvent"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The snippet object contains basic details about the Super Chat event.
+   * The `snippet` object contains basic details about the Super Chat event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class SuperChatEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "youtube#superChatEvent".
+   * Identifies what kind of resource this is. Value: the fixed string `"youtube#superChatEvent"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -100,7 +100,7 @@ public final class SuperChatEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "youtube#superChatEvent".
+   * Identifies what kind of resource this is. Value: the fixed string `"youtube#superChatEvent"`.
    * @param kind kind or {@code null} for none
    */
   public SuperChatEvent setKind(java.lang.String kind) {
@@ -109,7 +109,7 @@ public final class SuperChatEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The snippet object contains basic details about the Super Chat event.
+   * The `snippet` object contains basic details about the Super Chat event.
    * @return value or {@code null} for none
    */
   public SuperChatEventSnippet getSnippet() {
@@ -117,7 +117,7 @@ public final class SuperChatEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The snippet object contains basic details about the Super Chat event.
+   * The `snippet` object contains basic details about the Super Chat event.
    * @param snippet snippet or {@code null} for none
    */
   public SuperChatEvent setSnippet(SuperChatEventSnippet snippet) {

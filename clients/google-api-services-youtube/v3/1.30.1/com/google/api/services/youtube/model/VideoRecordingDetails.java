@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Recording information associated with the video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -49,7 +49,7 @@ public final class VideoRecordingDetails extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime recordingDate;
+  private java.lang.String recordingDate;
 
   /**
    * The geolocation information associated with the video.
@@ -90,7 +90,7 @@ public final class VideoRecordingDetails extends com.google.api.client.json.Gene
    * DDThh:mm:ss.sssZ) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getRecordingDate() {
+  public java.lang.String getRecordingDate() {
     return recordingDate;
   }
 
@@ -99,7 +99,7 @@ public final class VideoRecordingDetails extends com.google.api.client.json.Gene
    * DDThh:mm:ss.sssZ) format.
    * @param recordingDate recordingDate or {@code null} for none
    */
-  public VideoRecordingDetails setRecordingDate(com.google.api.client.util.DateTime recordingDate) {
+  public VideoRecordingDetails setRecordingDate(java.lang.String recordingDate) {
     this.recordingDate = recordingDate;
     return this;
   }

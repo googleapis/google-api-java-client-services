@@ -21,7 +21,7 @@ package com.google.api.services.youtube.model;
  * to a single channel_id.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,7 +32,7 @@ public final class InvideoPromotion extends com.google.api.client.json.GenericJs
 
   /**
    * The default temporal position within the video where the promoted item will be displayed. Can
-   * be overriden by more specific timing in the item.
+   * be overridden by more specific timing in the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class InvideoPromotion extends com.google.api.client.json.GenericJs
 
   /**
    * The default temporal position within the video where the promoted item will be displayed. Can
-   * be overriden by more specific timing in the item.
+   * be overridden by more specific timing in the item.
    * @return value or {@code null} for none
    */
   public InvideoTiming getDefaultTiming() {
@@ -73,7 +73,7 @@ public final class InvideoPromotion extends com.google.api.client.json.GenericJs
 
   /**
    * The default temporal position within the video where the promoted item will be displayed. Can
-   * be overriden by more specific timing in the item.
+   * be overridden by more specific timing in the item.
    * @param defaultTiming defaultTiming or {@code null} for none
    */
   public InvideoPromotion setDefaultTiming(InvideoTiming defaultTiming) {

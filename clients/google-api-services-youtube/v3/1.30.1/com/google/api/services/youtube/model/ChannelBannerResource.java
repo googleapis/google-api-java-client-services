@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * A channel banner returned as the response to a channel_banner.insert call.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,6 @@ package com.google.api.services.youtube.model;
 public final class ChannelBannerResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +51,6 @@ public final class ChannelBannerResource extends com.google.api.client.json.Gene
   private java.lang.String url;
 
   /**
-   * Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -60,7 +58,6 @@ public final class ChannelBannerResource extends com.google.api.client.json.Gene
   }
 
   /**
-   * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
   public ChannelBannerResource setEtag(java.lang.String etag) {

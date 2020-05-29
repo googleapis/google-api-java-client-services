@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for ChannelSectionListResponse.
+ * Model definition for VideoRatingListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ChannelSectionListResponse extends com.google.api.client.json.GenericJson {
+public final class VideoRatingListResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Etag of this resource.
@@ -44,21 +44,21 @@ public final class ChannelSectionListResponse extends com.google.api.client.json
   private java.lang.String eventId;
 
   /**
-   * A list of ChannelSections that match the request criteria.
+   * A list of ratings that match the request criteria.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ChannelSection> items;
+  private java.util.List<VideoRating> items;
 
   static {
-    // hack to force ProGuard to consider ChannelSection used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider VideoRating used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ChannelSection.class);
+    com.google.api.client.util.Data.nullOf(VideoRating.class);
   }
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#channelSectionListResponse".
+   * "youtube#videoGetRatingResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class ChannelSectionListResponse extends com.google.api.client.json
    * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
-  public ChannelSectionListResponse setEtag(java.lang.String etag) {
+  public VideoRatingListResponse setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
@@ -100,31 +100,31 @@ public final class ChannelSectionListResponse extends com.google.api.client.json
    * Serialized EventId of the request which produced this response.
    * @param eventId eventId or {@code null} for none
    */
-  public ChannelSectionListResponse setEventId(java.lang.String eventId) {
+  public VideoRatingListResponse setEventId(java.lang.String eventId) {
     this.eventId = eventId;
     return this;
   }
 
   /**
-   * A list of ChannelSections that match the request criteria.
+   * A list of ratings that match the request criteria.
    * @return value or {@code null} for none
    */
-  public java.util.List<ChannelSection> getItems() {
+  public java.util.List<VideoRating> getItems() {
     return items;
   }
 
   /**
-   * A list of ChannelSections that match the request criteria.
+   * A list of ratings that match the request criteria.
    * @param items items or {@code null} for none
    */
-  public ChannelSectionListResponse setItems(java.util.List<ChannelSection> items) {
+  public VideoRatingListResponse setItems(java.util.List<VideoRating> items) {
     this.items = items;
     return this;
   }
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#channelSectionListResponse".
+   * "youtube#videoGetRatingResponse".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -133,10 +133,10 @@ public final class ChannelSectionListResponse extends com.google.api.client.json
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#channelSectionListResponse".
+   * "youtube#videoGetRatingResponse".
    * @param kind kind or {@code null} for none
    */
-  public ChannelSectionListResponse setKind(java.lang.String kind) {
+  public VideoRatingListResponse setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
@@ -153,19 +153,19 @@ public final class ChannelSectionListResponse extends com.google.api.client.json
    * The visitorId identifies the visitor.
    * @param visitorId visitorId or {@code null} for none
    */
-  public ChannelSectionListResponse setVisitorId(java.lang.String visitorId) {
+  public VideoRatingListResponse setVisitorId(java.lang.String visitorId) {
     this.visitorId = visitorId;
     return this;
   }
 
   @Override
-  public ChannelSectionListResponse set(String fieldName, Object value) {
-    return (ChannelSectionListResponse) super.set(fieldName, value);
+  public VideoRatingListResponse set(String fieldName, Object value) {
+    return (VideoRatingListResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ChannelSectionListResponse clone() {
-    return (ChannelSectionListResponse) super.clone();
+  public VideoRatingListResponse clone() {
+    return (VideoRatingListResponse) super.clone();
   }
 
 }

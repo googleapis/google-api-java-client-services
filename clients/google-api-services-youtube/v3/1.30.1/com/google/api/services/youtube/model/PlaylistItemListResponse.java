@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for PlaylistItemListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,6 @@ package com.google.api.services.youtube.model;
 public final class PlaylistItemListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +57,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#playlistItemListResponse".
+   * "youtube#playlistItemListResponse". Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +72,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
+   * General pagination information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,6 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
   private java.lang.String visitorId;
 
   /**
-   * Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -108,7 +107,6 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
   public PlaylistItemListResponse setEtag(java.lang.String etag) {
@@ -152,7 +150,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#playlistItemListResponse".
+   * "youtube#playlistItemListResponse". Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -161,7 +159,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#playlistItemListResponse".
+   * "youtube#playlistItemListResponse". Etag of this resource.
    * @param kind kind or {@code null} for none
    */
   public PlaylistItemListResponse setKind(java.lang.String kind) {
@@ -189,6 +187,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
   }
 
   /**
+   * General pagination information.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -196,6 +195,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
   }
 
   /**
+   * General pagination information.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public PlaylistItemListResponse setPageInfo(PageInfo pageInfo) {

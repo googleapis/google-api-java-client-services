@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for SponsorListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -58,15 +58,15 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#sponsorListResponse".
+   * `"youtube#sponsorListResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The token that can be used as the value of the pageToken parameter to retrieve the next page in
-   * the result set.
+   * The token that can be used as the value of the `pageToken` parameter to retrieve the next page
+   * in the result set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
   private TokenPagination tokenPagination;
 
   /**
-   * The visitorId identifies the visitor.
+   * The `visitorId` identifies the visitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#sponsorListResponse".
+   * `"youtube#sponsorListResponse".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -153,7 +153,7 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#sponsorListResponse".
+   * `"youtube#sponsorListResponse".
    * @param kind kind or {@code null} for none
    */
   public SponsorListResponse setKind(java.lang.String kind) {
@@ -162,8 +162,8 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The token that can be used as the value of the pageToken parameter to retrieve the next page in
-   * the result set.
+   * The token that can be used as the value of the `pageToken` parameter to retrieve the next page
+   * in the result set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -171,8 +171,8 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The token that can be used as the value of the pageToken parameter to retrieve the next page in
-   * the result set.
+   * The token that can be used as the value of the `pageToken` parameter to retrieve the next page
+   * in the result set.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public SponsorListResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -211,7 +211,7 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The visitorId identifies the visitor.
+   * The `visitorId` identifies the visitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisitorId() {
@@ -219,7 +219,7 @@ public final class SponsorListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The visitorId identifies the visitor.
+   * The `visitorId` identifies the visitor.
    * @param visitorId visitorId or {@code null} for none
    */
   public SponsorListResponse setVisitorId(java.lang.String visitorId) {

@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for LevelDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,12 +30,14 @@ package com.google.api.services.youtube.model;
 public final class LevelDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name that should be used when referring to this level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
+   * The name that should be used when referring to this level.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -43,6 +45,7 @@ public final class LevelDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The name that should be used when referring to this level.
    * @param displayName displayName or {@code null} for none
    */
   public LevelDetails setDisplayName(java.lang.String displayName) {

@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for SponsorSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -51,12 +51,12 @@ public final class SponsorSnippet extends com.google.api.client.json.GenericJson
   private ChannelProfileDetails sponsorDetails;
 
   /**
-   * The date and time when the user became a sponsor. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the user became a sponsor. The value is specified in ISO 8601 (`YYYY-MM-
+   * DDThh:mm:ss.sZ`) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime sponsorSince;
+  private java.lang.String sponsorSince;
 
   /**
    * The id of the channel being sponsored.
@@ -110,20 +110,20 @@ public final class SponsorSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date and time when the user became a sponsor. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the user became a sponsor. The value is specified in ISO 8601 (`YYYY-MM-
+   * DDThh:mm:ss.sZ`) format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getSponsorSince() {
+  public java.lang.String getSponsorSince() {
     return sponsorSince;
   }
 
   /**
-   * The date and time when the user became a sponsor. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the user became a sponsor. The value is specified in ISO 8601 (`YYYY-MM-
+   * DDThh:mm:ss.sZ`) format.
    * @param sponsorSince sponsorSince or {@code null} for none
    */
-  public SponsorSnippet setSponsorSince(com.google.api.client.util.DateTime sponsorSince) {
+  public SponsorSnippet setSponsorSince(java.lang.String sponsorSince) {
     this.sponsorSince = sponsorSince;
     return this;
   }

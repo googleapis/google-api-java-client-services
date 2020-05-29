@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for PlaylistListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,7 +44,7 @@ public final class PlaylistListResponse extends com.google.api.client.json.Gener
   private java.lang.String eventId;
 
   /**
-   * A list of playlists that match the request criteria.
+   * A list of playlists that match the request criteria
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +73,7 @@ public final class PlaylistListResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
+   * General pagination information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +135,7 @@ public final class PlaylistListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of playlists that match the request criteria.
+   * A list of playlists that match the request criteria
    * @return value or {@code null} for none
    */
   public java.util.List<Playlist> getItems() {
@@ -142,7 +143,7 @@ public final class PlaylistListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of playlists that match the request criteria.
+   * A list of playlists that match the request criteria
    * @param items items or {@code null} for none
    */
   public PlaylistListResponse setItems(java.util.List<Playlist> items) {
@@ -189,6 +190,7 @@ public final class PlaylistListResponse extends com.google.api.client.json.Gener
   }
 
   /**
+   * General pagination information.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -196,6 +198,7 @@ public final class PlaylistListResponse extends com.google.api.client.json.Gener
   }
 
   /**
+   * General pagination information.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public PlaylistListResponse setPageInfo(PageInfo pageInfo) {

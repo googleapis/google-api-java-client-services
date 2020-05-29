@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Describes information necessary for ingesting an RTMP or an HTTP stream.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,17 +39,29 @@ public final class IngestionInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * The primary ingestion URL that you should use to stream video to YouTube. You must stream video
-   * to this URL.
-   *
-   * Depending on which application or tool you use to encode your video stream, you may need to
-   * enter the stream URL and stream name separately or you may need to concatenate them in the
-   * following format:
-   *
-   * STREAM_URL/STREAM_NAME
+   * to this URL. Depending on which application or tool you use to encode your video stream, you
+   * may need to enter the stream URL and stream name separately or you may need to concatenate them
+   * in the following format:STREAM_URL/STREAM_NAME
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ingestionAddress;
+
+  /**
+   * This ingestion url may be used instead of backupIngestionAddress in order to stream via RTMPS.
+   * Not applicable to non-RTMP streams.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rtmpsBackupIngestionAddress;
+
+  /**
+   * This ingestion url may be used instead of ingestionAddress in order to stream via RTMPS. Not
+   * applicable to non-RTMP streams.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rtmpsIngestionAddress;
 
   /**
    * The HTTP or RTMP stream name that YouTube assigns to the video stream.
@@ -79,13 +91,9 @@ public final class IngestionInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * The primary ingestion URL that you should use to stream video to YouTube. You must stream video
-   * to this URL.
-   *
-   * Depending on which application or tool you use to encode your video stream, you may need to
-   * enter the stream URL and stream name separately or you may need to concatenate them in the
-   * following format:
-   *
-   * STREAM_URL/STREAM_NAME
+   * to this URL. Depending on which application or tool you use to encode your video stream, you
+   * may need to enter the stream URL and stream name separately or you may need to concatenate them
+   * in the following format:STREAM_URL/STREAM_NAME
    * @return value or {@code null} for none
    */
   public java.lang.String getIngestionAddress() {
@@ -94,17 +102,51 @@ public final class IngestionInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * The primary ingestion URL that you should use to stream video to YouTube. You must stream video
-   * to this URL.
-   *
-   * Depending on which application or tool you use to encode your video stream, you may need to
-   * enter the stream URL and stream name separately or you may need to concatenate them in the
-   * following format:
-   *
-   * STREAM_URL/STREAM_NAME
+   * to this URL. Depending on which application or tool you use to encode your video stream, you
+   * may need to enter the stream URL and stream name separately or you may need to concatenate them
+   * in the following format:STREAM_URL/STREAM_NAME
    * @param ingestionAddress ingestionAddress or {@code null} for none
    */
   public IngestionInfo setIngestionAddress(java.lang.String ingestionAddress) {
     this.ingestionAddress = ingestionAddress;
+    return this;
+  }
+
+  /**
+   * This ingestion url may be used instead of backupIngestionAddress in order to stream via RTMPS.
+   * Not applicable to non-RTMP streams.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRtmpsBackupIngestionAddress() {
+    return rtmpsBackupIngestionAddress;
+  }
+
+  /**
+   * This ingestion url may be used instead of backupIngestionAddress in order to stream via RTMPS.
+   * Not applicable to non-RTMP streams.
+   * @param rtmpsBackupIngestionAddress rtmpsBackupIngestionAddress or {@code null} for none
+   */
+  public IngestionInfo setRtmpsBackupIngestionAddress(java.lang.String rtmpsBackupIngestionAddress) {
+    this.rtmpsBackupIngestionAddress = rtmpsBackupIngestionAddress;
+    return this;
+  }
+
+  /**
+   * This ingestion url may be used instead of ingestionAddress in order to stream via RTMPS. Not
+   * applicable to non-RTMP streams.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRtmpsIngestionAddress() {
+    return rtmpsIngestionAddress;
+  }
+
+  /**
+   * This ingestion url may be used instead of ingestionAddress in order to stream via RTMPS. Not
+   * applicable to non-RTMP streams.
+   * @param rtmpsIngestionAddress rtmpsIngestionAddress or {@code null} for none
+   */
+  public IngestionInfo setRtmpsIngestionAddress(java.lang.String rtmpsIngestionAddress) {
+    this.rtmpsIngestionAddress = rtmpsIngestionAddress;
     return this;
   }
 

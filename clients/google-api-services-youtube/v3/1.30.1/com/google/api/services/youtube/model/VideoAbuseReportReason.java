@@ -17,11 +17,11 @@
 package com.google.api.services.youtube.model;
 
 /**
- * A videoAbuseReportReason resource identifies a reason that a video could be reported as abusive.
- * Video abuse report reasons are used with video.ReportAbuse.
+ * A `__videoAbuseReportReason__` resource identifies a reason that a video could be reported as
+ * abusive. Video abuse report reasons are used with `video.ReportAbuse`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -46,14 +46,14 @@ public final class VideoAbuseReportReason extends com.google.api.client.json.Gen
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#videoAbuseReportReason".
+   * `"youtube#videoAbuseReportReason"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The snippet object contains basic details about the abuse report reason.
+   * The `snippet` object contains basic details about the abuse report reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class VideoAbuseReportReason extends com.google.api.client.json.Gen
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#videoAbuseReportReason".
+   * `"youtube#videoAbuseReportReason"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -104,7 +104,7 @@ public final class VideoAbuseReportReason extends com.google.api.client.json.Gen
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#videoAbuseReportReason".
+   * `"youtube#videoAbuseReportReason"`.
    * @param kind kind or {@code null} for none
    */
   public VideoAbuseReportReason setKind(java.lang.String kind) {
@@ -113,7 +113,7 @@ public final class VideoAbuseReportReason extends com.google.api.client.json.Gen
   }
 
   /**
-   * The snippet object contains basic details about the abuse report reason.
+   * The `snippet` object contains basic details about the abuse report reason.
    * @return value or {@code null} for none
    */
   public VideoAbuseReportReasonSnippet getSnippet() {
@@ -121,7 +121,7 @@ public final class VideoAbuseReportReason extends com.google.api.client.json.Gen
   }
 
   /**
-   * The snippet object contains basic details about the abuse report reason.
+   * The `snippet` object contains basic details about the abuse report reason.
    * @param snippet snippet or {@code null} for none
    */
   public VideoAbuseReportReason setSnippet(VideoAbuseReportReasonSnippet snippet) {

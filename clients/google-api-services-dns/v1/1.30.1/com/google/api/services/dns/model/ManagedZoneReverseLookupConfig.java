@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for ManagedZonePrivateVisibilityConfigNetwork.
+ * Model definition for ManagedZoneReverseLookupConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -27,25 +27,19 @@ package com.google.api.services.dns.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.api.client.json.GenericJson {
+public final class ManagedZoneReverseLookupConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePrivateVisibilityConfigNetwork".
+   * "dns#managedZoneReverseLookupConfig".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String networkUrl;
-
-  /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePrivateVisibilityConfigNetwork".
+   * "dns#managedZoneReverseLookupConfig".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -54,37 +48,22 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePrivateVisibilityConfigNetwork".
+   * "dns#managedZoneReverseLookupConfig".
    * @param kind kind or {@code null} for none
    */
-  public ManagedZonePrivateVisibilityConfigNetwork setKind(java.lang.String kind) {
+  public ManagedZoneReverseLookupConfig setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNetworkUrl() {
-    return networkUrl;
-  }
-
-  /**
-   * @param networkUrl networkUrl or {@code null} for none
-   */
-  public ManagedZonePrivateVisibilityConfigNetwork setNetworkUrl(java.lang.String networkUrl) {
-    this.networkUrl = networkUrl;
-    return this;
+  @Override
+  public ManagedZoneReverseLookupConfig set(String fieldName, Object value) {
+    return (ManagedZoneReverseLookupConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ManagedZonePrivateVisibilityConfigNetwork set(String fieldName, Object value) {
-    return (ManagedZonePrivateVisibilityConfigNetwork) super.set(fieldName, value);
-  }
-
-  @Override
-  public ManagedZonePrivateVisibilityConfigNetwork clone() {
-    return (ManagedZonePrivateVisibilityConfigNetwork) super.clone();
+  public ManagedZoneReverseLookupConfig clone() {
+    return (ManagedZoneReverseLookupConfig) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A DNSSEC key pair.
+ * Model definition for DnsKey.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -30,65 +30,48 @@ package com.google.api.services.dns.model;
 public final class DnsKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String algorithm;
 
   /**
-   * The time that this resource was created in the control plane. This is in RFC3339 text format.
-   * Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTime;
 
   /**
-   * A mutable string of at most 1024 characters associated with this resource for the user's
-   * convenience. Has no effect on the resource's function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests
-   * are needed to construct a DS record that points at this DNS key. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DnsKeyDigest> digests;
 
   /**
-   * Unique identifier for the resource; defined by the server (output only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will
-   * still be present as DNSKEY Resource Records for the use of resolvers validating existing
-   * signatures.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isActive;
 
   /**
-   * Length of the key in bits. Specified at creation time then immutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long keyLength;
 
   /**
-   * The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this
-   * DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique
-   * identifier). In particular, the key tag is used in a parent zone's DS record to point at the
-   * DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the
-   * algorithm to calculate it is specified in RFC4034 Appendix B. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,24 +85,18 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Base64 encoded public half of this key. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicKey;
 
   /**
-   * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types. Immutable after creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlgorithm() {
@@ -127,7 +104,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time.
    * @param algorithm algorithm or {@code null} for none
    */
   public DnsKey setAlgorithm(java.lang.String algorithm) {
@@ -136,8 +112,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that this resource was created in the control plane. This is in RFC3339 text format.
-   * Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTime() {
@@ -145,8 +119,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that this resource was created in the control plane. This is in RFC3339 text format.
-   * Output only.
    * @param creationTime creationTime or {@code null} for none
    */
   public DnsKey setCreationTime(java.lang.String creationTime) {
@@ -155,8 +127,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A mutable string of at most 1024 characters associated with this resource for the user's
-   * convenience. Has no effect on the resource's function.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -164,8 +134,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A mutable string of at most 1024 characters associated with this resource for the user's
-   * convenience. Has no effect on the resource's function.
    * @param description description or {@code null} for none
    */
   public DnsKey setDescription(java.lang.String description) {
@@ -174,8 +142,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests
-   * are needed to construct a DS record that points at this DNS key. Output only.
    * @return value or {@code null} for none
    */
   public java.util.List<DnsKeyDigest> getDigests() {
@@ -183,8 +149,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests
-   * are needed to construct a DS record that points at this DNS key. Output only.
    * @param digests digests or {@code null} for none
    */
   public DnsKey setDigests(java.util.List<DnsKeyDigest> digests) {
@@ -193,7 +157,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the resource; defined by the server (output only).
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -201,7 +164,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the resource; defined by the server (output only).
    * @param id id or {@code null} for none
    */
   public DnsKey setId(java.lang.String id) {
@@ -210,9 +172,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will
-   * still be present as DNSKEY Resource Records for the use of resolvers validating existing
-   * signatures.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsActive() {
@@ -220,9 +179,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will
-   * still be present as DNSKEY Resource Records for the use of resolvers validating existing
-   * signatures.
    * @param isActive isActive or {@code null} for none
    */
   public DnsKey setIsActive(java.lang.Boolean isActive) {
@@ -231,7 +187,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Length of the key in bits. Specified at creation time then immutable.
    * @return value or {@code null} for none
    */
   public java.lang.Long getKeyLength() {
@@ -239,7 +194,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Length of the key in bits. Specified at creation time then immutable.
    * @param keyLength keyLength or {@code null} for none
    */
   public DnsKey setKeyLength(java.lang.Long keyLength) {
@@ -248,11 +202,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this
-   * DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique
-   * identifier). In particular, the key tag is used in a parent zone's DS record to point at the
-   * DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the
-   * algorithm to calculate it is specified in RFC4034 Appendix B. Output only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getKeyTag() {
@@ -260,11 +209,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this
-   * DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique
-   * identifier). In particular, the key tag is used in a parent zone's DS record to point at the
-   * DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the
-   * algorithm to calculate it is specified in RFC4034 Appendix B. Output only.
    * @param keyTag keyTag or {@code null} for none
    */
   public DnsKey setKeyTag(java.lang.Integer keyTag) {
@@ -290,7 +234,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Base64 encoded public half of this key. Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicKey() {
@@ -298,7 +241,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Base64 encoded public half of this key. Output only.
    * @param publicKey publicKey or {@code null} for none
    */
   public DnsKey setPublicKey(java.lang.String publicKey) {
@@ -307,10 +249,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types. Immutable after creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -318,10 +256,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types. Immutable after creation time.
    * @param type type or {@code null} for none
    */
   public DnsKey setType(java.lang.String type) {

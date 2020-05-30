@@ -65,8 +65,7 @@ public final class PlaylistSnippet extends com.google.api.client.json.GenericJso
   private PlaylistLocalization localized;
 
   /**
-   * The date and time that the playlist was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the playlist was created. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,8 +180,7 @@ public final class PlaylistSnippet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The date and time that the playlist was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the playlist was created. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedAt() {
@@ -190,8 +188,7 @@ public final class PlaylistSnippet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The date and time that the playlist was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the playlist was created. The value is specified in ISO 8601 format.
    * @param publishedAt publishedAt or {@code null} for none
    */
   public PlaylistSnippet setPublishedAt(java.lang.String publishedAt) {

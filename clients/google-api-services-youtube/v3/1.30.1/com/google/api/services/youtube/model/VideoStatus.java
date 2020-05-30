@@ -76,8 +76,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The date and time when the video is scheduled to publish. It can be set only if the privacy
-   * status of the video is private. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ)
-   * format.
+   * status of the video is private. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,8 +213,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The date and time when the video is scheduled to publish. It can be set only if the privacy
-   * status of the video is private. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ)
-   * format.
+   * status of the video is private. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishAt() {
@@ -224,8 +222,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The date and time when the video is scheduled to publish. It can be set only if the privacy
-   * status of the video is private. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ)
-   * format.
+   * status of the video is private. The value is specified in ISO 8601 format.
    * @param publishAt publishAt or {@code null} for none
    */
   public VideoStatus setPublishAt(java.lang.String publishAt) {

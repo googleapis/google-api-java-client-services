@@ -71,7 +71,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
 
   /**
    * The date and time when the underlying stream went offline. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,7 +189,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
 
   /**
    * The date and time when the underlying stream went offline. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfflineAt() {
@@ -198,7 +198,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
 
   /**
    * The date and time when the underlying stream went offline. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * @param offlineAt offlineAt or {@code null} for none
    */
   public LiveChatMessageListResponse setOfflineAt(java.lang.String offlineAt) {

@@ -52,8 +52,7 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * The date and time that the subscription was created. The value is specified in ISO 8601 (YYYY-
-   * MM-DDThh:mm:ss.sZ) format.
+   * The date and time that the subscription was created. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +133,7 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
   }
 
   /**
-   * The date and time that the subscription was created. The value is specified in ISO 8601 (YYYY-
-   * MM-DDThh:mm:ss.sZ) format.
+   * The date and time that the subscription was created. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedAt() {
@@ -143,8 +141,7 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
   }
 
   /**
-   * The date and time that the subscription was created. The value is specified in ISO 8601 (YYYY-
-   * MM-DDThh:mm:ss.sZ) format.
+   * The date and time that the subscription was created. The value is specified in ISO 8601 format.
    * @param publishedAt publishedAt or {@code null} for none
    */
   public SubscriptionSnippet setPublishedAt(java.lang.String publishedAt) {

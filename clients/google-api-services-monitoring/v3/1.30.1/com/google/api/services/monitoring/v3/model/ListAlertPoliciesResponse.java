@@ -51,6 +51,14 @@ public final class ListAlertPoliciesResponse extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
+   * The total number of alert policies in all pages. This number is only an estimate, and may
+   * change in subsequent pages. https://aip.dev/158
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * The returned alert policies.
    * @return value or {@code null} for none
    */
@@ -83,6 +91,25 @@ public final class ListAlertPoliciesResponse extends com.google.api.client.json.
    */
   public ListAlertPoliciesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The total number of alert policies in all pages. This number is only an estimate, and may
+   * change in subsequent pages. https://aip.dev/158
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total number of alert policies in all pages. This number is only an estimate, and may
+   * change in subsequent pages. https://aip.dev/158
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public ListAlertPoliciesResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

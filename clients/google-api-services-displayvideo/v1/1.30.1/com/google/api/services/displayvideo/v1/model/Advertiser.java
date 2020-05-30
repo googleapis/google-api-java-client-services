@@ -110,6 +110,13 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private java.lang.Long partnerId;
 
   /**
+   * Targeting settings related to ad serving of the advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvertiserTargetingConfig servingConfig;
+
+  /**
    * Output only. The timestamp when the advertiser was last updated. Assigned by the system.
    * The value may be {@code null}.
    */
@@ -301,6 +308,23 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    */
   public Advertiser setPartnerId(java.lang.Long partnerId) {
     this.partnerId = partnerId;
+    return this;
+  }
+
+  /**
+   * Targeting settings related to ad serving of the advertiser.
+   * @return value or {@code null} for none
+   */
+  public AdvertiserTargetingConfig getServingConfig() {
+    return servingConfig;
+  }
+
+  /**
+   * Targeting settings related to ad serving of the advertiser.
+   * @param servingConfig servingConfig or {@code null} for none
+   */
+  public Advertiser setServingConfig(AdvertiserTargetingConfig servingConfig) {
+    this.servingConfig = servingConfig;
     return this;
   }
 

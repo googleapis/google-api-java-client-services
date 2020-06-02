@@ -5459,7 +5459,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Name of the search application.
-      Format: applications/{application_id}.
+      Format: searchapplications/{application_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5488,7 +5488,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Name of the search application.
-      Format: applications/{application_id}.
+      Format: searchapplications/{application_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5567,19 +5567,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Name of the search application. Format: applications/{application_id}.
+         * Name of the search application. Format: searchapplications/{application_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the search application. Format: applications/{application_id}.
+        /** Name of the search application. Format: searchapplications/{application_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the search application. Format: applications/{application_id}.
+         * Name of the search application. Format: searchapplications/{application_id}.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

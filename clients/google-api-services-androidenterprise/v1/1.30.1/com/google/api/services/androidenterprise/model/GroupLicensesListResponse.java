@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The grouplicense resources for the enterprise.
+ * Model definition for GroupLicensesListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -43,14 +43,6 @@ public final class GroupLicensesListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#groupLicensesListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * A group license for a product approved for use in the enterprise.
    * @return value or {@code null} for none
    */
@@ -64,25 +56,6 @@ public final class GroupLicensesListResponse extends com.google.api.client.json.
    */
   public GroupLicensesListResponse setGroupLicense(java.util.List<GroupLicense> groupLicense) {
     this.groupLicense = groupLicense;
-    return this;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#groupLicensesListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#groupLicensesListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public GroupLicensesListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

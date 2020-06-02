@@ -31,12 +31,6 @@ package com.google.api.services.androidenterprise.model;
 public final class ProductPermissions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The permissions required by the app.
    * The value may be {@code null}.
    */
@@ -55,21 +49,6 @@ public final class ProductPermissions extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public ProductPermissions setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
 
   /**
    * The permissions required by the app.

@@ -38,12 +38,6 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * Ordered list of pages a user should be able to reach from this page. The list can't include
    * this page. It is recommended that the basic pages are created first, before adding the links
    * between pages.
@@ -83,21 +77,6 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
    */
   public StorePage setId(java.lang.String id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public StorePage setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

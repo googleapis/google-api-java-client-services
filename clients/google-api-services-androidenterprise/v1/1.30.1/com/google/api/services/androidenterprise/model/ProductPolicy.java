@@ -44,7 +44,7 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   private ManagedConfiguration managedConfiguration;
 
   /**
-   * The ID of the product. For example, "app:com.google.android.gm".
+   * The ID of the product. For example, app:com.google.android.gm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the product. For example, "app:com.google.android.gm".
+   * The ID of the product. For example, app:com.google.android.gm.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -108,7 +108,7 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the product. For example, "app:com.google.android.gm".
+   * The ID of the product. For example, app:com.google.android.gm.
    * @param productId productId or {@code null} for none
    */
   public ProductPolicy setProductId(java.lang.String productId) {

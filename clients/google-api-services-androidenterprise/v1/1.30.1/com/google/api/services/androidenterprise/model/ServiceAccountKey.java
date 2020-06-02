@@ -45,12 +45,6 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private java.lang.String id;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * Public key data for the credentials file. This is an X.509 cert. If you are using the
    * googleCredentials key type, this is identical to the cert that can be retrieved by using the
    * X.509 cert url inside of the credentials file.
@@ -99,21 +93,6 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
    */
   public ServiceAccountKey setId(java.lang.String id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public ServiceAccountKey setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

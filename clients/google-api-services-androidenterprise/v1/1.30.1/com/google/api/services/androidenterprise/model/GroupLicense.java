@@ -42,9 +42,9 @@ package com.google.api.services.androidenterprise.model;
 public final class GroupLicense extends com.google.api.client.json.GenericJson {
 
   /**
-   * How this group license was acquired. "bulkPurchase" means that this Grouplicenses resource was
+   * How this group license was acquired. bulkPurchase means that this Grouplicenses resource was
    * created because the enterprise purchased licenses for this product; otherwise, the value is
-   * "free" (for free products).
+   * free (for free products).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,12 +61,6 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   private java.lang.String approval;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The total number of provisioned licenses for this product. Returned by read operations, but
    * ignored in write operations.
    * The value may be {@code null}.
@@ -77,7 +71,7 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   /**
    * The number of purchased licenses (possibly in multiple purchases). If this field is omitted,
    * then there is no limit on the number of licenses that can be provisioned (for example, if the
-   * acquisition kind is "free").
+   * acquisition kind is free).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,11 +79,11 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
 
   /**
    * The permission approval status of the product. This field is only set if the product is
-   * approved. Possible states are: - "currentApproved", the current set of permissions is approved,
+   * approved. Possible states are: "currentApproved", the current set of permissions is approved,
    * but additional permissions will require the administrator to reapprove the product (If the
    * product was approved without specifying the approved permissions setting, then this is the
-   * default behavior.),  - "needsReapproval", the product has unapproved permissions. No additional
-   * product licenses can be assigned until the product is reapproved,  -
+   * default behavior.), "needsReapproval", the product has unapproved permissions. No additional
+   * product licenses can be assigned until the product is reapproved,
    * "allCurrentAndFutureApproved", the current permissions are approved and any future permission
    * updates will be automatically approved without administrator review.
    * The value may be {@code null}.
@@ -98,16 +92,16 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   private java.lang.String permissions;
 
   /**
-   * The ID of the product that the license is for. For example, "app:com.google.android.gm".
+   * The ID of the product that the license is for. For example, app:com.google.android.gm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
 
   /**
-   * How this group license was acquired. "bulkPurchase" means that this Grouplicenses resource was
+   * How this group license was acquired. bulkPurchase means that this Grouplicenses resource was
    * created because the enterprise purchased licenses for this product; otherwise, the value is
-   * "free" (for free products).
+   * free (for free products).
    * @return value or {@code null} for none
    */
   public java.lang.String getAcquisitionKind() {
@@ -115,9 +109,9 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * How this group license was acquired. "bulkPurchase" means that this Grouplicenses resource was
+   * How this group license was acquired. bulkPurchase means that this Grouplicenses resource was
    * created because the enterprise purchased licenses for this product; otherwise, the value is
-   * "free" (for free products).
+   * free (for free products).
    * @param acquisitionKind acquisitionKind or {@code null} for none
    */
   public GroupLicense setAcquisitionKind(java.lang.String acquisitionKind) {
@@ -149,21 +143,6 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public GroupLicense setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
-
-  /**
    * The total number of provisioned licenses for this product. Returned by read operations, but
    * ignored in write operations.
    * @return value or {@code null} for none
@@ -185,7 +164,7 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   /**
    * The number of purchased licenses (possibly in multiple purchases). If this field is omitted,
    * then there is no limit on the number of licenses that can be provisioned (for example, if the
-   * acquisition kind is "free").
+   * acquisition kind is free).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumPurchased() {
@@ -195,7 +174,7 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   /**
    * The number of purchased licenses (possibly in multiple purchases). If this field is omitted,
    * then there is no limit on the number of licenses that can be provisioned (for example, if the
-   * acquisition kind is "free").
+   * acquisition kind is free).
    * @param numPurchased numPurchased or {@code null} for none
    */
   public GroupLicense setNumPurchased(java.lang.Integer numPurchased) {
@@ -205,11 +184,11 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
 
   /**
    * The permission approval status of the product. This field is only set if the product is
-   * approved. Possible states are: - "currentApproved", the current set of permissions is approved,
+   * approved. Possible states are: "currentApproved", the current set of permissions is approved,
    * but additional permissions will require the administrator to reapprove the product (If the
    * product was approved without specifying the approved permissions setting, then this is the
-   * default behavior.),  - "needsReapproval", the product has unapproved permissions. No additional
-   * product licenses can be assigned until the product is reapproved,  -
+   * default behavior.), "needsReapproval", the product has unapproved permissions. No additional
+   * product licenses can be assigned until the product is reapproved,
    * "allCurrentAndFutureApproved", the current permissions are approved and any future permission
    * updates will be automatically approved without administrator review.
    * @return value or {@code null} for none
@@ -220,11 +199,11 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
 
   /**
    * The permission approval status of the product. This field is only set if the product is
-   * approved. Possible states are: - "currentApproved", the current set of permissions is approved,
+   * approved. Possible states are: "currentApproved", the current set of permissions is approved,
    * but additional permissions will require the administrator to reapprove the product (If the
    * product was approved without specifying the approved permissions setting, then this is the
-   * default behavior.),  - "needsReapproval", the product has unapproved permissions. No additional
-   * product licenses can be assigned until the product is reapproved,  -
+   * default behavior.), "needsReapproval", the product has unapproved permissions. No additional
+   * product licenses can be assigned until the product is reapproved,
    * "allCurrentAndFutureApproved", the current permissions are approved and any future permission
    * updates will be automatically approved without administrator review.
    * @param permissions permissions or {@code null} for none
@@ -235,7 +214,7 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the product that the license is for. For example, "app:com.google.android.gm".
+   * The ID of the product that the license is for. For example, app:com.google.android.gm.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -243,7 +222,7 @@ public final class GroupLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the product that the license is for. For example, "app:com.google.android.gm".
+   * The ID of the product that the license is for. For example, app:com.google.android.gm.
    * @param productId productId or {@code null} for none
    */
   public GroupLicense setProductId(java.lang.String productId) {

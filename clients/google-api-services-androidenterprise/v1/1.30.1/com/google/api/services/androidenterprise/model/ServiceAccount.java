@@ -38,12 +38,6 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private ServiceAccountKey key;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The account name of the service account, in the form of an email address. Assigned by the
    * server.
    * The value may be {@code null}.
@@ -65,21 +59,6 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    */
   public ServiceAccount setKey(ServiceAccountKey key) {
     this.key = key;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public ServiceAccount setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

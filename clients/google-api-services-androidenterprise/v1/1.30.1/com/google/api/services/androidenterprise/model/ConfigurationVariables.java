@@ -32,12 +32,6 @@ package com.google.api.services.androidenterprise.model;
 public final class ConfigurationVariables extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The ID of the managed configurations settings.
    * The value may be {@code null}.
    */
@@ -50,21 +44,6 @@ public final class ConfigurationVariables extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<VariableSet> variableSet;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public ConfigurationVariables setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
 
   /**
    * The ID of the managed configurations settings.

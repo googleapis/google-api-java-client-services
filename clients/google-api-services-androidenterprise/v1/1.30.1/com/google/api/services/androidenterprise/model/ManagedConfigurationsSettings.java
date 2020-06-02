@@ -32,12 +32,6 @@ package com.google.api.services.androidenterprise.model;
 public final class ManagedConfigurationsSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The last updated time of the managed configuration settings in milliseconds since
    * 1970-01-01T00:00:00Z.
    * The value may be {@code null}.
@@ -58,21 +52,6 @@ public final class ManagedConfigurationsSettings extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public ManagedConfigurationsSettings setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
 
   /**
    * The last updated time of the managed configuration settings in milliseconds since

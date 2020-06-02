@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The install resources for the device.
+ * Model definition for InstallsListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -44,14 +44,6 @@ public final class InstallsListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#installsListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * An installation of an app for a user on a specific device. The existence of an install implies
    * that the user must have an entitlement to the app.
    * @return value or {@code null} for none
@@ -67,25 +59,6 @@ public final class InstallsListResponse extends com.google.api.client.json.Gener
    */
   public InstallsListResponse setInstall(java.util.List<Install> install) {
     this.install = install;
-    return this;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#installsListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#installsListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public InstallsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The managed configurations settings for a product.
+ * Model definition for ManagedConfigurationsSettingsListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -28,14 +28,6 @@ package com.google.api.services.androidenterprise.model;
  */
 @SuppressWarnings("javadoc")
 public final class ManagedConfigurationsSettingsListResponse extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#managedConfigurationsSettingsListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
 
   /**
    * A managed configurations settings for an app that may be assigned to a group of users in an
@@ -49,25 +41,6 @@ public final class ManagedConfigurationsSettingsListResponse extends com.google.
     // hack to force ProGuard to consider ManagedConfigurationsSettings used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ManagedConfigurationsSettings.class);
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#managedConfigurationsSettingsListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#managedConfigurationsSettingsListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public ManagedConfigurationsSettingsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
   }
 
   /**

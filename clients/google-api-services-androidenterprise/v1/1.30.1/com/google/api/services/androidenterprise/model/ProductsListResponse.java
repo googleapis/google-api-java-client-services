@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The matching products.
+ * Model definition for ProductsListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -28,14 +28,6 @@ package com.google.api.services.androidenterprise.model;
  */
 @SuppressWarnings("javadoc")
 public final class ProductsListResponse extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#productsListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
 
   /**
    * General pagination information.
@@ -64,25 +56,6 @@ public final class ProductsListResponse extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private TokenPagination tokenPagination;
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#productsListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#productsListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public ProductsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
 
   /**
    * General pagination information.

@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The matching enterprise resources.
+ * Model definition for EnterprisesListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -43,14 +43,6 @@ public final class EnterprisesListResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterprisesListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * An enterprise.
    * @return value or {@code null} for none
    */
@@ -64,25 +56,6 @@ public final class EnterprisesListResponse extends com.google.api.client.json.Ge
    */
   public EnterprisesListResponse setEnterprise(java.util.List<Enterprise> enterprise) {
     this.enterprise = enterprise;
-    return this;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterprisesListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterprisesListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public EnterprisesListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

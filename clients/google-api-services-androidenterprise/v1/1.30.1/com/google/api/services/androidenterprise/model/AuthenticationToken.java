@@ -31,33 +31,12 @@ package com.google.api.services.androidenterprise.model;
 public final class AuthenticationToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The authentication token to be passed to the device policy client on the device where it can be
    * used to provision the account for which this token was generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String token;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public AuthenticationToken setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
 
   /**
    * The authentication token to be passed to the device policy client on the device where it can be

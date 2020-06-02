@@ -31,12 +31,6 @@ package com.google.api.services.androidenterprise.model;
 public final class NotificationSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The notifications received, or empty if no notifications are present.
    * The value may be {@code null}.
    */
@@ -56,21 +50,6 @@ public final class NotificationSet extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String notificationSetId;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public NotificationSet setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
 
   /**
    * The notifications received, or empty if no notifications are present.

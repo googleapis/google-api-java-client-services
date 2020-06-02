@@ -38,12 +38,6 @@ public final class ApprovalUrlInfo extends com.google.api.client.json.GenericJso
   private java.lang.String approvalUrl;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * A URL that displays a product's permissions and that can also be used to approve the product
    * with the Products.approve call.
    * @return value or {@code null} for none
@@ -59,21 +53,6 @@ public final class ApprovalUrlInfo extends com.google.api.client.json.GenericJso
    */
   public ApprovalUrlInfo setApprovalUrl(java.lang.String approvalUrl) {
     this.approvalUrl = approvalUrl;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public ApprovalUrlInfo setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

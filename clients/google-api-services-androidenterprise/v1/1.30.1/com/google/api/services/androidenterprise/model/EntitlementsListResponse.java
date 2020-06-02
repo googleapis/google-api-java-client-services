@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The entitlement resources for the user.
+ * Model definition for EntitlementsListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -44,14 +44,6 @@ public final class EntitlementsListResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#entitlementsListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * An entitlement of a user to a product (e.g. an app). For example, a free app that they have
    * installed, or a paid app that they have been allocated a license to.
    * @return value or {@code null} for none
@@ -67,25 +59,6 @@ public final class EntitlementsListResponse extends com.google.api.client.json.G
    */
   public EntitlementsListResponse setEntitlement(java.util.List<Entitlement> entitlement) {
     this.entitlement = entitlement;
-    return this;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#entitlementsListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#entitlementsListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public EntitlementsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

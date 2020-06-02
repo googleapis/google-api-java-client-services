@@ -45,10 +45,8 @@ public final class NewDeviceEvent extends com.google.api.client.json.GenericJson
 
   /**
    * Identifies the extent to which the device is controlled by an Android EMM in various deployment
-   * configurations.
-   *
-   * Possible values include:  - "managedDevice", a device where the DPC is set as device owner,  -
-   * "managedProfile", a device where the DPC is set as profile owner.
+   * configurations.  Possible values include: "managedDevice", a device where the DPC is set as
+   * device owner, "managedProfile", a device where the DPC is set as profile owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,10 +95,8 @@ public final class NewDeviceEvent extends com.google.api.client.json.GenericJson
 
   /**
    * Identifies the extent to which the device is controlled by an Android EMM in various deployment
-   * configurations.
-   *
-   * Possible values include:  - "managedDevice", a device where the DPC is set as device owner,  -
-   * "managedProfile", a device where the DPC is set as profile owner.
+   * configurations.  Possible values include: "managedDevice", a device where the DPC is set as
+   * device owner, "managedProfile", a device where the DPC is set as profile owner.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagementType() {
@@ -109,10 +105,8 @@ public final class NewDeviceEvent extends com.google.api.client.json.GenericJson
 
   /**
    * Identifies the extent to which the device is controlled by an Android EMM in various deployment
-   * configurations.
-   *
-   * Possible values include:  - "managedDevice", a device where the DPC is set as device owner,  -
-   * "managedProfile", a device where the DPC is set as profile owner.
+   * configurations.  Possible values include: "managedDevice", a device where the DPC is set as
+   * device owner, "managedProfile", a device where the DPC is set as profile owner.
    * @param managementType managementType or {@code null} for none
    */
   public NewDeviceEvent setManagementType(java.lang.String managementType) {

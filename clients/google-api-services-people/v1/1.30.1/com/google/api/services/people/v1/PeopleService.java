@@ -1181,6 +1181,161 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the OtherContacts collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PeopleService people = new PeopleService(...);}
+   *   {@code PeopleService.OtherContacts.List request = people.otherContacts().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public OtherContacts otherContacts() {
+    return new OtherContacts();
+  }
+
+  /**
+   * The "otherContacts" collection of methods.
+   */
+  public class OtherContacts {
+
+    /**
+     * Copies an other contact to a new contact in the user's MY_CONTACTS group
+     *
+     * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link CopyOtherContactToMyContactsGroup#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param resourceName Required. The resource name of the other contact to copy.
+     * @param content the {@link com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest}
+     * @return the request
+     */
+    public CopyOtherContactToMyContactsGroup copyOtherContactToMyContactsGroup(java.lang.String resourceName, com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest content) throws java.io.IOException {
+      CopyOtherContactToMyContactsGroup result = new CopyOtherContactToMyContactsGroup(resourceName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CopyOtherContactToMyContactsGroup extends PeopleServiceRequest<com.google.api.services.people.v1.model.Person> {
+
+      private static final String REST_PATH = "v1/{+resourceName}:copyOtherContactToMyContactsGroup";
+
+      private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^otherContacts/[^/]+$");
+
+      /**
+       * Copies an other contact to a new contact in the user's MY_CONTACTS group
+       *
+       * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link CopyOtherContactToMyContactsGroup#execute()} method to invoke the
+       * remote operation. <p> {@link CopyOtherContactToMyContactsGroup#initialize(com.google.api.client
+       * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param resourceName Required. The resource name of the other contact to copy.
+       * @param content the {@link com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest}
+       * @since 1.13
+       */
+      protected CopyOtherContactToMyContactsGroup(java.lang.String resourceName, com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest content) {
+        super(PeopleService.this, "POST", REST_PATH, content, com.google.api.services.people.v1.model.Person.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^otherContacts/[^/]+$");
+        }
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup set$Xgafv(java.lang.String $Xgafv) {
+        return (CopyOtherContactToMyContactsGroup) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setAccessToken(java.lang.String accessToken) {
+        return (CopyOtherContactToMyContactsGroup) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setAlt(java.lang.String alt) {
+        return (CopyOtherContactToMyContactsGroup) super.setAlt(alt);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setCallback(java.lang.String callback) {
+        return (CopyOtherContactToMyContactsGroup) super.setCallback(callback);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setFields(java.lang.String fields) {
+        return (CopyOtherContactToMyContactsGroup) super.setFields(fields);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setKey(java.lang.String key) {
+        return (CopyOtherContactToMyContactsGroup) super.setKey(key);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setOauthToken(java.lang.String oauthToken) {
+        return (CopyOtherContactToMyContactsGroup) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CopyOtherContactToMyContactsGroup) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setQuotaUser(java.lang.String quotaUser) {
+        return (CopyOtherContactToMyContactsGroup) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setUploadType(java.lang.String uploadType) {
+        return (CopyOtherContactToMyContactsGroup) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CopyOtherContactToMyContactsGroup) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the other contact to copy. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** Required. The resource name of the other contact to copy.
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /** Required. The resource name of the other contact to copy. */
+      public CopyOtherContactToMyContactsGroup setResourceName(java.lang.String resourceName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^otherContacts/[^/]+$");
+        }
+        this.resourceName = resourceName;
+        return this;
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup set(String parameterName, Object value) {
+        return (CopyOtherContactToMyContactsGroup) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the People collection.
    *
    * <p>The typical use is:</p>
@@ -2409,7 +2564,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     public class Connections {
 
       /**
-       * Provides a list of the authenticated user's contacts merged with any connected profiles.
+       * Provides a list of the authenticated user's contacts.
        *
        * The request throws a 400 error if 'personFields' is not specified.
        *
@@ -2435,7 +2590,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^people/[^/]+$");
 
         /**
-         * Provides a list of the authenticated user's contacts merged with any connected profiles.
+         * Provides a list of the authenticated user's contacts.
          *
          * The request throws a 400 error if 'personFields' is not specified.
          *
@@ -2754,6 +2909,275 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the V1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PeopleService people = new PeopleService(...);}
+   *   {@code PeopleService.V1.List request = people.v1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1 v1() {
+    return new V1();
+  }
+
+  /**
+   * The "v1" collection of methods.
+   */
+  public class V1 {
+
+    /**
+     * List all other contacts, that is contacts that are not in a contact group. Other contacts are
+     * typically auto created contacts from interactions.
+     *
+     * Create a request for the method "v1.otherContacts".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link OtherContacts#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public OtherContacts otherContacts() throws java.io.IOException {
+      OtherContacts result = new OtherContacts();
+      initialize(result);
+      return result;
+    }
+
+    public class OtherContacts extends PeopleServiceRequest<com.google.api.services.people.v1.model.ListOtherContactsResponse> {
+
+      private static final String REST_PATH = "v1/otherContacts";
+
+      /**
+       * List all other contacts, that is contacts that are not in a contact group. Other contacts are
+       * typically auto created contacts from interactions.
+       *
+       * Create a request for the method "v1.otherContacts".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link OtherContacts#execute()} method to invoke the remote operation. <p>
+       * {@link OtherContacts#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+       * equest)} must be called to initialize this instance immediately after invoking the constructor.
+       * </p>
+       *
+       * @since 1.13
+       */
+      protected OtherContacts() {
+        super(PeopleService.this, "POST", REST_PATH, null, com.google.api.services.people.v1.model.ListOtherContactsResponse.class);
+      }
+
+      @Override
+      public OtherContacts set$Xgafv(java.lang.String $Xgafv) {
+        return (OtherContacts) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public OtherContacts setAccessToken(java.lang.String accessToken) {
+        return (OtherContacts) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public OtherContacts setAlt(java.lang.String alt) {
+        return (OtherContacts) super.setAlt(alt);
+      }
+
+      @Override
+      public OtherContacts setCallback(java.lang.String callback) {
+        return (OtherContacts) super.setCallback(callback);
+      }
+
+      @Override
+      public OtherContacts setFields(java.lang.String fields) {
+        return (OtherContacts) super.setFields(fields);
+      }
+
+      @Override
+      public OtherContacts setKey(java.lang.String key) {
+        return (OtherContacts) super.setKey(key);
+      }
+
+      @Override
+      public OtherContacts setOauthToken(java.lang.String oauthToken) {
+        return (OtherContacts) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public OtherContacts setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (OtherContacts) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public OtherContacts setQuotaUser(java.lang.String quotaUser) {
+        return (OtherContacts) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public OtherContacts setUploadType(java.lang.String uploadType) {
+        return (OtherContacts) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public OtherContacts setUploadProtocol(java.lang.String uploadProtocol) {
+        return (OtherContacts) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The number of other contacts to include in the response. Valid values are between
+       * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of other contacts to include in the response. Valid values are between 1 and
+     1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of other contacts to include in the response. Valid values are between
+       * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public OtherContacts setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve the subsequent page.
+       *
+       * When paginating, all other parameters provided to `ListOtherContacts` must match the call
+       * that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to retrieve
+     the subsequent page.
+
+     When paginating, all other parameters provided to `ListOtherContacts` must match the call that
+     provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve the subsequent page.
+       *
+       * When paginating, all other parameters provided to `ListOtherContacts` must match the call
+       * that provided the page token.
+       */
+      public OtherContacts setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are:
+       *
+       * * emailAddresses * names * phoneNumbers
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are:
+
+     * emailAddresses * names * phoneNumbers
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are:
+       *
+       * * emailAddresses * names * phoneNumbers
+       */
+      public OtherContacts setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      /**
+       * Optional. Whether the response should include `next_sync_token`, which can be used to get
+       * all changes since the last request. For subsequent sync requests use the `sync_token` param
+       * instead. Initial sync requests that specify `request_sync_token` have an additional rate
+       * limit.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean requestSyncToken;
+
+      /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
+     changes since the last request. For subsequent sync requests use the `sync_token` param instead.
+     Initial sync requests that specify `request_sync_token` have an additional rate limit.
+       */
+      public java.lang.Boolean getRequestSyncToken() {
+        return requestSyncToken;
+      }
+
+      /**
+       * Optional. Whether the response should include `next_sync_token`, which can be used to get
+       * all changes since the last request. For subsequent sync requests use the `sync_token` param
+       * instead. Initial sync requests that specify `request_sync_token` have an additional rate
+       * limit.
+       */
+      public OtherContacts setRequestSyncToken(java.lang.Boolean requestSyncToken) {
+        this.requestSyncToken = requestSyncToken;
+        return this;
+      }
+
+      /**
+       * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve only the resources changed since the last request. Sync requests that specify
+       * `sync_token` have an additional rate limit.
+       *
+       * When syncing, all other parameters provided to `ListOtherContacts` must match the call that
+       * provided the sync token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String syncToken;
+
+      /** Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to retrieve
+     only the resources changed since the last request. Sync requests that specify `sync_token` have an
+     additional rate limit.
+
+     When syncing, all other parameters provided to `ListOtherContacts` must match the call that
+     provided the sync token.
+       */
+      public java.lang.String getSyncToken() {
+        return syncToken;
+      }
+
+      /**
+       * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve only the resources changed since the last request. Sync requests that specify
+       * `sync_token` have an additional rate limit.
+       *
+       * When syncing, all other parameters provided to `ListOtherContacts` must match the call that
+       * provided the sync token.
+       */
+      public OtherContacts setSyncToken(java.lang.String syncToken) {
+        this.syncToken = syncToken;
+        return this;
+      }
+
+      @Override
+      public OtherContacts set(String parameterName, Object value) {
+        return (OtherContacts) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

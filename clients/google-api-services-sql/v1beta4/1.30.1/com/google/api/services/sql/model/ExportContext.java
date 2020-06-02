@@ -64,6 +64,13 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
+   * Option for export offload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean offload;
+
+  /**
    * Options for exporting data as SQL statements.
    * The value may be {@code null}.
    */
@@ -157,6 +164,23 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    */
   public ExportContext setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Option for export offload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOffload() {
+    return offload;
+  }
+
+  /**
+   * Option for export offload.
+   * @param offload offload or {@code null} for none
+   */
+  public ExportContext setOffload(java.lang.Boolean offload) {
+    this.offload = offload;
     return this;
   }
 

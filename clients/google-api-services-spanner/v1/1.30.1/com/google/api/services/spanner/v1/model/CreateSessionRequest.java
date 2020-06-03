@@ -30,14 +30,14 @@ package com.google.api.services.spanner.v1.model;
 public final class CreateSessionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The session to create.
+   * Required. The session to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Session session;
 
   /**
-   * The session to create.
+   * Required. The session to create.
    * @return value or {@code null} for none
    */
   public Session getSession() {
@@ -45,7 +45,7 @@ public final class CreateSessionRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The session to create.
+   * Required. The session to create.
    * @param session session or {@code null} for none
    */
   public CreateSessionRequest setSession(Session session) {

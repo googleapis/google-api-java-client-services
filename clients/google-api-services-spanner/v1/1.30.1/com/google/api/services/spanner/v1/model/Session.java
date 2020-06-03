@@ -59,8 +59,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The name of the session. This is always system-assigned; values provided when creating a
-   * session are ignored.
+   * Output only. The name of the session. This is always system-assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +133,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the session. This is always system-assigned; values provided when creating a
-   * session are ignored.
+   * Output only. The name of the session. This is always system-assigned.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -143,8 +141,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the session. This is always system-assigned; values provided when creating a
-   * session are ignored.
+   * Output only. The name of the session. This is always system-assigned.
    * @param name name or {@code null} for none
    */
   public Session setName(java.lang.String name) {

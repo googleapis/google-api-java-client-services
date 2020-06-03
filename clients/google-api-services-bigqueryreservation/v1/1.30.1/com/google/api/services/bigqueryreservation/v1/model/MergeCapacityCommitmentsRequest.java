@@ -32,7 +32,8 @@ public final class MergeCapacityCommitmentsRequest extends com.google.api.client
 
   /**
    * Ids of capacity commitments to merge. These capacity commitments must exist under admin project
-   * and location specified in the parent.
+   * and location specified in the parent. ID is the last portion of capacity commitment name e.g.,
+   * 'abc' for projects/myproject/locations/US/capacityCommitments/abc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,8 @@ public final class MergeCapacityCommitmentsRequest extends com.google.api.client
 
   /**
    * Ids of capacity commitments to merge. These capacity commitments must exist under admin project
-   * and location specified in the parent.
+   * and location specified in the parent. ID is the last portion of capacity commitment name e.g.,
+   * 'abc' for projects/myproject/locations/US/capacityCommitments/abc
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCapacityCommitmentIds() {
@@ -49,7 +51,8 @@ public final class MergeCapacityCommitmentsRequest extends com.google.api.client
 
   /**
    * Ids of capacity commitments to merge. These capacity commitments must exist under admin project
-   * and location specified in the parent.
+   * and location specified in the parent. ID is the last portion of capacity commitment name e.g.,
+   * 'abc' for projects/myproject/locations/US/capacityCommitments/abc
    * @param capacityCommitmentIds capacityCommitmentIds or {@code null} for none
    */
   public MergeCapacityCommitmentsRequest setCapacityCommitmentIds(java.util.List<java.lang.String> capacityCommitmentIds) {

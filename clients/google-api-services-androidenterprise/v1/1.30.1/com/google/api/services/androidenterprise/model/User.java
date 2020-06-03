@@ -20,8 +20,8 @@ package com.google.api.services.androidenterprise.model;
  * A Users resource represents an account associated with an enterprise. The account may be specific
  * to a device or to an individual user (who can then use the account across multiple devices). The
  * account may provide access to managed Google Play only, or to other Google services, depending on
- * the identity model: - The Google managed domain identity model requires synchronization to Google
- * account sources (via primaryEmail).  - The managed Google Play Accounts identity model provides a
+ * the identity model: The Google managed domain identity model requires synchronization to Google
+ * account sources (via primaryEmail). The managed Google Play Accounts identity model provides a
  * dynamic means for enterprises to create user or device accounts as needed. These accounts provide
  * access to managed Google Play.
  *
@@ -58,6 +58,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * The name that will appear in user interfaces. Setting this property is optional when creating
    * EMM-managed users. If you do set this property, use something generic about the organization
    * (such as "Example, Inc.") or your name (as EMM). Not used for Google-managed user accounts.
+   * @mutable androidenterprise.users.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,14 +72,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
-   * The entity that manages the user. With googleManaged users, the source of truth is Google so
-   * EMMs have to make sure a Google Account exists for the user. With emmManaged users, the EMM is
+   * The entity that manages the user.  With googleManaged users, the source of truth is Google so
+   * EMMs have to make sure a Google Account exists for the user.  With emmManaged users, the EMM is
    * in charge.
    * The value may be {@code null}.
    */
@@ -141,6 +136,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * The name that will appear in user interfaces. Setting this property is optional when creating
    * EMM-managed users. If you do set this property, use something generic about the organization
    * (such as "Example, Inc.") or your name (as EMM). Not used for Google-managed user accounts.
+   * @mutable androidenterprise.users.update
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -151,6 +147,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * The name that will appear in user interfaces. Setting this property is optional when creating
    * EMM-managed users. If you do set this property, use something generic about the organization
    * (such as "Example, Inc.") or your name (as EMM). Not used for Google-managed user accounts.
+   * @mutable androidenterprise.users.update
    * @param displayName displayName or {@code null} for none
    */
   public User setDisplayName(java.lang.String displayName) {
@@ -176,23 +173,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public User setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
-
-  /**
-   * The entity that manages the user. With googleManaged users, the source of truth is Google so
-   * EMMs have to make sure a Google Account exists for the user. With emmManaged users, the EMM is
+   * The entity that manages the user.  With googleManaged users, the source of truth is Google so
+   * EMMs have to make sure a Google Account exists for the user.  With emmManaged users, the EMM is
    * in charge.
    * @return value or {@code null} for none
    */
@@ -201,8 +183,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The entity that manages the user. With googleManaged users, the source of truth is Google so
-   * EMMs have to make sure a Google Account exists for the user. With emmManaged users, the EMM is
+   * The entity that manages the user.  With googleManaged users, the source of truth is Google so
+   * EMMs have to make sure a Google Account exists for the user.  With emmManaged users, the EMM is
    * in charge.
    * @param managementType managementType or {@code null} for none
    */

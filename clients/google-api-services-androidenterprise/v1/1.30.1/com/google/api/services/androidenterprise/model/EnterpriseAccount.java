@@ -38,12 +38,6 @@ public final class EnterpriseAccount extends com.google.api.client.json.GenericJ
   private java.lang.String accountEmail;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The email address of the service account.
    * @return value or {@code null} for none
    */
@@ -57,21 +51,6 @@ public final class EnterpriseAccount extends com.google.api.client.json.GenericJ
    */
   public EnterpriseAccount setAccountEmail(java.lang.String accountEmail) {
     this.accountEmail = accountEmail;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public EnterpriseAccount setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

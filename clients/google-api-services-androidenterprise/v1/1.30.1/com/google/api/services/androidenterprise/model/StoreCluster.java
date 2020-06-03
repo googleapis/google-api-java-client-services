@@ -38,12 +38,6 @@ public final class StoreCluster extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * Ordered list of localized strings giving the name of this page. The text displayed is the one
    * that best matches the user locale, or the first entry if there is no good match. There needs to
    * be at least one entry.
@@ -92,21 +86,6 @@ public final class StoreCluster extends com.google.api.client.json.GenericJson {
    */
   public StoreCluster setId(java.lang.String id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public StoreCluster setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

@@ -20,7 +20,7 @@ package com.google.api.services.androidenterprise;
  * Service definition for AndroidEnterprise (v1).
  *
  * <p>
- * Manages the deployment of apps to Android for Work users.
+ * Manages the deployment of apps to Android Enterprise devices.
  * </p>
  *
  * <p>
@@ -63,7 +63,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "androidenterprise/v1/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -144,7 +144,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     /**
      * Uploads a report containing any changes in app states on the device since the last report was
-     * generated. You can call this method up to 3 times every 24 hours for a given device.
+     * generated. You can call this method up to 3 times every 24 hours for a given device. If you
+     * exceed the quota, then the Google Play EMM API returns HTTP 429 Too Many Requests.
      *
      * Create a request for the method "devices.forceReportUpload".
      *
@@ -165,11 +166,12 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class ForceReportUpload extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/forceReportUpload";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/forceReportUpload";
 
       /**
        * Uploads a report containing any changes in app states on the device since the last report was
-       * generated. You can call this method up to 3 times every 24 hours for a given device.
+       * generated. You can call this method up to 3 times every 24 hours for a given device. If you
+       * exceed the quota, then the Google Play EMM API returns HTTP 429 Too Many Requests.
        *
        * Create a request for the method "devices.forceReportUpload".
        *
@@ -192,8 +194,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public ForceReportUpload set$Xgafv(java.lang.String $Xgafv) {
+        return (ForceReportUpload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ForceReportUpload setAccessToken(java.lang.String accessToken) {
+        return (ForceReportUpload) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ForceReportUpload setAlt(java.lang.String alt) {
         return (ForceReportUpload) super.setAlt(alt);
+      }
+
+      @Override
+      public ForceReportUpload setCallback(java.lang.String callback) {
+        return (ForceReportUpload) super.setCallback(callback);
       }
 
       @Override
@@ -222,8 +239,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public ForceReportUpload setUserIp(java.lang.String userIp) {
-        return (ForceReportUpload) super.setUserIp(userIp);
+      public ForceReportUpload setUploadType(java.lang.String uploadType) {
+        return (ForceReportUpload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ForceReportUpload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ForceReportUpload) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -300,7 +322,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Device> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}";
 
       /**
        * Retrieves the details of a device.
@@ -336,8 +358,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -366,8 +403,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -447,7 +489,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GetState extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.DeviceState> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state";
 
       /**
        * Retrieves whether a device's access to Google services is enabled or disabled. The device state
@@ -486,8 +528,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetState set$Xgafv(java.lang.String $Xgafv) {
+        return (GetState) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetState setAccessToken(java.lang.String accessToken) {
+        return (GetState) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetState setAlt(java.lang.String alt) {
         return (GetState) super.setAlt(alt);
+      }
+
+      @Override
+      public GetState setCallback(java.lang.String callback) {
+        return (GetState) super.setCallback(callback);
       }
 
       @Override
@@ -516,8 +573,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetState setUserIp(java.lang.String userIp) {
-        return (GetState) super.setUserIp(userIp);
+      public GetState setUploadType(java.lang.String uploadType) {
+        return (GetState) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetState setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetState) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -593,7 +655,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.DevicesListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices";
 
       /**
        * Retrieves the IDs of all of a user's devices.
@@ -627,8 +689,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -657,8 +734,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -723,7 +805,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class SetState extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.DeviceState> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state";
 
       /**
        * Sets whether a device's access to Google services is enabled or disabled. The device state
@@ -753,8 +835,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public SetState set$Xgafv(java.lang.String $Xgafv) {
+        return (SetState) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetState setAccessToken(java.lang.String accessToken) {
+        return (SetState) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetState setAlt(java.lang.String alt) {
         return (SetState) super.setAlt(alt);
+      }
+
+      @Override
+      public SetState setCallback(java.lang.String callback) {
+        return (SetState) super.setCallback(callback);
       }
 
       @Override
@@ -783,8 +880,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public SetState setUserIp(java.lang.String userIp) {
-        return (SetState) super.setUserIp(userIp);
+      public SetState setUploadType(java.lang.String uploadType) {
+        return (SetState) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetState setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetState) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -862,7 +964,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Device> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}";
 
       /**
        * Updates the device policy
@@ -889,8 +991,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -919,8 +1036,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -975,14 +1097,15 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * Mask that identifies which fields to update. If not set, all modifiable fields will be
        * modified.
        *
-       * When set in a query parameter, this field should be specified as updateMask=,,...
+       * When set in a query parameter, this field should be specified as
+       * updateMask=field1,field2,...
        */
       @com.google.api.client.util.Key
       private java.lang.String updateMask;
 
       /** Mask that identifies which fields to update. If not set, all modifiable fields will be modified.
 
-     When set in a query parameter, this field should be specified as updateMask=,,...
+     When set in a query parameter, this field should be specified as updateMask=field1,field2,...
        */
       public java.lang.String getUpdateMask() {
         return updateMask;
@@ -992,7 +1115,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * Mask that identifies which fields to update. If not set, all modifiable fields will be
        * modified.
        *
-       * When set in a query parameter, this field should be specified as updateMask=,,...
+       * When set in a query parameter, this field should be specified as
+       * updateMask=field1,field2,...
        */
       public Update setUpdateMask(java.lang.String updateMask) {
         this.updateMask = updateMask;
@@ -1047,7 +1171,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class AcknowledgeNotificationSet extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/acknowledgeNotificationSet";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/acknowledgeNotificationSet";
 
       /**
        * Acknowledges notifications that were received from Enterprises.PullNotificationSet to prevent
@@ -1068,8 +1192,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public AcknowledgeNotificationSet set$Xgafv(java.lang.String $Xgafv) {
+        return (AcknowledgeNotificationSet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AcknowledgeNotificationSet setAccessToken(java.lang.String accessToken) {
+        return (AcknowledgeNotificationSet) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public AcknowledgeNotificationSet setAlt(java.lang.String alt) {
         return (AcknowledgeNotificationSet) super.setAlt(alt);
+      }
+
+      @Override
+      public AcknowledgeNotificationSet setCallback(java.lang.String callback) {
+        return (AcknowledgeNotificationSet) super.setCallback(callback);
       }
 
       @Override
@@ -1098,8 +1237,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public AcknowledgeNotificationSet setUserIp(java.lang.String userIp) {
-        return (AcknowledgeNotificationSet) super.setUserIp(userIp);
+      public AcknowledgeNotificationSet setUploadType(java.lang.String uploadType) {
+        return (AcknowledgeNotificationSet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AcknowledgeNotificationSet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AcknowledgeNotificationSet) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1149,7 +1293,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class CompleteSignup extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Enterprise> {
 
-      private static final String REST_PATH = "enterprises/completeSignup";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/completeSignup";
 
       /**
        * Completes the signup flow, by specifying the Completion token and Enterprise token. This
@@ -1170,8 +1314,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public CompleteSignup set$Xgafv(java.lang.String $Xgafv) {
+        return (CompleteSignup) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CompleteSignup setAccessToken(java.lang.String accessToken) {
+        return (CompleteSignup) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public CompleteSignup setAlt(java.lang.String alt) {
         return (CompleteSignup) super.setAlt(alt);
+      }
+
+      @Override
+      public CompleteSignup setCallback(java.lang.String callback) {
+        return (CompleteSignup) super.setCallback(callback);
       }
 
       @Override
@@ -1200,8 +1359,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public CompleteSignup setUserIp(java.lang.String userIp) {
-        return (CompleteSignup) super.setUserIp(userIp);
+      public CompleteSignup setUploadType(java.lang.String uploadType) {
+        return (CompleteSignup) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CompleteSignup setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CompleteSignup) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Completion token initially returned by GenerateSignupUrl. */
@@ -1264,7 +1428,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class CreateWebToken extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.AdministratorWebToken> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/createWebToken";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/createWebToken";
 
       /**
        * Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated
@@ -1289,8 +1453,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public CreateWebToken set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateWebToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateWebToken setAccessToken(java.lang.String accessToken) {
+        return (CreateWebToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public CreateWebToken setAlt(java.lang.String alt) {
         return (CreateWebToken) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateWebToken setCallback(java.lang.String callback) {
+        return (CreateWebToken) super.setCallback(callback);
       }
 
       @Override
@@ -1319,8 +1498,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public CreateWebToken setUserIp(java.lang.String userIp) {
-        return (CreateWebToken) super.setUserIp(userIp);
+      public CreateWebToken setUploadType(java.lang.String uploadType) {
+        return (CreateWebToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateWebToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateWebToken) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -1352,7 +1536,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * This request holds the parameters needed by the androidenterprise server.  After setting any
      * optional parameters, call the {@link Enroll#execute()} method to invoke the remote operation.
      *
-     * @param token The token provided by the enterprise to register the EMM.
+     * @param token Required. The token provided by the enterprise to register the EMM.
      * @param content the {@link com.google.api.services.androidenterprise.model.Enterprise}
      * @return the request
      */
@@ -1364,7 +1548,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Enroll extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Enterprise> {
 
-      private static final String REST_PATH = "enterprises/enroll";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/enroll";
 
       /**
        * Enrolls an enterprise with the calling EMM.
@@ -1377,7 +1561,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * Enroll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param token The token provided by the enterprise to register the EMM.
+       * @param token Required. The token provided by the enterprise to register the EMM.
        * @param content the {@link com.google.api.services.androidenterprise.model.Enterprise}
        * @since 1.13
        */
@@ -1387,8 +1571,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Enroll set$Xgafv(java.lang.String $Xgafv) {
+        return (Enroll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Enroll setAccessToken(java.lang.String accessToken) {
+        return (Enroll) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Enroll setAlt(java.lang.String alt) {
         return (Enroll) super.setAlt(alt);
+      }
+
+      @Override
+      public Enroll setCallback(java.lang.String callback) {
+        return (Enroll) super.setCallback(callback);
       }
 
       @Override
@@ -1417,21 +1616,26 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Enroll setUserIp(java.lang.String userIp) {
-        return (Enroll) super.setUserIp(userIp);
+      public Enroll setUploadType(java.lang.String uploadType) {
+        return (Enroll) super.setUploadType(uploadType);
       }
 
-      /** The token provided by the enterprise to register the EMM. */
+      @Override
+      public Enroll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Enroll) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The token provided by the enterprise to register the EMM. */
       @com.google.api.client.util.Key
       private java.lang.String token;
 
-      /** The token provided by the enterprise to register the EMM.
+      /** Required. The token provided by the enterprise to register the EMM.
        */
       public java.lang.String getToken() {
         return token;
       }
 
-      /** The token provided by the enterprise to register the EMM. */
+      /** Required. The token provided by the enterprise to register the EMM. */
       public Enroll setToken(java.lang.String token) {
         this.token = token;
         return this;
@@ -1461,7 +1665,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GenerateSignupUrl extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.SignupInfo> {
 
-      private static final String REST_PATH = "enterprises/signupUrl";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/signupUrl";
 
       /**
        * Generates a sign-up URL.
@@ -1481,8 +1685,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GenerateSignupUrl set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateSignupUrl) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateSignupUrl setAccessToken(java.lang.String accessToken) {
+        return (GenerateSignupUrl) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GenerateSignupUrl setAlt(java.lang.String alt) {
         return (GenerateSignupUrl) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateSignupUrl setCallback(java.lang.String callback) {
+        return (GenerateSignupUrl) super.setCallback(callback);
       }
 
       @Override
@@ -1511,8 +1730,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GenerateSignupUrl setUserIp(java.lang.String userIp) {
-        return (GenerateSignupUrl) super.setUserIp(userIp);
+      public GenerateSignupUrl setUploadType(java.lang.String uploadType) {
+        return (GenerateSignupUrl) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateSignupUrl setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateSignupUrl) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1574,7 +1798,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Enterprise> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}";
 
       /**
        * Retrieves the name and domain of an enterprise.
@@ -1606,8 +1830,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1636,8 +1875,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -1665,16 +1909,11 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * Returns a service account and credentials. The service account can be bound to the enterprise by
      * calling setAccount. The service account is unique to this enterprise and EMM, and will be deleted
      * if the enterprise is unbound. The credentials contain private key data and are not stored server-
-     * side.
-     *
-     * This method can only be called after calling Enterprises.Enroll or Enterprises.CompleteSignup,
-     * and before Enterprises.SetAccount; at other times it will return an error.
-     *
-     * Subsequent calls after the first will generate a new, unique set of credentials, and invalidate
-     * the previously generated credentials.
-     *
-     * Once the service account is bound to the enterprise, it can be managed using the
-     * serviceAccountKeys resource.
+     * side.   This method can only be called after calling Enterprises.Enroll or
+     * Enterprises.CompleteSignup, and before Enterprises.SetAccount; at other times it will return an
+     * error.   Subsequent calls after the first will generate a new, unique set of credentials, and
+     * invalidate the previously generated credentials.   Once the service account is bound to the
+     * enterprise, it can be managed using the serviceAccountKeys resource.
      *
      * Create a request for the method "enterprises.getServiceAccount".
      *
@@ -1693,22 +1932,17 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GetServiceAccount extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ServiceAccount> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/serviceAccount";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/serviceAccount";
 
       /**
        * Returns a service account and credentials. The service account can be bound to the enterprise
        * by calling setAccount. The service account is unique to this enterprise and EMM, and will be
        * deleted if the enterprise is unbound. The credentials contain private key data and are not
-       * stored server-side.
-       *
-       * This method can only be called after calling Enterprises.Enroll or Enterprises.CompleteSignup,
-       * and before Enterprises.SetAccount; at other times it will return an error.
-       *
-       * Subsequent calls after the first will generate a new, unique set of credentials, and invalidate
-       * the previously generated credentials.
-       *
-       * Once the service account is bound to the enterprise, it can be managed using the
-       * serviceAccountKeys resource.
+       * stored server-side.   This method can only be called after calling Enterprises.Enroll or
+       * Enterprises.CompleteSignup, and before Enterprises.SetAccount; at other times it will return an
+       * error.   Subsequent calls after the first will generate a new, unique set of credentials, and
+       * invalidate the previously generated credentials.   Once the service account is bound to the
+       * enterprise, it can be managed using the serviceAccountKeys resource.
        *
        * Create a request for the method "enterprises.getServiceAccount".
        *
@@ -1737,8 +1971,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetServiceAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (GetServiceAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetServiceAccount setAccessToken(java.lang.String accessToken) {
+        return (GetServiceAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetServiceAccount setAlt(java.lang.String alt) {
         return (GetServiceAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public GetServiceAccount setCallback(java.lang.String callback) {
+        return (GetServiceAccount) super.setCallback(callback);
       }
 
       @Override
@@ -1767,8 +2016,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetServiceAccount setUserIp(java.lang.String userIp) {
-        return (GetServiceAccount) super.setUserIp(userIp);
+      public GetServiceAccount setUploadType(java.lang.String uploadType) {
+        return (GetServiceAccount) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetServiceAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetServiceAccount) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -1829,7 +2083,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GetStoreLayout extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreLayout> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout";
 
       /**
        * Returns the store layout for the enterprise. If the store layout has not been set, returns
@@ -1862,8 +2116,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetStoreLayout set$Xgafv(java.lang.String $Xgafv) {
+        return (GetStoreLayout) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetStoreLayout setAccessToken(java.lang.String accessToken) {
+        return (GetStoreLayout) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetStoreLayout setAlt(java.lang.String alt) {
         return (GetStoreLayout) super.setAlt(alt);
+      }
+
+      @Override
+      public GetStoreLayout setCallback(java.lang.String callback) {
+        return (GetStoreLayout) super.setCallback(callback);
       }
 
       @Override
@@ -1892,8 +2161,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetStoreLayout setUserIp(java.lang.String userIp) {
-        return (GetStoreLayout) super.setUserIp(userIp);
+      public GetStoreLayout setUploadType(java.lang.String uploadType) {
+        return (GetStoreLayout) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetStoreLayout setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetStoreLayout) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -1919,7 +2193,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     }
     /**
      * Looks up an enterprise by domain name. This is only supported for enterprises created via the
-     * Google-initiated creation flow. Lookup of the id is not needed for enterprises created via the
+     * Google-initiated creation flow.  Lookup of the id is not needed for enterprises created via the
      * EMM-initiated flow since the EMM learns the enterprise ID in the callback specified in the
      * Enterprises.generateSignupUrl call.
      *
@@ -1928,7 +2202,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * This request holds the parameters needed by the androidenterprise server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param domain The exact primary domain name of the enterprise to look up.
+     * @param domain Required. The exact primary domain name of the enterprise to look up.
      * @return the request
      */
     public List list(java.lang.String domain) throws java.io.IOException {
@@ -1939,11 +2213,11 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.EnterprisesListResponse> {
 
-      private static final String REST_PATH = "enterprises";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises";
 
       /**
        * Looks up an enterprise by domain name. This is only supported for enterprises created via the
-       * Google-initiated creation flow. Lookup of the id is not needed for enterprises created via the
+       * Google-initiated creation flow.  Lookup of the id is not needed for enterprises created via the
        * EMM-initiated flow since the EMM learns the enterprise ID in the callback specified in the
        * Enterprises.generateSignupUrl call.
        *
@@ -1955,7 +2229,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param domain The exact primary domain name of the enterprise to look up.
+       * @param domain Required. The exact primary domain name of the enterprise to look up.
        * @since 1.13
        */
       protected List(java.lang.String domain) {
@@ -1974,8 +2248,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2004,21 +2293,26 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** The exact primary domain name of the enterprise to look up. */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The exact primary domain name of the enterprise to look up. */
       @com.google.api.client.util.Key
       private java.lang.String domain;
 
-      /** The exact primary domain name of the enterprise to look up.
+      /** Required. The exact primary domain name of the enterprise to look up.
        */
       public java.lang.String getDomain() {
         return domain;
       }
 
-      /** The exact primary domain name of the enterprise to look up. */
+      /** Required. The exact primary domain name of the enterprise to look up. */
       public List setDomain(java.lang.String domain) {
         this.domain = domain;
         return this;
@@ -2032,15 +2326,19 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Pulls and returns a notification set for the enterprises associated with the service account
      * authenticated for the request. The notification set may be empty if no notification are pending.
+     *
      * A notification set returned needs to be acknowledged within 20 seconds by calling
-     * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty. Notifications that
-     * are not acknowledged within the 20 seconds will eventually be included again in the response to
-     * another PullNotificationSet request, and those that are never acknowledged will ultimately be
-     * deleted according to the Google Cloud Platform Pub/Sub system policy. Multiple requests might be
-     * performed concurrently to retrieve notifications, in which case the pending notifications (if
-     * any) will be split among each caller, if any are pending. If no notifications are present, an
-     * empty notification list is returned. Subsequent requests may return more notifications once they
-     * become available.
+     * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty.
+     *
+     * Notifications that are not acknowledged within the 20 seconds will eventually be included again
+     * in the response to another PullNotificationSet request, and those that are never acknowledged
+     * will ultimately be deleted according to the Google Cloud Platform Pub/Sub system policy.
+     *
+     * Multiple requests might be performed concurrently to retrieve notifications, in which case the
+     * pending notifications (if any) will be split among each caller, if any are pending.
+     *
+     * If no notifications are present, an empty notification list is returned. Subsequent requests may
+     * return more notifications once they become available.
      *
      * Create a request for the method "enterprises.pullNotificationSet".
      *
@@ -2058,20 +2356,25 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class PullNotificationSet extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.NotificationSet> {
 
-      private static final String REST_PATH = "enterprises/pullNotificationSet";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/pullNotificationSet";
 
       /**
        * Pulls and returns a notification set for the enterprises associated with the service account
        * authenticated for the request. The notification set may be empty if no notification are
-       * pending. A notification set returned needs to be acknowledged within 20 seconds by calling
-       * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty. Notifications
-       * that are not acknowledged within the 20 seconds will eventually be included again in the
-       * response to another PullNotificationSet request, and those that are never acknowledged will
-       * ultimately be deleted according to the Google Cloud Platform Pub/Sub system policy. Multiple
-       * requests might be performed concurrently to retrieve notifications, in which case the pending
-       * notifications (if any) will be split among each caller, if any are pending. If no notifications
-       * are present, an empty notification list is returned. Subsequent requests may return more
-       * notifications once they become available.
+       * pending.
+       *
+       * A notification set returned needs to be acknowledged within 20 seconds by calling
+       * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty.
+       *
+       * Notifications that are not acknowledged within the 20 seconds will eventually be included again
+       * in the response to another PullNotificationSet request, and those that are never acknowledged
+       * will ultimately be deleted according to the Google Cloud Platform Pub/Sub system policy.
+       *
+       * Multiple requests might be performed concurrently to retrieve notifications, in which case the
+       * pending notifications (if any) will be split among each caller, if any are pending.
+       *
+       * If no notifications are present, an empty notification list is returned. Subsequent requests
+       * may return more notifications once they become available.
        *
        * Create a request for the method "enterprises.pullNotificationSet".
        *
@@ -2088,8 +2391,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public PullNotificationSet set$Xgafv(java.lang.String $Xgafv) {
+        return (PullNotificationSet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public PullNotificationSet setAccessToken(java.lang.String accessToken) {
+        return (PullNotificationSet) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public PullNotificationSet setAlt(java.lang.String alt) {
         return (PullNotificationSet) super.setAlt(alt);
+      }
+
+      @Override
+      public PullNotificationSet setCallback(java.lang.String callback) {
+        return (PullNotificationSet) super.setCallback(callback);
       }
 
       @Override
@@ -2118,25 +2436,39 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public PullNotificationSet setUserIp(java.lang.String userIp) {
-        return (PullNotificationSet) super.setUserIp(userIp);
+      public PullNotificationSet setUploadType(java.lang.String uploadType) {
+        return (PullNotificationSet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public PullNotificationSet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (PullNotificationSet) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * The request mode for pulling notifications. Specifying waitForNotifications will cause the
-       * request to block and wait until one or more notifications are present, or return an empty
-       * notification list if no notifications are present after some time. Speciying
-       * returnImmediately will cause the request to immediately return the pending notifications,
-       * or an empty list if no notifications are present. If omitted, defaults to
-       * waitForNotifications.
+       * The request mode for pulling notifications.
+       *
+       * Specifying waitForNotifications will cause the request to block and wait until one or more
+       * notifications are present, or return an empty notification list if no notifications are
+       * present after some time.
+       *
+       * Speciying returnImmediately will cause the request to immediately return the pending
+       * notifications, or an empty list if no notifications are present.
+       *
+       * If omitted, defaults to waitForNotifications.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestMode;
 
-      /** The request mode for pulling notifications. Specifying waitForNotifications will cause the request
-     to block and wait until one or more notifications are present, or return an empty notification list
-     if no notifications are present after some time. Speciying returnImmediately will cause the request
-     to immediately return the pending notifications, or an empty list if no notifications are present.
+      /** The request mode for pulling notifications.
+
+     Specifying waitForNotifications will cause the request to block and wait until one or more
+     notifications are present, or return an empty notification list if no notifications are present
+     after some time.
+
+     Speciying returnImmediately will cause the request to immediately return the pending notifications,
+     or an empty list if no notifications are present.
+
      If omitted, defaults to waitForNotifications.
        */
       public java.lang.String getRequestMode() {
@@ -2144,12 +2476,16 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The request mode for pulling notifications. Specifying waitForNotifications will cause the
-       * request to block and wait until one or more notifications are present, or return an empty
-       * notification list if no notifications are present after some time. Speciying
-       * returnImmediately will cause the request to immediately return the pending notifications,
-       * or an empty list if no notifications are present. If omitted, defaults to
-       * waitForNotifications.
+       * The request mode for pulling notifications.
+       *
+       * Specifying waitForNotifications will cause the request to block and wait until one or more
+       * notifications are present, or return an empty notification list if no notifications are
+       * present after some time.
+       *
+       * Speciying returnImmediately will cause the request to immediately return the pending
+       * notifications, or an empty list if no notifications are present.
+       *
+       * If omitted, defaults to waitForNotifications.
        */
       public PullNotificationSet setRequestMode(java.lang.String requestMode) {
         this.requestMode = requestMode;
@@ -2182,7 +2518,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class SendTestPushNotification extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.EnterprisesSendTestPushNotificationResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/sendTestPushNotification";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/sendTestPushNotification";
 
       /**
        * Sends a test notification to validate the EMM integration with the Google Cloud Pub/Sub service
@@ -2205,8 +2541,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public SendTestPushNotification set$Xgafv(java.lang.String $Xgafv) {
+        return (SendTestPushNotification) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SendTestPushNotification setAccessToken(java.lang.String accessToken) {
+        return (SendTestPushNotification) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SendTestPushNotification setAlt(java.lang.String alt) {
         return (SendTestPushNotification) super.setAlt(alt);
+      }
+
+      @Override
+      public SendTestPushNotification setCallback(java.lang.String callback) {
+        return (SendTestPushNotification) super.setCallback(callback);
       }
 
       @Override
@@ -2235,8 +2586,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public SendTestPushNotification setUserIp(java.lang.String userIp) {
-        return (SendTestPushNotification) super.setUserIp(userIp);
+      public SendTestPushNotification setUploadType(java.lang.String uploadType) {
+        return (SendTestPushNotification) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SendTestPushNotification setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SendTestPushNotification) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -2280,7 +2636,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class SetAccount extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.EnterpriseAccount> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/account";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/account";
 
       /**
        * Sets the account that will be used to authenticate to the API as the enterprise.
@@ -2303,8 +2659,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public SetAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (SetAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetAccount setAccessToken(java.lang.String accessToken) {
+        return (SetAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetAccount setAlt(java.lang.String alt) {
         return (SetAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public SetAccount setCallback(java.lang.String callback) {
+        return (SetAccount) super.setCallback(callback);
       }
 
       @Override
@@ -2333,8 +2704,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public SetAccount setUserIp(java.lang.String userIp) {
-        return (SetAccount) super.setUserIp(userIp);
+      public SetAccount setUploadType(java.lang.String uploadType) {
+        return (SetAccount) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetAccount) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -2361,10 +2737,11 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Sets the store layout for the enterprise. By default, storeLayoutType is set to "basic" and the
      * basic store layout is enabled. The basic layout only contains apps approved by the admin, and
-     * that have been added to the available product set for a user (using the  setAvailableProductSet
-     * call). Apps on the page are sorted in order of their product ID value. If you create a custom
-     * store layout (by setting storeLayoutType = "custom" and setting a homepage), the basic store
-     * layout is disabled.
+     * that have been added to the available product set for a user (using the
+     *
+     * setAvailableProductSet call). Apps on the page are sorted in order of their product ID value. If
+     * you create a custom store layout (by setting storeLayoutType = "custom" and setting a homepage),
+     * the basic store layout is disabled.
      *
      * Create a request for the method "enterprises.setStoreLayout".
      *
@@ -2384,15 +2761,16 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class SetStoreLayout extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreLayout> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout";
 
       /**
        * Sets the store layout for the enterprise. By default, storeLayoutType is set to "basic" and the
        * basic store layout is enabled. The basic layout only contains apps approved by the admin, and
-       * that have been added to the available product set for a user (using the  setAvailableProductSet
-       * call). Apps on the page are sorted in order of their product ID value. If you create a custom
-       * store layout (by setting storeLayoutType = "custom" and setting a homepage), the basic store
-       * layout is disabled.
+       * that have been added to the available product set for a user (using the
+       *
+       * setAvailableProductSet call). Apps on the page are sorted in order of their product ID value.
+       * If you create a custom store layout (by setting storeLayoutType = "custom" and setting a
+       * homepage), the basic store layout is disabled.
        *
        * Create a request for the method "enterprises.setStoreLayout".
        *
@@ -2412,8 +2790,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public SetStoreLayout set$Xgafv(java.lang.String $Xgafv) {
+        return (SetStoreLayout) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetStoreLayout setAccessToken(java.lang.String accessToken) {
+        return (SetStoreLayout) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetStoreLayout setAlt(java.lang.String alt) {
         return (SetStoreLayout) super.setAlt(alt);
+      }
+
+      @Override
+      public SetStoreLayout setCallback(java.lang.String callback) {
+        return (SetStoreLayout) super.setCallback(callback);
       }
 
       @Override
@@ -2442,8 +2835,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public SetStoreLayout setUserIp(java.lang.String userIp) {
-        return (SetStoreLayout) super.setUserIp(userIp);
+      public SetStoreLayout setUploadType(java.lang.String uploadType) {
+        return (SetStoreLayout) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetStoreLayout setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetStoreLayout) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -2486,7 +2884,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Unenroll extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/unenroll";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/unenroll";
 
       /**
        * Unenrolls an enterprise from the calling EMM.
@@ -2508,8 +2906,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Unenroll set$Xgafv(java.lang.String $Xgafv) {
+        return (Unenroll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Unenroll setAccessToken(java.lang.String accessToken) {
+        return (Unenroll) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Unenroll setAlt(java.lang.String alt) {
         return (Unenroll) super.setAlt(alt);
+      }
+
+      @Override
+      public Unenroll setCallback(java.lang.String callback) {
+        return (Unenroll) super.setCallback(callback);
       }
 
       @Override
@@ -2538,8 +2951,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Unenroll setUserIp(java.lang.String userIp) {
-        return (Unenroll) super.setUserIp(userIp);
+      public Unenroll setUploadType(java.lang.String uploadType) {
+        return (Unenroll) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Unenroll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Unenroll) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -2607,7 +3025,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
 
       /**
        * Removes an entitlement to an app for a user.
@@ -2633,8 +3051,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -2663,8 +3096,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -2741,7 +3179,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Entitlement> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
 
       /**
        * Retrieves details of an entitlement.
@@ -2777,8 +3215,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2807,8 +3260,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -2884,7 +3342,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.EntitlementsListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/entitlements";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements";
 
       /**
        * Lists all entitlements for the specified user. Only the ID is set.
@@ -2918,8 +3376,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2948,8 +3421,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3011,7 +3489,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Entitlement> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}";
 
       /**
        * Adds or updates an entitlement to an app for a user.
@@ -3038,8 +3516,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -3068,8 +3561,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3183,7 +3681,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+     * @param groupLicenseId The ID of the product the group license is for, e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String groupLicenseId) throws java.io.IOException {
@@ -3194,7 +3693,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.GroupLicense> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}";
 
       /**
        * Retrieves details of an enterprise's group license for a product.
@@ -3208,7 +3707,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+       * @param groupLicenseId The ID of the product the group license is for, e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String groupLicenseId) {
@@ -3228,8 +3728,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3258,8 +3773,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3278,7 +3798,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String groupLicenseId;
 
@@ -3288,7 +3810,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return groupLicenseId;
       }
 
-      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+       */
       public Get setGroupLicenseId(java.lang.String groupLicenseId) {
         this.groupLicenseId = groupLicenseId;
         return this;
@@ -3318,7 +3842,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.GroupLicensesListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/groupLicenses";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses";
 
       /**
        * Retrieves IDs of all products for which the enterprise has a group license.
@@ -3350,8 +3874,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3380,8 +3919,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3437,7 +3981,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+     * @param groupLicenseId The ID of the product the group license is for, e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public List list(java.lang.String enterpriseId, java.lang.String groupLicenseId) throws java.io.IOException {
@@ -3448,7 +3993,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.GroupLicenseUsersListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}/users";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}/users";
 
       /**
        * Retrieves the IDs of the users who have been granted entitlements under the license.
@@ -3462,7 +4007,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+       * @param groupLicenseId The ID of the product the group license is for, e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected List(java.lang.String enterpriseId, java.lang.String groupLicenseId) {
@@ -3482,8 +4028,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3512,8 +4073,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3532,7 +4098,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String groupLicenseId;
 
@@ -3542,7 +4110,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return groupLicenseId;
       }
 
-      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
+       */
       public List setGroupLicenseId(java.lang.String groupLicenseId) {
         this.groupLicenseId = groupLicenseId;
         return this;
@@ -3588,7 +4158,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+     * @param installId The ID of the product represented by the install, e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Delete delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) throws java.io.IOException {
@@ -3599,7 +4170,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}";
 
       /**
        * Requests to remove an app from a device. A call to get or list will still show the app as
@@ -3616,7 +4187,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       * @param installId The ID of the product represented by the install, e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) {
@@ -3628,8 +4200,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -3658,8 +4245,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3710,7 +4302,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String installId;
 
@@ -3720,7 +4314,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return installId;
       }
 
-      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       */
       public Delete setInstallId(java.lang.String installId) {
         this.installId = installId;
         return this;
@@ -3742,7 +4338,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+     * @param installId The ID of the product represented by the install, e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) throws java.io.IOException {
@@ -3753,7 +4350,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Install> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}";
 
       /**
        * Retrieves details of an installation of an app on a device.
@@ -3769,7 +4366,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       * @param installId The ID of the product represented by the install, e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) {
@@ -3791,8 +4389,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3821,8 +4434,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -3873,7 +4491,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String installId;
 
@@ -3883,7 +4503,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return installId;
       }
 
-      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       */
       public Get setInstallId(java.lang.String installId) {
         this.installId = installId;
         return this;
@@ -3915,7 +4537,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.InstallsListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs";
 
       /**
        * Retrieves the details of all apps installed on the specified device.
@@ -3951,8 +4573,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3981,8 +4618,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4050,7 +4692,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+     * @param installId The ID of the product represented by the install, e.g.
+    "app:com.google.android.gm".
      * @param content the {@link com.google.api.services.androidenterprise.model.Install}
      * @return the request
      */
@@ -4062,7 +4705,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Install> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}";
 
       /**
        * Requests to install the latest version of an app to a device. If the app is already installed,
@@ -4079,7 +4722,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       * @param installId The ID of the product represented by the install, e.g.
+    "app:com.google.android.gm".
        * @param content the {@link com.google.api.services.androidenterprise.model.Install}
        * @since 1.13
        */
@@ -4092,8 +4736,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -4122,8 +4781,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4174,7 +4838,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String installId;
 
@@ -4184,7 +4850,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return installId;
       }
 
-      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+       */
       public Update setInstallId(java.lang.String installId) {
         this.installId = installId;
         return this;
@@ -4229,7 +4897,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Delete delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) throws java.io.IOException {
@@ -4240,7 +4909,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}";
 
       /**
        * Removes a per-device managed configuration for an app for the specified device.
@@ -4256,7 +4925,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) {
@@ -4268,8 +4938,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -4298,8 +4983,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4350,7 +5040,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForDeviceId;
 
@@ -4360,7 +5052,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForDeviceId;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       public Delete setManagedConfigurationForDeviceId(java.lang.String managedConfigurationForDeviceId) {
         this.managedConfigurationForDeviceId = managedConfigurationForDeviceId;
         return this;
@@ -4382,7 +5076,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) throws java.io.IOException {
@@ -4393,7 +5088,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfiguration> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}";
 
       /**
        * Retrieves details of a per-device managed configuration.
@@ -4409,7 +5104,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) {
@@ -4431,8 +5127,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4461,8 +5172,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4513,7 +5229,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForDeviceId;
 
@@ -4523,7 +5241,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForDeviceId;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       public Get setManagedConfigurationForDeviceId(java.lang.String managedConfigurationForDeviceId) {
         this.managedConfigurationForDeviceId = managedConfigurationForDeviceId;
         return this;
@@ -4555,7 +5275,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfigurationsForDeviceListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice";
 
       /**
        * Lists all the per-device managed configurations for the specified device. Only the ID is set.
@@ -4591,8 +5311,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4621,8 +5356,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4689,7 +5429,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
      * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
      * @return the request
      */
@@ -4701,7 +5442,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfiguration> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}";
 
       /**
        * Adds or updates a per-device managed configuration for an app for the specified device.
@@ -4717,7 +5458,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
        * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
        * @since 1.13
        */
@@ -4730,8 +5472,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -4760,8 +5517,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4812,7 +5574,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForDeviceId;
 
@@ -4822,7 +5586,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForDeviceId;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       public Update setManagedConfigurationForDeviceId(java.lang.String managedConfigurationForDeviceId) {
         this.managedConfigurationForDeviceId = managedConfigurationForDeviceId;
         return this;
@@ -4866,7 +5632,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      *
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
-     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Delete delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) throws java.io.IOException {
@@ -4877,7 +5644,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}";
 
       /**
        * Removes a per-user managed configuration for an app for the specified user.
@@ -4892,7 +5659,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        *
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
-       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) {
@@ -4903,8 +5671,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -4933,8 +5716,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -4969,7 +5757,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForUserId;
 
@@ -4979,7 +5769,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForUserId;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       public Delete setManagedConfigurationForUserId(java.lang.String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -5000,7 +5792,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      *
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
-     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) throws java.io.IOException {
@@ -5011,7 +5804,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfiguration> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}";
 
       /**
        * Retrieves details of a per-user managed configuration for an app for the specified user.
@@ -5026,7 +5819,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        *
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
-       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) {
@@ -5047,8 +5841,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5077,8 +5886,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -5113,7 +5927,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForUserId;
 
@@ -5123,7 +5939,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForUserId;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       public Get setManagedConfigurationForUserId(java.lang.String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -5154,7 +5972,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfigurationsForUserListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser";
 
       /**
        * Lists all the per-user managed configurations for the specified user. Only the ID is set.
@@ -5188,8 +6006,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5218,8 +6051,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -5272,7 +6110,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      *
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
-     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
      * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
      * @return the request
      */
@@ -5284,7 +6123,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfiguration> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}";
 
       /**
        * Adds or updates the managed configuration settings for an app for the specified user. If you
@@ -5303,7 +6142,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        *
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
-       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
+    "app:com.google.android.gm".
        * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
        * @since 1.13
        */
@@ -5315,8 +6155,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -5345,8 +6200,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -5381,7 +6241,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForUserId;
 
@@ -5391,7 +6253,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForUserId;
       }
 
-      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
+      /**
+       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
+       */
       public Update setManagedConfigurationForUserId(java.lang.String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -5434,7 +6298,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param productId The ID of the product for which the managed configurations settings applies to.
+     * @param productId The ID of the product for which the managed configurations settings applies
+    to.
      * @return the request
      */
     public List list(java.lang.String enterpriseId, java.lang.String productId) throws java.io.IOException {
@@ -5445,7 +6310,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ManagedConfigurationsSettingsListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings";
 
       /**
        * Lists all the managed configurations settings for the specified app.
@@ -5459,7 +6324,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param productId The ID of the product for which the managed configurations settings applies to.
+       * @param productId The ID of the product for which the managed configurations settings applies
+    to.
        * @since 1.13
        */
       protected List(java.lang.String enterpriseId, java.lang.String productId) {
@@ -5479,8 +6345,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5509,8 +6390,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -5529,7 +6415,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The ID of the product for which the managed configurations settings applies to. */
+      /**
+       * The ID of the product for which the managed configurations settings applies to.
+       */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
@@ -5539,7 +6427,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return productId;
       }
 
-      /** The ID of the product for which the managed configurations settings applies to. */
+      /**
+       * The ID of the product for which the managed configurations settings applies to.
+       */
       public List setProductId(java.lang.String productId) {
         this.productId = productId;
         return this;
@@ -5592,7 +6482,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Permission> {
 
-      private static final String REST_PATH = "permissions/{permissionId}";
+      private static final String REST_PATH = "androidenterprise/v1/permissions/{permissionId}";
 
       /**
        * Retrieves details of an Android app permission for display to an enterprise admin.
@@ -5624,8 +6514,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5654,8 +6559,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the permission. */
@@ -5720,10 +6630,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     /**
      * Approves the specified product and the relevant app permissions, if any. The maximum number of
-     * products that you can approve per enterprise customer is 1,000.
-     *
-     * To learn how to use managed Google Play to design and create a store layout to display approved
-     * products to your users, see Store Layout Design.
+     * products that you can approve per enterprise customer is 1,000. To learn how to use managed
+     * Google Play to design and create a store layout to display approved products to your users, see
+     * Store Layout Design.
      *
      * Create a request for the method "products.approve".
      *
@@ -5743,14 +6652,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Approve extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/approve";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/approve";
 
       /**
        * Approves the specified product and the relevant app permissions, if any. The maximum number of
-       * products that you can approve per enterprise customer is 1,000.
-       *
-       * To learn how to use managed Google Play to design and create a store layout to display approved
-       * products to your users, see Store Layout Design.
+       * products that you can approve per enterprise customer is 1,000. To learn how to use managed
+       * Google Play to design and create a store layout to display approved products to your users, see
+       * Store Layout Design.
        *
        * Create a request for the method "products.approve".
        *
@@ -5772,8 +6680,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Approve set$Xgafv(java.lang.String $Xgafv) {
+        return (Approve) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Approve setAccessToken(java.lang.String accessToken) {
+        return (Approve) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Approve setAlt(java.lang.String alt) {
         return (Approve) super.setAlt(alt);
+      }
+
+      @Override
+      public Approve setCallback(java.lang.String callback) {
+        return (Approve) super.setCallback(callback);
       }
 
       @Override
@@ -5802,8 +6725,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Approve setUserIp(java.lang.String userIp) {
-        return (Approve) super.setUserIp(userIp);
+      public Approve setUploadType(java.lang.String uploadType) {
+        return (Approve) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Approve) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -5846,12 +6774,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Generates a URL that can be rendered in an iframe to display the permissions (if any) of a
      * product. An enterprise admin must view these permissions and accept them on behalf of their
-     * organization in order to approve that product.
-     *
-     * Admins should accept the displayed permissions by interacting with a separate UI element in the
-     * EMM console, which in turn should trigger the use of this URL as the approvalUrlInfo.approvalUrl
-     * property in a Products.approve call to approve the product. This URL can only be used to display
-     * permissions for up to 1 day.
+     * organization in order to approve that product.  Admins should accept the displayed permissions by
+     * interacting with a separate UI element in the EMM console, which in turn should trigger the use
+     * of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to approve the
+     * product. This URL can only be used to display permissions for up to 1 day.
      *
      * Create a request for the method "products.generateApprovalUrl".
      *
@@ -5871,17 +6797,15 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GenerateApprovalUrl extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ProductsGenerateApprovalUrlResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/generateApprovalUrl";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/generateApprovalUrl";
 
       /**
        * Generates a URL that can be rendered in an iframe to display the permissions (if any) of a
        * product. An enterprise admin must view these permissions and accept them on behalf of their
-       * organization in order to approve that product.
-       *
-       * Admins should accept the displayed permissions by interacting with a separate UI element in the
-       * EMM console, which in turn should trigger the use of this URL as the
-       * approvalUrlInfo.approvalUrl property in a Products.approve call to approve the product. This
-       * URL can only be used to display permissions for up to 1 day.
+       * organization in order to approve that product.  Admins should accept the displayed permissions
+       * by interacting with a separate UI element in the EMM console, which in turn should trigger the
+       * use of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to
+       * approve the product. This URL can only be used to display permissions for up to 1 day.
        *
        * Create a request for the method "products.generateApprovalUrl".
        *
@@ -5902,8 +6826,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GenerateApprovalUrl set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateApprovalUrl) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateApprovalUrl setAccessToken(java.lang.String accessToken) {
+        return (GenerateApprovalUrl) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GenerateApprovalUrl setAlt(java.lang.String alt) {
         return (GenerateApprovalUrl) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateApprovalUrl setCallback(java.lang.String callback) {
+        return (GenerateApprovalUrl) super.setCallback(callback);
       }
 
       @Override
@@ -5932,8 +6871,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GenerateApprovalUrl setUserIp(java.lang.String userIp) {
-        return (GenerateApprovalUrl) super.setUserIp(userIp);
+      public GenerateApprovalUrl setUploadType(java.lang.String uploadType) {
+        return (GenerateApprovalUrl) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateApprovalUrl setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateApprovalUrl) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6016,7 +6960,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.Product> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}";
 
       /**
        * Retrieves details of a product for display to an enterprise admin.
@@ -6050,8 +6994,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -6080,8 +7039,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6162,7 +7126,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GetAppRestrictionsSchema extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.AppRestrictionsSchema> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/appRestrictionsSchema";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/appRestrictionsSchema";
 
       /**
        * Retrieves the schema that defines the configurable properties for this product. All products
@@ -6200,8 +7164,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetAppRestrictionsSchema set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAppRestrictionsSchema) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAppRestrictionsSchema setAccessToken(java.lang.String accessToken) {
+        return (GetAppRestrictionsSchema) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetAppRestrictionsSchema setAlt(java.lang.String alt) {
         return (GetAppRestrictionsSchema) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAppRestrictionsSchema setCallback(java.lang.String callback) {
+        return (GetAppRestrictionsSchema) super.setCallback(callback);
       }
 
       @Override
@@ -6230,8 +7209,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetAppRestrictionsSchema setUserIp(java.lang.String userIp) {
-        return (GetAppRestrictionsSchema) super.setUserIp(userIp);
+      public GetAppRestrictionsSchema setUploadType(java.lang.String uploadType) {
+        return (GetAppRestrictionsSchema) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAppRestrictionsSchema setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAppRestrictionsSchema) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6308,7 +7292,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GetPermissions extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ProductPermissions> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/permissions";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/permissions";
 
       /**
        * Retrieves the Android app permissions required by this app.
@@ -6342,8 +7326,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (GetPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetPermissions setAccessToken(java.lang.String accessToken) {
+        return (GetPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetPermissions setAlt(java.lang.String alt) {
         return (GetPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public GetPermissions setCallback(java.lang.String callback) {
+        return (GetPermissions) super.setCallback(callback);
       }
 
       @Override
@@ -6372,8 +7371,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetPermissions setUserIp(java.lang.String userIp) {
-        return (GetPermissions) super.setUserIp(userIp);
+      public GetPermissions setUploadType(java.lang.String uploadType) {
+        return (GetPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetPermissions) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6432,7 +7436,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ProductsListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products";
 
       /**
        * Finds approved products that match a query, or all approved products if there is no query.
@@ -6464,8 +7468,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -6494,8 +7513,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6561,24 +7585,22 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies the maximum number of products that can be returned per request. If not
-       * specified, uses a default value of 100, which is also the maximum retrievable within a
-       * single response.
+       * Defines how many results the list operation should return. The default number depends on
+       * the resource collection.
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Specifies the maximum number of products that can be returned per request. If not specified, uses a
-     default value of 100, which is also the maximum retrievable within a single response.
+      /** Defines how many results the list operation should return. The default number depends on the
+     resource collection.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
       /**
-       * Specifies the maximum number of products that can be returned per request. If not
-       * specified, uses a default value of 100, which is also the maximum retrievable within a
-       * single response.
+       * Defines how many results the list operation should return. The default number depends on
+       * the resource collection.
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -6612,25 +7634,22 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * A pagination token is contained in a request's response when there are more products. The
-       * token can be used in a subsequent request to obtain more products, and so forth. This
-       * parameter cannot be used in the initial request.
+       * Defines the token of the page to return, usually taken from TokenPagination. This can only
+       * be used if token paging is enabled.
        */
       @com.google.api.client.util.Key
       private java.lang.String token;
 
-      /** A pagination token is contained in a request's response when there are more products. The token can
-     be used in a subsequent request to obtain more products, and so forth. This parameter cannot be
-     used in the initial request.
+      /** Defines the token of the page to return, usually taken from TokenPagination. This can only be used
+     if token paging is enabled.
        */
       public java.lang.String getToken() {
         return token;
       }
 
       /**
-       * A pagination token is contained in a request's response when there are more products. The
-       * token can be used in a subsequent request to obtain more products, and so forth. This
-       * parameter cannot be used in the initial request.
+       * Defines the token of the page to return, usually taken from TokenPagination. This can only
+       * be used if token paging is enabled.
        */
       public List setToken(java.lang.String token) {
         this.token = token;
@@ -6662,7 +7681,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Unapprove extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/unapprove";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/unapprove";
 
       /**
        * Unapproves the specified product (and the relevant app permissions, if any)
@@ -6686,8 +7705,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Unapprove set$Xgafv(java.lang.String $Xgafv) {
+        return (Unapprove) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Unapprove setAccessToken(java.lang.String accessToken) {
+        return (Unapprove) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Unapprove setAlt(java.lang.String alt) {
         return (Unapprove) super.setAlt(alt);
+      }
+
+      @Override
+      public Unapprove setCallback(java.lang.String callback) {
+        return (Unapprove) super.setCallback(callback);
       }
 
       @Override
@@ -6716,8 +7750,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Unapprove setUserIp(java.lang.String userIp) {
-        return (Unapprove) super.setUserIp(userIp);
+      public Unapprove setUploadType(java.lang.String uploadType) {
+        return (Unapprove) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Unapprove setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Unapprove) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6803,7 +7842,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/serviceAccountKeys/{keyId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys/{keyId}";
 
       /**
        * Removes and invalidates the specified credentials for the service account associated with this
@@ -6830,8 +7869,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -6860,8 +7914,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -6904,9 +7963,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Generates new credentials for the service account associated with this enterprise. The calling
      * service account must have been retrieved by calling Enterprises.GetServiceAccount and must have
-     * been set as the enterprise service account by calling Enterprises.SetAccount.
-     *
-     * Only the type of the key should be populated in the resource to be inserted.
+     * been set as the enterprise service account by calling Enterprises.SetAccount.  Only the type of
+     * the key should be populated in the resource to be inserted.
      *
      * Create a request for the method "serviceaccountkeys.insert".
      *
@@ -6925,14 +7983,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Insert extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ServiceAccountKey> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/serviceAccountKeys";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys";
 
       /**
        * Generates new credentials for the service account associated with this enterprise. The calling
        * service account must have been retrieved by calling Enterprises.GetServiceAccount and must have
-       * been set as the enterprise service account by calling Enterprises.SetAccount.
-       *
-       * Only the type of the key should be populated in the resource to be inserted.
+       * been set as the enterprise service account by calling Enterprises.SetAccount.  Only the type of
+       * the key should be populated in the resource to be inserted.
        *
        * Create a request for the method "serviceaccountkeys.insert".
        *
@@ -6954,8 +8011,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -6984,8 +8056,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7031,7 +8108,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ServiceAccountKeysListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/serviceAccountKeys";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys";
 
       /**
        * Lists all active credentials for the service account associated with this enterprise. Only the
@@ -7066,8 +8143,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -7096,8 +8188,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7165,7 +8262,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}";
 
       /**
        * Deletes a cluster.
@@ -7191,8 +8288,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -7221,8 +8333,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7299,7 +8416,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreCluster> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}";
 
       /**
        * Retrieves details of a cluster.
@@ -7335,8 +8452,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -7365,8 +8497,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7443,7 +8580,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Insert extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreCluster> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters";
 
       /**
        * Inserts a new cluster in a page.
@@ -7468,8 +8605,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -7498,8 +8650,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7559,7 +8716,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreLayoutClustersListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters";
 
       /**
        * Retrieves the details of all clusters on the specified page.
@@ -7593,8 +8750,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -7623,8 +8795,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7686,7 +8863,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreCluster> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}";
 
       /**
        * Updates a cluster.
@@ -7713,8 +8890,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -7743,8 +8935,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7843,7 +9040,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}";
 
       /**
        * Deletes a store page.
@@ -7867,8 +9064,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -7897,8 +9109,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -7958,7 +9175,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StorePage> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}";
 
       /**
        * Retrieves details of a store page.
@@ -7992,8 +9209,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -8022,8 +9254,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8083,7 +9320,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Insert extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StorePage> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages";
 
       /**
        * Inserts a new store page.
@@ -8106,8 +9343,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -8136,8 +9388,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8180,7 +9437,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StoreLayoutPagesListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages";
 
       /**
        * Retrieves the details of all pages in the store.
@@ -8212,8 +9469,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -8242,8 +9514,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8288,7 +9565,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.StorePage> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/storeLayout/pages/{pageId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}";
 
       /**
        * Updates the content of a store page.
@@ -8313,8 +9590,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -8343,8 +9635,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8427,7 +9724,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}";
 
       /**
        * Deleted an EMM-managed user.
@@ -8451,8 +9748,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -8481,8 +9793,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8549,7 +9866,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GenerateAuthenticationToken extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.AuthenticationToken> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/authenticationToken";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/authenticationToken";
 
       /**
        * Generates an authentication token which the device policy client can use to provision the given
@@ -8579,8 +9896,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GenerateAuthenticationToken set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateAuthenticationToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateAuthenticationToken setAccessToken(java.lang.String accessToken) {
+        return (GenerateAuthenticationToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GenerateAuthenticationToken setAlt(java.lang.String alt) {
         return (GenerateAuthenticationToken) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateAuthenticationToken setCallback(java.lang.String callback) {
+        return (GenerateAuthenticationToken) super.setCallback(callback);
       }
 
       @Override
@@ -8609,8 +9941,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GenerateAuthenticationToken setUserIp(java.lang.String userIp) {
-        return (GenerateAuthenticationToken) super.setUserIp(userIp);
+      public GenerateAuthenticationToken setUploadType(java.lang.String uploadType) {
+        return (GenerateAuthenticationToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateAuthenticationToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateAuthenticationToken) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8651,128 +9988,6 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Generates a token (activation code) to allow this user to configure their managed account in the
-     * Android Setup Wizard. Revokes any previously generated token.
-     *
-     * This call only works with Google managed accounts.
-     *
-     * Create a request for the method "users.generateToken".
-     *
-     * This request holds the parameters needed by the androidenterprise server.  After setting any
-     * optional parameters, call the {@link GenerateToken#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param enterpriseId The ID of the enterprise.
-     * @param userId The ID of the user.
-     * @return the request
-     */
-    public GenerateToken generateToken(java.lang.String enterpriseId, java.lang.String userId) throws java.io.IOException {
-      GenerateToken result = new GenerateToken(enterpriseId, userId);
-      initialize(result);
-      return result;
-    }
-
-    public class GenerateToken extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.UserToken> {
-
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/token";
-
-      /**
-       * Generates a token (activation code) to allow this user to configure their managed account in
-       * the Android Setup Wizard. Revokes any previously generated token.
-       *
-       * This call only works with Google managed accounts.
-       *
-       * Create a request for the method "users.generateToken".
-       *
-       * This request holds the parameters needed by the the androidenterprise server.  After setting
-       * any optional parameters, call the {@link GenerateToken#execute()} method to invoke the remote
-       * operation. <p> {@link GenerateToken#initialize(com.google.api.client.googleapis.services.Abstra
-       * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-       * the constructor. </p>
-       *
-       * @param enterpriseId The ID of the enterprise.
-       * @param userId The ID of the user.
-       * @since 1.13
-       */
-      protected GenerateToken(java.lang.String enterpriseId, java.lang.String userId) {
-        super(AndroidEnterprise.this, "POST", REST_PATH, null, com.google.api.services.androidenterprise.model.UserToken.class);
-        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
-        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
-      }
-
-      @Override
-      public GenerateToken setAlt(java.lang.String alt) {
-        return (GenerateToken) super.setAlt(alt);
-      }
-
-      @Override
-      public GenerateToken setFields(java.lang.String fields) {
-        return (GenerateToken) super.setFields(fields);
-      }
-
-      @Override
-      public GenerateToken setKey(java.lang.String key) {
-        return (GenerateToken) super.setKey(key);
-      }
-
-      @Override
-      public GenerateToken setOauthToken(java.lang.String oauthToken) {
-        return (GenerateToken) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GenerateToken setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GenerateToken) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GenerateToken setQuotaUser(java.lang.String quotaUser) {
-        return (GenerateToken) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GenerateToken setUserIp(java.lang.String userIp) {
-        return (GenerateToken) super.setUserIp(userIp);
-      }
-
-      /** The ID of the enterprise. */
-      @com.google.api.client.util.Key
-      private java.lang.String enterpriseId;
-
-      /** The ID of the enterprise.
-       */
-      public java.lang.String getEnterpriseId() {
-        return enterpriseId;
-      }
-
-      /** The ID of the enterprise. */
-      public GenerateToken setEnterpriseId(java.lang.String enterpriseId) {
-        this.enterpriseId = enterpriseId;
-        return this;
-      }
-
-      /** The ID of the user. */
-      @com.google.api.client.util.Key
-      private java.lang.String userId;
-
-      /** The ID of the user.
-       */
-      public java.lang.String getUserId() {
-        return userId;
-      }
-
-      /** The ID of the user. */
-      public GenerateToken setUserId(java.lang.String userId) {
-        this.userId = userId;
-        return this;
-      }
-
-      @Override
-      public GenerateToken set(String parameterName, Object value) {
-        return (GenerateToken) super.set(parameterName, value);
-      }
-    }
-    /**
      * Retrieves a user's details.
      *
      * Create a request for the method "users.get".
@@ -8792,7 +10007,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.User> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}";
 
       /**
        * Retrieves a user's details.
@@ -8826,8 +10041,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -8856,8 +10086,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -8918,7 +10153,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class GetAvailableProductSet extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ProductSet> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/availableProductSet";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet";
 
       /**
        * Retrieves the set of products a user is entitled to access.
@@ -8952,8 +10187,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetAvailableProductSet set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAvailableProductSet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAvailableProductSet setAccessToken(java.lang.String accessToken) {
+        return (GetAvailableProductSet) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetAvailableProductSet setAlt(java.lang.String alt) {
         return (GetAvailableProductSet) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAvailableProductSet setCallback(java.lang.String callback) {
+        return (GetAvailableProductSet) super.setCallback(callback);
       }
 
       @Override
@@ -8982,8 +10232,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetAvailableProductSet setUserIp(java.lang.String userIp) {
-        return (GetAvailableProductSet) super.setUserIp(userIp);
+      public GetAvailableProductSet setUploadType(java.lang.String uploadType) {
+        return (GetAvailableProductSet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAvailableProductSet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAvailableProductSet) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9047,7 +10302,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Insert extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.User> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users";
 
       /**
        * Creates a new EMM-managed user.
@@ -9078,8 +10333,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -9108,8 +10378,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9134,9 +10409,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Looks up a user by primary email address. This is only supported for Google-managed users. Lookup
-     * of the id is not needed for EMM-managed users because the id is already returned in the result of
-     * the Users.insert call.
+     * Looks up a user by primary email address. This is only supported for Google-managed users.
+     * Lookup of the id is not needed for EMM-managed users because the id is already returned in the
+     * result of the Users.insert call.
      *
      * Create a request for the method "users.list".
      *
@@ -9144,7 +10419,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param email The exact primary email address of the user to look up.
+     * @param email Required. The exact primary email address of the user to look up.
      * @return the request
      */
     public List list(java.lang.String enterpriseId, java.lang.String email) throws java.io.IOException {
@@ -9155,7 +10430,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.UsersListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users";
 
       /**
        * Looks up a user by primary email address. This is only supported for Google-managed users.
@@ -9171,7 +10446,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param email The exact primary email address of the user to look up.
+       * @param email Required. The exact primary email address of the user to look up.
        * @since 1.13
        */
       protected List(java.lang.String enterpriseId, java.lang.String email) {
@@ -9191,8 +10466,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -9221,8 +10511,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9241,17 +10536,17 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The exact primary email address of the user to look up. */
+      /** Required. The exact primary email address of the user to look up. */
       @com.google.api.client.util.Key
       private java.lang.String email;
 
-      /** The exact primary email address of the user to look up.
+      /** Required. The exact primary email address of the user to look up.
        */
       public java.lang.String getEmail() {
         return email;
       }
 
-      /** The exact primary email address of the user to look up. */
+      /** Required. The exact primary email address of the user to look up. */
       public List setEmail(java.lang.String email) {
         this.email = email;
         return this;
@@ -9286,7 +10581,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class RevokeDeviceAccess extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/deviceAccess";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/deviceAccess";
 
       /**
        * Revokes access to all devices currently provisioned to the user. The user will no longer be
@@ -9313,8 +10608,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public RevokeDeviceAccess set$Xgafv(java.lang.String $Xgafv) {
+        return (RevokeDeviceAccess) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RevokeDeviceAccess setAccessToken(java.lang.String accessToken) {
+        return (RevokeDeviceAccess) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public RevokeDeviceAccess setAlt(java.lang.String alt) {
         return (RevokeDeviceAccess) super.setAlt(alt);
+      }
+
+      @Override
+      public RevokeDeviceAccess setCallback(java.lang.String callback) {
+        return (RevokeDeviceAccess) super.setCallback(callback);
       }
 
       @Override
@@ -9343,8 +10653,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public RevokeDeviceAccess setUserIp(java.lang.String userIp) {
-        return (RevokeDeviceAccess) super.setUserIp(userIp);
+      public RevokeDeviceAccess setUploadType(java.lang.String uploadType) {
+        return (RevokeDeviceAccess) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RevokeDeviceAccess setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RevokeDeviceAccess) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9385,122 +10700,6 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Revokes a previously generated token (activation code) for the user.
-     *
-     * Create a request for the method "users.revokeToken".
-     *
-     * This request holds the parameters needed by the androidenterprise server.  After setting any
-     * optional parameters, call the {@link RevokeToken#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param enterpriseId The ID of the enterprise.
-     * @param userId The ID of the user.
-     * @return the request
-     */
-    public RevokeToken revokeToken(java.lang.String enterpriseId, java.lang.String userId) throws java.io.IOException {
-      RevokeToken result = new RevokeToken(enterpriseId, userId);
-      initialize(result);
-      return result;
-    }
-
-    public class RevokeToken extends AndroidEnterpriseRequest<Void> {
-
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/token";
-
-      /**
-       * Revokes a previously generated token (activation code) for the user.
-       *
-       * Create a request for the method "users.revokeToken".
-       *
-       * This request holds the parameters needed by the the androidenterprise server.  After setting
-       * any optional parameters, call the {@link RevokeToken#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * RevokeToken#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param enterpriseId The ID of the enterprise.
-       * @param userId The ID of the user.
-       * @since 1.13
-       */
-      protected RevokeToken(java.lang.String enterpriseId, java.lang.String userId) {
-        super(AndroidEnterprise.this, "DELETE", REST_PATH, null, Void.class);
-        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
-        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
-      }
-
-      @Override
-      public RevokeToken setAlt(java.lang.String alt) {
-        return (RevokeToken) super.setAlt(alt);
-      }
-
-      @Override
-      public RevokeToken setFields(java.lang.String fields) {
-        return (RevokeToken) super.setFields(fields);
-      }
-
-      @Override
-      public RevokeToken setKey(java.lang.String key) {
-        return (RevokeToken) super.setKey(key);
-      }
-
-      @Override
-      public RevokeToken setOauthToken(java.lang.String oauthToken) {
-        return (RevokeToken) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public RevokeToken setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (RevokeToken) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public RevokeToken setQuotaUser(java.lang.String quotaUser) {
-        return (RevokeToken) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public RevokeToken setUserIp(java.lang.String userIp) {
-        return (RevokeToken) super.setUserIp(userIp);
-      }
-
-      /** The ID of the enterprise. */
-      @com.google.api.client.util.Key
-      private java.lang.String enterpriseId;
-
-      /** The ID of the enterprise.
-       */
-      public java.lang.String getEnterpriseId() {
-        return enterpriseId;
-      }
-
-      /** The ID of the enterprise. */
-      public RevokeToken setEnterpriseId(java.lang.String enterpriseId) {
-        this.enterpriseId = enterpriseId;
-        return this;
-      }
-
-      /** The ID of the user. */
-      @com.google.api.client.util.Key
-      private java.lang.String userId;
-
-      /** The ID of the user.
-       */
-      public java.lang.String getUserId() {
-        return userId;
-      }
-
-      /** The ID of the user. */
-      public RevokeToken setUserId(java.lang.String userId) {
-        this.userId = userId;
-        return this;
-      }
-
-      @Override
-      public RevokeToken set(String parameterName, Object value) {
-        return (RevokeToken) super.set(parameterName, value);
-      }
-    }
-    /**
      * Modifies the set of products that a user is entitled to access (referred to as whitelisted
      * products). Only products that are approved or products that were previously approved (products
      * with revoked approval) can be whitelisted.
@@ -9524,7 +10723,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class SetAvailableProductSet extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.ProductSet> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/availableProductSet";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet";
 
       /**
        * Modifies the set of products that a user is entitled to access (referred to as whitelisted
@@ -9551,8 +10750,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public SetAvailableProductSet set$Xgafv(java.lang.String $Xgafv) {
+        return (SetAvailableProductSet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetAvailableProductSet setAccessToken(java.lang.String accessToken) {
+        return (SetAvailableProductSet) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetAvailableProductSet setAlt(java.lang.String alt) {
         return (SetAvailableProductSet) super.setAlt(alt);
+      }
+
+      @Override
+      public SetAvailableProductSet setCallback(java.lang.String callback) {
+        return (SetAvailableProductSet) super.setCallback(callback);
       }
 
       @Override
@@ -9581,8 +10795,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public SetAvailableProductSet setUserIp(java.lang.String userIp) {
-        return (SetAvailableProductSet) super.setUserIp(userIp);
+      public SetAvailableProductSet setUploadType(java.lang.String uploadType) {
+        return (SetAvailableProductSet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetAvailableProductSet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetAvailableProductSet) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9647,7 +10866,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.User> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}";
 
       /**
        * Updates the details of an EMM-managed user.
@@ -9676,8 +10895,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -9706,8 +10940,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9790,7 +11029,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Delete extends AndroidEnterpriseRequest<Void> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}";
 
       /**
        * Deletes an existing web app.
@@ -9814,8 +11053,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -9844,8 +11098,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -9905,7 +11164,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}";
 
       /**
        * Gets an existing web app.
@@ -9939,8 +11198,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -9969,8 +11243,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -10030,7 +11309,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Insert extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/webApps";
 
       /**
        * Creates a new web app for the enterprise.
@@ -10053,8 +11332,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -10083,8 +11377,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -10127,7 +11426,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebAppsListResponse> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/webApps";
 
       /**
        * Retrieves the details of all web apps for a given enterprise.
@@ -10159,8 +11458,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -10189,8 +11503,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */
@@ -10235,7 +11554,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
     public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
 
-      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}";
 
       /**
        * Updates an existing web app.
@@ -10260,8 +11579,23 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -10290,8 +11624,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the enterprise. */

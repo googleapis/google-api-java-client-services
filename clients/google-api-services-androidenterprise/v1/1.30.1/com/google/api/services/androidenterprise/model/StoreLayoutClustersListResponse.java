@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The store page resources for the enterprise.
+ * Model definition for StoreLayoutClustersListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -43,14 +43,6 @@ public final class StoreLayoutClustersListResponse extends com.google.api.client
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storeLayoutClustersListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * A store cluster of an enterprise.
    * @return value or {@code null} for none
    */
@@ -64,25 +56,6 @@ public final class StoreLayoutClustersListResponse extends com.google.api.client
    */
   public StoreLayoutClustersListResponse setCluster(java.util.List<StoreCluster> cluster) {
     this.cluster = cluster;
-    return this;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storeLayoutClustersListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storeLayoutClustersListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public StoreLayoutClustersListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

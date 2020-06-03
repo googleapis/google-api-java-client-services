@@ -43,12 +43,6 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The name of the permission.
    * The value may be {@code null}.
    */
@@ -76,21 +70,6 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    */
   public Permission setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public Permission setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

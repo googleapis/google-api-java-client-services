@@ -18,12 +18,12 @@ package com.google.api.services.androidenterprise.model;
 
 /**
  * An Enterprises resource represents the binding between an EMM and a specific organization. That
- * binding can be instantiated in one of two different ways using this API as follows: - For Google
+ * binding can be instantiated in one of two different ways using this API as follows: For Google
  * managed domain customers, the process involves using Enterprises.enroll and
  * Enterprises.setAccount (in conjunction with artifacts obtained from the Admin console and the
- * Google API Console) and submitted to the EMM through a more-or-less manual process.  - For
- * managed Google Play Accounts customers, the process involves using Enterprises.generateSignupUrl
- * and Enterprises.completeSignup in conjunction with the managed Google Play sign-up UI (Google-
+ * Google API Console) and submitted to the EMM through a more-or-less manual process. For managed
+ * Google Play Accounts customers, the process involves using Enterprises.generateSignupUrl and
+ * Enterprises.completeSignup in conjunction with the managed Google Play sign-up UI (Google-
  * provided mechanism) to create the binding without manual steps. As an EMM, you can support either
  * or both approaches in your EMM console. See Create an Enterprise for details.
  *
@@ -57,12 +57,6 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
 
   /**
    * The name of the enterprise, for example, "Example, Inc".
@@ -111,21 +105,6 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   public Enterprise setId(java.lang.String id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public Enterprise setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

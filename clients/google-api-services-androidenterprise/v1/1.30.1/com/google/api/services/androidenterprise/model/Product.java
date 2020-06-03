@@ -131,12 +131,6 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String iconUrl;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The approximate time (within 7 days) the app was last published, expressed in milliseconds
    * since epoch.
    * The value may be {@code null}.
@@ -159,7 +153,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<ProductPermission> permissions;
 
   /**
-   * A string of the form app:. For example, app:com.google.android.gm represents the Gmail app.
+   * A string of the form app:package name. For example, app:com.google.android.gm represents the
+   * Gmail app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -439,21 +434,6 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public Product setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
-
-  /**
    * The approximate time (within 7 days) the app was last published, expressed in milliseconds
    * since epoch.
    * @return value or {@code null} for none
@@ -507,7 +487,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string of the form app:. For example, app:com.google.android.gm represents the Gmail app.
+   * A string of the form app:package name. For example, app:com.google.android.gm represents the
+   * Gmail app.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -515,7 +496,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string of the form app:. For example, app:com.google.android.gm represents the Gmail app.
+   * A string of the form app:package name. For example, app:com.google.android.gm represents the
+   * Gmail app.
    * @param productId productId or {@code null} for none
    */
   public Product setProductId(java.lang.String productId) {

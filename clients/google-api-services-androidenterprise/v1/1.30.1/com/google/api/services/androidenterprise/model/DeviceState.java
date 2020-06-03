@@ -40,12 +40,6 @@ public final class DeviceState extends com.google.api.client.json.GenericJson {
   private java.lang.String accountState;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The state of the Google account on the device. "enabled" indicates that the Google account on
    * the device can be used to access Google services (including Google Play), while "disabled"
    * means that it cannot. A new device is initially in the "disabled" state.
@@ -63,21 +57,6 @@ public final class DeviceState extends com.google.api.client.json.GenericJson {
    */
   public DeviceState setAccountState(java.lang.String accountState) {
     this.accountState = accountState;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public DeviceState setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

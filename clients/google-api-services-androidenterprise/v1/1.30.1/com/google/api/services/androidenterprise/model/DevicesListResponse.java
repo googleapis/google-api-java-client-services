@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The device resources for the user.
+ * Model definition for DevicesListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -43,14 +43,6 @@ public final class DevicesListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#devicesListResponse".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * A managed device.
    * @return value or {@code null} for none
    */
@@ -64,25 +56,6 @@ public final class DevicesListResponse extends com.google.api.client.json.Generi
    */
   public DevicesListResponse setDevice(java.util.List<Device> device) {
     this.device = device;
-    return this;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#devicesListResponse".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#devicesListResponse".
-   * @param kind kind or {@code null} for none
-   */
-  public DevicesListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

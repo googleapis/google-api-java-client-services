@@ -41,12 +41,6 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
   private java.lang.String homepageId;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * The store layout type. By default, this value is set to "basic" if the homepageId field is not
    * set, and to "custom" otherwise. If set to "basic", the layout will consist of all approved apps
    * that have been whitelisted for the user.
@@ -75,21 +69,6 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
    */
   public StoreLayout setHomepageId(java.lang.String homepageId) {
     this.homepageId = homepageId;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public StoreLayout setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

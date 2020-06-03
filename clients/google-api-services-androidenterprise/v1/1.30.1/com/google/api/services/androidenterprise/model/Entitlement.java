@@ -33,7 +33,9 @@ package com.google.api.services.androidenterprise.model;
  * requires permissions that the enterprise hasn't accepted.
  *
  * If an entitlement is deleted, the app may be uninstalled from a user's device. As a best
- * practice, uninstall the app by calling  Installs.delete() before deleting the entitlement.
+ * practice, uninstall the app by calling
+ *
+ * Installs.delete() before deleting the entitlement.
  *
  * Entitlements for apps that a user pays for on an unmanaged profile have "userPurchase" as the
  * entitlement reason. These entitlements cannot be removed via the API.
@@ -49,13 +51,7 @@ package com.google.api.services.androidenterprise.model;
 public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
-   * The ID of the product that the entitlement is for. For example, "app:com.google.android.gm".
+   * The ID of the product that the entitlement is for. For example, app:com.google.android.gm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,22 +66,7 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   private java.lang.String reason;
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * @param kind kind or {@code null} for none
-   */
-  public Entitlement setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
-
-  /**
-   * The ID of the product that the entitlement is for. For example, "app:com.google.android.gm".
+   * The ID of the product that the entitlement is for. For example, app:com.google.android.gm.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -93,7 +74,7 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the product that the entitlement is for. For example, "app:com.google.android.gm".
+   * The ID of the product that the entitlement is for. For example, app:com.google.android.gm.
    * @param productId productId or {@code null} for none
    */
   public Entitlement setProductId(java.lang.String productId) {

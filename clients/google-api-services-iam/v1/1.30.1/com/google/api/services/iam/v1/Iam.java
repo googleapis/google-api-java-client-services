@@ -4071,6 +4071,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * Disabling a service account that is bound to VMs, Apps, Functions, or other jobs will cause those
        * jobs to lose access to resources if they are using the disabled service account.
        *
+       * Previously issued Access tokens for a service account will be rejected while the service account
+       * is disabled but will start working again if the account is re-enabled. Issuance of new tokens
+       * will fail while the account is disabled.
+       *
        * To improve reliability of your services and avoid unexpected outages, it is recommended to first
        * disable a service account rather than delete it. After disabling the service account, wait at
        * least 24 hours to verify there are no unintended consequences, and then delete the service
@@ -4115,6 +4119,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          *
          * Disabling a service account that is bound to VMs, Apps, Functions, or other jobs will cause
          * those jobs to lose access to resources if they are using the disabled service account.
+         *
+         * Previously issued Access tokens for a service account will be rejected while the service
+         * account is disabled but will start working again if the account is re-enabled. Issuance of new
+         * tokens will fail while the account is disabled.
          *
          * To improve reliability of your services and avoid unexpected outages, it is recommended to
          * first disable a service account rather than delete it. After disabling the service account,
@@ -4735,6 +4743,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          *
          * Requests for policies with any conditional bindings must specify version 3. Policies
          * without any conditional bindings may specify any valid value or leave the field unset.
+         *
+         * To learn which resources support conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
@@ -4745,6 +4756,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
        Requests for policies with any conditional bindings must specify version 3. Policies without any
        conditional bindings may specify any valid value or leave the field unset.
+
+       To learn which resources support conditions in their IAM policies, see the [IAM
+       documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
@@ -4757,6 +4771,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          *
          * Requests for policies with any conditional bindings must specify version 3. Policies
          * without any conditional bindings may specify any valid value or leave the field unset.
+         *
+         * To learn which resources support conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;

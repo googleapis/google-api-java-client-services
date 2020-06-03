@@ -46,8 +46,8 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/locations/{lo
-   * cation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/da
+   * tasets/{dataset_id}/dicomStores/{dicom_store_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/locations/{lo
-   * cation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/da
+   * tasets/{dataset_id}/dicomStores/{dicom_store_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,8 +105,8 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/locations/{lo
-   * cation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/da
+   * tasets/{dataset_id}/dicomStores/{dicom_store_id}`.
    * @param name name or {@code null} for none
    */
   public DicomStore setName(java.lang.String name) {

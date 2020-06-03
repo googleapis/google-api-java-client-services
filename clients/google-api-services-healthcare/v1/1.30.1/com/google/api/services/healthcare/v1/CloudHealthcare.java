@@ -1183,7 +1183,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of the dataset, of the form
+         * @param name Resource name of the dataset, of the form
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1.model.Dataset}
          * @return the request
@@ -1212,7 +1212,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of the dataset, of the form
+           * @param name Resource name of the dataset, of the form
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.Dataset}
            * @since 1.13
@@ -1283,13 +1283,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. Resource name of the dataset, of the form
+           * Resource name of the dataset, of the form
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of the dataset, of the form
+          /** Resource name of the dataset, of the form
          `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public java.lang.String getName() {
@@ -1297,7 +1297,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. Resource name of the dataset, of the form
+           * Resource name of the dataset, of the form
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public Patch setName(java.lang.String name) {
@@ -2938,7 +2938,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of the DICOM store, of the form
+           * @param name Resource name of the DICOM store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.DicomStore}
@@ -2968,7 +2968,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of the DICOM store, of the form
+             * @param name Resource name of the DICOM store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.DicomStore}
@@ -3040,13 +3040,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/loc
-             * ations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of the DICOM store, of the form
+            /** Resource name of the DICOM store, of the form
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getName() {
@@ -3054,8 +3054,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/loc
-             * ations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -12352,7 +12352,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of the HL7v2 store, of the form
+           * @param name Resource name of the HL7v2 store, of the form
            *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.Hl7V2Store}
            * @return the request
@@ -12381,7 +12381,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of the HL7v2 store, of the form
+             * @param name Resource name of the HL7v2 store, of the form
            *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.Hl7V2Store}
              * @since 1.13
@@ -12452,13 +12452,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the HL7v2 store, of the form
+             * Resource name of the HL7v2 store, of the form
              * `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of the HL7v2 store, of the form
+            /** Resource name of the HL7v2 store, of the form
            `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public java.lang.String getName() {
@@ -12466,7 +12466,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the HL7v2 store, of the form
+             * Resource name of the HL7v2 store, of the form
              * `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public Patch setName(java.lang.String name) {

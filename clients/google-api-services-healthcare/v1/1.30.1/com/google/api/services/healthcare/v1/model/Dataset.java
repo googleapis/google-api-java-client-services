@@ -34,7 +34,7 @@ package com.google.api.services.healthcare.v1.model;
 public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Resource name of the dataset, of the form
+   * Resource name of the dataset, of the form
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String timeZone;
 
   /**
-   * Output only. Resource name of the dataset, of the form
+   * Resource name of the dataset, of the form
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the dataset, of the form
+   * Resource name of the dataset, of the form
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * @param name name or {@code null} for none
    */

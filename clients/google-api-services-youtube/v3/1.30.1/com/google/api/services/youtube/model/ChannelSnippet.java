@@ -66,7 +66,7 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The date and time that the channel was created. The value is specified in < a
-   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +180,7 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The date and time that the channel was created. The value is specified in < a
-   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedAt() {
@@ -189,7 +189,7 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The date and time that the channel was created. The value is specified in < a
-   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
    * @param publishedAt publishedAt or {@code null} for none
    */
   public ChannelSnippet setPublishedAt(java.lang.String publishedAt) {

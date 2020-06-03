@@ -41,16 +41,16 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   private java.lang.String activeLiveChatId;
 
   /**
-   * The time that the broadcast actually ended. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast is over.
+   * The time that the broadcast actually ended. The value is specified in ISO 8601 format. This
+   * value will not be available until the broadcast is over.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String actualEndTime;
 
   /**
-   * The time that the broadcast actually started. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast begins.
+   * The time that the broadcast actually started. The value is specified in ISO 8601 format. This
+   * value will not be available until the broadcast begins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,17 +68,16 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   private java.math.BigInteger concurrentViewers;
 
   /**
-   * The time that the broadcast is scheduled to end. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. If the value is empty or the property is not present, then the
-   * broadcast is scheduled to continue indefinitely.
+   * The time that the broadcast is scheduled to end. The value is specified in ISO 8601 format. If
+   * the value is empty or the property is not present, then the broadcast is scheduled to continue
+   * indefinitely.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scheduledEndTime;
 
   /**
-   * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +109,8 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast actually ended. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast is over.
+   * The time that the broadcast actually ended. The value is specified in ISO 8601 format. This
+   * value will not be available until the broadcast is over.
    * @return value or {@code null} for none
    */
   public java.lang.String getActualEndTime() {
@@ -119,8 +118,8 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast actually ended. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast is over.
+   * The time that the broadcast actually ended. The value is specified in ISO 8601 format. This
+   * value will not be available until the broadcast is over.
    * @param actualEndTime actualEndTime or {@code null} for none
    */
   public VideoLiveStreamingDetails setActualEndTime(java.lang.String actualEndTime) {
@@ -129,8 +128,8 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast actually started. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast begins.
+   * The time that the broadcast actually started. The value is specified in ISO 8601 format. This
+   * value will not be available until the broadcast begins.
    * @return value or {@code null} for none
    */
   public java.lang.String getActualStartTime() {
@@ -138,8 +137,8 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast actually started. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. This value will not be available until the broadcast begins.
+   * The time that the broadcast actually started. The value is specified in ISO 8601 format. This
+   * value will not be available until the broadcast begins.
    * @param actualStartTime actualStartTime or {@code null} for none
    */
   public VideoLiveStreamingDetails setActualStartTime(java.lang.String actualStartTime) {
@@ -173,9 +172,9 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast is scheduled to end. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. If the value is empty or the property is not present, then the
-   * broadcast is scheduled to continue indefinitely.
+   * The time that the broadcast is scheduled to end. The value is specified in ISO 8601 format. If
+   * the value is empty or the property is not present, then the broadcast is scheduled to continue
+   * indefinitely.
    * @return value or {@code null} for none
    */
   public java.lang.String getScheduledEndTime() {
@@ -183,9 +182,9 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast is scheduled to end. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format. If the value is empty or the property is not present, then the
-   * broadcast is scheduled to continue indefinitely.
+   * The time that the broadcast is scheduled to end. The value is specified in ISO 8601 format. If
+   * the value is empty or the property is not present, then the broadcast is scheduled to continue
+   * indefinitely.
    * @param scheduledEndTime scheduledEndTime or {@code null} for none
    */
   public VideoLiveStreamingDetails setScheduledEndTime(java.lang.String scheduledEndTime) {
@@ -194,8 +193,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getScheduledStartTime() {
@@ -203,8 +201,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
   }
 
   /**
-   * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The time that the broadcast is scheduled to begin. The value is specified in ISO 8601 format.
    * @param scheduledStartTime scheduledStartTime or {@code null} for none
    */
   public VideoLiveStreamingDetails setScheduledStartTime(java.lang.String scheduledStartTime) {

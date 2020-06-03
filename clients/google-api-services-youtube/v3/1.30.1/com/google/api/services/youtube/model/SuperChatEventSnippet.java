@@ -51,8 +51,7 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   private java.lang.String commentText;
 
   /**
-   * The date and time when the event occurred. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the event occurred. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +154,7 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * The date and time when the event occurred. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the event occurred. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatedAt() {
@@ -164,8 +162,7 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * The date and time when the event occurred. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the event occurred. The value is specified in ISO 8601 format.
    * @param createdAt createdAt or {@code null} for none
    */
   public SuperChatEventSnippet setCreatedAt(java.lang.String createdAt) {

@@ -65,7 +65,7 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
 
   /**
    * The date and time that the video was published to YouTube. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
 
   /**
    * The date and time that the video was published to YouTube. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoPublishedAt() {
@@ -162,7 +162,7 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
 
   /**
    * The date and time that the video was published to YouTube. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * @param videoPublishedAt videoPublishedAt or {@code null} for none
    */
   public PlaylistItemContentDetails setVideoPublishedAt(java.lang.String videoPublishedAt) {

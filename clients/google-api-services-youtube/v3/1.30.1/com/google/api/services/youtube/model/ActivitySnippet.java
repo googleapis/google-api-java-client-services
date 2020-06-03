@@ -64,8 +64,7 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
   private java.lang.String groupId;
 
   /**
-   * The date and time that the video was uploaded. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the video was uploaded. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,8 +172,7 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The date and time that the video was uploaded. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the video was uploaded. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedAt() {
@@ -182,8 +180,7 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The date and time that the video was uploaded. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the video was uploaded. The value is specified in ISO 8601 format.
    * @param publishedAt publishedAt or {@code null} for none
    */
   public ActivitySnippet setPublishedAt(java.lang.String publishedAt) {

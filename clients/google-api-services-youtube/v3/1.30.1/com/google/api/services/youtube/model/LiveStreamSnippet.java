@@ -50,8 +50,7 @@ public final class LiveStreamSnippet extends com.google.api.client.json.GenericJ
   private java.lang.Boolean isDefaultStream;
 
   /**
-   * The date and time that the stream was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the stream was created. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +113,7 @@ public final class LiveStreamSnippet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The date and time that the stream was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the stream was created. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedAt() {
@@ -123,8 +121,7 @@ public final class LiveStreamSnippet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The date and time that the stream was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the stream was created. The value is specified in ISO 8601 format.
    * @param publishedAt publishedAt or {@code null} for none
    */
   public LiveStreamSnippet setPublishedAt(java.lang.String publishedAt) {

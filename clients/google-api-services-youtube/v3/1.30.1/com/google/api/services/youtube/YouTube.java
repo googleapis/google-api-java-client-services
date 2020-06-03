@@ -71,7 +71,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/youtube/v3";
+  public static final String DEFAULT_BATCH_PATH = "batch/youtube";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -142,136 +142,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
    */
   public class Activities {
 
-    /**
-     * Inserts a new resource into this collection.
-     *
-     * Create a request for the method "activities.insert".
-     *
-     * This request holds the parameters needed by the youtube server.  After setting any optional
-     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
-     *
-     * @param part The part parameter serves two purposes in
-    this operation. It identifies the properties that the
-     *        write operation will
-    set as well as the properties that the API response will include.
-     * @param content the {@link com.google.api.services.youtube.model.Activity}
-     * @return the request
-     */
-    public Insert insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.Activity content) throws java.io.IOException {
-      Insert result = new Insert(part, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Insert extends YouTubeRequest<com.google.api.services.youtube.model.Activity> {
-
-      private static final String REST_PATH = "youtube/v3/activities";
-
-      /**
-       * Inserts a new resource into this collection.
-       *
-       * Create a request for the method "activities.insert".
-       *
-       * This request holds the parameters needed by the the youtube server.  After setting any optional
-       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
-       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param part The part parameter serves two purposes in
-    this operation. It identifies the properties that the
-     *        write operation will
-    set as well as the properties that the API response will include.
-       * @param content the {@link com.google.api.services.youtube.model.Activity}
-       * @since 1.13
-       */
-      protected Insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.Activity content) {
-        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.Activity.class);
-        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
-      }
-
-      @Override
-      public Insert set$Xgafv(java.lang.String $Xgafv) {
-        return (Insert) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Insert setAccessToken(java.lang.String accessToken) {
-        return (Insert) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Insert setAlt(java.lang.String alt) {
-        return (Insert) super.setAlt(alt);
-      }
-
-      @Override
-      public Insert setCallback(java.lang.String callback) {
-        return (Insert) super.setCallback(callback);
-      }
-
-      @Override
-      public Insert setFields(java.lang.String fields) {
-        return (Insert) super.setFields(fields);
-      }
-
-      @Override
-      public Insert setKey(java.lang.String key) {
-        return (Insert) super.setKey(key);
-      }
-
-      @Override
-      public Insert setOauthToken(java.lang.String oauthToken) {
-        return (Insert) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Insert) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Insert setQuotaUser(java.lang.String quotaUser) {
-        return (Insert) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Insert setUploadType(java.lang.String uploadType) {
-        return (Insert) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Insert) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * The part parameter serves two purposes in this operation. It identifies the properties that
-       * the write operation will set as well as the properties that the API response will include.
-       */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> part;
-
-      /** The part parameter serves two purposes in this operation. It identifies the properties that the
-     write operation will set as well as the properties that the API response will include.
-       */
-      public java.util.List<java.lang.String> getPart() {
-        return part;
-      }
-
-      /**
-       * The part parameter serves two purposes in this operation. It identifies the properties that
-       * the write operation will set as well as the properties that the API response will include.
-       */
-      public Insert setPart(java.util.List<java.lang.String> part) {
-        this.part = part;
-        return this;
-      }
-
-      @Override
-      public Insert set(String parameterName, Object value) {
-        return (Insert) super.set(parameterName, value);
-      }
-    }
     /**
      * Retrieves a list of resources, possibly filtered.
      *

@@ -18,8 +18,9 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
  * The configuration for how incoming requests to a site should be routed and processed before
- * serving content. The patterns are matched and applied according to a specific [priority
- * order](/docs/hosting/full-config#hosting_priority_order).
+ * serving content. The URL request paths are matched against the specified URL patterns in the
+ * configuration, then Hosting applies the applicable configuration according to a specific
+ * [priority order](/docs/hosting/full-config#hosting_priority_order).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -46,8 +47,8 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean cleanUrls;
 
   /**
-   * A list of custom response headers that are added to the content if the request URL path matches
-   * the glob.
+   * An array of objects, where each object specifies a URL pattern that, if matched to the request
+   * URL path, triggers Hosting to apply the specified custom response headers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,9 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of globs that will cause the response to redirect to another location.
+   * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if
+   * matched to the request URL path, triggers Hosting to respond with a redirect to the specified
+   * destination path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +76,9 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of rewrites that will act as if the service were given the destination URL.
+   * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if
+   * matched to the request URL path, triggers Hosting to respond as if the service were given the
+   * specified destination URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +132,8 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of custom response headers that are added to the content if the request URL path matches
-   * the glob.
+   * An array of objects, where each object specifies a URL pattern that, if matched to the request
+   * URL path, triggers Hosting to apply the specified custom response headers.
    * @return value or {@code null} for none
    */
   public java.util.List<Header> getHeaders() {
@@ -136,8 +141,8 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of custom response headers that are added to the content if the request URL path matches
-   * the glob.
+   * An array of objects, where each object specifies a URL pattern that, if matched to the request
+   * URL path, triggers Hosting to apply the specified custom response headers.
    * @param headers headers or {@code null} for none
    */
   public ServingConfig setHeaders(java.util.List<Header> headers) {
@@ -146,7 +151,9 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of globs that will cause the response to redirect to another location.
+   * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if
+   * matched to the request URL path, triggers Hosting to respond with a redirect to the specified
+   * destination path.
    * @return value or {@code null} for none
    */
   public java.util.List<Redirect> getRedirects() {
@@ -154,7 +161,9 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of globs that will cause the response to redirect to another location.
+   * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if
+   * matched to the request URL path, triggers Hosting to respond with a redirect to the specified
+   * destination path.
    * @param redirects redirects or {@code null} for none
    */
   public ServingConfig setRedirects(java.util.List<Redirect> redirects) {
@@ -163,7 +172,9 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of rewrites that will act as if the service were given the destination URL.
+   * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if
+   * matched to the request URL path, triggers Hosting to respond as if the service were given the
+   * specified destination URL.
    * @return value or {@code null} for none
    */
   public java.util.List<Rewrite> getRewrites() {
@@ -171,7 +182,9 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of rewrites that will act as if the service were given the destination URL.
+   * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if
+   * matched to the request URL path, triggers Hosting to respond as if the service were given the
+   * specified destination URL.
    * @param rewrites rewrites or {@code null} for none
    */
   public ServingConfig setRewrites(java.util.List<Rewrite> rewrites) {

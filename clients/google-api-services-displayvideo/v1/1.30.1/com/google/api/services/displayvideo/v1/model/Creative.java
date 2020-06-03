@@ -301,6 +301,15 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String jsTrackerUrl;
 
   /**
+   * Output only. The IDs of the line items this creative associated with.
+   *
+   * To associate a creative to a line item, use LineItem.creative_ids instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> lineItemIds;
+
+  /**
    * Output only. Media duration of the creative. Applicable when creative_type is one of:
    *
    * * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO` *
@@ -1162,6 +1171,27 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setJsTrackerUrl(java.lang.String jsTrackerUrl) {
     this.jsTrackerUrl = jsTrackerUrl;
+    return this;
+  }
+
+  /**
+   * Output only. The IDs of the line items this creative associated with.
+   *
+   * To associate a creative to a line item, use LineItem.creative_ids instead.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getLineItemIds() {
+    return lineItemIds;
+  }
+
+  /**
+   * Output only. The IDs of the line items this creative associated with.
+   *
+   * To associate a creative to a line item, use LineItem.creative_ids instead.
+   * @param lineItemIds lineItemIds or {@code null} for none
+   */
+  public Creative setLineItemIds(java.util.List<java.lang.Long> lineItemIds) {
+    this.lineItemIds = lineItemIds;
     return this;
   }
 

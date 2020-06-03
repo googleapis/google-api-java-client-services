@@ -41,6 +41,16 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
+   * Option to specify whether or not to apply bash style string operations to the substitutions.
+   *
+   * NOTE: this is always enabled for triggered builds and cannot be overridden in the build
+   * configuration file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dynamicSubstitutions;
+
+  /**
    * A list of global environment variable definitions that will exist for all build steps in this
    * build. If a variable is defined in both globally and in a build step, the variable will use the
    * build step value.
@@ -98,6 +108,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify behavior when there is an error in the substitution checks.
+   *
+   * NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the
+   * build configuration file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +162,29 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   public BuildOptions setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Option to specify whether or not to apply bash style string operations to the substitutions.
+   *
+   * NOTE: this is always enabled for triggered builds and cannot be overridden in the build
+   * configuration file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDynamicSubstitutions() {
+    return dynamicSubstitutions;
+  }
+
+  /**
+   * Option to specify whether or not to apply bash style string operations to the substitutions.
+   *
+   * NOTE: this is always enabled for triggered builds and cannot be overridden in the build
+   * configuration file.
+   * @param dynamicSubstitutions dynamicSubstitutions or {@code null} for none
+   */
+  public BuildOptions setDynamicSubstitutions(java.lang.Boolean dynamicSubstitutions) {
+    this.dynamicSubstitutions = dynamicSubstitutions;
     return this;
   }
 
@@ -287,6 +323,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify behavior when there is an error in the substitution checks.
+   *
+   * NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the
+   * build configuration file.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubstitutionOption() {
@@ -295,6 +334,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify behavior when there is an error in the substitution checks.
+   *
+   * NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the
+   * build configuration file.
    * @param substitutionOption substitutionOption or {@code null} for none
    */
   public BuildOptions setSubstitutionOption(java.lang.String substitutionOption) {

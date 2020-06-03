@@ -68,6 +68,17 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * The labels associated with this job. You can use these to organize and group your jobs. Label
+   * keys and values can be no longer than 63 characters, can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter and each label in the list must have a
+   * different key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The geographic location where the job should run. See details at
    * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * The value may be {@code null}.
@@ -84,6 +95,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Long maxResults;
+
+  /**
+   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
+   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
+   * project default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maximumBytesBilled;
 
   /**
    * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
@@ -120,6 +140,21 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(QueryParameter.class);
   }
+
+  /**
+   * A unique user provided identifier to ensure idempotent behavior for queries. Note that this is
+   * different from the job_id. It has the following properties: 1. It is case-sensitive, limited to
+   * up to 36 ASCII characters. A UUID is recommended. 2. Read only queries can ignore this token
+   * since they are nullipotent by definition. 3. When a duplicate mutating query request is
+   * detected (i.e. having the same request_id as an earlier query), it returns: a. the results of
+   * the mutation if it completes successfully within the timeout. b. the running operation if it is
+   * still in progress at the end of the timeout. 4. Its lifetime is limited to 15 minutes. In other
+   * words, if two requests are sent with the same request_id, but more than 15 minutes apart,
+   * idempotency is not guaranteed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
 
   /**
    * [Optional] How long to wait for the query to complete, in milliseconds, before the request
@@ -228,6 +263,31 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The labels associated with this job. You can use these to organize and group your jobs. Label
+   * keys and values can be no longer than 63 characters, can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter and each label in the list must have a
+   * different key.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels associated with this job. You can use these to organize and group your jobs. Label
+   * keys and values can be no longer than 63 characters, can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter and each label in the list must have a
+   * different key.
+   * @param labels labels or {@code null} for none
+   */
+  public QueryRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
    * The geographic location where the job should run. See details at
    * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * @return value or {@code null} for none
@@ -266,6 +326,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setMaxResults(java.lang.Long maxResults) {
     this.maxResults = maxResults;
+    return this;
+  }
+
+  /**
+   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
+   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
+   * project default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaximumBytesBilled() {
+    return maximumBytesBilled;
+  }
+
+  /**
+   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
+   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
+   * project default.
+   * @param maximumBytesBilled maximumBytesBilled or {@code null} for none
+   */
+  public QueryRequest setMaximumBytesBilled(java.lang.Long maximumBytesBilled) {
+    this.maximumBytesBilled = maximumBytesBilled;
     return this;
   }
 
@@ -338,6 +419,39 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setQueryParameters(java.util.List<QueryParameter> queryParameters) {
     this.queryParameters = queryParameters;
+    return this;
+  }
+
+  /**
+   * A unique user provided identifier to ensure idempotent behavior for queries. Note that this is
+   * different from the job_id. It has the following properties: 1. It is case-sensitive, limited to
+   * up to 36 ASCII characters. A UUID is recommended. 2. Read only queries can ignore this token
+   * since they are nullipotent by definition. 3. When a duplicate mutating query request is
+   * detected (i.e. having the same request_id as an earlier query), it returns: a. the results of
+   * the mutation if it completes successfully within the timeout. b. the running operation if it is
+   * still in progress at the end of the timeout. 4. Its lifetime is limited to 15 minutes. In other
+   * words, if two requests are sent with the same request_id, but more than 15 minutes apart,
+   * idempotency is not guaranteed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * A unique user provided identifier to ensure idempotent behavior for queries. Note that this is
+   * different from the job_id. It has the following properties: 1. It is case-sensitive, limited to
+   * up to 36 ASCII characters. A UUID is recommended. 2. Read only queries can ignore this token
+   * since they are nullipotent by definition. 3. When a duplicate mutating query request is
+   * detected (i.e. having the same request_id as an earlier query), it returns: a. the results of
+   * the mutation if it completes successfully within the timeout. b. the running operation if it is
+   * still in progress at the end of the timeout. 4. Its lifetime is limited to 15 minutes. In other
+   * words, if two requests are sent with the same request_id, but more than 15 minutes apart,
+   * idempotency is not guaranteed.
+   * @param requestId requestId or {@code null} for none
+   */
+  public QueryRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
     return this;
   }
 

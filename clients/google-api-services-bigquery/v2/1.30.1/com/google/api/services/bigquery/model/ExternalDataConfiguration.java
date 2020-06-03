@@ -54,6 +54,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.String compression;
 
   /**
+   * [Optional, Trusted Tester] Connection for external data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionId;
+
+  /**
    * Additional properties to set if sourceFormat is set to CSV.
    * The value may be {@code null}.
    */
@@ -182,6 +189,23 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setCompression(java.lang.String compression) {
     this.compression = compression;
+    return this;
+  }
+
+  /**
+   * [Optional, Trusted Tester] Connection for external data source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionId() {
+    return connectionId;
+  }
+
+  /**
+   * [Optional, Trusted Tester] Connection for external data source.
+   * @param connectionId connectionId or {@code null} for none
+   */
+  public ExternalDataConfiguration setConnectionId(java.lang.String connectionId) {
+    this.connectionId = connectionId;
     return this;
   }
 

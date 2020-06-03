@@ -63,6 +63,17 @@ public final class DomainMappingStatus extends com.google.api.client.json.Generi
   private java.util.List<ResourceRecord> resourceRecords;
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Holds the URL that will serve the traffic of the DomainMapping. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String url;
+
+  /**
    * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
    * @return value or {@code null} for none
    */
@@ -137,6 +148,31 @@ public final class DomainMappingStatus extends com.google.api.client.json.Generi
    */
   public DomainMappingStatus setResourceRecords(java.util.List<ResourceRecord> resourceRecords) {
     this.resourceRecords = resourceRecords;
+    return this;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Holds the URL that will serve the traffic of the DomainMapping. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrl() {
+    return url;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Holds the URL that will serve the traffic of the DomainMapping. +optional
+   * @param url url or {@code null} for none
+   */
+  public DomainMappingStatus setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 

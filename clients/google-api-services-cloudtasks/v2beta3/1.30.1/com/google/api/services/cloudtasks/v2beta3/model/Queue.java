@@ -132,6 +132,16 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Immutable. The type of a queue (push or pull).
+   *
+   * `Queue.type` is an immutable property of the queue that is set at the queue creation time. When
+   * left unspecified, the default value of `PUSH` is selected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * AppEngineHttpQueue settings apply only to App Engine tasks in this queue. Http tasks are not
    * affected by this proto.
    * @return value or {@code null} for none
@@ -351,6 +361,29 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    */
   public Queue setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Immutable. The type of a queue (push or pull).
+   *
+   * `Queue.type` is an immutable property of the queue that is set at the queue creation time. When
+   * left unspecified, the default value of `PUSH` is selected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Immutable. The type of a queue (push or pull).
+   *
+   * `Queue.type` is an immutable property of the queue that is set at the queue creation time. When
+   * left unspecified, the default value of `PUSH` is selected.
+   * @param type type or {@code null} for none
+   */
+  public Queue setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

@@ -100,6 +100,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
+   * default is SCSI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("interface")
+  private java.lang.String interface__;
+
+  /**
    * [Output Only] Type of the resource. Always compute#disk for disks.
    * The value may be {@code null}.
    */
@@ -312,7 +320,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or
    * pd-ssd
    * The value may be {@code null}.
    */
@@ -458,6 +466,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
+   * default is SCSI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterface() {
+    return interface__;
+  }
+
+  /**
+   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
+   * default is SCSI.
+   * @param interface__ interface__ or {@code null} for none
+   */
+  public Disk setInterface(java.lang.String interface__) {
+    this.interface__ = interface__;
     return this;
   }
 
@@ -994,7 +1021,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or
    * pd-ssd
    * @return value or {@code null} for none
    */
@@ -1004,7 +1031,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or
    * pd-ssd
    * @param type type or {@code null} for none
    */

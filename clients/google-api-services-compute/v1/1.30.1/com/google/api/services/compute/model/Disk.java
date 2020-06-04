@@ -297,7 +297,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or
    * pd-ssd
    * The value may be {@code null}.
    */
@@ -943,7 +943,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or
    * pd-ssd
    * @return value or {@code null} for none
    */
@@ -953,7 +953,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or
    * pd-ssd
    * @param type type or {@code null} for none
    */

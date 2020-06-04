@@ -42,6 +42,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canIpForward;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
    * [Output Only] The CPU platform used by this instance.
    * The value may be {@code null}.
    */
@@ -316,7 +322,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -365,6 +371,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCanIpForward(java.lang.Boolean canIpForward) {
     this.canIpForward = canIpForward;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public Instance setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
     return this;
   }
 
@@ -1064,7 +1085,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1073,7 +1094,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(java.lang.String status) {

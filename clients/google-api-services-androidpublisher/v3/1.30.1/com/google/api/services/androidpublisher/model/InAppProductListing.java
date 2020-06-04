@@ -31,18 +31,48 @@ package com.google.api.services.androidpublisher.model;
 public final class InAppProductListing extends com.google.api.client.json.GenericJson {
 
   /**
+   * The localized entitlement benefits of the in-app product. These are supported only for
+   * subscriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> benefits;
+
+  /**
+   * The localized description of the in-app product. These are deprecated for subscriptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
+   * The localized title of the in-app product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
+   * The localized entitlement benefits of the in-app product. These are supported only for
+   * subscriptions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBenefits() {
+    return benefits;
+  }
+
+  /**
+   * The localized entitlement benefits of the in-app product. These are supported only for
+   * subscriptions.
+   * @param benefits benefits or {@code null} for none
+   */
+  public InAppProductListing setBenefits(java.util.List<java.lang.String> benefits) {
+    this.benefits = benefits;
+    return this;
+  }
+
+  /**
+   * The localized description of the in-app product. These are deprecated for subscriptions.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -50,6 +80,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
+   * The localized description of the in-app product. These are deprecated for subscriptions.
    * @param description description or {@code null} for none
    */
   public InAppProductListing setDescription(java.lang.String description) {
@@ -58,6 +89,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
+   * The localized title of the in-app product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -65,6 +97,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
+   * The localized title of the in-app product.
    * @param title title or {@code null} for none
    */
   public InAppProductListing setTitle(java.lang.String title) {

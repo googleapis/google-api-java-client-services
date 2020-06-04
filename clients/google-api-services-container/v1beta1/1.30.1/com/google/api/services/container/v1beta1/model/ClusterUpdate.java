@@ -114,6 +114,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredLoggingService;
 
   /**
+   * Configuration for master components.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Master desiredMaster;
+
+  /**
    * The desired configuration options for master authorized networks feature.
    * The value may be {@code null}.
    */
@@ -430,6 +437,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredLoggingService(java.lang.String desiredLoggingService) {
     this.desiredLoggingService = desiredLoggingService;
+    return this;
+  }
+
+  /**
+   * Configuration for master components.
+   * @return value or {@code null} for none
+   */
+  public Master getDesiredMaster() {
+    return desiredMaster;
+  }
+
+  /**
+   * Configuration for master components.
+   * @param desiredMaster desiredMaster or {@code null} for none
+   */
+  public ClusterUpdate setDesiredMaster(Master desiredMaster) {
+    this.desiredMaster = desiredMaster;
     return this;
   }
 

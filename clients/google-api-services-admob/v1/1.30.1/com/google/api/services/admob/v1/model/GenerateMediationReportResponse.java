@@ -23,7 +23,7 @@ package com.google.api.services.admob.v1.model;
  * For example:
  *
  *     [{       "header": {         "date_range": {           "start_date": {"year": 2018, "month":
- * 9, "day": 1},           "end_date": {"year": 2018, "month": 9, "day": 30}         }
+ * 9, "day": 1},           "end_date": {"year": 2018, "month": 9, "day": 1}         },
  * "localization_settings": {           "currency_code": "USD",           "language_code": "en-US"
  * }       }     },     {       "row": {         "dimension_values": {           "DATE": {"value":
  * "20180918"},           "APP": {             "value": "ca-app-pub-8123415297019784~1001342552",

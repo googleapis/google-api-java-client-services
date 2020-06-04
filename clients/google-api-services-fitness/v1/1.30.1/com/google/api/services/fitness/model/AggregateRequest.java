@@ -55,7 +55,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Specifies that data be aggregated by the type of activity being performed when the data was
-   * recorded. All data that was recorded during a certain activity type (for the given time range)
+   * recorded. All data that was recorded during a certain activity type (.for the given time range)
    * will be aggregated into the same bucket. Data that was recorded while the user was not active
    * will not be included in the response. Mutually exclusive of other bucketing specifications.
    * The value may be {@code null}.
@@ -147,7 +147,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Specifies that data be aggregated by the type of activity being performed when the data was
-   * recorded. All data that was recorded during a certain activity type (for the given time range)
+   * recorded. All data that was recorded during a certain activity type (.for the given time range)
    * will be aggregated into the same bucket. Data that was recorded while the user was not active
    * will not be included in the response. Mutually exclusive of other bucketing specifications.
    * @return value or {@code null} for none
@@ -158,7 +158,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Specifies that data be aggregated by the type of activity being performed when the data was
-   * recorded. All data that was recorded during a certain activity type (for the given time range)
+   * recorded. All data that was recorded during a certain activity type (.for the given time range)
    * will be aggregated into the same bucket. Data that was recorded while the user was not active
    * will not be included in the response. Mutually exclusive of other bucketing specifications.
    * @param bucketByActivityType bucketByActivityType or {@code null} for none

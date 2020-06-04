@@ -30,16 +30,16 @@ package com.google.api.services.testing.model;
 public final class FileReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app-debug-
-   * unaligned.apk
+   * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-
+   * unaligned.apk These paths are expected to be url encoded (percent encoding)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsPath;
 
   /**
-   * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app-debug-
-   * unaligned.apk
+   * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-
+   * unaligned.apk These paths are expected to be url encoded (percent encoding)
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsPath() {
@@ -47,8 +47,8 @@ public final class FileReference extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app-debug-
-   * unaligned.apk
+   * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-
+   * unaligned.apk These paths are expected to be url encoded (percent encoding)
    * @param gcsPath gcsPath or {@code null} for none
    */
   public FileReference setGcsPath(java.lang.String gcsPath) {

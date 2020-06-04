@@ -2842,7 +2842,992 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a channel. Returns the updated channel if successful.
+       *
+       * Create a request for the method "channels.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId The ID of the advertiser that owns the created channel.
+       * @param channelId Output only. The unique ID of the channel. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.Channel}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Channel content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, channelId, content);
+        initialize(result);
+        return result;
+      }
 
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Channel> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/channels/{channelId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates a channel. Returns the updated channel if successful.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId The ID of the advertiser that owns the created channel.
+         * @param channelId Output only. The unique ID of the channel. Assigned by the system.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.Channel}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Channel content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.Channel.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The ID of the advertiser that owns the created channel. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the created channel.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** The ID of the advertiser that owns the created channel. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the channel. Assigned by the system. */
+        @com.google.api.client.util.Key
+        private java.lang.Long channelId;
+
+        /** Output only. The unique ID of the channel. Assigned by the system.
+         */
+        public java.lang.Long getChannelId() {
+          return channelId;
+        }
+
+        /** Output only. The unique ID of the channel. Assigned by the system. */
+        public Patch setChannelId(java.lang.Long channelId) {
+          this.channelId = channelId;
+          return this;
+        }
+
+        /** The ID of the partner that owns the created channel. */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the created channel.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /** The ID of the partner that owns the created channel. */
+        public Patch setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Sites collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.Sites.List request = displayvideo.sites().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Sites sites() {
+        return new Sites();
+      }
+
+      /**
+       * The "sites" collection of methods.
+       */
+      public class Sites {
+
+        /**
+         * Bulk edits sites under a single channel.
+         *
+         * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
+         * create the sites provided in BulkEditSitesRequest.created_sites.
+         *
+         * Create a request for the method "sites.bulkEdit".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId The ID of the advertiser that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel to which the sites belong.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest}
+         * @return the request
+         */
+        public BulkEdit bulkEdit(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest content) throws java.io.IOException {
+          BulkEdit result = new BulkEdit(advertiserId, channelId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkEdit extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditSitesResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/channels/{+channelId}/sites:bulkEdit";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Bulk edits sites under a single channel.
+           *
+           * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
+           * create the sites provided in BulkEditSitesRequest.created_sites.
+           *
+           * Create a request for the method "sites.bulkEdit".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId The ID of the advertiser that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel to which the sites belong.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest}
+           * @since 1.13
+           */
+          protected BulkEdit(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditSitesResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public BulkEdit set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkEdit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkEdit setAccessToken(java.lang.String accessToken) {
+            return (BulkEdit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkEdit setAlt(java.lang.String alt) {
+            return (BulkEdit) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkEdit setCallback(java.lang.String callback) {
+            return (BulkEdit) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkEdit setFields(java.lang.String fields) {
+            return (BulkEdit) super.setFields(fields);
+          }
+
+          @Override
+          public BulkEdit setKey(java.lang.String key) {
+            return (BulkEdit) super.setKey(key);
+          }
+
+          @Override
+          public BulkEdit setOauthToken(java.lang.String oauthToken) {
+            return (BulkEdit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkEdit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkEdit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkEdit setQuotaUser(java.lang.String quotaUser) {
+            return (BulkEdit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkEdit setUploadType(java.lang.String uploadType) {
+            return (BulkEdit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkEdit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkEdit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public BulkEdit setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel to which the sites belong. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel to which the sites belong.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel to which the sites belong. */
+          public BulkEdit setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          @Override
+          public BulkEdit set(String parameterName, Object value) {
+            return (BulkEdit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a site in a channel.
+         *
+         * Create a request for the method "sites.create".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId The ID of the advertiser that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel in which the site will be created.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.Site}
+         * @return the request
+         */
+        public Create create(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Site content) throws java.io.IOException {
+          Create result = new Create(advertiserId, channelId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Site> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/channels/{+channelId}/sites";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Creates a site in a channel.
+           *
+           * Create a request for the method "sites.create".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId The ID of the advertiser that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel in which the site will be created.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.Site}
+           * @since 1.13
+           */
+          protected Create(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Site content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.Site.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public Create setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel in which the site will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel in which the site will be created.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel in which the site will be created. */
+          public Create setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public Create setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a site from a channel.
+         *
+         * Create a request for the method "sites.delete".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId The ID of the advertiser that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel to which the site belongs.
+         * @param urlOrAppId Required. The URL or app ID of the site to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.Long advertiserId, java.lang.Long channelId, java.lang.String urlOrAppId) throws java.io.IOException {
+          Delete result = new Delete(advertiserId, channelId, urlOrAppId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/channels/{+channelId}/sites/{+urlOrAppId}";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern URL_OR_APP_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Deletes a site from a channel.
+           *
+           * Create a request for the method "sites.delete".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId The ID of the advertiser that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel to which the site belongs.
+           * @param urlOrAppId Required. The URL or app ID of the site to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.Long advertiserId, java.lang.Long channelId, java.lang.String urlOrAppId) {
+            super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+            this.urlOrAppId = com.google.api.client.util.Preconditions.checkNotNull(urlOrAppId, "Required parameter urlOrAppId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(URL_OR_APP_ID_PATTERN.matcher(urlOrAppId).matches(),
+                  "Parameter urlOrAppId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public Delete setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel to which the site belongs. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel to which the site belongs.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel to which the site belongs. */
+          public Delete setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /** Required. The URL or app ID of the site to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String urlOrAppId;
+
+          /** Required. The URL or app ID of the site to delete.
+           */
+          public java.lang.String getUrlOrAppId() {
+            return urlOrAppId;
+          }
+
+          /** Required. The URL or app ID of the site to delete. */
+          public Delete setUrlOrAppId(java.lang.String urlOrAppId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(URL_OR_APP_ID_PATTERN.matcher(urlOrAppId).matches(),
+                  "Parameter urlOrAppId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.urlOrAppId = urlOrAppId;
+            return this;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public Delete setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists sites in a channel.
+         *
+         * Create a request for the method "sites.list".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId The ID of the advertiser that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel to which the requested sites belong.
+         * @return the request
+         */
+        public List list(java.lang.Long advertiserId, java.lang.Long channelId) throws java.io.IOException {
+          List result = new List(advertiserId, channelId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListSitesResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{+advertiserId}/channels/{+channelId}/sites";
+
+          private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Lists sites in a channel.
+           *
+           * Create a request for the method "sites.list".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId The ID of the advertiser that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel to which the requested sites belong.
+           * @since 1.13
+           */
+          protected List(java.lang.Long advertiserId, java.lang.Long channelId) {
+            super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListSitesResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public List setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel to which the requested sites belong. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel to which the requested sites belong.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel to which the requested sites belong. */
+          public List setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /**
+           * Allows filtering by site fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions for site currently can only contain at most one * restriction. * A
+           * restriction has the form of `{field} {operator} {value}`. * The operator must be
+           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
+           *
+           * Examples:
+           *
+           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering by site fields.
+
+         Supported syntax:
+
+         * Filter expressions for site currently can only contain at most one * restriction. * A restriction
+         has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
+         fields: - `urlOrAppId`
+
+         Examples:
+
+         * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering by site fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions for site currently can only contain at most one * restriction. * A
+           * restriction has the form of `{field} {operator} {value}`. * The operator must be
+           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
+           *
+           * Examples:
+           *
+           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `urlOrAppId` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Field by which to sort the list. Acceptable values are:
+
+         * `urlOrAppId` (default)
+
+         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+         should be added to the field name. Example: `urlOrAppId desc`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `urlOrAppId` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+         error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListSites` method. If not specified, the first page of results will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return.
+
+         Typically, this is the value of next_page_token returned from the previous call to `ListSites`
+         method. If not specified, the first page of results will be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListSites` method. If not specified, the first page of results will be returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public List setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Creatives collection.
@@ -6992,6 +7977,127 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class LocationLists {
 
       /**
+       * Creates a new location list. Returns the newly created location list if successful.
+       *
+       * Create a request for the method "locationLists.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.LocationList}
+       * @return the request
+       */
+      public Create create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.LocationList content) throws java.io.IOException {
+        Create result = new Create(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.LocationList> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/locationLists";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates a new location list. Returns the newly created location list if successful.
+         *
+         * Create a request for the method "locationLists.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.LocationList}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.LocationList content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.LocationList.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the DV360 advertiser to which the location list belongs.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets a location list.
        *
        * Create a request for the method "locationLists.get".
@@ -7412,7 +8518,906 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a location list. Returns the updated location list if successful.
+       *
+       * Create a request for the method "locationLists.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the location lists belongs.
+       * @param locationListId Output only. The unique ID of the location list. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.LocationList}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long locationListId, com.google.api.services.displayvideo.v1.model.LocationList content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, locationListId, content);
+        initialize(result);
+        return result;
+      }
 
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.LocationList> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/locationLists/{locationListId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates a location list. Returns the updated location list if successful.
+         *
+         * Create a request for the method "locationLists.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the location lists belongs.
+         * @param locationListId Output only. The unique ID of the location list. Assigned by the system.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.LocationList}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long locationListId, com.google.api.services.displayvideo.v1.model.LocationList content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.LocationList.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.locationListId = com.google.api.client.util.Preconditions.checkNotNull(locationListId, "Required parameter locationListId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the location lists belongs. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the DV360 advertiser to which the location lists belongs.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the location lists belongs. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the location list. Assigned by the system. */
+        @com.google.api.client.util.Key
+        private java.lang.Long locationListId;
+
+        /** Output only. The unique ID of the location list. Assigned by the system.
+         */
+        public java.lang.Long getLocationListId() {
+          return locationListId;
+        }
+
+        /** Output only. The unique ID of the location list. Assigned by the system. */
+        public Patch setLocationListId(java.lang.Long locationListId) {
+          this.locationListId = locationListId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the AssignedLocations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.AssignedLocations.List request = displayvideo.assignedLocations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AssignedLocations assignedLocations() {
+        return new AssignedLocations();
+      }
+
+      /**
+       * The "assignedLocations" collection of methods.
+       */
+      public class AssignedLocations {
+
+        /**
+         * Bulk edits multiple assignments between locations and a single location list.
+         *
+         * The operation will delete the assigned locations provided in
+         * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
+         * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+         *
+         * Create a request for the method "assignedLocations.bulkEdit".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+         * @param locationListId Required. The ID of the location list to which these assignments are assigned.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedLocationsRequest}
+         * @return the request
+         */
+        public BulkEdit bulkEdit(java.lang.Long advertiserId, java.lang.Long locationListId, com.google.api.services.displayvideo.v1.model.BulkEditAssignedLocationsRequest content) throws java.io.IOException {
+          BulkEdit result = new BulkEdit(advertiserId, locationListId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkEdit extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditAssignedLocationsResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/locationLists/{+locationListId}/assignedLocations:bulkEdit";
+
+          private final java.util.regex.Pattern LOCATION_LIST_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Bulk edits multiple assignments between locations and a single location list.
+           *
+           * The operation will delete the assigned locations provided in
+           * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
+           * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+           *
+           * Create a request for the method "assignedLocations.bulkEdit".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+           * @param locationListId Required. The ID of the location list to which these assignments are assigned.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedLocationsRequest}
+           * @since 1.13
+           */
+          protected BulkEdit(java.lang.Long advertiserId, java.lang.Long locationListId, com.google.api.services.displayvideo.v1.model.BulkEditAssignedLocationsRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditAssignedLocationsResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.locationListId = com.google.api.client.util.Preconditions.checkNotNull(locationListId, "Required parameter locationListId must be specified.");
+          }
+
+          @Override
+          public BulkEdit set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkEdit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkEdit setAccessToken(java.lang.String accessToken) {
+            return (BulkEdit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkEdit setAlt(java.lang.String alt) {
+            return (BulkEdit) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkEdit setCallback(java.lang.String callback) {
+            return (BulkEdit) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkEdit setFields(java.lang.String fields) {
+            return (BulkEdit) super.setFields(fields);
+          }
+
+          @Override
+          public BulkEdit setKey(java.lang.String key) {
+            return (BulkEdit) super.setKey(key);
+          }
+
+          @Override
+          public BulkEdit setOauthToken(java.lang.String oauthToken) {
+            return (BulkEdit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkEdit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkEdit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkEdit setQuotaUser(java.lang.String quotaUser) {
+            return (BulkEdit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkEdit setUploadType(java.lang.String uploadType) {
+            return (BulkEdit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkEdit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkEdit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          public BulkEdit setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the location list to which these assignments are assigned. */
+          @com.google.api.client.util.Key
+          private java.lang.Long locationListId;
+
+          /** Required. The ID of the location list to which these assignments are assigned.
+           */
+          public java.lang.Long getLocationListId() {
+            return locationListId;
+          }
+
+          /** Required. The ID of the location list to which these assignments are assigned. */
+          public BulkEdit setLocationListId(java.lang.Long locationListId) {
+            this.locationListId = locationListId;
+            return this;
+          }
+
+          @Override
+          public BulkEdit set(String parameterName, Object value) {
+            return (BulkEdit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates an assignment between a location and a location list.
+         *
+         * Create a request for the method "assignedLocations.create".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+         * @param locationListId Required. The ID of the location list for which the assignment will be created.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedLocation}
+         * @return the request
+         */
+        public Create create(java.lang.Long advertiserId, java.lang.Long locationListId, com.google.api.services.displayvideo.v1.model.AssignedLocation content) throws java.io.IOException {
+          Create result = new Create(advertiserId, locationListId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AssignedLocation> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations";
+
+          /**
+           * Creates an assignment between a location and a location list.
+           *
+           * Create a request for the method "assignedLocations.create".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+           * @param locationListId Required. The ID of the location list for which the assignment will be created.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedLocation}
+           * @since 1.13
+           */
+          protected Create(java.lang.Long advertiserId, java.lang.Long locationListId, com.google.api.services.displayvideo.v1.model.AssignedLocation content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.AssignedLocation.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.locationListId = com.google.api.client.util.Preconditions.checkNotNull(locationListId, "Required parameter locationListId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          public Create setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the location list for which the assignment will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.Long locationListId;
+
+          /** Required. The ID of the location list for which the assignment will be created.
+           */
+          public java.lang.Long getLocationListId() {
+            return locationListId;
+          }
+
+          /** Required. The ID of the location list for which the assignment will be created. */
+          public Create setLocationListId(java.lang.Long locationListId) {
+            this.locationListId = locationListId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the assignment between a location and a location list.
+         *
+         * Create a request for the method "assignedLocations.delete".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+         * @param locationListId Required. The ID of the location list to which this assignment is assigned.
+         * @param assignedLocationId Required. The ID of the assigned location to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.Long advertiserId, java.lang.Long locationListId, java.lang.Long assignedLocationId) throws java.io.IOException {
+          Delete result = new Delete(advertiserId, locationListId, assignedLocationId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{+assignedLocationId}";
+
+          private final java.util.regex.Pattern ASSIGNED_LOCATION_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Deletes the assignment between a location and a location list.
+           *
+           * Create a request for the method "assignedLocations.delete".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+           * @param locationListId Required. The ID of the location list to which this assignment is assigned.
+           * @param assignedLocationId Required. The ID of the assigned location to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.Long advertiserId, java.lang.Long locationListId, java.lang.Long assignedLocationId) {
+            super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.locationListId = com.google.api.client.util.Preconditions.checkNotNull(locationListId, "Required parameter locationListId must be specified.");
+            this.assignedLocationId = com.google.api.client.util.Preconditions.checkNotNull(assignedLocationId, "Required parameter assignedLocationId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          public Delete setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the location list to which this assignment is assigned. */
+          @com.google.api.client.util.Key
+          private java.lang.Long locationListId;
+
+          /** Required. The ID of the location list to which this assignment is assigned.
+           */
+          public java.lang.Long getLocationListId() {
+            return locationListId;
+          }
+
+          /** Required. The ID of the location list to which this assignment is assigned. */
+          public Delete setLocationListId(java.lang.Long locationListId) {
+            this.locationListId = locationListId;
+            return this;
+          }
+
+          /** Required. The ID of the assigned location to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.Long assignedLocationId;
+
+          /** Required. The ID of the assigned location to delete.
+           */
+          public java.lang.Long getAssignedLocationId() {
+            return assignedLocationId;
+          }
+
+          /** Required. The ID of the assigned location to delete. */
+          public Delete setAssignedLocationId(java.lang.Long assignedLocationId) {
+            this.assignedLocationId = assignedLocationId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists locations assigned to a location list.
+         *
+         * Create a request for the method "assignedLocations.list".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+         * @param locationListId Required. The ID of the location list to which these assignments are assigned.
+         * @return the request
+         */
+        public List list(java.lang.Long advertiserId, java.lang.Long locationListId) throws java.io.IOException {
+          List result = new List(advertiserId, locationListId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListAssignedLocationsResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations";
+
+          /**
+           * Lists locations assigned to a location list.
+           *
+           * Create a request for the method "assignedLocations.list".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the location list belongs.
+           * @param locationListId Required. The ID of the location list to which these assignments are assigned.
+           * @since 1.13
+           */
+          protected List(java.lang.Long advertiserId, java.lang.Long locationListId) {
+            super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListAssignedLocationsResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.locationListId = com.google.api.client.util.Preconditions.checkNotNull(locationListId, "Required parameter locationListId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** Required. The ID of the DV360 advertiser to which the location list belongs. */
+          public List setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the location list to which these assignments are assigned. */
+          @com.google.api.client.util.Key
+          private java.lang.Long locationListId;
+
+          /** Required. The ID of the location list to which these assignments are assigned.
+           */
+          public java.lang.Long getLocationListId() {
+            return locationListId;
+          }
+
+          /** Required. The ID of the location list to which these assignments are assigned. */
+          public List setLocationListId(java.lang.Long locationListId) {
+            this.locationListId = locationListId;
+            return this;
+          }
+
+          /**
+           * Allows filtering by location list assignment fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
+           * combined by the logical operator `OR`. * A restriction has the form of `{field}
+           * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedLocationId`
+           *
+           * The length of this field should be no more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering by location list assignment fields.
+
+         Supported syntax:
+
+         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
+         logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
+         must be `EQUALS (=)`. * Supported fields: - `assignedLocationId`
+
+         The length of this field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering by location list assignment fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
+           * combined by the logical operator `OR`. * A restriction has the form of `{field}
+           * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedLocationId`
+           *
+           * The length of this field should be no more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `assignedLocationId` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `assignedLocationId desc`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Field by which to sort the list. Acceptable values are:
+
+         * `assignedLocationId` (default)
+
+         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+         should be added to the field name. Example: `assignedLocationId desc`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `assignedLocationId` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `assignedLocationId desc`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+         error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListAssignedLocations` method. If not specified, the first page of results will be
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return.
+
+         Typically, this is the value of next_page_token returned from the previous call to
+         `ListAssignedLocations` method. If not specified, the first page of results will be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListAssignedLocations` method. If not specified, the first page of results will be
+           * returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the NegativeKeywordLists collection.
@@ -7434,6 +9439,276 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
      */
     public class NegativeKeywordLists {
 
+      /**
+       * Creates a new negative keyword list. Returns the newly created negative keyword list if
+       * successful.
+       *
+       * Create a request for the method "negativeKeywordLists.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list will
+      belong.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeywordList}
+       * @return the request
+       */
+      public Create create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.NegativeKeywordList content) throws java.io.IOException {
+        Create result = new Create(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.NegativeKeywordList> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/negativeKeywordLists";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates a new negative keyword list. Returns the newly created negative keyword list if
+         * successful.
+         *
+         * Create a request for the method "negativeKeywordLists.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list will
+      belong.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeywordList}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.NegativeKeywordList content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.NegativeKeywordList.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /**
+         * Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
+         */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a negative keyword list given an advertiser ID and a negative keyword list ID.
+       *
+       * Create a request for the method "negativeKeywordLists.delete".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list belongs.
+       * @param negativeKeywordListId Required. The ID of the negative keyword list to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId) throws java.io.IOException {
+        Delete result = new Delete(advertiserId, negativeKeywordListId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/negativeKeywordLists/{+negativeKeywordListId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern NEGATIVE_KEYWORD_LIST_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Deletes a negative keyword list given an advertiser ID and a negative keyword list ID.
+         *
+         * Create a request for the method "negativeKeywordLists.delete".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list belongs.
+         * @param negativeKeywordListId Required. The ID of the negative keyword list to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId) {
+          super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list belongs. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list belongs.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list belongs. */
+        public Delete setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the negative keyword list to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.Long negativeKeywordListId;
+
+        /** Required. The ID of the negative keyword list to delete.
+         */
+        public java.lang.Long getNegativeKeywordListId() {
+          return negativeKeywordListId;
+        }
+
+        /** Required. The ID of the negative keyword list to delete. */
+        public Delete setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+          this.negativeKeywordListId = negativeKeywordListId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
       /**
        * Gets a negative keyword list given an advertiser ID and a negative keyword list ID.
        *
@@ -7782,7 +10057,1007 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a negative keyword list. Returns the updated negative keyword list if successful.
+       *
+       * Create a request for the method "negativeKeywordLists.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list belongs.
+       * @param negativeKeywordListId Output only. The unique ID of the negative keyword list. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeywordList}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.NegativeKeywordList content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, negativeKeywordListId, content);
+        initialize(result);
+        return result;
+      }
 
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.NegativeKeywordList> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/negativeKeywordLists/{negativeKeywordListId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates a negative keyword list. Returns the updated negative keyword list if successful.
+         *
+         * Create a request for the method "negativeKeywordLists.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list belongs.
+         * @param negativeKeywordListId Output only. The unique ID of the negative keyword list. Assigned by the system.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeywordList}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.NegativeKeywordList content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.NegativeKeywordList.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list belongs. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list belongs.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the DV360 advertiser to which the negative keyword list belongs. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the negative keyword list. Assigned by the system. */
+        @com.google.api.client.util.Key
+        private java.lang.Long negativeKeywordListId;
+
+        /** Output only. The unique ID of the negative keyword list. Assigned by the system.
+         */
+        public java.lang.Long getNegativeKeywordListId() {
+          return negativeKeywordListId;
+        }
+
+        /** Output only. The unique ID of the negative keyword list. Assigned by the system. */
+        public Patch setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+          this.negativeKeywordListId = negativeKeywordListId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the NegativeKeywords collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.NegativeKeywords.List request = displayvideo.negativeKeywords().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NegativeKeywords negativeKeywords() {
+        return new NegativeKeywords();
+      }
+
+      /**
+       * The "negativeKeywords" collection of methods.
+       */
+      public class NegativeKeywords {
+
+        /**
+         * Bulk edits negative keywords in a single negative keyword list.
+         *
+         * The operation will delete the negative keywords provided in
+         * BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords
+         * provided in BulkEditNegativeKeywordsRequest.created_negative_keywords.
+         *
+         * This operation is guaranteed to be atomic and will never result in a partial success or partial
+         * failure.
+         *
+         * Create a request for the method "negativeKeywords.bulkEdit".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords
+        belong.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsRequest}
+         * @return the request
+         */
+        public BulkEdit bulkEdit(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsRequest content) throws java.io.IOException {
+          BulkEdit result = new BulkEdit(advertiserId, negativeKeywordListId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkEdit extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/negativeKeywordLists/{+negativeKeywordListId}/negativeKeywords:bulkEdit";
+
+          private final java.util.regex.Pattern NEGATIVE_KEYWORD_LIST_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Bulk edits negative keywords in a single negative keyword list.
+           *
+           * The operation will delete the negative keywords provided in
+           * BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords
+           * provided in BulkEditNegativeKeywordsRequest.created_negative_keywords.
+           *
+           * This operation is guaranteed to be atomic and will never result in a partial success or partial
+           * failure.
+           *
+           * Create a request for the method "negativeKeywords.bulkEdit".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords
+        belong.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsRequest}
+           * @since 1.13
+           */
+          protected BulkEdit(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+          }
+
+          @Override
+          public BulkEdit set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkEdit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkEdit setAccessToken(java.lang.String accessToken) {
+            return (BulkEdit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkEdit setAlt(java.lang.String alt) {
+            return (BulkEdit) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkEdit setCallback(java.lang.String callback) {
+            return (BulkEdit) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkEdit setFields(java.lang.String fields) {
+            return (BulkEdit) super.setFields(fields);
+          }
+
+          @Override
+          public BulkEdit setKey(java.lang.String key) {
+            return (BulkEdit) super.setKey(key);
+          }
+
+          @Override
+          public BulkEdit setOauthToken(java.lang.String oauthToken) {
+            return (BulkEdit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkEdit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkEdit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkEdit setQuotaUser(java.lang.String quotaUser) {
+            return (BulkEdit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkEdit setUploadType(java.lang.String uploadType) {
+            return (BulkEdit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkEdit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkEdit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          public BulkEdit setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the negative keywords
+           * belong.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long negativeKeywordListId;
+
+          /** Required. The ID of the parent negative keyword list to which the negative keywords belong.
+           */
+          public java.lang.Long getNegativeKeywordListId() {
+            return negativeKeywordListId;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the negative keywords
+           * belong.
+           */
+          public BulkEdit setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+            this.negativeKeywordListId = negativeKeywordListId;
+            return this;
+          }
+
+          @Override
+          public BulkEdit set(String parameterName, Object value) {
+            return (BulkEdit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a negative keyword in a negative keyword list.
+         *
+         * Create a request for the method "negativeKeywords.create".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list in which the negative keyword
+        will be created.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeyword}
+         * @return the request
+         */
+        public Create create(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.NegativeKeyword content) throws java.io.IOException {
+          Create result = new Create(advertiserId, negativeKeywordListId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.NegativeKeyword> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/negativeKeywordLists/{+negativeKeywordListId}/negativeKeywords";
+
+          private final java.util.regex.Pattern NEGATIVE_KEYWORD_LIST_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Creates a negative keyword in a negative keyword list.
+           *
+           * Create a request for the method "negativeKeywords.create".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list in which the negative keyword
+        will be created.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeyword}
+           * @since 1.13
+           */
+          protected Create(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.NegativeKeyword content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.NegativeKeyword.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          public Create setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list in which the negative keyword will
+           * be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long negativeKeywordListId;
+
+          /** Required. The ID of the parent negative keyword list in which the negative keyword will be created.
+           */
+          public java.lang.Long getNegativeKeywordListId() {
+            return negativeKeywordListId;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list in which the negative keyword will
+           * be created.
+           */
+          public Create setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+            this.negativeKeywordListId = negativeKeywordListId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a negative keyword from a negative keyword list.
+         *
+         * Create a request for the method "negativeKeywords.delete".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keyword
+        belongs.
+         * @param keywordValue Required. The keyword value of the negative keyword to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, java.lang.String keywordValue) throws java.io.IOException {
+          Delete result = new Delete(advertiserId, negativeKeywordListId, keywordValue);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/negativeKeywordLists/{+negativeKeywordListId}/negativeKeywords/{+keywordValue}";
+
+          private final java.util.regex.Pattern NEGATIVE_KEYWORD_LIST_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern KEYWORD_VALUE_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Deletes a negative keyword from a negative keyword list.
+           *
+           * Create a request for the method "negativeKeywords.delete".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keyword
+        belongs.
+           * @param keywordValue Required. The keyword value of the negative keyword to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, java.lang.String keywordValue) {
+            super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+            this.keywordValue = com.google.api.client.util.Preconditions.checkNotNull(keywordValue, "Required parameter keywordValue must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(KEYWORD_VALUE_PATTERN.matcher(keywordValue).matches(),
+                  "Parameter keywordValue must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          public Delete setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the negative keyword
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long negativeKeywordListId;
+
+          /** Required. The ID of the parent negative keyword list to which the negative keyword belongs.
+           */
+          public java.lang.Long getNegativeKeywordListId() {
+            return negativeKeywordListId;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the negative keyword
+           * belongs.
+           */
+          public Delete setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+            this.negativeKeywordListId = negativeKeywordListId;
+            return this;
+          }
+
+          /** Required. The keyword value of the negative keyword to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String keywordValue;
+
+          /** Required. The keyword value of the negative keyword to delete.
+           */
+          public java.lang.String getKeywordValue() {
+            return keywordValue;
+          }
+
+          /** Required. The keyword value of the negative keyword to delete. */
+          public Delete setKeywordValue(java.lang.String keywordValue) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(KEYWORD_VALUE_PATTERN.matcher(keywordValue).matches(),
+                  "Parameter keywordValue must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.keywordValue = keywordValue;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists negative keywords in a negative keyword list.
+         *
+         * Create a request for the method "negativeKeywords.list".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the requested negative
+        keywords
+         *        belong.
+         * @return the request
+         */
+        public List list(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId) throws java.io.IOException {
+          List result = new List(advertiserId, negativeKeywordListId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListNegativeKeywordsResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{+advertiserId}/negativeKeywordLists/{+negativeKeywordListId}/negativeKeywords";
+
+          private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern NEGATIVE_KEYWORD_LIST_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Lists negative keywords in a negative keyword list.
+           *
+           * Create a request for the method "negativeKeywords.list".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
+        belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the requested negative
+        keywords
+         *        belong.
+           * @since 1.13
+           */
+          protected List(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId) {
+            super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListNegativeKeywordsResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          public List setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the requested negative
+           * keywords belong.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long negativeKeywordListId;
+
+          /** Required. The ID of the parent negative keyword list to which the requested negative keywords
+         belong.
+           */
+          public java.lang.Long getNegativeKeywordListId() {
+            return negativeKeywordListId;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the requested negative
+           * keywords belong.
+           */
+          public List setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+            this.negativeKeywordListId = negativeKeywordListId;
+            return this;
+          }
+
+          /**
+           * Allows filtering by negative keyword fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions for negative keyword currently can only contain at most one *
+           * restriction. * A restriction has the form of `{field} {operator} {value}`. * The
+           * operator must be `CONTAINS (:)`. * Supported fields: - `keywordValue`
+           *
+           * Examples:
+           *
+           * * All negative keywords for which the keyword value contains "google": `keywordValue :
+           * "google"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering by negative keyword fields.
+
+         Supported syntax:
+
+         * Filter expressions for negative keyword currently can only contain at most one * restriction. * A
+         restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+         Supported fields: - `keywordValue`
+
+         Examples:
+
+         * All negative keywords for which the keyword value contains "google": `keywordValue : "google"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering by negative keyword fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions for negative keyword currently can only contain at most one *
+           * restriction. * A restriction has the form of `{field} {operator} {value}`. * The
+           * operator must be `CONTAINS (:)`. * Supported fields: - `keywordValue`
+           *
+           * Examples:
+           *
+           * * All negative keywords for which the keyword value contains "google": `keywordValue :
+           * "google"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `keywordValue` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `keywordValue desc`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Field by which to sort the list. Acceptable values are:
+
+         * `keywordValue` (default)
+
+         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+         should be added to the field name. Example: `keywordValue desc`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `keywordValue` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `keywordValue desc`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+         error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListNegativeKeywords` method. If not specified, the first page of results will be
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return.
+
+         Typically, this is the value of next_page_token returned from the previous call to
+         `ListNegativeKeywords` method. If not specified, the first page of results will be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListNegativeKeywords` method. If not specified, the first page of results will be
+           * returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the TargetingTypes collection.
@@ -10882,6 +14157,333 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class InventorySourceGroups {
 
     /**
+     * Creates a new inventory source group. Returns the newly created inventory source group if
+     * successful.
+     *
+     * Create a request for the method "inventorySourceGroups.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySourceGroup}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.InventorySourceGroup content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.InventorySourceGroup> {
+
+      private static final String REST_PATH = "v1/inventorySourceGroups";
+
+      /**
+       * Creates a new inventory source group. Returns the newly created inventory source group if
+       * successful.
+       *
+       * Create a request for the method "inventorySourceGroups.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySourceGroup}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.InventorySourceGroup content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.InventorySourceGroup.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The ID of the advertiser that owns the inventory source group.
+       *
+       * The parent partner will not have access to this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that owns the inventory source group.
+
+     The parent partner will not have access to this group.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /**
+       * The ID of the advertiser that owns the inventory source group.
+       *
+       * The parent partner will not have access to this group.
+       */
+      public Create setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * The ID of the partner that owns the inventory source group.
+       *
+       * Only this partner will have write access to this group. Only advertisers to which this
+       * group is explicitly shared will have read access to this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that owns the inventory source group.
+
+     Only this partner will have write access to this group. Only advertisers to which this group is
+     explicitly shared will have read access to this group.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /**
+       * The ID of the partner that owns the inventory source group.
+       *
+       * Only this partner will have write access to this group. Only advertisers to which this
+       * group is explicitly shared will have read access to this group.
+       */
+      public Create setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes an inventory source group.
+     *
+     * Create a request for the method "inventorySourceGroups.delete".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param inventorySourceGroupId Required. The ID of the inventory source group to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long inventorySourceGroupId) throws java.io.IOException {
+      Delete result = new Delete(inventorySourceGroupId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/inventorySourceGroups/{+inventorySourceGroupId}";
+
+      private final java.util.regex.Pattern INVENTORY_SOURCE_GROUP_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Deletes an inventory source group.
+       *
+       * Create a request for the method "inventorySourceGroups.delete".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long inventorySourceGroupId) {
+        super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+        this.inventorySourceGroupId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceGroupId, "Required parameter inventorySourceGroupId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the inventory source group to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.Long inventorySourceGroupId;
+
+      /** Required. The ID of the inventory source group to delete.
+       */
+      public java.lang.Long getInventorySourceGroupId() {
+        return inventorySourceGroupId;
+      }
+
+      /** Required. The ID of the inventory source group to delete. */
+      public Delete setInventorySourceGroupId(java.lang.Long inventorySourceGroupId) {
+        this.inventorySourceGroupId = inventorySourceGroupId;
+        return this;
+      }
+
+      /**
+       * The ID of the advertiser that owns the inventory source group.
+       *
+       * The parent partner does not have access to this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that owns the inventory source group.
+
+     The parent partner does not have access to this group.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /**
+       * The ID of the advertiser that owns the inventory source group.
+       *
+       * The parent partner does not have access to this group.
+       */
+      public Delete setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * The ID of the partner that owns the inventory source group.
+       *
+       * Only this partner has write access to this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that owns the inventory source group.
+
+     Only this partner has write access to this group.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /**
+       * The ID of the partner that owns the inventory source group.
+       *
+       * Only this partner has write access to this group.
+       */
+      public Delete setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets an inventory source group.
      *
      * Create a request for the method "inventorySourceGroups.get".
@@ -11356,7 +14958,1052 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (List) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates an inventory source group. Returns the updated inventory source group if successful.
+     *
+     * Create a request for the method "inventorySourceGroups.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param inventorySourceGroupId Output only. The unique ID of the inventory source group. Assigned by the system.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySourceGroup}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long inventorySourceGroupId, com.google.api.services.displayvideo.v1.model.InventorySourceGroup content) throws java.io.IOException {
+      Patch result = new Patch(inventorySourceGroupId, content);
+      initialize(result);
+      return result;
+    }
 
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.InventorySourceGroup> {
+
+      private static final String REST_PATH = "v1/inventorySourceGroups/{inventorySourceGroupId}";
+
+      /**
+       * Updates an inventory source group. Returns the updated inventory source group if successful.
+       *
+       * Create a request for the method "inventorySourceGroups.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param inventorySourceGroupId Output only. The unique ID of the inventory source group. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySourceGroup}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long inventorySourceGroupId, com.google.api.services.displayvideo.v1.model.InventorySourceGroup content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.InventorySourceGroup.class);
+        this.inventorySourceGroupId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceGroupId, "Required parameter inventorySourceGroupId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Output only. The unique ID of the inventory source group. Assigned by the system. */
+      @com.google.api.client.util.Key
+      private java.lang.Long inventorySourceGroupId;
+
+      /** Output only. The unique ID of the inventory source group. Assigned by the system.
+       */
+      public java.lang.Long getInventorySourceGroupId() {
+        return inventorySourceGroupId;
+      }
+
+      /** Output only. The unique ID of the inventory source group. Assigned by the system. */
+      public Patch setInventorySourceGroupId(java.lang.Long inventorySourceGroupId) {
+        this.inventorySourceGroupId = inventorySourceGroupId;
+        return this;
+      }
+
+      /**
+       * The ID of the advertiser that owns the inventory source group.
+       *
+       * The parent partner does not have access to this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that owns the inventory source group.
+
+     The parent partner does not have access to this group.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /**
+       * The ID of the advertiser that owns the inventory source group.
+       *
+       * The parent partner does not have access to this group.
+       */
+      public Patch setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * The ID of the partner that owns the inventory source group.
+       *
+       * Only this partner has write access to this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that owns the inventory source group.
+
+     Only this partner has write access to this group.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /**
+       * The ID of the partner that owns the inventory source group.
+       *
+       * Only this partner has write access to this group.
+       */
+      public Patch setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the AssignedInventorySources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.AssignedInventorySources.List request = displayvideo.assignedInventorySources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AssignedInventorySources assignedInventorySources() {
+      return new AssignedInventorySources();
+    }
+
+    /**
+     * The "assignedInventorySources" collection of methods.
+     */
+    public class AssignedInventorySources {
+
+      /**
+       * Bulk edits multiple assignments between inventory sources and a single inventory source group.
+       *
+       * The operation will delete the assigned inventory sources provided in
+       * BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the
+       * assigned inventory sources provided in
+       * BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
+       *
+       * Create a request for the method "assignedInventorySources.bulkEdit".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+       *
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignments are
+      assigned.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesRequest}
+       * @return the request
+       */
+      public BulkEdit bulkEdit(java.lang.Long inventorySourceGroupId, com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesRequest content) throws java.io.IOException {
+        BulkEdit result = new BulkEdit(inventorySourceGroupId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkEdit extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesResponse> {
+
+        private static final String REST_PATH = "v1/inventorySourceGroups/{+inventorySourceGroupId}/assignedInventorySources:bulkEdit";
+
+        private final java.util.regex.Pattern INVENTORY_SOURCE_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Bulk edits multiple assignments between inventory sources and a single inventory source group.
+         *
+         * The operation will delete the assigned inventory sources provided in
+         * BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the
+         * assigned inventory sources provided in
+         * BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
+         *
+         * Create a request for the method "assignedInventorySources.bulkEdit".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignments are
+      assigned.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesRequest}
+         * @since 1.13
+         */
+        protected BulkEdit(java.lang.Long inventorySourceGroupId, com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesResponse.class);
+          this.inventorySourceGroupId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceGroupId, "Required parameter inventorySourceGroupId must be specified.");
+        }
+
+        @Override
+        public BulkEdit set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkEdit) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkEdit setAccessToken(java.lang.String accessToken) {
+          return (BulkEdit) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkEdit setAlt(java.lang.String alt) {
+          return (BulkEdit) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkEdit setCallback(java.lang.String callback) {
+          return (BulkEdit) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkEdit setFields(java.lang.String fields) {
+          return (BulkEdit) super.setFields(fields);
+        }
+
+        @Override
+        public BulkEdit setKey(java.lang.String key) {
+          return (BulkEdit) super.setKey(key);
+        }
+
+        @Override
+        public BulkEdit setOauthToken(java.lang.String oauthToken) {
+          return (BulkEdit) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkEdit setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkEdit) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkEdit setQuotaUser(java.lang.String quotaUser) {
+          return (BulkEdit) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkEdit setUploadType(java.lang.String uploadType) {
+          return (BulkEdit) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkEdit setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkEdit) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the inventory source group to which the assignments are assigned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long inventorySourceGroupId;
+
+        /** Required. The ID of the inventory source group to which the assignments are assigned.
+         */
+        public java.lang.Long getInventorySourceGroupId() {
+          return inventorySourceGroupId;
+        }
+
+        /**
+         * Required. The ID of the inventory source group to which the assignments are assigned.
+         */
+        public BulkEdit setInventorySourceGroupId(java.lang.Long inventorySourceGroupId) {
+          this.inventorySourceGroupId = inventorySourceGroupId;
+          return this;
+        }
+
+        @Override
+        public BulkEdit set(String parameterName, Object value) {
+          return (BulkEdit) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates an assignment between an inventory source and an inventory source group.
+       *
+       * Create a request for the method "assignedInventorySources.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignment will be
+      assigned.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedInventorySource}
+       * @return the request
+       */
+      public Create create(java.lang.Long inventorySourceGroupId, com.google.api.services.displayvideo.v1.model.AssignedInventorySource content) throws java.io.IOException {
+        Create result = new Create(inventorySourceGroupId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AssignedInventorySource> {
+
+        private static final String REST_PATH = "v1/inventorySourceGroups/{+inventorySourceGroupId}/assignedInventorySources";
+
+        private final java.util.regex.Pattern INVENTORY_SOURCE_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates an assignment between an inventory source and an inventory source group.
+         *
+         * Create a request for the method "assignedInventorySources.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignment will be
+      assigned.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedInventorySource}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long inventorySourceGroupId, com.google.api.services.displayvideo.v1.model.AssignedInventorySource content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.AssignedInventorySource.class);
+          this.inventorySourceGroupId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceGroupId, "Required parameter inventorySourceGroupId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the inventory source group to which the assignment will be assigned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long inventorySourceGroupId;
+
+        /** Required. The ID of the inventory source group to which the assignment will be assigned.
+         */
+        public java.lang.Long getInventorySourceGroupId() {
+          return inventorySourceGroupId;
+        }
+
+        /**
+         * Required. The ID of the inventory source group to which the assignment will be assigned.
+         */
+        public Create setInventorySourceGroupId(java.lang.Long inventorySourceGroupId) {
+          this.inventorySourceGroupId = inventorySourceGroupId;
+          return this;
+        }
+
+        /**
+         * The ID of the advertiser that owns the parent inventory source group.
+         *
+         * The parent partner will not have access to this assigned inventory source.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the parent inventory source group.
+
+       The parent partner will not have access to this assigned inventory source.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /**
+         * The ID of the advertiser that owns the parent inventory source group.
+         *
+         * The parent partner will not have access to this assigned inventory source.
+         */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * The ID of the partner that owns the parent inventory source group.
+         *
+         * Only this partner will have write access to this assigned inventory source.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the parent inventory source group.
+
+       Only this partner will have write access to this assigned inventory source.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * The ID of the partner that owns the parent inventory source group.
+         *
+         * Only this partner will have write access to this assigned inventory source.
+         */
+        public Create setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the assignment between an inventory source and an inventory source group.
+       *
+       * Create a request for the method "assignedInventorySources.delete".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which this assignment is assigned.
+       * @param assignedInventorySourceId Required. The ID of the assigned inventory source to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long inventorySourceGroupId, java.lang.Long assignedInventorySourceId) throws java.io.IOException {
+        Delete result = new Delete(inventorySourceGroupId, assignedInventorySourceId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/inventorySourceGroups/{+inventorySourceGroupId}/assignedInventorySources/{+assignedInventorySourceId}";
+
+        private final java.util.regex.Pattern INVENTORY_SOURCE_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern ASSIGNED_INVENTORY_SOURCE_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Deletes the assignment between an inventory source and an inventory source group.
+         *
+         * Create a request for the method "assignedInventorySources.delete".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which this assignment is assigned.
+         * @param assignedInventorySourceId Required. The ID of the assigned inventory source to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long inventorySourceGroupId, java.lang.Long assignedInventorySourceId) {
+          super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+          this.inventorySourceGroupId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceGroupId, "Required parameter inventorySourceGroupId must be specified.");
+          this.assignedInventorySourceId = com.google.api.client.util.Preconditions.checkNotNull(assignedInventorySourceId, "Required parameter assignedInventorySourceId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the inventory source group to which this assignment is assigned. */
+        @com.google.api.client.util.Key
+        private java.lang.Long inventorySourceGroupId;
+
+        /** Required. The ID of the inventory source group to which this assignment is assigned.
+         */
+        public java.lang.Long getInventorySourceGroupId() {
+          return inventorySourceGroupId;
+        }
+
+        /** Required. The ID of the inventory source group to which this assignment is assigned. */
+        public Delete setInventorySourceGroupId(java.lang.Long inventorySourceGroupId) {
+          this.inventorySourceGroupId = inventorySourceGroupId;
+          return this;
+        }
+
+        /** Required. The ID of the assigned inventory source to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.Long assignedInventorySourceId;
+
+        /** Required. The ID of the assigned inventory source to delete.
+         */
+        public java.lang.Long getAssignedInventorySourceId() {
+          return assignedInventorySourceId;
+        }
+
+        /** Required. The ID of the assigned inventory source to delete. */
+        public Delete setAssignedInventorySourceId(java.lang.Long assignedInventorySourceId) {
+          this.assignedInventorySourceId = assignedInventorySourceId;
+          return this;
+        }
+
+        /**
+         * The ID of the advertiser that owns the parent inventory source group.
+         *
+         * The parent partner does not have access to this assigned inventory source.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the parent inventory source group.
+
+       The parent partner does not have access to this assigned inventory source.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /**
+         * The ID of the advertiser that owns the parent inventory source group.
+         *
+         * The parent partner does not have access to this assigned inventory source.
+         */
+        public Delete setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * The ID of the partner that owns the parent inventory source group.
+         *
+         * Only this partner has write access to this assigned inventory source.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the parent inventory source group.
+
+       Only this partner has write access to this assigned inventory source.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * The ID of the partner that owns the parent inventory source group.
+         *
+         * Only this partner has write access to this assigned inventory source.
+         */
+        public Delete setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists inventory sources assigned to an inventory source group.
+       *
+       * Create a request for the method "assignedInventorySources.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which these assignments are
+      assigned.
+       * @return the request
+       */
+      public List list(java.lang.Long inventorySourceGroupId) throws java.io.IOException {
+        List result = new List(inventorySourceGroupId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListAssignedInventorySourcesResponse> {
+
+        private static final String REST_PATH = "v1/inventorySourceGroups/{+inventorySourceGroupId}/assignedInventorySources";
+
+        private final java.util.regex.Pattern INVENTORY_SOURCE_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists inventory sources assigned to an inventory source group.
+         *
+         * Create a request for the method "assignedInventorySources.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which these assignments are
+      assigned.
+         * @since 1.13
+         */
+        protected List(java.lang.Long inventorySourceGroupId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListAssignedInventorySourcesResponse.class);
+          this.inventorySourceGroupId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceGroupId, "Required parameter inventorySourceGroupId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the inventory source group to which these assignments are assigned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long inventorySourceGroupId;
+
+        /** Required. The ID of the inventory source group to which these assignments are assigned.
+         */
+        public java.lang.Long getInventorySourceGroupId() {
+          return inventorySourceGroupId;
+        }
+
+        /**
+         * Required. The ID of the inventory source group to which these assignments are assigned.
+         */
+        public List setInventorySourceGroupId(java.lang.Long inventorySourceGroupId) {
+          this.inventorySourceGroupId = inventorySourceGroupId;
+          return this;
+        }
+
+        /**
+         * The ID of the advertiser that has access to the assignment.
+         *
+         * If the parent inventory source group is partner-owned, only advertisers to which the
+         * parent group is explicitly shared can access the assigned inventory source.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that has access to the assignment.
+
+       If the parent inventory source group is partner-owned, only advertisers to which the parent group
+       is explicitly shared can access the assigned inventory source.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /**
+         * The ID of the advertiser that has access to the assignment.
+         *
+         * If the parent inventory source group is partner-owned, only advertisers to which the
+         * parent group is explicitly shared can access the assigned inventory source.
+         */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by assigned inventory source fields.
+         *
+         * Supported syntax:
+         *
+         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
+         * combined by the logical operator `OR`. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `assignedInventorySourceId`
+         *
+         * The length of this field should be no more than 500 characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by assigned inventory source fields.
+
+       Supported syntax:
+
+       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
+       logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
+       must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId`
+
+       The length of this field should be no more than 500 characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by assigned inventory source fields.
+         *
+         * Supported syntax:
+         *
+         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
+         * combined by the logical operator `OR`. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `assignedInventorySourceId`
+         *
+         * The length of this field should be no more than 500 characters.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are:
+         *
+         * * `assignedInventorySourceId` (default)
+         *
+         * The default sorting order is ascending. To specify descending order for a field, a suffix
+         * " desc" should be added to the field name. Example: `assignedInventorySourceId desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are:
+
+       * `assignedInventorySourceId` (default)
+
+       The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+       should be added to the field name. Example: `assignedInventorySourceId desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are:
+         *
+         * * `assignedInventorySourceId` (default)
+         *
+         * The default sorting order is ascending. To specify descending order for a field, a suffix
+         * " desc" should be added to the field name. Example: `assignedInventorySourceId desc`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+       error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return.
+         *
+         * Typically, this is the value of next_page_token returned from the previous call to
+         * `ListAssignedInventorySources` method. If not specified, the first page of results will
+         * be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return.
+
+       Typically, this is the value of next_page_token returned from the previous call to
+       `ListAssignedInventorySources` method. If not specified, the first page of results will be
+       returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return.
+         *
+         * Typically, this is the value of next_page_token returned from the previous call to
+         * `ListAssignedInventorySources` method. If not specified, the first page of results will
+         * be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The ID of the partner that has access to the assignment.
+         *
+         * If the parent inventory source group is advertiser-owned, the assignment cannot be
+         * accessed via a partner.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that has access to the assignment.
+
+       If the parent inventory source group is advertiser-owned, the assignment cannot be accessed via a
+       partner.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * The ID of the partner that has access to the assignment.
+         *
+         * If the parent inventory source group is advertiser-owned, the assignment cannot be
+         * accessed via a partner.
+         */
+        public List setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -12505,7 +17152,992 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a channel. Returns the updated channel if successful.
+       *
+       * Create a request for the method "channels.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param partnerId The ID of the partner that owns the created channel.
+       * @param channelId Output only. The unique ID of the channel. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.Channel}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Channel content) throws java.io.IOException {
+        Patch result = new Patch(partnerId, channelId, content);
+        initialize(result);
+        return result;
+      }
 
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Channel> {
+
+        private static final String REST_PATH = "v1/partners/{+partnerId}/channels/{channelId}";
+
+        private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates a channel. Returns the updated channel if successful.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param partnerId The ID of the partner that owns the created channel.
+         * @param channelId Output only. The unique ID of the channel. Assigned by the system.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.Channel}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Channel content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.Channel.class);
+          this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+          this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The ID of the partner that owns the created channel. */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the created channel.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /** The ID of the partner that owns the created channel. */
+        public Patch setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the channel. Assigned by the system. */
+        @com.google.api.client.util.Key
+        private java.lang.Long channelId;
+
+        /** Output only. The unique ID of the channel. Assigned by the system.
+         */
+        public java.lang.Long getChannelId() {
+          return channelId;
+        }
+
+        /** Output only. The unique ID of the channel. Assigned by the system. */
+        public Patch setChannelId(java.lang.Long channelId) {
+          this.channelId = channelId;
+          return this;
+        }
+
+        /** The ID of the advertiser that owns the created channel. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the created channel.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** The ID of the advertiser that owns the created channel. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Sites collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.Sites.List request = displayvideo.sites().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Sites sites() {
+        return new Sites();
+      }
+
+      /**
+       * The "sites" collection of methods.
+       */
+      public class Sites {
+
+        /**
+         * Bulk edits sites under a single channel.
+         *
+         * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
+         * create the sites provided in BulkEditSitesRequest.created_sites.
+         *
+         * Create a request for the method "sites.bulkEdit".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId The ID of the partner that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel to which the sites belong.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest}
+         * @return the request
+         */
+        public BulkEdit bulkEdit(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest content) throws java.io.IOException {
+          BulkEdit result = new BulkEdit(partnerId, channelId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkEdit extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditSitesResponse> {
+
+          private static final String REST_PATH = "v1/partners/{partnerId}/channels/{+channelId}/sites:bulkEdit";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Bulk edits sites under a single channel.
+           *
+           * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
+           * create the sites provided in BulkEditSitesRequest.created_sites.
+           *
+           * Create a request for the method "sites.bulkEdit".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId The ID of the partner that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel to which the sites belong.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest}
+           * @since 1.13
+           */
+          protected BulkEdit(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.BulkEditSitesRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditSitesResponse.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public BulkEdit set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkEdit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkEdit setAccessToken(java.lang.String accessToken) {
+            return (BulkEdit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkEdit setAlt(java.lang.String alt) {
+            return (BulkEdit) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkEdit setCallback(java.lang.String callback) {
+            return (BulkEdit) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkEdit setFields(java.lang.String fields) {
+            return (BulkEdit) super.setFields(fields);
+          }
+
+          @Override
+          public BulkEdit setKey(java.lang.String key) {
+            return (BulkEdit) super.setKey(key);
+          }
+
+          @Override
+          public BulkEdit setOauthToken(java.lang.String oauthToken) {
+            return (BulkEdit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkEdit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkEdit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkEdit setQuotaUser(java.lang.String quotaUser) {
+            return (BulkEdit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkEdit setUploadType(java.lang.String uploadType) {
+            return (BulkEdit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkEdit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkEdit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public BulkEdit setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel to which the sites belong. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel to which the sites belong.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel to which the sites belong. */
+          public BulkEdit setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          @Override
+          public BulkEdit set(String parameterName, Object value) {
+            return (BulkEdit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a site in a channel.
+         *
+         * Create a request for the method "sites.create".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId The ID of the partner that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel in which the site will be created.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.Site}
+         * @return the request
+         */
+        public Create create(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Site content) throws java.io.IOException {
+          Create result = new Create(partnerId, channelId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Site> {
+
+          private static final String REST_PATH = "v1/partners/{partnerId}/channels/{+channelId}/sites";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Creates a site in a channel.
+           *
+           * Create a request for the method "sites.create".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId The ID of the partner that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel in which the site will be created.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.Site}
+           * @since 1.13
+           */
+          protected Create(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.Site content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.Site.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public Create setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel in which the site will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel in which the site will be created.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel in which the site will be created. */
+          public Create setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public Create setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a site from a channel.
+         *
+         * Create a request for the method "sites.delete".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId The ID of the partner that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel to which the site belongs.
+         * @param urlOrAppId Required. The URL or app ID of the site to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.Long partnerId, java.lang.Long channelId, java.lang.String urlOrAppId) throws java.io.IOException {
+          Delete result = new Delete(partnerId, channelId, urlOrAppId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/partners/{partnerId}/channels/{+channelId}/sites/{+urlOrAppId}";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern URL_OR_APP_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Deletes a site from a channel.
+           *
+           * Create a request for the method "sites.delete".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId The ID of the partner that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel to which the site belongs.
+           * @param urlOrAppId Required. The URL or app ID of the site to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.Long partnerId, java.lang.Long channelId, java.lang.String urlOrAppId) {
+            super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+            this.urlOrAppId = com.google.api.client.util.Preconditions.checkNotNull(urlOrAppId, "Required parameter urlOrAppId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(URL_OR_APP_ID_PATTERN.matcher(urlOrAppId).matches(),
+                  "Parameter urlOrAppId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public Delete setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel to which the site belongs. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel to which the site belongs.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel to which the site belongs. */
+          public Delete setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /** Required. The URL or app ID of the site to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String urlOrAppId;
+
+          /** Required. The URL or app ID of the site to delete.
+           */
+          public java.lang.String getUrlOrAppId() {
+            return urlOrAppId;
+          }
+
+          /** Required. The URL or app ID of the site to delete. */
+          public Delete setUrlOrAppId(java.lang.String urlOrAppId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(URL_OR_APP_ID_PATTERN.matcher(urlOrAppId).matches(),
+                  "Parameter urlOrAppId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.urlOrAppId = urlOrAppId;
+            return this;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public Delete setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists sites in a channel.
+         *
+         * Create a request for the method "sites.list".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId The ID of the partner that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel to which the requested sites belong.
+         * @return the request
+         */
+        public List list(java.lang.Long partnerId, java.lang.Long channelId) throws java.io.IOException {
+          List result = new List(partnerId, channelId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListSitesResponse> {
+
+          private static final String REST_PATH = "v1/partners/{+partnerId}/channels/{+channelId}/sites";
+
+          private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Lists sites in a channel.
+           *
+           * Create a request for the method "sites.list".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId The ID of the partner that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel to which the requested sites belong.
+           * @since 1.13
+           */
+          protected List(java.lang.Long partnerId, java.lang.Long channelId) {
+            super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListSitesResponse.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public List setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel to which the requested sites belong. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel to which the requested sites belong.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel to which the requested sites belong. */
+          public List setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public List setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /**
+           * Allows filtering by site fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions for site currently can only contain at most one * restriction. * A
+           * restriction has the form of `{field} {operator} {value}`. * The operator must be
+           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
+           *
+           * Examples:
+           *
+           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering by site fields.
+
+         Supported syntax:
+
+         * Filter expressions for site currently can only contain at most one * restriction. * A restriction
+         has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
+         fields: - `urlOrAppId`
+
+         Examples:
+
+         * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering by site fields.
+           *
+           * Supported syntax:
+           *
+           * * Filter expressions for site currently can only contain at most one * restriction. * A
+           * restriction has the form of `{field} {operator} {value}`. * The operator must be
+           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
+           *
+           * Examples:
+           *
+           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `urlOrAppId` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Field by which to sort the list. Acceptable values are:
+
+         * `urlOrAppId` (default)
+
+         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+         should be added to the field name. Example: `urlOrAppId desc`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are:
+           *
+           * * `urlOrAppId` (default)
+           *
+           * The default sorting order is ascending. To specify descending order for a field, a
+           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+         error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListSites` method. If not specified, the first page of results will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return.
+
+         Typically, this is the value of next_page_token returned from the previous call to `ListSites`
+         method. If not specified, the first page of results will be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return.
+           *
+           * Typically, this is the value of next_page_token returned from the previous call to
+           * `ListSites` method. If not specified, the first page of results will be returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

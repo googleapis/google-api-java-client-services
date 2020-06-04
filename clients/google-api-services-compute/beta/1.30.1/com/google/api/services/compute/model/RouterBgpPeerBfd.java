@@ -32,8 +32,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   /**
    * The minimum interval, in milliseconds, between BFD control packets received from the peer
    * router. The actual value is negotiated between the two routers and is equal to the greater of
-   * this value and the transmit interval of the other router. If set, this value must be between
-   * 100 and 30000. The default is 300.
+   * this value and the transmit interval of the other router. Not currently available publicly. If
+   * set, this value must be between 100 and 30000. The default is 300.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   /**
    * The minimum interval, in milliseconds, between BFD control packets transmitted to the peer
    * router. The actual value is negotiated between the two routers and is equal to the greater of
-   * this value and the corresponding receive interval of the other router. If set, this value must
-   * be between 100 and 30000. The default is 300.
+   * this value and the corresponding receive interval of the other router. Not currently available
+   * publicly. If set, this value must be between 100 and 30000. The default is 300.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,17 +51,18 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
 
   /**
    * The number of consecutive BFD packets that must be missed before BFD declares that a peer is
-   * unavailable. If set, the value must be a value between 2 and 16. The default is 3.
+   * unavailable. Not currently available publicly. If set, the value must be a value between 2 and
+   * 16. The default is 3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long multiplier;
 
   /**
-   * The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will
-   * initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for
-   * the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
-   * disabled for this BGP peer. The default is PASSIVE.
+   * The BFD session initialization mode for this BGP peer. Not currently available publicly. If set
+   * to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE,
+   * the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer.
+   * If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +71,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   /**
    * The minimum interval, in milliseconds, between BFD control packets received from the peer
    * router. The actual value is negotiated between the two routers and is equal to the greater of
-   * this value and the transmit interval of the other router. If set, this value must be between
-   * 100 and 30000. The default is 300.
+   * this value and the transmit interval of the other router. Not currently available publicly. If
+   * set, this value must be between 100 and 30000. The default is 300.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinReceiveInterval() {
@@ -81,8 +82,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   /**
    * The minimum interval, in milliseconds, between BFD control packets received from the peer
    * router. The actual value is negotiated between the two routers and is equal to the greater of
-   * this value and the transmit interval of the other router. If set, this value must be between
-   * 100 and 30000. The default is 300.
+   * this value and the transmit interval of the other router. Not currently available publicly. If
+   * set, this value must be between 100 and 30000. The default is 300.
    * @param minReceiveInterval minReceiveInterval or {@code null} for none
    */
   public RouterBgpPeerBfd setMinReceiveInterval(java.lang.Long minReceiveInterval) {
@@ -93,8 +94,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   /**
    * The minimum interval, in milliseconds, between BFD control packets transmitted to the peer
    * router. The actual value is negotiated between the two routers and is equal to the greater of
-   * this value and the corresponding receive interval of the other router. If set, this value must
-   * be between 100 and 30000. The default is 300.
+   * this value and the corresponding receive interval of the other router. Not currently available
+   * publicly. If set, this value must be between 100 and 30000. The default is 300.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinTransmitInterval() {
@@ -104,8 +105,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   /**
    * The minimum interval, in milliseconds, between BFD control packets transmitted to the peer
    * router. The actual value is negotiated between the two routers and is equal to the greater of
-   * this value and the corresponding receive interval of the other router. If set, this value must
-   * be between 100 and 30000. The default is 300.
+   * this value and the corresponding receive interval of the other router. Not currently available
+   * publicly. If set, this value must be between 100 and 30000. The default is 300.
    * @param minTransmitInterval minTransmitInterval or {@code null} for none
    */
   public RouterBgpPeerBfd setMinTransmitInterval(java.lang.Long minTransmitInterval) {
@@ -115,7 +116,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
 
   /**
    * The number of consecutive BFD packets that must be missed before BFD declares that a peer is
-   * unavailable. If set, the value must be a value between 2 and 16. The default is 3.
+   * unavailable. Not currently available publicly. If set, the value must be a value between 2 and
+   * 16. The default is 3.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMultiplier() {
@@ -124,7 +126,8 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
 
   /**
    * The number of consecutive BFD packets that must be missed before BFD declares that a peer is
-   * unavailable. If set, the value must be a value between 2 and 16. The default is 3.
+   * unavailable. Not currently available publicly. If set, the value must be a value between 2 and
+   * 16. The default is 3.
    * @param multiplier multiplier or {@code null} for none
    */
   public RouterBgpPeerBfd setMultiplier(java.lang.Long multiplier) {
@@ -133,10 +136,10 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will
-   * initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for
-   * the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
-   * disabled for this BGP peer. The default is PASSIVE.
+   * The BFD session initialization mode for this BGP peer. Not currently available publicly. If set
+   * to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE,
+   * the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer.
+   * If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionInitializationMode() {
@@ -144,10 +147,10 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will
-   * initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for
-   * the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
-   * disabled for this BGP peer. The default is PASSIVE.
+   * The BFD session initialization mode for this BGP peer. Not currently available publicly. If set
+   * to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE,
+   * the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer.
+   * If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.
    * @param sessionInitializationMode sessionInitializationMode or {@code null} for none
    */
   public RouterBgpPeerBfd setSessionInitializationMode(java.lang.String sessionInitializationMode) {

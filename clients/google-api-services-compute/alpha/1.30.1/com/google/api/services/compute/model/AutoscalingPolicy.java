@@ -91,13 +91,6 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String mode;
 
   /**
-   * Configuration parameters of autoscaling based on queuing system.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AutoscalingPolicyQueueBasedScaling queueBasedScaling;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,23 +242,6 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setMode(java.lang.String mode) {
     this.mode = mode;
-    return this;
-  }
-
-  /**
-   * Configuration parameters of autoscaling based on queuing system.
-   * @return value or {@code null} for none
-   */
-  public AutoscalingPolicyQueueBasedScaling getQueueBasedScaling() {
-    return queueBasedScaling;
-  }
-
-  /**
-   * Configuration parameters of autoscaling based on queuing system.
-   * @param queueBasedScaling queueBasedScaling or {@code null} for none
-   */
-  public AutoscalingPolicy setQueueBasedScaling(AutoscalingPolicyQueueBasedScaling queueBasedScaling) {
-    this.queueBasedScaling = queueBasedScaling;
     return this;
   }
 

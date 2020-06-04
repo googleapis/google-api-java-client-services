@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/rgSkg8lMwYWw6t8zxIovlBT9JjA\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/FiH_aMQt7tU2fE5Yx34MqPm9md8\"",
  "discoveryVersion": "v1",
  "id": "content:v2",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2",
- "revision": "20200421",
+ "revision": "20200526",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -3529,6 +3529,10 @@
       "$ref": "OrderShipmentLineItemShipment"
      }
     },
+    "scheduledDeliveryDetails": {
+     "$ref": "OrderShipmentScheduledDeliveryDetails",
+     "description": "Delivery details of the shipment if scheduling is needed."
+    },
     "status": {
      "type": "string",
      "description": "The status of the shipment.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`readyForPickup`\" \n- \"`shipped`\" \n- \"`undeliverable`\""
@@ -3555,6 +3559,20 @@
      "type": "integer",
      "description": "The quantity that is shipped.",
      "format": "uint32"
+    }
+   }
+  },
+  "OrderShipmentScheduledDeliveryDetails": {
+   "id": "OrderShipmentScheduledDeliveryDetails",
+   "type": "object",
+   "properties": {
+    "carrierPhoneNumber": {
+     "type": "string",
+     "description": "The phone number of the carrier fulfilling the delivery."
+    },
+    "scheduledDate": {
+     "type": "string",
+     "description": "The date a shipment is scheduled for delivery, in ISO 8601 format."
     }
    }
   },
@@ -6715,7 +6733,7 @@
     },
     "state": {
      "type": "string",
-     "description": "State of the shipment.\n\nAcceptable values are:  \n- \"`completed`\" \n- \"`new`\" \n- \"`shipped`\" \n- \"`undeliverable`\""
+     "description": "State of the shipment.\n\nAcceptable values are:  \n- \"`completed`\" \n- \"`new`\" \n- \"`shipped`\" \n- \"`undeliverable`\" \n- \"`pending`\""
     }
    }
   },
@@ -9672,7 +9690,7 @@
      "id": "content.orders.returnrefundlineitem",
      "path": "{merchantId}/orders/{orderId}/returnRefundLineItem",
      "httpMethod": "POST",
-     "description": "Returns and refunds a line item. Note that this method can only be called on fully shipped orders.",
+     "description": "Returns and refunds a line item. Note that this method can only be called on fully shipped orders. Please also note that the Orderreturns API is the preferred way to handle returns after you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot be found, then we recommend using this API to issue a refund.",
      "parameters": {
       "merchantId": {
        "type": "string",

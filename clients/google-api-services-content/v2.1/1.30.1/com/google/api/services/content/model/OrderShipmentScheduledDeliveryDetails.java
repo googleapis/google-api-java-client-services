@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for ProductStatusDestinationStatus.
+ * Model definition for OrderShipmentScheduledDeliveryDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductStatusDestinationStatus extends com.google.api.client.json.GenericJson {
+public final class OrderShipmentScheduledDeliveryDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the destination
+   * The phone number of the carrier fulfilling the delivery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String destination;
+  private java.lang.String carrierPhoneNumber;
 
   /**
-   * Destination approval status in targetCountry of the offer.
+   * The date a shipment is scheduled for delivery, in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String status;
+  private java.lang.String scheduledDate;
 
   /**
-   * The name of the destination
+   * The phone number of the carrier fulfilling the delivery.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDestination() {
-    return destination;
+  public java.lang.String getCarrierPhoneNumber() {
+    return carrierPhoneNumber;
   }
 
   /**
-   * The name of the destination
-   * @param destination destination or {@code null} for none
+   * The phone number of the carrier fulfilling the delivery.
+   * @param carrierPhoneNumber carrierPhoneNumber or {@code null} for none
    */
-  public ProductStatusDestinationStatus setDestination(java.lang.String destination) {
-    this.destination = destination;
+  public OrderShipmentScheduledDeliveryDetails setCarrierPhoneNumber(java.lang.String carrierPhoneNumber) {
+    this.carrierPhoneNumber = carrierPhoneNumber;
     return this;
   }
 
   /**
-   * Destination approval status in targetCountry of the offer.
+   * The date a shipment is scheduled for delivery, in ISO 8601 format.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStatus() {
-    return status;
+  public java.lang.String getScheduledDate() {
+    return scheduledDate;
   }
 
   /**
-   * Destination approval status in targetCountry of the offer.
-   * @param status status or {@code null} for none
+   * The date a shipment is scheduled for delivery, in ISO 8601 format.
+   * @param scheduledDate scheduledDate or {@code null} for none
    */
-  public ProductStatusDestinationStatus setStatus(java.lang.String status) {
-    this.status = status;
+  public OrderShipmentScheduledDeliveryDetails setScheduledDate(java.lang.String scheduledDate) {
+    this.scheduledDate = scheduledDate;
     return this;
   }
 
   @Override
-  public ProductStatusDestinationStatus set(String fieldName, Object value) {
-    return (ProductStatusDestinationStatus) super.set(fieldName, value);
+  public OrderShipmentScheduledDeliveryDetails set(String fieldName, Object value) {
+    return (OrderShipmentScheduledDeliveryDetails) super.set(fieldName, value);
   }
 
   @Override
-  public ProductStatusDestinationStatus clone() {
-    return (ProductStatusDestinationStatus) super.clone();
+  public OrderShipmentScheduledDeliveryDetails clone() {
+    return (OrderShipmentScheduledDeliveryDetails) super.clone();
   }
 
 }

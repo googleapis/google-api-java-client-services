@@ -8413,7 +8413,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
     /**
      * Returns and refunds a line item. Note that this method can only be called on fully shipped
-     * orders.
+     * orders. Please also note that the Orderreturns API is the preferred way to handle returns after
+     * you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search
+     * for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot
+     * be found, then we recommend using this API to issue a refund.
      *
      * Create a request for the method "orders.returnrefundlineitem".
      *
@@ -8438,7 +8441,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Returns and refunds a line item. Note that this method can only be called on fully shipped
-       * orders.
+       * orders. Please also note that the Orderreturns API is the preferred way to handle returns after
+       * you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to
+       * search for the return, and then use Orderreturns.processreturn to issue the refund. If the
+       * return cannot be found, then we recommend using this API to issue a refund.
        *
        * Create a request for the method "orders.returnrefundlineitem".
        *

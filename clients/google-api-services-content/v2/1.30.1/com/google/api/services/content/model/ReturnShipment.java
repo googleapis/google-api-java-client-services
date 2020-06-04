@@ -78,7 +78,8 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
   /**
    * State of the shipment.
    *
-   * Acceptable values are:   - "`completed`"  - "`new`"  - "`shipped`"  - "`undeliverable`"
+   * Acceptable values are:   - "`completed`"  - "`new`"  - "`shipped`"  - "`undeliverable`"  -
+   * "`pending`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +196,8 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
   /**
    * State of the shipment.
    *
-   * Acceptable values are:   - "`completed`"  - "`new`"  - "`shipped`"  - "`undeliverable`"
+   * Acceptable values are:   - "`completed`"  - "`new`"  - "`shipped`"  - "`undeliverable`"  -
+   * "`pending`"
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -205,7 +207,8 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
   /**
    * State of the shipment.
    *
-   * Acceptable values are:   - "`completed`"  - "`new`"  - "`shipped`"  - "`undeliverable`"
+   * Acceptable values are:   - "`completed`"  - "`new`"  - "`shipped`"  - "`undeliverable`"  -
+   * "`pending`"
    * @param state state or {@code null} for none
    */
   public ReturnShipment setState(java.lang.String state) {

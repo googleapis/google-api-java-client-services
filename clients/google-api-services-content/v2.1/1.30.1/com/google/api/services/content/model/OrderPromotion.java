@@ -31,15 +31,18 @@ package com.google.api.services.content.model;
 public final class OrderPromotion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Items which this promotion may be applied to. If empty, there are no restrictions on applicable
-   * items and quantity.
+   * Items that this promotion may be applied to. If empty, there are no restrictions on applicable
+   * items and quantity. This field will also be empty for shipping promotions because shipping is
+   * not tied to any specific item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OrderPromotionItem> applicableItems;
 
   /**
-   * Items which this promotion have been applied to. Do not provide for `orders.createtestorder`.
+   * Items that this promotion have been applied to. Do not provide for `orders.createtestorder`.
+   * This field will be empty for shipping promotions because shipping is not tied to any specific
+   * item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +135,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
-   * Items which this promotion may be applied to. If empty, there are no restrictions on applicable
-   * items and quantity.
+   * Items that this promotion may be applied to. If empty, there are no restrictions on applicable
+   * items and quantity. This field will also be empty for shipping promotions because shipping is
+   * not tied to any specific item.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderPromotionItem> getApplicableItems() {
@@ -141,8 +145,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion may be applied to. If empty, there are no restrictions on applicable
-   * items and quantity.
+   * Items that this promotion may be applied to. If empty, there are no restrictions on applicable
+   * items and quantity. This field will also be empty for shipping promotions because shipping is
+   * not tied to any specific item.
    * @param applicableItems applicableItems or {@code null} for none
    */
   public OrderPromotion setApplicableItems(java.util.List<OrderPromotionItem> applicableItems) {
@@ -151,7 +156,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion have been applied to. Do not provide for `orders.createtestorder`.
+   * Items that this promotion have been applied to. Do not provide for `orders.createtestorder`.
+   * This field will be empty for shipping promotions because shipping is not tied to any specific
+   * item.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderPromotionItem> getAppliedItems() {
@@ -159,7 +166,9 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion have been applied to. Do not provide for `orders.createtestorder`.
+   * Items that this promotion have been applied to. Do not provide for `orders.createtestorder`.
+   * This field will be empty for shipping promotions because shipping is not tied to any specific
+   * item.
    * @param appliedItems appliedItems or {@code null} for none
    */
   public OrderPromotion setAppliedItems(java.util.List<OrderPromotionItem> appliedItems) {

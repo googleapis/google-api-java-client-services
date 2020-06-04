@@ -88,6 +88,13 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   private java.util.List<OrderShipmentLineItemShipment> lineItems;
 
   /**
+   * Delivery details of the shipment if scheduling is needed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OrderShipmentScheduledDeliveryDetails scheduledDeliveryDetails;
+
+  /**
    * The shipment group ID of the shipment. This is set in shiplineitems request.
    * The value may be {@code null}.
    */
@@ -237,6 +244,23 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    */
   public OrderShipment setLineItems(java.util.List<OrderShipmentLineItemShipment> lineItems) {
     this.lineItems = lineItems;
+    return this;
+  }
+
+  /**
+   * Delivery details of the shipment if scheduling is needed.
+   * @return value or {@code null} for none
+   */
+  public OrderShipmentScheduledDeliveryDetails getScheduledDeliveryDetails() {
+    return scheduledDeliveryDetails;
+  }
+
+  /**
+   * Delivery details of the shipment if scheduling is needed.
+   * @param scheduledDeliveryDetails scheduledDeliveryDetails or {@code null} for none
+   */
+  public OrderShipment setScheduledDeliveryDetails(OrderShipmentScheduledDeliveryDetails scheduledDeliveryDetails) {
+    this.scheduledDeliveryDetails = scheduledDeliveryDetails;
     return this;
   }
 

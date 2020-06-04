@@ -273,6 +273,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MaintenancePolicy maintenancePolicy;
 
   /**
+   * Configuration for master components.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Master master;
+
+  /**
    * The authentication information for accessing the master endpoint. If unspecified, the defaults
    * are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to
    * "admin", a random password will be generated, and a client certificate will be issued.
@@ -1072,6 +1079,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
     this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Configuration for master components.
+   * @return value or {@code null} for none
+   */
+  public Master getMaster() {
+    return master;
+  }
+
+  /**
+   * Configuration for master components.
+   * @param master master or {@code null} for none
+   */
+  public Cluster setMaster(Master master) {
+    this.master = master;
     return this;
   }
 

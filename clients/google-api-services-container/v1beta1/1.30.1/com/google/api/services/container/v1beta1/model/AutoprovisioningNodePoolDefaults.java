@@ -50,16 +50,14 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String minCpuPlatform;
 
   /**
-   * Scopes that are used by NAP when creating node pools. If oauth_scopes are specified,
-   * service_account should be empty.
+   * Scopes that are used by NAP when creating node pools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> oauthScopes;
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs. If service_account is
-   * specified, scopes should be empty.
+   * The Google Cloud Platform Service Account to be used by the node VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +115,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Scopes that are used by NAP when creating node pools. If oauth_scopes are specified,
-   * service_account should be empty.
+   * Scopes that are used by NAP when creating node pools.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -126,8 +123,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Scopes that are used by NAP when creating node pools. If oauth_scopes are specified,
-   * service_account should be empty.
+   * Scopes that are used by NAP when creating node pools.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setOauthScopes(java.util.List<java.lang.String> oauthScopes) {
@@ -136,8 +132,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs. If service_account is
-   * specified, scopes should be empty.
+   * The Google Cloud Platform Service Account to be used by the node VMs.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -145,8 +140,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs. If service_account is
-   * specified, scopes should be empty.
+   * The Google Cloud Platform Service Account to be used by the node VMs.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setServiceAccount(java.lang.String serviceAccount) {

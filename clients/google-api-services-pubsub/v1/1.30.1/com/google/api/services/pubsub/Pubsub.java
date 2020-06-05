@@ -1945,6 +1945,146 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Detaches a subscription from this topic. All messages retained in the subscription are dropped.
+       * Subsequent `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the
+       * subscription is a push subscription, pushes to the endpoint will stop.
+       *
+       * Create a request for the method "subscriptions.detach".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Detach#execute()} method to invoke the remote operation.
+       *
+       * @param subscription Required. The subscription to detach.
+      Format is `projects/{project}/subscriptions/{subscription}`.
+       * @return the request
+       */
+      public Detach detach(java.lang.String subscription) throws java.io.IOException {
+        Detach result = new Detach(subscription);
+        initialize(result);
+        return result;
+      }
+
+      public class Detach extends PubsubRequest<com.google.api.services.pubsub.model.DetachSubscriptionResponse> {
+
+        private static final String REST_PATH = "v1/{+subscription}:detach";
+
+        private final java.util.regex.Pattern SUBSCRIPTION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/subscriptions/[^/]+$");
+
+        /**
+         * Detaches a subscription from this topic. All messages retained in the subscription are dropped.
+         * Subsequent `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the
+         * subscription is a push subscription, pushes to the endpoint will stop.
+         *
+         * Create a request for the method "subscriptions.detach".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Detach#execute()} method to invoke the remote operation. <p> {@link
+         * Detach#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param subscription Required. The subscription to detach.
+      Format is `projects/{project}/subscriptions/{subscription}`.
+         * @since 1.13
+         */
+        protected Detach(java.lang.String subscription) {
+          super(Pubsub.this, "POST", REST_PATH, null, com.google.api.services.pubsub.model.DetachSubscriptionResponse.class);
+          this.subscription = com.google.api.client.util.Preconditions.checkNotNull(subscription, "Required parameter subscription must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
+                "Parameter subscription must conform to the pattern " +
+                "^projects/[^/]+/subscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Detach set$Xgafv(java.lang.String $Xgafv) {
+          return (Detach) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Detach setAccessToken(java.lang.String accessToken) {
+          return (Detach) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Detach setAlt(java.lang.String alt) {
+          return (Detach) super.setAlt(alt);
+        }
+
+        @Override
+        public Detach setCallback(java.lang.String callback) {
+          return (Detach) super.setCallback(callback);
+        }
+
+        @Override
+        public Detach setFields(java.lang.String fields) {
+          return (Detach) super.setFields(fields);
+        }
+
+        @Override
+        public Detach setKey(java.lang.String key) {
+          return (Detach) super.setKey(key);
+        }
+
+        @Override
+        public Detach setOauthToken(java.lang.String oauthToken) {
+          return (Detach) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Detach setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Detach) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Detach setQuotaUser(java.lang.String quotaUser) {
+          return (Detach) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Detach setUploadType(java.lang.String uploadType) {
+          return (Detach) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Detach setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Detach) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The subscription to detach. Format is
+         * `projects/{project}/subscriptions/{subscription}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String subscription;
+
+        /** Required. The subscription to detach. Format is `projects/{project}/subscriptions/{subscription}`.
+         */
+        public java.lang.String getSubscription() {
+          return subscription;
+        }
+
+        /**
+         * Required. The subscription to detach. Format is
+         * `projects/{project}/subscriptions/{subscription}`.
+         */
+        public Detach setSubscription(java.lang.String subscription) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
+                "Parameter subscription must conform to the pattern " +
+                "^projects/[^/]+/subscriptions/[^/]+$");
+          }
+          this.subscription = subscription;
+          return this;
+        }
+
+        @Override
+        public Detach set(String parameterName, Object value) {
+          return (Detach) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the configuration details of a subscription.
        *
        * Create a request for the method "subscriptions.get".
@@ -5204,7 +5344,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       public class Subscriptions {
 
         /**
-         * Lists the names of the subscriptions on this topic.
+         * Lists the names of the attached subscriptions on this topic.
          *
          * Create a request for the method "subscriptions.list".
          *
@@ -5230,7 +5370,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/topics/[^/]+$");
 
           /**
-           * Lists the names of the subscriptions on this topic.
+           * Lists the names of the attached subscriptions on this topic.
            *
            * Create a request for the method "subscriptions.list".
            *

@@ -130,6 +130,13 @@ public final class Name extends com.google.api.client.json.GenericJson {
   private java.lang.String phoneticMiddleName;
 
   /**
+   * The free form name value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unstructuredName;
+
+  /**
    * Output only. The display name formatted according to the locale specified by the viewer's
    * account or the `Accept-Language` HTTP header.
    * @return value or {@code null} for none
@@ -368,6 +375,23 @@ public final class Name extends com.google.api.client.json.GenericJson {
    */
   public Name setPhoneticMiddleName(java.lang.String phoneticMiddleName) {
     this.phoneticMiddleName = phoneticMiddleName;
+    return this;
+  }
+
+  /**
+   * The free form name value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnstructuredName() {
+    return unstructuredName;
+  }
+
+  /**
+   * The free form name value.
+   * @param unstructuredName unstructuredName or {@code null} for none
+   */
+  public Name setUnstructuredName(java.lang.String unstructuredName) {
+    this.unstructuredName = unstructuredName;
     return this;
   }
 

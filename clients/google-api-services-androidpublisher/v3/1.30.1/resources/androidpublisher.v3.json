@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/JGLPV1zqOHPwqh54vY170XqwJ98\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/944s_nQUBB2zQT_SQbdy8UnEiHI\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v3",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v3",
- "revision": "20200526",
+ "revision": "20200602",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -603,6 +603,10 @@
     "purchaseType": {
      "type": "string",
      "description": "Purchase type enum value. Unmodifiable after creation."
+    },
+    "resubscribeEligibility": {
+     "type": "string",
+     "description": "Whether or not the developer wants the specific subscription to be resubscribable. If the developer doesn't use PBL2.0, this value is ignored since the feature is only for developers using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from the subscription center by clicking on a \"Resubscribe\" CTA under the entry for the expired subscription."
     },
     "sku": {
      "type": "string",

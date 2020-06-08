@@ -53,6 +53,16 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
   private java.lang.String locationId;
 
   /**
+   * The pickup type of this order.
+   *
+   * Acceptable values are:   - "`merchantStore`"  - "`merchantStoreCurbside`"  -
+   * "`merchantStoreLocker`"  - "`thirdPartyPickupPoint`"  - "`thirdPartyLocker`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pickupType;
+
+  /**
    * Address of the pickup location where the shipment should be sent. Note that `recipientName` in
    * the address is the name of the business at the pickup location.
    * @return value or {@code null} for none
@@ -102,6 +112,29 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
    */
   public OrderPickupDetails setLocationId(java.lang.String locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * The pickup type of this order.
+   *
+   * Acceptable values are:   - "`merchantStore`"  - "`merchantStoreCurbside`"  -
+   * "`merchantStoreLocker`"  - "`thirdPartyPickupPoint`"  - "`thirdPartyLocker`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPickupType() {
+    return pickupType;
+  }
+
+  /**
+   * The pickup type of this order.
+   *
+   * Acceptable values are:   - "`merchantStore`"  - "`merchantStoreCurbside`"  -
+   * "`merchantStoreLocker`"  - "`thirdPartyPickupPoint`"  - "`thirdPartyLocker`"
+   * @param pickupType pickupType or {@code null} for none
+   */
+  public OrderPickupDetails setPickupType(java.lang.String pickupType) {
+    this.pickupType = pickupType;
     return this;
   }
 

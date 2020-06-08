@@ -47,11 +47,27 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   private java.lang.String deliveryDate;
 
   /**
+   * Date after which the pickup will expire, in ISO 8601 format. Required only when order is buy-
+   * online-pickup-in-store(BOPIS) and `status` is `ready for pickup`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastPickupDate;
+
+  /**
    * The ID of the operation. Unique across all operations for a given order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operationId;
+
+  /**
+   * Date on which the shipment has been ready for pickup, in ISO 8601 format. Optional and can be
+   * provided only if `status` is `ready for pickup`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readyPickupDate;
 
   /**
    * The ID of the shipment.
@@ -63,7 +79,7 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   /**
    * New status for the shipment. Not updated if missing.
    *
-   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"
+   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"  - "`readyForPickup`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,6 +91,14 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingId;
+
+  /**
+   * Date on which the shipment has been undeliverable, in ISO 8601 format. Optional and can be
+   * provided only if `status` is `undeliverable`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String undeliveredDate;
 
   /**
    * The carrier handling the shipment. Not updated if missing. See `shipments[].carrier` in the
@@ -115,6 +139,25 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   }
 
   /**
+   * Date after which the pickup will expire, in ISO 8601 format. Required only when order is buy-
+   * online-pickup-in-store(BOPIS) and `status` is `ready for pickup`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastPickupDate() {
+    return lastPickupDate;
+  }
+
+  /**
+   * Date after which the pickup will expire, in ISO 8601 format. Required only when order is buy-
+   * online-pickup-in-store(BOPIS) and `status` is `ready for pickup`.
+   * @param lastPickupDate lastPickupDate or {@code null} for none
+   */
+  public OrdersUpdateShipmentRequest setLastPickupDate(java.lang.String lastPickupDate) {
+    this.lastPickupDate = lastPickupDate;
+    return this;
+  }
+
+  /**
    * The ID of the operation. Unique across all operations for a given order.
    * @return value or {@code null} for none
    */
@@ -128,6 +171,25 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
    */
   public OrdersUpdateShipmentRequest setOperationId(java.lang.String operationId) {
     this.operationId = operationId;
+    return this;
+  }
+
+  /**
+   * Date on which the shipment has been ready for pickup, in ISO 8601 format. Optional and can be
+   * provided only if `status` is `ready for pickup`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReadyPickupDate() {
+    return readyPickupDate;
+  }
+
+  /**
+   * Date on which the shipment has been ready for pickup, in ISO 8601 format. Optional and can be
+   * provided only if `status` is `ready for pickup`.
+   * @param readyPickupDate readyPickupDate or {@code null} for none
+   */
+  public OrdersUpdateShipmentRequest setReadyPickupDate(java.lang.String readyPickupDate) {
+    this.readyPickupDate = readyPickupDate;
     return this;
   }
 
@@ -151,7 +213,7 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   /**
    * New status for the shipment. Not updated if missing.
    *
-   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"
+   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"  - "`readyForPickup`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -161,7 +223,7 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   /**
    * New status for the shipment. Not updated if missing.
    *
-   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"
+   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"  - "`readyForPickup`"
    * @param status status or {@code null} for none
    */
   public OrdersUpdateShipmentRequest setStatus(java.lang.String status) {
@@ -183,6 +245,25 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
    */
   public OrdersUpdateShipmentRequest setTrackingId(java.lang.String trackingId) {
     this.trackingId = trackingId;
+    return this;
+  }
+
+  /**
+   * Date on which the shipment has been undeliverable, in ISO 8601 format. Optional and can be
+   * provided only if `status` is `undeliverable`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUndeliveredDate() {
+    return undeliveredDate;
+  }
+
+  /**
+   * Date on which the shipment has been undeliverable, in ISO 8601 format. Optional and can be
+   * provided only if `status` is `undeliverable`.
+   * @param undeliveredDate undeliveredDate or {@code null} for none
+   */
+  public OrdersUpdateShipmentRequest setUndeliveredDate(java.lang.String undeliveredDate) {
+    this.undeliveredDate = undeliveredDate;
     return this;
   }
 

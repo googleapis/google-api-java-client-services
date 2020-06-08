@@ -8294,6 +8294,240 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Issues a partial or total refund for items and shipment.
+     *
+     * Create a request for the method "orders.refunditem".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Refunditem#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param orderId The ID of the order to refund.
+     * @param content the {@link com.google.api.services.content.model.OrdersRefundItemRequest}
+     * @return the request
+     */
+    public Refunditem refunditem(java.math.BigInteger merchantId, java.lang.String orderId, com.google.api.services.content.model.OrdersRefundItemRequest content) throws java.io.IOException {
+      Refunditem result = new Refunditem(merchantId, orderId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Refunditem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRefundItemResponse> {
+
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/refunditem";
+
+      /**
+       * Issues a partial or total refund for items and shipment.
+       *
+       * Create a request for the method "orders.refunditem".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Refunditem#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Refunditem#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param orderId The ID of the order to refund.
+       * @param content the {@link com.google.api.services.content.model.OrdersRefundItemRequest}
+       * @since 1.13
+       */
+      protected Refunditem(java.math.BigInteger merchantId, java.lang.String orderId, com.google.api.services.content.model.OrdersRefundItemRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.OrdersRefundItemResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.orderId = com.google.api.client.util.Preconditions.checkNotNull(orderId, "Required parameter orderId must be specified.");
+      }
+
+      @Override
+      public Refunditem setAlt(java.lang.String alt) {
+        return (Refunditem) super.setAlt(alt);
+      }
+
+      @Override
+      public Refunditem setFields(java.lang.String fields) {
+        return (Refunditem) super.setFields(fields);
+      }
+
+      @Override
+      public Refunditem setKey(java.lang.String key) {
+        return (Refunditem) super.setKey(key);
+      }
+
+      @Override
+      public Refunditem setOauthToken(java.lang.String oauthToken) {
+        return (Refunditem) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Refunditem setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Refunditem) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Refunditem setQuotaUser(java.lang.String quotaUser) {
+        return (Refunditem) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Refunditem setUserIp(java.lang.String userIp) {
+        return (Refunditem) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      public Refunditem setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the order to refund. */
+      @com.google.api.client.util.Key
+      private java.lang.String orderId;
+
+      /** The ID of the order to refund.
+       */
+      public java.lang.String getOrderId() {
+        return orderId;
+      }
+
+      /** The ID of the order to refund. */
+      public Refunditem setOrderId(java.lang.String orderId) {
+        this.orderId = orderId;
+        return this;
+      }
+
+      @Override
+      public Refunditem set(String parameterName, Object value) {
+        return (Refunditem) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Issues a partial or total refund for an order.
+     *
+     * Create a request for the method "orders.refundorder".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Refundorder#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param orderId The ID of the order to refund.
+     * @param content the {@link com.google.api.services.content.model.OrdersRefundOrderRequest}
+     * @return the request
+     */
+    public Refundorder refundorder(java.math.BigInteger merchantId, java.lang.String orderId, com.google.api.services.content.model.OrdersRefundOrderRequest content) throws java.io.IOException {
+      Refundorder result = new Refundorder(merchantId, orderId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Refundorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRefundOrderResponse> {
+
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/refundorder";
+
+      /**
+       * Issues a partial or total refund for an order.
+       *
+       * Create a request for the method "orders.refundorder".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Refundorder#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Refundorder#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param orderId The ID of the order to refund.
+       * @param content the {@link com.google.api.services.content.model.OrdersRefundOrderRequest}
+       * @since 1.13
+       */
+      protected Refundorder(java.math.BigInteger merchantId, java.lang.String orderId, com.google.api.services.content.model.OrdersRefundOrderRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.OrdersRefundOrderResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.orderId = com.google.api.client.util.Preconditions.checkNotNull(orderId, "Required parameter orderId must be specified.");
+      }
+
+      @Override
+      public Refundorder setAlt(java.lang.String alt) {
+        return (Refundorder) super.setAlt(alt);
+      }
+
+      @Override
+      public Refundorder setFields(java.lang.String fields) {
+        return (Refundorder) super.setFields(fields);
+      }
+
+      @Override
+      public Refundorder setKey(java.lang.String key) {
+        return (Refundorder) super.setKey(key);
+      }
+
+      @Override
+      public Refundorder setOauthToken(java.lang.String oauthToken) {
+        return (Refundorder) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Refundorder setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Refundorder) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Refundorder setQuotaUser(java.lang.String quotaUser) {
+        return (Refundorder) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Refundorder setUserIp(java.lang.String userIp) {
+        return (Refundorder) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      public Refundorder setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the order to refund. */
+      @com.google.api.client.util.Key
+      private java.lang.String orderId;
+
+      /** The ID of the order to refund.
+       */
+      public java.lang.String getOrderId() {
+        return orderId;
+      }
+
+      /** The ID of the order to refund. */
+      public Refundorder setOrderId(java.lang.String orderId) {
+        this.orderId = orderId;
+        return this;
+      }
+
+      @Override
+      public Refundorder set(String parameterName, Object value) {
+        return (Refundorder) super.set(parameterName, value);
+      }
+    }
+    /**
      * Rejects return on an line item.
      *
      * Create a request for the method "orders.rejectreturnlineitem".

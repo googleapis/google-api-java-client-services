@@ -45,6 +45,14 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   private OrderLineItemShippingDetailsMethod method;
 
   /**
+   * The promised time in minutes in which the order will be ready for pickup. This only applies to
+   * buy-online-pickup-in-store same-day order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long pickupPromiseInMinutes;
+
+  /**
    * Required. The ship by date, in ISO 8601 format.
    * The value may be {@code null}.
    */
@@ -92,6 +100,25 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
    */
   public OrderLineItemShippingDetails setMethod(OrderLineItemShippingDetailsMethod method) {
     this.method = method;
+    return this;
+  }
+
+  /**
+   * The promised time in minutes in which the order will be ready for pickup. This only applies to
+   * buy-online-pickup-in-store same-day order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPickupPromiseInMinutes() {
+    return pickupPromiseInMinutes;
+  }
+
+  /**
+   * The promised time in minutes in which the order will be ready for pickup. This only applies to
+   * buy-online-pickup-in-store same-day order.
+   * @param pickupPromiseInMinutes pickupPromiseInMinutes or {@code null} for none
+   */
+  public OrderLineItemShippingDetails setPickupPromiseInMinutes(java.lang.Long pickupPromiseInMinutes) {
+    this.pickupPromiseInMinutes = pickupPromiseInMinutes;
     return this;
   }
 

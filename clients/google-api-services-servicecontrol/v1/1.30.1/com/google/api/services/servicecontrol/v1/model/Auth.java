@@ -47,10 +47,10 @@ public final class Auth extends com.google.api.client.json.GenericJson {
    * claim within a JWT. The audience value(s) depends on the `issuer`, but typically include one or
    * more of the following pieces of information:
    *
-   * *  The services intended to receive the credential such as    ["pubsub.googleapis.com",
-   * "storage.googleapis.com"] *  A set of service-based scopes. For example,
-   * ["https://www.googleapis.com/auth/cloud-platform"] *  The client id of an app, such as the
-   * Firebase project id for JWTs    from Firebase Auth.
+   * *  The services intended to receive the credential. For example,
+   * ["https://pubsub.googleapis.com/", "https://storage.googleapis.com/"]. *  A set of service-
+   * based scopes. For example,    ["https://www.googleapis.com/auth/cloud-platform"]. *  The client
+   * id of an app, such as the Firebase project id for JWTs    from Firebase Auth.
    *
    * Consult the documentation for the credential issuer to determine the information provided.
    * The value may be {@code null}.
@@ -125,10 +125,10 @@ public final class Auth extends com.google.api.client.json.GenericJson {
    * claim within a JWT. The audience value(s) depends on the `issuer`, but typically include one or
    * more of the following pieces of information:
    *
-   * *  The services intended to receive the credential such as    ["pubsub.googleapis.com",
-   * "storage.googleapis.com"] *  A set of service-based scopes. For example,
-   * ["https://www.googleapis.com/auth/cloud-platform"] *  The client id of an app, such as the
-   * Firebase project id for JWTs    from Firebase Auth.
+   * *  The services intended to receive the credential. For example,
+   * ["https://pubsub.googleapis.com/", "https://storage.googleapis.com/"]. *  A set of service-
+   * based scopes. For example,    ["https://www.googleapis.com/auth/cloud-platform"]. *  The client
+   * id of an app, such as the Firebase project id for JWTs    from Firebase Auth.
    *
    * Consult the documentation for the credential issuer to determine the information provided.
    * @return value or {@code null} for none
@@ -142,10 +142,10 @@ public final class Auth extends com.google.api.client.json.GenericJson {
    * claim within a JWT. The audience value(s) depends on the `issuer`, but typically include one or
    * more of the following pieces of information:
    *
-   * *  The services intended to receive the credential such as    ["pubsub.googleapis.com",
-   * "storage.googleapis.com"] *  A set of service-based scopes. For example,
-   * ["https://www.googleapis.com/auth/cloud-platform"] *  The client id of an app, such as the
-   * Firebase project id for JWTs    from Firebase Auth.
+   * *  The services intended to receive the credential. For example,
+   * ["https://pubsub.googleapis.com/", "https://storage.googleapis.com/"]. *  A set of service-
+   * based scopes. For example,    ["https://www.googleapis.com/auth/cloud-platform"]. *  The client
+   * id of an app, such as the Firebase project id for JWTs    from Firebase Auth.
    *
    * Consult the documentation for the credential issuer to determine the information provided.
    * @param audiences audiences or {@code null} for none

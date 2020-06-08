@@ -45,7 +45,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
-   * Represents the transfer operation object.
+   * Represents the transfer operation object. To request a TransferOperation object, use
+   * transferOperations.get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents the transfer operation object.
+   * Represents the transfer operation object. To request a TransferOperation object, use
+   * transferOperations.get.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -117,7 +119,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents the transfer operation object.
+   * Represents the transfer operation object. To request a TransferOperation object, use
+   * transferOperations.get.
    * @param metadata metadata or {@code null} for none
    */
   public Operation setMetadata(java.util.Map<String, java.lang.Object> metadata) {

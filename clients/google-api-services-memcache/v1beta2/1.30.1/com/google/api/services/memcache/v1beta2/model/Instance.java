@@ -31,7 +31,7 @@ package com.google.api.services.memcache.v1beta2.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * The full name of the Google Compute Engine [network](/compute/docs/networks-and-
    * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
    * network will be used.
    * The value may be {@code null}.
@@ -54,8 +54,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String discoveryEndpoint;
 
   /**
-   * Optional. User provided name for the instance only used for display purposes. Cannot be more
-   * than 80 characters.
+   * User provided name for the instance only used for display purposes. Cannot be more than 80
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<InstanceMessage> instanceMessages;
 
   /**
-   * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
-   * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+   * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for
+   * more details. https://cloud.google.com/compute/docs/labeling-resources
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +93,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<Node> memcacheNodes;
 
   /**
-   * Optional. The major version of Memcached software. If not provided, latest supported version
-   * will be used. Currently the latest supported major version is MEMCACHE_1_5. The minor version
-   * will be automatically determined by our system based on the latest supported minor version.
+   * The major version of Memcached software. If not provided, latest supported version will be
+   * used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be
+   * automatically determined by our system based on the latest supported minor version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
+   * Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
    * distributed across these zones. If not provided, the service will by default create nodes in
    * all zones in the region for the instance.
    * The value may be {@code null}.
@@ -158,7 +158,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> zones;
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * The full name of the Google Compute Engine [network](/compute/docs/networks-and-
    * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
    * network will be used.
    * @return value or {@code null} for none
@@ -168,7 +168,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * The full name of the Google Compute Engine [network](/compute/docs/networks-and-
    * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
    * network will be used.
    * @param authorizedNetwork authorizedNetwork or {@code null} for none
@@ -213,8 +213,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User provided name for the instance only used for display purposes. Cannot be more
-   * than 80 characters.
+   * User provided name for the instance only used for display purposes. Cannot be more than 80
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -222,8 +222,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User provided name for the instance only used for display purposes. Cannot be more
-   * than 80 characters.
+   * User provided name for the instance only used for display purposes. Cannot be more than 80
+   * characters.
    * @param displayName displayName or {@code null} for none
    */
   public Instance setDisplayName(java.lang.String displayName) {
@@ -249,8 +249,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
-   * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+   * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for
+   * more details. https://cloud.google.com/compute/docs/labeling-resources
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -258,8 +258,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
-   * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+   * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for
+   * more details. https://cloud.google.com/compute/docs/labeling-resources
    * @param labels labels or {@code null} for none
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -306,9 +306,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The major version of Memcached software. If not provided, latest supported version
-   * will be used. Currently the latest supported major version is MEMCACHE_1_5. The minor version
-   * will be automatically determined by our system based on the latest supported minor version.
+   * The major version of Memcached software. If not provided, latest supported version will be
+   * used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be
+   * automatically determined by our system based on the latest supported minor version.
    * @return value or {@code null} for none
    */
   public java.lang.String getMemcacheVersion() {
@@ -316,9 +316,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The major version of Memcached software. If not provided, latest supported version
-   * will be used. Currently the latest supported major version is MEMCACHE_1_5. The minor version
-   * will be automatically determined by our system based on the latest supported minor version.
+   * The major version of Memcached software. If not provided, latest supported version will be
+   * used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be
+   * automatically determined by our system based on the latest supported minor version.
    * @param memcacheVersion memcacheVersion or {@code null} for none
    */
   public Instance setMemcacheVersion(java.lang.String memcacheVersion) {
@@ -439,7 +439,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
+   * Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
    * distributed across these zones. If not provided, the service will by default create nodes in
    * all zones in the region for the instance.
    * @return value or {@code null} for none
@@ -449,7 +449,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
+   * Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
    * distributed across these zones. If not provided, the service will by default create nodes in
    * all zones in the region for the instance.
    * @param zones zones or {@code null} for none

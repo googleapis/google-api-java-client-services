@@ -37,7 +37,7 @@ public final class ForwardingAddress extends com.google.api.client.json.GenericJ
   private java.lang.String forwardingEmail;
 
   /**
-   * Indicates whether this address has been verified and is usable for forwarding. Read-only.
+   * Indicates whether this address has been verified and is usable for forwarding.  Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ForwardingAddress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Indicates whether this address has been verified and is usable for forwarding. Read-only.
+   * Indicates whether this address has been verified and is usable for forwarding.  Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerificationStatus() {
@@ -69,7 +69,7 @@ public final class ForwardingAddress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Indicates whether this address has been verified and is usable for forwarding. Read-only.
+   * Indicates whether this address has been verified and is usable for forwarding.  Read-only.
    * @param verificationStatus verificationStatus or {@code null} for none
    */
   public ForwardingAddress setVerificationStatus(java.lang.String verificationStatus) {

@@ -19,7 +19,7 @@ package com.google.api.services.osconfig.v1.model;
 /**
  * A high level representation of a patch job that is either in progress or has completed.
  *
- * Instances details are not included in the job. To paginate through instance details, use
+ * Instance details are not included in the job. To paginate through instance details, use
  * ListPatchJobInstanceDetails.
  *
  * For more information about patch jobs, see [Creating patch
@@ -122,7 +122,7 @@ public final class PatchJob extends com.google.api.client.json.GenericJson {
   private java.lang.Double percentComplete;
 
   /**
-   * The current state of the PatchJob .
+   * The current state of the PatchJob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -344,7 +344,7 @@ public final class PatchJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current state of the PatchJob .
+   * The current state of the PatchJob.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -352,7 +352,7 @@ public final class PatchJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current state of the PatchJob .
+   * The current state of the PatchJob.
    * @param state state or {@code null} for none
    */
   public PatchJob setState(java.lang.String state) {

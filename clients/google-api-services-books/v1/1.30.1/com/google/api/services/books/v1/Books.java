@@ -55,7 +55,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://books.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch";
+  public static final String DEFAULT_BATCH_PATH = "batch/books/v1";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

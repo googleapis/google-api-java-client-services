@@ -18,10 +18,11 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Message for detecting output from deidentification transformations such as [`CryptoReplaceFfxFpeC
- * onfig`](/dlp/docs/reference/rest/v2/organizations.deidentifyTemplates#cryptoreplaceffxfpeconfig).
- * These types of transformations are those that perform pseudonymization, thereby producing a
- * "surrogate" as output. This should be used in conjunction with a field on the transformation such
- * as `surrogate_info_type`. This CustomInfoType does not support the use of `detection_rules`.
+ * onfig`](https://cloud.google.com/dlp/docs/reference/rest/v2/organizations.deidentifyTemplates#cry
+ * ptoreplaceffxfpeconfig). These types of transformations are those that perform pseudonymization,
+ * thereby producing a "surrogate" as output. This should be used in conjunction with a field on the
+ * transformation such as `surrogate_info_type`. This CustomInfoType does not support the use of
+ * `detection_rules`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

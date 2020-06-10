@@ -307,17 +307,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /** The parent resource name, for example locations/{location_id}. */
+      /**
+       * The parent resource name. - Format:locations/[LOCATION-ID]
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The parent resource name, for example locations/{location_id}.
+      /** The parent resource name. - Format:locations/[LOCATION-ID]
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** The parent resource name, for example locations/{location_id}. */
+      /**
+       * The parent resource name. - Format:locations/[LOCATION-ID]
+       */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;
@@ -380,7 +384,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example locations/{location_id}.
+       * @param parent The parent resource name.
+      - Format:locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -407,7 +412,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example locations/{location_id}.
+         * @param parent The parent resource name.
+      - Format:locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -485,17 +491,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example locations/{location_id}. */
+        /**
+         * The parent resource name. - Format:locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example locations/{location_id}.
+        /** The parent resource name. - Format:locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example locations/{location_id}. */
+        /**
+         * The parent resource name. - Format:locations/[LOCATION-ID]
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -627,8 +637,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
        */
@@ -657,8 +672,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
          */
@@ -728,21 +748,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1074,8 +1098,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1102,8 +1131,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1182,21 +1216,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1501,8 +1539,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
        */
@@ -1530,8 +1573,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
          */
@@ -1601,21 +1649,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1945,8 +1997,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1972,8 +2029,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2052,21 +2114,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2392,8 +2458,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
@@ -2422,8 +2493,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
@@ -2493,21 +2569,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2839,8 +2919,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2867,8 +2952,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2947,21 +3037,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3268,8 +3362,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
@@ -3297,8 +3396,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
@@ -3368,21 +3472,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3712,8 +3820,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3739,8 +3852,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3819,21 +3937,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4138,8 +4260,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
@@ -4167,8 +4294,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
@@ -4238,21 +4370,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4584,8 +4720,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4612,8 +4753,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4692,21 +4838,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5014,8 +5164,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
        */
@@ -5043,8 +5198,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
          */
@@ -5114,21 +5274,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5460,8 +5624,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5488,8 +5657,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5568,21 +5742,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5915,7 +6093,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example projects/my-project-id.
+       * @param parent Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-ID]/locations
+       *        /[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
        * @return the request
        */
@@ -5949,7 +6130,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-ID]/locations
+       *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @since 1.13
          */
@@ -6018,17 +6202,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Deidentify) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         * ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example projects/my-project-id.
+        /** Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
+       /[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         * ID]/locations/[LOCATION-ID]
+         */
         public Deidentify setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6060,7 +6251,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example projects/my-project-id.
+       * @param parent Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-ID]/locations
+       *        /[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
        * @return the request
        */
@@ -6096,7 +6290,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-ID]/locations
+       *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @since 1.13
          */
@@ -6165,17 +6362,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Inspect) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         * ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example projects/my-project-id.
+        /** Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
+       /[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         * ID]/locations/[LOCATION-ID]
+         */
         public Inspect setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6202,6 +6406,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
        * @return the request
        */
@@ -6232,6 +6439,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @since 1.13
          */
@@ -6300,17 +6510,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Reidentify) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name. */
+        /**
+         * Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name.
+        /** Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+       ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name. */
+        /**
+         * Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         public Reidentify setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6358,8 +6575,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
        */
@@ -6388,8 +6610,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
          */
@@ -6459,21 +6686,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -6805,8 +7036,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6833,8 +7069,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6913,21 +7154,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -7371,7 +7616,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
        * @return the request
        */
@@ -7404,7 +7652,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @since 1.13
          */
@@ -7473,17 +7724,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+       ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7781,7 +8039,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -7809,7 +8070,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -7887,17 +8151,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+       ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8143,7 +8414,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example projects/my-project-id.
+       * @param parent The parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-ID]/locations
+       *        /[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
        * @return the request
        */
@@ -8176,7 +8450,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Redact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent The parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-ID]/locations
+       *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @since 1.13
          */
@@ -8245,17 +8522,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Redact) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         * ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example projects/my-project-id.
+        /** The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
+       /[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         * ID]/locations/[LOCATION-ID]
+         */
         public Redact setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8302,8 +8586,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
        */
@@ -8331,8 +8620,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
          */
@@ -8402,21 +8696,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8746,8 +9044,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8773,8 +9076,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8853,21 +9161,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -9316,7 +9628,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
        * @return the request
        */
@@ -9344,7 +9659,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @since 1.13
          */
@@ -9413,17 +9731,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+       ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9736,7 +10061,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example `projects/my-project-id`.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -9762,7 +10090,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example `projects/my-project-id`.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:projects/[PROJECT-
+       *        ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -9840,17 +10171,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example `projects/my-project-id`. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example `projects/my-project-id`.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+       ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example `projects/my-project-id`. */
+        /**
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+         * /[PROJECT-ID]/locations/[LOCATION-ID]
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10249,7 +10587,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-ID]/locations
+         *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @return the request
          */
@@ -10283,7 +10624,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name, for example projects/my-project-id.
+           * @param parent Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-ID]/locations
+         *        /[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
            * @since 1.13
            */
@@ -10352,17 +10696,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Deidentify) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+           * ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name, for example projects/my-project-id.
+          /** Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
+         /[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+           * ID]/locations/[LOCATION-ID]
+           */
           public Deidentify setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10394,7 +10745,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-ID]/locations
+         *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @return the request
          */
@@ -10430,7 +10784,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name, for example projects/my-project-id.
+           * @param parent Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-ID]/locations
+         *        /[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
            * @since 1.13
            */
@@ -10499,17 +10856,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Inspect) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+           * ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name, for example projects/my-project-id.
+          /** Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
+         /[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+           * ID]/locations/[LOCATION-ID]
+           */
           public Inspect setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10536,6 +10900,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @return the request
          */
@@ -10566,6 +10933,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
            * @since 1.13
            */
@@ -10634,17 +11004,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Reidentify) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name. */
+          /**
+           * Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name.
+          /** Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name. */
+          /**
+           * Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           public Reidentify setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10692,8 +11069,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
@@ -10722,8 +11104,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
@@ -10793,21 +11180,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -11139,8 +11530,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -11167,8 +11563,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -11247,21 +11648,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -11707,7 +12112,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @return the request
          */
@@ -11740,7 +12148,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
            * @since 1.13
            */
@@ -11809,17 +12220,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12401,7 +12819,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -12429,7 +12850,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -12507,17 +12931,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12763,7 +13194,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent The parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-ID]/locations
+         *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @return the request
          */
@@ -12796,7 +13230,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Redact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name, for example projects/my-project-id.
+           * @param parent The parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-ID]/locations
+         *        /[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
            * @since 1.13
            */
@@ -12865,17 +13302,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Redact) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+           * ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name, for example projects/my-project-id.
+          /** The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
+         /[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+           * ID]/locations/[LOCATION-ID]
+           */
           public Redact setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12922,8 +13366,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
@@ -12951,8 +13400,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
@@ -13022,21 +13476,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13366,8 +13824,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13393,8 +13856,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13473,21 +13941,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13936,7 +14408,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @return the request
          */
@@ -13964,7 +14439,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
            * @since 1.13
            */
@@ -14033,17 +14511,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14504,7 +14989,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example `projects/my-project-id`.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -14530,7 +15018,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example `projects/my-project-id`.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:projects/[PROJECT-
+         *        ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -14608,17 +15099,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example `projects/my-project-id`. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example `projects/my-project-id`.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
+         ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example `projects/my-project-id`. */
+          /**
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects
+           * /[PROJECT-ID]/locations/[LOCATION-ID]
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14993,8 +15491,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
@@ -15022,8 +15525,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
@@ -15093,21 +15601,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -15439,8 +15951,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -15467,8 +15984,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
+           * @param parent Required. Parent resource name.
+        - Format:projects/[PROJECT-ID]
+        - Format:organizations/[ORGANIZATION-
+         *        ID]
+        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+        - Format:organizations
+         *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -15547,21 +16069,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+         /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+           * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+           * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -15869,8 +16395,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
        */
@@ -15898,8 +16429,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
          */
@@ -15969,21 +16505,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -16315,8 +16855,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -16343,8 +16888,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name.
+      - Format:projects/[PROJECT-ID]
+      - Format:organizations/[ORGANIZATION-
+       *        ID]
+      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+      - Format:organizations
+       *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -16423,21 +16973,25 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+       /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
+       /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations
+         * /[ORGANIZATION-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] -
+         * Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

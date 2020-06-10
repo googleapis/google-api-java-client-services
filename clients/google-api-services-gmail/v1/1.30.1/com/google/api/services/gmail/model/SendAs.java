@@ -44,10 +44,10 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this address is selected as the default "From:" address in situations such as composing
-   * a new message or sending a vacation auto-reply. Every Gmail account has exactly one default
-   * send-as address, so the only legal value that clients may write to this field is true. Changing
-   * this from false to true for an address will result in this field becoming false for the other
-   * previous default address.
+   * a new message or sending a vacation auto-reply.  Every Gmail account has exactly one default
+   * send-as address, so the only legal value that clients may write to this field is true.
+   * Changing this from false to true for an address will result in this field becoming false for
+   * the other previous default address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * Whether this address is the primary address used to login to the account. Every Gmail account
    * has exactly one primary address, and it cannot be deleted from the collection of send-as
-   * aliases. This field is read-only.
+   * aliases.  This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +64,14 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional email address that is included in a "Reply-To:" header for mail sent using this
-   * alias. If this is empty, Gmail will not generate a "Reply-To:" header.
+   * alias.  If this is empty, Gmail will not generate a "Reply-To:" header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String replyToAddress;
 
   /**
-   * The email address that appears in the "From:" header for mail sent using this alias. This is
+   * The email address that appears in the "From:" header for mail sent using this alias.  This is
    * read-only for all operations except create.
    * The value may be {@code null}.
    */
@@ -89,14 +89,14 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * An optional SMTP service that will be used as an outbound relay for mail sent using this alias.
    * If this is empty, outbound mail will be sent directly from Gmail's servers to the destination
-   * SMTP service. This setting only applies to custom "from" aliases.
+   * SMTP service.  This setting only applies to custom "from" aliases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SmtpMsa smtpMsa;
 
   /**
-   * Whether Gmail should  treat this address as an alias for the user's primary email address. This
+   * Whether Gmail should treat this address as an alias for the user's primary email address. This
    * setting only applies to custom "from" aliases.
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean treatAsAlias;
 
   /**
-   * Indicates whether this address has been verified for use as a send-as alias. Read-only. This
+   * Indicates whether this address has been verified for use as a send-as alias.  Read-only.  This
    * setting only applies to custom "from" aliases.
    * The value may be {@code null}.
    */
@@ -138,10 +138,10 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this address is selected as the default "From:" address in situations such as composing
-   * a new message or sending a vacation auto-reply. Every Gmail account has exactly one default
-   * send-as address, so the only legal value that clients may write to this field is true. Changing
-   * this from false to true for an address will result in this field becoming false for the other
-   * previous default address.
+   * a new message or sending a vacation auto-reply.  Every Gmail account has exactly one default
+   * send-as address, so the only legal value that clients may write to this field is true.
+   * Changing this from false to true for an address will result in this field becoming false for
+   * the other previous default address.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDefault() {
@@ -150,10 +150,10 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this address is selected as the default "From:" address in situations such as composing
-   * a new message or sending a vacation auto-reply. Every Gmail account has exactly one default
-   * send-as address, so the only legal value that clients may write to this field is true. Changing
-   * this from false to true for an address will result in this field becoming false for the other
-   * previous default address.
+   * a new message or sending a vacation auto-reply.  Every Gmail account has exactly one default
+   * send-as address, so the only legal value that clients may write to this field is true.
+   * Changing this from false to true for an address will result in this field becoming false for
+   * the other previous default address.
    * @param isDefault isDefault or {@code null} for none
    */
   public SendAs setIsDefault(java.lang.Boolean isDefault) {
@@ -164,7 +164,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * Whether this address is the primary address used to login to the account. Every Gmail account
    * has exactly one primary address, and it cannot be deleted from the collection of send-as
-   * aliases. This field is read-only.
+   * aliases.  This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsPrimary() {
@@ -174,7 +174,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * Whether this address is the primary address used to login to the account. Every Gmail account
    * has exactly one primary address, and it cannot be deleted from the collection of send-as
-   * aliases. This field is read-only.
+   * aliases.  This field is read-only.
    * @param isPrimary isPrimary or {@code null} for none
    */
   public SendAs setIsPrimary(java.lang.Boolean isPrimary) {
@@ -184,7 +184,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional email address that is included in a "Reply-To:" header for mail sent using this
-   * alias. If this is empty, Gmail will not generate a "Reply-To:" header.
+   * alias.  If this is empty, Gmail will not generate a "Reply-To:" header.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplyToAddress() {
@@ -193,7 +193,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional email address that is included in a "Reply-To:" header for mail sent using this
-   * alias. If this is empty, Gmail will not generate a "Reply-To:" header.
+   * alias.  If this is empty, Gmail will not generate a "Reply-To:" header.
    * @param replyToAddress replyToAddress or {@code null} for none
    */
   public SendAs setReplyToAddress(java.lang.String replyToAddress) {
@@ -202,7 +202,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address that appears in the "From:" header for mail sent using this alias. This is
+   * The email address that appears in the "From:" header for mail sent using this alias.  This is
    * read-only for all operations except create.
    * @return value or {@code null} for none
    */
@@ -211,7 +211,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address that appears in the "From:" header for mail sent using this alias. This is
+   * The email address that appears in the "From:" header for mail sent using this alias.  This is
    * read-only for all operations except create.
    * @param sendAsEmail sendAsEmail or {@code null} for none
    */
@@ -242,7 +242,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * An optional SMTP service that will be used as an outbound relay for mail sent using this alias.
    * If this is empty, outbound mail will be sent directly from Gmail's servers to the destination
-   * SMTP service. This setting only applies to custom "from" aliases.
+   * SMTP service.  This setting only applies to custom "from" aliases.
    * @return value or {@code null} for none
    */
   public SmtpMsa getSmtpMsa() {
@@ -252,7 +252,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * An optional SMTP service that will be used as an outbound relay for mail sent using this alias.
    * If this is empty, outbound mail will be sent directly from Gmail's servers to the destination
-   * SMTP service. This setting only applies to custom "from" aliases.
+   * SMTP service.  This setting only applies to custom "from" aliases.
    * @param smtpMsa smtpMsa or {@code null} for none
    */
   public SendAs setSmtpMsa(SmtpMsa smtpMsa) {
@@ -261,7 +261,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether Gmail should  treat this address as an alias for the user's primary email address. This
+   * Whether Gmail should treat this address as an alias for the user's primary email address. This
    * setting only applies to custom "from" aliases.
    * @return value or {@code null} for none
    */
@@ -270,7 +270,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether Gmail should  treat this address as an alias for the user's primary email address. This
+   * Whether Gmail should treat this address as an alias for the user's primary email address. This
    * setting only applies to custom "from" aliases.
    * @param treatAsAlias treatAsAlias or {@code null} for none
    */
@@ -280,7 +280,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether this address has been verified for use as a send-as alias. Read-only. This
+   * Indicates whether this address has been verified for use as a send-as alias.  Read-only.  This
    * setting only applies to custom "from" aliases.
    * @return value or {@code null} for none
    */
@@ -289,7 +289,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether this address has been verified for use as a send-as alias. Read-only. This
+   * Indicates whether this address has been verified for use as a send-as alias.  Read-only.  This
    * setting only applies to custom "from" aliases.
    * @param verificationStatus verificationStatus or {@code null} for none
    */

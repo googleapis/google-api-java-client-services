@@ -37,7 +37,7 @@ public final class AutoForwarding extends com.google.api.client.json.GenericJson
   private java.lang.String disposition;
 
   /**
-   * Email address to which all incoming messages are forwarded. This email address must be a
+   * Email address to which all incoming messages are forwarded.  This email address must be a
    * verified member of the forwarding addresses.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class AutoForwarding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Email address to which all incoming messages are forwarded. This email address must be a
+   * Email address to which all incoming messages are forwarded.  This email address must be a
    * verified member of the forwarding addresses.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class AutoForwarding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Email address to which all incoming messages are forwarded. This email address must be a
+   * Email address to which all incoming messages are forwarded.  This email address must be a
    * verified member of the forwarding addresses.
    * @param emailAddress emailAddress or {@code null} for none
    */

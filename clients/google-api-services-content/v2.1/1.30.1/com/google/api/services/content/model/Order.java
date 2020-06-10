@@ -39,6 +39,13 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean acknowledged;
 
   /**
+   * List of key-value pairs that are attached to a given order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OrderOrderAnnotation> annotations;
+
+  /**
    * The billing address.
    * The value may be {@code null}.
    */
@@ -221,6 +228,23 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   public Order setAcknowledged(java.lang.Boolean acknowledged) {
     this.acknowledged = acknowledged;
+    return this;
+  }
+
+  /**
+   * List of key-value pairs that are attached to a given order.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OrderOrderAnnotation> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * List of key-value pairs that are attached to a given order.
+   * @param annotations annotations or {@code null} for none
+   */
+  public Order setAnnotations(java.util.List<OrderOrderAnnotation> annotations) {
+    this.annotations = annotations;
     return this;
   }
 

@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/eW17Vp7lQKK_eQEfqEgs3DMjBm4\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/N8mdGR5CdqP9V1ItPpqAuiW0638\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200526",
+ "revision": "20200529",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -2573,6 +2573,13 @@
      "type": "boolean",
      "description": "Whether the order was acknowledged."
     },
+    "annotations": {
+     "type": "array",
+     "description": "List of key-value pairs that are attached to a given order.",
+     "items": {
+      "$ref": "OrderOrderAnnotation"
+     }
+    },
     "billingAddress": {
      "$ref": "OrderAddress",
      "description": "The billing address."
@@ -3079,6 +3086,11 @@
       ]
      }
     },
+    "pickupPromiseInMinutes": {
+     "type": "integer",
+     "description": "The promised time in minutes in which the order will be ready for pickup. This only applies to buy-online-pickup-in-store same-day order.",
+     "format": "uint32"
+    },
     "shipByDate": {
      "type": "string",
      "description": "Required. The ship by date, in ISO 8601 format.",
@@ -3147,6 +3159,20 @@
     }
    }
   },
+  "OrderOrderAnnotation": {
+   "id": "OrderOrderAnnotation",
+   "type": "object",
+   "properties": {
+    "key": {
+     "type": "string",
+     "description": "Key for additional google provided (as key-value pairs) annotation."
+    },
+    "value": {
+     "type": "string",
+     "description": "Value for additional google provided (as key-value pairs) annotation."
+    }
+   }
+  },
   "OrderPickupDetails": {
    "id": "OrderPickupDetails",
    "type": "object",
@@ -3165,6 +3191,10 @@
     "locationId": {
      "type": "string",
      "description": "ID of the pickup location."
+    },
+    "pickupType": {
+     "type": "string",
+     "description": "The pickup type of this order.\n\nAcceptable values are:  \n- \"`merchantStore`\" \n- \"`merchantStoreCurbside`\" \n- \"`merchantStoreLocker`\" \n- \"`thirdPartyPickupPoint`\" \n- \"`thirdPartyLocker`\""
     }
    }
   },
@@ -4023,6 +4053,47 @@
     }
    }
   },
+  "OrdersCustomBatchRequestEntryRefundItemItem": {
+   "id": "OrdersCustomBatchRequestEntryRefundItemItem",
+   "type": "object",
+   "properties": {
+    "amount": {
+     "$ref": "MonetaryAmount",
+     "description": "The amount that is refunded. In case of multiple refunds,  \n- If the quantity of refunded items changed, this should contain the total refund per item. \n- If the quantity of the refunded items remained the same, this should be the newly refunded amount."
+    },
+    "fullRefund": {
+     "type": "boolean",
+     "description": "If true, the full item will be refunded. If this is true, amount should not be provided and will be ignored."
+    },
+    "lineItemId": {
+     "type": "string",
+     "description": "The ID of the line item. Either lineItemId or productId is required."
+    },
+    "productId": {
+     "type": "string",
+     "description": "The ID of the product. This is the REST ID used in the products service. Either lineItemId or productId is required."
+    },
+    "quantity": {
+     "type": "integer",
+     "description": "The number of products that are refunded.",
+     "format": "int32"
+    }
+   }
+  },
+  "OrdersCustomBatchRequestEntryRefundItemShipping": {
+   "id": "OrdersCustomBatchRequestEntryRefundItemShipping",
+   "type": "object",
+   "properties": {
+    "amount": {
+     "$ref": "Price",
+     "description": "The amount that is refunded. If this is not the first refund for the shipment, this should be the newly refunded amount."
+    },
+    "fullRefund": {
+     "type": "boolean",
+     "description": "If set to true, all shipping costs for the order will be refunded. If this is true, amount should not be provided and will be ignored."
+    }
+   }
+  },
   "OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo": {
    "id": "OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo",
    "type": "object",
@@ -4148,6 +4219,91 @@
      "items": {
       "$ref": "Order"
      }
+    }
+   }
+  },
+  "OrdersRefundItemRequest": {
+   "id": "OrdersRefundItemRequest",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "description": "The items that are refunded. Either Item or Shipping must be provided in the request.",
+     "items": {
+      "$ref": "OrdersCustomBatchRequestEntryRefundItemItem"
+     }
+    },
+    "operationId": {
+     "type": "string",
+     "description": "The ID of the operation. Unique across all operations for a given order."
+    },
+    "reason": {
+     "type": "string",
+     "description": "The reason for the refund.\n\nAcceptable values are:  \n- \"`shippingCostAdjustment`\" \n- \"`priceAdjustment`\" \n- \"`taxAdjustment`\" \n- \"`feeAdjustment`\" \n- \"`courtesyAdjustment`\" \n- \"`adjustment`\" \n- \"`customerCancelled`\" \n- \"`noInventory`\" \n- \"`productNotAsDescribed`\" \n- \"`undeliverableShippingAddress`\" \n- \"`wrongProductShipped`\" \n- \"`lateShipmentCredit`\" \n- \"`deliveredLateByCarrier`\" \n- \"`productArrivedDamaged`\""
+    },
+    "reasonText": {
+     "type": "string",
+     "description": "The explanation of the reason."
+    },
+    "shipping": {
+     "$ref": "OrdersCustomBatchRequestEntryRefundItemShipping",
+     "description": "The refund on shipping. Optional, but either Item or Shipping must be provided in the request."
+    }
+   }
+  },
+  "OrdersRefundItemResponse": {
+   "id": "OrdersRefundItemResponse",
+   "type": "object",
+   "properties": {
+    "executionStatus": {
+     "type": "string",
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#ordersRefundItemResponse\".",
+     "default": "content#ordersRefundItemResponse"
+    }
+   }
+  },
+  "OrdersRefundOrderRequest": {
+   "id": "OrdersRefundOrderRequest",
+   "type": "object",
+   "properties": {
+    "amount": {
+     "$ref": "MonetaryAmount",
+     "description": "The amount that is refunded. If this is not the first refund for the order, this should be the newly refunded amount."
+    },
+    "fullRefund": {
+     "type": "boolean",
+     "description": "If true, the full order will be refunded, including shipping. If this is true, amount should not be provided and will be ignored."
+    },
+    "operationId": {
+     "type": "string",
+     "description": "The ID of the operation. Unique across all operations for a given order."
+    },
+    "reason": {
+     "type": "string",
+     "description": "The reason for the refund.\n\nAcceptable values are:  \n- \"`courtesyAdjustment`\" \n- \"`other`\""
+    },
+    "reasonText": {
+     "type": "string",
+     "description": "The explanation of the reason."
+    }
+   }
+  },
+  "OrdersRefundOrderResponse": {
+   "id": "OrdersRefundOrderResponse",
+   "type": "object",
+   "properties": {
+    "executionStatus": {
+     "type": "string",
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#ordersRefundOrderResponse\".",
+     "default": "content#ordersRefundOrderResponse"
     }
    }
   },
@@ -4415,9 +4571,17 @@
      "type": "string",
      "description": "Date on which the shipment has been delivered, in ISO 8601 format. Optional and can be provided only if `status` is `delivered`."
     },
+    "lastPickupDate": {
+     "type": "string",
+     "description": "Date after which the pickup will expire, in ISO 8601 format. Required only when order is buy-online-pickup-in-store(BOPIS) and `status` is `ready for pickup`."
+    },
     "operationId": {
      "type": "string",
      "description": "The ID of the operation. Unique across all operations for a given order."
+    },
+    "readyPickupDate": {
+     "type": "string",
+     "description": "Date on which the shipment has been ready for pickup, in ISO 8601 format. Optional and can be provided only if `status` is `ready for pickup`."
     },
     "shipmentId": {
      "type": "string",
@@ -4425,11 +4589,15 @@
     },
     "status": {
      "type": "string",
-     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`undeliverable`\""
+     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`undeliverable`\" \n- \"`readyForPickup`\""
     },
     "trackingId": {
      "type": "string",
      "description": "The tracking ID for the shipment. Not updated if missing."
+    },
+    "undeliveredDate": {
+     "type": "string",
+     "description": "Date on which the shipment has been undeliverable, in ISO 8601 format. Optional and can be provided only if `status` is `undeliverable`."
     }
    }
   },
@@ -9589,9 +9757,11 @@
         "template1a",
         "template1b",
         "template2",
-        "template3"
+        "template3",
+        "template4"
        ],
        "enumDescriptions": [
+        "",
         "",
         "",
         "",
@@ -9728,6 +9898,74 @@
      ],
      "response": {
       "$ref": "OrdersListResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "refunditem": {
+     "id": "content.orders.refunditem",
+     "path": "{merchantId}/orders/{orderId}/refunditem",
+     "httpMethod": "POST",
+     "description": "Issues a partial or total refund for items and shipment.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account that manages the order. This cannot be a multi-client account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "orderId": {
+       "type": "string",
+       "description": "The ID of the order to refund.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId",
+      "orderId"
+     ],
+     "request": {
+      "$ref": "OrdersRefundItemRequest"
+     },
+     "response": {
+      "$ref": "OrdersRefundItemResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "refundorder": {
+     "id": "content.orders.refundorder",
+     "path": "{merchantId}/orders/{orderId}/refundorder",
+     "httpMethod": "POST",
+     "description": "Issues a partial or total refund for an order.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account that manages the order. This cannot be a multi-client account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "orderId": {
+       "type": "string",
+       "description": "The ID of the order to refund.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId",
+      "orderId"
+     ],
+     "request": {
+      "$ref": "OrdersRefundOrderRequest"
+     },
+     "response": {
+      "$ref": "OrdersRefundOrderResponse"
      },
      "scopes": [
       "https://www.googleapis.com/auth/content"

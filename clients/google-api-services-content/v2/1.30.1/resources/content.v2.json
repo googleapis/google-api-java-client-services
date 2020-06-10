@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/FiH_aMQt7tU2fE5Yx34MqPm9md8\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/QidsRUtueh34L5qHte4rvUj6Z5Y\"",
  "discoveryVersion": "v1",
  "id": "content:v2",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2",
- "revision": "20200526",
+ "revision": "20200529",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -4392,7 +4392,7 @@
     },
     "status": {
      "type": "string",
-     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`undeliverable`\""
+     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`undeliverable`\" \n- \"`readyForPickup`\""
     },
     "trackingId": {
      "type": "string",
@@ -4928,7 +4928,7 @@
     },
     "status": {
      "type": "string",
-     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`undeliverable`\""
+     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"`delivered`\" \n- \"`undeliverable`\" \n- \"`readyForPickup`\""
     },
     "trackingId": {
      "type": "string",

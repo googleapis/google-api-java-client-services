@@ -45,6 +45,13 @@ public final class GoogleCloudSecuritycenterV1NotificationMessage extends com.go
   private java.lang.String notificationConfigName;
 
   /**
+   * The Cloud resource tied to this notification's Finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV1Resource resource;
+
+  /**
    * If it's a Finding based notification config, this field will be populated.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudSecuritycenterV1NotificationMessage extends com.go
    */
   public GoogleCloudSecuritycenterV1NotificationMessage setNotificationConfigName(java.lang.String notificationConfigName) {
     this.notificationConfigName = notificationConfigName;
+    return this;
+  }
+
+  /**
+   * The Cloud resource tied to this notification's Finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource getResource() {
+    return resource;
+  }
+
+  /**
+   * The Cloud resource tied to this notification's Finding.
+   * @param resource resource or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1NotificationMessage setResource(GoogleCloudSecuritycenterV1Resource resource) {
+    this.resource = resource;
     return this;
   }
 

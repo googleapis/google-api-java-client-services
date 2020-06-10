@@ -58,7 +58,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ancestors;
 
   /**
-   * The type of the asset. Example: "compute.googleapis.com/Disk"
+   * The type of the asset. Example: `compute.googleapis.com/Disk`
    *
    * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types) for more information.
@@ -81,7 +81,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. Example:
-   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
    *
    * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
    * for more information.
@@ -111,6 +111,14 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter;
+
+  /**
+   * The last update timestamp of an asset. update_time is updated when create/update/delete
+   * operation is performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * @return value or {@code null} for none
@@ -172,7 +180,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the asset. Example: "compute.googleapis.com/Disk"
+   * The type of the asset. Example: `compute.googleapis.com/Disk`
    *
    * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types) for more information.
@@ -183,7 +191,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the asset. Example: "compute.googleapis.com/Disk"
+   * The type of the asset. Example: `compute.googleapis.com/Disk`
    *
    * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types) for more information.
@@ -223,7 +231,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. Example:
-   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
    *
    * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
    * for more information.
@@ -235,7 +243,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. Example:
-   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
    *
    * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
    * for more information.
@@ -296,6 +304,25 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setServicePerimeter(GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter) {
     this.servicePerimeter = servicePerimeter;
+    return this;
+  }
+
+  /**
+   * The last update timestamp of an asset. update_time is updated when create/update/delete
+   * operation is performed.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * The last update timestamp of an asset. update_time is updated when create/update/delete
+   * operation is performed.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Asset setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

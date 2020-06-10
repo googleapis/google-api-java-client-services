@@ -18,8 +18,8 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 
 /**
  * Specifies the resource to analyze for access policies, which may be set directly on the resource,
- * or on ancestors such as organizations, folders or projects. At least one of ResourceSelector,
- * IdentitySelector or AccessSelector must be specified in a request.
+ * or on ancestors such as organizations, folders or projects. Either ResourceSelector or
+ * IdentitySelector must be specified in a request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -32,16 +32,18 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 public final class ResourceSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) .
+   * Required. The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-
+   * format) of a resource of [supported resource types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types#analyzable_asset_types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
 
   /**
-   * Required. The [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) .
+   * Required. The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-
+   * format) of a resource of [supported resource types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types#analyzable_asset_types).
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -49,8 +51,9 @@ public final class ResourceSelector extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) .
+   * Required. The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-
+   * format) of a resource of [supported resource types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types#analyzable_asset_types).
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public ResourceSelector setFullResourceName(java.lang.String fullResourceName) {

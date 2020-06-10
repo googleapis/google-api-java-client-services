@@ -45,7 +45,8 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The full name of the resource to which the iam_binding policy attaches.
+   * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+   * the resource to which the iam_binding policy attaches.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The full name of the resource to which the iam_binding policy attaches.
+   * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+   * the resource to which the iam_binding policy attaches.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachedResourceFullName() {
@@ -102,7 +104,8 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The full name of the resource to which the iam_binding policy attaches.
+   * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format) of
+   * the resource to which the iam_binding policy attaches.
    * @param attachedResourceFullName attachedResourceFullName or {@code null} for none
    */
   public IamPolicyAnalysisResult setAttachedResourceFullName(java.lang.String attachedResourceFullName) {

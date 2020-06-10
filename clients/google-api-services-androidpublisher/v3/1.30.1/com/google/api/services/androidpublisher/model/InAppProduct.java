@@ -85,6 +85,17 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   private java.lang.String purchaseType;
 
   /**
+   * Whether or not the developer wants the specific subscription to be resubscribable. If the
+   * developer doesn't use PBL2.0, this value is ignored since the feature is only for developers
+   * using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from
+   * the subscription center by clicking on a "Resubscribe" CTA under the entry for the expired
+   * subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resubscribeEligibility;
+
+  /**
    * The stock-keeping-unit (SKU) of the product, unique within an app.
    * The value may be {@code null}.
    */
@@ -239,6 +250,31 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
    */
   public InAppProduct setPurchaseType(java.lang.String purchaseType) {
     this.purchaseType = purchaseType;
+    return this;
+  }
+
+  /**
+   * Whether or not the developer wants the specific subscription to be resubscribable. If the
+   * developer doesn't use PBL2.0, this value is ignored since the feature is only for developers
+   * using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from
+   * the subscription center by clicking on a "Resubscribe" CTA under the entry for the expired
+   * subscription.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResubscribeEligibility() {
+    return resubscribeEligibility;
+  }
+
+  /**
+   * Whether or not the developer wants the specific subscription to be resubscribable. If the
+   * developer doesn't use PBL2.0, this value is ignored since the feature is only for developers
+   * using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from
+   * the subscription center by clicking on a "Resubscribe" CTA under the entry for the expired
+   * subscription.
+   * @param resubscribeEligibility resubscribeEligibility or {@code null} for none
+   */
+  public InAppProduct setResubscribeEligibility(java.lang.String resubscribeEligibility) {
+    this.resubscribeEligibility = resubscribeEligibility;
     return this;
   }
 

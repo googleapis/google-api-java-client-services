@@ -31,8 +31,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Destination on BigQuery. The output table stores the fields in asset proto as columns in
-   * BigQuery. The resource/iam_policy field is converted to a record with each field to a column,
-   * except metadata to a single JSON string.
+   * BigQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Destination on BigQuery. The output table stores the fields in asset proto as columns in
-   * BigQuery. The resource/iam_policy field is converted to a record with each field to a column,
-   * except metadata to a single JSON string.
+   * BigQuery.
    * @return value or {@code null} for none
    */
   public BigQueryDestination getBigqueryDestination() {
@@ -57,8 +55,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Destination on BigQuery. The output table stores the fields in asset proto as columns in
-   * BigQuery. The resource/iam_policy field is converted to a record with each field to a column,
-   * except metadata to a single JSON string.
+   * BigQuery.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public OutputConfig setBigqueryDestination(BigQueryDestination bigqueryDestination) {

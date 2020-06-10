@@ -487,11 +487,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class Organizations {
 
     /**
-     * Batch gets the update history of assets that overlap a time window. For RESOURCE content, this
-     * API outputs history with asset in both non-delete or deleted status. For IAM_POLICY content, this
+     * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this
      * API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps
-     * in the output history. If a specified asset does not exist, this API returns an INVALID_ARGUMENT
-     * error.
+     * in the output history. Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
      *
      * Create a request for the method "organizations.batchGetAssetsHistory".
      *
@@ -520,11 +519,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
       /**
-       * Batch gets the update history of assets that overlap a time window. For RESOURCE content, this
-       * API outputs history with asset in both non-delete or deleted status. For IAM_POLICY content,
+       * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content,
        * this API outputs history when the asset and its attached IAM POLICY both exist. This can create
-       * gaps in the output history. If a specified asset does not exist, this API returns an
-       * INVALID_ARGUMENT error.
+       * gaps in the output history. Otherwise, this API outputs history with asset in both non-delete
+       * or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+       * error.
        *
        * Create a request for the method "organizations.batchGetAssetsHistory".
        *
@@ -1086,11 +1085,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class Projects {
 
     /**
-     * Batch gets the update history of assets that overlap a time window. For RESOURCE content, this
-     * API outputs history with asset in both non-delete or deleted status. For IAM_POLICY content, this
+     * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this
      * API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps
-     * in the output history. If a specified asset does not exist, this API returns an INVALID_ARGUMENT
-     * error.
+     * in the output history. Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
      *
      * Create a request for the method "projects.batchGetAssetsHistory".
      *
@@ -1119,11 +1117,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Batch gets the update history of assets that overlap a time window. For RESOURCE content, this
-       * API outputs history with asset in both non-delete or deleted status. For IAM_POLICY content,
+       * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content,
        * this API outputs history when the asset and its attached IAM POLICY both exist. This can create
-       * gaps in the output history. If a specified asset does not exist, this API returns an
-       * INVALID_ARGUMENT error.
+       * gaps in the output history. Otherwise, this API outputs history with asset in both non-delete
+       * or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+       * error.
        *
        * Create a request for the method "projects.batchGetAssetsHistory".
        *

@@ -37,7 +37,7 @@ public final class GoogleCloudAssetV1p4beta1Resource extends com.google.api.clie
   private GoogleCloudAssetV1p4beta1AnalysisState analysisState;
 
   /**
-   * The [full resource name](https://aip.dev/122#full-resource-names).
+   * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudAssetV1p4beta1Resource extends com.google.api.clie
   }
 
   /**
-   * The [full resource name](https://aip.dev/122#full-resource-names).
+   * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format)
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAssetV1p4beta1Resource extends com.google.api.clie
   }
 
   /**
-   * The [full resource name](https://aip.dev/122#full-resource-names).
+   * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format)
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public GoogleCloudAssetV1p4beta1Resource setFullResourceName(java.lang.String fullResourceName) {

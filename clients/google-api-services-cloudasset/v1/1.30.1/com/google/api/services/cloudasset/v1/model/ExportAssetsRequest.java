@@ -47,8 +47,7 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   private java.lang.String contentType;
 
   /**
-   * Required. Output configuration indicating where the results will be output to. All results will
-   * be in newline delimited JSON format.
+   * Required. Output configuration indicating where the results will be output to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +104,7 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Output configuration indicating where the results will be output to. All results will
-   * be in newline delimited JSON format.
+   * Required. Output configuration indicating where the results will be output to.
    * @return value or {@code null} for none
    */
   public OutputConfig getOutputConfig() {
@@ -114,8 +112,7 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Output configuration indicating where the results will be output to. All results will
-   * be in newline delimited JSON format.
+   * Required. Output configuration indicating where the results will be output to.
    * @param outputConfig outputConfig or {@code null} for none
    */
   public ExportAssetsRequest setOutputConfig(OutputConfig outputConfig) {

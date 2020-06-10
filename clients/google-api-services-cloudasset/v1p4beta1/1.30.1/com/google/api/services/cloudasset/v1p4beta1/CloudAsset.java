@@ -156,6 +156,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *        will be analyzed. This can only be an organization number (such
     as "organizations/123") or
      *        a folder number (such as "folders/123").
+    To know how to get organization id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id).
+    To know how to get folder id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
      * @return the request
      */
     public AnalyzeIamPolicy analyzeIamPolicy(java.lang.String parent) throws java.io.IOException {
@@ -188,6 +194,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *        will be analyzed. This can only be an organization number (such
     as "organizations/123") or
      *        a folder number (such as "folders/123").
+    To know how to get organization id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id).
+    To know how to get folder id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
        * @since 1.13
        */
       protected AnalyzeIamPolicy(java.lang.String parent) {
@@ -269,6 +281,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
        * "organizations/123") or a folder number (such as "folders/123").
+       *
+       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
+       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
+       *
+       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
+       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
@@ -276,6 +294,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. The relative name of the root asset. Only resources and IAM policies within the parent
      will be analyzed. This can only be an organization number (such as "organizations/123") or a folder
      number (such as "folders/123").
+
+     To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs
+     /creating-managing-organization#retrieving_your_organization_id).
+
+     To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
+     /creating-managing-folders#viewing_or_listing_folders_and_projects).
        */
       public java.lang.String getParent() {
         return parent;
@@ -285,6 +309,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
        * "organizations/123") or a folder number (such as "folders/123").
+       *
+       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
+       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
+       *
+       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
+       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
        */
       public AnalyzeIamPolicy setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -331,12 +361,24 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The identity appear in the form of members in [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
+       *
+       * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
+       * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
+       *
+       * Notice that wildcard characters (such as * and ?) are not supported. You must give a
+       * specific identity.
        */
       @com.google.api.client.util.Key("analysisQuery.identitySelector.identity")
       private java.lang.String analysisQueryIdentitySelectorIdentity;
 
       /** Required. The identity appear in the form of members in [IAM policy
      binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
+
+     The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
+     "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
+
+     Notice that wildcard characters (such as * and ?) are not supported. You must give a specific
+     identity.
        */
       public java.lang.String getAnalysisQueryIdentitySelectorIdentity() {
         return analysisQueryIdentitySelectorIdentity;
@@ -345,6 +387,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The identity appear in the form of members in [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
+       *
+       * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
+       * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
+       *
+       * Notice that wildcard characters (such as * and ?) are not supported. You must give a
+       * specific identity.
        */
       public AnalyzeIamPolicy setAnalysisQueryIdentitySelectorIdentity(java.lang.String analysisQueryIdentitySelectorIdentity) {
         this.analysisQueryIdentitySelectorIdentity = analysisQueryIdentitySelectorIdentity;
@@ -352,22 +400,25 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. The [full resource
-       * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) .
+       * Required. The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-
+       * name-format) of a resource of [supported resource types](https://cloud.google.com/asset-
+       * inventory/docs/supported-asset-types#analyzable_asset_types).
        */
       @com.google.api.client.util.Key("analysisQuery.resourceSelector.fullResourceName")
       private java.lang.String analysisQueryResourceSelectorFullResourceName;
 
-      /** Required. The [full resource
-     name](https://cloud.google.com/apis/design/resource_names#full_resource_name) .
+      /** Required. The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-
+     format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs
+     /supported-asset-types#analyzable_asset_types).
        */
       public java.lang.String getAnalysisQueryResourceSelectorFullResourceName() {
         return analysisQueryResourceSelectorFullResourceName;
       }
 
       /**
-       * Required. The [full resource
-       * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) .
+       * Required. The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-
+       * name-format) of a resource of [supported resource types](https://cloud.google.com/asset-
+       * inventory/docs/supported-asset-types#analyzable_asset_types).
        */
       public AnalyzeIamPolicy setAnalysisQueryResourceSelectorFullResourceName(java.lang.String analysisQueryResourceSelectorFullResourceName) {
         this.analysisQueryResourceSelectorFullResourceName = analysisQueryResourceSelectorFullResourceName;
@@ -377,7 +428,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. If true, the response will include access analysis from identities to resources
        * via service account impersonation. This is a very expensive operation, because many derived
-       * queries will be executed. We highly recommend you use ExportIamPolicyAnalysis rpc instead.
+       * queries will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis
+       * rpc instead.
        *
        * For example, if the request analyzes for which resources user A has permission P, and
        * there's an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a
@@ -400,7 +452,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Optional. If true, the response will include access analysis from identities to resources via
      service account impersonation. This is a very expensive operation, because many derived queries
-     will be executed. We highly recommend you use ExportIamPolicyAnalysis rpc instead.
+     will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis rpc instead.
 
      For example, if the request analyzes for which resources user A has permission P, and there's an
      IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA,
@@ -423,7 +475,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. If true, the response will include access analysis from identities to resources
        * via service account impersonation. This is a very expensive operation, because many derived
-       * queries will be executed. We highly recommend you use ExportIamPolicyAnalysis rpc instead.
+       * queries will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis
+       * rpc instead.
        *
        * For example, if the request analyzes for which resources user A has permission P, and
        * there's an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a
@@ -677,6 +730,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *        will be analyzed. This can only be an organization number (such
     as "organizations/123") or
      *        a folder number (such as "folders/123").
+    To know how to get organization id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id).
+    To know how to get folder id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
      * @param content the {@link com.google.api.services.cloudasset.v1p4beta1.model.ExportIamPolicyAnalysisRequest}
      * @return the request
      */
@@ -711,6 +770,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *        will be analyzed. This can only be an organization number (such
     as "organizations/123") or
      *        a folder number (such as "folders/123").
+    To know how to get organization id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id).
+    To know how to get folder id, visit [here
+     *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
        * @param content the {@link com.google.api.services.cloudasset.v1p4beta1.model.ExportIamPolicyAnalysisRequest}
        * @since 1.13
        */
@@ -783,6 +848,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
        * "organizations/123") or a folder number (such as "folders/123").
+       *
+       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
+       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
+       *
+       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
+       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
@@ -790,6 +861,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. The relative name of the root asset. Only resources and IAM policies within the parent
      will be analyzed. This can only be an organization number (such as "organizations/123") or a folder
      number (such as "folders/123").
+
+     To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs
+     /creating-managing-organization#retrieving_your_organization_id).
+
+     To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
+     /creating-managing-folders#viewing_or_listing_folders_and_projects).
        */
       public java.lang.String getParent() {
         return parent;
@@ -799,6 +876,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
        * "organizations/123") or a folder number (such as "folders/123").
+       *
+       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
+       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
+       *
+       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
+       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
        */
       public ExportIamPolicyAnalysis setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {

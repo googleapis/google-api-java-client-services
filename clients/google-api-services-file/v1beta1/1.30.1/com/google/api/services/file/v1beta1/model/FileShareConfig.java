@@ -44,6 +44,13 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Nfs Export Options. There is a limit of 10 export options per file share.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NfsExportOptions> nfsExportOptions;
+
+  /**
    * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
    */
   public FileShareConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Nfs Export Options. There is a limit of 10 export options per file share.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NfsExportOptions> getNfsExportOptions() {
+    return nfsExportOptions;
+  }
+
+  /**
+   * Nfs Export Options. There is a limit of 10 export options per file share.
+   * @param nfsExportOptions nfsExportOptions or {@code null} for none
+   */
+  public FileShareConfig setNfsExportOptions(java.util.List<NfsExportOptions> nfsExportOptions) {
+    this.nfsExportOptions = nfsExportOptions;
     return this;
   }
 

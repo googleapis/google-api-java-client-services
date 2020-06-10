@@ -52,6 +52,13 @@ public final class PagespeedApiLoadingExperienceV5 extends com.google.api.client
   private java.util.Map<String, UserPageLoadMetricV5> metrics;
 
   /**
+   * True if the result is an origin fallback from a page, false otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("origin_fallback")
+  private java.lang.Boolean originFallback;
+
+  /**
    * The human readable speed "category" of the id.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class PagespeedApiLoadingExperienceV5 extends com.google.api.client
    */
   public PagespeedApiLoadingExperienceV5 setMetrics(java.util.Map<String, UserPageLoadMetricV5> metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * True if the result is an origin fallback from a page, false otherwise.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOriginFallback() {
+    return originFallback;
+  }
+
+  /**
+   * True if the result is an origin fallback from a page, false otherwise.
+   * @param originFallback originFallback or {@code null} for none
+   */
+  public PagespeedApiLoadingExperienceV5 setOriginFallback(java.lang.Boolean originFallback) {
+    this.originFallback = originFallback;
     return this;
   }
 

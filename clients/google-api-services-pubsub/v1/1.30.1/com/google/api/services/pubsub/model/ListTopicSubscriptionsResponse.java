@@ -38,7 +38,7 @@ public final class ListTopicSubscriptionsResponse extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * The names of the subscriptions that match the request.
+   * The names of subscriptions attached to the topic specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ListTopicSubscriptionsResponse extends com.google.api.client.
   }
 
   /**
-   * The names of the subscriptions that match the request.
+   * The names of subscriptions attached to the topic specified in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubscriptions() {
@@ -72,7 +72,7 @@ public final class ListTopicSubscriptionsResponse extends com.google.api.client.
   }
 
   /**
-   * The names of the subscriptions that match the request.
+   * The names of subscriptions attached to the topic specified in the request.
    * @param subscriptions subscriptions or {@code null} for none
    */
   public ListTopicSubscriptionsResponse setSubscriptions(java.util.List<java.lang.String> subscriptions) {

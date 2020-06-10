@@ -30,8 +30,8 @@ package com.google.api.services.dataproc.model;
 public final class SparkJob extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. HCFS URIs of archives to be extracted in the working directory of Spark drivers and
-   * tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Optional. HCFS URIs of archives to be extracted into the working directory of each executor.
+   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> args;
 
   /**
-   * Optional. HCFS URIs of files to be copied to the working directory of Spark drivers and
-   * distributed tasks. Useful for naively parallel tasks.
+   * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for
+   * naively parallel tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +93,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> properties;
 
   /**
-   * Optional. HCFS URIs of archives to be extracted in the working directory of Spark drivers and
-   * tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Optional. HCFS URIs of archives to be extracted into the working directory of each executor.
+   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArchiveUris() {
@@ -102,8 +102,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. HCFS URIs of archives to be extracted in the working directory of Spark drivers and
-   * tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Optional. HCFS URIs of archives to be extracted into the working directory of each executor.
+   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
    * @param archiveUris archiveUris or {@code null} for none
    */
   public SparkJob setArchiveUris(java.util.List<java.lang.String> archiveUris) {
@@ -133,8 +133,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. HCFS URIs of files to be copied to the working directory of Spark drivers and
-   * distributed tasks. Useful for naively parallel tasks.
+   * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for
+   * naively parallel tasks.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileUris() {
@@ -142,8 +142,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. HCFS URIs of files to be copied to the working directory of Spark drivers and
-   * distributed tasks. Useful for naively parallel tasks.
+   * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for
+   * naively parallel tasks.
    * @param fileUris fileUris or {@code null} for none
    */
   public SparkJob setFileUris(java.util.List<java.lang.String> fileUris) {

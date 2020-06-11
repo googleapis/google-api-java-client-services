@@ -229,11 +229,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -251,11 +246,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -367,11 +357,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -389,11 +374,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -589,11 +569,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -611,11 +586,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -742,11 +712,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -764,11 +729,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -889,11 +849,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -911,11 +866,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1041,11 +991,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -1063,11 +1008,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1125,6 +1065,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            *
            * Requests for policies with any conditional bindings must specify version 3. Policies
            * without any conditional bindings may specify any valid value or leave the field unset.
+           *
+           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
@@ -1135,6 +1078,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
          Requests for policies with any conditional bindings must specify version 3. Policies without any
          conditional bindings may specify any valid value or leave the field unset.
+
+         To learn which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
@@ -1147,6 +1093,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            *
            * Requests for policies with any conditional bindings must specify version 3. Policies
            * without any conditional bindings may specify any valid value or leave the field unset.
+           *
+           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1231,11 +1180,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -1253,11 +1197,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1446,11 +1385,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
           }
@@ -1468,11 +1402,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch setKey(java.lang.String key) {
             return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1617,11 +1546,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Restart setAccessToken(java.lang.String accessToken) {
-            return (Restart) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Restart setAlt(java.lang.String alt) {
             return (Restart) super.setAlt(alt);
           }
@@ -1639,11 +1563,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Restart setKey(java.lang.String key) {
             return (Restart) super.setKey(key);
-          }
-
-          @Override
-          public Restart setOauthToken(java.lang.String oauthToken) {
-            return (Restart) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1702,7 +1621,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
          *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "instances.setIamPolicy".
          *
@@ -1731,7 +1650,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "instances.setIamPolicy".
            *
@@ -1763,11 +1682,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -1785,11 +1699,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1847,7 +1756,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error.
          *
          * Note: This operation is designed to be used for building permission-aware UIs and command-line
          * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -1878,7 +1787,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
            *
            * Note: This operation is designed to be used for building permission-aware UIs and command-line
            * tools, not for authorization checking. This operation may "fail open" without warning.
@@ -1913,11 +1822,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -1935,11 +1839,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2059,11 +1958,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Upgrade setAccessToken(java.lang.String accessToken) {
-            return (Upgrade) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Upgrade setAlt(java.lang.String alt) {
             return (Upgrade) super.setAlt(alt);
           }
@@ -2081,11 +1975,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Upgrade setKey(java.lang.String key) {
             return (Upgrade) super.setKey(key);
-          }
-
-          @Override
-          public Upgrade setOauthToken(java.lang.String oauthToken) {
-            return (Upgrade) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2234,11 +2123,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Cancel setAccessToken(java.lang.String accessToken) {
-            return (Cancel) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Cancel setAlt(java.lang.String alt) {
             return (Cancel) super.setAlt(alt);
           }
@@ -2256,11 +2140,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Cancel setKey(java.lang.String key) {
             return (Cancel) super.setKey(key);
-          }
-
-          @Override
-          public Cancel setOauthToken(java.lang.String oauthToken) {
-            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2367,11 +2246,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -2389,11 +2263,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2507,11 +2376,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -2529,11 +2393,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2659,11 +2518,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -2681,11 +2535,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2772,6 +2621,231 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Versions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataFusion datafusion = new DataFusion(...);}
+       *   {@code DataFusion.Versions.List request = datafusion.versions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Versions versions() {
+        return new Versions();
+      }
+
+      /**
+       * The "versions" collection of methods.
+       */
+      public class Versions {
+
+        /**
+         * Lists possible versions for Data Fusion instances in the specified project and location.
+         *
+         * Create a request for the method "versions.list".
+         *
+         * This request holds the parameters needed by the datafusion server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve instance information
+        in the format
+         *        projects/{project}/locations/{location}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.ListAvailableVersionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/versions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists possible versions for Data Fusion instances in the specified project and location.
+           *
+           * Create a request for the method "versions.list".
+           *
+           * This request holds the parameters needed by the the datafusion server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve instance information
+        in the format
+         *        projects/{project}/locations/{location}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataFusion.this, "GET", REST_PATH, null, com.google.api.services.datafusion.v1beta1.model.ListAvailableVersionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve instance information in the
+           * format projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve instance information in the format
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve instance information in the
+           * format projects/{project}/locations/{location}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Whether or not to return the latest patch of every available minor version. If true,
+           * only the latest patch will be returned. Ex. if allowed versions is [6.1.1, 6.1.2,
+           * 6.2.0] then response will be [6.1.2, 6.2.0]
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean latestPatchOnly;
+
+          /** Whether or not to return the latest patch of every available minor version. If true, only the
+         latest patch will be returned. Ex. if allowed versions is [6.1.1, 6.1.2, 6.2.0] then response will
+         be [6.1.2, 6.2.0]
+           */
+          public java.lang.Boolean getLatestPatchOnly() {
+            return latestPatchOnly;
+          }
+
+          /**
+           * Whether or not to return the latest patch of every available minor version. If true,
+           * only the latest patch will be returned. Ex. if allowed versions is [6.1.1, 6.1.2,
+           * 6.2.0] then response will be [6.1.2, 6.2.0]
+           */
+          public List setLatestPatchOnly(java.lang.Boolean latestPatchOnly) {
+            this.latestPatchOnly = latestPatchOnly;
+            return this;
+          }
+
+          /** The maximum number of items to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of items to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The next_page_token value to use if there are additional results to retrieve for this
+           * list request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value to use if there are additional results to retrieve for this list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The next_page_token value to use if there are additional results to retrieve for this
+           * list request.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

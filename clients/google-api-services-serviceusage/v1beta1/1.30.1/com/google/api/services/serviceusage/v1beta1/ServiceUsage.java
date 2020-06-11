@@ -1014,6 +1014,165 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * Generate service identity for service.
+     *
+     * Create a request for the method "services.generateServiceIdentity".
+     *
+     * This request holds the parameters needed by the serviceusage server.  After setting any optional
+     * parameters, call the {@link GenerateServiceIdentity#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param parent Name of the consumer and service to generate an identity for.
+    The `GenerateServiceIdentity` methods
+     *        currently only support projects.
+    An example name would be:
+     *        `projects/123/services/example.googleapis.com` where `123` is the
+    project number.
+     * @return the request
+     */
+    public GenerateServiceIdentity generateServiceIdentity(java.lang.String parent) throws java.io.IOException {
+      GenerateServiceIdentity result = new GenerateServiceIdentity(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateServiceIdentity extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+      private static final String REST_PATH = "v1beta1/{+parent}:generateServiceIdentity";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+      /**
+       * Generate service identity for service.
+       *
+       * Create a request for the method "services.generateServiceIdentity".
+       *
+       * This request holds the parameters needed by the the serviceusage server.  After setting any
+       * optional parameters, call the {@link GenerateServiceIdentity#execute()} method to invoke the
+       * remote operation. <p> {@link GenerateServiceIdentity#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param parent Name of the consumer and service to generate an identity for.
+    The `GenerateServiceIdentity` methods
+     *        currently only support projects.
+    An example name would be:
+     *        `projects/123/services/example.googleapis.com` where `123` is the
+    project number.
+       * @since 1.13
+       */
+      protected GenerateServiceIdentity(java.lang.String parent) {
+        super(ServiceUsage.this, "POST", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+      }
+
+      @Override
+      public GenerateServiceIdentity set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateServiceIdentity) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateServiceIdentity setAccessToken(java.lang.String accessToken) {
+        return (GenerateServiceIdentity) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateServiceIdentity setAlt(java.lang.String alt) {
+        return (GenerateServiceIdentity) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateServiceIdentity setCallback(java.lang.String callback) {
+        return (GenerateServiceIdentity) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateServiceIdentity setFields(java.lang.String fields) {
+        return (GenerateServiceIdentity) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateServiceIdentity setKey(java.lang.String key) {
+        return (GenerateServiceIdentity) super.setKey(key);
+      }
+
+      @Override
+      public GenerateServiceIdentity setOauthToken(java.lang.String oauthToken) {
+        return (GenerateServiceIdentity) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateServiceIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateServiceIdentity) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateServiceIdentity setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateServiceIdentity) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateServiceIdentity setUploadType(java.lang.String uploadType) {
+        return (GenerateServiceIdentity) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateServiceIdentity setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateServiceIdentity) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Name of the consumer and service to generate an identity for.
+       *
+       * The `GenerateServiceIdentity` methods currently only support projects.
+       *
+       * An example name would be: `projects/123/services/example.googleapis.com` where `123` is the
+       * project number.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Name of the consumer and service to generate an identity for.
+
+     The `GenerateServiceIdentity` methods currently only support projects.
+
+     An example name would be: `projects/123/services/example.googleapis.com` where `123` is the project
+     number.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Name of the consumer and service to generate an identity for.
+       *
+       * The `GenerateServiceIdentity` methods currently only support projects.
+       *
+       * An example name would be: `projects/123/services/example.googleapis.com` where `123` is the
+       * project number.
+       */
+      public GenerateServiceIdentity setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public GenerateServiceIdentity set(String parameterName, Object value) {
+        return (GenerateServiceIdentity) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the service configuration and enabled state for a given service.
      *
      * Create a request for the method "services.get".

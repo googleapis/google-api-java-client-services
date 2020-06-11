@@ -41,8 +41,8 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
 
   /**
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
-   * be specified by separating them with commas. Defaults to empty if not set, which will skip the
-   * post mutate get. Valid values are:
+   * be specified by separating them with commas. Defaults to the copy mask with metadata and
+   * membership fields if not set. Valid values are:
    *
    * * addresses * ageRanges * biographies * birthdays * coverPhotos * emailAddresses * events *
    * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
@@ -52,6 +52,14 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    */
   @com.google.api.client.util.Key
   private String readMask;
+
+  /**
+   * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
+   * ReadSourceType.PROFILE if not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sources;
 
   /**
    * Required. A field mask to restrict which fields are copied into the new contact. Valid values
@@ -78,8 +86,8 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
 
   /**
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
-   * be specified by separating them with commas. Defaults to empty if not set, which will skip the
-   * post mutate get. Valid values are:
+   * be specified by separating them with commas. Defaults to the copy mask with metadata and
+   * membership fields if not set. Valid values are:
    *
    * * addresses * ageRanges * biographies * birthdays * coverPhotos * emailAddresses * events *
    * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
@@ -93,8 +101,8 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
 
   /**
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
-   * be specified by separating them with commas. Defaults to empty if not set, which will skip the
-   * post mutate get. Valid values are:
+   * be specified by separating them with commas. Defaults to the copy mask with metadata and
+   * membership fields if not set. Valid values are:
    *
    * * addresses * ageRanges * biographies * birthdays * coverPhotos * emailAddresses * events *
    * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
@@ -104,6 +112,25 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    */
   public CopyOtherContactToMyContactsGroupRequest setReadMask(String readMask) {
     this.readMask = readMask;
+    return this;
+  }
+
+  /**
+   * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
+   * ReadSourceType.PROFILE if not set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSources() {
+    return sources;
+  }
+
+  /**
+   * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
+   * ReadSourceType.PROFILE if not set.
+   * @param sources sources or {@code null} for none
+   */
+  public CopyOtherContactToMyContactsGroupRequest setSources(java.util.List<java.lang.String> sources) {
+    this.sources = sources;
     return this;
   }
 

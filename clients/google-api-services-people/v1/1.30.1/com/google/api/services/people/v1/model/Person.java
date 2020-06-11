@@ -155,6 +155,19 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The person's file-ases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FileAs> fileAses;
+
+  static {
+    // hack to force ProGuard to consider FileAs used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FileAs.class);
+  }
+
+  /**
    * The person's genders.
    * The value may be {@code null}.
    */
@@ -536,6 +549,23 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   public Person setEvents(java.util.List<Event> events) {
     this.events = events;
+    return this;
+  }
+
+  /**
+   * The person's file-ases.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FileAs> getFileAses() {
+    return fileAses;
+  }
+
+  /**
+   * The person's file-ases.
+   * @param fileAses fileAses or {@code null} for none
+   */
+  public Person setFileAses(java.util.List<FileAs> fileAses) {
+    this.fileAses = fileAses;
     return this;
   }
 

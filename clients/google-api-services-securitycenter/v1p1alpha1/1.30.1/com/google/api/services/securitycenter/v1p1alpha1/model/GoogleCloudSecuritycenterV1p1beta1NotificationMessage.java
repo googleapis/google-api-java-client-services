@@ -45,6 +45,13 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   private java.lang.String notificationConfigName;
 
   /**
+   * The Cloud resource tied to the notification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV1p1beta1Resource resource;
+
+  /**
    * If it's an asset based notification config, this field will be populated.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
    */
   public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setNotificationConfigName(java.lang.String notificationConfigName) {
     this.notificationConfigName = notificationConfigName;
+    return this;
+  }
+
+  /**
+   * The Cloud resource tied to the notification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1p1beta1Resource getResource() {
+    return resource;
+  }
+
+  /**
+   * The Cloud resource tied to the notification.
+   * @param resource resource or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setResource(GoogleCloudSecuritycenterV1p1beta1Resource resource) {
+    this.resource = resource;
     return this;
   }
 

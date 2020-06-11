@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for ExpansionFile.
+ * An expansion file. The resource for ExpansionFilesService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,16 +31,16 @@ package com.google.api.services.androidpublisher.model;
 public final class ExpansionFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set this field indicates that this APK has an Expansion File uploaded to it: this APK does
-   * not reference another APK's Expansion File. The field's value is the size of the uploaded
-   * Expansion File in bytes.
+   * If set, this field indicates that this APK has an expansion file uploaded to it: this APK does
+   * not reference another APK's expansion file. The field's value is the size of the uploaded
+   * expansion file in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long fileSize;
 
   /**
-   * If set this APK's Expansion File references another APK's Expansion File. The file_size field
+   * If set, this APK's expansion file references another APK's expansion file. The file_size field
    * will not be set.
    * The value may be {@code null}.
    */
@@ -48,9 +48,9 @@ public final class ExpansionFile extends com.google.api.client.json.GenericJson 
   private java.lang.Integer referencesVersion;
 
   /**
-   * If set this field indicates that this APK has an Expansion File uploaded to it: this APK does
-   * not reference another APK's Expansion File. The field's value is the size of the uploaded
-   * Expansion File in bytes.
+   * If set, this field indicates that this APK has an expansion file uploaded to it: this APK does
+   * not reference another APK's expansion file. The field's value is the size of the uploaded
+   * expansion file in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFileSize() {
@@ -58,9 +58,9 @@ public final class ExpansionFile extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If set this field indicates that this APK has an Expansion File uploaded to it: this APK does
-   * not reference another APK's Expansion File. The field's value is the size of the uploaded
-   * Expansion File in bytes.
+   * If set, this field indicates that this APK has an expansion file uploaded to it: this APK does
+   * not reference another APK's expansion file. The field's value is the size of the uploaded
+   * expansion file in bytes.
    * @param fileSize fileSize or {@code null} for none
    */
   public ExpansionFile setFileSize(java.lang.Long fileSize) {
@@ -69,7 +69,7 @@ public final class ExpansionFile extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If set this APK's Expansion File references another APK's Expansion File. The file_size field
+   * If set, this APK's expansion file references another APK's expansion file. The file_size field
    * will not be set.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class ExpansionFile extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If set this APK's Expansion File references another APK's Expansion File. The file_size field
+   * If set, this APK's expansion file references another APK's expansion file. The file_size field
    * will not be set.
    * @param referencesVersion referencesVersion or {@code null} for none
    */

@@ -20,8 +20,8 @@ package com.google.api.services.androidpublisher.model;
  * A VoidedPurchase resource indicates a purchase that was either canceled/refunded/charged-back.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -61,15 +61,15 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   private java.lang.String purchaseToken;
 
   /**
-   * The reason why the purchase was voided, possible values are: - Other  - Remorse  - Not_received
-   * - Defective  - Accidental_purchase  - Fraud  - Friendly_fraud  - Chargeback
+   * The reason why the purchase was voided, possible values are: 0. Other 1. Remorse 2.
+   * Not_received 3. Defective 4. Accidental_purchase 5. Fraud 6. Friendly_fraud 7. Chargeback
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer voidedReason;
 
   /**
-   * The initiator of voided purchase, possible values are: - User  - Developer  - Google
+   * The initiator of voided purchase, possible values are: 0. User 1. Developer 2. Google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,8 +156,8 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The reason why the purchase was voided, possible values are: - Other  - Remorse  - Not_received
-   * - Defective  - Accidental_purchase  - Fraud  - Friendly_fraud  - Chargeback
+   * The reason why the purchase was voided, possible values are: 0. Other 1. Remorse 2.
+   * Not_received 3. Defective 4. Accidental_purchase 5. Fraud 6. Friendly_fraud 7. Chargeback
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVoidedReason() {
@@ -165,8 +165,8 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The reason why the purchase was voided, possible values are: - Other  - Remorse  - Not_received
-   * - Defective  - Accidental_purchase  - Fraud  - Friendly_fraud  - Chargeback
+   * The reason why the purchase was voided, possible values are: 0. Other 1. Remorse 2.
+   * Not_received 3. Defective 4. Accidental_purchase 5. Fraud 6. Friendly_fraud 7. Chargeback
    * @param voidedReason voidedReason or {@code null} for none
    */
   public VoidedPurchase setVoidedReason(java.lang.Integer voidedReason) {
@@ -175,7 +175,7 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The initiator of voided purchase, possible values are: - User  - Developer  - Google
+   * The initiator of voided purchase, possible values are: 0. User 1. Developer 2. Google
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVoidedSource() {
@@ -183,7 +183,7 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The initiator of voided purchase, possible values are: - User  - Developer  - Google
+   * The initiator of voided purchase, possible values are: 0. User 1. Developer 2. Google
    * @param voidedSource voidedSource or {@code null} for none
    */
   public VoidedPurchase setVoidedSource(java.lang.Integer voidedSource) {

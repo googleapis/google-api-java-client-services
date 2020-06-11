@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Apk.
+ * Information about an APK. The resource for ApksService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,13 +38,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   private ApkBinary binary;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ApkBinary testBinary;
-
-  /**
-   * The version code of the APK, as specified in the APK's manifest file.
+   * The version code of the APK, as specified in the manifest file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,22 +62,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public ApkBinary getTestBinary() {
-    return testBinary;
-  }
-
-  /**
-   * @param testBinary testBinary or {@code null} for none
-   */
-  public Apk setTestBinary(ApkBinary testBinary) {
-    this.testBinary = testBinary;
-    return this;
-  }
-
-  /**
-   * The version code of the APK, as specified in the APK's manifest file.
+   * The version code of the APK, as specified in the manifest file.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersionCode() {
@@ -91,7 +70,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version code of the APK, as specified in the APK's manifest file.
+   * The version code of the APK, as specified in the manifest file.
    * @param versionCode versionCode or {@code null} for none
    */
   public Apk setVersionCode(java.lang.Integer versionCode) {

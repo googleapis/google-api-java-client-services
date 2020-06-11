@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for CountryTargeting.
+ * Country targeting specification.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,18 +31,23 @@ package com.google.api.services.androidpublisher.model;
 public final class CountryTargeting extends com.google.api.client.json.GenericJson {
 
   /**
+   * Countries to target, specified as two letter [CLDR
+   * codes](https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> countries;
 
   /**
+   * Include "rest of world" as well as explicitly targeted countries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeRestOfWorld;
 
   /**
+   * Countries to target, specified as two letter [CLDR
+   * codes](https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCountries() {
@@ -50,6 +55,8 @@ public final class CountryTargeting extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Countries to target, specified as two letter [CLDR
+   * codes](https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html).
    * @param countries countries or {@code null} for none
    */
   public CountryTargeting setCountries(java.util.List<java.lang.String> countries) {
@@ -58,6 +65,7 @@ public final class CountryTargeting extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Include "rest of world" as well as explicitly targeted countries.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeRestOfWorld() {
@@ -65,6 +73,7 @@ public final class CountryTargeting extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Include "rest of world" as well as explicitly targeted countries.
    * @param includeRestOfWorld includeRestOfWorld or {@code null} for none
    */
   public CountryTargeting setIncludeRestOfWorld(java.lang.Boolean includeRestOfWorld) {

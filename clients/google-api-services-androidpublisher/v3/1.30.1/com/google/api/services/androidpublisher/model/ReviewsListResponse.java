@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for ReviewsListResponse.
+ * Response listing reviews.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,12 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class ReviewsListResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Information about the current page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PageInfo pageInfo;
 
   /**
+   * List of reviews.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,12 +51,14 @@ public final class ReviewsListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * Pagination token, to handle a number of products that is over one page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TokenPagination tokenPagination;
 
   /**
+   * Information about the current page.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -62,6 +66,7 @@ public final class ReviewsListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * Information about the current page.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public ReviewsListResponse setPageInfo(PageInfo pageInfo) {
@@ -70,6 +75,7 @@ public final class ReviewsListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * List of reviews.
    * @return value or {@code null} for none
    */
   public java.util.List<Review> getReviews() {
@@ -77,6 +83,7 @@ public final class ReviewsListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * List of reviews.
    * @param reviews reviews or {@code null} for none
    */
   public ReviewsListResponse setReviews(java.util.List<Review> reviews) {
@@ -85,6 +92,7 @@ public final class ReviewsListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * Pagination token, to handle a number of products that is over one page.
    * @return value or {@code null} for none
    */
   public TokenPagination getTokenPagination() {
@@ -92,6 +100,7 @@ public final class ReviewsListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * Pagination token, to handle a number of products that is over one page.
    * @param tokenPagination tokenPagination or {@code null} for none
    */
   public ReviewsListResponse setTokenPagination(TokenPagination tokenPagination) {

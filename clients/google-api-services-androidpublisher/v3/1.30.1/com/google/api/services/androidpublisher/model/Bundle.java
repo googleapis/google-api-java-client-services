@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Bundle.
+ * Information about a bundle. The resource for BundlesService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -47,7 +47,7 @@ public final class Bundle extends com.google.api.client.json.GenericJson {
   private java.lang.String sha256;
 
   /**
-   * The version code of the Android App Bundle. As specified in the Android App Bundle's base
+   * The version code of the Android App Bundle, as specified in the Android App Bundle's base
    * module APK manifest file.
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class Bundle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version code of the Android App Bundle. As specified in the Android App Bundle's base
+   * The version code of the Android App Bundle, as specified in the Android App Bundle's base
    * module APK manifest file.
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class Bundle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version code of the Android App Bundle. As specified in the Android App Bundle's base
+   * The version code of the Android App Bundle, as specified in the Android App Bundle's base
    * module APK manifest file.
    * @param versionCode versionCode or {@code null} for none
    */

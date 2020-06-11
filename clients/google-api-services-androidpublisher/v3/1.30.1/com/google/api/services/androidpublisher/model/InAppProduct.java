@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for InAppProduct.
+ * An in-app product. The resource for InappproductsService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,101 +31,92 @@ package com.google.api.services.androidpublisher.model;
 public final class InAppProduct extends com.google.api.client.json.GenericJson {
 
   /**
-   * The default language of the localized data, as defined by BCP 47. e.g. "en-US", "en-GB".
+   * Default language of the localized data, as defined by BCP-47. e.g. "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultLanguage;
 
   /**
-   * Default price cannot be zero. In-app products can never be free. Default price is always in the
-   * developer's Checkout merchant currency.
+   * Default price. Cannot be zero, as in-app products are never free. Always in the developer's
+   * Checkout merchant currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price defaultPrice;
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. It will allow developers to
-   * give their subscribers a grace period when the payment for the new recurrence period is
-   * declined. Acceptable values = "P3D" (three days), "P7D" (seven days), "P14D" (fourteen days),
-   * and "P30D" (thirty days)
+   * Grace period of the subscription, specified in ISO 8601 format. Allows developers to give their
+   * subscribers a grace period when the payment for the new recurrence period is declined.
+   * Acceptable values are P0D (zero days), P3D (three days), P7D (seven days), P14D (14 days), and
+   * P30D (30 days).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gracePeriod;
 
   /**
-   * List of localized title and description data.
+   * List of localized title and description data. Map key is the language of the localized data, as
+   * defined by BCP-47, e.g. "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, InAppProductListing> listings;
 
   /**
-   * The package name of the parent app.
+   * Package name of the parent app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageName;
 
   /**
-   * Prices per buyer region. None of these prices should be zero. In-app products can never be
-   * free.
+   * Prices per buyer region. None of these can be zero, as in-app products are never free. Map key
+   * is region code, as defined by ISO 3166-2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Price> prices;
 
   /**
-   * Purchase type enum value. Unmodifiable after creation.
+   * The type of the product, e.g. a recurring subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String purchaseType;
 
   /**
-   * Whether or not the developer wants the specific subscription to be resubscribable. If the
-   * developer doesn't use PBL2.0, this value is ignored since the feature is only for developers
-   * using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from
-   * the subscription center by clicking on a "Resubscribe" CTA under the entry for the expired
-   * subscription.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String resubscribeEligibility;
-
-  /**
-   * The stock-keeping-unit (SKU) of the product, unique within an app.
+   * Stock-keeping-unit (SKU) of the product, unique within an app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sku;
 
   /**
+   * The status of the product, e.g. whether it's active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are "P1W" (one week),
-   * "P1M" (one month), "P3M" (three months), "P6M" (six months), and "P1Y" (one year).
+   * Subscription period, specified in ISO 8601 format. Acceptable values are P1W (one week), P1M
+   * (one month), P3M (three months), P6M (six months), and P1Y (one year).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subscriptionPeriod;
 
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything between "P7D" (seven
-   * days) and "P999D" (999 days). Seasonal subscriptions cannot have a trial period.
+   * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
+   * days) and P999D (999 days).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trialPeriod;
 
   /**
-   * The default language of the localized data, as defined by BCP 47. e.g. "en-US", "en-GB".
+   * Default language of the localized data, as defined by BCP-47. e.g. "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultLanguage() {
@@ -133,7 +124,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default language of the localized data, as defined by BCP 47. e.g. "en-US", "en-GB".
+   * Default language of the localized data, as defined by BCP-47. e.g. "en-US".
    * @param defaultLanguage defaultLanguage or {@code null} for none
    */
   public InAppProduct setDefaultLanguage(java.lang.String defaultLanguage) {
@@ -142,8 +133,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default price cannot be zero. In-app products can never be free. Default price is always in the
-   * developer's Checkout merchant currency.
+   * Default price. Cannot be zero, as in-app products are never free. Always in the developer's
+   * Checkout merchant currency.
    * @return value or {@code null} for none
    */
   public Price getDefaultPrice() {
@@ -151,8 +142,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default price cannot be zero. In-app products can never be free. Default price is always in the
-   * developer's Checkout merchant currency.
+   * Default price. Cannot be zero, as in-app products are never free. Always in the developer's
+   * Checkout merchant currency.
    * @param defaultPrice defaultPrice or {@code null} for none
    */
   public InAppProduct setDefaultPrice(Price defaultPrice) {
@@ -161,10 +152,10 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. It will allow developers to
-   * give their subscribers a grace period when the payment for the new recurrence period is
-   * declined. Acceptable values = "P3D" (three days), "P7D" (seven days), "P14D" (fourteen days),
-   * and "P30D" (thirty days)
+   * Grace period of the subscription, specified in ISO 8601 format. Allows developers to give their
+   * subscribers a grace period when the payment for the new recurrence period is declined.
+   * Acceptable values are P0D (zero days), P3D (three days), P7D (seven days), P14D (14 days), and
+   * P30D (30 days).
    * @return value or {@code null} for none
    */
   public java.lang.String getGracePeriod() {
@@ -172,10 +163,10 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. It will allow developers to
-   * give their subscribers a grace period when the payment for the new recurrence period is
-   * declined. Acceptable values = "P3D" (three days), "P7D" (seven days), "P14D" (fourteen days),
-   * and "P30D" (thirty days)
+   * Grace period of the subscription, specified in ISO 8601 format. Allows developers to give their
+   * subscribers a grace period when the payment for the new recurrence period is declined.
+   * Acceptable values are P0D (zero days), P3D (three days), P7D (seven days), P14D (14 days), and
+   * P30D (30 days).
    * @param gracePeriod gracePeriod or {@code null} for none
    */
   public InAppProduct setGracePeriod(java.lang.String gracePeriod) {
@@ -184,7 +175,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of localized title and description data.
+   * List of localized title and description data. Map key is the language of the localized data, as
+   * defined by BCP-47, e.g. "en-US".
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InAppProductListing> getListings() {
@@ -192,7 +184,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of localized title and description data.
+   * List of localized title and description data. Map key is the language of the localized data, as
+   * defined by BCP-47, e.g. "en-US".
    * @param listings listings or {@code null} for none
    */
   public InAppProduct setListings(java.util.Map<String, InAppProductListing> listings) {
@@ -201,7 +194,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The package name of the parent app.
+   * Package name of the parent app.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageName() {
@@ -209,7 +202,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The package name of the parent app.
+   * Package name of the parent app.
    * @param packageName packageName or {@code null} for none
    */
   public InAppProduct setPackageName(java.lang.String packageName) {
@@ -218,8 +211,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Prices per buyer region. None of these prices should be zero. In-app products can never be
-   * free.
+   * Prices per buyer region. None of these can be zero, as in-app products are never free. Map key
+   * is region code, as defined by ISO 3166-2.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Price> getPrices() {
@@ -227,8 +220,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Prices per buyer region. None of these prices should be zero. In-app products can never be
-   * free.
+   * Prices per buyer region. None of these can be zero, as in-app products are never free. Map key
+   * is region code, as defined by ISO 3166-2.
    * @param prices prices or {@code null} for none
    */
   public InAppProduct setPrices(java.util.Map<String, Price> prices) {
@@ -237,7 +230,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Purchase type enum value. Unmodifiable after creation.
+   * The type of the product, e.g. a recurring subscription.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchaseType() {
@@ -245,7 +238,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Purchase type enum value. Unmodifiable after creation.
+   * The type of the product, e.g. a recurring subscription.
    * @param purchaseType purchaseType or {@code null} for none
    */
   public InAppProduct setPurchaseType(java.lang.String purchaseType) {
@@ -254,32 +247,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not the developer wants the specific subscription to be resubscribable. If the
-   * developer doesn't use PBL2.0, this value is ignored since the feature is only for developers
-   * using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from
-   * the subscription center by clicking on a "Resubscribe" CTA under the entry for the expired
-   * subscription.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResubscribeEligibility() {
-    return resubscribeEligibility;
-  }
-
-  /**
-   * Whether or not the developer wants the specific subscription to be resubscribable. If the
-   * developer doesn't use PBL2.0, this value is ignored since the feature is only for developers
-   * using PBL2.0. This feature allows users to resubscribe to an expired subscription directly from
-   * the subscription center by clicking on a "Resubscribe" CTA under the entry for the expired
-   * subscription.
-   * @param resubscribeEligibility resubscribeEligibility or {@code null} for none
-   */
-  public InAppProduct setResubscribeEligibility(java.lang.String resubscribeEligibility) {
-    this.resubscribeEligibility = resubscribeEligibility;
-    return this;
-  }
-
-  /**
-   * The stock-keeping-unit (SKU) of the product, unique within an app.
+   * Stock-keeping-unit (SKU) of the product, unique within an app.
    * @return value or {@code null} for none
    */
   public java.lang.String getSku() {
@@ -287,7 +255,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stock-keeping-unit (SKU) of the product, unique within an app.
+   * Stock-keeping-unit (SKU) of the product, unique within an app.
    * @param sku sku or {@code null} for none
    */
   public InAppProduct setSku(java.lang.String sku) {
@@ -296,6 +264,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The status of the product, e.g. whether it's active.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -303,6 +272,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The status of the product, e.g. whether it's active.
    * @param status status or {@code null} for none
    */
   public InAppProduct setStatus(java.lang.String status) {
@@ -311,8 +281,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are "P1W" (one week),
-   * "P1M" (one month), "P3M" (three months), "P6M" (six months), and "P1Y" (one year).
+   * Subscription period, specified in ISO 8601 format. Acceptable values are P1W (one week), P1M
+   * (one month), P3M (three months), P6M (six months), and P1Y (one year).
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscriptionPeriod() {
@@ -320,8 +290,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are "P1W" (one week),
-   * "P1M" (one month), "P3M" (three months), "P6M" (six months), and "P1Y" (one year).
+   * Subscription period, specified in ISO 8601 format. Acceptable values are P1W (one week), P1M
+   * (one month), P3M (three months), P6M (six months), and P1Y (one year).
    * @param subscriptionPeriod subscriptionPeriod or {@code null} for none
    */
   public InAppProduct setSubscriptionPeriod(java.lang.String subscriptionPeriod) {
@@ -330,8 +300,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything between "P7D" (seven
-   * days) and "P999D" (999 days). Seasonal subscriptions cannot have a trial period.
+   * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
+   * days) and P999D (999 days).
    * @return value or {@code null} for none
    */
   public java.lang.String getTrialPeriod() {
@@ -339,8 +309,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything between "P7D" (seven
-   * days) and "P999D" (999 days). Seasonal subscriptions cannot have a trial period.
+   * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
+   * days) and P999D (999 days).
    * @param trialPeriod trialPeriod or {@code null} for none
    */
   public InAppProduct setTrialPeriod(java.lang.String trialPeriod) {

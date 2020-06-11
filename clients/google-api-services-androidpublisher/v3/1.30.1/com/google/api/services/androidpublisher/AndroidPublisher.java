@@ -20,7 +20,7 @@ package com.google.api.services.androidpublisher;
  * Service definition for AndroidPublisher (v3).
  *
  * <p>
- * Accesses Android application developers' Google Play accounts.
+ * Lets Android application developers access their Google Play accounts.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Play Developer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Google Play Android Developer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -63,7 +63,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "androidpublisher/v3/applications/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/androidpublisher/v3";
+  public static final String DEFAULT_BATCH_PATH = "batch/androidpublisher";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -143,15 +143,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Edits {
 
     /**
-     * Commits/applies the changes made in this edit back to the app.
+     * Commits an app edit.
      *
      * Create a request for the method "edits.commit".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Commit#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-     * @param editId Unique identifier for this edit.
+     * @param packageName Package name of the app.
+     * @param editId Identifier of the edit.
      * @return the request
      */
     public Commit commit(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -162,10 +162,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Commit extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppEdit> {
 
-      private static final String REST_PATH = "{packageName}/edits/{editId}:commit";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}:commit";
 
       /**
-       * Commits/applies the changes made in this edit back to the app.
+       * Commits an app edit.
        *
        * Create a request for the method "edits.commit".
        *
@@ -175,8 +175,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @since 1.13
        */
       protected Commit(java.lang.String packageName, java.lang.String editId) {
@@ -186,8 +186,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Commit set$Xgafv(java.lang.String $Xgafv) {
+        return (Commit) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Commit setAccessToken(java.lang.String accessToken) {
+        return (Commit) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Commit setAlt(java.lang.String alt) {
         return (Commit) super.setAlt(alt);
+      }
+
+      @Override
+      public Commit setCallback(java.lang.String callback) {
+        return (Commit) super.setCallback(callback);
       }
 
       @Override
@@ -216,41 +231,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Commit setUserIp(java.lang.String userIp) {
-        return (Commit) super.setUserIp(userIp);
+      public Commit setUploadType(java.lang.String uploadType) {
+        return (Commit) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      @Override
+      public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Commit) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Commit setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       @com.google.api.client.util.Key
       private java.lang.String editId;
 
-      /** Unique identifier for this edit.
+      /** Identifier of the edit.
        */
       public java.lang.String getEditId() {
         return editId;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       public Commit setEditId(java.lang.String editId) {
         this.editId = editId;
         return this;
@@ -262,16 +278,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Deletes an edit for an app. Creating a new edit will automatically delete any of your previous
-     * edits so this method need only be called if you want to preemptively abandon an edit.
+     * Deletes an app edit.
      *
      * Create a request for the method "edits.delete".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-     * @param editId Unique identifier for this edit.
+     * @param packageName Package name of the app.
+     * @param editId Identifier of the edit.
      * @return the request
      */
     public Delete delete(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -282,11 +297,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Delete extends AndroidPublisherRequest<Void> {
 
-      private static final String REST_PATH = "{packageName}/edits/{editId}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}";
 
       /**
-       * Deletes an edit for an app. Creating a new edit will automatically delete any of your previous
-       * edits so this method need only be called if you want to preemptively abandon an edit.
+       * Deletes an app edit.
        *
        * Create a request for the method "edits.delete".
        *
@@ -296,8 +310,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @since 1.13
        */
       protected Delete(java.lang.String packageName, java.lang.String editId) {
@@ -307,8 +321,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -337,41 +366,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Delete setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       @com.google.api.client.util.Key
       private java.lang.String editId;
 
-      /** Unique identifier for this edit.
+      /** Identifier of the edit.
        */
       public java.lang.String getEditId() {
         return editId;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       public Delete setEditId(java.lang.String editId) {
         this.editId = editId;
         return this;
@@ -383,16 +413,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Returns information about the edit specified. Calls will fail if the edit is no long active (e.g.
-     * has been deleted, superseded or expired).
+     * Gets an app edit.
      *
      * Create a request for the method "edits.get".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-     * @param editId Unique identifier for this edit.
+     * @param packageName Package name of the app.
+     * @param editId Identifier of the edit.
      * @return the request
      */
     public Get get(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -403,11 +432,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppEdit> {
 
-      private static final String REST_PATH = "{packageName}/edits/{editId}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}";
 
       /**
-       * Returns information about the edit specified. Calls will fail if the edit is no long active
-       * (e.g. has been deleted, superseded or expired).
+       * Gets an app edit.
        *
        * Create a request for the method "edits.get".
        *
@@ -416,8 +444,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @since 1.13
        */
       protected Get(java.lang.String packageName, java.lang.String editId) {
@@ -437,8 +465,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -467,41 +510,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Get setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       @com.google.api.client.util.Key
       private java.lang.String editId;
 
-      /** Unique identifier for this edit.
+      /** Identifier of the edit.
        */
       public java.lang.String getEditId() {
         return editId;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       public Get setEditId(java.lang.String editId) {
         this.editId = editId;
         return this;
@@ -513,14 +557,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Creates a new edit for an app, populated with the app's current state.
+     * Creates a new edit for an app.
      *
      * Create a request for the method "edits.insert".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param content the {@link com.google.api.services.androidpublisher.model.AppEdit}
      * @return the request
      */
@@ -532,10 +576,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Insert extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppEdit> {
 
-      private static final String REST_PATH = "{packageName}/edits";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits";
 
       /**
-       * Creates a new edit for an app, populated with the app's current state.
+       * Creates a new edit for an app.
        *
        * Create a request for the method "edits.insert".
        *
@@ -545,7 +589,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param content the {@link com.google.api.services.androidpublisher.model.AppEdit}
        * @since 1.13
        */
@@ -555,8 +599,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -585,25 +644,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Insert setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -615,16 +675,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Checks that the edit can be successfully committed. The edit's changes are not applied to the
-     * live app.
+     * Validates an app edit.
      *
      * Create a request for the method "edits.validate".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-     * @param editId Unique identifier for this edit.
+     * @param packageName Package name of the app.
+     * @param editId Identifier of the edit.
      * @return the request
      */
     public Validate validate(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -635,11 +694,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Validate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppEdit> {
 
-      private static final String REST_PATH = "{packageName}/edits/{editId}:validate";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}:validate";
 
       /**
-       * Checks that the edit can be successfully committed. The edit's changes are not applied to the
-       * live app.
+       * Validates an app edit.
        *
        * Create a request for the method "edits.validate".
        *
@@ -649,8 +707,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @since 1.13
        */
       protected Validate(java.lang.String packageName, java.lang.String editId) {
@@ -660,8 +718,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Validate set$Xgafv(java.lang.String $Xgafv) {
+        return (Validate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Validate setAccessToken(java.lang.String accessToken) {
+        return (Validate) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Validate setAlt(java.lang.String alt) {
         return (Validate) super.setAlt(alt);
+      }
+
+      @Override
+      public Validate setCallback(java.lang.String callback) {
+        return (Validate) super.setCallback(callback);
       }
 
       @Override
@@ -690,41 +763,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Validate setUserIp(java.lang.String userIp) {
-        return (Validate) super.setUserIp(userIp);
+      public Validate setUploadType(java.lang.String uploadType) {
+        return (Validate) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      @Override
+      public Validate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Validate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Validate setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       @com.google.api.client.util.Key
       private java.lang.String editId;
 
-      /** Unique identifier for this edit.
+      /** Identifier of the edit.
        */
       public java.lang.String getEditId() {
         return editId;
       }
 
-      /** Unique identifier for this edit. */
+      /** Identifier of the edit. */
       public Validate setEditId(java.lang.String editId) {
         this.editId = editId;
         return this;
@@ -758,8 +832,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       /**
        * Creates a new APK without uploading the APK itself to Google Play, instead hosting the APK at a
-       * specified URL. This function is only available to enterprises using Google Play for Work whose
-       * application is configured to restrict distribution to the enterprise domain.
+       * specified URL. This function is only available to organizations using Managed Play whose
+       * application is configured to restrict distribution to the organizations.
        *
        * Create a request for the method "apks.addexternallyhosted".
        *
@@ -767,8 +841,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link Addexternallyhosted#execute()} method to invoke the remote
        * operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @param content the {@link com.google.api.services.androidpublisher.model.ApksAddExternallyHostedRequest}
        * @return the request
        */
@@ -780,12 +854,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Addexternallyhosted extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ApksAddExternallyHostedResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks/externallyHosted";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/externallyHosted";
 
         /**
          * Creates a new APK without uploading the APK itself to Google Play, instead hosting the APK at a
-         * specified URL. This function is only available to enterprises using Google Play for Work whose
-         * application is configured to restrict distribution to the enterprise domain.
+         * specified URL. This function is only available to organizations using Managed Play whose
+         * application is configured to restrict distribution to the organizations.
          *
          * Create a request for the method "apks.addexternallyhosted".
          *
@@ -795,8 +869,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @param content the {@link com.google.api.services.androidpublisher.model.ApksAddExternallyHostedRequest}
          * @since 1.13
          */
@@ -807,8 +881,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Addexternallyhosted set$Xgafv(java.lang.String $Xgafv) {
+          return (Addexternallyhosted) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Addexternallyhosted setAccessToken(java.lang.String accessToken) {
+          return (Addexternallyhosted) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Addexternallyhosted setAlt(java.lang.String alt) {
           return (Addexternallyhosted) super.setAlt(alt);
+        }
+
+        @Override
+        public Addexternallyhosted setCallback(java.lang.String callback) {
+          return (Addexternallyhosted) super.setCallback(callback);
         }
 
         @Override
@@ -837,43 +926,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Addexternallyhosted setUserIp(java.lang.String userIp) {
-          return (Addexternallyhosted) super.setUserIp(userIp);
+        public Addexternallyhosted setUploadType(java.lang.String uploadType) {
+          return (Addexternallyhosted) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Addexternallyhosted setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Addexternallyhosted) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Addexternallyhosted setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Addexternallyhosted setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -885,13 +973,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Lists all current APKs of the app and edit.
+       *
        * Create a request for the method "apks.list".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public List list(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -902,9 +992,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ApksListResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks";
 
         /**
+         * Lists all current APKs of the app and edit.
+         *
          * Create a request for the method "apks.list".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -912,8 +1004,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected List(java.lang.String packageName, java.lang.String editId) {
@@ -933,8 +1025,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -963,43 +1070,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public List setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public List setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -1011,13 +1117,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Uploads an APK and adds to the current edit.
+       *
        * Create a request for the method "apks.upload".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public Upload upload(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -1027,6 +1135,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * Uploads an APK and adds to the current edit.
+       *
        * Create a request for the method "apks.upload".
        *
        * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -1036,7 +1146,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.@param editId Identifier of the edit.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -1049,9 +1159,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Upload extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Apk> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks";
 
         /**
+         * Uploads an APK and adds to the current edit.
+         *
          * Create a request for the method "apks.upload".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -1060,8 +1172,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected Upload(java.lang.String packageName, java.lang.String editId) {
@@ -1071,6 +1183,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
+         * Uploads an APK and adds to the current edit.
+         *
          * Create a request for the method "apks.upload".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -1083,7 +1197,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.@param editId Identifier of the edit.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -1095,8 +1209,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Upload set$Xgafv(java.lang.String $Xgafv) {
+          return (Upload) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Upload setAccessToken(java.lang.String accessToken) {
+          return (Upload) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Upload setAlt(java.lang.String alt) {
           return (Upload) super.setAlt(alt);
+        }
+
+        @Override
+        public Upload setCallback(java.lang.String callback) {
+          return (Upload) super.setCallback(callback);
         }
 
         @Override
@@ -1125,43 +1254,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Upload setUserIp(java.lang.String userIp) {
-          return (Upload) super.setUserIp(userIp);
+        public Upload setUploadType(java.lang.String uploadType) {
+          return (Upload) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Upload) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Upload setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Upload setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -1195,13 +1323,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Bundles {
 
       /**
+       * Lists all current Android App Bundles of the app and edit.
+       *
        * Create a request for the method "bundles.list".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public List list(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -1212,9 +1342,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BundlesListResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/bundles";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/bundles";
 
         /**
+         * Lists all current Android App Bundles of the app and edit.
+         *
          * Create a request for the method "bundles.list".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -1222,8 +1354,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected List(java.lang.String packageName, java.lang.String editId) {
@@ -1243,8 +1375,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -1273,43 +1420,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public List setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public List setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -1323,16 +1469,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads a new Android App Bundle to this edit. If you are using the Google API client libraries,
        * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-       * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors for an example in java.
+       * minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
+       * library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "bundles.upload".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public Upload upload(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -1344,8 +1490,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads a new Android App Bundle to this edit. If you are using the Google API client libraries,
        * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-       * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors for an example in java.
+       * minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
+       * library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "bundles.upload".
        *
@@ -1356,7 +1502,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.@param editId Identifier of the edit.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -1369,13 +1515,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Upload extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Bundle> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/bundles";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/bundles";
 
         /**
          * Uploads a new Android App Bundle to this edit. If you are using the Google API client
          * libraries, please increase the timeout of the http request before calling this endpoint (a
-         * timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-
-         * library/java/google-api-java-client/errors for an example in java.
+         * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+         * /api-client-library/java/google-api-java-client/errors) for an example in java.
          *
          * Create a request for the method "bundles.upload".
          *
@@ -1385,8 +1531,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected Upload(java.lang.String packageName, java.lang.String editId) {
@@ -1398,8 +1544,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Uploads a new Android App Bundle to this edit. If you are using the Google API client
          * libraries, please increase the timeout of the http request before calling this endpoint (a
-         * timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-
-         * library/java/google-api-java-client/errors for an example in java.
+         * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+         * /api-client-library/java/google-api-java-client/errors) for an example in java.
          *
          * Create a request for the method "bundles.upload".
          *
@@ -1413,7 +1559,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.@param editId Identifier of the edit.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -1425,8 +1571,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Upload set$Xgafv(java.lang.String $Xgafv) {
+          return (Upload) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Upload setAccessToken(java.lang.String accessToken) {
+          return (Upload) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Upload setAlt(java.lang.String alt) {
           return (Upload) super.setAlt(alt);
+        }
+
+        @Override
+        public Upload setCallback(java.lang.String callback) {
+          return (Upload) super.setCallback(callback);
         }
 
         @Override
@@ -1455,43 +1616,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Upload setUserIp(java.lang.String userIp) {
-          return (Upload) super.setUserIp(userIp);
+        public Upload setUploadType(java.lang.String uploadType) {
+          return (Upload) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Upload) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Upload setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Upload setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -1548,20 +1708,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Deobfuscationfiles {
 
       /**
-       * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
-       * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
-       * to learn more about deobfuscation files.
+       * Uploads a new deobfuscation file and attaches to the specified APK.
        *
        * Create a request for the method "deobfuscationfiles.upload".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
-       *        example, "com.spiffygame".
+       * @param packageName Unique identifier for the Android app.
        * @param editId Unique identifier for this edit.
-       * @param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.
-       * @param deobfuscationFileType
+       * @param apkVersionCode The version code of the APK whose Deobfuscation File is being
+      uploaded.
+       * @param deobfuscationFileType The type of the deobfuscation file.
        * @return the request
        */
       public Upload upload(java.lang.String packageName, java.lang.String editId, java.lang.Integer apkVersionCode, java.lang.String deobfuscationFileType) throws java.io.IOException {
@@ -1571,9 +1729,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
-       * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
-       * to learn more about deobfuscation files.
+       * Uploads a new deobfuscation file and attaches to the specified APK.
        *
        * Create a request for the method "deobfuscationfiles.upload".
        *
@@ -1584,8 +1740,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
-       *        example, "com.spiffygame".@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.@param deobfuscationFileType
+       * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being
+      uploaded.@param deobfuscationFileType The type of the deobfuscation file.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -1598,12 +1754,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Upload extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.DeobfuscationFilesUploadResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}";
 
         /**
-         * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
-         * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
-         * to learn more about deobfuscation files.
+         * Uploads a new deobfuscation file and attaches to the specified APK.
          *
          * Create a request for the method "deobfuscationfiles.upload".
          *
@@ -1613,11 +1767,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
-       *        example, "com.spiffygame".
+         * @param packageName Unique identifier for the Android app.
          * @param editId Unique identifier for this edit.
-         * @param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.
-         * @param deobfuscationFileType
+         * @param apkVersionCode The version code of the APK whose Deobfuscation File is being
+      uploaded.
+         * @param deobfuscationFileType The type of the deobfuscation file.
          * @since 1.13
          */
         protected Upload(java.lang.String packageName, java.lang.String editId, java.lang.Integer apkVersionCode, java.lang.String deobfuscationFileType) {
@@ -1629,9 +1783,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file
-         * already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code
-         * to learn more about deobfuscation files.
+         * Uploads a new deobfuscation file and attaches to the specified APK.
          *
          * Create a request for the method "deobfuscationfiles.upload".
          *
@@ -1645,8 +1797,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
-       *        example, "com.spiffygame".@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose deobfuscation file is being uploaded.@param deobfuscationFileType
+         * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being
+      uploaded.@param deobfuscationFileType The type of the deobfuscation file.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -1660,8 +1812,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Upload set$Xgafv(java.lang.String $Xgafv) {
+          return (Upload) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Upload setAccessToken(java.lang.String accessToken) {
+          return (Upload) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Upload setAlt(java.lang.String alt) {
           return (Upload) super.setAlt(alt);
+        }
+
+        @Override
+        public Upload setCallback(java.lang.String callback) {
+          return (Upload) super.setCallback(callback);
         }
 
         @Override
@@ -1690,28 +1857,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Upload setUserIp(java.lang.String userIp) {
-          return (Upload) super.setUserIp(userIp);
+        public Upload setUploadType(java.lang.String uploadType) {
+          return (Upload) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier of the Android app for which the deobfuscation files are being
-         * uploaded; for example, "com.spiffygame".
-         */
+        @Override
+        public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Upload) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Unique identifier for the Android app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier of the Android app for which the deobfuscation files are being uploaded; for
-       example, "com.spiffygame".
+        /** Unique identifier for the Android app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier of the Android app for which the deobfuscation files are being
-         * uploaded; for example, "com.spiffygame".
-         */
+        /** Unique identifier for the Android app. */
         public Upload setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
@@ -1733,32 +1898,37 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The version code of the APK whose deobfuscation file is being uploaded. */
+        /**
+         * The version code of the APK whose Deobfuscation File is being uploaded.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer apkVersionCode;
 
-        /** The version code of the APK whose deobfuscation file is being uploaded.
+        /** The version code of the APK whose Deobfuscation File is being uploaded.
          */
         public java.lang.Integer getApkVersionCode() {
           return apkVersionCode;
         }
 
-        /** The version code of the APK whose deobfuscation file is being uploaded. */
+        /**
+         * The version code of the APK whose Deobfuscation File is being uploaded.
+         */
         public Upload setApkVersionCode(java.lang.Integer apkVersionCode) {
           this.apkVersionCode = apkVersionCode;
           return this;
         }
 
+        /** The type of the deobfuscation file. */
         @com.google.api.client.util.Key
         private java.lang.String deobfuscationFileType;
 
-        /**
-
+        /** The type of the deobfuscation file.
          */
         public java.lang.String getDeobfuscationFileType() {
           return deobfuscationFileType;
         }
 
+        /** The type of the deobfuscation file. */
         public Upload setDeobfuscationFileType(java.lang.String deobfuscationFileType) {
           this.deobfuscationFileType = deobfuscationFileType;
           return this;
@@ -1792,16 +1962,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Details {
 
       /**
-       * Fetches app details for this edit. This includes the default language and developer support
-       * contact information.
+       * Gets details of an app.
        *
        * Create a request for the method "details.get".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -1812,11 +1981,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppDetails> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/details";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/details";
 
         /**
-         * Fetches app details for this edit. This includes the default language and developer support
-         * contact information.
+         * Gets details of an app.
          *
          * Create a request for the method "details.get".
          *
@@ -1825,8 +1993,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId) {
@@ -1846,8 +2014,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -1876,43 +2059,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Get setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Get setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -1924,15 +2106,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates app details for this edit. This method supports patch semantics.
+       * Patches details of an app.
        *
        * Create a request for the method "details.patch".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @param content the {@link com.google.api.services.androidpublisher.model.AppDetails}
        * @return the request
        */
@@ -1944,10 +2126,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppDetails> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/details";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/details";
 
         /**
-         * Updates app details for this edit. This method supports patch semantics.
+         * Patches details of an app.
          *
          * Create a request for the method "details.patch".
          *
@@ -1957,8 +2139,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @param content the {@link com.google.api.services.androidpublisher.model.AppDetails}
          * @since 1.13
          */
@@ -1969,8 +2151,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
         }
 
         @Override
@@ -1999,43 +2196,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Patch setUserIp(java.lang.String userIp) {
-          return (Patch) super.setUserIp(userIp);
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Patch setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Patch setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -2047,15 +2243,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates app details for this edit.
+       * Updates details of an app.
        *
        * Create a request for the method "details.update".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @param content the {@link com.google.api.services.androidpublisher.model.AppDetails}
        * @return the request
        */
@@ -2067,10 +2263,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Update extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppDetails> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/details";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/details";
 
         /**
-         * Updates app details for this edit.
+         * Updates details of an app.
          *
          * Create a request for the method "details.update".
          *
@@ -2080,8 +2276,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @param content the {@link com.google.api.services.androidpublisher.model.AppDetails}
          * @since 1.13
          */
@@ -2092,8 +2288,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -2122,43 +2333,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Update setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Update setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -2192,17 +2402,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Expansionfiles {
 
       /**
-       * Fetches the Expansion File configuration for the APK specified.
+       * Fetches the expansion file configuration for the specified APK.
        *
        * Create a request for the method "expansionfiles.get".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-       * @param expansionFileType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+       * @param expansionFileType The file type of the file configuration which is being read or modified.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.Integer apkVersionCode, java.lang.String expansionFileType) throws java.io.IOException {
@@ -2213,10 +2424,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExpansionFile> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
 
         /**
-         * Fetches the Expansion File configuration for the APK specified.
+         * Fetches the expansion file configuration for the specified APK.
          *
          * Create a request for the method "expansionfiles.get".
          *
@@ -2225,10 +2436,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-         * @param expansionFileType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+         * @param expansionFileType The file type of the file configuration which is being read or modified.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.Integer apkVersionCode, java.lang.String expansionFileType) {
@@ -2250,8 +2462,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -2280,78 +2507,78 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Get setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Get setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer apkVersionCode;
 
-        /** The version code of the APK whose Expansion File configuration is being read or modified.
+        /** The version code of the APK whose expansion file configuration is being read or modified.
          */
         public java.lang.Integer getApkVersionCode() {
           return apkVersionCode;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         public Get setApkVersionCode(java.lang.Integer apkVersionCode) {
           this.apkVersionCode = apkVersionCode;
           return this;
         }
 
+        /** The file type of the file configuration which is being read or modified. */
         @com.google.api.client.util.Key
         private java.lang.String expansionFileType;
 
-        /**
-
+        /** The file type of the file configuration which is being read or modified.
          */
         public java.lang.String getExpansionFileType() {
           return expansionFileType;
         }
 
+        /** The file type of the file configuration which is being read or modified. */
         public Get setExpansionFileType(java.lang.String expansionFileType) {
           this.expansionFileType = expansionFileType;
           return this;
@@ -2363,18 +2590,19 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add
-       * a new Expansion File use the Upload method. This method supports patch semantics.
+       * Patches the APK's expansion file configuration to reference another APK's expansion file. To add
+       * a new expansion file use the Upload method.
        *
        * Create a request for the method "expansionfiles.patch".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-       * @param expansionFileType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+       * @param expansionFileType The file type of the expansion file configuration which is being updated.
        * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
        * @return the request
        */
@@ -2386,11 +2614,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExpansionFile> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
 
         /**
-         * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To
-         * add a new Expansion File use the Upload method. This method supports patch semantics.
+         * Patches the APK's expansion file configuration to reference another APK's expansion file. To
+         * add a new expansion file use the Upload method.
          *
          * Create a request for the method "expansionfiles.patch".
          *
@@ -2400,10 +2628,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-         * @param expansionFileType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+         * @param expansionFileType The file type of the expansion file configuration which is being updated.
          * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
          * @since 1.13
          */
@@ -2416,8 +2645,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
         }
 
         @Override
@@ -2446,78 +2690,78 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Patch setUserIp(java.lang.String userIp) {
-          return (Patch) super.setUserIp(userIp);
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Patch setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Patch setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer apkVersionCode;
 
-        /** The version code of the APK whose Expansion File configuration is being read or modified.
+        /** The version code of the APK whose expansion file configuration is being read or modified.
          */
         public java.lang.Integer getApkVersionCode() {
           return apkVersionCode;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         public Patch setApkVersionCode(java.lang.Integer apkVersionCode) {
           this.apkVersionCode = apkVersionCode;
           return this;
         }
 
+        /** The file type of the expansion file configuration which is being updated. */
         @com.google.api.client.util.Key
         private java.lang.String expansionFileType;
 
-        /**
-
+        /** The file type of the expansion file configuration which is being updated.
          */
         public java.lang.String getExpansionFileType() {
           return expansionFileType;
         }
 
+        /** The file type of the expansion file configuration which is being updated. */
         public Patch setExpansionFileType(java.lang.String expansionFileType) {
           this.expansionFileType = expansionFileType;
           return this;
@@ -2529,18 +2773,19 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add
-       * a new Expansion File use the Upload method.
+       * Updates the APK's expansion file configuration to reference another APK's expansion file. To add
+       * a new expansion file use the Upload method.
        *
        * Create a request for the method "expansionfiles.update".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-       * @param expansionFileType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+       * @param expansionFileType The file type of the file configuration which is being read or modified.
        * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
        * @return the request
        */
@@ -2552,11 +2797,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Update extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExpansionFile> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
 
         /**
-         * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To
-         * add a new Expansion File use the Upload method.
+         * Updates the APK's expansion file configuration to reference another APK's expansion file. To
+         * add a new expansion file use the Upload method.
          *
          * Create a request for the method "expansionfiles.update".
          *
@@ -2566,10 +2811,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-         * @param expansionFileType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+         * @param expansionFileType The file type of the file configuration which is being read or modified.
          * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
          * @since 1.13
          */
@@ -2582,8 +2828,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -2612,78 +2873,78 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Update setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Update setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer apkVersionCode;
 
-        /** The version code of the APK whose Expansion File configuration is being read or modified.
+        /** The version code of the APK whose expansion file configuration is being read or modified.
          */
         public java.lang.Integer getApkVersionCode() {
           return apkVersionCode;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         public Update setApkVersionCode(java.lang.Integer apkVersionCode) {
           this.apkVersionCode = apkVersionCode;
           return this;
         }
 
+        /** The file type of the file configuration which is being read or modified. */
         @com.google.api.client.util.Key
         private java.lang.String expansionFileType;
 
-        /**
-
+        /** The file type of the file configuration which is being read or modified.
          */
         public java.lang.String getExpansionFileType() {
           return expansionFileType;
         }
 
+        /** The file type of the file configuration which is being read or modified. */
         public Update setExpansionFileType(java.lang.String expansionFileType) {
           this.expansionFileType = expansionFileType;
           return this;
@@ -2695,17 +2956,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Uploads and attaches a new Expansion File to the APK specified.
+       * Uploads a new expansion file and attaches to the specified APK.
        *
        * Create a request for the method "expansionfiles.upload".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-       * @param expansionFileType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+       * @param expansionFileType The file type of the expansion file configuration which is being updated.
        * @return the request
        */
       public Upload upload(java.lang.String packageName, java.lang.String editId, java.lang.Integer apkVersionCode, java.lang.String expansionFileType) throws java.io.IOException {
@@ -2715,7 +2977,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * Uploads and attaches a new Expansion File to the APK specified.
+       * Uploads a new expansion file and attaches to the specified APK.
        *
        * Create a request for the method "expansionfiles.upload".
        *
@@ -2726,7 +2988,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.@param expansionFileType
+       * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -2739,10 +3002,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Upload extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExpansionFilesUploadResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}";
 
         /**
-         * Uploads and attaches a new Expansion File to the APK specified.
+         * Uploads a new expansion file and attaches to the specified APK.
          *
          * Create a request for the method "expansionfiles.upload".
          *
@@ -2752,10 +3015,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.
-         * @param expansionFileType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.
+         * @param expansionFileType The file type of the expansion file configuration which is being updated.
          * @since 1.13
          */
         protected Upload(java.lang.String packageName, java.lang.String editId, java.lang.Integer apkVersionCode, java.lang.String expansionFileType) {
@@ -2767,7 +3031,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Uploads and attaches a new Expansion File to the APK specified.
+         * Uploads a new expansion file and attaches to the specified APK.
          *
          * Create a request for the method "expansionfiles.upload".
          *
@@ -2781,7 +3045,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Expansion File configuration is being read or modified.@param expansionFileType
+         * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being
+      read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -2795,8 +3060,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Upload set$Xgafv(java.lang.String $Xgafv) {
+          return (Upload) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Upload setAccessToken(java.lang.String accessToken) {
+          return (Upload) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Upload setAlt(java.lang.String alt) {
           return (Upload) super.setAlt(alt);
+        }
+
+        @Override
+        public Upload setCallback(java.lang.String callback) {
+          return (Upload) super.setCallback(callback);
         }
 
         @Override
@@ -2825,78 +3105,78 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Upload setUserIp(java.lang.String userIp) {
-          return (Upload) super.setUserIp(userIp);
+        public Upload setUploadType(java.lang.String uploadType) {
+          return (Upload) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Upload) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Upload setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Upload setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer apkVersionCode;
 
-        /** The version code of the APK whose Expansion File configuration is being read or modified.
+        /** The version code of the APK whose expansion file configuration is being read or modified.
          */
         public java.lang.Integer getApkVersionCode() {
           return apkVersionCode;
         }
 
         /**
-         * The version code of the APK whose Expansion File configuration is being read or modified.
+         * The version code of the APK whose expansion file configuration is being read or modified.
          */
         public Upload setApkVersionCode(java.lang.Integer apkVersionCode) {
           this.apkVersionCode = apkVersionCode;
           return this;
         }
 
+        /** The file type of the expansion file configuration which is being updated. */
         @com.google.api.client.util.Key
         private java.lang.String expansionFileType;
 
-        /**
-
+        /** The file type of the expansion file configuration which is being updated.
          */
         public java.lang.String getExpansionFileType() {
           return expansionFileType;
         }
 
+        /** The file type of the expansion file configuration which is being updated. */
         public Upload setExpansionFileType(java.lang.String expansionFileType) {
           this.expansionFileType = expansionFileType;
           return this;
@@ -2937,11 +3217,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-       * @param imageType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       * @param imageType Type of the Image.
        * @param imageId Unique identifier an image within the set of images attached to this edit.
        * @return the request
        */
@@ -2953,7 +3233,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Delete extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}";
 
         /**
          * Deletes the image (specified by id) from the edit.
@@ -2966,11 +3246,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-         * @param imageType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+         * @param imageType Type of the Image.
          * @param imageId Unique identifier an image within the set of images attached to this edit.
          * @since 1.13
          */
@@ -2984,8 +3264,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -3014,81 +3309,80 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Delete setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Delete setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       modified. For example, to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         public Delete setLanguage(java.lang.String language) {
           this.language = language;
           return this;
         }
 
+        /** Type of the Image. */
         @com.google.api.client.util.Key
         private java.lang.String imageType;
 
-        /**
-
+        /** Type of the Image.
          */
         public java.lang.String getImageType() {
           return imageType;
         }
 
+        /** Type of the Image. */
         public Delete setImageType(java.lang.String imageType) {
           this.imageType = imageType;
           return this;
@@ -3116,18 +3410,21 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Deletes all images for the specified language and image type.
+       * Deletes all images for the specified language and image type. Returns an empty response if no
+       * images are found.
        *
        * Create a request for the method "images.deleteall".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Deleteall#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-       * @param imageType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       *        Providing a language that is not supported by the App is a no-op.
+       * @param imageType Type of the Image.
+      Providing an image type that refers to no images is a no-op.
        * @return the request
        */
       public Deleteall deleteall(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) throws java.io.IOException {
@@ -3138,10 +3435,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Deleteall extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ImagesDeleteAllResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}/{imageType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}";
 
         /**
-         * Deletes all images for the specified language and image type.
+         * Deletes all images for the specified language and image type. Returns an empty response if no
+         * images are found.
          *
          * Create a request for the method "images.deleteall".
          *
@@ -3151,11 +3449,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Deleteall#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-         * @param imageType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       *        Providing a language that is not supported by the App is a no-op.
+         * @param imageType Type of the Image.
+      Providing an image type that refers to no images is a no-op.
          * @since 1.13
          */
         protected Deleteall(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) {
@@ -3167,8 +3467,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Deleteall set$Xgafv(java.lang.String $Xgafv) {
+          return (Deleteall) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Deleteall setAccessToken(java.lang.String accessToken) {
+          return (Deleteall) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Deleteall setAlt(java.lang.String alt) {
           return (Deleteall) super.setAlt(alt);
+        }
+
+        @Override
+        public Deleteall setCallback(java.lang.String callback) {
+          return (Deleteall) super.setCallback(callback);
         }
 
         @Override
@@ -3197,81 +3512,85 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Deleteall setUserIp(java.lang.String userIp) {
-          return (Deleteall) super.setUserIp(userIp);
+        public Deleteall setUploadType(java.lang.String uploadType) {
+          return (Deleteall) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Deleteall setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Deleteall) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Deleteall setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Deleteall setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German). Providing a language that is not supported by the App is a no-op.
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       modified. For example, to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
+       Providing a language that is not supported by the App is a no-op.
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German). Providing a language that is not supported by the App is a no-op.
          */
         public Deleteall setLanguage(java.lang.String language) {
           this.language = language;
           return this;
         }
 
+        /**
+         * Type of the Image. Providing an image type that refers to no images is a no-op.
+         */
         @com.google.api.client.util.Key
         private java.lang.String imageType;
 
-        /**
-
+        /** Type of the Image. Providing an image type that refers to no images is a no-op.
          */
         public java.lang.String getImageType() {
           return imageType;
         }
 
+        /**
+         * Type of the Image. Providing an image type that refers to no images is a no-op.
+         */
         public Deleteall setImageType(java.lang.String imageType) {
           this.imageType = imageType;
           return this;
@@ -3283,18 +3602,21 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Lists all images for the specified language and image type.
+       * Lists all images. The response may be empty.
        *
        * Create a request for the method "images.list".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-       * @param imageType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+      There
+       *        must be a store listing for the specified language.
+       * @param imageType Type of the Image. Providing an image type that refers to no images will
+      return an empty response.
        * @return the request
        */
       public List list(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) throws java.io.IOException {
@@ -3305,10 +3627,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ImagesListResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}/{imageType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}";
 
         /**
-         * Lists all images for the specified language and image type.
+         * Lists all images. The response may be empty.
          *
          * Create a request for the method "images.list".
          *
@@ -3317,11 +3639,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-         * @param imageType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+      There
+       *        must be a store listing for the specified language.
+         * @param imageType Type of the Image. Providing an image type that refers to no images will
+      return an empty response.
          * @since 1.13
          */
         protected List(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) {
@@ -3343,8 +3668,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -3373,81 +3713,87 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public List setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public List setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German). There must be a store listing for the specified language.
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       modified. For example, to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German). There
+       must be a store listing for the specified language.
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German). There must be a store listing for the specified language.
          */
         public List setLanguage(java.lang.String language) {
           this.language = language;
           return this;
         }
 
+        /**
+         * Type of the Image. Providing an image type that refers to no images will return an empty
+         * response.
+         */
         @com.google.api.client.util.Key
         private java.lang.String imageType;
 
-        /**
-
+        /** Type of the Image. Providing an image type that refers to no images will return an empty response.
          */
         public java.lang.String getImageType() {
           return imageType;
         }
 
+        /**
+         * Type of the Image. Providing an image type that refers to no images will return an empty
+         * response.
+         */
         public List setImageType(java.lang.String imageType) {
           this.imageType = imageType;
           return this;
@@ -3459,18 +3805,19 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Uploads a new image and adds it to the list of images for the specified language and image type.
+       * Uploads an image of the specified language and image type, and adds to the edit.
        *
        * Create a request for the method "images.upload".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-       * @param imageType
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       *        Providing a language that is not supported by the App is a no-op.
+       * @param imageType Type of the Image.
        * @return the request
        */
       public Upload upload(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) throws java.io.IOException {
@@ -3480,7 +3827,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * Uploads a new image and adds it to the list of images for the specified language and image type.
+       * Uploads an image of the specified language and image type, and adds to the edit.
        *
        * Create a request for the method "images.upload".
        *
@@ -3491,8 +3838,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.@param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".@param imageType
+       * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       *        Providing a language that is not supported by the App is a no-op.@param imageType Type of the Image.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -3505,11 +3853,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Upload extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ImagesUploadResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}/{imageType}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}/{imageType}";
 
         /**
-         * Uploads a new image and adds it to the list of images for the specified language and image
-         * type.
+         * Uploads an image of the specified language and image type, and adds to the edit.
          *
          * Create a request for the method "images.upload".
          *
@@ -3519,11 +3866,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".
-         * @param imageType
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       *        Providing a language that is not supported by the App is a no-op.
+         * @param imageType Type of the Image.
          * @since 1.13
          */
         protected Upload(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) {
@@ -3535,8 +3883,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Uploads a new image and adds it to the list of images for the specified language and image
-         * type.
+         * Uploads an image of the specified language and image type, and adds to the edit.
          *
          * Create a request for the method "images.upload".
          *
@@ -3550,8 +3897,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".@param editId Unique identifier for this edit.@param language The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       *        modified. For example, to select Austrian German, pass "de-AT".@param imageType
+         * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
+       *        Providing a language that is not supported by the App is a no-op.@param imageType Type of the Image.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -3565,8 +3913,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Upload set$Xgafv(java.lang.String $Xgafv) {
+          return (Upload) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Upload setAccessToken(java.lang.String accessToken) {
+          return (Upload) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Upload setAlt(java.lang.String alt) {
           return (Upload) super.setAlt(alt);
+        }
+
+        @Override
+        public Upload setCallback(java.lang.String callback) {
+          return (Upload) super.setCallback(callback);
         }
 
         @Override
@@ -3595,81 +3958,81 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Upload setUserIp(java.lang.String userIp) {
-          return (Upload) super.setUserIp(userIp);
+        public Upload setUploadType(java.lang.String uploadType) {
+          return (Upload) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Upload) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Upload setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Upload setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German). Providing a language that is not supported by the App is a no-op.
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing whose images are to read or
-       modified. For example, to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
+       Providing a language that is not supported by the App is a no-op.
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing whose images are to
-         * read or modified. For example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German). Providing a language that is not supported by the App is a no-op.
          */
         public Upload setLanguage(java.lang.String language) {
           this.language = language;
           return this;
         }
 
+        /** Type of the Image. */
         @com.google.api.client.util.Key
         private java.lang.String imageType;
 
-        /**
-
+        /** Type of the Image.
          */
         public java.lang.String getImageType() {
           return imageType;
         }
 
+        /** Type of the Image. */
         public Upload setImageType(java.lang.String imageType) {
           this.imageType = imageType;
           return this;
@@ -3703,17 +4066,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Listings {
 
       /**
-       * Deletes the specified localized store listing from an edit.
+       * Deletes a localized store listing.
        *
        * Create a request for the method "listings.delete".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
        * @return the request
        */
       public Delete delete(java.lang.String packageName, java.lang.String editId, java.lang.String language) throws java.io.IOException {
@@ -3724,10 +4087,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Delete extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}";
 
         /**
-         * Deletes the specified localized store listing from an edit.
+         * Deletes a localized store listing.
          *
          * Create a request for the method "listings.delete".
          *
@@ -3737,10 +4100,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
          * @since 1.13
          */
         protected Delete(java.lang.String packageName, java.lang.String editId, java.lang.String language) {
@@ -3751,8 +4114,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -3781,65 +4159,63 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Delete setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Delete setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         public Delete setLanguage(java.lang.String language) {
           this.language = language;
@@ -3852,15 +4228,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Deletes all localized listings from an edit.
+       * Deletes all store listings.
        *
        * Create a request for the method "listings.deleteall".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Deleteall#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public Deleteall deleteall(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -3871,10 +4247,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Deleteall extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings";
 
         /**
-         * Deletes all localized listings from an edit.
+         * Deletes all store listings.
          *
          * Create a request for the method "listings.deleteall".
          *
@@ -3884,8 +4260,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Deleteall#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected Deleteall(java.lang.String packageName, java.lang.String editId) {
@@ -3895,8 +4271,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Deleteall set$Xgafv(java.lang.String $Xgafv) {
+          return (Deleteall) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Deleteall setAccessToken(java.lang.String accessToken) {
+          return (Deleteall) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Deleteall setAlt(java.lang.String alt) {
           return (Deleteall) super.setAlt(alt);
+        }
+
+        @Override
+        public Deleteall setCallback(java.lang.String callback) {
+          return (Deleteall) super.setCallback(callback);
         }
 
         @Override
@@ -3925,43 +4316,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Deleteall setUserIp(java.lang.String userIp) {
-          return (Deleteall) super.setUserIp(userIp);
+        public Deleteall setUploadType(java.lang.String uploadType) {
+          return (Deleteall) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Deleteall setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Deleteall) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Deleteall setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Deleteall setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -3973,17 +4363,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Fetches information about a localized store listing.
+       * Gets a localized store listing.
        *
        * Create a request for the method "listings.get".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String language) throws java.io.IOException {
@@ -3994,10 +4384,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Listing> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}";
 
         /**
-         * Fetches information about a localized store listing.
+         * Gets a localized store listing.
          *
          * Create a request for the method "listings.get".
          *
@@ -4006,10 +4396,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String language) {
@@ -4030,8 +4420,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -4060,65 +4465,63 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Get setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Get setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         public Get setLanguage(java.lang.String language) {
           this.language = language;
@@ -4131,15 +4534,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Returns all of the localized store listings attached to this edit.
+       * Lists all localized store listings.
        *
        * Create a request for the method "listings.list".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public List list(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -4150,10 +4553,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListingsListResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings";
 
         /**
-         * Returns all of the localized store listings attached to this edit.
+         * Lists all localized store listings.
          *
          * Create a request for the method "listings.list".
          *
@@ -4162,8 +4565,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected List(java.lang.String packageName, java.lang.String editId) {
@@ -4183,8 +4586,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -4213,43 +4631,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public List setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public List setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -4261,17 +4678,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Creates or updates a localized store listing. This method supports patch semantics.
+       * Patches a localized store listing.
        *
        * Create a request for the method "listings.patch".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
        * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
        * @return the request
        */
@@ -4283,10 +4700,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Listing> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}";
 
         /**
-         * Creates or updates a localized store listing. This method supports patch semantics.
+         * Patches a localized store listing.
          *
          * Create a request for the method "listings.patch".
          *
@@ -4296,10 +4713,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
          * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
          * @since 1.13
          */
@@ -4311,8 +4728,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
         }
 
         @Override
@@ -4341,65 +4773,63 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Patch setUserIp(java.lang.String userIp) {
-          return (Patch) super.setUserIp(userIp);
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Patch setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Patch setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         public Patch setLanguage(java.lang.String language) {
           this.language = language;
@@ -4419,10 +4849,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
        * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
        * @return the request
        */
@@ -4434,7 +4864,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Update extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Listing> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/listings/{language}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/listings/{language}";
 
         /**
          * Creates or updates a localized store listing.
@@ -4447,10 +4877,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param language The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       *        to select Austrian German, pass "de-AT".
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
+      for Austrian German).
          * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
          * @since 1.13
          */
@@ -4462,8 +4892,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -4492,65 +4937,63 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Update setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Update setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         @com.google.api.client.util.Key
         private java.lang.String language;
 
-        /** The language code (a BCP-47 language tag) of the localized listing to read or modify. For example,
-       to select Austrian German, pass "de-AT".
+        /** Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          */
         public java.lang.String getLanguage() {
           return language;
         }
 
         /**
-         * The language code (a BCP-47 language tag) of the localized listing to read or modify. For
-         * example, to select Austrian German, pass "de-AT".
+         * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian
+         * German).
          */
         public Update setLanguage(java.lang.String language) {
           this.language = language;
@@ -4585,14 +5028,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Testers {
 
       /**
+       * Gets testers.
+       *
        * Create a request for the method "testers.get".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track The track to read from.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String track) throws java.io.IOException {
@@ -4603,9 +5048,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Testers> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/testers/{track}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}";
 
         /**
+         * Gets testers.
+         *
          * Create a request for the method "testers.get".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -4613,9 +5060,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track The track to read from.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String track) {
@@ -4636,8 +5083,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -4666,59 +5128,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Get setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Get setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
-        /** The track to read or modify. */
+        /** The track to read from. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify.
+        /** The track to read from.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** The track to read or modify. */
+        /** The track to read from. */
         public Get setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -4730,14 +5191,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Patches testers.
+       *
        * Create a request for the method "testers.patch".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track The track to update.
        * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
        * @return the request
        */
@@ -4749,9 +5212,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Testers> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/testers/{track}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}";
 
         /**
+         * Patches testers.
+         *
          * Create a request for the method "testers.patch".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -4760,9 +5225,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track The track to update.
          * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
          * @since 1.13
          */
@@ -4774,8 +5239,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
         }
 
         @Override
@@ -4804,59 +5284,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Patch setUserIp(java.lang.String userIp) {
-          return (Patch) super.setUserIp(userIp);
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Patch setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Patch setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
-        /** The track to read or modify. */
+        /** The track to update. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify.
+        /** The track to update.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** The track to read or modify. */
+        /** The track to update. */
         public Patch setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -4868,14 +5347,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Updates testers.
+       *
        * Create a request for the method "testers.update".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track The track to update.
        * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
        * @return the request
        */
@@ -4887,9 +5368,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Update extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Testers> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/testers/{track}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}";
 
         /**
+         * Updates testers.
+         *
          * Create a request for the method "testers.update".
          *
          * This request holds the parameters needed by the the androidpublisher server.  After setting any
@@ -4898,9 +5381,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track The track to update.
          * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
          * @since 1.13
          */
@@ -4912,8 +5395,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -4942,59 +5440,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Update setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Update setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
-        /** The track to read or modify. */
+        /** The track to update. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify.
+        /** The track to update.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** The track to read or modify. */
+        /** The track to update. */
         public Update setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -5028,17 +5525,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Tracks {
 
       /**
-       * Fetches the track configuration for the specified track type. Includes the APK version codes that
-       * are in this track.
+       * Gets a track.
        *
        * Create a request for the method "tracks.get".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track Identifier of the track.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String track) throws java.io.IOException {
@@ -5049,11 +5545,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Track> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/tracks/{track}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}";
 
         /**
-         * Fetches the track configuration for the specified track type. Includes the APK version codes
-         * that are in this track.
+         * Gets a track.
          *
          * Create a request for the method "tracks.get".
          *
@@ -5062,9 +5557,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track Identifier of the track.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String track) {
@@ -5085,8 +5580,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -5115,59 +5625,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Get setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Get setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
-        /** The track to read or modify. */
+        /** Identifier of the track. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify.
+        /** Identifier of the track.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** The track to read or modify. */
+        /** Identifier of the track. */
         public Get setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -5179,15 +5688,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Lists all the track configurations for this edit.
+       * Lists all tracks.
        *
        * Create a request for the method "tracks.list".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
        * @return the request
        */
       public List list(java.lang.String packageName, java.lang.String editId) throws java.io.IOException {
@@ -5198,10 +5707,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.TracksListResponse> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/tracks";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks";
 
         /**
-         * Lists all the track configurations for this edit.
+         * Lists all tracks.
          *
          * Create a request for the method "tracks.list".
          *
@@ -5210,8 +5719,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
          * @since 1.13
          */
         protected List(java.lang.String packageName, java.lang.String editId) {
@@ -5231,8 +5740,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -5261,43 +5785,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public List setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public List setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
@@ -5309,17 +5832,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates the track configuration for the specified track type. This method supports patch
-       * semantics.
+       * Patches a track.
        *
        * Create a request for the method "tracks.patch".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track Identifier of the track.
        * @param content the {@link com.google.api.services.androidpublisher.model.Track}
        * @return the request
        */
@@ -5331,11 +5853,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Track> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/tracks/{track}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}";
 
         /**
-         * Updates the track configuration for the specified track type. This method supports patch
-         * semantics.
+         * Patches a track.
          *
          * Create a request for the method "tracks.patch".
          *
@@ -5345,9 +5866,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track Identifier of the track.
          * @param content the {@link com.google.api.services.androidpublisher.model.Track}
          * @since 1.13
          */
@@ -5359,8 +5880,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
         }
 
         @Override
@@ -5389,59 +5925,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Patch setUserIp(java.lang.String userIp) {
-          return (Patch) super.setUserIp(userIp);
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Patch setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Patch setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
-        /** The track to read or modify. */
+        /** Identifier of the track. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify.
+        /** Identifier of the track.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** The track to read or modify. */
+        /** Identifier of the track. */
         public Patch setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -5453,16 +5988,16 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates the track configuration for the specified track type.
+       * Updates a track.
        *
        * Create a request for the method "tracks.update".
        *
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-       * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify.
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track Identifier of the track.
        * @param content the {@link com.google.api.services.androidpublisher.model.Track}
        * @return the request
        */
@@ -5474,10 +6009,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Update extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Track> {
 
-        private static final String REST_PATH = "{packageName}/edits/{editId}/tracks/{track}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}";
 
         /**
-         * Updates the track configuration for the specified track type.
+         * Updates a track.
          *
          * Create a request for the method "tracks.update".
          *
@@ -5487,9 +6022,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
-         * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify.
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track Identifier of the track.
          * @param content the {@link com.google.api.services.androidpublisher.model.Track}
          * @since 1.13
          */
@@ -5501,8 +6036,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -5531,59 +6081,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Unique identifier for the Android app that is being updated; for example,
-         * "com.spiffygame".
-         */
+        /** Package name of the app. */
         public Update setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         @com.google.api.client.util.Key
         private java.lang.String editId;
 
-        /** Unique identifier for this edit.
+        /** Identifier of the edit.
          */
         public java.lang.String getEditId() {
           return editId;
         }
 
-        /** Unique identifier for this edit. */
+        /** Identifier of the edit. */
         public Update setEditId(java.lang.String editId) {
           this.editId = editId;
           return this;
         }
 
-        /** The track to read or modify. */
+        /** Identifier of the track. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify.
+        /** Identifier of the track.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** The track to read or modify. */
+        /** Identifier of the track. */
         public Update setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -5619,14 +6168,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Inappproducts {
 
     /**
-     * Delete an in-app product for an app.
+     * Deletes an in-app product (i.e. a managed product or a subscriptions).
      *
      * Create a request for the method "inappproducts.delete".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param sku Unique identifier for the in-app product.
      * @return the request
      */
@@ -5638,10 +6187,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Delete extends AndroidPublisherRequest<Void> {
 
-      private static final String REST_PATH = "{packageName}/inappproducts/{sku}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Delete an in-app product for an app.
+       * Deletes an in-app product (i.e. a managed product or a subscriptions).
        *
        * Create a request for the method "inappproducts.delete".
        *
@@ -5651,7 +6200,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param sku Unique identifier for the in-app product.
        * @since 1.13
        */
@@ -5662,8 +6211,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -5692,27 +6256,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app with the in-app product; for example,
-       * "com.spiffygame".
-       */
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app with the in-app product; for example,
-       * "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Delete setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -5740,14 +6303,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Returns information about the in-app product specified.
+     * Gets an in-app product, which can be a managed product or a subscription.
      *
      * Create a request for the method "inappproducts.get".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param packageName
+     * @param packageName Package name of the app.
      * @param sku Unique identifier for the in-app product.
      * @return the request
      */
@@ -5759,10 +6322,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InAppProduct> {
 
-      private static final String REST_PATH = "{packageName}/inappproducts/{sku}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Returns information about the in-app product specified.
+       * Gets an in-app product, which can be a managed product or a subscription.
        *
        * Create a request for the method "inappproducts.get".
        *
@@ -5771,7 +6334,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName
+       * @param packageName Package name of the app.
        * @param sku Unique identifier for the in-app product.
        * @since 1.13
        */
@@ -5792,8 +6355,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5822,20 +6400,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /**
-
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
+      /** Package name of the app. */
       public Get setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -5863,14 +6447,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Creates a new in-app product for an app.
+     * Creates an in-app product (i.e. a managed product or a subscriptions).
      *
      * Create a request for the method "inappproducts.insert".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param content the {@link com.google.api.services.androidpublisher.model.InAppProduct}
      * @return the request
      */
@@ -5882,10 +6466,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Insert extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InAppProduct> {
 
-      private static final String REST_PATH = "{packageName}/inappproducts";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts";
 
       /**
-       * Creates a new in-app product for an app.
+       * Creates an in-app product (i.e. a managed product or a subscriptions).
        *
        * Create a request for the method "inappproducts.insert".
        *
@@ -5895,7 +6479,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param content the {@link com.google.api.services.androidpublisher.model.InAppProduct}
        * @since 1.13
        */
@@ -5905,8 +6489,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -5935,21 +6534,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      /** Package name of the app. */
       public Insert setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -5987,14 +6591,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * List all the in-app products for an Android app, both subscriptions and managed in-app products..
+     * Lists all in-app products - both managed products and subscriptions.
      *
      * Create a request for the method "inappproducts.list".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @return the request
      */
     public List list(java.lang.String packageName) throws java.io.IOException {
@@ -6005,11 +6609,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InappproductsListResponse> {
 
-      private static final String REST_PATH = "{packageName}/inappproducts";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts";
 
       /**
-       * List all the in-app products for an Android app, both subscriptions and managed in-app
-       * products..
+       * Lists all in-app products - both managed products and subscriptions.
        *
        * Create a request for the method "inappproducts.list".
        *
@@ -6018,7 +6621,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @since 1.13
        */
       protected List(java.lang.String packageName) {
@@ -6037,8 +6640,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -6067,70 +6685,74 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
-       */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app with in-app products; for example, "com.spiffygame".
-       */
+      /** Package name of the app. */
       public List setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
+      /** How many results the list operation should return. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /**
-
+      /** How many results the list operation should return.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
+      /** How many results the list operation should return. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /** The index of the first element to return. */
       @com.google.api.client.util.Key
       private java.lang.Long startIndex;
 
-      /**
-
+      /** The index of the first element to return.
        */
       public java.lang.Long getStartIndex() {
         return startIndex;
       }
 
+      /** The index of the first element to return. */
       public List setStartIndex(java.lang.Long startIndex) {
         this.startIndex = startIndex;
         return this;
       }
 
+      /** Pagination token. If empty, list starts at the first product. */
       @com.google.api.client.util.Key
       private java.lang.String token;
 
-      /**
-
+      /** Pagination token. If empty, list starts at the first product.
        */
       public java.lang.String getToken() {
         return token;
       }
 
+      /** Pagination token. If empty, list starts at the first product. */
       public List setToken(java.lang.String token) {
         this.token = token;
         return this;
@@ -6142,14 +6764,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Updates the details of an in-app product. This method supports patch semantics.
+     * Patches an in-app product (i.e. a managed product or a subscriptions).
      *
      * Create a request for the method "inappproducts.patch".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param sku Unique identifier for the in-app product.
      * @param content the {@link com.google.api.services.androidpublisher.model.InAppProduct}
      * @return the request
@@ -6162,10 +6784,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InAppProduct> {
 
-      private static final String REST_PATH = "{packageName}/inappproducts/{sku}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Updates the details of an in-app product. This method supports patch semantics.
+       * Patches an in-app product (i.e. a managed product or a subscriptions).
        *
        * Create a request for the method "inappproducts.patch".
        *
@@ -6175,7 +6797,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param sku Unique identifier for the in-app product.
        * @param content the {@link com.google.api.services.androidpublisher.model.InAppProduct}
        * @since 1.13
@@ -6187,8 +6809,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -6217,27 +6854,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app with the in-app product; for example,
-       * "com.spiffygame".
-       */
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app with the in-app product; for example,
-       * "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Patch setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -6291,14 +6927,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Updates the details of an in-app product.
+     * Updates an in-app product (i.e. a managed product or a subscriptions).
      *
      * Create a request for the method "inappproducts.update".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param sku Unique identifier for the in-app product.
      * @param content the {@link com.google.api.services.androidpublisher.model.InAppProduct}
      * @return the request
@@ -6311,10 +6947,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Update extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InAppProduct> {
 
-      private static final String REST_PATH = "{packageName}/inappproducts/{sku}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Updates the details of an in-app product.
+       * Updates an in-app product (i.e. a managed product or a subscriptions).
        *
        * Create a request for the method "inappproducts.update".
        *
@@ -6324,7 +6960,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param sku Unique identifier for the in-app product.
        * @param content the {@link com.google.api.services.androidpublisher.model.InAppProduct}
        * @since 1.13
@@ -6336,8 +6972,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -6366,27 +7017,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app with the in-app product; for example,
-       * "com.spiffygame".
-       */
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app with the in-app product; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app with the in-app product; for example,
-       * "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Update setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -6465,15 +7115,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
      * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
-     * recommended). See: https://developers.google.com/api-client-library/java/google-api-java-
-     * client/errors for an example in java.
+     * recommended).
+     *
+     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
+     * client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadapk".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @return the request
      */
     public Uploadapk uploadapk(java.lang.String packageName) throws java.io.IOException {
@@ -6485,8 +7137,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
      * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
-     * recommended). See: https://developers.google.com/api-client-library/java/google-api-java-
-     * client/errors for an example in java.
+     * recommended).
+     *
+     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
+     * client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadapk".
      *
@@ -6497,7 +7151,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
@@ -6510,13 +7164,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Uploadapk extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InternalAppSharingArtifact> {
 
-      private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/apk";
+      private static final String REST_PATH = "androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/apk";
 
       /**
        * Uploads an APK to internal app sharing. If you are using the Google API client libraries,
        * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-       * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors for an example in java.
+       * minutes is recommended).
+       *
+       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
+       * java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadapk".
        *
@@ -6526,7 +7182,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Uploadapk#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @since 1.13
        */
       protected Uploadapk(java.lang.String packageName) {
@@ -6537,8 +7193,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an APK to internal app sharing. If you are using the Google API client libraries,
        * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-       * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors for an example in java.
+       * minutes is recommended).
+       *
+       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
+       * java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadapk".
        *
@@ -6552,7 +7210,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
        */
@@ -6563,8 +7221,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Uploadapk set$Xgafv(java.lang.String $Xgafv) {
+        return (Uploadapk) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Uploadapk setAccessToken(java.lang.String accessToken) {
+        return (Uploadapk) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Uploadapk setAlt(java.lang.String alt) {
         return (Uploadapk) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadapk setCallback(java.lang.String callback) {
+        return (Uploadapk) super.setCallback(callback);
       }
 
       @Override
@@ -6593,21 +7266,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Uploadapk setUserIp(java.lang.String userIp) {
-        return (Uploadapk) super.setUserIp(userIp);
+      public Uploadapk setUploadType(java.lang.String uploadType) {
+        return (Uploadapk) super.setUploadType(uploadType);
       }
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      @Override
+      public Uploadapk setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Uploadapk) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      /** Package name of the app. */
       public Uploadapk setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -6621,8 +7299,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries,
      * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-     * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
-     * java-client/errors for an example in java.
+     * minutes is recommended).
+     *
+     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
+     * client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadbundle".
      *
@@ -6630,7 +7310,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * optional parameters, call the {@link Uploadbundle#execute()} method to invoke the remote
      * operation.
      *
-     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @return the request
      */
     public Uploadbundle uploadbundle(java.lang.String packageName) throws java.io.IOException {
@@ -6642,8 +7322,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries,
      * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-     * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
-     * java-client/errors for an example in java.
+     * minutes is recommended).
+     *
+     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
+     * client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadbundle".
      *
@@ -6655,7 +7337,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
@@ -6668,13 +7350,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Uploadbundle extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InternalAppSharingArtifact> {
 
-      private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/bundle";
+      private static final String REST_PATH = "androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/bundle";
 
       /**
        * Uploads an app bundle to internal app sharing. If you are using the Google API client
        * libraries, please increase the timeout of the http request before calling this endpoint (a
-       * timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-
-       * library/java/google-api-java-client/errors for an example in java.
+       * timeout of 2 minutes is recommended).
+       *
+       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
+       * java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadbundle".
        *
@@ -6684,7 +7368,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Uploadbundle#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @since 1.13
        */
       protected Uploadbundle(java.lang.String packageName) {
@@ -6695,8 +7379,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an app bundle to internal app sharing. If you are using the Google API client
        * libraries, please increase the timeout of the http request before calling this endpoint (a
-       * timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-
-       * library/java/google-api-java-client/errors for an example in java.
+       * timeout of 2 minutes is recommended).
+       *
+       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
+       * java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadbundle".
        *
@@ -6710,7 +7396,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
        */
@@ -6721,8 +7407,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Uploadbundle set$Xgafv(java.lang.String $Xgafv) {
+        return (Uploadbundle) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Uploadbundle setAccessToken(java.lang.String accessToken) {
+        return (Uploadbundle) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Uploadbundle setAlt(java.lang.String alt) {
         return (Uploadbundle) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadbundle setCallback(java.lang.String callback) {
+        return (Uploadbundle) super.setCallback(callback);
       }
 
       @Override
@@ -6751,21 +7452,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Uploadbundle setUserIp(java.lang.String userIp) {
-        return (Uploadbundle) super.setUserIp(userIp);
+      public Uploadbundle setUploadType(java.lang.String uploadType) {
+        return (Uploadbundle) super.setUploadType(uploadType);
       }
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      @Override
+      public Uploadbundle setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Uploadbundle) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      /** Package name of the app. */
       public Uploadbundle setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
@@ -6807,9 +7513,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Refund#execute()} method to invoke the remote operation.
      *
-     * @param packageName The package name of the application for which this subscription or in-app item was purchased (for
+     * @param packageName The package name of the application for which this subscription or in-app
+    item was purchased (for
      *        example, 'com.some.thing').
-     * @param orderId The order ID provided to the user when the subscription or in-app order was purchased.
+     * @param orderId The order ID provided to the user when the subscription or in-app order was
+    purchased.
      * @return the request
      */
     public Refund refund(java.lang.String packageName, java.lang.String orderId) throws java.io.IOException {
@@ -6820,7 +7528,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Refund extends AndroidPublisherRequest<Void> {
 
-      private static final String REST_PATH = "{packageName}/orders/{orderId}:refund";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/orders/{orderId}:refund";
 
       /**
        * Refund a user's subscription or in-app purchase order.
@@ -6833,9 +7541,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Refund#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName The package name of the application for which this subscription or in-app item was purchased (for
+       * @param packageName The package name of the application for which this subscription or in-app
+    item was purchased (for
      *        example, 'com.some.thing').
-       * @param orderId The order ID provided to the user when the subscription or in-app order was purchased.
+       * @param orderId The order ID provided to the user when the subscription or in-app order was
+    purchased.
        * @since 1.13
        */
       protected Refund(java.lang.String packageName, java.lang.String orderId) {
@@ -6845,8 +7555,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Refund set$Xgafv(java.lang.String $Xgafv) {
+        return (Refund) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Refund setAccessToken(java.lang.String accessToken) {
+        return (Refund) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Refund setAlt(java.lang.String alt) {
         return (Refund) super.setAlt(alt);
+      }
+
+      @Override
+      public Refund setCallback(java.lang.String callback) {
+        return (Refund) super.setCallback(callback);
       }
 
       @Override
@@ -6875,8 +7600,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Refund setUserIp(java.lang.String userIp) {
-        return (Refund) super.setUserIp(userIp);
+      public Refund setUploadType(java.lang.String uploadType) {
+        return (Refund) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Refund setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Refund) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -6902,7 +7632,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
-      /** The order ID provided to the user when the subscription or in-app order was purchased. */
+      /**
+       * The order ID provided to the user when the subscription or in-app order was purchased.
+       */
       @com.google.api.client.util.Key
       private java.lang.String orderId;
 
@@ -6912,7 +7644,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return orderId;
       }
 
-      /** The order ID provided to the user when the subscription or in-app order was purchased. */
+      /**
+       * The order ID provided to the user when the subscription or in-app order was purchased.
+       */
       public Refund setOrderId(java.lang.String orderId) {
         this.orderId = orderId;
         return this;
@@ -6922,14 +7656,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Whether to revoke the purchased item. If set to true, access to the subscription or in-app
        * item will be terminated immediately. If the item is a recurring subscription, all future
        * payments will also be terminated. Consumed in-app items need to be handled by developer's
-       * app. (optional)
+       * app. (optional).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean revoke;
 
       /** Whether to revoke the purchased item. If set to true, access to the subscription or in-app item
      will be terminated immediately. If the item is a recurring subscription, all future payments will
-     also be terminated. Consumed in-app items need to be handled by developer's app. (optional)
+     also be terminated. Consumed in-app items need to be handled by developer's app. (optional).
        */
       public java.lang.Boolean getRevoke() {
         return revoke;
@@ -6939,7 +7673,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Whether to revoke the purchased item. If set to true, access to the subscription or in-app
        * item will be terminated immediately. If the item is a recurring subscription, all future
        * payments will also be terminated. Consumed in-app items need to be handled by developer's
-       * app. (optional)
+       * app. (optional).
        */
       public Refund setRevoke(java.lang.Boolean revoke) {
         this.revoke = revoke;
@@ -7003,9 +7737,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
        * operation.
        *
-       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+       * @param packageName The package name of the application the inapp product was sold in (for
+      example, 'com.some.thing').
        * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param token The token provided to the user's device when the inapp product was
+      purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest}
        * @return the request
        */
@@ -7017,7 +7753,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Acknowledge extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/purchases/products/{productId}/tokens/{token}:acknowledge";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:acknowledge";
 
         /**
          * Acknowledges a purchase of an inapp item.
@@ -7030,9 +7766,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         * @param packageName The package name of the application the inapp product was sold in (for
+      example, 'com.some.thing').
          * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param token The token provided to the user's device when the inapp product was
+      purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest}
          * @since 1.13
          */
@@ -7044,8 +7782,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Acknowledge set$Xgafv(java.lang.String $Xgafv) {
+          return (Acknowledge) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Acknowledge setAccessToken(java.lang.String accessToken) {
+          return (Acknowledge) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Acknowledge setAlt(java.lang.String alt) {
           return (Acknowledge) super.setAlt(alt);
+        }
+
+        @Override
+        public Acknowledge setCallback(java.lang.String callback) {
+          return (Acknowledge) super.setCallback(callback);
         }
 
         @Override
@@ -7074,8 +7827,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Acknowledge setUserIp(java.lang.String userIp) {
-          return (Acknowledge) super.setUserIp(userIp);
+        public Acknowledge setUploadType(java.lang.String uploadType) {
+          return (Acknowledge) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Acknowledge setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Acknowledge) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -7116,17 +7874,21 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the inapp product was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
-        /** The token provided to the user's device when the subscription was purchased.
+        /** The token provided to the user's device when the inapp product was purchased.
          */
         public java.lang.String getToken() {
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the inapp product was purchased.
+         */
         public Acknowledge setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7145,9 +7907,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+       * @param packageName The package name of the application the inapp product was sold in (for
+      example, 'com.some.thing').
        * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-       * @param token The token provided to the user's device when the inapp product was purchased.
+       * @param token The token provided to the user's device when the inapp product was
+      purchased.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String productId, java.lang.String token) throws java.io.IOException {
@@ -7158,7 +7922,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ProductPurchase> {
 
-        private static final String REST_PATH = "{packageName}/purchases/products/{productId}/tokens/{token}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}";
 
         /**
          * Checks the purchase and consumption status of an inapp item.
@@ -7170,9 +7934,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         * @param packageName The package name of the application the inapp product was sold in (for
+      example, 'com.some.thing').
          * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-         * @param token The token provided to the user's device when the inapp product was purchased.
+         * @param token The token provided to the user's device when the inapp product was
+      purchased.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String productId, java.lang.String token) {
@@ -7193,8 +7959,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -7223,8 +8004,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -7265,7 +8051,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the inapp product was purchased. */
+        /**
+         * The token provided to the user's device when the inapp product was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -7275,7 +8063,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the inapp product was purchased. */
+        /**
+         * The token provided to the user's device when the inapp product was purchased.
+         */
         public Get setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7317,10 +8107,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
        * operation.
        *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param token The token provided to the user's device when the subscription was
+      purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
        * @return the request
        */
@@ -7332,7 +8124,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Acknowledge extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:acknowledge";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:acknowledge";
 
         /**
          * Acknowledges a subscription purchase.
@@ -7345,10 +8137,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
+         * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param token The token provided to the user's device when the subscription was
+      purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
          * @since 1.13
          */
@@ -7360,8 +8154,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Acknowledge set$Xgafv(java.lang.String $Xgafv) {
+          return (Acknowledge) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Acknowledge setAccessToken(java.lang.String accessToken) {
+          return (Acknowledge) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Acknowledge setAlt(java.lang.String alt) {
           return (Acknowledge) super.setAlt(alt);
+        }
+
+        @Override
+        public Acknowledge setCallback(java.lang.String callback) {
+          return (Acknowledge) super.setCallback(callback);
         }
 
         @Override
@@ -7390,8 +8199,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Acknowledge setUserIp(java.lang.String userIp) {
-          return (Acknowledge) super.setUserIp(userIp);
+        public Acknowledge setUploadType(java.lang.String uploadType) {
+          return (Acknowledge) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Acknowledge setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Acknowledge) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -7433,7 +8247,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -7443,7 +8259,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         public Acknowledge setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7462,10 +8280,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param token The token provided to the user's device when the subscription was
+      purchased.
        * @return the request
        */
       public Cancel cancel(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -7476,7 +8296,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Cancel extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel";
 
         /**
          * Cancels a user's subscription purchase. The subscription remains valid until its expiration
@@ -7490,10 +8310,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
+         * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param token The token provided to the user's device when the subscription was
+      purchased.
          * @since 1.13
          */
         protected Cancel(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -7504,8 +8326,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Cancel setAlt(java.lang.String alt) {
           return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
         }
 
         @Override
@@ -7534,8 +8371,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Cancel setUserIp(java.lang.String userIp) {
-          return (Cancel) super.setUserIp(userIp);
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -7577,7 +8419,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -7587,7 +8431,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         public Cancel setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7606,10 +8452,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Defer#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param token The token provided to the user's device when the subscription was
+      purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesDeferRequest}
        * @return the request
        */
@@ -7621,7 +8469,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Defer extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionPurchasesDeferResponse> {
 
-        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer";
 
         /**
          * Defers a user's subscription purchase until a specified future expiration time.
@@ -7634,10 +8482,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Defer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
+         * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param token The token provided to the user's device when the subscription was
+      purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesDeferRequest}
          * @since 1.13
          */
@@ -7649,8 +8499,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Defer set$Xgafv(java.lang.String $Xgafv) {
+          return (Defer) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Defer setAccessToken(java.lang.String accessToken) {
+          return (Defer) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Defer setAlt(java.lang.String alt) {
           return (Defer) super.setAlt(alt);
+        }
+
+        @Override
+        public Defer setCallback(java.lang.String callback) {
+          return (Defer) super.setCallback(callback);
         }
 
         @Override
@@ -7679,8 +8544,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Defer setUserIp(java.lang.String userIp) {
-          return (Defer) super.setUserIp(userIp);
+        public Defer setUploadType(java.lang.String uploadType) {
+          return (Defer) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Defer setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Defer) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -7722,7 +8592,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -7732,7 +8604,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         public Defer setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7751,10 +8625,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param token The token provided to the user's device when the subscription was
+      purchased.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -7765,7 +8641,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionPurchase> {
 
-        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}";
 
         /**
          * Checks whether a user's subscription purchase is valid and returns its expiry time.
@@ -7777,10 +8653,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
+         * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param token The token provided to the user's device when the subscription was
+      purchased.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -7801,8 +8679,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -7831,8 +8724,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -7874,7 +8772,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -7884,7 +8784,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         public Get setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7904,10 +8806,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Refund#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
-       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param subscriptionId "The purchased subscription ID (for example, 'monthly001').
+       * @param token The token provided to the user's device when the subscription was
+      purchased.
        * @return the request
        */
       public Refund refund(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -7918,7 +8822,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Refund extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund";
 
         /**
          * Refunds a user's subscription purchase, but the subscription remains valid until its expiration
@@ -7932,10 +8836,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Refund#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
+         * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
-         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param subscriptionId "The purchased subscription ID (for example, 'monthly001').
+         * @param token The token provided to the user's device when the subscription was
+      purchased.
          * @since 1.13
          */
         protected Refund(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -7946,8 +8852,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Refund set$Xgafv(java.lang.String $Xgafv) {
+          return (Refund) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Refund setAccessToken(java.lang.String accessToken) {
+          return (Refund) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Refund setAlt(java.lang.String alt) {
           return (Refund) super.setAlt(alt);
+        }
+
+        @Override
+        public Refund setCallback(java.lang.String callback) {
+          return (Refund) super.setCallback(callback);
         }
 
         @Override
@@ -7976,8 +8897,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Refund setUserIp(java.lang.String userIp) {
-          return (Refund) super.setUserIp(userIp);
+        public Refund setUploadType(java.lang.String uploadType) {
+          return (Refund) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Refund setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Refund) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -8003,23 +8929,27 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The purchased subscription ID (for example, 'monthly001'). */
+        /** "The purchased subscription ID (for example, 'monthly001'). */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
-        /** The purchased subscription ID (for example, 'monthly001').
+        /**" The purchased subscription ID (for example, 'monthly001').
+      "
+
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
         }
 
-        /** The purchased subscription ID (for example, 'monthly001'). */
+        /** "The purchased subscription ID (for example, 'monthly001'). */
         public Refund setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8029,7 +8959,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         public Refund setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8049,10 +8981,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param token The token provided to the user's device when the subscription was
+      purchased.
        * @return the request
        */
       public Revoke revoke(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -8063,7 +8997,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class Revoke extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke";
 
         /**
          * Refunds and immediately revokes a user's subscription purchase. Access to the subscription will
@@ -8077,10 +9011,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
+         * @param packageName The package name of the application for which this subscription was
+      purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param token The token provided to the user's device when the subscription was
+      purchased.
          * @since 1.13
          */
         protected Revoke(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -8091,8 +9027,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public Revoke set$Xgafv(java.lang.String $Xgafv) {
+          return (Revoke) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Revoke setAccessToken(java.lang.String accessToken) {
+          return (Revoke) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Revoke setAlt(java.lang.String alt) {
           return (Revoke) super.setAlt(alt);
+        }
+
+        @Override
+        public Revoke setCallback(java.lang.String callback) {
+          return (Revoke) super.setCallback(callback);
         }
 
         @Override
@@ -8121,8 +9072,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public Revoke setUserIp(java.lang.String userIp) {
-          return (Revoke) super.setUserIp(userIp);
+        public Revoke setUploadType(java.lang.String uploadType) {
+          return (Revoke) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Revoke) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -8164,7 +9120,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8174,7 +9132,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /** The token provided to the user's device when the subscription was purchased. */
+        /**
+         * The token provided to the user's device when the subscription was purchased.
+         */
         public Revoke setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8215,7 +9175,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which voided purchases need to be returned (for example,
+       * @param packageName The package name of the application for which voided purchases need to be
+      returned (for example,
        *        'com.some.thing').
        * @return the request
        */
@@ -8227,7 +9188,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.VoidedPurchasesListResponse> {
 
-        private static final String REST_PATH = "{packageName}/purchases/voidedpurchases";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/voidedpurchases";
 
         /**
          * Lists the purchases that were canceled, refunded or charged-back.
@@ -8239,7 +9200,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which voided purchases need to be returned (for example,
+         * @param packageName The package name of the application for which voided purchases need to be
+      returned (for example,
        *        'com.some.thing').
          * @since 1.13
          */
@@ -8259,8 +9221,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -8289,8 +9266,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -8348,31 +9330,47 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
+        /**
+         * Defines how many results the list operation should return. The default number depends on
+         * the resource collection.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long maxResults;
 
-        /**
-
+        /** Defines how many results the list operation should return. The default number depends on the
+       resource collection.
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
         }
 
+        /**
+         * Defines how many results the list operation should return. The default number depends on
+         * the resource collection.
+         */
         public List setMaxResults(java.lang.Long maxResults) {
           this.maxResults = maxResults;
           return this;
         }
 
+        /**
+         * Defines the index of the first element to return. This can only be used if indexed paging
+         * is enabled.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long startIndex;
 
-        /**
-
+        /** Defines the index of the first element to return. This can only be used if indexed paging is
+       enabled.
          */
         public java.lang.Long getStartIndex() {
           return startIndex;
         }
 
+        /**
+         * Defines the index of the first element to return. This can only be used if indexed paging
+         * is enabled.
+         */
         public List setStartIndex(java.lang.Long startIndex) {
           this.startIndex = startIndex;
           return this;
@@ -8410,37 +9408,47 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
+        /**
+         * Defines the token of the page to return, usually taken from TokenPagination. This can
+         * only be used if token paging is enabled.
+         */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
-        /**
-
+        /** Defines the token of the page to return, usually taken from TokenPagination. This can only be used
+       if token paging is enabled.
          */
         public java.lang.String getToken() {
           return token;
         }
 
+        /**
+         * Defines the token of the page to return, usually taken from TokenPagination. This can
+         * only be used if token paging is enabled.
+         */
         public List setToken(java.lang.String token) {
           this.token = token;
           return this;
         }
 
         /**
-         * The type of voided purchases that you want to see in the response. Possible values are: -
-         * 0: Only voided in-app product purchases will be returned in the response. This is the
-         * default value. - 1: Both voided in-app purchases and voided subscription purchases will
-         * be returned in the response.  Note: Before requesting to receive voided subscription
-         * purchases, you must switch to use orderId in the response which uniquely identifies one-
-         * time purchases and subscriptions. Otherwise, you will receive multiple subscription
-         * orders with the same PurchaseToken, because subscription renewal orders share the same
-         * PurchaseToken.
+         * The type of voided purchases that you want to see in the response. Possible values are:
+         * 0. Only voided in-app product purchases will be returned in the response. This is the
+         * default value. 1. Both voided in-app purchases and voided subscription purchases will be
+         * returned in the response.
+         *
+         * Note: Before requesting to receive voided subscription purchases, you must switch to use
+         * orderId in the response which uniquely identifies one-time purchases and subscriptions.
+         * Otherwise, you will receive multiple subscription orders with the same PurchaseToken,
+         * because subscription renewal orders share the same PurchaseToken.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer type;
 
-        /** The type of voided purchases that you want to see in the response. Possible values are: - 0: Only
-       voided in-app product purchases will be returned in the response. This is the default value. - 1:
+        /** The type of voided purchases that you want to see in the response. Possible values are: 0. Only
+       voided in-app product purchases will be returned in the response. This is the default value. 1.
        Both voided in-app purchases and voided subscription purchases will be returned in the response.
+
        Note: Before requesting to receive voided subscription purchases, you must switch to use orderId in
        the response which uniquely identifies one-time purchases and subscriptions. Otherwise, you will
        receive multiple subscription orders with the same PurchaseToken, because subscription renewal
@@ -8451,14 +9459,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * The type of voided purchases that you want to see in the response. Possible values are: -
-         * 0: Only voided in-app product purchases will be returned in the response. This is the
-         * default value. - 1: Both voided in-app purchases and voided subscription purchases will
-         * be returned in the response.  Note: Before requesting to receive voided subscription
-         * purchases, you must switch to use orderId in the response which uniquely identifies one-
-         * time purchases and subscriptions. Otherwise, you will receive multiple subscription
-         * orders with the same PurchaseToken, because subscription renewal orders share the same
-         * PurchaseToken.
+         * The type of voided purchases that you want to see in the response. Possible values are:
+         * 0. Only voided in-app product purchases will be returned in the response. This is the
+         * default value. 1. Both voided in-app purchases and voided subscription purchases will be
+         * returned in the response.
+         *
+         * Note: Before requesting to receive voided subscription purchases, you must switch to use
+         * orderId in the response which uniquely identifies one-time purchases and subscriptions.
+         * Otherwise, you will receive multiple subscription orders with the same PurchaseToken,
+         * because subscription renewal orders share the same PurchaseToken.
          */
         public List setType(java.lang.Integer type) {
           this.type = type;
@@ -8495,15 +9504,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Reviews {
 
     /**
-     * Returns a single review.
+     * Gets a single review.
      *
      * Create a request for the method "reviews.get".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
-     * @param reviewId
+     * @param packageName Package name of the app.
+     * @param reviewId Unique identifier for a review.
      * @return the request
      */
     public Get get(java.lang.String packageName, java.lang.String reviewId) throws java.io.IOException {
@@ -8514,10 +9523,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Review> {
 
-      private static final String REST_PATH = "{packageName}/reviews/{reviewId}";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/reviews/{reviewId}";
 
       /**
-       * Returns a single review.
+       * Gets a single review.
        *
        * Create a request for the method "reviews.get".
        *
@@ -8526,8 +9535,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
-       * @param reviewId
+       * @param packageName Package name of the app.
+       * @param reviewId Unique identifier for a review.
        * @since 1.13
        */
       protected Get(java.lang.String packageName, java.lang.String reviewId) {
@@ -8547,8 +9556,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -8577,57 +9601,58 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app for which we want reviews; for example,
-       * "com.spiffygame".
-       */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app for which we want reviews; for example,
-       * "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Get setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
+      /** Unique identifier for a review. */
       @com.google.api.client.util.Key
       private java.lang.String reviewId;
 
-      /**
-
+      /** Unique identifier for a review.
        */
       public java.lang.String getReviewId() {
         return reviewId;
       }
 
+      /** Unique identifier for a review. */
       public Get setReviewId(java.lang.String reviewId) {
         this.reviewId = reviewId;
         return this;
       }
 
+      /** Language localization code. */
       @com.google.api.client.util.Key
       private java.lang.String translationLanguage;
 
-      /**
-
+      /** Language localization code.
        */
       public java.lang.String getTranslationLanguage() {
         return translationLanguage;
       }
 
+      /** Language localization code. */
       public Get setTranslationLanguage(java.lang.String translationLanguage) {
         this.translationLanguage = translationLanguage;
         return this;
@@ -8639,14 +9664,14 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Returns a list of reviews. Only reviews from last week will be returned.
+     * Lists all reviews.
      *
      * Create a request for the method "reviews.list".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
+     * @param packageName Package name of the app.
      * @return the request
      */
     public List list(java.lang.String packageName) throws java.io.IOException {
@@ -8657,10 +9682,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ReviewsListResponse> {
 
-      private static final String REST_PATH = "{packageName}/reviews";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/reviews";
 
       /**
-       * Returns a list of reviews. Only reviews from last week will be returned.
+       * Lists all reviews.
        *
        * Create a request for the method "reviews.list".
        *
@@ -8669,7 +9694,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
+       * @param packageName Package name of the app.
        * @since 1.13
        */
       protected List(java.lang.String packageName) {
@@ -8688,8 +9713,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -8718,87 +9758,90 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app for which we want reviews; for example,
-       * "com.spiffygame".
-       */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app for which we want reviews; for example,
-       * "com.spiffygame".
-       */
+      /** Package name of the app. */
       public List setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
+      /** How many results the list operation should return. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /**
-
+      /** How many results the list operation should return.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
+      /** How many results the list operation should return. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /** The index of the first element to return. */
       @com.google.api.client.util.Key
       private java.lang.Long startIndex;
 
-      /**
-
+      /** The index of the first element to return.
        */
       public java.lang.Long getStartIndex() {
         return startIndex;
       }
 
+      /** The index of the first element to return. */
       public List setStartIndex(java.lang.Long startIndex) {
         this.startIndex = startIndex;
         return this;
       }
 
+      /** Pagination token. If empty, list starts at the first review. */
       @com.google.api.client.util.Key
       private java.lang.String token;
 
-      /**
-
+      /** Pagination token. If empty, list starts at the first review.
        */
       public java.lang.String getToken() {
         return token;
       }
 
+      /** Pagination token. If empty, list starts at the first review. */
       public List setToken(java.lang.String token) {
         this.token = token;
         return this;
       }
 
+      /** Language localization code. */
       @com.google.api.client.util.Key
       private java.lang.String translationLanguage;
 
-      /**
-
+      /** Language localization code.
        */
       public java.lang.String getTranslationLanguage() {
         return translationLanguage;
       }
 
+      /** Language localization code. */
       public List setTranslationLanguage(java.lang.String translationLanguage) {
         this.translationLanguage = translationLanguage;
         return this;
@@ -8810,15 +9853,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Reply to a single review, or update an existing reply.
+     * Replies to a single review, or updates an existing reply.
      *
      * Create a request for the method "reviews.reply".
      *
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Reply#execute()} method to invoke the remote operation.
      *
-     * @param packageName Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
-     * @param reviewId
+     * @param packageName Package name of the app.
+     * @param reviewId Unique identifier for a review.
      * @param content the {@link com.google.api.services.androidpublisher.model.ReviewsReplyRequest}
      * @return the request
      */
@@ -8830,10 +9873,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     public class Reply extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ReviewsReplyResponse> {
 
-      private static final String REST_PATH = "{packageName}/reviews/{reviewId}:reply";
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/reviews/{reviewId}:reply";
 
       /**
-       * Reply to a single review, or update an existing reply.
+       * Replies to a single review, or updates an existing reply.
        *
        * Create a request for the method "reviews.reply".
        *
@@ -8843,8 +9886,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Reply#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
-       * @param reviewId
+       * @param packageName Package name of the app.
+       * @param reviewId Unique identifier for a review.
        * @param content the {@link com.google.api.services.androidpublisher.model.ReviewsReplyRequest}
        * @since 1.13
        */
@@ -8855,8 +9898,23 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public Reply set$Xgafv(java.lang.String $Xgafv) {
+        return (Reply) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reply setAccessToken(java.lang.String accessToken) {
+        return (Reply) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Reply setAlt(java.lang.String alt) {
         return (Reply) super.setAlt(alt);
+      }
+
+      @Override
+      public Reply setCallback(java.lang.String callback) {
+        return (Reply) super.setCallback(callback);
       }
 
       @Override
@@ -8885,42 +9943,42 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       @Override
-      public Reply setUserIp(java.lang.String userIp) {
-        return (Reply) super.setUserIp(userIp);
+      public Reply setUploadType(java.lang.String uploadType) {
+        return (Reply) super.setUploadType(uploadType);
       }
 
-      /**
-       * Unique identifier for the Android app for which we want reviews; for example,
-       * "com.spiffygame".
-       */
+      @Override
+      public Reply setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reply) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
       @com.google.api.client.util.Key
       private java.lang.String packageName;
 
-      /** Unique identifier for the Android app for which we want reviews; for example, "com.spiffygame".
+      /** Package name of the app.
        */
       public java.lang.String getPackageName() {
         return packageName;
       }
 
-      /**
-       * Unique identifier for the Android app for which we want reviews; for example,
-       * "com.spiffygame".
-       */
+      /** Package name of the app. */
       public Reply setPackageName(java.lang.String packageName) {
         this.packageName = packageName;
         return this;
       }
 
+      /** Unique identifier for a review. */
       @com.google.api.client.util.Key
       private java.lang.String reviewId;
 
-      /**
-
+      /** Unique identifier for a review.
        */
       public java.lang.String getReviewId() {
         return reviewId;
       }
 
+      /** Unique identifier for a review. */
       public Reply setReviewId(java.lang.String reviewId) {
         this.reviewId = reviewId;
         return this;
@@ -8932,601 +9990,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
 
-  }
-
-  /**
-   * An accessor for creating requests from the Systemapks collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
-   *   {@code AndroidPublisher.Systemapks.List request = androidpublisher.systemapks().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Systemapks systemapks() {
-    return new Systemapks();
-  }
-
-  /**
-   * The "systemapks" collection of methods.
-   */
-  public class Systemapks {
-
-    /**
-     * An accessor for creating requests from the Variants collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
-     *   {@code AndroidPublisher.Variants.List request = androidpublisher.variants().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Variants variants() {
-      return new Variants();
-    }
-
-    /**
-     * The "variants" collection of methods.
-     */
-    public class Variants {
-
-      /**
-       * Creates a new variant of APK which is suitable for inclusion in a system image.
-       *
-       * Create a request for the method "variants.create".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-       * @param versionCode The version code of the App Bundle.
-       * @param content the {@link com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest}
-       * @return the request
-       */
-      public Create create(java.lang.String packageName, java.lang.Long versionCode, com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest content) throws java.io.IOException {
-        Create result = new Create(packageName, versionCode, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Variant> {
-
-        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants";
-
-        /**
-         * Creates a new variant of APK which is suitable for inclusion in a system image.
-         *
-         * Create a request for the method "variants.create".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-         * @param versionCode The version code of the App Bundle.
-         * @param content the {@link com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest}
-         * @since 1.13
-         */
-        protected Create(java.lang.String packageName, java.lang.Long versionCode, com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest content) {
-          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Variant.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
-        }
-
-        @Override
-        public Create setAlt(java.lang.String alt) {
-          return (Create) super.setAlt(alt);
-        }
-
-        @Override
-        public Create setFields(java.lang.String fields) {
-          return (Create) super.setFields(fields);
-        }
-
-        @Override
-        public Create setKey(java.lang.String key) {
-          return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Create) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Create setQuotaUser(java.lang.String quotaUser) {
-          return (Create) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame".
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        public Create setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** The version code of the App Bundle. */
-        @com.google.api.client.util.Key
-        private java.lang.Long versionCode;
-
-        /** The version code of the App Bundle.
-         */
-        public java.lang.Long getVersionCode() {
-          return versionCode;
-        }
-
-        /** The version code of the App Bundle. */
-        public Create setVersionCode(java.lang.Long versionCode) {
-          this.versionCode = versionCode;
-          return this;
-        }
-
-        @Override
-        public Create set(String parameterName, Object value) {
-          return (Create) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Download a previously created APK which is suitable for inclusion in a system image.
-       *
-       * Create a request for the method "variants.download".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
-       *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-       * @param versionCode The version code of the App Bundle.
-       * @param variantId
-       * @return the request
-       */
-      public Download download(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) throws java.io.IOException {
-        Download result = new Download(packageName, versionCode, variantId);
-        initialize(result);
-        return result;
-      }
-
-      public class Download extends AndroidPublisherRequest<Void> {
-
-        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants/{variantId}:download";
-
-        /**
-         * Download a previously created APK which is suitable for inclusion in a system image.
-         *
-         * Create a request for the method "variants.download".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-         * @param versionCode The version code of the App Bundle.
-         * @param variantId
-         * @since 1.13
-         */
-        protected Download(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) {
-          super(AndroidPublisher.this, "GET", REST_PATH, null, Void.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
-          this.variantId = com.google.api.client.util.Preconditions.checkNotNull(variantId, "Required parameter variantId must be specified.");
-          initializeMediaDownload();
-        }
-
-        @Override
-        public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
-          super.executeMediaAndDownloadTo(outputStream);
-        }
-
-        @Override
-        public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
-          return super.executeMediaAsInputStream();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
-          return super.executeMedia();
-        }
-
-        @Override
-        public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
-          java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
-              ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
-          return new com.google.api.client.http.GenericUrl(
-              com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Download setAlt(java.lang.String alt) {
-          return (Download) super.setAlt(alt);
-        }
-
-        @Override
-        public Download setFields(java.lang.String fields) {
-          return (Download) super.setFields(fields);
-        }
-
-        @Override
-        public Download setKey(java.lang.String key) {
-          return (Download) super.setKey(key);
-        }
-
-        @Override
-        public Download setOauthToken(java.lang.String oauthToken) {
-          return (Download) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Download) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Download setQuotaUser(java.lang.String quotaUser) {
-          return (Download) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Download setUserIp(java.lang.String userIp) {
-          return (Download) super.setUserIp(userIp);
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame".
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        public Download setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** The version code of the App Bundle. */
-        @com.google.api.client.util.Key
-        private java.lang.Long versionCode;
-
-        /** The version code of the App Bundle.
-         */
-        public java.lang.Long getVersionCode() {
-          return versionCode;
-        }
-
-        /** The version code of the App Bundle. */
-        public Download setVersionCode(java.lang.Long versionCode) {
-          this.versionCode = versionCode;
-          return this;
-        }
-
-        @com.google.api.client.util.Key
-        private java.lang.Long variantId;
-
-        /**
-
-         */
-        public java.lang.Long getVariantId() {
-          return variantId;
-        }
-
-        public Download setVariantId(java.lang.Long variantId) {
-          this.variantId = variantId;
-          return this;
-        }
-
-        @Override
-        public Download set(String parameterName, Object value) {
-          return (Download) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Returns a previously created system APK variant.
-       *
-       * Create a request for the method "variants.get".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-       * @param versionCode The version code of the App Bundle.
-       * @param variantId Unique identifier for this variant.
-       * @return the request
-       */
-      public Get get(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) throws java.io.IOException {
-        Get result = new Get(packageName, versionCode, variantId);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Variant> {
-
-        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants/{variantId}";
-
-        /**
-         * Returns a previously created system APK variant.
-         *
-         * Create a request for the method "variants.get".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-         * @param versionCode The version code of the App Bundle.
-         * @param variantId Unique identifier for this variant.
-         * @since 1.13
-         */
-        protected Get(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) {
-          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.Variant.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
-          this.variantId = com.google.api.client.util.Preconditions.checkNotNull(variantId, "Required parameter variantId must be specified.");
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame".
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        public Get setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** The version code of the App Bundle. */
-        @com.google.api.client.util.Key
-        private java.lang.Long versionCode;
-
-        /** The version code of the App Bundle.
-         */
-        public java.lang.Long getVersionCode() {
-          return versionCode;
-        }
-
-        /** The version code of the App Bundle. */
-        public Get setVersionCode(java.lang.Long versionCode) {
-          this.versionCode = versionCode;
-          return this;
-        }
-
-        /** Unique identifier for this variant. */
-        @com.google.api.client.util.Key
-        private java.lang.Long variantId;
-
-        /** Unique identifier for this variant.
-         */
-        public java.lang.Long getVariantId() {
-          return variantId;
-        }
-
-        /** Unique identifier for this variant. */
-        public Get setVariantId(java.lang.Long variantId) {
-          this.variantId = variantId;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Returns the list of previously created system APK variants.
-       *
-       * Create a request for the method "variants.list".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-       * @param versionCode The version code of the App Bundle.
-       * @return the request
-       */
-      public List list(java.lang.String packageName, java.lang.Long versionCode) throws java.io.IOException {
-        List result = new List(packageName, versionCode);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SystemApkVariantsListResponse> {
-
-        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants";
-
-        /**
-         * Returns the list of previously created system APK variants.
-         *
-         * Create a request for the method "variants.list".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
-         * @param versionCode The version code of the App Bundle.
-         * @since 1.13
-         */
-        protected List(java.lang.String packageName, java.lang.Long versionCode) {
-          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.SystemApkVariantsListResponse.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame".
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /** Unique identifier for the Android app; for example, "com.spiffygame". */
-        public List setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** The version code of the App Bundle. */
-        @com.google.api.client.util.Key
-        private java.lang.Long versionCode;
-
-        /** The version code of the App Bundle.
-         */
-        public java.lang.Long getVersionCode() {
-          return versionCode;
-        }
-
-        /** The version code of the App Bundle. */
-        public List setVersionCode(java.lang.Long versionCode) {
-          this.versionCode = versionCode;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
-      }
-
-    }
   }
 
   /**

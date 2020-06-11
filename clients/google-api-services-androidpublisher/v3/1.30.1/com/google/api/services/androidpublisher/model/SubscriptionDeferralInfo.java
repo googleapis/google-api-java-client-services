@@ -21,8 +21,8 @@ package com.google.api.services.androidpublisher.model;
  * expiry time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -40,7 +40,7 @@ public final class SubscriptionDeferralInfo extends com.google.api.client.json.G
   private java.lang.Long desiredExpiryTimeMillis;
 
   /**
-   * The expected expiry time for the subscription. If the current expiry time for the subscription
+   * The expected expiry time for the subscription.  If the current expiry time for the subscription
    * is not the value specified here, the deferral will not occur.
    * The value may be {@code null}.
    */
@@ -67,7 +67,7 @@ public final class SubscriptionDeferralInfo extends com.google.api.client.json.G
   }
 
   /**
-   * The expected expiry time for the subscription. If the current expiry time for the subscription
+   * The expected expiry time for the subscription.  If the current expiry time for the subscription
    * is not the value specified here, the deferral will not occur.
    * @return value or {@code null} for none
    */
@@ -76,7 +76,7 @@ public final class SubscriptionDeferralInfo extends com.google.api.client.json.G
   }
 
   /**
-   * The expected expiry time for the subscription. If the current expiry time for the subscription
+   * The expected expiry time for the subscription.  If the current expiry time for the subscription
    * is not the value specified here, the deferral will not occur.
    * @param expectedExpiryTimeMillis expectedExpiryTimeMillis or {@code null} for none
    */

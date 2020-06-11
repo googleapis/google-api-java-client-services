@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for InappproductsListResponse.
+ * Response listing all in-app products.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,6 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class InappproductsListResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * All in-app products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,26 +44,28 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#inappproductsListResponse".
+   * The kind of this response ("androidpublisher#inappproductsListResponse").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * Information about the current page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PageInfo pageInfo;
 
   /**
+   * Pagination token, to handle a number of products that is over one page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TokenPagination tokenPagination;
 
   /**
+   * All in-app products.
    * @return value or {@code null} for none
    */
   public java.util.List<InAppProduct> getInappproduct() {
@@ -70,6 +73,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
+   * All in-app products.
    * @param inappproduct inappproduct or {@code null} for none
    */
   public InappproductsListResponse setInappproduct(java.util.List<InAppProduct> inappproduct) {
@@ -78,8 +82,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#inappproductsListResponse".
+   * The kind of this response ("androidpublisher#inappproductsListResponse").
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -87,8 +90,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#inappproductsListResponse".
+   * The kind of this response ("androidpublisher#inappproductsListResponse").
    * @param kind kind or {@code null} for none
    */
   public InappproductsListResponse setKind(java.lang.String kind) {
@@ -97,6 +99,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
+   * Information about the current page.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -104,6 +107,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
+   * Information about the current page.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public InappproductsListResponse setPageInfo(PageInfo pageInfo) {
@@ -112,6 +116,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
+   * Pagination token, to handle a number of products that is over one page.
    * @return value or {@code null} for none
    */
   public TokenPagination getTokenPagination() {
@@ -119,6 +124,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
+   * Pagination token, to handle a number of products that is over one page.
    * @param tokenPagination tokenPagination or {@code null} for none
    */
   public InappproductsListResponse setTokenPagination(TokenPagination tokenPagination) {

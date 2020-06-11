@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher;
 
 /**
- * Available OAuth 2.0 scopes for use with the Google Play Developer API.
+ * Available OAuth 2.0 scopes for use with the Google Play Android Developer API.
  *
  * @since 1.4
  */

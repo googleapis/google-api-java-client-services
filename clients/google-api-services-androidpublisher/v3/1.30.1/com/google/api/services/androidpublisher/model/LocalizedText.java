@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for LocalizedText.
+ * Release notes specification, i.e. language and text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,21 +31,21 @@ package com.google.api.services.androidpublisher.model;
 public final class LocalizedText extends com.google.api.client.json.GenericJson {
 
   /**
-   * The language code, in BCP 47 format (eg "en-US").
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String language;
 
   /**
-   * The text in the given `language`.
+   * The text in the given language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The language code, in BCP 47 format (eg "en-US").
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -53,7 +53,7 @@ public final class LocalizedText extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The language code, in BCP 47 format (eg "en-US").
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
    * @param language language or {@code null} for none
    */
   public LocalizedText setLanguage(java.lang.String language) {
@@ -62,7 +62,7 @@ public final class LocalizedText extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The text in the given `language`.
+   * The text in the given language.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -70,7 +70,7 @@ public final class LocalizedText extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The text in the given `language`.
+   * The text in the given language.
    * @param text text or {@code null} for none
    */
   public LocalizedText setText(java.lang.String text) {

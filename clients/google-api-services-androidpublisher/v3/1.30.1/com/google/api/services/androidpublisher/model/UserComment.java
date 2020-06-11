@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for UserComment.
+ * User entry from conversation between user and developer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -60,7 +60,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   private java.lang.String device;
 
   /**
-   * Some information about the characteristics of the user's device
+   * Information about the characteristics of the user's device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   private Timestamp lastModified;
 
   /**
-   * Untranslated text of the review, in the case where the review has been translated. If the
-   * review has not been translated this is left blank.
+   * Untranslated text of the review, where the review was translated. If the review was not
+   * translated this is left blank.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,14 +106,14 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * Number of users who have given this review a thumbs down
+   * Number of users who have given this review a thumbs down.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer thumbsDownCount;
 
   /**
-   * Number of users who have given this review a thumbs up
+   * Number of users who have given this review a thumbs up.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +190,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Some information about the characteristics of the user's device
+   * Information about the characteristics of the user's device.
    * @return value or {@code null} for none
    */
   public DeviceMetadata getDeviceMetadata() {
@@ -198,7 +198,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Some information about the characteristics of the user's device
+   * Information about the characteristics of the user's device.
    * @param deviceMetadata deviceMetadata or {@code null} for none
    */
   public UserComment setDeviceMetadata(DeviceMetadata deviceMetadata) {
@@ -224,8 +224,8 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Untranslated text of the review, in the case where the review has been translated. If the
-   * review has not been translated this is left blank.
+   * Untranslated text of the review, where the review was translated. If the review was not
+   * translated this is left blank.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginalText() {
@@ -233,8 +233,8 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Untranslated text of the review, in the case where the review has been translated. If the
-   * review has not been translated this is left blank.
+   * Untranslated text of the review, where the review was translated. If the review was not
+   * translated this is left blank.
    * @param originalText originalText or {@code null} for none
    */
   public UserComment setOriginalText(java.lang.String originalText) {
@@ -300,7 +300,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of users who have given this review a thumbs down
+   * Number of users who have given this review a thumbs down.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThumbsDownCount() {
@@ -308,7 +308,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of users who have given this review a thumbs down
+   * Number of users who have given this review a thumbs down.
    * @param thumbsDownCount thumbsDownCount or {@code null} for none
    */
   public UserComment setThumbsDownCount(java.lang.Integer thumbsDownCount) {
@@ -317,7 +317,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of users who have given this review a thumbs up
+   * Number of users who have given this review a thumbs up.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThumbsUpCount() {
@@ -325,7 +325,7 @@ public final class UserComment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of users who have given this review a thumbs up
+   * Number of users who have given this review a thumbs up.
    * @param thumbsUpCount thumbsUpCount or {@code null} for none
    */
   public UserComment setThumbsUpCount(java.lang.Integer thumbsUpCount) {

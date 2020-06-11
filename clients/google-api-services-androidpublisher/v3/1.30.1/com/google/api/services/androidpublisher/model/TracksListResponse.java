@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for TracksListResponse.
+ * Response listing all tracks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,14 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class TracksListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#tracksListResponse".
+   * The kind of this response ("androidpublisher#tracksListResponse").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * All tracks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#tracksListResponse".
+   * The kind of this response ("androidpublisher#tracksListResponse").
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -60,8 +59,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#tracksListResponse".
+   * The kind of this response ("androidpublisher#tracksListResponse").
    * @param kind kind or {@code null} for none
    */
   public TracksListResponse setKind(java.lang.String kind) {
@@ -70,6 +68,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   }
 
   /**
+   * All tracks.
    * @return value or {@code null} for none
    */
   public java.util.List<Track> getTracks() {
@@ -77,6 +76,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   }
 
   /**
+   * All tracks.
    * @param tracks tracks or {@code null} for none
    */
   public TracksListResponse setTracks(java.util.List<Track> tracks) {

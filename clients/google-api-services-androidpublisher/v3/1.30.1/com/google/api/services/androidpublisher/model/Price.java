@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Price.
+ * Definition of a price, i.e. currency and units.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,21 +31,23 @@ package com.google.api.services.androidpublisher.model;
 public final class Price extends com.google.api.client.json.GenericJson {
 
   /**
-   * 3 letter Currency code, as defined by ISO 4217.
+   * 3 letter Currency code, as defined by ISO 4217. See
+   * java/com/google/common/money/CurrencyCode.java
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currency;
 
   /**
-   * The price in millionths of the currency base unit represented as a string.
+   * Price in 1/million of the currency base unit, represented as a string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String priceMicros;
 
   /**
-   * 3 letter Currency code, as defined by ISO 4217.
+   * 3 letter Currency code, as defined by ISO 4217. See
+   * java/com/google/common/money/CurrencyCode.java
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrency() {
@@ -53,7 +55,8 @@ public final class Price extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * 3 letter Currency code, as defined by ISO 4217.
+   * 3 letter Currency code, as defined by ISO 4217. See
+   * java/com/google/common/money/CurrencyCode.java
    * @param currency currency or {@code null} for none
    */
   public Price setCurrency(java.lang.String currency) {
@@ -62,7 +65,7 @@ public final class Price extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price in millionths of the currency base unit represented as a string.
+   * Price in 1/million of the currency base unit, represented as a string.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriceMicros() {
@@ -70,7 +73,7 @@ public final class Price extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price in millionths of the currency base unit represented as a string.
+   * Price in 1/million of the currency base unit, represented as a string.
    * @param priceMicros priceMicros or {@code null} for none
    */
   public Price setPriceMicros(java.lang.String priceMicros) {

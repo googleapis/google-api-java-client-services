@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Testers.
+ * The testers of an app. The resource for TestersService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,77 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class Testers extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> autoEnrolledAndroidGroups;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> autoEnrolledGoogleGroups;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> excludedGoogleGroups;
-
-  /**
-   * A list of all Google Groups, as email addresses, that define testers for this track.
+   * All testing Google Groups, as email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> googleGroups;
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAutoEnrolledAndroidGroups() {
-    return autoEnrolledAndroidGroups;
-  }
-
-  /**
-   * @param autoEnrolledAndroidGroups autoEnrolledAndroidGroups or {@code null} for none
-   */
-  public Testers setAutoEnrolledAndroidGroups(java.util.List<java.lang.String> autoEnrolledAndroidGroups) {
-    this.autoEnrolledAndroidGroups = autoEnrolledAndroidGroups;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAutoEnrolledGoogleGroups() {
-    return autoEnrolledGoogleGroups;
-  }
-
-  /**
-   * @param autoEnrolledGoogleGroups autoEnrolledGoogleGroups or {@code null} for none
-   */
-  public Testers setAutoEnrolledGoogleGroups(java.util.List<java.lang.String> autoEnrolledGoogleGroups) {
-    this.autoEnrolledGoogleGroups = autoEnrolledGoogleGroups;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getExcludedGoogleGroups() {
-    return excludedGoogleGroups;
-  }
-
-  /**
-   * @param excludedGoogleGroups excludedGoogleGroups or {@code null} for none
-   */
-  public Testers setExcludedGoogleGroups(java.util.List<java.lang.String> excludedGoogleGroups) {
-    this.excludedGoogleGroups = excludedGoogleGroups;
-    return this;
-  }
-
-  /**
-   * A list of all Google Groups, as email addresses, that define testers for this track.
+   * All testing Google Groups, as email addresses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGoogleGroups() {
@@ -109,7 +46,7 @@ public final class Testers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all Google Groups, as email addresses, that define testers for this track.
+   * All testing Google Groups, as email addresses.
    * @param googleGroups googleGroups or {@code null} for none
    */
   public Testers setGoogleGroups(java.util.List<java.lang.String> googleGroups) {

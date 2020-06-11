@@ -17,11 +17,14 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for PageInfo.
+ * Information about the current page.
+ *
+ * List operations that supports paging return only one "page" of results. This protocol buffer
+ * message describes the page that has been returned.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,24 +34,31 @@ package com.google.api.services.androidpublisher.model;
 public final class PageInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Maximum number of results returned in one page. ! The number of results included in the API
+   * response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer resultPerPage;
 
   /**
+   * Index of the first result returned in the current page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startIndex;
 
   /**
+   * Total number of results available on the backend ! The total number of results in the result
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalResults;
 
   /**
+   * Maximum number of results returned in one page. ! The number of results included in the API
+   * response.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResultPerPage() {
@@ -56,6 +66,8 @@ public final class PageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum number of results returned in one page. ! The number of results included in the API
+   * response.
    * @param resultPerPage resultPerPage or {@code null} for none
    */
   public PageInfo setResultPerPage(java.lang.Integer resultPerPage) {
@@ -64,6 +76,7 @@ public final class PageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Index of the first result returned in the current page.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -71,6 +84,7 @@ public final class PageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Index of the first result returned in the current page.
    * @param startIndex startIndex or {@code null} for none
    */
   public PageInfo setStartIndex(java.lang.Integer startIndex) {
@@ -79,6 +93,8 @@ public final class PageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Total number of results available on the backend ! The total number of results in the result
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalResults() {
@@ -86,6 +102,8 @@ public final class PageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Total number of results available on the backend ! The total number of results in the result
+   * set.
    * @param totalResults totalResults or {@code null} for none
    */
   public PageInfo setTotalResults(java.lang.Integer totalResults) {

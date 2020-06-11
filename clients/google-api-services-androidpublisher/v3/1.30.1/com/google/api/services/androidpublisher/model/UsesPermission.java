@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Response listing all localized listings.
+ * A permission used by this APK.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -28,70 +28,64 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListingsListResponse extends com.google.api.client.json.GenericJson {
+public final class UsesPermission extends com.google.api.client.json.GenericJson {
 
   /**
-   * The kind of this response ("androidpublisher#listingsListResponse").
+   * Optionally, the maximum SDK version for which the permission is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String kind;
+  private java.lang.Integer maxSdkVersion;
 
   /**
-   * All localized listings.
+   * The name of the permission requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Listing> listings;
-
-  static {
-    // hack to force ProGuard to consider Listing used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Listing.class);
-  }
+  private java.lang.String name;
 
   /**
-   * The kind of this response ("androidpublisher#listingsListResponse").
+   * Optionally, the maximum SDK version for which the permission is required.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKind() {
-    return kind;
+  public java.lang.Integer getMaxSdkVersion() {
+    return maxSdkVersion;
   }
 
   /**
-   * The kind of this response ("androidpublisher#listingsListResponse").
-   * @param kind kind or {@code null} for none
+   * Optionally, the maximum SDK version for which the permission is required.
+   * @param maxSdkVersion maxSdkVersion or {@code null} for none
    */
-  public ListingsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
+  public UsesPermission setMaxSdkVersion(java.lang.Integer maxSdkVersion) {
+    this.maxSdkVersion = maxSdkVersion;
     return this;
   }
 
   /**
-   * All localized listings.
+   * The name of the permission requested.
    * @return value or {@code null} for none
    */
-  public java.util.List<Listing> getListings() {
-    return listings;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * All localized listings.
-   * @param listings listings or {@code null} for none
+   * The name of the permission requested.
+   * @param name name or {@code null} for none
    */
-  public ListingsListResponse setListings(java.util.List<Listing> listings) {
-    this.listings = listings;
+  public UsesPermission setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public ListingsListResponse set(String fieldName, Object value) {
-    return (ListingsListResponse) super.set(fieldName, value);
+  public UsesPermission set(String fieldName, Object value) {
+    return (UsesPermission) super.set(fieldName, value);
   }
 
   @Override
-  public ListingsListResponse clone() {
-    return (ListingsListResponse) super.clone();
+  public UsesPermission clone() {
+    return (UsesPermission) super.clone();
   }
 
 }

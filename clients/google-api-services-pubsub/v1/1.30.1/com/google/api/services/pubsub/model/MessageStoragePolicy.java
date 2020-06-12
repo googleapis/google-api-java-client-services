@@ -17,7 +17,7 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * Model definition for MessageStoragePolicy.
+ * A policy constraining the storage of messages published to the topic.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:

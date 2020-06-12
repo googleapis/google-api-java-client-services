@@ -78,9 +78,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
    * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
-   * subscription. If empty, then no messages are filtered out. EXPERIMENTAL: This feature is part
-   * of a closed alpha release. This API might be changed in backward-incompatible ways and is not
-   * recommended for production use. It is not subject to any SLA or deprecation policy.
+   * subscription. If empty, then no messages are filtered out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,6 +130,17 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean retainAckedMessages;
+
+  /**
+   * A policy that specifies how Pub/Sub retries message delivery for this subscription.
+   *
+   * If not set, the default retry policy is applied. This generally implies that messages will be
+   * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * acknowledgement deadline exceeded events for a given message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RetryPolicy retryPolicy;
 
   /**
    * Required. The name of the topic from which this subscription is receiving messages. Format is
@@ -246,9 +255,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
    * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
-   * subscription. If empty, then no messages are filtered out. EXPERIMENTAL: This feature is part
-   * of a closed alpha release. This API might be changed in backward-incompatible ways and is not
-   * recommended for production use. It is not subject to any SLA or deprecation policy.
+   * subscription. If empty, then no messages are filtered out.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -258,9 +265,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
    * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
-   * subscription. If empty, then no messages are filtered out. EXPERIMENTAL: This feature is part
-   * of a closed alpha release. This API might be changed in backward-incompatible ways and is not
-   * recommended for production use. It is not subject to any SLA or deprecation policy.
+   * subscription. If empty, then no messages are filtered out.
    * @param filter filter or {@code null} for none
    */
   public Subscription setFilter(java.lang.String filter) {
@@ -374,6 +379,31 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setRetainAckedMessages(java.lang.Boolean retainAckedMessages) {
     this.retainAckedMessages = retainAckedMessages;
+    return this;
+  }
+
+  /**
+   * A policy that specifies how Pub/Sub retries message delivery for this subscription.
+   *
+   * If not set, the default retry policy is applied. This generally implies that messages will be
+   * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * acknowledgement deadline exceeded events for a given message.
+   * @return value or {@code null} for none
+   */
+  public RetryPolicy getRetryPolicy() {
+    return retryPolicy;
+  }
+
+  /**
+   * A policy that specifies how Pub/Sub retries message delivery for this subscription.
+   *
+   * If not set, the default retry policy is applied. This generally implies that messages will be
+   * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * acknowledgement deadline exceeded events for a given message.
+   * @param retryPolicy retryPolicy or {@code null} for none
+   */
+  public Subscription setRetryPolicy(RetryPolicy retryPolicy) {
+    this.retryPolicy = retryPolicy;
     return this;
   }
 

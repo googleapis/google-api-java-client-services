@@ -200,11 +200,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -222,11 +217,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -357,11 +347,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -379,11 +364,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -522,11 +502,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -544,11 +519,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -739,11 +709,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public AddBook setAccessToken(java.lang.String accessToken) {
-        return (AddBook) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public AddBook setAlt(java.lang.String alt) {
         return (AddBook) super.setAlt(alt);
       }
@@ -761,11 +726,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public AddBook setKey(java.lang.String key) {
         return (AddBook) super.setKey(key);
-      }
-
-      @Override
-      public AddBook setOauthToken(java.lang.String oauthToken) {
-        return (AddBook) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -900,11 +860,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public DeleteBook setAccessToken(java.lang.String accessToken) {
-        return (DeleteBook) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public DeleteBook setAlt(java.lang.String alt) {
         return (DeleteBook) super.setAlt(alt);
       }
@@ -922,11 +877,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public DeleteBook setKey(java.lang.String key) {
         return (DeleteBook) super.setKey(key);
-      }
-
-      @Override
-      public DeleteBook setOauthToken(java.lang.String oauthToken) {
-        return (DeleteBook) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1015,11 +965,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public UpdateBook setAccessToken(java.lang.String accessToken) {
-        return (UpdateBook) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public UpdateBook setAlt(java.lang.String alt) {
         return (UpdateBook) super.setAlt(alt);
       }
@@ -1037,11 +982,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public UpdateBook setKey(java.lang.String key) {
         return (UpdateBook) super.setKey(key);
-      }
-
-      @Override
-      public UpdateBook setOauthToken(java.lang.String oauthToken) {
-        return (UpdateBook) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1145,11 +1085,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListOfflineMetadata setAccessToken(java.lang.String accessToken) {
-        return (ListOfflineMetadata) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public ListOfflineMetadata setAlt(java.lang.String alt) {
         return (ListOfflineMetadata) super.setAlt(alt);
       }
@@ -1167,11 +1102,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public ListOfflineMetadata setKey(java.lang.String key) {
         return (ListOfflineMetadata) super.setKey(key);
-      }
-
-      @Override
-      public ListOfflineMetadata setOauthToken(java.lang.String oauthToken) {
-        return (ListOfflineMetadata) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1291,11 +1221,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public GetFamilyInfo setAccessToken(java.lang.String accessToken) {
-        return (GetFamilyInfo) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public GetFamilyInfo setAlt(java.lang.String alt) {
         return (GetFamilyInfo) super.setAlt(alt);
       }
@@ -1313,11 +1238,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public GetFamilyInfo setKey(java.lang.String key) {
         return (GetFamilyInfo) super.setKey(key);
-      }
-
-      @Override
-      public GetFamilyInfo setOauthToken(java.lang.String oauthToken) {
-        return (GetFamilyInfo) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1403,11 +1323,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Share setAccessToken(java.lang.String accessToken) {
-        return (Share) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Share setAlt(java.lang.String alt) {
         return (Share) super.setAlt(alt);
       }
@@ -1425,11 +1340,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Share setKey(java.lang.String key) {
         return (Share) super.setKey(key);
-      }
-
-      @Override
-      public Share setOauthToken(java.lang.String oauthToken) {
-        return (Share) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1550,11 +1460,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Unshare setAccessToken(java.lang.String accessToken) {
-        return (Unshare) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Unshare setAlt(java.lang.String alt) {
         return (Unshare) super.setAlt(alt);
       }
@@ -1572,11 +1477,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Unshare setKey(java.lang.String key) {
         return (Unshare) super.setKey(key);
-      }
-
-      @Override
-      public Unshare setOauthToken(java.lang.String oauthToken) {
-        return (Unshare) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1733,11 +1633,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -1755,11 +1650,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1906,11 +1796,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -1928,11 +1813,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -2122,11 +2002,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -2144,11 +2019,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2412,11 +2282,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -2434,11 +2299,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2787,11 +2647,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -2809,11 +2664,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2985,11 +2835,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -3007,11 +2852,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -3377,11 +3217,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public GetUserSettings setAccessToken(java.lang.String accessToken) {
-        return (GetUserSettings) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public GetUserSettings setAlt(java.lang.String alt) {
         return (GetUserSettings) super.setAlt(alt);
       }
@@ -3399,11 +3234,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public GetUserSettings setKey(java.lang.String key) {
         return (GetUserSettings) super.setKey(key);
-      }
-
-      @Override
-      public GetUserSettings setOauthToken(java.lang.String oauthToken) {
-        return (GetUserSettings) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -3491,11 +3321,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ReleaseDownloadAccess setAccessToken(java.lang.String accessToken) {
-        return (ReleaseDownloadAccess) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public ReleaseDownloadAccess setAlt(java.lang.String alt) {
         return (ReleaseDownloadAccess) super.setAlt(alt);
       }
@@ -3513,11 +3338,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public ReleaseDownloadAccess setKey(java.lang.String key) {
         return (ReleaseDownloadAccess) super.setKey(key);
-      }
-
-      @Override
-      public ReleaseDownloadAccess setOauthToken(java.lang.String oauthToken) {
-        return (ReleaseDownloadAccess) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -3652,11 +3472,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public RequestAccess setAccessToken(java.lang.String accessToken) {
-        return (RequestAccess) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public RequestAccess setAlt(java.lang.String alt) {
         return (RequestAccess) super.setAlt(alt);
       }
@@ -3674,11 +3489,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public RequestAccess setKey(java.lang.String key) {
         return (RequestAccess) super.setKey(key);
-      }
-
-      @Override
-      public RequestAccess setOauthToken(java.lang.String oauthToken) {
-        return (RequestAccess) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -3849,11 +3659,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public SyncVolumeLicenses setAccessToken(java.lang.String accessToken) {
-        return (SyncVolumeLicenses) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public SyncVolumeLicenses setAlt(java.lang.String alt) {
         return (SyncVolumeLicenses) super.setAlt(alt);
       }
@@ -3871,11 +3676,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public SyncVolumeLicenses setKey(java.lang.String key) {
         return (SyncVolumeLicenses) super.setKey(key);
-      }
-
-      @Override
-      public SyncVolumeLicenses setOauthToken(java.lang.String oauthToken) {
-        return (SyncVolumeLicenses) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -4078,11 +3878,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public UpdateUserSettings setAccessToken(java.lang.String accessToken) {
-        return (UpdateUserSettings) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public UpdateUserSettings setAlt(java.lang.String alt) {
         return (UpdateUserSettings) super.setAlt(alt);
       }
@@ -4100,11 +3895,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public UpdateUserSettings setKey(java.lang.String key) {
         return (UpdateUserSettings) super.setKey(key);
-      }
-
-      @Override
-      public UpdateUserSettings setOauthToken(java.lang.String oauthToken) {
-        return (UpdateUserSettings) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -4220,11 +4010,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -4242,11 +4027,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4350,11 +4130,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Insert setAccessToken(java.lang.String accessToken) {
-          return (Insert) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Insert setAlt(java.lang.String alt) {
           return (Insert) super.setAlt(alt);
         }
@@ -4372,11 +4147,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Insert setKey(java.lang.String key) {
           return (Insert) super.setKey(key);
-        }
-
-        @Override
-        public Insert setOauthToken(java.lang.String oauthToken) {
-          return (Insert) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4524,11 +4294,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -4546,11 +4311,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4796,11 +4556,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Summary setAccessToken(java.lang.String accessToken) {
-          return (Summary) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Summary setAlt(java.lang.String alt) {
           return (Summary) super.setAlt(alt);
         }
@@ -4818,11 +4573,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Summary setKey(java.lang.String key) {
           return (Summary) super.setKey(key);
-        }
-
-        @Override
-        public Summary setOauthToken(java.lang.String oauthToken) {
-          return (Summary) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4929,11 +4679,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Update setAccessToken(java.lang.String accessToken) {
-          return (Update) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
         }
@@ -4951,11 +4696,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Update setKey(java.lang.String key) {
           return (Update) super.setKey(key);
-        }
-
-        @Override
-        public Update setOauthToken(java.lang.String oauthToken) {
-          return (Update) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5083,11 +4823,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public AddVolume setAccessToken(java.lang.String accessToken) {
-          return (AddVolume) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public AddVolume setAlt(java.lang.String alt) {
           return (AddVolume) super.setAlt(alt);
         }
@@ -5105,11 +4840,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public AddVolume setKey(java.lang.String key) {
           return (AddVolume) super.setKey(key);
-        }
-
-        @Override
-        public AddVolume setOauthToken(java.lang.String oauthToken) {
-          return (AddVolume) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5247,11 +4977,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public ClearVolumes setAccessToken(java.lang.String accessToken) {
-          return (ClearVolumes) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public ClearVolumes setAlt(java.lang.String alt) {
           return (ClearVolumes) super.setAlt(alt);
         }
@@ -5269,11 +4994,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public ClearVolumes setKey(java.lang.String key) {
           return (ClearVolumes) super.setKey(key);
-        }
-
-        @Override
-        public ClearVolumes setOauthToken(java.lang.String oauthToken) {
-          return (ClearVolumes) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5388,11 +5108,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -5410,11 +5125,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5526,11 +5236,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -5548,11 +5253,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5642,11 +5342,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public MoveVolume setAccessToken(java.lang.String accessToken) {
-          return (MoveVolume) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public MoveVolume setAlt(java.lang.String alt) {
           return (MoveVolume) super.setAlt(alt);
         }
@@ -5664,11 +5359,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public MoveVolume setKey(java.lang.String key) {
           return (MoveVolume) super.setKey(key);
-        }
-
-        @Override
-        public MoveVolume setOauthToken(java.lang.String oauthToken) {
-          return (MoveVolume) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5813,11 +5503,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public RemoveVolume setAccessToken(java.lang.String accessToken) {
-          return (RemoveVolume) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public RemoveVolume setAlt(java.lang.String alt) {
           return (RemoveVolume) super.setAlt(alt);
         }
@@ -5835,11 +5520,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public RemoveVolume setKey(java.lang.String key) {
           return (RemoveVolume) super.setKey(key);
-        }
-
-        @Override
-        public RemoveVolume setOauthToken(java.lang.String oauthToken) {
-          return (RemoveVolume) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6007,11 +5687,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -6029,11 +5704,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6267,11 +5937,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -6289,11 +5954,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6415,11 +6075,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public SetPosition setAccessToken(java.lang.String accessToken) {
-          return (SetPosition) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public SetPosition setAlt(java.lang.String alt) {
           return (SetPosition) super.setAlt(alt);
         }
@@ -6437,11 +6092,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public SetPosition setKey(java.lang.String key) {
           return (SetPosition) super.setKey(key);
-        }
-
-        @Override
-        public SetPosition setOauthToken(java.lang.String oauthToken) {
-          return (SetPosition) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6657,11 +6307,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -6679,11 +6324,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -6842,11 +6482,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListCategories setAccessToken(java.lang.String accessToken) {
-        return (ListCategories) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public ListCategories setAlt(java.lang.String alt) {
         return (ListCategories) super.setAlt(alt);
       }
@@ -6864,11 +6499,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public ListCategories setKey(java.lang.String key) {
         return (ListCategories) super.setKey(key);
-      }
-
-      @Override
-      public ListCategories setOauthToken(java.lang.String oauthToken) {
-        return (ListCategories) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -6965,11 +6595,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListCategoryVolumes setAccessToken(java.lang.String accessToken) {
-        return (ListCategoryVolumes) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public ListCategoryVolumes setAlt(java.lang.String alt) {
         return (ListCategoryVolumes) super.setAlt(alt);
       }
@@ -6987,11 +6612,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public ListCategoryVolumes setKey(java.lang.String key) {
         return (ListCategoryVolumes) super.setKey(key);
-      }
-
-      @Override
-      public ListCategoryVolumes setOauthToken(java.lang.String oauthToken) {
-        return (ListCategoryVolumes) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -7181,11 +6801,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -7203,11 +6818,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -7361,11 +6971,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Accept setAccessToken(java.lang.String accessToken) {
-        return (Accept) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Accept setAlt(java.lang.String alt) {
         return (Accept) super.setAlt(alt);
       }
@@ -7383,11 +6988,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Accept setKey(java.lang.String key) {
         return (Accept) super.setKey(key);
-      }
-
-      @Override
-      public Accept setOauthToken(java.lang.String oauthToken) {
-        return (Accept) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -7585,11 +7185,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Dismiss setAccessToken(java.lang.String accessToken) {
-        return (Dismiss) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Dismiss setAlt(java.lang.String alt) {
         return (Dismiss) super.setAlt(alt);
       }
@@ -7607,11 +7202,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Dismiss setKey(java.lang.String key) {
         return (Dismiss) super.setKey(key);
-      }
-
-      @Override
-      public Dismiss setOauthToken(java.lang.String oauthToken) {
-        return (Dismiss) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -7803,11 +7393,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -7825,11 +7410,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -8028,11 +7608,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -8050,11 +7625,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -8171,11 +7741,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -8193,11 +7758,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -8352,11 +7912,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -8374,11 +7929,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -8569,11 +8119,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -8591,11 +8136,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -8930,11 +8470,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -8952,11 +8487,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9151,11 +8681,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -9173,11 +8698,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9404,11 +8924,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -9426,11 +8941,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9561,11 +9071,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public Rate setAccessToken(java.lang.String accessToken) {
-          return (Rate) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Rate setAlt(java.lang.String alt) {
           return (Rate) super.setAlt(alt);
         }
@@ -9583,11 +9088,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Rate setKey(java.lang.String key) {
           return (Rate) super.setKey(key);
-        }
-
-        @Override
-        public Rate setOauthToken(java.lang.String oauthToken) {
-          return (Rate) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9759,11 +9259,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -9781,11 +9276,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override

@@ -889,7 +889,8 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the genomics server.  After setting any optional
        * parameters, call the {@link CheckIn#execute()} method to invoke the remote operation.
        *
-       * @param id The worker id, assigned when it was created.
+       * @param id The VM identity token for authenticating the VM instance.
+       *        https://cloud.google.com/compute/docs/instances/verifying-instance-identity
        * @param content the {@link com.google.api.services.genomics.v2alpha1.model.CheckInRequest}
        * @return the request
        */
@@ -918,7 +919,8 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
          * CheckIn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param id The worker id, assigned when it was created.
+         * @param id The VM identity token for authenticating the VM instance.
+       *        https://cloud.google.com/compute/docs/instances/verifying-instance-identity
          * @param content the {@link com.google.api.services.genomics.v2alpha1.model.CheckInRequest}
          * @since 1.13
          */
@@ -987,17 +989,24 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
           return (CheckIn) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The worker id, assigned when it was created. */
+        /**
+         * The VM identity token for authenticating the VM instance.
+         * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+         */
         @com.google.api.client.util.Key
         private java.lang.String id;
 
-        /** The worker id, assigned when it was created.
+        /** The VM identity token for authenticating the VM instance.
+       https://cloud.google.com/compute/docs/instances/verifying-instance-identity
          */
         public java.lang.String getId() {
           return id;
         }
 
-        /** The worker id, assigned when it was created. */
+        /**
+         * The VM identity token for authenticating the VM instance.
+         * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+         */
         public CheckIn setId(java.lang.String id) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
@@ -1046,7 +1055,8 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the genomics server.  After setting any optional
      * parameters, call the {@link CheckIn#execute()} method to invoke the remote operation.
      *
-     * @param id The worker id, assigned when it was created.
+     * @param id The VM identity token for authenticating the VM instance.
+     *        https://cloud.google.com/compute/docs/instances/verifying-instance-identity
      * @param content the {@link com.google.api.services.genomics.v2alpha1.model.CheckInRequest}
      * @return the request
      */
@@ -1072,7 +1082,8 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        * CheckIn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id The worker id, assigned when it was created.
+       * @param id The VM identity token for authenticating the VM instance.
+     *        https://cloud.google.com/compute/docs/instances/verifying-instance-identity
        * @param content the {@link com.google.api.services.genomics.v2alpha1.model.CheckInRequest}
        * @since 1.13
        */
@@ -1136,17 +1147,24 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         return (CheckIn) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The worker id, assigned when it was created. */
+      /**
+       * The VM identity token for authenticating the VM instance.
+       * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+       */
       @com.google.api.client.util.Key
       private java.lang.String id;
 
-      /** The worker id, assigned when it was created.
+      /** The VM identity token for authenticating the VM instance.
+     https://cloud.google.com/compute/docs/instances/verifying-instance-identity
        */
       public java.lang.String getId() {
         return id;
       }
 
-      /** The worker id, assigned when it was created. */
+      /**
+       * The VM identity token for authenticating the VM instance.
+       * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+       */
       public CheckIn setId(java.lang.String id) {
         this.id = id;
         return this;
@@ -1158,6 +1176,189 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
       }
     }
 
+    /**
+     * An accessor for creating requests from the Projects collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Genomics genomics = new Genomics(...);}
+     *   {@code Genomics.Projects.List request = genomics.projects().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Projects projects() {
+      return new Projects();
+    }
+
+    /**
+     * The "projects" collection of methods.
+     */
+    public class Projects {
+
+      /**
+       * An accessor for creating requests from the Workers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Genomics genomics = new Genomics(...);}
+       *   {@code Genomics.Workers.List request = genomics.workers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Workers workers() {
+        return new Workers();
+      }
+
+      /**
+       * The "workers" collection of methods.
+       */
+      public class Workers {
+
+        /**
+         * The worker uses this method to upload SOS reports for unexpected errors.
+         *
+         * Create a request for the method "workers.uploadSosReport".
+         *
+         * This request holds the parameters needed by the genomics server.  After setting any optional
+         * parameters, call the {@link UploadSosReport#execute()} method to invoke the remote operation.
+         *
+         * @param id The VM identity token for authenticating the VM instance.
+         *        https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+         * @param content the {@link com.google.api.services.genomics.v2alpha1.model.HttpBody}
+         * @return the request
+         */
+        public UploadSosReport uploadSosReport(java.lang.String id, com.google.api.services.genomics.v2alpha1.model.HttpBody content) throws java.io.IOException {
+          UploadSosReport result = new UploadSosReport(id, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UploadSosReport extends GenomicsRequest<com.google.api.services.genomics.v2alpha1.model.UploadSOSReportResponse> {
+
+          private static final String REST_PATH = "v2alpha1/workers/{+id}:uploadSosReport";
+
+          private final java.util.regex.Pattern ID_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/workers/[^/]+$");
+
+          /**
+           * The worker uses this method to upload SOS reports for unexpected errors.
+           *
+           * Create a request for the method "workers.uploadSosReport".
+           *
+           * This request holds the parameters needed by the the genomics server.  After setting any
+           * optional parameters, call the {@link UploadSosReport#execute()} method to invoke the remote
+           * operation. <p> {@link UploadSosReport#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param id The VM identity token for authenticating the VM instance.
+         *        https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+           * @param content the {@link com.google.api.services.genomics.v2alpha1.model.HttpBody}
+           * @since 1.13
+           */
+          protected UploadSosReport(java.lang.String id, com.google.api.services.genomics.v2alpha1.model.HttpBody content) {
+            super(Genomics.this, "POST", REST_PATH, content, com.google.api.services.genomics.v2alpha1.model.UploadSOSReportResponse.class);
+            this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+                  "Parameter id must conform to the pattern " +
+                  "^projects/[^/]+/workers/[^/]+$");
+            }
+          }
+
+          @Override
+          public UploadSosReport set$Xgafv(java.lang.String $Xgafv) {
+            return (UploadSosReport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UploadSosReport setAccessToken(java.lang.String accessToken) {
+            return (UploadSosReport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UploadSosReport setAlt(java.lang.String alt) {
+            return (UploadSosReport) super.setAlt(alt);
+          }
+
+          @Override
+          public UploadSosReport setCallback(java.lang.String callback) {
+            return (UploadSosReport) super.setCallback(callback);
+          }
+
+          @Override
+          public UploadSosReport setFields(java.lang.String fields) {
+            return (UploadSosReport) super.setFields(fields);
+          }
+
+          @Override
+          public UploadSosReport setKey(java.lang.String key) {
+            return (UploadSosReport) super.setKey(key);
+          }
+
+          @Override
+          public UploadSosReport setOauthToken(java.lang.String oauthToken) {
+            return (UploadSosReport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UploadSosReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UploadSosReport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UploadSosReport setQuotaUser(java.lang.String quotaUser) {
+            return (UploadSosReport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UploadSosReport setUploadType(java.lang.String uploadType) {
+            return (UploadSosReport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UploadSosReport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UploadSosReport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The VM identity token for authenticating the VM instance.
+           * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String id;
+
+          /** The VM identity token for authenticating the VM instance.
+         https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+           */
+          public java.lang.String getId() {
+            return id;
+          }
+
+          /**
+           * The VM identity token for authenticating the VM instance.
+           * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+           */
+          public UploadSosReport setId(java.lang.String id) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+                  "Parameter id must conform to the pattern " +
+                  "^projects/[^/]+/workers/[^/]+$");
+            }
+            this.id = id;
+            return this;
+          }
+
+          @Override
+          public UploadSosReport set(String parameterName, Object value) {
+            return (UploadSosReport) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**

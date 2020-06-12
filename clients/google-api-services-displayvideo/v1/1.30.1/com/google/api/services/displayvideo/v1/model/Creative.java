@@ -301,7 +301,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String jsTrackerUrl;
 
   /**
-   * Output only. The IDs of the line items this creative associated with.
+   * Output only. The IDs of the line items this creative is associated with.
    *
    * To associate a creative to a line item, use LineItem.creative_ids instead.
    * The value may be {@code null}.
@@ -1175,7 +1175,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The IDs of the line items this creative associated with.
+   * Output only. The IDs of the line items this creative is associated with.
    *
    * To associate a creative to a line item, use LineItem.creative_ids instead.
    * @return value or {@code null} for none
@@ -1185,7 +1185,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The IDs of the line items this creative associated with.
+   * Output only. The IDs of the line items this creative is associated with.
    *
    * To associate a creative to a line item, use LineItem.creative_ids instead.
    * @param lineItemIds lineItemIds or {@code null} for none

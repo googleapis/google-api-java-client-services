@@ -200,11 +200,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public BulkEditAdvertiserAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
-        return (BulkEditAdvertiserAssignedTargetingOptions) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public BulkEditAdvertiserAssignedTargetingOptions setAlt(java.lang.String alt) {
         return (BulkEditAdvertiserAssignedTargetingOptions) super.setAlt(alt);
       }
@@ -222,11 +217,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public BulkEditAdvertiserAssignedTargetingOptions setKey(java.lang.String key) {
         return (BulkEditAdvertiserAssignedTargetingOptions) super.setKey(key);
-      }
-
-      @Override
-      public BulkEditAdvertiserAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
-        return (BulkEditAdvertiserAssignedTargetingOptions) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -330,11 +320,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public BulkListAdvertiserAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
-        return (BulkListAdvertiserAssignedTargetingOptions) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public BulkListAdvertiserAssignedTargetingOptions setAlt(java.lang.String alt) {
         return (BulkListAdvertiserAssignedTargetingOptions) super.setAlt(alt);
       }
@@ -352,11 +337,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public BulkListAdvertiserAssignedTargetingOptions setKey(java.lang.String key) {
         return (BulkListAdvertiserAssignedTargetingOptions) super.setKey(key);
-      }
-
-      @Override
-      public BulkListAdvertiserAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
-        return (BulkListAdvertiserAssignedTargetingOptions) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -585,11 +565,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Create setAccessToken(java.lang.String accessToken) {
-        return (Create) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
       }
@@ -607,11 +582,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Create setKey(java.lang.String key) {
         return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -690,11 +660,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setAccessToken(java.lang.String accessToken) {
-        return (Delete) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
       }
@@ -712,11 +677,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Delete setKey(java.lang.String key) {
         return (Delete) super.setKey(key);
-      }
-
-      @Override
-      public Delete setOauthToken(java.lang.String oauthToken) {
-        return (Delete) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -818,11 +778,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -840,11 +795,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -948,11 +898,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -970,11 +915,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1216,11 +1156,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setAccessToken(java.lang.String accessToken) {
-        return (Patch) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
       }
@@ -1238,11 +1173,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Patch setKey(java.lang.String key) {
         return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1428,11 +1358,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Upload setAccessToken(java.lang.String accessToken) {
-          return (Upload) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Upload setAlt(java.lang.String alt) {
           return (Upload) super.setAlt(alt);
         }
@@ -1450,11 +1375,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Upload setKey(java.lang.String key) {
           return (Upload) super.setKey(key);
-        }
-
-        @Override
-        public Upload setOauthToken(java.lang.String oauthToken) {
-          return (Upload) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1571,11 +1491,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -1593,11 +1508,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1698,11 +1608,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -1720,11 +1625,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1848,11 +1748,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -1870,11 +1765,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1998,11 +1888,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -2020,11 +1905,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2268,11 +2148,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -2290,11 +2165,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2393,7 +2263,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Channels {
 
       /**
-       * Gets a channel for a partner or advertiser.
+       * Updates an existing inventory source. Returns the updated inventory source if successful. Gets a
+       * channel for a partner or advertiser.
        *
        * Create a request for the method "channels.get".
        *
@@ -2421,7 +2292,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Gets a channel for a partner or advertiser.
+         * Updates an existing inventory source. Returns the updated inventory source if successful. Gets
+         * a channel for a partner or advertiser.
          *
          * Create a request for the method "channels.get".
          *
@@ -2456,11 +2328,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -2478,11 +2345,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2616,11 +2478,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -2638,11 +2495,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2896,11 +2748,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -2918,11 +2765,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -3095,11 +2937,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public BulkEdit setAccessToken(java.lang.String accessToken) {
-            return (BulkEdit) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public BulkEdit setAlt(java.lang.String alt) {
             return (BulkEdit) super.setAlt(alt);
           }
@@ -3117,11 +2954,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public BulkEdit setKey(java.lang.String key) {
             return (BulkEdit) super.setKey(key);
-          }
-
-          @Override
-          public BulkEdit setOauthToken(java.lang.String oauthToken) {
-            return (BulkEdit) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3235,11 +3067,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -3257,11 +3084,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3400,11 +3222,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -3422,11 +3239,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3587,11 +3399,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -3609,11 +3416,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3900,11 +3702,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -3922,11 +3719,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4029,11 +3821,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -4051,11 +3838,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4179,11 +3961,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -4201,11 +3978,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4329,11 +4101,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -4351,11 +4118,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4648,11 +4410,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -4670,11 +4427,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4823,11 +4575,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -4845,11 +4592,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -4952,11 +4694,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -4974,11 +4711,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5102,11 +4834,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -5124,11 +4851,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5252,11 +4974,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -5274,11 +4991,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5528,11 +5240,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -5550,11 +5257,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5716,11 +5418,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public BulkEditLineItemAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
-          return (BulkEditLineItemAssignedTargetingOptions) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public BulkEditLineItemAssignedTargetingOptions setAlt(java.lang.String alt) {
           return (BulkEditLineItemAssignedTargetingOptions) super.setAlt(alt);
         }
@@ -5738,11 +5435,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public BulkEditLineItemAssignedTargetingOptions setKey(java.lang.String key) {
           return (BulkEditLineItemAssignedTargetingOptions) super.setKey(key);
-        }
-
-        @Override
-        public BulkEditLineItemAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
-          return (BulkEditLineItemAssignedTargetingOptions) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -5868,11 +5560,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public BulkListLineItemAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
-          return (BulkListLineItemAssignedTargetingOptions) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public BulkListLineItemAssignedTargetingOptions setAlt(java.lang.String alt) {
           return (BulkListLineItemAssignedTargetingOptions) super.setAlt(alt);
         }
@@ -5890,11 +5577,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public BulkListLineItemAssignedTargetingOptions setKey(java.lang.String key) {
           return (BulkListLineItemAssignedTargetingOptions) super.setKey(key);
-        }
-
-        @Override
-        public BulkListLineItemAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
-          return (BulkListLineItemAssignedTargetingOptions) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6158,11 +5840,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -6180,11 +5857,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6287,11 +5959,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -6309,11 +5976,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6437,11 +6099,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -6459,11 +6116,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6587,11 +6239,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -6609,11 +6256,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -6868,11 +6510,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -6890,11 +6527,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -7079,11 +6711,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             @Override
-            public Create setAccessToken(java.lang.String accessToken) {
-              return (Create) super.setAccessToken(accessToken);
-            }
-
-            @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
             }
@@ -7101,11 +6728,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             @Override
             public Create setKey(java.lang.String key) {
               return (Create) super.setKey(key);
-            }
-
-            @Override
-            public Create setOauthToken(java.lang.String oauthToken) {
-              return (Create) super.setOauthToken(oauthToken);
             }
 
             @Override
@@ -7263,11 +6885,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             @Override
-            public Delete setAccessToken(java.lang.String accessToken) {
-              return (Delete) super.setAccessToken(accessToken);
-            }
-
-            @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
             }
@@ -7285,11 +6902,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             @Override
             public Delete setKey(java.lang.String key) {
               return (Delete) super.setKey(key);
-            }
-
-            @Override
-            public Delete setOauthToken(java.lang.String oauthToken) {
-              return (Delete) super.setOauthToken(oauthToken);
             }
 
             @Override
@@ -7481,11 +7093,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             @Override
-            public Get setAccessToken(java.lang.String accessToken) {
-              return (Get) super.setAccessToken(accessToken);
-            }
-
-            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
             }
@@ -7503,11 +7110,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             @Override
             public Get setKey(java.lang.String key) {
               return (Get) super.setKey(key);
-            }
-
-            @Override
-            public Get setOauthToken(java.lang.String oauthToken) {
-              return (Get) super.setOauthToken(oauthToken);
             }
 
             @Override
@@ -7691,11 +7293,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             @Override
-            public List setAccessToken(java.lang.String accessToken) {
-              return (List) super.setAccessToken(accessToken);
-            }
-
-            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
             }
@@ -7713,11 +7310,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             @Override
             public List setKey(java.lang.String key) {
               return (List) super.setKey(key);
-            }
-
-            @Override
-            public List setOauthToken(java.lang.String oauthToken) {
-              return (List) super.setOauthToken(oauthToken);
             }
 
             @Override
@@ -8027,11 +7619,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -8049,11 +7636,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -8161,11 +7743,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -8183,11 +7760,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -8305,11 +7877,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -8327,11 +7894,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -8572,11 +8134,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -8594,11 +8151,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -8757,11 +8309,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public BulkEdit setAccessToken(java.lang.String accessToken) {
-            return (BulkEdit) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public BulkEdit setAlt(java.lang.String alt) {
             return (BulkEdit) super.setAlt(alt);
           }
@@ -8779,11 +8326,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public BulkEdit setKey(java.lang.String key) {
             return (BulkEdit) super.setKey(key);
-          }
-
-          @Override
-          public BulkEdit setOauthToken(java.lang.String oauthToken) {
-            return (BulkEdit) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8894,11 +8436,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -8916,11 +8453,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9035,11 +8567,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -9057,11 +8584,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9195,11 +8717,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -9217,11 +8734,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9494,11 +9006,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -9516,11 +9023,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9623,11 +9125,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -9645,11 +9142,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9775,11 +9267,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -9797,11 +9284,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -9927,11 +9409,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -9949,11 +9426,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -10111,11 +9583,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -10133,11 +9600,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -10306,11 +9768,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public BulkEdit setAccessToken(java.lang.String accessToken) {
-            return (BulkEdit) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public BulkEdit setAlt(java.lang.String alt) {
             return (BulkEdit) super.setAlt(alt);
           }
@@ -10328,11 +9785,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public BulkEdit setKey(java.lang.String key) {
             return (BulkEdit) super.setKey(key);
-          }
-
-          @Override
-          public BulkEdit setOauthToken(java.lang.String oauthToken) {
-            return (BulkEdit) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10462,11 +9914,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -10484,11 +9931,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10627,11 +10069,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -10649,11 +10086,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10816,11 +10248,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -10838,11 +10265,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -11162,11 +10584,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -11184,11 +10601,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -11324,11 +10736,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -11346,11 +10753,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -11520,11 +10922,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -11542,11 +10939,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -11708,11 +11100,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -11730,11 +11117,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -12028,11 +11410,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -12050,11 +11427,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -12190,11 +11562,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -12212,11 +11579,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -12503,11 +11865,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -12525,11 +11882,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -12649,11 +12001,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -12671,11 +12018,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -12944,11 +12286,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -12966,11 +12303,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -13110,11 +12442,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -13132,11 +12459,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -13430,11 +12752,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -13452,11 +12769,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -13564,11 +12876,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setAccessToken(java.lang.String accessToken) {
-        return (Patch) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
       }
@@ -13586,11 +12893,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Patch setKey(java.lang.String key) {
         return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -13747,11 +13049,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -13769,11 +13066,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -13905,11 +13197,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -13927,11 +13214,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -14203,11 +13485,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Create setAccessToken(java.lang.String accessToken) {
-        return (Create) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
       }
@@ -14225,11 +13502,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Create setKey(java.lang.String key) {
         return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -14361,11 +13633,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setAccessToken(java.lang.String accessToken) {
-        return (Delete) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
       }
@@ -14383,11 +13650,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Delete setKey(java.lang.String key) {
         return (Delete) super.setKey(key);
-      }
-
-      @Override
-      public Delete setOauthToken(java.lang.String oauthToken) {
-        return (Delete) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -14541,11 +13803,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -14563,11 +13820,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -14722,11 +13974,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -14744,11 +13991,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -15006,11 +14248,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setAccessToken(java.lang.String accessToken) {
-        return (Patch) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
       }
@@ -15028,11 +14265,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Patch setKey(java.lang.String key) {
         return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -15228,11 +14460,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public BulkEdit setAccessToken(java.lang.String accessToken) {
-          return (BulkEdit) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public BulkEdit setAlt(java.lang.String alt) {
           return (BulkEdit) super.setAlt(alt);
         }
@@ -15250,11 +14477,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public BulkEdit setKey(java.lang.String key) {
           return (BulkEdit) super.setKey(key);
-        }
-
-        @Override
-        public BulkEdit setOauthToken(java.lang.String oauthToken) {
-          return (BulkEdit) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -15355,11 +14577,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -15377,11 +14594,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -15536,11 +14748,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -15558,11 +14765,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -15734,11 +14936,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -15756,11 +14953,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -16084,11 +15276,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -16106,11 +15293,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -16236,11 +15418,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -16258,11 +15435,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -16580,11 +15752,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Download setAccessToken(java.lang.String accessToken) {
-        return (Download) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Download setAlt(java.lang.String alt) {
         return (Download) super.setAlt(alt);
       }
@@ -16602,11 +15769,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Download setKey(java.lang.String key) {
         return (Download) super.setKey(key);
-      }
-
-      @Override
-      public Download setOauthToken(java.lang.String oauthToken) {
-        return (Download) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -16703,7 +15865,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Channels {
 
       /**
-       * Gets a channel for a partner or advertiser.
+       * Updates an existing inventory source. Returns the updated inventory source if successful. Gets a
+       * channel for a partner or advertiser.
        *
        * Create a request for the method "channels.get".
        *
@@ -16731,7 +15894,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Gets a channel for a partner or advertiser.
+         * Updates an existing inventory source. Returns the updated inventory source if successful. Gets
+         * a channel for a partner or advertiser.
          *
          * Create a request for the method "channels.get".
          *
@@ -16766,11 +15930,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -16788,11 +15947,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -16926,11 +16080,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -16948,11 +16097,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -17206,11 +16350,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -17228,11 +16367,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -17405,11 +16539,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public BulkEdit setAccessToken(java.lang.String accessToken) {
-            return (BulkEdit) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public BulkEdit setAlt(java.lang.String alt) {
             return (BulkEdit) super.setAlt(alt);
           }
@@ -17427,11 +16556,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public BulkEdit setKey(java.lang.String key) {
             return (BulkEdit) super.setKey(key);
-          }
-
-          @Override
-          public BulkEdit setOauthToken(java.lang.String oauthToken) {
-            return (BulkEdit) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -17545,11 +16669,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -17567,11 +16686,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -17710,11 +16824,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -17732,11 +16841,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -17897,11 +17001,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -17919,11 +17018,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -18222,11 +17316,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Create setAccessToken(java.lang.String accessToken) {
-        return (Create) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
       }
@@ -18244,11 +17333,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Create setKey(java.lang.String key) {
         return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -18362,11 +17446,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -18384,11 +17463,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -18555,11 +17629,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -18577,11 +17646,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -18730,11 +17794,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -18752,11 +17811,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override

@@ -38,6 +38,13 @@ public final class CustomApp extends com.google.api.client.json.GenericJson {
   private java.lang.String languageCode;
 
   /**
+   * Output only. Package name of the created Android app. Only present in the API response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageName;
+
+  /**
    * Title for the Android app.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class CustomApp extends com.google.api.client.json.GenericJson {
    */
   public CustomApp setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Output only. Package name of the created Android app. Only present in the API response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageName() {
+    return packageName;
+  }
+
+  /**
+   * Output only. Package name of the created Android app. Only present in the API response.
+   * @param packageName packageName or {@code null} for none
+   */
+  public CustomApp setPackageName(java.lang.String packageName) {
+    this.packageName = packageName;
     return this;
   }
 

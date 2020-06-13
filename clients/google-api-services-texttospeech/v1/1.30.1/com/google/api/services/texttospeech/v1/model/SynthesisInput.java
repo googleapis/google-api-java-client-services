@@ -35,7 +35,7 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise
    * the RPC will fail and return google.rpc.Code.INVALID_ARGUMENT. For more information, see
-   * [SSML](/speech/text-to-speech/docs/ssml).
+   * [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise
    * the RPC will fail and return google.rpc.Code.INVALID_ARGUMENT. For more information, see
-   * [SSML](/speech/text-to-speech/docs/ssml).
+   * [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
    * @return value or {@code null} for none
    */
   public java.lang.String getSsml() {
@@ -61,7 +61,7 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise
    * the RPC will fail and return google.rpc.Code.INVALID_ARGUMENT. For more information, see
-   * [SSML](/speech/text-to-speech/docs/ssml).
+   * [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
    * @param ssml ssml or {@code null} for none
    */
   public SynthesisInput setSsml(java.lang.String ssml) {

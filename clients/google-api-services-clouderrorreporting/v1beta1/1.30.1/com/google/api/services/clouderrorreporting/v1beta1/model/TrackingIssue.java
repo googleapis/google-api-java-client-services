@@ -31,7 +31,7 @@ public final class TrackingIssue extends com.google.api.client.json.GenericJson 
 
   /**
    * A URL pointing to a related entry in an issue tracking system. Example:
-   * https://github.com/user/project/issues/4
+   * `https://github.com/user/project/issues/4`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class TrackingIssue extends com.google.api.client.json.GenericJson 
 
   /**
    * A URL pointing to a related entry in an issue tracking system. Example:
-   * https://github.com/user/project/issues/4
+   * `https://github.com/user/project/issues/4`
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -48,7 +48,7 @@ public final class TrackingIssue extends com.google.api.client.json.GenericJson 
 
   /**
    * A URL pointing to a related entry in an issue tracking system. Example:
-   * https://github.com/user/project/issues/4
+   * `https://github.com/user/project/issues/4`
    * @param url url or {@code null} for none
    */
   public TrackingIssue setUrl(java.lang.String url) {

@@ -20,7 +20,8 @@ package com.google.api.services.cloudasset.v1.model;
  * An asset in Google Cloud. An asset can be any resource in the Google Cloud [resource
  * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy), a
  * resource outside the Google Cloud resource hierarchy (such as Google Kubernetes Engine clusters
- * and objects), or a Cloud IAM policy.
+ * and objects), or a policy (e.g. Cloud IAM policy). See [Supported asset
+ * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -33,12 +34,16 @@ package com.google.api.services.cloudasset.v1.model;
 public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
+   * Please also refer to the [access level user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-levels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel;
 
   /**
+   * Please also refer to the [access policy user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-policies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +112,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private Resource resource;
 
   /**
+   * Please also refer to the [service perimeter user guide](https://cloud.google.com/vpc-service-
+   * controls/docs/overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,6 +128,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Please also refer to the [access level user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-levels).
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AccessLevel getAccessLevel() {
@@ -128,6 +137,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Please also refer to the [access level user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-levels).
    * @param accessLevel accessLevel or {@code null} for none
    */
   public Asset setAccessLevel(GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel) {
@@ -136,6 +147,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Please also refer to the [access policy user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-policies).
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AccessPolicy getAccessPolicy() {
@@ -143,6 +156,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Please also refer to the [access policy user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-policies).
    * @param accessPolicy accessPolicy or {@code null} for none
    */
   public Asset setAccessPolicy(GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy) {
@@ -293,6 +308,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Please also refer to the [service perimeter user guide](https://cloud.google.com/vpc-service-
+   * controls/docs/overview).
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeter getServicePerimeter() {
@@ -300,6 +317,8 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Please also refer to the [service perimeter user guide](https://cloud.google.com/vpc-service-
+   * controls/docs/overview).
    * @param servicePerimeter servicePerimeter or {@code null} for none
    */
   public Asset setServicePerimeter(GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter) {

@@ -53,8 +53,7 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   private java.lang.String attachedResourceFullName;
 
   /**
-   * Represents whether all nodes in the transitive closure of the iam_binding node have been
-   * explored.
+   * Represents whether all analyses on the iam_binding have successfully finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +113,7 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * Represents whether all nodes in the transitive closure of the iam_binding node have been
-   * explored.
+   * Represents whether all analyses on the iam_binding have successfully finished.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullyExplored() {
@@ -123,8 +121,7 @@ public final class IamPolicyAnalysisResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * Represents whether all nodes in the transitive closure of the iam_binding node have been
-   * explored.
+   * Represents whether all analyses on the iam_binding have successfully finished.
    * @param fullyExplored fullyExplored or {@code null} for none
    */
   public IamPolicyAnalysisResult setFullyExplored(java.lang.Boolean fullyExplored) {

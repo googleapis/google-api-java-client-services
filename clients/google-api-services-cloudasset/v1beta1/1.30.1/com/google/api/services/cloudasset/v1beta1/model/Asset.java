@@ -17,8 +17,11 @@
 package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
- * Cloud asset. This includes all Google Cloud Platform resources, Cloud IAM policies, and other
- * non-GCP assets.
+ * An asset in Google Cloud. An asset can be any resource in the Google Cloud [resource
+ * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy), a
+ * resource outside the Google Cloud resource hierarchy (such as Google Kubernetes Engine clusters
+ * and objects), or a policy (e.g. Cloud IAM policy). See [Supported asset
+ * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -31,39 +34,121 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the asset. Example: "google.compute.Disk".
+   * Please also refer to the [access level user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-levels).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel;
+
+  /**
+   * Please also refer to the [access policy user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-policies).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
+
+  /**
+   * The type of the asset. Example: `compute.googleapis.com/Disk`
+   *
+   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String assetType;
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
+   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
+   * their granted access scope from any policies set on parent resources in the resource hierarchy.
+   * Therefore, the effectively policy is the union of both the policy set on this resource and each
+   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Policy iamPolicy;
 
   /**
-   * The full name of the asset. For example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more information.
+   * The full name of the asset. Example:
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
+   *
+   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+   * for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Representation of the resource.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy;
+
+  /**
+   * A representation of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Resource resource;
 
   /**
-   * Type of the asset. Example: "google.compute.Disk".
+   * Please also refer to the [service perimeter user guide](https://cloud.google.com/vpc-service-
+   * controls/docs/overview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter;
+
+  /**
+   * Please also refer to the [access level user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-levels).
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1AccessLevel getAccessLevel() {
+    return accessLevel;
+  }
+
+  /**
+   * Please also refer to the [access level user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-levels).
+   * @param accessLevel accessLevel or {@code null} for none
+   */
+  public Asset setAccessLevel(GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel) {
+    this.accessLevel = accessLevel;
+    return this;
+  }
+
+  /**
+   * Please also refer to the [access policy user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-policies).
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1AccessPolicy getAccessPolicy() {
+    return accessPolicy;
+  }
+
+  /**
+   * Please also refer to the [access policy user guide](https://cloud.google.com/access-context-
+   * manager/docs/overview#access-policies).
+   * @param accessPolicy accessPolicy or {@code null} for none
+   */
+  public Asset setAccessPolicy(GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy) {
+    this.accessPolicy = accessPolicy;
+    return this;
+  }
+
+  /**
+   * The type of the asset. Example: `compute.googleapis.com/Disk`
+   *
+   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -71,7 +156,10 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the asset. Example: "google.compute.Disk".
+   * The type of the asset. Example: `compute.googleapis.com/Disk`
+   *
+   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types) for more information.
    * @param assetType assetType or {@code null} for none
    */
   public Asset setAssetType(java.lang.String assetType) {
@@ -80,8 +168,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
+   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
+   * their granted access scope from any policies set on parent resources in the resource hierarchy.
+   * Therefore, the effectively policy is the union of both the policy set on this resource and each
+   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
    * @return value or {@code null} for none
    */
   public Policy getIamPolicy() {
@@ -89,8 +181,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
+   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
+   * their granted access scope from any policies set on parent resources in the resource hierarchy.
+   * Therefore, the effectively policy is the union of both the policy set on this resource and each
+   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
    * @param iamPolicy iamPolicy or {@code null} for none
    */
   public Asset setIamPolicy(Policy iamPolicy) {
@@ -99,10 +195,11 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full name of the asset. For example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more information.
+   * The full name of the asset. Example:
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
+   *
+   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+   * for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -110,10 +207,11 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full name of the asset. For example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more information.
+   * The full name of the asset. Example:
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
+   *
+   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+   * for more information.
    * @param name name or {@code null} for none
    */
   public Asset setName(java.lang.String name) {
@@ -122,7 +220,28 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the resource.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudOrgpolicyV1Policy> getOrgPolicy() {
+    return orgPolicy;
+  }
+
+  /**
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
+   * @param orgPolicy orgPolicy or {@code null} for none
+   */
+  public Asset setOrgPolicy(java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy) {
+    this.orgPolicy = orgPolicy;
+    return this;
+  }
+
+  /**
+   * A representation of the resource.
    * @return value or {@code null} for none
    */
   public Resource getResource() {
@@ -130,11 +249,30 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the resource.
+   * A representation of the resource.
    * @param resource resource or {@code null} for none
    */
   public Asset setResource(Resource resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * Please also refer to the [service perimeter user guide](https://cloud.google.com/vpc-service-
+   * controls/docs/overview).
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1ServicePerimeter getServicePerimeter() {
+    return servicePerimeter;
+  }
+
+  /**
+   * Please also refer to the [service perimeter user guide](https://cloud.google.com/vpc-service-
+   * controls/docs/overview).
+   * @param servicePerimeter servicePerimeter or {@code null} for none
+   */
+  public Asset setServicePerimeter(GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter) {
+    this.servicePerimeter = servicePerimeter;
     return this;
   }
 

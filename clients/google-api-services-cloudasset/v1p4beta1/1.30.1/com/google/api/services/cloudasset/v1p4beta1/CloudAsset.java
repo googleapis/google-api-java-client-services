@@ -143,8 +143,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class V1p4beta1 {
 
     /**
-     * Analyzes IAM policies based on the specified request. Returns a list of IamPolicyAnalysisResult
-     * matching the request.
+     * Analyzes IAM policies to answer which identities have what accesses on which resources.
      *
      * Create a request for the method "v1p4beta1.analyzeIamPolicy".
      *
@@ -178,8 +177,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Analyzes IAM policies based on the specified request. Returns a list of IamPolicyAnalysisResult
-       * matching the request.
+       * Analyzes IAM policies to answer which identities have what accesses on which resources.
        *
        * Create a request for the method "v1p4beta1.analyzeIamPolicy".
        *
@@ -715,9 +713,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Exports IAM policy analysis based on the specified request. This API implements the
-     * google.longrunning.Operation API allowing you to keep track of the export. The metadata contains
-     * the request to help callers to map responses to requests.
+     * Exports the answers of which identities have what accesses on which resources to a Google Cloud
+     * Storage destination. The output format is the JSON format that represents a
+     * AnalyzeIamPolicyResponse in the JSON format. This method implements the
+     * google.longrunning.Operation, which allows you to keep track of the export. We recommend
+     * intervals of at least 2 seconds with exponential retry to poll the export operation result. The
+     * metadata contains the request to help callers to map responses to requests.
      *
      * Create a request for the method "v1p4beta1.exportIamPolicyAnalysis".
      *
@@ -753,9 +754,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Exports IAM policy analysis based on the specified request. This API implements the
-       * google.longrunning.Operation API allowing you to keep track of the export. The metadata
-       * contains the request to help callers to map responses to requests.
+       * Exports the answers of which identities have what accesses on which resources to a Google Cloud
+       * Storage destination. The output format is the JSON format that represents a
+       * AnalyzeIamPolicyResponse in the JSON format. This method implements the
+       * google.longrunning.Operation, which allows you to keep track of the export. We recommend
+       * intervals of at least 2 seconds with exponential retry to poll the export operation result. The
+       * metadata contains the request to help callers to map responses to requests.
        *
        * Create a request for the method "v1p4beta1.exportIamPolicyAnalysis".
        *

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1p4beta1.model;
 
 /**
- * An identity that appears in an access control list.
+ * An identity under analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 public final class GoogleCloudAssetV1p4beta1Identity extends com.google.api.client.json.GenericJson {
 
   /**
-   * The analysis state of this identity node.
+   * The analysis state of this identity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class GoogleCloudAssetV1p4beta1Identity extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * The analysis state of this identity node.
+   * The analysis state of this identity.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssetV1p4beta1AnalysisState getAnalysisState() {
@@ -55,7 +55,7 @@ public final class GoogleCloudAssetV1p4beta1Identity extends com.google.api.clie
   }
 
   /**
-   * The analysis state of this identity node.
+   * The analysis state of this identity.
    * @param analysisState analysisState or {@code null} for none
    */
   public GoogleCloudAssetV1p4beta1Identity setAnalysisState(GoogleCloudAssetV1p4beta1AnalysisState analysisState) {

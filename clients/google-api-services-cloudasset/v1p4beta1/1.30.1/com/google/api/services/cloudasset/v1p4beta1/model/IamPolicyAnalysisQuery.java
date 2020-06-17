@@ -30,14 +30,15 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 public final class IamPolicyAnalysisQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies roles or permissions for analysis. Leaving it empty means ANY.
+   * Optional. Specifies roles or permissions for analysis. This is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccessSelector accessSelector;
 
   /**
-   * Optional. Specifies an identity for analysis. Leaving it empty means ANY.
+   * Optional. Specifies an identity for analysis. Either ResourceSelector or IdentitySelector must
+   * be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +60,15 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   private java.lang.String parent;
 
   /**
-   * Optional. Specifies a resource for analysis. Leaving it empty means ANY.
+   * Optional. Specifies a resource for analysis. Either ResourceSelector or IdentitySelector must
+   * be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceSelector resourceSelector;
 
   /**
-   * Optional. Specifies roles or permissions for analysis. Leaving it empty means ANY.
+   * Optional. Specifies roles or permissions for analysis. This is optional.
    * @return value or {@code null} for none
    */
   public AccessSelector getAccessSelector() {
@@ -74,7 +76,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies roles or permissions for analysis. Leaving it empty means ANY.
+   * Optional. Specifies roles or permissions for analysis. This is optional.
    * @param accessSelector accessSelector or {@code null} for none
    */
   public IamPolicyAnalysisQuery setAccessSelector(AccessSelector accessSelector) {
@@ -83,7 +85,8 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies an identity for analysis. Leaving it empty means ANY.
+   * Optional. Specifies an identity for analysis. Either ResourceSelector or IdentitySelector must
+   * be specified.
    * @return value or {@code null} for none
    */
   public IdentitySelector getIdentitySelector() {
@@ -91,7 +94,8 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies an identity for analysis. Leaving it empty means ANY.
+   * Optional. Specifies an identity for analysis. Either ResourceSelector or IdentitySelector must
+   * be specified.
    * @param identitySelector identitySelector or {@code null} for none
    */
   public IamPolicyAnalysisQuery setIdentitySelector(IdentitySelector identitySelector) {
@@ -133,7 +137,8 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies a resource for analysis. Leaving it empty means ANY.
+   * Optional. Specifies a resource for analysis. Either ResourceSelector or IdentitySelector must
+   * be specified.
    * @return value or {@code null} for none
    */
   public ResourceSelector getResourceSelector() {
@@ -141,7 +146,8 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies a resource for analysis. Leaving it empty means ANY.
+   * Optional. Specifies a resource for analysis. Either ResourceSelector or IdentitySelector must
+   * be specified.
    * @param resourceSelector resourceSelector or {@code null} for none
    */
   public IamPolicyAnalysisQuery setResourceSelector(ResourceSelector resourceSelector) {

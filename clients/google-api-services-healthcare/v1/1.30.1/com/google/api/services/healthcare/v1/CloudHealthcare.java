@@ -6127,7 +6127,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance UID.
-                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
+                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. Study
+                 * and series search results can take a few seconds to be updated after an instance is deleted using
+                 * DeleteInstance.
                  *
                  * Create a request for the method "instances.delete".
                  *
@@ -6160,6 +6162,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance
                    * UID. Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
+                   * Study and series search results can take a few seconds to be updated after an instance is
+                   * deleted using DeleteInstance.
                    *
                    * Create a request for the method "instances.delete".
                    *

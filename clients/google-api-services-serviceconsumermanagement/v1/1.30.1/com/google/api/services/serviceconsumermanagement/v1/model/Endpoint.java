@@ -61,13 +61,6 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowCors;
 
   /**
-   * The list of features enabled on this endpoint.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> features;
-
-  /**
    * The canonical name of this endpoint.
    * The value may be {@code null}.
    */
@@ -127,23 +120,6 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setAllowCors(java.lang.Boolean allowCors) {
     this.allowCors = allowCors;
-    return this;
-  }
-
-  /**
-   * The list of features enabled on this endpoint.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getFeatures() {
-    return features;
-  }
-
-  /**
-   * The list of features enabled on this endpoint.
-   * @param features features or {@code null} for none
-   */
-  public Endpoint setFeatures(java.util.List<java.lang.String> features) {
-    this.features = features;
     return this;
   }
 

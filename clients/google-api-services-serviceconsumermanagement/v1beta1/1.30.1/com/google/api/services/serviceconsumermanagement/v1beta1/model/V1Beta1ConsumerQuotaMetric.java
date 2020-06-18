@@ -75,6 +75,13 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
   private java.lang.String name;
 
   /**
+   * The units in which the metric value is reported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unit;
+
+  /**
    * The consumer quota for each quota limit defined on the metric.
    * @return value or {@code null} for none
    */
@@ -159,6 +166,23 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
    */
   public V1Beta1ConsumerQuotaMetric setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The units in which the metric value is reported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnit() {
+    return unit;
+  }
+
+  /**
+   * The units in which the metric value is reported.
+   * @param unit unit or {@code null} for none
+   */
+  public V1Beta1ConsumerQuotaMetric setUnit(java.lang.String unit) {
+    this.unit = unit;
     return this;
   }
 

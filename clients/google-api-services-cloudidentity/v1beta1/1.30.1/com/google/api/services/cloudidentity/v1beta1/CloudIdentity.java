@@ -187,11 +187,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public Create setAccessToken(java.lang.String accessToken) {
-        return (Create) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
       }
@@ -209,11 +204,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Create setKey(java.lang.String key) {
         return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -317,11 +307,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public Delete setAccessToken(java.lang.String accessToken) {
-        return (Delete) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
       }
@@ -339,11 +324,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Delete setKey(java.lang.String key) {
         return (Delete) super.setKey(key);
-      }
-
-      @Override
-      public Delete setOauthToken(java.lang.String oauthToken) {
-        return (Delete) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -474,11 +454,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -496,11 +471,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -614,11 +584,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -636,11 +601,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -838,11 +798,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public Lookup setAccessToken(java.lang.String accessToken) {
-        return (Lookup) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Lookup setAlt(java.lang.String alt) {
         return (Lookup) super.setAlt(alt);
       }
@@ -860,11 +815,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Lookup setKey(java.lang.String key) {
         return (Lookup) super.setKey(key);
-      }
-
-      @Override
-      public Lookup setOauthToken(java.lang.String oauthToken) {
-        return (Lookup) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1038,11 +988,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public Patch setAccessToken(java.lang.String accessToken) {
-        return (Patch) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
       }
@@ -1060,11 +1005,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Patch setKey(java.lang.String key) {
         return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1205,11 +1145,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       @Override
-      public Search setAccessToken(java.lang.String accessToken) {
-        return (Search) super.setAccessToken(accessToken);
-      }
-
-      @Override
       public Search setAlt(java.lang.String alt) {
         return (Search) super.setAlt(alt);
       }
@@ -1227,11 +1162,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Search setKey(java.lang.String key) {
         return (Search) super.setKey(key);
-      }
-
-      @Override
-      public Search setOauthToken(java.lang.String oauthToken) {
-        return (Search) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1464,11 +1394,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -1486,11 +1411,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1611,11 +1531,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -1633,11 +1548,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1770,11 +1680,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -1792,11 +1697,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1925,11 +1825,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -1947,11 +1842,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2170,11 +2060,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Lookup setAccessToken(java.lang.String accessToken) {
-          return (Lookup) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Lookup setAlt(java.lang.String alt) {
           return (Lookup) super.setAlt(alt);
         }
@@ -2192,11 +2077,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Lookup setKey(java.lang.String key) {
           return (Lookup) super.setKey(key);
-        }
-
-        @Override
-        public Lookup setOauthToken(java.lang.String oauthToken) {
-          return (Lookup) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2404,11 +2284,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public ModifyMembershipRoles setAccessToken(java.lang.String accessToken) {
-          return (ModifyMembershipRoles) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public ModifyMembershipRoles setAlt(java.lang.String alt) {
           return (ModifyMembershipRoles) super.setAlt(alt);
         }
@@ -2426,11 +2301,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public ModifyMembershipRoles setKey(java.lang.String key) {
           return (ModifyMembershipRoles) super.setKey(key);
-        }
-
-        @Override
-        public ModifyMembershipRoles setOauthToken(java.lang.String oauthToken) {
-          return (ModifyMembershipRoles) super.setOauthToken(oauthToken);
         }
 
         @Override

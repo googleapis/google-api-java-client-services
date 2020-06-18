@@ -61,23 +61,6 @@ public abstract class CloudRunRequest<T> extends com.google.api.client.googleapi
     return this;
   }
 
-  /** OAuth access token. */
-  @com.google.api.client.util.Key("access_token")
-  private java.lang.String accessToken;
-
-  /**
-   * OAuth access token.
-   */
-  public java.lang.String getAccessToken() {
-    return accessToken;
-  }
-
-  /** OAuth access token. */
-  public CloudRunRequest<T> setAccessToken(java.lang.String accessToken) {
-    this.accessToken = accessToken;
-    return this;
-  }
-
   /** Data format for response. */
   @com.google.api.client.util.Key
   private java.lang.String alt;
@@ -150,23 +133,6 @@ public abstract class CloudRunRequest<T> extends com.google.api.client.googleapi
    */
   public CloudRunRequest<T> setKey(java.lang.String key) {
     this.key = key;
-    return this;
-  }
-
-  /** OAuth 2.0 token for the current user. */
-  @com.google.api.client.util.Key("oauth_token")
-  private java.lang.String oauthToken;
-
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  public java.lang.String getOauthToken() {
-    return oauthToken;
-  }
-
-  /** OAuth 2.0 token for the current user. */
-  public CloudRunRequest<T> setOauthToken(java.lang.String oauthToken) {
-    this.oauthToken = oauthToken;
     return this;
   }
 

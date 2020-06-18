@@ -1981,6 +1981,732 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class AnnotationStores {
 
           /**
+           * Creates a new Annotation store within the parent dataset.
+           *
+           * Create a request for the method "annotationStores.create".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the dataset this Annotation store belongs to.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnnotationStore> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/annotationStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Creates a new Annotation store within the parent dataset.
+             *
+             * Create a request for the method "annotationStores.create".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the dataset this Annotation store belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AnnotationStore.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the dataset this Annotation store belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the dataset this Annotation store belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the dataset this Annotation store belongs to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The ID of the Annotation store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String annotationStoreId;
+
+            /** The ID of the Annotation store that is being created. The string must match the following regex:
+           `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            public java.lang.String getAnnotationStoreId() {
+              return annotationStoreId;
+            }
+
+            /**
+             * The ID of the Annotation store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            public Create setAnnotationStoreId(java.lang.String annotationStoreId) {
+              this.annotationStoreId = annotationStoreId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes the specified Annotation store and removes all annotations that are contained within it.
+           *
+           * Create a request for the method "annotationStores.delete".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the Annotation store to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Deletes the specified Annotation store and removes all annotations that are contained within
+             * it.
+             *
+             * Create a request for the method "annotationStores.delete".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the Annotation store to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the Annotation store to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the Annotation store to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The resource name of the Annotation store to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Evaluate an Annotation store against a ground truth Annotation store. When the operation finishes
+           * successfully, a detailed response is returned of type EvaluateAnnotationStoreResponse, contained
+           * in the response. The metadata field type is OperationMetadata. Errors are logged to Cloud Logging
+           * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+           *
+           * Create a request for the method "annotationStores.evaluate".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
+           *
+           * @param evalStore The Annotation store to compare against `golden_store`, in the format of
+          `projects/{project_id}/loca
+           *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
+           * @return the request
+           */
+          public Evaluate evaluate(java.lang.String evalStore, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) throws java.io.IOException {
+            Evaluate result = new Evaluate(evalStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Evaluate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+evalStore}:evaluate";
+
+            private final java.util.regex.Pattern EVAL_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Evaluate an Annotation store against a ground truth Annotation store. When the operation
+             * finishes successfully, a detailed response is returned of type EvaluateAnnotationStoreResponse,
+             * contained in the response. The metadata field type is OperationMetadata. Errors are logged to
+             * Cloud Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+             *
+             * Create a request for the method "annotationStores.evaluate".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Evaluate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param evalStore The Annotation store to compare against `golden_store`, in the format of
+          `projects/{project_id}/loca
+           *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
+             * @since 1.13
+             */
+            protected Evaluate(java.lang.String evalStore, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.evalStore = com.google.api.client.util.Preconditions.checkNotNull(evalStore, "Required parameter evalStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(EVAL_STORE_PATTERN.matcher(evalStore).matches(),
+                    "Parameter evalStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Evaluate set$Xgafv(java.lang.String $Xgafv) {
+              return (Evaluate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Evaluate setAccessToken(java.lang.String accessToken) {
+              return (Evaluate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Evaluate setAlt(java.lang.String alt) {
+              return (Evaluate) super.setAlt(alt);
+            }
+
+            @Override
+            public Evaluate setCallback(java.lang.String callback) {
+              return (Evaluate) super.setCallback(callback);
+            }
+
+            @Override
+            public Evaluate setFields(java.lang.String fields) {
+              return (Evaluate) super.setFields(fields);
+            }
+
+            @Override
+            public Evaluate setKey(java.lang.String key) {
+              return (Evaluate) super.setKey(key);
+            }
+
+            @Override
+            public Evaluate setOauthToken(java.lang.String oauthToken) {
+              return (Evaluate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Evaluate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Evaluate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Evaluate setQuotaUser(java.lang.String quotaUser) {
+              return (Evaluate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Evaluate setUploadType(java.lang.String uploadType) {
+              return (Evaluate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Evaluate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Evaluate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The Annotation store to compare against `golden_store`, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
+             * _store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String evalStore;
+
+            /** The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loc
+           ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getEvalStore() {
+              return evalStore;
+            }
+
+            /**
+             * The Annotation store to compare against `golden_store`, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
+             * _store_id}`.
+             */
+            public Evaluate setEvalStore(java.lang.String evalStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(EVAL_STORE_PATTERN.matcher(evalStore).matches(),
+                    "Parameter evalStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.evalStore = evalStore;
+              return this;
+            }
+
+            @Override
+            public Evaluate set(String parameterName, Object value) {
+              return (Evaluate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Export Annotations from the Annotation store. If the request is successful, a detailed response
+           * is returned of type ExportAnnotationsResponse, contained in the response field when the operation
+           * finishes. The metadata field type is OperationMetadata. If errors occur, the error field type is
+           * ImportAnnotationsErrorDetails. Errors are also logged to Cloud Logging (see [Viewing
+           * logs](/healthcare/docs/how-tos/logging)).
+           *
+           * Create a request for the method "annotationStores.export".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param annotationStore The name of the Annotation store to export annotations to, in
+          the format of
+          `projects/{project_id}/l
+           *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) throws java.io.IOException {
+            Export result = new Export(annotationStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+annotationStore}:export";
+
+            private final java.util.regex.Pattern ANNOTATION_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Export Annotations from the Annotation store. If the request is successful, a detailed response
+             * is returned of type ExportAnnotationsResponse, contained in the response field when the
+             * operation finishes. The metadata field type is OperationMetadata. If errors occur, the error
+             * field type is ImportAnnotationsErrorDetails. Errors are also logged to Cloud Logging (see
+             * [Viewing logs](/healthcare/docs/how-tos/logging)).
+             *
+             * Create a request for the method "annotationStores.export".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param annotationStore The name of the Annotation store to export annotations to, in
+          the format of
+          `projects/{project_id}/l
+           *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.annotationStore = com.google.api.client.util.Preconditions.checkNotNull(annotationStore, "Required parameter annotationStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
+                    "Parameter annotationStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the Annotation store to export annotations to, in the format of `projects
+             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
+             * ion_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String annotationStore;
+
+            /** The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/
+           locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getAnnotationStore() {
+              return annotationStore;
+            }
+
+            /**
+             * The name of the Annotation store to export annotations to, in the format of `projects
+             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
+             * ion_store_id}`.
+             */
+            public Export setAnnotationStore(java.lang.String annotationStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
+                    "Parameter annotationStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.annotationStore = annotationStore;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the specified Annotation store or returns NOT_FOUND if it does not exist.
+           *
+           * Create a request for the method "annotationStores.get".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the Annotation store to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnnotationStore> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Gets the specified Annotation store or returns NOT_FOUND if it does not exist.
+             *
+             * Create a request for the method "annotationStores.get".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the Annotation store to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.AnnotationStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the Annotation store to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the Annotation store to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The resource name of the Annotation store to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -2176,6 +2902,533 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Import Annotations to the Annotation store by loading data from the specified sources. If the
+           * request is successful, a detailed response is returned as of type ImportAnnotationsResponse,
+           * contained in the response field when the operation finishes. The metadata field type is
+           * OperationMetadata. If errors occur, the error field type is ImportAnnotationsErrorDetails. Errors
+           * are also logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+           *
+           * Create a request for the method "annotationStores.import".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param annotationStore The name of the Annotation store to which the server imports annotations,
+          in the format
+          `projects/{p
+           *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
+           * @return the request
+           */
+          public CloudHealthcareImport healthcareImport(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) throws java.io.IOException {
+            CloudHealthcareImport result = new CloudHealthcareImport(annotationStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CloudHealthcareImport extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+annotationStore}:import";
+
+            private final java.util.regex.Pattern ANNOTATION_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Import Annotations to the Annotation store by loading data from the specified sources. If the
+             * request is successful, a detailed response is returned as of type ImportAnnotationsResponse,
+             * contained in the response field when the operation finishes. The metadata field type is
+             * OperationMetadata. If errors occur, the error field type is ImportAnnotationsErrorDetails.
+             * Errors are also logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+             *
+             * Create a request for the method "annotationStores.import".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the
+             * remote operation. <p> {@link CloudHealthcareImport#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param annotationStore The name of the Annotation store to which the server imports annotations,
+          in the format
+          `projects/{p
+           *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
+             * @since 1.13
+             */
+            protected CloudHealthcareImport(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.annotationStore = com.google.api.client.util.Preconditions.checkNotNull(annotationStore, "Required parameter annotationStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
+                    "Parameter annotationStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public CloudHealthcareImport set$Xgafv(java.lang.String $Xgafv) {
+              return (CloudHealthcareImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CloudHealthcareImport setAccessToken(java.lang.String accessToken) {
+              return (CloudHealthcareImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CloudHealthcareImport setAlt(java.lang.String alt) {
+              return (CloudHealthcareImport) super.setAlt(alt);
+            }
+
+            @Override
+            public CloudHealthcareImport setCallback(java.lang.String callback) {
+              return (CloudHealthcareImport) super.setCallback(callback);
+            }
+
+            @Override
+            public CloudHealthcareImport setFields(java.lang.String fields) {
+              return (CloudHealthcareImport) super.setFields(fields);
+            }
+
+            @Override
+            public CloudHealthcareImport setKey(java.lang.String key) {
+              return (CloudHealthcareImport) super.setKey(key);
+            }
+
+            @Override
+            public CloudHealthcareImport setOauthToken(java.lang.String oauthToken) {
+              return (CloudHealthcareImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CloudHealthcareImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CloudHealthcareImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CloudHealthcareImport setQuotaUser(java.lang.String quotaUser) {
+              return (CloudHealthcareImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CloudHealthcareImport setUploadType(java.lang.String uploadType) {
+              return (CloudHealthcareImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CloudHealthcareImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CloudHealthcareImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the Annotation store to which the server imports annotations, in the
+             * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
+             * nStores/{annotation_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String annotationStore;
+
+            /** The name of the Annotation store to which the server imports annotations, in the format `projects/{
+           project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getAnnotationStore() {
+              return annotationStore;
+            }
+
+            /**
+             * The name of the Annotation store to which the server imports annotations, in the
+             * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
+             * nStores/{annotation_store_id}`.
+             */
+            public CloudHealthcareImport setAnnotationStore(java.lang.String annotationStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
+                    "Parameter annotationStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.annotationStore = annotationStore;
+              return this;
+            }
+
+            @Override
+            public CloudHealthcareImport set(String parameterName, Object value) {
+              return (CloudHealthcareImport) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the Annotation stores in the given dataset for a source store.
+           *
+           * Create a request for the method "annotationStores.list".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Name of the dataset.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListAnnotationStoresResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/annotationStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Lists the Annotation stores in the given dataset for a source store.
+             *
+             * Create a request for the method "annotationStores.list".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Name of the dataset.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListAnnotationStoresResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the dataset. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Name of the dataset.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Name of the dataset. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Restricts stores returned to those matching a filter. Syntax:
+             * https://cloud.google.com/appengine/docs/standard/python/search/query_strings Only
+             * filtering on labels is supported, for example `labels.key=value`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Restricts stores returned to those matching a filter. Syntax:
+           https://cloud.google.com/appengine/docs/standard/python/search/query_strings Only filtering on
+           labels is supported, for example `labels.key=value`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Restricts stores returned to those matching a filter. Syntax:
+             * https://cloud.google.com/appengine/docs/standard/python/search/query_strings Only
+             * filtering on labels is supported, for example `labels.key=value`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Limit on the number of Annotation stores to return in a single response. If zero the
+             * default page size of 100 is used.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Limit on the number of Annotation stores to return in a single response. If zero the default page
+           size of 100 is used.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Limit on the number of Annotation stores to return in a single response. If zero the
+             * default page size of 100 is used.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from the previous List request, if any. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from the previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from the previous List request, if any. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified Annotation store.
+           *
+           * Create a request for the method "annotationStores.patch".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Resource name of the Annotation store, of the form
+          `projects/{project_id}/locations/{location_id}/da
+           *        tasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnnotationStore> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Updates the specified Annotation store.
+             *
+             * Create a request for the method "annotationStores.patch".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Resource name of the Annotation store, of the form
+          `projects/{project_id}/locations/{location_id}/da
+           *        tasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) {
+              super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AnnotationStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Resource name of the Annotation store, of the form `projects/{project_id}/locations/{
+             * location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/d
+           atasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Resource name of the Annotation store, of the form `projects/{project_id}/locations/{
+             * location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The update mask applies to the resource. For the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The update mask applies to the resource. For the `FieldMask` definition, see
+           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The update mask applies to the resource. For the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
           /**
@@ -2475,6 +3728,854 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
 
+          /**
+           * An accessor for creating requests from the Annotations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.Annotations.List request = healthcare.annotations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Annotations annotations() {
+            return new Annotations();
+          }
+
+          /**
+           * The "annotations" collection of methods.
+           */
+          public class Annotations {
+
+            /**
+             * Creates a new Annotation record. It is valid to create Annotation objects for the same source
+             * more than once since a unique ID is assigned to each record by this service.
+             *
+             * Create a request for the method "annotations.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the Annotation store this annotation belongs to. For example,
+            `projects/my-
+             *        project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.Annotation content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Annotation> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/annotations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+              /**
+               * Creates a new Annotation record. It is valid to create Annotation objects for the same source
+               * more than once since a unique ID is assigned to each record by this service.
+               *
+               * Create a request for the method "annotations.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent The name of the Annotation store this annotation belongs to. For example,
+            `projects/my-
+             *        project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.Annotation content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Annotation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The name of the Annotation store this annotation belongs to. For example, `projects
+               * /my-project/locations/us-
+               * central1/datasets/mydataset/annotationStores/myannotationstore`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the Annotation store this annotation belongs to. For example, `projects/my-
+             project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * The name of the Annotation store this annotation belongs to. For example, `projects
+               * /my-project/locations/us-
+               * central1/datasets/mydataset/annotationStores/myannotationstore`.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes an Annotation or returns NOT_FOUND if it does not exist.
+             *
+             * Create a request for the method "annotations.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name The resource name of the Annotation to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+
+              /**
+               * Deletes an Annotation or returns NOT_FOUND if it does not exist.
+               *
+               * Create a request for the method "annotations.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The resource name of the Annotation to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The resource name of the Annotation to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The resource name of the Annotation to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The resource name of the Annotation to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets an Annotation.
+             *
+             * Create a request for the method "annotations.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name The resource name of the Annotation to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Annotation> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+
+              /**
+               * Gets an Annotation.
+               *
+               * Create a request for the method "annotations.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The resource name of the Annotation to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Annotation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The resource name of the Annotation to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The resource name of the Annotation to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The resource name of the Annotation to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Annotations in the given Annotation store for a source resource.
+             *
+             * Create a request for the method "annotations.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Name of the Annotation store to retrieve Annotations from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListAnnotationsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/annotations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+              /**
+               * Lists the Annotations in the given Annotation store for a source resource.
+               *
+               * Create a request for the method "annotations.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Name of the Annotation store to retrieve Annotations from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListAnnotationsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Name of the Annotation store to retrieve Annotations from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Name of the Annotation store to retrieve Annotations from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Name of the Annotation store to retrieve Annotations from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Restricts Annotations returned to those matching a filter. Functions available for
+               * filtering are:
+               *
+               * - `matches("annotation_source.cloud_healthcare_source.name", substring)`. Filter on
+               * `cloud_healthcare_source.name`. For example:
+               * `matches("annotation_source.cloud_healthcare_source.name", "some source")`.
+               *
+               * - `matches("annotation", substring)`. Filter on all fields of annotation. For
+               * example: `matches("annotation", "some-content")`.
+               *
+               * - `type("text")`, `type("image")`, `type("resource")`. Filter on the type of
+               * annotation `data`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts Annotations returned to those matching a filter. Functions available for filtering are:
+
+             - `matches("annotation_source.cloud_healthcare_source.name", substring)`. Filter on
+             `cloud_healthcare_source.name`. For example:
+             `matches("annotation_source.cloud_healthcare_source.name", "some source")`.
+
+             - `matches("annotation", substring)`. Filter on all fields of annotation. For example:
+             `matches("annotation", "some-content")`.
+
+             - `type("text")`, `type("image")`, `type("resource")`. Filter on the type of annotation `data`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts Annotations returned to those matching a filter. Functions available for
+               * filtering are:
+               *
+               * - `matches("annotation_source.cloud_healthcare_source.name", substring)`. Filter on
+               * `cloud_healthcare_source.name`. For example:
+               * `matches("annotation_source.cloud_healthcare_source.name", "some source")`.
+               *
+               * - `matches("annotation", substring)`. Filter on all fields of annotation. For
+               * example: `matches("annotation", "some-content")`.
+               *
+               * - `type("text")`, `type("image")`, `type("resource")`. Filter on the type of
+               * annotation `data`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of Annotations to return in a single response. If zero the
+               * default page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of Annotations to return in a single response. If zero the default page size of
+             100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of Annotations to return in a single response. If zero the
+               * default page size of 100 is used.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The next_page_token value returned from the previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** Controls which fields are populated in the response. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Controls which fields are populated in the response.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** Controls which fields are populated in the response. */
+              public List setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the Annotation.
+             *
+             * Create a request for the method "annotations.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the Annotation, of the form
+            `projects/{project_id}/locations/{location_id}/datasets
+             *        /{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.Annotation content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Annotation> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+
+              /**
+               * Updates the Annotation.
+               *
+               * Create a request for the method "annotations.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the Annotation, of the form
+            `projects/{project_id}/locations/{location_id}/datasets
+             *        /{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.Annotation content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Annotation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+               * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{
+               * annotation_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/dataset
+             s/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+               * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{
+               * annotation_id}`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The update mask applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The update mask applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * The update mask applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the DicomStores collection.
@@ -6968,7 +9069,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance UID.
-                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
+                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. Study
+                 * and series search results can take a few seconds to be updated after an instance is deleted using
+                 * DeleteInstance.
                  *
                  * Create a request for the method "instances.delete".
                  *
@@ -7001,6 +9104,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance
                    * UID. Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
+                   * Study and series search results can take a few seconds to be updated after an instance is
+                   * deleted using DeleteInstance.
                    *
                    * Create a request for the method "instances.delete".
                    *

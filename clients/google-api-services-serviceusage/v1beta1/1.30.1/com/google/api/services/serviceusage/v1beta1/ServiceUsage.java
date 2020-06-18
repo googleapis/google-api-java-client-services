@@ -1758,6 +1758,154 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
+       * different metrics or limits. The name field in the quota override message should not be set.
+       *
+       * Create a request for the method "consumerQuotaMetrics.importConsumerOverrides".
+       *
+       * This request holds the parameters needed by the serviceusage server.  After setting any optional
+       * parameters, call the {@link ImportConsumerOverrides#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent The resource name of the consumer.
+      An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+       * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest}
+       * @return the request
+       */
+      public ImportConsumerOverrides importConsumerOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest content) throws java.io.IOException {
+        ImportConsumerOverrides result = new ImportConsumerOverrides(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportConsumerOverrides extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/consumerQuotaMetrics:importConsumerOverrides";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
+         * different metrics or limits. The name field in the quota override message should not be set.
+         *
+         * Create a request for the method "consumerQuotaMetrics.importConsumerOverrides".
+         *
+         * This request holds the parameters needed by the the serviceusage server.  After setting any
+         * optional parameters, call the {@link ImportConsumerOverrides#execute()} method to invoke the
+         * remote operation. <p> {@link ImportConsumerOverrides#initialize(com.google.api.client.googleapi
+         * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent The resource name of the consumer.
+      An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+         * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest}
+         * @since 1.13
+         */
+        protected ImportConsumerOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest content) {
+          super(ServiceUsage.this, "POST", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportConsumerOverrides set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportConsumerOverrides) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportConsumerOverrides setAccessToken(java.lang.String accessToken) {
+          return (ImportConsumerOverrides) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportConsumerOverrides setAlt(java.lang.String alt) {
+          return (ImportConsumerOverrides) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportConsumerOverrides setCallback(java.lang.String callback) {
+          return (ImportConsumerOverrides) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportConsumerOverrides setFields(java.lang.String fields) {
+          return (ImportConsumerOverrides) super.setFields(fields);
+        }
+
+        @Override
+        public ImportConsumerOverrides setKey(java.lang.String key) {
+          return (ImportConsumerOverrides) super.setKey(key);
+        }
+
+        @Override
+        public ImportConsumerOverrides setOauthToken(java.lang.String oauthToken) {
+          return (ImportConsumerOverrides) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportConsumerOverrides setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportConsumerOverrides) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportConsumerOverrides setQuotaUser(java.lang.String quotaUser) {
+          return (ImportConsumerOverrides) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportConsumerOverrides setUploadType(java.lang.String uploadType) {
+          return (ImportConsumerOverrides) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportConsumerOverrides setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportConsumerOverrides) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the consumer.
+         *
+         * An example name would be: `projects/123/services/compute.googleapis.com`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource name of the consumer.
+
+       An example name would be: `projects/123/services/compute.googleapis.com`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The resource name of the consumer.
+         *
+         * An example name would be: `projects/123/services/compute.googleapis.com`
+         */
+        public ImportConsumerOverrides setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ImportConsumerOverrides set(String parameterName, Object value) {
+          return (ImportConsumerOverrides) super.set(parameterName, value);
+        }
+      }
+      /**
        * Retrieves a summary of all quota information visible to the service consumer, organized by
        * service metric. Each metric includes information about all of its defined limits. Each limit
        * includes the limit configuration (quota unit, preciseness, default value), the current effective

@@ -128,6 +128,18 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private SoftwareConfig softwareConfig;
 
   /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
+   * and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine
+   * a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tempBucket;
+
+  /**
    * Optional. The Compute Engine config settings for worker instances in a cluster.
    * The value may be {@code null}.
    */
@@ -363,6 +375,33 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setSoftwareConfig(SoftwareConfig softwareConfig) {
     this.softwareConfig = softwareConfig;
+    return this;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
+   * and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine
+   * a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTempBucket() {
+    return tempBucket;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
+   * and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine
+   * a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket.
+   * @param tempBucket tempBucket or {@code null} for none
+   */
+  public ClusterConfig setTempBucket(java.lang.String tempBucket) {
+    this.tempBucket = tempBucket;
     return this;
   }
 

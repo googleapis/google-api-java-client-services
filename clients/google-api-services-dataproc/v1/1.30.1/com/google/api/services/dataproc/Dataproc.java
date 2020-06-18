@@ -252,11 +252,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -274,11 +269,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -416,11 +406,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -438,11 +423,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -591,11 +571,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -613,11 +588,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -749,11 +719,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -771,11 +736,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -908,11 +868,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -930,11 +885,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1106,11 +1056,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -1128,11 +1073,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1252,11 +1192,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -1274,11 +1209,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1406,11 +1336,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Update setAccessToken(java.lang.String accessToken) {
-            return (Update) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
           }
@@ -1428,11 +1353,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Update setKey(java.lang.String key) {
             return (Update) super.setKey(key);
-          }
-
-          @Override
-          public Update setOauthToken(java.lang.String oauthToken) {
-            return (Update) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1596,11 +1516,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -1618,11 +1533,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1757,11 +1667,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -1779,11 +1684,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1957,11 +1857,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -1979,11 +1874,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2138,11 +2028,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -2160,11 +2045,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2305,11 +2185,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Instantiate setAccessToken(java.lang.String accessToken) {
-            return (Instantiate) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Instantiate setAlt(java.lang.String alt) {
             return (Instantiate) super.setAlt(alt);
           }
@@ -2327,11 +2202,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Instantiate setKey(java.lang.String key) {
             return (Instantiate) super.setKey(key);
-          }
-
-          @Override
-          public Instantiate setOauthToken(java.lang.String oauthToken) {
-            return (Instantiate) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2491,11 +2361,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public InstantiateInline setAccessToken(java.lang.String accessToken) {
-            return (InstantiateInline) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public InstantiateInline setAlt(java.lang.String alt) {
             return (InstantiateInline) super.setAlt(alt);
           }
@@ -2513,11 +2378,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public InstantiateInline setKey(java.lang.String key) {
             return (InstantiateInline) super.setKey(key);
-          }
-
-          @Override
-          public InstantiateInline setOauthToken(java.lang.String oauthToken) {
-            return (InstantiateInline) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2696,11 +2556,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -2718,11 +2573,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2887,11 +2737,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -2909,11 +2754,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3033,11 +2873,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -3055,11 +2890,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3187,11 +3017,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Update setAccessToken(java.lang.String accessToken) {
-            return (Update) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
           }
@@ -3209,11 +3034,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Update setKey(java.lang.String key) {
             return (Update) super.setKey(key);
-          }
-
-          @Override
-          public Update setOauthToken(java.lang.String oauthToken) {
-            return (Update) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3398,11 +3218,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -3420,11 +3235,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3562,11 +3372,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -3584,11 +3389,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3737,11 +3537,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -3759,11 +3554,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -3895,11 +3685,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -3917,11 +3702,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -4054,11 +3834,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -4076,11 +3851,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -4252,11 +4022,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -4274,11 +4039,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -4398,11 +4158,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -4420,11 +4175,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -4552,11 +4302,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Update setAccessToken(java.lang.String accessToken) {
-            return (Update) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
           }
@@ -4574,11 +4319,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Update setKey(java.lang.String key) {
             return (Update) super.setKey(key);
-          }
-
-          @Override
-          public Update setOauthToken(java.lang.String oauthToken) {
-            return (Update) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -4727,11 +4467,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -4749,11 +4484,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -4906,11 +4636,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -4928,11 +4653,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -5130,11 +4850,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Diagnose setAccessToken(java.lang.String accessToken) {
-            return (Diagnose) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Diagnose setAlt(java.lang.String alt) {
             return (Diagnose) super.setAlt(alt);
           }
@@ -5152,11 +4867,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Diagnose setKey(java.lang.String key) {
             return (Diagnose) super.setKey(key);
-          }
-
-          @Override
-          public Diagnose setOauthToken(java.lang.String oauthToken) {
-            return (Diagnose) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -5293,11 +5003,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -5315,11 +5020,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -5455,11 +5155,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -5477,11 +5172,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -5595,11 +5285,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -5617,11 +5302,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -5817,11 +5497,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
           }
@@ -5839,11 +5514,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Patch setKey(java.lang.String key) {
             return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6105,11 +5775,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -6127,11 +5792,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6251,11 +5911,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -6273,11 +5928,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6417,11 +6067,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Cancel setAccessToken(java.lang.String accessToken) {
-            return (Cancel) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Cancel setAlt(java.lang.String alt) {
             return (Cancel) super.setAlt(alt);
           }
@@ -6439,11 +6084,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Cancel setKey(java.lang.String key) {
             return (Cancel) super.setKey(key);
-          }
-
-          @Override
-          public Cancel setOauthToken(java.lang.String oauthToken) {
-            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6573,11 +6213,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -6595,11 +6230,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6736,11 +6366,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -6758,11 +6383,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -6898,11 +6518,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -6920,11 +6535,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -7038,11 +6648,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -7060,11 +6665,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -7296,11 +6896,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
           }
@@ -7318,11 +6913,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Patch setKey(java.lang.String key) {
             return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -7486,11 +7076,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -7508,11 +7093,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -7619,11 +7199,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Submit setAccessToken(java.lang.String accessToken) {
-            return (Submit) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Submit setAlt(java.lang.String alt) {
             return (Submit) super.setAlt(alt);
           }
@@ -7641,11 +7216,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Submit setKey(java.lang.String key) {
             return (Submit) super.setKey(key);
-          }
-
-          @Override
-          public Submit setOauthToken(java.lang.String oauthToken) {
-            return (Submit) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -7756,11 +7326,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SubmitAsOperation setAccessToken(java.lang.String accessToken) {
-            return (SubmitAsOperation) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SubmitAsOperation setAlt(java.lang.String alt) {
             return (SubmitAsOperation) super.setAlt(alt);
           }
@@ -7778,11 +7343,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SubmitAsOperation setKey(java.lang.String key) {
             return (SubmitAsOperation) super.setKey(key);
-          }
-
-          @Override
-          public SubmitAsOperation setOauthToken(java.lang.String oauthToken) {
-            return (SubmitAsOperation) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -7906,11 +7466,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -7928,11 +7483,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8076,11 +7626,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Cancel setAccessToken(java.lang.String accessToken) {
-            return (Cancel) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Cancel setAlt(java.lang.String alt) {
             return (Cancel) super.setAlt(alt);
           }
@@ -8098,11 +7643,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Cancel setKey(java.lang.String key) {
             return (Cancel) super.setKey(key);
-          }
-
-          @Override
-          public Cancel setOauthToken(java.lang.String oauthToken) {
-            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8209,11 +7749,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -8231,11 +7766,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8349,11 +7879,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -8371,11 +7896,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8484,11 +8004,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -8506,11 +8021,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8641,11 +8151,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -8663,11 +8168,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8824,11 +8324,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -8846,11 +8341,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -8970,11 +8460,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -8992,11 +8477,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9144,11 +8624,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -9166,11 +8641,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9305,11 +8775,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -9327,11 +8792,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9505,11 +8965,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -9527,11 +8982,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9686,11 +9136,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -9708,11 +9153,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -9853,11 +9293,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Instantiate setAccessToken(java.lang.String accessToken) {
-            return (Instantiate) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Instantiate setAlt(java.lang.String alt) {
             return (Instantiate) super.setAlt(alt);
           }
@@ -9875,11 +9310,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Instantiate setKey(java.lang.String key) {
             return (Instantiate) super.setKey(key);
-          }
-
-          @Override
-          public Instantiate setOauthToken(java.lang.String oauthToken) {
-            return (Instantiate) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10039,11 +9469,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public InstantiateInline setAccessToken(java.lang.String accessToken) {
-            return (InstantiateInline) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public InstantiateInline setAlt(java.lang.String alt) {
             return (InstantiateInline) super.setAlt(alt);
           }
@@ -10061,11 +9486,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public InstantiateInline setKey(java.lang.String key) {
             return (InstantiateInline) super.setKey(key);
-          }
-
-          @Override
-          public InstantiateInline setOauthToken(java.lang.String oauthToken) {
-            return (InstantiateInline) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10244,11 +9664,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -10266,11 +9681,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10435,11 +9845,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -10457,11 +9862,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10581,11 +9981,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -10603,11 +9998,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -10735,11 +10125,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public Update setAccessToken(java.lang.String accessToken) {
-            return (Update) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
           }
@@ -10757,11 +10142,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Update setKey(java.lang.String key) {
             return (Update) super.setKey(key);
-          }
-
-          @Override
-          public Update setOauthToken(java.lang.String oauthToken) {
-            return (Update) super.setOauthToken(oauthToken);
           }
 
           @Override

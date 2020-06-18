@@ -31,6 +31,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The description of the page element. Combined with title to display alt text.
+   *
+   * The field is not supported for Group elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,6 +97,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The title of the page element. Combined with description to display alt text.
+   *
+   * The field is not supported for Group elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +134,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The description of the page element. Combined with title to display alt text.
+   *
+   * The field is not supported for Group elements.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -138,6 +144,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The description of the page element. Combined with title to display alt text.
+   *
+   * The field is not supported for Group elements.
    * @param description description or {@code null} for none
    */
   public PageElement setDescription(java.lang.String description) {
@@ -285,6 +293,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The title of the page element. Combined with description to display alt text.
+   *
+   * The field is not supported for Group elements.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -293,6 +303,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The title of the page element. Combined with description to display alt text.
+   *
+   * The field is not supported for Group elements.
    * @param title title or {@code null} for none
    */
   public PageElement setTitle(java.lang.String title) {

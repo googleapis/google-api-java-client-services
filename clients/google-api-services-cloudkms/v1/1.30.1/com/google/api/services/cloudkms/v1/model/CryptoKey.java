@@ -41,8 +41,8 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Labels with user-defined metadata. For more information, see [Labeling Keys](/kms/docs
-   * /labeling-keys).
+   * Labels with user-defined metadata. For more information, see [Labeling
+   * Keys](https://cloud.google.com/kms/docs/labeling-keys).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +131,8 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels with user-defined metadata. For more information, see [Labeling Keys](/kms/docs
-   * /labeling-keys).
+   * Labels with user-defined metadata. For more information, see [Labeling
+   * Keys](https://cloud.google.com/kms/docs/labeling-keys).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -140,8 +140,8 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels with user-defined metadata. For more information, see [Labeling Keys](/kms/docs
-   * /labeling-keys).
+   * Labels with user-defined metadata. For more information, see [Labeling
+   * Keys](https://cloud.google.com/kms/docs/labeling-keys).
    * @param labels labels or {@code null} for none
    */
   public CryptoKey setLabels(java.util.Map<String, java.lang.String> labels) {

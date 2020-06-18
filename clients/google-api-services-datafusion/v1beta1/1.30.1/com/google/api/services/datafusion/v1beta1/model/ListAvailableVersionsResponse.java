@@ -17,7 +17,7 @@
 package com.google.api.services.datafusion.v1beta1.model;
 
 /**
- * The Data Fusion version.
+ * Response message for the list available versions request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.datafusion.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Version extends com.google.api.client.json.GenericJson {
+public final class ListAvailableVersionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether this is currently the default version for Cloud Data Fusion
+   * Represents a list of versions that are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean defaultVersion;
+  private java.util.List<Version> availableVersions;
 
   /**
-   * The version number of the Data Fusion instance, such as '6.0.1.0'.
+   * Token to retrieve the next page of results or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String versionNumber;
+  private java.lang.String nextPageToken;
 
   /**
-   * Whether this is currently the default version for Cloud Data Fusion
+   * Represents a list of versions that are supported.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getDefaultVersion() {
-    return defaultVersion;
+  public java.util.List<Version> getAvailableVersions() {
+    return availableVersions;
   }
 
   /**
-   * Whether this is currently the default version for Cloud Data Fusion
-   * @param defaultVersion defaultVersion or {@code null} for none
+   * Represents a list of versions that are supported.
+   * @param availableVersions availableVersions or {@code null} for none
    */
-  public Version setDefaultVersion(java.lang.Boolean defaultVersion) {
-    this.defaultVersion = defaultVersion;
+  public ListAvailableVersionsResponse setAvailableVersions(java.util.List<Version> availableVersions) {
+    this.availableVersions = availableVersions;
     return this;
   }
 
   /**
-   * The version number of the Data Fusion instance, such as '6.0.1.0'.
+   * Token to retrieve the next page of results or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVersionNumber() {
-    return versionNumber;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * The version number of the Data Fusion instance, such as '6.0.1.0'.
-   * @param versionNumber versionNumber or {@code null} for none
+   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public Version setVersionNumber(java.lang.String versionNumber) {
-    this.versionNumber = versionNumber;
+  public ListAvailableVersionsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public Version set(String fieldName, Object value) {
-    return (Version) super.set(fieldName, value);
+  public ListAvailableVersionsResponse set(String fieldName, Object value) {
+    return (ListAvailableVersionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public Version clone() {
-    return (Version) super.clone();
+  public ListAvailableVersionsResponse clone() {
+    return (ListAvailableVersionsResponse) super.clone();
   }
 
 }

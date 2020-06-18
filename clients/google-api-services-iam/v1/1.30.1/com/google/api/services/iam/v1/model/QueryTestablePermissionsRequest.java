@@ -43,6 +43,8 @@ public final class QueryTestablePermissionsRequest extends com.google.api.client
 
   /**
    * Optional limit on the number of permissions to include in the response.
+   *
+   * The default is 100, and the maximum is 1,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,6 +84,8 @@ public final class QueryTestablePermissionsRequest extends com.google.api.client
 
   /**
    * Optional limit on the number of permissions to include in the response.
+   *
+   * The default is 100, and the maximum is 1,000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -90,6 +94,8 @@ public final class QueryTestablePermissionsRequest extends com.google.api.client
 
   /**
    * Optional limit on the number of permissions to include in the response.
+   *
+   * The default is 100, and the maximum is 1,000.
    * @param pageSize pageSize or {@code null} for none
    */
   public QueryTestablePermissionsRequest setPageSize(java.lang.Integer pageSize) {

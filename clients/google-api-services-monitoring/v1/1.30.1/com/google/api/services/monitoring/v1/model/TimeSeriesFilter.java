@@ -62,6 +62,14 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
   private Aggregation secondaryAggregation;
 
   /**
+   * Statistics based time series filter. Note: This field is deprecated and completely ignored by
+   * the API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StatisticalTimeSeriesFilter statisticalTimeSeriesFilter;
+
+  /**
    * By default, the raw time series data is returned. Use this field to combine multiple time
    * series for different views of the data.
    * @return value or {@code null} for none
@@ -130,6 +138,25 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
    */
   public TimeSeriesFilter setSecondaryAggregation(Aggregation secondaryAggregation) {
     this.secondaryAggregation = secondaryAggregation;
+    return this;
+  }
+
+  /**
+   * Statistics based time series filter. Note: This field is deprecated and completely ignored by
+   * the API.
+   * @return value or {@code null} for none
+   */
+  public StatisticalTimeSeriesFilter getStatisticalTimeSeriesFilter() {
+    return statisticalTimeSeriesFilter;
+  }
+
+  /**
+   * Statistics based time series filter. Note: This field is deprecated and completely ignored by
+   * the API.
+   * @param statisticalTimeSeriesFilter statisticalTimeSeriesFilter or {@code null} for none
+   */
+  public TimeSeriesFilter setStatisticalTimeSeriesFilter(StatisticalTimeSeriesFilter statisticalTimeSeriesFilter) {
+    this.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
     return this;
   }
 

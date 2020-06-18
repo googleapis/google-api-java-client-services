@@ -52,6 +52,16 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
   private java.util.List<TimeSeries> timeSeries;
 
   /**
+   * The unit in which all time_series point values are reported. unit follows the UCUM format for
+   * units as seen in https://unitsofmeasure.org/ucum.html. If different time_series have different
+   * units (for example, because they come from different metric types, or a unit is absent), then
+   * unit will be "{not_a_unit}".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unit;
+
+  /**
    * Query execution errors that may have caused the time series data returned to be incomplete.
    * @return value or {@code null} for none
    */
@@ -101,6 +111,29 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
    */
   public ListTimeSeriesResponse setTimeSeries(java.util.List<TimeSeries> timeSeries) {
     this.timeSeries = timeSeries;
+    return this;
+  }
+
+  /**
+   * The unit in which all time_series point values are reported. unit follows the UCUM format for
+   * units as seen in https://unitsofmeasure.org/ucum.html. If different time_series have different
+   * units (for example, because they come from different metric types, or a unit is absent), then
+   * unit will be "{not_a_unit}".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnit() {
+    return unit;
+  }
+
+  /**
+   * The unit in which all time_series point values are reported. unit follows the UCUM format for
+   * units as seen in https://unitsofmeasure.org/ucum.html. If different time_series have different
+   * units (for example, because they come from different metric types, or a unit is absent), then
+   * unit will be "{not_a_unit}".
+   * @param unit unit or {@code null} for none
+   */
+  public ListTimeSeriesResponse setUnit(java.lang.String unit) {
+    this.unit = unit;
     return this;
   }
 

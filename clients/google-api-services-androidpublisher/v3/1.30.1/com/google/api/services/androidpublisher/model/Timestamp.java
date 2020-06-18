@@ -17,11 +17,13 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Timestamp.
+ * A Timestamp represents a point in time independent of any time zone or local calendar, encoded as
+ * a count of seconds and fractions of seconds at nanosecond resolution. The count is relative to an
+ * epoch at UTC midnight on January 1, 1970.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,18 +33,23 @@ package com.google.api.services.androidpublisher.model;
 public final class Timestamp extends com.google.api.client.json.GenericJson {
 
   /**
+   * Non-negative fractions of a second at nanosecond resolution. Must be from 0 to 999,999,999
+   * inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer nanos;
 
   /**
+   * Represents seconds of UTC time since Unix epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long seconds;
 
   /**
+   * Non-negative fractions of a second at nanosecond resolution. Must be from 0 to 999,999,999
+   * inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNanos() {
@@ -50,6 +57,8 @@ public final class Timestamp extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Non-negative fractions of a second at nanosecond resolution. Must be from 0 to 999,999,999
+   * inclusive.
    * @param nanos nanos or {@code null} for none
    */
   public Timestamp setNanos(java.lang.Integer nanos) {
@@ -58,6 +67,7 @@ public final class Timestamp extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Represents seconds of UTC time since Unix epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSeconds() {
@@ -65,6 +75,7 @@ public final class Timestamp extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Represents seconds of UTC time since Unix epoch.
    * @param seconds seconds or {@code null} for none
    */
   public Timestamp setSeconds(java.lang.Long seconds) {

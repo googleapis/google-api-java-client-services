@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for VoidedPurchasesListResponse.
+ * Response for the voidedpurchases.list API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,12 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class VoidedPurchasesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * General pagination information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PageInfo pageInfo;
 
   /**
+   * Pagination information for token pagination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,6 +57,7 @@ public final class VoidedPurchasesListResponse extends com.google.api.client.jso
   }
 
   /**
+   * General pagination information.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -62,6 +65,7 @@ public final class VoidedPurchasesListResponse extends com.google.api.client.jso
   }
 
   /**
+   * General pagination information.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public VoidedPurchasesListResponse setPageInfo(PageInfo pageInfo) {
@@ -70,6 +74,7 @@ public final class VoidedPurchasesListResponse extends com.google.api.client.jso
   }
 
   /**
+   * Pagination information for token pagination.
    * @return value or {@code null} for none
    */
   public TokenPagination getTokenPagination() {
@@ -77,6 +82,7 @@ public final class VoidedPurchasesListResponse extends com.google.api.client.jso
   }
 
   /**
+   * Pagination information for token pagination.
    * @param tokenPagination tokenPagination or {@code null} for none
    */
   public VoidedPurchasesListResponse setTokenPagination(TokenPagination tokenPagination) {

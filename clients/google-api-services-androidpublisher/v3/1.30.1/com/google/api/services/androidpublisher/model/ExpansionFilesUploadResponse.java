@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for ExpansionFilesUploadResponse.
+ * Response for uploading an expansion file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,12 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class ExpansionFilesUploadResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The uploaded expansion file configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExpansionFile expansionFile;
 
   /**
+   * The uploaded expansion file configuration.
    * @return value or {@code null} for none
    */
   public ExpansionFile getExpansionFile() {
@@ -44,6 +46,7 @@ public final class ExpansionFilesUploadResponse extends com.google.api.client.js
   }
 
   /**
+   * The uploaded expansion file configuration.
    * @param expansionFile expansionFile or {@code null} for none
    */
   public ExpansionFilesUploadResponse setExpansionFile(ExpansionFile expansionFile) {

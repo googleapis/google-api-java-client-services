@@ -20,8 +20,8 @@ package com.google.api.services.androidpublisher.model;
  * A SubscriptionPurchase resource indicates the status of a user's subscription purchase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,8 +31,8 @@ package com.google.api.services.androidpublisher.model;
 public final class SubscriptionPurchase extends com.google.api.client.json.GenericJson {
 
   /**
-   * The acknowledgement state of the subscription product. Possible values are: - Yet to be
-   * acknowledged  - Acknowledged
+   * The acknowledgement state of the subscription product. Possible values are: 0. Yet to be
+   * acknowledged 1. Acknowledged
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,10 +54,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.Long autoResumeTimeMillis;
 
   /**
-   * The reason why a subscription was canceled or is not auto-renewing. Possible values are: - User
-   * canceled the subscription  - Subscription was canceled by the system, for example because of a
-   * billing problem  - Subscription was replaced with a new subscription  - Subscription was
-   * canceled by the developer
+   * The reason why a subscription was canceled or is not auto-renewing. Possible values are: 0.
+   * User canceled the subscription 1. Subscription was canceled by the system,       for example
+   * because of a billing problem 2. Subscription was replaced with a new subscription 3.
+   * Subscription was canceled by the developer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,18 +143,40 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
-   * The purchase token of the originating purchase if this subscription is one of the following: -
-   * Re-signup of a canceled but non-lapsed subscription  - Upgrade/downgrade from a previous
-   * subscription  For example, suppose a user originally signs up and you receive purchase token X,
-   * then the user cancels and goes through the resignup flow (before their subscription lapses) and
-   * you receive purchase token Y, and finally the user upgrades their subscription and you receive
-   * purchase token Z. If you call this API with purchase token Z, this field will be set to Y. If
-   * you call this API with purchase token Y, this field will be set to X. If you call this API with
-   * purchase token X, this field will not be set.
+   * The purchase token of the originating purchase if this subscription is one of the following: 0.
+   * Re-signup of a canceled but non-lapsed subscription 1. Upgrade/downgrade from a previous
+   * subscription
+   *
+   * For example, suppose a user originally signs up and you receive purchase token X, then the user
+   * cancels and goes through the resignup flow (before their subscription lapses) and you receive
+   * purchase token Y, and finally the user upgrades their subscription and you receive purchase
+   * token Z. If you call this API with purchase token Z, this field will be set to Y. If you call
+   * this API with purchase token Y, this field will be set to X. If you call this API with purchase
+   * token X, this field will not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String linkedPurchaseToken;
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's account in your
+   * app. Present for the following purchases:   * If account linking happened as part of the
+   * subscription purchase flow.   * It was specified using     https://developer.android.com/refere
+   * nce/com/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid     when the
+   * purchase was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String obfuscatedExternalAccountId;
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's profile in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedprofileid when the purchase was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String obfuscatedExternalProfileId;
 
   /**
    * The order id of the latest recurring order associated with the purchase of the subscription.
@@ -164,8 +186,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.String orderId;
 
   /**
-   * The payment state of the subscription. Possible values are: - Payment pending  - Payment
-   * received  - Free trial  - Pending deferred upgrade/downgrade
+   * The payment state of the subscription. Possible values are: 0. Payment pending 1. Payment
+   * received 2. Free trial 3. Pending deferred upgrade/downgrade
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +196,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * Price of the subscription, not including tax. Price is expressed in micro-units, where
    * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is €1.99, price_amount_micros is 1990000.
+   * price is 1.99, price_amount_micros is 1990000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -225,7 +247,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The type of promotion applied on this purchase. This field is only set if a promotion is
-   * applied when the subscription was purchased. Possible values are: - One time code  - Vanity
+   * applied when the subscription was purchased. Possible values are: 0. One time code 1. Vanity
    * code
    * The value may be {@code null}.
    */
@@ -234,8 +256,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
-   * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)
+   * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
+   * license testing account) 1. Promo (i.e. purchased using a promo code)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,8 +279,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.Long userCancellationTimeMillis;
 
   /**
-   * The acknowledgement state of the subscription product. Possible values are: - Yet to be
-   * acknowledged  - Acknowledged
+   * The acknowledgement state of the subscription product. Possible values are: 0. Yet to be
+   * acknowledged 1. Acknowledged
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAcknowledgementState() {
@@ -266,8 +288,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The acknowledgement state of the subscription product. Possible values are: - Yet to be
-   * acknowledged  - Acknowledged
+   * The acknowledgement state of the subscription product. Possible values are: 0. Yet to be
+   * acknowledged 1. Acknowledged
    * @param acknowledgementState acknowledgementState or {@code null} for none
    */
   public SubscriptionPurchase setAcknowledgementState(java.lang.Integer acknowledgementState) {
@@ -312,10 +334,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The reason why a subscription was canceled or is not auto-renewing. Possible values are: - User
-   * canceled the subscription  - Subscription was canceled by the system, for example because of a
-   * billing problem  - Subscription was replaced with a new subscription  - Subscription was
-   * canceled by the developer
+   * The reason why a subscription was canceled or is not auto-renewing. Possible values are: 0.
+   * User canceled the subscription 1. Subscription was canceled by the system,       for example
+   * because of a billing problem 2. Subscription was replaced with a new subscription 3.
+   * Subscription was canceled by the developer
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCancelReason() {
@@ -323,10 +345,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The reason why a subscription was canceled or is not auto-renewing. Possible values are: - User
-   * canceled the subscription  - Subscription was canceled by the system, for example because of a
-   * billing problem  - Subscription was replaced with a new subscription  - Subscription was
-   * canceled by the developer
+   * The reason why a subscription was canceled or is not auto-renewing. Possible values are: 0.
+   * User canceled the subscription 1. Subscription was canceled by the system,       for example
+   * because of a billing problem 2. Subscription was replaced with a new subscription 3.
+   * Subscription was canceled by the developer
    * @param cancelReason cancelReason or {@code null} for none
    */
   public SubscriptionPurchase setCancelReason(java.lang.Integer cancelReason) {
@@ -523,14 +545,16 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The purchase token of the originating purchase if this subscription is one of the following: -
-   * Re-signup of a canceled but non-lapsed subscription  - Upgrade/downgrade from a previous
-   * subscription  For example, suppose a user originally signs up and you receive purchase token X,
-   * then the user cancels and goes through the resignup flow (before their subscription lapses) and
-   * you receive purchase token Y, and finally the user upgrades their subscription and you receive
-   * purchase token Z. If you call this API with purchase token Z, this field will be set to Y. If
-   * you call this API with purchase token Y, this field will be set to X. If you call this API with
-   * purchase token X, this field will not be set.
+   * The purchase token of the originating purchase if this subscription is one of the following: 0.
+   * Re-signup of a canceled but non-lapsed subscription 1. Upgrade/downgrade from a previous
+   * subscription
+   *
+   * For example, suppose a user originally signs up and you receive purchase token X, then the user
+   * cancels and goes through the resignup flow (before their subscription lapses) and you receive
+   * purchase token Y, and finally the user upgrades their subscription and you receive purchase
+   * token Z. If you call this API with purchase token Z, this field will be set to Y. If you call
+   * this API with purchase token Y, this field will be set to X. If you call this API with purchase
+   * token X, this field will not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedPurchaseToken() {
@@ -538,18 +562,66 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The purchase token of the originating purchase if this subscription is one of the following: -
-   * Re-signup of a canceled but non-lapsed subscription  - Upgrade/downgrade from a previous
-   * subscription  For example, suppose a user originally signs up and you receive purchase token X,
-   * then the user cancels and goes through the resignup flow (before their subscription lapses) and
-   * you receive purchase token Y, and finally the user upgrades their subscription and you receive
-   * purchase token Z. If you call this API with purchase token Z, this field will be set to Y. If
-   * you call this API with purchase token Y, this field will be set to X. If you call this API with
-   * purchase token X, this field will not be set.
+   * The purchase token of the originating purchase if this subscription is one of the following: 0.
+   * Re-signup of a canceled but non-lapsed subscription 1. Upgrade/downgrade from a previous
+   * subscription
+   *
+   * For example, suppose a user originally signs up and you receive purchase token X, then the user
+   * cancels and goes through the resignup flow (before their subscription lapses) and you receive
+   * purchase token Y, and finally the user upgrades their subscription and you receive purchase
+   * token Z. If you call this API with purchase token Z, this field will be set to Y. If you call
+   * this API with purchase token Y, this field will be set to X. If you call this API with purchase
+   * token X, this field will not be set.
    * @param linkedPurchaseToken linkedPurchaseToken or {@code null} for none
    */
   public SubscriptionPurchase setLinkedPurchaseToken(java.lang.String linkedPurchaseToken) {
     this.linkedPurchaseToken = linkedPurchaseToken;
+    return this;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's account in your
+   * app. Present for the following purchases:   * If account linking happened as part of the
+   * subscription purchase flow.   * It was specified using     https://developer.android.com/refere
+   * nce/com/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid     when the
+   * purchase was made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObfuscatedExternalAccountId() {
+    return obfuscatedExternalAccountId;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's account in your
+   * app. Present for the following purchases:   * If account linking happened as part of the
+   * subscription purchase flow.   * It was specified using     https://developer.android.com/refere
+   * nce/com/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid     when the
+   * purchase was made.
+   * @param obfuscatedExternalAccountId obfuscatedExternalAccountId or {@code null} for none
+   */
+  public SubscriptionPurchase setObfuscatedExternalAccountId(java.lang.String obfuscatedExternalAccountId) {
+    this.obfuscatedExternalAccountId = obfuscatedExternalAccountId;
+    return this;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's profile in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedprofileid when the purchase was made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObfuscatedExternalProfileId() {
+    return obfuscatedExternalProfileId;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's profile in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedprofileid when the purchase was made.
+   * @param obfuscatedExternalProfileId obfuscatedExternalProfileId or {@code null} for none
+   */
+  public SubscriptionPurchase setObfuscatedExternalProfileId(java.lang.String obfuscatedExternalProfileId) {
+    this.obfuscatedExternalProfileId = obfuscatedExternalProfileId;
     return this;
   }
 
@@ -571,8 +643,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The payment state of the subscription. Possible values are: - Payment pending  - Payment
-   * received  - Free trial  - Pending deferred upgrade/downgrade
+   * The payment state of the subscription. Possible values are: 0. Payment pending 1. Payment
+   * received 2. Free trial 3. Pending deferred upgrade/downgrade
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPaymentState() {
@@ -580,8 +652,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The payment state of the subscription. Possible values are: - Payment pending  - Payment
-   * received  - Free trial  - Pending deferred upgrade/downgrade
+   * The payment state of the subscription. Possible values are: 0. Payment pending 1. Payment
+   * received 2. Free trial 3. Pending deferred upgrade/downgrade
    * @param paymentState paymentState or {@code null} for none
    */
   public SubscriptionPurchase setPaymentState(java.lang.Integer paymentState) {
@@ -592,7 +664,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * Price of the subscription, not including tax. Price is expressed in micro-units, where
    * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is €1.99, price_amount_micros is 1990000.
+   * price is 1.99, price_amount_micros is 1990000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriceAmountMicros() {
@@ -602,7 +674,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * Price of the subscription, not including tax. Price is expressed in micro-units, where
    * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is €1.99, price_amount_micros is 1990000.
+   * price is 1.99, price_amount_micros is 1990000.
    * @param priceAmountMicros priceAmountMicros or {@code null} for none
    */
   public SubscriptionPurchase setPriceAmountMicros(java.lang.Long priceAmountMicros) {
@@ -713,7 +785,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The type of promotion applied on this purchase. This field is only set if a promotion is
-   * applied when the subscription was purchased. Possible values are: - One time code  - Vanity
+   * applied when the subscription was purchased. Possible values are: 0. One time code 1. Vanity
    * code
    * @return value or {@code null} for none
    */
@@ -723,7 +795,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The type of promotion applied on this purchase. This field is only set if a promotion is
-   * applied when the subscription was purchased. Possible values are: - One time code  - Vanity
+   * applied when the subscription was purchased. Possible values are: 0. One time code 1. Vanity
    * code
    * @param promotionType promotionType or {@code null} for none
    */
@@ -734,8 +806,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
-   * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)
+   * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
+   * license testing account) 1. Promo (i.e. purchased using a promo code)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseType() {
@@ -744,8 +816,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
-   * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)
+   * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
+   * license testing account) 1. Promo (i.e. purchased using a promo code)
    * @param purchaseType purchaseType or {@code null} for none
    */
   public SubscriptionPurchase setPurchaseType(java.lang.Integer purchaseType) {

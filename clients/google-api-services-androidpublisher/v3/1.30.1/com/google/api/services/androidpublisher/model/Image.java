@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Image.
+ * An uploaded image. The resource for ImagesService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,14 +38,14 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * A sha1 hash of the image that was uploaded.
+   * A sha1 hash of the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sha1;
 
   /**
-   * A sha256 hash of the image that was uploaded.
+   * A sha256 hash of the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A sha1 hash of the image that was uploaded.
+   * A sha1 hash of the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha1() {
@@ -84,7 +84,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A sha1 hash of the image that was uploaded.
+   * A sha1 hash of the image.
    * @param sha1 sha1 or {@code null} for none
    */
   public Image setSha1(java.lang.String sha1) {
@@ -93,7 +93,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A sha256 hash of the image that was uploaded.
+   * A sha256 hash of the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha256() {
@@ -101,7 +101,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A sha256 hash of the image that was uploaded.
+   * A sha256 hash of the image.
    * @param sha256 sha256 or {@code null} for none
    */
   public Image setSha256(java.lang.String sha256) {

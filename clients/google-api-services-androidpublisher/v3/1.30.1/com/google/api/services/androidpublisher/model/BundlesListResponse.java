@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for BundlesListResponse.
+ * Response listing all bundles.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,6 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class BundlesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * All bundles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +44,14 @@ public final class BundlesListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#bundlesListResponse".
+   * The kind of this response ("androidpublisher#bundlesListResponse").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * All bundles.
    * @return value or {@code null} for none
    */
   public java.util.List<Bundle> getBundles() {
@@ -58,6 +59,7 @@ public final class BundlesListResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * All bundles.
    * @param bundles bundles or {@code null} for none
    */
   public BundlesListResponse setBundles(java.util.List<Bundle> bundles) {
@@ -66,8 +68,7 @@ public final class BundlesListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#bundlesListResponse".
+   * The kind of this response ("androidpublisher#bundlesListResponse").
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,8 +76,7 @@ public final class BundlesListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidpublisher#bundlesListResponse".
+   * The kind of this response ("androidpublisher#bundlesListResponse").
    * @param kind kind or {@code null} for none
    */
   public BundlesListResponse setKind(java.lang.String kind) {

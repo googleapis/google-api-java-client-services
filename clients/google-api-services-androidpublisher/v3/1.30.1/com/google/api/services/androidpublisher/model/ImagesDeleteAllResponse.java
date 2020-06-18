@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for ImagesDeleteAllResponse.
+ * Response for deleting all images.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,6 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class ImagesDeleteAllResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The deleted images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,6 +44,7 @@ public final class ImagesDeleteAllResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The deleted images.
    * @return value or {@code null} for none
    */
   public java.util.List<Image> getDeleted() {
@@ -50,6 +52,7 @@ public final class ImagesDeleteAllResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The deleted images.
    * @param deleted deleted or {@code null} for none
    */
   public ImagesDeleteAllResponse setDeleted(java.util.List<Image> deleted) {

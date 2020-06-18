@@ -17,12 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Represents an edit of an app. An edit allows clients to make multiple changes before committing
- * them in one operation.
+ * An app edit. The resource for EditsService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,23 +31,23 @@ package com.google.api.services.androidpublisher.model;
 public final class AppEdit extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which the edit will expire and will be no longer valid for use in any subsequent
-   * API calls (encoded as seconds since the Epoch).
+   * Output only. The time (as seconds since Epoch) at which the edit will expire and will be no
+   * longer valid for use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expiryTimeSeconds;
 
   /**
-   * The ID of the edit that can be used in subsequent API calls.
+   * Output only. Identifier of the edit. Can be used in subsequent API calls.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The time at which the edit will expire and will be no longer valid for use in any subsequent
-   * API calls (encoded as seconds since the Epoch).
+   * Output only. The time (as seconds since Epoch) at which the edit will expire and will be no
+   * longer valid for use.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpiryTimeSeconds() {
@@ -56,8 +55,8 @@ public final class AppEdit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the edit will expire and will be no longer valid for use in any subsequent
-   * API calls (encoded as seconds since the Epoch).
+   * Output only. The time (as seconds since Epoch) at which the edit will expire and will be no
+   * longer valid for use.
    * @param expiryTimeSeconds expiryTimeSeconds or {@code null} for none
    */
   public AppEdit setExpiryTimeSeconds(java.lang.String expiryTimeSeconds) {
@@ -66,7 +65,7 @@ public final class AppEdit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the edit that can be used in subsequent API calls.
+   * Output only. Identifier of the edit. Can be used in subsequent API calls.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -74,7 +73,7 @@ public final class AppEdit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the edit that can be used in subsequent API calls.
+   * Output only. Identifier of the edit. Can be used in subsequent API calls.
    * @param id id or {@code null} for none
    */
   public AppEdit setId(java.lang.String id) {

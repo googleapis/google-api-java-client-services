@@ -21,8 +21,8 @@ package com.google.api.services.androidpublisher.model;
  * internal app sharing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,7 +32,7 @@ package com.google.api.services.androidpublisher.model;
 public final class InternalAppSharingArtifact extends com.google.api.client.json.GenericJson {
 
   /**
-   * The SHA256 fingerprint of the certificate used to signed the generated artifact.
+   * The sha256 fingerprint of the certificate used to sign the generated artifact.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class InternalAppSharingArtifact extends com.google.api.client.json
   private java.lang.String downloadUrl;
 
   /**
-   * The SHA-256 hash of the artifact represented as a lowercase hexadecimal number, matching the
+   * The sha256 hash of the artifact represented as a lowercase hexadecimal number, matching the
    * output of the sha256sum command.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class InternalAppSharingArtifact extends com.google.api.client.json
   private java.lang.String sha256;
 
   /**
-   * The SHA256 fingerprint of the certificate used to signed the generated artifact.
+   * The sha256 fingerprint of the certificate used to sign the generated artifact.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificateFingerprint() {
@@ -63,7 +63,7 @@ public final class InternalAppSharingArtifact extends com.google.api.client.json
   }
 
   /**
-   * The SHA256 fingerprint of the certificate used to signed the generated artifact.
+   * The sha256 fingerprint of the certificate used to sign the generated artifact.
    * @param certificateFingerprint certificateFingerprint or {@code null} for none
    */
   public InternalAppSharingArtifact setCertificateFingerprint(java.lang.String certificateFingerprint) {
@@ -91,7 +91,7 @@ public final class InternalAppSharingArtifact extends com.google.api.client.json
   }
 
   /**
-   * The SHA-256 hash of the artifact represented as a lowercase hexadecimal number, matching the
+   * The sha256 hash of the artifact represented as a lowercase hexadecimal number, matching the
    * output of the sha256sum command.
    * @return value or {@code null} for none
    */
@@ -100,7 +100,7 @@ public final class InternalAppSharingArtifact extends com.google.api.client.json
   }
 
   /**
-   * The SHA-256 hash of the artifact represented as a lowercase hexadecimal number, matching the
+   * The sha256 hash of the artifact represented as a lowercase hexadecimal number, matching the
    * output of the sha256sum command.
    * @param sha256 sha256 or {@code null} for none
    */

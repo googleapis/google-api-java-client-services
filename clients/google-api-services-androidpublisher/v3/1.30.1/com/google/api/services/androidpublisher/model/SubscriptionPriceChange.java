@@ -22,8 +22,8 @@ package com.google.api.services.androidpublisher.model;
  * user or tailoring the experience for a successful conversion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -40,12 +40,12 @@ public final class SubscriptionPriceChange extends com.google.api.client.json.Ge
   private Price newPrice;
 
   /**
-   * The current state of the price change. Possible values are: - Outstanding: State for a pending
-   * price change waiting for the user to agree. In this state, you can optionally seek confirmation
-   * from the user using the In-App API.  - Accepted: State for an accepted price change that the
-   * subscription will renew with unless it's canceled. The price change takes effect on a future
-   * date when the subscription renews. Note that the change might not occur when the subscription
-   * is renewed next.
+   * The current state of the price change. Possible values are: 0. Outstanding: State for a pending
+   * price change waiting for the user to     agree. In this state, you can optionally seek
+   * confirmation from the     user using the In-App API. 1. Accepted: State for an accepted price
+   * change that the subscription     will renew with unless it's canceled. The price change takes
+   * effect on     a future date when the subscription renews. Note that the change might     not
+   * occur when the subscription is renewed next.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,12 +69,12 @@ public final class SubscriptionPriceChange extends com.google.api.client.json.Ge
   }
 
   /**
-   * The current state of the price change. Possible values are: - Outstanding: State for a pending
-   * price change waiting for the user to agree. In this state, you can optionally seek confirmation
-   * from the user using the In-App API.  - Accepted: State for an accepted price change that the
-   * subscription will renew with unless it's canceled. The price change takes effect on a future
-   * date when the subscription renews. Note that the change might not occur when the subscription
-   * is renewed next.
+   * The current state of the price change. Possible values are: 0. Outstanding: State for a pending
+   * price change waiting for the user to     agree. In this state, you can optionally seek
+   * confirmation from the     user using the In-App API. 1. Accepted: State for an accepted price
+   * change that the subscription     will renew with unless it's canceled. The price change takes
+   * effect on     a future date when the subscription renews. Note that the change might     not
+   * occur when the subscription is renewed next.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getState() {
@@ -82,12 +82,12 @@ public final class SubscriptionPriceChange extends com.google.api.client.json.Ge
   }
 
   /**
-   * The current state of the price change. Possible values are: - Outstanding: State for a pending
-   * price change waiting for the user to agree. In this state, you can optionally seek confirmation
-   * from the user using the In-App API.  - Accepted: State for an accepted price change that the
-   * subscription will renew with unless it's canceled. The price change takes effect on a future
-   * date when the subscription renews. Note that the change might not occur when the subscription
-   * is renewed next.
+   * The current state of the price change. Possible values are: 0. Outstanding: State for a pending
+   * price change waiting for the user to     agree. In this state, you can optionally seek
+   * confirmation from the     user using the In-App API. 1. Accepted: State for an accepted price
+   * change that the subscription     will renew with unless it's canceled. The price change takes
+   * effect on     a future date when the subscription renews. Note that the change might     not
+   * occur when the subscription is renewed next.
    * @param state state or {@code null} for none
    */
   public SubscriptionPriceChange setState(java.lang.Integer state) {

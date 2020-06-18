@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Track.
+ * A track configuration. The resource for TracksService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,7 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class Track extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of all active releases in this track during a read request. On an update request, it
+   * In a read request, represents all active releases in the track. In an update request,
    * represents desired changes.
    * The value may be {@code null}.
    */
@@ -39,14 +39,14 @@ public final class Track extends com.google.api.client.json.GenericJson {
   private java.util.List<TrackRelease> releases;
 
   /**
-   * Identifier for this track.
+   * Identifier of the track.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String track;
 
   /**
-   * A list of all active releases in this track during a read request. On an update request, it
+   * In a read request, represents all active releases in the track. In an update request,
    * represents desired changes.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class Track extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all active releases in this track during a read request. On an update request, it
+   * In a read request, represents all active releases in the track. In an update request,
    * represents desired changes.
    * @param releases releases or {@code null} for none
    */
@@ -65,7 +65,7 @@ public final class Track extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for this track.
+   * Identifier of the track.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrack() {
@@ -73,7 +73,7 @@ public final class Track extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for this track.
+   * Identifier of the track.
    * @param track track or {@code null} for none
    */
   public Track setTrack(java.lang.String track) {

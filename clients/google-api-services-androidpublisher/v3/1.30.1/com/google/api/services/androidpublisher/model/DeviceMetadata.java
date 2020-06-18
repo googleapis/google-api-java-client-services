@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for DeviceMetadata.
+ * Characteristics of the user's device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,14 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class DeviceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Device CPU make e.g. "Qualcomm"
+   * Device CPU make, e.g. "Qualcomm"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpuMake;
 
   /**
-   * Device CPU model e.g. "MSM8974"
+   * Device CPU model, e.g. "MSM8974"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String productName;
 
   /**
-   * Device RAM in Megabytes e.g. "2048"
+   * Device RAM in Megabytes, e.g. "2048"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   private java.lang.Integer screenWidthPx;
 
   /**
-   * Device CPU make e.g. "Qualcomm"
+   * Device CPU make, e.g. "Qualcomm"
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuMake() {
@@ -116,7 +116,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device CPU make e.g. "Qualcomm"
+   * Device CPU make, e.g. "Qualcomm"
    * @param cpuMake cpuMake or {@code null} for none
    */
   public DeviceMetadata setCpuMake(java.lang.String cpuMake) {
@@ -125,7 +125,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device CPU model e.g. "MSM8974"
+   * Device CPU model, e.g. "MSM8974"
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuModel() {
@@ -133,7 +133,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device CPU model e.g. "MSM8974"
+   * Device CPU model, e.g. "MSM8974"
    * @param cpuModel cpuModel or {@code null} for none
    */
   public DeviceMetadata setCpuModel(java.lang.String cpuModel) {
@@ -227,7 +227,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device RAM in Megabytes e.g. "2048"
+   * Device RAM in Megabytes, e.g. "2048"
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRamMb() {
@@ -235,7 +235,7 @@ public final class DeviceMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device RAM in Megabytes e.g. "2048"
+   * Device RAM in Megabytes, e.g. "2048"
    * @param ramMb ramMb or {@code null} for none
    */
   public DeviceMetadata setRamMb(java.lang.Integer ramMb) {

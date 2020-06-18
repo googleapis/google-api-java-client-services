@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for InAppProductListing.
+ * Store listing of a single in-app product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,30 +31,28 @@ package com.google.api.services.androidpublisher.model;
 public final class InAppProductListing extends com.google.api.client.json.GenericJson {
 
   /**
-   * The localized entitlement benefits of the in-app product. These are supported only for
-   * subscriptions.
+   * Localized entitlement benefits for a subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> benefits;
 
   /**
-   * The localized description of the in-app product. These are deprecated for subscriptions.
+   * Description for the store listing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The localized title of the in-app product.
+   * Title for the store listing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The localized entitlement benefits of the in-app product. These are supported only for
-   * subscriptions.
+   * Localized entitlement benefits for a subscription.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBenefits() {
@@ -62,8 +60,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The localized entitlement benefits of the in-app product. These are supported only for
-   * subscriptions.
+   * Localized entitlement benefits for a subscription.
    * @param benefits benefits or {@code null} for none
    */
   public InAppProductListing setBenefits(java.util.List<java.lang.String> benefits) {
@@ -72,7 +69,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The localized description of the in-app product. These are deprecated for subscriptions.
+   * Description for the store listing.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -80,7 +77,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The localized description of the in-app product. These are deprecated for subscriptions.
+   * Description for the store listing.
    * @param description description or {@code null} for none
    */
   public InAppProductListing setDescription(java.lang.String description) {
@@ -89,7 +86,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The localized title of the in-app product.
+   * Title for the store listing.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -97,7 +94,7 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The localized title of the in-app product.
+   * Title for the store listing.
    * @param title title or {@code null} for none
    */
   public InAppProductListing setTitle(java.lang.String title) {

@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Listing.
+ * A localized store listing. The resource for ListingsService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,29 +31,28 @@ package com.google.api.services.androidpublisher.model;
 public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Full description of the app; this may be up to 4000 characters in length.
+   * Full description of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullDescription;
 
   /**
-   * Language localization code (for example, "de-AT" for Austrian German).
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String language;
 
   /**
-   * Short description of the app (previously known as promo text); this may be up to 80 characters
-   * in length.
+   * Short description of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shortDescription;
 
   /**
-   * App's localized title.
+   * Localized title of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +66,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.lang.String video;
 
   /**
-   * Full description of the app; this may be up to 4000 characters in length.
+   * Full description of the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullDescription() {
@@ -75,7 +74,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full description of the app; this may be up to 4000 characters in length.
+   * Full description of the app.
    * @param fullDescription fullDescription or {@code null} for none
    */
   public Listing setFullDescription(java.lang.String fullDescription) {
@@ -84,7 +83,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Language localization code (for example, "de-AT" for Austrian German).
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -92,7 +91,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Language localization code (for example, "de-AT" for Austrian German).
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
    * @param language language or {@code null} for none
    */
   public Listing setLanguage(java.lang.String language) {
@@ -101,8 +100,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Short description of the app (previously known as promo text); this may be up to 80 characters
-   * in length.
+   * Short description of the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortDescription() {
@@ -110,8 +108,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Short description of the app (previously known as promo text); this may be up to 80 characters
-   * in length.
+   * Short description of the app.
    * @param shortDescription shortDescription or {@code null} for none
    */
   public Listing setShortDescription(java.lang.String shortDescription) {
@@ -120,7 +117,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * App's localized title.
+   * Localized title of the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -128,7 +125,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * App's localized title.
+   * Localized title of the app.
    * @param title title or {@code null} for none
    */
   public Listing setTitle(java.lang.String title) {

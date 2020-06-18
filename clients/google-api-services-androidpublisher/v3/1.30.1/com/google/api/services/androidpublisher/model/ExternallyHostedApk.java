@@ -18,12 +18,12 @@ package com.google.api.services.androidpublisher.model;
 
 /**
  * Defines an APK available for this application that is hosted externally and not uploaded to
- * Google Play. This function is only available to enterprises who are using Google Play for Work,
- * and whos application is restricted to the enterprise private channel
+ * Google Play. This function is only available to organizations using Managed Play whose
+ * application is configured to restrict distribution to the organizations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -40,8 +40,8 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   private java.lang.String applicationLabel;
 
   /**
-   * A certificate (or array of certificates if a certificate-chain is used) used to signed this
-   * APK, represented as a base64 encoded byte array.
+   * A certificate (or array of certificates if a certificate-chain is used) used to sign this APK,
+   * represented as a base64 encoded byte array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,14 +55,14 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   private java.lang.String externallyHostedUrl;
 
   /**
-   * The SHA1 checksum of this APK, represented as a base64 encoded byte array.
+   * The sha1 checksum of this APK, represented as a base64 encoded byte array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileSha1Base64;
 
   /**
-   * The SHA256 checksum of this APK, represented as a base64 encoded byte array.
+   * The sha256 checksum of this APK, represented as a base64 encoded byte array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ExternallyHostedApkUsesPermission> usesPermissions;
+  private java.util.List<UsesPermission> usesPermissions;
 
   /**
    * The version code of this APK.
@@ -156,8 +156,8 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   }
 
   /**
-   * A certificate (or array of certificates if a certificate-chain is used) used to signed this
-   * APK, represented as a base64 encoded byte array.
+   * A certificate (or array of certificates if a certificate-chain is used) used to sign this APK,
+   * represented as a base64 encoded byte array.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCertificateBase64s() {
@@ -165,8 +165,8 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   }
 
   /**
-   * A certificate (or array of certificates if a certificate-chain is used) used to signed this
-   * APK, represented as a base64 encoded byte array.
+   * A certificate (or array of certificates if a certificate-chain is used) used to sign this APK,
+   * represented as a base64 encoded byte array.
    * @param certificateBase64s certificateBase64s or {@code null} for none
    */
   public ExternallyHostedApk setCertificateBase64s(java.util.List<java.lang.String> certificateBase64s) {
@@ -192,7 +192,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   }
 
   /**
-   * The SHA1 checksum of this APK, represented as a base64 encoded byte array.
+   * The sha1 checksum of this APK, represented as a base64 encoded byte array.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileSha1Base64() {
@@ -200,7 +200,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   }
 
   /**
-   * The SHA1 checksum of this APK, represented as a base64 encoded byte array.
+   * The sha1 checksum of this APK, represented as a base64 encoded byte array.
    * @param fileSha1Base64 fileSha1Base64 or {@code null} for none
    */
   public ExternallyHostedApk setFileSha1Base64(java.lang.String fileSha1Base64) {
@@ -209,7 +209,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   }
 
   /**
-   * The SHA256 checksum of this APK, represented as a base64 encoded byte array.
+   * The sha256 checksum of this APK, represented as a base64 encoded byte array.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileSha256Base64() {
@@ -217,7 +217,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
   }
 
   /**
-   * The SHA256 checksum of this APK, represented as a base64 encoded byte array.
+   * The sha256 checksum of this APK, represented as a base64 encoded byte array.
    * @param fileSha256Base64 fileSha256Base64 or {@code null} for none
    */
   public ExternallyHostedApk setFileSha256Base64(java.lang.String fileSha256Base64) {
@@ -348,7 +348,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
    * The permissions requested by this APK.
    * @return value or {@code null} for none
    */
-  public java.util.List<ExternallyHostedApkUsesPermission> getUsesPermissions() {
+  public java.util.List<UsesPermission> getUsesPermissions() {
     return usesPermissions;
   }
 
@@ -356,7 +356,7 @@ public final class ExternallyHostedApk extends com.google.api.client.json.Generi
    * The permissions requested by this APK.
    * @param usesPermissions usesPermissions or {@code null} for none
    */
-  public ExternallyHostedApk setUsesPermissions(java.util.List<ExternallyHostedApkUsesPermission> usesPermissions) {
+  public ExternallyHostedApk setUsesPermissions(java.util.List<UsesPermission> usesPermissions) {
     this.usesPermissions = usesPermissions;
     return this;
   }

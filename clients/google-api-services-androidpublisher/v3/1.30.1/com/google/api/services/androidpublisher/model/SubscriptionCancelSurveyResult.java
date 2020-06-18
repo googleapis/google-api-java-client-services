@@ -21,8 +21,8 @@ package com.google.api.services.androidpublisher.model;
  * (cancellation reason survey).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,8 +32,8 @@ package com.google.api.services.androidpublisher.model;
 public final class SubscriptionCancelSurveyResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cancellation reason the user chose in the survey. Possible values are: - Other  - I don't
-   * use this service enough  - Technical issues  - Cost-related reasons  - I found a better app
+   * The cancellation reason the user chose in the survey. Possible values are: 0. Other 1. I don't
+   * use this service enough 2. Technical issues 3. Cost-related reasons 4. I found a better app
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class SubscriptionCancelSurveyResult extends com.google.api.client.
   private java.lang.String userInputCancelReason;
 
   /**
-   * The cancellation reason the user chose in the survey. Possible values are: - Other  - I don't
-   * use this service enough  - Technical issues  - Cost-related reasons  - I found a better app
+   * The cancellation reason the user chose in the survey. Possible values are: 0. Other 1. I don't
+   * use this service enough 2. Technical issues 3. Cost-related reasons 4. I found a better app
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCancelSurveyReason() {
@@ -56,8 +56,8 @@ public final class SubscriptionCancelSurveyResult extends com.google.api.client.
   }
 
   /**
-   * The cancellation reason the user chose in the survey. Possible values are: - Other  - I don't
-   * use this service enough  - Technical issues  - Cost-related reasons  - I found a better app
+   * The cancellation reason the user chose in the survey. Possible values are: 0. Other 1. I don't
+   * use this service enough 2. Technical issues 3. Cost-related reasons 4. I found a better app
    * @param cancelSurveyReason cancelSurveyReason or {@code null} for none
    */
   public SubscriptionCancelSurveyResult setCancelSurveyReason(java.lang.Integer cancelSurveyReason) {

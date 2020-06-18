@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-androidpublisher</artifactId>
-  <version>v3-rev20200602-1.30.9</version>
-  <name>Google Play Developer API v3-rev20200602-1.30.9</name>
+  <version>v3-rev20200607-1.30.9</version>
+  <name>Google Play Android Developer API v3-rev20200607-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Google Play Developer API ${project.version}</doctitle>
-          <windowtitle>Google Play Developer API ${project.version}</windowtitle>
+          <doctitle>Google Play Android Developer API ${project.version}</doctitle>
+          <windowtitle>Google Play Android Developer API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.34.2/</link>

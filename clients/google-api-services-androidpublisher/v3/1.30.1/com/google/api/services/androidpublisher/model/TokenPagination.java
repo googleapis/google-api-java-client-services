@@ -17,11 +17,19 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for TokenPagination.
+ * Pagination information returned by a List operation when token pagination is enabled.
+ *
+ * List operations that supports paging return only one "page" of results. This protocol buffer
+ * message describes the page that has been returned.
+ *
+ * When using token pagination, clients should use the next/previous token to get another page of
+ * the result. The presence or absence of next/previous token indicates whether a next/previous page
+ * is available and provides a mean of accessing this page. ListRequest.page_token should be set to
+ * either next_page_token or previous_page_token to access another page.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,6 +39,8 @@ package com.google.api.services.androidpublisher.model;
 public final class TokenPagination extends com.google.api.client.json.GenericJson {
 
   /**
+   * Tokens to pass to the standard list field 'page_token'. Whenever available, tokens are
+   * preferred over manipulating start_index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,6 +53,8 @@ public final class TokenPagination extends com.google.api.client.json.GenericJso
   private java.lang.String previousPageToken;
 
   /**
+   * Tokens to pass to the standard list field 'page_token'. Whenever available, tokens are
+   * preferred over manipulating start_index.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -50,6 +62,8 @@ public final class TokenPagination extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Tokens to pass to the standard list field 'page_token'. Whenever available, tokens are
+   * preferred over manipulating start_index.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public TokenPagination setNextPageToken(java.lang.String nextPageToken) {

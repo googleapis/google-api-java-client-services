@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for TrackRelease.
+ * A release within a track.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,18 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class TrackRelease extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Control> controls;
-
-  static {
-    // hack to force ProGuard to consider Control used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Control.class);
-  }
-
-  /**
+   * Restricts a release to a specific set of countries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,30 +39,24 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
 
   /**
    * In-app update priority of the release. All newly added APKs in the release will be considered
-   * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
-   * priority. Default priority is 0. in_app_update_priority can not be updated once the release is
-   * rolled out. See https://developer.android.com/guide/playcore/in-app-updates.
+   * at this priority. Can take values in the range [0, 5], with 5 the highest priority. Defaults to
+   * 0. in_app_update_priority can not be updated once the release is rolled out. See
+   * https://developer.android.com/guide/playcore/in-app-updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer inAppUpdatePriority;
 
   /**
-   * The release name, used to identify this release in the Play Console UI. Not required to be
-   * unique. This is optional, if not set it will be generated from the version_name in the APKs.
+   * The release name. Not required to be unique. If not set, the name is generated from the APK's
+   * version_name. If the release contains multiple APKs, the name is generated from the date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<TrackReleasePin> pinnedVersions;
-
-  /**
-   * The description of what is new in the app in this release.
+   * A description of what is new in this release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,57 +69,30 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean rollbackEnabled;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Sampling sampling;
-
-  /**
-   * The desired status of this release.
+   * The status of the release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Fraction of users who are eligible to receive the release. 0 < fraction < 1. To be set, release
-   * status must be "inProgress" or "halted".
+   * Fraction of users who are eligible for a staged release. 0 < fraction < 1. Can only be set when
+   * status is "inProgress" or "halted".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double userFraction;
 
   /**
-   * A list of all version codes of APKs that will be exposed to the users of this track when this
-   * release is rolled out. Note that this list should contain all versions you wish to be active,
-   * including those you wish to retain from previous releases.
+   * Version codes of all APKs in the release. Must include version codes to retain from previous
+   * releases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> versionCodes;
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Control> getControls() {
-    return controls;
-  }
-
-  /**
-   * @param controls controls or {@code null} for none
-   */
-  public TrackRelease setControls(java.util.List<Control> controls) {
-    this.controls = controls;
-    return this;
-  }
-
-  /**
+   * Restricts a release to a specific set of countries.
    * @return value or {@code null} for none
    */
   public CountryTargeting getCountryTargeting() {
@@ -144,6 +100,7 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Restricts a release to a specific set of countries.
    * @param countryTargeting countryTargeting or {@code null} for none
    */
   public TrackRelease setCountryTargeting(CountryTargeting countryTargeting) {
@@ -153,9 +110,9 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
 
   /**
    * In-app update priority of the release. All newly added APKs in the release will be considered
-   * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
-   * priority. Default priority is 0. in_app_update_priority can not be updated once the release is
-   * rolled out. See https://developer.android.com/guide/playcore/in-app-updates.
+   * at this priority. Can take values in the range [0, 5], with 5 the highest priority. Defaults to
+   * 0. in_app_update_priority can not be updated once the release is rolled out. See
+   * https://developer.android.com/guide/playcore/in-app-updates.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInAppUpdatePriority() {
@@ -164,9 +121,9 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
 
   /**
    * In-app update priority of the release. All newly added APKs in the release will be considered
-   * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
-   * priority. Default priority is 0. in_app_update_priority can not be updated once the release is
-   * rolled out. See https://developer.android.com/guide/playcore/in-app-updates.
+   * at this priority. Can take values in the range [0, 5], with 5 the highest priority. Defaults to
+   * 0. in_app_update_priority can not be updated once the release is rolled out. See
+   * https://developer.android.com/guide/playcore/in-app-updates.
    * @param inAppUpdatePriority inAppUpdatePriority or {@code null} for none
    */
   public TrackRelease setInAppUpdatePriority(java.lang.Integer inAppUpdatePriority) {
@@ -175,8 +132,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The release name, used to identify this release in the Play Console UI. Not required to be
-   * unique. This is optional, if not set it will be generated from the version_name in the APKs.
+   * The release name. Not required to be unique. If not set, the name is generated from the APK's
+   * version_name. If the release contains multiple APKs, the name is generated from the date.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -184,8 +141,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The release name, used to identify this release in the Play Console UI. Not required to be
-   * unique. This is optional, if not set it will be generated from the version_name in the APKs.
+   * The release name. Not required to be unique. If not set, the name is generated from the APK's
+   * version_name. If the release contains multiple APKs, the name is generated from the date.
    * @param name name or {@code null} for none
    */
   public TrackRelease setName(java.lang.String name) {
@@ -194,22 +151,7 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<TrackReleasePin> getPinnedVersions() {
-    return pinnedVersions;
-  }
-
-  /**
-   * @param pinnedVersions pinnedVersions or {@code null} for none
-   */
-  public TrackRelease setPinnedVersions(java.util.List<TrackReleasePin> pinnedVersions) {
-    this.pinnedVersions = pinnedVersions;
-    return this;
-  }
-
-  /**
-   * The description of what is new in the app in this release.
+   * A description of what is new in this release.
    * @return value or {@code null} for none
    */
   public java.util.List<LocalizedText> getReleaseNotes() {
@@ -217,7 +159,7 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of what is new in the app in this release.
+   * A description of what is new in this release.
    * @param releaseNotes releaseNotes or {@code null} for none
    */
   public TrackRelease setReleaseNotes(java.util.List<LocalizedText> releaseNotes) {
@@ -226,37 +168,7 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getRollbackEnabled() {
-    return rollbackEnabled;
-  }
-
-  /**
-   * @param rollbackEnabled rollbackEnabled or {@code null} for none
-   */
-  public TrackRelease setRollbackEnabled(java.lang.Boolean rollbackEnabled) {
-    this.rollbackEnabled = rollbackEnabled;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public Sampling getSampling() {
-    return sampling;
-  }
-
-  /**
-   * @param sampling sampling or {@code null} for none
-   */
-  public TrackRelease setSampling(Sampling sampling) {
-    this.sampling = sampling;
-    return this;
-  }
-
-  /**
-   * The desired status of this release.
+   * The status of the release.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -264,7 +176,7 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The desired status of this release.
+   * The status of the release.
    * @param status status or {@code null} for none
    */
   public TrackRelease setStatus(java.lang.String status) {
@@ -273,8 +185,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fraction of users who are eligible to receive the release. 0 < fraction < 1. To be set, release
-   * status must be "inProgress" or "halted".
+   * Fraction of users who are eligible for a staged release. 0 < fraction < 1. Can only be set when
+   * status is "inProgress" or "halted".
    * @return value or {@code null} for none
    */
   public java.lang.Double getUserFraction() {
@@ -282,8 +194,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fraction of users who are eligible to receive the release. 0 < fraction < 1. To be set, release
-   * status must be "inProgress" or "halted".
+   * Fraction of users who are eligible for a staged release. 0 < fraction < 1. Can only be set when
+   * status is "inProgress" or "halted".
    * @param userFraction userFraction or {@code null} for none
    */
   public TrackRelease setUserFraction(java.lang.Double userFraction) {
@@ -292,9 +204,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all version codes of APKs that will be exposed to the users of this track when this
-   * release is rolled out. Note that this list should contain all versions you wish to be active,
-   * including those you wish to retain from previous releases.
+   * Version codes of all APKs in the release. Must include version codes to retain from previous
+   * releases.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getVersionCodes() {
@@ -302,9 +213,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all version codes of APKs that will be exposed to the users of this track when this
-   * release is rolled out. Note that this list should contain all versions you wish to be active,
-   * including those you wish to retain from previous releases.
+   * Version codes of all APKs in the release. Must include version codes to retain from previous
+   * releases.
    * @param versionCodes versionCodes or {@code null} for none
    */
   public TrackRelease setVersionCodes(java.util.List<java.lang.Long> versionCodes) {

@@ -20,8 +20,8 @@ package com.google.api.services.androidpublisher.model;
  * A ProductPurchase resource indicates the status of a user's inapp product purchase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,15 +31,15 @@ package com.google.api.services.androidpublisher.model;
 public final class ProductPurchase extends com.google.api.client.json.GenericJson {
 
   /**
-   * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
-   * - Acknowledged
+   * The acknowledgement state of the inapp product. Possible values are: 0. Yet to be acknowledged
+   * 1. Acknowledged
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer acknowledgementState;
 
   /**
-   * The consumption state of the inapp product. Possible values are: - Yet to be consumed  -
+   * The consumption state of the inapp product. Possible values are: 0. Yet to be consumed 1.
    * Consumed
    * The value may be {@code null}.
    */
@@ -61,6 +61,24 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
+   * An obfuscated version of the id that is uniquely associated with the user's account in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedaccountid when the purchase was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String obfuscatedExternalAccountId;
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's profile in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedprofileid when the purchase was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String obfuscatedExternalProfileId;
+
+  /**
    * The order id associated with the purchase of the inapp product.
    * The value may be {@code null}.
    */
@@ -75,7 +93,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.String productId;
 
   /**
-   * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
+   * The purchase state of the order. Possible values are: 0. Purchased 1. Canceled 2. Pending
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +115,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
 
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
-   * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
+   * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
+   * license testing account) 1. Promo (i.e. purchased using a promo code) 2. Rewarded (i.e. from
    * watching a video ad instead of paying)
    * The value may be {@code null}.
    */
@@ -113,8 +131,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Integer quantity;
 
   /**
-   * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
-   * - Acknowledged
+   * The acknowledgement state of the inapp product. Possible values are: 0. Yet to be acknowledged
+   * 1. Acknowledged
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAcknowledgementState() {
@@ -122,8 +140,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
-   * - Acknowledged
+   * The acknowledgement state of the inapp product. Possible values are: 0. Yet to be acknowledged
+   * 1. Acknowledged
    * @param acknowledgementState acknowledgementState or {@code null} for none
    */
   public ProductPurchase setAcknowledgementState(java.lang.Integer acknowledgementState) {
@@ -132,7 +150,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The consumption state of the inapp product. Possible values are: - Yet to be consumed  -
+   * The consumption state of the inapp product. Possible values are: 0. Yet to be consumed 1.
    * Consumed
    * @return value or {@code null} for none
    */
@@ -141,7 +159,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The consumption state of the inapp product. Possible values are: - Yet to be consumed  -
+   * The consumption state of the inapp product. Possible values are: 0. Yet to be consumed 1.
    * Consumed
    * @param consumptionState consumptionState or {@code null} for none
    */
@@ -185,6 +203,48 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * An obfuscated version of the id that is uniquely associated with the user's account in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedaccountid when the purchase was made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObfuscatedExternalAccountId() {
+    return obfuscatedExternalAccountId;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's account in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedaccountid when the purchase was made.
+   * @param obfuscatedExternalAccountId obfuscatedExternalAccountId or {@code null} for none
+   */
+  public ProductPurchase setObfuscatedExternalAccountId(java.lang.String obfuscatedExternalAccountId) {
+    this.obfuscatedExternalAccountId = obfuscatedExternalAccountId;
+    return this;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's profile in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedprofileid when the purchase was made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObfuscatedExternalProfileId() {
+    return obfuscatedExternalProfileId;
+  }
+
+  /**
+   * An obfuscated version of the id that is uniquely associated with the user's profile in your
+   * app. Only present if specified using https://developer.android.com/reference/com/android/billin
+   * gclient/api/BillingFlowParams.Builder#setobfuscatedprofileid when the purchase was made.
+   * @param obfuscatedExternalProfileId obfuscatedExternalProfileId or {@code null} for none
+   */
+  public ProductPurchase setObfuscatedExternalProfileId(java.lang.String obfuscatedExternalProfileId) {
+    this.obfuscatedExternalProfileId = obfuscatedExternalProfileId;
+    return this;
+  }
+
+  /**
    * The order id associated with the purchase of the inapp product.
    * @return value or {@code null} for none
    */
@@ -219,7 +279,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
+   * The purchase state of the order. Possible values are: 0. Purchased 1. Canceled 2. Pending
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseState() {
@@ -227,7 +287,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
+   * The purchase state of the order. Possible values are: 0. Purchased 1. Canceled 2. Pending
    * @param purchaseState purchaseState or {@code null} for none
    */
   public ProductPurchase setPurchaseState(java.lang.Integer purchaseState) {
@@ -271,8 +331,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
 
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
-   * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
+   * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
+   * license testing account) 1. Promo (i.e. purchased using a promo code) 2. Rewarded (i.e. from
    * watching a video ad instead of paying)
    * @return value or {@code null} for none
    */
@@ -282,8 +342,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
 
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
-   * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
+   * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
+   * license testing account) 1. Promo (i.e. purchased using a promo code) 2. Rewarded (i.e. from
    * watching a video ad instead of paying)
    * @param purchaseType purchaseType or {@code null} for none
    */

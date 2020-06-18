@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for ImagesUploadResponse.
+ * Response for uploading an image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,12 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class ImagesUploadResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The uploaded image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Image image;
 
   /**
+   * The uploaded image.
    * @return value or {@code null} for none
    */
   public Image getImage() {
@@ -44,6 +46,7 @@ public final class ImagesUploadResponse extends com.google.api.client.json.Gener
   }
 
   /**
+   * The uploaded image.
    * @param image image or {@code null} for none
    */
   public ImagesUploadResponse setImage(Image image) {

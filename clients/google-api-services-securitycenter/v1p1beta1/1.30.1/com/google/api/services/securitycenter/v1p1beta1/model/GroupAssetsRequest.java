@@ -83,12 +83,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
-   * "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time = 1560208038000"
+   * `update_time = "2019-06-10T16:07:18-07:00"`     `update_time = 1560208038000`
    *
    * * create_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
-   * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
+   * `create_time = "2019-06-10T16:07:18-07:00"`     `create_time = 1560208038000`
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
@@ -103,10 +103,10 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * For example, `resource_properties.size = 100` is a valid filter string.
    *
    * Use a partial match on the empty string to filter based on a property existing:
-   * "resource_properties.my_property : \"\""
+   * `resource_properties.my_property : ""`
    *
    * Use a negated partial match on the empty string to filter based on a property not existing:
-   * "-resource_properties.my_property : \"\""
+   * `-resource_properties.my_property : ""`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,12 +242,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
-   * "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time = 1560208038000"
+   * `update_time = "2019-06-10T16:07:18-07:00"`     `update_time = 1560208038000`
    *
    * * create_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
-   * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
+   * `create_time = "2019-06-10T16:07:18-07:00"`     `create_time = 1560208038000`
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
@@ -262,10 +262,10 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * For example, `resource_properties.size = 100` is a valid filter string.
    *
    * Use a partial match on the empty string to filter based on a property existing:
-   * "resource_properties.my_property : \"\""
+   * `resource_properties.my_property : ""`
    *
    * Use a negated partial match on the empty string to filter based on a property not existing:
-   * "-resource_properties.my_property : \"\""
+   * `-resource_properties.my_property : ""`
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -298,12 +298,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
-   * "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time = 1560208038000"
+   * `update_time = "2019-06-10T16:07:18-07:00"`     `update_time = 1560208038000`
    *
    * * create_time: `=`, `>`, `<`, `>=`, `<=`
    *
    *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
-   * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
+   * `create_time = "2019-06-10T16:07:18-07:00"`     `create_time = 1560208038000`
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
@@ -318,10 +318,10 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * For example, `resource_properties.size = 100` is a valid filter string.
    *
    * Use a partial match on the empty string to filter based on a property existing:
-   * "resource_properties.my_property : \"\""
+   * `resource_properties.my_property : ""`
    *
    * Use a negated partial match on the empty string to filter based on a property not existing:
-   * "-resource_properties.my_property : \"\""
+   * `-resource_properties.my_property : ""`
    * @param filter filter or {@code null} for none
    */
   public GroupAssetsRequest setFilter(java.lang.String filter) {

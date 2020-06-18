@@ -45,11 +45,11 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> delegates;
 
   /**
-   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claim
+   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
    * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
    *
-   * If the claim set contains an `exp` claim, it must be an integer timestamp that is not in the
-   * past and at most 12 hours in the future.
+   * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
+   * timestamp that is not in the past and no more than 12 hours in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,11 +87,11 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claim
+   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
    * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
    *
-   * If the claim set contains an `exp` claim, it must be an integer timestamp that is not in the
-   * past and at most 12 hours in the future.
+   * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
+   * timestamp that is not in the past and no more than 12 hours in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -99,11 +99,11 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claim
+   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
    * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
    *
-   * If the claim set contains an `exp` claim, it must be an integer timestamp that is not in the
-   * past and at most 12 hours in the future.
+   * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
+   * timestamp that is not in the past and no more than 12 hours in the future.
    * @param payload payload or {@code null} for none
    */
   public SignJwtRequest setPayload(java.lang.String payload) {

@@ -17,20 +17,15 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * A service account in the Identity and Access Management API.
+ * An IAM service account.
  *
- * To create a service account, specify the `project_id` and the `account_id` for the account.  The
- * `account_id` is unique within the project, and is used to generate the service account email
- * address and a stable `unique_id`.
+ * A service account is an account for an application or a virtual machine (VM) instance, not a
+ * person. You can use a service account to call Google APIs. To learn more, read the [overview of
+ * service accounts](https://cloud.google.com/iam/help/service-accounts/overview).
  *
- * If the account already exists, the account's resource name is returned in the format of
- * projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}. The caller can use the name in other methods to
- * access the account.
- *
- * All other methods can identify the service account using the format
- * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
- * will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
- * `unique_id` of the service account.
+ * When you create a service account, you specify the project ID that owns the service account, as
+ * well as a name that must be unique within the project. IAM uses these values to create an email
+ * address that identifies the service account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -44,84 +39,91 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A user-specified opaque description of the service account. Must be less than or
-   * equal to 256 UTF-8 bytes.
+   * Optional. A user-specified, human-readable description of the service account. The maximum
+   * length is 256 UTF-8 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
-   * phase.
+   * Output only. Whether the service account is disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. A user-specified name for the service account. Must be less than or equal to 100
-   * UTF-8 bytes.
+   * Optional. A user-specified, human-readable name for the service account. The maximum length is
+   * 100 UTF-8 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * @OutputOnly The email address of the service account.
+   * Output only. The email address of the service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * Optional. Note: `etag` is an inoperable legacy field that is only returned for backwards
-   * compatibility.
+   * Deprecated. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * The resource name of the service account in the following format:
-   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+   * The resource name of the service account.
    *
-   * Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account`
-   * and the `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.
+   * Use one of the following formats:
    *
-   * In responses the resource name will always be in the format
-   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+   * * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
+   *
+   * As an alternative, you can use the `-` wildcard character instead of the project ID:
+   *
+   * * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+   *
+   * When possible, avoid using the `-` wildcard character, because it can cause response messages
+   * to contain misleading error codes. For example, if you try to get the service account
+   * `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an
+   * HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * @OutputOnly The OAuth2 client id for the service account. This is used in conjunction with the
-   * OAuth2 clientconfig API to make three legged OAuth2 (3LO) flows to access the data of Google
-   * users.
+   * Output only. The OAuth 2.0 client ID for the service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String oauth2ClientId;
 
   /**
-   * @OutputOnly The id of the project that owns the service account.
+   * Output only. The ID of the project that owns the service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * @OutputOnly The unique and stable id of the service account.
+   * Output only. The unique, stable numeric ID for the service account.
+   *
+   * Each service account retains its unique ID even if you delete the service account. For example,
+   * if you delete a service account, then create a new service account with the same name, the new
+   * service account has a different unique ID than the deleted service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uniqueId;
 
   /**
-   * Optional. A user-specified opaque description of the service account. Must be less than or
-   * equal to 256 UTF-8 bytes.
+   * Optional. A user-specified, human-readable description of the service account. The maximum
+   * length is 256 UTF-8 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -129,8 +131,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A user-specified opaque description of the service account. Must be less than or
-   * equal to 256 UTF-8 bytes.
+   * Optional. A user-specified, human-readable description of the service account. The maximum
+   * length is 256 UTF-8 bytes.
    * @param description description or {@code null} for none
    */
   public ServiceAccount setDescription(java.lang.String description) {
@@ -139,8 +141,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
-   * phase.
+   * Output only. Whether the service account is disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -148,8 +149,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
-   * phase.
+   * Output only. Whether the service account is disabled.
    * @param disabled disabled or {@code null} for none
    */
   public ServiceAccount setDisabled(java.lang.Boolean disabled) {
@@ -158,8 +158,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A user-specified name for the service account. Must be less than or equal to 100
-   * UTF-8 bytes.
+   * Optional. A user-specified, human-readable name for the service account. The maximum length is
+   * 100 UTF-8 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -167,8 +167,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A user-specified name for the service account. Must be less than or equal to 100
-   * UTF-8 bytes.
+   * Optional. A user-specified, human-readable name for the service account. The maximum length is
+   * 100 UTF-8 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public ServiceAccount setDisplayName(java.lang.String displayName) {
@@ -177,7 +177,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The email address of the service account.
+   * Output only. The email address of the service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -185,7 +185,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The email address of the service account.
+   * Output only. The email address of the service account.
    * @param email email or {@code null} for none
    */
   public ServiceAccount setEmail(java.lang.String email) {
@@ -194,8 +194,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Note: `etag` is an inoperable legacy field that is only returned for backwards
-   * compatibility.
+   * Deprecated. Do not use.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -204,8 +203,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Note: `etag` is an inoperable legacy field that is only returned for backwards
-   * compatibility.
+   * Deprecated. Do not use.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -216,8 +214,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Note: `etag` is an inoperable legacy field that is only returned for backwards
-   * compatibility.
+   * Deprecated. Do not use.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -227,8 +224,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Note: `etag` is an inoperable legacy field that is only returned for backwards
-   * compatibility.
+   * Deprecated. Do not use.
    * @see #setEtag()
    *
    * <p>
@@ -243,14 +239,21 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the service account in the following format:
-   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+   * The resource name of the service account.
    *
-   * Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account`
-   * and the `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.
+   * Use one of the following formats:
    *
-   * In responses the resource name will always be in the format
-   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+   * * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
+   *
+   * As an alternative, you can use the `-` wildcard character instead of the project ID:
+   *
+   * * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+   *
+   * When possible, avoid using the `-` wildcard character, because it can cause response messages
+   * to contain misleading error codes. For example, if you try to get the service account
+   * `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an
+   * HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -258,14 +261,21 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the service account in the following format:
-   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+   * The resource name of the service account.
    *
-   * Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account`
-   * and the `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.
+   * Use one of the following formats:
    *
-   * In responses the resource name will always be in the format
-   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+   * * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
+   *
+   * As an alternative, you can use the `-` wildcard character instead of the project ID:
+   *
+   * * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
+   *
+   * When possible, avoid using the `-` wildcard character, because it can cause response messages
+   * to contain misleading error codes. For example, if you try to get the service account
+   * `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an
+   * HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * @param name name or {@code null} for none
    */
   public ServiceAccount setName(java.lang.String name) {
@@ -274,9 +284,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The OAuth2 client id for the service account. This is used in conjunction with the
-   * OAuth2 clientconfig API to make three legged OAuth2 (3LO) flows to access the data of Google
-   * users.
+   * Output only. The OAuth 2.0 client ID for the service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getOauth2ClientId() {
@@ -284,9 +292,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The OAuth2 client id for the service account. This is used in conjunction with the
-   * OAuth2 clientconfig API to make three legged OAuth2 (3LO) flows to access the data of Google
-   * users.
+   * Output only. The OAuth 2.0 client ID for the service account.
    * @param oauth2ClientId oauth2ClientId or {@code null} for none
    */
   public ServiceAccount setOauth2ClientId(java.lang.String oauth2ClientId) {
@@ -295,7 +301,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The id of the project that owns the service account.
+   * Output only. The ID of the project that owns the service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -303,7 +309,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The id of the project that owns the service account.
+   * Output only. The ID of the project that owns the service account.
    * @param projectId projectId or {@code null} for none
    */
   public ServiceAccount setProjectId(java.lang.String projectId) {
@@ -312,7 +318,11 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The unique and stable id of the service account.
+   * Output only. The unique, stable numeric ID for the service account.
+   *
+   * Each service account retains its unique ID even if you delete the service account. For example,
+   * if you delete a service account, then create a new service account with the same name, the new
+   * service account has a different unique ID than the deleted service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueId() {
@@ -320,7 +330,11 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly The unique and stable id of the service account.
+   * Output only. The unique, stable numeric ID for the service account.
+   *
+   * Each service account retains its unique ID even if you delete the service account. For example,
+   * if you delete a service account, then create a new service account with the same name, the new
+   * service account has a different unique ID than the deleted service account.
    * @param uniqueId uniqueId or {@code null} for none
    */
   public ServiceAccount setUniqueId(java.lang.String uniqueId) {

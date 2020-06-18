@@ -229,11 +229,6 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
         }
 
         @Override
-        public Send setAccessToken(java.lang.String accessToken) {
-          return (Send) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Send setAlt(java.lang.String alt) {
           return (Send) super.setAlt(alt);
         }
@@ -251,11 +246,6 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
         @Override
         public Send setKey(java.lang.String key) {
           return (Send) super.setKey(key);
-        }
-
-        @Override
-        public Send setOauthToken(java.lang.String oauthToken) {
-          return (Send) super.setOauthToken(oauthToken);
         }
 
         @Override

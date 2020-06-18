@@ -31,16 +31,16 @@ package com.google.api.services.osconfig.v1beta.model;
 public final class PatchInstanceFilterGroupLabel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Compute Engine instance labels that must be present for a VM instance to be targeted by
-   * this filter.
+   * Compute Engine instance labels that must be present for a VM instance to be targeted by this
+   * filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Google Compute Engine instance labels that must be present for a VM instance to be targeted by
-   * this filter.
+   * Compute Engine instance labels that must be present for a VM instance to be targeted by this
+   * filter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -48,8 +48,8 @@ public final class PatchInstanceFilterGroupLabel extends com.google.api.client.j
   }
 
   /**
-   * Google Compute Engine instance labels that must be present for a VM instance to be targeted by
-   * this filter.
+   * Compute Engine instance labels that must be present for a VM instance to be targeted by this
+   * filter.
    * @param labels labels or {@code null} for none
    */
   public PatchInstanceFilterGroupLabel setLabels(java.util.Map<String, java.lang.String> labels) {

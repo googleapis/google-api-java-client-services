@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Chain name that the snapshot is created in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chainName;
+
+  /**
    * Indication to perform a 'guest aware' snapshot.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> storageLocations;
+
+  /**
+   * Chain name that the snapshot is created in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChainName() {
+    return chainName;
+  }
+
+  /**
+   * Chain name that the snapshot is created in.
+   * @param chainName chainName or {@code null} for none
+   */
+  public ResourcePolicySnapshotSchedulePolicySnapshotProperties setChainName(java.lang.String chainName) {
+    this.chainName = chainName;
+    return this;
+  }
 
   /**
    * Indication to perform a 'guest aware' snapshot.

@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/69ND3IwVNcOnVLF-ZC0OyHds1bQ\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/MNcrndeYTaDX4ARVTRYYFFDtyD0\"",
  "discoveryVersion": "v1",
  "id": "compute:beta",
  "name": "compute",
  "version": "beta",
- "revision": "20200511",
+ "revision": "20200515",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -3978,7 +3978,7 @@
     },
     "physicalBlockSizeBytes": {
      "type": "string",
-     "description": "Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.",
+     "description": "Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. The currently supported size is 4096, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.",
      "format": "int64"
     },
     "region": {
@@ -20269,6 +20269,10 @@
    "type": "object",
    "description": "Specified snapshot properties for scheduled snapshots created by this policy.",
    "properties": {
+    "chainName": {
+     "type": "string",
+     "description": "Chain name that the snapshot is created in."
+    },
     "guestFlush": {
      "type": "boolean",
      "description": "Indication to perform a 'guest aware' snapshot."
@@ -22557,6 +22561,10 @@
     "autoCreated": {
      "type": "boolean",
      "description": "[Output Only] Set to true if snapshots are automatically created by applying resource policy on the target disk."
+    },
+    "chainName": {
+     "type": "string",
+     "description": "Chain name should conform to RFC1035."
     },
     "creationTimestamp": {
      "type": "string",

@@ -41,6 +41,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean autoCreated;
 
   /**
+   * Chain name should conform to RFC1035.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chainName;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -248,6 +255,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setAutoCreated(java.lang.Boolean autoCreated) {
     this.autoCreated = autoCreated;
+    return this;
+  }
+
+  /**
+   * Chain name should conform to RFC1035.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChainName() {
+    return chainName;
+  }
+
+  /**
+   * Chain name should conform to RFC1035.
+   * @param chainName chainName or {@code null} for none
+   */
+  public Snapshot setChainName(java.lang.String chainName) {
+    this.chainName = chainName;
     return this;
   }
 

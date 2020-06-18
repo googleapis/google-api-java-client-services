@@ -60,6 +60,13 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
+   * Resource policy for scheduling instance operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy;
+
+  /**
    * [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
    * The value may be {@code null}.
    */
@@ -181,6 +188,23 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   public ResourcePolicy setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Resource policy for scheduling instance operations.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyInstanceSchedulePolicy getInstanceSchedulePolicy() {
+    return instanceSchedulePolicy;
+  }
+
+  /**
+   * Resource policy for scheduling instance operations.
+   * @param instanceSchedulePolicy instanceSchedulePolicy or {@code null} for none
+   */
+  public ResourcePolicy setInstanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy) {
+    this.instanceSchedulePolicy = instanceSchedulePolicy;
     return this;
   }
 

@@ -514,7 +514,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * (https://cloud.google.com/resource-manager/reference/rest/v1/projects).
      *
      * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` uses underlying GCP
-     * identifiers (most importantly, the `projectId`) as its own for easy interop with GCP APIs.
+     * identifiers (most importantly, the `PROJECT_NUMBER`) as its own for easy interop with GCP APIs.
      *
      * The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to
      * track the provisioning process by calling GetOperation until
@@ -538,12 +538,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * @param project The resource name of the GCP `Project` to which Firebase resources will be
     added, in the format:
-     *        projects/projectId
+     *        projects/PROJECT_NUMBER
     After calling `AddFirebase`, the
-    [`projectId`](https://cloud.google.com
-     *        /resource-manager/reference/rest/v1/projects#Project.FIELDS.project_id)
-    of the GCP
-     *        `Project` is also the `projectId` of the FirebaseProject.
+     *        [`project_id`](https://cloud.google.com/resource-
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)
+    of the GCP `Project` is also
+     *        the `project_id` of the FirebaseProject.
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddFirebaseRequest}
      * @return the request
      */
@@ -565,7 +565,8 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * (https://cloud.google.com/resource-manager/reference/rest/v1/projects).
        *
        * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` uses underlying
-       * GCP identifiers (most importantly, the `projectId`) as its own for easy interop with GCP APIs.
+       * GCP identifiers (most importantly, the `PROJECT_NUMBER`) as its own for easy interop with GCP
+       * APIs.
        *
        * The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to
        * track the provisioning process by calling GetOperation until
@@ -593,12 +594,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * @param project The resource name of the GCP `Project` to which Firebase resources will be
     added, in the format:
-     *        projects/projectId
+     *        projects/PROJECT_NUMBER
     After calling `AddFirebase`, the
-    [`projectId`](https://cloud.google.com
-     *        /resource-manager/reference/rest/v1/projects#Project.FIELDS.project_id)
-    of the GCP
-     *        `Project` is also the `projectId` of the FirebaseProject.
+     *        [`project_id`](https://cloud.google.com/resource-
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)
+    of the GCP `Project` is also
+     *        the `project_id` of the FirebaseProject.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddFirebaseRequest}
        * @since 1.13
        */
@@ -669,18 +670,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The resource name of the GCP `Project` to which Firebase resources will be added, in the
-       * format: projects/projectId After calling `AddFirebase`, the
-       * [`projectId`](https://cloud.google.com/resource-
+       * format: projects/PROJECT_NUMBER After calling `AddFirebase`, the
+       * [`project_id`](https://cloud.google.com/resource-
        * manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP `Project` is also
-       * the `projectId` of the FirebaseProject.
+       * the `project_id` of the FirebaseProject.
        */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
       /** The resource name of the GCP `Project` to which Firebase resources will be added, in the format:
-     projects/projectId After calling `AddFirebase`, the [`projectId`](https://cloud.google.com
+     projects/PROJECT_NUMBER After calling `AddFirebase`, the [`project_id`](https://cloud.google.com
      /resource-manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP `Project` is
-     also the `projectId` of the FirebaseProject.
+     also the `project_id` of the FirebaseProject.
        */
       public java.lang.String getProject() {
         return project;
@@ -688,10 +689,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The resource name of the GCP `Project` to which Firebase resources will be added, in the
-       * format: projects/projectId After calling `AddFirebase`, the
-       * [`projectId`](https://cloud.google.com/resource-
+       * format: projects/PROJECT_NUMBER After calling `AddFirebase`, the
+       * [`project_id`](https://cloud.google.com/resource-
        * manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP `Project` is also
-       * the `projectId` of the FirebaseProject.
+       * the `project_id` of the FirebaseProject.
        */
       public AddFirebase setProject(java.lang.String project) {
         if (!getSuppressPatternChecks()) {
@@ -756,7 +757,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * @param parent The parent `FirebaseProject` to link to an existing Google Analytics
     account, in the format:
-     *        projects/projectId
+     *        projects/PROJECT_NUMBER
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest}
      * @return the request
      */
@@ -825,7 +826,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * @param parent The parent `FirebaseProject` to link to an existing Google Analytics
     account, in the format:
-     *        projects/projectId
+     *        projects/PROJECT_NUMBER
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest}
        * @since 1.13
        */
@@ -896,13 +897,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The parent `FirebaseProject` to link to an existing Google Analytics account, in the
-       * format: projects/projectId
+       * format: projects/PROJECT_NUMBER
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** The parent `FirebaseProject` to link to an existing Google Analytics account, in the format:
-     projects/projectId
+     projects/PROJECT_NUMBER
        */
       public java.lang.String getParent() {
         return parent;
@@ -910,7 +911,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The parent `FirebaseProject` to link to an existing Google Analytics account, in the
-       * format: projects/projectId
+       * format: projects/PROJECT_NUMBER
        */
       public AddGoogleAnalytics setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -936,7 +937,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name The fully qualified resource name of the Project, in the format:
-    projects/projectId
+    projects/PROJECT_NUMBER
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -963,7 +964,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name The fully qualified resource name of the Project, in the format:
-    projects/projectId
+    projects/PROJECT_NUMBER
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1042,19 +1043,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format: projects/projectId
+       * The fully qualified resource name of the Project, in the format: projects/PROJECT_NUMBER
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name of the Project, in the format: projects/projectId
+      /** The fully qualified resource name of the Project, in the format: projects/PROJECT_NUMBER
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format: projects/projectId
+       * The fully qualified resource name of the Project, in the format: projects/PROJECT_NUMBER
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1083,7 +1084,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * parameters, call the {@link GetAdminSdkConfig#execute()} method to invoke the remote operation.
      *
      * @param name The fully qualified resource name of the Project, in the format:
-    projects/projectId/adminSdkConfig
+     *        projects/PROJECT_NUMBER/adminSdkConfig
      * @return the request
      */
     public GetAdminSdkConfig getAdminSdkConfig(java.lang.String name) throws java.io.IOException {
@@ -1114,7 +1115,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * invoking the constructor. </p>
        *
        * @param name The fully qualified resource name of the Project, in the format:
-    projects/projectId/adminSdkConfig
+     *        projects/PROJECT_NUMBER/adminSdkConfig
        * @since 1.13
        */
       protected GetAdminSdkConfig(java.lang.String name) {
@@ -1194,12 +1195,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The fully qualified resource name of the Project, in the format:
-       * projects/projectId/adminSdkConfig
+       * projects/PROJECT_NUMBER/adminSdkConfig
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name of the Project, in the format: projects/projectId/adminSdkConfig
+      /** The fully qualified resource name of the Project, in the format:
+     projects/PROJECT_NUMBER/adminSdkConfig
        */
       public java.lang.String getName() {
         return name;
@@ -1207,7 +1209,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The fully qualified resource name of the Project, in the format:
-       * projects/projectId/adminSdkConfig
+       * projects/PROJECT_NUMBER/adminSdkConfig
        */
       public GetAdminSdkConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1236,7 +1238,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * parameters, call the {@link GetAnalyticsDetails#execute()} method to invoke the remote operation.
      *
      * @param name The fully qualified resource name, in the format:
-    projects/projectId/analyticsDetails
+    projects/PROJECT_NUMBER/analyticsDetails
      * @return the request
      */
     public GetAnalyticsDetails getAnalyticsDetails(java.lang.String name) throws java.io.IOException {
@@ -1267,7 +1269,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * invoking the constructor. </p>
        *
        * @param name The fully qualified resource name, in the format:
-    projects/projectId/analyticsDetails
+    projects/PROJECT_NUMBER/analyticsDetails
        * @since 1.13
        */
       protected GetAnalyticsDetails(java.lang.String name) {
@@ -1346,19 +1348,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The fully qualified resource name, in the format: projects/projectId/analyticsDetails
+       * The fully qualified resource name, in the format: projects/PROJECT_NUMBER/analyticsDetails
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name, in the format: projects/projectId/analyticsDetails
+      /** The fully qualified resource name, in the format: projects/PROJECT_NUMBER/analyticsDetails
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The fully qualified resource name, in the format: projects/projectId/analyticsDetails
+       * The fully qualified resource name, in the format: projects/PROJECT_NUMBER/analyticsDetails
        */
       public GetAnalyticsDetails setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1749,7 +1751,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * @param parent The parent `FirebaseProject` to unlink from its Google Analytics account,
     in the format:
-     *        projects/projectId
+     *        projects/PROJECT_NUMBER
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest}
      * @return the request
      */
@@ -1791,7 +1793,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * @param parent The parent `FirebaseProject` to unlink from its Google Analytics account,
     in the format:
-     *        projects/projectId
+     *        projects/PROJECT_NUMBER
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest}
        * @since 1.13
        */
@@ -1862,13 +1864,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
-       * projects/projectId
+       * projects/PROJECT_NUMBER
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
-     projects/projectId
+     projects/PROJECT_NUMBER
        */
       public java.lang.String getParent() {
         return parent;
@@ -1876,7 +1878,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
-       * projects/projectId
+       * projects/PROJECT_NUMBER
        */
       public RemoveAnalytics setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -1905,7 +1907,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * parameters, call the {@link SearchApps#execute()} method to invoke the remote operation.
      *
      * @param parent The parent Project for which to list Apps, in the format:
-    projects/projectId
+    projects/PROJECT_NUMBER
      * @return the request
      */
     public SearchApps searchApps(java.lang.String parent) throws java.io.IOException {
@@ -1936,7 +1938,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent The parent Project for which to list Apps, in the format:
-    projects/projectId
+    projects/PROJECT_NUMBER
        * @since 1.13
        */
       protected SearchApps(java.lang.String parent) {
@@ -2015,19 +2017,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The parent Project for which to list Apps, in the format: projects/projectId
+       * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The parent Project for which to list Apps, in the format: projects/projectId
+      /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The parent Project for which to list Apps, in the format: projects/projectId
+       * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
        */
       public SearchApps setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -2136,7 +2138,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent The parent Project in which to create an App, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
        * @return the request
        */
@@ -2169,7 +2171,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The parent Project in which to create an App, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
          * @since 1.13
          */
@@ -2239,19 +2241,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project in which to create an App, in the format: projects/projectId
+        /** The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2277,12 +2279,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/androidApps/appId
-      As
-       *        an appId is a unique identifier, the Unique Resource
-      from Sub-Collection access pattern
-       *        may be used here, in the format:
-      projects/-/androidApps/appId
+       *        projects/PROJECT_NUMBER/androidApps/APP_ID
+      As an APP_ID is a unique identifier, the Unique
+       *        Resource
+      from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/androidApps/APP_ID
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2309,12 +2310,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/androidApps/appId
-      As
-       *        an appId is a unique identifier, the Unique Resource
-      from Sub-Collection access pattern
-       *        may be used here, in the format:
-      projects/-/androidApps/appId
+       *        projects/PROJECT_NUMBER/androidApps/APP_ID
+      As an APP_ID is a unique identifier, the Unique
+       *        Resource
+      from Sub-Collection access pattern may be used here, in the format:
+       *        projects/-/androidApps/APP_ID
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2394,16 +2394,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The fully qualified resource name of the App, in the format:
-         * projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/appId
+         * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
+         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/androidApps/APP_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/projectId/androidApps/appId
-       As an appId is a unique identifier, the Unique Resource from Sub-Collection access pattern may be
-       used here, in the format: projects/-/androidApps/appId
+        /** The fully qualified resource name of the App, in the format:
+       projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the Unique Resource
+       from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
          */
         public java.lang.String getName() {
           return name;
@@ -2411,9 +2411,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The fully qualified resource name of the App, in the format:
-         * projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/appId
+         * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
+         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/androidApps/APP_ID
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2439,11 +2439,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
        *
        * @param name The resource name of the App configuration to download, in the format:
-       *        projects/projectId/androidApps/appId/config
-      As an appId is a unique identifier, the Unique
-       *        Resource
+       *        projects/PROJECT_NUMBER/androidApps/APP_ID/config
+      As an APP_ID is a unique identifier, the
+       *        Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/androidApps/appId
+       *        projects/-/androidApps/APP_ID
        * @return the request
        */
       public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -2471,11 +2471,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The resource name of the App configuration to download, in the format:
-       *        projects/projectId/androidApps/appId/config
-      As an appId is a unique identifier, the Unique
-       *        Resource
+       *        projects/PROJECT_NUMBER/androidApps/APP_ID/config
+      As an APP_ID is a unique identifier, the
+       *        Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/androidApps/appId
+       *        projects/-/androidApps/APP_ID
          * @since 1.13
          */
         protected GetConfig(java.lang.String name) {
@@ -2555,16 +2555,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/projectId/androidApps/appId/config As an appId is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/appId
+         * projects/PROJECT_NUMBER/androidApps/APP_ID/config As an APP_ID is a unique identifier,
+         * the Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/androidApps/APP_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the App configuration to download, in the format:
-       projects/projectId/androidApps/appId/config As an appId is a unique identifier, the Unique Resource
-       from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/appId
+       projects/PROJECT_NUMBER/androidApps/APP_ID/config As an APP_ID is a unique identifier, the Unique
+       Resource from Sub-Collection access pattern may be used here, in the format:
+       projects/-/androidApps/APP_ID
          */
         public java.lang.String getName() {
           return name;
@@ -2572,9 +2573,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/projectId/androidApps/appId/config As an appId is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/appId
+         * projects/PROJECT_NUMBER/androidApps/APP_ID/config As an APP_ID is a unique identifier,
+         * the Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/androidApps/APP_ID
          */
         public GetConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2603,7 +2604,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent The parent Project for which to list Apps, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2633,7 +2634,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The parent Project for which to list Apps, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2712,19 +2713,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/projectId
+        /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2928,22 +2929,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-         * `packageName` are all immutable.
+         * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
+         * and `package_name` are all immutable.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-       `packageName` are all immutable.
+        /** Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`, and
+       `package_name` are all immutable.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-         * `packageName` are all immutable.
+         * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
+         * and `package_name` are all immutable.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -2985,11 +2986,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent The parent App to which a SHA certificate will be added, in the format:
-         *        projects/projectId/androidApps/appId
-        As an appId is a unique identifier, the Unique
+         *        projects/PROJECT_NUMBER/androidApps/APP_ID
+        As an APP_ID is a unique identifier, the Unique
          *        Resource
         from Sub-Collection access pattern may be used here, in the format:
-         *        projects/-/androidApps/appId
+         *        projects/-/androidApps/APP_ID
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.ShaCertificate}
          * @return the request
          */
@@ -3018,11 +3019,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent The parent App to which a SHA certificate will be added, in the format:
-         *        projects/projectId/androidApps/appId
-        As an appId is a unique identifier, the Unique
+         *        projects/PROJECT_NUMBER/androidApps/APP_ID
+        As an APP_ID is a unique identifier, the Unique
          *        Resource
         from Sub-Collection access pattern may be used here, in the format:
-         *        projects/-/androidApps/appId
+         *        projects/-/androidApps/APP_ID
            * @param content the {@link com.google.api.services.firebase.v1beta1.model.ShaCertificate}
            * @since 1.13
            */
@@ -3093,16 +3094,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The parent App to which a SHA certificate will be added, in the format:
-           * projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique
-           * Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/appId
+           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
+           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+           * projects/-/androidApps/APP_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent App to which a SHA certificate will be added, in the format:
-         projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique Resource from
-         Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/appId
+         projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the Unique Resource
+         from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
            */
           public java.lang.String getParent() {
             return parent;
@@ -3110,9 +3111,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The parent App to which a SHA certificate will be added, in the format:
-           * projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique
-           * Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/appId
+           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
+           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+           * projects/-/androidApps/APP_ID
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3138,9 +3139,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name The fully qualified resource name of the `sha-key`, in the format:
-         *        projects/projectId/androidApps/appId/sha/shaId
-        You can obtain the full name from the
-         *        response of
+         *        projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
+        You can obtain the full name from
+         *        the response of
         [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
          *        [`CreateShaCertificate`](../projects.androidApps.sha/create).
          * @return the request
@@ -3170,9 +3171,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The fully qualified resource name of the `sha-key`, in the format:
-         *        projects/projectId/androidApps/appId/sha/shaId
-        You can obtain the full name from the
-         *        response of
+         *        projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
+        You can obtain the full name from
+         *        the response of
         [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
          *        [`CreateShaCertificate`](../projects.androidApps.sha/create).
            * @since 1.13
@@ -3244,16 +3245,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The fully qualified resource name of the `sha-key`, in the format:
-           * projects/projectId/androidApps/appId/sha/shaId You can obtain the full name from the
-           * response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
-           * [`CreateShaCertificate`](../projects.androidApps.sha/create).
+           * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID You can obtain the full name from
+           * the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the
+           * original [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The fully qualified resource name of the `sha-key`, in the format:
-         projects/projectId/androidApps/appId/sha/shaId You can obtain the full name from the response of
-         [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+         projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID You can obtain the full name from the
+         response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
          [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           public java.lang.String getName() {
@@ -3262,9 +3263,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The fully qualified resource name of the `sha-key`, in the format:
-           * projects/projectId/androidApps/appId/sha/shaId You can obtain the full name from the
-           * response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
-           * [`CreateShaCertificate`](../projects.androidApps.sha/create).
+           * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID You can obtain the full name from
+           * the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the
+           * original [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3290,11 +3291,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent The parent App for which to list SHA certificates, in the format:
-         *        projects/projectId/androidApps/appId
-        As an appId is a unique identifier, the Unique
+         *        projects/PROJECT_NUMBER/androidApps/APP_ID
+        As an APP_ID is a unique identifier, the Unique
          *        Resource
         from Sub-Collection access pattern may be used here, in the format:
-         *        projects/-/androidApps/appId
+         *        projects/-/androidApps/APP_ID
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3321,11 +3322,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent The parent App for which to list SHA certificates, in the format:
-         *        projects/projectId/androidApps/appId
-        As an appId is a unique identifier, the Unique
+         *        projects/PROJECT_NUMBER/androidApps/APP_ID
+        As an APP_ID is a unique identifier, the Unique
          *        Resource
         from Sub-Collection access pattern may be used here, in the format:
-         *        projects/-/androidApps/appId
+         *        projects/-/androidApps/APP_ID
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3405,16 +3406,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The parent App for which to list SHA certificates, in the format:
-           * projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique
-           * Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/appId
+           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
+           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+           * projects/-/androidApps/APP_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent App for which to list SHA certificates, in the format:
-         projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique Resource from
-         Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/appId
+         projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the Unique Resource
+         from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
            */
           public java.lang.String getParent() {
             return parent;
@@ -3422,9 +3423,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The parent App for which to list SHA certificates, in the format:
-           * projects/projectId/androidApps/appId As an appId is a unique identifier, the Unique
-           * Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/appId
+           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
+           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+           * projects/-/androidApps/APP_ID
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3477,12 +3478,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This call checks for any possible [location restrictions](https://cloud.google.com/resource-
        * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
        * return a subset of all possible GCP resource locations. To list all GCP resource locations
-       * (regardless of any restrictions), call the endpoint without specifying a `projectId` (that is,
-       * `/v1beta1/{parent=projects/-}/listAvailableLocations`).
-       *
-       * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
-       * of the project. Calls without a specified project do not require any specific project
-       * permissions.
+       * (regardless of any restrictions), call the endpoint without specifying a `PROJECT_NUMBER` (that
+       * is, `/v1beta1/{parent=projects/-}/listAvailableLocations`).  To call `ListAvailableLocations`
+       * with a specified project, a member must be at minimum a Viewer of the project. Calls without a
+       * specified project do not require any specific project permissions.
        *
        * Create a request for the method "availableLocations.list".
        *
@@ -3490,7 +3489,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent The Project for which to list GCP resource locations, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
       If no
        *        project is specified (that is, `projects/-`), the returned list
       does not take into account
@@ -3524,12 +3523,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * This call checks for any possible [location restrictions](https://cloud.google.com/resource-
          * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
          * return a subset of all possible GCP resource locations. To list all GCP resource locations
-         * (regardless of any restrictions), call the endpoint without specifying a `projectId` (that is,
-         * `/v1beta1/{parent=projects/-}/listAvailableLocations`).
-         *
-         * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
-         * of the project. Calls without a specified project do not require any specific project
-         * permissions.
+         * (regardless of any restrictions), call the endpoint without specifying a `PROJECT_NUMBER` (that
+         * is, `/v1beta1/{parent=projects/-}/listAvailableLocations`).  To call `ListAvailableLocations`
+         * with a specified project, a member must be at minimum a Viewer of the project. Calls without a
+         * specified project do not require any specific project permissions.
          *
          * Create a request for the method "availableLocations.list".
          *
@@ -3539,7 +3536,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The Project for which to list GCP resource locations, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
       If no
        *        project is specified (that is, `projects/-`), the returned list
       does not take into account
@@ -3623,14 +3620,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The Project for which to list GCP resource locations, in the format: projects/projectId
-         * If no project is specified (that is, `projects/-`), the returned list does not take into
-         * account org-specific or project-specific location restrictions.
+         * The Project for which to list GCP resource locations, in the format:
+         * projects/PROJECT_NUMBER If no project is specified (that is, `projects/-`), the returned
+         * list does not take into account org-specific or project-specific location restrictions.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The Project for which to list GCP resource locations, in the format: projects/projectId If no
+        /** The Project for which to list GCP resource locations, in the format: projects/PROJECT_NUMBER If no
        project is specified (that is, `projects/-`), the returned list does not take into account org-
        specific or project-specific location restrictions.
          */
@@ -3639,9 +3636,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The Project for which to list GCP resource locations, in the format: projects/projectId
-         * If no project is specified (that is, `projects/-`), the returned list does not take into
-         * account org-specific or project-specific location restrictions.
+         * The Project for which to list GCP resource locations, in the format:
+         * projects/PROJECT_NUMBER If no project is specified (that is, `projects/-`), the returned
+         * list does not take into account org-specific or project-specific location restrictions.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3775,7 +3772,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * @param parent The resource name of the Project for which the default GCP resource
       location will be set, in the
        *        format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
        * @return the request
        */
@@ -3834,7 +3831,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * @param parent The resource name of the Project for which the default GCP resource
       location will be set, in the
        *        format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
          * @since 1.13
          */
@@ -3905,13 +3902,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the Project for which the default GCP resource location will be set,
-         * in the format: projects/projectId
+         * in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** The resource name of the Project for which the default GCP resource location will be set, in the
-       format: projects/projectId
+       format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
@@ -3919,7 +3916,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the Project for which the default GCP resource location will be set,
-         * in the format: projects/projectId
+         * in the format: projects/PROJECT_NUMBER
          */
         public Finalize setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3971,7 +3968,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent The parent Project in which to create an App, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
        * @return the request
        */
@@ -4004,7 +4001,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The parent Project in which to create an App, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
          * @since 1.13
          */
@@ -4074,19 +4071,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project in which to create an App, in the format: projects/projectId
+        /** The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4112,12 +4109,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/iosApps/appId
-      As an
-       *        appId is a unique identifier, the Unique Resource
-      from Sub-Collection access pattern may
-       *        be used here, in the format:
-      projects/-/iosApps/appId
+      projects/PROJECT_NUMBER/iosApps/APP_ID
+       *        As an APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access
+       *        pattern may be used here, in the format:
+      projects/-/iosApps/APP_ID
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4144,12 +4140,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/iosApps/appId
-      As an
-       *        appId is a unique identifier, the Unique Resource
-      from Sub-Collection access pattern may
-       *        be used here, in the format:
-      projects/-/iosApps/appId
+      projects/PROJECT_NUMBER/iosApps/APP_ID
+       *        As an APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access
+       *        pattern may be used here, in the format:
+      projects/-/iosApps/APP_ID
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4229,16 +4224,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The fully qualified resource name of the App, in the format:
-         * projects/projectId/iosApps/appId As an appId is a unique identifier, the Unique Resource
-         * from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/appId
+         * projects/PROJECT_NUMBER/iosApps/APP_ID As an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/iosApps/APP_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/projectId/iosApps/appId As an
-       appId is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used
-       here, in the format: projects/-/iosApps/appId
+        /** The fully qualified resource name of the App, in the format: projects/PROJECT_NUMBER/iosApps/APP_ID
+       As an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be
+       used here, in the format: projects/-/iosApps/APP_ID
          */
         public java.lang.String getName() {
           return name;
@@ -4246,9 +4241,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The fully qualified resource name of the App, in the format:
-         * projects/projectId/iosApps/appId As an appId is a unique identifier, the Unique Resource
-         * from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/appId
+         * projects/PROJECT_NUMBER/iosApps/APP_ID As an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/iosApps/APP_ID
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4274,11 +4269,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
        *
        * @param name The resource name of the App configuration to download, in the format:
-       *        projects/projectId/iosApps/appId/config
-      As an appId is a unique identifier, the Unique
-       *        Resource
+       *        projects/PROJECT_NUMBER/iosApps/APP_ID/config
+      As an APP_ID is a unique identifier, the
+       *        Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/iosApps/appId
+       *        projects/-/iosApps/APP_ID
        * @return the request
        */
       public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -4306,11 +4301,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The resource name of the App configuration to download, in the format:
-       *        projects/projectId/iosApps/appId/config
-      As an appId is a unique identifier, the Unique
-       *        Resource
+       *        projects/PROJECT_NUMBER/iosApps/APP_ID/config
+      As an APP_ID is a unique identifier, the
+       *        Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/iosApps/appId
+       *        projects/-/iosApps/APP_ID
          * @since 1.13
          */
         protected GetConfig(java.lang.String name) {
@@ -4390,16 +4385,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/projectId/iosApps/appId/config As an appId is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/appId
+         * projects/PROJECT_NUMBER/iosApps/APP_ID/config As an APP_ID is a unique identifier, the
+         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/iosApps/APP_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the App configuration to download, in the format:
-       projects/projectId/iosApps/appId/config As an appId is a unique identifier, the Unique Resource
-       from Sub-Collection access pattern may be used here, in the format: projects/-/iosApps/appId
+       projects/PROJECT_NUMBER/iosApps/APP_ID/config As an APP_ID is a unique identifier, the Unique
+       Resource from Sub-Collection access pattern may be used here, in the format:
+       projects/-/iosApps/APP_ID
          */
         public java.lang.String getName() {
           return name;
@@ -4407,9 +4403,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/projectId/iosApps/appId/config As an appId is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/appId
+         * projects/PROJECT_NUMBER/iosApps/APP_ID/config As an APP_ID is a unique identifier, the
+         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/iosApps/APP_ID
          */
         public GetConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4438,7 +4434,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent The parent Project for which to list Apps, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4468,7 +4464,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The parent Project for which to list Apps, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4547,19 +4543,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/projectId
+        /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4825,7 +4821,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent The parent Project in which to create an App, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
        * @return the request
        */
@@ -4858,7 +4854,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The parent Project in which to create an App, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
          * @since 1.13
          */
@@ -4928,19 +4924,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project in which to create an App, in the format: projects/projectId
+        /** The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4966,12 +4962,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/webApps/appId
-      As an
-       *        appId is a unique identifier, the Unique Resource
-      from Sub-Collection access pattern may
-       *        be used here, in the format:
-      projects/-/webApps/appId
+      projects/PROJECT_NUMBER/webApps/APP_ID
+       *        As an APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access
+       *        pattern may be used here, in the format:
+      projects/-/webApps/APP_ID
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4998,12 +4993,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/webApps/appId
-      As an
-       *        appId is a unique identifier, the Unique Resource
-      from Sub-Collection access pattern may
-       *        be used here, in the format:
-      projects/-/webApps/appId
+      projects/PROJECT_NUMBER/webApps/APP_ID
+       *        As an APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access
+       *        pattern may be used here, in the format:
+      projects/-/webApps/APP_ID
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5083,16 +5077,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The fully qualified resource name of the App, in the format:
-         * projects/projectId/webApps/appId As an appId is a unique identifier, the Unique Resource
-         * from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/appId
+         * projects/PROJECT_NUMBER/webApps/APP_ID As an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/webApps/APP_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/projectId/webApps/appId As an
-       appId is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used
-       here, in the format: projects/-/webApps/appId
+        /** The fully qualified resource name of the App, in the format: projects/PROJECT_NUMBER/webApps/APP_ID
+       As an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be
+       used here, in the format: projects/-/webApps/APP_ID
          */
         public java.lang.String getName() {
           return name;
@@ -5100,9 +5094,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The fully qualified resource name of the App, in the format:
-         * projects/projectId/webApps/appId As an appId is a unique identifier, the Unique Resource
-         * from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/appId
+         * projects/PROJECT_NUMBER/webApps/APP_ID As an APP_ID is a unique identifier, the Unique
+         * Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/webApps/APP_ID
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5128,11 +5122,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
        *
        * @param name The resource name of the App configuration to download, in the format:
-       *        projects/projectId/webApps/appId/config
-      As an appId is a unique identifier, the Unique
-       *        Resource
+       *        projects/PROJECT_NUMBER/webApps/APP_ID/config
+      As an APP_ID is a unique identifier, the
+       *        Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/webApps/appId
+       *        projects/-/webApps/APP_ID
        * @return the request
        */
       public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -5160,11 +5154,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The resource name of the App configuration to download, in the format:
-       *        projects/projectId/webApps/appId/config
-      As an appId is a unique identifier, the Unique
-       *        Resource
+       *        projects/PROJECT_NUMBER/webApps/APP_ID/config
+      As an APP_ID is a unique identifier, the
+       *        Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/webApps/appId
+       *        projects/-/webApps/APP_ID
          * @since 1.13
          */
         protected GetConfig(java.lang.String name) {
@@ -5244,16 +5238,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/projectId/webApps/appId/config As an appId is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/appId
+         * projects/PROJECT_NUMBER/webApps/APP_ID/config As an APP_ID is a unique identifier, the
+         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/webApps/APP_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the App configuration to download, in the format:
-       projects/projectId/webApps/appId/config As an appId is a unique identifier, the Unique Resource
-       from Sub-Collection access pattern may be used here, in the format: projects/-/webApps/appId
+       projects/PROJECT_NUMBER/webApps/APP_ID/config As an APP_ID is a unique identifier, the Unique
+       Resource from Sub-Collection access pattern may be used here, in the format:
+       projects/-/webApps/APP_ID
          */
         public java.lang.String getName() {
           return name;
@@ -5261,9 +5256,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/projectId/webApps/appId/config As an appId is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/appId
+         * projects/PROJECT_NUMBER/webApps/APP_ID/config As an APP_ID is a unique identifier, the
+         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
+         * projects/-/webApps/APP_ID
          */
         public GetConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5292,7 +5287,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent The parent Project for which to list Apps, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5322,7 +5317,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The parent Project for which to list Apps, in the format:
-      projects/projectId
+      projects/PROJECT_NUMBER
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5401,19 +5396,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/projectId
+        /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

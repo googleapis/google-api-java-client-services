@@ -51,7 +51,7 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the GCP `Project` to which Firebase resources can be added, in the format:
-   * projects/projectId
+   * projects/PROJECT_NUMBER
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the GCP `Project` to which Firebase resources can be added, in the format:
-   * projects/projectId
+   * projects/PROJECT_NUMBER
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -112,7 +112,7 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the GCP `Project` to which Firebase resources can be added, in the format:
-   * projects/projectId
+   * projects/PROJECT_NUMBER
    * @param project project or {@code null} for none
    */
   public ProjectInfo setProject(java.lang.String project) {

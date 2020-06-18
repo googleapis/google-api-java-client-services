@@ -17,7 +17,9 @@
 package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
- * A time window specified by its `start_time` and `end_time`.
+ * `CustomLevel` is an `AccessLevel` using the Cloud Common Expression Language to represent the
+ * necessary conditions for the level to apply to a request. See CEL spec at:
+ * https://github.com/google/cel-spec
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -27,67 +29,40 @@ package com.google.api.services.cloudasset.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TimeWindow extends com.google.api.client.json.GenericJson {
+public final class GoogleIdentityAccesscontextmanagerV1CustomLevel extends com.google.api.client.json.GenericJson {
 
   /**
-   * End time of the time window (inclusive). If not specified, the current timestamp is used
-   * instead.
+   * Required. A Cloud CEL expression evaluating to a boolean.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endTime;
+  private Expr expr;
 
   /**
-   * Start time of the time window (exclusive).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String startTime;
-
-  /**
-   * End time of the time window (inclusive). If not specified, the current timestamp is used
-   * instead.
+   * Required. A Cloud CEL expression evaluating to a boolean.
    * @return value or {@code null} for none
    */
-  public String getEndTime() {
-    return endTime;
+  public Expr getExpr() {
+    return expr;
   }
 
   /**
-   * End time of the time window (inclusive). If not specified, the current timestamp is used
-   * instead.
-   * @param endTime endTime or {@code null} for none
+   * Required. A Cloud CEL expression evaluating to a boolean.
+   * @param expr expr or {@code null} for none
    */
-  public TimeWindow setEndTime(String endTime) {
-    this.endTime = endTime;
-    return this;
-  }
-
-  /**
-   * Start time of the time window (exclusive).
-   * @return value or {@code null} for none
-   */
-  public String getStartTime() {
-    return startTime;
-  }
-
-  /**
-   * Start time of the time window (exclusive).
-   * @param startTime startTime or {@code null} for none
-   */
-  public TimeWindow setStartTime(String startTime) {
-    this.startTime = startTime;
+  public GoogleIdentityAccesscontextmanagerV1CustomLevel setExpr(Expr expr) {
+    this.expr = expr;
     return this;
   }
 
   @Override
-  public TimeWindow set(String fieldName, Object value) {
-    return (TimeWindow) super.set(fieldName, value);
+  public GoogleIdentityAccesscontextmanagerV1CustomLevel set(String fieldName, Object value) {
+    return (GoogleIdentityAccesscontextmanagerV1CustomLevel) super.set(fieldName, value);
   }
 
   @Override
-  public TimeWindow clone() {
-    return (TimeWindow) super.clone();
+  public GoogleIdentityAccesscontextmanagerV1CustomLevel clone() {
+    return (GoogleIdentityAccesscontextmanagerV1CustomLevel) super.clone();
   }
 
 }

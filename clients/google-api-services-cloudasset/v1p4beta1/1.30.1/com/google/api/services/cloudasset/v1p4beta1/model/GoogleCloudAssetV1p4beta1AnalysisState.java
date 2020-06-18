@@ -17,8 +17,8 @@
 package com.google.api.services.cloudasset.v1p4beta1.model;
 
 /**
- * Represents analysis state of each node in the result graph or non-critical errors in the
- * response.
+ * Represents the detailed state of an entity under analysis, such as a resource, an identity or an
+ * access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -38,9 +38,10 @@ public final class GoogleCloudAssetV1p4beta1AnalysisState extends com.google.api
   private java.lang.String cause;
 
   /**
-   * The Google standard error code that best describes the state. For example: - OK means the node
-   * has been successfully explored; - PERMISSION_DENIED means an access denied error is
-   * encountered; - DEADLINE_EXCEEDED means the node hasn't been explored in time;
+   * The Google standard error code that best describes the state. For example: - OK means the
+   * analysis on this entity has been successfully finished; - PERMISSION_DENIED means an access
+   * denied error is encountered; - DEADLINE_EXCEEDED means the analysis on this entity hasn't been
+   * started in time;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,9 +65,10 @@ public final class GoogleCloudAssetV1p4beta1AnalysisState extends com.google.api
   }
 
   /**
-   * The Google standard error code that best describes the state. For example: - OK means the node
-   * has been successfully explored; - PERMISSION_DENIED means an access denied error is
-   * encountered; - DEADLINE_EXCEEDED means the node hasn't been explored in time;
+   * The Google standard error code that best describes the state. For example: - OK means the
+   * analysis on this entity has been successfully finished; - PERMISSION_DENIED means an access
+   * denied error is encountered; - DEADLINE_EXCEEDED means the analysis on this entity hasn't been
+   * started in time;
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -74,9 +76,10 @@ public final class GoogleCloudAssetV1p4beta1AnalysisState extends com.google.api
   }
 
   /**
-   * The Google standard error code that best describes the state. For example: - OK means the node
-   * has been successfully explored; - PERMISSION_DENIED means an access denied error is
-   * encountered; - DEADLINE_EXCEEDED means the node hasn't been explored in time;
+   * The Google standard error code that best describes the state. For example: - OK means the
+   * analysis on this entity has been successfully finished; - PERMISSION_DENIED means an access
+   * denied error is encountered; - DEADLINE_EXCEEDED means the analysis on this entity hasn't been
+   * started in time;
    * @param code code or {@code null} for none
    */
   public GoogleCloudAssetV1p4beta1AnalysisState setCode(java.lang.String code) {

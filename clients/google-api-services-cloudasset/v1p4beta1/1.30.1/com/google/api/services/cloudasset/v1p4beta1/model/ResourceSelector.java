@@ -18,8 +18,7 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 
 /**
  * Specifies the resource to analyze for access policies, which may be set directly on the resource,
- * or on ancestors such as organizations, folders or projects. Either ResourceSelector or
- * IdentitySelector must be specified in a request.
+ * or on ancestors such as organizations, folders or projects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

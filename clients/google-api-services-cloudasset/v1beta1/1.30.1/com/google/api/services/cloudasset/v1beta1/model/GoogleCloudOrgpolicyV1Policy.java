@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudasset.v1.model;
+package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
  * Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
- * Representation of a cloud resource.
+ * A representation of a Google Cloud resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,25 +30,28 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The content of the resource, in which some sensitive fields are scrubbed away and may not be
-   * present.
+   * The content of the resource, in which some sensitive fields are removed and may not be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> data;
 
   /**
-   * The URL of the discovery document containing the resource's JSON schema. For example:
-   * `"https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"`. It will be left unspecified
-   * for resources without a discovery-based API, such as Cloud Bigtable.
+   * The URL of the discovery document containing the resource's JSON schema. Example:
+   * `https://www.googleapis.com/discovery/v1/apis/compute/v1/rest`
+   *
+   * This value is unspecified for resources that do not have an API based on a discovery document,
+   * such as Cloud Bigtable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String discoveryDocumentUri;
 
   /**
-   * The JSON schema name listed in the discovery document. Example: "Project". It will be left
-   * unspecified for resources (such as Cloud Bigtable) without a discovery-based API.
+   * The JSON schema name listed in the discovery document. Example: `Project`
+   *
+   * This value is unspecified for resources that do not have an API based on a discovery document,
+   * such as Cloud Bigtable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,35 +62,36 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
    * information.
    *
-   * For GCP assets, it is the parent resource defined in the [Cloud IAM policy
-   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). For example:
-   * `"//cloudresourcemanager.googleapis.com/projects/my_project_123"`.
+   * For Google Cloud assets, this value is the parent resource defined in the [Cloud IAM policy
+   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
+   * `//cloudresourcemanager.googleapis.com/projects/my_project_123`
    *
-   * For third-party assets, it is up to the users to define.
+   * For third-party assets, this field may be set differently.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * The REST URL for accessing the resource. An HTTP GET operation using this URL returns the
+   * The REST URL for accessing the resource. An HTTP `GET` request using this URL returns the
    * resource itself. Example: `https://cloudresourcemanager.googleapis.com/v1/projects/my-
-   * project-123`. It will be left unspecified for resources without a REST API.
+   * project-123`
+   *
+   * This value is unspecified for resources without a REST API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceUrl;
 
   /**
-   * The API version. Example: "v1".
+   * The API version. Example: `v1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * The content of the resource, in which some sensitive fields are scrubbed away and may not be
-   * present.
+   * The content of the resource, in which some sensitive fields are removed and may not be present.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getData() {
@@ -95,8 +99,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the resource, in which some sensitive fields are scrubbed away and may not be
-   * present.
+   * The content of the resource, in which some sensitive fields are removed and may not be present.
    * @param data data or {@code null} for none
    */
   public Resource setData(java.util.Map<String, java.lang.Object> data) {
@@ -105,9 +108,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the discovery document containing the resource's JSON schema. For example:
-   * `"https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"`. It will be left unspecified
-   * for resources without a discovery-based API, such as Cloud Bigtable.
+   * The URL of the discovery document containing the resource's JSON schema. Example:
+   * `https://www.googleapis.com/discovery/v1/apis/compute/v1/rest`
+   *
+   * This value is unspecified for resources that do not have an API based on a discovery document,
+   * such as Cloud Bigtable.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiscoveryDocumentUri() {
@@ -115,9 +120,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the discovery document containing the resource's JSON schema. For example:
-   * `"https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"`. It will be left unspecified
-   * for resources without a discovery-based API, such as Cloud Bigtable.
+   * The URL of the discovery document containing the resource's JSON schema. Example:
+   * `https://www.googleapis.com/discovery/v1/apis/compute/v1/rest`
+   *
+   * This value is unspecified for resources that do not have an API based on a discovery document,
+   * such as Cloud Bigtable.
    * @param discoveryDocumentUri discoveryDocumentUri or {@code null} for none
    */
   public Resource setDiscoveryDocumentUri(java.lang.String discoveryDocumentUri) {
@@ -126,8 +133,10 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The JSON schema name listed in the discovery document. Example: "Project". It will be left
-   * unspecified for resources (such as Cloud Bigtable) without a discovery-based API.
+   * The JSON schema name listed in the discovery document. Example: `Project`
+   *
+   * This value is unspecified for resources that do not have an API based on a discovery document,
+   * such as Cloud Bigtable.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiscoveryName() {
@@ -135,8 +144,10 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The JSON schema name listed in the discovery document. Example: "Project". It will be left
-   * unspecified for resources (such as Cloud Bigtable) without a discovery-based API.
+   * The JSON schema name listed in the discovery document. Example: `Project`
+   *
+   * This value is unspecified for resources that do not have an API based on a discovery document,
+   * such as Cloud Bigtable.
    * @param discoveryName discoveryName or {@code null} for none
    */
   public Resource setDiscoveryName(java.lang.String discoveryName) {
@@ -149,11 +160,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
    * information.
    *
-   * For GCP assets, it is the parent resource defined in the [Cloud IAM policy
-   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). For example:
-   * `"//cloudresourcemanager.googleapis.com/projects/my_project_123"`.
+   * For Google Cloud assets, this value is the parent resource defined in the [Cloud IAM policy
+   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
+   * `//cloudresourcemanager.googleapis.com/projects/my_project_123`
    *
-   * For third-party assets, it is up to the users to define.
+   * For third-party assets, this field may be set differently.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -165,11 +176,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more
    * information.
    *
-   * For GCP assets, it is the parent resource defined in the [Cloud IAM policy
-   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). For example:
-   * `"//cloudresourcemanager.googleapis.com/projects/my_project_123"`.
+   * For Google Cloud assets, this value is the parent resource defined in the [Cloud IAM policy
+   * hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy). Example:
+   * `//cloudresourcemanager.googleapis.com/projects/my_project_123`
    *
-   * For third-party assets, it is up to the users to define.
+   * For third-party assets, this field may be set differently.
    * @param parent parent or {@code null} for none
    */
   public Resource setParent(java.lang.String parent) {
@@ -178,9 +189,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The REST URL for accessing the resource. An HTTP GET operation using this URL returns the
+   * The REST URL for accessing the resource. An HTTP `GET` request using this URL returns the
    * resource itself. Example: `https://cloudresourcemanager.googleapis.com/v1/projects/my-
-   * project-123`. It will be left unspecified for resources without a REST API.
+   * project-123`
+   *
+   * This value is unspecified for resources without a REST API.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUrl() {
@@ -188,9 +201,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The REST URL for accessing the resource. An HTTP GET operation using this URL returns the
+   * The REST URL for accessing the resource. An HTTP `GET` request using this URL returns the
    * resource itself. Example: `https://cloudresourcemanager.googleapis.com/v1/projects/my-
-   * project-123`. It will be left unspecified for resources without a REST API.
+   * project-123`
+   *
+   * This value is unspecified for resources without a REST API.
    * @param resourceUrl resourceUrl or {@code null} for none
    */
   public Resource setResourceUrl(java.lang.String resourceUrl) {
@@ -199,7 +214,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version. Example: "v1".
+   * The API version. Example: `v1`
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -207,7 +222,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version. Example: "v1".
+   * The API version. Example: `v1`
    * @param version version or {@code null} for none
    */
   public Resource setVersion(java.lang.String version) {

@@ -700,19 +700,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * End time of the time window (inclusive). Current timestamp if not specified.
+       * End time of the time window (inclusive). If not specified, the current timestamp is used
+       * instead.
        */
       @com.google.api.client.util.Key("readTimeWindow.endTime")
       private String readTimeWindowEndTime;
 
-      /** End time of the time window (inclusive). Current timestamp if not specified.
+      /** End time of the time window (inclusive). If not specified, the current timestamp is used instead.
        */
       public String getReadTimeWindowEndTime() {
         return readTimeWindowEndTime;
       }
 
       /**
-       * End time of the time window (inclusive). Current timestamp if not specified.
+       * End time of the time window (inclusive). If not specified, the current timestamp is used
+       * instead.
        */
       public BatchGetAssetsHistory setReadTimeWindowEndTime(String readTimeWindowEndTime) {
         this.readTimeWindowEndTime = readTimeWindowEndTime;
@@ -1298,19 +1300,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * End time of the time window (inclusive). Current timestamp if not specified.
+       * End time of the time window (inclusive). If not specified, the current timestamp is used
+       * instead.
        */
       @com.google.api.client.util.Key("readTimeWindow.endTime")
       private String readTimeWindowEndTime;
 
-      /** End time of the time window (inclusive). Current timestamp if not specified.
+      /** End time of the time window (inclusive). If not specified, the current timestamp is used instead.
        */
       public String getReadTimeWindowEndTime() {
         return readTimeWindowEndTime;
       }
 
       /**
-       * End time of the time window (inclusive). Current timestamp if not specified.
+       * End time of the time window (inclusive). If not specified, the current timestamp is used
+       * instead.
        */
       public BatchGetAssetsHistory setReadTimeWindowEndTime(String readTimeWindowEndTime) {
         this.readTimeWindowEndTime = readTimeWindowEndTime;

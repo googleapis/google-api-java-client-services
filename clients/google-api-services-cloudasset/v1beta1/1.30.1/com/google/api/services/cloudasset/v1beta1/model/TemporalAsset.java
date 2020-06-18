@@ -17,8 +17,8 @@
 package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
- * Temporal asset. In addition to the asset, the temporal asset includes the status of the asset and
- * valid from and to time of it.
+ * An asset in Google Cloud and its temporal metadata, including the time window when it was
+ * observed and its status during that window.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -31,14 +31,14 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class TemporalAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Asset.
+   * An asset in Google Cloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Asset asset;
 
   /**
-   * If the asset is deleted or not.
+   * Whether the asset has been deleted or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class TemporalAsset extends com.google.api.client.json.GenericJson 
   private TimeWindow window;
 
   /**
-   * Asset.
+   * An asset in Google Cloud.
    * @return value or {@code null} for none
    */
   public Asset getAsset() {
@@ -60,7 +60,7 @@ public final class TemporalAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Asset.
+   * An asset in Google Cloud.
    * @param asset asset or {@code null} for none
    */
   public TemporalAsset setAsset(Asset asset) {
@@ -69,7 +69,7 @@ public final class TemporalAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If the asset is deleted or not.
+   * Whether the asset has been deleted or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -77,7 +77,7 @@ public final class TemporalAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If the asset is deleted or not.
+   * Whether the asset has been deleted or not.
    * @param deleted deleted or {@code null} for none
    */
   public TemporalAsset setDeleted(java.lang.Boolean deleted) {

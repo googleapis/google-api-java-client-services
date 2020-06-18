@@ -1,80 +1,27 @@
 {
-  "version": "v1p4beta1",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        }
-      }
-    }
-  },
-  "canonicalName": "Cloud Asset",
-  "mtlsRootUrl": "https://cloudasset.mtls.googleapis.com/",
+  "revision": "20200613",
+  "ownerDomain": "google.com",
   "protocol": "rest",
+  "description": "The cloud asset API manages the history and inventory of cloud resources.",
+  "canonicalName": "Cloud Asset",
+  "version_module": true,
+  "id": "cloudasset:v1p4beta1",
+  "ownerName": "Google",
+  "discoveryVersion": "v1",
+  "basePath": "",
+  "kind": "discovery#restDescription",
+  "version": "v1p4beta1",
+  "name": "cloudasset",
+  "documentationLink": "https://cloud.google.com/asset-inventory/docs/quickstart",
+  "rootUrl": "https://cloudasset.googleapis.com/",
   "parameters": {
-    "upload_protocol": {
-      "type": "string",
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
-    },
-    "$.xgafv": {
-      "type": "string",
-      "location": "query",
-      "description": "V1 error format.",
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "enum": [
-        "1",
-        "2"
-      ]
-    },
-    "access_token": {
-      "description": "OAuth access token.",
-      "type": "string",
-      "location": "query"
-    },
     "key": {
-      "location": "query",
       "type": "string",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
-    },
-    "prettyPrint": {
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
       "location": "query"
     },
     "oauth_token": {
-      "location": "query",
-      "type": "string",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "alt": {
-      "type": "string",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "location": "query",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "default": "json",
-      "description": "Data format for response."
-    },
-    "fields": {
-      "location": "query",
-      "type": "string",
-      "description": "Selector specifying which fields to include in a partial response."
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "description": "OAuth 2.0 token for the current user.",
       "type": "string",
       "location": "query"
     },
@@ -83,14 +30,281 @@
       "description": "JSONP",
       "location": "query"
     },
+    "access_token": {
+      "type": "string",
+      "description": "OAuth access token.",
+      "location": "query"
+    },
     "uploadType": {
       "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
       "location": "query",
       "type": "string"
+    },
+    "upload_protocol": {
+      "type": "string",
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
+    },
+    "$.xgafv": {
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "type": "string",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "location": "query",
+      "description": "V1 error format."
+    },
+    "alt": {
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "description": "Data format for response.",
+      "default": "json",
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "type": "string",
+      "location": "query"
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "location": "query",
+      "default": "true"
+    },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+    },
+    "fields": {
+      "location": "query",
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response."
     }
   },
-  "title": "Cloud Asset API",
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
+  "servicePath": "",
+  "mtlsRootUrl": "https://cloudasset.mtls.googleapis.com/",
+  "baseUrl": "https://cloudasset.googleapis.com/",
+  "batchPath": "batch",
   "schemas": {
+    "AnalyzeIamPolicyResponse": {
+      "description": "A response message for AssetService.AnalyzeIamPolicy.",
+      "type": "object",
+      "properties": {
+        "fullyExplored": {
+          "type": "boolean",
+          "description": "Represents whether all entries in the main_analysis and\nservice_account_impersonation_analysis have been fully explored to\nanswer the query in the request."
+        },
+        "serviceAccountImpersonationAnalysis": {
+          "description": "The service account impersonation analysis if\nAnalyzeIamPolicyRequest.analyze_service_account_impersonation is\nenabled.",
+          "type": "array",
+          "items": {
+            "$ref": "IamPolicyAnalysis"
+          }
+        },
+        "nonCriticalErrors": {
+          "items": {
+            "$ref": "GoogleCloudAssetV1p4beta1AnalysisState"
+          },
+          "description": "A list of non-critical errors happened during the request handling to\nexplain why `fully_explored` is false, or empty if no error happened.",
+          "type": "array"
+        },
+        "mainAnalysis": {
+          "$ref": "IamPolicyAnalysis",
+          "description": "The main analysis that matches the original request."
+        }
+      },
+      "id": "AnalyzeIamPolicyResponse"
+    },
+    "ExportIamPolicyAnalysisRequest": {
+      "description": "A request message for AssetService.ExportIamPolicyAnalysis.",
+      "id": "ExportIamPolicyAnalysisRequest",
+      "properties": {
+        "options": {
+          "$ref": "Options",
+          "description": "Optional. The request options."
+        },
+        "analysisQuery": {
+          "description": "Required. The request query.",
+          "$ref": "IamPolicyAnalysisQuery"
+        },
+        "outputConfig": {
+          "$ref": "IamPolicyAnalysisOutputConfig",
+          "description": "Required. Output configuration indicating where the results will be output to."
+        }
+      },
+      "type": "object"
+    },
+    "GoogleCloudAssetV1p4beta1Resource": {
+      "properties": {
+        "analysisState": {
+          "$ref": "GoogleCloudAssetV1p4beta1AnalysisState",
+          "description": "The analysis state of this resource."
+        },
+        "fullResourceName": {
+          "description": "The [full resource\nname](https://cloud.google.com/asset-inventory/docs/resource-name-format)",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "A Google Cloud resource under analysis.",
+      "id": "GoogleCloudAssetV1p4beta1Resource"
+    },
+    "IamPolicyAnalysisQuery": {
+      "description": "IAM policy analysis query message.",
+      "id": "IamPolicyAnalysisQuery",
+      "properties": {
+        "resourceSelector": {
+          "description": "Optional. Specifies a resource for analysis. Either ResourceSelector or\nIdentitySelector must be specified.",
+          "$ref": "ResourceSelector"
+        },
+        "identitySelector": {
+          "$ref": "IdentitySelector",
+          "description": "Optional. Specifies an identity for analysis. Either ResourceSelector or\nIdentitySelector must be specified."
+        },
+        "accessSelector": {
+          "$ref": "AccessSelector",
+          "description": "Optional. Specifies roles or permissions for analysis. This is optional."
+        },
+        "parent": {
+          "description": "Required. The relative name of the root asset. Only resources and IAM policies within\nthe parent will be analyzed. This can only be an organization number (such\nas \"organizations/123\") or a folder number (such as \"folders/123\").\n\nTo know how to get organization id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).\n\nTo know how to get folder id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Status": {
+      "type": "object",
+      "id": "Status",
+      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client."
+        },
+        "details": {
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "description": "Properties of the object. Contains field @type with type URL.",
+              "type": "any"
+            }
+          },
+          "type": "array",
+          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use."
+        },
+        "code": {
+          "description": "The status code, which should be an enum value of google.rpc.Code.",
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "Options": {
+      "type": "object",
+      "id": "Options",
+      "description": "Contains request options.",
+      "properties": {
+        "expandResources": {
+          "description": "Optional. If true, the resource section of the result will expand any\nresource attached to an IAM policy to include resources lower in the\nresource hierarchy.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and the results include an IAM policy with P on a GCP\nfolder, the results will also include resources in that folder with\npermission P.\n\nIf resource_selector is specified, the resource section of the result\nwill be determined by the selector, and this flag will have no effect.\nDefault is false.",
+          "type": "boolean"
+        },
+        "outputResourceEdges": {
+          "description": "Optional. If true, the result will output resource edges, starting\nfrom the policy attached resource, to any expanded resources.\nDefault is false.",
+          "type": "boolean"
+        },
+        "outputGroupEdges": {
+          "description": "Optional. If true, the result will output group identity edges, starting\nfrom the binding's group members, to any expanded identities.\nDefault is false.",
+          "type": "boolean"
+        },
+        "expandRoles": {
+          "description": "Optional. If true, the access section of result will expand any roles\nappearing in IAM policy bindings to include their permissions.\n\nIf access_selector is specified, the access section of the result\nwill be determined by the selector, and this flag will have no effect.\n\nDefault is false.",
+          "type": "boolean"
+        },
+        "analyzeServiceAccountImpersonation": {
+          "description": "Optional. If true, the response will include access analysis from identities to\nresources via service account impersonation. This is a very expensive\noperation, because many derived queries will be executed.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and there's an IAM policy states user A has\niam.serviceAccounts.getAccessToken permission to a service account SA,\nand there's another IAM policy states service account SA has permission P\nto a GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nAnother example, if the request analyzes for who has\npermission P to a GCP folder F, and there's an IAM policy states user A\nhas iam.serviceAccounts.actAs permission to a service account SA, and\nthere's another IAM policy states service account SA has permission P to\nthe GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nDefault is false.",
+          "type": "boolean"
+        },
+        "expandGroups": {
+          "type": "boolean",
+          "description": "Optional. If true, the identities section of the result will expand any\nGoogle groups appearing in an IAM policy binding.\n\nIf identity_selector is specified, the identity in the result will\nbe determined by the selector, and this flag will have no effect.\n\nDefault is false."
+        }
+      }
+    },
+    "IdentitySelector": {
+      "description": "Specifies an identity for which to determine resource access, based on\nroles assigned either directly to them or to the groups they belong to,\ndirectly or indirectly.",
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "Required. The identity appear in the form of members in\n[IAM policy\nbinding](https://cloud.google.com/iam/reference/rest/v1/Binding).\n\nThe examples of supported forms are:\n\"user:mike@example.com\",\n\"group:admins@example.com\",\n\"domain:google.com\",\n\"serviceAccount:my-project-id@appspot.gserviceaccount.com\".\n\nNotice that wildcard characters (such as * and ?) are not supported.\nYou must give a specific identity."
+        }
+      },
+      "type": "object",
+      "id": "IdentitySelector"
+    },
+    "GoogleCloudAssetV1p4beta1IdentityList": {
+      "type": "object",
+      "id": "GoogleCloudAssetV1p4beta1IdentityList",
+      "properties": {
+        "identities": {
+          "items": {
+            "$ref": "GoogleCloudAssetV1p4beta1Identity"
+          },
+          "type": "array",
+          "description": "Only the identities that match one of the following conditions will be\npresented:\n- The identity_selector, if it is specified in request;\n- Otherwise, identities reachable from the policy binding's members."
+        },
+        "groupEdges": {
+          "description": "Group identity edges of the graph starting from the binding's\ngroup members to any node of the identities. The Edge.source_node\ncontains a group, such as \"group:parent@google.com\". The\nEdge.target_node contains a member of the group,\nsuch as \"group:child@google.com\" or \"user:foo@google.com\".\nThis field is present only if the output_group_edges option is enabled in\nrequest.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudAssetV1p4beta1Edge"
+          }
+        }
+      }
+    },
+    "GoogleCloudAssetV1p4beta1Edge": {
+      "id": "GoogleCloudAssetV1p4beta1Edge",
+      "properties": {
+        "sourceNode": {
+          "type": "string",
+          "description": "The source node of the edge."
+        },
+        "targetNode": {
+          "description": "The target node of the edge.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "A directional edge."
+    },
+    "GoogleCloudAssetV1p4beta1Identity": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The identity name in any form of members appear in\n[IAM policy\nbinding](https://cloud.google.com/iam/reference/rest/v1/Binding), such\nas:\n- user:foo@google.com\n- group:group1@google.com\n- serviceAccount:s1@prj1.iam.gserviceaccount.com\n- projectOwner:some_project_id\n- domain:google.com\n- allUsers\n- etc."
+        },
+        "analysisState": {
+          "description": "The analysis state of this identity.",
+          "$ref": "GoogleCloudAssetV1p4beta1AnalysisState"
+        }
+      },
+      "description": "An identity under analysis.",
+      "type": "object",
+      "id": "GoogleCloudAssetV1p4beta1Identity"
+    },
     "ResourceSelector": {
       "properties": {
         "fullResourceName": {
@@ -98,48 +312,23 @@
           "type": "string"
         }
       },
-      "description": "Specifies the resource to analyze for access policies, which may be set\ndirectly on the resource, or on ancestors such as organizations, folders or\nprojects. Either ResourceSelector or IdentitySelector must be\nspecified in a request.",
-      "type": "object",
-      "id": "ResourceSelector"
+      "id": "ResourceSelector",
+      "description": "Specifies the resource to analyze for access policies, which may be set\ndirectly on the resource, or on ancestors such as organizations, folders or\nprojects.",
+      "type": "object"
     },
-    "Options": {
+    "GcsDestination": {
       "type": "object",
-      "description": "Contains request options.",
+      "id": "GcsDestination",
       "properties": {
-        "expandResources": {
-          "description": "Optional. If true, the resource section of the result will expand any\nresource attached to an IAM policy to include resources lower in the\nresource hierarchy.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and the results include an IAM policy with P on a GCP\nfolder, the results will also include resources in that folder with\npermission P.\n\nIf resource_selector is specified, the resource section of the result\nwill be determined by the selector, and this flag will have no effect.\nDefault is false.",
-          "type": "boolean"
-        },
-        "expandGroups": {
-          "type": "boolean",
-          "description": "Optional. If true, the identities section of the result will expand any\nGoogle groups appearing in an IAM policy binding.\n\nIf identity_selector is specified, the identity in the result will\nbe determined by the selector, and this flag will have no effect.\n\nDefault is false."
-        },
-        "outputResourceEdges": {
-          "description": "Optional. If true, the result will output resource edges, starting\nfrom the policy attached resource, to any expanded resources.\nDefault is false.",
-          "type": "boolean"
-        },
-        "analyzeServiceAccountImpersonation": {
-          "type": "boolean",
-          "description": "Optional. If true, the response will include access analysis from identities to\nresources via service account impersonation. This is a very expensive\noperation, because many derived queries will be executed.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and there's an IAM policy states user A has\niam.serviceAccounts.getAccessToken permission to a service account SA,\nand there's another IAM policy states service account SA has permission P\nto a GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nAnother example, if the request analyzes for who has\npermission P to a GCP folder F, and there's an IAM policy states user A\nhas iam.serviceAccounts.actAs permission to a service account SA, and\nthere's another IAM policy states service account SA has permission P to\nthe GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nDefault is false."
-        },
-        "expandRoles": {
-          "description": "Optional. If true, the access section of result will expand any roles\nappearing in IAM policy bindings to include their permissions.\n\nIf access_selector is specified, the access section of the result\nwill be determined by the selector, and this flag will have no effect.\n\nDefault is false.",
-          "type": "boolean"
-        },
-        "outputGroupEdges": {
-          "description": "Optional. If true, the result will output group identity edges, starting\nfrom the binding's group members, to any expanded identities.\nDefault is false.",
-          "type": "boolean"
+        "uri": {
+          "description": "Required. The uri of the Cloud Storage object. It's the same uri that is used by\ngsutil. For example: \"gs://bucket_name/object_name\". See [Viewing and\nEditing Object\nMetadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)\nfor more information.",
+          "type": "string"
         }
       },
-      "id": "Options"
+      "description": "A Cloud Storage location."
     },
     "GoogleCloudAssetV1p4beta1AnalysisState": {
-      "type": "object",
       "properties": {
-        "cause": {
-          "type": "string",
-          "description": "The human-readable description of the cause of failure."
-        },
         "code": {
           "enumDescriptions": [
             "Not an error; returned on success\n\nHTTP Mapping: 200 OK",
@@ -160,7 +349,7 @@
             "The service is currently unavailable.  This is most likely a\ntransient condition, which can be corrected by retrying with\na backoff. Note that it is not always safe to retry\nnon-idempotent operations.\n\nSee the guidelines above for deciding between `FAILED_PRECONDITION`,\n`ABORTED`, and `UNAVAILABLE`.\n\nHTTP Mapping: 503 Service Unavailable",
             "Unrecoverable data loss or corruption.\n\nHTTP Mapping: 500 Internal Server Error"
           ],
-          "description": "The Google standard error code that best describes the state.\nFor example:\n- OK means the node has been successfully explored;\n- PERMISSION_DENIED means an access denied error is encountered;\n- DEADLINE_EXCEEDED means the node hasn't been explored in time;",
+          "description": "The Google standard error code that best describes the state.\nFor example:\n- OK means the analysis on this entity has been successfully finished;\n- PERMISSION_DENIED means an access denied error is encountered;\n- DEADLINE_EXCEEDED means the analysis on this entity hasn't been started\nin time;",
           "type": "string",
           "enum": [
             "OK",
@@ -181,143 +370,160 @@
             "UNAVAILABLE",
             "DATA_LOSS"
           ]
+        },
+        "cause": {
+          "type": "string",
+          "description": "The human-readable description of the cause of failure."
         }
       },
-      "description": "Represents analysis state of each node in the result graph or non-critical\nerrors in the response.",
+      "type": "object",
+      "description": "Represents the detailed state of an entity under analysis, such as a\nresource, an identity or an access.",
       "id": "GoogleCloudAssetV1p4beta1AnalysisState"
     },
-    "IamPolicyAnalysis": {
-      "properties": {
-        "fullyExplored": {
-          "description": "Represents whether all entries in the analysis_results have been\nfully explored to answer the query.",
-          "type": "boolean"
-        },
-        "analysisQuery": {
-          "$ref": "IamPolicyAnalysisQuery",
-          "description": "The analysis query."
-        },
-        "analysisResults": {
-          "type": "array",
-          "description": "A list of IamPolicyAnalysisResult that matches the analysis query, or\nempty if no result is found.",
-          "items": {
-            "$ref": "IamPolicyAnalysisResult"
-          }
-        }
-      },
-      "type": "object",
-      "description": "An analysis message to group the query and results.",
-      "id": "IamPolicyAnalysis"
-    },
     "IamPolicyAnalysisResult": {
-      "id": "IamPolicyAnalysisResult",
-      "type": "object",
       "description": "IAM Policy analysis result, consisting of one IAM policy binding and derived\naccess control lists.",
       "properties": {
+        "identityList": {
+          "description": "The identity list derived from members of the iam_binding that match or\npotentially match identity selector specified in the request.",
+          "$ref": "GoogleCloudAssetV1p4beta1IdentityList"
+        },
         "attachedResourceFullName": {
-          "description": "The [full resource\nname](https://cloud.google.com/asset-inventory/docs/resource-name-format)\nof the resource to which the iam_binding policy attaches.",
-          "type": "string"
+          "type": "string",
+          "description": "The [full resource\nname](https://cloud.google.com/asset-inventory/docs/resource-name-format)\nof the resource to which the iam_binding policy attaches."
+        },
+        "iamBinding": {
+          "description": "The Cloud IAM policy binding under analysis.",
+          "$ref": "Binding"
+        },
+        "fullyExplored": {
+          "type": "boolean",
+          "description": "Represents whether all analyses on the iam_binding have successfully\nfinished."
         },
         "accessControlLists": {
           "items": {
             "$ref": "GoogleCloudAssetV1p4beta1AccessControlList"
           },
-          "description": "The access control lists derived from the iam_binding that match or\npotentially match resource and access selectors specified in the request.",
-          "type": "array"
-        },
-        "identityList": {
-          "description": "The identity list derived from members of the iam_binding that match or\npotentially match identity selector specified in the request.",
-          "$ref": "GoogleCloudAssetV1p4beta1IdentityList"
-        },
-        "fullyExplored": {
-          "type": "boolean",
-          "description": "Represents whether all nodes in the transitive closure of the\niam_binding node have been explored."
-        },
-        "iamBinding": {
-          "$ref": "Binding",
-          "description": "The Cloud IAM policy binding under analysis."
-        }
-      }
-    },
-    "IamPolicyAnalysisQuery": {
-      "properties": {
-        "identitySelector": {
-          "$ref": "IdentitySelector",
-          "description": "Optional. Specifies an identity for analysis. Leaving it empty means ANY."
-        },
-        "accessSelector": {
-          "$ref": "AccessSelector",
-          "description": "Optional. Specifies roles or permissions for analysis. Leaving it empty\nmeans ANY."
-        },
-        "resourceSelector": {
-          "description": "Optional. Specifies a resource for analysis. Leaving it empty means ANY.",
-          "$ref": "ResourceSelector"
-        },
-        "parent": {
-          "description": "Required. The relative name of the root asset. Only resources and IAM policies within\nthe parent will be analyzed. This can only be an organization number (such\nas \"organizations/123\") or a folder number (such as \"folders/123\").\n\nTo know how to get organization id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).\n\nTo know how to get folder id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).",
-          "type": "string"
+          "type": "array",
+          "description": "The access control lists derived from the iam_binding that match or\npotentially match resource and access selectors specified in the request."
         }
       },
-      "id": "IamPolicyAnalysisQuery",
-      "description": "IAM policy analysis query message.",
+      "id": "IamPolicyAnalysisResult",
       "type": "object"
     },
-    "GoogleCloudAssetV1p4beta1Identity": {
+    "GoogleCloudAssetV1p4beta1AccessControlList": {
+      "description": "An access control list, derived from the above IAM policy binding, which\ncontains a set of resources and accesses. May include one\nitem from each set to compose an access control entry.\n\nNOTICE that there could be multiple access control lists for one IAM policy\nbinding. The access control lists are created based on resource and access\ncombinations.\n\nFor example, assume we have the following cases in one IAM policy binding:\n- Permission P1 and P2 apply to resource R1 and R2;\n- Permission P3 applies to resource R2 and R3;\n\nThis will result in the following access control lists:\n- AccessControlList 1: [R1, R2], [P1, P2]\n- AccessControlList 2: [R2, R3], [P3]",
+      "id": "GoogleCloudAssetV1p4beta1AccessControlList",
       "properties": {
-        "analysisState": {
-          "$ref": "GoogleCloudAssetV1p4beta1AnalysisState",
-          "description": "The analysis state of this identity node."
+        "accesses": {
+          "description": "The accesses that match one of the following conditions:\n- The access_selector, if it is specified in request;\n- Otherwise, access specifiers reachable from the policy binding's role.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudAssetV1p4beta1Access"
+          }
         },
-        "name": {
-          "type": "string",
-          "description": "The identity name in any form of members appear in\n[IAM policy\nbinding](https://cloud.google.com/iam/reference/rest/v1/Binding), such\nas:\n- user:foo@google.com\n- group:group1@google.com\n- serviceAccount:s1@prj1.iam.gserviceaccount.com\n- projectOwner:some_project_id\n- domain:google.com\n- allUsers\n- etc."
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudAssetV1p4beta1Resource"
+          },
+          "description": "The resources that match one of the following conditions:\n- The resource_selector, if it is specified in request;\n- Otherwise, resources reachable from the policy attached resource."
+        },
+        "resourceEdges": {
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudAssetV1p4beta1Edge"
+          },
+          "description": "Resource edges of the graph starting from the policy attached\nresource to any descendant resources. The Edge.source_node contains\nthe full resource name of a parent resource and Edge.target_node\ncontains the full resource name of a child resource. This field is\npresent only if the output_resource_edges option is enabled in request."
         }
       },
-      "type": "object",
-      "description": "An identity that appears in an access control list.",
-      "id": "GoogleCloudAssetV1p4beta1Identity"
+      "type": "object"
     },
     "Binding": {
       "properties": {
         "role": {
-          "type": "string",
-          "description": "Role that is assigned to `members`.\nFor example, `roles/viewer`, `roles/editor`, or `roles/owner`."
+          "description": "Role that is assigned to `members`.\nFor example, `roles/viewer`, `roles/editor`, or `roles/owner`.",
+          "type": "string"
         },
         "members": {
+          "description": "Specifies the identities requesting access for a Cloud Platform resource.\n`members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is\n   on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone\n   who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google\n   account. For example, `alice@example.com` .\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service\n   account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group.\n   For example, `admins@example.com`.\n\n* `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique\n   identifier) representing a user that has been recently deleted. For\n   example, `alice@example.com?uid=123456789012345678901`. If the user is\n   recovered, this value reverts to `user:{emailid}` and the recovered user\n   retains the role in the binding.\n\n* `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus\n   unique identifier) representing a service account that has been recently\n   deleted. For example,\n   `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`.\n   If the service account is undeleted, this value reverts to\n   `serviceAccount:{emailid}` and the undeleted service account retains the\n   role in the binding.\n\n* `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique\n   identifier) representing a Google group that has been recently\n   deleted. For example, `admins@example.com?uid=123456789012345678901`. If\n   the group is recovered, this value reverts to `group:{emailid}` and the\n   recovered group retains the role in the binding.\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the\n   users of that domain. For example, `google.com` or `example.com`.\n\n",
+          "type": "array",
           "items": {
             "type": "string"
-          },
-          "description": "Specifies the identities requesting access for a Cloud Platform resource.\n`members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is\n   on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone\n   who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google\n   account. For example, `alice@example.com` .\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service\n   account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group.\n   For example, `admins@example.com`.\n\n* `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique\n   identifier) representing a user that has been recently deleted. For\n   example, `alice@example.com?uid=123456789012345678901`. If the user is\n   recovered, this value reverts to `user:{emailid}` and the recovered user\n   retains the role in the binding.\n\n* `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus\n   unique identifier) representing a service account that has been recently\n   deleted. For example,\n   `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`.\n   If the service account is undeleted, this value reverts to\n   `serviceAccount:{emailid}` and the undeleted service account retains the\n   role in the binding.\n\n* `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique\n   identifier) representing a Google group that has been recently\n   deleted. For example, `admins@example.com?uid=123456789012345678901`. If\n   the group is recovered, this value reverts to `group:{emailid}` and the\n   recovered group retains the role in the binding.\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the\n   users of that domain. For example, `google.com` or `example.com`.\n\n",
-          "type": "array"
+          }
         },
         "condition": {
-          "description": "The condition that is associated with this binding.\n\nIf the condition evaluates to `true`, then this binding applies to the\ncurrent request.\n\nIf the condition evaluates to `false`, then this binding does not apply to\nthe current request. However, a different role binding might grant the same\nrole to one or more of the members in this binding.\n\nTo learn which resources support conditions in their IAM policies, see the\n[IAM\ndocumentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-          "$ref": "Expr"
+          "$ref": "Expr",
+          "description": "The condition that is associated with this binding.\n\nIf the condition evaluates to `true`, then this binding applies to the\ncurrent request.\n\nIf the condition evaluates to `false`, then this binding does not apply to\nthe current request. However, a different role binding might grant the same\nrole to one or more of the members in this binding.\n\nTo learn which resources support conditions in their IAM policies, see the\n[IAM\ndocumentation](https://cloud.google.com/iam/help/conditions/resource-policies)."
         }
       },
       "id": "Binding",
       "type": "object",
       "description": "Associates `members` with a `role`."
     },
-    "GcsDestination": {
-      "description": "A Cloud Storage location.",
-      "id": "GcsDestination",
+    "GoogleCloudAssetV1p4beta1Access": {
+      "properties": {
+        "analysisState": {
+          "$ref": "GoogleCloudAssetV1p4beta1AnalysisState",
+          "description": "The analysis state of this access."
+        },
+        "role": {
+          "type": "string",
+          "description": "The role."
+        },
+        "permission": {
+          "description": "The permission.",
+          "type": "string"
+        }
+      },
+      "description": "An IAM role or permission under analysis.",
+      "type": "object",
+      "id": "GoogleCloudAssetV1p4beta1Access"
+    },
+    "Operation": {
+      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
       "type": "object",
       "properties": {
-        "uri": {
+        "response": {
+          "type": "object",
+          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`.",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          }
+        },
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
+          "type": "boolean"
+        },
+        "name": {
           "type": "string",
-          "description": "Required. The uri of the Cloud Storage object. It's the same uri that is used by\ngsutil. For example: \"gs://bucket_name/object_name\". See [Viewing and\nEditing Object\nMetadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)\nfor more information."
+          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should be a resource name ending with `operations/{unique_id}`."
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any."
+        },
+        "error": {
+          "description": "The error result of the operation in case of failure or cancellation.",
+          "$ref": "Status"
         }
-      }
+      },
+      "id": "Operation"
     },
     "AccessSelector": {
-      "description": "Specifies roles and/or permissions to analyze, to determine both the\nidentities possessing them and the resources they control. If multiple\nvalues are specified, results will include identities and resources\nmatching any of them.",
+      "type": "object",
+      "id": "AccessSelector",
       "properties": {
         "permissions": {
+          "description": "Optional. The permissions to appear in result.",
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "description": "Optional. The permissions to appear in result."
+          }
         },
         "roles": {
           "type": "array",
@@ -327,126 +533,35 @@
           }
         }
       },
-      "type": "object",
-      "id": "AccessSelector"
+      "description": "Specifies roles and/or permissions to analyze, to determine both the\nidentities possessing them and the resources they control. If multiple\nvalues are specified, results will include identities and resources\nmatching any of them."
     },
-    "Operation": {
-      "id": "Operation",
-      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
-      "type": "object",
+    "IamPolicyAnalysis": {
       "properties": {
-        "response": {
-          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`.",
-          "type": "object",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          }
-        },
-        "metadata": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
+        "analysisResults": {
+          "type": "array",
+          "items": {
+            "$ref": "IamPolicyAnalysisResult"
           },
-          "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any."
+          "description": "A list of IamPolicyAnalysisResult that matches the analysis query, or\nempty if no result is found."
         },
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
+        "fullyExplored": {
+          "description": "Represents whether all entries in the analysis_results have been\nfully explored to answer the query.",
           "type": "boolean"
         },
-        "name": {
-          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should be a resource name ending with `operations/{unique_id}`.",
-          "type": "string"
-        },
-        "error": {
-          "$ref": "Status",
-          "description": "The error result of the operation in case of failure or cancellation."
-        }
-      }
-    },
-    "IamPolicyAnalysisOutputConfig": {
-      "description": "Output configuration for export IAM policy analysis destination.",
-      "properties": {
-        "gcsDestination": {
-          "$ref": "GcsDestination",
-          "description": "Destination on Cloud Storage."
+        "analysisQuery": {
+          "description": "The analysis query.",
+          "$ref": "IamPolicyAnalysisQuery"
         }
       },
-      "id": "IamPolicyAnalysisOutputConfig",
-      "type": "object"
-    },
-    "GoogleCloudAssetV1p4beta1Edge": {
-      "description": "A directional edge.",
       "type": "object",
-      "properties": {
-        "sourceNode": {
-          "type": "string",
-          "description": "The source node of the edge."
-        },
-        "targetNode": {
-          "description": "The target node of the edge.",
-          "type": "string"
-        }
-      },
-      "id": "GoogleCloudAssetV1p4beta1Edge"
-    },
-    "GoogleCloudAssetV1p4beta1Access": {
-      "id": "GoogleCloudAssetV1p4beta1Access",
-      "properties": {
-        "analysisState": {
-          "description": "The analysis state of this access node.",
-          "$ref": "GoogleCloudAssetV1p4beta1AnalysisState"
-        },
-        "permission": {
-          "type": "string",
-          "description": "The permission."
-        },
-        "role": {
-          "description": "The role.",
-          "type": "string"
-        }
-      },
-      "description": "A role or permission that appears in an access control list.",
-      "type": "object"
-    },
-    "GoogleCloudAssetV1p4beta1AccessControlList": {
-      "description": "An access control list, derived from the above IAM policy binding, which\ncontains a set of resources and accesses. May include one\nitem from each set to compose an access control entry.\n\nNOTICE that there could be multiple access control lists for one IAM policy\nbinding. The access control lists are created based on resource and access\ncombinations.\n\nFor example, assume we have the following cases in one IAM policy binding:\n- Permission P1 and P2 apply to resource R1 and R2;\n- Permission P3 applies to resource R2 and R3;\n\nThis will result in the following access control lists:\n- AccessControlList 1: [R1, R2], [P1, P2]\n- AccessControlList 2: [R2, R3], [P3]",
-      "properties": {
-        "resourceEdges": {
-          "items": {
-            "$ref": "GoogleCloudAssetV1p4beta1Edge"
-          },
-          "type": "array",
-          "description": "Resource edges of the graph starting from the policy attached\nresource to any descendant resources. The Edge.source_node contains\nthe full resource name of a parent resource and Edge.target_node\ncontains the full resource name of a child resource. This field is\npresent only if the output_resource_edges option is enabled in request."
-        },
-        "accesses": {
-          "type": "array",
-          "description": "The accesses that match one of the following conditions:\n- The access_selector, if it is specified in request;\n- Otherwise, access specifiers reachable from the policy binding's role.",
-          "items": {
-            "$ref": "GoogleCloudAssetV1p4beta1Access"
-          }
-        },
-        "resources": {
-          "items": {
-            "$ref": "GoogleCloudAssetV1p4beta1Resource"
-          },
-          "description": "The resources that match one of the following conditions:\n- The resource_selector, if it is specified in request;\n- Otherwise, resources reachable from the policy attached resource.",
-          "type": "array"
-        }
-      },
-      "id": "GoogleCloudAssetV1p4beta1AccessControlList",
-      "type": "object"
+      "description": "An analysis message to group the query and results.",
+      "id": "IamPolicyAnalysis"
     },
     "Expr": {
       "type": "object",
-      "description": "Represents a textual expression in the Common Expression Language (CEL)\nsyntax. CEL is a C-like expression language. The syntax and semantics of CEL\nare documented at https://github.com/google/cel-spec.\n\nExample (Comparison):\n\n    title: \"Summary size limit\"\n    description: \"Determines if a summary is less than 100 chars\"\n    expression: \"document.summary.size() \u003c 100\"\n\nExample (Equality):\n\n    title: \"Requestor is owner\"\n    description: \"Determines if requestor is the document owner\"\n    expression: \"document.owner == request.auth.claims.email\"\n\nExample (Logic):\n\n    title: \"Public documents\"\n    description: \"Determine whether the document should be publicly visible\"\n    expression: \"document.type != 'private' && document.type != 'internal'\"\n\nExample (Data Manipulation):\n\n    title: \"Notification string\"\n    description: \"Create a notification string with a timestamp.\"\n    expression: \"'New message received at ' + string(document.create_time)\"\n\nThe exact variables and functions that may be referenced within an expression\nare determined by the service that evaluates it. See the service\ndocumentation for additional information.",
       "id": "Expr",
+      "description": "Represents a textual expression in the Common Expression Language (CEL)\nsyntax. CEL is a C-like expression language. The syntax and semantics of CEL\nare documented at https://github.com/google/cel-spec.\n\nExample (Comparison):\n\n    title: \"Summary size limit\"\n    description: \"Determines if a summary is less than 100 chars\"\n    expression: \"document.summary.size() \u003c 100\"\n\nExample (Equality):\n\n    title: \"Requestor is owner\"\n    description: \"Determines if requestor is the document owner\"\n    expression: \"document.owner == request.auth.claims.email\"\n\nExample (Logic):\n\n    title: \"Public documents\"\n    description: \"Determine whether the document should be publicly visible\"\n    expression: \"document.type != 'private' && document.type != 'internal'\"\n\nExample (Data Manipulation):\n\n    title: \"Notification string\"\n    description: \"Create a notification string with a timestamp.\"\n    expression: \"'New message received at ' + string(document.create_time)\"\n\nThe exact variables and functions that may be referenced within an expression\nare determined by the service that evaluates it. See the service\ndocumentation for additional information.",
       "properties": {
-        "expression": {
-          "description": "Textual representation of an expression in Common Expression Language\nsyntax.",
-          "type": "string"
-        },
         "title": {
           "type": "string",
           "description": "Optional. Title for the expression, i.e. a short string describing\nits purpose. This can be used e.g. in UIs which allow to enter the\nexpression."
@@ -455,210 +570,81 @@
           "description": "Optional. Description of the expression. This is a longer text which\ndescribes the expression, e.g. when hovered over it in a UI.",
           "type": "string"
         },
+        "expression": {
+          "type": "string",
+          "description": "Textual representation of an expression in Common Expression Language\nsyntax."
+        },
         "location": {
-          "type": "string",
-          "description": "Optional. String indicating the location of the expression for error\nreporting, e.g. a file name and a position in the file."
-        }
-      }
-    },
-    "GoogleCloudAssetV1p4beta1Resource": {
-      "id": "GoogleCloudAssetV1p4beta1Resource",
-      "type": "object",
-      "description": "A GCP resource that appears in an access control list.",
-      "properties": {
-        "analysisState": {
-          "$ref": "GoogleCloudAssetV1p4beta1AnalysisState",
-          "description": "The analysis state of this resource node."
-        },
-        "fullResourceName": {
-          "type": "string",
-          "description": "The [full resource\nname](https://cloud.google.com/asset-inventory/docs/resource-name-format)"
-        }
-      }
-    },
-    "ExportIamPolicyAnalysisRequest": {
-      "properties": {
-        "analysisQuery": {
-          "$ref": "IamPolicyAnalysisQuery",
-          "description": "Required. The request query."
-        },
-        "options": {
-          "description": "Optional. The request options.",
-          "$ref": "Options"
-        },
-        "outputConfig": {
-          "description": "Required. Output configuration indicating where the results will be output to.",
-          "$ref": "IamPolicyAnalysisOutputConfig"
-        }
-      },
-      "description": "A request message for AssetService.ExportIamPolicyAnalysis.",
-      "type": "object",
-      "id": "ExportIamPolicyAnalysisRequest"
-    },
-    "GoogleCloudAssetV1p4beta1IdentityList": {
-      "properties": {
-        "identities": {
-          "description": "Only the identities that match one of the following conditions will be\npresented:\n- The identity_selector, if it is specified in request;\n- Otherwise, identities reachable from the policy binding's members.",
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudAssetV1p4beta1Identity"
-          }
-        },
-        "groupEdges": {
-          "type": "array",
-          "description": "Group identity edges of the graph starting from the binding's\ngroup members to any node of the identities. The Edge.source_node\ncontains a group, such as \"group:parent@google.com\". The\nEdge.target_node contains a member of the group,\nsuch as \"group:child@google.com\" or \"user:foo@google.com\".\nThis field is present only if the output_group_edges option is enabled in\nrequest.",
-          "items": {
-            "$ref": "GoogleCloudAssetV1p4beta1Edge"
-          }
-        }
-      },
-      "id": "GoogleCloudAssetV1p4beta1IdentityList",
-      "type": "object"
-    },
-    "AnalyzeIamPolicyResponse": {
-      "type": "object",
-      "description": "A response message for AssetService.AnalyzeIamPolicy.",
-      "id": "AnalyzeIamPolicyResponse",
-      "properties": {
-        "nonCriticalErrors": {
-          "items": {
-            "$ref": "GoogleCloudAssetV1p4beta1AnalysisState"
-          },
-          "type": "array",
-          "description": "A list of non-critical errors happened during the request handling to\nexplain why `fully_explored` is false, or empty if no error happened."
-        },
-        "mainAnalysis": {
-          "description": "The main analysis that matches the original request.",
-          "$ref": "IamPolicyAnalysis"
-        },
-        "serviceAccountImpersonationAnalysis": {
-          "items": {
-            "$ref": "IamPolicyAnalysis"
-          },
-          "type": "array",
-          "description": "The service account impersonation analysis if\nAnalyzeIamPolicyRequest.analyze_service_account_impersonation is\nenabled."
-        },
-        "fullyExplored": {
-          "description": "Represents whether all entries in the main_analysis and\nservice_account_impersonation_analysis have been fully explored to\nanswer the query in the request.",
-          "type": "boolean"
-        }
-      }
-    },
-    "Status": {
-      "id": "Status",
-      "type": "object",
-      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "properties": {
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client.",
+          "description": "Optional. String indicating the location of the expression for error\nreporting, e.g. a file name and a position in the file.",
           "type": "string"
-        },
-        "details": {
-          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
-          "items": {
-            "additionalProperties": {
-              "type": "any",
-              "description": "Properties of the object. Contains field @type with type URL."
-            },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "code": {
-          "format": "int32",
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "type": "integer"
         }
       }
     },
-    "IdentitySelector": {
+    "IamPolicyAnalysisOutputConfig": {
+      "id": "IamPolicyAnalysisOutputConfig",
       "type": "object",
-      "id": "IdentitySelector",
       "properties": {
-        "identity": {
-          "type": "string",
-          "description": "Required. The identity appear in the form of members in\n[IAM policy\nbinding](https://cloud.google.com/iam/reference/rest/v1/Binding).\n\nThe examples of supported forms are:\n\"user:mike@example.com\",\n\"group:admins@example.com\",\n\"domain:google.com\",\n\"serviceAccount:my-project-id@appspot.gserviceaccount.com\".\n\nNotice that wildcard characters (such as * and ?) are not supported.\nYou must give a specific identity."
+        "gcsDestination": {
+          "description": "Destination on Cloud Storage.",
+          "$ref": "GcsDestination"
         }
       },
-      "description": "Specifies an identity for which to determine resource access, based on\nroles assigned either directly to them or to the groups they belong to,\ndirectly or indirectly."
+      "description": "Output configuration for export IAM policy analysis destination."
     }
   },
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "View and manage your data across Google Cloud Platform services"
+        }
+      }
+    }
   },
-  "basePath": "",
-  "kind": "discovery#restDescription",
-  "revision": "20200605",
-  "fullyEncodeReservedExpansion": true,
-  "batchPath": "batch",
-  "id": "cloudasset:v1p4beta1",
-  "description": "The cloud asset API manages the history and inventory of cloud resources.",
-  "discoveryVersion": "v1",
-  "version_module": true,
-  "name": "cloudasset",
   "resources": {
     "v1p4beta1": {
       "methods": {
         "analyzeIamPolicy": {
-          "path": "v1p4beta1/{+parent}:analyzeIamPolicy",
+          "flatPath": "v1p4beta1/{v1p4beta1Id}/{v1p4beta1Id1}:analyzeIamPolicy",
           "id": "cloudasset.analyzeIamPolicy",
-          "httpMethod": "GET",
-          "description": "Analyzes IAM policies based on the specified request. Returns\na list of IamPolicyAnalysisResult matching the request.",
+          "path": "v1p4beta1/{+parent}:analyzeIamPolicy",
           "parameterOrder": [
             "parent"
           ],
-          "flatPath": "v1p4beta1/{v1p4beta1Id}/{v1p4beta1Id1}:analyzeIamPolicy",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform"
-          ],
-          "response": {
-            "$ref": "AnalyzeIamPolicyResponse"
-          },
+          "httpMethod": "GET",
           "parameters": {
+            "parent": {
+              "required": true,
+              "type": "string",
+              "pattern": "^[^/]+/[^/]+$",
+              "description": "Required. The relative name of the root asset. Only resources and IAM policies within\nthe parent will be analyzed. This can only be an organization number (such\nas \"organizations/123\") or a folder number (such as \"folders/123\").\n\nTo know how to get organization id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).\n\nTo know how to get folder id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).",
+              "location": "path"
+            },
             "options.outputGroupEdges": {
+              "description": "Optional. If true, the result will output group identity edges, starting\nfrom the binding's group members, to any expanded identities.\nDefault is false.",
+              "location": "query",
+              "type": "boolean"
+            },
+            "options.expandRoles": {
               "location": "query",
               "type": "boolean",
-              "description": "Optional. If true, the result will output group identity edges, starting\nfrom the binding's group members, to any expanded identities.\nDefault is false."
+              "description": "Optional. If true, the access section of result will expand any roles\nappearing in IAM policy bindings to include their permissions.\n\nIf access_selector is specified, the access section of the result\nwill be determined by the selector, and this flag will have no effect.\n\nDefault is false."
             },
-            "options.analyzeServiceAccountImpersonation": {
+            "analysisQuery.accessSelector.permissions": {
               "location": "query",
-              "description": "Optional. If true, the response will include access analysis from identities to\nresources via service account impersonation. This is a very expensive\noperation, because many derived queries will be executed. We highly\nrecommend you use AssetService.ExportIamPolicyAnalysis rpc instead.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and there's an IAM policy states user A has\niam.serviceAccounts.getAccessToken permission to a service account SA,\nand there's another IAM policy states service account SA has permission P\nto a GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nAnother example, if the request analyzes for who has\npermission P to a GCP folder F, and there's an IAM policy states user A\nhas iam.serviceAccounts.actAs permission to a service account SA, and\nthere's another IAM policy states service account SA has permission P to\nthe GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nDefault is false.",
-              "type": "boolean"
-            },
-            "analysisQuery.identitySelector.identity": {
-              "type": "string",
-              "location": "query",
-              "description": "Required. The identity appear in the form of members in\n[IAM policy\nbinding](https://cloud.google.com/iam/reference/rest/v1/Binding).\n\nThe examples of supported forms are:\n\"user:mike@example.com\",\n\"group:admins@example.com\",\n\"domain:google.com\",\n\"serviceAccount:my-project-id@appspot.gserviceaccount.com\".\n\nNotice that wildcard characters (such as * and ?) are not supported.\nYou must give a specific identity."
-            },
-            "options.outputResourceEdges": {
-              "description": "Optional. If true, the result will output resource edges, starting\nfrom the policy attached resource, to any expanded resources.\nDefault is false.",
-              "location": "query",
-              "type": "boolean"
-            },
-            "analysisQuery.accessSelector.roles": {
-              "type": "string",
               "repeated": true,
-              "location": "query",
-              "description": "Optional. The roles to appear in result."
+              "type": "string",
+              "description": "Optional. The permissions to appear in result."
             },
             "analysisQuery.resourceSelector.fullResourceName": {
               "type": "string",
-              "description": "Required. The [full resource\nname](https://cloud.google.com/asset-inventory/docs/resource-name-format)\nof a resource of [supported resource\ntypes](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).",
-              "location": "query"
-            },
-            "analysisQuery.accessSelector.permissions": {
-              "description": "Optional. The permissions to appear in result.",
               "location": "query",
-              "repeated": true,
-              "type": "string"
+              "description": "Required. The [full resource\nname](https://cloud.google.com/asset-inventory/docs/resource-name-format)\nof a resource of [supported resource\ntypes](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types)."
             },
-            "parent": {
-              "description": "Required. The relative name of the root asset. Only resources and IAM policies within\nthe parent will be analyzed. This can only be an organization number (such\nas \"organizations/123\") or a folder number (such as \"folders/123\").\n\nTo know how to get organization id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).\n\nTo know how to get folder id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).",
-              "location": "path",
-              "required": true,
-              "pattern": "^[^/]+/[^/]+$",
-              "type": "string"
+            "options.expandGroups": {
+              "location": "query",
+              "type": "boolean",
+              "description": "Optional. If true, the identities section of the result will expand any\nGoogle groups appearing in an IAM policy binding.\n\nIf identity_selector is specified, the identity in the result will\nbe determined by the selector, and this flag will have no effect.\n\nDefault is false."
             },
             "options.executionTimeout": {
               "description": "Optional. Amount of time executable has to complete.  See JSON representation of\n[Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).\n\nIf this field is set with a value less than the RPC deadline, and the\nexecution of your query hasn't finished in the specified\nexecution timeout,  you will get a response with partial result.\nOtherwise, your query's execution will continue until the RPC deadline.\nIf it's not finished until then, you will get a  DEADLINE_EXCEEDED error.\n\nDefault is empty.",
@@ -666,58 +652,72 @@
               "type": "string",
               "format": "google-duration"
             },
+            "analysisQuery.identitySelector.identity": {
+              "type": "string",
+              "location": "query",
+              "description": "Required. The identity appear in the form of members in\n[IAM policy\nbinding](https://cloud.google.com/iam/reference/rest/v1/Binding).\n\nThe examples of supported forms are:\n\"user:mike@example.com\",\n\"group:admins@example.com\",\n\"domain:google.com\",\n\"serviceAccount:my-project-id@appspot.gserviceaccount.com\".\n\nNotice that wildcard characters (such as * and ?) are not supported.\nYou must give a specific identity."
+            },
             "options.expandResources": {
-              "description": "Optional. If true, the resource section of the result will expand any\nresource attached to an IAM policy to include resources lower in the\nresource hierarchy.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and the results include an IAM policy with P on a GCP\nfolder, the results will also include resources in that folder with\npermission P.\n\nIf resource_selector is specified, the resource section of the result\nwill be determined by the selector, and this flag will have no effect.\nDefault is false.",
               "type": "boolean",
+              "description": "Optional. If true, the resource section of the result will expand any\nresource attached to an IAM policy to include resources lower in the\nresource hierarchy.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and the results include an IAM policy with P on a GCP\nfolder, the results will also include resources in that folder with\npermission P.\n\nIf resource_selector is specified, the resource section of the result\nwill be determined by the selector, and this flag will have no effect.\nDefault is false.",
               "location": "query"
             },
-            "options.expandRoles": {
-              "description": "Optional. If true, the access section of result will expand any roles\nappearing in IAM policy bindings to include their permissions.\n\nIf access_selector is specified, the access section of the result\nwill be determined by the selector, and this flag will have no effect.\n\nDefault is false.",
-              "location": "query",
-              "type": "boolean"
-            },
-            "options.expandGroups": {
+            "options.analyzeServiceAccountImpersonation": {
               "type": "boolean",
               "location": "query",
-              "description": "Optional. If true, the identities section of the result will expand any\nGoogle groups appearing in an IAM policy binding.\n\nIf identity_selector is specified, the identity in the result will\nbe determined by the selector, and this flag will have no effect.\n\nDefault is false."
+              "description": "Optional. If true, the response will include access analysis from identities to\nresources via service account impersonation. This is a very expensive\noperation, because many derived queries will be executed. We highly\nrecommend you use AssetService.ExportIamPolicyAnalysis rpc instead.\n\nFor example, if the request analyzes for which resources user A has\npermission P, and there's an IAM policy states user A has\niam.serviceAccounts.getAccessToken permission to a service account SA,\nand there's another IAM policy states service account SA has permission P\nto a GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nAnother example, if the request analyzes for who has\npermission P to a GCP folder F, and there's an IAM policy states user A\nhas iam.serviceAccounts.actAs permission to a service account SA, and\nthere's another IAM policy states service account SA has permission P to\nthe GCP folder F, then user A potentially has access to the GCP folder\nF. And those advanced analysis results will be included in\nAnalyzeIamPolicyResponse.service_account_impersonation_analysis.\n\nDefault is false."
+            },
+            "analysisQuery.accessSelector.roles": {
+              "location": "query",
+              "description": "Optional. The roles to appear in result.",
+              "repeated": true,
+              "type": "string"
+            },
+            "options.outputResourceEdges": {
+              "description": "Optional. If true, the result will output resource edges, starting\nfrom the policy attached resource, to any expanded resources.\nDefault is false.",
+              "location": "query",
+              "type": "boolean"
             }
-          }
+          },
+          "response": {
+            "$ref": "AnalyzeIamPolicyResponse"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform"
+          ],
+          "description": "Analyzes IAM policies to answer which identities have what accesses on\nwhich resources."
         },
         "exportIamPolicyAnalysis": {
-          "response": {
-            "$ref": "Operation"
-          },
           "httpMethod": "POST",
-          "description": "Exports IAM policy analysis based on the specified request. This API\nimplements the google.longrunning.Operation API allowing you to keep\ntrack of the export. The metadata contains the request to help callers to\nmap responses to requests.",
+          "request": {
+            "$ref": "ExportIamPolicyAnalysisRequest"
+          },
+          "id": "cloudasset.exportIamPolicyAnalysis",
+          "description": "Exports the answers of which identities have what accesses on which\nresources to a Google Cloud Storage destination. The output format is\nthe JSON format that represents a AnalyzeIamPolicyResponse\nin the JSON format.\nThis method implements the google.longrunning.Operation, which allows\nyou to keep track of the export. We recommend intervals of at least 2\nseconds with exponential retry to poll the export operation result. The\nmetadata contains the request to help callers to map responses to requests.",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform"
           ],
           "parameters": {
             "parent": {
               "description": "Required. The relative name of the root asset. Only resources and IAM policies within\nthe parent will be analyzed. This can only be an organization number (such\nas \"organizations/123\") or a folder number (such as \"folders/123\").\n\nTo know how to get organization id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).\n\nTo know how to get folder id, visit [here\n](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).",
-              "required": true,
               "pattern": "^[^/]+/[^/]+$",
-              "location": "path",
-              "type": "string"
+              "required": true,
+              "type": "string",
+              "location": "path"
             }
           },
           "flatPath": "v1p4beta1/{v1p4beta1Id}/{v1p4beta1Id1}:exportIamPolicyAnalysis",
-          "id": "cloudasset.exportIamPolicyAnalysis",
-          "request": {
-            "$ref": "ExportIamPolicyAnalysisRequest"
+          "path": "v1p4beta1/{+parent}:exportIamPolicyAnalysis",
+          "response": {
+            "$ref": "Operation"
           },
           "parameterOrder": [
             "parent"
-          ],
-          "path": "v1p4beta1/{+parent}:exportIamPolicyAnalysis"
+          ]
         }
       }
     }
   },
-  "rootUrl": "https://cloudasset.googleapis.com/",
-  "baseUrl": "https://cloudasset.googleapis.com/",
-  "documentationLink": "https://cloud.google.com/asset-inventory/docs/quickstart",
-  "ownerDomain": "google.com",
-  "ownerName": "Google",
-  "servicePath": ""
+  "title": "Cloud Asset API",
+  "fullyEncodeReservedExpansion": true
 }

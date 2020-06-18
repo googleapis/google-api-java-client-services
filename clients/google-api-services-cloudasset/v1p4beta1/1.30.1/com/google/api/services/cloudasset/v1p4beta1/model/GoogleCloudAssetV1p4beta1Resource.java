@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1p4beta1.model;
 
 /**
- * A GCP resource that appears in an access control list.
+ * A Google Cloud resource under analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 public final class GoogleCloudAssetV1p4beta1Resource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The analysis state of this resource node.
+   * The analysis state of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudAssetV1p4beta1Resource extends com.google.api.clie
   private java.lang.String fullResourceName;
 
   /**
-   * The analysis state of this resource node.
+   * The analysis state of this resource.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssetV1p4beta1AnalysisState getAnalysisState() {
@@ -52,7 +52,7 @@ public final class GoogleCloudAssetV1p4beta1Resource extends com.google.api.clie
   }
 
   /**
-   * The analysis state of this resource node.
+   * The analysis state of this resource.
    * @param analysisState analysisState or {@code null} for none
    */
   public GoogleCloudAssetV1p4beta1Resource setAnalysisState(GoogleCloudAssetV1p4beta1AnalysisState analysisState) {

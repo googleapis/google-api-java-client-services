@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudasset.v1.model;
+package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
  * Used in `policy_type` to specify how `list_policy` behaves at this resource.

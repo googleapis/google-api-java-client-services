@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * The response to a request for the authenticated user's other contacts.
+ * The response to a request for the authenticated user's "Other contacts".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -46,9 +46,8 @@ public final class ListOtherContactsResponse extends com.google.api.client.json.
   private java.lang.String nextSyncToken;
 
   /**
-   * The list of other contacts returned as Person resources. Other contacts support a limited
-   * subset of supported fields. See ListOtherContactsRequest.request_mask for more detailed
-   * information.
+   * The list of "Other contacts" returned as Person resources. "Other contacts" support a limited
+   * subset of fields. See ListOtherContactsRequest.request_mask for more detailed information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +92,8 @@ public final class ListOtherContactsResponse extends com.google.api.client.json.
   }
 
   /**
-   * The list of other contacts returned as Person resources. Other contacts support a limited
-   * subset of supported fields. See ListOtherContactsRequest.request_mask for more detailed
-   * information.
+   * The list of "Other contacts" returned as Person resources. "Other contacts" support a limited
+   * subset of fields. See ListOtherContactsRequest.request_mask for more detailed information.
    * @return value or {@code null} for none
    */
   public java.util.List<Person> getOtherContacts() {
@@ -103,9 +101,8 @@ public final class ListOtherContactsResponse extends com.google.api.client.json.
   }
 
   /**
-   * The list of other contacts returned as Person resources. Other contacts support a limited
-   * subset of supported fields. See ListOtherContactsRequest.request_mask for more detailed
-   * information.
+   * The list of "Other contacts" returned as Person resources. "Other contacts" support a limited
+   * subset of fields. See ListOtherContactsRequest.request_mask for more detailed information.
    * @param otherContacts otherContacts or {@code null} for none
    */
   public ListOtherContactsResponse setOtherContacts(java.util.List<Person> otherContacts) {

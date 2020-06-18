@@ -20,7 +20,8 @@ package com.google.api.services.groupsmigration;
  * Service definition for GroupsMigration (v1).
  *
  * <p>
- * Groups Migration Api.
+ * The Groups Migration API allows domain administrators to archive
+    emails into Google groups.
  * </p>
  *
  * <p>
@@ -63,7 +64,7 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "groups/v1/groups/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -184,7 +185,7 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
 
     public class Insert extends GroupsMigrationRequest<com.google.api.services.groupsmigration.model.Groups> {
 
-      private static final String REST_PATH = "{groupId}/archive";
+      private static final String REST_PATH = "groups/v1/groups/{groupId}/archive";
 
       /**
        * Inserts a new mail into the archive of the Google group.
@@ -231,8 +232,23 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -261,8 +277,13 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The group ID */

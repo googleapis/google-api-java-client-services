@@ -42,6 +42,13 @@ public final class BlockAction extends com.google.api.client.json.GenericJson {
   private java.lang.Integer blockAfterDays;
 
   /**
+   * Specifies the scope of this BlockAction. Only applicable to devices that are company-owned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String blockScope;
+
+  /**
    * Number of days the policy is non-compliant before the device or work profile is blocked. To
    * block access immediately, set to 0. blockAfterDays must be less than wipeAfterDays.
    * @return value or {@code null} for none
@@ -57,6 +64,23 @@ public final class BlockAction extends com.google.api.client.json.GenericJson {
    */
   public BlockAction setBlockAfterDays(java.lang.Integer blockAfterDays) {
     this.blockAfterDays = blockAfterDays;
+    return this;
+  }
+
+  /**
+   * Specifies the scope of this BlockAction. Only applicable to devices that are company-owned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBlockScope() {
+    return blockScope;
+  }
+
+  /**
+   * Specifies the scope of this BlockAction. Only applicable to devices that are company-owned.
+   * @param blockScope blockScope or {@code null} for none
+   */
+  public BlockAction setBlockScope(java.lang.String blockScope) {
+    this.blockScope = blockScope;
     return this;
   }
 

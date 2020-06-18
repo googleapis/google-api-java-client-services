@@ -31,6 +31,18 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class SigninDetail extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls whether personal usage is allowed on a device provisioned with this enrollment
+   * token.For company-owned devices: Enabling personal usage allows the user to set up a work
+   * profile on the device. Disabling personal usage requires the user provision the device as a
+   * fully managed device.For personally-owned devices: Enabling personal usage allows the user to
+   * set up a work profile on the device. Disabling personal usage will prevent the device from
+   * provisioning. Personal usage cannot be disabled on personally-owned device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowPersonalUsage;
+
+  /**
    * A JSON string whose UTF-8 representation can be used to generate a QR code to enroll a device
    * with this enrollment token. To enroll a device using NFC, the NFC record must contain a
    * serialized java.util.Properties representation of the properties in the JSON. This is a read-
@@ -57,6 +69,33 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String signinUrl;
+
+  /**
+   * Controls whether personal usage is allowed on a device provisioned with this enrollment
+   * token.For company-owned devices: Enabling personal usage allows the user to set up a work
+   * profile on the device. Disabling personal usage requires the user provision the device as a
+   * fully managed device.For personally-owned devices: Enabling personal usage allows the user to
+   * set up a work profile on the device. Disabling personal usage will prevent the device from
+   * provisioning. Personal usage cannot be disabled on personally-owned device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowPersonalUsage() {
+    return allowPersonalUsage;
+  }
+
+  /**
+   * Controls whether personal usage is allowed on a device provisioned with this enrollment
+   * token.For company-owned devices: Enabling personal usage allows the user to set up a work
+   * profile on the device. Disabling personal usage requires the user provision the device as a
+   * fully managed device.For personally-owned devices: Enabling personal usage allows the user to
+   * set up a work profile on the device. Disabling personal usage will prevent the device from
+   * provisioning. Personal usage cannot be disabled on personally-owned device.
+   * @param allowPersonalUsage allowPersonalUsage or {@code null} for none
+   */
+  public SigninDetail setAllowPersonalUsage(java.lang.String allowPersonalUsage) {
+    this.allowPersonalUsage = allowPersonalUsage;
+    return this;
+  }
 
   /**
    * A JSON string whose UTF-8 representation can be used to generate a QR code to enroll a device

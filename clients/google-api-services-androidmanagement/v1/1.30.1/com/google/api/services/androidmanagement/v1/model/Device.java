@@ -202,6 +202,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.List<NonComplianceDetail> nonComplianceDetails;
 
   /**
+   * Ownership of the managed device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ownership;
+
+  /**
    * Whether the device is compliant with its policy.
    * The value may be {@code null}.
    */
@@ -674,6 +681,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setNonComplianceDetails(java.util.List<NonComplianceDetail> nonComplianceDetails) {
     this.nonComplianceDetails = nonComplianceDetails;
+    return this;
+  }
+
+  /**
+   * Ownership of the managed device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOwnership() {
+    return ownership;
+  }
+
+  /**
+   * Ownership of the managed device.
+   * @param ownership ownership or {@code null} for none
+   */
+  public Device setOwnership(java.lang.String ownership) {
+    this.ownership = ownership;
     return this;
   }
 

@@ -226,11 +226,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -248,11 +243,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -364,11 +354,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -386,11 +371,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -569,11 +549,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public AddVersion setAccessToken(java.lang.String accessToken) {
-          return (AddVersion) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public AddVersion setAlt(java.lang.String alt) {
           return (AddVersion) super.setAlt(alt);
         }
@@ -591,11 +566,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public AddVersion setKey(java.lang.String key) {
           return (AddVersion) super.setKey(key);
-        }
-
-        @Override
-        public AddVersion setOauthToken(java.lang.String oauthToken) {
-          return (AddVersion) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -709,11 +679,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
         }
@@ -731,11 +696,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public Create setKey(java.lang.String key) {
           return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -875,11 +835,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
         }
@@ -897,11 +852,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public Delete setKey(java.lang.String key) {
           return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1017,11 +967,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -1039,11 +984,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1162,11 +1102,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-          return (GetIamPolicy) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public GetIamPolicy setAlt(java.lang.String alt) {
           return (GetIamPolicy) super.setAlt(alt);
         }
@@ -1184,11 +1119,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public GetIamPolicy setKey(java.lang.String key) {
           return (GetIamPolicy) super.setKey(key);
-        }
-
-        @Override
-        public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-          return (GetIamPolicy) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1353,11 +1283,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -1375,11 +1300,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1536,11 +1456,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public Patch setAlt(java.lang.String alt) {
           return (Patch) super.setAlt(alt);
         }
@@ -1558,11 +1473,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public Patch setKey(java.lang.String key) {
           return (Patch) super.setKey(key);
-        }
-
-        @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1692,11 +1602,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-          return (SetIamPolicy) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public SetIamPolicy setAlt(java.lang.String alt) {
           return (SetIamPolicy) super.setAlt(alt);
         }
@@ -1714,11 +1619,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public SetIamPolicy setKey(java.lang.String key) {
           return (SetIamPolicy) super.setKey(key);
-        }
-
-        @Override
-        public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-          return (SetIamPolicy) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -1842,11 +1742,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-          return (TestIamPermissions) super.setAccessToken(accessToken);
-        }
-
-        @Override
         public TestIamPermissions setAlt(java.lang.String alt) {
           return (TestIamPermissions) super.setAlt(alt);
         }
@@ -1864,11 +1759,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public TestIamPermissions setKey(java.lang.String key) {
           return (TestIamPermissions) super.setKey(key);
-        }
-
-        @Override
-        public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-          return (TestIamPermissions) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -2015,11 +1905,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public Access setAccessToken(java.lang.String accessToken) {
-            return (Access) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Access setAlt(java.lang.String alt) {
             return (Access) super.setAlt(alt);
           }
@@ -2037,11 +1922,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public Access setKey(java.lang.String key) {
             return (Access) super.setKey(key);
-          }
-
-          @Override
-          public Access setOauthToken(java.lang.String oauthToken) {
-            return (Access) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2158,11 +2038,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public Destroy setAccessToken(java.lang.String accessToken) {
-            return (Destroy) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Destroy setAlt(java.lang.String alt) {
             return (Destroy) super.setAlt(alt);
           }
@@ -2180,11 +2055,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public Destroy setKey(java.lang.String key) {
             return (Destroy) super.setKey(key);
-          }
-
-          @Override
-          public Destroy setOauthToken(java.lang.String oauthToken) {
-            return (Destroy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2302,11 +2172,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public Disable setAccessToken(java.lang.String accessToken) {
-            return (Disable) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Disable setAlt(java.lang.String alt) {
             return (Disable) super.setAlt(alt);
           }
@@ -2324,11 +2189,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public Disable setKey(java.lang.String key) {
             return (Disable) super.setKey(key);
-          }
-
-          @Override
-          public Disable setOauthToken(java.lang.String oauthToken) {
-            return (Disable) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2446,11 +2306,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public Enable setAccessToken(java.lang.String accessToken) {
-            return (Enable) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Enable setAlt(java.lang.String alt) {
             return (Enable) super.setAlt(alt);
           }
@@ -2468,11 +2323,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public Enable setKey(java.lang.String key) {
             return (Enable) super.setKey(key);
-          }
-
-          @Override
-          public Enable setOauthToken(java.lang.String oauthToken) {
-            return (Enable) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2601,11 +2451,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -2623,11 +2468,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2752,11 +2592,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -2774,11 +2609,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override

@@ -18,7 +18,13 @@ package com.google.api.services.monitoring.v3.model;
 
 /**
  * Defines a metric type and its schema. Once a metric descriptor is created, deleting or altering
- * it stops data collection and makes the metric type's existing data unusable.
+ * it stops data collection and makes the metric type's existing data unusable.The following are
+ * specific rules for service defined Monitoring metric descriptors: type, metric_kind, value_type,
+ * description, display_name,  launch_stage fields are all required. The unit field must be
+ * specified  if the value_type is any of DOUBLE, INT64, DISTRIBUTION. Maximum of default 500 metric
+ * descriptors per service is allowed. Maximum of default 10 labels per metric descriptor is
+ * allowed.The default maximum limit can be overridden. Please follow
+ * https://cloud.google.com/monitoring/quotas
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -47,10 +53,12 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   private java.lang.String displayName;
 
   /**
-   * The set of labels that can be used to describe a specific instance of this metric type. For
-   * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
-   * for the HTTP response code, response_code, so you can look at latencies for successful
-   * responses or just for responses that failed.
+   * The set of labels that can be used to describe a specific instance of this metric type.The
+   * label key name must follow: Only upper and lower-case letters, digits and underscores (_) are
+   * allowed. Label name must start with a letter or digit. The maximum length of a label name is
+   * 100 characters.For example, the appengine.googleapis.com/http/server/response_latencies metric
+   * type has a label for the HTTP response code, response_code, so you can look at latencies for
+   * successful responses or just for responses that failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,10 +109,14 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined
-   * metric types have the DNS name custom.googleapis.com or external.googleapis.com. Metric types
-   * should use a natural hierarchical grouping. For example:
-   * "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
+   * The metric type, including its DNS name prefix. The type is not URL-encoded.All service defined
+   * metrics must be prefixed with the service name, in the format of {service name}/{relative
+   * metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric
+   * name must follow: Only upper and lower-case letters, digits, '/' and underscores '_' are
+   * allowed. The maximum number of characters allowed for the relative_metric_name is  100.All
+   * user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
+   * logging.googleapis.com/user/.Metric types should use a natural hierarchical grouping. For
+   * example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
    * The value may be {@code null}.
    */
@@ -125,15 +137,16 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * (which is 12005/1000), or use Kis{CPU} and write 11.723 (which is 12005/1024).The supported
    * units are a subset of The Unified Code for Units of Measure
    * (http://unitsofmeasure.org/ucum.html) standard:Basic units (UNIT) bit bit By byte s second min
-   * minute h hour d dayPrefixes (PREFIX) k kilo (10^3) M mega (10^6) G giga (10^9) T tera (10^12) P
-   * peta (10^15) E exa (10^18) Z zetta (10^21) Y yotta (10^24) m milli (10^-3) u micro (10^-6) n
-   * nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21) y yocto (10^-24)
-   * Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi (2^50)GrammarThe grammar
-   * also includes these connectors: / division or ratio (as an infix operator). For examples,
-   * kBy/{email} or MiBy/10ms (although you should almost never  have /s in a metric unit; rates
-   * should always be computed at  query time from the underlying cumulative or delta value). .
-   * multiplication or composition (as an infix operator). For  examples, GBy.d or k{watt}.h.The
-   * grammar for a unit is as follows: Expression = Component { "." Component } { "/" Component } ;
+   * minute h hour d day 1 dimensionlessPrefixes (PREFIX) k kilo (10^3) M mega (10^6) G giga (10^9)
+   * T tera (10^12) P peta (10^15) E exa (10^18) Z zetta (10^21) Y yotta (10^24) m milli (10^-3) u
+   * micro (10^-6) n nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21)
+   * y yocto (10^-24) Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi
+   * (2^50)GrammarThe grammar also includes these connectors: / division or ratio (as an infix
+   * operator). For examples,  kBy/{email} or MiBy/10ms (although you should almost never  have /s
+   * in a metric unit; rates should always be computed at  query time from the underlying cumulative
+   * or delta value). . multiplication or composition (as an infix operator). For  examples, GBy.d
+   * or k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } {
+   * "/" Component } ;
    *
    * Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ]           | Annotation           | "1"
    * ;
@@ -203,10 +216,12 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The set of labels that can be used to describe a specific instance of this metric type. For
-   * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
-   * for the HTTP response code, response_code, so you can look at latencies for successful
-   * responses or just for responses that failed.
+   * The set of labels that can be used to describe a specific instance of this metric type.The
+   * label key name must follow: Only upper and lower-case letters, digits and underscores (_) are
+   * allowed. Label name must start with a letter or digit. The maximum length of a label name is
+   * 100 characters.For example, the appengine.googleapis.com/http/server/response_latencies metric
+   * type has a label for the HTTP response code, response_code, so you can look at latencies for
+   * successful responses or just for responses that failed.
    * @return value or {@code null} for none
    */
   public java.util.List<LabelDescriptor> getLabels() {
@@ -214,10 +229,12 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The set of labels that can be used to describe a specific instance of this metric type. For
-   * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
-   * for the HTTP response code, response_code, so you can look at latencies for successful
-   * responses or just for responses that failed.
+   * The set of labels that can be used to describe a specific instance of this metric type.The
+   * label key name must follow: Only upper and lower-case letters, digits and underscores (_) are
+   * allowed. Label name must start with a letter or digit. The maximum length of a label name is
+   * 100 characters.For example, the appengine.googleapis.com/http/server/response_latencies metric
+   * type has a label for the HTTP response code, response_code, so you can look at latencies for
+   * successful responses or just for responses that failed.
    * @param labels labels or {@code null} for none
    */
   public MetricDescriptor setLabels(java.util.List<LabelDescriptor> labels) {
@@ -317,10 +334,14 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined
-   * metric types have the DNS name custom.googleapis.com or external.googleapis.com. Metric types
-   * should use a natural hierarchical grouping. For example:
-   * "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
+   * The metric type, including its DNS name prefix. The type is not URL-encoded.All service defined
+   * metrics must be prefixed with the service name, in the format of {service name}/{relative
+   * metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric
+   * name must follow: Only upper and lower-case letters, digits, '/' and underscores '_' are
+   * allowed. The maximum number of characters allowed for the relative_metric_name is  100.All
+   * user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
+   * logging.googleapis.com/user/.Metric types should use a natural hierarchical grouping. For
+   * example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
    * @return value or {@code null} for none
    */
@@ -329,10 +350,14 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined
-   * metric types have the DNS name custom.googleapis.com or external.googleapis.com. Metric types
-   * should use a natural hierarchical grouping. For example:
-   * "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
+   * The metric type, including its DNS name prefix. The type is not URL-encoded.All service defined
+   * metrics must be prefixed with the service name, in the format of {service name}/{relative
+   * metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric
+   * name must follow: Only upper and lower-case letters, digits, '/' and underscores '_' are
+   * allowed. The maximum number of characters allowed for the relative_metric_name is  100.All
+   * user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
+   * logging.googleapis.com/user/.Metric types should use a natural hierarchical grouping. For
+   * example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
    * @param type type or {@code null} for none
    */
@@ -355,15 +380,16 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * (which is 12005/1000), or use Kis{CPU} and write 11.723 (which is 12005/1024).The supported
    * units are a subset of The Unified Code for Units of Measure
    * (http://unitsofmeasure.org/ucum.html) standard:Basic units (UNIT) bit bit By byte s second min
-   * minute h hour d dayPrefixes (PREFIX) k kilo (10^3) M mega (10^6) G giga (10^9) T tera (10^12) P
-   * peta (10^15) E exa (10^18) Z zetta (10^21) Y yotta (10^24) m milli (10^-3) u micro (10^-6) n
-   * nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21) y yocto (10^-24)
-   * Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi (2^50)GrammarThe grammar
-   * also includes these connectors: / division or ratio (as an infix operator). For examples,
-   * kBy/{email} or MiBy/10ms (although you should almost never  have /s in a metric unit; rates
-   * should always be computed at  query time from the underlying cumulative or delta value). .
-   * multiplication or composition (as an infix operator). For  examples, GBy.d or k{watt}.h.The
-   * grammar for a unit is as follows: Expression = Component { "." Component } { "/" Component } ;
+   * minute h hour d day 1 dimensionlessPrefixes (PREFIX) k kilo (10^3) M mega (10^6) G giga (10^9)
+   * T tera (10^12) P peta (10^15) E exa (10^18) Z zetta (10^21) Y yotta (10^24) m milli (10^-3) u
+   * micro (10^-6) n nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21)
+   * y yocto (10^-24) Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi
+   * (2^50)GrammarThe grammar also includes these connectors: / division or ratio (as an infix
+   * operator). For examples,  kBy/{email} or MiBy/10ms (although you should almost never  have /s
+   * in a metric unit; rates should always be computed at  query time from the underlying cumulative
+   * or delta value). . multiplication or composition (as an infix operator). For  examples, GBy.d
+   * or k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } {
+   * "/" Component } ;
    *
    * Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ]           | Annotation           | "1"
    * ;
@@ -401,15 +427,16 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * (which is 12005/1000), or use Kis{CPU} and write 11.723 (which is 12005/1024).The supported
    * units are a subset of The Unified Code for Units of Measure
    * (http://unitsofmeasure.org/ucum.html) standard:Basic units (UNIT) bit bit By byte s second min
-   * minute h hour d dayPrefixes (PREFIX) k kilo (10^3) M mega (10^6) G giga (10^9) T tera (10^12) P
-   * peta (10^15) E exa (10^18) Z zetta (10^21) Y yotta (10^24) m milli (10^-3) u micro (10^-6) n
-   * nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21) y yocto (10^-24)
-   * Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi (2^50)GrammarThe grammar
-   * also includes these connectors: / division or ratio (as an infix operator). For examples,
-   * kBy/{email} or MiBy/10ms (although you should almost never  have /s in a metric unit; rates
-   * should always be computed at  query time from the underlying cumulative or delta value). .
-   * multiplication or composition (as an infix operator). For  examples, GBy.d or k{watt}.h.The
-   * grammar for a unit is as follows: Expression = Component { "." Component } { "/" Component } ;
+   * minute h hour d day 1 dimensionlessPrefixes (PREFIX) k kilo (10^3) M mega (10^6) G giga (10^9)
+   * T tera (10^12) P peta (10^15) E exa (10^18) Z zetta (10^21) Y yotta (10^24) m milli (10^-3) u
+   * micro (10^-6) n nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21)
+   * y yocto (10^-24) Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi
+   * (2^50)GrammarThe grammar also includes these connectors: / division or ratio (as an infix
+   * operator). For examples,  kBy/{email} or MiBy/10ms (although you should almost never  have /s
+   * in a metric unit; rates should always be computed at  query time from the underlying cumulative
+   * or delta value). . multiplication or composition (as an infix operator). For  examples, GBy.d
+   * or k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } {
+   * "/" Component } ;
    *
    * Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ]           | Annotation           | "1"
    * ;

@@ -42,6 +42,9 @@ public final class OrgPolicy extends com.google.api.client.json.GenericJson {
    * The name of the `Constraint` the `Policy` is configuring, for example,
    * `constraints/serviceuser.services`.
    *
+   * A [list of available constraints](/resource-manager/docs/organization-policy/org-policy-
+   * constraints) is available.
+   *
    * Immutable after creation.
    * The value may be {@code null}.
    */
@@ -117,6 +120,9 @@ public final class OrgPolicy extends com.google.api.client.json.GenericJson {
    * The name of the `Constraint` the `Policy` is configuring, for example,
    * `constraints/serviceuser.services`.
    *
+   * A [list of available constraints](/resource-manager/docs/organization-policy/org-policy-
+   * constraints) is available.
+   *
    * Immutable after creation.
    * @return value or {@code null} for none
    */
@@ -127,6 +133,9 @@ public final class OrgPolicy extends com.google.api.client.json.GenericJson {
   /**
    * The name of the `Constraint` the `Policy` is configuring, for example,
    * `constraints/serviceuser.services`.
+   *
+   * A [list of available constraints](/resource-manager/docs/organization-policy/org-policy-
+   * constraints) is available.
    *
    * Immutable after creation.
    * @param constraint constraint or {@code null} for none

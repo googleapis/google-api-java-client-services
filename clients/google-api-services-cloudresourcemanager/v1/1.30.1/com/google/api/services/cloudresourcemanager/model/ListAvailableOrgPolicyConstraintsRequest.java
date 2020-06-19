@@ -17,8 +17,8 @@
 package com.google.api.services.cloudresourcemanager.model;
 
 /**
- * The request sent to the [ListAvailableOrgPolicyConstraints]
- * google.cloud.OrgPolicy.v1.ListAvailableOrgPolicyConstraints] method.
+ * The request sent to the `ListAvailableOrgPolicyConstraints` method on the project, folder, or
+ * organization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

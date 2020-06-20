@@ -33,8 +33,8 @@ public final class TimeRange extends com.google.api.client.json.GenericJson {
 
   /**
    * End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`. The
-   * end_time must not be in the future. Creates transfer runs where run_time is in the range betwen
-   * start_time (inclusive) and end_time (exlusive).
+   * end_time must not be in the future. Creates transfer runs where run_time is in the range
+   * between start_time (inclusive) and end_time (exclusive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class TimeRange extends com.google.api.client.json.GenericJson {
   /**
    * Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`. The
    * start_time must be strictly less than the end_time. Creates transfer runs where run_time is in
-   * the range betwen start_time (inclusive) and end_time (exlusive).
+   * the range between start_time (inclusive) and end_time (exclusive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class TimeRange extends com.google.api.client.json.GenericJson {
 
   /**
    * End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`. The
-   * end_time must not be in the future. Creates transfer runs where run_time is in the range betwen
-   * start_time (inclusive) and end_time (exlusive).
+   * end_time must not be in the future. Creates transfer runs where run_time is in the range
+   * between start_time (inclusive) and end_time (exclusive).
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -61,8 +61,8 @@ public final class TimeRange extends com.google.api.client.json.GenericJson {
 
   /**
    * End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`. The
-   * end_time must not be in the future. Creates transfer runs where run_time is in the range betwen
-   * start_time (inclusive) and end_time (exlusive).
+   * end_time must not be in the future. Creates transfer runs where run_time is in the range
+   * between start_time (inclusive) and end_time (exclusive).
    * @param endTime endTime or {@code null} for none
    */
   public TimeRange setEndTime(String endTime) {
@@ -73,7 +73,7 @@ public final class TimeRange extends com.google.api.client.json.GenericJson {
   /**
    * Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`. The
    * start_time must be strictly less than the end_time. Creates transfer runs where run_time is in
-   * the range betwen start_time (inclusive) and end_time (exlusive).
+   * the range between start_time (inclusive) and end_time (exclusive).
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -83,7 +83,7 @@ public final class TimeRange extends com.google.api.client.json.GenericJson {
   /**
    * Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`. The
    * start_time must be strictly less than the end_time. Creates transfer runs where run_time is in
-   * the range betwen start_time (inclusive) and end_time (exlusive).
+   * the range between start_time (inclusive) and end_time (exclusive).
    * @param startTime startTime or {@code null} for none
    */
   public TimeRange setStartTime(String startTime) {

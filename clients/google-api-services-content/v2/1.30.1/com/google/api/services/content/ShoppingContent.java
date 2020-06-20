@@ -1203,7 +1203,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Updates a Merchant Center account.
+     * Updates a Merchant Center account. Any fields that are not provided are deleted from the
+     * resource.
      *
      * Create a request for the method "accounts.update".
      *
@@ -1228,7 +1229,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
 
       /**
-       * Updates a Merchant Center account.
+       * Updates a Merchant Center account. Any fields that are not provided are deleted from the
+       * resource.
        *
        * Create a request for the method "accounts.update".
        *
@@ -2182,7 +2184,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Updates the tax settings of the account.
+     * Updates the tax settings of the account. Any fields that are not provided are deleted from the
+     * resource.
      *
      * Create a request for the method "accounttax.update".
      *
@@ -2207,7 +2210,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/accounttax/{accountId}";
 
       /**
-       * Updates the tax settings of the account.
+       * Updates the tax settings of the account. Any fields that are not provided are deleted from the
+       * resource.
        *
        * Create a request for the method "accounttax.update".
        *
@@ -3153,7 +3157,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Updates a datafeed configuration of your Merchant Center account.
+     * Updates a datafeed configuration of your Merchant Center account. Any fields that are not
+     * provided are deleted from the resource.
      *
      * Create a request for the method "datafeeds.update".
      *
@@ -3176,7 +3181,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
 
       /**
-       * Updates a datafeed configuration of your Merchant Center account.
+       * Updates a datafeed configuration of your Merchant Center account. Any fields that are not
+       * provided are deleted from the resource.
        *
        * Create a request for the method "datafeeds.update".
        *
@@ -5338,7 +5344,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Updates the LIA settings of the account.
+     * Updates the LIA settings of the account. Any fields that are not provided are deleted from the
+     * resource.
      *
      * Create a request for the method "liasettings.update".
      *
@@ -5363,7 +5370,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/liasettings/{accountId}";
 
       /**
-       * Updates the LIA settings of the account.
+       * Updates the LIA settings of the account. Any fields that are not provided are deleted from the
+       * resource.
        *
        * Create a request for the method "liasettings.update".
        *
@@ -12175,7 +12183,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Updates the shipping settings of the account.
+     * Updates the shipping settings of the account. Any fields that are not provided are deleted from
+     * the resource.
      *
      * Create a request for the method "shippingsettings.update".
      *
@@ -12200,7 +12209,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/shippingsettings/{accountId}";
 
       /**
-       * Updates the shipping settings of the account.
+       * Updates the shipping settings of the account. Any fields that are not provided are deleted from
+       * the resource.
        *
        * Create a request for the method "shippingsettings.update".
        *

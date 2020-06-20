@@ -31,9 +31,9 @@ package com.google.api.services.content.model;
 public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * The amount that is refunded. In case of multiple refunds, - If the quantity of refunded items
-   * changed, this should contain the total refund per item.  - If the quantity of the refunded
-   * items remained the same, this should be the newly refunded amount.
+   * The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by
+   * setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount
+   * you currently want to refund to the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.googl
   private java.lang.Integer quantity;
 
   /**
-   * The amount that is refunded. In case of multiple refunds, - If the quantity of refunded items
-   * changed, this should contain the total refund per item.  - If the quantity of the refunded
-   * items remained the same, this should be the newly refunded amount.
+   * The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by
+   * setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount
+   * you currently want to refund to the customer.
    * @return value or {@code null} for none
    */
   public MonetaryAmount getAmount() {
@@ -80,9 +80,9 @@ public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.googl
   }
 
   /**
-   * The amount that is refunded. In case of multiple refunds, - If the quantity of refunded items
-   * changed, this should contain the total refund per item.  - If the quantity of the refunded
-   * items remained the same, this should be the newly refunded amount.
+   * The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by
+   * setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount
+   * you currently want to refund to the customer.
    * @param amount amount or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRefundItemItem setAmount(MonetaryAmount amount) {

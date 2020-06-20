@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/N8mdGR5CdqP9V1ItPpqAuiW0638\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/MVmoulndJbAS5lT73tnDsslbrZE\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200529",
+ "revision": "20200615",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -4059,7 +4059,7 @@
    "properties": {
     "amount": {
      "$ref": "MonetaryAmount",
-     "description": "The amount that is refunded. In case of multiple refunds,  \n- If the quantity of refunded items changed, this should contain the total refund per item. \n- If the quantity of the refunded items remained the same, this should be the newly refunded amount."
+     "description": "The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount you currently want to refund to the customer."
     },
     "fullRefund": {
      "type": "boolean",
@@ -5409,6 +5409,10 @@
      "type": "string",
      "description": "Brand of the item."
     },
+    "canonicalLink": {
+     "type": "string",
+     "description": "Link to the canonical version of the landing page."
+    },
     "channel": {
      "type": "string",
      "description": "Required. The item's channel (online or local).\n\nAcceptable values are:  \n- \"`local`\" \n- \"`online`\"",
@@ -5542,7 +5546,7 @@
     },
     "installment": {
      "$ref": "Installment",
-     "description": "Number and amount of installments to pay for an item. Brazil only."
+     "description": "Number and amount of installments to pay for an item."
     },
     "isBundle": {
      "type": "boolean",
@@ -5617,6 +5621,20 @@
      "$ref": "Price",
      "description": "Price of the item."
     },
+    "productDetails": {
+     "type": "array",
+     "description": "Technical specification or additional product details",
+     "items": {
+      "$ref": "ProductProductDetail"
+     }
+    },
+    "productHighlights": {
+     "type": "array",
+     "description": "List of important bullet points describing the product",
+     "items": {
+      "type": "string"
+     }
+    },
     "productTypes": {
      "type": "array",
      "description": "Categories of the item (formatted as in products data specification).",
@@ -5690,6 +5708,10 @@
      "type": "string",
      "description": "The source of the offer, i.e., how the offer was created.\n\nAcceptable values are:  \n- \"`api`\" \n- \"`crawl`\" \n- \"`feed`\""
     },
+    "subscriptionCost": {
+     "$ref": "ProductSubscriptionCost",
+     "description": "Number of periods (months or years) and amount of payment per period for an item with an associated subscription contract."
+    },
     "targetCountry": {
      "type": "string",
      "description": "Required. The CLDR territory code for the item.",
@@ -5743,6 +5765,24 @@
     "taxAmount": {
      "$ref": "Price",
      "description": "Tax value."
+    }
+   }
+  },
+  "ProductProductDetail": {
+   "id": "ProductProductDetail",
+   "type": "object",
+   "properties": {
+    "attributeName": {
+     "type": "string",
+     "description": "The name of the product detail."
+    },
+    "attributeValue": {
+     "type": "string",
+     "description": "The value of the product detail."
+    },
+    "sectionName": {
+     "type": "string",
+     "description": "The section header used to group a set of product details."
     }
    }
   },
@@ -5871,7 +5911,7 @@
     },
     "status": {
      "type": "string",
-     "description": "Destination approval status in targetCountry of the offer."
+     "description": "Destination approval status in `targetCountry` of the offer."
     }
    }
   },
@@ -5910,6 +5950,25 @@
     "servability": {
      "type": "string",
      "description": "How this issue affects serving of the offer."
+    }
+   }
+  },
+  "ProductSubscriptionCost": {
+   "id": "ProductSubscriptionCost",
+   "type": "object",
+   "properties": {
+    "amount": {
+     "$ref": "Price",
+     "description": "The amount the buyer has to pay per subscription period."
+    },
+    "period": {
+     "type": "string",
+     "description": "The type of subscription period."
+    },
+    "periodLength": {
+     "type": "string",
+     "description": "The number of subscription periods the buyer has to pay.",
+     "format": "int64"
     }
    }
   },
@@ -8070,7 +8129,7 @@
      "id": "content.accounts.update",
      "path": "{merchantId}/accounts/{accountId}",
      "httpMethod": "PUT",
-     "description": "Updates a Merchant Center account.",
+     "description": "Updates a Merchant Center account. Any fields that are not provided are deleted from the resource.",
      "parameters": {
       "accountId": {
        "type": "string",
@@ -8289,7 +8348,7 @@
      "id": "content.accounttax.update",
      "path": "{merchantId}/accounttax/{accountId}",
      "httpMethod": "PUT",
-     "description": "Updates the tax settings of the account.",
+     "description": "Updates the tax settings of the account. Any fields that are not provided are deleted from the resource.",
      "parameters": {
       "accountId": {
        "type": "string",
@@ -8498,7 +8557,7 @@
      "id": "content.datafeeds.update",
      "path": "{merchantId}/datafeeds/{datafeedId}",
      "httpMethod": "PUT",
-     "description": "Updates a datafeed configuration of your Merchant Center account.",
+     "description": "Updates a datafeed configuration of your Merchant Center account. Any fields that are not provided are deleted from the resource.",
      "parameters": {
       "datafeedId": {
        "type": "string",
@@ -8947,7 +9006,7 @@
      "id": "content.liasettings.update",
      "path": "{merchantId}/liasettings/{accountId}",
      "httpMethod": "PUT",
-     "description": "Updates the LIA settings of the account.",
+     "description": "Updates the LIA settings of the account. Any fields that are not provided are deleted from the resource.",
      "parameters": {
       "accountId": {
        "type": "string",
@@ -11365,7 +11424,7 @@
      "id": "content.shippingsettings.update",
      "path": "{merchantId}/shippingsettings/{accountId}",
      "httpMethod": "PUT",
-     "description": "Updates the shipping settings of the account.",
+     "description": "Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.",
      "parameters": {
       "accountId": {
        "type": "string",

@@ -30,13 +30,7 @@ package com.google.api.services.compute.model;
 public final class SecuritySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * A URL referring to a networksecurity.Authentication resource that describes how clients should
-   * authenticate with this service's backends. If left blank, communications between services are
-   * not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's
-   * backends, the OriginationTls setting of Authentication.TransportAuthentication is applied.
-   * Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources
-   * for additional details. authentication only applies to a global BackendService with the
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use clientTlsPolicy instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +54,16 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   private AuthorizationConfig authorizationConfig;
 
   /**
+   * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
+   * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
+   * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
+   * communications are not encrypted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientTlsPolicy;
+
+  /**
    * [Deprecated] TLS Settings for the backend service.
    * The value may be {@code null}.
    */
@@ -67,24 +71,22 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   private ClientTlsSettings clientTlsSettings;
 
   /**
-   * Optional. A list of subject alternate names to verify the subject identity (SAN) in the
-   * certificate presented by the server, to authorize the SAN list as identities to run the service
-   * represented by this BackendService. If specified, the client will verify that the server
-   * certificate's subject alt name matches one of the specified values. Only applies to a global
-   * BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual
+   * TLS handshake with an server/endpoint for this BackendService. When the server presents its
+   * X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If
+   * the field contains one of the specified values, the communication continues. Otherwise, it
+   * fails. This additional check enables the client to verify that the server is authorized to run
+   * the requested service. Note that the contents of the server certificate's subjectAltName field
+   * are configured by the Public Key Infrastructure which provisions server identities. Only
+   * applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only
+   * applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subjectAltNames;
 
   /**
-   * A URL referring to a networksecurity.Authentication resource that describes how clients should
-   * authenticate with this service's backends. If left blank, communications between services are
-   * not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's
-   * backends, the OriginationTls setting of Authentication.TransportAuthentication is applied.
-   * Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources
-   * for additional details. authentication only applies to a global BackendService with the
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use clientTlsPolicy instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthentication() {
@@ -92,13 +94,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A URL referring to a networksecurity.Authentication resource that describes how clients should
-   * authenticate with this service's backends. If left blank, communications between services are
-   * not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's
-   * backends, the OriginationTls setting of Authentication.TransportAuthentication is applied.
-   * Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources
-   * for additional details. authentication only applies to a global BackendService with the
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use clientTlsPolicy instead.
    * @param authentication authentication or {@code null} for none
    */
   public SecuritySettings setAuthentication(java.lang.String authentication) {
@@ -147,6 +143,29 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
+   * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
+   * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
+   * communications are not encrypted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientTlsPolicy() {
+    return clientTlsPolicy;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
+   * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
+   * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
+   * communications are not encrypted.
+   * @param clientTlsPolicy clientTlsPolicy or {@code null} for none
+   */
+  public SecuritySettings setClientTlsPolicy(java.lang.String clientTlsPolicy) {
+    this.clientTlsPolicy = clientTlsPolicy;
+    return this;
+  }
+
+  /**
    * [Deprecated] TLS Settings for the backend service.
    * @return value or {@code null} for none
    */
@@ -164,11 +183,15 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A list of subject alternate names to verify the subject identity (SAN) in the
-   * certificate presented by the server, to authorize the SAN list as identities to run the service
-   * represented by this BackendService. If specified, the client will verify that the server
-   * certificate's subject alt name matches one of the specified values. Only applies to a global
-   * BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual
+   * TLS handshake with an server/endpoint for this BackendService. When the server presents its
+   * X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If
+   * the field contains one of the specified values, the communication continues. Otherwise, it
+   * fails. This additional check enables the client to verify that the server is authorized to run
+   * the requested service. Note that the contents of the server certificate's subjectAltName field
+   * are configured by the Public Key Infrastructure which provisions server identities. Only
+   * applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only
+   * applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubjectAltNames() {
@@ -176,11 +199,15 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A list of subject alternate names to verify the subject identity (SAN) in the
-   * certificate presented by the server, to authorize the SAN list as identities to run the service
-   * represented by this BackendService. If specified, the client will verify that the server
-   * certificate's subject alt name matches one of the specified values. Only applies to a global
-   * BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual
+   * TLS handshake with an server/endpoint for this BackendService. When the server presents its
+   * X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If
+   * the field contains one of the specified values, the communication continues. Otherwise, it
+   * fails. This additional check enables the client to verify that the server is authorized to run
+   * the requested service. Note that the contents of the server certificate's subjectAltName field
+   * are configured by the Public Key Infrastructure which provisions server identities. Only
+   * applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only
+   * applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).
    * @param subjectAltNames subjectAltNames or {@code null} for none
    */
   public SecuritySettings setSubjectAltNames(java.util.List<java.lang.String> subjectAltNames) {

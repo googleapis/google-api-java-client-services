@@ -19,8 +19,11 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Backend Service resource.
  *
- * A backend service contains configuration values for Google Cloud Platform load balancing
- * services.
+ * A backend service defines how Google Cloud load balancers distribute traffic. The backend service
+ * configuration contains a set of values, such as the protocol used to connect to backends, various
+ * distribution and session settings, health checks, and timeouts. These settings provide fine-
+ * grained control over how your load balancer behaves. Most of the settings have default values
+ * that allow for easy configuration if you need to get started quickly.
  *
  * Backend services in Google Compute Engine can be either regionally or globally scoped.
  *

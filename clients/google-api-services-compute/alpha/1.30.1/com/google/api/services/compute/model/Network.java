@@ -67,6 +67,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * [Output Only] URL of the firewall policy the network is associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firewallPolicy;
+
+  /**
    * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the firewall policy the network is associated with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirewallPolicy() {
+    return firewallPolicy;
+  }
+
+  /**
+   * [Output Only] URL of the firewall policy the network is associated with.
+   * @param firewallPolicy firewallPolicy or {@code null} for none
+   */
+  public Network setFirewallPolicy(java.lang.String firewallPolicy) {
+    this.firewallPolicy = firewallPolicy;
     return this;
   }
 

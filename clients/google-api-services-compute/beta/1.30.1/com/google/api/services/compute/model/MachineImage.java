@@ -139,7 +139,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * GCS bucket storage location of the machine image (regional or multi-regional).
+   * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -399,7 +399,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCS bucket storage location of the machine image (regional or multi-regional).
+   * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStorageLocations() {
@@ -407,7 +407,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCS bucket storage location of the machine image (regional or multi-regional).
+   * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
    * @param storageLocations storageLocations or {@code null} for none
    */
   public MachineImage setStorageLocations(java.util.List<java.lang.String> storageLocations) {

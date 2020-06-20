@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Properties of the SKU instances being reserved.
+ * Properties of the SKU instances being reserved. Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -94,6 +94,16 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maintenanceFreezeDurationHours;
+
+  /**
+   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
+   * VM as a Stable Fleet VM.
+   *
+   * See go/stable-fleet-ug for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceInterval;
 
   /**
    * Minimum cpu platform the reservation.
@@ -225,6 +235,29 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties setMaintenanceFreezeDurationHours(java.lang.Integer maintenanceFreezeDurationHours) {
     this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+    return this;
+  }
+
+  /**
+   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
+   * VM as a Stable Fleet VM.
+   *
+   * See go/stable-fleet-ug for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceInterval() {
+    return maintenanceInterval;
+  }
+
+  /**
+   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
+   * VM as a Stable Fleet VM.
+   *
+   * See go/stable-fleet-ug for more details.
+   * @param maintenanceInterval maintenanceInterval or {@code null} for none
+   */
+  public AllocationSpecificSKUAllocationReservedInstanceProperties setMaintenanceInterval(java.lang.String maintenanceInterval) {
+    this.maintenanceInterval = maintenanceInterval;
     return this;
   }
 

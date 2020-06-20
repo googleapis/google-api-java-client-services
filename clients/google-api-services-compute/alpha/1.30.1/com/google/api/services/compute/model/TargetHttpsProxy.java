@@ -45,28 +45,29 @@ package com.google.api.services.compute.model;
 public final class TargetHttpsProxy extends com.google.api.client.json.GenericJson {
 
   /**
-   * A URL referring to a networksecurity.Authentication resource that describes how the proxy
-   * should authenticate inbound traffic. If left blank, communications between services are not
-   * encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this
-   * proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied. Refer
-   * to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for
-   * additional details. authentication only applies to a global TargetHttpsProxy attached to
-   * globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use serverTlsPolicy instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authentication;
 
   /**
-   * A URL referring to a networksecurity.Authorization resource that describes how the proxy should
-   * authorize inbound traffic. If left blank, access will not be restricted by an authorization
-   * policy. Refer to the Authorization resource for additional details. authorization only applies
-   * to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set
-   * to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use authorizationPolicy instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authorization;
+
+  /**
+   * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how
+   * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
+   * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
+   * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authorizationPolicy;
 
   /**
    * URL of a certificate map that identifies a certificate map associated with the given target
@@ -159,6 +160,16 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String selfLinkWithId;
 
   /**
+   * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
+   * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
+   * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverTlsPolicy;
+
+  /**
    * URLs to SslCertificate resources that are used to authenticate connections between users and
    * the load balancer. At least one SSL certificate must be specified. Currently, you may specify
    * up to 15 SSL certificates.
@@ -186,13 +197,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String urlMap;
 
   /**
-   * A URL referring to a networksecurity.Authentication resource that describes how the proxy
-   * should authenticate inbound traffic. If left blank, communications between services are not
-   * encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this
-   * proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied. Refer
-   * to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for
-   * additional details. authentication only applies to a global TargetHttpsProxy attached to
-   * globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use serverTlsPolicy instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthentication() {
@@ -200,13 +205,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A URL referring to a networksecurity.Authentication resource that describes how the proxy
-   * should authenticate inbound traffic. If left blank, communications between services are not
-   * encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this
-   * proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied. Refer
-   * to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for
-   * additional details. authentication only applies to a global TargetHttpsProxy attached to
-   * globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use serverTlsPolicy instead.
    * @param authentication authentication or {@code null} for none
    */
   public TargetHttpsProxy setAuthentication(java.lang.String authentication) {
@@ -215,11 +214,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A URL referring to a networksecurity.Authorization resource that describes how the proxy should
-   * authorize inbound traffic. If left blank, access will not be restricted by an authorization
-   * policy. Refer to the Authorization resource for additional details. authorization only applies
-   * to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set
-   * to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use authorizationPolicy instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorization() {
@@ -227,15 +222,36 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A URL referring to a networksecurity.Authorization resource that describes how the proxy should
-   * authorize inbound traffic. If left blank, access will not be restricted by an authorization
-   * policy. Refer to the Authorization resource for additional details. authorization only applies
-   * to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set
-   * to INTERNAL_SELF_MANAGED.
+   * [Deprecated] Use authorizationPolicy instead.
    * @param authorization authorization or {@code null} for none
    */
   public TargetHttpsProxy setAuthorization(java.lang.String authorization) {
     this.authorization = authorization;
+    return this;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how
+   * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
+   * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
+   * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthorizationPolicy() {
+    return authorizationPolicy;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how
+   * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
+   * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
+   * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @param authorizationPolicy authorizationPolicy or {@code null} for none
+   */
+  public TargetHttpsProxy setAuthorizationPolicy(java.lang.String authorizationPolicy) {
+    this.authorizationPolicy = authorizationPolicy;
     return this;
   }
 
@@ -449,6 +465,29 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   public TargetHttpsProxy setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
+   * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
+   * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerTlsPolicy() {
+    return serverTlsPolicy;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
+   * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
+   * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted.
+   * @param serverTlsPolicy serverTlsPolicy or {@code null} for none
+   */
+  public TargetHttpsProxy setServerTlsPolicy(java.lang.String serverTlsPolicy) {
+    this.serverTlsPolicy = serverTlsPolicy;
     return this;
   }
 

@@ -65,14 +65,14 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> validImageTypes;
 
   /**
-   * List of valid master versions.
+   * List of valid master versions, in descending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> validMasterVersions;
 
   /**
-   * List of valid node upgrade target versions.
+   * List of valid node upgrade target versions, in descending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of valid master versions.
+   * List of valid master versions, in descending order.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValidMasterVersions() {
@@ -155,7 +155,7 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of valid master versions.
+   * List of valid master versions, in descending order.
    * @param validMasterVersions validMasterVersions or {@code null} for none
    */
   public ServerConfig setValidMasterVersions(java.util.List<java.lang.String> validMasterVersions) {
@@ -164,7 +164,7 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of valid node upgrade target versions.
+   * List of valid node upgrade target versions, in descending order.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValidNodeVersions() {
@@ -172,7 +172,7 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of valid node upgrade target versions.
+   * List of valid node upgrade target versions, in descending order.
    * @param validNodeVersions validNodeVersions or {@code null} for none
    */
   public ServerConfig setValidNodeVersions(java.util.List<java.lang.String> validNodeVersions) {

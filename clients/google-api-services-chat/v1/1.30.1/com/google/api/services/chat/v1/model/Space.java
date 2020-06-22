@@ -30,7 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The display name (only if the space is a room).
+   * Output only. The display name (only if the space is a room). Please note that this field might
+   * not be populated in direct messages between humans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only. The display name (only if the space is a room).
+   * Output only. The display name (only if the space is a room). Please note that this field might
+   * not be populated in direct messages between humans.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -75,7 +77,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The display name (only if the space is a room).
+   * Output only. The display name (only if the space is a room). Please note that this field might
+   * not be populated in direct messages between humans.
    * @param displayName displayName or {@code null} for none
    */
   public Space setDisplayName(java.lang.String displayName) {

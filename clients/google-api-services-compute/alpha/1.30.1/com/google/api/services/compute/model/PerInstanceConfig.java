@@ -58,6 +58,13 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   private PreservedState preservedState;
 
   /**
+   * The status of applying this per-instance config on the corresponding managed instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * Fingerprint of this per-instance config. This field can be used in optimistic locking. It is
    * ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
@@ -151,6 +158,23 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PerInstanceConfig setPreservedState(PreservedState preservedState) {
     this.preservedState = preservedState;
+    return this;
+  }
+
+  /**
+   * The status of applying this per-instance config on the corresponding managed instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * The status of applying this per-instance config on the corresponding managed instance.
+   * @param status status or {@code null} for none
+   */
+  public PerInstanceConfig setStatus(java.lang.String status) {
+    this.status = status;
     return this;
   }
 

@@ -31,8 +31,9 @@ package com.google.api.services.compute.model;
  * Optionally, certificate file contents that you upload can contain a set of up to five PEM-encoded
  * certificates. The API call creates an object (sslCertificate) that holds this data. You can use
  * SSL keys and certificates to secure connections to a load balancer. For more information, read
- * Creating and using SSL certificates and SSL certificates quotas and limits. (== resource_for
- * {$api_version}.sslCertificates ==) (== resource_for {$api_version}.regionSslCertificates ==)
+ * Creating and using SSL certificates, SSL certificates quotas and limits, and  Troubleshooting SSL
+ * certificates. (== resource_for {$api_version}.sslCertificates ==) (== resource_for
+ * {$api_version}.regionSslCertificates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

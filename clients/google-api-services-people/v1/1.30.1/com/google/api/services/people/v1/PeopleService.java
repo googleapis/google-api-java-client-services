@@ -1201,7 +1201,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   public class OtherContacts {
 
     /**
-     * Copies an other contact to a new contact in the user's MY_CONTACTS group
+     * Copies an "Other contact" to a new contact in the user's "myContacts" group
      *
      * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
      *
@@ -1209,7 +1209,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link CopyOtherContactToMyContactsGroup#execute()} method to invoke the
      * remote operation.
      *
-     * @param resourceName Required. The resource name of the other contact to copy.
+     * @param resourceName Required. The resource name of the "Other contact" to copy.
      * @param content the {@link com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest}
      * @return the request
      */
@@ -1227,7 +1227,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^otherContacts/[^/]+$");
 
       /**
-       * Copies an other contact to a new contact in the user's MY_CONTACTS group
+       * Copies an "Other contact" to a new contact in the user's "myContacts" group
        *
        * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
        *
@@ -1237,7 +1237,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param resourceName Required. The resource name of the other contact to copy.
+       * @param resourceName Required. The resource name of the "Other contact" to copy.
        * @param content the {@link com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest}
        * @since 1.13
        */
@@ -1306,17 +1306,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (CopyOtherContactToMyContactsGroup) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the other contact to copy. */
+      /** Required. The resource name of the "Other contact" to copy. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Required. The resource name of the other contact to copy.
+      /** Required. The resource name of the "Other contact" to copy.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /** Required. The resource name of the other contact to copy. */
+      /** Required. The resource name of the "Other contact" to copy. */
       public CopyOtherContactToMyContactsGroup setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -1333,7 +1333,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * List all other contacts, that is contacts that are not in a contact group. Other contacts are
+     * List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are
      * typically auto created contacts from interactions.
      *
      * Create a request for the method "otherContacts.list".
@@ -1354,8 +1354,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/otherContacts";
 
       /**
-       * List all other contacts, that is contacts that are not in a contact group. Other contacts are
-       * typically auto created contacts from interactions.
+       * List all "Other contacts", that is contacts that are not in a contact group. "Other contacts"
+       * are typically auto created contacts from interactions.
        *
        * Create a request for the method "otherContacts.list".
        *
@@ -1436,13 +1436,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. The number of other contacts to include in the response. Valid values are between
-       * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+       * Optional. The number of "Other contacts" to include in the response. Valid values are
+       * between 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The number of other contacts to include in the response. Valid values are between 1 and
+      /** Optional. The number of "Other contacts" to include in the response. Valid values are between 1 and
      1000, inclusive. Defaults to 100 if not set or set to 0.
        */
       public java.lang.Integer getPageSize() {
@@ -1450,8 +1450,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. The number of other contacts to include in the response. Valid values are between
-       * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+       * Optional. The number of "Other contacts" to include in the response. Valid values are
+       * between 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

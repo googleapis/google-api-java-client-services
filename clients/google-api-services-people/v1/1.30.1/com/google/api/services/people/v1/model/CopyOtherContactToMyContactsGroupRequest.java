@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A request to copy an other contact to my contacts group.
+ * A request to copy an "Other contact" to my contacts group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:

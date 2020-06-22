@@ -102,6 +102,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
+   * Link to the canonical version of the landing page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalLink;
+
+  /**
    * Required. The item's channel (online or local).
    *
    * Acceptable values are:   - "`local`"  - "`online`"
@@ -311,7 +318,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> includedDestinations;
 
   /**
-   * Number and amount of installments to pay for an item. Brazil only.
+   * Number and amount of installments to pay for an item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -434,6 +441,20 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price price;
 
   /**
+   * Technical specification or additional product details
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProductProductDetail> productDetails;
+
+  /**
+   * List of important bullet points describing the product
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> productHighlights;
+
+  /**
    * Categories of the item (formatted as in products data specification).
    * The value may be {@code null}.
    */
@@ -541,6 +562,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Number of periods (months or years) and amount of payment per period for an item with an
+   * associated subscription contract.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductSubscriptionCost subscriptionCost;
 
   /**
    * Required. The CLDR territory code for the item.
@@ -745,6 +774,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setBrand(java.lang.String brand) {
     this.brand = brand;
+    return this;
+  }
+
+  /**
+   * Link to the canonical version of the landing page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalLink() {
+    return canonicalLink;
+  }
+
+  /**
+   * Link to the canonical version of the landing page.
+   * @param canonicalLink canonicalLink or {@code null} for none
+   */
+  public Product setCanonicalLink(java.lang.String canonicalLink) {
+    this.canonicalLink = canonicalLink;
     return this;
   }
 
@@ -1236,7 +1282,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number and amount of installments to pay for an item. Brazil only.
+   * Number and amount of installments to pay for an item.
    * @return value or {@code null} for none
    */
   public Installment getInstallment() {
@@ -1244,7 +1290,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number and amount of installments to pay for an item. Brazil only.
+   * Number and amount of installments to pay for an item.
    * @param installment installment or {@code null} for none
    */
   public Product setInstallment(Installment installment) {
@@ -1533,6 +1579,40 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Technical specification or additional product details
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProductProductDetail> getProductDetails() {
+    return productDetails;
+  }
+
+  /**
+   * Technical specification or additional product details
+   * @param productDetails productDetails or {@code null} for none
+   */
+  public Product setProductDetails(java.util.List<ProductProductDetail> productDetails) {
+    this.productDetails = productDetails;
+    return this;
+  }
+
+  /**
+   * List of important bullet points describing the product
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProductHighlights() {
+    return productHighlights;
+  }
+
+  /**
+   * List of important bullet points describing the product
+   * @param productHighlights productHighlights or {@code null} for none
+   */
+  public Product setProductHighlights(java.util.List<java.lang.String> productHighlights) {
+    this.productHighlights = productHighlights;
+    return this;
+  }
+
+  /**
    * Categories of the item (formatted as in products data specification).
    * @return value or {@code null} for none
    */
@@ -1792,6 +1872,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setSource(java.lang.String source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Number of periods (months or years) and amount of payment per period for an item with an
+   * associated subscription contract.
+   * @return value or {@code null} for none
+   */
+  public ProductSubscriptionCost getSubscriptionCost() {
+    return subscriptionCost;
+  }
+
+  /**
+   * Number of periods (months or years) and amount of payment per period for an item with an
+   * associated subscription contract.
+   * @param subscriptionCost subscriptionCost or {@code null} for none
+   */
+  public Product setSubscriptionCost(ProductSubscriptionCost subscriptionCost) {
+    this.subscriptionCost = subscriptionCost;
     return this;
   }
 

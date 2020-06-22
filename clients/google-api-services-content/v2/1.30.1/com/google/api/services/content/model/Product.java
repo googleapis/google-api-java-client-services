@@ -121,6 +121,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
+   * Link to the canonical version of the landing page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalLink;
+
+  /**
    * Required. The item's channel (online or local).
    *
    * Acceptable values are:   - "`local`"  - "`online`"
@@ -340,7 +347,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String imageLink;
 
   /**
-   * Number and amount of installments to pay for an item. Brazil only.
+   * Number and amount of installments to pay for an item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -845,6 +852,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Link to the canonical version of the landing page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalLink() {
+    return canonicalLink;
+  }
+
+  /**
+   * Link to the canonical version of the landing page.
+   * @param canonicalLink canonicalLink or {@code null} for none
+   */
+  public Product setCanonicalLink(java.lang.String canonicalLink) {
+    this.canonicalLink = canonicalLink;
+    return this;
+  }
+
+  /**
    * Required. The item's channel (online or local).
    *
    * Acceptable values are:   - "`local`"  - "`online`"
@@ -1340,7 +1364,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number and amount of installments to pay for an item. Brazil only.
+   * Number and amount of installments to pay for an item.
    * @return value or {@code null} for none
    */
   public Installment getInstallment() {
@@ -1348,7 +1372,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number and amount of installments to pay for an item. Brazil only.
+   * Number and amount of installments to pay for an item.
    * @param installment installment or {@code null} for none
    */
   public Product setInstallment(Installment installment) {

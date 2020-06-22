@@ -889,12 +889,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
          *
          * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * "update_time = \"2019-06-10T16:07:18-07:00\"" "update_time = 1560208038000"
+         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000`
          *
          * * create_time: `=`, `>`, `<`, `>=`, `<=`
          *
          * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * "create_time = \"2019-06-10T16:07:18-07:00\"" "create_time = 1560208038000"
+         * `create_time = "2019-06-10T16:07:18-07:00"` `create_time = 1560208038000`
          *
          * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
          * * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
@@ -909,10 +909,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * For example, `resource_properties.size = 100` is a valid filter string.
          *
          * Use a partial match on the empty string to filter based on a property existing:
-         * "resource_properties.my_property : \"\""
+         * `resource_properties.my_property : ""`
          *
          * Use a negated partial match on the empty string to filter based on a property not
-         * existing: "-resource_properties.my_property : \"\""
+         * existing: `-resource_properties.my_property : ""`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -941,13 +941,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
        * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
 
-       Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: "update_time =
-       \"2019-06-10T16:07:18-07:00\"" "update_time = 1560208038000"
+       Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: `update_time =
+       "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000`
 
        * create_time: `=`, `>`, `<`, `>=`, `<=`
 
-       Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: "create_time =
-       \"2019-06-10T16:07:18-07:00\"" "create_time = 1560208038000"
+       Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: `create_time =
+       "2019-06-10T16:07:18-07:00"` `create_time = 1560208038000`
 
        * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
        security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
@@ -961,10 +961,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        For example, `resource_properties.size = 100` is a valid filter string.
 
        Use a partial match on the empty string to filter based on a property existing:
-       "resource_properties.my_property : \"\""
+       `resource_properties.my_property : ""`
 
        Use a negated partial match on the empty string to filter based on a property not existing:
-       "-resource_properties.my_property : \"\""
+       `-resource_properties.my_property : ""`
          */
         public java.lang.String getFilter() {
           return filter;
@@ -996,12 +996,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
          *
          * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * "update_time = \"2019-06-10T16:07:18-07:00\"" "update_time = 1560208038000"
+         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000`
          *
          * * create_time: `=`, `>`, `<`, `>=`, `<=`
          *
          * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * "create_time = \"2019-06-10T16:07:18-07:00\"" "create_time = 1560208038000"
+         * `create_time = "2019-06-10T16:07:18-07:00"` `create_time = 1560208038000`
          *
          * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
          * * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
@@ -1016,10 +1016,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * For example, `resource_properties.size = 100` is a valid filter string.
          *
          * Use a partial match on the empty string to filter based on a property existing:
-         * "resource_properties.my_property : \"\""
+         * `resource_properties.my_property : ""`
          *
          * Use a negated partial match on the empty string to filter based on a property not
-         * existing: "-resource_properties.my_property : \"\""
+         * existing: `-resource_properties.my_property : ""`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4739,17 +4739,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=`
            *
            * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-           * "event_time = \"2019-06-10T16:07:18-07:00\"" "event_time = 1560208038000"
+           * `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000`
            *
            * security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
            *
            * For example, `source_properties.size = 100` is a valid filter string.
            *
            * Use a partial match on the empty string to filter based on a property existing:
-           * "source_properties.my_property : \"\""
+           * `source_properties.my_property : ""`
            *
            * Use a negated partial match on the empty string to filter based on a property not
-           * existing: "-source_properties.my_property : \"\""
+           * existing: `-source_properties.my_property : ""`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -4778,18 +4778,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:` external_uri:
          `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=`
 
-         Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: "event_time =
-         \"2019-06-10T16:07:18-07:00\"" "event_time = 1560208038000"
+         Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
+         "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000`
 
          security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
 
          For example, `source_properties.size = 100` is a valid filter string.
 
          Use a partial match on the empty string to filter based on a property existing:
-         "source_properties.my_property : \"\""
+         `source_properties.my_property : ""`
 
          Use a negated partial match on the empty string to filter based on a property not existing:
-         "-source_properties.my_property : \"\""
+         `-source_properties.my_property : ""`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -4821,17 +4821,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=`
            *
            * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-           * "event_time = \"2019-06-10T16:07:18-07:00\"" "event_time = 1560208038000"
+           * `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000`
            *
            * security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
            *
            * For example, `source_properties.size = 100` is a valid filter string.
            *
            * Use a partial match on the empty string to filter based on a property existing:
-           * "source_properties.my_property : \"\""
+           * `source_properties.my_property : ""`
            *
            * Use a negated partial match on the empty string to filter based on a property not
-           * existing: "-source_properties.my_property : \"\""
+           * existing: `-source_properties.my_property : ""`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

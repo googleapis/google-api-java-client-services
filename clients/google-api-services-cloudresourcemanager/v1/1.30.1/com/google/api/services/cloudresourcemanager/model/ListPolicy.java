@@ -69,7 +69,7 @@ public final class ListPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Determines the inheritance behavior for this `Policy`.
    *
-   * By default, a `ListPolicy` set at a resource supercedes any `Policy` set anywhere up the
+   * By default, a `ListPolicy` set at a resource supersedes any `Policy` set anywhere up the
    * resource hierarchy. However, if `inherit_from_parent` is set to `true`, then the values from
    * the effective `Policy` of the parent resource are inherited, meaning the values set in this
    * `Policy` are added to the values inherited up the hierarchy.
@@ -204,7 +204,7 @@ public final class ListPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Determines the inheritance behavior for this `Policy`.
    *
-   * By default, a `ListPolicy` set at a resource supercedes any `Policy` set anywhere up the
+   * By default, a `ListPolicy` set at a resource supersedes any `Policy` set anywhere up the
    * resource hierarchy. However, if `inherit_from_parent` is set to `true`, then the values from
    * the effective `Policy` of the parent resource are inherited, meaning the values set in this
    * `Policy` are added to the values inherited up the hierarchy.
@@ -276,7 +276,7 @@ public final class ListPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Determines the inheritance behavior for this `Policy`.
    *
-   * By default, a `ListPolicy` set at a resource supercedes any `Policy` set anywhere up the
+   * By default, a `ListPolicy` set at a resource supersedes any `Policy` set anywhere up the
    * resource hierarchy. However, if `inherit_from_parent` is set to `true`, then the values from
    * the effective `Policy` of the parent resource are inherited, meaning the values set in this
    * `Policy` are added to the values inherited up the hierarchy.

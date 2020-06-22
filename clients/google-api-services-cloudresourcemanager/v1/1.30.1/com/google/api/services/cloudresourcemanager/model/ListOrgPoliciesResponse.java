@@ -17,8 +17,8 @@
 package com.google.api.services.cloudresourcemanager.model;
 
 /**
- * The response returned from the ListOrgPolicies method. It will be empty if no `Policies` are set
- * on the resource.
+ * The response returned from the `ListOrgPolicies` method. It will be empty if no `Policies` are
+ * set on the resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

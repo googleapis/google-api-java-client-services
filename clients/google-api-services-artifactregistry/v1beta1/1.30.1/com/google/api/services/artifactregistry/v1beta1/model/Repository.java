@@ -52,6 +52,15 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String format;
 
   /**
+   * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the
+   * contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-
+   * kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and
    * values may be no longer than 63 characters. Label keys must begin with a lowercase letter and
    * may only contain lowercase letters, numeric characters, underscores, and dashes.
@@ -123,6 +132,27 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setFormat(java.lang.String format) {
     this.format = format;
+    return this;
+  }
+
+  /**
+   * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the
+   * contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-
+   * kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the
+   * contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-
+   * kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public Repository setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 

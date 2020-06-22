@@ -1431,17 +1431,27 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
+        /**
+         * Optional limit on the number of roles to include in the response.
+         *
+         * The default is 300, and the maximum is 1,000.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional limit on the number of roles to include in the response.
+
+       The default is 300, and the maximum is 1,000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
+        /**
+         * Optional limit on the number of roles to include in the response.
+         *
+         * The default is 300, and the maximum is 1,000.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -3199,17 +3209,27 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
+        /**
+         * Optional limit on the number of roles to include in the response.
+         *
+         * The default is 300, and the maximum is 1,000.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional limit on the number of roles to include in the response.
+
+       The default is 300, and the maximum is 1,000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
+        /**
+         * Optional limit on the number of roles to include in the response.
+         *
+         * The default is 300, and the maximum is 1,000.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -4963,6 +4983,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Optional limit on the number of service accounts to include in the response. Further
          * accounts can subsequently be obtained by including the
          * ListServiceAccountsResponse.next_page_token in a subsequent request.
+         *
+         * The default is 20, and the maximum is 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -4970,6 +4992,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /** Optional limit on the number of service accounts to include in the response. Further accounts can
        subsequently be obtained by including the ListServiceAccountsResponse.next_page_token in a
        subsequent request.
+
+       The default is 20, and the maximum is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -4979,6 +5003,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Optional limit on the number of service accounts to include in the response. Further
          * accounts can subsequently be obtained by including the
          * ListServiceAccountsResponse.next_page_token in a subsequent request.
+         *
+         * The default is 20, and the maximum is 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -7520,17 +7546,27 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Optional limit on the number of roles to include in the response. */
+      /**
+       * Optional limit on the number of roles to include in the response.
+       *
+       * The default is 300, and the maximum is 1,000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional limit on the number of roles to include in the response.
+
+     The default is 300, and the maximum is 1,000.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Optional limit on the number of roles to include in the response. */
+      /**
+       * Optional limit on the number of roles to include in the response.
+       *
+       * The default is 300, and the maximum is 1,000.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

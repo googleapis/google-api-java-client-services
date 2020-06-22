@@ -31,15 +31,15 @@ package com.google.api.services.container.v1beta1.model;
 public final class AutoprovisioningNodePoolDefaults extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the node management options for NAP created node-pools.
+   * NodeManagement configuration for this NodePool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NodeManagement management;
 
   /**
-   * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on
-   * the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
+   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
+   * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
    * information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
@@ -50,28 +50,41 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String minCpuPlatform;
 
   /**
-   * Scopes that are used by NAP when creating node pools.
+   * The set of Google API scopes to be made available on all of the node VMs under the "default"
+   * service account.
+   *
+   * The following scopes are recommended, but not required, and by default are not included:
+   *
+   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
+   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
+   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
+   * registry/)).
+   *
+   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> oauthScopes;
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs.
+   * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
+   * of the Service Account; otherwise, if no Service Account is specified, the "default" service
+   * account is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * Specifies the upgrade settings for NAP created node pools
+   * Upgrade settings control disruption and speed of the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UpgradeSettings upgradeSettings;
 
   /**
-   * Specifies the node management options for NAP created node-pools.
+   * NodeManagement configuration for this NodePool.
    * @return value or {@code null} for none
    */
   public NodeManagement getManagement() {
@@ -79,7 +92,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Specifies the node management options for NAP created node-pools.
+   * NodeManagement configuration for this NodePool.
    * @param management management or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setManagement(NodeManagement management) {
@@ -88,8 +101,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on
-   * the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
+   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
+   * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
    * information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
@@ -101,8 +114,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on
-   * the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
+   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
+   * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
    * information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
@@ -115,7 +128,18 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Scopes that are used by NAP when creating node pools.
+   * The set of Google API scopes to be made available on all of the node VMs under the "default"
+   * service account.
+   *
+   * The following scopes are recommended, but not required, and by default are not included:
+   *
+   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
+   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
+   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
+   * registry/)).
+   *
+   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -123,7 +147,18 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Scopes that are used by NAP when creating node pools.
+   * The set of Google API scopes to be made available on all of the node VMs under the "default"
+   * service account.
+   *
+   * The following scopes are recommended, but not required, and by default are not included:
+   *
+   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
+   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
+   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
+   * registry/)).
+   *
+   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setOauthScopes(java.util.List<java.lang.String> oauthScopes) {
@@ -132,7 +167,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs.
+   * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
+   * of the Service Account; otherwise, if no Service Account is specified, the "default" service
+   * account is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -140,7 +177,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs.
+   * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
+   * of the Service Account; otherwise, if no Service Account is specified, the "default" service
+   * account is used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setServiceAccount(java.lang.String serviceAccount) {
@@ -149,7 +188,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Specifies the upgrade settings for NAP created node pools
+   * Upgrade settings control disruption and speed of the upgrade.
    * @return value or {@code null} for none
    */
   public UpgradeSettings getUpgradeSettings() {
@@ -157,7 +196,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Specifies the upgrade settings for NAP created node pools
+   * Upgrade settings control disruption and speed of the upgrade.
    * @param upgradeSettings upgradeSettings or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setUpgradeSettings(UpgradeSettings upgradeSettings) {

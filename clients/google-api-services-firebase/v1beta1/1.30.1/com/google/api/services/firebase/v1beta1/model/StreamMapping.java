@@ -32,8 +32,8 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The fully qualified resource name of the Firebase App associated with the Google Analytics data
-   * stream, in the format: projects/projectId/androidApps/appId or projects/projectId/iosApps/appId
-   * or projects/projectId/webApps/appId
+   * stream, in the format: projects/PROJECT_NUMBER/androidApps/APP_ID or
+   * projects/PROJECT_NUMBER/iosApps/APP_ID or projects/PROJECT_NUMBER/webApps/APP_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The fully qualified resource name of the Firebase App associated with the Google Analytics data
-   * stream, in the format: projects/projectId/androidApps/appId or projects/projectId/iosApps/appId
-   * or projects/projectId/webApps/appId
+   * stream, in the format: projects/PROJECT_NUMBER/androidApps/APP_ID or
+   * projects/PROJECT_NUMBER/iosApps/APP_ID or projects/PROJECT_NUMBER/webApps/APP_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getApp() {
@@ -74,8 +74,8 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The fully qualified resource name of the Firebase App associated with the Google Analytics data
-   * stream, in the format: projects/projectId/androidApps/appId or projects/projectId/iosApps/appId
-   * or projects/projectId/webApps/appId
+   * stream, in the format: projects/PROJECT_NUMBER/androidApps/APP_ID or
+   * projects/PROJECT_NUMBER/iosApps/APP_ID or projects/PROJECT_NUMBER/webApps/APP_ID
    * @param app app or {@code null} for none
    */
   public StreamMapping setApp(java.lang.String app) {

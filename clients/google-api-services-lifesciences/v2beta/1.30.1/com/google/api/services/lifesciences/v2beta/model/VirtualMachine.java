@@ -97,6 +97,16 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The Compute Engine Disk Images to use as a Docker cache. The disks will be mounted into the
+   * Docker folder in a way that the images present in the cache will not need to be pulled. The
+   * digests of the cached images must match those of the tags used or the latest version will still
+   * be pulled. Only a single image is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> dockerCacheImages;
+
+  /**
    * Whether Stackdriver monitoring should be enabled on the VM.
    * The value may be {@code null}.
    */
@@ -281,6 +291,29 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    */
   public VirtualMachine setDisks(java.util.List<Disk> disks) {
     this.disks = disks;
+    return this;
+  }
+
+  /**
+   * The Compute Engine Disk Images to use as a Docker cache. The disks will be mounted into the
+   * Docker folder in a way that the images present in the cache will not need to be pulled. The
+   * digests of the cached images must match those of the tags used or the latest version will still
+   * be pulled. Only a single image is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDockerCacheImages() {
+    return dockerCacheImages;
+  }
+
+  /**
+   * The Compute Engine Disk Images to use as a Docker cache. The disks will be mounted into the
+   * Docker folder in a way that the images present in the cache will not need to be pulled. The
+   * digests of the cached images must match those of the tags used or the latest version will still
+   * be pulled. Only a single image is supported.
+   * @param dockerCacheImages dockerCacheImages or {@code null} for none
+   */
+  public VirtualMachine setDockerCacheImages(java.util.List<java.lang.String> dockerCacheImages) {
+    this.dockerCacheImages = dockerCacheImages;
     return this;
   }
 

@@ -16760,6 +16760,184 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the Youtube collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.Youtube.List request = youtube.youtube().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Youtube youtube() {
+    return new Youtube();
+  }
+
+  /**
+   * The "youtube" collection of methods.
+   */
+  public class Youtube {
+
+    /**
+     * An accessor for creating requests from the V3 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code YouTube youtube = new YouTube(...);}
+     *   {@code YouTube.V3.List request = youtube.v3().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public V3 v3() {
+      return new V3();
+    }
+
+    /**
+     * The "v3" collection of methods.
+     */
+    public class V3 {
+
+      /**
+       * An accessor for creating requests from the Tests collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code YouTube youtube = new YouTube(...);}
+       *   {@code YouTube.Tests.List request = youtube.tests().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Tests tests() {
+        return new Tests();
+      }
+
+      /**
+       * The "tests" collection of methods.
+       */
+      public class Tests {
+
+        /**
+         * POST method.
+         *
+         * Create a request for the method "tests.create".
+         *
+         * This request holds the parameters needed by the youtube server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param content the {@link com.google.api.services.youtube.model.TestItem}
+         * @return the request
+         */
+        public Create create(com.google.api.services.youtube.model.TestItem content) throws java.io.IOException {
+          Create result = new Create(content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends YouTubeRequest<com.google.api.services.youtube.model.TestItem> {
+
+          private static final String REST_PATH = "youtube/v3/tests";
+
+          /**
+           * POST method.
+           *
+           * Create a request for the method "tests.create".
+           *
+           * This request holds the parameters needed by the the youtube server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param content the {@link com.google.api.services.youtube.model.TestItem}
+           * @since 1.13
+           */
+          protected Create(com.google.api.services.youtube.model.TestItem content) {
+            super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.TestItem.class);
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> part;
+
+          /**
+
+           */
+          public java.util.List<java.lang.String> getPart() {
+            return part;
+          }
+
+          public Create setPart(java.util.List<java.lang.String> part) {
+            this.part = part;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * Builder for {@link YouTube}.
    *
    * <p>

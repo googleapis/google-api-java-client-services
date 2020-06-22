@@ -69,7 +69,7 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
    * created.
    *
    * Example names would be: `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics
-   * /compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminPolicies/4a3f2c1d`
+   * /compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminQuotaPolicies/4a3f2c1d`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
    * created.
    *
    * Example names would be: `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics
-   * /compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminPolicies/4a3f2c1d`
+   * /compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminQuotaPolicies/4a3f2c1d`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -188,7 +188,7 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
    * created.
    *
    * Example names would be: `organizations/123/services/compute.googleapis.com/consumerQuotaMetrics
-   * /compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminPolicies/4a3f2c1d`
+   * /compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminQuotaPolicies/4a3f2c1d`
    * @param name name or {@code null} for none
    */
   public AdminQuotaPolicy setName(java.lang.String name) {

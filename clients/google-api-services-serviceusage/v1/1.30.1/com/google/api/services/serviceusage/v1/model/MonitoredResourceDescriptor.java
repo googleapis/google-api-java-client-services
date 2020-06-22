@@ -102,6 +102,16 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
+   * Required. The monitored resource type. For example, the type `cloudsql_database` represents
+   * databases in Google Cloud SQL.
+   *
+   * All service defined monitored resource types must be prefixed with the service name, in the
+   * format of `{service name}/{relative resource name}`. The relative resource name must follow:
+   *
+   * * Only upper and lower-case letters and digits are allowed. * It must start with upper case
+   * character and is recommended to use Upper   Camel Case style. * The maximum number of
+   * characters allowed for the relative_resource_name   is 100.
+   *
    * Note there are legacy service monitored resources not following this rule.
    * The value may be {@code null}.
    */
@@ -222,6 +232,16 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
   }
 
   /**
+   * Required. The monitored resource type. For example, the type `cloudsql_database` represents
+   * databases in Google Cloud SQL.
+   *
+   * All service defined monitored resource types must be prefixed with the service name, in the
+   * format of `{service name}/{relative resource name}`. The relative resource name must follow:
+   *
+   * * Only upper and lower-case letters and digits are allowed. * It must start with upper case
+   * character and is recommended to use Upper   Camel Case style. * The maximum number of
+   * characters allowed for the relative_resource_name   is 100.
+   *
    * Note there are legacy service monitored resources not following this rule.
    * @return value or {@code null} for none
    */
@@ -230,6 +250,16 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
   }
 
   /**
+   * Required. The monitored resource type. For example, the type `cloudsql_database` represents
+   * databases in Google Cloud SQL.
+   *
+   * All service defined monitored resource types must be prefixed with the service name, in the
+   * format of `{service name}/{relative resource name}`. The relative resource name must follow:
+   *
+   * * Only upper and lower-case letters and digits are allowed. * It must start with upper case
+   * character and is recommended to use Upper   Camel Case style. * The maximum number of
+   * characters allowed for the relative_resource_name   is 100.
+   *
    * Note there are legacy service monitored resources not following this rule.
    * @param type type or {@code null} for none
    */

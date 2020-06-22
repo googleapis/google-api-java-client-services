@@ -20,7 +20,7 @@ package com.google.api.services.iamcredentials.v1;
  * Service definition for IAMCredentials (v1).
  *
  * <p>
- * Creates short-lived, limited-privilege credentials for IAM service accounts.
+ * Creates short-lived credentials for impersonating IAM service accounts.
  * </p>
  *
  * <p>

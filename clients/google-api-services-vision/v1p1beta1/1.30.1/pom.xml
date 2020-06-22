@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-vision</artifactId>
-  <version>v1p1beta1-rev20200405-1.30.9</version>
-  <name>Cloud Vision API v1p1beta1-rev20200405-1.30.9</name>
+  <version>v1p1beta1-rev20200612-1.30.9</version>
+  <name>Cloud Vision API v1p1beta1-rev20200612-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

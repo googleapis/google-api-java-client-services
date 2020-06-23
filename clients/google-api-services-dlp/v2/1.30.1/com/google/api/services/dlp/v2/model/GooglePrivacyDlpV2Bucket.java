@@ -45,8 +45,7 @@ public final class GooglePrivacyDlpV2Bucket extends com.google.api.client.json.G
   private GooglePrivacyDlpV2Value min;
 
   /**
-   * Replacement value for this bucket. If not provided the default behavior will be to hyphenate
-   * the min-max range.
+   * Required. Replacement value for this bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +86,7 @@ public final class GooglePrivacyDlpV2Bucket extends com.google.api.client.json.G
   }
 
   /**
-   * Replacement value for this bucket. If not provided the default behavior will be to hyphenate
-   * the min-max range.
+   * Required. Replacement value for this bucket.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Value getReplacementValue() {
@@ -96,8 +94,7 @@ public final class GooglePrivacyDlpV2Bucket extends com.google.api.client.json.G
   }
 
   /**
-   * Replacement value for this bucket. If not provided the default behavior will be to hyphenate
-   * the min-max range.
+   * Required. Replacement value for this bucket.
    * @param replacementValue replacementValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Bucket setReplacementValue(GooglePrivacyDlpV2Value replacementValue) {

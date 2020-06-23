@@ -194,6 +194,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -211,6 +216,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -506,6 +516,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -523,6 +538,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -709,6 +729,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -726,6 +751,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -846,6 +876,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -863,6 +898,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override

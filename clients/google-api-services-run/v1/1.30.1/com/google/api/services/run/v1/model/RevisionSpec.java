@@ -71,8 +71,6 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountName;
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Not
-   * currently used by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,8 +162,6 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Not
-   * currently used by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -173,8 +169,6 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Not
-   * currently used by Cloud Run.
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public RevisionSpec setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

@@ -223,6 +223,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
       }
@@ -240,6 +245,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Create setKey(java.lang.String key) {
         return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -354,6 +364,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
       }
@@ -371,6 +386,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Delete setKey(java.lang.String key) {
         return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -495,6 +515,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -512,6 +537,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -633,6 +663,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetIamPolicy setAlt(java.lang.String alt) {
         return (GetIamPolicy) super.setAlt(alt);
       }
@@ -650,6 +685,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public GetIamPolicy setKey(java.lang.String key) {
         return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -764,6 +804,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -781,6 +826,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -974,6 +1024,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Move setAccessToken(java.lang.String accessToken) {
+        return (Move) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Move setAlt(java.lang.String alt) {
         return (Move) super.setAlt(alt);
       }
@@ -991,6 +1046,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Move setKey(java.lang.String key) {
         return (Move) super.setKey(key);
+      }
+
+      @Override
+      public Move setOauthToken(java.lang.String oauthToken) {
+        return (Move) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1123,6 +1183,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
       }
@@ -1140,6 +1205,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Patch setKey(java.lang.String key) {
         return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1268,6 +1338,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Search setAlt(java.lang.String alt) {
         return (Search) super.setAlt(alt);
       }
@@ -1285,6 +1360,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Search setKey(java.lang.String key) {
         return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1377,6 +1457,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetIamPolicy setAlt(java.lang.String alt) {
         return (SetIamPolicy) super.setAlt(alt);
       }
@@ -1394,6 +1479,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public SetIamPolicy setKey(java.lang.String key) {
         return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1516,6 +1606,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public TestIamPermissions setAlt(java.lang.String alt) {
         return (TestIamPermissions) super.setAlt(alt);
       }
@@ -1533,6 +1628,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public TestIamPermissions setKey(java.lang.String key) {
         return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1654,6 +1754,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Undelete setAccessToken(java.lang.String accessToken) {
+        return (Undelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Undelete setAlt(java.lang.String alt) {
         return (Undelete) super.setAlt(alt);
       }
@@ -1671,6 +1776,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Undelete setKey(java.lang.String key) {
         return (Undelete) super.setKey(key);
+      }
+
+      @Override
+      public Undelete setOauthToken(java.lang.String oauthToken) {
+        return (Undelete) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1814,6 +1924,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -1831,6 +1946,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override

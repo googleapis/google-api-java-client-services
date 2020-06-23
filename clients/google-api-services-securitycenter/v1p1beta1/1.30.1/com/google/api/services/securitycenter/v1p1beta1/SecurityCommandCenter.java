@@ -841,22 +841,23 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Optional. A field mask to specify the ListAssetsResult fields to be listed in the
-         * response. An empty field mask will list all fields.
+         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
+         * empty field mask will list all fields.
          */
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /** Optional. A field mask to specify the ListAssetsResult fields to be listed in the response. An
-       empty field mask will list all fields.
+        /**
+       A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
+       mask will list all fields.
          */
         public String getFieldMask() {
           return fieldMask;
         }
 
         /**
-         * Optional. A field mask to specify the ListAssetsResult fields to be listed in the
-         * response. An empty field mask will list all fields.
+         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
+         * empty field mask will list all fields.
          */
         public List setFieldMask(String fieldMask) {
           this.fieldMask = fieldMask;
@@ -2192,7 +2193,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a notification config.
+       * Updates a notification config. The following update fields are allowed: description,
+       * pubsub_topic, streaming_config.filter
        *
        * Create a request for the method "notificationConfigs.patch".
        *
@@ -2220,7 +2222,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Updates a notification config.
+         * Updates a notification config. The following update fields are allowed: description,
+         * pubsub_topic, streaming_config.filter
          *
          * Create a request for the method "notificationConfigs.patch".
          *
@@ -4262,26 +4265,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * Required. Unique identifier provided by the client within the parent scope. It must be
-           * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
-           * length.
-           */
+          /** Required. Unique identifier provided by the client within the parent scope. */
           @com.google.api.client.util.Key
           private java.lang.String findingId;
 
-          /** Required. Unique identifier provided by the client within the parent scope. It must be alphanumeric
-         and less than or equal to 32 characters and greater than 0 characters in length.
+          /** Required. Unique identifier provided by the client within the parent scope.
            */
           public java.lang.String getFindingId() {
             return findingId;
           }
 
-          /**
-           * Required. Unique identifier provided by the client within the parent scope. It must be
-           * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
-           * length.
-           */
+          /** Required. Unique identifier provided by the client within the parent scope. */
           public Create setFindingId(java.lang.String findingId) {
             this.findingId = findingId;
             return this;
@@ -4691,22 +4685,23 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Optional. A field mask to specify the Finding fields to be listed in the response. An
-           * empty field mask will list all fields.
+           * A field mask to specify the Finding fields to be listed in the response. An empty field
+           * mask will list all fields.
            */
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /** Optional. A field mask to specify the Finding fields to be listed in the response. An empty field
-         mask will list all fields.
+          /**
+         A field mask to specify the Finding fields to be listed in the response. An empty field mask will
+         list all fields.
            */
           public String getFieldMask() {
             return fieldMask;
           }
 
           /**
-           * Optional. A field mask to specify the Finding fields to be listed in the response. An
-           * empty field mask will list all fields.
+           * A field mask to specify the Finding fields to be listed in the response. An empty field
+           * mask will list all fields.
            */
           public List setFieldMask(String fieldMask) {
             this.fieldMask = fieldMask;

@@ -100,9 +100,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-
-   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version
-   * of the node software components. If they are currently at multiple versions because they're in
-   * the process of being upgraded, this reflects the minimum version of all nodes.
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current
+   * version of the node software components. If they are currently at multiple versions because
+   * they're in the process of being upgraded, this reflects the minimum version of all nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -625,9 +625,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-
-   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version
-   * of the node software components. If they are currently at multiple versions because they're in
-   * the process of being upgraded, this reflects the minimum version of all nodes.
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current
+   * version of the node software components. If they are currently at multiple versions because
+   * they're in the process of being upgraded, this reflects the minimum version of all nodes.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentNodeVersion() {
@@ -636,9 +636,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-
-   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version
-   * of the node software components. If they are currently at multiple versions because they're in
-   * the process of being upgraded, this reflects the minimum version of all nodes.
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current
+   * version of the node software components. If they are currently at multiple versions because
+   * they're in the process of being upgraded, this reflects the minimum version of all nodes.
    * @param currentNodeVersion currentNodeVersion or {@code null} for none
    */
   public Cluster setCurrentNodeVersion(java.lang.String currentNodeVersion) {

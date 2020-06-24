@@ -31,19 +31,26 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The additional attributes of this resource. The attributes may vary from one resource type to
-   * another. Examples: "projectId" for Project, "dnsName" for DNS ManagedZone.
+   * another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone. This field contains
+   * a subset of the resource metadata fields that are returned by the List or Get APIs provided by
+   * the corresponding GCP service (e.g., Compute Engine). see [API
+   * references](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#supported_resource_types) of CAIS supported resource types. You can search values of
+   * these fields through free text search. However, you should not consume the field programically
+   * as the field names and values may change as the GCP service (e.g., Compute Engine) updates to a
+   * new incompatible API version.
    *
    * To search against the `additional_attributes`:
    *
    * * use a free text query to match the attributes values. Example: to search
-   * additional_attributes = { dnsName: "foobar" }, you can issue a query   `"foobar"`.
+   * `additional_attributes = { dnsName: "foobar" }`, you can issue a query   `"foobar"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> additionalAttributes;
 
   /**
-   * The type of this resource. Example: "compute.googleapis.com/Disk".
+   * The type of this resource. Example: `compute.googleapis.com/Disk`.
    *
    * To search against the `asset_type`:
    *
@@ -94,7 +101,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`.
    *
    * To search against the `location`:
    *
@@ -107,7 +114,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The full resource name of this resource. Example:
-   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1". See [Cloud
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information.
    *
@@ -148,12 +155,19 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The additional attributes of this resource. The attributes may vary from one resource type to
-   * another. Examples: "projectId" for Project, "dnsName" for DNS ManagedZone.
+   * another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone. This field contains
+   * a subset of the resource metadata fields that are returned by the List or Get APIs provided by
+   * the corresponding GCP service (e.g., Compute Engine). see [API
+   * references](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#supported_resource_types) of CAIS supported resource types. You can search values of
+   * these fields through free text search. However, you should not consume the field programically
+   * as the field names and values may change as the GCP service (e.g., Compute Engine) updates to a
+   * new incompatible API version.
    *
    * To search against the `additional_attributes`:
    *
    * * use a free text query to match the attributes values. Example: to search
-   * additional_attributes = { dnsName: "foobar" }, you can issue a query   `"foobar"`.
+   * `additional_attributes = { dnsName: "foobar" }`, you can issue a query   `"foobar"`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalAttributes() {
@@ -162,12 +176,19 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The additional attributes of this resource. The attributes may vary from one resource type to
-   * another. Examples: "projectId" for Project, "dnsName" for DNS ManagedZone.
+   * another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone. This field contains
+   * a subset of the resource metadata fields that are returned by the List or Get APIs provided by
+   * the corresponding GCP service (e.g., Compute Engine). see [API
+   * references](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#supported_resource_types) of CAIS supported resource types. You can search values of
+   * these fields through free text search. However, you should not consume the field programically
+   * as the field names and values may change as the GCP service (e.g., Compute Engine) updates to a
+   * new incompatible API version.
    *
    * To search against the `additional_attributes`:
    *
    * * use a free text query to match the attributes values. Example: to search
-   * additional_attributes = { dnsName: "foobar" }, you can issue a query   `"foobar"`.
+   * `additional_attributes = { dnsName: "foobar" }`, you can issue a query   `"foobar"`.
    * @param additionalAttributes additionalAttributes or {@code null} for none
    */
   public ResourceSearchResult setAdditionalAttributes(java.util.Map<String, java.lang.Object> additionalAttributes) {
@@ -176,7 +197,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The type of this resource. Example: "compute.googleapis.com/Disk".
+   * The type of this resource. Example: `compute.googleapis.com/Disk`.
    *
    * To search against the `asset_type`:
    *
@@ -188,7 +209,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The type of this resource. Example: "compute.googleapis.com/Disk".
+   * The type of this resource. Example: `compute.googleapis.com/Disk`.
    *
    * To search against the `asset_type`:
    *
@@ -290,7 +311,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`.
    *
    * To search against the `location`:
    *
@@ -303,7 +324,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`.
    *
    * To search against the `location`:
    *
@@ -318,7 +339,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The full resource name of this resource. Example:
-   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1". See [Cloud
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information.
    *
@@ -334,7 +355,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The full resource name of this resource. Example:
-   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1". See [Cloud
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information.
    *

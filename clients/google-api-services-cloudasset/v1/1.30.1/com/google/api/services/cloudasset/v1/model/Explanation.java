@@ -33,7 +33,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
    * The map from roles to their included permissions that match the permission query (i.e., a query
    * containing `policy.role.permissions:`). Example: if query `policy.role.permissions :
    * "compute.disk.get"` matches a policy binding that contains owner role, the matched_permissions
-   * will be {"roles/owner": ["compute.disk.get"]}. The roles can also be found in the returned
+   * will be `{"roles/owner": ["compute.disk.get"]}`. The roles can also be found in the returned
    * `policy` bindings. Note that the map is populated only for requests with permission queries.
    * The value may be {@code null}.
    */
@@ -44,7 +44,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
    * The map from roles to their included permissions that match the permission query (i.e., a query
    * containing `policy.role.permissions:`). Example: if query `policy.role.permissions :
    * "compute.disk.get"` matches a policy binding that contains owner role, the matched_permissions
-   * will be {"roles/owner": ["compute.disk.get"]}. The roles can also be found in the returned
+   * will be `{"roles/owner": ["compute.disk.get"]}`. The roles can also be found in the returned
    * `policy` bindings. Note that the map is populated only for requests with permission queries.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
    * The map from roles to their included permissions that match the permission query (i.e., a query
    * containing `policy.role.permissions:`). Example: if query `policy.role.permissions :
    * "compute.disk.get"` matches a policy binding that contains owner role, the matched_permissions
-   * will be {"roles/owner": ["compute.disk.get"]}. The roles can also be found in the returned
+   * will be `{"roles/owner": ["compute.disk.get"]}`. The roles can also be found in the returned
    * `policy` bindings. Note that the map is populated only for requests with permission queries.
    * @param matchedPermissions matchedPermissions or {@code null} for none
    */

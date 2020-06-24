@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclicksearch.model;
 
 /**
- * A message containing the custome dimension.
+ * A message containing the custom dimension.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 API. For a detailed explanation see:

@@ -31,9 +31,10 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The columns to include in the report. This includes both DoubleClick Search columns and saved
-   * columns. For DoubleClick Search columns, only the columnName parameter is required. For saved
-   * columns only the savedColumnName parameter is required. Both columnName and savedColumnName
-   * cannot be set in the same stanza. The maximum number of columns per request is 300.
+   * columns. For DoubleClick Search columns, only the `columnName` parameter is required. For saved
+   * columns only the `savedColumnName` parameter is required. Both `columnName` and
+   * `savedColumnName` cannot be set in the same stanza.\ The maximum number of columns per request
+   * is 300.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +47,14 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Format that the report should be returned in. Currently csv or tsv is supported.
+   * Format that the report should be returned in. Currently `csv` or `tsv` is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String downloadFormat;
 
   /**
-   * A list of filters to be applied to the report. The maximum number of filters per request is
+   * A list of filters to be applied to the report.\ The maximum number of filters per request is
    * 300.
    * The value may be {@code null}.
    */
@@ -67,15 +68,15 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines if removed entities should be included in the report. Defaults to false. Deprecated,
-   * please use includeRemovedEntities instead.
+   * Determines if removed entities should be included in the report. Defaults to `false`.
+   * Deprecated, please use `includeRemovedEntities` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeDeletedEntities;
 
   /**
-   * Determines if removed entities should be included in the report. Defaults to false.
+   * Determines if removed entities should be included in the report. Defaults to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Asynchronous report only. The maximum number of rows per report file. A large report is split
-   * into many files based on this field. Acceptable values are 1000000 to 100000000, inclusive.
+   * into many files based on this field. Acceptable values are `1000000` to `100000000`, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Synchronous report only. A list of columns and directions defining sorting to be performed on
-   * the report rows. The maximum number of orderings per request is 300.
+   * the report rows.\ The maximum number of orderings per request is 300.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +115,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Determines the type of rows that are returned in the report. For example, if you specify
-   * reportType: keyword, each row in the report will contain data about a keyword. See the Types of
-   * Reports reference for the columns that are available for each type.
+   * `reportType: keyword`, each row in the report will contain data about a keyword. See the [Types
+   * of Reports](/search-ads/v2/report-types/) reference for the columns that are available for each
+   * type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,24 +125,24 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Synchronous report only. The maximum number of rows to return; additional rows are dropped.
-   * Acceptable values are 0 to 10000, inclusive. Defaults to 10000.
+   * Acceptable values are `0` to `10000`, inclusive. Defaults to `10000`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rowCount;
 
   /**
-   * Synchronous report only. Zero-based index of the first row to return. Acceptable values are 0
-   * to 50000, inclusive. Defaults to 0.
+   * Synchronous report only. Zero-based index of the first row to return. Acceptable values are `0`
+   * to `50000`, inclusive. Defaults to `0`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startRow;
 
   /**
-   * Specifies the currency in which monetary will be returned. Possible values are: usd, agency
-   * (valid if the report is scoped to agency or lower), advertiser (valid if the report is scoped
-   * to * advertiser or lower), or account (valid if the report is scoped to engine account or
+   * Specifies the currency in which monetary will be returned. Possible values are: `usd`, `agency`
+   * (valid if the report is scoped to agency or lower), `advertiser` (valid if the report is scoped
+   * to * advertiser or lower), or `account` (valid if the report is scoped to engine account or
    * lower).
    * The value may be {@code null}.
    */
@@ -156,8 +158,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   private TimeRange timeRange;
 
   /**
-   * If true, the report would only be created if all the requested stat data are sourced from a
-   * single timezone. Defaults to false.
+   * If `true`, the report would only be created if all the requested stat data are sourced from a
+   * single timezone. Defaults to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,9 +167,10 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The columns to include in the report. This includes both DoubleClick Search columns and saved
-   * columns. For DoubleClick Search columns, only the columnName parameter is required. For saved
-   * columns only the savedColumnName parameter is required. Both columnName and savedColumnName
-   * cannot be set in the same stanza. The maximum number of columns per request is 300.
+   * columns. For DoubleClick Search columns, only the `columnName` parameter is required. For saved
+   * columns only the `savedColumnName` parameter is required. Both `columnName` and
+   * `savedColumnName` cannot be set in the same stanza.\ The maximum number of columns per request
+   * is 300.
    * @return value or {@code null} for none
    */
   public java.util.List<ReportApiColumnSpec> getColumns() {
@@ -176,9 +179,10 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The columns to include in the report. This includes both DoubleClick Search columns and saved
-   * columns. For DoubleClick Search columns, only the columnName parameter is required. For saved
-   * columns only the savedColumnName parameter is required. Both columnName and savedColumnName
-   * cannot be set in the same stanza. The maximum number of columns per request is 300.
+   * columns. For DoubleClick Search columns, only the `columnName` parameter is required. For saved
+   * columns only the `savedColumnName` parameter is required. Both `columnName` and
+   * `savedColumnName` cannot be set in the same stanza.\ The maximum number of columns per request
+   * is 300.
    * @param columns columns or {@code null} for none
    */
   public ReportRequest setColumns(java.util.List<ReportApiColumnSpec> columns) {
@@ -187,7 +191,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Format that the report should be returned in. Currently csv or tsv is supported.
+   * Format that the report should be returned in. Currently `csv` or `tsv` is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadFormat() {
@@ -195,7 +199,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Format that the report should be returned in. Currently csv or tsv is supported.
+   * Format that the report should be returned in. Currently `csv` or `tsv` is supported.
    * @param downloadFormat downloadFormat or {@code null} for none
    */
   public ReportRequest setDownloadFormat(java.lang.String downloadFormat) {
@@ -204,7 +208,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of filters to be applied to the report. The maximum number of filters per request is
+   * A list of filters to be applied to the report.\ The maximum number of filters per request is
    * 300.
    * @return value or {@code null} for none
    */
@@ -213,7 +217,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of filters to be applied to the report. The maximum number of filters per request is
+   * A list of filters to be applied to the report.\ The maximum number of filters per request is
    * 300.
    * @param filters filters or {@code null} for none
    */
@@ -223,8 +227,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines if removed entities should be included in the report. Defaults to false. Deprecated,
-   * please use includeRemovedEntities instead.
+   * Determines if removed entities should be included in the report. Defaults to `false`.
+   * Deprecated, please use `includeRemovedEntities` instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeDeletedEntities() {
@@ -232,8 +236,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines if removed entities should be included in the report. Defaults to false. Deprecated,
-   * please use includeRemovedEntities instead.
+   * Determines if removed entities should be included in the report. Defaults to `false`.
+   * Deprecated, please use `includeRemovedEntities` instead.
    * @param includeDeletedEntities includeDeletedEntities or {@code null} for none
    */
   public ReportRequest setIncludeDeletedEntities(java.lang.Boolean includeDeletedEntities) {
@@ -242,35 +246,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
-   *
-   * <p>
-   * Boolean properties can have four possible values:
-   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
-   * or {@link Boolean#FALSE}.
-   * </p>
-   *
-   * <p>
-   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
-   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
-   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * </p>
-   *
-   * <p>
-   * Determines if removed entities should be included in the report. Defaults to false. Deprecated,
- please use includeRemovedEntities instead.
-   * </p>
-   */
-  public boolean isIncludeDeletedEntities() {
-    if (includeDeletedEntities == null || includeDeletedEntities == com.google.api.client.util.Data.NULL_BOOLEAN) {
-      return false;
-    }
-    return includeDeletedEntities;
-  }
-
-  /**
-   * Determines if removed entities should be included in the report. Defaults to false.
+   * Determines if removed entities should be included in the report. Defaults to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeRemovedEntities() {
@@ -278,7 +254,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines if removed entities should be included in the report. Defaults to false.
+   * Determines if removed entities should be included in the report. Defaults to `false`.
    * @param includeRemovedEntities includeRemovedEntities or {@code null} for none
    */
   public ReportRequest setIncludeRemovedEntities(java.lang.Boolean includeRemovedEntities) {
@@ -287,35 +263,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
-   *
-   * <p>
-   * Boolean properties can have four possible values:
-   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
-   * or {@link Boolean#FALSE}.
-   * </p>
-   *
-   * <p>
-   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
-   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
-   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * </p>
-   *
-   * <p>
-   * Determines if removed entities should be included in the report. Defaults to false.
-   * </p>
-   */
-  public boolean isIncludeRemovedEntities() {
-    if (includeRemovedEntities == null || includeRemovedEntities == com.google.api.client.util.Data.NULL_BOOLEAN) {
-      return false;
-    }
-    return includeRemovedEntities;
-  }
-
-  /**
    * Asynchronous report only. The maximum number of rows per report file. A large report is split
-   * into many files based on this field. Acceptable values are 1000000 to 100000000, inclusive.
+   * into many files based on this field. Acceptable values are `1000000` to `100000000`, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRowsPerFile() {
@@ -324,7 +273,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Asynchronous report only. The maximum number of rows per report file. A large report is split
-   * into many files based on this field. Acceptable values are 1000000 to 100000000, inclusive.
+   * into many files based on this field. Acceptable values are `1000000` to `100000000`, inclusive.
    * @param maxRowsPerFile maxRowsPerFile or {@code null} for none
    */
   public ReportRequest setMaxRowsPerFile(java.lang.Integer maxRowsPerFile) {
@@ -334,7 +283,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Synchronous report only. A list of columns and directions defining sorting to be performed on
-   * the report rows. The maximum number of orderings per request is 300.
+   * the report rows.\ The maximum number of orderings per request is 300.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderBy> getOrderBy() {
@@ -343,7 +292,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Synchronous report only. A list of columns and directions defining sorting to be performed on
-   * the report rows. The maximum number of orderings per request is 300.
+   * the report rows.\ The maximum number of orderings per request is 300.
    * @param orderBy orderBy or {@code null} for none
    */
   public ReportRequest setOrderBy(java.util.List<OrderBy> orderBy) {
@@ -374,8 +323,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Determines the type of rows that are returned in the report. For example, if you specify
-   * reportType: keyword, each row in the report will contain data about a keyword. See the Types of
-   * Reports reference for the columns that are available for each type.
+   * `reportType: keyword`, each row in the report will contain data about a keyword. See the [Types
+   * of Reports](/search-ads/v2/report-types/) reference for the columns that are available for each
+   * type.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportType() {
@@ -384,8 +334,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Determines the type of rows that are returned in the report. For example, if you specify
-   * reportType: keyword, each row in the report will contain data about a keyword. See the Types of
-   * Reports reference for the columns that are available for each type.
+   * `reportType: keyword`, each row in the report will contain data about a keyword. See the [Types
+   * of Reports](/search-ads/v2/report-types/) reference for the columns that are available for each
+   * type.
    * @param reportType reportType or {@code null} for none
    */
   public ReportRequest setReportType(java.lang.String reportType) {
@@ -395,7 +346,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Synchronous report only. The maximum number of rows to return; additional rows are dropped.
-   * Acceptable values are 0 to 10000, inclusive. Defaults to 10000.
+   * Acceptable values are `0` to `10000`, inclusive. Defaults to `10000`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRowCount() {
@@ -404,7 +355,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Synchronous report only. The maximum number of rows to return; additional rows are dropped.
-   * Acceptable values are 0 to 10000, inclusive. Defaults to 10000.
+   * Acceptable values are `0` to `10000`, inclusive. Defaults to `10000`.
    * @param rowCount rowCount or {@code null} for none
    */
   public ReportRequest setRowCount(java.lang.Integer rowCount) {
@@ -413,8 +364,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Synchronous report only. Zero-based index of the first row to return. Acceptable values are 0
-   * to 50000, inclusive. Defaults to 0.
+   * Synchronous report only. Zero-based index of the first row to return. Acceptable values are `0`
+   * to `50000`, inclusive. Defaults to `0`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartRow() {
@@ -422,8 +373,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Synchronous report only. Zero-based index of the first row to return. Acceptable values are 0
-   * to 50000, inclusive. Defaults to 0.
+   * Synchronous report only. Zero-based index of the first row to return. Acceptable values are `0`
+   * to `50000`, inclusive. Defaults to `0`.
    * @param startRow startRow or {@code null} for none
    */
   public ReportRequest setStartRow(java.lang.Integer startRow) {
@@ -432,9 +383,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies the currency in which monetary will be returned. Possible values are: usd, agency
-   * (valid if the report is scoped to agency or lower), advertiser (valid if the report is scoped
-   * to * advertiser or lower), or account (valid if the report is scoped to engine account or
+   * Specifies the currency in which monetary will be returned. Possible values are: `usd`, `agency`
+   * (valid if the report is scoped to agency or lower), `advertiser` (valid if the report is scoped
+   * to * advertiser or lower), or `account` (valid if the report is scoped to engine account or
    * lower).
    * @return value or {@code null} for none
    */
@@ -443,9 +394,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies the currency in which monetary will be returned. Possible values are: usd, agency
-   * (valid if the report is scoped to agency or lower), advertiser (valid if the report is scoped
-   * to * advertiser or lower), or account (valid if the report is scoped to engine account or
+   * Specifies the currency in which monetary will be returned. Possible values are: `usd`, `agency`
+   * (valid if the report is scoped to agency or lower), `advertiser` (valid if the report is scoped
+   * to * advertiser or lower), or `account` (valid if the report is scoped to engine account or
    * lower).
    * @param statisticsCurrency statisticsCurrency or {@code null} for none
    */
@@ -474,8 +425,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If true, the report would only be created if all the requested stat data are sourced from a
-   * single timezone. Defaults to false.
+   * If `true`, the report would only be created if all the requested stat data are sourced from a
+   * single timezone. Defaults to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerifySingleTimeZone() {
@@ -483,41 +434,13 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If true, the report would only be created if all the requested stat data are sourced from a
-   * single timezone. Defaults to false.
+   * If `true`, the report would only be created if all the requested stat data are sourced from a
+   * single timezone. Defaults to `false`.
    * @param verifySingleTimeZone verifySingleTimeZone or {@code null} for none
    */
   public ReportRequest setVerifySingleTimeZone(java.lang.Boolean verifySingleTimeZone) {
     this.verifySingleTimeZone = verifySingleTimeZone;
     return this;
-  }
-
-  /**
-   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
-   *
-   * <p>
-   * Boolean properties can have four possible values:
-   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
-   * or {@link Boolean#FALSE}.
-   * </p>
-   *
-   * <p>
-   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
-   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
-   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * </p>
-   *
-   * <p>
-   * If true, the report would only be created if all the requested stat data are sourced from a single
- timezone. Defaults to false.
-   * </p>
-   */
-  public boolean isVerifySingleTimeZone() {
-    if (verifySingleTimeZone == null || verifySingleTimeZone == com.google.api.client.util.Data.NULL_BOOLEAN) {
-      return false;
-    }
-    return verifySingleTimeZone;
   }
 
   @Override
@@ -550,7 +473,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     private java.lang.String operator;
 
     /**
-     * A list of values to filter the column value against. The maximum number of filter values per
+     * A list of values to filter the column value against.\ The maximum number of filter values per
      * request is 300.
      * The value may be {@code null}.
      */
@@ -592,7 +515,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * A list of values to filter the column value against. The maximum number of filter values per
+     * A list of values to filter the column value against.\ The maximum number of filter values per
      * request is 300.
      * @return value or {@code null} for none
      */
@@ -601,7 +524,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * A list of values to filter the column value against. The maximum number of filter values per
+     * A list of values to filter the column value against.\ The maximum number of filter values per
      * request is 300.
      * @param values values or {@code null} for none
      */
@@ -636,7 +559,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     private ReportApiColumnSpec column;
 
     /**
-     * The sort direction, which is either ascending or descending.
+     * The sort direction, which is either `ascending` or `descending`.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -662,7 +585,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * The sort direction, which is either ascending or descending.
+     * The sort direction, which is either `ascending` or `descending`.
      * @return value or {@code null} for none
      */
     public java.lang.String getSortOrder() {
@@ -670,7 +593,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * The sort direction, which is either ascending or descending.
+     * The sort direction, which is either `ascending` or `descending`.
      * @param sortOrder sortOrder or {@code null} for none
      */
     public OrderBy setSortOrder(java.lang.String sortOrder) {
@@ -884,20 +807,20 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   public static final class TimeRange extends com.google.api.client.json.GenericJson {
 
     /**
-     * Inclusive UTC timestamp in RFC format, e.g., 2013-07-16T10:16:23.555Z. See additional
+     * Inclusive UTC timestamp in RFC format, e.g., `2013-07-16T10:16:23.555Z`. See additional
      * references on how changed attribute reports work.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
-    private com.google.api.client.util.DateTime changedAttributesSinceTimestamp;
+    private java.lang.String changedAttributesSinceTimestamp;
 
     /**
-     * Inclusive UTC timestamp in RFC format, e.g., 2013-07-16T10:16:23.555Z. See additional
+     * Inclusive UTC timestamp in RFC format, e.g., `2013-07-16T10:16:23.555Z`. See additional
      * references on how changed metrics reports work.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
-    private com.google.api.client.util.DateTime changedMetricsSinceTimestamp;
+    private java.lang.String changedMetricsSinceTimestamp;
 
     /**
      * Inclusive date in YYYY-MM-DD format.
@@ -914,39 +837,39 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
     private java.lang.String startDate;
 
     /**
-     * Inclusive UTC timestamp in RFC format, e.g., 2013-07-16T10:16:23.555Z. See additional
+     * Inclusive UTC timestamp in RFC format, e.g., `2013-07-16T10:16:23.555Z`. See additional
      * references on how changed attribute reports work.
      * @return value or {@code null} for none
      */
-    public com.google.api.client.util.DateTime getChangedAttributesSinceTimestamp() {
+    public java.lang.String getChangedAttributesSinceTimestamp() {
       return changedAttributesSinceTimestamp;
     }
 
     /**
-     * Inclusive UTC timestamp in RFC format, e.g., 2013-07-16T10:16:23.555Z. See additional
+     * Inclusive UTC timestamp in RFC format, e.g., `2013-07-16T10:16:23.555Z`. See additional
      * references on how changed attribute reports work.
      * @param changedAttributesSinceTimestamp changedAttributesSinceTimestamp or {@code null} for none
      */
-    public TimeRange setChangedAttributesSinceTimestamp(com.google.api.client.util.DateTime changedAttributesSinceTimestamp) {
+    public TimeRange setChangedAttributesSinceTimestamp(java.lang.String changedAttributesSinceTimestamp) {
       this.changedAttributesSinceTimestamp = changedAttributesSinceTimestamp;
       return this;
     }
 
     /**
-     * Inclusive UTC timestamp in RFC format, e.g., 2013-07-16T10:16:23.555Z. See additional
+     * Inclusive UTC timestamp in RFC format, e.g., `2013-07-16T10:16:23.555Z`. See additional
      * references on how changed metrics reports work.
      * @return value or {@code null} for none
      */
-    public com.google.api.client.util.DateTime getChangedMetricsSinceTimestamp() {
+    public java.lang.String getChangedMetricsSinceTimestamp() {
       return changedMetricsSinceTimestamp;
     }
 
     /**
-     * Inclusive UTC timestamp in RFC format, e.g., 2013-07-16T10:16:23.555Z. See additional
+     * Inclusive UTC timestamp in RFC format, e.g., `2013-07-16T10:16:23.555Z`. See additional
      * references on how changed metrics reports work.
      * @param changedMetricsSinceTimestamp changedMetricsSinceTimestamp or {@code null} for none
      */
-    public TimeRange setChangedMetricsSinceTimestamp(com.google.api.client.util.DateTime changedMetricsSinceTimestamp) {
+    public TimeRange setChangedMetricsSinceTimestamp(java.lang.String changedMetricsSinceTimestamp) {
       this.changedMetricsSinceTimestamp = changedMetricsSinceTimestamp;
       return this;
     }

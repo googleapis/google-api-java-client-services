@@ -40,9 +40,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String alternativeLocationId;
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
-   * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
-   * network will be used.
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left
+   * unspecified, the `default` network will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,9 +225,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
-   * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
-   * network will be used.
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left
+   * unspecified, the `default` network will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizedNetwork() {
@@ -235,9 +235,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
-   * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
-   * network will be used.
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left
+   * unspecified, the `default` network will be used.
    * @param authorizedNetwork authorizedNetwork or {@code null} for none
    */
   public Instance setAuthorizedNetwork(java.lang.String authorizedNetwork) {

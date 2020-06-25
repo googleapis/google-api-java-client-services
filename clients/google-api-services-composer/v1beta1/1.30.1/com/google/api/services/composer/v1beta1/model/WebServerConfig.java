@@ -30,8 +30,8 @@ package com.google.api.services.composer.v1beta1.model;
 public final class WebServerConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Machine type on which Airflow web server is running. For example:
-   * composer-n1-webserver-2, composer-n1-webserver-4, composer-n1-webserver-8. If not specified,
+   * Optional. Machine type on which Airflow web server is running. It has to be one of:
+   * composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified,
    * composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web
    * server parameters were manually changed to a non-standard values.
    * The value may be {@code null}.
@@ -40,8 +40,8 @@ public final class WebServerConfig extends com.google.api.client.json.GenericJso
   private java.lang.String machineType;
 
   /**
-   * Optional. Machine type on which Airflow web server is running. For example:
-   * composer-n1-webserver-2, composer-n1-webserver-4, composer-n1-webserver-8. If not specified,
+   * Optional. Machine type on which Airflow web server is running. It has to be one of:
+   * composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified,
    * composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web
    * server parameters were manually changed to a non-standard values.
    * @return value or {@code null} for none
@@ -51,8 +51,8 @@ public final class WebServerConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Machine type on which Airflow web server is running. For example:
-   * composer-n1-webserver-2, composer-n1-webserver-4, composer-n1-webserver-8. If not specified,
+   * Optional. Machine type on which Airflow web server is running. It has to be one of:
+   * composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified,
    * composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web
    * server parameters were manually changed to a non-standard values.
    * @param machineType machineType or {@code null} for none

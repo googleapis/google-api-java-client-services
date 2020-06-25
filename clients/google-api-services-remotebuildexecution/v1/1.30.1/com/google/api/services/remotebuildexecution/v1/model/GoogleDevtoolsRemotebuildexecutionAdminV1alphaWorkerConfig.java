@@ -109,7 +109,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.Boolean reserved;
 
   /**
-   * Output only. The name of the image used by each VM.
+   * The name of the image used by each VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,7 +299,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Output only. The name of the image used by each VM.
+   * The name of the image used by each VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmImage() {
@@ -307,7 +307,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Output only. The name of the image used by each VM.
+   * The name of the image used by each VM.
    * @param vmImage vmImage or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setVmImage(java.lang.String vmImage) {

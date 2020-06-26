@@ -17,11 +17,11 @@
 package com.google.api.services.webfonts.model;
 
 /**
- * Model definition for Webfont.
+ * Metadata describing a family of fonts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Fonts Developer API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Web Fonts Developer API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -64,7 +64,7 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime lastModified;
+  private java.lang.String lastModified;
 
   /**
    * The scripts supported by the font.
@@ -161,7 +161,7 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    * The date (format "yyyy-MM-dd") the font was modified for the last time.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getLastModified() {
+  public java.lang.String getLastModified() {
     return lastModified;
   }
 
@@ -169,7 +169,7 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    * The date (format "yyyy-MM-dd") the font was modified for the last time.
    * @param lastModified lastModified or {@code null} for none
    */
-  public Webfont setLastModified(com.google.api.client.util.DateTime lastModified) {
+  public Webfont setLastModified(java.lang.String lastModified) {
     this.lastModified = lastModified;
     return this;
   }

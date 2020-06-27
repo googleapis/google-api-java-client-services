@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class TestOrder extends com.google.api.client.json.GenericJson {
 
   /**
+   * Overrides the predefined delivery details if provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TestOrderDeliveryDetails deliveryDetails;
+
+  /**
    * Whether the orderinvoices service should support this order.
    * The value may be {@code null}.
    */
@@ -57,6 +64,13 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String notificationMode;
+
+  /**
+   * Overrides the predefined pickup details if provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TestOrderPickupDetails pickupDetails;
 
   /**
    * Required. The billing address.
@@ -129,6 +143,23 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   private java.lang.String shippingOption;
 
   /**
+   * Overrides the predefined delivery details if provided.
+   * @return value or {@code null} for none
+   */
+  public TestOrderDeliveryDetails getDeliveryDetails() {
+    return deliveryDetails;
+  }
+
+  /**
+   * Overrides the predefined delivery details if provided.
+   * @param deliveryDetails deliveryDetails or {@code null} for none
+   */
+  public TestOrder setDeliveryDetails(TestOrderDeliveryDetails deliveryDetails) {
+    this.deliveryDetails = deliveryDetails;
+    return this;
+  }
+
+  /**
    * Whether the orderinvoices service should support this order.
    * @return value or {@code null} for none
    */
@@ -193,6 +224,23 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
    */
   public TestOrder setNotificationMode(java.lang.String notificationMode) {
     this.notificationMode = notificationMode;
+    return this;
+  }
+
+  /**
+   * Overrides the predefined pickup details if provided.
+   * @return value or {@code null} for none
+   */
+  public TestOrderPickupDetails getPickupDetails() {
+    return pickupDetails;
+  }
+
+  /**
+   * Overrides the predefined pickup details if provided.
+   * @param pickupDetails pickupDetails or {@code null} for none
+   */
+  public TestOrder setPickupDetails(TestOrderPickupDetails pickupDetails) {
+    this.pickupDetails = pickupDetails;
     return this;
   }
 

@@ -52,9 +52,9 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   private java.lang.String orderBy;
 
   /**
-   * Optional. The maximum number of results to return from this request. Non-positive values are
-   * ignored. The presence of next_page_token in the response indicates that more results might be
-   * available.
+   * Optional. The maximum number of results to return from this request. Default is 50. If the
+   * value is negative or exceeds 1000, the request is rejected. The presence of next_page_token in
+   * the response indicates that more results might be available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +138,9 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The maximum number of results to return from this request. Non-positive values are
-   * ignored. The presence of next_page_token in the response indicates that more results might be
-   * available.
+   * Optional. The maximum number of results to return from this request. Default is 50. If the
+   * value is negative or exceeds 1000, the request is rejected. The presence of next_page_token in
+   * the response indicates that more results might be available.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -148,9 +148,9 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The maximum number of results to return from this request. Non-positive values are
-   * ignored. The presence of next_page_token in the response indicates that more results might be
-   * available.
+   * Optional. The maximum number of results to return from this request. Default is 50. If the
+   * value is negative or exceeds 1000, the request is rejected. The presence of next_page_token in
+   * the response indicates that more results might be available.
    * @param pageSize pageSize or {@code null} for none
    */
   public ListLogEntriesRequest setPageSize(java.lang.Integer pageSize) {

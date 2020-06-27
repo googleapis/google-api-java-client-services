@@ -94,6 +94,13 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Indicates whether or not the disk can be read/write attached to more than one instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multiWriter;
+
+  /**
    * Specifies which action to take on instance update with this disk. Default is to use the
    * existing disk.
    * The value may be {@code null}.
@@ -300,6 +307,23 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Indicates whether or not the disk can be read/write attached to more than one instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultiWriter() {
+    return multiWriter;
+  }
+
+  /**
+   * Indicates whether or not the disk can be read/write attached to more than one instance.
+   * @param multiWriter multiWriter or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setMultiWriter(java.lang.Boolean multiWriter) {
+    this.multiWriter = multiWriter;
     return this;
   }
 

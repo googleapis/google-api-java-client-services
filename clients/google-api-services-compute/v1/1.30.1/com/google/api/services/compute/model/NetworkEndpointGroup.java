@@ -35,6 +35,13 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata defined as annotations on the network endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -123,6 +130,23 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Metadata defined as annotations on the network endpoint group.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Metadata defined as annotations on the network endpoint group.
+   * @param annotations annotations or {@code null} for none
+   */
+  public NetworkEndpointGroup setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

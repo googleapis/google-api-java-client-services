@@ -59,8 +59,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String onHostMaintenance;
 
   /**
-   * Defines whether the instance is preemptible. This can only be set during instance creation, it
-   * cannot be set or changed after the instance has been created.
+   * Defines whether the instance is preemptible. This can only be set during instance creation or
+   * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
+   * for more information on the possible instance states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +135,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines whether the instance is preemptible. This can only be set during instance creation, it
-   * cannot be set or changed after the instance has been created.
+   * Defines whether the instance is preemptible. This can only be set during instance creation or
+   * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
+   * for more information on the possible instance states.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -143,8 +145,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines whether the instance is preemptible. This can only be set during instance creation, it
-   * cannot be set or changed after the instance has been created.
+   * Defines whether the instance is preemptible. This can only be set during instance creation or
+   * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
+   * for more information on the possible instance states.
    * @param preemptible preemptible or {@code null} for none
    */
   public Scheduling setPreemptible(java.lang.Boolean preemptible) {

@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class BackendServiceGroupHealth extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata defined as annotations on the network endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Health state of the backend instances or endpoints in requested instance or network endpoint
    * group, determined based on configured health checks.
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class BackendServiceGroupHealth extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Metadata defined as annotations on the network endpoint group.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Metadata defined as annotations on the network endpoint group.
+   * @param annotations annotations or {@code null} for none
+   */
+  public BackendServiceGroupHealth setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Health state of the backend instances or endpoints in requested instance or network endpoint

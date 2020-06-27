@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class HealthStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata defined as annotations for network endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Health state of the instance.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Metadata defined as annotations for network endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Metadata defined as annotations for network endpoint.
+   * @param annotations annotations or {@code null} for none
+   */
+  public HealthStatus setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Health state of the instance.

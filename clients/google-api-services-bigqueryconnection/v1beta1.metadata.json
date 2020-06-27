@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-bigqueryconnection",
-    "version": "v1beta1-rev20200430-1.30.9"
+    "version": "v1beta1-rev20200617-1.30.9"
   }
 }

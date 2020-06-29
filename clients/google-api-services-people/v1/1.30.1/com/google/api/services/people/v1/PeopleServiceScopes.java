@@ -26,6 +26,9 @@ public class PeopleServiceScopes {
   /** See, edit, download, and permanently delete your contacts. */
   public static final String CONTACTS = "https://www.googleapis.com/auth/contacts";
 
+  /** See and download contact info automatically saved in your "Other contacts". */
+  public static final String CONTACTS_OTHER_READONLY = "https://www.googleapis.com/auth/contacts.other.readonly";
+
   /** See and download your contacts. */
   public static final String CONTACTS_READONLY = "https://www.googleapis.com/auth/contacts.readonly";
 
@@ -64,6 +67,7 @@ public class PeopleServiceScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CONTACTS);
+    set.add(CONTACTS_OTHER_READONLY);
     set.add(CONTACTS_READONLY);
     set.add(DIRECTORY_READONLY);
     set.add(USER_ADDRESSES_READ);

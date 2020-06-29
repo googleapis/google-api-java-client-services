@@ -129,7 +129,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
-   * logs are exported to Stackdriver.
+   * logs are exported to Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -501,7 +501,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
-   * logs are exported to Stackdriver.
+   * logs are exported to Cloud Logging.
    * @return value or {@code null} for none
    */
   public SubnetworkLogConfig getLogConfig() {
@@ -510,7 +510,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
-   * logs are exported to Stackdriver.
+   * logs are exported to Cloud Logging.
    * @param logConfig logConfig or {@code null} for none
    */
   public Subnetwork setLogConfig(SubnetworkLogConfig logConfig) {

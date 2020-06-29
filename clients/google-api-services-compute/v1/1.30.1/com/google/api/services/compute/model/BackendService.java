@@ -167,6 +167,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> healthChecks;
 
   /**
+   * The configurations for Identity-Aware Proxy on this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -653,6 +654,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The configurations for Identity-Aware Proxy on this resource.
    * @return value or {@code null} for none
    */
   public BackendServiceIAP getIap() {
@@ -660,6 +662,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The configurations for Identity-Aware Proxy on this resource.
    * @param iap iap or {@code null} for none
    */
   public BackendService setIap(BackendServiceIAP iap) {

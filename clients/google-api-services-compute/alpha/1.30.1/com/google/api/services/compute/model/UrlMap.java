@@ -59,7 +59,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set.
+   * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
+   * urlRewrite action within defaultRouteAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +214,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set.
+   * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
+   * urlRewrite action within defaultRouteAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -226,7 +228,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set.
+   * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
+   * urlRewrite action within defaultRouteAction.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public UrlMap setDefaultRouteAction(HttpRouteAction defaultRouteAction) {

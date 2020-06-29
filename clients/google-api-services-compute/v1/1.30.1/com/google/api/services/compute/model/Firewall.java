@@ -117,7 +117,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the logging options for a particular firewall rule. If logging is enabled,
-   * logs will be exported to Stackdriver.
+   * logs will be exported to Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,7 +396,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the logging options for a particular firewall rule. If logging is enabled,
-   * logs will be exported to Stackdriver.
+   * logs will be exported to Cloud Logging.
    * @return value or {@code null} for none
    */
   public FirewallLogConfig getLogConfig() {
@@ -405,7 +405,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the logging options for a particular firewall rule. If logging is enabled,
-   * logs will be exported to Stackdriver.
+   * logs will be exported to Cloud Logging.
    * @param logConfig logConfig or {@code null} for none
    */
   public Firewall setLogConfig(FirewallLogConfig logConfig) {

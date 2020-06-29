@@ -69,7 +69,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * [Output Only] Maximum accelerator cards allowed per instance.
+   * [Output Only] Maximum number of accelerator cards allowed per instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined, fully qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +184,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Maximum accelerator cards allowed per instance.
+   * [Output Only] Maximum number of accelerator cards allowed per instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaximumCardsPerInstance() {
@@ -192,7 +192,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Maximum accelerator cards allowed per instance.
+   * [Output Only] Maximum number of accelerator cards allowed per instance.
    * @param maximumCardsPerInstance maximumCardsPerInstance or {@code null} for none
    */
   public AcceleratorType setMaximumCardsPerInstance(java.lang.Integer maximumCardsPerInstance) {
@@ -218,7 +218,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined, fully qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -226,7 +226,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined, fully qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public AcceleratorType setSelfLink(java.lang.String selfLink) {

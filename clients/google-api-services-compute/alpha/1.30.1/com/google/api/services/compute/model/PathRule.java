@@ -44,7 +44,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
    * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
-   * routeAction or urlRedirect must be set.
+   * routeAction or urlRedirect must be set. UrlMaps for external HTTP(S) load balancers support
+   * only the urlRewrite action within a pathRule's routeAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +97,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
    * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
-   * routeAction or urlRedirect must be set.
+   * routeAction or urlRedirect must be set. UrlMaps for external HTTP(S) load balancers support
+   * only the urlRewrite action within a pathRule's routeAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -108,7 +110,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
    * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
-   * routeAction or urlRedirect must be set.
+   * routeAction or urlRedirect must be set. UrlMaps for external HTTP(S) load balancers support
+   * only the urlRewrite action within a pathRule's routeAction.
    * @param routeAction routeAction or {@code null} for none
    */
   public PathRule setRouteAction(HttpRouteAction routeAction) {

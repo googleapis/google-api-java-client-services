@@ -17,7 +17,7 @@
 package com.google.api.services.cloudresourcemanager.model;
 
 /**
- * Response from the GetAncestry method.
+ * Response from the projects.getAncestry method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

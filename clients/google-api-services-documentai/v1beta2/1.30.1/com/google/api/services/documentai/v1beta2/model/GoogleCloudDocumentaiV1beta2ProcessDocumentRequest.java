@@ -78,8 +78,7 @@ public final class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest extends co
   private GoogleCloudDocumentaiV1beta2OcrParams ocrParams;
 
   /**
-   * Optional. The desired output location. This field is only needed in
-   * BatchProcessDocumentsRequest.
+   * The desired output location. This field is only needed in BatchProcessDocumentsRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,8 +217,7 @@ public final class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest extends co
   }
 
   /**
-   * Optional. The desired output location. This field is only needed in
-   * BatchProcessDocumentsRequest.
+   * The desired output location. This field is only needed in BatchProcessDocumentsRequest.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2OutputConfig getOutputConfig() {
@@ -227,8 +225,7 @@ public final class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest extends co
   }
 
   /**
-   * Optional. The desired output location. This field is only needed in
-   * BatchProcessDocumentsRequest.
+   * The desired output location. This field is only needed in BatchProcessDocumentsRequest.
    * @param outputConfig outputConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest setOutputConfig(GoogleCloudDocumentaiV1beta2OutputConfig outputConfig) {

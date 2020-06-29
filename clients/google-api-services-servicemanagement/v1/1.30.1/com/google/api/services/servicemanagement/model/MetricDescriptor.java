@@ -162,7 +162,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    *
    * **Basic units (UNIT)**
    *
-   * * `bit`   bit * `By`    byte * `s`     second * `min`   minute * `h`     hour * `d`     day
+   * * `bit`   bit * `By`    byte * `s`     second * `min`   minute * `h`     hour * `d`     day *
+   * `1`     dimensionless
    *
    * **Prefixes (PREFIX)**
    *
@@ -459,7 +460,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    *
    * **Basic units (UNIT)**
    *
-   * * `bit`   bit * `By`    byte * `s`     second * `min`   minute * `h`     hour * `d`     day
+   * * `bit`   bit * `By`    byte * `s`     second * `min`   minute * `h`     hour * `d`     day *
+   * `1`     dimensionless
    *
    * **Prefixes (PREFIX)**
    *
@@ -538,7 +540,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    *
    * **Basic units (UNIT)**
    *
-   * * `bit`   bit * `By`    byte * `s`     second * `min`   minute * `h`     hour * `d`     day
+   * * `bit`   bit * `By`    byte * `s`     second * `min`   minute * `h`     hour * `d`     day *
+   * `1`     dimensionless
    *
    * **Prefixes (PREFIX)**
    *

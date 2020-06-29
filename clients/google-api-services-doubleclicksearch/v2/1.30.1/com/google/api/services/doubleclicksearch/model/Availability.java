@@ -48,7 +48,7 @@ public final class Availability extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger availabilityTimestamp;
+  private java.lang.Long availabilityTimestamp;
 
   /**
    * The numeric segmentation identifier (for example, DoubleClick Search Floodlight activity ID).
@@ -66,7 +66,7 @@ public final class Availability extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentationName;
 
   /**
-   * The segmentation type that this availability is for (its default value is FLOODLIGHT).
+   * The segmentation type that this availability is for (its default value is `FLOODLIGHT`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class Availability extends com.google.api.client.json.GenericJson {
    * The time by which all conversions have been uploaded, in epoch millis UTC.
    * @return value or {@code null} for none
    */
-  public java.math.BigInteger getAvailabilityTimestamp() {
+  public java.lang.Long getAvailabilityTimestamp() {
     return availabilityTimestamp;
   }
 
@@ -118,7 +118,7 @@ public final class Availability extends com.google.api.client.json.GenericJson {
    * The time by which all conversions have been uploaded, in epoch millis UTC.
    * @param availabilityTimestamp availabilityTimestamp or {@code null} for none
    */
-  public Availability setAvailabilityTimestamp(java.math.BigInteger availabilityTimestamp) {
+  public Availability setAvailabilityTimestamp(java.lang.Long availabilityTimestamp) {
     this.availabilityTimestamp = availabilityTimestamp;
     return this;
   }
@@ -160,7 +160,7 @@ public final class Availability extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The segmentation type that this availability is for (its default value is FLOODLIGHT).
+   * The segmentation type that this availability is for (its default value is `FLOODLIGHT`).
    * @return value or {@code null} for none
    */
   public java.lang.String getSegmentationType() {
@@ -168,7 +168,7 @@ public final class Availability extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The segmentation type that this availability is for (its default value is FLOODLIGHT).
+   * The segmentation type that this availability is for (its default value is `FLOODLIGHT`).
    * @param segmentationType segmentationType or {@code null} for none
    */
   public Availability setSegmentationType(java.lang.String segmentationType) {

@@ -72,7 +72,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long campaignId;
 
   /**
-   * Sales channel for the product. Acceptable values are: - "local": a physical store  - "online":
+   * Sales channel for the product. Acceptable values are: "`local`": a physical store "`online`":
    * an online store
    * The value may be {@code null}.
    */
@@ -90,8 +90,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * For offline conversions, advertisers provide this ID. Advertisers can specify any ID that is
    * meaningful to them. Each conversion in a request must specify a unique ID, and the combination
    * of ID and timestamp must be unique amongst all conversions within the advertiser. For online
-   * conversions, DS copies the dsConversionId or floodlightOrderId into this property depending on
-   * the advertiser's Floodlight instructions.
+   * conversions, DS copies the `dsConversionId` or `floodlightOrderId` into this property depending
+   * on the advertiser's Floodlight instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,14 +102,14 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger conversionModifiedTimestamp;
+  private java.lang.Long conversionModifiedTimestamp;
 
   /**
    * The time at which the conversion took place, in epoch millis UTC.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger conversionTimestamp;
+  @com.google.api.client.util.Key
+  private java.lang.String conversionTimestamp;
 
   /**
    * Available to advertisers only after contacting DoubleClick Search customer support.
@@ -221,13 +221,13 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long quantityMillis;
 
   /**
-   * The revenue amount of this TRANSACTION conversion, in micros (value multiplied by 1000000, no
-   * decimal). For example, to specify a revenue value of "10" enter "10000000" (10 million) in your
-   * request.
+   * The revenue amount of this `TRANSACTION` conversion, in micros (value multiplied by 1000000, no
+   * decimal). For example, to specify a revenue value of "10"  enter "10000000" (10 million) in
+   * your request.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long revenueMicros;
+  @com.google.api.client.util.Key
+  private java.lang.String revenueMicros;
 
   /**
    * The numeric segmentation identifier (for example, DoubleClick Search Floodlight activity ID).
@@ -245,14 +245,14 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentationName;
 
   /**
-   * The segmentation type of this conversion (for example, FLOODLIGHT).
+   * The segmentation type of this conversion (for example, `FLOODLIGHT`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String segmentationType;
 
   /**
-   * The state of the conversion, that is, either ACTIVE or REMOVED. Note: state DELETED is
+   * The state of the conversion, that is, either `ACTIVE` or `REMOVED`. Note: state DELETED is
    * deprecated.
    * The value may be {@code null}.
    */
@@ -261,17 +261,17 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the local store for which the product was advertised. Applicable only when the
-   * channel is "local".
+   * channel is "`local`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storeId;
 
   /**
-   * The type of the conversion, that is, either ACTION or TRANSACTION. An ACTION conversion is an
-   * action by the user that has no monetarily quantifiable value, while a TRANSACTION conversion is
-   * an action that does have a monetarily quantifiable value. Examples are email list signups
-   * (ACTION) versus ecommerce purchases (TRANSACTION).
+   * The type of the conversion, that is, either `ACTION` or `TRANSACTION`. An `ACTION` conversion
+   * is an action by the user that has no monetarily quantifiable value, while a `TRANSACTION`
+   * conversion is an action that does have a monetarily quantifiable value. Examples are email list
+   * signups (`ACTION`) versus ecommerce purchases (`TRANSACTION`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,7 +380,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sales channel for the product. Acceptable values are: - "local": a physical store  - "online":
+   * Sales channel for the product. Acceptable values are: "`local`": a physical store "`online`":
    * an online store
    * @return value or {@code null} for none
    */
@@ -389,7 +389,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sales channel for the product. Acceptable values are: - "local": a physical store  - "online":
+   * Sales channel for the product. Acceptable values are: "`local`": a physical store "`online`":
    * an online store
    * @param channel channel or {@code null} for none
    */
@@ -419,8 +419,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * For offline conversions, advertisers provide this ID. Advertisers can specify any ID that is
    * meaningful to them. Each conversion in a request must specify a unique ID, and the combination
    * of ID and timestamp must be unique amongst all conversions within the advertiser. For online
-   * conversions, DS copies the dsConversionId or floodlightOrderId into this property depending on
-   * the advertiser's Floodlight instructions.
+   * conversions, DS copies the `dsConversionId` or `floodlightOrderId` into this property depending
+   * on the advertiser's Floodlight instructions.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversionId() {
@@ -431,8 +431,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * For offline conversions, advertisers provide this ID. Advertisers can specify any ID that is
    * meaningful to them. Each conversion in a request must specify a unique ID, and the combination
    * of ID and timestamp must be unique amongst all conversions within the advertiser. For online
-   * conversions, DS copies the dsConversionId or floodlightOrderId into this property depending on
-   * the advertiser's Floodlight instructions.
+   * conversions, DS copies the `dsConversionId` or `floodlightOrderId` into this property depending
+   * on the advertiser's Floodlight instructions.
    * @param conversionId conversionId or {@code null} for none
    */
   public Conversion setConversionId(java.lang.String conversionId) {
@@ -444,7 +444,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * The time at which the conversion was last modified, in epoch millis UTC.
    * @return value or {@code null} for none
    */
-  public java.math.BigInteger getConversionModifiedTimestamp() {
+  public java.lang.Long getConversionModifiedTimestamp() {
     return conversionModifiedTimestamp;
   }
 
@@ -452,7 +452,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * The time at which the conversion was last modified, in epoch millis UTC.
    * @param conversionModifiedTimestamp conversionModifiedTimestamp or {@code null} for none
    */
-  public Conversion setConversionModifiedTimestamp(java.math.BigInteger conversionModifiedTimestamp) {
+  public Conversion setConversionModifiedTimestamp(java.lang.Long conversionModifiedTimestamp) {
     this.conversionModifiedTimestamp = conversionModifiedTimestamp;
     return this;
   }
@@ -461,7 +461,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * The time at which the conversion took place, in epoch millis UTC.
    * @return value or {@code null} for none
    */
-  public java.math.BigInteger getConversionTimestamp() {
+  public java.lang.String getConversionTimestamp() {
     return conversionTimestamp;
   }
 
@@ -469,7 +469,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * The time at which the conversion took place, in epoch millis UTC.
    * @param conversionTimestamp conversionTimestamp or {@code null} for none
    */
-  public Conversion setConversionTimestamp(java.math.BigInteger conversionTimestamp) {
+  public Conversion setConversionTimestamp(java.lang.String conversionTimestamp) {
     this.conversionTimestamp = conversionTimestamp;
     return this;
   }
@@ -738,22 +738,22 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revenue amount of this TRANSACTION conversion, in micros (value multiplied by 1000000, no
-   * decimal). For example, to specify a revenue value of "10" enter "10000000" (10 million) in your
-   * request.
+   * The revenue amount of this `TRANSACTION` conversion, in micros (value multiplied by 1000000, no
+   * decimal). For example, to specify a revenue value of "10"  enter "10000000" (10 million) in
+   * your request.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getRevenueMicros() {
+  public java.lang.String getRevenueMicros() {
     return revenueMicros;
   }
 
   /**
-   * The revenue amount of this TRANSACTION conversion, in micros (value multiplied by 1000000, no
-   * decimal). For example, to specify a revenue value of "10" enter "10000000" (10 million) in your
-   * request.
+   * The revenue amount of this `TRANSACTION` conversion, in micros (value multiplied by 1000000, no
+   * decimal). For example, to specify a revenue value of "10"  enter "10000000" (10 million) in
+   * your request.
    * @param revenueMicros revenueMicros or {@code null} for none
    */
-  public Conversion setRevenueMicros(java.lang.Long revenueMicros) {
+  public Conversion setRevenueMicros(java.lang.String revenueMicros) {
     this.revenueMicros = revenueMicros;
     return this;
   }
@@ -795,7 +795,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The segmentation type of this conversion (for example, FLOODLIGHT).
+   * The segmentation type of this conversion (for example, `FLOODLIGHT`).
    * @return value or {@code null} for none
    */
   public java.lang.String getSegmentationType() {
@@ -803,7 +803,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The segmentation type of this conversion (for example, FLOODLIGHT).
+   * The segmentation type of this conversion (for example, `FLOODLIGHT`).
    * @param segmentationType segmentationType or {@code null} for none
    */
   public Conversion setSegmentationType(java.lang.String segmentationType) {
@@ -812,7 +812,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the conversion, that is, either ACTIVE or REMOVED. Note: state DELETED is
+   * The state of the conversion, that is, either `ACTIVE` or `REMOVED`. Note: state DELETED is
    * deprecated.
    * @return value or {@code null} for none
    */
@@ -821,7 +821,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the conversion, that is, either ACTIVE or REMOVED. Note: state DELETED is
+   * The state of the conversion, that is, either `ACTIVE` or `REMOVED`. Note: state DELETED is
    * deprecated.
    * @param state state or {@code null} for none
    */
@@ -832,7 +832,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the local store for which the product was advertised. Applicable only when the
-   * channel is "local".
+   * channel is "`local`".
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreId() {
@@ -841,7 +841,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the local store for which the product was advertised. Applicable only when the
-   * channel is "local".
+   * channel is "`local`".
    * @param storeId storeId or {@code null} for none
    */
   public Conversion setStoreId(java.lang.String storeId) {
@@ -850,10 +850,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the conversion, that is, either ACTION or TRANSACTION. An ACTION conversion is an
-   * action by the user that has no monetarily quantifiable value, while a TRANSACTION conversion is
-   * an action that does have a monetarily quantifiable value. Examples are email list signups
-   * (ACTION) versus ecommerce purchases (TRANSACTION).
+   * The type of the conversion, that is, either `ACTION` or `TRANSACTION`. An `ACTION` conversion
+   * is an action by the user that has no monetarily quantifiable value, while a `TRANSACTION`
+   * conversion is an action that does have a monetarily quantifiable value. Examples are email list
+   * signups (`ACTION`) versus ecommerce purchases (`TRANSACTION`).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -861,10 +861,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the conversion, that is, either ACTION or TRANSACTION. An ACTION conversion is an
-   * action by the user that has no monetarily quantifiable value, while a TRANSACTION conversion is
-   * an action that does have a monetarily quantifiable value. Examples are email list signups
-   * (ACTION) versus ecommerce purchases (TRANSACTION).
+   * The type of the conversion, that is, either `ACTION` or `TRANSACTION`. An `ACTION` conversion
+   * is an action by the user that has no monetarily quantifiable value, while a `TRANSACTION`
+   * conversion is an action that does have a monetarily quantifiable value. Examples are email list
+   * signups (`ACTION`) versus ecommerce purchases (`TRANSACTION`).
    * @param type type or {@code null} for none
    */
   public Conversion setType(java.lang.String type) {

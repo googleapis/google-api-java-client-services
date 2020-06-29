@@ -44,20 +44,54 @@ public abstract class DoubleclicksearchRequest<T> extends com.google.api.client.
         responseClass);
   }
 
-  /** Data format for the response. */
+  /** V1 error format. */
+  @com.google.api.client.util.Key("$.xgafv")
+  private java.lang.String $Xgafv;
+
+  /**
+   * V1 error format.
+   */
+  public java.lang.String get$Xgafv() {
+    return $Xgafv;
+  }
+
+  /** V1 error format. */
+  public DoubleclicksearchRequest<T> set$Xgafv(java.lang.String $Xgafv) {
+    this.$Xgafv = $Xgafv;
+    return this;
+  }
+
+  /** Data format for response. */
   @com.google.api.client.util.Key
   private java.lang.String alt;
 
   /**
-   * Data format for the response. [default: json]
+   * Data format for response. [default: json]
    */
   public java.lang.String getAlt() {
     return alt;
   }
 
-  /** Data format for the response. */
+  /** Data format for response. */
   public DoubleclicksearchRequest<T> setAlt(java.lang.String alt) {
     this.alt = alt;
+    return this;
+  }
+
+  /** JSONP */
+  @com.google.api.client.util.Key
+  private java.lang.String callback;
+
+  /**
+   * JSONP
+   */
+  public java.lang.String getCallback() {
+    return callback;
+  }
+
+  /** JSONP */
+  public DoubleclicksearchRequest<T> setCallback(java.lang.String callback) {
+    this.callback = callback;
     return this;
   }
 
@@ -102,23 +136,6 @@ public abstract class DoubleclicksearchRequest<T> extends com.google.api.client.
     return this;
   }
 
-  /** OAuth 2.0 token for the current user. */
-  @com.google.api.client.util.Key("oauth_token")
-  private java.lang.String oauthToken;
-
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  public java.lang.String getOauthToken() {
-    return oauthToken;
-  }
-
-  /** OAuth 2.0 token for the current user. */
-  public DoubleclicksearchRequest<T> setOauthToken(java.lang.String oauthToken) {
-    this.oauthToken = oauthToken;
-    return this;
-  }
-
   /** Returns response with indentations and line breaks. */
   @com.google.api.client.util.Key
   private java.lang.Boolean prettyPrint;
@@ -136,37 +153,61 @@ public abstract class DoubleclicksearchRequest<T> extends com.google.api.client.
     return this;
   }
 
-  /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
+  /**
+   * Available to use for quota purposes for server-side applications. Can be any arbitrary string
+   * assigned to a user, but should not exceed 40 characters.
+   */
   @com.google.api.client.util.Key
   private java.lang.String quotaUser;
 
   /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+   * Available to use for quota purposes for server-side applications. Can be any arbitrary string
+   * assigned to a user, but should not exceed 40 characters.
    */
   public java.lang.String getQuotaUser() {
     return quotaUser;
   }
 
-  /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
+  /**
+   * Available to use for quota purposes for server-side applications. Can be any arbitrary string
+   * assigned to a user, but should not exceed 40 characters.
+   */
   public DoubleclicksearchRequest<T> setQuotaUser(java.lang.String quotaUser) {
     this.quotaUser = quotaUser;
     return this;
   }
 
-  /** Deprecated. Please use quotaUser instead. */
+  /** Legacy upload protocol for media (e.g. "media", "multipart"). */
   @com.google.api.client.util.Key
-  private java.lang.String userIp;
+  private java.lang.String uploadType;
 
   /**
-   * Deprecated. Please use quotaUser instead.
+   * Legacy upload protocol for media (e.g. "media", "multipart").
    */
-  public java.lang.String getUserIp() {
-    return userIp;
+  public java.lang.String getUploadType() {
+    return uploadType;
   }
 
-  /** Deprecated. Please use quotaUser instead. */
-  public DoubleclicksearchRequest<T> setUserIp(java.lang.String userIp) {
-    this.userIp = userIp;
+  /** Legacy upload protocol for media (e.g. "media", "multipart"). */
+  public DoubleclicksearchRequest<T> setUploadType(java.lang.String uploadType) {
+    this.uploadType = uploadType;
+    return this;
+  }
+
+  /** Upload protocol for media (e.g. "raw", "multipart"). */
+  @com.google.api.client.util.Key("upload_protocol")
+  private java.lang.String uploadProtocol;
+
+  /**
+   * Upload protocol for media (e.g. "raw", "multipart").
+   */
+  public java.lang.String getUploadProtocol() {
+    return uploadProtocol;
+  }
+
+  /** Upload protocol for media (e.g. "raw", "multipart"). */
+  public DoubleclicksearchRequest<T> setUploadProtocol(java.lang.String uploadProtocol) {
+    this.uploadProtocol = uploadProtocol;
     return this;
   }
 

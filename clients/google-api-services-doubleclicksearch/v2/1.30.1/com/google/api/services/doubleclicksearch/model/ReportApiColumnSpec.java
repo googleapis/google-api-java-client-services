@@ -39,7 +39,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   /**
    * Segments a report by a custom dimension. The report must be scoped to an advertiser or lower,
    * and the custom dimension must already be set up in DoubleClick Search. The custom dimension
-   * name, which appears in DoubleClick Search, is case sensitive. If used in a conversion report,
+   * name, which appears in DoubleClick Search, is case sensitive.\ If used in a conversion report,
    * returns the value of the specified custom dimension for the given conversion, if set. This
    * column does not segment the conversion report.
    * The value may be {@code null}.
@@ -58,23 +58,23 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
 
   /**
    * Inclusive day in YYYY-MM-DD format. When provided, this overrides the overall time range of the
-   * report for this column only. Must be provided together with startDate.
+   * report for this column only. Must be provided together with `startDate`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endDate;
 
   /**
-   * Synchronous report only. Set to true to group by this column. Defaults to false.
+   * Synchronous report only. Set to `true` to group by this column. Defaults to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean groupByColumn;
 
   /**
-   * Text used to identify this column in the report output; defaults to columnName or
-   * savedColumnName when not specified. This can be used to prevent collisions between DoubleClick
-   * Search columns and saved columns with the same name.
+   * Text used to identify this column in the report output; defaults to `columnName` or
+   * `savedColumnName` when not specified. This can be used to prevent collisions between
+   * DoubleClick Search columns and saved columns with the same name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   private java.lang.String platformSource;
 
   /**
-   * Returns metrics only for a specific type of product activity. Accepted values are: - "sold":
-   * returns metrics only for products that were sold  - "advertised": returns metrics only for
+   * Returns metrics only for a specific type of product activity. Accepted values are:  "`sold`":
+   * returns metrics only for products that were sold "`advertised`": returns metrics only for
    * products that were advertised in a Shopping campaign, and that might or might not have been
    * sold
    * The value may be {@code null}.
@@ -108,7 +108,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
 
   /**
    * Inclusive date in YYYY-MM-DD format. When provided, this overrides the overall time range of
-   * the report for this column only. Must be provided together with endDate.
+   * the report for this column only. Must be provided together with `endDate`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   /**
    * Segments a report by a custom dimension. The report must be scoped to an advertiser or lower,
    * and the custom dimension must already be set up in DoubleClick Search. The custom dimension
-   * name, which appears in DoubleClick Search, is case sensitive. If used in a conversion report,
+   * name, which appears in DoubleClick Search, is case sensitive.\ If used in a conversion report,
    * returns the value of the specified custom dimension for the given conversion, if set. This
    * column does not segment the conversion report.
    * @return value or {@code null} for none
@@ -146,7 +146,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   /**
    * Segments a report by a custom dimension. The report must be scoped to an advertiser or lower,
    * and the custom dimension must already be set up in DoubleClick Search. The custom dimension
-   * name, which appears in DoubleClick Search, is case sensitive. If used in a conversion report,
+   * name, which appears in DoubleClick Search, is case sensitive.\ If used in a conversion report,
    * returns the value of the specified custom dimension for the given conversion, if set. This
    * column does not segment the conversion report.
    * @param customDimensionName customDimensionName or {@code null} for none
@@ -179,7 +179,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
 
   /**
    * Inclusive day in YYYY-MM-DD format. When provided, this overrides the overall time range of the
-   * report for this column only. Must be provided together with startDate.
+   * report for this column only. Must be provided together with `startDate`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndDate() {
@@ -188,7 +188,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
 
   /**
    * Inclusive day in YYYY-MM-DD format. When provided, this overrides the overall time range of the
-   * report for this column only. Must be provided together with startDate.
+   * report for this column only. Must be provided together with `startDate`.
    * @param endDate endDate or {@code null} for none
    */
   public ReportApiColumnSpec setEndDate(java.lang.String endDate) {
@@ -197,7 +197,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Synchronous report only. Set to true to group by this column. Defaults to false.
+   * Synchronous report only. Set to `true` to group by this column. Defaults to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGroupByColumn() {
@@ -205,7 +205,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Synchronous report only. Set to true to group by this column. Defaults to false.
+   * Synchronous report only. Set to `true` to group by this column. Defaults to `false`.
    * @param groupByColumn groupByColumn or {@code null} for none
    */
   public ReportApiColumnSpec setGroupByColumn(java.lang.Boolean groupByColumn) {
@@ -214,36 +214,9 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
-   *
-   * <p>
-   * Boolean properties can have four possible values:
-   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
-   * or {@link Boolean#FALSE}.
-   * </p>
-   *
-   * <p>
-   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
-   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
-   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * </p>
-   *
-   * <p>
-   * Synchronous report only. Set to true to group by this column. Defaults to false.
-   * </p>
-   */
-  public boolean isGroupByColumn() {
-    if (groupByColumn == null || groupByColumn == com.google.api.client.util.Data.NULL_BOOLEAN) {
-      return false;
-    }
-    return groupByColumn;
-  }
-
-  /**
-   * Text used to identify this column in the report output; defaults to columnName or
-   * savedColumnName when not specified. This can be used to prevent collisions between DoubleClick
-   * Search columns and saved columns with the same name.
+   * Text used to identify this column in the report output; defaults to `columnName` or
+   * `savedColumnName` when not specified. This can be used to prevent collisions between
+   * DoubleClick Search columns and saved columns with the same name.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeaderText() {
@@ -251,9 +224,9 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Text used to identify this column in the report output; defaults to columnName or
-   * savedColumnName when not specified. This can be used to prevent collisions between DoubleClick
-   * Search columns and saved columns with the same name.
+   * Text used to identify this column in the report output; defaults to `columnName` or
+   * `savedColumnName` when not specified. This can be used to prevent collisions between
+   * DoubleClick Search columns and saved columns with the same name.
    * @param headerText headerText or {@code null} for none
    */
   public ReportApiColumnSpec setHeaderText(java.lang.String headerText) {
@@ -281,8 +254,8 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Returns metrics only for a specific type of product activity. Accepted values are: - "sold":
-   * returns metrics only for products that were sold  - "advertised": returns metrics only for
+   * Returns metrics only for a specific type of product activity. Accepted values are:  "`sold`":
+   * returns metrics only for products that were sold "`advertised`": returns metrics only for
    * products that were advertised in a Shopping campaign, and that might or might not have been
    * sold
    * @return value or {@code null} for none
@@ -292,8 +265,8 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Returns metrics only for a specific type of product activity. Accepted values are: - "sold":
-   * returns metrics only for products that were sold  - "advertised": returns metrics only for
+   * Returns metrics only for a specific type of product activity. Accepted values are:  "`sold`":
+   * returns metrics only for products that were sold "`advertised`": returns metrics only for
    * products that were advertised in a Shopping campaign, and that might or might not have been
    * sold
    * @param productReportPerspective productReportPerspective or {@code null} for none
@@ -324,7 +297,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
 
   /**
    * Inclusive date in YYYY-MM-DD format. When provided, this overrides the overall time range of
-   * the report for this column only. Must be provided together with endDate.
+   * the report for this column only. Must be provided together with `endDate`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartDate() {
@@ -333,7 +306,7 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
 
   /**
    * Inclusive date in YYYY-MM-DD format. When provided, this overrides the overall time range of
-   * the report for this column only. Must be provided together with endDate.
+   * the report for this column only. Must be provided together with `endDate`.
    * @param startDate startDate or {@code null} for none
    */
   public ReportApiColumnSpec setStartDate(java.lang.String startDate) {

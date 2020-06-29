@@ -60,7 +60,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isReportReady;
 
   /**
-   * Identifies this as a Report resource. Value: the fixed string doubleclicksearch#report.
+   * Identifies this as a Report resource. Value: the fixed string `doubleclicksearch#report`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
   /**
    * The currency code of all monetary values produced in the report, including values that are set
    * by users (e.g., keyword bid settings) and metrics (e.g., cost and revenue). The currency code
-   * of a report is determined by the statisticsCurrency field of the report request.
+   * of a report is determined by the `statisticsCurrency` field of the report request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies this as a Report resource. Value: the fixed string doubleclicksearch#report.
+   * Identifies this as a Report resource. Value: the fixed string `doubleclicksearch#report`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -169,7 +169,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies this as a Report resource. Value: the fixed string doubleclicksearch#report.
+   * Identifies this as a Report resource. Value: the fixed string `doubleclicksearch#report`.
    * @param kind kind or {@code null} for none
    */
   public Report setKind(java.lang.String kind) {
@@ -233,7 +233,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
   /**
    * The currency code of all monetary values produced in the report, including values that are set
    * by users (e.g., keyword bid settings) and metrics (e.g., cost and revenue). The currency code
-   * of a report is determined by the statisticsCurrency field of the report request.
+   * of a report is determined by the `statisticsCurrency` field of the report request.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatisticsCurrencyCode() {
@@ -243,7 +243,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
   /**
    * The currency code of all monetary values produced in the report, including values that are set
    * by users (e.g., keyword bid settings) and metrics (e.g., cost and revenue). The currency code
-   * of a report is determined by the statisticsCurrency field of the report request.
+   * of a report is determined by the `statisticsCurrency` field of the report request.
    * @param statisticsCurrencyCode statisticsCurrencyCode or {@code null} for none
    */
   public Report setStatisticsCurrencyCode(java.lang.String statisticsCurrencyCode) {

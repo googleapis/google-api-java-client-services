@@ -30,16 +30,18 @@ package com.google.api.services.composer.v1beta1.model;
 public final class DatabaseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Cloud SQL tier used by Airflow database. If not specified, db-n1-standard-2 will be
-   * used.
+   * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
+   * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
+   * db-n1-standard-2 will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Optional. Cloud SQL tier used by Airflow database. If not specified, db-n1-standard-2 will be
-   * used.
+   * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
+   * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
+   * db-n1-standard-2 will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -47,8 +49,9 @@ public final class DatabaseConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Cloud SQL tier used by Airflow database. If not specified, db-n1-standard-2 will be
-   * used.
+   * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
+   * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
+   * db-n1-standard-2 will be used.
    * @param machineType machineType or {@code null} for none
    */
   public DatabaseConfig setMachineType(java.lang.String machineType) {

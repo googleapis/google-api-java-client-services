@@ -76,7 +76,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private ExpirationPolicy expirationPolicy;
 
   /**
-   * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
+   * An expression written in the Pub/Sub [filter
+   * language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only
    * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
    * subscription. If empty, then no messages are filtered out.
    * The value may be {@code null}.
@@ -253,7 +254,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
+   * An expression written in the Pub/Sub [filter
+   * language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only
    * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
    * subscription. If empty, then no messages are filtered out.
    * @return value or {@code null} for none
@@ -263,7 +265,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An expression written in the Cloud Pub/Sub filter language. If non-empty, then only
+   * An expression written in the Pub/Sub [filter
+   * language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only
    * `PubsubMessage`s whose `attributes` field matches the filter are delivered on this
    * subscription. If empty, then no messages are filtered out.
    * @param filter filter or {@code null} for none

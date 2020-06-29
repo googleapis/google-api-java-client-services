@@ -35,6 +35,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
 
   /**
    * Attributes for this message. If this field is empty, the message must contain non-empty data.
+   * This can be used to filter messages on the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +69,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
 
   /**
    * Attributes for this message. If this field is empty, the message must contain non-empty data.
+   * This can be used to filter messages on the subscription.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -76,6 +78,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
 
   /**
    * Attributes for this message. If this field is empty, the message must contain non-empty data.
+   * This can be used to filter messages on the subscription.
    * @param attributes attributes or {@code null} for none
    */
   public PubsubMessage setAttributes(java.util.Map<String, java.lang.String> attributes) {

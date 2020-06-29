@@ -31,22 +31,22 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1FieldTypeEnumType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required on create; optional on update. The set of allowed values for this enum. This set must
-   * not be empty, the display names of the values in this set must not be empty and the display
-   * names of the values must be case-insensitively unique within this set. Currently, enum values
-   * can only be added to the list of allowed values. Deletion and renaming of enum values are not
-   * supported. Can have up to 500 allowed values.
+   * The set of allowed values for this enum. This set must not be empty, the display names of the
+   * values in this set must not be empty and the display names of the values must be case-
+   * insensitively unique within this set. The order of items in this list is preserved. This field
+   * can be used to create, remove and reorder enum values. In order to rename enum value use
+   * RenameTagTemplateFieldEnumValue method. Can have up to 500 allowed values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDatacatalogV1beta1FieldTypeEnumTypeEnumValue> allowedValues;
 
   /**
-   * Required on create; optional on update. The set of allowed values for this enum. This set must
-   * not be empty, the display names of the values in this set must not be empty and the display
-   * names of the values must be case-insensitively unique within this set. Currently, enum values
-   * can only be added to the list of allowed values. Deletion and renaming of enum values are not
-   * supported. Can have up to 500 allowed values.
+   * The set of allowed values for this enum. This set must not be empty, the display names of the
+   * values in this set must not be empty and the display names of the values must be case-
+   * insensitively unique within this set. The order of items in this list is preserved. This field
+   * can be used to create, remove and reorder enum values. In order to rename enum value use
+   * RenameTagTemplateFieldEnumValue method. Can have up to 500 allowed values.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDatacatalogV1beta1FieldTypeEnumTypeEnumValue> getAllowedValues() {
@@ -54,11 +54,11 @@ public final class GoogleCloudDatacatalogV1beta1FieldTypeEnumType extends com.go
   }
 
   /**
-   * Required on create; optional on update. The set of allowed values for this enum. This set must
-   * not be empty, the display names of the values in this set must not be empty and the display
-   * names of the values must be case-insensitively unique within this set. Currently, enum values
-   * can only be added to the list of allowed values. Deletion and renaming of enum values are not
-   * supported. Can have up to 500 allowed values.
+   * The set of allowed values for this enum. This set must not be empty, the display names of the
+   * values in this set must not be empty and the display names of the values must be case-
+   * insensitively unique within this set. The order of items in this list is preserved. This field
+   * can be used to create, remove and reorder enum values. In order to rename enum value use
+   * RenameTagTemplateFieldEnumValue method. Can have up to 500 allowed values.
    * @param allowedValues allowedValues or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1FieldTypeEnumType setAllowedValues(java.util.List<GoogleCloudDatacatalogV1beta1FieldTypeEnumTypeEnumValue> allowedValues) {

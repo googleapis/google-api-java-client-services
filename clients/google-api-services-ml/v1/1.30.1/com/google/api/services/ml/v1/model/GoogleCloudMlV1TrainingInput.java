@@ -291,6 +291,15 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private GoogleCloudMlV1Scheduling scheduling;
 
   /**
+   * Optional. Specifies the service account for workload run-as account. Users submitting jobs must
+   * have act-as permission on this run-as account. If not specified, then CMLE P4SA will be used by
+   * default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training
    * with a custom container. Defaults to `false`. [Learn more about this field.](/ai-
    * platform/training/docs/distributed-training-details#chief-versus-master)
@@ -919,6 +928,27 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setScheduling(GoogleCloudMlV1Scheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the service account for workload run-as account. Users submitting jobs must
+   * have act-as permission on this run-as account. If not specified, then CMLE P4SA will be used by
+   * default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. Specifies the service account for workload run-as account. Users submitting jobs must
+   * have act-as permission on this run-as account. If not specified, then CMLE P4SA will be used by
+   * default.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

@@ -32,9 +32,9 @@ package com.google.api.services.monitoring.v3.model;
 public final class TimeSeries extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The associated monitored resource metadata. When reading a timeseries, this field
-   * will include metadata labels that are explicitly named in the reduction. When creating a
-   * timeseries, this field is ignored.
+   * Output only. The associated monitored resource metadata. When reading a time series, this field
+   * will include metadata labels that are explicitly named in the reduction. When creating a time
+   * series, this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +95,9 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   private java.lang.String valueType;
 
   /**
-   * Output only. The associated monitored resource metadata. When reading a timeseries, this field
-   * will include metadata labels that are explicitly named in the reduction. When creating a
-   * timeseries, this field is ignored.
+   * Output only. The associated monitored resource metadata. When reading a time series, this field
+   * will include metadata labels that are explicitly named in the reduction. When creating a time
+   * series, this field is ignored.
    * @return value or {@code null} for none
    */
   public MonitoredResourceMetadata getMetadata() {
@@ -105,9 +105,9 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The associated monitored resource metadata. When reading a timeseries, this field
-   * will include metadata labels that are explicitly named in the reduction. When creating a
-   * timeseries, this field is ignored.
+   * Output only. The associated monitored resource metadata. When reading a time series, this field
+   * will include metadata labels that are explicitly named in the reduction. When creating a time
+   * series, this field is ignored.
    * @param metadata metadata or {@code null} for none
    */
   public TimeSeries setMetadata(MonitoredResourceMetadata metadata) {

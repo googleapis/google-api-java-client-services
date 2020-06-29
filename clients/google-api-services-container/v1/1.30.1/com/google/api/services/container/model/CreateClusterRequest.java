@@ -32,7 +32,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. A [cluster resource](https://cloud.google.com/container-
-   * engine/reference/rest/v1/projects.zones.clusters)
+   * engine/reference/rest/v1/projects.locations.clusters)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. A [cluster resource](https://cloud.google.com/container-
-   * engine/reference/rest/v1/projects.zones.clusters)
+   * engine/reference/rest/v1/projects.locations.clusters)
    * @return value or {@code null} for none
    */
   public Cluster getCluster() {
@@ -75,7 +75,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. A [cluster resource](https://cloud.google.com/container-
-   * engine/reference/rest/v1/projects.zones.clusters)
+   * engine/reference/rest/v1/projects.locations.clusters)
    * @param cluster cluster or {@code null} for none
    */
   public CreateClusterRequest setCluster(Cluster cluster) {

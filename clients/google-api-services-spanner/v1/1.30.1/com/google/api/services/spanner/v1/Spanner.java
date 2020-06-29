@@ -5158,6 +5158,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link GetDdl#execute()} method to invoke the remote operation.
          *
          * @param database Required. The database whose schema we wish to get.
+        Values are of the form
+         *        `projects//instances//databases/`
          * @return the request
          */
         public GetDdl getDdl(java.lang.String database) throws java.io.IOException {
@@ -5185,6 +5187,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param database Required. The database whose schema we wish to get.
+        Values are of the form
+         *        `projects//instances//databases/`
            * @since 1.13
            */
           protected GetDdl(java.lang.String database) {
@@ -5262,17 +5266,24 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             return (GetDdl) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The database whose schema we wish to get. */
+          /**
+           * Required. The database whose schema we wish to get. Values are of the form
+           * `projects//instances//databases/`
+           */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** Required. The database whose schema we wish to get.
+          /** Required. The database whose schema we wish to get. Values are of the form
+         `projects//instances//databases/`
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
-          /** Required. The database whose schema we wish to get. */
+          /**
+           * Required. The database whose schema we wish to get. Values are of the form
+           * `projects//instances//databases/`
+           */
           public GetDdl setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),

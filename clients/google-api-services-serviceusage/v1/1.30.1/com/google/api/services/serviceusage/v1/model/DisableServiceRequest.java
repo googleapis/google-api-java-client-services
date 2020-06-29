@@ -30,6 +30,13 @@ package com.google.api.services.serviceusage.v1.model;
 public final class DisableServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defines the behavior for checking service usage when disabling a service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String checkIfServiceHasUsage;
+
+  /**
    * Indicates if services that are enabled and which depend on this service should also be
    * disabled. If not set, an error will be generated if any enabled services depend on the service
    * to be disabled. When set, the service, and any enabled services that depend on it, will be
@@ -38,6 +45,23 @@ public final class DisableServiceRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableDependentServices;
+
+  /**
+   * Defines the behavior for checking service usage when disabling a service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCheckIfServiceHasUsage() {
+    return checkIfServiceHasUsage;
+  }
+
+  /**
+   * Defines the behavior for checking service usage when disabling a service.
+   * @param checkIfServiceHasUsage checkIfServiceHasUsage or {@code null} for none
+   */
+  public DisableServiceRequest setCheckIfServiceHasUsage(java.lang.String checkIfServiceHasUsage) {
+    this.checkIfServiceHasUsage = checkIfServiceHasUsage;
+    return this;
+  }
 
   /**
    * Indicates if services that are enabled and which depend on this service should also be

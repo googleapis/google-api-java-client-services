@@ -1524,6 +1524,688 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         return (ExportAssets) super.set(parameterName, value);
       }
     }
+    /**
+     * Searches all the IAM policies within the given accessible scope (e.g., a project, a folder or an
+     * organization). Callers should have `cloud.assets.SearchAllIamPolicies` permission upon the
+     * requested scope, otherwise the request will be rejected.
+     *
+     * Create a request for the method "v1.searchAllIamPolicies".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link SearchAllIamPolicies#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param scope Required. A scope can be a project, a folder or an organization. The search is
+    limited to the IAM
+     *        policies within the `scope`.
+    The allowed values are:
+    * projects/{PROJECT_ID}
+    *
+     *        projects/{PROJECT_NUMBER}
+    * folders/{FOLDER_NUMBER}
+    * organizations/{ORGANIZATION_NUMBER}
+     * @return the request
+     */
+    public SearchAllIamPolicies searchAllIamPolicies(java.lang.String scope) throws java.io.IOException {
+      SearchAllIamPolicies result = new SearchAllIamPolicies(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchAllIamPolicies extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.SearchAllIamPoliciesResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:searchAllIamPolicies";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Searches all the IAM policies within the given accessible scope (e.g., a project, a folder or
+       * an organization). Callers should have `cloud.assets.SearchAllIamPolicies` permission upon the
+       * requested scope, otherwise the request will be rejected.
+       *
+       * Create a request for the method "v1.searchAllIamPolicies".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link SearchAllIamPolicies#execute()} method to invoke the
+       * remote operation. <p> {@link SearchAllIamPolicies#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param scope Required. A scope can be a project, a folder or an organization. The search is
+    limited to the IAM
+     *        policies within the `scope`.
+    The allowed values are:
+    * projects/{PROJECT_ID}
+    *
+     *        projects/{PROJECT_NUMBER}
+    * folders/{FOLDER_NUMBER}
+    * organizations/{ORGANIZATION_NUMBER}
+       * @since 1.13
+       */
+      protected SearchAllIamPolicies(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.SearchAllIamPoliciesResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public SearchAllIamPolicies set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchAllIamPolicies) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchAllIamPolicies setAccessToken(java.lang.String accessToken) {
+        return (SearchAllIamPolicies) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchAllIamPolicies setAlt(java.lang.String alt) {
+        return (SearchAllIamPolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchAllIamPolicies setCallback(java.lang.String callback) {
+        return (SearchAllIamPolicies) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchAllIamPolicies setFields(java.lang.String fields) {
+        return (SearchAllIamPolicies) super.setFields(fields);
+      }
+
+      @Override
+      public SearchAllIamPolicies setKey(java.lang.String key) {
+        return (SearchAllIamPolicies) super.setKey(key);
+      }
+
+      @Override
+      public SearchAllIamPolicies setOauthToken(java.lang.String oauthToken) {
+        return (SearchAllIamPolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchAllIamPolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchAllIamPolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchAllIamPolicies setQuotaUser(java.lang.String quotaUser) {
+        return (SearchAllIamPolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchAllIamPolicies setUploadType(java.lang.String uploadType) {
+        return (SearchAllIamPolicies) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchAllIamPolicies setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchAllIamPolicies) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A scope can be a project, a folder or an organization. The search is limited to
+       * the IAM policies within the `scope`.
+       *
+       * The allowed values are:
+       *
+       * * projects/{PROJECT_ID} * projects/{PROJECT_NUMBER} * folders/{FOLDER_NUMBER} *
+       * organizations/{ORGANIZATION_NUMBER}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. A scope can be a project, a folder or an organization. The search is limited to the IAM
+     policies within the `scope`.
+
+     The allowed values are:
+
+     * projects/{PROJECT_ID} * projects/{PROJECT_NUMBER} * folders/{FOLDER_NUMBER} *
+     organizations/{ORGANIZATION_NUMBER}
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. A scope can be a project, a folder or an organization. The search is limited to
+       * the IAM policies within the `scope`.
+       *
+       * The allowed values are:
+       *
+       * * projects/{PROJECT_ID} * projects/{PROJECT_NUMBER} * folders/{FOLDER_NUMBER} *
+       * organizations/{ORGANIZATION_NUMBER}
+       */
+      public SearchAllIamPolicies setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The page size for search result pagination. Page size is capped at 500 even if a larger
+     value is given. If set to zero, server will pick an appropriate default. Returned results may be
+     fewer than requested. When this happens, there could be more results as long as `next_page_token`
+     is returned.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      public SearchAllIamPolicies setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. If present, retrieve the next batch of results from the preceding call to this
+       * method. `page_token` must be the value of `next_page_token` from the previous response. The
+       * values of all other method parameters must be identical to those in the previous call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. If present, retrieve the next batch of results from the preceding call to this method.
+     `page_token` must be the value of `next_page_token` from the previous response. The values of all
+     other method parameters must be identical to those in the previous call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. If present, retrieve the next batch of results from the preceding call to this
+       * method. `page_token` must be the value of `next_page_token` from the previous response. The
+       * values of all other method parameters must be identical to those in the previous call.
+       */
+      public SearchAllIamPolicies setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. The query statement. An empty query can be specified to search all the IAM
+       * policies within the given `scope`.
+       *
+       * Examples:
+       *
+       * * `policy : "amy@gmail.com"` to find Cloud IAM policy bindings that specify user
+       * "amy@gmail.com". * `policy : "roles/compute.admin"` to find Cloud IAM policy bindings that
+       * specify the Compute Admin role. * `policy.role.permissions : "storage.buckets.update"` to
+       * find Cloud IAM policy bindings that specify a role containing "storage.buckets.update"
+       * permission. * `resource : "organizations/123"` to find Cloud IAM policy bindings that are
+       * set on "organizations/123". * `(resource : ("organizations/123" OR "folders/1234") AND
+       * policy : "amy")` to find Cloud IAM policy bindings that are set on "organizations/123" or
+       * "folders/1234", and also specify user "amy".
+       *
+       * See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-iam-
+       * policies#how_to_construct_a_query) for more details.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. The query statement. An empty query can be specified to search all the IAM policies
+     within the given `scope`.
+
+     Examples:
+
+     * `policy : "amy@gmail.com"` to find Cloud IAM policy bindings that specify user "amy@gmail.com". *
+     `policy : "roles/compute.admin"` to find Cloud IAM policy bindings that specify the Compute Admin
+     role. * `policy.role.permissions : "storage.buckets.update"` to find Cloud IAM policy bindings that
+     specify a role containing "storage.buckets.update" permission. * `resource : "organizations/123"`
+     to find Cloud IAM policy bindings that are set on "organizations/123". * `(resource :
+     ("organizations/123" OR "folders/1234") AND policy : "amy")` to find Cloud IAM policy bindings that
+     are set on "organizations/123" or "folders/1234", and also specify user "amy".
+
+     See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-iam-
+     policies#how_to_construct_a_query) for more details.
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. The query statement. An empty query can be specified to search all the IAM
+       * policies within the given `scope`.
+       *
+       * Examples:
+       *
+       * * `policy : "amy@gmail.com"` to find Cloud IAM policy bindings that specify user
+       * "amy@gmail.com". * `policy : "roles/compute.admin"` to find Cloud IAM policy bindings that
+       * specify the Compute Admin role. * `policy.role.permissions : "storage.buckets.update"` to
+       * find Cloud IAM policy bindings that specify a role containing "storage.buckets.update"
+       * permission. * `resource : "organizations/123"` to find Cloud IAM policy bindings that are
+       * set on "organizations/123". * `(resource : ("organizations/123" OR "folders/1234") AND
+       * policy : "amy")` to find Cloud IAM policy bindings that are set on "organizations/123" or
+       * "folders/1234", and also specify user "amy".
+       *
+       * See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-iam-
+       * policies#how_to_construct_a_query) for more details.
+       */
+      public SearchAllIamPolicies setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public SearchAllIamPolicies set(String parameterName, Object value) {
+        return (SearchAllIamPolicies) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Searches all the resources within the given accessible scope (e.g., a project, a folder or an
+     * organization). Callers should have `cloud.assets.SearchAllResources` permission upon the
+     * requested scope, otherwise the request will be rejected.
+     *
+     * Create a request for the method "v1.searchAllResources".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link SearchAllResources#execute()} method to invoke the remote operation.
+     *
+     * @param scope Required. A scope can be a project, a folder or an organization. The search is
+    limited to the
+     *        resources within the `scope`.
+    The allowed values are:
+    * projects/{PROJECT_ID}
+    *
+     *        projects/{PROJECT_NUMBER}
+    * folders/{FOLDER_NUMBER}
+    * organizations/{ORGANIZATION_NUMBER}
+     * @return the request
+     */
+    public SearchAllResources searchAllResources(java.lang.String scope) throws java.io.IOException {
+      SearchAllResources result = new SearchAllResources(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchAllResources extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.SearchAllResourcesResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:searchAllResources";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Searches all the resources within the given accessible scope (e.g., a project, a folder or an
+       * organization). Callers should have `cloud.assets.SearchAllResources` permission upon the
+       * requested scope, otherwise the request will be rejected.
+       *
+       * Create a request for the method "v1.searchAllResources".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link SearchAllResources#execute()} method to invoke the remote
+       * operation. <p> {@link SearchAllResources#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param scope Required. A scope can be a project, a folder or an organization. The search is
+    limited to the
+     *        resources within the `scope`.
+    The allowed values are:
+    * projects/{PROJECT_ID}
+    *
+     *        projects/{PROJECT_NUMBER}
+    * folders/{FOLDER_NUMBER}
+    * organizations/{ORGANIZATION_NUMBER}
+       * @since 1.13
+       */
+      protected SearchAllResources(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.SearchAllResourcesResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public SearchAllResources set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchAllResources) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchAllResources setAccessToken(java.lang.String accessToken) {
+        return (SearchAllResources) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchAllResources setAlt(java.lang.String alt) {
+        return (SearchAllResources) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchAllResources setCallback(java.lang.String callback) {
+        return (SearchAllResources) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchAllResources setFields(java.lang.String fields) {
+        return (SearchAllResources) super.setFields(fields);
+      }
+
+      @Override
+      public SearchAllResources setKey(java.lang.String key) {
+        return (SearchAllResources) super.setKey(key);
+      }
+
+      @Override
+      public SearchAllResources setOauthToken(java.lang.String oauthToken) {
+        return (SearchAllResources) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchAllResources setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchAllResources) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchAllResources setQuotaUser(java.lang.String quotaUser) {
+        return (SearchAllResources) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchAllResources setUploadType(java.lang.String uploadType) {
+        return (SearchAllResources) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchAllResources setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchAllResources) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A scope can be a project, a folder or an organization. The search is limited to
+       * the resources within the `scope`.
+       *
+       * The allowed values are:
+       *
+       * * projects/{PROJECT_ID} * projects/{PROJECT_NUMBER} * folders/{FOLDER_NUMBER} *
+       * organizations/{ORGANIZATION_NUMBER}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. A scope can be a project, a folder or an organization. The search is limited to the
+     resources within the `scope`.
+
+     The allowed values are:
+
+     * projects/{PROJECT_ID} * projects/{PROJECT_NUMBER} * folders/{FOLDER_NUMBER} *
+     organizations/{ORGANIZATION_NUMBER}
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. A scope can be a project, a folder or an organization. The search is limited to
+       * the resources within the `scope`.
+       *
+       * The allowed values are:
+       *
+       * * projects/{PROJECT_ID} * projects/{PROJECT_NUMBER} * folders/{FOLDER_NUMBER} *
+       * organizations/{ORGANIZATION_NUMBER}
+       */
+      public SearchAllResources setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Optional. A list of asset types that this request searches for. If empty, it will search
+       * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types).
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> assetTypes;
+
+      /** Optional. A list of asset types that this request searches for. If empty, it will search all the
+     [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+     types#searchable_asset_types).
+       */
+      public java.util.List<java.lang.String> getAssetTypes() {
+        return assetTypes;
+      }
+
+      /**
+       * Optional. A list of asset types that this request searches for. If empty, it will search
+       * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types).
+       */
+      public SearchAllResources setAssetTypes(java.util.List<java.lang.String> assetTypes) {
+        this.assetTypes = assetTypes;
+        return this;
+      }
+
+      /**
+       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * default order is ascending. Add " DESC" after the field name to indicate descending order.
+       * Redundant space characters are ignored. Example: "location DESC, name". Only string fields
+       * in the response are sortable, including `name`, `displayName`, `description`, `location`.
+       * All the other fields such as repeated fields (e.g., `networkTags`), map fields (e.g.,
+       * `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. A comma separated list of fields specifying the sorting order of the results. The default
+     order is ascending. Add " DESC" after the field name to indicate descending order. Redundant space
+     characters are ignored. Example: "location DESC, name". Only string fields in the response are
+     sortable, including `name`, `displayName`, `description`, `location`. All the other fields such as
+     repeated fields (e.g., `networkTags`), map fields (e.g., `labels`) and struct fields (e.g.,
+     `additionalAttributes`) are not supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * default order is ascending. Add " DESC" after the field name to indicate descending order.
+       * Redundant space characters are ignored. Example: "location DESC, name". Only string fields
+       * in the response are sortable, including `name`, `displayName`, `description`, `location`.
+       * All the other fields such as repeated fields (e.g., `networkTags`), map fields (e.g.,
+       * `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
+       */
+      public SearchAllResources setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The page size for search result pagination. Page size is capped at 500 even if a larger
+     value is given. If set to zero, server will pick an appropriate default. Returned results may be
+     fewer than requested. When this happens, there could be more results as long as `next_page_token`
+     is returned.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      public SearchAllResources setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. If present, then retrieve the next batch of results from the preceding call to
+       * this method. `page_token` must be the value of `next_page_token` from the previous
+       * response. The values of all other method parameters, must be identical to those in the
+       * previous call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+     method. `page_token` must be the value of `next_page_token` from the previous response. The values
+     of all other method parameters, must be identical to those in the previous call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. If present, then retrieve the next batch of results from the preceding call to
+       * this method. `page_token` must be the value of `next_page_token` from the previous
+       * response. The values of all other method parameters, must be identical to those in the
+       * previous call.
+       */
+      public SearchAllResources setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. The query statement. An empty query can be specified to search all the resources
+       * of certain `asset_types` within the given `scope`.
+       *
+       * Examples:
+       *
+       * * `name : "Important"` to find Cloud resources whose name contains "Important" as a word. *
+       * `displayName : "Impor*"` to find Cloud resources whose display name contains "Impor" as a
+       * word prefix. * `description : "*por*"` to find Cloud resources whose description contains
+       * "por" as a substring. * `location : "us-west*"` to find Cloud resources whose location is
+       * prefixed with "us-west". * `labels : "prod"` to find Cloud resources whose labels contain
+       * "prod" as a key or value. * `labels.env : "prod"` to find Cloud resources which have a
+       * label "env" and its value is "prod". * `labels.env : *` to find Cloud resources which have
+       * a label "env". * `"Important"` to find Cloud resources which contain "Important" as a word
+       * in any of the searchable fields. * `"Impor*"` to find Cloud resources which contain "Impor"
+       * as a word prefix in any of the searchable fields. * `"*por*"` to find Cloud resources which
+       * contain "por" as a substring in any of the searchable fields. * `("Important" AND location
+       * : ("us-west1" OR "global"))` to find Cloud resources which contain "Important" as a word in
+       * any of the searchable fields and are also located in the "us-west1" region or the "global"
+       * location.
+       *
+       * See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-
+       * resources#how_to_construct_a_query) for more details.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. The query statement. An empty query can be specified to search all the resources of
+     certain `asset_types` within the given `scope`.
+
+     Examples:
+
+     * `name : "Important"` to find Cloud resources whose name contains "Important" as a word. *
+     `displayName : "Impor*"` to find Cloud resources whose display name contains "Impor" as a word
+     prefix. * `description : "*por*"` to find Cloud resources whose description contains "por" as a
+     substring. * `location : "us-west*"` to find Cloud resources whose location is prefixed with "us-
+     west". * `labels : "prod"` to find Cloud resources whose labels contain "prod" as a key or value. *
+     `labels.env : "prod"` to find Cloud resources which have a label "env" and its value is "prod". *
+     `labels.env : *` to find Cloud resources which have a label "env". * `"Important"` to find Cloud
+     resources which contain "Important" as a word in any of the searchable fields. * `"Impor*"` to find
+     Cloud resources which contain "Impor" as a word prefix in any of the searchable fields. * `"*por*"`
+     to find Cloud resources which contain "por" as a substring in any of the searchable fields. *
+     `("Important" AND location : ("us-west1" OR "global"))` to find Cloud resources which contain
+     "Important" as a word in any of the searchable fields and are also located in the "us-west1" region
+     or the "global" location.
+
+     See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-
+     resources#how_to_construct_a_query) for more details.
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. The query statement. An empty query can be specified to search all the resources
+       * of certain `asset_types` within the given `scope`.
+       *
+       * Examples:
+       *
+       * * `name : "Important"` to find Cloud resources whose name contains "Important" as a word. *
+       * `displayName : "Impor*"` to find Cloud resources whose display name contains "Impor" as a
+       * word prefix. * `description : "*por*"` to find Cloud resources whose description contains
+       * "por" as a substring. * `location : "us-west*"` to find Cloud resources whose location is
+       * prefixed with "us-west". * `labels : "prod"` to find Cloud resources whose labels contain
+       * "prod" as a key or value. * `labels.env : "prod"` to find Cloud resources which have a
+       * label "env" and its value is "prod". * `labels.env : *` to find Cloud resources which have
+       * a label "env". * `"Important"` to find Cloud resources which contain "Important" as a word
+       * in any of the searchable fields. * `"Impor*"` to find Cloud resources which contain "Impor"
+       * as a word prefix in any of the searchable fields. * `"*por*"` to find Cloud resources which
+       * contain "por" as a substring in any of the searchable fields. * `("Important" AND location
+       * : ("us-west1" OR "global"))` to find Cloud resources which contain "Important" as a word in
+       * any of the searchable fields and are also located in the "us-west1" region or the "global"
+       * location.
+       *
+       * See [how to construct a query](https://cloud.google.com/asset-inventory/docs/searching-
+       * resources#how_to_construct_a_query) for more details.
+       */
+      public SearchAllResources setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public SearchAllResources set(String parameterName, Object value) {
+        return (SearchAllResources) super.set(parameterName, value);
+      }
+    }
 
   }
 

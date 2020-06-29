@@ -56,6 +56,18 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> assetTypes;
 
   /**
+   * A condition which determines whether an asset update should be published. If specified, an
+   * asset will be returned only when the expression evaluates to true. When set, `expression` field
+   * in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a
+   * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
+   * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
+   * are optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Expr condition;
+
+  /**
    * Asset content type. If not specified, no content but the asset name and type will be returned.
    * The value may be {@code null}.
    */
@@ -132,6 +144,33 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    */
   public Feed setAssetTypes(java.util.List<java.lang.String> assetTypes) {
     this.assetTypes = assetTypes;
+    return this;
+  }
+
+  /**
+   * A condition which determines whether an asset update should be published. If specified, an
+   * asset will be returned only when the expression evaluates to true. When set, `expression` field
+   * in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a
+   * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
+   * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
+   * are optional.
+   * @return value or {@code null} for none
+   */
+  public Expr getCondition() {
+    return condition;
+  }
+
+  /**
+   * A condition which determines whether an asset update should be published. If specified, an
+   * asset will be returned only when the expression evaluates to true. When set, `expression` field
+   * in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a
+   * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
+   * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
+   * are optional.
+   * @param condition condition or {@code null} for none
+   */
+  public Feed setCondition(Expr condition) {
+    this.condition = condition;
     return this;
   }
 

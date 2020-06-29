@@ -45,6 +45,21 @@ public final class TemporalAsset extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean deleted;
 
   /**
+   * Prior copy of the asset. Populated if prior_asset_state is PRESENT. Currently this is only set
+   * for responses in Real-Time Feed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Asset priorAsset;
+
+  /**
+   * State of prior_asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priorAssetState;
+
+  /**
    * The time window when the asset data and state was observed.
    * The value may be {@code null}.
    */
@@ -82,6 +97,42 @@ public final class TemporalAsset extends com.google.api.client.json.GenericJson 
    */
   public TemporalAsset setDeleted(java.lang.Boolean deleted) {
     this.deleted = deleted;
+    return this;
+  }
+
+  /**
+   * Prior copy of the asset. Populated if prior_asset_state is PRESENT. Currently this is only set
+   * for responses in Real-Time Feed.
+   * @return value or {@code null} for none
+   */
+  public Asset getPriorAsset() {
+    return priorAsset;
+  }
+
+  /**
+   * Prior copy of the asset. Populated if prior_asset_state is PRESENT. Currently this is only set
+   * for responses in Real-Time Feed.
+   * @param priorAsset priorAsset or {@code null} for none
+   */
+  public TemporalAsset setPriorAsset(Asset priorAsset) {
+    this.priorAsset = priorAsset;
+    return this;
+  }
+
+  /**
+   * State of prior_asset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriorAssetState() {
+    return priorAssetState;
+  }
+
+  /**
+   * State of prior_asset.
+   * @param priorAssetState priorAssetState or {@code null} for none
+   */
+  public TemporalAsset setPriorAssetState(java.lang.String priorAssetState) {
+    this.priorAssetState = priorAssetState;
     return this;
   }
 

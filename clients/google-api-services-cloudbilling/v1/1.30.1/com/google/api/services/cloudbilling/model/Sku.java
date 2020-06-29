@@ -44,6 +44,13 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The geographic taxonomy for this sku.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeoTaxonomy geoTaxonomy;
+
+  /**
    * The resource name for the SKU. Example: "services/DA34-426B-A397/skus/AA95-CD31-42FE"
    * The value may be {@code null}.
    */
@@ -117,6 +124,23 @@ public final class Sku extends com.google.api.client.json.GenericJson {
    */
   public Sku setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The geographic taxonomy for this sku.
+   * @return value or {@code null} for none
+   */
+  public GeoTaxonomy getGeoTaxonomy() {
+    return geoTaxonomy;
+  }
+
+  /**
+   * The geographic taxonomy for this sku.
+   * @param geoTaxonomy geoTaxonomy or {@code null} for none
+   */
+  public Sku setGeoTaxonomy(GeoTaxonomy geoTaxonomy) {
+    this.geoTaxonomy = geoTaxonomy;
     return this;
   }
 

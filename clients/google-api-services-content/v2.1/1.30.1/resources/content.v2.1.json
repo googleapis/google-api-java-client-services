@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/MVmoulndJbAS5lT73tnDsslbrZE\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/mM9QQ9Q-yi6Xw-ieynL_CsfCUJ8\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200615",
+ "revision": "20200617",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -7474,6 +7474,10 @@
    "id": "TestOrder",
    "type": "object",
    "properties": {
+    "deliveryDetails": {
+     "$ref": "TestOrderDeliveryDetails",
+     "description": "Overrides the predefined delivery details if provided."
+    },
     "enableOrderinvoices": {
      "type": "boolean",
      "description": "Whether the orderinvoices service should support this order."
@@ -7498,6 +7502,10 @@
     "notificationMode": {
      "type": "string",
      "description": "Restricted. Do not use."
+    },
+    "pickupDetails": {
+     "$ref": "TestOrderPickupDetails",
+     "description": "Overrides the predefined pickup details if provided."
     },
     "predefinedBillingAddress": {
      "type": "string",
@@ -7554,6 +7562,64 @@
        "content.orders.createtestorder"
       ]
      }
+    }
+   }
+  },
+  "TestOrderAddress": {
+   "id": "TestOrderAddress",
+   "type": "object",
+   "properties": {
+    "country": {
+     "type": "string",
+     "description": "CLDR country code (e.g. \"US\")."
+    },
+    "fullAddress": {
+     "type": "array",
+     "description": "Strings representing the lines of the printed label for mailing the order, for example:\nJohn Smith\n1600 Amphitheatre Parkway\nMountain View, CA, 94043\nUnited States",
+     "items": {
+      "type": "string"
+     }
+    },
+    "isPostOfficeBox": {
+     "type": "boolean",
+     "description": "Whether the address is a post office box."
+    },
+    "locality": {
+     "type": "string",
+     "description": "City, town or commune. May also include dependent localities or sublocalities (e.g. neighborhoods or suburbs)."
+    },
+    "postalCode": {
+     "type": "string",
+     "description": "Postal Code or ZIP (e.g. \"94043\")."
+    },
+    "recipientName": {
+     "type": "string",
+     "description": "Name of the recipient."
+    },
+    "region": {
+     "type": "string",
+     "description": "Top-level administrative subdivision of the country. For example, a state like California (\"CA\") or a province like Quebec (\"QC\")."
+    },
+    "streetAddress": {
+     "type": "array",
+     "description": "Street-level part of the address.",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "TestOrderDeliveryDetails": {
+   "id": "TestOrderDeliveryDetails",
+   "type": "object",
+   "properties": {
+    "address": {
+     "$ref": "TestOrderAddress",
+     "description": "The delivery address"
+    },
+    "phoneNumber": {
+     "type": "string",
+     "description": "The phone number of the person receiving the delivery."
     }
    }
   },
@@ -7696,6 +7762,45 @@
      "items": {
       "$ref": "OrderLineItemProductVariantAttribute"
      }
+    }
+   }
+  },
+  "TestOrderPickupDetails": {
+   "id": "TestOrderPickupDetails",
+   "type": "object",
+   "properties": {
+    "locationCode": {
+     "type": "string",
+     "description": "Required. Code of the location defined by provider or merchant."
+    },
+    "pickupLocationAddress": {
+     "$ref": "TestOrderAddress",
+     "description": "Required. Pickup location address."
+    },
+    "pickupLocationType": {
+     "type": "string",
+     "description": "Pickup location type.\n\nAcceptable values are:  \n- \"`locker`\" \n- \"`store`\" \n- \"`curbside`\""
+    },
+    "pickupPersons": {
+     "type": "array",
+     "description": "Required. all pickup persons set by users.",
+     "items": {
+      "$ref": "TestOrderPickupDetailsPickupPerson"
+     }
+    }
+   }
+  },
+  "TestOrderPickupDetailsPickupPerson": {
+   "id": "TestOrderPickupDetailsPickupPerson",
+   "type": "object",
+   "properties": {
+    "name": {
+     "type": "string",
+     "description": "Required. Full name of the pickup person."
+    },
+    "phoneNumber": {
+     "type": "string",
+     "description": "Required. The phone number of the person picking up the items."
     }
    }
   },

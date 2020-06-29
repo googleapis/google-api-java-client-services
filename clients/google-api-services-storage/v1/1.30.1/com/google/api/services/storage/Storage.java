@@ -6125,25 +6125,22 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Resource name of the Cloud KMS key, of the form projects/my-
-       * project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the
-       * object. Overrides the object metadata's kms_key_name value, if any.
+       * Not currently supported. Specifying the parameter causes the request to fail with status
+       * code 400 - Bad Request.
        */
       @com.google.api.client.util.Key
       private java.lang.String kmsKeyName;
 
-      /** Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-
-     kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's
-     kms_key_name value, if any.
+      /** Not currently supported. Specifying the parameter causes the request to fail with status code 400 -
+     Bad Request.
        */
       public java.lang.String getKmsKeyName() {
         return kmsKeyName;
       }
 
       /**
-       * Resource name of the Cloud KMS key, of the form projects/my-
-       * project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the
-       * object. Overrides the object metadata's kms_key_name value, if any.
+       * Not currently supported. Specifying the parameter causes the request to fail with status
+       * code 400 - Bad Request.
        */
       public Compose setKmsKeyName(java.lang.String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;

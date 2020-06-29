@@ -6637,6 +6637,182 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
 
+          /**
+           * An accessor for creating requests from the EnumValues collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DataCatalog datacatalog = new DataCatalog(...);}
+           *   {@code DataCatalog.EnumValues.List request = datacatalog.enumValues().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public EnumValues enumValues() {
+            return new EnumValues();
+          }
+
+          /**
+           * The "enumValues" collection of methods.
+           */
+          public class EnumValues {
+
+            /**
+             * Renames an enum value in a tag template. The enum values have to be unique within one enum field.
+             * Thus, an enum value cannot be renamed with a name used in any other enum value within the same
+             * enum field.
+             *
+             * Create a request for the method "enumValues.rename".
+             *
+             * This request holds the parameters needed by the datacatalog server.  After setting any optional
+             * parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the enum field value. Example:
+            * projects/{project_id}/locations/{location}/ta
+             *        gTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display
+             *        _name}
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest}
+             * @return the request
+             */
+            public Rename rename(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest content) throws java.io.IOException {
+              Rename result = new Rename(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Rename extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1TagTemplateField> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:rename";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tagTemplates/[^/]+/fields/[^/]+/enumValues/[^/]+$");
+
+              /**
+               * Renames an enum value in a tag template. The enum values have to be unique within one enum
+               * field. Thus, an enum value cannot be renamed with a name used in any other enum value within
+               * the same enum field.
+               *
+               * Create a request for the method "enumValues.rename".
+               *
+               * This request holds the parameters needed by the the datacatalog server.  After setting any
+               * optional parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the enum field value. Example:
+            * projects/{project_id}/locations/{location}/ta
+             *        gTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display
+             *        _name}
+               * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest}
+               * @since 1.13
+               */
+              protected Rename(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest content) {
+                super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1TagTemplateField.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/tagTemplates/[^/]+/fields/[^/]+/enumValues/[^/]+$");
+                }
+              }
+
+              @Override
+              public Rename set$Xgafv(java.lang.String $Xgafv) {
+                return (Rename) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Rename setAccessToken(java.lang.String accessToken) {
+                return (Rename) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Rename setAlt(java.lang.String alt) {
+                return (Rename) super.setAlt(alt);
+              }
+
+              @Override
+              public Rename setCallback(java.lang.String callback) {
+                return (Rename) super.setCallback(callback);
+              }
+
+              @Override
+              public Rename setFields(java.lang.String fields) {
+                return (Rename) super.setFields(fields);
+              }
+
+              @Override
+              public Rename setKey(java.lang.String key) {
+                return (Rename) super.setKey(key);
+              }
+
+              @Override
+              public Rename setOauthToken(java.lang.String oauthToken) {
+                return (Rename) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Rename setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Rename) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Rename setQuotaUser(java.lang.String quotaUser) {
+                return (Rename) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Rename setUploadType(java.lang.String uploadType) {
+                return (Rename) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Rename setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Rename) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the enum field value. Example:
+               *
+               * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/
+               * {tag_template_field_id}/enumValues/{enum_value_display_name}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the enum field value. Example:
+
+             * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_fi
+             eld_id}/enumValues/{enum_value_display_name}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the enum field value. Example:
+               *
+               * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/
+               * {tag_template_field_id}/enumValues/{enum_value_display_name}
+               */
+              public Rename setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/tagTemplates/[^/]+/fields/[^/]+/enumValues/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Rename set(String parameterName, Object value) {
+                return (Rename) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**

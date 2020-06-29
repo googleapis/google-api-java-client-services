@@ -31,6 +31,14 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class V1Beta1QuotaOverride extends com.google.api.client.json.GenericJson {
 
   /**
+   * The resource name of the ancestor that requested the override. For example:
+   * "organizations/12345" or "folders/67890". Used by admin overrides only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adminOverrideAncestor;
+
+  /**
    * If this map is nonempty, then this override applies only to specific values for dimensions
    * defined in the limit unit.
    *
@@ -87,6 +95,25 @@ public final class V1Beta1QuotaOverride extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String unit;
+
+  /**
+   * The resource name of the ancestor that requested the override. For example:
+   * "organizations/12345" or "folders/67890". Used by admin overrides only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdminOverrideAncestor() {
+    return adminOverrideAncestor;
+  }
+
+  /**
+   * The resource name of the ancestor that requested the override. For example:
+   * "organizations/12345" or "folders/67890". Used by admin overrides only.
+   * @param adminOverrideAncestor adminOverrideAncestor or {@code null} for none
+   */
+  public V1Beta1QuotaOverride setAdminOverrideAncestor(java.lang.String adminOverrideAncestor) {
+    this.adminOverrideAncestor = adminOverrideAncestor;
+    return this;
+  }
 
   /**
    * If this map is nonempty, then this override applies only to specific values for dimensions

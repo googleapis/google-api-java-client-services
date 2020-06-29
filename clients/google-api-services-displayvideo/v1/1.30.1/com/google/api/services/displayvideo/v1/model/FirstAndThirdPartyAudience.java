@@ -33,6 +33,95 @@ package com.google.api.services.displayvideo.v1.model;
 public final class FirstAndThirdPartyAudience extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The estimated audience size for the Display network in the past month.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long activeDisplayAudienceSize;
+
+  /**
+   * Output only. The source of the audience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audienceSource;
+
+  /**
+   * Output only. The type of the audience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audienceType;
+
+  /**
+   * Output only. The description of the first and third party audience.
+   *
+   * Only applicable to first party audiences.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. The estimated audience size for the Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long displayAudienceSize;
+
+  /**
+   * Output only. The estimated desktop audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long displayDesktopAudienceSize;
+
+  /**
+   * Output only. The estimated mobile app audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long displayMobileAppAudienceSize;
+
+  /**
+   * Output only. The estimated mobile web audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long displayMobileWebAudienceSize;
+
+  /**
    * Output only. The display name of the first and third party audience. .
    * The value may be {@code null}.
    */
@@ -54,11 +143,251 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.String firstAndThirdPartyAudienceType;
 
   /**
+   * Output only. The estimated audience size for Gmail network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long gmailAudienceSize;
+
+  /**
+   * Output only. The duration in days that an entry remains in the audience after the qualifying
+   * event.
+   *
+   * Only applicable to first party audiences.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long membershipDurationDays;
+
+  /**
    * Output only. The resource name of the first and third party audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The estimated audience size for YouTube network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long youtubeAudienceSize;
+
+  /**
+   * Output only. The estimated audience size for the Display network in the past month.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getActiveDisplayAudienceSize() {
+    return activeDisplayAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated audience size for the Display network in the past month.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only returned in GET request.
+   * @param activeDisplayAudienceSize activeDisplayAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setActiveDisplayAudienceSize(java.lang.Long activeDisplayAudienceSize) {
+    this.activeDisplayAudienceSize = activeDisplayAudienceSize;
+    return this;
+  }
+
+  /**
+   * Output only. The source of the audience.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudienceSource() {
+    return audienceSource;
+  }
+
+  /**
+   * Output only. The source of the audience.
+   * @param audienceSource audienceSource or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setAudienceSource(java.lang.String audienceSource) {
+    this.audienceSource = audienceSource;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the audience.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudienceType() {
+    return audienceType;
+  }
+
+  /**
+   * Output only. The type of the audience.
+   * @param audienceType audienceType or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setAudienceType(java.lang.String audienceType) {
+    this.audienceType = audienceType;
+    return this;
+  }
+
+  /**
+   * Output only. The description of the first and third party audience.
+   *
+   * Only applicable to first party audiences.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. The description of the first and third party audience.
+   *
+   * Only applicable to first party audiences.
+   * @param description description or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The estimated audience size for the Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDisplayAudienceSize() {
+    return displayAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated audience size for the Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only returned in GET request.
+   * @param displayAudienceSize displayAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setDisplayAudienceSize(java.lang.Long displayAudienceSize) {
+    this.displayAudienceSize = displayAudienceSize;
+    return this;
+  }
+
+  /**
+   * Output only. The estimated desktop audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDisplayDesktopAudienceSize() {
+    return displayDesktopAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated desktop audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @param displayDesktopAudienceSize displayDesktopAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setDisplayDesktopAudienceSize(java.lang.Long displayDesktopAudienceSize) {
+    this.displayDesktopAudienceSize = displayDesktopAudienceSize;
+    return this;
+  }
+
+  /**
+   * Output only. The estimated mobile app audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDisplayMobileAppAudienceSize() {
+    return displayMobileAppAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated mobile app audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @param displayMobileAppAudienceSize displayMobileAppAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setDisplayMobileAppAudienceSize(java.lang.Long displayMobileAppAudienceSize) {
+    this.displayMobileAppAudienceSize = displayMobileAppAudienceSize;
+    return this;
+  }
+
+  /**
+   * Output only. The estimated mobile web audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDisplayMobileWebAudienceSize() {
+    return displayMobileWebAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated mobile web audience size in Display network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @param displayMobileWebAudienceSize displayMobileWebAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setDisplayMobileWebAudienceSize(java.lang.Long displayMobileWebAudienceSize) {
+    this.displayMobileWebAudienceSize = displayMobileWebAudienceSize;
+    return this;
+  }
 
   /**
    * Output only. The display name of the first and third party audience. .
@@ -112,6 +441,60 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
+   * Output only. The estimated audience size for Gmail network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGmailAudienceSize() {
+    return gmailAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated audience size for Gmail network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @param gmailAudienceSize gmailAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setGmailAudienceSize(java.lang.Long gmailAudienceSize) {
+    this.gmailAudienceSize = gmailAudienceSize;
+    return this;
+  }
+
+  /**
+   * Output only. The duration in days that an entry remains in the audience after the qualifying
+   * event.
+   *
+   * Only applicable to first party audiences.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMembershipDurationDays() {
+    return membershipDurationDays;
+  }
+
+  /**
+   * Output only. The duration in days that an entry remains in the audience after the qualifying
+   * event.
+   *
+   * Only applicable to first party audiences.
+   * @param membershipDurationDays membershipDurationDays or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setMembershipDurationDays(java.lang.Long membershipDurationDays) {
+    this.membershipDurationDays = membershipDurationDays;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of the first and third party audience.
    * @return value or {@code null} for none
    */
@@ -125,6 +508,37 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
    */
   public FirstAndThirdPartyAudience setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The estimated audience size for YouTube network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getYoutubeAudienceSize() {
+    return youtubeAudienceSize;
+  }
+
+  /**
+   * Output only. The estimated audience size for YouTube network.
+   *
+   * If the size is less than 1000, the number will be hidden and 0 will be returned due to privacy
+   * reasons. Otherwise, the number will be rounded off to two significant digits.
+   *
+   * Only applicable to first party audiences.
+   *
+   * Only returned in GET request.
+   * @param youtubeAudienceSize youtubeAudienceSize or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setYoutubeAudienceSize(java.lang.Long youtubeAudienceSize) {
+    this.youtubeAudienceSize = youtubeAudienceSize;
     return this;
   }
 

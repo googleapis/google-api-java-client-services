@@ -69,8 +69,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   /**
    * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
-   * set to the name of the master account, usage from the master account will be included. If
-   * omitted, the report will include usage from the master account and all subaccounts, if they
+   * set to the name of the resller account, usage from the reseller account will be included. If
+   * omitted, the report will include usage from the reseller account and all subaccounts, if they
    * exist.
    * The value may be {@code null}.
    */
@@ -164,8 +164,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   /**
    * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
-   * set to the name of the master account, usage from the master account will be included. If
-   * omitted, the report will include usage from the master account and all subaccounts, if they
+   * set to the name of the resller account, usage from the reseller account will be included. If
+   * omitted, the report will include usage from the reseller account and all subaccounts, if they
    * exist.
    * @return value or {@code null} for none
    */
@@ -176,8 +176,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Filter extends com.google.api
   /**
    * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
-   * set to the name of the master account, usage from the master account will be included. If
-   * omitted, the report will include usage from the master account and all subaccounts, if they
+   * set to the name of the resller account, usage from the reseller account will be included. If
+   * omitted, the report will include usage from the reseller account and all subaccounts, if they
    * exist.
    * @param subaccounts subaccounts or {@code null} for none
    */

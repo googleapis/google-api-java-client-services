@@ -84,6 +84,13 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. [Experimental] The determinism level of the JavaScript UDF if defined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String determinismLevel;
+
+  /**
    * Output only. A hash of this resource.
    * The value may be {@code null}.
    */
@@ -259,6 +266,23 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. [Experimental] The determinism level of the JavaScript UDF if defined.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeterminismLevel() {
+    return determinismLevel;
+  }
+
+  /**
+   * Optional. [Experimental] The determinism level of the JavaScript UDF if defined.
+   * @param determinismLevel determinismLevel or {@code null} for none
+   */
+  public Routine setDeterminismLevel(java.lang.String determinismLevel) {
+    this.determinismLevel = determinismLevel;
     return this;
   }
 

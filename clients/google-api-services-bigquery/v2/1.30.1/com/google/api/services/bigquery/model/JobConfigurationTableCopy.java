@@ -48,11 +48,26 @@ public final class JobConfigurationTableCopy extends com.google.api.client.json.
   private EncryptionConfiguration destinationEncryptionConfiguration;
 
   /**
+   * [Optional] The time when the destination table expires. Expired tables will be deleted and
+   * their storage reclaimed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object destinationExpirationTime;
+
+  /**
    * [Required] The destination table
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference destinationTable;
+
+  /**
+   * [Optional] Supported operation types in table copy job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operationType;
 
   /**
    * [Pick one] Source table to copy.
@@ -124,6 +139,25 @@ public final class JobConfigurationTableCopy extends com.google.api.client.json.
   }
 
   /**
+   * [Optional] The time when the destination table expires. Expired tables will be deleted and
+   * their storage reclaimed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getDestinationExpirationTime() {
+    return destinationExpirationTime;
+  }
+
+  /**
+   * [Optional] The time when the destination table expires. Expired tables will be deleted and
+   * their storage reclaimed.
+   * @param destinationExpirationTime destinationExpirationTime or {@code null} for none
+   */
+  public JobConfigurationTableCopy setDestinationExpirationTime(java.lang.Object destinationExpirationTime) {
+    this.destinationExpirationTime = destinationExpirationTime;
+    return this;
+  }
+
+  /**
    * [Required] The destination table
    * @return value or {@code null} for none
    */
@@ -137,6 +171,23 @@ public final class JobConfigurationTableCopy extends com.google.api.client.json.
    */
   public JobConfigurationTableCopy setDestinationTable(TableReference destinationTable) {
     this.destinationTable = destinationTable;
+    return this;
+  }
+
+  /**
+   * [Optional] Supported operation types in table copy job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperationType() {
+    return operationType;
+  }
+
+  /**
+   * [Optional] Supported operation types in table copy job.
+   * @param operationType operationType or {@code null} for none
+   */
+  public JobConfigurationTableCopy setOperationType(java.lang.String operationType) {
+    this.operationType = operationType;
     return this;
   }
 

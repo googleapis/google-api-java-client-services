@@ -239,6 +239,15 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String optimizationStrategy;
 
   /**
+   * Whether to preserve the input structs in output feature names. Suppose there is a struct A with
+   * field b. When false (default), the output feature name is A_b. When true, the output feature
+   * name is A.b.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preserveInputStructs;
+
+  /**
    * Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree
    * models.
    * The value may be {@code null}.
@@ -766,6 +775,27 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setOptimizationStrategy(java.lang.String optimizationStrategy) {
     this.optimizationStrategy = optimizationStrategy;
+    return this;
+  }
+
+  /**
+   * Whether to preserve the input structs in output feature names. Suppose there is a struct A with
+   * field b. When false (default), the output feature name is A_b. When true, the output feature
+   * name is A.b.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreserveInputStructs() {
+    return preserveInputStructs;
+  }
+
+  /**
+   * Whether to preserve the input structs in output feature names. Suppose there is a struct A with
+   * field b. When false (default), the output feature name is A_b. When true, the output feature
+   * name is A.b.
+   * @param preserveInputStructs preserveInputStructs or {@code null} for none
+   */
+  public TrainingOptions setPreserveInputStructs(java.lang.Boolean preserveInputStructs) {
+    this.preserveInputStructs = preserveInputStructs;
     return this;
   }
 

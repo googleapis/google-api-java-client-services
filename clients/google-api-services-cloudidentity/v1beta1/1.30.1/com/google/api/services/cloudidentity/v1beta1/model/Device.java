@@ -196,7 +196,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> otherAccounts;
 
   /**
-   * Whether the device is owned by the company or an individual
+   * Output only. Whether the device is owned by the company or an individual
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -630,7 +630,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the device is owned by the company or an individual
+   * Output only. Whether the device is owned by the company or an individual
    * @return value or {@code null} for none
    */
   public java.lang.String getOwnerType() {
@@ -638,7 +638,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the device is owned by the company or an individual
+   * Output only. Whether the device is owned by the company or an individual
    * @param ownerType ownerType or {@code null} for none
    */
   public Device setOwnerType(java.lang.String ownerType) {

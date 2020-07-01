@@ -73,6 +73,13 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> maintenanceSchedules;
 
   /**
+   * Optional. The MaintenanceSettings associated with instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings maintenanceSettings;
+
+  /**
    * Unique name of the resource. It uses the form:
    * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
    * The value may be {@code null}.
@@ -239,6 +246,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenanceSchedules(java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> maintenanceSchedules) {
     this.maintenanceSchedules = maintenanceSchedules;
+    return this;
+  }
+
+  /**
+   * Optional. The MaintenanceSettings associated with instance.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings getMaintenanceSettings() {
+    return maintenanceSettings;
+  }
+
+  /**
+   * Optional. The MaintenanceSettings associated with instance.
+   * @param maintenanceSettings maintenanceSettings or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenanceSettings(GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings maintenanceSettings) {
+    this.maintenanceSettings = maintenanceSettings;
     return this;
   }
 

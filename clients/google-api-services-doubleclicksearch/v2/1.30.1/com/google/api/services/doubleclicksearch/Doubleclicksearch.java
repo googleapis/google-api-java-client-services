@@ -230,6 +230,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -247,6 +252,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -505,6 +515,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
       }
@@ -522,6 +537,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Insert setKey(java.lang.String key) {
         return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -594,6 +614,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
       }
@@ -611,6 +636,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Update setKey(java.lang.String key) {
         return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -684,6 +714,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public UpdateAvailability setAccessToken(java.lang.String accessToken) {
+        return (UpdateAvailability) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public UpdateAvailability setAlt(java.lang.String alt) {
         return (UpdateAvailability) super.setAlt(alt);
       }
@@ -701,6 +736,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public UpdateAvailability setKey(java.lang.String key) {
         return (UpdateAvailability) super.setKey(key);
+      }
+
+      @Override
+      public UpdateAvailability setOauthToken(java.lang.String oauthToken) {
+        return (UpdateAvailability) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -796,6 +836,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Generate setAccessToken(java.lang.String accessToken) {
+        return (Generate) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Generate setAlt(java.lang.String alt) {
         return (Generate) super.setAlt(alt);
       }
@@ -813,6 +858,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Generate setKey(java.lang.String key) {
         return (Generate) super.setKey(key);
+      }
+
+      @Override
+      public Generate setOauthToken(java.lang.String oauthToken) {
+        return (Generate) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -896,6 +946,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
       }
@@ -913,6 +968,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Get setKey(java.lang.String key) {
         return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1041,6 +1101,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetFile setAccessToken(java.lang.String accessToken) {
+        return (GetFile) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetFile setAlt(java.lang.String alt) {
         return (GetFile) super.setAlt(alt);
       }
@@ -1058,6 +1123,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public GetFile setKey(java.lang.String key) {
         return (GetFile) super.setKey(key);
+      }
+
+      @Override
+      public GetFile setOauthToken(java.lang.String oauthToken) {
+        return (GetFile) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1164,6 +1234,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Request setAccessToken(java.lang.String accessToken) {
+        return (Request) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Request setAlt(java.lang.String alt) {
         return (Request) super.setAlt(alt);
       }
@@ -1181,6 +1256,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public Request setKey(java.lang.String key) {
         return (Request) super.setKey(key);
+      }
+
+      @Override
+      public Request setOauthToken(java.lang.String oauthToken) {
+        return (Request) super.setOauthToken(oauthToken);
       }
 
       @Override
@@ -1290,6 +1370,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
       }
@@ -1307,6 +1392,11 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       @Override
       public List setKey(java.lang.String key) {
         return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
       }
 
       @Override

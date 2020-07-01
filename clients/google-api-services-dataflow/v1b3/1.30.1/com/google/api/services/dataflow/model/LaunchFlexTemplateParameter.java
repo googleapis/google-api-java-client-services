@@ -51,6 +51,14 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   private java.lang.String jobName;
 
   /**
+   * Launch options for this flex template job. This is a common set of options across languages and
+   * templates. This should not be used to pass job parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> launchOptions;
+
+  /**
    * The parameters for FlexTemplate. Ex. {"num_workers":"5"}
    * The value may be {@code null}.
    */
@@ -105,6 +113,25 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
    */
   public LaunchFlexTemplateParameter setJobName(java.lang.String jobName) {
     this.jobName = jobName;
+    return this;
+  }
+
+  /**
+   * Launch options for this flex template job. This is a common set of options across languages and
+   * templates. This should not be used to pass job parameters.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLaunchOptions() {
+    return launchOptions;
+  }
+
+  /**
+   * Launch options for this flex template job. This is a common set of options across languages and
+   * templates. This should not be used to pass job parameters.
+   * @param launchOptions launchOptions or {@code null} for none
+   */
+  public LaunchFlexTemplateParameter setLaunchOptions(java.util.Map<String, java.lang.String> launchOptions) {
+    this.launchOptions = launchOptions;
     return this;
   }
 

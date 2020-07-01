@@ -30,6 +30,15 @@ package com.google.api.services.dataflow.model;
 public final class WorkItemServiceState extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set, a request to complete the work item with the given status. This will not be set to OK,
+   * unless supported by the specific kind of WorkItem. It can be used for the backend to indicate a
+   * WorkItem must terminate, e.g., for aborting work.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status completeWorkStatus;
+
+  /**
    * Other data returned by the service, specific to the particular worker harness.
    * The value may be {@code null}.
    */
@@ -104,6 +113,27 @@ public final class WorkItemServiceState extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private Position suggestedStopPosition;
+
+  /**
+   * If set, a request to complete the work item with the given status. This will not be set to OK,
+   * unless supported by the specific kind of WorkItem. It can be used for the backend to indicate a
+   * WorkItem must terminate, e.g., for aborting work.
+   * @return value or {@code null} for none
+   */
+  public Status getCompleteWorkStatus() {
+    return completeWorkStatus;
+  }
+
+  /**
+   * If set, a request to complete the work item with the given status. This will not be set to OK,
+   * unless supported by the specific kind of WorkItem. It can be used for the backend to indicate a
+   * WorkItem must terminate, e.g., for aborting work.
+   * @param completeWorkStatus completeWorkStatus or {@code null} for none
+   */
+  public WorkItemServiceState setCompleteWorkStatus(Status completeWorkStatus) {
+    this.completeWorkStatus = completeWorkStatus;
+    return this;
+  }
 
   /**
    * Other data returned by the service, specific to the particular worker harness.

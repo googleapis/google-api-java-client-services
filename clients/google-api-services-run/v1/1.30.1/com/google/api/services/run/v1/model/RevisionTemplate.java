@@ -21,7 +21,7 @@ package com.google.api.services.run.v1.model;
  * Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

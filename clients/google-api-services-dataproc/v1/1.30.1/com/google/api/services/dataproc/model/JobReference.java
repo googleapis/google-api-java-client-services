@@ -39,7 +39,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   private java.lang.String jobId;
 
   /**
-   * Required. The ID of the Google Cloud Platform project that the job belongs to.
+   * Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified,
+   * must match the request project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the Google Cloud Platform project that the job belongs to.
+   * Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified,
+   * must match the request project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -75,7 +77,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the Google Cloud Platform project that the job belongs to.
+   * Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified,
+   * must match the request project ID.
    * @param projectId projectId or {@code null} for none
    */
   public JobReference setProjectId(java.lang.String projectId) {

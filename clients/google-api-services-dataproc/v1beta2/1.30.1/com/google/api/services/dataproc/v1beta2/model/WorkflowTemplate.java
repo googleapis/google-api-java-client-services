@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * A Dataproc workflow template resource. Next ID: 11
+ * A Dataproc workflow template resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -35,6 +35,14 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. Timeout for DAG of jobs. The timer begins when the first job is submitted. Minimum
+   * duration of 10 minutes, max of 24 hours.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagTimeout;
 
   /**
    * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
@@ -136,6 +144,25 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    */
   public WorkflowTemplate setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Timeout for DAG of jobs. The timer begins when the first job is submitted. Minimum
+   * duration of 10 minutes, max of 24 hours.
+   * @return value or {@code null} for none
+   */
+  public String getDagTimeout() {
+    return dagTimeout;
+  }
+
+  /**
+   * Optional. Timeout for DAG of jobs. The timer begins when the first job is submitted. Minimum
+   * duration of 10 minutes, max of 24 hours.
+   * @param dagTimeout dagTimeout or {@code null} for none
+   */
+  public WorkflowTemplate setDagTimeout(String dagTimeout) {
+    this.dagTimeout = dagTimeout;
     return this;
   }
 

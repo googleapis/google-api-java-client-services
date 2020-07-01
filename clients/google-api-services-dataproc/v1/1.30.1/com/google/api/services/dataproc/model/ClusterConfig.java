@@ -119,8 +119,8 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
-   * and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine
-   * a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
    * Compute Engine zone where your cluster is deployed, and then create and manage this project-
    * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
    * (or none) if you specify a bucket.
@@ -347,8 +347,8 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
-   * and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine
-   * a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
    * Compute Engine zone where your cluster is deployed, and then create and manage this project-
    * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
    * (or none) if you specify a bucket.
@@ -360,8 +360,8 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
-   * and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine
-   * a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
    * Compute Engine zone where your cluster is deployed, and then create and manage this project-
    * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
    * (or none) if you specify a bucket.

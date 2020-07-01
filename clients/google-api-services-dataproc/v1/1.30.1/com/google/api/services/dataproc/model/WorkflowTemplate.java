@@ -80,7 +80,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Optional. emplate parameters whose values are substituted into the template. Values for
+   * Optional. Template parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * The value may be {@code null}.
    */
@@ -223,7 +223,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. emplate parameters whose values are substituted into the template. Values for
+   * Optional. Template parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * @return value or {@code null} for none
    */
@@ -232,7 +232,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. emplate parameters whose values are substituted into the template. Values for
+   * Optional. Template parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * @param parameters parameters or {@code null} for none
    */

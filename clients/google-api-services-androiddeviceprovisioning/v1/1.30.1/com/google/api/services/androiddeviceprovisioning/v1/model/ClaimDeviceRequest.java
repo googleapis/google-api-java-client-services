@@ -38,7 +38,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   private java.lang.Long customerId;
 
   /**
-   * Required. The device identifier of the device to claim.
+   * Required. Required. The device identifier of the device to claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The device identifier of the device to claim.
+   * Required. Required. The device identifier of the device to claim.
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -84,7 +84,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The device identifier of the device to claim.
+   * Required. Required. The device identifier of the device to claim.
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public ClaimDeviceRequest setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {

@@ -31,14 +31,14 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class UnclaimDeviceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The device ID returned by `ClaimDevice`.
+   * Required. The device ID returned by `ClaimDevice`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long deviceId;
 
   /**
-   * The device identifier you used when you claimed this device.
+   * Required. The device identifier you used when you claimed this device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class UnclaimDeviceRequest extends com.google.api.client.json.Gener
   private String vacationModeExpireTime;
 
   /**
-   * The device ID returned by `ClaimDevice`.
+   * Required. The device ID returned by `ClaimDevice`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDeviceId() {
@@ -75,7 +75,7 @@ public final class UnclaimDeviceRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The device ID returned by `ClaimDevice`.
+   * Required. The device ID returned by `ClaimDevice`.
    * @param deviceId deviceId or {@code null} for none
    */
   public UnclaimDeviceRequest setDeviceId(java.lang.Long deviceId) {
@@ -84,7 +84,7 @@ public final class UnclaimDeviceRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The device identifier you used when you claimed this device.
+   * Required. The device identifier you used when you claimed this device.
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -92,7 +92,7 @@ public final class UnclaimDeviceRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The device identifier you used when you claimed this device.
+   * Required. The device identifier you used when you claimed this device.
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public UnclaimDeviceRequest setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {

@@ -31,14 +31,14 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class PartnerUnclaim extends com.google.api.client.json.GenericJson {
 
   /**
-   * Device ID of the device.
+   * Required. Device ID of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long deviceId;
 
   /**
-   * Device identifier of the device.
+   * Required. Device identifier of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,22 +52,22 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   private java.lang.String sectionType;
 
   /**
-   * The duration of the vacation unlock starting from when the request is processed. (1 day is
-   * treated as 24 hours)
+   * Optional. The duration of the vacation unlock starting from when the request is processed. (1
+   * day is treated as 24 hours)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vacationModeDays;
 
   /**
-   * The expiration time of the vacation unlock.
+   * Optional. The expiration time of the vacation unlock.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String vacationModeExpireTime;
 
   /**
-   * Device ID of the device.
+   * Required. Device ID of the device.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDeviceId() {
@@ -75,7 +75,7 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device ID of the device.
+   * Required. Device ID of the device.
    * @param deviceId deviceId or {@code null} for none
    */
   public PartnerUnclaim setDeviceId(java.lang.Long deviceId) {
@@ -84,7 +84,7 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device identifier of the device.
+   * Required. Device identifier of the device.
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -92,7 +92,7 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Device identifier of the device.
+   * Required. Device identifier of the device.
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public PartnerUnclaim setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
@@ -118,8 +118,8 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The duration of the vacation unlock starting from when the request is processed. (1 day is
-   * treated as 24 hours)
+   * Optional. The duration of the vacation unlock starting from when the request is processed. (1
+   * day is treated as 24 hours)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVacationModeDays() {
@@ -127,8 +127,8 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The duration of the vacation unlock starting from when the request is processed. (1 day is
-   * treated as 24 hours)
+   * Optional. The duration of the vacation unlock starting from when the request is processed. (1
+   * day is treated as 24 hours)
    * @param vacationModeDays vacationModeDays or {@code null} for none
    */
   public PartnerUnclaim setVacationModeDays(java.lang.Integer vacationModeDays) {
@@ -137,7 +137,7 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The expiration time of the vacation unlock.
+   * Optional. The expiration time of the vacation unlock.
    * @return value or {@code null} for none
    */
   public String getVacationModeExpireTime() {
@@ -145,7 +145,7 @@ public final class PartnerUnclaim extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The expiration time of the vacation unlock.
+   * Optional. The expiration time of the vacation unlock.
    * @param vacationModeExpireTime vacationModeExpireTime or {@code null} for none
    */
   public PartnerUnclaim setVacationModeExpireTime(String vacationModeExpireTime) {

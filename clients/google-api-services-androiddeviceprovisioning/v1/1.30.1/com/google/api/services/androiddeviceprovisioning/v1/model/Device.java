@@ -54,8 +54,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.Long deviceId;
 
   /**
-   * The hardware IDs that identify a manufactured device. To learn more, read [Identifiers](/zero-
-   * touch/guides/identifiers).
+   * The hardware IDs that identify a manufactured device. To learn more, read
+   * [Identifiers](https://developers.google.com/zero-touch/guides/identifiers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The metadata attached to the device. Structured as key-value pairs. To learn more, read [Device
-   * metadata](/zero-touch/guides/metadata).
+   * metadata](https://developers.google.com/zero-touch/guides/metadata).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +133,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hardware IDs that identify a manufactured device. To learn more, read [Identifiers](/zero-
-   * touch/guides/identifiers).
+   * The hardware IDs that identify a manufactured device. To learn more, read
+   * [Identifiers](https://developers.google.com/zero-touch/guides/identifiers).
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -142,8 +142,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hardware IDs that identify a manufactured device. To learn more, read [Identifiers](/zero-
-   * touch/guides/identifiers).
+   * The hardware IDs that identify a manufactured device. To learn more, read
+   * [Identifiers](https://developers.google.com/zero-touch/guides/identifiers).
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public Device setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
@@ -153,7 +153,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The metadata attached to the device. Structured as key-value pairs. To learn more, read [Device
-   * metadata](/zero-touch/guides/metadata).
+   * metadata](https://developers.google.com/zero-touch/guides/metadata).
    * @return value or {@code null} for none
    */
   public DeviceMetadata getDeviceMetadata() {
@@ -162,7 +162,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The metadata attached to the device. Structured as key-value pairs. To learn more, read [Device
-   * metadata](/zero-touch/guides/metadata).
+   * metadata](https://developers.google.com/zero-touch/guides/metadata).
    * @param deviceMetadata deviceMetadata or {@code null} for none
    */
   public Device setDeviceMetadata(DeviceMetadata deviceMetadata) {

@@ -38,7 +38,7 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   private java.lang.Long customerId;
 
   /**
-   * Required. Device identifier of the device.
+   * Required. Required. Device identifier of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Device identifier of the device.
+   * Required. Required. Device identifier of the device.
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -84,7 +84,7 @@ public final class PartnerClaim extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Device identifier of the device.
+   * Required. Required. Device identifier of the device.
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public PartnerClaim setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {

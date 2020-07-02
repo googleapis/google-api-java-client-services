@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an achievement set steps at least response.
+ * An achievement set steps at least response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,14 +39,14 @@ public final class AchievementSetStepsAtLeastResponse extends com.google.api.cli
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementSetStepsAtLeastResponse.
+   * `games#achievementSetStepsAtLeastResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Whether the the current steps for the achievement has reached the number of steps required to
+   * Whether the current steps for the achievement has reached the number of steps required to
    * unlock.
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class AchievementSetStepsAtLeastResponse extends com.google.api.cli
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementSetStepsAtLeastResponse.
+   * `games#achievementSetStepsAtLeastResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -81,7 +81,7 @@ public final class AchievementSetStepsAtLeastResponse extends com.google.api.cli
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementSetStepsAtLeastResponse.
+   * `games#achievementSetStepsAtLeastResponse`.
    * @param kind kind or {@code null} for none
    */
   public AchievementSetStepsAtLeastResponse setKind(java.lang.String kind) {
@@ -90,7 +90,7 @@ public final class AchievementSetStepsAtLeastResponse extends com.google.api.cli
   }
 
   /**
-   * Whether the the current steps for the achievement has reached the number of steps required to
+   * Whether the current steps for the achievement has reached the number of steps required to
    * unlock.
    * @return value or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class AchievementSetStepsAtLeastResponse extends com.google.api.cli
   }
 
   /**
-   * Whether the the current steps for the achievement has reached the number of steps required to
+   * Whether the current steps for the achievement has reached the number of steps required to
    * unlock.
    * @param newlyUnlocked newlyUnlocked or {@code null} for none
    */

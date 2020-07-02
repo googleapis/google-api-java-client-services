@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for a ListScores response.
+ * A ListScores response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,7 +45,7 @@ public final class LeaderboardScores extends com.google.api.client.json.GenericJ
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardScores.
+   * `games#leaderboardScores`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class LeaderboardScores extends com.google.api.client.json.GenericJ
   /**
    * The score of the requesting player on the leaderboard. The player's score may appear both here
    * and in the list of scores above. If you are viewing a public leaderboard and the player is not
-   * sharing their gameplay information publicly, the scoreRank and formattedScoreRank values will
-   * not be present.
+   * sharing their gameplay information publicly, the `scoreRank`and `formattedScoreRank` values
+   * will not be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class LeaderboardScores extends com.google.api.client.json.GenericJ
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardScores.
+   * `games#leaderboardScores`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -110,7 +110,7 @@ public final class LeaderboardScores extends com.google.api.client.json.GenericJ
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardScores.
+   * `games#leaderboardScores`.
    * @param kind kind or {@code null} for none
    */
   public LeaderboardScores setKind(java.lang.String kind) {
@@ -155,8 +155,8 @@ public final class LeaderboardScores extends com.google.api.client.json.GenericJ
   /**
    * The score of the requesting player on the leaderboard. The player's score may appear both here
    * and in the list of scores above. If you are viewing a public leaderboard and the player is not
-   * sharing their gameplay information publicly, the scoreRank and formattedScoreRank values will
-   * not be present.
+   * sharing their gameplay information publicly, the `scoreRank`and `formattedScoreRank` values
+   * will not be present.
    * @return value or {@code null} for none
    */
   public LeaderboardEntry getPlayerScore() {
@@ -166,8 +166,8 @@ public final class LeaderboardScores extends com.google.api.client.json.GenericJ
   /**
    * The score of the requesting player on the leaderboard. The player's score may appear both here
    * and in the list of scores above. If you are viewing a public leaderboard and the player is not
-   * sharing their gameplay information publicly, the scoreRank and formattedScoreRank values will
-   * not be present.
+   * sharing their gameplay information publicly, the `scoreRank`and `formattedScoreRank` values
+   * will not be present.
    * @param playerScore playerScore or {@code null} for none
    */
   public LeaderboardScores setPlayerScore(LeaderboardEntry playerScore) {

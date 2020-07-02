@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for the Instance resource.
+ * The Instance resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -52,7 +52,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private InstanceIosDetails iosInstance;
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#instance.
+   * Uniquely identifies the type of this resource. Value is always the fixed string
+   * `games#instance`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +67,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The platform type. Possible values are:   - "ANDROID" - Instance is for Android.  - "IOS" -
-   * Instance is for iOS  - "WEB_APP" - Instance is for Web App.
+   * The platform type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#instance.
+   * Uniquely identifies the type of this resource. Value is always the fixed string
+   * `games#instance`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -154,7 +155,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#instance.
+   * Uniquely identifies the type of this resource. Value is always the fixed string
+   * `games#instance`.
    * @param kind kind or {@code null} for none
    */
   public Instance setKind(java.lang.String kind) {
@@ -180,8 +182,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The platform type. Possible values are:   - "ANDROID" - Instance is for Android.  - "IOS" -
-   * Instance is for iOS  - "WEB_APP" - Instance is for Web App.
+   * The platform type.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatformType() {
@@ -189,8 +190,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The platform type. Possible values are:   - "ANDROID" - Instance is for Android.  - "IOS" -
-   * Instance is for iOS  - "WEB_APP" - Instance is for Web App.
+   * The platform type.
    * @param platformType platformType or {@code null} for none
    */
   public Instance setPlatformType(java.lang.String platformType) {

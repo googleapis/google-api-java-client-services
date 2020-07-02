@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an snapshot object.
+ * An snapshot object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,8 +45,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The ID of the file underlying this snapshot in the Drive API. Only present if the snapshot is a
-   * view on a Drive file and the file is owned by the caller.
+   * The ID of the file underlying this snapshot in the Drive API.  Only present if the snapshot is
+   * a view on a Drive file and the file is owned by the caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#snapshot.
+   * Uniquely identifies the type of this resource. Value is always the fixed string
+   * `games#snapshot`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +96,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The type of this snapshot. Possible values are:   - "SAVE_GAME" - A snapshot representing a
-   * save game.
+   * The type of this snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +144,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the file underlying this snapshot in the Drive API. Only present if the snapshot is a
-   * view on a Drive file and the file is owned by the caller.
+   * The ID of the file underlying this snapshot in the Drive API.  Only present if the snapshot is
+   * a view on a Drive file and the file is owned by the caller.
    * @return value or {@code null} for none
    */
   public java.lang.String getDriveId() {
@@ -153,8 +153,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the file underlying this snapshot in the Drive API. Only present if the snapshot is a
-   * view on a Drive file and the file is owned by the caller.
+   * The ID of the file underlying this snapshot in the Drive API.  Only present if the snapshot is
+   * a view on a Drive file and the file is owned by the caller.
    * @param driveId driveId or {@code null} for none
    */
   public Snapshot setDriveId(java.lang.String driveId) {
@@ -197,7 +197,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#snapshot.
+   * Uniquely identifies the type of this resource. Value is always the fixed string
+   * `games#snapshot`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -205,7 +206,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#snapshot.
+   * Uniquely identifies the type of this resource. Value is always the fixed string
+   * `games#snapshot`.
    * @param kind kind or {@code null} for none
    */
   public Snapshot setKind(java.lang.String kind) {
@@ -265,8 +267,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this snapshot. Possible values are:   - "SAVE_GAME" - A snapshot representing a
-   * save game.
+   * The type of this snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -274,8 +275,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this snapshot. Possible values are:   - "SAVE_GAME" - A snapshot representing a
-   * save game.
+   * The type of this snapshot.
    * @param type type or {@code null} for none
    */
   public Snapshot setType(java.lang.String type) {

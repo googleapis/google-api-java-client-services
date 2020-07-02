@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for a player leaderboard score object.
+ * A player leaderboard score object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,7 +32,7 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerLeaderboardScore.
+   * `games#playerLeaderboardScore`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   private java.lang.String scoreString;
 
   /**
-   * Additional information about the score. Values must contain no more than 64 URI-safe characters
-   * as defined by section 2.3 of RFC 3986.
+   * Additional information about the score.  Values must contain no more than 64 URI-safe
+   * characters as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,7 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   private LeaderboardScoreRank socialRank;
 
   /**
-   * The time span of this score. Possible values are:   - "ALL_TIME" - The score is an all-time
-   * score.  - "WEEKLY" - The score is a weekly score.  - "DAILY" - The score is a daily score.
+   * The time span of this score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +98,7 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerLeaderboardScore.
+   * `games#playerLeaderboardScore`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -108,7 +107,7 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerLeaderboardScore.
+   * `games#playerLeaderboardScore`.
    * @param kind kind or {@code null} for none
    */
   public PlayerLeaderboardScore setKind(java.lang.String kind) {
@@ -170,8 +169,8 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   }
 
   /**
-   * Additional information about the score. Values must contain no more than 64 URI-safe characters
-   * as defined by section 2.3 of RFC 3986.
+   * Additional information about the score.  Values must contain no more than 64 URI-safe
+   * characters as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getScoreTag() {
@@ -179,8 +178,8 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   }
 
   /**
-   * Additional information about the score. Values must contain no more than 64 URI-safe characters
-   * as defined by section 2.3 of RFC 3986.
+   * Additional information about the score.  Values must contain no more than 64 URI-safe
+   * characters as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */
   public PlayerLeaderboardScore setScoreTag(java.lang.String scoreTag) {
@@ -223,8 +222,7 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time span of this score. Possible values are:   - "ALL_TIME" - The score is an all-time
-   * score.  - "WEEKLY" - The score is a weekly score.  - "DAILY" - The score is a daily score.
+   * The time span of this score.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeSpan() {
@@ -232,8 +230,7 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time span of this score. Possible values are:   - "ALL_TIME" - The score is an all-time
-   * score.  - "WEEKLY" - The score is a weekly score.  - "DAILY" - The score is a daily score.
+   * The time span of this score.
    * @param timeSpan timeSpan or {@code null} for none
    */
   public PlayerLeaderboardScore setTimeSpan(java.lang.String timeSpan) {

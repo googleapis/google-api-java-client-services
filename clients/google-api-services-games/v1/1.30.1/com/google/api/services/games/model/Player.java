@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for a Player resource.
+ * A Player resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -74,23 +74,14 @@ public final class Player extends com.google.api.client.json.GenericJson {
   private java.lang.String friendStatus;
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#player.
+   * Uniquely identifies the type of this resource. Value is always the fixed string `games#player`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Details about the last time this player played a multiplayer game with the currently
-   * authenticated player. Populated for PLAYED_WITH player collection members.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Played lastPlayedWith;
-
-  /**
-   * An object representation of the individual components of the player's name. For some players,
-   * these fields may not be present.
+   * A representation of the individual components of the name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +223,7 @@ public final class Player extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#player.
+   * Uniquely identifies the type of this resource. Value is always the fixed string `games#player`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -240,7 +231,7 @@ public final class Player extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uniquely identifies the type of this resource. Value is always the fixed string games#player.
+   * Uniquely identifies the type of this resource. Value is always the fixed string `games#player`
    * @param kind kind or {@code null} for none
    */
   public Player setKind(java.lang.String kind) {
@@ -249,27 +240,7 @@ public final class Player extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about the last time this player played a multiplayer game with the currently
-   * authenticated player. Populated for PLAYED_WITH player collection members.
-   * @return value or {@code null} for none
-   */
-  public Played getLastPlayedWith() {
-    return lastPlayedWith;
-  }
-
-  /**
-   * Details about the last time this player played a multiplayer game with the currently
-   * authenticated player. Populated for PLAYED_WITH player collection members.
-   * @param lastPlayedWith lastPlayedWith or {@code null} for none
-   */
-  public Player setLastPlayedWith(Played lastPlayedWith) {
-    this.lastPlayedWith = lastPlayedWith;
-    return this;
-  }
-
-  /**
-   * An object representation of the individual components of the player's name. For some players,
-   * these fields may not be present.
+   * A representation of the individual components of the name.
    * @return value or {@code null} for none
    */
   public Name getName() {
@@ -277,8 +248,7 @@ public final class Player extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An object representation of the individual components of the player's name. For some players,
-   * these fields may not be present.
+   * A representation of the individual components of the name.
    * @param name name or {@code null} for none
    */
   public Player setName(Name name) {
@@ -371,8 +341,7 @@ public final class Player extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An object representation of the individual components of the player's name. For some players,
-   * these fields may not be present.
+   * A representation of the individual components of the name.
    */
   public static final class Name extends com.google.api.client.json.GenericJson {
 

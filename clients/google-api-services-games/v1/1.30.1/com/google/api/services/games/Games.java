@@ -20,12 +20,13 @@ package com.google.api.services.games;
  * Service definition for Games (v1).
  *
  * <p>
- * The API for Google Play Game Services.
+ * The Google Play games service allows developers to enhance games with social leaderboards,
+    achievements, game state, sign-in with Google, and more.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/games/services/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/games/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +47,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Play Game Services API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Google Play Game Services library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -63,7 +64,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "games/v1/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -160,7 +161,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends GamesRequest<com.google.api.services.games.model.AchievementDefinitionsListResponse> {
 
-      private static final String REST_PATH = "achievements";
+      private static final String REST_PATH = "games/v1/achievements";
 
       /**
        * Lists all the achievement definitions for your application.
@@ -189,8 +190,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -219,8 +235,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The preferred language to use for strings returned by this method. */
@@ -242,16 +263,14 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of achievement resources to return in the response, used for paging. For
        * any response, the actual number of achievement resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of achievement resources to return in the response, used for paging. For any
      response, the actual number of achievement resources returned may be less than the specified
-     maxResults.
-
-     [minimum: 1] [maximum: 200]
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -260,7 +279,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of achievement resources to return in the response, used for paging. For
        * any response, the actual number of achievement resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -321,7 +340,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      *
      * @param achievementId The ID of the achievement used by this method.
      * @param stepsToIncrement The number of steps to increment.
-    [minimum: 1]
      * @return the request
      */
     public Increment increment(java.lang.String achievementId, java.lang.Integer stepsToIncrement) throws java.io.IOException {
@@ -332,7 +350,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Increment extends GamesRequest<com.google.api.services.games.model.AchievementIncrementResponse> {
 
-      private static final String REST_PATH = "achievements/{achievementId}/increment";
+      private static final String REST_PATH = "games/v1/achievements/{achievementId}/increment";
 
       /**
        * Increments the steps of the achievement with the given ID for the currently authenticated
@@ -348,7 +366,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param achievementId The ID of the achievement used by this method.
        * @param stepsToIncrement The number of steps to increment.
-    [minimum: 1]
        * @since 1.13
        */
       protected Increment(java.lang.String achievementId, java.lang.Integer stepsToIncrement) {
@@ -358,8 +375,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Increment set$Xgafv(java.lang.String $Xgafv) {
+        return (Increment) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Increment setAccessToken(java.lang.String accessToken) {
+        return (Increment) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Increment setAlt(java.lang.String alt) {
         return (Increment) super.setAlt(alt);
+      }
+
+      @Override
+      public Increment setCallback(java.lang.String callback) {
+        return (Increment) super.setCallback(callback);
       }
 
       @Override
@@ -388,8 +420,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Increment setUserIp(java.lang.String userIp) {
-        return (Increment) super.setUserIp(userIp);
+      public Increment setUploadType(java.lang.String uploadType) {
+        return (Increment) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Increment setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Increment) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -413,8 +450,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       private java.lang.Integer stepsToIncrement;
 
       /** The number of steps to increment.
-
-     [minimum: 1]
        */
       public java.lang.Integer getStepsToIncrement() {
         return stepsToIncrement;
@@ -463,7 +498,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
      * @return the request
      */
     public List list(java.lang.String playerId) throws java.io.IOException {
@@ -474,7 +510,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends GamesRequest<com.google.api.services.games.model.PlayerAchievementListResponse> {
 
-      private static final String REST_PATH = "players/{playerId}/achievements";
+      private static final String REST_PATH = "games/v1/players/{playerId}/achievements";
 
       /**
        * Lists the progress for all your application's achievements for the currently authenticated
@@ -487,7 +523,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
        * @since 1.13
        */
       protected List(java.lang.String playerId) {
@@ -506,8 +543,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -536,21 +588,30 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       public List setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -575,16 +636,14 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of achievement resources to return in the response, used for paging. For
        * any response, the actual number of achievement resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of achievement resources to return in the response, used for paging. For any
      response, the actual number of achievement resources returned may be less than the specified
-     maxResults.
-
-     [minimum: 1] [maximum: 200]
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -593,7 +652,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of achievement resources to return in the response, used for paging. For
        * any response, the actual number of achievement resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -617,13 +676,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Tells the server to return only achievements with the specified state. If this parameter
+       * Tells the server to return only achievements with the specified state.  If this parameter
        * isn't specified, all achievements are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String state;
 
-      /** Tells the server to return only achievements with the specified state. If this parameter isn't
+      /** Tells the server to return only achievements with the specified state.  If this parameter isn't
      specified, all achievements are returned.
        */
       public java.lang.String getState() {
@@ -631,7 +690,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Tells the server to return only achievements with the specified state. If this parameter
+       * Tells the server to return only achievements with the specified state.  If this parameter
        * isn't specified, all achievements are returned.
        */
       public List setState(java.lang.String state) {
@@ -645,7 +704,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Sets the state of the achievement with the given ID to REVEALED for the currently authenticated
+     * Sets the state of the achievement with the given ID to `REVEALED` for the currently authenticated
      * player.
      *
      * Create a request for the method "achievements.reveal".
@@ -664,11 +723,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Reveal extends GamesRequest<com.google.api.services.games.model.AchievementRevealResponse> {
 
-      private static final String REST_PATH = "achievements/{achievementId}/reveal";
+      private static final String REST_PATH = "games/v1/achievements/{achievementId}/reveal";
 
       /**
-       * Sets the state of the achievement with the given ID to REVEALED for the currently authenticated
-       * player.
+       * Sets the state of the achievement with the given ID to `REVEALED` for the currently
+       * authenticated player.
        *
        * Create a request for the method "achievements.reveal".
        *
@@ -686,8 +745,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Reveal set$Xgafv(java.lang.String $Xgafv) {
+        return (Reveal) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reveal setAccessToken(java.lang.String accessToken) {
+        return (Reveal) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Reveal setAlt(java.lang.String alt) {
         return (Reveal) super.setAlt(alt);
+      }
+
+      @Override
+      public Reveal setCallback(java.lang.String callback) {
+        return (Reveal) super.setCallback(callback);
       }
 
       @Override
@@ -716,8 +790,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Reveal setUserIp(java.lang.String userIp) {
-        return (Reveal) super.setUserIp(userIp);
+      public Reveal setUploadType(java.lang.String uploadType) {
+        return (Reveal) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reveal setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reveal) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -753,7 +832,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      *
      * @param achievementId The ID of the achievement used by this method.
      * @param steps The minimum value to set the steps to.
-    [minimum: 1]
      * @return the request
      */
     public SetStepsAtLeast setStepsAtLeast(java.lang.String achievementId, java.lang.Integer steps) throws java.io.IOException {
@@ -764,7 +842,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class SetStepsAtLeast extends GamesRequest<com.google.api.services.games.model.AchievementSetStepsAtLeastResponse> {
 
-      private static final String REST_PATH = "achievements/{achievementId}/setStepsAtLeast";
+      private static final String REST_PATH = "games/v1/achievements/{achievementId}/setStepsAtLeast";
 
       /**
        * Sets the steps for the currently authenticated player towards unlocking an achievement. If the
@@ -781,7 +859,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param achievementId The ID of the achievement used by this method.
        * @param steps The minimum value to set the steps to.
-    [minimum: 1]
        * @since 1.13
        */
       protected SetStepsAtLeast(java.lang.String achievementId, java.lang.Integer steps) {
@@ -791,8 +868,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public SetStepsAtLeast set$Xgafv(java.lang.String $Xgafv) {
+        return (SetStepsAtLeast) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetStepsAtLeast setAccessToken(java.lang.String accessToken) {
+        return (SetStepsAtLeast) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetStepsAtLeast setAlt(java.lang.String alt) {
         return (SetStepsAtLeast) super.setAlt(alt);
+      }
+
+      @Override
+      public SetStepsAtLeast setCallback(java.lang.String callback) {
+        return (SetStepsAtLeast) super.setCallback(callback);
       }
 
       @Override
@@ -821,8 +913,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public SetStepsAtLeast setUserIp(java.lang.String userIp) {
-        return (SetStepsAtLeast) super.setUserIp(userIp);
+      public SetStepsAtLeast setUploadType(java.lang.String uploadType) {
+        return (SetStepsAtLeast) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetStepsAtLeast setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetStepsAtLeast) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -846,8 +943,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       private java.lang.Integer steps;
 
       /** The minimum value to set the steps to.
-
-     [minimum: 1]
        */
       public java.lang.Integer getSteps() {
         return steps;
@@ -883,7 +978,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Unlock extends GamesRequest<com.google.api.services.games.model.AchievementUnlockResponse> {
 
-      private static final String REST_PATH = "achievements/{achievementId}/unlock";
+      private static final String REST_PATH = "games/v1/achievements/{achievementId}/unlock";
 
       /**
        * Unlocks this achievement for the currently authenticated player.
@@ -904,8 +999,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Unlock set$Xgafv(java.lang.String $Xgafv) {
+        return (Unlock) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Unlock setAccessToken(java.lang.String accessToken) {
+        return (Unlock) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Unlock setAlt(java.lang.String alt) {
         return (Unlock) super.setAlt(alt);
+      }
+
+      @Override
+      public Unlock setCallback(java.lang.String callback) {
+        return (Unlock) super.setCallback(callback);
       }
 
       @Override
@@ -934,8 +1044,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Unlock setUserIp(java.lang.String userIp) {
-        return (Unlock) super.setUserIp(userIp);
+      public Unlock setUploadType(java.lang.String uploadType) {
+        return (Unlock) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Unlock setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Unlock) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -978,7 +1093,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class UpdateMultiple extends GamesRequest<com.google.api.services.games.model.AchievementUpdateMultipleResponse> {
 
-      private static final String REST_PATH = "achievements/updateMultiple";
+      private static final String REST_PATH = "games/v1/achievements/updateMultiple";
 
       /**
        * Updates multiple achievements for the currently authenticated player.
@@ -999,8 +1114,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public UpdateMultiple set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateMultiple) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateMultiple setAccessToken(java.lang.String accessToken) {
+        return (UpdateMultiple) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public UpdateMultiple setAlt(java.lang.String alt) {
         return (UpdateMultiple) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateMultiple setCallback(java.lang.String callback) {
+        return (UpdateMultiple) super.setCallback(callback);
       }
 
       @Override
@@ -1029,8 +1159,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public UpdateMultiple setUserIp(java.lang.String userIp) {
-        return (UpdateMultiple) super.setUserIp(userIp);
+      public UpdateMultiple setUploadType(java.lang.String uploadType) {
+        return (UpdateMultiple) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateMultiple setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateMultiple) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1063,7 +1198,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Retrieves the metadata of the application with the given ID. If the requested application is not
-     * available for the specified platformType, the returned response will not include any instance
+     * available for the specified `platformType`, the returned response will not include any instance
      * data.
      *
      * Create a request for the method "applications.get".
@@ -1082,11 +1217,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends GamesRequest<com.google.api.services.games.model.Application> {
 
-      private static final String REST_PATH = "applications/{applicationId}";
+      private static final String REST_PATH = "games/v1/applications/{applicationId}";
 
       /**
        * Retrieves the metadata of the application with the given ID. If the requested application is
-       * not available for the specified platformType, the returned response will not include any
+       * not available for the specified `platformType`, the returned response will not include any
        * instance data.
        *
        * Create a request for the method "applications.get".
@@ -1115,8 +1250,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1145,8 +1295,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -1203,7 +1358,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Indicate that the the currently authenticated user is playing your application.
+     * Indicate that the currently authenticated user is playing your application.
      *
      * Create a request for the method "applications.played".
      *
@@ -1220,10 +1375,10 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Played extends GamesRequest<Void> {
 
-      private static final String REST_PATH = "applications/played";
+      private static final String REST_PATH = "games/v1/applications/played";
 
       /**
-       * Indicate that the the currently authenticated user is playing your application.
+       * Indicate that the currently authenticated user is playing your application.
        *
        * Create a request for the method "applications.played".
        *
@@ -1239,8 +1394,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Played set$Xgafv(java.lang.String $Xgafv) {
+        return (Played) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Played setAccessToken(java.lang.String accessToken) {
+        return (Played) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Played setAlt(java.lang.String alt) {
         return (Played) super.setAlt(alt);
+      }
+
+      @Override
+      public Played setCallback(java.lang.String callback) {
+        return (Played) super.setCallback(callback);
       }
 
       @Override
@@ -1269,8 +1439,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Played setUserIp(java.lang.String userIp) {
-        return (Played) super.setUserIp(userIp);
+      public Played setUploadType(java.lang.String uploadType) {
+        return (Played) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Played setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Played) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1298,7 +1473,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Verify extends GamesRequest<com.google.api.services.games.model.ApplicationVerifyResponse> {
 
-      private static final String REST_PATH = "applications/{applicationId}/verify";
+      private static final String REST_PATH = "games/v1/applications/{applicationId}/verify";
 
       /**
        * Verifies the auth token provided with this request is for the application with the specified
@@ -1330,8 +1505,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Verify set$Xgafv(java.lang.String $Xgafv) {
+        return (Verify) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Verify setAccessToken(java.lang.String accessToken) {
+        return (Verify) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Verify setAlt(java.lang.String alt) {
         return (Verify) super.setAlt(alt);
+      }
+
+      @Override
+      public Verify setCallback(java.lang.String callback) {
+        return (Verify) super.setCallback(callback);
       }
 
       @Override
@@ -1360,8 +1550,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Verify setUserIp(java.lang.String userIp) {
-        return (Verify) super.setUserIp(userIp);
+      public Verify setUploadType(java.lang.String uploadType) {
+        return (Verify) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Verify setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Verify) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -1427,7 +1622,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class ListByPlayer extends GamesRequest<com.google.api.services.games.model.PlayerEventListResponse> {
 
-      private static final String REST_PATH = "events";
+      private static final String REST_PATH = "games/v1/events";
 
       /**
        * Returns a list showing the current progress on events in this application for the currently
@@ -1458,8 +1653,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public ListByPlayer set$Xgafv(java.lang.String $Xgafv) {
+        return (ListByPlayer) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListByPlayer setAccessToken(java.lang.String accessToken) {
+        return (ListByPlayer) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListByPlayer setAlt(java.lang.String alt) {
         return (ListByPlayer) super.setAlt(alt);
+      }
+
+      @Override
+      public ListByPlayer setCallback(java.lang.String callback) {
+        return (ListByPlayer) super.setCallback(callback);
       }
 
       @Override
@@ -1488,8 +1698,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListByPlayer setUserIp(java.lang.String userIp) {
-        return (ListByPlayer) super.setUserIp(userIp);
+      public ListByPlayer setUploadType(java.lang.String uploadType) {
+        return (ListByPlayer) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListByPlayer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListByPlayer) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The preferred language to use for strings returned by this method. */
@@ -1517,8 +1732,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
       /** The maximum number of events to return in the response, used for paging. For any response, the
      actual number of events to return may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -1572,7 +1785,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class ListDefinitions extends GamesRequest<com.google.api.services.games.model.EventDefinitionListResponse> {
 
-      private static final String REST_PATH = "eventDefinitions";
+      private static final String REST_PATH = "games/v1/eventDefinitions";
 
       /**
        * Returns a list of the event definitions in this application.
@@ -1602,8 +1815,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public ListDefinitions set$Xgafv(java.lang.String $Xgafv) {
+        return (ListDefinitions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListDefinitions setAccessToken(java.lang.String accessToken) {
+        return (ListDefinitions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListDefinitions setAlt(java.lang.String alt) {
         return (ListDefinitions) super.setAlt(alt);
+      }
+
+      @Override
+      public ListDefinitions setCallback(java.lang.String callback) {
+        return (ListDefinitions) super.setCallback(callback);
       }
 
       @Override
@@ -1632,8 +1860,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListDefinitions setUserIp(java.lang.String userIp) {
-        return (ListDefinitions) super.setUserIp(userIp);
+      public ListDefinitions setUploadType(java.lang.String uploadType) {
+        return (ListDefinitions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListDefinitions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListDefinitions) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The preferred language to use for strings returned by this method. */
@@ -1653,27 +1886,25 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of event definitions to return in the response, used for paging. For any
-       * response, the actual number of event definitions to return may be less than the specified
-       * maxResults.
+       * The maximum number of event definitions to return in the response, used for paging.  For
+       * any response, the actual number of event definitions to return may be less than the
+       * specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of event definitions to return in the response, used for paging. For any
+      /** The maximum number of event definitions to return in the response, used for paging.  For any
      response, the actual number of event definitions to return may be less than the specified
-     maxResults.
-
-     [minimum: 1] [maximum: 100]
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * The maximum number of event definitions to return in the response, used for paging. For any
-       * response, the actual number of event definitions to return may be less than the specified
-       * maxResults.
+       * The maximum number of event definitions to return in the response, used for paging.  For
+       * any response, the actual number of event definitions to return may be less than the
+       * specified `maxResults`.
        */
       public ListDefinitions setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -1721,7 +1952,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Record extends GamesRequest<com.google.api.services.games.model.EventUpdateResponse> {
 
-      private static final String REST_PATH = "events";
+      private static final String REST_PATH = "games/v1/events";
 
       /**
        * Records a batch of changes to the number of times events have occurred for the currently
@@ -1742,8 +1973,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Record set$Xgafv(java.lang.String $Xgafv) {
+        return (Record) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Record setAccessToken(java.lang.String accessToken) {
+        return (Record) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Record setAlt(java.lang.String alt) {
         return (Record) super.setAlt(alt);
+      }
+
+      @Override
+      public Record setCallback(java.lang.String callback) {
+        return (Record) super.setCallback(callback);
       }
 
       @Override
@@ -1772,8 +2018,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Record setUserIp(java.lang.String userIp) {
-        return (Record) super.setUserIp(userIp);
+      public Record setUploadType(java.lang.String uploadType) {
+        return (Record) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Record setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Record) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The preferred language to use for strings returned by this method. */
@@ -1839,7 +2090,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends GamesRequest<com.google.api.services.games.model.Leaderboard> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}";
+      private static final String REST_PATH = "games/v1/leaderboards/{leaderboardId}";
 
       /**
        * Retrieves the metadata of the leaderboard with the given ID.
@@ -1870,8 +2121,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1900,8 +2166,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -1959,7 +2230,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends GamesRequest<com.google.api.services.games.model.LeaderboardListResponse> {
 
-      private static final String REST_PATH = "leaderboards";
+      private static final String REST_PATH = "games/v1/leaderboards";
 
       /**
        * Lists all the leaderboard metadata for your application.
@@ -1988,8 +2259,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2018,8 +2304,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The preferred language to use for strings returned by this method. */
@@ -2039,24 +2330,22 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboards to return in the response. For any response, the actual
-       * number of leaderboards returned may be less than the specified maxResults.
+       * The maximum number of leaderboards to return in the response.  For any response, the actual
+       * number of leaderboards returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboards to return in the response. For any response, the actual number
-     of leaderboards returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 200]
+      /** The maximum number of leaderboards to return in the response.  For any response, the actual number
+     of leaderboards returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * The maximum number of leaderboards to return in the response. For any response, the actual
-       * number of leaderboards returned may be less than the specified maxResults.
+       * The maximum number of leaderboards to return in the response.  For any response, the actual
+       * number of leaderboards returned may be less than the specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -2125,7 +2414,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class GetMetagameConfig extends GamesRequest<com.google.api.services.games.model.MetagameConfig> {
 
-      private static final String REST_PATH = "metagameConfig";
+      private static final String REST_PATH = "games/v1/metagameConfig";
 
       /**
        * Return the metagame configuration data for the calling application.
@@ -2155,8 +2444,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public GetMetagameConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetMetagameConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetMetagameConfig setAccessToken(java.lang.String accessToken) {
+        return (GetMetagameConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetMetagameConfig setAlt(java.lang.String alt) {
         return (GetMetagameConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetMetagameConfig setCallback(java.lang.String callback) {
+        return (GetMetagameConfig) super.setCallback(callback);
       }
 
       @Override
@@ -2185,8 +2489,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public GetMetagameConfig setUserIp(java.lang.String userIp) {
-        return (GetMetagameConfig) super.setUserIp(userIp);
+      public GetMetagameConfig setUploadType(java.lang.String uploadType) {
+        return (GetMetagameConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetMetagameConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetMetagameConfig) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -2195,7 +2504,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * List play data aggregated per category for the player corresponding to playerId.
+     * List play data aggregated per category for the player corresponding to `playerId`.
      *
      * Create a request for the method "metagame.listCategoriesByPlayer".
      *
@@ -2203,7 +2512,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link ListCategoriesByPlayer#execute()} method to invoke the remote
      * operation.
      *
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
      * @param collection The collection of categories for which data will be returned.
      * @return the request
      */
@@ -2215,10 +2525,10 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class ListCategoriesByPlayer extends GamesRequest<com.google.api.services.games.model.CategoryListResponse> {
 
-      private static final String REST_PATH = "players/{playerId}/categories/{collection}";
+      private static final String REST_PATH = "games/v1/players/{playerId}/categories/{collection}";
 
       /**
-       * List play data aggregated per category for the player corresponding to playerId.
+       * List play data aggregated per category for the player corresponding to `playerId`.
        *
        * Create a request for the method "metagame.listCategoriesByPlayer".
        *
@@ -2228,7 +2538,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
        * @param collection The collection of categories for which data will be returned.
        * @since 1.13
        */
@@ -2249,8 +2560,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public ListCategoriesByPlayer set$Xgafv(java.lang.String $Xgafv) {
+        return (ListCategoriesByPlayer) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListCategoriesByPlayer setAccessToken(java.lang.String accessToken) {
+        return (ListCategoriesByPlayer) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListCategoriesByPlayer setAlt(java.lang.String alt) {
         return (ListCategoriesByPlayer) super.setAlt(alt);
+      }
+
+      @Override
+      public ListCategoriesByPlayer setCallback(java.lang.String callback) {
+        return (ListCategoriesByPlayer) super.setCallback(callback);
       }
 
       @Override
@@ -2279,21 +2605,30 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListCategoriesByPlayer setUserIp(java.lang.String userIp) {
-        return (ListCategoriesByPlayer) super.setUserIp(userIp);
+      public ListCategoriesByPlayer setUploadType(java.lang.String uploadType) {
+        return (ListCategoriesByPlayer) super.setUploadType(uploadType);
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      @Override
+      public ListCategoriesByPlayer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListCategoriesByPlayer) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       public ListCategoriesByPlayer setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -2334,16 +2669,14 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of category resources to return in the response, used for paging. For
        * any response, the actual number of category resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of category resources to return in the response, used for paging. For any
      response, the actual number of category resources returned may be less than the specified
-     maxResults.
-
-     [minimum: 1] [maximum: 100]
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -2352,7 +2685,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of category resources to return in the response, used for paging. For
        * any response, the actual number of category resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       public ListCategoriesByPlayer setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -2404,15 +2737,16 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   public class Players {
 
     /**
-     * Retrieves the Player resource with the given ID. To retrieve the player for the currently
-     * authenticated user, set playerId to me.
+     * Retrieves the Player resource with the given ID.  To retrieve the player for the currently
+     * authenticated user, set `playerId` to `me`.
      *
      * Create a request for the method "players.get".
      *
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
      * @return the request
      */
     public Get get(java.lang.String playerId) throws java.io.IOException {
@@ -2423,11 +2757,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends GamesRequest<com.google.api.services.games.model.Player> {
 
-      private static final String REST_PATH = "players/{playerId}";
+      private static final String REST_PATH = "games/v1/players/{playerId}";
 
       /**
-       * Retrieves the Player resource with the given ID. To retrieve the player for the currently
-       * authenticated user, set playerId to me.
+       * Retrieves the Player resource with the given ID.  To retrieve the player for the currently
+       * authenticated user, set `playerId` to `me`.
        *
        * Create a request for the method "players.get".
        *
@@ -2436,7 +2770,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
        * @since 1.13
        */
       protected Get(java.lang.String playerId) {
@@ -2455,8 +2790,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2485,21 +2835,30 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       public Get setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -2545,7 +2904,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends GamesRequest<com.google.api.services.games.model.PlayerListResponse> {
 
-      private static final String REST_PATH = "players/me/players/{collection}";
+      private static final String REST_PATH = "games/v1/players/me/players/{collection}";
 
       /**
        * Get the collection of players for the currently authenticated user.
@@ -2576,8 +2935,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2606,8 +2980,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Collection of players being retrieved */
@@ -2645,15 +3024,14 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of player resources to return in the response, used for paging. For any
        * response, the actual number of player resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of player resources to return in the response, used for paging. For any
-     response, the actual number of player resources returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 50]
+     response, the actual number of player resources returned may be less than the specified
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -2662,7 +3040,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of player resources to return in the response, used for paging. For any
        * response, the actual number of player resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -2688,187 +3066,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
-   * An accessor for creating requests from the Pushtokens collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Games games = new Games(...);}
-   *   {@code Games.Pushtokens.List request = games.pushtokens().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Pushtokens pushtokens() {
-    return new Pushtokens();
-  }
-
-  /**
-   * The "pushtokens" collection of methods.
-   */
-  public class Pushtokens {
-
-    /**
-     * Removes a push token for the current user and application. Removing a non-existent push token
-     * will report success.
-     *
-     * Create a request for the method "pushtokens.remove".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Remove#execute()} method to invoke the remote operation.
-     *
-     * @param content the {@link com.google.api.services.games.model.PushTokenId}
-     * @return the request
-     */
-    public Remove remove(com.google.api.services.games.model.PushTokenId content) throws java.io.IOException {
-      Remove result = new Remove(content);
-      initialize(result);
-      return result;
-    }
-
-    public class Remove extends GamesRequest<Void> {
-
-      private static final String REST_PATH = "pushtokens/remove";
-
-      /**
-       * Removes a push token for the current user and application. Removing a non-existent push token
-       * will report success.
-       *
-       * Create a request for the method "pushtokens.remove".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Remove#execute()} method to invoke the remote operation. <p> {@link
-       * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.games.model.PushTokenId}
-       * @since 1.13
-       */
-      protected Remove(com.google.api.services.games.model.PushTokenId content) {
-        super(Games.this, "POST", REST_PATH, content, Void.class);
-      }
-
-      @Override
-      public Remove setAlt(java.lang.String alt) {
-        return (Remove) super.setAlt(alt);
-      }
-
-      @Override
-      public Remove setFields(java.lang.String fields) {
-        return (Remove) super.setFields(fields);
-      }
-
-      @Override
-      public Remove setKey(java.lang.String key) {
-        return (Remove) super.setKey(key);
-      }
-
-      @Override
-      public Remove setOauthToken(java.lang.String oauthToken) {
-        return (Remove) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Remove) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Remove setQuotaUser(java.lang.String quotaUser) {
-        return (Remove) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Remove setUserIp(java.lang.String userIp) {
-        return (Remove) super.setUserIp(userIp);
-      }
-
-      @Override
-      public Remove set(String parameterName, Object value) {
-        return (Remove) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Registers a push token for the current user and application.
-     *
-     * Create a request for the method "pushtokens.update".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
-     *
-     * @param content the {@link com.google.api.services.games.model.PushToken}
-     * @return the request
-     */
-    public Update update(com.google.api.services.games.model.PushToken content) throws java.io.IOException {
-      Update result = new Update(content);
-      initialize(result);
-      return result;
-    }
-
-    public class Update extends GamesRequest<Void> {
-
-      private static final String REST_PATH = "pushtokens";
-
-      /**
-       * Registers a push token for the current user and application.
-       *
-       * Create a request for the method "pushtokens.update".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
-       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.games.model.PushToken}
-       * @since 1.13
-       */
-      protected Update(com.google.api.services.games.model.PushToken content) {
-        super(Games.this, "PUT", REST_PATH, content, Void.class);
-      }
-
-      @Override
-      public Update setAlt(java.lang.String alt) {
-        return (Update) super.setAlt(alt);
-      }
-
-      @Override
-      public Update setFields(java.lang.String fields) {
-        return (Update) super.setFields(fields);
-      }
-
-      @Override
-      public Update setKey(java.lang.String key) {
-        return (Update) super.setKey(key);
-      }
-
-      @Override
-      public Update setOauthToken(java.lang.String oauthToken) {
-        return (Update) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Update) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Update setQuotaUser(java.lang.String quotaUser) {
-        return (Update) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
-      }
-
-      @Override
-      public Update set(String parameterName, Object value) {
-        return (Update) super.set(parameterName, value);
       }
     }
 
@@ -2903,12 +3100,12 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link Check#execute()} method to invoke the remote operation.
      *
      * @param clientRevision The revision of the client SDK used by your application. Format:
-    [PLATFORM_TYPE]:[VERSION_NUMBER].
-     *        Possible values of PLATFORM_TYPE are:
-    - "ANDROID" - Client is running the Android SDK.
-    -
-     *        "IOS" - Client is running the iOS SDK.
-    - "WEB_APP" - Client is running as a Web App.
+    `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
+     *        Possible values of `PLATFORM_TYPE` are:
+    * `ANDROID` - Client is running the Android SDK.
+    *
+     *        `IOS` - Client is running the iOS SDK.
+    * `WEB_APP` - Client is running as a Web App.
      * @return the request
      */
     public Check check(java.lang.String clientRevision) throws java.io.IOException {
@@ -2919,7 +3116,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Check extends GamesRequest<com.google.api.services.games.model.RevisionCheckResponse> {
 
-      private static final String REST_PATH = "revisions/check";
+      private static final String REST_PATH = "games/v1/revisions/check";
 
       /**
        * Checks whether the games client is out of date.
@@ -2932,12 +3129,12 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param clientRevision The revision of the client SDK used by your application. Format:
-    [PLATFORM_TYPE]:[VERSION_NUMBER].
-     *        Possible values of PLATFORM_TYPE are:
-    - "ANDROID" - Client is running the Android SDK.
-    -
-     *        "IOS" - Client is running the iOS SDK.
-    - "WEB_APP" - Client is running as a Web App.
+    `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
+     *        Possible values of `PLATFORM_TYPE` are:
+    * `ANDROID` - Client is running the Android SDK.
+    *
+     *        `IOS` - Client is running the iOS SDK.
+    * `WEB_APP` - Client is running as a Web App.
        * @since 1.13
        */
       protected Check(java.lang.String clientRevision) {
@@ -2956,8 +3153,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Check set$Xgafv(java.lang.String $Xgafv) {
+        return (Check) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Check setAccessToken(java.lang.String accessToken) {
+        return (Check) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Check setAlt(java.lang.String alt) {
         return (Check) super.setAlt(alt);
+      }
+
+      @Override
+      public Check setCallback(java.lang.String callback) {
+        return (Check) super.setCallback(callback);
       }
 
       @Override
@@ -2986,25 +3198,28 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Check setUserIp(java.lang.String userIp) {
-        return (Check) super.setUserIp(userIp);
+      public Check setUploadType(java.lang.String uploadType) {
+        return (Check) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Check setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Check) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
        * The revision of the client SDK used by your application. Format:
-       * [PLATFORM_TYPE]:[VERSION_NUMBER]. Possible values of PLATFORM_TYPE are:
-       *
-       * - "ANDROID" - Client is running the Android SDK. - "IOS" - Client is running the iOS SDK. -
-       * "WEB_APP" - Client is running as a Web App.
+       * `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` -
+       * Client is running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` -
+       * Client is running as a Web App.
        */
       @com.google.api.client.util.Key
       private java.lang.String clientRevision;
 
-      /** The revision of the client SDK used by your application. Format: [PLATFORM_TYPE]:[VERSION_NUMBER].
-     Possible values of PLATFORM_TYPE are:
-
-     - "ANDROID" - Client is running the Android SDK. - "IOS" - Client is running the iOS SDK. -
-     "WEB_APP" - Client is running as a Web App.
+      /** The revision of the client SDK used by your application. Format:
+     `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` - Client is
+     running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` - Client is running
+     as a Web App.
        */
       public java.lang.String getClientRevision() {
         return clientRevision;
@@ -3012,10 +3227,9 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The revision of the client SDK used by your application. Format:
-       * [PLATFORM_TYPE]:[VERSION_NUMBER]. Possible values of PLATFORM_TYPE are:
-       *
-       * - "ANDROID" - Client is running the Android SDK. - "IOS" - Client is running the iOS SDK. -
-       * "WEB_APP" - Client is running as a Web App.
+       * `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` -
+       * Client is running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` -
+       * Client is running as a Web App.
        */
       public Check setClientRevision(java.lang.String clientRevision) {
         this.clientRevision = clientRevision;
@@ -3025,946 +3239,6 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Check set(String parameterName, Object value) {
         return (Check) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
-   * An accessor for creating requests from the Rooms collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Games games = new Games(...);}
-   *   {@code Games.Rooms.List request = games.rooms().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Rooms rooms() {
-    return new Rooms();
-  }
-
-  /**
-   * The "rooms" collection of methods.
-   */
-  public class Rooms {
-
-    /**
-     * Create a room. For internal use by the Games SDK only. Calling this method directly is
-     * unsupported.
-     *
-     * Create a request for the method "rooms.create".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-     *
-     * @param content the {@link com.google.api.services.games.model.RoomCreateRequest}
-     * @return the request
-     */
-    public Create create(com.google.api.services.games.model.RoomCreateRequest content) throws java.io.IOException {
-      Create result = new Create(content);
-      initialize(result);
-      return result;
-    }
-
-    public class Create extends GamesRequest<com.google.api.services.games.model.Room> {
-
-      private static final String REST_PATH = "rooms/create";
-
-      /**
-       * Create a room. For internal use by the Games SDK only. Calling this method directly is
-       * unsupported.
-       *
-       * Create a request for the method "rooms.create".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.games.model.RoomCreateRequest}
-       * @since 1.13
-       */
-      protected Create(com.google.api.services.games.model.RoomCreateRequest content) {
-        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.Room.class);
-      }
-
-      @Override
-      public Create setAlt(java.lang.String alt) {
-        return (Create) super.setAlt(alt);
-      }
-
-      @Override
-      public Create setFields(java.lang.String fields) {
-        return (Create) super.setFields(fields);
-      }
-
-      @Override
-      public Create setKey(java.lang.String key) {
-        return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Create) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Create setQuotaUser(java.lang.String quotaUser) {
-        return (Create) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Create setUserIp(java.lang.String userIp) {
-        return (Create) super.setUserIp(userIp);
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Create setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Create set(String parameterName, Object value) {
-        return (Create) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Decline an invitation to join a room. For internal use by the Games SDK only. Calling this method
-     * directly is unsupported.
-     *
-     * Create a request for the method "rooms.decline".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Decline#execute()} method to invoke the remote operation.
-     *
-     * @param roomId The ID of the room.
-     * @return the request
-     */
-    public Decline decline(java.lang.String roomId) throws java.io.IOException {
-      Decline result = new Decline(roomId);
-      initialize(result);
-      return result;
-    }
-
-    public class Decline extends GamesRequest<com.google.api.services.games.model.Room> {
-
-      private static final String REST_PATH = "rooms/{roomId}/decline";
-
-      /**
-       * Decline an invitation to join a room. For internal use by the Games SDK only. Calling this
-       * method directly is unsupported.
-       *
-       * Create a request for the method "rooms.decline".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Decline#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * Decline#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param roomId The ID of the room.
-       * @since 1.13
-       */
-      protected Decline(java.lang.String roomId) {
-        super(Games.this, "POST", REST_PATH, null, com.google.api.services.games.model.Room.class);
-        this.roomId = com.google.api.client.util.Preconditions.checkNotNull(roomId, "Required parameter roomId must be specified.");
-      }
-
-      @Override
-      public Decline setAlt(java.lang.String alt) {
-        return (Decline) super.setAlt(alt);
-      }
-
-      @Override
-      public Decline setFields(java.lang.String fields) {
-        return (Decline) super.setFields(fields);
-      }
-
-      @Override
-      public Decline setKey(java.lang.String key) {
-        return (Decline) super.setKey(key);
-      }
-
-      @Override
-      public Decline setOauthToken(java.lang.String oauthToken) {
-        return (Decline) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Decline setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Decline) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Decline setQuotaUser(java.lang.String quotaUser) {
-        return (Decline) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Decline setUserIp(java.lang.String userIp) {
-        return (Decline) super.setUserIp(userIp);
-      }
-
-      /** The ID of the room. */
-      @com.google.api.client.util.Key
-      private java.lang.String roomId;
-
-      /** The ID of the room.
-       */
-      public java.lang.String getRoomId() {
-        return roomId;
-      }
-
-      /** The ID of the room. */
-      public Decline setRoomId(java.lang.String roomId) {
-        this.roomId = roomId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Decline setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Decline set(String parameterName, Object value) {
-        return (Decline) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Dismiss an invitation to join a room. For internal use by the Games SDK only. Calling this method
-     * directly is unsupported.
-     *
-     * Create a request for the method "rooms.dismiss".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Dismiss#execute()} method to invoke the remote operation.
-     *
-     * @param roomId The ID of the room.
-     * @return the request
-     */
-    public Dismiss dismiss(java.lang.String roomId) throws java.io.IOException {
-      Dismiss result = new Dismiss(roomId);
-      initialize(result);
-      return result;
-    }
-
-    public class Dismiss extends GamesRequest<Void> {
-
-      private static final String REST_PATH = "rooms/{roomId}/dismiss";
-
-      /**
-       * Dismiss an invitation to join a room. For internal use by the Games SDK only. Calling this
-       * method directly is unsupported.
-       *
-       * Create a request for the method "rooms.dismiss".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Dismiss#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * Dismiss#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param roomId The ID of the room.
-       * @since 1.13
-       */
-      protected Dismiss(java.lang.String roomId) {
-        super(Games.this, "POST", REST_PATH, null, Void.class);
-        this.roomId = com.google.api.client.util.Preconditions.checkNotNull(roomId, "Required parameter roomId must be specified.");
-      }
-
-      @Override
-      public Dismiss setAlt(java.lang.String alt) {
-        return (Dismiss) super.setAlt(alt);
-      }
-
-      @Override
-      public Dismiss setFields(java.lang.String fields) {
-        return (Dismiss) super.setFields(fields);
-      }
-
-      @Override
-      public Dismiss setKey(java.lang.String key) {
-        return (Dismiss) super.setKey(key);
-      }
-
-      @Override
-      public Dismiss setOauthToken(java.lang.String oauthToken) {
-        return (Dismiss) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Dismiss setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Dismiss) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Dismiss setQuotaUser(java.lang.String quotaUser) {
-        return (Dismiss) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Dismiss setUserIp(java.lang.String userIp) {
-        return (Dismiss) super.setUserIp(userIp);
-      }
-
-      /** The ID of the room. */
-      @com.google.api.client.util.Key
-      private java.lang.String roomId;
-
-      /** The ID of the room.
-       */
-      public java.lang.String getRoomId() {
-        return roomId;
-      }
-
-      /** The ID of the room. */
-      public Dismiss setRoomId(java.lang.String roomId) {
-        this.roomId = roomId;
-        return this;
-      }
-
-      @Override
-      public Dismiss set(String parameterName, Object value) {
-        return (Dismiss) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Get the data for a room.
-     *
-     * Create a request for the method "rooms.get".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-     *
-     * @param roomId The ID of the room.
-     * @return the request
-     */
-    public Get get(java.lang.String roomId) throws java.io.IOException {
-      Get result = new Get(roomId);
-      initialize(result);
-      return result;
-    }
-
-    public class Get extends GamesRequest<com.google.api.services.games.model.Room> {
-
-      private static final String REST_PATH = "rooms/{roomId}";
-
-      /**
-       * Get the data for a room.
-       *
-       * Create a request for the method "rooms.get".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
-       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param roomId The ID of the room.
-       * @since 1.13
-       */
-      protected Get(java.lang.String roomId) {
-        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.Room.class);
-        this.roomId = com.google.api.client.util.Preconditions.checkNotNull(roomId, "Required parameter roomId must be specified.");
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Get setAlt(java.lang.String alt) {
-        return (Get) super.setAlt(alt);
-      }
-
-      @Override
-      public Get setFields(java.lang.String fields) {
-        return (Get) super.setFields(fields);
-      }
-
-      @Override
-      public Get setKey(java.lang.String key) {
-        return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Get) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Get setQuotaUser(java.lang.String quotaUser) {
-        return (Get) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
-      }
-
-      /** The ID of the room. */
-      @com.google.api.client.util.Key
-      private java.lang.String roomId;
-
-      /** The ID of the room.
-       */
-      public java.lang.String getRoomId() {
-        return roomId;
-      }
-
-      /** The ID of the room. */
-      public Get setRoomId(java.lang.String roomId) {
-        this.roomId = roomId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Get setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Get set(String parameterName, Object value) {
-        return (Get) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Join a room. For internal use by the Games SDK only. Calling this method directly is unsupported.
-     *
-     * Create a request for the method "rooms.join".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Join#execute()} method to invoke the remote operation.
-     *
-     * @param roomId The ID of the room.
-     * @param content the {@link com.google.api.services.games.model.RoomJoinRequest}
-     * @return the request
-     */
-    public Join join(java.lang.String roomId, com.google.api.services.games.model.RoomJoinRequest content) throws java.io.IOException {
-      Join result = new Join(roomId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Join extends GamesRequest<com.google.api.services.games.model.Room> {
-
-      private static final String REST_PATH = "rooms/{roomId}/join";
-
-      /**
-       * Join a room. For internal use by the Games SDK only. Calling this method directly is
-       * unsupported.
-       *
-       * Create a request for the method "rooms.join".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Join#execute()} method to invoke the remote operation. <p> {@link
-       * Join#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param roomId The ID of the room.
-       * @param content the {@link com.google.api.services.games.model.RoomJoinRequest}
-       * @since 1.13
-       */
-      protected Join(java.lang.String roomId, com.google.api.services.games.model.RoomJoinRequest content) {
-        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.Room.class);
-        this.roomId = com.google.api.client.util.Preconditions.checkNotNull(roomId, "Required parameter roomId must be specified.");
-      }
-
-      @Override
-      public Join setAlt(java.lang.String alt) {
-        return (Join) super.setAlt(alt);
-      }
-
-      @Override
-      public Join setFields(java.lang.String fields) {
-        return (Join) super.setFields(fields);
-      }
-
-      @Override
-      public Join setKey(java.lang.String key) {
-        return (Join) super.setKey(key);
-      }
-
-      @Override
-      public Join setOauthToken(java.lang.String oauthToken) {
-        return (Join) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Join setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Join) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Join setQuotaUser(java.lang.String quotaUser) {
-        return (Join) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Join setUserIp(java.lang.String userIp) {
-        return (Join) super.setUserIp(userIp);
-      }
-
-      /** The ID of the room. */
-      @com.google.api.client.util.Key
-      private java.lang.String roomId;
-
-      /** The ID of the room.
-       */
-      public java.lang.String getRoomId() {
-        return roomId;
-      }
-
-      /** The ID of the room. */
-      public Join setRoomId(java.lang.String roomId) {
-        this.roomId = roomId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Join setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Join set(String parameterName, Object value) {
-        return (Join) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Leave a room. For internal use by the Games SDK only. Calling this method directly is
-     * unsupported.
-     *
-     * Create a request for the method "rooms.leave".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Leave#execute()} method to invoke the remote operation.
-     *
-     * @param roomId The ID of the room.
-     * @param content the {@link com.google.api.services.games.model.RoomLeaveRequest}
-     * @return the request
-     */
-    public Leave leave(java.lang.String roomId, com.google.api.services.games.model.RoomLeaveRequest content) throws java.io.IOException {
-      Leave result = new Leave(roomId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Leave extends GamesRequest<com.google.api.services.games.model.Room> {
-
-      private static final String REST_PATH = "rooms/{roomId}/leave";
-
-      /**
-       * Leave a room. For internal use by the Games SDK only. Calling this method directly is
-       * unsupported.
-       *
-       * Create a request for the method "rooms.leave".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Leave#execute()} method to invoke the remote operation. <p> {@link
-       * Leave#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param roomId The ID of the room.
-       * @param content the {@link com.google.api.services.games.model.RoomLeaveRequest}
-       * @since 1.13
-       */
-      protected Leave(java.lang.String roomId, com.google.api.services.games.model.RoomLeaveRequest content) {
-        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.Room.class);
-        this.roomId = com.google.api.client.util.Preconditions.checkNotNull(roomId, "Required parameter roomId must be specified.");
-      }
-
-      @Override
-      public Leave setAlt(java.lang.String alt) {
-        return (Leave) super.setAlt(alt);
-      }
-
-      @Override
-      public Leave setFields(java.lang.String fields) {
-        return (Leave) super.setFields(fields);
-      }
-
-      @Override
-      public Leave setKey(java.lang.String key) {
-        return (Leave) super.setKey(key);
-      }
-
-      @Override
-      public Leave setOauthToken(java.lang.String oauthToken) {
-        return (Leave) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Leave setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Leave) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Leave setQuotaUser(java.lang.String quotaUser) {
-        return (Leave) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Leave setUserIp(java.lang.String userIp) {
-        return (Leave) super.setUserIp(userIp);
-      }
-
-      /** The ID of the room. */
-      @com.google.api.client.util.Key
-      private java.lang.String roomId;
-
-      /** The ID of the room.
-       */
-      public java.lang.String getRoomId() {
-        return roomId;
-      }
-
-      /** The ID of the room. */
-      public Leave setRoomId(java.lang.String roomId) {
-        this.roomId = roomId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Leave setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Leave set(String parameterName, Object value) {
-        return (Leave) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Returns invitations to join rooms.
-     *
-     * Create a request for the method "rooms.list".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @return the request
-     */
-    public List list() throws java.io.IOException {
-      List result = new List();
-      initialize(result);
-      return result;
-    }
-
-    public class List extends GamesRequest<com.google.api.services.games.model.RoomList> {
-
-      private static final String REST_PATH = "rooms";
-
-      /**
-       * Returns invitations to join rooms.
-       *
-       * Create a request for the method "rooms.list".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected List() {
-        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.RoomList.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public List setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      /**
-       * The maximum number of rooms to return in the response, used for paging. For any response,
-       * the actual number of rooms to return may be less than the specified maxResults.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** The maximum number of rooms to return in the response, used for paging. For any response, the
-     actual number of rooms to return may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 500]
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /**
-       * The maximum number of rooms to return in the response, used for paging. For any response,
-       * the actual number of rooms to return may be less than the specified maxResults.
-       */
-      public List setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-      }
-
-      /** The token returned by the previous request. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The token returned by the previous request.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The token returned by the previous request. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Updates sent by a client reporting the status of peers in a room. For internal use by the Games
-     * SDK only. Calling this method directly is unsupported.
-     *
-     * Create a request for the method "rooms.reportStatus".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link ReportStatus#execute()} method to invoke the remote operation.
-     *
-     * @param roomId The ID of the room.
-     * @param content the {@link com.google.api.services.games.model.RoomP2PStatuses}
-     * @return the request
-     */
-    public ReportStatus reportStatus(java.lang.String roomId, com.google.api.services.games.model.RoomP2PStatuses content) throws java.io.IOException {
-      ReportStatus result = new ReportStatus(roomId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class ReportStatus extends GamesRequest<com.google.api.services.games.model.RoomStatus> {
-
-      private static final String REST_PATH = "rooms/{roomId}/reportstatus";
-
-      /**
-       * Updates sent by a client reporting the status of peers in a room. For internal use by the Games
-       * SDK only. Calling this method directly is unsupported.
-       *
-       * Create a request for the method "rooms.reportStatus".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link ReportStatus#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * ReportStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param roomId The ID of the room.
-       * @param content the {@link com.google.api.services.games.model.RoomP2PStatuses}
-       * @since 1.13
-       */
-      protected ReportStatus(java.lang.String roomId, com.google.api.services.games.model.RoomP2PStatuses content) {
-        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.RoomStatus.class);
-        this.roomId = com.google.api.client.util.Preconditions.checkNotNull(roomId, "Required parameter roomId must be specified.");
-      }
-
-      @Override
-      public ReportStatus setAlt(java.lang.String alt) {
-        return (ReportStatus) super.setAlt(alt);
-      }
-
-      @Override
-      public ReportStatus setFields(java.lang.String fields) {
-        return (ReportStatus) super.setFields(fields);
-      }
-
-      @Override
-      public ReportStatus setKey(java.lang.String key) {
-        return (ReportStatus) super.setKey(key);
-      }
-
-      @Override
-      public ReportStatus setOauthToken(java.lang.String oauthToken) {
-        return (ReportStatus) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ReportStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ReportStatus) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ReportStatus setQuotaUser(java.lang.String quotaUser) {
-        return (ReportStatus) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ReportStatus setUserIp(java.lang.String userIp) {
-        return (ReportStatus) super.setUserIp(userIp);
-      }
-
-      /** The ID of the room. */
-      @com.google.api.client.util.Key
-      private java.lang.String roomId;
-
-      /** The ID of the room.
-       */
-      public java.lang.String getRoomId() {
-        return roomId;
-      }
-
-      /** The ID of the room. */
-      public ReportStatus setRoomId(java.lang.String roomId) {
-        this.roomId = roomId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public ReportStatus setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public ReportStatus set(String parameterName, Object value) {
-        return (ReportStatus) super.set(parameterName, value);
       }
     }
 
@@ -3992,17 +3266,19 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Get high scores, and optionally ranks, in leaderboards for the currently authenticated player.
-     * For a specific time span, leaderboardId can be set to ALL to retrieve data for all leaderboards
-     * in a given time span. NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same
-     * request; only one parameter may be set to 'ALL'.
+     * For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all
+     * leaderboards in a given time span.  `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL'
+     * timeSpans in the same request; only one parameter may be set to 'ALL'.
      *
      * Create a request for the method "scores.get".
      *
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
-     * @param leaderboardId The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this
+     * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
+     * @param leaderboardId The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all
+    leaderboards for this
      *        application.
      * @param timeSpan The time span for the scores and ranks you're requesting.
      * @return the request
@@ -4015,13 +3291,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends GamesRequest<com.google.api.services.games.model.PlayerLeaderboardScoreListResponse> {
 
-      private static final String REST_PATH = "players/{playerId}/leaderboards/{leaderboardId}/scores/{timeSpan}";
+      private static final String REST_PATH = "games/v1/players/{playerId}/leaderboards/{leaderboardId}/scores/{timeSpan}";
 
       /**
        * Get high scores, and optionally ranks, in leaderboards for the currently authenticated player.
-       * For a specific time span, leaderboardId can be set to ALL to retrieve data for all leaderboards
-       * in a given time span. NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the
-       * same request; only one parameter may be set to 'ALL'.
+       * For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all
+       * leaderboards in a given time span.  `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL'
+       * timeSpans in the same request; only one parameter may be set to 'ALL'.
        *
        * Create a request for the method "scores.get".
        *
@@ -4030,8 +3306,10 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
-       * @param leaderboardId The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this
+       * @param playerId A player ID. A value of `me` may be used in place of the
+    authenticated player's ID.
+       * @param leaderboardId The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all
+    leaderboards for this
      *        application.
        * @param timeSpan The time span for the scores and ranks you're requesting.
        * @since 1.13
@@ -4054,8 +3332,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4084,34 +3377,43 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       public Get setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
       }
 
       /**
-       * The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for
+       * The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all leaderboards for
        * this application.
        */
       @com.google.api.client.util.Key
       private java.lang.String leaderboardId;
 
-      /** The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this
+      /** The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all leaderboards for this
      application.
        */
       public java.lang.String getLeaderboardId() {
@@ -4119,7 +3421,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for
+       * The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all leaderboards for
        * this application.
        */
       public Get setLeaderboardId(java.lang.String leaderboardId) {
@@ -4143,7 +3445,9 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The types of ranks to return. If the parameter is omitted, no ranks will be returned. */
+      /**
+       * The types of ranks to return. If the parameter is omitted, no ranks will be returned.
+       */
       @com.google.api.client.util.Key
       private java.lang.String includeRankType;
 
@@ -4153,7 +3457,9 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return includeRankType;
       }
 
-      /** The types of ranks to return. If the parameter is omitted, no ranks will be returned. */
+      /**
+       * The types of ranks to return. If the parameter is omitted, no ranks will be returned.
+       */
       public Get setIncludeRankType(java.lang.String includeRankType) {
         this.includeRankType = includeRankType;
         return this;
@@ -4176,24 +3482,22 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response. For any response, the
-       * actual number of leaderboard scores returned may be less than the specified maxResults.
+       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboard scores to return in the response. For any response, the actual
-     number of leaderboard scores returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 30]
+      /** The maximum number of leaderboard scores to return in the response.  For any response, the actual
+     number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response. For any response, the
-       * actual number of leaderboard scores returned may be less than the specified maxResults.
+       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public Get setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -4242,7 +3546,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends GamesRequest<com.google.api.services.games.model.LeaderboardScores> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}/scores/{collection}";
+      private static final String REST_PATH = "games/v1/leaderboards/{leaderboardId}/scores/{collection}";
 
       /**
        * Lists the scores in a leaderboard, starting from the top.
@@ -4277,8 +3581,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4307,8 +3626,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -4376,24 +3700,22 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response. For any response, the
-       * actual number of leaderboard scores returned may be less than the specified maxResults.
+       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboard scores to return in the response. For any response, the actual
-     number of leaderboard scores returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 30]
+      /** The maximum number of leaderboard scores to return in the response.  For any response, the actual
+     number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response. For any response, the
-       * actual number of leaderboard scores returned may be less than the specified maxResults.
+       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -4442,7 +3764,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class ListWindow extends GamesRequest<com.google.api.services.games.model.LeaderboardScores> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}/window/{collection}";
+      private static final String REST_PATH = "games/v1/leaderboards/{leaderboardId}/window/{collection}";
 
       /**
        * Lists the scores in a leaderboard around (and including) a player's score.
@@ -4478,8 +3800,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public ListWindow set$Xgafv(java.lang.String $Xgafv) {
+        return (ListWindow) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListWindow setAccessToken(java.lang.String accessToken) {
+        return (ListWindow) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListWindow setAlt(java.lang.String alt) {
         return (ListWindow) super.setAlt(alt);
+      }
+
+      @Override
+      public ListWindow setCallback(java.lang.String callback) {
+        return (ListWindow) super.setCallback(callback);
       }
 
       @Override
@@ -4508,8 +3845,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListWindow setUserIp(java.lang.String userIp) {
-        return (ListWindow) super.setUserIp(userIp);
+      public ListWindow setUploadType(java.lang.String uploadType) {
+        return (ListWindow) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListWindow setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListWindow) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -4577,24 +3919,22 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response. For any response, the
-       * actual number of leaderboard scores returned may be less than the specified maxResults.
+       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboard scores to return in the response. For any response, the actual
-     number of leaderboard scores returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 30]
+      /** The maximum number of leaderboard scores to return in the response.  For any response, the actual
+     number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response. For any response, the
-       * actual number of leaderboard scores returned may be less than the specified maxResults.
+       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public ListWindow setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -4680,11 +4020,16 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
      *
      * @param leaderboardId The ID of the leaderboard.
-     * @param score The score you're submitting. The submitted score is ignored if it is worse than a previously
-     *        submitted score, where worse depends on the leaderboard sort order. The meaning of the
-     *        score value depends on the leaderboard format type. For fixed-point, the score represents
-     *        the raw value. For time, the score represents elapsed time in milliseconds. For currency,
-     *        the score represents a value in micro units.
+     * @param score The score you're submitting. The submitted score is ignored if it is worse
+    than a previously
+     *        submitted score, where worse depends on the leaderboard
+    sort order. The meaning of the
+     *        score value depends on the leaderboard
+    format type. For fixed-point, the score represents
+     *        the raw value.  For
+    time, the score represents elapsed time in milliseconds.  For
+     *        currency, the
+    score represents a value in micro units.
      * @return the request
      */
     public Submit submit(java.lang.String leaderboardId, java.lang.Long score) throws java.io.IOException {
@@ -4695,7 +4040,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Submit extends GamesRequest<com.google.api.services.games.model.PlayerScoreResponse> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}/scores";
+      private static final String REST_PATH = "games/v1/leaderboards/{leaderboardId}/scores";
 
       private final java.util.regex.Pattern SCORE_TAG_PATTERN =
           java.util.regex.Pattern.compile("[a-zA-Z0-9-._~]{0,64}");
@@ -4711,11 +4056,16 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param leaderboardId The ID of the leaderboard.
-       * @param score The score you're submitting. The submitted score is ignored if it is worse than a previously
-     *        submitted score, where worse depends on the leaderboard sort order. The meaning of the
-     *        score value depends on the leaderboard format type. For fixed-point, the score represents
-     *        the raw value. For time, the score represents elapsed time in milliseconds. For currency,
-     *        the score represents a value in micro units.
+       * @param score The score you're submitting. The submitted score is ignored if it is worse
+    than a previously
+     *        submitted score, where worse depends on the leaderboard
+    sort order. The meaning of the
+     *        score value depends on the leaderboard
+    format type. For fixed-point, the score represents
+     *        the raw value.  For
+    time, the score represents elapsed time in milliseconds.  For
+     *        currency, the
+    score represents a value in micro units.
        * @since 1.13
        */
       protected Submit(java.lang.String leaderboardId, java.lang.Long score) {
@@ -4725,8 +4075,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Submit set$Xgafv(java.lang.String $Xgafv) {
+        return (Submit) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Submit setAccessToken(java.lang.String accessToken) {
+        return (Submit) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Submit setAlt(java.lang.String alt) {
         return (Submit) super.setAlt(alt);
+      }
+
+      @Override
+      public Submit setCallback(java.lang.String callback) {
+        return (Submit) super.setCallback(callback);
       }
 
       @Override
@@ -4755,8 +4120,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Submit setUserIp(java.lang.String userIp) {
-        return (Submit) super.setUserIp(userIp);
+      public Submit setUploadType(java.lang.String uploadType) {
+        return (Submit) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Submit setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Submit) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -4779,17 +4149,17 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * The score you're submitting. The submitted score is ignored if it is worse than a
        * previously submitted score, where worse depends on the leaderboard sort order. The meaning
        * of the score value depends on the leaderboard format type. For fixed-point, the score
-       * represents the raw value. For time, the score represents elapsed time in milliseconds. For
-       * currency, the score represents a value in micro units.
+       * represents the raw value.  For time, the score represents elapsed time in milliseconds.
+       * For currency, the score represents a value in micro units.
        */
       @com.google.api.client.util.Key
       private java.lang.Long score;
 
       /** The score you're submitting. The submitted score is ignored if it is worse than a previously
      submitted score, where worse depends on the leaderboard sort order. The meaning of the score value
-     depends on the leaderboard format type. For fixed-point, the score represents the raw value. For
-     time, the score represents elapsed time in milliseconds. For currency, the score represents a value
-     in micro units.
+     depends on the leaderboard format type. For fixed-point, the score represents the raw value.  For
+     time, the score represents elapsed time in milliseconds.  For currency, the score represents a
+     value in micro units.
        */
       public java.lang.Long getScore() {
         return score;
@@ -4799,8 +4169,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * The score you're submitting. The submitted score is ignored if it is worse than a
        * previously submitted score, where worse depends on the leaderboard sort order. The meaning
        * of the score value depends on the leaderboard format type. For fixed-point, the score
-       * represents the raw value. For time, the score represents elapsed time in milliseconds. For
-       * currency, the score represents a value in micro units.
+       * represents the raw value.  For time, the score represents elapsed time in milliseconds.
+       * For currency, the score represents a value in micro units.
        */
       public Submit setScore(java.lang.Long score) {
         this.score = score;
@@ -4824,13 +4194,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Additional information about the score you're submitting. Values must contain no more than
+       * Additional information about the score you're submitting.  Values must contain no more than
        * 64 URI-safe characters as defined by section 2.3 of RFC 3986.
        */
       @com.google.api.client.util.Key
       private java.lang.String scoreTag;
 
-      /** Additional information about the score you're submitting. Values must contain no more than 64 URI-
+      /** Additional information about the score you're submitting.  Values must contain no more than 64 URI-
      safe characters as defined by section 2.3 of RFC 3986.
        */
       public java.lang.String getScoreTag() {
@@ -4838,7 +4208,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Additional information about the score you're submitting. Values must contain no more than
+       * Additional information about the score you're submitting.  Values must contain no more than
        * 64 URI-safe characters as defined by section 2.3 of RFC 3986.
        */
       public Submit setScoreTag(java.lang.String scoreTag) {
@@ -4875,7 +4245,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class SubmitMultiple extends GamesRequest<com.google.api.services.games.model.PlayerScoreListResponse> {
 
-      private static final String REST_PATH = "leaderboards/scores";
+      private static final String REST_PATH = "games/v1/leaderboards/scores";
 
       /**
        * Submits multiple scores to leaderboards.
@@ -4896,8 +4266,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public SubmitMultiple set$Xgafv(java.lang.String $Xgafv) {
+        return (SubmitMultiple) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SubmitMultiple setAccessToken(java.lang.String accessToken) {
+        return (SubmitMultiple) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SubmitMultiple setAlt(java.lang.String alt) {
         return (SubmitMultiple) super.setAlt(alt);
+      }
+
+      @Override
+      public SubmitMultiple setCallback(java.lang.String callback) {
+        return (SubmitMultiple) super.setCallback(callback);
       }
 
       @Override
@@ -4926,8 +4311,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public SubmitMultiple setUserIp(java.lang.String userIp) {
-        return (SubmitMultiple) super.setUserIp(userIp);
+      public SubmitMultiple setUploadType(java.lang.String uploadType) {
+        return (SubmitMultiple) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SubmitMultiple setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SubmitMultiple) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The preferred language to use for strings returned by this method. */
@@ -4993,7 +4383,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends GamesRequest<com.google.api.services.games.model.Snapshot> {
 
-      private static final String REST_PATH = "snapshots/{snapshotId}";
+      private static final String REST_PATH = "games/v1/snapshots/{snapshotId}";
 
       /**
        * Retrieves the metadata for a given snapshot ID.
@@ -5024,8 +4414,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5054,8 +4459,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the snapshot. */
@@ -5104,7 +4514,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated
+    player's ID.
      * @return the request
      */
     public List list(java.lang.String playerId) throws java.io.IOException {
@@ -5115,7 +4526,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends GamesRequest<com.google.api.services.games.model.SnapshotListResponse> {
 
-      private static final String REST_PATH = "players/{playerId}/snapshots";
+      private static final String REST_PATH = "games/v1/players/{playerId}/snapshots";
 
       /**
        * Retrieves a list of snapshots created by your application for the player corresponding to the
@@ -5128,7 +4539,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated
+    player's ID.
        * @since 1.13
        */
       protected List(java.lang.String playerId) {
@@ -5147,8 +4559,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5177,21 +4604,30 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /**
+       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       */
       public List setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -5216,16 +4652,14 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of snapshot resources to return in the response, used for paging. For
        * any response, the actual number of snapshot resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of snapshot resources to return in the response, used for paging. For any
      response, the actual number of snapshot resources returned may be less than the specified
-     maxResults.
-
-     [minimum: 1] [maximum: 25]
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -5234,7 +4668,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * The maximum number of snapshot resources to return in the response, used for paging. For
        * any response, the actual number of snapshot resources returned may be less than the
-       * specified maxResults.
+       * specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -5266,578 +4700,60 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
-   * An accessor for creating requests from the TurnBasedMatches collection.
+   * An accessor for creating requests from the Stats collection.
    *
    * <p>The typical use is:</p>
    * <pre>
    *   {@code Games games = new Games(...);}
-   *   {@code Games.TurnBasedMatches.List request = games.turnBasedMatches().list(parameters ...)}
+   *   {@code Games.Stats.List request = games.stats().list(parameters ...)}
    * </pre>
    *
    * @return the resource collection
    */
-  public TurnBasedMatches turnBasedMatches() {
-    return new TurnBasedMatches();
+  public Stats stats() {
+    return new Stats();
   }
 
   /**
-   * The "turnBasedMatches" collection of methods.
+   * The "stats" collection of methods.
    */
-  public class TurnBasedMatches {
+  public class Stats {
 
     /**
-     * Cancel a turn-based match.
+     * Returns engagement and spend statistics in this application for the currently authenticated user.
      *
-     * Create a request for the method "turnBasedMatches.cancel".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @return the request
-     */
-    public Cancel cancel(java.lang.String matchId) throws java.io.IOException {
-      Cancel result = new Cancel(matchId);
-      initialize(result);
-      return result;
-    }
-
-    public class Cancel extends GamesRequest<Void> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/cancel";
-
-      /**
-       * Cancel a turn-based match.
-       *
-       * Create a request for the method "turnBasedMatches.cancel".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
-       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @since 1.13
-       */
-      protected Cancel(java.lang.String matchId) {
-        super(Games.this, "PUT", REST_PATH, null, Void.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Cancel setAlt(java.lang.String alt) {
-        return (Cancel) super.setAlt(alt);
-      }
-
-      @Override
-      public Cancel setFields(java.lang.String fields) {
-        return (Cancel) super.setFields(fields);
-      }
-
-      @Override
-      public Cancel setKey(java.lang.String key) {
-        return (Cancel) super.setKey(key);
-      }
-
-      @Override
-      public Cancel setOauthToken(java.lang.String oauthToken) {
-        return (Cancel) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Cancel) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Cancel setQuotaUser(java.lang.String quotaUser) {
-        return (Cancel) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Cancel setUserIp(java.lang.String userIp) {
-        return (Cancel) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Cancel setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      @Override
-      public Cancel set(String parameterName, Object value) {
-        return (Cancel) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Create a turn-based match.
-     *
-     * Create a request for the method "turnBasedMatches.create".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-     *
-     * @param content the {@link com.google.api.services.games.model.TurnBasedMatchCreateRequest}
-     * @return the request
-     */
-    public Create create(com.google.api.services.games.model.TurnBasedMatchCreateRequest content) throws java.io.IOException {
-      Create result = new Create(content);
-      initialize(result);
-      return result;
-    }
-
-    public class Create extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/create";
-
-      /**
-       * Create a turn-based match.
-       *
-       * Create a request for the method "turnBasedMatches.create".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.games.model.TurnBasedMatchCreateRequest}
-       * @since 1.13
-       */
-      protected Create(com.google.api.services.games.model.TurnBasedMatchCreateRequest content) {
-        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.TurnBasedMatch.class);
-      }
-
-      @Override
-      public Create setAlt(java.lang.String alt) {
-        return (Create) super.setAlt(alt);
-      }
-
-      @Override
-      public Create setFields(java.lang.String fields) {
-        return (Create) super.setFields(fields);
-      }
-
-      @Override
-      public Create setKey(java.lang.String key) {
-        return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Create) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Create setQuotaUser(java.lang.String quotaUser) {
-        return (Create) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Create setUserIp(java.lang.String userIp) {
-        return (Create) super.setUserIp(userIp);
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Create setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Create set(String parameterName, Object value) {
-        return (Create) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Decline an invitation to play a turn-based match.
-     *
-     * Create a request for the method "turnBasedMatches.decline".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Decline#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @return the request
-     */
-    public Decline decline(java.lang.String matchId) throws java.io.IOException {
-      Decline result = new Decline(matchId);
-      initialize(result);
-      return result;
-    }
-
-    public class Decline extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/decline";
-
-      /**
-       * Decline an invitation to play a turn-based match.
-       *
-       * Create a request for the method "turnBasedMatches.decline".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Decline#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * Decline#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @since 1.13
-       */
-      protected Decline(java.lang.String matchId) {
-        super(Games.this, "PUT", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Decline setAlt(java.lang.String alt) {
-        return (Decline) super.setAlt(alt);
-      }
-
-      @Override
-      public Decline setFields(java.lang.String fields) {
-        return (Decline) super.setFields(fields);
-      }
-
-      @Override
-      public Decline setKey(java.lang.String key) {
-        return (Decline) super.setKey(key);
-      }
-
-      @Override
-      public Decline setOauthToken(java.lang.String oauthToken) {
-        return (Decline) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Decline setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Decline) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Decline setQuotaUser(java.lang.String quotaUser) {
-        return (Decline) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Decline setUserIp(java.lang.String userIp) {
-        return (Decline) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Decline setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Decline setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Decline set(String parameterName, Object value) {
-        return (Decline) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Dismiss a turn-based match from the match list. The match will no longer show up in the list and
-     * will not generate notifications.
-     *
-     * Create a request for the method "turnBasedMatches.dismiss".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Dismiss#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @return the request
-     */
-    public Dismiss dismiss(java.lang.String matchId) throws java.io.IOException {
-      Dismiss result = new Dismiss(matchId);
-      initialize(result);
-      return result;
-    }
-
-    public class Dismiss extends GamesRequest<Void> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/dismiss";
-
-      /**
-       * Dismiss a turn-based match from the match list. The match will no longer show up in the list
-       * and will not generate notifications.
-       *
-       * Create a request for the method "turnBasedMatches.dismiss".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Dismiss#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * Dismiss#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @since 1.13
-       */
-      protected Dismiss(java.lang.String matchId) {
-        super(Games.this, "PUT", REST_PATH, null, Void.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Dismiss setAlt(java.lang.String alt) {
-        return (Dismiss) super.setAlt(alt);
-      }
-
-      @Override
-      public Dismiss setFields(java.lang.String fields) {
-        return (Dismiss) super.setFields(fields);
-      }
-
-      @Override
-      public Dismiss setKey(java.lang.String key) {
-        return (Dismiss) super.setKey(key);
-      }
-
-      @Override
-      public Dismiss setOauthToken(java.lang.String oauthToken) {
-        return (Dismiss) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Dismiss setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Dismiss) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Dismiss setQuotaUser(java.lang.String quotaUser) {
-        return (Dismiss) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Dismiss setUserIp(java.lang.String userIp) {
-        return (Dismiss) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Dismiss setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      @Override
-      public Dismiss set(String parameterName, Object value) {
-        return (Dismiss) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Finish a turn-based match. Each player should make this call once, after all results are in. Only
-     * the player whose turn it is may make the first call to Finish, and can pass in the final match
-     * state.
-     *
-     * Create a request for the method "turnBasedMatches.finish".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Finish#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @param content the {@link com.google.api.services.games.model.TurnBasedMatchResults}
-     * @return the request
-     */
-    public Finish finish(java.lang.String matchId, com.google.api.services.games.model.TurnBasedMatchResults content) throws java.io.IOException {
-      Finish result = new Finish(matchId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Finish extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/finish";
-
-      /**
-       * Finish a turn-based match. Each player should make this call once, after all results are in.
-       * Only the player whose turn it is may make the first call to Finish, and can pass in the final
-       * match state.
-       *
-       * Create a request for the method "turnBasedMatches.finish".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Finish#execute()} method to invoke the remote operation. <p> {@link
-       * Finish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @param content the {@link com.google.api.services.games.model.TurnBasedMatchResults}
-       * @since 1.13
-       */
-      protected Finish(java.lang.String matchId, com.google.api.services.games.model.TurnBasedMatchResults content) {
-        super(Games.this, "PUT", REST_PATH, content, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Finish setAlt(java.lang.String alt) {
-        return (Finish) super.setAlt(alt);
-      }
-
-      @Override
-      public Finish setFields(java.lang.String fields) {
-        return (Finish) super.setFields(fields);
-      }
-
-      @Override
-      public Finish setKey(java.lang.String key) {
-        return (Finish) super.setKey(key);
-      }
-
-      @Override
-      public Finish setOauthToken(java.lang.String oauthToken) {
-        return (Finish) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Finish setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Finish) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Finish setQuotaUser(java.lang.String quotaUser) {
-        return (Finish) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Finish setUserIp(java.lang.String userIp) {
-        return (Finish) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Finish setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Finish setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Finish set(String parameterName, Object value) {
-        return (Finish) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Get the data for a turn-based match.
-     *
-     * Create a request for the method "turnBasedMatches.get".
+     * Create a request for the method "stats.get".
      *
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param matchId The ID of the match.
      * @return the request
      */
-    public Get get(java.lang.String matchId) throws java.io.IOException {
-      Get result = new Get(matchId);
+    public Get get() throws java.io.IOException {
+      Get result = new Get();
       initialize(result);
       return result;
     }
 
-    public class Get extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
+    public class Get extends GamesRequest<com.google.api.services.games.model.StatsResponse> {
 
-      private static final String REST_PATH = "turnbasedmatches/{matchId}";
+      private static final String REST_PATH = "games/v1/stats";
 
       /**
-       * Get the data for a turn-based match.
+       * Returns engagement and spend statistics in this application for the currently authenticated
+       * user.
        *
-       * Create a request for the method "turnBasedMatches.get".
+       * Create a request for the method "stats.get".
        *
        * This request holds the parameters needed by the the games server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param matchId The ID of the match.
        * @since 1.13
        */
-      protected Get(java.lang.String matchId) {
-        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
+      protected Get() {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.StatsResponse.class);
       }
 
       @Override
@@ -5851,8 +4767,23 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5881,1091 +4812,18 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Get setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** Get match data along with metadata. */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean includeMatchData;
-
-      /** Get match data along with metadata.
-       */
-      public java.lang.Boolean getIncludeMatchData() {
-        return includeMatchData;
-      }
-
-      /** Get match data along with metadata. */
-      public Get setIncludeMatchData(java.lang.Boolean includeMatchData) {
-        this.includeMatchData = includeMatchData;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Get setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Join a turn-based match.
-     *
-     * Create a request for the method "turnBasedMatches.join".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Join#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @return the request
-     */
-    public Join join(java.lang.String matchId) throws java.io.IOException {
-      Join result = new Join(matchId);
-      initialize(result);
-      return result;
-    }
-
-    public class Join extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/join";
-
-      /**
-       * Join a turn-based match.
-       *
-       * Create a request for the method "turnBasedMatches.join".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Join#execute()} method to invoke the remote operation. <p> {@link
-       * Join#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @since 1.13
-       */
-      protected Join(java.lang.String matchId) {
-        super(Games.this, "PUT", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Join setAlt(java.lang.String alt) {
-        return (Join) super.setAlt(alt);
-      }
-
-      @Override
-      public Join setFields(java.lang.String fields) {
-        return (Join) super.setFields(fields);
-      }
-
-      @Override
-      public Join setKey(java.lang.String key) {
-        return (Join) super.setKey(key);
-      }
-
-      @Override
-      public Join setOauthToken(java.lang.String oauthToken) {
-        return (Join) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Join setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Join) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Join setQuotaUser(java.lang.String quotaUser) {
-        return (Join) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Join setUserIp(java.lang.String userIp) {
-        return (Join) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Join setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Join setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Join set(String parameterName, Object value) {
-        return (Join) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Leave a turn-based match when it is not the current player's turn, without canceling the match.
-     *
-     * Create a request for the method "turnBasedMatches.leave".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Leave#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @return the request
-     */
-    public Leave leave(java.lang.String matchId) throws java.io.IOException {
-      Leave result = new Leave(matchId);
-      initialize(result);
-      return result;
-    }
-
-    public class Leave extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/leave";
-
-      /**
-       * Leave a turn-based match when it is not the current player's turn, without canceling the match.
-       *
-       * Create a request for the method "turnBasedMatches.leave".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Leave#execute()} method to invoke the remote operation. <p> {@link
-       * Leave#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @since 1.13
-       */
-      protected Leave(java.lang.String matchId) {
-        super(Games.this, "PUT", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Leave setAlt(java.lang.String alt) {
-        return (Leave) super.setAlt(alt);
-      }
-
-      @Override
-      public Leave setFields(java.lang.String fields) {
-        return (Leave) super.setFields(fields);
-      }
-
-      @Override
-      public Leave setKey(java.lang.String key) {
-        return (Leave) super.setKey(key);
-      }
-
-      @Override
-      public Leave setOauthToken(java.lang.String oauthToken) {
-        return (Leave) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Leave setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Leave) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Leave setQuotaUser(java.lang.String quotaUser) {
-        return (Leave) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Leave setUserIp(java.lang.String userIp) {
-        return (Leave) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Leave setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Leave setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public Leave set(String parameterName, Object value) {
-        return (Leave) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Leave a turn-based match during the current player's turn, without canceling the match.
-     *
-     * Create a request for the method "turnBasedMatches.leaveTurn".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link LeaveTurn#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @param matchVersion The version of the match being updated.
-     * @return the request
-     */
-    public LeaveTurn leaveTurn(java.lang.String matchId, java.lang.Integer matchVersion) throws java.io.IOException {
-      LeaveTurn result = new LeaveTurn(matchId, matchVersion);
-      initialize(result);
-      return result;
-    }
-
-    public class LeaveTurn extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/leaveTurn";
-
-      /**
-       * Leave a turn-based match during the current player's turn, without canceling the match.
-       *
-       * Create a request for the method "turnBasedMatches.leaveTurn".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link LeaveTurn#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * LeaveTurn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @param matchVersion The version of the match being updated.
-       * @since 1.13
-       */
-      protected LeaveTurn(java.lang.String matchId, java.lang.Integer matchVersion) {
-        super(Games.this, "PUT", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-        this.matchVersion = com.google.api.client.util.Preconditions.checkNotNull(matchVersion, "Required parameter matchVersion must be specified.");
-      }
-
-      @Override
-      public LeaveTurn setAlt(java.lang.String alt) {
-        return (LeaveTurn) super.setAlt(alt);
-      }
-
-      @Override
-      public LeaveTurn setFields(java.lang.String fields) {
-        return (LeaveTurn) super.setFields(fields);
-      }
-
-      @Override
-      public LeaveTurn setKey(java.lang.String key) {
-        return (LeaveTurn) super.setKey(key);
-      }
-
-      @Override
-      public LeaveTurn setOauthToken(java.lang.String oauthToken) {
-        return (LeaveTurn) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public LeaveTurn setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (LeaveTurn) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public LeaveTurn setQuotaUser(java.lang.String quotaUser) {
-        return (LeaveTurn) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public LeaveTurn setUserIp(java.lang.String userIp) {
-        return (LeaveTurn) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public LeaveTurn setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The version of the match being updated. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer matchVersion;
-
-      /** The version of the match being updated.
-       */
-      public java.lang.Integer getMatchVersion() {
-        return matchVersion;
-      }
-
-      /** The version of the match being updated. */
-      public LeaveTurn setMatchVersion(java.lang.Integer matchVersion) {
-        this.matchVersion = matchVersion;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public LeaveTurn setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      /**
-       * The ID of another participant who should take their turn next. If not set, the match will
-       * wait for other player(s) to join via automatching; this is only valid if automatch criteria
-       * is set on the match with remaining slots for automatched players.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pendingParticipantId;
-
-      /** The ID of another participant who should take their turn next. If not set, the match will wait for
-     other player(s) to join via automatching; this is only valid if automatch criteria is set on the
-     match with remaining slots for automatched players.
-       */
-      public java.lang.String getPendingParticipantId() {
-        return pendingParticipantId;
-      }
-
-      /**
-       * The ID of another participant who should take their turn next. If not set, the match will
-       * wait for other player(s) to join via automatching; this is only valid if automatch criteria
-       * is set on the match with remaining slots for automatched players.
-       */
-      public LeaveTurn setPendingParticipantId(java.lang.String pendingParticipantId) {
-        this.pendingParticipantId = pendingParticipantId;
-        return this;
-      }
-
-      @Override
-      public LeaveTurn set(String parameterName, Object value) {
-        return (LeaveTurn) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Returns turn-based matches the player is or was involved in.
-     *
-     * Create a request for the method "turnBasedMatches.list".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @return the request
-     */
-    public List list() throws java.io.IOException {
-      List result = new List();
-      initialize(result);
-      return result;
-    }
-
-    public class List extends GamesRequest<com.google.api.services.games.model.TurnBasedMatchList> {
-
-      private static final String REST_PATH = "turnbasedmatches";
-
-      /**
-       * Returns turn-based matches the player is or was involved in.
-       *
-       * Create a request for the method "turnBasedMatches.list".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected List() {
-        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatchList.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
-      }
-
-      /**
-       * True if match data should be returned in the response. Note that not all data will
-       * necessarily be returned if include_match_data is true; the server may decide to only return
-       * data for some of the matches to limit download size for the client. The remainder of the
-       * data for these matches will be retrievable on request.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean includeMatchData;
-
-      /** True if match data should be returned in the response. Note that not all data will necessarily be
-     returned if include_match_data is true; the server may decide to only return data for some of the
-     matches to limit download size for the client. The remainder of the data for these matches will be
-     retrievable on request.
-       */
-      public java.lang.Boolean getIncludeMatchData() {
-        return includeMatchData;
-      }
-
-      /**
-       * True if match data should be returned in the response. Note that not all data will
-       * necessarily be returned if include_match_data is true; the server may decide to only return
-       * data for some of the matches to limit download size for the client. The remainder of the
-       * data for these matches will be retrievable on request.
-       */
-      public List setIncludeMatchData(java.lang.Boolean includeMatchData) {
-        this.includeMatchData = includeMatchData;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public List setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      /**
-       * The maximum number of completed or canceled matches to return in the response. If not set,
-       * all matches returned could be completed or canceled.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxCompletedMatches;
-
-      /** The maximum number of completed or canceled matches to return in the response. If not set, all
-     matches returned could be completed or canceled.
-
-     [minimum: 0] [maximum: 500]
-       */
-      public java.lang.Integer getMaxCompletedMatches() {
-        return maxCompletedMatches;
-      }
-
-      /**
-       * The maximum number of completed or canceled matches to return in the response. If not set,
-       * all matches returned could be completed or canceled.
-       */
-      public List setMaxCompletedMatches(java.lang.Integer maxCompletedMatches) {
-        this.maxCompletedMatches = maxCompletedMatches;
-        return this;
-      }
-
-      /**
-       * The maximum number of matches to return in the response, used for paging. For any response,
-       * the actual number of matches to return may be less than the specified maxResults.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** The maximum number of matches to return in the response, used for paging. For any response, the
-     actual number of matches to return may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 500]
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /**
-       * The maximum number of matches to return in the response, used for paging. For any response,
-       * the actual number of matches to return may be less than the specified maxResults.
-       */
-      public List setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-      }
-
-      /** The token returned by the previous request. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The token returned by the previous request.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The token returned by the previous request. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Create a rematch of a match that was previously completed, with the same participants. This can
-     * be called by only one player on a match still in their list; the player must have called Finish
-     * first. Returns the newly created match; it will be the caller's turn.
-     *
-     * Create a request for the method "turnBasedMatches.rematch".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Rematch#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @return the request
-     */
-    public Rematch rematch(java.lang.String matchId) throws java.io.IOException {
-      Rematch result = new Rematch(matchId);
-      initialize(result);
-      return result;
-    }
-
-    public class Rematch extends GamesRequest<com.google.api.services.games.model.TurnBasedMatchRematch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/rematch";
-
-      /**
-       * Create a rematch of a match that was previously completed, with the same participants. This can
-       * be called by only one player on a match still in their list; the player must have called Finish
-       * first. Returns the newly created match; it will be the caller's turn.
-       *
-       * Create a request for the method "turnBasedMatches.rematch".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Rematch#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * Rematch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @since 1.13
-       */
-      protected Rematch(java.lang.String matchId) {
-        super(Games.this, "POST", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatchRematch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public Rematch setAlt(java.lang.String alt) {
-        return (Rematch) super.setAlt(alt);
-      }
-
-      @Override
-      public Rematch setFields(java.lang.String fields) {
-        return (Rematch) super.setFields(fields);
-      }
-
-      @Override
-      public Rematch setKey(java.lang.String key) {
-        return (Rematch) super.setKey(key);
-      }
-
-      @Override
-      public Rematch setOauthToken(java.lang.String oauthToken) {
-        return (Rematch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Rematch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Rematch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Rematch setQuotaUser(java.lang.String quotaUser) {
-        return (Rematch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Rematch setUserIp(java.lang.String userIp) {
-        return (Rematch) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public Rematch setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Rematch setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      /**
-       * A randomly generated numeric ID for each request specified by the caller. This number is
-       * used at the server to ensure that the request is handled correctly across retries.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Long requestId;
-
-      /** A randomly generated numeric ID for each request specified by the caller. This number is used at
-     the server to ensure that the request is handled correctly across retries.
-       */
-      public java.lang.Long getRequestId() {
-        return requestId;
-      }
-
-      /**
-       * A randomly generated numeric ID for each request specified by the caller. This number is
-       * used at the server to ensure that the request is handled correctly across retries.
-       */
-      public Rematch setRequestId(java.lang.Long requestId) {
-        this.requestId = requestId;
-        return this;
-      }
-
-      @Override
-      public Rematch set(String parameterName, Object value) {
-        return (Rematch) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Returns turn-based matches the player is or was involved in that changed since the last sync
-     * call, with the least recent changes coming first. Matches that should be removed from the local
-     * cache will have a status of MATCH_DELETED.
-     *
-     * Create a request for the method "turnBasedMatches.sync".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
-     *
-     * @return the request
-     */
-    public Sync sync() throws java.io.IOException {
-      Sync result = new Sync();
-      initialize(result);
-      return result;
-    }
-
-    public class Sync extends GamesRequest<com.google.api.services.games.model.TurnBasedMatchSync> {
-
-      private static final String REST_PATH = "turnbasedmatches/sync";
-
-      /**
-       * Returns turn-based matches the player is or was involved in that changed since the last sync
-       * call, with the least recent changes coming first. Matches that should be removed from the local
-       * cache will have a status of MATCH_DELETED.
-       *
-       * Create a request for the method "turnBasedMatches.sync".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link Sync#execute()} method to invoke the remote operation. <p> {@link
-       * Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected Sync() {
-        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.TurnBasedMatchSync.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Sync setAlt(java.lang.String alt) {
-        return (Sync) super.setAlt(alt);
-      }
-
-      @Override
-      public Sync setFields(java.lang.String fields) {
-        return (Sync) super.setFields(fields);
-      }
-
-      @Override
-      public Sync setKey(java.lang.String key) {
-        return (Sync) super.setKey(key);
-      }
-
-      @Override
-      public Sync setOauthToken(java.lang.String oauthToken) {
-        return (Sync) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Sync setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Sync) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Sync setQuotaUser(java.lang.String quotaUser) {
-        return (Sync) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Sync setUserIp(java.lang.String userIp) {
-        return (Sync) super.setUserIp(userIp);
-      }
-
-      /**
-       * True if match data should be returned in the response. Note that not all data will
-       * necessarily be returned if include_match_data is true; the server may decide to only return
-       * data for some of the matches to limit download size for the client. The remainder of the
-       * data for these matches will be retrievable on request.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean includeMatchData;
-
-      /** True if match data should be returned in the response. Note that not all data will necessarily be
-     returned if include_match_data is true; the server may decide to only return data for some of the
-     matches to limit download size for the client. The remainder of the data for these matches will be
-     retrievable on request.
-       */
-      public java.lang.Boolean getIncludeMatchData() {
-        return includeMatchData;
-      }
-
-      /**
-       * True if match data should be returned in the response. Note that not all data will
-       * necessarily be returned if include_match_data is true; the server may decide to only return
-       * data for some of the matches to limit download size for the client. The remainder of the
-       * data for these matches will be retrievable on request.
-       */
-      public Sync setIncludeMatchData(java.lang.Boolean includeMatchData) {
-        this.includeMatchData = includeMatchData;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public Sync setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      /**
-       * The maximum number of completed or canceled matches to return in the response. If not set,
-       * all matches returned could be completed or canceled.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxCompletedMatches;
-
-      /** The maximum number of completed or canceled matches to return in the response. If not set, all
-     matches returned could be completed or canceled.
-
-     [minimum: 0] [maximum: 500]
-       */
-      public java.lang.Integer getMaxCompletedMatches() {
-        return maxCompletedMatches;
-      }
-
-      /**
-       * The maximum number of completed or canceled matches to return in the response. If not set,
-       * all matches returned could be completed or canceled.
-       */
-      public Sync setMaxCompletedMatches(java.lang.Integer maxCompletedMatches) {
-        this.maxCompletedMatches = maxCompletedMatches;
-        return this;
-      }
-
-      /**
-       * The maximum number of matches to return in the response, used for paging. For any response,
-       * the actual number of matches to return may be less than the specified maxResults.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** The maximum number of matches to return in the response, used for paging. For any response, the
-     actual number of matches to return may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 500]
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /**
-       * The maximum number of matches to return in the response, used for paging. For any response,
-       * the actual number of matches to return may be less than the specified maxResults.
-       */
-      public Sync setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-      }
-
-      /** The token returned by the previous request. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The token returned by the previous request.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The token returned by the previous request. */
-      public Sync setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      @Override
-      public Sync set(String parameterName, Object value) {
-        return (Sync) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Commit the results of a player turn.
-     *
-     * Create a request for the method "turnBasedMatches.takeTurn".
-     *
-     * This request holds the parameters needed by the games server.  After setting any optional
-     * parameters, call the {@link TakeTurn#execute()} method to invoke the remote operation.
-     *
-     * @param matchId The ID of the match.
-     * @param content the {@link com.google.api.services.games.model.TurnBasedMatchTurn}
-     * @return the request
-     */
-    public TakeTurn takeTurn(java.lang.String matchId, com.google.api.services.games.model.TurnBasedMatchTurn content) throws java.io.IOException {
-      TakeTurn result = new TakeTurn(matchId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class TakeTurn extends GamesRequest<com.google.api.services.games.model.TurnBasedMatch> {
-
-      private static final String REST_PATH = "turnbasedmatches/{matchId}/turn";
-
-      /**
-       * Commit the results of a player turn.
-       *
-       * Create a request for the method "turnBasedMatches.takeTurn".
-       *
-       * This request holds the parameters needed by the the games server.  After setting any optional
-       * parameters, call the {@link TakeTurn#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * TakeTurn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param matchId The ID of the match.
-       * @param content the {@link com.google.api.services.games.model.TurnBasedMatchTurn}
-       * @since 1.13
-       */
-      protected TakeTurn(java.lang.String matchId, com.google.api.services.games.model.TurnBasedMatchTurn content) {
-        super(Games.this, "PUT", REST_PATH, content, com.google.api.services.games.model.TurnBasedMatch.class);
-        this.matchId = com.google.api.client.util.Preconditions.checkNotNull(matchId, "Required parameter matchId must be specified.");
-      }
-
-      @Override
-      public TakeTurn setAlt(java.lang.String alt) {
-        return (TakeTurn) super.setAlt(alt);
-      }
-
-      @Override
-      public TakeTurn setFields(java.lang.String fields) {
-        return (TakeTurn) super.setFields(fields);
-      }
-
-      @Override
-      public TakeTurn setKey(java.lang.String key) {
-        return (TakeTurn) super.setKey(key);
-      }
-
-      @Override
-      public TakeTurn setOauthToken(java.lang.String oauthToken) {
-        return (TakeTurn) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public TakeTurn setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (TakeTurn) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public TakeTurn setQuotaUser(java.lang.String quotaUser) {
-        return (TakeTurn) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public TakeTurn setUserIp(java.lang.String userIp) {
-        return (TakeTurn) super.setUserIp(userIp);
-      }
-
-      /** The ID of the match. */
-      @com.google.api.client.util.Key
-      private java.lang.String matchId;
-
-      /** The ID of the match.
-       */
-      public java.lang.String getMatchId() {
-        return matchId;
-      }
-
-      /** The ID of the match. */
-      public TakeTurn setMatchId(java.lang.String matchId) {
-        this.matchId = matchId;
-        return this;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String language;
-
-      /** The preferred language to use for strings returned by this method.
-       */
-      public java.lang.String getLanguage() {
-        return language;
-      }
-
-      /** The preferred language to use for strings returned by this method. */
-      public TakeTurn setLanguage(java.lang.String language) {
-        this.language = language;
-        return this;
-      }
-
-      @Override
-      public TakeTurn set(String parameterName, Object value) {
-        return (TakeTurn) super.set(parameterName, value);
       }
     }
 

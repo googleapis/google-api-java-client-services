@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for the Leaderboard Entry resource.
+ * The Leaderboard Entry resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -46,7 +46,7 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardEntry.
+   * `games#leaderboardEntry`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   private java.lang.Long scoreRank;
 
   /**
-   * Additional information about the score. Values must contain no more than 64 URI-safe characters
-   * as defined by section 2.3 of RFC 3986.
+   * Additional information about the score.  Values must contain no more than 64 URI-safe
+   * characters as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +82,7 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   private java.lang.Long scoreValue;
 
   /**
-   * The time span of this high score. Possible values are:   - "ALL_TIME" - The score is an all-
-   * time high score.  - "WEEKLY" - The score is a weekly high score.  - "DAILY" - The score is a
-   * daily high score.
+   * The time span of this high score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +131,7 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardEntry.
+   * `games#leaderboardEntry`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -142,7 +140,7 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardEntry.
+   * `games#leaderboardEntry`.
    * @param kind kind or {@code null} for none
    */
   public LeaderboardEntry setKind(java.lang.String kind) {
@@ -185,8 +183,8 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Additional information about the score. Values must contain no more than 64 URI-safe characters
-   * as defined by section 2.3 of RFC 3986.
+   * Additional information about the score.  Values must contain no more than 64 URI-safe
+   * characters as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getScoreTag() {
@@ -194,8 +192,8 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Additional information about the score. Values must contain no more than 64 URI-safe characters
-   * as defined by section 2.3 of RFC 3986.
+   * Additional information about the score.  Values must contain no more than 64 URI-safe
+   * characters as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */
   public LeaderboardEntry setScoreTag(java.lang.String scoreTag) {
@@ -221,9 +219,7 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The time span of this high score. Possible values are:   - "ALL_TIME" - The score is an all-
-   * time high score.  - "WEEKLY" - The score is a weekly high score.  - "DAILY" - The score is a
-   * daily high score.
+   * The time span of this high score.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeSpan() {
@@ -231,9 +227,7 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The time span of this high score. Possible values are:   - "ALL_TIME" - The score is an all-
-   * time high score.  - "WEEKLY" - The score is a weekly high score.  - "DAILY" - The score is a
-   * daily high score.
+   * The time span of this high score.
    * @param timeSpan timeSpan or {@code null} for none
    */
   public LeaderboardEntry setTimeSpan(java.lang.String timeSpan) {

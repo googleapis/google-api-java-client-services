@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an achievement object.
+ * An achievement object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,8 +31,7 @@ package com.google.api.services.games.model;
 public final class PlayerAchievement extends com.google.api.client.json.GenericJson {
 
   /**
-   * The state of the achievement. Possible values are:   - "HIDDEN" - Achievement is hidden.  -
-   * "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The state of the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +69,7 @@ public final class PlayerAchievement extends com.google.api.client.json.GenericJ
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerAchievement.
+   * `games#playerAchievement`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +83,7 @@ public final class PlayerAchievement extends com.google.api.client.json.GenericJ
   private java.lang.Long lastUpdatedTimestamp;
 
   /**
-   * The state of the achievement. Possible values are:   - "HIDDEN" - Achievement is hidden.  -
-   * "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The state of the achievement.
    * @return value or {@code null} for none
    */
   public java.lang.String getAchievementState() {
@@ -93,8 +91,7 @@ public final class PlayerAchievement extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The state of the achievement. Possible values are:   - "HIDDEN" - Achievement is hidden.  -
-   * "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The state of the achievement.
    * @param achievementState achievementState or {@code null} for none
    */
   public PlayerAchievement setAchievementState(java.lang.String achievementState) {
@@ -176,7 +173,7 @@ public final class PlayerAchievement extends com.google.api.client.json.GenericJ
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerAchievement.
+   * `games#playerAchievement`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -185,7 +182,7 @@ public final class PlayerAchievement extends com.google.api.client.json.GenericJ
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerAchievement.
+   * `games#playerAchievement`.
    * @param kind kind or {@code null} for none
    */
   public PlayerAchievement setKind(java.lang.String kind) {

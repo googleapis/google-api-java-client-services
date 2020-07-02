@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an event update failure resource.
+ * An event update failure resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,9 +38,7 @@ public final class EventRecordFailure extends com.google.api.client.json.Generic
   private java.lang.String eventId;
 
   /**
-   * The cause for the update failure. Possible values are:   - "NOT_FOUND" - An attempt was made to
-   * set an event that was not defined.  - "INVALID_UPDATE_VALUE" - An attempt was made to increment
-   * an event by a non-positive value.
+   * The cause for the update failure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +46,7 @@ public final class EventRecordFailure extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventRecordFailure.
+   * `games#eventRecordFailure`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +70,7 @@ public final class EventRecordFailure extends com.google.api.client.json.Generic
   }
 
   /**
-   * The cause for the update failure. Possible values are:   - "NOT_FOUND" - An attempt was made to
-   * set an event that was not defined.  - "INVALID_UPDATE_VALUE" - An attempt was made to increment
-   * an event by a non-positive value.
+   * The cause for the update failure.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureCause() {
@@ -82,9 +78,7 @@ public final class EventRecordFailure extends com.google.api.client.json.Generic
   }
 
   /**
-   * The cause for the update failure. Possible values are:   - "NOT_FOUND" - An attempt was made to
-   * set an event that was not defined.  - "INVALID_UPDATE_VALUE" - An attempt was made to increment
-   * an event by a non-positive value.
+   * The cause for the update failure.
    * @param failureCause failureCause or {@code null} for none
    */
   public EventRecordFailure setFailureCause(java.lang.String failureCause) {
@@ -94,7 +88,7 @@ public final class EventRecordFailure extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventRecordFailure.
+   * `games#eventRecordFailure`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -103,7 +97,7 @@ public final class EventRecordFailure extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventRecordFailure.
+   * `games#eventRecordFailure`.
    * @param kind kind or {@code null} for none
    */
   public EventRecordFailure setKind(java.lang.String kind) {

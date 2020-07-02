@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an achievement reveal response
+ * An achievement reveal response
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,9 +31,8 @@ package com.google.api.services.games.model;
 public final class AchievementRevealResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current state of the achievement for which a reveal was attempted. This might be UNLOCKED
-   * if the achievement was already unlocked. Possible values are:   - "REVEALED" - Achievement is
-   * revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The current state of the achievement for which a reveal was attempted. This might be `UNLOCKED`
+   * if the achievement was already unlocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,16 +40,15 @@ public final class AchievementRevealResponse extends com.google.api.client.json.
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementRevealResponse.
+   * `games#achievementRevealResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The current state of the achievement for which a reveal was attempted. This might be UNLOCKED
-   * if the achievement was already unlocked. Possible values are:   - "REVEALED" - Achievement is
-   * revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The current state of the achievement for which a reveal was attempted. This might be `UNLOCKED`
+   * if the achievement was already unlocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentState() {
@@ -58,9 +56,8 @@ public final class AchievementRevealResponse extends com.google.api.client.json.
   }
 
   /**
-   * The current state of the achievement for which a reveal was attempted. This might be UNLOCKED
-   * if the achievement was already unlocked. Possible values are:   - "REVEALED" - Achievement is
-   * revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The current state of the achievement for which a reveal was attempted. This might be `UNLOCKED`
+   * if the achievement was already unlocked.
    * @param currentState currentState or {@code null} for none
    */
   public AchievementRevealResponse setCurrentState(java.lang.String currentState) {
@@ -70,7 +67,7 @@ public final class AchievementRevealResponse extends com.google.api.client.json.
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementRevealResponse.
+   * `games#achievementRevealResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,7 +76,7 @@ public final class AchievementRevealResponse extends com.google.api.client.json.
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementRevealResponse.
+   * `games#achievementRevealResponse`.
    * @param kind kind or {@code null} for none
    */
   public AchievementRevealResponse setKind(java.lang.String kind) {

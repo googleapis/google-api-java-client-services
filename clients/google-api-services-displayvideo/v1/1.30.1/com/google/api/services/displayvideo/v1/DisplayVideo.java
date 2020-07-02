@@ -2530,8 +2530,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an existing inventory source. Returns the updated inventory source if successful. Gets a
-       * channel for a partner or advertiser.
+       * Gets a channel for a partner or advertiser.
        *
        * Create a request for the method "channels.get".
        *
@@ -2559,8 +2558,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an existing inventory source. Returns the updated inventory source if successful. Gets
-         * a channel for a partner or advertiser.
+         * Gets a channel for a partner or advertiser.
          *
          * Create a request for the method "channels.get".
          *
@@ -16987,8 +16985,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an existing inventory source. Returns the updated inventory source if successful. Gets a
-       * channel for a partner or advertiser.
+       * Gets a channel for a partner or advertiser.
        *
        * Create a request for the method "channels.get".
        *
@@ -17016,8 +17013,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an existing inventory source. Returns the updated inventory source if successful. Gets
-         * a channel for a partner or advertiser.
+         * Gets a channel for a partner or advertiser.
          *
          * Create a request for the method "channels.get".
          *

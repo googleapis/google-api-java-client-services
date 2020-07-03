@@ -169,6 +169,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredNodeVersion;
 
   /**
+   * The desired release channel configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReleaseChannel desiredReleaseChannel;
+
+  /**
    * The desired configuration for exporting resource usage.
    * The value may be {@code null}.
    */
@@ -509,6 +516,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNodeVersion(java.lang.String desiredNodeVersion) {
     this.desiredNodeVersion = desiredNodeVersion;
+    return this;
+  }
+
+  /**
+   * The desired release channel configuration.
+   * @return value or {@code null} for none
+   */
+  public ReleaseChannel getDesiredReleaseChannel() {
+    return desiredReleaseChannel;
+  }
+
+  /**
+   * The desired release channel configuration.
+   * @param desiredReleaseChannel desiredReleaseChannel or {@code null} for none
+   */
+  public ClusterUpdate setDesiredReleaseChannel(ReleaseChannel desiredReleaseChannel) {
+    this.desiredReleaseChannel = desiredReleaseChannel;
     return this;
   }
 

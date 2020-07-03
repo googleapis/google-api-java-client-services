@@ -45,6 +45,17 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
+   * node pool. This should be of the form
+   * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
+   * more information about protecting resources with Cloud KMS Keys please see:
+   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootDiskKmsKey;
+
+  /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
    * 10GB.
    *
@@ -237,6 +248,31 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
+   * node pool. This should be of the form
+   * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
+   * more information about protecting resources with Cloud KMS Keys please see:
+   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootDiskKmsKey() {
+    return bootDiskKmsKey;
+  }
+
+  /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
+   * node pool. This should be of the form
+   * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
+   * more information about protecting resources with Cloud KMS Keys please see:
+   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * @param bootDiskKmsKey bootDiskKmsKey or {@code null} for none
+   */
+  public NodeConfig setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
+    this.bootDiskKmsKey = bootDiskKmsKey;
     return this;
   }
 

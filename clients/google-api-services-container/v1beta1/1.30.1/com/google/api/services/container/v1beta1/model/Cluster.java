@@ -192,11 +192,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes to create in this cluster. You must ensure that your Compute Engine
-   * resource quota is sufficient for this number of instances. You must also have available
-   * firewall and routes quota. For requests, this field should only be used in lieu of a
-   * "node_pool" object, since this configuration (along with the "node_config") will be used to
-   * create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the
-   * same time.
+   * [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of
+   * instances. You must also have available firewall and routes quota. For requests, this field
+   * should only be used in lieu of a "node_pool" object, since this configuration (along with the
+   * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
+   * use this and a node_pool at the same time.
    *
    * This field is deprecated, use node_pool.initial_node_count instead.
    * The value may be {@code null}.
@@ -893,11 +893,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes to create in this cluster. You must ensure that your Compute Engine
-   * resource quota is sufficient for this number of instances. You must also have available
-   * firewall and routes quota. For requests, this field should only be used in lieu of a
-   * "node_pool" object, since this configuration (along with the "node_config") will be used to
-   * create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the
-   * same time.
+   * [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of
+   * instances. You must also have available firewall and routes quota. For requests, this field
+   * should only be used in lieu of a "node_pool" object, since this configuration (along with the
+   * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
+   * use this and a node_pool at the same time.
    *
    * This field is deprecated, use node_pool.initial_node_count instead.
    * @return value or {@code null} for none
@@ -908,11 +908,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes to create in this cluster. You must ensure that your Compute Engine
-   * resource quota is sufficient for this number of instances. You must also have available
-   * firewall and routes quota. For requests, this field should only be used in lieu of a
-   * "node_pool" object, since this configuration (along with the "node_config") will be used to
-   * create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the
-   * same time.
+   * [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of
+   * instances. You must also have available firewall and routes quota. For requests, this field
+   * should only be used in lieu of a "node_pool" object, since this configuration (along with the
+   * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
+   * use this and a node_pool at the same time.
    *
    * This field is deprecated, use node_pool.initial_node_count instead.
    * @param initialNodeCount initialNodeCount or {@code null} for none

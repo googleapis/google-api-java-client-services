@@ -7191,6 +7191,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * reasons. If `Commit` returns `ABORTED`, the caller should re-attempt the transaction from the
            * beginning, re-using the same session.
            *
+           * On very rare occasions, `Commit` might return `UNKNOWN`. This can happen, for example, if the
+           * client job experiences a 1+ hour networking failure. At that point, Cloud Spanner has lost track
+           * of the transaction outcome and we recommend that you perform another read from the database to
+           * see the state of things as they are now.
+           *
            * Create a request for the method "sessions.commit".
            *
            * This request holds the parameters needed by the spanner server.  After setting any optional
@@ -7221,6 +7226,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
              * conflicts with concurrent transactions. However, it can also happen for a variety of other
              * reasons. If `Commit` returns `ABORTED`, the caller should re-attempt the transaction from the
              * beginning, re-using the same session.
+             *
+             * On very rare occasions, `Commit` might return `UNKNOWN`. This can happen, for example, if the
+             * client job experiences a 1+ hour networking failure. At that point, Cloud Spanner has lost
+             * track of the transaction outcome and we recommend that you perform another read from the
+             * database to see the state of things as they are now.
              *
              * Create a request for the method "sessions.commit".
              *

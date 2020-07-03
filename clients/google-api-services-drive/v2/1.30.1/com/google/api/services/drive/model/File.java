@@ -1833,6 +1833,15 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAddChildren;
 
     /**
+     * Whether the current user can add a folder from another drive (different shared drive or My
+     * Drive) to this folder. This is false when the item is not a folder. Only populated for items in
+     * shared drives.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canAddFolderFromAnotherDrive;
+
+    /**
      * Whether the current user can add a parent for the item without removing an existing parent in
      * the same request. Not populated for shared drive files.
      * The value may be {@code null}.
@@ -2083,6 +2092,27 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanAddChildren(java.lang.Boolean canAddChildren) {
       this.canAddChildren = canAddChildren;
+      return this;
+    }
+
+    /**
+     * Whether the current user can add a folder from another drive (different shared drive or My
+     * Drive) to this folder. This is false when the item is not a folder. Only populated for items in
+     * shared drives.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanAddFolderFromAnotherDrive() {
+      return canAddFolderFromAnotherDrive;
+    }
+
+    /**
+     * Whether the current user can add a folder from another drive (different shared drive or My
+     * Drive) to this folder. This is false when the item is not a folder. Only populated for items in
+     * shared drives.
+     * @param canAddFolderFromAnotherDrive canAddFolderFromAnotherDrive or {@code null} for none
+     */
+    public Capabilities setCanAddFolderFromAnotherDrive(java.lang.Boolean canAddFolderFromAnotherDrive) {
+      this.canAddFolderFromAnotherDrive = canAddFolderFromAnotherDrive;
       return this;
     }
 

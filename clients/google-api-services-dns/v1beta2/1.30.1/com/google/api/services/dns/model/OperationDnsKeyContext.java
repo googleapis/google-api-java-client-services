@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for OperationDnsKeyContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,18 +30,21 @@ package com.google.api.services.dns.model;
 public final class OperationDnsKeyContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * The post-operation DnsKey resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DnsKey newValue;
 
   /**
+   * The pre-operation DnsKey resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DnsKey oldValue;
 
   /**
+   * The post-operation DnsKey resource.
    * @return value or {@code null} for none
    */
   public DnsKey getNewValue() {
@@ -49,6 +52,7 @@ public final class OperationDnsKeyContext extends com.google.api.client.json.Gen
   }
 
   /**
+   * The post-operation DnsKey resource.
    * @param newValue newValue or {@code null} for none
    */
   public OperationDnsKeyContext setNewValue(DnsKey newValue) {
@@ -57,6 +61,7 @@ public final class OperationDnsKeyContext extends com.google.api.client.json.Gen
   }
 
   /**
+   * The pre-operation DnsKey resource.
    * @return value or {@code null} for none
    */
   public DnsKey getOldValue() {
@@ -64,6 +69,7 @@ public final class OperationDnsKeyContext extends com.google.api.client.json.Gen
   }
 
   /**
+   * The pre-operation DnsKey resource.
    * @param oldValue oldValue or {@code null} for none
    */
   public OperationDnsKeyContext setOldValue(DnsKey oldValue) {

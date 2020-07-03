@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for ManagedZoneServiceDirectoryConfigNamespace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,26 +30,31 @@ package com.google.api.services.dns.model;
 public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time that the namespace backing this zone was deleted, empty string if it still exists.
+   * This is in RFC3339 text format. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deletionTime;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZoneServiceDirectoryConfigNamespace".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * The fully qualified URL of the namespace associated with the zone. This should be formatted
+   * like https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespa
+   * ces/{namespace}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namespaceUrl;
 
   /**
+   * The time that the namespace backing this zone was deleted, empty string if it still exists.
+   * This is in RFC3339 text format. Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeletionTime() {
@@ -57,6 +62,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
+   * The time that the namespace backing this zone was deleted, empty string if it still exists.
+   * This is in RFC3339 text format. Output only.
    * @param deletionTime deletionTime or {@code null} for none
    */
   public ManagedZoneServiceDirectoryConfigNamespace setDeletionTime(java.lang.String deletionTime) {
@@ -65,8 +72,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZoneServiceDirectoryConfigNamespace".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -74,8 +79,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZoneServiceDirectoryConfigNamespace".
    * @param kind kind or {@code null} for none
    */
   public ManagedZoneServiceDirectoryConfigNamespace setKind(java.lang.String kind) {
@@ -84,6 +87,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
+   * The fully qualified URL of the namespace associated with the zone. This should be formatted
+   * like https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespa
+   * ces/{namespace}
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespaceUrl() {
@@ -91,6 +97,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
+   * The fully qualified URL of the namespace associated with the zone. This should be formatted
+   * like https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespa
+   * ces/{namespace}
    * @param namespaceUrl namespaceUrl or {@code null} for none
    */
   public ManagedZoneServiceDirectoryConfigNamespace setNamespaceUrl(java.lang.String namespaceUrl) {

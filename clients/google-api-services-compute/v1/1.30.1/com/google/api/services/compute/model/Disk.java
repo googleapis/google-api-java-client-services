@@ -219,6 +219,26 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeGb;
 
   /**
+   * The source disk used to create this disk. You can provide this as a partial or full URL to the
+   * resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
+   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceDisk;
+
+  /**
+   * [Output Only] The unique ID of the disk used to create this disk. This value identifies the
+   * exact disk that was used to create this persistent disk. For example, if you created the
+   * persistent disk from a disk that was later deleted and recreated under the same name, the
+   * source disk ID would identify the exact version of the disk that was used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceDiskId;
+
+  /**
    * The source image used to create this disk. If the source image is deleted, this field will not
    * be set.
    *
@@ -763,6 +783,52 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSizeGb(java.lang.Long sizeGb) {
     this.sizeGb = sizeGb;
+    return this;
+  }
+
+  /**
+   * The source disk used to create this disk. You can provide this as a partial or full URL to the
+   * resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
+   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceDisk() {
+    return sourceDisk;
+  }
+
+  /**
+   * The source disk used to create this disk. You can provide this as a partial or full URL to the
+   * resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
+   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * @param sourceDisk sourceDisk or {@code null} for none
+   */
+  public Disk setSourceDisk(java.lang.String sourceDisk) {
+    this.sourceDisk = sourceDisk;
+    return this;
+  }
+
+  /**
+   * [Output Only] The unique ID of the disk used to create this disk. This value identifies the
+   * exact disk that was used to create this persistent disk. For example, if you created the
+   * persistent disk from a disk that was later deleted and recreated under the same name, the
+   * source disk ID would identify the exact version of the disk that was used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceDiskId() {
+    return sourceDiskId;
+  }
+
+  /**
+   * [Output Only] The unique ID of the disk used to create this disk. This value identifies the
+   * exact disk that was used to create this persistent disk. For example, if you created the
+   * persistent disk from a disk that was later deleted and recreated under the same name, the
+   * source disk ID would identify the exact version of the disk that was used.
+   * @param sourceDiskId sourceDiskId or {@code null} for none
+   */
+  public Disk setSourceDiskId(java.lang.String sourceDiskId) {
+    this.sourceDiskId = sourceDiskId;
     return this;
   }
 

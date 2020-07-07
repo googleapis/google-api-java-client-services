@@ -112,7 +112,15 @@ public final class Contest extends com.google.api.client.json.GenericJson {
   private java.lang.String office;
 
   /**
-   * If this is a partisan election, the name of the party it is for.
+   * If this is a partisan election, the name of the party/parties it is for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> primaryParties;
+
+  /**
+   * [DEPRECATED] If this is a partisan election, the name of the party it is for. This field as
+   * deprecated in favor of the array "primaryParties", as contests may contain more than one party.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -411,7 +419,25 @@ public final class Contest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this is a partisan election, the name of the party it is for.
+   * If this is a partisan election, the name of the party/parties it is for.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPrimaryParties() {
+    return primaryParties;
+  }
+
+  /**
+   * If this is a partisan election, the name of the party/parties it is for.
+   * @param primaryParties primaryParties or {@code null} for none
+   */
+  public Contest setPrimaryParties(java.util.List<java.lang.String> primaryParties) {
+    this.primaryParties = primaryParties;
+    return this;
+  }
+
+  /**
+   * [DEPRECATED] If this is a partisan election, the name of the party it is for. This field as
+   * deprecated in favor of the array "primaryParties", as contests may contain more than one party.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryParty() {
@@ -419,7 +445,8 @@ public final class Contest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this is a partisan election, the name of the party it is for.
+   * [DEPRECATED] If this is a partisan election, the name of the party it is for. This field as
+   * deprecated in favor of the array "primaryParties", as contests may contain more than one party.
    * @param primaryParty primaryParty or {@code null} for none
    */
   public Contest setPrimaryParty(java.lang.String primaryParty) {

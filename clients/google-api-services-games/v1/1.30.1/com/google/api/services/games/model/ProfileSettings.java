@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for profile settings
+ * Profile settings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,7 +31,6 @@ package com.google.api.services.games.model;
 public final class ProfileSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the player's friends list is visible to the game.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,20 +38,20 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#profileSettings.
+   * `games#profileSettings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * Whether the player's profile is visible to the currently signed in player.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean profileVisible;
 
   /**
-   * Whether the player's friends list is visible to the game.
    * @return value or {@code null} for none
    */
   public java.lang.String getFriendsListVisibility() {
@@ -60,7 +59,6 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether the player's friends list is visible to the game.
    * @param friendsListVisibility friendsListVisibility or {@code null} for none
    */
   public ProfileSettings setFriendsListVisibility(java.lang.String friendsListVisibility) {
@@ -70,7 +68,7 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#profileSettings.
+   * `games#profileSettings`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,7 +77,7 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#profileSettings.
+   * `games#profileSettings`.
    * @param kind kind or {@code null} for none
    */
   public ProfileSettings setKind(java.lang.String kind) {
@@ -88,6 +86,7 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Whether the player's profile is visible to the currently signed in player.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProfileVisible() {
@@ -95,6 +94,7 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Whether the player's profile is visible to the currently signed in player.
    * @param profileVisible profileVisible or {@code null} for none
    */
   public ProfileSettings setProfileVisible(java.lang.Boolean profileVisible) {

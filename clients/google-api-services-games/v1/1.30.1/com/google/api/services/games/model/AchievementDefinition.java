@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an achievement definition object.
+ * An achievement definition object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,8 +31,7 @@ package com.google.api.services.games.model;
 public final class AchievementDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the achievement. Possible values are:   - "STANDARD" - Achievement is either locked
-   * or unlocked.  - "INCREMENTAL" - Achievement is incremental.
+   * The type of the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +66,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
   private java.lang.String id;
 
   /**
-   * The initial state of the achievement. Possible values are:   - "HIDDEN" - Achievement is
-   * hidden.  - "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The initial state of the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +90,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementDefinition.
+   * `games#achievementDefinition`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +125,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
   private java.lang.String unlockedIconUrl;
 
   /**
-   * The type of the achievement. Possible values are:   - "STANDARD" - Achievement is either locked
-   * or unlocked.  - "INCREMENTAL" - Achievement is incremental.
+   * The type of the achievement.
    * @return value or {@code null} for none
    */
   public java.lang.String getAchievementType() {
@@ -136,8 +133,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
   }
 
   /**
-   * The type of the achievement. Possible values are:   - "STANDARD" - Achievement is either locked
-   * or unlocked.  - "INCREMENTAL" - Achievement is incremental.
+   * The type of the achievement.
    * @param achievementType achievementType or {@code null} for none
    */
   public AchievementDefinition setAchievementType(java.lang.String achievementType) {
@@ -214,8 +210,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
   }
 
   /**
-   * The initial state of the achievement. Possible values are:   - "HIDDEN" - Achievement is
-   * hidden.  - "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The initial state of the achievement.
    * @return value or {@code null} for none
    */
   public java.lang.String getInitialState() {
@@ -223,8 +218,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
   }
 
   /**
-   * The initial state of the achievement. Possible values are:   - "HIDDEN" - Achievement is
-   * hidden.  - "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The initial state of the achievement.
    * @param initialState initialState or {@code null} for none
    */
   public AchievementDefinition setInitialState(java.lang.String initialState) {
@@ -272,7 +266,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementDefinition.
+   * `games#achievementDefinition`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -281,7 +275,7 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementDefinition.
+   * `games#achievementDefinition`.
    * @param kind kind or {@code null} for none
    */
   public AchievementDefinition setKind(java.lang.String kind) {

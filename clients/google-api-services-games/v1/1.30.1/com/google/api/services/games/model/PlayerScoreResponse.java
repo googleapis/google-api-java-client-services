@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for a list of leaderboard entry resources.
+ * A list of leaderboard entry resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,8 +32,6 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
 
   /**
    * The time spans where the submitted score is better than the existing score for that time span.
-   * Possible values are:   - "ALL_TIME" - The score is an all-time score.  - "WEEKLY" - The score
-   * is a weekly score.  - "DAILY" - The score is a daily score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +46,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerScoreResponse.
+   * `games#playerScoreResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +60,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   private java.lang.String leaderboardId;
 
   /**
-   * Additional information about this score. Values will contain no more than 64 URI-safe
+   * Additional information about this score.  Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
@@ -70,9 +68,9 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   private java.lang.String scoreTag;
 
   /**
-   * The scores in time spans that have not been beaten. As an example, the submitted score may be
-   * better than the player's DAILY score, but not better than the player's scores for the WEEKLY or
-   * ALL_TIME time spans.
+   * The scores in time spans that have not been beaten.  As an example, the submitted score may be
+   * better than the player's `DAILY` score, but not better than the player's scores for the
+   * `WEEKLY` or `ALL_TIME` time spans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +84,6 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
 
   /**
    * The time spans where the submitted score is better than the existing score for that time span.
-   * Possible values are:   - "ALL_TIME" - The score is an all-time score.  - "WEEKLY" - The score
-   * is a weekly score.  - "DAILY" - The score is a daily score.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBeatenScoreTimeSpans() {
@@ -96,8 +92,6 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
 
   /**
    * The time spans where the submitted score is better than the existing score for that time span.
-   * Possible values are:   - "ALL_TIME" - The score is an all-time score.  - "WEEKLY" - The score
-   * is a weekly score.  - "DAILY" - The score is a daily score.
    * @param beatenScoreTimeSpans beatenScoreTimeSpans or {@code null} for none
    */
   public PlayerScoreResponse setBeatenScoreTimeSpans(java.util.List<java.lang.String> beatenScoreTimeSpans) {
@@ -124,7 +118,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerScoreResponse.
+   * `games#playerScoreResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -133,7 +127,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#playerScoreResponse.
+   * `games#playerScoreResponse`.
    * @param kind kind or {@code null} for none
    */
   public PlayerScoreResponse setKind(java.lang.String kind) {
@@ -159,7 +153,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Additional information about this score. Values will contain no more than 64 URI-safe
+   * Additional information about this score.  Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
@@ -168,7 +162,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Additional information about this score. Values will contain no more than 64 URI-safe
+   * Additional information about this score.  Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */
@@ -178,9 +172,9 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The scores in time spans that have not been beaten. As an example, the submitted score may be
-   * better than the player's DAILY score, but not better than the player's scores for the WEEKLY or
-   * ALL_TIME time spans.
+   * The scores in time spans that have not been beaten.  As an example, the submitted score may be
+   * better than the player's `DAILY` score, but not better than the player's scores for the
+   * `WEEKLY` or `ALL_TIME` time spans.
    * @return value or {@code null} for none
    */
   public java.util.List<PlayerScore> getUnbeatenScores() {
@@ -188,9 +182,9 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The scores in time spans that have not been beaten. As an example, the submitted score may be
-   * better than the player's DAILY score, but not better than the player's scores for the WEEKLY or
-   * ALL_TIME time spans.
+   * The scores in time spans that have not been beaten.  As an example, the submitted score may be
+   * better than the player's `DAILY` score, but not better than the player's scores for the
+   * `WEEKLY` or `ALL_TIME` time spans.
    * @param unbeatenScores unbeatenScores or {@code null} for none
    */
   public PlayerScoreResponse setUnbeatenScores(java.util.List<PlayerScore> unbeatenScores) {

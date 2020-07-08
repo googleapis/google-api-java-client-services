@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for an event period update resource.
+ * An event period update resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,7 +39,7 @@ public final class EventRecordRequest extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventRecordRequest.
+   * `games#eventRecordRequest`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class EventRecordRequest extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventRecordRequest.
+   * `games#eventRecordRequest`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -93,7 +93,7 @@ public final class EventRecordRequest extends com.google.api.client.json.Generic
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventRecordRequest.
+   * `games#eventRecordRequest`.
    * @param kind kind or {@code null} for none
    */
   public EventRecordRequest setKind(java.lang.String kind) {

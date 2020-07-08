@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for the Application resource.
+ * The Application resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -66,8 +66,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * A list of features that have been enabled for the application. Possible values are:   -
-   * "SNAPSHOTS" - Snapshots has been enabled
+   * A list of features that have been enabled for the application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +88,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#application.
+   * `games#application`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,8 +209,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of features that have been enabled for the application. Possible values are:   -
-   * "SNAPSHOTS" - Snapshots has been enabled
+   * A list of features that have been enabled for the application.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnabledFeatures() {
@@ -219,8 +217,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of features that have been enabled for the application. Possible values are:   -
-   * "SNAPSHOTS" - Snapshots has been enabled
+   * A list of features that have been enabled for the application.
    * @param enabledFeatures enabledFeatures or {@code null} for none
    */
   public Application setEnabledFeatures(java.util.List<java.lang.String> enabledFeatures) {
@@ -264,7 +261,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#application.
+   * `games#application`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -273,7 +270,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#application.
+   * `games#application`.
    * @param kind kind or {@code null} for none
    */
   public Application setKind(java.lang.String kind) {

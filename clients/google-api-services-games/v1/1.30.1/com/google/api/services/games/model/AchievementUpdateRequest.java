@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for a request to update an achievement.
+ * A request to update an achievement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,7 +38,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   private java.lang.String achievementId;
 
   /**
-   * The payload if an update of type INCREMENT was requested for the achievement.
+   * The payload if an update of type `INCREMENT` was requested for the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,23 +46,21 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementUpdateRequest.
+   * `games#achievementUpdateRequest`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The payload if an update of type SET_STEPS_AT_LEAST was requested for the achievement.
+   * The payload if an update of type `SET_STEPS_AT_LEAST` was requested for the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GamesAchievementSetStepsAtLeast setStepsAtLeastPayload;
 
   /**
-   * The type of update being applied. Possible values are:   - "REVEAL" - Achievement is revealed.
-   * - "UNLOCK" - Achievement is unlocked.  - "INCREMENT" - Achievement is incremented.  -
-   * "SET_STEPS_AT_LEAST" - Achievement progress is set to at least the passed value.
+   * The type of update being applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +84,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The payload if an update of type INCREMENT was requested for the achievement.
+   * The payload if an update of type `INCREMENT` was requested for the achievement.
    * @return value or {@code null} for none
    */
   public GamesAchievementIncrement getIncrementPayload() {
@@ -94,7 +92,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The payload if an update of type INCREMENT was requested for the achievement.
+   * The payload if an update of type `INCREMENT` was requested for the achievement.
    * @param incrementPayload incrementPayload or {@code null} for none
    */
   public AchievementUpdateRequest setIncrementPayload(GamesAchievementIncrement incrementPayload) {
@@ -104,7 +102,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementUpdateRequest.
+   * `games#achievementUpdateRequest`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -113,7 +111,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#achievementUpdateRequest.
+   * `games#achievementUpdateRequest`.
    * @param kind kind or {@code null} for none
    */
   public AchievementUpdateRequest setKind(java.lang.String kind) {
@@ -122,7 +120,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The payload if an update of type SET_STEPS_AT_LEAST was requested for the achievement.
+   * The payload if an update of type `SET_STEPS_AT_LEAST` was requested for the achievement.
    * @return value or {@code null} for none
    */
   public GamesAchievementSetStepsAtLeast getSetStepsAtLeastPayload() {
@@ -130,7 +128,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The payload if an update of type SET_STEPS_AT_LEAST was requested for the achievement.
+   * The payload if an update of type `SET_STEPS_AT_LEAST` was requested for the achievement.
    * @param setStepsAtLeastPayload setStepsAtLeastPayload or {@code null} for none
    */
   public AchievementUpdateRequest setSetStepsAtLeastPayload(GamesAchievementSetStepsAtLeast setStepsAtLeastPayload) {
@@ -139,9 +137,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The type of update being applied. Possible values are:   - "REVEAL" - Achievement is revealed.
-   * - "UNLOCK" - Achievement is unlocked.  - "INCREMENT" - Achievement is incremented.  -
-   * "SET_STEPS_AT_LEAST" - Achievement progress is set to at least the passed value.
+   * The type of update being applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateType() {
@@ -149,9 +145,7 @@ public final class AchievementUpdateRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The type of update being applied. Possible values are:   - "REVEAL" - Achievement is revealed.
-   * - "UNLOCK" - Achievement is unlocked.  - "INCREMENT" - Achievement is incremented.  -
-   * "SET_STEPS_AT_LEAST" - Achievement progress is set to at least the passed value.
+   * The type of update being applied.
    * @param updateType updateType or {@code null} for none
    */
   public AchievementUpdateRequest setUpdateType(java.lang.String updateType) {

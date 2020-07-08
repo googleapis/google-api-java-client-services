@@ -17,11 +17,11 @@
 package com.google.api.services.games.model;
 
 /**
- * This is a JSON template for a batch update failure resource.
+ * A batch update failure resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Game Services API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,13 +31,7 @@ package com.google.api.services.games.model;
 public final class EventBatchRecordFailure extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cause for the update failure. Possible values are:   - "TOO_LARGE": A batch request was
-   * issued with more events than are allowed in a single batch.  - "TIME_PERIOD_EXPIRED": A batch
-   * was sent with data too far in the past to record.  - "TIME_PERIOD_SHORT": A batch was sent with
-   * a time range that was too short.  - "TIME_PERIOD_LONG": A batch was sent with a time range that
-   * was too long.  - "ALREADY_UPDATED": An attempt was made to record a batch of data which was
-   * already seen.  - "RECORD_RATE_HIGH": An attempt was made to record data faster than the server
-   * will apply updates.
+   * The cause for the update failure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +39,7 @@ public final class EventBatchRecordFailure extends com.google.api.client.json.Ge
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventBatchRecordFailure.
+   * `games#eventBatchRecordFailure`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,13 +53,7 @@ public final class EventBatchRecordFailure extends com.google.api.client.json.Ge
   private EventPeriodRange range;
 
   /**
-   * The cause for the update failure. Possible values are:   - "TOO_LARGE": A batch request was
-   * issued with more events than are allowed in a single batch.  - "TIME_PERIOD_EXPIRED": A batch
-   * was sent with data too far in the past to record.  - "TIME_PERIOD_SHORT": A batch was sent with
-   * a time range that was too short.  - "TIME_PERIOD_LONG": A batch was sent with a time range that
-   * was too long.  - "ALREADY_UPDATED": An attempt was made to record a batch of data which was
-   * already seen.  - "RECORD_RATE_HIGH": An attempt was made to record data faster than the server
-   * will apply updates.
+   * The cause for the update failure.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureCause() {
@@ -73,13 +61,7 @@ public final class EventBatchRecordFailure extends com.google.api.client.json.Ge
   }
 
   /**
-   * The cause for the update failure. Possible values are:   - "TOO_LARGE": A batch request was
-   * issued with more events than are allowed in a single batch.  - "TIME_PERIOD_EXPIRED": A batch
-   * was sent with data too far in the past to record.  - "TIME_PERIOD_SHORT": A batch was sent with
-   * a time range that was too short.  - "TIME_PERIOD_LONG": A batch was sent with a time range that
-   * was too long.  - "ALREADY_UPDATED": An attempt was made to record a batch of data which was
-   * already seen.  - "RECORD_RATE_HIGH": An attempt was made to record data faster than the server
-   * will apply updates.
+   * The cause for the update failure.
    * @param failureCause failureCause or {@code null} for none
    */
   public EventBatchRecordFailure setFailureCause(java.lang.String failureCause) {
@@ -89,7 +71,7 @@ public final class EventBatchRecordFailure extends com.google.api.client.json.Ge
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventBatchRecordFailure.
+   * `games#eventBatchRecordFailure`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -98,7 +80,7 @@ public final class EventBatchRecordFailure extends com.google.api.client.json.Ge
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#eventBatchRecordFailure.
+   * `games#eventBatchRecordFailure`.
    * @param kind kind or {@code null} for none
    */
   public EventBatchRecordFailure setKind(java.lang.String kind) {

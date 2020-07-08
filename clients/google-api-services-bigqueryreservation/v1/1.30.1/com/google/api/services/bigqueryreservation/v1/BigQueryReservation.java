@@ -687,6 +687,253 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
        * (project->folder->organization) happens in this API. 3. Parent here is `projects/locations`,
        * instead of    `projects/locationsreservations`.
        *
+       * Create a request for the method "locations.searchAllAssignments".
+       *
+       * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+       * optional parameters, call the {@link SearchAllAssignments#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The resource name with location (project name could be the wildcard '-'),
+      e.g.:
+       *        `projects/-/locations/US`.
+       * @return the request
+       */
+      public SearchAllAssignments searchAllAssignments(java.lang.String parent) throws java.io.IOException {
+        SearchAllAssignments result = new SearchAllAssignments(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchAllAssignments extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.SearchAllAssignmentsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:searchAllAssignments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Looks up assignments for a specified resource for a particular region. If the request is about
+         * a project:
+         *
+         * 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments
+         * created on the closest ancestor will be    returned. 3. Assignments for different JobTypes will
+         * all be returned.
+         *
+         * The same logic applies if the request is about a folder.
+         *
+         * If the request is about an organization, then assignments created on the organization will be
+         * returned (organization doesn't have ancestors).
+         *
+         * Comparing to ListAssignments, there are some behavior differences:
+         *
+         * 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup
+         * (project->folder->organization) happens in this API. 3. Parent here is `projects/locations`,
+         * instead of    `projects/locationsreservations`.
+         *
+         * Create a request for the method "locations.searchAllAssignments".
+         *
+         * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+         * any optional parameters, call the {@link SearchAllAssignments#execute()} method to invoke the
+         * remote operation. <p> {@link SearchAllAssignments#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name with location (project name could be the wildcard '-'),
+      e.g.:
+       *        `projects/-/locations/US`.
+         * @since 1.13
+         */
+        protected SearchAllAssignments(java.lang.String parent) {
+          super(BigQueryReservation.this, "GET", REST_PATH, null, com.google.api.services.bigqueryreservation.v1.model.SearchAllAssignmentsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public SearchAllAssignments set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchAllAssignments) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchAllAssignments setAccessToken(java.lang.String accessToken) {
+          return (SearchAllAssignments) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchAllAssignments setAlt(java.lang.String alt) {
+          return (SearchAllAssignments) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchAllAssignments setCallback(java.lang.String callback) {
+          return (SearchAllAssignments) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchAllAssignments setFields(java.lang.String fields) {
+          return (SearchAllAssignments) super.setFields(fields);
+        }
+
+        @Override
+        public SearchAllAssignments setKey(java.lang.String key) {
+          return (SearchAllAssignments) super.setKey(key);
+        }
+
+        @Override
+        public SearchAllAssignments setOauthToken(java.lang.String oauthToken) {
+          return (SearchAllAssignments) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchAllAssignments setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchAllAssignments) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchAllAssignments setQuotaUser(java.lang.String quotaUser) {
+          return (SearchAllAssignments) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchAllAssignments setUploadType(java.lang.String uploadType) {
+          return (SearchAllAssignments) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchAllAssignments setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchAllAssignments) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name with location (project name could be the wildcard '-'), e.g.:
+         * `projects/-/locations/US`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name with location (project name could be the wildcard '-'), e.g.:
+       `projects/-/locations/US`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name with location (project name could be the wildcard '-'), e.g.:
+         * `projects/-/locations/US`.
+         */
+        public SearchAllAssignments setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** The maximum number of items to return per page. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of items to return per page.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of items to return per page. */
+        public SearchAllAssignments setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token value returned from a previous List request, if any. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token value returned from a previous List request, if any.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token value returned from a previous List request, if any. */
+        public SearchAllAssignments setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Please specify resource name as assignee in the query.
+         *
+         * Examples:
+         *
+         * * `assignee=projects/myproject` * `assignee=folders/123` * `assignee=organizations/456`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String query;
+
+        /** Please specify resource name as assignee in the query.
+
+       Examples:
+
+       * `assignee=projects/myproject` * `assignee=folders/123` * `assignee=organizations/456`
+         */
+        public java.lang.String getQuery() {
+          return query;
+        }
+
+        /**
+         * Please specify resource name as assignee in the query.
+         *
+         * Examples:
+         *
+         * * `assignee=projects/myproject` * `assignee=folders/123` * `assignee=organizations/456`
+         */
+        public SearchAllAssignments setQuery(java.lang.String query) {
+          this.query = query;
+          return this;
+        }
+
+        @Override
+        public SearchAllAssignments set(String parameterName, Object value) {
+          return (SearchAllAssignments) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Looks up assignments for a specified resource for a particular region. If the request is about a
+       * project:
+       *
+       * 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments
+       * created on the closest ancestor will be    returned. 3. Assignments for different JobTypes will
+       * all be returned.
+       *
+       * The same logic applies if the request is about a folder.
+       *
+       * If the request is about an organization, then assignments created on the organization will be
+       * returned (organization doesn't have ancestors).
+       *
+       * Comparing to ListAssignments, there are some behavior differences:
+       *
+       * 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup
+       * (project->folder->organization) happens in this API. 3. Parent here is `projects/locations`,
+       * instead of    `projects/locationsreservations`.
+       *
        * **Note** "-" cannot be used for projects nor locations.
        *
        * Create a request for the method "locations.searchAssignments".

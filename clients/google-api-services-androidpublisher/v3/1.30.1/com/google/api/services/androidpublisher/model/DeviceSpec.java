@@ -17,11 +17,11 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for DeviceSpec.
+ * The device spec used to generate a system APK.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,24 +31,29 @@ package com.google.api.services.androidpublisher.model;
 public final class DeviceSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Screen dpi.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long screenDensity;
 
   /**
+   * Supported ABI architectures in the order of preference. The values should be the string as
+   * reported by the platform, e.g. "armeabi-v7a", "x86_64".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedAbis;
 
   /**
+   * All installed locales represented as BCP-47 strings, e.g. "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedLocales;
 
   /**
+   * Screen dpi.
    * @return value or {@code null} for none
    */
   public java.lang.Long getScreenDensity() {
@@ -56,6 +61,7 @@ public final class DeviceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Screen dpi.
    * @param screenDensity screenDensity or {@code null} for none
    */
   public DeviceSpec setScreenDensity(java.lang.Long screenDensity) {
@@ -64,6 +70,8 @@ public final class DeviceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Supported ABI architectures in the order of preference. The values should be the string as
+   * reported by the platform, e.g. "armeabi-v7a", "x86_64".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedAbis() {
@@ -71,6 +79,8 @@ public final class DeviceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Supported ABI architectures in the order of preference. The values should be the string as
+   * reported by the platform, e.g. "armeabi-v7a", "x86_64".
    * @param supportedAbis supportedAbis or {@code null} for none
    */
   public DeviceSpec setSupportedAbis(java.util.List<java.lang.String> supportedAbis) {
@@ -79,6 +89,7 @@ public final class DeviceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * All installed locales represented as BCP-47 strings, e.g. "en-US".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedLocales() {
@@ -86,6 +97,7 @@ public final class DeviceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * All installed locales represented as BCP-47 strings, e.g. "en-US".
    * @param supportedLocales supportedLocales or {@code null} for none
    */
   public DeviceSpec setSupportedLocales(java.util.List<java.lang.String> supportedLocales) {

@@ -71,7 +71,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/androidpublisher";
+  public static final String DEFAULT_BATCH_PATH = "batch/androidpublisher/v3";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -9990,6 +9990,684 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
 
+  }
+
+  /**
+   * An accessor for creating requests from the Systemapks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Systemapks.List request = androidpublisher.systemapks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Systemapks systemapks() {
+    return new Systemapks();
+  }
+
+  /**
+   * The "systemapks" collection of methods.
+   */
+  public class Systemapks {
+
+    /**
+     * An accessor for creating requests from the Variants collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Variants.List request = androidpublisher.variants().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Variants variants() {
+      return new Variants();
+    }
+
+    /**
+     * The "variants" collection of methods.
+     */
+    public class Variants {
+
+      /**
+       * Creates an APK which is suitable for inclusion in a system image from an already uploaded Android
+       * App Bundle.
+       *
+       * Create a request for the method "variants.create".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier of the Android app.
+       * @param versionCode The version code of the App Bundle.
+       * @param content the {@link com.google.api.services.androidpublisher.model.Variant}
+       * @return the request
+       */
+      public Create create(java.lang.String packageName, java.lang.Long versionCode, com.google.api.services.androidpublisher.model.Variant content) throws java.io.IOException {
+        Create result = new Create(packageName, versionCode, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Variant> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants";
+
+        /**
+         * Creates an APK which is suitable for inclusion in a system image from an already uploaded
+         * Android App Bundle.
+         *
+         * Create a request for the method "variants.create".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier of the Android app.
+         * @param versionCode The version code of the App Bundle.
+         * @param content the {@link com.google.api.services.androidpublisher.model.Variant}
+         * @since 1.13
+         */
+        protected Create(java.lang.String packageName, java.lang.Long versionCode, com.google.api.services.androidpublisher.model.Variant content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Variant.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Unique identifier of the Android app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier of the Android app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier of the Android app. */
+        public Create setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public Create setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Downloads a previously created system APK which is suitable for inclusion in a system image.
+       *
+       * Create a request for the method "variants.download".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier of the Android app.
+       * @param versionCode The version code of the App Bundle.
+       * @param variantId The ID of a previously created system APK variant.
+       * @return the request
+       */
+      public Download download(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) throws java.io.IOException {
+        Download result = new Download(packageName, versionCode, variantId);
+        initialize(result);
+        return result;
+      }
+
+      public class Download extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download";
+
+        /**
+         * Downloads a previously created system APK which is suitable for inclusion in a system image.
+         *
+         * Create a request for the method "variants.download".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier of the Android app.
+         * @param versionCode The version code of the App Bundle.
+         * @param variantId The ID of a previously created system APK variant.
+         * @since 1.13
+         */
+        protected Download(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+          this.variantId = com.google.api.client.util.Preconditions.checkNotNull(variantId, "Required parameter variantId must be specified.");
+          initializeMediaDownload();
+        }
+
+        @Override
+        public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+          super.executeMediaAndDownloadTo(outputStream);
+        }
+
+        @Override
+        public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+          return super.executeMediaAsInputStream();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+          return super.executeMedia();
+        }
+
+        @Override
+        public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+          java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+              ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+          return new com.google.api.client.http.GenericUrl(
+              com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Download set$Xgafv(java.lang.String $Xgafv) {
+          return (Download) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Download setAccessToken(java.lang.String accessToken) {
+          return (Download) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Download setAlt(java.lang.String alt) {
+          return (Download) super.setAlt(alt);
+        }
+
+        @Override
+        public Download setCallback(java.lang.String callback) {
+          return (Download) super.setCallback(callback);
+        }
+
+        @Override
+        public Download setFields(java.lang.String fields) {
+          return (Download) super.setFields(fields);
+        }
+
+        @Override
+        public Download setKey(java.lang.String key) {
+          return (Download) super.setKey(key);
+        }
+
+        @Override
+        public Download setOauthToken(java.lang.String oauthToken) {
+          return (Download) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Download) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Download setQuotaUser(java.lang.String quotaUser) {
+          return (Download) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Download setUploadType(java.lang.String uploadType) {
+          return (Download) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Download setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Download) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Unique identifier of the Android app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier of the Android app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier of the Android app. */
+        public Download setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public Download setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        /** The ID of a previously created system APK variant. */
+        @com.google.api.client.util.Key
+        private java.lang.Long variantId;
+
+        /** The ID of a previously created system APK variant.
+         */
+        public java.lang.Long getVariantId() {
+          return variantId;
+        }
+
+        /** The ID of a previously created system APK variant. */
+        public Download setVariantId(java.lang.Long variantId) {
+          this.variantId = variantId;
+          return this;
+        }
+
+        @Override
+        public Download set(String parameterName, Object value) {
+          return (Download) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a previously created system APK variant.
+       *
+       * Create a request for the method "variants.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier of the Android app.
+       * @param versionCode The version code of the App Bundle.
+       * @param variantId The ID of a previously created system APK variant.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) throws java.io.IOException {
+        Get result = new Get(packageName, versionCode, variantId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Variant> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}";
+
+        /**
+         * Returns a previously created system APK variant.
+         *
+         * Create a request for the method "variants.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier of the Android app.
+         * @param versionCode The version code of the App Bundle.
+         * @param variantId The ID of a previously created system APK variant.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.Variant.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+          this.variantId = com.google.api.client.util.Preconditions.checkNotNull(variantId, "Required parameter variantId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Unique identifier of the Android app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier of the Android app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier of the Android app. */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public Get setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        /** The ID of a previously created system APK variant. */
+        @com.google.api.client.util.Key
+        private java.lang.Long variantId;
+
+        /** The ID of a previously created system APK variant.
+         */
+        public java.lang.Long getVariantId() {
+          return variantId;
+        }
+
+        /** The ID of a previously created system APK variant. */
+        public Get setVariantId(java.lang.Long variantId) {
+          this.variantId = variantId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of previously created system APK variants.
+       *
+       * Create a request for the method "variants.list".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier of the Android app.
+       * @param versionCode The version code of the App Bundle.
+       * @return the request
+       */
+      public List list(java.lang.String packageName, java.lang.Long versionCode) throws java.io.IOException {
+        List result = new List(packageName, versionCode);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SystemApksListResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants";
+
+        /**
+         * Returns the list of previously created system APK variants.
+         *
+         * Create a request for the method "variants.list".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier of the Android app.
+         * @param versionCode The version code of the App Bundle.
+         * @since 1.13
+         */
+        protected List(java.lang.String packageName, java.lang.Long versionCode) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.SystemApksListResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Unique identifier of the Android app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier of the Android app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier of the Android app. */
+        public List setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public List setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

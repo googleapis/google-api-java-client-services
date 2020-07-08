@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * APK that is suitable for inclusion in a system image. The resource of SystemApksService.
+ * Response to list previously created system APK variants.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -28,64 +28,40 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Variant extends com.google.api.client.json.GenericJson {
+public final class SystemApksListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The device spec used to generate the APK.
+   * All system APK variants created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DeviceSpec deviceSpec;
+  private java.util.List<Variant> variants;
 
   /**
-   * Output only. The ID of a previously created system APK variant.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Long variantId;
-
-  /**
-   * The device spec used to generate the APK.
+   * All system APK variants created.
    * @return value or {@code null} for none
    */
-  public DeviceSpec getDeviceSpec() {
-    return deviceSpec;
+  public java.util.List<Variant> getVariants() {
+    return variants;
   }
 
   /**
-   * The device spec used to generate the APK.
-   * @param deviceSpec deviceSpec or {@code null} for none
+   * All system APK variants created.
+   * @param variants variants or {@code null} for none
    */
-  public Variant setDeviceSpec(DeviceSpec deviceSpec) {
-    this.deviceSpec = deviceSpec;
-    return this;
-  }
-
-  /**
-   * Output only. The ID of a previously created system APK variant.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getVariantId() {
-    return variantId;
-  }
-
-  /**
-   * Output only. The ID of a previously created system APK variant.
-   * @param variantId variantId or {@code null} for none
-   */
-  public Variant setVariantId(java.lang.Long variantId) {
-    this.variantId = variantId;
+  public SystemApksListResponse setVariants(java.util.List<Variant> variants) {
+    this.variants = variants;
     return this;
   }
 
   @Override
-  public Variant set(String fieldName, Object value) {
-    return (Variant) super.set(fieldName, value);
+  public SystemApksListResponse set(String fieldName, Object value) {
+    return (SystemApksListResponse) super.set(fieldName, value);
   }
 
   @Override
-  public Variant clone() {
-    return (Variant) super.clone();
+  public SystemApksListResponse clone() {
+    return (SystemApksListResponse) super.clone();
   }
 
 }

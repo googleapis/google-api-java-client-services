@@ -163,6 +163,574 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
     public class Locations {
 
       /**
+       * An accessor for creating requests from the InsightTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Recommender recommender = new Recommender(...);}
+       *   {@code Recommender.InsightTypes.List request = recommender.insightTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InsightTypes insightTypes() {
+        return new InsightTypes();
+      }
+
+      /**
+       * The "insightTypes" collection of methods.
+       */
+      public class InsightTypes {
+
+        /**
+         * An accessor for creating requests from the Insights collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Recommender recommender = new Recommender(...);}
+         *   {@code Recommender.Insights.List request = recommender.insights().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Insights insights() {
+          return new Insights();
+        }
+
+        /**
+         * The "insights" collection of methods.
+         */
+        public class Insights {
+
+          /**
+           * Gets the requested insight. Requires the recommender.*.get IAM permission for the specified
+           * insight type.
+           *
+           * Create a request for the method "insights.get".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the insight.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Insight> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+/insights/[^/]+$");
+
+            /**
+             * Gets the requested insight. Requires the recommender.*.get IAM permission for the specified
+             * insight type.
+             *
+             * Create a request for the method "insights.get".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the insight.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Insight.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+/insights/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the insight. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the insight.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the insight. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+/insights/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
+           * specified insight type.
+           *
+           * Create a request for the method "insights.list".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The container resource on which to execute the request.
+          Acceptable formats:
+          1.
+           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+          LOCATION
+           *        here refers to GCP Locations:
+          https://cloud.google.com/about/locations/
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1ListInsightsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/insights";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
+
+            /**
+             * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
+             * specified insight type.
+             *
+             * Create a request for the method "insights.list".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The container resource on which to execute the request.
+          Acceptable formats:
+          1.
+           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+          LOCATION
+           *        here refers to GCP Locations:
+          https://cloud.google.com/about/locations/
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1ListInsightsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The container resource on which to execute the request. Acceptable formats:
+             *
+             * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+             *
+             * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The container resource on which to execute the request. Acceptable formats:
+
+           1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+
+           LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The container resource on which to execute the request. Acceptable formats:
+             *
+             * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+             *
+             * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter expression to restrict the insights returned. Supported filter
+             * fields: state Eg: `state:"DISMISSED" or state:"ACTIVE"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression to restrict the insights returned. Supported filter fields: state Eg:
+           `state:"DISMISSED" or state:"ACTIVE"
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression to restrict the insights returned. Supported filter
+             * fields: state Eg: `state:"DISMISSED" or state:"ACTIVE"
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of results to return from this request.  Non-positive
+             * values are ignored. If not specified, the server will determine the number of results
+             * to return.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results to return from this request.  Non-positive values are
+           ignored. If not specified, the server will determine the number of results to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of results to return from this request.  Non-positive
+             * values are ignored. If not specified, the server will determine the number of results
+             * to return.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. If present, retrieves the next batch of results from the preceding call to
+             * this method. `page_token` must be the value of `next_page_token` from the previous
+             * response. The values of other method parameters must be identical to those in the
+             * previous call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. If present, retrieves the next batch of results from the preceding call to this method.
+           `page_token` must be the value of `next_page_token` from the previous response. The values of other
+           method parameters must be identical to those in the previous call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. If present, retrieves the next batch of results from the preceding call to
+             * this method. `page_token` must be the value of `next_page_token` from the previous
+             * response. The values of other method parameters must be identical to those in the
+             * previous call.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender API
+           * that they have applied some action based on the insight. This stops the insight content from
+           * being updated.
+           *
+           * MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the recommender.*.update
+           * IAM permission for the specified insight.
+           *
+           * Create a request for the method "insights.markAccepted".
+           *
+           * This request holds the parameters needed by the recommender server.  After setting any optional
+           * parameters, call the {@link MarkAccepted#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the insight.
+           * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkInsightAcceptedRequest}
+           * @return the request
+           */
+          public MarkAccepted markAccepted(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkInsightAcceptedRequest content) throws java.io.IOException {
+            MarkAccepted result = new MarkAccepted(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class MarkAccepted extends RecommenderRequest<com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Insight> {
+
+            private static final String REST_PATH = "v1/{+name}:markAccepted";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+/insights/[^/]+$");
+
+            /**
+             * Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender
+             * API that they have applied some action based on the insight. This stops the insight content
+             * from being updated.
+             *
+             * MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the
+             * recommender.*.update IAM permission for the specified insight.
+             *
+             * Create a request for the method "insights.markAccepted".
+             *
+             * This request holds the parameters needed by the the recommender server.  After setting any
+             * optional parameters, call the {@link MarkAccepted#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * MarkAccepted#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the insight.
+             * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkInsightAcceptedRequest}
+             * @since 1.13
+             */
+            protected MarkAccepted(java.lang.String name, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkInsightAcceptedRequest content) {
+              super(Recommender.this, "POST", REST_PATH, content, com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1Insight.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+/insights/[^/]+$");
+              }
+            }
+
+            @Override
+            public MarkAccepted set$Xgafv(java.lang.String $Xgafv) {
+              return (MarkAccepted) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MarkAccepted setAccessToken(java.lang.String accessToken) {
+              return (MarkAccepted) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public MarkAccepted setAlt(java.lang.String alt) {
+              return (MarkAccepted) super.setAlt(alt);
+            }
+
+            @Override
+            public MarkAccepted setCallback(java.lang.String callback) {
+              return (MarkAccepted) super.setCallback(callback);
+            }
+
+            @Override
+            public MarkAccepted setFields(java.lang.String fields) {
+              return (MarkAccepted) super.setFields(fields);
+            }
+
+            @Override
+            public MarkAccepted setKey(java.lang.String key) {
+              return (MarkAccepted) super.setKey(key);
+            }
+
+            @Override
+            public MarkAccepted setOauthToken(java.lang.String oauthToken) {
+              return (MarkAccepted) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public MarkAccepted setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (MarkAccepted) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public MarkAccepted setQuotaUser(java.lang.String quotaUser) {
+              return (MarkAccepted) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public MarkAccepted setUploadType(java.lang.String uploadType) {
+              return (MarkAccepted) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MarkAccepted setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MarkAccepted) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the insight. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the insight.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the insight. */
+            public MarkAccepted setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+/insights/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public MarkAccepted set(String parameterName, Object value) {
+              return (MarkAccepted) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Recommenders collection.
        *
        * <p>The typical use is:</p>

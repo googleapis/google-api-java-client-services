@@ -20,7 +20,7 @@ package com.google.api.services.run.v1.model;
  * RevisionSpec holds the desired state of the Revision (from the client).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -71,13 +71,6 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountName;
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   *
-   * Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900
-   * seconds (15 minutes).
-   *
-   * Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is
-   * configurable by the cluster operator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,13 +162,6 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   *
-   * Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900
-   * seconds (15 minutes).
-   *
-   * Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is
-   * configurable by the cluster operator.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -183,13 +169,6 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   *
-   * Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900
-   * seconds (15 minutes).
-   *
-   * Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is
-   * configurable by the cluster operator.
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public RevisionSpec setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

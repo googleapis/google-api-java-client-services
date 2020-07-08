@@ -45,6 +45,14 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private String commitmentEndTime;
 
   /**
+   * Output only. The start of the current commitment period. It is applicable only for ACTIVE
+   * capacity commitments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String commitmentStartTime;
+
+  /**
    * Output only. For FAILED commitment plan, provides the reason of failure.
    * The value may be {@code null}.
    */
@@ -105,6 +113,25 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    */
   public CapacityCommitment setCommitmentEndTime(String commitmentEndTime) {
     this.commitmentEndTime = commitmentEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. The start of the current commitment period. It is applicable only for ACTIVE
+   * capacity commitments.
+   * @return value or {@code null} for none
+   */
+  public String getCommitmentStartTime() {
+    return commitmentStartTime;
+  }
+
+  /**
+   * Output only. The start of the current commitment period. It is applicable only for ACTIVE
+   * capacity commitments.
+   * @param commitmentStartTime commitmentStartTime or {@code null} for none
+   */
+  public CapacityCommitment setCommitmentStartTime(String commitmentStartTime) {
+    this.commitmentStartTime = commitmentStartTime;
     return this;
   }
 

@@ -34,14 +34,16 @@ package com.google.api.services.testing.model;
 public final class UniformSharding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Total number of shards. The number must be >= 1 and <= 50.
+   * Required. Total number of shards. When any physical devices are selected, the number must be >=
+   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 250.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numShards;
 
   /**
-   * Required. Total number of shards. The number must be >= 1 and <= 50.
+   * Required. Total number of shards. When any physical devices are selected, the number must be >=
+   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 250.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumShards() {
@@ -49,7 +51,8 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Total number of shards. The number must be >= 1 and <= 50.
+   * Required. Total number of shards. When any physical devices are selected, the number must be >=
+   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 250.
    * @param numShards numShards or {@code null} for none
    */
   public UniformSharding setNumShards(java.lang.Integer numShards) {

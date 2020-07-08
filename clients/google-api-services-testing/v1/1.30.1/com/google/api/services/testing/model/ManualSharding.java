@@ -33,16 +33,18 @@ package com.google.api.services.testing.model;
 public final class ManualSharding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Group of packages, classes, and/or test methods to be run for each shard. The number
-   * of shard_test_targets must be >= 1 and <= 50.
+   * Required. Group of packages, classes, and/or test methods to be run for each shard. When any
+   * physical devices are selected,  the number of test_targets_for_shard must be >= 1 and <= 50.
+   * When no physical devices are selected, the number must be >= 1 and <= 250.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TestTargetsForShard> testTargetsForShard;
 
   /**
-   * Required. Group of packages, classes, and/or test methods to be run for each shard. The number
-   * of shard_test_targets must be >= 1 and <= 50.
+   * Required. Group of packages, classes, and/or test methods to be run for each shard. When any
+   * physical devices are selected,  the number of test_targets_for_shard must be >= 1 and <= 50.
+   * When no physical devices are selected, the number must be >= 1 and <= 250.
    * @return value or {@code null} for none
    */
   public java.util.List<TestTargetsForShard> getTestTargetsForShard() {
@@ -50,8 +52,9 @@ public final class ManualSharding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Group of packages, classes, and/or test methods to be run for each shard. The number
-   * of shard_test_targets must be >= 1 and <= 50.
+   * Required. Group of packages, classes, and/or test methods to be run for each shard. When any
+   * physical devices are selected,  the number of test_targets_for_shard must be >= 1 and <= 50.
+   * When no physical devices are selected, the number must be >= 1 and <= 250.
    * @param testTargetsForShard testTargetsForShard or {@code null} for none
    */
   public ManualSharding setTestTargetsForShard(java.util.List<TestTargetsForShard> testTargetsForShard) {

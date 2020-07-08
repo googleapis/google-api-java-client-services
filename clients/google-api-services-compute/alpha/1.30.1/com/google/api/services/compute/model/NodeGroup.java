@@ -109,7 +109,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The URL of the node template to which this node group belongs.
+   * URL of the node template to create the node group from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -356,7 +356,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the node template to which this node group belongs.
+   * URL of the node template to create the node group from.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodeTemplate() {
@@ -364,7 +364,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the node template to which this node group belongs.
+   * URL of the node template to create the node group from.
    * @param nodeTemplate nodeTemplate or {@code null} for none
    */
   public NodeGroup setNodeTemplate(java.lang.String nodeTemplate) {

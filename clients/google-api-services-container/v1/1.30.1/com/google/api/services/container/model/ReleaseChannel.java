@@ -14,10 +14,14 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
- * Deprecated.
+ * ReleaseChannel indicates which release channel a cluster is subscribed to. Release channels are
+ * arranged in order of risk.
+ *
+ * When a cluster is subscribed to a release channel, Google maintains both the master version and
+ * the node version. Node auto-upgrade defaults to true and cannot be disabled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,64 +32,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AvailableVersion extends com.google.api.client.json.GenericJson {
+public final class ReleaseChannel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reason for availability.
+   * channel specifies which release channel the cluster is subscribed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String channel;
 
   /**
-   * Kubernetes version.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String version;
-
-  /**
-   * Reason for availability.
+   * channel specifies which release channel the cluster is subscribed to.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getChannel() {
+    return channel;
   }
 
   /**
-   * Reason for availability.
-   * @param reason reason or {@code null} for none
+   * channel specifies which release channel the cluster is subscribed to.
+   * @param channel channel or {@code null} for none
    */
-  public AvailableVersion setReason(java.lang.String reason) {
-    this.reason = reason;
-    return this;
-  }
-
-  /**
-   * Kubernetes version.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVersion() {
-    return version;
-  }
-
-  /**
-   * Kubernetes version.
-   * @param version version or {@code null} for none
-   */
-  public AvailableVersion setVersion(java.lang.String version) {
-    this.version = version;
+  public ReleaseChannel setChannel(java.lang.String channel) {
+    this.channel = channel;
     return this;
   }
 
   @Override
-  public AvailableVersion set(String fieldName, Object value) {
-    return (AvailableVersion) super.set(fieldName, value);
+  public ReleaseChannel set(String fieldName, Object value) {
+    return (ReleaseChannel) super.set(fieldName, value);
   }
 
   @Override
-  public AvailableVersion clone() {
-    return (AvailableVersion) super.clone();
+  public ReleaseChannel clone() {
+    return (ReleaseChannel) super.clone();
   }
 
 }

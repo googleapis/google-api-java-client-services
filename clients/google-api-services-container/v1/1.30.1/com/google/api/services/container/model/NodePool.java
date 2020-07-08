@@ -57,9 +57,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeConfig config;
 
   /**
-   * The initial node count for the pool. You must ensure that your Compute Engine resource quota is
-   * sufficient for this number of instances. You must also have available firewall and routes
-   * quota.
+   * The initial node count for the pool. You must ensure that your Compute Engine [resource
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,9 +202,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The initial node count for the pool. You must ensure that your Compute Engine resource quota is
-   * sufficient for this number of instances. You must also have available firewall and routes
-   * quota.
+   * The initial node count for the pool. You must ensure that your Compute Engine [resource
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialNodeCount() {
@@ -212,9 +212,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The initial node count for the pool. You must ensure that your Compute Engine resource quota is
-   * sufficient for this number of instances. You must also have available firewall and routes
-   * quota.
+   * The initial node count for the pool. You must ensure that your Compute Engine [resource
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * @param initialNodeCount initialNodeCount or {@code null} for none
    */
   public NodePool setInitialNodeCount(java.lang.Integer initialNodeCount) {

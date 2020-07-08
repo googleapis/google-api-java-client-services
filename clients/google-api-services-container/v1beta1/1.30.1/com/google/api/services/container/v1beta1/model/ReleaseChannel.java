@@ -18,11 +18,10 @@ package com.google.api.services.container.v1beta1.model;
 
 /**
  * ReleaseChannel indicates which release channel a cluster is subscribed to. Release channels are
- * arranged in order of risk and frequency of updates.
+ * arranged in order of risk.
  *
  * When a cluster is subscribed to a release channel, Google maintains both the master version and
- * the node version. Node auto-upgrade defaults to true and cannot be disabled. Updates to version
- * related fields (e.g. current_master_version) return an error.
+ * the node version. Node auto-upgrade defaults to true and cannot be disabled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

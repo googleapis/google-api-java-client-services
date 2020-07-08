@@ -31,8 +31,8 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class Company extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Input only. Email address of customer's users in the admin role. Each email address
-   * must be associated with a Google Account.
+   * Optional. Email address of customer's users in the admin role. Each email address must be
+   * associated with a Google Account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +67,10 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Input only. Email address of customer's users in the owner role. At least one `owner_email` is
-   * required. Each email address must be associated with a Google Account. Owners share the same
-   * access as admins but can also add, delete, and edit your organization's portal users.
+   * Required. Input only. Email address of customer's users in the owner role. At least one
+   * `owner_email` is required. Each email address must be associated with a Google Account. Owners
+   * share the same access as admins but can also add, delete, and edit your organization's portal
+   * users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +85,8 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String termsStatus;
 
   /**
-   * Optional. Input only. Email address of customer's users in the admin role. Each email address
-   * must be associated with a Google Account.
+   * Optional. Email address of customer's users in the admin role. Each email address must be
+   * associated with a Google Account.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdminEmails() {
@@ -93,8 +94,8 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Email address of customer's users in the admin role. Each email address
-   * must be associated with a Google Account.
+   * Optional. Email address of customer's users in the admin role. Each email address must be
+   * associated with a Google Account.
    * @param adminEmails adminEmails or {@code null} for none
    */
   public Company setAdminEmails(java.util.List<java.lang.String> adminEmails) {
@@ -168,9 +169,10 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Email address of customer's users in the owner role. At least one `owner_email` is
-   * required. Each email address must be associated with a Google Account. Owners share the same
-   * access as admins but can also add, delete, and edit your organization's portal users.
+   * Required. Input only. Email address of customer's users in the owner role. At least one
+   * `owner_email` is required. Each email address must be associated with a Google Account. Owners
+   * share the same access as admins but can also add, delete, and edit your organization's portal
+   * users.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOwnerEmails() {
@@ -178,9 +180,10 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Email address of customer's users in the owner role. At least one `owner_email` is
-   * required. Each email address must be associated with a Google Account. Owners share the same
-   * access as admins but can also add, delete, and edit your organization's portal users.
+   * Required. Input only. Email address of customer's users in the owner role. At least one
+   * `owner_email` is required. Each email address must be associated with a Google Account. Owners
+   * share the same access as admins but can also add, delete, and edit your organization's portal
+   * users.
    * @param ownerEmails ownerEmails or {@code null} for none
    */
   public Company setOwnerEmails(java.util.List<java.lang.String> ownerEmails) {

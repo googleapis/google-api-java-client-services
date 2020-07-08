@@ -31,14 +31,14 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class UpdateMetadataArguments extends com.google.api.client.json.GenericJson {
 
   /**
-   * Device ID of the device.
+   * Required. Device ID of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long deviceId;
 
   /**
-   * Device identifier.
+   * Required. Device identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class UpdateMetadataArguments extends com.google.api.client.json.Ge
   private DeviceMetadata deviceMetadata;
 
   /**
-   * Device ID of the device.
+   * Required. Device ID of the device.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDeviceId() {
@@ -60,7 +60,7 @@ public final class UpdateMetadataArguments extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device ID of the device.
+   * Required. Device ID of the device.
    * @param deviceId deviceId or {@code null} for none
    */
   public UpdateMetadataArguments setDeviceId(java.lang.Long deviceId) {
@@ -69,7 +69,7 @@ public final class UpdateMetadataArguments extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device identifier.
+   * Required. Device identifier.
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -77,7 +77,7 @@ public final class UpdateMetadataArguments extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device identifier.
+   * Required. Device identifier.
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public UpdateMetadataArguments setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {

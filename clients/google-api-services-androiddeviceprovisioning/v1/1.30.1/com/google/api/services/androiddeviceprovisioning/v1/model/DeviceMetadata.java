@@ -17,8 +17,8 @@
 package com.google.api.services.androiddeviceprovisioning.v1.model;
 
 /**
- * Metadata entries that can be attached to a `Device`. To learn more, read [Device metadata](/zero-
- * touch/guides/metadata).
+ * Metadata entries that can be attached to a `Device`. To learn more, read [Device
+ * metadata](https://developers.google.com/zero-touch/guides/metadata).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Device Provisioning Partner API. For a

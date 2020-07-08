@@ -59,7 +59,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.String audienceType;
 
   /**
-   * Output only. The description of the first and third party audience.
+   * The user-provided description of the audience.
    *
    * Only applicable to first party audiences.
    * The value may be {@code null}.
@@ -122,7 +122,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.Long displayMobileWebAudienceSize;
 
   /**
-   * Output only. The display name of the first and third party audience. .
+   * The display name of the first and third party audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.Long firstAndThirdPartyAudienceId;
 
   /**
-   * Output only. Whether the audience is a first or third party audience. .
+   * Output only. Whether the audience is a first or third party audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,8 +157,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.Long gmailAudienceSize;
 
   /**
-   * Output only. The duration in days that an entry remains in the audience after the qualifying
-   * event.
+   * The duration in days that an entry remains in the audience after the qualifying event.
    *
    * Only applicable to first party audiences.
    * The value may be {@code null}.
@@ -249,7 +248,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The description of the first and third party audience.
+   * The user-provided description of the audience.
    *
    * Only applicable to first party audiences.
    * @return value or {@code null} for none
@@ -259,7 +258,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The description of the first and third party audience.
+   * The user-provided description of the audience.
    *
    * Only applicable to first party audiences.
    * @param description description or {@code null} for none
@@ -390,7 +389,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The display name of the first and third party audience. .
+   * The display name of the first and third party audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -398,7 +397,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The display name of the first and third party audience. .
+   * The display name of the first and third party audience.
    * @param displayName displayName or {@code null} for none
    */
   public FirstAndThirdPartyAudience setDisplayName(java.lang.String displayName) {
@@ -424,7 +423,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. Whether the audience is a first or third party audience. .
+   * Output only. Whether the audience is a first or third party audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstAndThirdPartyAudienceType() {
@@ -432,7 +431,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. Whether the audience is a first or third party audience. .
+   * Output only. Whether the audience is a first or third party audience.
    * @param firstAndThirdPartyAudienceType firstAndThirdPartyAudienceType or {@code null} for none
    */
   public FirstAndThirdPartyAudience setFirstAndThirdPartyAudienceType(java.lang.String firstAndThirdPartyAudienceType) {
@@ -472,8 +471,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The duration in days that an entry remains in the audience after the qualifying
-   * event.
+   * The duration in days that an entry remains in the audience after the qualifying event.
    *
    * Only applicable to first party audiences.
    * @return value or {@code null} for none
@@ -483,8 +481,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The duration in days that an entry remains in the audience after the qualifying
-   * event.
+   * The duration in days that an entry remains in the audience after the qualifying event.
    *
    * Only applicable to first party audiences.
    * @param membershipDurationDays membershipDurationDays or {@code null} for none

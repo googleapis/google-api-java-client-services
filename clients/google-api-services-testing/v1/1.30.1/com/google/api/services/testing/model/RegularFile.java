@@ -37,10 +37,11 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   private FileReference content;
 
   /**
-   * Required. Where to put the content on the device. Must be an absolute, whitelisted path. If the
+   * Required. Where to put the content on the device. Must be an absolute, allowlisted path. If the
    * file exists, it will be replaced. The following device-side directories and any of their
-   * subdirectories are whitelisted: ${EXTERNAL_STORAGE}, or /sdcard ${ANDROID_DATA}/local/tmp, or
-   * /data/local/tmp Specifying a path outside of these directory trees is invalid.
+   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage
+   * ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory
+   * trees is invalid.
    *
    *  The paths /sdcard and /data will be made available and treated as implicit path substitutions.
    * E.g. if /sdcard on a particular device does not map to external storage, the system will
@@ -71,10 +72,11 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Where to put the content on the device. Must be an absolute, whitelisted path. If the
+   * Required. Where to put the content on the device. Must be an absolute, allowlisted path. If the
    * file exists, it will be replaced. The following device-side directories and any of their
-   * subdirectories are whitelisted: ${EXTERNAL_STORAGE}, or /sdcard ${ANDROID_DATA}/local/tmp, or
-   * /data/local/tmp Specifying a path outside of these directory trees is invalid.
+   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage
+   * ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory
+   * trees is invalid.
    *
    *  The paths /sdcard and /data will be made available and treated as implicit path substitutions.
    * E.g. if /sdcard on a particular device does not map to external storage, the system will
@@ -89,10 +91,11 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Where to put the content on the device. Must be an absolute, whitelisted path. If the
+   * Required. Where to put the content on the device. Must be an absolute, allowlisted path. If the
    * file exists, it will be replaced. The following device-side directories and any of their
-   * subdirectories are whitelisted: ${EXTERNAL_STORAGE}, or /sdcard ${ANDROID_DATA}/local/tmp, or
-   * /data/local/tmp Specifying a path outside of these directory trees is invalid.
+   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage
+   * ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory
+   * trees is invalid.
    *
    *  The paths /sdcard and /data will be made available and treated as implicit path substitutions.
    * E.g. if /sdcard on a particular device does not map to external storage, the system will

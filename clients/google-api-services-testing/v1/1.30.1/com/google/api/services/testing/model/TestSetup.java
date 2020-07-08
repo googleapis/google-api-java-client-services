@@ -51,8 +51,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
-   * absolute paths under /sdcard or /data/local/tmp. Path names are restricted to characters a-z
-   * A-Z 0-9 _ - . + and /
+   * absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to
+   * characters a-z A-Z 0-9 _ - . + and /
    *
    * Note: The paths /sdcard and /data will be made available and treated as implicit path
    * substitutions. E.g. if /sdcard on a particular device does not map to external storage, the
@@ -61,6 +61,13 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> directoriesToPull;
+
+  /**
+   * Whether to prevent all runtime permissions to be granted at app install
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dontAutograntPermissions;
 
   /**
    * Environment variables to set for the test (only applicable for instrumentation tests).
@@ -142,8 +149,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
-   * absolute paths under /sdcard or /data/local/tmp. Path names are restricted to characters a-z
-   * A-Z 0-9 _ - . + and /
+   * absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to
+   * characters a-z A-Z 0-9 _ - . + and /
    *
    * Note: The paths /sdcard and /data will be made available and treated as implicit path
    * substitutions. E.g. if /sdcard on a particular device does not map to external storage, the
@@ -156,8 +163,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
-   * absolute paths under /sdcard or /data/local/tmp. Path names are restricted to characters a-z
-   * A-Z 0-9 _ - . + and /
+   * absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to
+   * characters a-z A-Z 0-9 _ - . + and /
    *
    * Note: The paths /sdcard and /data will be made available and treated as implicit path
    * substitutions. E.g. if /sdcard on a particular device does not map to external storage, the
@@ -166,6 +173,23 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
    */
   public TestSetup setDirectoriesToPull(java.util.List<java.lang.String> directoriesToPull) {
     this.directoriesToPull = directoriesToPull;
+    return this;
+  }
+
+  /**
+   * Whether to prevent all runtime permissions to be granted at app install
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDontAutograntPermissions() {
+    return dontAutograntPermissions;
+  }
+
+  /**
+   * Whether to prevent all runtime permissions to be granted at app install
+   * @param dontAutograntPermissions dontAutograntPermissions or {@code null} for none
+   */
+  public TestSetup setDontAutograntPermissions(java.lang.Boolean dontAutograntPermissions) {
+    this.dontAutograntPermissions = dontAutograntPermissions;
     return this;
   }
 

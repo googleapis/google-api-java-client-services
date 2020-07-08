@@ -602,14 +602,14 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * If set to true, the query will return the success codeand include any partial information
+       * If set to true, the query will return the success code and include any partial information
        * when it is unable to determine a matching address or unable to determine the election for
        * electionId=0 queries.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean returnAllAvailableData;
 
-      /** If set to true, the query will return the success codeand include any partial information when it
+      /** If set to true, the query will return the success code and include any partial information when it
      is unable to determine a matching address or unable to determine the election for electionId=0
      queries. [default: false]
        */
@@ -618,7 +618,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * If set to true, the query will return the success codeand include any partial information
+       * If set to true, the query will return the success code and include any partial information
        * when it is unable to determine a matching address or unable to determine the election for
        * electionId=0 queries.
        */
@@ -644,7 +644,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * </p>
        *
        * <p>
-       * If set to true, the query will return the success codeand include any partial information when it
+       * If set to true, the query will return the success code and include any partial information when it
      is unable to determine a matching address or unable to determine the election for electionId=0
      queries.
        * </p>

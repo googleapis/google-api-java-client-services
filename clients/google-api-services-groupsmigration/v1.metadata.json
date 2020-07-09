@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-groupsmigration",
-    "version": "v1-rev20200608-1.30.9"
-  }
-}

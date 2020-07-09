@@ -57,6 +57,7 @@ packages on [Maven Central][maven-search].
 | Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
 | Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1), [v1alpha2](clients/google-api-services-cloudbuild/v1alpha2) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
+| Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2) |
 | Cloud Data Fusion API | [v1beta1](clients/google-api-services-datafusion/v1beta1) |
 | Cloud Data Loss Prevention (DLP) API | [v2](clients/google-api-services-dlp/v2) |
 | Cloud Dataproc API | [v1](clients/google-api-services-dataproc/v1), [v1beta2](clients/google-api-services-dataproc/v1beta2) |
@@ -82,7 +83,7 @@ packages on [Maven Central][maven-search].
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1) |
 | Cloud Run API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |
 | Cloud Runtime Configuration API | [v1](clients/google-api-services-runtimeconfig/v1), [v1beta1](clients/google-api-services-runtimeconfig/v1beta1) |
-| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4), [v1beta4](clients/google-api-services-sql/v1beta4) |
+| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sql/v1beta4) |
 | Cloud Scheduler API | [v1](clients/google-api-services-cloudscheduler/v1), [v1beta1](clients/google-api-services-cloudscheduler/v1beta1) |
 | Cloud Search API | [v1](clients/google-api-services-cloudsearch/v1) |
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1), [v1alpha1](clients/google-api-services-cloudshell/v1alpha1) |
@@ -103,6 +104,7 @@ packages on [Maven Central][maven-search].
 | Compute Engine API | [alpha](clients/google-api-services-compute/alpha), [beta](clients/google-api-services-compute/beta), [v1](clients/google-api-services-compute/v1) |
 | Container Analysis API | [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
+| Custom Search API | [v1](clients/google-api-services-customsearch/v1) |
 | DCM/DFA Reporting And Trafficking API | [v3.3](clients/google-api-services-dfareporting/v3.3), [v3.4](clients/google-api-services-dfareporting/v3.4) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1) |
@@ -117,20 +119,21 @@ packages on [Maven Central][maven-search].
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |
-| Firebase Hosting API | [v1beta1](clients/google-api-services-firebasehosting/v1beta1) |
+| Firebase Hosting API | [v1](clients/google-api-services-firebasehosting/v1), [v1beta1](clients/google-api-services-firebasehosting/v1beta1) |
 | Firebase ML API | [v1](clients/google-api-services-firebaseml/v1), [v1beta2](clients/google-api-services-firebaseml/v1beta2) |
 | Firebase Management API | [v1beta1](clients/google-api-services-firebase/v1beta1) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
 | G Suite Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
-| Game Services API | [v1beta](clients/google-api-services-gameservices/v1beta) |
+| Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
+| Gmail Postmaster Tools API | [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
-| Google Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2), [v2beta1](clients/google-api-services-dns/v2beta1) |
+| Google Cloud DNS API | [v2beta1](clients/google-api-services-dns/v2beta1) |
 | Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
 | Google Cloud Deployment Manager API | [v2](clients/google-api-services-deploymentmanager/v2) |
 | Google Cloud Deployment Manager API V2Beta Methods | [v2beta](clients/google-api-services-deploymentmanager/v2beta) |
@@ -138,22 +141,19 @@ packages on [Maven Central][maven-search].
 | Google Cloud Memorystore for Redis API | [v1](clients/google-api-services-redis/v1), [v1beta1](clients/google-api-services-redis/v1beta1) |
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |
-| Google Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Google Identity Toolkit API | [v3](clients/google-api-services-identitytoolkit/v3) |
 | Google OAuth2 API | [v2](clients/google-api-services-oauth2/v2) |
 | Google Play Android Developer API | [v3](clients/google-api-services-androidpublisher/v3) |
 | Google Play Custom App Publishing API | [v1](clients/google-api-services-playcustomapp/v1) |
-| Google Play Developer API | [v1](clients/google-api-services-androidpublisher/v1), [v1.1](clients/google-api-services-androidpublisher/v1.1), [v2](clients/google-api-services-androidpublisher/v2) |
 | Google Play EMM API | [v1](clients/google-api-services-androidenterprise/v1) |
 | Google Play Game Management | [v1management](clients/google-api-services-gamesManagement/v1management) |
-| Google Play Game Services API | [v1](clients/google-api-services-games/v1) |
+| Google Play Game Services | [v1](clients/google-api-services-games/v1) |
 | Google Play Game Services Publishing API | [v1configuration](clients/google-api-services-gamesConfiguration/v1configuration) |
 | Google Search Console URL Testing Tools API | [v1](clients/google-api-services-searchconsole/v1) |
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
 | Google+ API | [v1](clients/google-api-services-plus/v1) |
-| Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |
 | HomeGraph API | [v1](clients/google-api-services-homegraph/v1) |
@@ -172,6 +172,7 @@ packages on [Maven Central][maven-search].
 | Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
+| Real-time Bidding API | [v1](clients/google-api-services-realtimebidding/v1) |
 | Recommender API | [v1](clients/google-api-services-recommender/v1), [v1beta1](clients/google-api-services-recommender/v1beta1) |
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |
 | SAS Portal API | [v1alpha1](clients/google-api-services-sasportal/v1alpha1) |
@@ -181,6 +182,7 @@ packages on [Maven Central][maven-search].
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
 | Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1), [v1p1beta1](clients/google-api-services-securitycenter/v1p1beta1) |
+| Semantic Tile API | [v1](clients/google-api-services-vectortile/v1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1), [v1beta1](clients/google-api-services-serviceconsumermanagement/v1beta1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1) |
 | Service Directory API | [v1beta1](clients/google-api-services-servicedirectory/v1beta1) |
@@ -192,6 +194,7 @@ packages on [Maven Central][maven-search].
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
+| Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | YouTube Analytics API | [v1](clients/google-api-services-youtubeAnalytics/v1), [v2](clients/google-api-services-youtubeAnalytics/v2) |
 | YouTube Data API v3 | [v3](clients/google-api-services-youtube/v3) |

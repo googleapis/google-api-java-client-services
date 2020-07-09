@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
  * * [Global](/compute/docs/reference/rest/{$api_version}/backendServices) *
  * [Regional](/compute/docs/reference/rest/{$api_version}/regionBackendServices)
  *
- * For more information, read Backend Services.
+ * For more information, see Backend Services.
  *
  * (== resource_for {$api_version}.backendService ==)
  *
@@ -210,7 +210,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * address as the destination address of the incoming connection before the connection was
    * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
    * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
-   * host selection times. For more information about Maglev, refer to
+   * host selection times. For more information about Maglev, see
    * https://ai.google/research/pubs/pub44824
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
@@ -348,7 +348,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information read,  Backend service settings The default is 30 seconds.
+   * more information see,  Backend service settings The default is 30 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -751,7 +751,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * address as the destination address of the incoming connection before the connection was
    * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
    * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
-   * host selection times. For more information about Maglev, refer to
+   * host selection times. For more information about Maglev, see
    * https://ai.google/research/pubs/pub44824
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
@@ -778,7 +778,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * address as the destination address of the incoming connection before the connection was
    * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
    * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
-   * host selection times. For more information about Maglev, refer to
+   * host selection times. For more information about Maglev, see
    * https://ai.google/research/pubs/pub44824
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
@@ -1076,7 +1076,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information read,  Backend service settings The default is 30 seconds.
+   * more information see,  Backend service settings The default is 30 seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSec() {
@@ -1085,7 +1085,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information read,  Backend service settings The default is 30 seconds.
+   * more information see,  Backend service settings The default is 30 seconds.
    * @param timeoutSec timeoutSec or {@code null} for none
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {

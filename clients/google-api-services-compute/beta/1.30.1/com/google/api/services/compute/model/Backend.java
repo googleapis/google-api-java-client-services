@@ -63,7 +63,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or
    * CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured
    * capacity (depending on balancingMode). A setting of 0 means the group is completely drained,
-   * offering 0% of its available Capacity. Valid range is [0.0,1.0].
+   * offering 0% of its available capacity. Valid range is 0.0 and [0.1,1.0]. You cannot configure a
+   * setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is
+   * only one backend attached to the backend service.
    *
    * This cannot be used for internal load balancing.
    * The value may be {@code null}.
@@ -277,7 +279,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or
    * CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured
    * capacity (depending on balancingMode). A setting of 0 means the group is completely drained,
-   * offering 0% of its available Capacity. Valid range is [0.0,1.0].
+   * offering 0% of its available capacity. Valid range is 0.0 and [0.1,1.0]. You cannot configure a
+   * setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is
+   * only one backend attached to the backend service.
    *
    * This cannot be used for internal load balancing.
    * @return value or {@code null} for none
@@ -290,7 +294,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or
    * CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured
    * capacity (depending on balancingMode). A setting of 0 means the group is completely drained,
-   * offering 0% of its available Capacity. Valid range is [0.0,1.0].
+   * offering 0% of its available capacity. Valid range is 0.0 and [0.1,1.0]. You cannot configure a
+   * setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is
+   * only one backend attached to the backend service.
    *
    * This cannot be used for internal load balancing.
    * @param capacityScaler capacityScaler or {@code null} for none

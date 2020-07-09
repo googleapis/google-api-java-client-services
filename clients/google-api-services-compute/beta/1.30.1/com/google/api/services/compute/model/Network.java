@@ -42,11 +42,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
-   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
-   * is created in "custom" mode.
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
    *
    * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
    * range as described in Auto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,11 +151,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
-   * is created in "custom" mode.
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
    *
    * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
    * range as described in Auto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateSubnetworks() {
@@ -161,11 +165,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
-   * is created in "custom" mode.
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
    *
    * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
    * range as described in Auto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
    * @param autoCreateSubnetworks autoCreateSubnetworks or {@code null} for none
    */
   public Network setAutoCreateSubnetworks(java.lang.Boolean autoCreateSubnetworks) {

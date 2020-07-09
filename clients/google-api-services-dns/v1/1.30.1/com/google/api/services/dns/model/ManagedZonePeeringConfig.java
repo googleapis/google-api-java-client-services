@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for ManagedZonePeeringConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,22 +30,19 @@ package com.google.api.services.dns.model;
 public final class ManagedZonePeeringConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfig".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * The network with which to peer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedZonePeeringConfigTargetNetwork targetNetwork;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfig".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -53,8 +50,6 @@ public final class ManagedZonePeeringConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfig".
    * @param kind kind or {@code null} for none
    */
   public ManagedZonePeeringConfig setKind(java.lang.String kind) {
@@ -63,6 +58,7 @@ public final class ManagedZonePeeringConfig extends com.google.api.client.json.G
   }
 
   /**
+   * The network with which to peer.
    * @return value or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork getTargetNetwork() {
@@ -70,6 +66,7 @@ public final class ManagedZonePeeringConfig extends com.google.api.client.json.G
   }
 
   /**
+   * The network with which to peer.
    * @param targetNetwork targetNetwork or {@code null} for none
    */
   public ManagedZonePeeringConfig setTargetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {

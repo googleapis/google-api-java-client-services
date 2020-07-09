@@ -17,10 +17,10 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for ResourceRecordSet.
+ * A unit of data that will be returned by the DNS servers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,44 +30,47 @@ package com.google.api.services.dns.model;
 public final class ResourceRecordSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#resourceRecordSet".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * For example, www.example.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
+   * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> rrdatas;
 
   /**
+   * As defined in RFC 4034 (section 3.2).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signatureRrdatas;
 
   /**
+   * Number of seconds that this ResourceRecordSet can be cached by resolvers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ttl;
 
   /**
+   * The identifier of a supported record type. See the list of Supported DNS record types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#resourceRecordSet".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +78,6 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#resourceRecordSet".
    * @param kind kind or {@code null} for none
    */
   public ResourceRecordSet setKind(java.lang.String kind) {
@@ -84,6 +86,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * For example, www.example.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -91,6 +94,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * For example, www.example.com.
    * @param name name or {@code null} for none
    */
   public ResourceRecordSet setName(java.lang.String name) {
@@ -99,6 +103,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRrdatas() {
@@ -106,6 +111,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
    * @param rrdatas rrdatas or {@code null} for none
    */
   public ResourceRecordSet setRrdatas(java.util.List<java.lang.String> rrdatas) {
@@ -114,6 +120,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * As defined in RFC 4034 (section 3.2).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdatas() {
@@ -121,6 +128,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * As defined in RFC 4034 (section 3.2).
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
   public ResourceRecordSet setSignatureRrdatas(java.util.List<java.lang.String> signatureRrdatas) {
@@ -129,6 +137,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Number of seconds that this ResourceRecordSet can be cached by resolvers.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTtl() {
@@ -136,6 +145,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Number of seconds that this ResourceRecordSet can be cached by resolvers.
    * @param ttl ttl or {@code null} for none
    */
   public ResourceRecordSet setTtl(java.lang.Integer ttl) {
@@ -144,6 +154,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The identifier of a supported record type. See the list of Supported DNS record types.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -151,6 +162,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The identifier of a supported record type. See the list of Supported DNS record types.
    * @param type type or {@code null} for none
    */
   public ResourceRecordSet setType(java.lang.String type) {

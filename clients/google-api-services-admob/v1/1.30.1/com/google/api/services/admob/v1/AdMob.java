@@ -151,7 +151,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the admob server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name of the publisher account to retrieve.
+     * @param name Required. Resource name of the publisher account to retrieve.
     Example: accounts/pub-9876543210987654
      * @return the request
      */
@@ -178,7 +178,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name of the publisher account to retrieve.
+       * @param name Required. Resource name of the publisher account to retrieve.
     Example: accounts/pub-9876543210987654
        * @since 1.13
        */
@@ -258,19 +258,22 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Resource name of the publisher account to retrieve. Example: accounts/pub-9876543210987654
+       * Required. Resource name of the publisher account to retrieve. Example:
+       * accounts/pub-9876543210987654
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Resource name of the publisher account to retrieve. Example: accounts/pub-9876543210987654
+      /** Required. Resource name of the publisher account to retrieve. Example:
+     accounts/pub-9876543210987654
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Resource name of the publisher account to retrieve. Example: accounts/pub-9876543210987654
+       * Required. Resource name of the publisher account to retrieve. Example:
+       * accounts/pub-9876543210987654
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

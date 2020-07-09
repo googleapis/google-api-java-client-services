@@ -6287,14 +6287,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`.
          *
          * The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of items to return. Zero means no maximum.
+        /** Maximum number of items to return. The default is 30 if unspecified or `0`.
 
        The server may return fewer than the specified number of results.
          */
@@ -6303,7 +6303,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`.
          *
          * The server may return fewer than the specified number of results.
          */
@@ -7032,14 +7032,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`.
          *
          * The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of items to return. Zero means no maximum.
+        /** Maximum number of items to return. The default is 30 if unspecified or `0`.
 
        The server may return fewer than the specified number of results.
          */
@@ -7048,7 +7048,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`.
          *
          * The server may return fewer than the specified number of results.
          */
@@ -8648,14 +8648,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Maximum number of items to return. Zero means no maximum.
+       * Maximum number of items to return. The default is 500 if unspecified or `0`.
        *
        * The server may return fewer than the specified number of results.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of items to return. Zero means no maximum.
+      /** Maximum number of items to return. The default is 500 if unspecified or `0`.
 
      The server may return fewer than the specified number of results.
        */
@@ -8664,7 +8664,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Maximum number of items to return. Zero means no maximum.
+       * Maximum number of items to return. The default is 500 if unspecified or `0`.
        *
        * The server may return fewer than the specified number of results.
        */

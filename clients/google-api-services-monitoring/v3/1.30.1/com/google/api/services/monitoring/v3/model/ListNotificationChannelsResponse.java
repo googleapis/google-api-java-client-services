@@ -46,6 +46,14 @@ public final class ListNotificationChannelsResponse extends com.google.api.clien
   private java.util.List<NotificationChannel> notificationChannels;
 
   /**
+   * The total number of notification channels in all pages. This number is only an estimate, and
+   * may change in subsequent pages. https://aip.dev/158
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * If not empty, indicates that there may be more results that match the request. Use the value in
    * the page_token field in a subsequent request to fetch the next set of results. If empty, all
    * results have been returned.
@@ -80,6 +88,25 @@ public final class ListNotificationChannelsResponse extends com.google.api.clien
    */
   public ListNotificationChannelsResponse setNotificationChannels(java.util.List<NotificationChannel> notificationChannels) {
     this.notificationChannels = notificationChannels;
+    return this;
+  }
+
+  /**
+   * The total number of notification channels in all pages. This number is only an estimate, and
+   * may change in subsequent pages. https://aip.dev/158
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total number of notification channels in all pages. This number is only an estimate, and
+   * may change in subsequent pages. https://aip.dev/158
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public ListNotificationChannelsResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

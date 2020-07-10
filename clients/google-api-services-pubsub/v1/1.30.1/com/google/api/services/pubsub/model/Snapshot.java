@@ -17,9 +17,10 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * A snapshot resource. Snapshots are used in Seek operations, which allow you to manage message
- * acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an existing
- * subscription to the state captured by a snapshot.
+ * A snapshot resource. Snapshots are used in [Seek](https://cloud.google.com/pubsub/docs/replay-
+ * overview) operations, which allow you to manage message acknowledgments in bulk. That is, you can
+ * set the acknowledgment state of messages in an existing subscription to the state captured by a
+ * snapshot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:
@@ -46,7 +47,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
-   * See  Creating and managing labels.
+   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +99,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See  Creating and managing labels.
+   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -106,7 +107,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See  Creating and managing labels.
+   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public Snapshot setLabels(java.util.Map<String, java.lang.String> labels) {

@@ -2880,7 +2880,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Adds content files to a version.
+         * Adds content files to a version. Each file must be under 2 GB.
          *
          * Create a request for the method "versions.populateFiles".
          *
@@ -2907,7 +2907,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
 
           /**
-           * Adds content files to a version.
+           * Adds content files to a version. Each file must be under 2 GB.
            *
            * Create a request for the method "versions.populateFiles".
            *
@@ -5821,7 +5821,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Adds content files to a version.
+       * Adds content files to a version. Each file must be under 2 GB.
        *
        * Create a request for the method "versions.populateFiles".
        *
@@ -5848,7 +5848,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^sites/[^/]+/versions/[^/]+$");
 
         /**
-         * Adds content files to a version.
+         * Adds content files to a version. Each file must be under 2 GB.
          *
          * Create a request for the method "versions.populateFiles".
          *

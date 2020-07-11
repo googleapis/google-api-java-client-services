@@ -38,6 +38,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.Integer availableMemoryMb;
 
   /**
+   * Output only. The Cloud Build ID of the latest successful deployment of the function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildId;
+
+  /**
    * User-provided description of a function.
    * The value may be {@code null}.
    */
@@ -228,6 +235,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setAvailableMemoryMb(java.lang.Integer availableMemoryMb) {
     this.availableMemoryMb = availableMemoryMb;
+    return this;
+  }
+
+  /**
+   * Output only. The Cloud Build ID of the latest successful deployment of the function.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildId() {
+    return buildId;
+  }
+
+  /**
+   * Output only. The Cloud Build ID of the latest successful deployment of the function.
+   * @param buildId buildId or {@code null} for none
+   */
+  public CloudFunction setBuildId(java.lang.String buildId) {
+    this.buildId = buildId;
     return this;
   }
 

@@ -225,6 +225,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         }
 
         @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -242,6 +247,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -353,6 +363,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         }
 
         @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -370,6 +385,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -568,6 +588,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -585,6 +610,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -730,6 +760,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -747,6 +782,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -867,6 +907,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -884,6 +929,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1016,6 +1066,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -1033,6 +1088,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1221,6 +1281,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
           }
@@ -1238,6 +1303,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Patch setKey(java.lang.String key) {
             return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1411,6 +1481,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Cancel setAlt(java.lang.String alt) {
             return (Cancel) super.setAlt(alt);
           }
@@ -1428,6 +1503,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Cancel setKey(java.lang.String key) {
             return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1533,6 +1613,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -1550,6 +1635,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1663,6 +1753,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -1680,6 +1775,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1805,6 +1905,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -1822,6 +1927,11 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override

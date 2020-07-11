@@ -43,20 +43,24 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
 
   /**
    * Required. The performance goal the bidding strategy will attempt to meet or beat, in micros of
-   * the advertiser's currency. Must be greater than or equal to a billable unit of the given
-   * currency and smaller or equal to upper bounds. Each performance_goal_type has its upper bound:
+   * the advertiser's currency or in micro of the ROAS (Return On Advertising Spend) value which is
+   * also based on advertiser's currency. Must be greater than or equal to a billable unit of the
+   * given currency and smaller or equal to upper bounds. Each performance_goal_type has its upper
+   * bound:
    *
    * * when performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`, upper bound is
    * 10000.00 USD. * when performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`,
    * upper bound is 1000.00 USD. * when performance_goal_type is
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, upper bound is 1000.00 USD.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, upper bound is 1000.00 USD. * when
+   * performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`, upper bound is
+   * 1000.00 and lower bound is 0.01.
    *
    * Example: If set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, the bid price will be
    * based on the probability that each available impression will be viewable. For example, if
    * viewable CPM target is $2 and an impression is 40% likely to be viewable, the bid price will be
    * $0.80 CPM (40% of $2).
    *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * For example, 1500000 represents 1.5 standard units of the currency or ROAS value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -68,7 +72,8 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
    * For line item level usage, the value must be one of:
    *
    * * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA` * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC` *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` *
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,20 +106,24 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
 
   /**
    * Required. The performance goal the bidding strategy will attempt to meet or beat, in micros of
-   * the advertiser's currency. Must be greater than or equal to a billable unit of the given
-   * currency and smaller or equal to upper bounds. Each performance_goal_type has its upper bound:
+   * the advertiser's currency or in micro of the ROAS (Return On Advertising Spend) value which is
+   * also based on advertiser's currency. Must be greater than or equal to a billable unit of the
+   * given currency and smaller or equal to upper bounds. Each performance_goal_type has its upper
+   * bound:
    *
    * * when performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`, upper bound is
    * 10000.00 USD. * when performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`,
    * upper bound is 1000.00 USD. * when performance_goal_type is
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, upper bound is 1000.00 USD.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, upper bound is 1000.00 USD. * when
+   * performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`, upper bound is
+   * 1000.00 and lower bound is 0.01.
    *
    * Example: If set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, the bid price will be
    * based on the probability that each available impression will be viewable. For example, if
    * viewable CPM target is $2 and an impression is 40% likely to be viewable, the bid price will be
    * $0.80 CPM (40% of $2).
    *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * For example, 1500000 represents 1.5 standard units of the currency or ROAS value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPerformanceGoalAmountMicros() {
@@ -123,20 +132,24 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
 
   /**
    * Required. The performance goal the bidding strategy will attempt to meet or beat, in micros of
-   * the advertiser's currency. Must be greater than or equal to a billable unit of the given
-   * currency and smaller or equal to upper bounds. Each performance_goal_type has its upper bound:
+   * the advertiser's currency or in micro of the ROAS (Return On Advertising Spend) value which is
+   * also based on advertiser's currency. Must be greater than or equal to a billable unit of the
+   * given currency and smaller or equal to upper bounds. Each performance_goal_type has its upper
+   * bound:
    *
    * * when performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`, upper bound is
    * 10000.00 USD. * when performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`,
    * upper bound is 1000.00 USD. * when performance_goal_type is
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, upper bound is 1000.00 USD.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, upper bound is 1000.00 USD. * when
+   * performance_goal_type is `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`, upper bound is
+   * 1000.00 and lower bound is 0.01.
    *
    * Example: If set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`, the bid price will be
    * based on the probability that each available impression will be viewable. For example, if
    * viewable CPM target is $2 and an impression is 40% likely to be viewable, the bid price will be
    * $0.80 CPM (40% of $2).
    *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * For example, 1500000 represents 1.5 standard units of the currency or ROAS value.
    * @param performanceGoalAmountMicros performanceGoalAmountMicros or {@code null} for none
    */
   public PerformanceGoalBidStrategy setPerformanceGoalAmountMicros(java.lang.Long performanceGoalAmountMicros) {
@@ -150,7 +163,8 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
    * For line item level usage, the value must be one of:
    *
    * * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA` * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC` *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` *
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPerformanceGoalType() {
@@ -163,7 +177,8 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
    * For line item level usage, the value must be one of:
    *
    * * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA` * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC` *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` *
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
    * @param performanceGoalType performanceGoalType or {@code null} for none
    */
   public PerformanceGoalBidStrategy setPerformanceGoalType(java.lang.String performanceGoalType) {

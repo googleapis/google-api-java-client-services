@@ -46,7 +46,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Cloud Memorystore for Redis API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Cloud Memorystore for Redis API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -225,6 +225,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -242,6 +247,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -353,6 +363,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -370,6 +385,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -568,6 +588,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
           }
@@ -585,6 +610,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -736,6 +766,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -753,6 +788,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -882,6 +922,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Export setAccessToken(java.lang.String accessToken) {
+            return (Export) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Export setAlt(java.lang.String alt) {
             return (Export) super.setAlt(alt);
           }
@@ -899,6 +944,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Export setKey(java.lang.String key) {
             return (Export) super.setKey(key);
+          }
+
+          @Override
+          public Export setOauthToken(java.lang.String oauthToken) {
+            return (Export) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1021,6 +1071,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Failover setAccessToken(java.lang.String accessToken) {
+            return (Failover) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Failover setAlt(java.lang.String alt) {
             return (Failover) super.setAlt(alt);
           }
@@ -1038,6 +1093,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Failover setKey(java.lang.String key) {
             return (Failover) super.setKey(key);
+          }
+
+          @Override
+          public Failover setOauthToken(java.lang.String oauthToken) {
+            return (Failover) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1165,6 +1225,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -1182,6 +1247,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1314,6 +1384,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public CloudRedisImport setAccessToken(java.lang.String accessToken) {
+            return (CloudRedisImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public CloudRedisImport setAlt(java.lang.String alt) {
             return (CloudRedisImport) super.setAlt(alt);
           }
@@ -1331,6 +1406,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public CloudRedisImport setKey(java.lang.String key) {
             return (CloudRedisImport) super.setKey(key);
+          }
+
+          @Override
+          public CloudRedisImport setOauthToken(java.lang.String oauthToken) {
+            return (CloudRedisImport) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1474,6 +1554,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -1491,6 +1576,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1685,6 +1775,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
           }
@@ -1702,6 +1797,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch setKey(java.lang.String key) {
             return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1863,6 +1963,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Upgrade setAlt(java.lang.String alt) {
             return (Upgrade) super.setAlt(alt);
           }
@@ -1880,6 +1985,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Upgrade setKey(java.lang.String key) {
             return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2025,6 +2135,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Cancel setAlt(java.lang.String alt) {
             return (Cancel) super.setAlt(alt);
           }
@@ -2042,6 +2157,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Cancel setKey(java.lang.String key) {
             return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2147,6 +2267,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -2164,6 +2289,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2277,6 +2407,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -2294,6 +2429,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2419,6 +2559,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -2436,6 +2581,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override

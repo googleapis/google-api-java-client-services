@@ -46,7 +46,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Access Approval API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Access Approval API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1207,7 +1207,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          *
          * [not set]: Requests that are pending or have active approvals. ALL: All requests.
          * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * DISMISSED: Only dismissed (including expired) requests. HISTORY: Active and dismissed
+         * (including expired) requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -1216,7 +1217,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
        [not set]: Requests that are pending or have active approvals. ALL: All requests. PENDING: Only
        pending requests. ACTIVE: Only active (i.e. currently approved) requests. DISMISSED: Only dismissed
-       (including expired) requests.
+       (including expired) requests. HISTORY: Active and dismissed (including expired) requests.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -1228,7 +1229,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          *
          * [not set]: Requests that are pending or have active approvals. ALL: All requests.
          * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * DISMISSED: Only dismissed (including expired) requests. HISTORY: Active and dismissed
+         * (including expired) requests.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2361,7 +2363,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          *
          * [not set]: Requests that are pending or have active approvals. ALL: All requests.
          * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * DISMISSED: Only dismissed (including expired) requests. HISTORY: Active and dismissed
+         * (including expired) requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2370,7 +2373,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
        [not set]: Requests that are pending or have active approvals. ALL: All requests. PENDING: Only
        pending requests. ACTIVE: Only active (i.e. currently approved) requests. DISMISSED: Only dismissed
-       (including expired) requests.
+       (including expired) requests. HISTORY: Active and dismissed (including expired) requests.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2382,7 +2385,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          *
          * [not set]: Requests that are pending or have active approvals. ALL: All requests.
          * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * DISMISSED: Only dismissed (including expired) requests. HISTORY: Active and dismissed
+         * (including expired) requests.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -3515,7 +3519,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          *
          * [not set]: Requests that are pending or have active approvals. ALL: All requests.
          * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * DISMISSED: Only dismissed (including expired) requests. HISTORY: Active and dismissed
+         * (including expired) requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -3524,7 +3529,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
        [not set]: Requests that are pending or have active approvals. ALL: All requests. PENDING: Only
        pending requests. ACTIVE: Only active (i.e. currently approved) requests. DISMISSED: Only dismissed
-       (including expired) requests.
+       (including expired) requests. HISTORY: Active and dismissed (including expired) requests.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -3536,7 +3541,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          *
          * [not set]: Requests that are pending or have active approvals. ALL: All requests.
          * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * DISMISSED: Only dismissed (including expired) requests. HISTORY: Active and dismissed
+         * (including expired) requests.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

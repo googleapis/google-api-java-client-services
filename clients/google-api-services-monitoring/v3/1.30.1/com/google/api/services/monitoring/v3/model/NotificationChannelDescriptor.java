@@ -77,8 +77,9 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   private java.lang.String name;
 
   /**
-   * The type of notification channel, such as "email", "sms", etc. Notification channel types are
-   * globally unique.
+   * The type of notification channel, such as "email" and "sms". To view the full list of channels,
+   * see Channel descriptors (https://cloud.google.com/monitoring/alerts/using-channels-api#ncd).
+   * Notification channel types are globally unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,8 +181,9 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   }
 
   /**
-   * The type of notification channel, such as "email", "sms", etc. Notification channel types are
-   * globally unique.
+   * The type of notification channel, such as "email" and "sms". To view the full list of channels,
+   * see Channel descriptors (https://cloud.google.com/monitoring/alerts/using-channels-api#ncd).
+   * Notification channel types are globally unique.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -189,8 +191,9 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   }
 
   /**
-   * The type of notification channel, such as "email", "sms", etc. Notification channel types are
-   * globally unique.
+   * The type of notification channel, such as "email" and "sms". To view the full list of channels,
+   * see Channel descriptors (https://cloud.google.com/monitoring/alerts/using-channels-api#ncd).
+   * Notification channel types are globally unique.
    * @param type type or {@code null} for none
    */
   public NotificationChannelDescriptor setType(java.lang.String type) {

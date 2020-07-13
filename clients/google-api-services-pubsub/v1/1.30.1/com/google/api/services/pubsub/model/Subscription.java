@@ -124,9 +124,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from
    * the subscription's backlog, even if they are acknowledged, until they fall out of the
-   * `message_retention_duration` window. This must be true if you would like to
-   *
-   * Seek to a timestamp.
+   * `message_retention_duration` window. This must be true if you would like to [Seek to a
+   * timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,9 +362,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from
    * the subscription's backlog, even if they are acknowledged, until they fall out of the
-   * `message_retention_duration` window. This must be true if you would like to
-   *
-   * Seek to a timestamp.
+   * `message_retention_duration` window. This must be true if you would like to [Seek to a
+   * timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRetainAckedMessages() {
@@ -375,9 +373,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from
    * the subscription's backlog, even if they are acknowledged, until they fall out of the
-   * `message_retention_duration` window. This must be true if you would like to
-   *
-   * Seek to a timestamp.
+   * `message_retention_duration` window. This must be true if you would like to [Seek to a
+   * timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time).
    * @param retainAckedMessages retainAckedMessages or {@code null} for none
    */
   public Subscription setRetainAckedMessages(java.lang.Boolean retainAckedMessages) {

@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Kp493-dMkXZB0Zyk4vCacL1b3bo\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/5KKlwzUaNNeAkffCpewpBXEAfq8\"",
  "discoveryVersion": "v1",
  "id": "content:v2",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2",
- "revision": "20200615",
+ "revision": "20200702",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -5760,7 +5760,7 @@
     },
     "canonicalLink": {
      "type": "string",
-     "description": "Link to the canonical version of the landing page."
+     "description": "URL for the canonical version of your item's landing page."
     },
     "channel": {
      "type": "string",
@@ -5942,7 +5942,7 @@
     },
     "mobileLink": {
      "type": "string",
-     "description": "Link to a mobile-optimized version of the landing page."
+     "description": "URL for the mobile-optimized version of your item's landing page."
     },
     "mpn": {
      "type": "string",

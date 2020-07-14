@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/mM9QQ9Q-yi6Xw-ieynL_CsfCUJ8\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/k6Dlgm4cXQYWKFVP_brVT7p-gd0\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200617",
+ "revision": "20200702",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -5411,7 +5411,7 @@
     },
     "canonicalLink": {
      "type": "string",
-     "description": "Link to the canonical version of the landing page."
+     "description": "URL for the canonical version of your item's landing page."
     },
     "channel": {
      "type": "string",
@@ -5593,7 +5593,7 @@
     },
     "mobileLink": {
      "type": "string",
-     "description": "Link to a mobile-optimized version of the landing page."
+     "description": "URL for the mobile-optimized version of your item's landing page."
     },
     "mpn": {
      "type": "string",
@@ -5623,14 +5623,14 @@
     },
     "productDetails": {
      "type": "array",
-     "description": "Technical specification or additional product details",
+     "description": "Technical specification or additional product details.",
      "items": {
       "$ref": "ProductProductDetail"
      }
     },
     "productHighlights": {
      "type": "array",
-     "description": "List of important bullet points describing the product",
+     "description": "Bullet points describing the most relevant highlights of a product.",
      "items": {
       "type": "string"
      }

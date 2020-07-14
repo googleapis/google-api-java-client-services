@@ -57,6 +57,19 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String argumentText;
 
   /**
+   * User uploaded attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Attachment> attachment;
+
+  static {
+    // hack to force ProGuard to consider Attachment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Attachment.class);
+  }
+
+  /**
    * Rich, formatted and interactive cards that can be used to display UI elements such as:
    * formatted texts, buttons, clickable images. Cards are normally displayed below the plain-text
    * body of the message.
@@ -179,6 +192,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setArgumentText(java.lang.String argumentText) {
     this.argumentText = argumentText;
+    return this;
+  }
+
+  /**
+   * User uploaded attachment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Attachment> getAttachment() {
+    return attachment;
+  }
+
+  /**
+   * User uploaded attachment.
+   * @param attachment attachment or {@code null} for none
+   */
+  public Message setAttachment(java.util.List<Attachment> attachment) {
+    this.attachment = attachment;
     return this;
   }
 

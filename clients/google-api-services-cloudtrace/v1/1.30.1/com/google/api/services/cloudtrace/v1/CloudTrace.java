@@ -147,8 +147,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
      * Sends new traces to Stackdriver Trace or updates existing traces. If the ID of a trace that you
      * send matches that of an existing trace, any fields in the existing trace and its spans are
      * overwritten by the provided values, and any new fields provided are merged with the existing
-     * trace data. If the ID does not match, a new trace is created. In this case, writing traces is not
-     * considered an active developer method since traces are machine generated.
+     * trace data. If the ID does not match, a new trace is created.
      *
      * Create a request for the method "projects.patchTraces".
      *
@@ -173,8 +172,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * Sends new traces to Stackdriver Trace or updates existing traces. If the ID of a trace that you
        * send matches that of an existing trace, any fields in the existing trace and its spans are
        * overwritten by the provided values, and any new fields provided are merged with the existing
-       * trace data. If the ID does not match, a new trace is created. In this case, writing traces is
-       * not considered an active developer method since traces are machine generated.
+       * trace data. If the ID does not match, a new trace is created.
        *
        * Create a request for the method "projects.patchTraces".
        *
@@ -291,8 +289,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
     public class Traces {
 
       /**
-       * Gets a single trace by its ID. In this case, getting for traces is considered an active developer
-       * method, even though it is technically a read-only method.
+       * Gets a single trace by its ID.
        *
        * Create a request for the method "traces.get".
        *
@@ -314,8 +311,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/traces/{traceId}";
 
         /**
-         * Gets a single trace by its ID. In this case, getting for traces is considered an active
-         * developer method, even though it is technically a read-only method.
+         * Gets a single trace by its ID.
          *
          * Create a request for the method "traces.get".
          *
@@ -437,9 +433,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Returns of a list of traces that match the specified filter conditions. In this case, listing for
-       * traces is considered an active developer method, even though it is technically a read-only
-       * method.
+       * Returns of a list of traces that match the specified filter conditions.
        *
        * Create a request for the method "traces.list".
        *
@@ -460,9 +454,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/traces";
 
         /**
-         * Returns of a list of traces that match the specified filter conditions. In this case, listing
-         * for traces is considered an active developer method, even though it is technically a read-only
-         * method.
+         * Returns of a list of traces that match the specified filter conditions.
          *
          * Create a request for the method "traces.list".
          *

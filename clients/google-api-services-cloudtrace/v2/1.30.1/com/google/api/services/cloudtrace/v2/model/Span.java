@@ -75,7 +75,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private Links links;
 
   /**
-   * The resource name of the span in the following format:
+   * Required. The resource name of the span in the following format:
    *
    *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
    * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -112,9 +112,9 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.String spanId;
 
   /**
-   * Distinguishes between spans generated in a particular context. For example, two spans with the
-   * same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to identify an RPC
-   * call.
+   * Optional. Distinguishes between spans generated in a particular context. For example, two spans
+   * with the same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to
+   * identify an RPC call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +250,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the span in the following format:
+   * Required. The resource name of the span in the following format:
    *
    *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
    * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -264,7 +264,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the span in the following format:
+   * Required. The resource name of the span in the following format:
    *
    *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
    * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -336,9 +336,9 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Distinguishes between spans generated in a particular context. For example, two spans with the
-   * same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to identify an RPC
-   * call.
+   * Optional. Distinguishes between spans generated in a particular context. For example, two spans
+   * with the same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to
+   * identify an RPC call.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpanKind() {
@@ -346,9 +346,9 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Distinguishes between spans generated in a particular context. For example, two spans with the
-   * same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to identify an RPC
-   * call.
+   * Optional. Distinguishes between spans generated in a particular context. For example, two spans
+   * with the same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to
+   * identify an RPC call.
    * @param spanKind spanKind or {@code null} for none
    */
   public Span setSpanKind(java.lang.String spanKind) {

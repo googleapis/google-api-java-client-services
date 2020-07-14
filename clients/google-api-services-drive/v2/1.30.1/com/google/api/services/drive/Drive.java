@@ -7344,7 +7344,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center.
+       * details on how revisions are retained, see the Drive Help Center. Note that this field is
+       * ignored if there is no payload in the request.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean newRevision;
@@ -7353,7 +7354,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center. [default: true]
+     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
+     payload in the request. [default: true]
        */
       public java.lang.Boolean getNewRevision() {
         return newRevision;
@@ -7364,7 +7366,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center.
+       * details on how revisions are retained, see the Drive Help Center. Note that this field is
+       * ignored if there is no payload in the request.
        */
       public Patch setNewRevision(java.lang.Boolean newRevision) {
         this.newRevision = newRevision;
@@ -7392,7 +7395,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center.
+     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
+     payload in the request.
        * </p>
        */
       public boolean isNewRevision() {
@@ -7461,18 +7465,24 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. */
+      /**
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note
+       * that this field is ignored if there is no payload in the request.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean pinned;
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. [default:
-     false]
+      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this
+     field is ignored if there is no payload in the request. [default: false]
        */
       public java.lang.Boolean getPinned() {
         return pinned;
       }
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. */
+      /**
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note
+       * that this field is ignored if there is no payload in the request.
+       */
       public Patch setPinned(java.lang.Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -7495,7 +7505,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions.
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this
+     field is ignored if there is no payload in the request.
        * </p>
        */
       public boolean isPinned() {
@@ -8625,7 +8636,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center.
+       * details on how revisions are retained, see the Drive Help Center. Note that this field is
+       * ignored if there is no payload in the request.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean newRevision;
@@ -8634,7 +8646,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center. [default: true]
+     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
+     payload in the request. [default: true]
        */
       public java.lang.Boolean getNewRevision() {
         return newRevision;
@@ -8645,7 +8658,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center.
+       * details on how revisions are retained, see the Drive Help Center. Note that this field is
+       * ignored if there is no payload in the request.
        */
       public Update setNewRevision(java.lang.Boolean newRevision) {
         this.newRevision = newRevision;
@@ -8673,7 +8687,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center.
+     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
+     payload in the request.
        * </p>
        */
       public boolean isNewRevision() {
@@ -8742,18 +8757,24 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. */
+      /**
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note
+       * that this field is ignored if there is no payload in the request.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean pinned;
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. [default:
-     false]
+      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this
+     field is ignored if there is no payload in the request. [default: false]
        */
       public java.lang.Boolean getPinned() {
         return pinned;
       }
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. */
+      /**
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note
+       * that this field is ignored if there is no payload in the request.
+       */
       public Update setPinned(java.lang.Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -8776,7 +8797,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions.
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this
+     field is ignored if there is no payload in the request.
        * </p>
        */
       public boolean isPinned() {

@@ -17,6 +17,9 @@
 package com.google.api.services.iam.v1.model;
 
 /**
+ * Deprecated. [Migrate to Service Account Credentials
+ * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+ *
  * The service account sign blob request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,14 +34,20 @@ package com.google.api.services.iam.v1.model;
 public final class SignBlobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The bytes to sign.
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The bytes to sign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bytesToSign;
 
   /**
-   * Required. The bytes to sign.
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The bytes to sign.
    * @see #decodeBytesToSign()
    * @return value or {@code null} for none
    */
@@ -47,7 +56,10 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The bytes to sign.
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The bytes to sign.
    * @see #getBytesToSign()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -58,7 +70,10 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The bytes to sign.
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The bytes to sign.
    * @see #encodeBytesToSign()
    * @param bytesToSign bytesToSign or {@code null} for none
    */
@@ -68,7 +83,10 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The bytes to sign.
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The bytes to sign.
    * @see #setBytesToSign()
    *
    * <p>

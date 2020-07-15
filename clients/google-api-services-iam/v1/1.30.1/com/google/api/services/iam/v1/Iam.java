@@ -5425,10 +5425,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * **Note:** We are in the process of deprecating this method. Use the
+       * **Note:** This method is deprecated and will stop working on July 1, 2021. Use the
        * [`signBlob`](https://cloud.google.com/iam/help/rest-
        * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account Credentials
-       * API instead.
+       * API instead. If you currently use this method, see the [migration
+       * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions.
        *
        * Signs a blob using the system-managed private key for a ServiceAccount.
        *
@@ -5437,7 +5438,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link SignBlob#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the service account in the following format:
+       * @param name Required. Deprecated. [Migrate to Service Account Credentials
+       *        API](https://cloud.google.com/iam/help/credentials/migrate-api).
+      The resource name of the
+       *        service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5461,10 +5465,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
         /**
-         * **Note:** We are in the process of deprecating this method. Use the
+         * **Note:** This method is deprecated and will stop working on July 1, 2021. Use the
          * [`signBlob`](https://cloud.google.com/iam/help/rest-
          * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account Credentials
-         * API instead.
+         * API instead. If you currently use this method, see the [migration
+         * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions.
          *
          * Signs a blob using the system-managed private key for a ServiceAccount.
          *
@@ -5476,7 +5481,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * SignBlob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account in the following format:
+         * @param name Required. Deprecated. [Migrate to Service Account Credentials
+       *        API](https://cloud.google.com/iam/help/credentials/migrate-api).
+      The resource name of the
+       *        service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5552,7 +5560,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
+         * Required. Deprecated. [Migrate to Service Account Credentials
+         * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+         *
+         * The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5560,7 +5571,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the service account in the following format:
+        /** Required. Deprecated. [Migrate to Service Account Credentials
+       API](https://cloud.google.com/iam/help/credentials/migrate-api).
+
+       The resource name of the service account in the following format:
        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
        will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
        `unique_id` of the service account.
@@ -5570,7 +5584,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
+         * Required. Deprecated. [Migrate to Service Account Credentials
+         * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+         *
+         * The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5591,10 +5608,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * **Note:** We are in the process of deprecating this method. Use the
+       * **Note:** This method is deprecated and will stop working on July 1, 2021. Use the
        * [`signJwt`](https://cloud.google.com/iam/help/rest-
        * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account Credentials
-       * API instead.
+       * API instead. If you currently use this method, see the [migration
+       * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions.
        *
        * Signs a JSON Web Token (JWT) using the system-managed private key for a ServiceAccount.
        *
@@ -5603,7 +5621,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link SignJwt#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the service account in the following format:
+       * @param name Required. Deprecated. [Migrate to Service Account Credentials
+       *        API](https://cloud.google.com/iam/help/credentials/migrate-api).
+      The resource name of the
+       *        service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5627,10 +5648,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
         /**
-         * **Note:** We are in the process of deprecating this method. Use the
+         * **Note:** This method is deprecated and will stop working on July 1, 2021. Use the
          * [`signJwt`](https://cloud.google.com/iam/help/rest-
          * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account Credentials
-         * API instead.
+         * API instead. If you currently use this method, see the [migration
+         * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions.
          *
          * Signs a JSON Web Token (JWT) using the system-managed private key for a ServiceAccount.
          *
@@ -5642,7 +5664,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * SignJwt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account in the following format:
+         * @param name Required. Deprecated. [Migrate to Service Account Credentials
+       *        API](https://cloud.google.com/iam/help/credentials/migrate-api).
+      The resource name of the
+       *        service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5718,7 +5743,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
+         * Required. Deprecated. [Migrate to Service Account Credentials
+         * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+         *
+         * The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5726,7 +5754,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the service account in the following format:
+        /** Required. Deprecated. [Migrate to Service Account Credentials
+       API](https://cloud.google.com/iam/help/credentials/migrate-api).
+
+       The resource name of the service account in the following format:
        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
        will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
        `unique_id` of the service account.
@@ -5736,7 +5767,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The resource name of the service account in the following format:
+         * Required. Deprecated. [Migrate to Service Account Credentials
+         * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+         *
+         * The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.

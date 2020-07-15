@@ -1996,6 +1996,157 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * Applies a batch of write operations.
+         *
+         * The BatchWrite method does not apply the write operations atomically and can apply them out of
+         * order. Method does not allow more than one write per document. Each write succeeds or fails
+         * independently. See the BatchWriteResponse for the success status of each write.
+         *
+         * If you require an atomically applied set of writes, use Commit instead.
+         *
+         * Create a request for the method "documents.batchWrite".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link BatchWrite#execute()} method to invoke the remote operation.
+         *
+         * @param database Required. The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.BatchWriteRequest}
+         * @return the request
+         */
+        public BatchWrite batchWrite(java.lang.String database, com.google.api.services.firestore.v1.model.BatchWriteRequest content) throws java.io.IOException {
+          BatchWrite result = new BatchWrite(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchWrite extends FirestoreRequest<com.google.api.services.firestore.v1.model.BatchWriteResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:batchWrite";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Applies a batch of write operations.
+           *
+           * The BatchWrite method does not apply the write operations atomically and can apply them out of
+           * order. Method does not allow more than one write per document. Each write succeeds or fails
+           * independently. See the BatchWriteResponse for the success status of each write.
+           *
+           * If you require an atomically applied set of writes, use Commit instead.
+           *
+           * Create a request for the method "documents.batchWrite".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link BatchWrite#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchWrite#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database Required. The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.BatchWriteRequest}
+           * @since 1.13
+           */
+          protected BatchWrite(java.lang.String database, com.google.api.services.firestore.v1.model.BatchWriteRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.BatchWriteResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchWrite set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchWrite) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchWrite setAccessToken(java.lang.String accessToken) {
+            return (BatchWrite) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchWrite setAlt(java.lang.String alt) {
+            return (BatchWrite) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchWrite setCallback(java.lang.String callback) {
+            return (BatchWrite) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchWrite setFields(java.lang.String fields) {
+            return (BatchWrite) super.setFields(fields);
+          }
+
+          @Override
+          public BatchWrite setKey(java.lang.String key) {
+            return (BatchWrite) super.setKey(key);
+          }
+
+          @Override
+          public BatchWrite setOauthToken(java.lang.String oauthToken) {
+            return (BatchWrite) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchWrite setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchWrite) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchWrite setQuotaUser(java.lang.String quotaUser) {
+            return (BatchWrite) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchWrite setUploadType(java.lang.String uploadType) {
+            return (BatchWrite) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchWrite setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchWrite) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
+           */
+          public BatchWrite setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public BatchWrite set(String parameterName, Object value) {
+            return (BatchWrite) super.set(parameterName, value);
+          }
+        }
+        /**
          * Starts a new transaction.
          *
          * Create a request for the method "documents.beginTransaction".
@@ -3492,6 +3643,159 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           @Override
           public Listen set(String parameterName, Object value) {
             return (Listen) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Partitions a query by returning partition cursors that can be used to run the query in parallel.
+         * The returned partition cursors are split points that can be used by RunQuery as starting/end
+         * points for the query results.
+         *
+         * Create a request for the method "documents.partitionQuery".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link PartitionQuery#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents`.
+        Document resource names are not
+         *        supported; only database resource names
+        can be specified.
+         * @param content the {@link com.google.api.services.firestore.v1.model.PartitionQueryRequest}
+         * @return the request
+         */
+        public PartitionQuery partitionQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.PartitionQueryRequest content) throws java.io.IOException {
+          PartitionQuery result = new PartitionQuery(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PartitionQuery extends FirestoreRequest<com.google.api.services.firestore.v1.model.PartitionQueryResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:partitionQuery";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+
+          /**
+           * Partitions a query by returning partition cursors that can be used to run the query in
+           * parallel. The returned partition cursors are split points that can be used by RunQuery as
+           * starting/end points for the query results.
+           *
+           * Create a request for the method "documents.partitionQuery".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link PartitionQuery#execute()} method to invoke the remote
+           * operation. <p> {@link PartitionQuery#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents`.
+        Document resource names are not
+         *        supported; only database resource names
+        can be specified.
+           * @param content the {@link com.google.api.services.firestore.v1.model.PartitionQueryRequest}
+           * @since 1.13
+           */
+          protected PartitionQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.PartitionQueryRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.PartitionQueryResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+            }
+          }
+
+          @Override
+          public PartitionQuery set$Xgafv(java.lang.String $Xgafv) {
+            return (PartitionQuery) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PartitionQuery setAccessToken(java.lang.String accessToken) {
+            return (PartitionQuery) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PartitionQuery setAlt(java.lang.String alt) {
+            return (PartitionQuery) super.setAlt(alt);
+          }
+
+          @Override
+          public PartitionQuery setCallback(java.lang.String callback) {
+            return (PartitionQuery) super.setCallback(callback);
+          }
+
+          @Override
+          public PartitionQuery setFields(java.lang.String fields) {
+            return (PartitionQuery) super.setFields(fields);
+          }
+
+          @Override
+          public PartitionQuery setKey(java.lang.String key) {
+            return (PartitionQuery) super.setKey(key);
+          }
+
+          @Override
+          public PartitionQuery setOauthToken(java.lang.String oauthToken) {
+            return (PartitionQuery) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PartitionQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PartitionQuery) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PartitionQuery setQuotaUser(java.lang.String quotaUser) {
+            return (PartitionQuery) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PartitionQuery setUploadType(java.lang.String uploadType) {
+            return (PartitionQuery) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PartitionQuery setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PartitionQuery) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents`. Document resource names are
+           * not supported; only database resource names can be specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. In the format:
+         `projects/{project_id}/databases/{database_id}/documents`. Document resource names are not
+         supported; only database resource names can be specified.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents`. Document resource names are
+           * not supported; only database resource names can be specified.
+           */
+          public PartitionQuery setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public PartitionQuery set(String parameterName, Object value) {
+            return (PartitionQuery) super.set(parameterName, value);
           }
         }
         /**

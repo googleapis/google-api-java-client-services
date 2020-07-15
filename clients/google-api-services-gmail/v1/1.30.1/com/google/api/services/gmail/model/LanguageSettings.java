@@ -31,8 +31,8 @@ package com.google.api.services.gmail.model;
 public final class LanguageSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The language to display Gmail in, formatted as an RFC 3066 Language Tag (for example en-GB, fr
-   * or ja for British English, French, or Japanese respectively).
+   * The language to display Gmail in, formatted as an RFC 3066 Language Tag (for example `en-GB`,
+   * `fr` or `ja` for British English, French, or Japanese respectively).
    *
    * The set of languages supported by Gmail evolves over time, so please refer to the "Language"
    * dropdown in the Gmail settings  for all available options, as described in the language
@@ -48,8 +48,8 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   private java.lang.String displayLanguage;
 
   /**
-   * The language to display Gmail in, formatted as an RFC 3066 Language Tag (for example en-GB, fr
-   * or ja for British English, French, or Japanese respectively).
+   * The language to display Gmail in, formatted as an RFC 3066 Language Tag (for example `en-GB`,
+   * `fr` or `ja` for British English, French, or Japanese respectively).
    *
    * The set of languages supported by Gmail evolves over time, so please refer to the "Language"
    * dropdown in the Gmail settings  for all available options, as described in the language
@@ -66,8 +66,8 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The language to display Gmail in, formatted as an RFC 3066 Language Tag (for example en-GB, fr
-   * or ja for British English, French, or Japanese respectively).
+   * The language to display Gmail in, formatted as an RFC 3066 Language Tag (for example `en-GB`,
+   * `fr` or `ja` for British English, French, or Japanese respectively).
    *
    * The set of languages supported by Gmail evolves over time, so please refer to the "Language"
    * dropdown in the Gmail settings  for all available options, as described in the language

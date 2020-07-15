@@ -30,8 +30,8 @@ package com.google.api.services.gmail.model;
 public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color to assign to the label. Color is only available for labels that have their type set
-   * to user. @mutable gmail.users.labels.create gmail.users.labels.update
+   * The color to assign to the label. Color is only available for labels that have their `type` set
+   * to `user`. @mutable gmail.users.labels.create gmail.users.labels.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,16 +100,16 @@ public final class Label extends com.google.api.client.json.GenericJson {
    * deleted by the user and can be applied to any message or thread. System labels are internally
    * created and cannot be added, modified, or deleted. System labels may be able to be applied to
    * or removed from messages and threads under some circumstances but this is not guaranteed. For
-   * example, users can apply and remove the INBOX and UNREAD labels from messages and threads, but
-   * cannot apply or remove the DRAFTS or SENT labels from messages or threads.
+   * example, users can apply and remove the `INBOX` and `UNREAD` labels from messages and threads,
+   * but cannot apply or remove the `DRAFTS` or `SENT` labels from messages or threads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The color to assign to the label. Color is only available for labels that have their type set
-   * to user. @mutable gmail.users.labels.create gmail.users.labels.update
+   * The color to assign to the label. Color is only available for labels that have their `type` set
+   * to `user`. @mutable gmail.users.labels.create gmail.users.labels.update
    * @return value or {@code null} for none
    */
   public LabelColor getColor() {
@@ -117,8 +117,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color to assign to the label. Color is only available for labels that have their type set
-   * to user. @mutable gmail.users.labels.create gmail.users.labels.update
+   * The color to assign to the label. Color is only available for labels that have their `type` set
+   * to `user`. @mutable gmail.users.labels.create gmail.users.labels.update
    * @param color color or {@code null} for none
    */
   public Label setColor(LabelColor color) {
@@ -271,8 +271,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
    * deleted by the user and can be applied to any message or thread. System labels are internally
    * created and cannot be added, modified, or deleted. System labels may be able to be applied to
    * or removed from messages and threads under some circumstances but this is not guaranteed. For
-   * example, users can apply and remove the INBOX and UNREAD labels from messages and threads, but
-   * cannot apply or remove the DRAFTS or SENT labels from messages or threads.
+   * example, users can apply and remove the `INBOX` and `UNREAD` labels from messages and threads,
+   * but cannot apply or remove the `DRAFTS` or `SENT` labels from messages or threads.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -284,8 +284,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
    * deleted by the user and can be applied to any message or thread. System labels are internally
    * created and cannot be added, modified, or deleted. System labels may be able to be applied to
    * or removed from messages and threads under some circumstances but this is not guaranteed. For
-   * example, users can apply and remove the INBOX and UNREAD labels from messages and threads, but
-   * cannot apply or remove the DRAFTS or SENT labels from messages or threads.
+   * example, users can apply and remove the `INBOX` and `UNREAD` labels from messages and threads,
+   * but cannot apply or remove the `DRAFTS` or `SENT` labels from messages or threads.
    * @param type type or {@code null} for none
    */
   public Label setType(java.lang.String type) {

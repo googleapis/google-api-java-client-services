@@ -30,21 +30,21 @@ package com.google.api.services.gmail.model;
 public final class MessagePartHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the header before the : separator. For example, To.
+   * The name of the header before the `:` separator. For example, `To`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The value of the header after the : separator. For example, someuser@example.com.
+   * The value of the header after the `:` separator. For example, `someuser@example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The name of the header before the : separator. For example, To.
+   * The name of the header before the `:` separator. For example, `To`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +52,7 @@ public final class MessagePartHeader extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the header before the : separator. For example, To.
+   * The name of the header before the `:` separator. For example, `To`.
    * @param name name or {@code null} for none
    */
   public MessagePartHeader setName(java.lang.String name) {
@@ -61,7 +61,7 @@ public final class MessagePartHeader extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The value of the header after the : separator. For example, someuser@example.com.
+   * The value of the header after the `:` separator. For example, `someuser@example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class MessagePartHeader extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The value of the header after the : separator. For example, someuser@example.com.
+   * The value of the header after the `:` separator. For example, `someuser@example.com`.
    * @param value value or {@code null} for none
    */
   public MessagePartHeader setValue(java.lang.String value) {

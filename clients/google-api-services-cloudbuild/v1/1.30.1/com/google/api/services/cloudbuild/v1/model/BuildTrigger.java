@@ -51,7 +51,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * If true, the trigger will never result in a build.
+   * If true, the trigger will never automatically execute a build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +198,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the trigger will never result in a build.
+   * If true, the trigger will never automatically execute a build.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -206,7 +206,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the trigger will never result in a build.
+   * If true, the trigger will never automatically execute a build.
    * @param disabled disabled or {@code null} for none
    */
   public BuildTrigger setDisabled(java.lang.Boolean disabled) {

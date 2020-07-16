@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.clien
   /**
    * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
    * differentiable structure. Refer to this paper for more details:
-   * http://proceedings.mlr.press/v70/sundararajan17a.html
+   * https://arxiv.org/abs/1703.01365
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.clien
   /**
    * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
    * differentiable structure. Refer to this paper for more details:
-   * http://proceedings.mlr.press/v70/sundararajan17a.html
+   * https://arxiv.org/abs/1703.01365
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1IntegratedGradientsAttribution getIntegratedGradientsAttribution() {
@@ -72,7 +72,7 @@ public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.clien
   /**
    * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
    * differentiable structure. Refer to this paper for more details:
-   * http://proceedings.mlr.press/v70/sundararajan17a.html
+   * https://arxiv.org/abs/1703.01365
    * @param integratedGradientsAttribution integratedGradientsAttribution or {@code null} for none
    */
   public GoogleCloudMlV1ExplanationConfig setIntegratedGradientsAttribution(GoogleCloudMlV1IntegratedGradientsAttribution integratedGradientsAttribution) {

@@ -164,15 +164,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String masterType;
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
-   * firewalls#networks) to which the Job is peered. For example,
-   * projects/12345/global/networks/myVPC. Format is of the form
-   * projects/{project}/global/networks/{network}. Where {project} is a project number, as in
-   * '12345', and {network} is network name.".
+   * Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is
+   * peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is
+   * `projects/{project}/global/networks/{network}`, where {project} is a project number (like
+   * `12345`) and {network} is network name.
    *
    * Private services access must already be configured for the network. If left unspecified, the
-   * Job is not peered with any network. Learn more - Connecting Job to user network over private
-   * IP.
+   * Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-
+   * platform/training/docs/vpc-peering).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,9 +290,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private GoogleCloudMlV1Scheduling scheduling;
 
   /**
-   * Optional. Specifies the service account for workload run-as account. Users submitting jobs must
-   * have act-as permission on this run-as account. If not specified, then CMLE P4SA will be used by
-   * default.
+   * Optional. The email address of a service account to use when running the training appplication.
+   * You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In
+   * addition, the AI Platform Training Google-managed service account must have the
+   * `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about
+   * configuring a service account.](/ai-platform/training/docs/custom-service-account)
+   *
+   * If not specified, the AI Platform Training Google-managed service account is used by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -645,15 +648,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
-   * firewalls#networks) to which the Job is peered. For example,
-   * projects/12345/global/networks/myVPC. Format is of the form
-   * projects/{project}/global/networks/{network}. Where {project} is a project number, as in
-   * '12345', and {network} is network name.".
+   * Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is
+   * peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is
+   * `projects/{project}/global/networks/{network}`, where {project} is a project number (like
+   * `12345`) and {network} is network name.
    *
    * Private services access must already be configured for the network. If left unspecified, the
-   * Job is not peered with any network. Learn more - Connecting Job to user network over private
-   * IP.
+   * Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-
+   * platform/training/docs/vpc-peering).
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -661,15 +663,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The full name of the Google Compute Engine [network](/compute/docs/networks-and-
-   * firewalls#networks) to which the Job is peered. For example,
-   * projects/12345/global/networks/myVPC. Format is of the form
-   * projects/{project}/global/networks/{network}. Where {project} is a project number, as in
-   * '12345', and {network} is network name.".
+   * Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is
+   * peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is
+   * `projects/{project}/global/networks/{network}`, where {project} is a project number (like
+   * `12345`) and {network} is network name.
    *
    * Private services access must already be configured for the network. If left unspecified, the
-   * Job is not peered with any network. Learn more - Connecting Job to user network over private
-   * IP.
+   * Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-
+   * platform/training/docs/vpc-peering).
    * @param network network or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setNetwork(java.lang.String network) {
@@ -932,9 +933,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. Specifies the service account for workload run-as account. Users submitting jobs must
-   * have act-as permission on this run-as account. If not specified, then CMLE P4SA will be used by
-   * default.
+   * Optional. The email address of a service account to use when running the training appplication.
+   * You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In
+   * addition, the AI Platform Training Google-managed service account must have the
+   * `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about
+   * configuring a service account.](/ai-platform/training/docs/custom-service-account)
+   *
+   * If not specified, the AI Platform Training Google-managed service account is used by default.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -942,9 +947,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. Specifies the service account for workload run-as account. Users submitting jobs must
-   * have act-as permission on this run-as account. If not specified, then CMLE P4SA will be used by
-   * default.
+   * Optional. The email address of a service account to use when running the training appplication.
+   * You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In
+   * addition, the AI Platform Training Google-managed service account must have the
+   * `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about
+   * configuring a service account.](/ai-platform/training/docs/custom-service-account)
+   *
+   * If not specified, the AI Platform Training Google-managed service account is used by default.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setServiceAccount(java.lang.String serviceAccount) {

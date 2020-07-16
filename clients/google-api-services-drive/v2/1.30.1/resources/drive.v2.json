@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/0HpFu_RDPkuIU_N39LrLS2PV3e0\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/erXdng4sqc4RDzlXNStInU_1gYs\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20200618",
+ "revision": "20200701",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -4108,7 +4108,7 @@
       },
       "newRevision": {
        "type": "boolean",
-       "description": "Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous unpinned revisions are preserved for a short period of time. Pinned revisions are stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how revisions are retained, see the Drive Help Center.",
+       "description": "Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous unpinned revisions are preserved for a short period of time. Pinned revisions are stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no payload in the request.",
        "default": "true",
        "location": "query"
       },
@@ -4125,7 +4125,7 @@
       },
       "pinned": {
        "type": "boolean",
-       "description": "Whether to pin the new revision. A file can have a maximum of 200 pinned revisions.",
+       "description": "Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this field is ignored if there is no payload in the request.",
        "default": "false",
        "location": "query"
       },
@@ -4360,7 +4360,7 @@
       },
       "newRevision": {
        "type": "boolean",
-       "description": "Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous unpinned revisions are preserved for a short period of time. Pinned revisions are stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how revisions are retained, see the Drive Help Center.",
+       "description": "Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous unpinned revisions are preserved for a short period of time. Pinned revisions are stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no payload in the request.",
        "default": "true",
        "location": "query"
       },
@@ -4377,7 +4377,7 @@
       },
       "pinned": {
        "type": "boolean",
-       "description": "Whether to pin the new revision. A file can have a maximum of 200 pinned revisions.",
+       "description": "Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this field is ignored if there is no payload in the request.",
        "default": "false",
        "location": "query"
       },

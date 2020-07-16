@@ -45,8 +45,8 @@ public final class MessagePart extends com.google.api.client.json.GenericJson {
 
   /**
    * List of headers on this message part. For the top-level message part, representing the entire
-   * message payload, it will contain the standard RFC 2822 email headers such as To, From, and
-   * Subject.
+   * message payload, it will contain the standard RFC 2822 email headers such as `To`, `From`, and
+   * `Subject`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class MessagePart extends com.google.api.client.json.GenericJson {
 
   /**
    * The child MIME message parts of this part. This only applies to container MIME message parts,
-   * for example multipart. For non- container MIME message part types, such as text/plain, this
+   * for example `multipart`. For non- container MIME message part types, such as `text/plain`, this
    * field is empty. For more information, see RFC 1521.
    * The value may be {@code null}.
    */
@@ -111,8 +111,8 @@ public final class MessagePart extends com.google.api.client.json.GenericJson {
 
   /**
    * List of headers on this message part. For the top-level message part, representing the entire
-   * message payload, it will contain the standard RFC 2822 email headers such as To, From, and
-   * Subject.
+   * message payload, it will contain the standard RFC 2822 email headers such as `To`, `From`, and
+   * `Subject`.
    * @return value or {@code null} for none
    */
   public java.util.List<MessagePartHeader> getHeaders() {
@@ -121,8 +121,8 @@ public final class MessagePart extends com.google.api.client.json.GenericJson {
 
   /**
    * List of headers on this message part. For the top-level message part, representing the entire
-   * message payload, it will contain the standard RFC 2822 email headers such as To, From, and
-   * Subject.
+   * message payload, it will contain the standard RFC 2822 email headers such as `To`, `From`, and
+   * `Subject`.
    * @param headers headers or {@code null} for none
    */
   public MessagePart setHeaders(java.util.List<MessagePartHeader> headers) {
@@ -166,7 +166,7 @@ public final class MessagePart extends com.google.api.client.json.GenericJson {
 
   /**
    * The child MIME message parts of this part. This only applies to container MIME message parts,
-   * for example multipart. For non- container MIME message part types, such as text/plain, this
+   * for example `multipart`. For non- container MIME message part types, such as `text/plain`, this
    * field is empty. For more information, see RFC 1521.
    * @return value or {@code null} for none
    */
@@ -176,7 +176,7 @@ public final class MessagePart extends com.google.api.client.json.GenericJson {
 
   /**
    * The child MIME message parts of this part. This only applies to container MIME message parts,
-   * for example multipart. For non- container MIME message part types, such as text/plain, this
+   * for example `multipart`. For non- container MIME message part types, such as `text/plain`, this
    * field is empty. For more information, see RFC 1521.
    * @param parts parts or {@code null} for none
    */

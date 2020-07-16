@@ -151,7 +151,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the gmail server.  After setting any optional
      * parameters, call the {@link GetProfile#execute()} method to invoke the remote operation.
      *
-     * @param userId The user's email address. The special value me
+     * @param userId The user's email address. The special value `me`
     can be used to indicate the authenticated user.
      *        [default: me]
      * @return the request
@@ -177,7 +177,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * GetProfile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
     can be used to indicate the authenticated user.
      *        [default: me]
        * @since 1.13
@@ -253,13 +253,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The user's email address. The special value me can be used to indicate the authenticated
+       * The user's email address. The special value `me` can be used to indicate the authenticated
        * user.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** The user's email address. The special value me can be used to indicate the authenticated user.
+      /** The user's email address. The special value `me` can be used to indicate the authenticated user.
      [default: me]
        */
       public java.lang.String getUserId() {
@@ -267,7 +267,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The user's email address. The special value me can be used to indicate the authenticated
+       * The user's email address. The special value `me` can be used to indicate the authenticated
        * user.
        */
       public GetProfile setUserId(java.lang.String userId) {
@@ -288,7 +288,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the gmail server.  After setting any optional
      * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
      *
-     * @param userId The user's email address. The special value me
+     * @param userId The user's email address. The special value `me`
     can be used to indicate the authenticated user.
      *        [default: me]
      * @return the request
@@ -313,7 +313,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
     can be used to indicate the authenticated user.
      *        [default: me]
        * @since 1.13
@@ -379,13 +379,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The user's email address. The special value me can be used to indicate the authenticated
+       * The user's email address. The special value `me` can be used to indicate the authenticated
        * user.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** The user's email address. The special value me can be used to indicate the authenticated user.
+      /** The user's email address. The special value `me` can be used to indicate the authenticated user.
      [default: me]
        */
       public java.lang.String getUserId() {
@@ -393,7 +393,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The user's email address. The special value me can be used to indicate the authenticated
+       * The user's email address. The special value `me` can be used to indicate the authenticated
        * user.
        */
       public Stop setUserId(java.lang.String userId) {
@@ -414,7 +414,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the gmail server.  After setting any optional
      * parameters, call the {@link Watch#execute()} method to invoke the remote operation.
      *
-     * @param userId The user's email address. The special value me
+     * @param userId The user's email address. The special value `me`
     can be used to indicate the authenticated user.
      *        [default: me]
      * @param content the {@link com.google.api.services.gmail.model.WatchRequest}
@@ -440,7 +440,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * Watch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
     can be used to indicate the authenticated user.
      *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.WatchRequest}
@@ -507,13 +507,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The user's email address. The special value me can be used to indicate the authenticated
+       * The user's email address. The special value `me` can be used to indicate the authenticated
        * user.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** The user's email address. The special value me can be used to indicate the authenticated user.
+      /** The user's email address. The special value `me` can be used to indicate the authenticated user.
      [default: me]
        */
       public java.lang.String getUserId() {
@@ -521,7 +521,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The user's email address. The special value me can be used to indicate the authenticated
+       * The user's email address. The special value `me` can be used to indicate the authenticated
        * user.
        */
       public Watch setUserId(java.lang.String userId) {
@@ -556,14 +556,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
     public class Drafts {
 
       /**
-       * Creates a new draft with the DRAFT label.
+       * Creates a new draft with the `DRAFT` label.
        *
        * Create a request for the method "drafts.create".
        *
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Draft}
@@ -576,7 +576,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Creates a new draft with the DRAFT label.
+       * Creates a new draft with the `DRAFT` label.
        *
        * Create a request for the method "drafts.create".
        *
@@ -587,7 +587,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
@@ -606,7 +606,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts";
 
         /**
-         * Creates a new draft with the DRAFT label.
+         * Creates a new draft with the `DRAFT` label.
          *
          * Create a request for the method "drafts.create".
          *
@@ -615,7 +615,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Draft}
@@ -627,7 +627,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Creates a new draft with the DRAFT label.
+         * Creates a new draft with the `DRAFT` label.
          *
          * Create a request for the method "drafts.create".
          *
@@ -640,7 +640,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
@@ -709,13 +709,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -723,8 +723,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Create setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -744,7 +744,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the draft to delete.
@@ -770,7 +770,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the draft to delete.
@@ -838,13 +838,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -852,8 +852,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Delete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -889,7 +889,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the draft to retrieve.
@@ -915,7 +915,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the draft to retrieve.
@@ -993,13 +993,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -1007,8 +1007,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Get setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -1060,7 +1060,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @return the request
@@ -1085,7 +1085,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @since 1.13
@@ -1161,13 +1161,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -1175,8 +1175,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public List setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -1184,19 +1184,19 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Include drafts from SPAM and TRASH in the results.
+         * Include drafts from `SPAM` and `TRASH` in the results.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeSpamTrash;
 
-        /** Include drafts from SPAM and TRASH in the results. [default: false]
+        /** Include drafts from `SPAM` and `TRASH` in the results. [default: false]
          */
         public java.lang.Boolean getIncludeSpamTrash() {
           return includeSpamTrash;
         }
 
         /**
-         * Include drafts from SPAM and TRASH in the results.
+         * Include drafts from `SPAM` and `TRASH` in the results.
          */
         public List setIncludeSpamTrash(java.lang.Boolean includeSpamTrash) {
           this.includeSpamTrash = includeSpamTrash;
@@ -1220,7 +1220,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * </p>
          *
          * <p>
-         * Include drafts from SPAM and TRASH in the results.
+         * Include drafts from `SPAM` and `TRASH` in the results.
          * </p>
          */
         public boolean isIncludeSpamTrash() {
@@ -1264,13 +1264,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Only return draft messages matching the specified query. Supports the same query format
-         * as the Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+         * as the Gmail search box. For example, `"from:someuser@example.com rfc822msgid:
+         * is:unread"`.
          */
         @com.google.api.client.util.Key
         private java.lang.String q;
 
         /** Only return draft messages matching the specified query. Supports the same query format as the
-       Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+       Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
          */
         public java.lang.String getQ() {
           return q;
@@ -1278,7 +1279,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Only return draft messages matching the specified query. Supports the same query format
-         * as the Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+         * as the Gmail search box. For example, `"from:someuser@example.com rfc822msgid:
+         * is:unread"`.
          */
         public List setQ(java.lang.String q) {
           this.q = q;
@@ -1291,14 +1293,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.
+       * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
        *
        * Create a request for the method "drafts.send".
        *
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Send#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Draft}
@@ -1311,7 +1313,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.
+       * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
        *
        * Create a request for the method "drafts.send".
        *
@@ -1322,7 +1324,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
@@ -1341,7 +1343,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts/send";
 
         /**
-         * Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.
+         * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
          *
          * Create a request for the method "drafts.send".
          *
@@ -1350,7 +1352,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Draft}
@@ -1362,7 +1364,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.
+         * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
          *
          * Create a request for the method "drafts.send".
          *
@@ -1375,7 +1377,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
@@ -1444,13 +1446,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -1458,8 +1460,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Send setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -1479,7 +1481,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the draft to update.
@@ -1504,7 +1506,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]@param id The ID of the draft to update.
        * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
@@ -1532,7 +1534,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the draft to update.
@@ -1559,7 +1561,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]@param id The ID of the draft to update.
          * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
@@ -1629,13 +1631,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -1643,8 +1645,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Update setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -1696,14 +1698,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Lists the history of all changes to the given mailbox. History results are returned in
-       * chronological order (increasing historyId).
+       * chronological order (increasing `historyId`).
        *
        * Create a request for the method "history.list".
        *
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @return the request
@@ -1720,7 +1722,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Lists the history of all changes to the given mailbox. History results are returned in
-         * chronological order (increasing historyId).
+         * chronological order (increasing `historyId`).
          *
          * Create a request for the method "history.list".
          *
@@ -1729,7 +1731,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @since 1.13
@@ -1805,13 +1807,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -1819,8 +1821,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public List setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -1892,42 +1894,42 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Required. Returns history records after the specified startHistoryId. The supplied
-         * startHistoryId should be obtained from the historyId of a message, thread, or previous
-         * list response. History IDs increase chronologically but are not contiguous with random
-         * gaps in between valid IDs. Supplying an invalid or out of date startHistoryId typically
-         * returns an HTTP 404 error code. A historyId is typically valid for at least a week, but
-         * in some rare circumstances may be valid for only a few hours. If you receive an HTTP 404
-         * error response, your  application should perform a full sync. If you receive no
-         * nextPageToken in the response, there are no updates to retrieve and you can store the
-         * returned historyId for a future request.
+         * Required. Returns history records after the specified `startHistoryId`. The supplied
+         * `startHistoryId` should be obtained from the `historyId` of a message, thread, or
+         * previous `list` response. History IDs increase chronologically but are not contiguous
+         * with random gaps in between valid IDs. Supplying an invalid or out of date
+         * `startHistoryId` typically returns an `HTTP 404` error code. A `historyId` is typically
+         * valid for at least a week, but in some rare circumstances may be valid for only a few
+         * hours. If you receive an `HTTP 404` error response, your  application should perform a
+         * full sync. If you receive no `nextPageToken` in the response, there are no updates to
+         * retrieve and you can store the returned `historyId` for a future request.
          */
         @com.google.api.client.util.Key
         private java.math.BigInteger startHistoryId;
 
-        /** Required. Returns history records after the specified startHistoryId. The supplied startHistoryId
-       should be obtained from the historyId of a message, thread, or previous list response. History IDs
-       increase chronologically but are not contiguous with random gaps in between valid IDs. Supplying an
-       invalid or out of date startHistoryId typically returns an HTTP 404 error code. A historyId is
-       typically valid for at least a week, but in some rare circumstances may be valid for only a few
-       hours. If you receive an HTTP 404 error response, your  application should perform a full sync. If
-       you receive no nextPageToken in the response, there are no updates to retrieve and you can store
-       the returned historyId for a future request.
+        /** Required. Returns history records after the specified `startHistoryId`. The supplied
+       `startHistoryId` should be obtained from the `historyId` of a message, thread, or previous `list`
+       response. History IDs increase chronologically but are not contiguous with random gaps in between
+       valid IDs. Supplying an invalid or out of date `startHistoryId` typically returns an `HTTP 404`
+       error code. A `historyId` is typically valid for at least a week, but in some rare circumstances
+       may be valid for only a few hours. If you receive an `HTTP 404` error response, your  application
+       should perform a full sync. If you receive no `nextPageToken` in the response, there are no updates
+       to retrieve and you can store the returned `historyId` for a future request.
          */
         public java.math.BigInteger getStartHistoryId() {
           return startHistoryId;
         }
 
         /**
-         * Required. Returns history records after the specified startHistoryId. The supplied
-         * startHistoryId should be obtained from the historyId of a message, thread, or previous
-         * list response. History IDs increase chronologically but are not contiguous with random
-         * gaps in between valid IDs. Supplying an invalid or out of date startHistoryId typically
-         * returns an HTTP 404 error code. A historyId is typically valid for at least a week, but
-         * in some rare circumstances may be valid for only a few hours. If you receive an HTTP 404
-         * error response, your  application should perform a full sync. If you receive no
-         * nextPageToken in the response, there are no updates to retrieve and you can store the
-         * returned historyId for a future request.
+         * Required. Returns history records after the specified `startHistoryId`. The supplied
+         * `startHistoryId` should be obtained from the `historyId` of a message, thread, or
+         * previous `list` response. History IDs increase chronologically but are not contiguous
+         * with random gaps in between valid IDs. Supplying an invalid or out of date
+         * `startHistoryId` typically returns an `HTTP 404` error code. A `historyId` is typically
+         * valid for at least a week, but in some rare circumstances may be valid for only a few
+         * hours. If you receive an `HTTP 404` error response, your  application should perform a
+         * full sync. If you receive no `nextPageToken` in the response, there are no updates to
+         * retrieve and you can store the returned `historyId` for a future request.
          */
         public List setStartHistoryId(java.math.BigInteger startHistoryId) {
           this.startHistoryId = startHistoryId;
@@ -1969,7 +1971,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Label}
@@ -1995,7 +1997,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Label}
@@ -2068,13 +2070,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2082,8 +2084,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Create setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2104,7 +2106,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the label to delete.
@@ -2131,7 +2133,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the label to delete.
@@ -2199,13 +2201,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2213,8 +2215,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Delete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2250,7 +2252,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the label to retrieve.
@@ -2276,7 +2278,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the label to retrieve.
@@ -2354,13 +2356,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2368,8 +2370,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Get setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2405,7 +2407,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @return the request
@@ -2430,7 +2432,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @since 1.13
@@ -2506,13 +2508,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2520,8 +2522,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public List setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2541,7 +2543,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the label to update.
@@ -2568,7 +2570,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the label to update.
@@ -2637,13 +2639,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2651,8 +2653,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Patch setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2688,7 +2690,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the label to update.
@@ -2715,7 +2717,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the label to update.
@@ -2792,13 +2794,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2806,8 +2808,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Update setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2866,7 +2868,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.BatchDeleteMessagesRequest}
@@ -2894,7 +2896,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.BatchDeleteMessagesRequest}
@@ -2961,13 +2963,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -2975,8 +2977,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public BatchDelete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -2996,7 +2998,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link BatchModify#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.BatchModifyMessagesRequest}
@@ -3023,7 +3025,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * BatchModify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.BatchModifyMessagesRequest}
@@ -3090,13 +3092,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -3104,8 +3106,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public BatchModify setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -3119,14 +3121,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Immediately and permanently deletes the specified message. This operation cannot be undone.
-       * Prefer messages.trash instead.
+       * Prefer `messages.trash` instead.
        *
        * Create a request for the method "messages.delete".
        *
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the message to delete.
@@ -3144,7 +3146,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Immediately and permanently deletes the specified message. This operation cannot be undone.
-         * Prefer messages.trash instead.
+         * Prefer `messages.trash` instead.
          *
          * Create a request for the method "messages.delete".
          *
@@ -3153,7 +3155,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the message to delete.
@@ -3221,13 +3223,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -3235,8 +3237,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Delete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -3272,7 +3274,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the message to retrieve.
@@ -3298,7 +3300,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the message to retrieve.
@@ -3376,13 +3378,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -3390,8 +3392,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Get setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -3460,7 +3462,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link GmailImport#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Message}
@@ -3485,7 +3487,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
@@ -3515,7 +3517,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * GmailImport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message}
@@ -3542,7 +3544,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
@@ -3611,13 +3613,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -3625,8 +3627,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public GmailImport setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -3807,7 +3809,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Directly inserts a message into only this user's mailbox similar to IMAP APPEND, bypassing most
+       * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing most
        * scanning and classification. Does not send a message.
        *
        * Create a request for the method "messages.insert".
@@ -3815,7 +3817,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Message}
@@ -3828,7 +3830,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Directly inserts a message into only this user's mailbox similar to IMAP APPEND, bypassing most
+       * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing most
        * scanning and classification. Does not send a message.
        *
        * Create a request for the method "messages.insert".
@@ -3840,7 +3842,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
@@ -3859,8 +3861,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages";
 
         /**
-         * Directly inserts a message into only this user's mailbox similar to IMAP APPEND, bypassing most
-         * scanning and classification. Does not send a message.
+         * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing
+         * most scanning and classification. Does not send a message.
          *
          * Create a request for the method "messages.insert".
          *
@@ -3869,7 +3871,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message}
@@ -3883,8 +3885,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Directly inserts a message into only this user's mailbox similar to IMAP APPEND, bypassing most
-         * scanning and classification. Does not send a message.
+         * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing
+         * most scanning and classification. Does not send a message.
          *
          * Create a request for the method "messages.insert".
          *
@@ -3897,7 +3899,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
@@ -3966,13 +3968,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -3980,8 +3982,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Insert setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -4068,7 +4070,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @return the request
@@ -4093,7 +4095,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @since 1.13
@@ -4169,13 +4171,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -4183,8 +4185,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public List setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -4192,19 +4194,19 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Include messages from SPAM and TRASH in the results.
+         * Include messages from `SPAM` and `TRASH` in the results.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeSpamTrash;
 
-        /** Include messages from SPAM and TRASH in the results. [default: false]
+        /** Include messages from `SPAM` and `TRASH` in the results. [default: false]
          */
         public java.lang.Boolean getIncludeSpamTrash() {
           return includeSpamTrash;
         }
 
         /**
-         * Include messages from SPAM and TRASH in the results.
+         * Include messages from `SPAM` and `TRASH` in the results.
          */
         public List setIncludeSpamTrash(java.lang.Boolean includeSpamTrash) {
           this.includeSpamTrash = includeSpamTrash;
@@ -4228,7 +4230,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * </p>
          *
          * <p>
-         * Include messages from SPAM and TRASH in the results.
+         * Include messages from `SPAM` and `TRASH` in the results.
          * </p>
          */
         public boolean isIncludeSpamTrash() {
@@ -4288,16 +4290,15 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Only return messages matching the specified query. Supports the same query format as the
-         * Gmail search box. For example, "from:someuser@example.com
-         * rfc822msgid:somemsgid@example.com is:unread". Parameter cannot be used when accessing the
-         * api using the gmail.metadata scope.
+         * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
+         * Parameter cannot be used when accessing the api using the gmail.metadata scope.
          */
         @com.google.api.client.util.Key
         private java.lang.String q;
 
         /** Only return messages matching the specified query. Supports the same query format as the Gmail
-       search box. For example, "from:someuser@example.com rfc822msgid:somemsgid@example.com is:unread".
-       Parameter cannot be used when accessing the api using the gmail.metadata scope.
+       search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`. Parameter cannot be
+       used when accessing the api using the gmail.metadata scope.
          */
         public java.lang.String getQ() {
           return q;
@@ -4305,9 +4306,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Only return messages matching the specified query. Supports the same query format as the
-         * Gmail search box. For example, "from:someuser@example.com
-         * rfc822msgid:somemsgid@example.com is:unread". Parameter cannot be used when accessing the
-         * api using the gmail.metadata scope.
+         * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
+         * Parameter cannot be used when accessing the api using the gmail.metadata scope.
          */
         public List setQ(java.lang.String q) {
           this.q = q;
@@ -4327,7 +4327,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Modify#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the message to modify.
@@ -4354,7 +4354,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Modify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the message to modify.
@@ -4423,13 +4423,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -4437,8 +4437,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Modify setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -4467,14 +4467,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Sends the specified message to the recipients in the To, Cc, and Bcc headers.
+       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
        *
        * Create a request for the method "messages.send".
        *
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Send#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Message}
@@ -4487,7 +4487,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Sends the specified message to the recipients in the To, Cc, and Bcc headers.
+       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
        *
        * Create a request for the method "messages.send".
        *
@@ -4498,7 +4498,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
@@ -4517,7 +4517,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages/send";
 
         /**
-         * Sends the specified message to the recipients in the To, Cc, and Bcc headers.
+         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
          *
          * Create a request for the method "messages.send".
          *
@@ -4526,7 +4526,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message}
@@ -4540,7 +4540,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Sends the specified message to the recipients in the To, Cc, and Bcc headers.
+         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers.
          *
          * Create a request for the method "messages.send".
          *
@@ -4553,7 +4553,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
@@ -4622,13 +4622,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -4636,8 +4636,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Send setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -4657,7 +4657,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Trash#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the message to Trash.
@@ -4683,7 +4683,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Trash#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the message to Trash.
@@ -4751,13 +4751,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -4765,8 +4765,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Trash setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -4802,7 +4802,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Untrash#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the message to remove from Trash.
@@ -4829,7 +4829,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Untrash#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the message to remove from Trash.
@@ -4897,13 +4897,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -4911,8 +4911,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Untrash setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -4969,7 +4969,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * This request holds the parameters needed by the gmail server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
         can be used to indicate the authenticated user.
          *        [default: me]
          * @param messageId The ID of the message containing the attachment.
@@ -4996,7 +4996,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param userId The user's email address. The special value me
+           * @param userId The user's email address. The special value `me`
         can be used to indicate the authenticated user.
          *        [default: me]
            * @param messageId The ID of the message containing the attachment.
@@ -5076,13 +5076,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
 
           /**
-           * The user's email address. The special value me can be used to indicate the
+           * The user's email address. The special value `me` can be used to indicate the
            * authenticated user.
            */
           @com.google.api.client.util.Key
           private java.lang.String userId;
 
-          /** The user's email address. The special value me can be used to indicate the authenticated user.
+          /** The user's email address. The special value `me` can be used to indicate the authenticated user.
          [default: me]
            */
           public java.lang.String getUserId() {
@@ -5090,7 +5090,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
 
           /**
-           * The user's email address. The special value me can be used to indicate the
+           * The user's email address. The special value `me` can be used to indicate the
            * authenticated user.
            */
           public Get setUserId(java.lang.String userId) {
@@ -6112,10 +6112,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Updates language settings.
        *
-       * If successful, the return object contains the displayLanguage that was saved for the user, which
-       * may differ from the value passed into the request. This is because the requested displayLanguage
-       * may not be directly supported by Gmail but have a close variant that is, and so the variant may
-       * be chosen and saved instead.
+       * If successful, the return object contains the `displayLanguage` that was saved for the user,
+       * which may differ from the value passed into the request. This is because the requested
+       * `displayLanguage` may not be directly supported by Gmail but have a close variant that is, and so
+       * the variant may be chosen and saved instead.
        *
        * Create a request for the method "settings.updateLanguage".
        *
@@ -6141,10 +6141,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         /**
          * Updates language settings.
          *
-         * If successful, the return object contains the displayLanguage that was saved for the user,
+         * If successful, the return object contains the `displayLanguage` that was saved for the user,
          * which may differ from the value passed into the request. This is because the requested
-         * displayLanguage may not be directly supported by Gmail but have a close variant that is, and so
-         * the variant may be chosen and saved instead.
+         * `displayLanguage` may not be directly supported by Gmail but have a close variant that is, and
+         * so the variant may be chosen and saved instead.
          *
          * Create a request for the method "settings.updateLanguage".
          *
@@ -6528,7 +6528,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       public class Delegates {
 
         /**
-         * Adds a delegate with its verification status set directly to accepted, without sending any
+         * Adds a delegate with its verification status set directly to `accepted`, without sending any
          * verification email.  The delegate user must be a member of the same G Suite organization as the
          * delegator user.
          *
@@ -6567,7 +6567,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/delegates";
 
           /**
-           * Adds a delegate with its verification status set directly to accepted, without sending any
+           * Adds a delegate with its verification status set directly to `accepted`, without sending any
            * verification email.  The delegate user must be a member of the same G Suite organization as the
            * delegator user.
            *
@@ -7769,8 +7769,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Creates a forwarding address.  If ownership verification is required, a message will be sent to
-         * the recipient and the resource's verification status will be set to pending; otherwise, the
-         * resource will be created with verification status set to accepted.
+         * the recipient and the resource's verification status will be set to `pending`; otherwise, the
+         * resource will be created with verification status set to `accepted`.
          *
          * This method is only available to service account clients that have been delegated domain-wide
          * authority.
@@ -7798,8 +7798,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Creates a forwarding address.  If ownership verification is required, a message will be sent to
-           * the recipient and the resource's verification status will be set to pending; otherwise, the
-           * resource will be created with verification status set to accepted.
+           * the recipient and the resource's verification status will be set to `pending`; otherwise, the
+           * resource will be created with verification status set to `accepted`.
            *
            * This method is only available to service account clients that have been delegated domain-wide
            * authority.
@@ -8375,8 +8375,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Creates a custom "from" send-as alias.  If an SMTP MSA is specified, Gmail will attempt to
          * connect to the SMTP service to validate the configuration before creating the alias.  If
          * ownership verification is required for the alias, a message will be sent to the email address and
-         * the resource's verification status will be set to pending; otherwise, the resource will be
-         * created with verification status set to accepted.  If a signature is provided, Gmail will
+         * the resource's verification status will be set to `pending`; otherwise, the resource will be
+         * created with verification status set to `accepted`.  If a signature is provided, Gmail will
          * sanitize the HTML before saving it with the alias.
          *
          * This method is only available to service account clients that have been delegated domain-wide
@@ -8407,8 +8407,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * Creates a custom "from" send-as alias.  If an SMTP MSA is specified, Gmail will attempt to
            * connect to the SMTP service to validate the configuration before creating the alias.  If
            * ownership verification is required for the alias, a message will be sent to the email address
-           * and the resource's verification status will be set to pending; otherwise, the resource will be
-           * created with verification status set to accepted.  If a signature is provided, Gmail will
+           * and the resource's verification status will be set to `pending`; otherwise, the resource will
+           * be created with verification status set to `accepted`.  If a signature is provided, Gmail will
            * sanitize the HTML before saving it with the alias.
            *
            * This method is only available to service account clients that have been delegated domain-wide
@@ -9267,7 +9267,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Sends a verification email to the specified send-as alias address. The verification status must
-         * be pending.
+         * be `pending`.
          *
          * This method is only available to service account clients that have been delegated domain-wide
          * authority.
@@ -9295,7 +9295,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Sends a verification email to the specified send-as alias address. The verification status must
-           * be pending.
+           * be `pending`.
            *
            * This method is only available to service account clients that have been delegated domain-wide
            * authority.
@@ -9447,7 +9447,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * This request holds the parameters needed by the gmail server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param userId The user's email address. The special value me
+           * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
            * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9475,7 +9475,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param userId The user's email address. The special value me
+             * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
              * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9546,13 +9546,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             @com.google.api.client.util.Key
             private java.lang.String userId;
 
-            /** The user's email address. The special value me can be used to indicate the authenticated user.
+            /** The user's email address. The special value `me` can be used to indicate the authenticated user.
            [default: me]
              */
             public java.lang.String getUserId() {
@@ -9560,7 +9560,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             public Delete setUserId(java.lang.String userId) {
@@ -9617,7 +9617,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * This request holds the parameters needed by the gmail server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param userId The user's email address. The special value me
+           * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
            * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9645,7 +9645,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param userId The user's email address. The special value me
+             * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
              * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9726,13 +9726,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             @com.google.api.client.util.Key
             private java.lang.String userId;
 
-            /** The user's email address. The special value me can be used to indicate the authenticated user.
+            /** The user's email address. The special value `me` can be used to indicate the authenticated user.
            [default: me]
              */
             public java.lang.String getUserId() {
@@ -9740,7 +9740,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             public Get setUserId(java.lang.String userId) {
@@ -9798,7 +9798,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * This request holds the parameters needed by the gmail server.  After setting any optional
            * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
            *
-           * @param userId The user's email address. The special value me
+           * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
            * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9827,7 +9827,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param userId The user's email address. The special value me
+             * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
              * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9897,13 +9897,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             @com.google.api.client.util.Key
             private java.lang.String userId;
 
-            /** The user's email address. The special value me can be used to indicate the authenticated user.
+            /** The user's email address. The special value `me` can be used to indicate the authenticated user.
            [default: me]
              */
             public java.lang.String getUserId() {
@@ -9911,7 +9911,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             public Insert setUserId(java.lang.String userId) {
@@ -9952,7 +9952,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * This request holds the parameters needed by the gmail server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param userId The user's email address. The special value me
+           * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
            * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -9979,7 +9979,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param userId The user's email address. The special value me
+             * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
              * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -10058,13 +10058,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             @com.google.api.client.util.Key
             private java.lang.String userId;
 
-            /** The user's email address. The special value me can be used to indicate the authenticated user.
+            /** The user's email address. The special value `me` can be used to indicate the authenticated user.
            [default: me]
              */
             public java.lang.String getUserId() {
@@ -10072,7 +10072,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             public List setUserId(java.lang.String userId) {
@@ -10113,7 +10113,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * This request holds the parameters needed by the gmail server.  After setting any optional
            * parameters, call the {@link SetDefault#execute()} method to invoke the remote operation.
            *
-           * @param userId The user's email address. The special value me
+           * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
            * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -10142,7 +10142,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * SetDefault#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param userId The user's email address. The special value me
+             * @param userId The user's email address. The special value `me`
           can be used to indicate the authenticated user.
            *        [default: me]
              * @param sendAsEmail The email address that appears in the "From:" header for mail sent using
@@ -10213,13 +10213,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             @com.google.api.client.util.Key
             private java.lang.String userId;
 
-            /** The user's email address. The special value me can be used to indicate the authenticated user.
+            /** The user's email address. The special value `me` can be used to indicate the authenticated user.
            [default: me]
              */
             public java.lang.String getUserId() {
@@ -10227,7 +10227,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
 
             /**
-             * The user's email address. The special value me can be used to indicate the
+             * The user's email address. The special value `me` can be used to indicate the
              * authenticated user.
              */
             public SetDefault setUserId(java.lang.String userId) {
@@ -10302,14 +10302,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Immediately and permanently deletes the specified thread. This operation cannot be undone. Prefer
-       * threads.trash instead.
+       * `threads.trash` instead.
        *
        * Create a request for the method "threads.delete".
        *
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id ID of the Thread to delete.
@@ -10327,7 +10327,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Immediately and permanently deletes the specified thread. This operation cannot be undone.
-         * Prefer threads.trash instead.
+         * Prefer `threads.trash` instead.
          *
          * Create a request for the method "threads.delete".
          *
@@ -10336,7 +10336,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id ID of the Thread to delete.
@@ -10404,13 +10404,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -10418,8 +10418,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Delete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -10455,7 +10455,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the thread to retrieve.
@@ -10481,7 +10481,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the thread to retrieve.
@@ -10559,13 +10559,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -10573,8 +10573,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Get setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -10642,7 +10642,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @return the request
@@ -10667,7 +10667,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @since 1.13
@@ -10743,13 +10743,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -10757,8 +10757,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public List setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -10766,19 +10766,19 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Include threads from SPAM and TRASH in the results.
+         * Include threads from `SPAM` and `TRASH` in the results.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeSpamTrash;
 
-        /** Include threads from SPAM and TRASH in the results. [default: false]
+        /** Include threads from `SPAM` and `TRASH` in the results. [default: false]
          */
         public java.lang.Boolean getIncludeSpamTrash() {
           return includeSpamTrash;
         }
 
         /**
-         * Include threads from SPAM and TRASH in the results.
+         * Include threads from `SPAM` and `TRASH` in the results.
          */
         public List setIncludeSpamTrash(java.lang.Boolean includeSpamTrash) {
           this.includeSpamTrash = includeSpamTrash;
@@ -10802,7 +10802,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * </p>
          *
          * <p>
-         * Include threads from SPAM and TRASH in the results.
+         * Include threads from `SPAM` and `TRASH` in the results.
          * </p>
          */
         public boolean isIncludeSpamTrash() {
@@ -10862,14 +10862,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Only return threads matching the specified query. Supports the same query format as the
-         * Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+         * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
          * Parameter cannot be used when accessing the api using the gmail.metadata scope.
          */
         @com.google.api.client.util.Key
         private java.lang.String q;
 
         /** Only return threads matching the specified query. Supports the same query format as the Gmail
-       search box. For example, "from:someuser@example.com rfc822msgid: is:unread". Parameter cannot be
+       search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`. Parameter cannot be
        used when accessing the api using the gmail.metadata scope.
          */
         public java.lang.String getQ() {
@@ -10878,7 +10878,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Only return threads matching the specified query. Supports the same query format as the
-         * Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+         * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
          * Parameter cannot be used when accessing the api using the gmail.metadata scope.
          */
         public List setQ(java.lang.String q) {
@@ -10899,7 +10899,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Modify#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the thread to modify.
@@ -10926,7 +10926,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Modify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the thread to modify.
@@ -10995,13 +10995,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -11009,8 +11009,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Modify setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -11046,7 +11046,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Trash#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the thread to Trash.
@@ -11072,7 +11072,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Trash#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the thread to Trash.
@@ -11140,13 +11140,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -11154,8 +11154,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Trash setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -11191,7 +11191,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the gmail server.  After setting any optional
        * parameters, call the {@link Untrash#execute()} method to invoke the remote operation.
        *
-       * @param userId The user's email address. The special value me
+       * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
        * @param id The ID of the thread to remove from Trash.
@@ -11218,7 +11218,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Untrash#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param userId The user's email address. The special value me
+         * @param userId The user's email address. The special value `me`
       can be used to indicate the authenticated user.
        *        [default: me]
          * @param id The ID of the thread to remove from Trash.
@@ -11286,13 +11286,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** The user's email address. The special value me can be used to indicate the authenticated user.
+        /** The user's email address. The special value `me` can be used to indicate the authenticated user.
        [default: me]
          */
         public java.lang.String getUserId() {
@@ -11300,8 +11300,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The user's email address. The special value me can be used to indicate the authenticated
-         * user.
+         * The user's email address. The special value `me` can be used to indicate the
+         * authenticated user.
          */
         public Untrash setUserId(java.lang.String userId) {
           this.userId = userId;

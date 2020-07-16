@@ -53,7 +53,7 @@ public final class History extends com.google.api.client.json.GenericJson {
 
   /**
    * List of messages changed in this history record.  The fields for specific change types, such as
-   * messagesAdded may duplicate messages in this field.  We recommend using the specific change-
+   * `messagesAdded` may duplicate messages in this field.  We recommend using the specific change-
    * type fields instead of this.
    * The value may be {@code null}.
    */
@@ -127,7 +127,7 @@ public final class History extends com.google.api.client.json.GenericJson {
 
   /**
    * List of messages changed in this history record.  The fields for specific change types, such as
-   * messagesAdded may duplicate messages in this field.  We recommend using the specific change-
+   * `messagesAdded` may duplicate messages in this field.  We recommend using the specific change-
    * type fields instead of this.
    * @return value or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class History extends com.google.api.client.json.GenericJson {
 
   /**
    * List of messages changed in this history record.  The fields for specific change types, such as
-   * messagesAdded may duplicate messages in this field.  We recommend using the specific change-
+   * `messagesAdded` may duplicate messages in this field.  We recommend using the specific change-
    * type fields instead of this.
    * @param messages messages or {@code null} for none
    */

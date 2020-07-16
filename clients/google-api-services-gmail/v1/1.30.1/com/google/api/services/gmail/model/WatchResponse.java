@@ -30,8 +30,8 @@ package com.google.api.services.gmail.model;
 public final class WatchResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * When Gmail will stop sending notifications for mailbox updates (epoch millis). Call watch again
-   * before this time to renew the watch.
+   * When Gmail will stop sending notifications for mailbox updates (epoch millis). Call `watch`
+   * again before this time to renew the watch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,8 +45,8 @@ public final class WatchResponse extends com.google.api.client.json.GenericJson 
   private java.math.BigInteger historyId;
 
   /**
-   * When Gmail will stop sending notifications for mailbox updates (epoch millis). Call watch again
-   * before this time to renew the watch.
+   * When Gmail will stop sending notifications for mailbox updates (epoch millis). Call `watch`
+   * again before this time to renew the watch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExpiration() {
@@ -54,8 +54,8 @@ public final class WatchResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When Gmail will stop sending notifications for mailbox updates (epoch millis). Call watch again
-   * before this time to renew the watch.
+   * When Gmail will stop sending notifications for mailbox updates (epoch millis). Call `watch`
+   * again before this time to renew the watch.
    * @param expiration expiration or {@code null} for none
    */
   public WatchResponse setExpiration(java.lang.Long expiration) {

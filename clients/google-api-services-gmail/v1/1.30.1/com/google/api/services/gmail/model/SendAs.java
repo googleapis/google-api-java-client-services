@@ -45,9 +45,9 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * Whether this address is selected as the default "From:" address in situations such as composing
    * a new message or sending a vacation auto-reply.  Every Gmail account has exactly one default
-   * send-as address, so the only legal value that clients may write to this field is true.
-   * Changing this from false to true for an address will result in this field becoming false for
-   * the other previous default address.
+   * send-as address, so the only legal value that clients may write to this field is `true`.
+   * Changing this from `false` to `true` for an address will result in this field becoming `false`
+   * for the other previous default address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,9 +139,9 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * Whether this address is selected as the default "From:" address in situations such as composing
    * a new message or sending a vacation auto-reply.  Every Gmail account has exactly one default
-   * send-as address, so the only legal value that clients may write to this field is true.
-   * Changing this from false to true for an address will result in this field becoming false for
-   * the other previous default address.
+   * send-as address, so the only legal value that clients may write to this field is `true`.
+   * Changing this from `false` to `true` for an address will result in this field becoming `false`
+   * for the other previous default address.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDefault() {
@@ -151,9 +151,9 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
   /**
    * Whether this address is selected as the default "From:" address in situations such as composing
    * a new message or sending a vacation auto-reply.  Every Gmail account has exactly one default
-   * send-as address, so the only legal value that clients may write to this field is true.
-   * Changing this from false to true for an address will result in this field becoming false for
-   * the other previous default address.
+   * send-as address, so the only legal value that clients may write to this field is `true`.
+   * Changing this from `false` to `true` for an address will result in this field becoming `false`
+   * for the other previous default address.
    * @param isDefault isDefault or {@code null} for none
    */
   public SendAs setIsDefault(java.lang.Boolean isDefault) {

@@ -52,7 +52,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * Only return messages not matching the specified query. Supports the same query format as the
-   * Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+   * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * Only return messages matching the specified query. Supports the same query format as the Gmail
-   * search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+   * search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * Only return messages not matching the specified query. Supports the same query format as the
-   * Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+   * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNegatedQuery() {
@@ -159,7 +159,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * Only return messages not matching the specified query. Supports the same query format as the
-   * Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+   * Gmail search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
    * @param negatedQuery negatedQuery or {@code null} for none
    */
   public FilterCriteria setNegatedQuery(java.lang.String negatedQuery) {
@@ -169,7 +169,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * Only return messages matching the specified query. Supports the same query format as the Gmail
-   * search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+   * search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -178,7 +178,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * Only return messages matching the specified query. Supports the same query format as the Gmail
-   * search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
+   * search box. For example, `"from:someuser@example.com rfc822msgid: is:unread"`.
    * @param query query or {@code null} for none
    */
   public FilterCriteria setQuery(java.lang.String query) {

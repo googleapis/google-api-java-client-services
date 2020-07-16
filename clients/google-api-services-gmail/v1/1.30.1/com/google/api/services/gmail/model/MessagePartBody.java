@@ -31,8 +31,8 @@ public final class MessagePartBody extends com.google.api.client.json.GenericJso
 
   /**
    * When present, contains the ID of an external attachment that can be retrieved in a separate
-   * messages.attachments.get request. When not present, the entire content of the message part body
-   * is contained in the data field.
+   * `messages.attachments.get` request. When not present, the entire content of the message part
+   * body is contained in the data field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class MessagePartBody extends com.google.api.client.json.GenericJso
 
   /**
    * When present, contains the ID of an external attachment that can be retrieved in a separate
-   * messages.attachments.get request. When not present, the entire content of the message part body
-   * is contained in the data field.
+   * `messages.attachments.get` request. When not present, the entire content of the message part
+   * body is contained in the data field.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachmentId() {
@@ -66,8 +66,8 @@ public final class MessagePartBody extends com.google.api.client.json.GenericJso
 
   /**
    * When present, contains the ID of an external attachment that can be retrieved in a separate
-   * messages.attachments.get request. When not present, the entire content of the message part body
-   * is contained in the data field.
+   * `messages.attachments.get` request. When not present, the entire content of the message part
+   * body is contained in the data field.
    * @param attachmentId attachmentId or {@code null} for none
    */
   public MessagePartBody setAttachmentId(java.lang.String attachmentId) {

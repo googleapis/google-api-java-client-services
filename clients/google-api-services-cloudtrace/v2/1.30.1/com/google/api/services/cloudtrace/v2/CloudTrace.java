@@ -164,8 +164,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
     public class Traces {
 
       /**
-       * Sends new spans to new or existing traces. You cannot update existing spans. In this case,
-       * writing traces is not considered an active developer method since traces are machine generated.
+       * Sends new spans to new or existing traces. You cannot update existing spans.
        *
        * Create a request for the method "traces.batchWrite".
        *
@@ -191,8 +190,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Sends new spans to new or existing traces. You cannot update existing spans. In this case,
-         * writing traces is not considered an active developer method since traces are machine generated.
+         * Sends new spans to new or existing traces. You cannot update existing spans.
          *
          * Create a request for the method "traces.batchWrite".
          *
@@ -326,15 +324,14 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
       public class Spans {
 
         /**
-         * Creates a new span. In this case, writing traces is not considered an active developer method
-         * since traces are machine generated.
+         * Creates a new span.
          *
          * Create a request for the method "spans.createSpan".
          *
          * This request holds the parameters needed by the cloudtrace server.  After setting any optional
          * parameters, call the {@link CreateSpan#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the span in the following format:
+         * @param name Required. The resource name of the span in the following format:
          *        projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
          *        within a project;
         it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -359,8 +356,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/traces/[^/]+/spans/[^/]+$");
 
           /**
-           * Creates a new span. In this case, writing traces is not considered an active developer method
-           * since traces are machine generated.
+           * Creates a new span.
            *
            * Create a request for the method "spans.createSpan".
            *
@@ -370,7 +366,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
            * CreateSpan#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the span in the following format:
+           * @param name Required. The resource name of the span in the following format:
          *        projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
          *        within a project;
         it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -447,7 +443,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The resource name of the span in the following format:
+           * Required. The resource name of the span in the following format:
            *
            * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a
            * trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -458,7 +454,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the span in the following format:
+          /** Required. The resource name of the span in the following format:
 
          projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within a
          project; it is a 32-character hexadecimal encoding of a 16-byte array.
@@ -471,7 +467,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The resource name of the span in the following format:
+           * Required. The resource name of the span in the following format:
            *
            * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a
            * trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array.

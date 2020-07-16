@@ -121,7 +121,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
-   * Link to the canonical version of the landing page.
+   * URL for the canonical version of your item's landing page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -431,7 +431,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.Long minHandlingTime;
 
   /**
-   * Link to a mobile-optimized version of the landing page.
+   * URL for the mobile-optimized version of your item's landing page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -852,7 +852,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the canonical version of the landing page.
+   * URL for the canonical version of your item's landing page.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalLink() {
@@ -860,7 +860,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the canonical version of the landing page.
+   * URL for the canonical version of your item's landing page.
    * @param canonicalLink canonicalLink or {@code null} for none
    */
   public Product setCanonicalLink(java.lang.String canonicalLink) {
@@ -1565,7 +1565,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to a mobile-optimized version of the landing page.
+   * URL for the mobile-optimized version of your item's landing page.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileLink() {
@@ -1573,7 +1573,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to a mobile-optimized version of the landing page.
+   * URL for the mobile-optimized version of your item's landing page.
    * @param mobileLink mobileLink or {@code null} for none
    */
   public Product setMobileLink(java.lang.String mobileLink) {

@@ -102,7 +102,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
-   * Link to the canonical version of the landing page.
+   * URL for the canonical version of your item's landing page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,7 +396,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.Long minHandlingTime;
 
   /**
-   * Link to a mobile-optimized version of the landing page.
+   * URL for the mobile-optimized version of your item's landing page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -441,14 +441,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price price;
 
   /**
-   * Technical specification or additional product details
+   * Technical specification or additional product details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ProductProductDetail> productDetails;
 
   /**
-   * List of important bullet points describing the product
+   * Bullet points describing the most relevant highlights of a product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -778,7 +778,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the canonical version of the landing page.
+   * URL for the canonical version of your item's landing page.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalLink() {
@@ -786,7 +786,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the canonical version of the landing page.
+   * URL for the canonical version of your item's landing page.
    * @param canonicalLink canonicalLink or {@code null} for none
    */
   public Product setCanonicalLink(java.lang.String canonicalLink) {
@@ -1471,7 +1471,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to a mobile-optimized version of the landing page.
+   * URL for the mobile-optimized version of your item's landing page.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileLink() {
@@ -1479,7 +1479,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to a mobile-optimized version of the landing page.
+   * URL for the mobile-optimized version of your item's landing page.
    * @param mobileLink mobileLink or {@code null} for none
    */
   public Product setMobileLink(java.lang.String mobileLink) {
@@ -1579,7 +1579,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Technical specification or additional product details
+   * Technical specification or additional product details.
    * @return value or {@code null} for none
    */
   public java.util.List<ProductProductDetail> getProductDetails() {
@@ -1587,7 +1587,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Technical specification or additional product details
+   * Technical specification or additional product details.
    * @param productDetails productDetails or {@code null} for none
    */
   public Product setProductDetails(java.util.List<ProductProductDetail> productDetails) {
@@ -1596,7 +1596,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of important bullet points describing the product
+   * Bullet points describing the most relevant highlights of a product.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProductHighlights() {
@@ -1604,7 +1604,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of important bullet points describing the product
+   * Bullet points describing the most relevant highlights of a product.
    * @param productHighlights productHighlights or {@code null} for none
    */
   public Product setProductHighlights(java.util.List<java.lang.String> productHighlights) {

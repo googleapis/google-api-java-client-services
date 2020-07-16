@@ -20,7 +20,7 @@ package com.google.api.services.searchconsole.v1;
  * Service definition for SearchConsole (v1).
  *
  * <p>
- * Provides tools for running validation tests against single URLs
+ * The Search Console API provides access to both Search Console data (verified users only) and to public information on an URL basis (anyone)
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class SearchConsole extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.10 of the Google Search Console URL Testing Tools API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Search Console API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

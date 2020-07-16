@@ -102,7 +102,7 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. Time the patch deployment was last updated. Timestamp is in
-   * [RFC3339]("https://www.ietf.org/rfc/rfc3339.txt) text format.
+   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,7 +273,7 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. Time the patch deployment was last updated. Timestamp is in
-   * [RFC3339]("https://www.ietf.org/rfc/rfc3339.txt) text format.
+   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -282,7 +282,7 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. Time the patch deployment was last updated. Timestamp is in
-   * [RFC3339]("https://www.ietf.org/rfc/rfc3339.txt) text format.
+   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @param updateTime updateTime or {@code null} for none
    */
   public PatchDeployment setUpdateTime(String updateTime) {

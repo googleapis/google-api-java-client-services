@@ -6806,7 +6806,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
          * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
          * be `EQUALS (=)`. * Supported fields: - `campaignId` - `insertionOrderId` - `entityStatus`
-         * - `lineItemType`.
+         * - `lineItemType`
          *
          * Examples:
          *
@@ -6827,7 +6827,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
        `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
        has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       fields: - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType`.
+       fields: - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType`
 
        Examples:
 
@@ -6851,7 +6851,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
          * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
          * be `EQUALS (=)`. * Supported fields: - `campaignId` - `insertionOrderId` - `entityStatus`
-         * - `lineItemType`.
+         * - `lineItemType`
          *
          * Examples:
          *
@@ -6870,7 +6870,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Field by which to sort the list. Acceptable values are:
          *
-         * * "displayName" (default) * "entityStatus"
+         * * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
          *
          * The default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `displayName desc`.
@@ -6880,7 +6880,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /** Field by which to sort the list. Acceptable values are:
 
-       * "displayName" (default) * "entityStatus"
+       * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
 
        The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
        should be added to the field name. Example: `displayName desc`.
@@ -6892,7 +6892,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Field by which to sort the list. Acceptable values are:
          *
-         * * "displayName" (default) * "entityStatus"
+         * * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
          *
          * The default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `displayName desc`.

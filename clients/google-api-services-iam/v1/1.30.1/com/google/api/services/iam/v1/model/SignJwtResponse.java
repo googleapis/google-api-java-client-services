@@ -17,6 +17,9 @@
 package com.google.api.services.iam.v1.model;
 
 /**
+ * Deprecated. [Migrate to Service Account Credentials
+ * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+ *
  * The service account sign JWT response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,6 +34,9 @@ package com.google.api.services.iam.v1.model;
 public final class SignJwtResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
    * The id of the key used to sign the JWT.
    * The value may be {@code null}.
    */
@@ -38,6 +44,9 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   private java.lang.String keyId;
 
   /**
+   * Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
    * The signed JWT.
    * The value may be {@code null}.
    */
@@ -45,6 +54,9 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   private java.lang.String signedJwt;
 
   /**
+   * Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
    * The id of the key used to sign the JWT.
    * @return value or {@code null} for none
    */
@@ -53,6 +65,9 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
    * The id of the key used to sign the JWT.
    * @param keyId keyId or {@code null} for none
    */
@@ -62,6 +77,9 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
    * The signed JWT.
    * @return value or {@code null} for none
    */
@@ -70,6 +88,9 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
    * The signed JWT.
    * @param signedJwt signedJwt or {@code null} for none
    */

@@ -17,6 +17,9 @@
 package com.google.api.services.iam.v1.model;
 
 /**
+ * Deprecated. [Migrate to Service Account Credentials
+ * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+ *
  * The service account sign JWT request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,8 +34,11 @@ package com.google.api.services.iam.v1.model;
 public final class SignJwtRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
-   * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims Set. For
+   * example: `{"sub": "user@example.com", "iat": 313435}`
    *
    * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
    * timestamp that is not in the past and no more than 1 hour in the future.
@@ -45,8 +51,11 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   private java.lang.String payload;
 
   /**
-   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
-   * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims Set. For
+   * example: `{"sub": "user@example.com", "iat": 313435}`
    *
    * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
    * timestamp that is not in the past and no more than 1 hour in the future.
@@ -60,8 +69,11 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
-   * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
+   * Required. Deprecated. [Migrate to Service Account Credentials
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
+   *
+   * The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims Set. For
+   * example: `{"sub": "user@example.com", "iat": 313435}`
    *
    * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
    * timestamp that is not in the past and no more than 1 hour in the future.

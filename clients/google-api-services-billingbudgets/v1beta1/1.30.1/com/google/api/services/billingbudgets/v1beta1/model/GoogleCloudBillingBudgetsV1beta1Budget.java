@@ -34,8 +34,7 @@ package com.google.api.services.billingbudgets.v1beta1.model;
 public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Rules to apply to all updates to the actual spend, regardless of the thresholds set
-   * in `threshold_rules`.
+   * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +87,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
   private java.util.List<GoogleCloudBillingBudgetsV1beta1ThresholdRule> thresholdRules;
 
   /**
-   * Optional. Rules to apply to all updates to the actual spend, regardless of the thresholds set
-   * in `threshold_rules`.
+   * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1AllUpdatesRule getAllUpdatesRule() {
@@ -97,8 +95,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
   }
 
   /**
-   * Optional. Rules to apply to all updates to the actual spend, regardless of the thresholds set
-   * in `threshold_rules`.
+   * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
    * @param allUpdatesRule allUpdatesRule or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1Budget setAllUpdatesRule(GoogleCloudBillingBudgetsV1beta1AllUpdatesRule allUpdatesRule) {

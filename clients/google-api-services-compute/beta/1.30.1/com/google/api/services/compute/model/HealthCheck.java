@@ -63,6 +63,12 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GRPCHealthCheck grpcHealthCheck;
+
+  /**
    * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
    * default value is 2.
    * The value may be {@code null}.
@@ -219,6 +225,21 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GRPCHealthCheck getGrpcHealthCheck() {
+    return grpcHealthCheck;
+  }
+
+  /**
+   * @param grpcHealthCheck grpcHealthCheck or {@code null} for none
+   */
+  public HealthCheck setGrpcHealthCheck(GRPCHealthCheck grpcHealthCheck) {
+    this.grpcHealthCheck = grpcHealthCheck;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Cloud Run API.
+ * Available OAuth 2.0 scopes for use with the Cloud Run Admin API.
  *
  * @since 1.4
  */

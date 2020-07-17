@@ -72,9 +72,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the span. Must be less than 128 bytes. The span name is sanitized and displayed in the
-   * Stackdriver Trace tool in the Google Cloud Platform Console. The name may be a method name or
-   * some other per-call site name. For the same executable and the same call point, a best practice
-   * is to use a consistent name, which makes it easier to correlate cross-trace spans.
+   * Trace tool in the Google Cloud Platform Console. The name may be a method name or some other
+   * per-call site name. For the same executable and the same call point, a best practice is to use
+   * a consistent name, which makes it easier to correlate cross-trace spans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,9 +189,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the span. Must be less than 128 bytes. The span name is sanitized and displayed in the
-   * Stackdriver Trace tool in the Google Cloud Platform Console. The name may be a method name or
-   * some other per-call site name. For the same executable and the same call point, a best practice
-   * is to use a consistent name, which makes it easier to correlate cross-trace spans.
+   * Trace tool in the Google Cloud Platform Console. The name may be a method name or some other
+   * per-call site name. For the same executable and the same call point, a best practice is to use
+   * a consistent name, which makes it easier to correlate cross-trace spans.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -200,9 +200,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the span. Must be less than 128 bytes. The span name is sanitized and displayed in the
-   * Stackdriver Trace tool in the Google Cloud Platform Console. The name may be a method name or
-   * some other per-call site name. For the same executable and the same call point, a best practice
-   * is to use a consistent name, which makes it easier to correlate cross-trace spans.
+   * Trace tool in the Google Cloud Platform Console. The name may be a method name or some other
+   * per-call site name. For the same executable and the same call point, a best practice is to use
+   * a consistent name, which makes it easier to correlate cross-trace spans.
    * @param name name or {@code null} for none
    */
   public TraceSpan setName(java.lang.String name) {

@@ -1475,17 +1475,29 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The sort expression to apply to the results. */
+      /**
+       * The sort expression to apply to the results. The sort parameter specifies that the results
+       * be sorted according to the specified expression i.e. sort by date. [Example:
+       * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+       * attribute).
+       */
       @com.google.api.client.util.Key
       private java.lang.String sort;
 
-      /** The sort expression to apply to the results.
+      /** The sort expression to apply to the results. The sort parameter specifies that the results be
+     sorted according to the specified expression i.e. sort by date. [Example:
+     sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
        */
       public java.lang.String getSort() {
         return sort;
       }
 
-      /** The sort expression to apply to the results. */
+      /**
+       * The sort expression to apply to the results. The sort parameter specifies that the results
+       * be sorted according to the specified expression i.e. sort by date. [Example:
+       * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+       * attribute).
+       */
       public List setSort(java.lang.String sort) {
         this.sort = sort;
         return this;
@@ -2884,17 +2896,29 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The sort expression to apply to the results. */
+        /**
+         * The sort expression to apply to the results. The sort parameter specifies that the
+         * results be sorted according to the specified expression i.e. sort by date. [Example:
+         * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+         * attribute).
+         */
         @com.google.api.client.util.Key
         private java.lang.String sort;
 
-        /** The sort expression to apply to the results.
+        /** The sort expression to apply to the results. The sort parameter specifies that the results be
+       sorted according to the specified expression i.e. sort by date. [Example:
+       sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
          */
         public java.lang.String getSort() {
           return sort;
         }
 
-        /** The sort expression to apply to the results. */
+        /**
+         * The sort expression to apply to the results. The sort parameter specifies that the
+         * results be sorted according to the specified expression i.e. sort by date. [Example:
+         * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+         * attribute).
+         */
         public List setSort(java.lang.String sort) {
           this.sort = sort;
           return this;

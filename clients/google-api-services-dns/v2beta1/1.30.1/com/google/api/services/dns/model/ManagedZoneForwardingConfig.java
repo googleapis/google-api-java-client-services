@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for ManagedZoneForwardingConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,22 +30,20 @@ package com.google.api.services.dns.model;
 public final class ManagedZoneForwardingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZoneForwardingConfig".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * List of target name servers to forward to. Cloud DNS will select the best available name server
+   * if more than one target is given.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ManagedZoneForwardingConfigNameServerTarget> targetNameServers;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZoneForwardingConfig".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -53,8 +51,6 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZoneForwardingConfig".
    * @param kind kind or {@code null} for none
    */
   public ManagedZoneForwardingConfig setKind(java.lang.String kind) {
@@ -63,6 +59,8 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   }
 
   /**
+   * List of target name servers to forward to. Cloud DNS will select the best available name server
+   * if more than one target is given.
    * @return value or {@code null} for none
    */
   public java.util.List<ManagedZoneForwardingConfigNameServerTarget> getTargetNameServers() {
@@ -70,6 +68,8 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   }
 
   /**
+   * List of target name servers to forward to. Cloud DNS will select the best available name server
+   * if more than one target is given.
    * @param targetNameServers targetNameServers or {@code null} for none
    */
   public ManagedZoneForwardingConfig setTargetNameServers(java.util.List<ManagedZoneForwardingConfigNameServerTarget> targetNameServers) {

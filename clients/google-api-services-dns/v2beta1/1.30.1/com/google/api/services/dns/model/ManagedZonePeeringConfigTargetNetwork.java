@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for ManagedZonePeeringConfigTargetNetwork.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,26 +30,34 @@ package com.google.api.services.dns.model;
 public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string
+   * indicates that the peering connection is active. The producer network can deactivate a zone.
+   * The zone is automatically deactivated if the producer network that the zone targeted is
+   * deleted. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deactivateTime;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfigTargetNetwork".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
+   * The fully qualified URL of the VPC network to forward queries to. This should be formatted like
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUrl;
 
   /**
+   * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string
+   * indicates that the peering connection is active. The producer network can deactivate a zone.
+   * The zone is automatically deactivated if the producer network that the zone targeted is
+   * deleted. Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeactivateTime() {
@@ -57,6 +65,10 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
+   * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string
+   * indicates that the peering connection is active. The producer network can deactivate a zone.
+   * The zone is automatically deactivated if the producer network that the zone targeted is
+   * deleted. Output only.
    * @param deactivateTime deactivateTime or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork setDeactivateTime(java.lang.String deactivateTime) {
@@ -65,8 +77,6 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfigTargetNetwork".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -74,8 +84,6 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfigTargetNetwork".
    * @param kind kind or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork setKind(java.lang.String kind) {
@@ -84,6 +92,8 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
+   * The fully qualified URL of the VPC network to forward queries to. This should be formatted like
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUrl() {
@@ -91,6 +101,8 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
+   * The fully qualified URL of the VPC network to forward queries to. This should be formatted like
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * @param networkUrl networkUrl or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork setNetworkUrl(java.lang.String networkUrl) {

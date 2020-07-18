@@ -12869,6 +12869,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * [R4](https://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which   details the eligible
              * resource types and referencing search parameters.
              *
+             * For samples that show how to call `Patient-everything`, see [Getting all patient compartment
+             * resources](/healthcare/docs/how-tos/fhir-resources#getting_all_patient_compartment_resources).
+             *
              * Create a request for the method "fhir.Patient-everything".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -12913,6 +12916,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * [STU3](http://www.hl7.org/fhir/stu3/compartmentdefinition-patient.html),
                * [R4](https://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which   details the eligible
                * resource types and referencing search parameters.
+               *
+               * For samples that show how to call `Patient-everything`, see [Getting all patient compartment
+               * resources](/healthcare/docs/how-tos/fhir-resources#getting_all_patient_compartment_resources).
                *
                * Create a request for the method "fhir.Patient-everything".
                *
@@ -13072,6 +13078,57 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
+               * If provided, only resources updated after this time are exported. The time uses the
+               * format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00`
+               * or `2017-01-01T00:00:00Z`. The time must be specified to the second and include a
+               * time zone.
+               */
+              @com.google.api.client.util.Key("_since")
+              private java.lang.String since;
+
+              /** If provided, only resources updated after this time are exported. The time uses the format YYYY-MM-
+             DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The
+             time must be specified to the second and include a time zone.
+               */
+              public java.lang.String getSince() {
+                return since;
+              }
+
+              /**
+               * If provided, only resources updated after this time are exported. The time uses the
+               * format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00`
+               * or `2017-01-01T00:00:00Z`. The time must be specified to the second and include a
+               * time zone.
+               */
+              public PatientEverything setSince(java.lang.String since) {
+                this.since = since;
+                return this;
+              }
+
+              /**
+               * String of comma-delimited FHIR resource types. If provided, only resources of the
+               * specified resource type(s) are returned.
+               */
+              @com.google.api.client.util.Key("_type")
+              private java.lang.String type;
+
+              /** String of comma-delimited FHIR resource types. If provided, only resources of the specified
+             resource type(s) are returned.
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * String of comma-delimited FHIR resource types. If provided, only resources of the
+               * specified resource type(s) are returned.
+               */
+              public PatientEverything setType(java.lang.String type) {
+                this.type = type;
+                return this;
+              }
+
+              /**
                * The response includes records prior to the end date. If no end date is provided,
                * all records subsequent to the start date are in scope.
                */
@@ -13129,6 +13186,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * This is not a FHIR standard operation.
              *
+             * For samples that show how to call `Resource-purge`, see [Deleting historical versions of a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-
+             * resources#deleting_historical_versions_of_a_fhir_resource).
+             *
              * Create a request for the method "fhir.Resource-purge".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13156,6 +13217,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * this method.
                *
                * This is not a FHIR standard operation.
+               *
+               * For samples that show how to call `Resource-purge`, see [Deleting historical versions of a FHIR
+               * resource](/healthcare/docs/how-tos/fhir-
+               * resources#deleting_historical_versions_of_a_fhir_resource).
                *
                * Create a request for the method "fhir.Resource-purge".
                *
@@ -13443,6 +13508,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This method requires the`healthcare.fhirStores.searchResources` and
              * `healthcare.fhirResources.delete` permissions on the parent FHIR store.
              *
+             * For samples that show how to call `conditionalDelete`, see [Conditionally deleting a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_deleting_a_fhir_resource).
+             *
              * Create a request for the method "fhir.conditionalDelete".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13490,6 +13558,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * This method requires the`healthcare.fhirStores.searchResources` and
                * `healthcare.fhirResources.delete` permissions on the parent FHIR store.
+               *
+               * For samples that show how to call `conditionalDelete`, see [Conditionally deleting a FHIR
+               * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalDelete".
                *
@@ -13669,6 +13740,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This method requires the`healthcare.fhirStores.searchResources` permission on the parent FHIR
              * store and the `healthcare.fhirResources.patch` permission on the requested FHIR store resource.
              *
+             * For samples that show how to call `conditionalPatch`, see [Conditionally patching a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_patching_a_fhir_resource).
+             *
              * Create a request for the method "fhir.conditionalPatch".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13727,6 +13801,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * This method requires the`healthcare.fhirStores.searchResources` permission on the parent FHIR
                * store and the `healthcare.fhirResources.patch` permission on the requested FHIR store resource.
+               *
+               * For samples that show how to call `conditionalPatch`, see [Conditionally patching a FHIR
+               * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_patching_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalPatch".
                *
@@ -13908,6 +13985,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This method requires the`healthcare.fhirStores.searchResources` and
              * `healthcare.fhirResources.update` permissions on the parent FHIR store.
              *
+             * For samples that show how to call `conditionalUpdate`, see [Conditionally updating a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_updating_a_fhir_resource).
+             *
              * Create a request for the method "fhir.conditionalUpdate".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13969,6 +14049,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * This method requires the`healthcare.fhirStores.searchResources` and
                * `healthcare.fhirResources.update` permissions on the parent FHIR store.
+               *
+               * For samples that show how to call `conditionalUpdate`, see [Conditionally updating a FHIR
+               * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_updating_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalUpdate".
                *
@@ -14151,6 +14234,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * the error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
              * error might be returned instead.
              *
+             * For samples that show how to call `create`, see [Creating a FHIR resource](/healthcare/docs/how-
+             * tos/fhir-resources#creating_a_fhir_resource).
+             *
              * Create a request for the method "fhir.create".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -14208,6 +14294,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
                * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
                * generic GCP error might be returned instead.
+               *
+               * For samples that show how to call `create`, see [Creating a FHIR resource](/healthcare/docs
+               * /how-tos/fhir-resources#creating_a_fhir_resource).
                *
                * Create a request for the method "fhir.create".
                *
@@ -14377,6 +14466,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * the FHIR store, the deleted resources are moved to a history repository that can still be
              * retrieved through vread and related methods, unless they are removed by the purge method.
              *
+             * For samples that show how to call `delete`, see [Deleting a FHIR resource](/healthcare/docs/how-
+             * tos/fhir-resources#deleting_a_fhir_resource).
+             *
              * Create a request for the method "fhir.delete".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -14409,6 +14501,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
                * the FHIR store, the deleted resources are moved to a history repository that can still be
                * retrieved through vread and related methods, unless they are removed by the purge method.
+               *
+               * For samples that show how to call `delete`, see [Deleting a FHIR resource](/healthcare/docs
+               * /how-tos/fhir-resources#deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.delete".
                *
@@ -14546,6 +14641,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * Logging is available for the `executeBundle` permission.
              *
+             * For samples that show how to call `executeBundle`, see [Managing FHIR resources using FHIR
+             * bundles](/healthcare/docs/how-tos/fhir-bundles).
+             *
              * Create a request for the method "fhir.executeBundle".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -14601,6 +14699,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * contains a `create` request, you must have permission to execute the `create` request.
                *
                * Logging is available for the `executeBundle` permission.
+               *
+               * For samples that show how to call `executeBundle`, see [Managing FHIR resources using FHIR
+               * bundles](/healthcare/docs/how-tos/fhir-bundles).
                *
                * Create a request for the method "fhir.executeBundle".
                *
@@ -14720,6 +14821,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
              * generic GCP error might be returned instead.
              *
+             * For samples that show how to call `history`, see [Listing FHIR resource
+             * versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
+             *
              * Create a request for the method "fhir.history".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -14755,6 +14859,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
                * describing the reason for the error. If the request cannot be mapped to a valid API method on a
                * FHIR store, a generic GCP error might be returned instead.
+               *
+               * For samples that show how to call `history`, see [Listing FHIR resource
+               * versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
                *
                * Create a request for the method "fhir.history".
                *
@@ -15005,6 +15112,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
              * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
              *
+             * For samples that show how to call `patch`, see [Patching a FHIR resource](/healthcare/docs/how-
+             * tos/fhir-resources#patching_a_fhir_resource).
+             *
              * Create a request for the method "fhir.patch".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -15045,6 +15155,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * including the server-assigned version ID. Errors generated by the FHIR store contain a JSON-
                * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot
                * be mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               *
+               * For samples that show how to call `patch`, see [Patching a FHIR resource](/healthcare/docs/how-
+               * tos/fhir-resources#patching_a_fhir_resource).
                *
                * Create a request for the method "fhir.patch".
                *
@@ -15168,6 +15281,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
              * generic GCP error might be returned instead.
              *
+             * For samples that show how to call `read`, see [Getting a FHIR resource](/healthcare/docs/how-tos
+             * /fhir-resources#getting_a_fhir_resource).
+             *
              * Create a request for the method "fhir.read".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -15208,6 +15324,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
                * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
                * generic GCP error might be returned instead.
+               *
+               * For samples that show how to call `read`, see [Getting a FHIR resource](/healthcare/docs/how-
+               * tos/fhir-resources#getting_a_fhir_resource).
                *
                * Create a request for the method "fhir.read".
                *
@@ -15371,6 +15490,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
              * time a resource is created or changes and when the change is reflected in search results.
              *
+             * For samples and detailed information, see [Searching for FHIR resources](/healthcare/docs/how-tos
+             * /fhir-search) and [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-search).
+             *
              * Create a request for the method "fhir.search".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -15444,6 +15566,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
                * time a resource is created or changes and when the change is reflected in search results.
+               *
+               * For samples and detailed information, see [Searching for FHIR resources](/healthcare/docs/how-
+               * tos/fhir-search) and [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-
+               * search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -15568,6 +15694,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
              * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
              *
+             * For samples that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs/how-
+             * tos/fhir-resources#updating_a_fhir_resource).
+             *
              * Create a request for the method "fhir.update".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -15609,6 +15738,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * including the server-assigned version ID. Errors generated by the FHIR store contain a JSON-
                * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot
                * be mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               *
+               * For samples that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs
+               * /how-tos/fhir-resources#updating_a_fhir_resource).
                *
                * Create a request for the method "fhir.update".
                *
@@ -15726,6 +15858,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
              * generic GCP error might be returned instead.
              *
+             * For samples that show how to call `vread`, see [Retrieving a FHIR resource
+             * version](/healthcare/docs/how-tos/fhir-resources#retrieving_a_fhir_resource_version).
+             *
              * Create a request for the method "fhir.vread".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -15759,6 +15894,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
                * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
                * generic GCP error might be returned instead.
+               *
+               * For samples that show how to call `vread`, see [Retrieving a FHIR resource
+               * version](/healthcare/docs/how-tos/fhir-resources#retrieving_a_fhir_resource_version).
                *
                * Create a request for the method "fhir.vread".
                *

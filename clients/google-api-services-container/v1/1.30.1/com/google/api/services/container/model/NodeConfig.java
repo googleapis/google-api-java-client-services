@@ -148,6 +148,15 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String minCpuPlatform;
 
   /**
+   * Setting this field will assign instances of this pool to run on the specified node group. This
+   * is useful for running workloads on [sole tenant
+   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nodeGroup;
+
+  /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
    * service account.
    *
@@ -481,6 +490,27 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {
     this.minCpuPlatform = minCpuPlatform;
+    return this;
+  }
+
+  /**
+   * Setting this field will assign instances of this pool to run on the specified node group. This
+   * is useful for running workloads on [sole tenant
+   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNodeGroup() {
+    return nodeGroup;
+  }
+
+  /**
+   * Setting this field will assign instances of this pool to run on the specified node group. This
+   * is useful for running workloads on [sole tenant
+   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * @param nodeGroup nodeGroup or {@code null} for none
+   */
+  public NodeConfig setNodeGroup(java.lang.String nodeGroup) {
+    this.nodeGroup = nodeGroup;
     return this;
   }
 

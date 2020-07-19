@@ -38,6 +38,13 @@ public final class WorkloadIdentityConfig extends com.google.api.client.json.Gen
   private java.lang.String identityNamespace;
 
   /**
+   * identity provider is the third party identity provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identityProvider;
+
+  /**
    * The workload pool to attach all Kubernetes service accounts to.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class WorkloadIdentityConfig extends com.google.api.client.json.Gen
    */
   public WorkloadIdentityConfig setIdentityNamespace(java.lang.String identityNamespace) {
     this.identityNamespace = identityNamespace;
+    return this;
+  }
+
+  /**
+   * identity provider is the third party identity provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentityProvider() {
+    return identityProvider;
+  }
+
+  /**
+   * identity provider is the third party identity provider.
+   * @param identityProvider identityProvider or {@code null} for none
+   */
+  public WorkloadIdentityConfig setIdentityProvider(java.lang.String identityProvider) {
+    this.identityProvider = identityProvider;
     return this;
   }
 

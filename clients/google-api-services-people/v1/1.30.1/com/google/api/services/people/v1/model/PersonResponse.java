@@ -30,9 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class PersonResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * **DEPRECATED** (Please use status instead)
-   *
-   * [HTTP 1.1 status code] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+   * **DEPRECATED** (Please use status instead) [HTTP 1.1 status code]
+   * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +46,8 @@ public final class PersonResponse extends com.google.api.client.json.GenericJson
 
   /**
    * The original requested resource name. May be different than the resource name on the returned
-   * person.
-   *
-   * The resource name can change when adding or removing fields that link a contact and profile
-   * such as a verified email, verified phone number, or a profile URL.
+   * person. The resource name can change when adding or removing fields that link a contact and
+   * profile such as a verified email, verified phone number, or a profile URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,9 +61,8 @@ public final class PersonResponse extends com.google.api.client.json.GenericJson
   private Status status;
 
   /**
-   * **DEPRECATED** (Please use status instead)
-   *
-   * [HTTP 1.1 status code] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+   * **DEPRECATED** (Please use status instead) [HTTP 1.1 status code]
+   * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpStatusCode() {
@@ -74,9 +70,8 @@ public final class PersonResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * **DEPRECATED** (Please use status instead)
-   *
-   * [HTTP 1.1 status code] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+   * **DEPRECATED** (Please use status instead) [HTTP 1.1 status code]
+   * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
    * @param httpStatusCode httpStatusCode or {@code null} for none
    */
   public PersonResponse setHttpStatusCode(java.lang.Integer httpStatusCode) {
@@ -103,10 +98,8 @@ public final class PersonResponse extends com.google.api.client.json.GenericJson
 
   /**
    * The original requested resource name. May be different than the resource name on the returned
-   * person.
-   *
-   * The resource name can change when adding or removing fields that link a contact and profile
-   * such as a verified email, verified phone number, or a profile URL.
+   * person. The resource name can change when adding or removing fields that link a contact and
+   * profile such as a verified email, verified phone number, or a profile URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestedResourceName() {
@@ -115,10 +108,8 @@ public final class PersonResponse extends com.google.api.client.json.GenericJson
 
   /**
    * The original requested resource name. May be different than the resource name on the returned
-   * person.
-   *
-   * The resource name can change when adding or removing fields that link a contact and profile
-   * such as a verified email, verified phone number, or a profile URL.
+   * person. The resource name can change when adding or removing fields that link a contact and
+   * profile such as a verified email, verified phone number, or a profile URL.
    * @param requestedResourceName requestedResourceName or {@code null} for none
    */
   public PersonResponse setRequestedResourceName(java.lang.String requestedResourceName) {

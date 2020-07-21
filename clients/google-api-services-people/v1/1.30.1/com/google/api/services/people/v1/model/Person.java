@@ -18,10 +18,9 @@ package com.google.api.services.people.v1.model;
 
 /**
  * Information about a person merged from various data sources such as the authenticated user's
- * contacts and profile data.
- *
- * Most fields can have multiple items. The items in a field have no guaranteed order, but each non-
- * empty field is guaranteed to have exactly one field with `metadata.primary` set to true.
+ * contacts and profile data. Most fields can have multiple items. The items in a field have no
+ * guaranteed order, but each non-empty field is guaranteed to have exactly one field with
+ * `metadata.primary` set to true.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -47,9 +46,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)
-   *
-   * The person's age range.
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead) The person's age range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,9 +391,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)
-   *
-   * The person's age range.
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead) The person's age range.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgeRange() {
@@ -404,9 +399,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)
-   *
-   * The person's age range.
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead) The person's age range.
    * @param ageRange ageRange or {@code null} for none
    */
   public Person setAgeRange(java.lang.String ageRange) {

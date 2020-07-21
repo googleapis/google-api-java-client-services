@@ -31,9 +31,7 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
 
   /**
    * Required. A field mask to restrict which fields are copied into the new contact. Valid values
-   * are:
-   *
-   * * emailAddresses * names * phoneNumbers
+   * are: * emailAddresses * names * phoneNumbers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,12 +40,10 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
   /**
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
-   * membership fields if not set. Valid values are:
-   *
-   * * addresses * ageRanges * biographies * birthdays * coverPhotos * emailAddresses * events *
-   * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-   * skills * urls * userDefined
+   * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
+   * birthdays * coverPhotos * emailAddresses * events * genders * imClients * interests * locales *
+   * memberships * metadata * names * nicknames * occupations * organizations * phoneNumbers *
+   * photos * relations * residences * sipAddresses * skills * urls * userDefined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +59,7 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
 
   /**
    * Required. A field mask to restrict which fields are copied into the new contact. Valid values
-   * are:
-   *
-   * * emailAddresses * names * phoneNumbers
+   * are: * emailAddresses * names * phoneNumbers
    * @return value or {@code null} for none
    */
   public String getCopyMask() {
@@ -74,9 +68,7 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
 
   /**
    * Required. A field mask to restrict which fields are copied into the new contact. Valid values
-   * are:
-   *
-   * * emailAddresses * names * phoneNumbers
+   * are: * emailAddresses * names * phoneNumbers
    * @param copyMask copyMask or {@code null} for none
    */
   public CopyOtherContactToMyContactsGroupRequest setCopyMask(String copyMask) {
@@ -87,12 +79,10 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
   /**
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
-   * membership fields if not set. Valid values are:
-   *
-   * * addresses * ageRanges * biographies * birthdays * coverPhotos * emailAddresses * events *
-   * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-   * skills * urls * userDefined
+   * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
+   * birthdays * coverPhotos * emailAddresses * events * genders * imClients * interests * locales *
+   * memberships * metadata * names * nicknames * occupations * organizations * phoneNumbers *
+   * photos * relations * residences * sipAddresses * skills * urls * userDefined
    * @return value or {@code null} for none
    */
   public String getReadMask() {
@@ -102,12 +92,10 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
   /**
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
-   * membership fields if not set. Valid values are:
-   *
-   * * addresses * ageRanges * biographies * birthdays * coverPhotos * emailAddresses * events *
-   * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-   * skills * urls * userDefined
+   * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
+   * birthdays * coverPhotos * emailAddresses * events * genders * imClients * interests * locales *
+   * memberships * metadata * names * nicknames * occupations * organizations * phoneNumbers *
+   * photos * relations * residences * sipAddresses * skills * urls * userDefined
    * @param readMask readMask or {@code null} for none
    */
   public CopyOtherContactToMyContactsGroupRequest setReadMask(String readMask) {

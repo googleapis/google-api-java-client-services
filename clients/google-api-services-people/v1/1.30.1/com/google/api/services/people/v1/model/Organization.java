@@ -124,9 +124,8 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The type of the organization. The type can be custom or  one of these predefined values:
-   *
-   * * `work` * `school`
+   * The type of the organization. The type can be custom or one of these predefined values: *
+   * `work` * `school`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,9 +359,8 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the organization. The type can be custom or  one of these predefined values:
-   *
-   * * `work` * `school`
+   * The type of the organization. The type can be custom or one of these predefined values: *
+   * `work` * `school`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -370,9 +368,8 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the organization. The type can be custom or  one of these predefined values:
-   *
-   * * `work` * `school`
+   * The type of the organization. The type can be custom or one of these predefined values: *
+   * `work` * `school`
    * @param type type or {@code null} for none
    */
   public Organization setType(java.lang.String type) {

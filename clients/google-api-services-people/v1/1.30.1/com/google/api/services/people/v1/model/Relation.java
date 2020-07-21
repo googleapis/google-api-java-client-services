@@ -53,10 +53,8 @@ public final class Relation extends com.google.api.client.json.GenericJson {
 
   /**
    * The person's relation to the other person. The type can be custom or one of these predefined
-   * values:
-   *
-   * * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend` *
-   * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
+   * values: * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend`
+   * * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,10 +115,8 @@ public final class Relation extends com.google.api.client.json.GenericJson {
 
   /**
    * The person's relation to the other person. The type can be custom or one of these predefined
-   * values:
-   *
-   * * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend` *
-   * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
+   * values: * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend`
+   * * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -129,10 +125,8 @@ public final class Relation extends com.google.api.client.json.GenericJson {
 
   /**
    * The person's relation to the other person. The type can be custom or one of these predefined
-   * values:
-   *
-   * * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend` *
-   * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
+   * values: * `spouse` * `child` * `mother` * `father` * `parent` * `brother` * `sister` * `friend`
+   * * `relative` * `domesticPartner` * `manager` * `assistant` * `referredBy` * `partner`
    * @param type type or {@code null} for none
    */
   public Relation setType(java.lang.String type) {

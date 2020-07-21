@@ -53,18 +53,16 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * The protocol of the IM client. The protocol can be custom or one of these predefined values:
-   *
-   * * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
+   * The protocol of the IM client. The protocol can be custom or one of these predefined values: *
+   * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String protocol;
 
   /**
-   * The type of the IM client. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `other`
+   * The type of the IM client. The type can be custom or one of these predefined values: * `home` *
+   * `work` * `other`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,9 +131,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The protocol of the IM client. The protocol can be custom or one of these predefined values:
-   *
-   * * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
+   * The protocol of the IM client. The protocol can be custom or one of these predefined values: *
+   * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -143,9 +140,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The protocol of the IM client. The protocol can be custom or one of these predefined values:
-   *
-   * * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
+   * The protocol of the IM client. The protocol can be custom or one of these predefined values: *
+   * `aim` * `msn` * `yahoo` * `skype` * `qq` * `googleTalk` * `icq` * `jabber` * `netMeeting`
    * @param protocol protocol or {@code null} for none
    */
   public ImClient setProtocol(java.lang.String protocol) {
@@ -154,9 +150,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the IM client. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `other`
+   * The type of the IM client. The type can be custom or one of these predefined values: * `home` *
+   * `work` * `other`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -164,9 +159,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the IM client. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `other`
+   * The type of the IM client. The type can be custom or one of these predefined values: * `home` *
+   * `work` * `other`
    * @param type type or {@code null} for none
    */
   public ImClient setType(java.lang.String type) {

@@ -31,9 +31,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of pronouns that should be used to address the person. The value can be custom or one
-   * of these predefined values:
-   *
-   * * `male` * `female` * `other`
+   * of these predefined values: * `male` * `female` * `other`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +53,8 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * The gender for the person. The gender can be custom or one of these predefined values:
-   *
-   * * `male` * `female` * `unspecified`
+   * The gender for the person. The gender can be custom or one of these predefined values: * `male`
+   * * `female` * `unspecified`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +62,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of pronouns that should be used to address the person. The value can be custom or one
-   * of these predefined values:
-   *
-   * * `male` * `female` * `other`
+   * of these predefined values: * `male` * `female` * `other`
    * @return value or {@code null} for none
    */
   public java.lang.String getAddressMeAs() {
@@ -76,9 +71,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of pronouns that should be used to address the person. The value can be custom or one
-   * of these predefined values:
-   *
-   * * `male` * `female` * `other`
+   * of these predefined values: * `male` * `female` * `other`
    * @param addressMeAs addressMeAs or {@code null} for none
    */
   public Gender setAddressMeAs(java.lang.String addressMeAs) {
@@ -123,9 +116,8 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The gender for the person. The gender can be custom or one of these predefined values:
-   *
-   * * `male` * `female` * `unspecified`
+   * The gender for the person. The gender can be custom or one of these predefined values: * `male`
+   * * `female` * `unspecified`
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -133,9 +125,8 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The gender for the person. The gender can be custom or one of these predefined values:
-   *
-   * * `male` * `female` * `unspecified`
+   * The gender for the person. The gender can be custom or one of these predefined values: * `male`
+   * * `female` * `unspecified`
    * @param value value or {@code null} for none
    */
   public Gender setValue(java.lang.String value) {

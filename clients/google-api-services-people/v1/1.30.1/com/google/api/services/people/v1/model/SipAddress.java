@@ -46,9 +46,8 @@ public final class SipAddress extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * The type of the SIP address. The type can be custom or or one of these predefined values:
-   *
-   * * `home` * `work` * `mobile` * `other`
+   * The type of the SIP address. The type can be custom or or one of these predefined values: *
+   * `home` * `work` * `mobile` * `other`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,9 +98,8 @@ public final class SipAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the SIP address. The type can be custom or or one of these predefined values:
-   *
-   * * `home` * `work` * `mobile` * `other`
+   * The type of the SIP address. The type can be custom or or one of these predefined values: *
+   * `home` * `work` * `mobile` * `other`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -109,9 +107,8 @@ public final class SipAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the SIP address. The type can be custom or or one of these predefined values:
-   *
-   * * `home` * `work` * `mobile` * `other`
+   * The type of the SIP address. The type can be custom or or one of these predefined values: *
+   * `home` * `work` * `mobile` * `other`
    * @param type type or {@code null} for none
    */
   public SipAddress setType(java.lang.String type) {

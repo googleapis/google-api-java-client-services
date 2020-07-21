@@ -17,12 +17,10 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Settings that control a partner cost.
- *
- * A partner cost is any type of expense involved in running a campaign, other than the costs of
- * purchasing impressions (which is called the media cost) and using third-party audience segment
- * data (data fee). Some examples of partner costs include the fees for using DV360, a third-party
- * ad server, or a third-party ad serving verification service.
+ * Settings that control a partner cost. A partner cost is any type of expense involved in running a
+ * campaign, other than the costs of purchasing impressions (which is called the media cost) and
+ * using third-party audience segment data (data fee). Some examples of partner costs include the
+ * fees for using DV360, a third-party ad server, or a third-party ad serving verification service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -43,23 +41,18 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   private java.lang.String costType;
 
   /**
-   * The CPM fee amount in micros of advertiser's currency.
-   *
-   * Applicable when the fee_type is `PARTNER_FEE_TYPE_CPM_FEE`. Must be greater than or equal to 0.
-   *
-   * For example, for 1.5 standard unit of the advertiser's currency, set this field to 1500000.
+   * The CPM fee amount in micros of advertiser's currency. Applicable when the fee_type is
+   * `PARTNER_FEE_TYPE_CPM_FEE`. Must be greater than or equal to 0. For example, for 1.5 standard
+   * unit of the advertiser's currency, set this field to 1500000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long feeAmount;
 
   /**
-   * The media fee percentage in millis (1/1000 of a percent).
-   *
-   * Applicable when the fee_type is `PARTNER_FEE_TYPE_MEDIA_FEE`. Must be greater than or equal to
-   * 0.
-   *
-   * For example: 100 represents 0.1%.
+   * The media fee percentage in millis (1/1000 of a percent). Applicable when the fee_type is
+   * `PARTNER_FEE_TYPE_MEDIA_FEE`. Must be greater than or equal to 0. For example: 100 represents
+   * 0.1%.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -73,11 +66,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   private java.lang.String feeType;
 
   /**
-   * The invoice type for this partner cost.
-   *
-   * * Required when cost_type is one of:     - `PARTNER_COST_TYPE_ADLOOX`     -
-   * `PARTNER_COST_TYPE_DOUBLE_VERIFY`     - `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only
-   * for other types.
+   * The invoice type for this partner cost. * Required when cost_type is one of: -
+   * `PARTNER_COST_TYPE_ADLOOX` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
+   * `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only for other types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,11 +92,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CPM fee amount in micros of advertiser's currency.
-   *
-   * Applicable when the fee_type is `PARTNER_FEE_TYPE_CPM_FEE`. Must be greater than or equal to 0.
-   *
-   * For example, for 1.5 standard unit of the advertiser's currency, set this field to 1500000.
+   * The CPM fee amount in micros of advertiser's currency. Applicable when the fee_type is
+   * `PARTNER_FEE_TYPE_CPM_FEE`. Must be greater than or equal to 0. For example, for 1.5 standard
+   * unit of the advertiser's currency, set this field to 1500000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFeeAmount() {
@@ -113,11 +102,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CPM fee amount in micros of advertiser's currency.
-   *
-   * Applicable when the fee_type is `PARTNER_FEE_TYPE_CPM_FEE`. Must be greater than or equal to 0.
-   *
-   * For example, for 1.5 standard unit of the advertiser's currency, set this field to 1500000.
+   * The CPM fee amount in micros of advertiser's currency. Applicable when the fee_type is
+   * `PARTNER_FEE_TYPE_CPM_FEE`. Must be greater than or equal to 0. For example, for 1.5 standard
+   * unit of the advertiser's currency, set this field to 1500000.
    * @param feeAmount feeAmount or {@code null} for none
    */
   public PartnerCost setFeeAmount(java.lang.Long feeAmount) {
@@ -126,12 +113,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The media fee percentage in millis (1/1000 of a percent).
-   *
-   * Applicable when the fee_type is `PARTNER_FEE_TYPE_MEDIA_FEE`. Must be greater than or equal to
-   * 0.
-   *
-   * For example: 100 represents 0.1%.
+   * The media fee percentage in millis (1/1000 of a percent). Applicable when the fee_type is
+   * `PARTNER_FEE_TYPE_MEDIA_FEE`. Must be greater than or equal to 0. For example: 100 represents
+   * 0.1%.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFeePercentageMillis() {
@@ -139,12 +123,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The media fee percentage in millis (1/1000 of a percent).
-   *
-   * Applicable when the fee_type is `PARTNER_FEE_TYPE_MEDIA_FEE`. Must be greater than or equal to
-   * 0.
-   *
-   * For example: 100 represents 0.1%.
+   * The media fee percentage in millis (1/1000 of a percent). Applicable when the fee_type is
+   * `PARTNER_FEE_TYPE_MEDIA_FEE`. Must be greater than or equal to 0. For example: 100 represents
+   * 0.1%.
    * @param feePercentageMillis feePercentageMillis or {@code null} for none
    */
   public PartnerCost setFeePercentageMillis(java.lang.Long feePercentageMillis) {
@@ -170,11 +151,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The invoice type for this partner cost.
-   *
-   * * Required when cost_type is one of:     - `PARTNER_COST_TYPE_ADLOOX`     -
-   * `PARTNER_COST_TYPE_DOUBLE_VERIFY`     - `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only
-   * for other types.
+   * The invoice type for this partner cost. * Required when cost_type is one of: -
+   * `PARTNER_COST_TYPE_ADLOOX` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
+   * `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only for other types.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvoiceType() {
@@ -182,11 +161,9 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The invoice type for this partner cost.
-   *
-   * * Required when cost_type is one of:     - `PARTNER_COST_TYPE_ADLOOX`     -
-   * `PARTNER_COST_TYPE_DOUBLE_VERIFY`     - `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only
-   * for other types.
+   * The invoice type for this partner cost. * Required when cost_type is one of: -
+   * `PARTNER_COST_TYPE_ADLOOX` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
+   * `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only for other types.
    * @param invoiceType invoiceType or {@code null} for none
    */
   public PartnerCost setInvoiceType(java.lang.String invoiceType) {

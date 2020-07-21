@@ -46,10 +46,9 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   private java.lang.Long iasClientId;
 
   /**
-   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance.
-   *
-   * Warning: Changing OBA settings may cause the audit status of your creatives to be reset by some
-   * ad exchanges, making them ineligible to serve until they are re-approved.
+   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Warning: Changing
+   * OBA settings may cause the audit status of your creatives to be reset by some ad exchanges,
+   * making them ineligible to serve until they are re-approved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,9 +57,8 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   /**
    * By setting this field to `true`, you, on behalf of your company, authorize Google to use video
    * creatives associated with this Display & Video 360 advertiser to provide reporting and features
-   * related to the advertiser's television campaigns.
-   *
-   * Applicable only when the advertiser has a CM hybrid ad server configuration.
+   * related to the advertiser's television campaigns. Applicable only when the advertiser has a CM
+   * hybrid ad server configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,10 +101,9 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance.
-   *
-   * Warning: Changing OBA settings may cause the audit status of your creatives to be reset by some
-   * ad exchanges, making them ineligible to serve until they are re-approved.
+   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Warning: Changing
+   * OBA settings may cause the audit status of your creatives to be reset by some ad exchanges,
+   * making them ineligible to serve until they are re-approved.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getObaComplianceDisabled() {
@@ -114,10 +111,9 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance.
-   *
-   * Warning: Changing OBA settings may cause the audit status of your creatives to be reset by some
-   * ad exchanges, making them ineligible to serve until they are re-approved.
+   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Warning: Changing
+   * OBA settings may cause the audit status of your creatives to be reset by some ad exchanges,
+   * making them ineligible to serve until they are re-approved.
    * @param obaComplianceDisabled obaComplianceDisabled or {@code null} for none
    */
   public AdvertiserCreativeConfig setObaComplianceDisabled(java.lang.Boolean obaComplianceDisabled) {
@@ -128,9 +124,8 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   /**
    * By setting this field to `true`, you, on behalf of your company, authorize Google to use video
    * creatives associated with this Display & Video 360 advertiser to provide reporting and features
-   * related to the advertiser's television campaigns.
-   *
-   * Applicable only when the advertiser has a CM hybrid ad server configuration.
+   * related to the advertiser's television campaigns. Applicable only when the advertiser has a CM
+   * hybrid ad server configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVideoCreativeDataSharingAuthorized() {
@@ -140,9 +135,8 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   /**
    * By setting this field to `true`, you, on behalf of your company, authorize Google to use video
    * creatives associated with this Display & Video 360 advertiser to provide reporting and features
-   * related to the advertiser's television campaigns.
-   *
-   * Applicable only when the advertiser has a CM hybrid ad server configuration.
+   * related to the advertiser's television campaigns. Applicable only when the advertiser has a CM
+   * hybrid ad server configuration.
    * @param videoCreativeDataSharingAuthorized videoCreativeDataSharingAuthorized or {@code null} for none
    */
   public AdvertiserCreativeConfig setVideoCreativeDataSharingAuthorized(java.lang.Boolean videoCreativeDataSharingAuthorized) {

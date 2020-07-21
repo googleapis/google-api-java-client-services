@@ -31,18 +31,16 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AdvertiserDataAccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Structured Data Files (SDF) settings for the advertiser.
-   *
-   * If not specified, the SDF settings of the parent partner are used.
+   * Structured Data Files (SDF) settings for the advertiser. If not specified, the SDF settings of
+   * the parent partner are used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdvertiserSdfConfig sdfConfig;
 
   /**
-   * Structured Data Files (SDF) settings for the advertiser.
-   *
-   * If not specified, the SDF settings of the parent partner are used.
+   * Structured Data Files (SDF) settings for the advertiser. If not specified, the SDF settings of
+   * the parent partner are used.
    * @return value or {@code null} for none
    */
   public AdvertiserSdfConfig getSdfConfig() {
@@ -50,9 +48,8 @@ public final class AdvertiserDataAccessConfig extends com.google.api.client.json
   }
 
   /**
-   * Structured Data Files (SDF) settings for the advertiser.
-   *
-   * If not specified, the SDF settings of the parent partner are used.
+   * Structured Data Files (SDF) settings for the advertiser. If not specified, the SDF settings of
+   * the parent partner are used.
    * @param sdfConfig sdfConfig or {@code null} for none
    */
   public AdvertiserDataAccessConfig setSdfConfig(AdvertiserSdfConfig sdfConfig) {

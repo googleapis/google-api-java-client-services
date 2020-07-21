@@ -31,18 +31,16 @@ package com.google.api.services.displayvideo.v1.model;
 public final class BulkEditNegativeKeywordsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of negative keywords that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of negative keywords that have been successfully created. This list will be absent if
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NegativeKeyword> negativeKeywords;
 
   /**
-   * The list of negative keywords that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of negative keywords that have been successfully created. This list will be absent if
+   * empty.
    * @return value or {@code null} for none
    */
   public java.util.List<NegativeKeyword> getNegativeKeywords() {
@@ -50,9 +48,8 @@ public final class BulkEditNegativeKeywordsResponse extends com.google.api.clien
   }
 
   /**
-   * The list of negative keywords that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of negative keywords that have been successfully created. This list will be absent if
+   * empty.
    * @param negativeKeywords negativeKeywords or {@code null} for none
    */
   public BulkEditNegativeKeywordsResponse setNegativeKeywords(java.util.List<NegativeKeyword> negativeKeywords) {

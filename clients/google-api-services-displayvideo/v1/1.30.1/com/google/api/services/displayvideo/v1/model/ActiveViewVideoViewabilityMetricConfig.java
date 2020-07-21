@@ -39,10 +39,8 @@ public final class ActiveViewVideoViewabilityMetricConfig extends com.google.api
 
   /**
    * The minimum visible video duration required (in seconds) in order for an impression to be
-   * recorded.
-   *
-   * You must specify minimum_duration, minimum_quartile or both. If both are specified, an
-   * impression meets the metric criteria if either requirement is met (whichever happens first).
+   * recorded. You must specify minimum_duration, minimum_quartile or both. If both are specified,
+   * an impression meets the metric criteria if either requirement is met (whichever happens first).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +48,9 @@ public final class ActiveViewVideoViewabilityMetricConfig extends com.google.api
 
   /**
    * The minimum visible video duration required, based on the video quartiles, in order for an
-   * impression to be recorded.
-   *
-   * You must specify minimum_duration, minimum_quartile or both. If both are specified, an
-   * impression meets the metric criteria if either requirement is met (whichever happens first).
+   * impression to be recorded. You must specify minimum_duration, minimum_quartile or both. If both
+   * are specified, an impression meets the metric criteria if either requirement is met (whichever
+   * happens first).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,10 +91,8 @@ public final class ActiveViewVideoViewabilityMetricConfig extends com.google.api
 
   /**
    * The minimum visible video duration required (in seconds) in order for an impression to be
-   * recorded.
-   *
-   * You must specify minimum_duration, minimum_quartile or both. If both are specified, an
-   * impression meets the metric criteria if either requirement is met (whichever happens first).
+   * recorded. You must specify minimum_duration, minimum_quartile or both. If both are specified,
+   * an impression meets the metric criteria if either requirement is met (whichever happens first).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinimumDuration() {
@@ -106,10 +101,8 @@ public final class ActiveViewVideoViewabilityMetricConfig extends com.google.api
 
   /**
    * The minimum visible video duration required (in seconds) in order for an impression to be
-   * recorded.
-   *
-   * You must specify minimum_duration, minimum_quartile or both. If both are specified, an
-   * impression meets the metric criteria if either requirement is met (whichever happens first).
+   * recorded. You must specify minimum_duration, minimum_quartile or both. If both are specified,
+   * an impression meets the metric criteria if either requirement is met (whichever happens first).
    * @param minimumDuration minimumDuration or {@code null} for none
    */
   public ActiveViewVideoViewabilityMetricConfig setMinimumDuration(java.lang.String minimumDuration) {
@@ -119,10 +112,9 @@ public final class ActiveViewVideoViewabilityMetricConfig extends com.google.api
 
   /**
    * The minimum visible video duration required, based on the video quartiles, in order for an
-   * impression to be recorded.
-   *
-   * You must specify minimum_duration, minimum_quartile or both. If both are specified, an
-   * impression meets the metric criteria if either requirement is met (whichever happens first).
+   * impression to be recorded. You must specify minimum_duration, minimum_quartile or both. If both
+   * are specified, an impression meets the metric criteria if either requirement is met (whichever
+   * happens first).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinimumQuartile() {
@@ -131,10 +123,9 @@ public final class ActiveViewVideoViewabilityMetricConfig extends com.google.api
 
   /**
    * The minimum visible video duration required, based on the video quartiles, in order for an
-   * impression to be recorded.
-   *
-   * You must specify minimum_duration, minimum_quartile or both. If both are specified, an
-   * impression meets the metric criteria if either requirement is met (whichever happens first).
+   * impression to be recorded. You must specify minimum_duration, minimum_quartile or both. If both
+   * are specified, an impression meets the metric criteria if either requirement is met (whichever
+   * happens first).
    * @param minimumQuartile minimumQuartile or {@code null} for none
    */
   public ActiveViewVideoViewabilityMetricConfig setMinimumQuartile(java.lang.String minimumQuartile) {

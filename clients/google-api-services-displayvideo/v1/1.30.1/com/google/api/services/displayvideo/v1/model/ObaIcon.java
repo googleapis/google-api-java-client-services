@@ -31,11 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The click tracking URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
-   * * https://info.evidon.com * https://l.betrad.com
+   * Required. The click tracking URL of the OBA icon. Only URLs of the following domains are
+   * allowed: * https://info.evidon.com * https://l.betrad.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,10 +46,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   private Dimensions dimensions;
 
   /**
-   * Required. The landing page URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
+   * Required. The landing page URL of the OBA icon. Only URLs of the following domains are allowed:
    * * https://info.evidon.com * https://l.betrad.com
    * The value may be {@code null}.
    */
@@ -88,22 +82,16 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceUrl;
 
   /**
-   * Required. The view tracking URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
-   * * https://info.evidon.com * https://l.betrad.com
+   * Required. The view tracking URL of the OBA icon. Only URLs of the following domains are
+   * allowed: * https://info.evidon.com * https://l.betrad.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String viewTrackingUrl;
 
   /**
-   * Required. The click tracking URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
-   * * https://info.evidon.com * https://l.betrad.com
+   * Required. The click tracking URL of the OBA icon. Only URLs of the following domains are
+   * allowed: * https://info.evidon.com * https://l.betrad.com
    * @return value or {@code null} for none
    */
   public java.lang.String getClickTrackingUrl() {
@@ -111,11 +99,8 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The click tracking URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
-   * * https://info.evidon.com * https://l.betrad.com
+   * Required. The click tracking URL of the OBA icon. Only URLs of the following domains are
+   * allowed: * https://info.evidon.com * https://l.betrad.com
    * @param clickTrackingUrl clickTrackingUrl or {@code null} for none
    */
   public ObaIcon setClickTrackingUrl(java.lang.String clickTrackingUrl) {
@@ -141,10 +126,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The landing page URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
+   * Required. The landing page URL of the OBA icon. Only URLs of the following domains are allowed:
    * * https://info.evidon.com * https://l.betrad.com
    * @return value or {@code null} for none
    */
@@ -153,10 +135,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The landing page URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
+   * Required. The landing page URL of the OBA icon. Only URLs of the following domains are allowed:
    * * https://info.evidon.com * https://l.betrad.com
    * @param landingPageUrl landingPageUrl or {@code null} for none
    */
@@ -234,11 +213,8 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The view tracking URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
-   * * https://info.evidon.com * https://l.betrad.com
+   * Required. The view tracking URL of the OBA icon. Only URLs of the following domains are
+   * allowed: * https://info.evidon.com * https://l.betrad.com
    * @return value or {@code null} for none
    */
   public java.lang.String getViewTrackingUrl() {
@@ -246,11 +222,8 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The view tracking URL of the OBA icon.
-   *
-   * Only URLs of the following domains are allowed:
-   *
-   * * https://info.evidon.com * https://l.betrad.com
+   * Required. The view tracking URL of the OBA icon. Only URLs of the following domains are
+   * allowed: * https://info.evidon.com * https://l.betrad.com
    * @param viewTrackingUrl viewTrackingUrl or {@code null} for none
    */
   public ObaIcon setViewTrackingUrl(java.lang.String viewTrackingUrl) {

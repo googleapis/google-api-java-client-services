@@ -31,36 +31,31 @@ package com.google.api.services.displayvideo.v1.model;
 public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of impressions to serve every day.
-   *
-   * Applicable when the budget is impression based. Must be greater than 0.
+   * Maximum number of impressions to serve every day. Applicable when the budget is impression
+   * based. Must be greater than 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long dailyMaxImpressions;
 
   /**
-   * Maximum currency amount to spend every day in micros of advertiser's currency.
-   *
-   * Applicable when the budget is currency based. Must be greater than 0. For example, for 1.5
-   * standard unit of the currency, set this field to 1500000.
-   *
-   * The value assigned will be rounded to whole billable units for the relevant currency by the
-   * following rules: any positive value less than a single billable unit will be rounded up to one
-   * billable unit and any value larger than a single billable unit will be rounded down to the
-   * nearest billable value. For example, if the currency's billable unit is 0.01, and this field is
-   * set to 10257770, it will round down to 10250000, a value of 10.25. If set to 505, it will round
-   * up to 10000, a value of 0.01.
+   * Maximum currency amount to spend every day in micros of advertiser's currency. Applicable when
+   * the budget is currency based. Must be greater than 0. For example, for 1.5 standard unit of the
+   * currency, set this field to 1500000. The value assigned will be rounded to whole billable units
+   * for the relevant currency by the following rules: any positive value less than a single
+   * billable unit will be rounded up to one billable unit and any value larger than a single
+   * billable unit will be rounded down to the nearest billable value. For example, if the
+   * currency's billable unit is 0.01, and this field is set to 10257770, it will round down to
+   * 10250000, a value of 10.25. If set to 505, it will round up to 10000, a value of 0.01.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long dailyMaxMicros;
 
   /**
-   * Required. The time period in which the pacing budget will be spent.
-   *
-   * When automatic budget allocation is enabled at the insertion order via auto_budget_allocation,
-   * this field is output only and defaults to `PACING_PERIOD_FLIGHT`.
+   * Required. The time period in which the pacing budget will be spent. When automatic budget
+   * allocation is enabled at the insertion order via auto_budget_allocation, this field is output
+   * only and defaults to `PACING_PERIOD_FLIGHT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +70,8 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
   private java.lang.String pacingType;
 
   /**
-   * Maximum number of impressions to serve every day.
-   *
-   * Applicable when the budget is impression based. Must be greater than 0.
+   * Maximum number of impressions to serve every day. Applicable when the budget is impression
+   * based. Must be greater than 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDailyMaxImpressions() {
@@ -85,9 +79,8 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum number of impressions to serve every day.
-   *
-   * Applicable when the budget is impression based. Must be greater than 0.
+   * Maximum number of impressions to serve every day. Applicable when the budget is impression
+   * based. Must be greater than 0.
    * @param dailyMaxImpressions dailyMaxImpressions or {@code null} for none
    */
   public Pacing setDailyMaxImpressions(java.lang.Long dailyMaxImpressions) {
@@ -96,17 +89,14 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum currency amount to spend every day in micros of advertiser's currency.
-   *
-   * Applicable when the budget is currency based. Must be greater than 0. For example, for 1.5
-   * standard unit of the currency, set this field to 1500000.
-   *
-   * The value assigned will be rounded to whole billable units for the relevant currency by the
-   * following rules: any positive value less than a single billable unit will be rounded up to one
-   * billable unit and any value larger than a single billable unit will be rounded down to the
-   * nearest billable value. For example, if the currency's billable unit is 0.01, and this field is
-   * set to 10257770, it will round down to 10250000, a value of 10.25. If set to 505, it will round
-   * up to 10000, a value of 0.01.
+   * Maximum currency amount to spend every day in micros of advertiser's currency. Applicable when
+   * the budget is currency based. Must be greater than 0. For example, for 1.5 standard unit of the
+   * currency, set this field to 1500000. The value assigned will be rounded to whole billable units
+   * for the relevant currency by the following rules: any positive value less than a single
+   * billable unit will be rounded up to one billable unit and any value larger than a single
+   * billable unit will be rounded down to the nearest billable value. For example, if the
+   * currency's billable unit is 0.01, and this field is set to 10257770, it will round down to
+   * 10250000, a value of 10.25. If set to 505, it will round up to 10000, a value of 0.01.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDailyMaxMicros() {
@@ -114,17 +104,14 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum currency amount to spend every day in micros of advertiser's currency.
-   *
-   * Applicable when the budget is currency based. Must be greater than 0. For example, for 1.5
-   * standard unit of the currency, set this field to 1500000.
-   *
-   * The value assigned will be rounded to whole billable units for the relevant currency by the
-   * following rules: any positive value less than a single billable unit will be rounded up to one
-   * billable unit and any value larger than a single billable unit will be rounded down to the
-   * nearest billable value. For example, if the currency's billable unit is 0.01, and this field is
-   * set to 10257770, it will round down to 10250000, a value of 10.25. If set to 505, it will round
-   * up to 10000, a value of 0.01.
+   * Maximum currency amount to spend every day in micros of advertiser's currency. Applicable when
+   * the budget is currency based. Must be greater than 0. For example, for 1.5 standard unit of the
+   * currency, set this field to 1500000. The value assigned will be rounded to whole billable units
+   * for the relevant currency by the following rules: any positive value less than a single
+   * billable unit will be rounded up to one billable unit and any value larger than a single
+   * billable unit will be rounded down to the nearest billable value. For example, if the
+   * currency's billable unit is 0.01, and this field is set to 10257770, it will round down to
+   * 10250000, a value of 10.25. If set to 505, it will round up to 10000, a value of 0.01.
    * @param dailyMaxMicros dailyMaxMicros or {@code null} for none
    */
   public Pacing setDailyMaxMicros(java.lang.Long dailyMaxMicros) {
@@ -133,10 +120,9 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time period in which the pacing budget will be spent.
-   *
-   * When automatic budget allocation is enabled at the insertion order via auto_budget_allocation,
-   * this field is output only and defaults to `PACING_PERIOD_FLIGHT`.
+   * Required. The time period in which the pacing budget will be spent. When automatic budget
+   * allocation is enabled at the insertion order via auto_budget_allocation, this field is output
+   * only and defaults to `PACING_PERIOD_FLIGHT`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPacingPeriod() {
@@ -144,10 +130,9 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time period in which the pacing budget will be spent.
-   *
-   * When automatic budget allocation is enabled at the insertion order via auto_budget_allocation,
-   * this field is output only and defaults to `PACING_PERIOD_FLIGHT`.
+   * Required. The time period in which the pacing budget will be spent. When automatic budget
+   * allocation is enabled at the insertion order via auto_budget_allocation, this field is output
+   * only and defaults to `PACING_PERIOD_FLIGHT`.
    * @param pacingPeriod pacingPeriod or {@code null} for none
    */
   public Pacing setPacingPeriod(java.lang.String pacingPeriod) {

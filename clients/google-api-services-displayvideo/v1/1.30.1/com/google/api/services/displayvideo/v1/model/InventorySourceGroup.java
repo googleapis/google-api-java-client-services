@@ -31,9 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class InventorySourceGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The display name of the inventory source group.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the inventory source group. Must be UTF-8 encoded with a maximum
+   * size of 240 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +53,8 @@ public final class InventorySourceGroup extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Required. The display name of the inventory source group.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the inventory source group. Must be UTF-8 encoded with a maximum
+   * size of 240 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -64,9 +62,8 @@ public final class InventorySourceGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The display name of the inventory source group.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the inventory source group. Must be UTF-8 encoded with a maximum
+   * size of 240 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public InventorySourceGroup setDisplayName(java.lang.String displayName) {

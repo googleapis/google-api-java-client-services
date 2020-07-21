@@ -55,12 +55,10 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean cmFloodlightLinkingAuthorized;
 
   /**
-   * A list of CM sites whose placements will be synced to DV360 as creatives.
-   *
-   * If absent or empty in CreateAdvertiser method, the system will automatically create a CM site.
-   *
-   * Removing sites from this list may cause DV360 creatives synced from CM to be deleted. At least
-   * one site must be specified.
+   * A list of CM sites whose placements will be synced to DV360 as creatives. If absent or empty in
+   * CreateAdvertiser method, the system will automatically create a CM site. Removing sites from
+   * this list may cause DV360 creatives synced from CM to be deleted. At least one site must be
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -138,12 +136,10 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of CM sites whose placements will be synced to DV360 as creatives.
-   *
-   * If absent or empty in CreateAdvertiser method, the system will automatically create a CM site.
-   *
-   * Removing sites from this list may cause DV360 creatives synced from CM to be deleted. At least
-   * one site must be specified.
+   * A list of CM sites whose placements will be synced to DV360 as creatives. If absent or empty in
+   * CreateAdvertiser method, the system will automatically create a CM site. Removing sites from
+   * this list may cause DV360 creatives synced from CM to be deleted. At least one site must be
+   * specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getCmSyncableSiteIds() {
@@ -151,12 +147,10 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of CM sites whose placements will be synced to DV360 as creatives.
-   *
-   * If absent or empty in CreateAdvertiser method, the system will automatically create a CM site.
-   *
-   * Removing sites from this list may cause DV360 creatives synced from CM to be deleted. At least
-   * one site must be specified.
+   * A list of CM sites whose placements will be synced to DV360 as creatives. If absent or empty in
+   * CreateAdvertiser method, the system will automatically create a CM site. Removing sites from
+   * this list may cause DV360 creatives synced from CM to be deleted. At least one site must be
+   * specified.
    * @param cmSyncableSiteIds cmSyncableSiteIds or {@code null} for none
    */
   public CmHybridConfig setCmSyncableSiteIds(java.util.List<java.lang.Long> cmSyncableSiteIds) {

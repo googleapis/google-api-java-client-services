@@ -31,9 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class RateDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The rate type.
-   *
-   * Acceptable values are `INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED`,
+   * The rate type. Acceptable values are `INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED`,
    * `INVENTORY_SOURCE_RATE_TYPE_CPM_FLOOR`, and `INVENTORY_SOURCE_RATE_TYPE_CPD`.
    * The value may be {@code null}.
    */
@@ -42,9 +40,7 @@ public final class RateDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The amount that the buyer has committed to spending on the inventory source up
-   * front.
-   *
-   * Only applicable for guaranteed inventory sources.
+   * front. Only applicable for guaranteed inventory sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +61,7 @@ public final class RateDetails extends com.google.api.client.json.GenericJson {
   private java.lang.Long unitsPurchased;
 
   /**
-   * The rate type.
-   *
-   * Acceptable values are `INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED`,
+   * The rate type. Acceptable values are `INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED`,
    * `INVENTORY_SOURCE_RATE_TYPE_CPM_FLOOR`, and `INVENTORY_SOURCE_RATE_TYPE_CPD`.
    * @return value or {@code null} for none
    */
@@ -76,9 +70,7 @@ public final class RateDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The rate type.
-   *
-   * Acceptable values are `INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED`,
+   * The rate type. Acceptable values are `INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED`,
    * `INVENTORY_SOURCE_RATE_TYPE_CPM_FLOOR`, and `INVENTORY_SOURCE_RATE_TYPE_CPD`.
    * @param inventorySourceRateType inventorySourceRateType or {@code null} for none
    */
@@ -89,9 +81,7 @@ public final class RateDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The amount that the buyer has committed to spending on the inventory source up
-   * front.
-   *
-   * Only applicable for guaranteed inventory sources.
+   * front. Only applicable for guaranteed inventory sources.
    * @return value or {@code null} for none
    */
   public Money getMinimumSpend() {
@@ -100,9 +90,7 @@ public final class RateDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The amount that the buyer has committed to spending on the inventory source up
-   * front.
-   *
-   * Only applicable for guaranteed inventory sources.
+   * front. Only applicable for guaranteed inventory sources.
    * @param minimumSpend minimumSpend or {@code null} for none
    */
   public RateDetails setMinimumSpend(Money minimumSpend) {

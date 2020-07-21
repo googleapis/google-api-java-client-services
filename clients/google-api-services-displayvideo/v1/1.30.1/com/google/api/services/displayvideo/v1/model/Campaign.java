@@ -59,9 +59,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   private java.lang.Long campaignId;
 
   /**
-   * Required. The display name of the campaign.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the campaign. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +68,9 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Controls whether or not the insertion orders under this campaign can spend their
-   * budgets and bid on inventory.
-   *
-   * * Accepted values are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
-   * `ENTITY_STATUS_PAUSED`. * For CreateCampaign method, `ENTITY_STATUS_ARCHIVED` is not allowed.
+   * budgets and bid on inventory. * Accepted values are `ENTITY_STATUS_ACTIVE`,
+   * `ENTITY_STATUS_ARCHIVED`, and `ENTITY_STATUS_PAUSED`. * For CreateCampaign method,
+   * `ENTITY_STATUS_ARCHIVED` is not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,9 +166,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name of the campaign.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the campaign. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -178,9 +175,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name of the campaign.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the campaign. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * @param displayName displayName or {@code null} for none
    */
   public Campaign setDisplayName(java.lang.String displayName) {
@@ -190,10 +186,9 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Controls whether or not the insertion orders under this campaign can spend their
-   * budgets and bid on inventory.
-   *
-   * * Accepted values are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
-   * `ENTITY_STATUS_PAUSED`. * For CreateCampaign method, `ENTITY_STATUS_ARCHIVED` is not allowed.
+   * budgets and bid on inventory. * Accepted values are `ENTITY_STATUS_ACTIVE`,
+   * `ENTITY_STATUS_ARCHIVED`, and `ENTITY_STATUS_PAUSED`. * For CreateCampaign method,
+   * `ENTITY_STATUS_ARCHIVED` is not allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityStatus() {
@@ -202,10 +197,9 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Controls whether or not the insertion orders under this campaign can spend their
-   * budgets and bid on inventory.
-   *
-   * * Accepted values are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
-   * `ENTITY_STATUS_PAUSED`. * For CreateCampaign method, `ENTITY_STATUS_ARCHIVED` is not allowed.
+   * budgets and bid on inventory. * Accepted values are `ENTITY_STATUS_ACTIVE`,
+   * `ENTITY_STATUS_ARCHIVED`, and `ENTITY_STATUS_PAUSED`. * For CreateCampaign method,
+   * `ENTITY_STATUS_ARCHIVED` is not allowed.
    * @param entityStatus entityStatus or {@code null} for none
    */
   public Campaign setEntityStatus(java.lang.String entityStatus) {

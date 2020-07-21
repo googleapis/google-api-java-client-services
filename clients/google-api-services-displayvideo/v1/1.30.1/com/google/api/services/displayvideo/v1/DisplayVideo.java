@@ -396,48 +396,33 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by assigned targeting option properties. Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by the logical operator `OR`.. * A restriction has the form of `{field} {operator}
-       * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType`
-       *
-       * Examples:
-       *
-       * * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
-       *
+       * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+       * expressions are made up of one or more restrictions. * Restrictions can be combined by the
+       * logical operator `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The
+       * operator must be `EQUALS (=)`. * Supported fields: - `targetingType` Examples: *
+       * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
        * The length of this field should be no more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by assigned targeting option properties. Supported syntax:
-
-     * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-     logical operator `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The
-     operator must be `EQUALS (=)`. * Supported fields: - `targetingType`
-
-     Examples:
-
-     * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+     are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+     `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+     (=)`. * Supported fields: - `targetingType` Examples: * targetingType with value
+     TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"` The length of this field should be
+     no more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by assigned targeting option properties. Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by the logical operator `OR`.. * A restriction has the form of `{field} {operator}
-       * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType`
-       *
-       * Examples:
-       *
-       * * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
-       *
+       * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+       * expressions are made up of one or more restrictions. * Restrictions can be combined by the
+       * logical operator `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The
+       * operator must be `EQUALS (=)`. * Supported fields: - `targetingType` Examples: *
+       * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
        * The length of this field should be no more than 500 characters.
        */
       public BulkListAdvertiserAssignedTargetingOptions setFilter(java.lang.String filter) {
@@ -446,33 +431,24 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `targetingType` (default)
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
+       * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
        * "desc" should be added to the field name. Example: `targetingType desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `targetingType` (default)
-
-     The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-     should be added to the field name. Example: `targetingType desc`.
+      /** Field by which to sort the list. Acceptable values are: * `targetingType` (default) The default
+     sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+     added to the field name. Example: `targetingType desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `targetingType` (default)
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
+       * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
        * "desc" should be added to the field name. Example: `targetingType desc`.
        */
       public BulkListAdvertiserAssignedTargetingOptions setOrderBy(java.lang.String orderBy) {
@@ -889,11 +865,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists advertisers that are accessible to the current user.
-     *
-     * The order is defined by the order_by parameter.
-     *
-     * A single partner_id is required. Cross-partner listing is not supported.
+     * Lists advertisers that are accessible to the current user. The order is defined by the order_by
+     * parameter. A single partner_id is required. Cross-partner listing is not supported.
      *
      * Create a request for the method "advertisers.list".
      *
@@ -913,11 +886,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/advertisers";
 
       /**
-       * Lists advertisers that are accessible to the current user.
-       *
-       * The order is defined by the order_by parameter.
-       *
-       * A single partner_id is required. Cross-partner listing is not supported.
+       * Lists advertisers that are accessible to the current user. The order is defined by the order_by
+       * parameter. A single partner_id is required. Cross-partner listing is not supported.
        *
        * Create a request for the method "advertisers.list".
        *
@@ -998,58 +968,36 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by advertiser properties.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-       * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-       * `EQUALS (=)`. * Supported fields: - `entityStatus`
-       *
-       * Examples:
-       *
-       * * All active advertisers under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"`
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made
+       * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `entityStatus` Examples: * All active advertisers under a partner:
+       * `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more than 500
+       * characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by advertiser properties.
-
-     Supported syntax:
-
-     * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-     `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-     has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-     fields: - `entityStatus`
-
-     Examples:
-
-     * All active advertisers under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"`
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made up of
+     one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+     sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `entityStatus` Examples: * All
+     active advertisers under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field
+     should be no more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by advertiser properties.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-       * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-       * `EQUALS (=)`. * Supported fields: - `entityStatus`
-       *
-       * Examples:
-       *
-       * * All active advertisers under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"`
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made
+       * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `entityStatus` Examples: * All active advertisers under a partner:
+       * `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more than 500
+       * characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1057,20 +1005,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `displayName` (default) * `entityStatus`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. For example, `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+       * `entityStatus` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. For example, `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `displayName` (default) * `entityStatus`
-
+      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
      The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
      should be added to the field name. For example, `displayName desc`.
        */
@@ -1079,12 +1021,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `displayName` (default) * `entityStatus`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. For example, `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+       * `entityStatus` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. For example, `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -1935,10 +1874,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists campaigns in an advertiser.
-       *
-       * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-       * campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+       * Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter by
+       * entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in
+       * the results.
        *
        * Create a request for the method "campaigns.list".
        *
@@ -1962,10 +1900,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Lists campaigns in an advertiser.
-         *
-         * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-         * campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+         * Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter
+         * by entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included
+         * in the results.
          *
          * Create a request for the method "campaigns.list".
          *
@@ -2064,61 +2001,39 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by campaign properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `entityStatus`
-         *
-         * Examples:
-         *
-         * * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by campaign properties. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
+         * - `entityStatus` Examples: * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * campaigns under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by campaign properties.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       fields: - `entityStatus`
-
-       Examples:
-
-       * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
-       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
-
-       The length of this field should be no more than 500 characters.
+        /** Allows filtering by campaign properties. Supported syntax: * Filter expressions are made up of one
+       or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
+       of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `entityStatus` Examples: * All
+       `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
+       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` The length of this
+       field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by campaign properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `entityStatus`
-         *
-         * Examples:
-         *
-         * * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by campaign properties. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
+         * - `entityStatus` Examples: * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * campaigns under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2126,20 +2041,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `displayName` (default) * `entityStatus`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `displayName` (default) * `entityStatus`
-
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
        The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
        should be added to the field name. Example: `displayName desc`.
          */
@@ -2148,12 +2057,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `displayName` (default) * `entityStatus`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -2819,55 +2725,31 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by channel fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions for channel currently can only contain at most one * restriction. *
-         * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-         * `CONTAINS (:)`. * Supported fields: - `displayName`
-         *
-         * Examples:
-         *
-         * * All channels for which the display name contains "google": `displayName : "google"`.
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
+         * currently can only contain at most one * restriction. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
+         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * `displayName : "google"`. The length of this field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by channel fields.
-
-       Supported syntax:
-
-       * Filter expressions for channel currently can only contain at most one * restriction. * A
-       restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-       Supported fields: - `displayName`
-
-       Examples:
-
-       * All channels for which the display name contains "google": `displayName : "google"`.
-
-       The length of this field should be no more than 500 characters.
+        /** Allows filtering by channel fields. Supported syntax: * Filter expressions for channel currently
+       can only contain at most one * restriction. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: *
+       All channels for which the display name contains "google": `displayName : "google"`. The length of
+       this field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by channel fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions for channel currently can only contain at most one * restriction. *
-         * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-         * `CONTAINS (:)`. * Supported fields: - `displayName`
-         *
-         * Examples:
-         *
-         * * All channels for which the display name contains "google": `displayName : "google"`.
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
+         * currently can only contain at most one * restriction. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
+         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * `displayName : "google"`. The length of this field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2875,21 +2757,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `displayName` (default) * `channelId`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * " desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `channelId` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix " desc" should be added to the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `displayName` (default) * `channelId`
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `channelId` The
+       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
        should be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
@@ -2897,12 +2773,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `displayName` (default) * `channelId`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * " desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `channelId` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix " desc" should be added to the field name. Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -3173,10 +3046,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       public class Sites {
 
         /**
-         * Bulk edits sites under a single channel.
-         *
-         * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
-         * create the sites provided in BulkEditSitesRequest.created_sites.
+         * Bulk edits sites under a single channel. The operation will delete the sites provided in
+         * BulkEditSitesRequest.deleted_sites and then create the sites provided in
+         * BulkEditSitesRequest.created_sites.
          *
          * Create a request for the method "sites.bulkEdit".
          *
@@ -3202,10 +3074,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
-           * Bulk edits sites under a single channel.
-           *
-           * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
-           * create the sites provided in BulkEditSitesRequest.created_sites.
+           * Bulk edits sites under a single channel. The operation will delete the sites provided in
+           * BulkEditSitesRequest.deleted_sites and then create the sites provided in
+           * BulkEditSitesRequest.created_sites.
            *
            * Create a request for the method "sites.bulkEdit".
            *
@@ -3806,49 +3677,30 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by site fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions for site currently can only contain at most one * restriction. * A
-           * restriction has the form of `{field} {operator} {value}`. * The operator must be
-           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
-           *
-           * Examples:
-           *
-           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           * Allows filtering by site fields. Supported syntax: * Filter expressions for site
+           * currently can only contain at most one * restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
+           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by site fields.
-
-         Supported syntax:
-
-         * Filter expressions for site currently can only contain at most one * restriction. * A restriction
-         has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
-         fields: - `urlOrAppId`
-
-         Examples:
-
-         * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+          /** Allows filtering by site fields. Supported syntax: * Filter expressions for site currently can only
+         contain at most one * restriction. * A restriction has the form of `{field} {operator} {value}`. *
+         The operator must be `CONTAINS (:)`. * Supported fields: - `urlOrAppId` Examples: * All sites for
+         which the URL or app ID contains "google": `urlOrAppId : "google"`
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by site fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions for site currently can only contain at most one * restriction. * A
-           * restriction has the form of `{field} {operator} {value}`. * The operator must be
-           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
-           *
-           * Examples:
-           *
-           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           * Allows filtering by site fields. Supported syntax: * Filter expressions for site
+           * currently can only contain at most one * restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
+           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3856,34 +3708,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `urlOrAppId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           * Field by which to sort the list. Acceptable values are: * `urlOrAppId` (default) The
+           * default sorting order is ascending. To specify descending order for a field, a suffix "
+           * desc" should be added to the field name. Example: `urlOrAppId desc`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the list. Acceptable values are:
-
-         * `urlOrAppId` (default)
-
-         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be added to the field name. Example: `urlOrAppId desc`.
+          /** Field by which to sort the list. Acceptable values are: * `urlOrAppId` (default) The default
+         sorting order is ascending. To specify descending order for a field, a suffix " desc" should be
+         added to the field name. Example: `urlOrAppId desc`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `urlOrAppId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           * Field by which to sort the list. Acceptable values are: * `urlOrAppId` (default) The
+           * default sorting order is ascending. To specify descending order for a field, a suffix "
+           * desc" should be added to the field name. Example: `urlOrAppId desc`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -3914,28 +3757,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListSites` method. If not specified, the first page of results will be returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListSites` method. If not
+           * specified, the first page of results will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
-
-         Typically, this is the value of next_page_token returned from the previous call to `ListSites`
-         method. If not specified, the first page of results will be returned.
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         next_page_token returned from the previous call to `ListSites` method. If not specified, the first
+         page of results will be returned.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListSites` method. If not specified, the first page of results will be returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListSites` method. If not
+           * specified, the first page of results will be returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4403,10 +4243,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists creatives in an advertiser.
-       *
-       * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-       * creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+       * Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter by
+       * entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included in
+       * the results.
        *
        * Create a request for the method "creatives.list".
        *
@@ -4430,10 +4269,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Lists creatives in an advertiser.
-         *
-         * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-         * creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+         * Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter
+         * by entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included
+         * in the results.
          *
          * Create a request for the method "creatives.list".
          *
@@ -4532,112 +4370,89 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by creative properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restriction for the same
-         * field must be combined by `OR`. * Restriction for different fields must be combined by
-         * `AND`. * Between `(` and `)` there can only be restrictions combined by `OR` for the same
-         * field. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)` for the following fields: - `entityStatus` - `creativeType`. -
-         * `dimensions` - `minDuration` - `maxDuration` - `approvalStatus` - `exchangeReviewStatus`
-         * - `dynamic` - `creativeId` * The operator must be `HAS (:)` for the following fields: -
-         * `lineItemIds` * For `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may
-         * be at most one restriction. * For `dimensions`, the value is in the form of
-         * `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
-         * `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the
-         * form of `"{duration}s"`. Only seconds are supported with millisecond granularity. * There
-         * may be multiple `lineItemIds` restrictions in order to search against multiple possible
-         * line item IDs. * There may be multiple `creativeId` restrictions in order to search
-         * against multiple possible creative IDs.
-         *
-         * Examples:
-         *
-         * * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with
-         * 300x400 or 50x100 dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND
+         * Allows filtering by creative properties. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restriction for the same field must be combined by
+         * `OR`. * Restriction for different fields must be combined by `AND`. * Between `(` and `)`
+         * there can only be restrictions combined by `OR` for the same field. * A restriction has
+         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the
+         * following fields: - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` -
+         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` *
+         * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * For
+         * `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may be at most one
+         * restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
+         * `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
+         * `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only
+         * seconds are supported with millisecond granularity. * There may be multiple `lineItemIds`
+         * restrictions in order to search against multiple possible line item IDs. * There may be
+         * multiple `creativeId` restrictions in order to search against multiple possible creative
+         * IDs. Examples: * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active
+         * creatives with 300x400 or 50x100 dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND
          * (dimensions="300x400" OR dimensions="50x100")` * All dynamic creatives that are approved
          * by AdX or AppNexus, with a minimum duration of 5 seconds and 200ms. `dynamic="true" AND
          * minDuration="5.2s" AND (exchangeReviewStatus="EXCHANGE_GOOGLE_AD_MANAGER-
          * REVIEW_STATUS_APPROVED" OR exchangeReviewStatus="EXCHANGE_APPNEXUS-
          * REVIEW_STATUS_APPROVED")` * All video creatives that are associated with line item ID 1
          * or 2: `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR lineItemIds:2)` * Find
-         * creatives by multiple creative IDs: `creativeId=1 OR creativeId=2`
-         *
-         * The length of this field should be no more than 500 characters.
+         * creatives by multiple creative IDs: `creativeId=1 OR creativeId=2` The length of this
+         * field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by creative properties.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restriction for the same field must
-       be combined by `OR`. * Restriction for different fields must be combined by `AND`. * Between `(`
-       and `)` there can only be restrictions combined by `OR` for the same field. * A restriction has the
-       form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the following fields:
-       - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` - `maxDuration` -
-       `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` * The operator must be `HAS
-       (:)` for the following fields: - `lineItemIds` * For `entityStatus`, `minDuration`, `maxDuration`,
-       and `dynamic` there may be at most one restriction. * For `dimensions`, the value is in the form of
-       `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
-       `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the form of
-       `"{duration}s"`. Only seconds are supported with millisecond granularity. * There may be multiple
-       `lineItemIds` restrictions in order to search against multiple possible line item IDs. * There may
-       be multiple `creativeId` restrictions in order to search against multiple possible creative IDs.
-
-       Examples:
-
-       * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400
-       or 50x100 dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR
-       dimensions="50x100")` * All dynamic creatives that are approved by AdX or AppNexus, with a minimum
-       duration of 5 seconds and 200ms. `dynamic="true" AND minDuration="5.2s" AND (exchangeReviewStatus
+        /** Allows filtering by creative properties. Supported syntax: * Filter expressions are made up of one
+       or more restrictions. * Restriction for the same field must be combined by `OR`. * Restriction for
+       different fields must be combined by `AND`. * Between `(` and `)` there can only be restrictions
+       combined by `OR` for the same field. * A restriction has the form of `{field} {operator} {value}`.
+       * The operator must be `EQUALS (=)` for the following fields: - `entityStatus` - `creativeType`. -
+       `dimensions` - `minDuration` - `maxDuration` - `approvalStatus` - `exchangeReviewStatus` -
+       `dynamic` - `creativeId` * The operator must be `HAS (:)` for the following fields: - `lineItemIds`
+       * For `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may be at most one
+       restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
+       `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
+       `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only seconds are
+       supported with millisecond granularity. * There may be multiple `lineItemIds` restrictions in order
+       to search against multiple possible line item IDs. * There may be multiple `creativeId`
+       restrictions in order to search against multiple possible creative IDs. Examples: * All native
+       creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400 or 50x100
+       dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR dimensions="50x100")`
+       * All dynamic creatives that are approved by AdX or AppNexus, with a minimum duration of 5 seconds
+       and 200ms. `dynamic="true" AND minDuration="5.2s" AND (exchangeReviewStatus
        ="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR exchangeReviewStatus="EXCHANGE_APPNEXUS-
        REVIEW_STATUS_APPROVED")` * All video creatives that are associated with line item ID 1 or 2:
        `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR lineItemIds:2)` * Find creatives by
-       multiple creative IDs: `creativeId=1 OR creativeId=2`
-
-       The length of this field should be no more than 500 characters.
+       multiple creative IDs: `creativeId=1 OR creativeId=2` The length of this field should be no more
+       than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by creative properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restriction for the same
-         * field must be combined by `OR`. * Restriction for different fields must be combined by
-         * `AND`. * Between `(` and `)` there can only be restrictions combined by `OR` for the same
-         * field. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)` for the following fields: - `entityStatus` - `creativeType`. -
-         * `dimensions` - `minDuration` - `maxDuration` - `approvalStatus` - `exchangeReviewStatus`
-         * - `dynamic` - `creativeId` * The operator must be `HAS (:)` for the following fields: -
-         * `lineItemIds` * For `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may
-         * be at most one restriction. * For `dimensions`, the value is in the form of
-         * `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
-         * `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the
-         * form of `"{duration}s"`. Only seconds are supported with millisecond granularity. * There
-         * may be multiple `lineItemIds` restrictions in order to search against multiple possible
-         * line item IDs. * There may be multiple `creativeId` restrictions in order to search
-         * against multiple possible creative IDs.
-         *
-         * Examples:
-         *
-         * * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with
-         * 300x400 or 50x100 dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND
+         * Allows filtering by creative properties. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restriction for the same field must be combined by
+         * `OR`. * Restriction for different fields must be combined by `AND`. * Between `(` and `)`
+         * there can only be restrictions combined by `OR` for the same field. * A restriction has
+         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the
+         * following fields: - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` -
+         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` *
+         * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * For
+         * `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may be at most one
+         * restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
+         * `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
+         * `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only
+         * seconds are supported with millisecond granularity. * There may be multiple `lineItemIds`
+         * restrictions in order to search against multiple possible line item IDs. * There may be
+         * multiple `creativeId` restrictions in order to search against multiple possible creative
+         * IDs. Examples: * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active
+         * creatives with 300x400 or 50x100 dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND
          * (dimensions="300x400" OR dimensions="50x100")` * All dynamic creatives that are approved
          * by AdX or AppNexus, with a minimum duration of 5 seconds and 200ms. `dynamic="true" AND
          * minDuration="5.2s" AND (exchangeReviewStatus="EXCHANGE_GOOGLE_AD_MANAGER-
          * REVIEW_STATUS_APPROVED" OR exchangeReviewStatus="EXCHANGE_APPNEXUS-
          * REVIEW_STATUS_APPROVED")` * All video creatives that are associated with line item ID 1
          * or 2: `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR lineItemIds:2)` * Find
-         * creatives by multiple creative IDs: `creativeId=1 OR creativeId=2`
-         *
-         * The length of this field should be no more than 500 characters.
+         * creatives by multiple creative IDs: `creativeId=1 OR creativeId=2` The length of this
+         * field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4645,36 +4460,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `creativeId` (default) * `createTime` * `mediaDuration` * `dimensions` (sorts by width
-         * first, then by height)
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
+         * Field by which to sort the list. Acceptable values are: * `creativeId` (default) *
+         * `createTime` * `mediaDuration` * `dimensions` (sorts by width first, then by height) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `createTime desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `creativeId` (default) * `createTime` * `mediaDuration` * `dimensions` (sorts by width first,
-       then by height)
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `createTime desc`.
+        /** Field by which to sort the list. Acceptable values are: * `creativeId` (default) * `createTime` *
+       `mediaDuration` * `dimensions` (sorts by width first, then by height) The default sorting order is
+       ascending. To specify descending order for a field, a suffix "desc" should be added to the field
+       name. Example: `createTime desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `creativeId` (default) * `createTime` * `mediaDuration` * `dimensions` (sorts by width
-         * first, then by height)
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
+         * Field by which to sort the list. Acceptable values are: * `creativeId` (default) *
+         * `createTime` * `mediaDuration` * `dimensions` (sorts by width first, then by height) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `createTime desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
@@ -5334,10 +5140,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists insertion orders in an advertiser.
-       *
-       * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-       * insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+       * Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a
+       * filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will not
+       * be included in the results.
        *
        * Create a request for the method "insertionOrders.list".
        *
@@ -5361,10 +5166,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Lists insertion orders in an advertiser.
-         *
-         * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-         * insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+         * Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a
+         * filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will
+         * not be included in the results.
          *
          * Create a request for the method "insertionOrders.list".
          *
@@ -5463,64 +5267,42 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by insertion order properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `campaignId` - `entityStatus`
-         *
-         * Examples:
-         *
-         * * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE`
-         * or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by insertion order properties. Supported syntax: * Filter expressions
+         * are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+         * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
+         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+         * Supported fields: - `campaignId` - `entityStatus` Examples: * All insertion orders under
+         * a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by insertion order properties.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       fields: - `campaignId` - `entityStatus`
-
-       Examples:
-
-       * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or
-       `ENTITY_STATUS_PAUSED` insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE"
-       OR entityStatus="ENTITY_STATUS_PAUSED")`
-
-       The length of this field should be no more than 500 characters.
+        /** Allows filtering by insertion order properties. Supported syntax: * Filter expressions are made up
+       of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+       sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `campaignId` - `entityStatus`
+       Examples: * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE`
+       or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
+       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` The length of this
+       field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by insertion order properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `campaignId` - `entityStatus`
-         *
-         * Examples:
-         *
-         * * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE`
-         * or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")`
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by insertion order properties. Supported syntax: * Filter expressions
+         * are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+         * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
+         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+         * Supported fields: - `campaignId` - `entityStatus` Examples: * All insertion orders under
+         * a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -5528,20 +5310,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * "displayName" (default) * "entityStatus"
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
+         * "entityStatus" The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * "displayName" (default) * "entityStatus"
-
+        /** Field by which to sort the list. Acceptable values are: * "displayName" (default) * "entityStatus"
        The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
        should be added to the field name. Example: `displayName desc`.
          */
@@ -5550,12 +5326,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * "displayName" (default) * "entityStatus"
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
+         * "entityStatus" The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -6095,64 +5868,48 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by the logical operator `OR` on the same field. * A restriction has the form of
-         * `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance`
-         *
-         * Examples:
-         *
-         * * AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
-         * TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
          * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
          * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-         * inheritance="INHERITED_FROM_PARTNER"`
-         *
-         * The length of this field should be no more than 500 characters.
+         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by assigned targeting option properties. Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-       logical operator `OR` on the same field. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType` -
-       `inheritance`
-
-       Examples:
-
-       * AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
+        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
+       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: *
+       AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
        TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
        targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance status of
        NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-       inheritance="INHERITED_FROM_PARTNER"`
-
-       The length of this field should be no more than 500 characters.
+       inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+       characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by the logical operator `OR` on the same field. * A restriction has the form of
-         * `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance`
-         *
-         * Examples:
-         *
-         * * AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
-         * TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
          * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
          * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-         * inheritance="INHERITED_FROM_PARTNER"`
-         *
-         * The length of this field should be no more than 500 characters.
+         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+         * characters.
          */
         public BulkListLineItemAssignedTargetingOptions setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -6160,33 +5917,24 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `targetingType` (default)
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
+         * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `targetingType desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `targetingType` (default)
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `targetingType desc`.
+        /** Field by which to sort the list. Acceptable values are: * `targetingType` (default) The default
+       sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+       added to the field name. Example: `targetingType desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `targetingType` (default)
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
+         * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `targetingType desc`.
          */
         public BulkListLineItemAssignedTargetingOptions setOrderBy(java.lang.String orderBy) {
@@ -6669,10 +6417,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists line items in an advertiser.
-       *
-       * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-       * line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+       * Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter by
+       * entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be included in
+       * the results.
        *
        * Create a request for the method "lineItems.list".
        *
@@ -6696,10 +6443,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Lists line items in an advertiser.
-         *
-         * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-         * line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+         * Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter
+         * by entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be
+         * included in the results.
          *
          * Create a request for the method "lineItems.list".
          *
@@ -6798,68 +6544,45 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by line item properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `campaignId` - `insertionOrderId` - `entityStatus`
-         * - `lineItemType`
-         *
-         * Examples:
-         *
-         * * All line items under an insertion order: `insertionOrderId="1234"` * All
+         * Allows filtering by line item properties. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
+         * - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType` Examples: * All
+         * line items under an insertion order: `insertionOrderId="1234"` * All
          * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
          * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
          * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
-         *
          * The length of this field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by line item properties.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       fields: - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType`
-
-       Examples:
-
-       * All line items under an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE`
-       or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
+        /** Allows filtering by line item properties. Supported syntax: * Filter expressions are made up of one
+       or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
+       of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `campaignId` -
+       `insertionOrderId` - `entityStatus` - `lineItemType` Examples: * All line items under an insertion
+       order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+       `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
        `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
-       lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
-
-       The length of this field should be no more than 500 characters.
+       lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` The length of this field should be no more than 500
+       characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by line item properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `campaignId` - `insertionOrderId` - `entityStatus`
-         * - `lineItemType`
-         *
-         * Examples:
-         *
-         * * All line items under an insertion order: `insertionOrderId="1234"` * All
+         * Allows filtering by line item properties. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
+         * - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType` Examples: * All
+         * line items under an insertion order: `insertionOrderId="1234"` * All
          * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
          * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
          * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
-         *
          * The length of this field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
@@ -6868,34 +6591,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
+         * "entityStatus" * “flight.dateRange.endDate” The default sorting order is ascending. To
+         * specify descending order for a field, a suffix "desc" should be added to the field name.
+         * Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `displayName desc`.
+        /** Field by which to sort the list. Acceptable values are: * "displayName" (default) * "entityStatus"
+       * “flight.dateRange.endDate” The default sorting order is ascending. To specify descending order
+       for a field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * "displayName" (default) * "entityStatus" * “flight.dateRange.endDate”
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
+         * "entityStatus" * “flight.dateRange.endDate” The default sorting order is ascending. To
+         * specify descending order for a field, a suffix "desc" should be added to the field name.
+         * Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -7547,8 +7263,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param advertiserId Required. The ID of the advertiser the line item belongs to.
            * @param lineItemId Required. The ID of the line item the assigned targeting option belongs to.
            * @param targetingType Required. Identifies the type of this assigned targeting option.
-           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that
-          identifies the assigned
+           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that identifies the assigned
            *        targeting option being requested.
            * @return the request
            */
@@ -7587,8 +7302,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * @param advertiserId Required. The ID of the advertiser the line item belongs to.
              * @param lineItemId Required. The ID of the line item the assigned targeting option belongs to.
              * @param targetingType Required. Identifies the type of this assigned targeting option.
-             * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that
-          identifies the assigned
+             * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that identifies the assigned
            *        targeting option being requested.
              * @since 1.13
              */
@@ -7939,65 +7653,44 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Allows filtering by assigned targeting option properties.
-             *
-             * Supported syntax:
-             *
-             * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-             * combined by the logical operator `OR`. * A restriction has the form of `{field}
-             * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance`
-             *
-             * Examples:
-             *
-             * * AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
-             * assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of
-             * NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-             * inheritance="INHERITED_FROM_PARTNER"`
-             *
-             * The length of this field should be no more than 500 characters.
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
+             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
+             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
+             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
+             * 500 characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Allows filtering by assigned targeting option properties.
-
-           Supported syntax:
-
-           * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-           logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
-           must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance`
-
-           Examples:
-
-           * AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
+            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+           (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance` Examples: *
+           AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
            assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED
-           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"`
-
-           The length of this field should be no more than 500 characters.
+           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
+           length of this field should be no more than 500 characters.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Allows filtering by assigned targeting option properties.
-             *
-             * Supported syntax:
-             *
-             * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-             * combined by the logical operator `OR`. * A restriction has the form of `{field}
-             * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance`
-             *
-             * Examples:
-             *
-             * * AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
-             * assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of
-             * NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-             * inheritance="INHERITED_FROM_PARTNER"`
-             *
-             * The length of this field should be no more than 500 characters.
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
+             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
+             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
+             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
+             * 500 characters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -8005,36 +7698,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Field by which to sort the list. Acceptable values are:
-             *
-             * * `assignedTargetingOptionId` (default)
-             *
-             * The default sorting order is ascending. To specify descending order for a field, a
-             * suffix "desc" should be added to the field name. Example: `assignedTargetingOptionId
-             * desc`.
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Field by which to sort the list. Acceptable values are:
-
-           * `assignedTargetingOptionId` (default)
-
-           The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-           should be added to the field name. Example: `assignedTargetingOptionId desc`.
+            /** Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId` (default) The
+           default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+           be added to the field name. Example: `assignedTargetingOptionId desc`.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
             /**
-             * Field by which to sort the list. Acceptable values are:
-             *
-             * * `assignedTargetingOptionId` (default)
-             *
-             * The default sorting order is ascending. To specify descending order for a field, a
-             * suffix "desc" should be added to the field name. Example: `assignedTargetingOptionId
-             * desc`.
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -8516,55 +8200,36 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by location list fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `locationType`
-         *
-         * Examples:
-         *
-         * * All regional location list: `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All
-         * proximity location list: `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
+         * Allows filtering by location list fields. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
+         * - `locationType` Examples: * All regional location list:
+         * `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity location list:
+         * `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by location list fields.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       fields: - `locationType`
-
-       Examples:
-
-       * All regional location list: `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity
-       location list: `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
+        /** Allows filtering by location list fields. Supported syntax: * Filter expressions are made up of one
+       or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
+       of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `locationType` Examples: * All
+       regional location list: `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity location
+       list: `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by location list fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must
-         * be `EQUALS (=)`. * Supported fields: - `locationType`
-         *
-         * Examples:
-         *
-         * * All regional location list: `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All
-         * proximity location list: `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
+         * Allows filtering by location list fields. Supported syntax: * Filter expressions are made
+         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
+         * - `locationType` Examples: * All regional location list:
+         * `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity location list:
+         * `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -8572,34 +8237,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `locationListId` (default) * `displayName`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `locationListId` (default) *
+         * `displayName` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `locationListId` (default) * `displayName`
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `displayName desc`.
+        /** Field by which to sort the list. Acceptable values are: * `locationListId` (default) *
+       `displayName` The default sorting order is ascending. To specify descending order for a field, a
+       suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `locationListId` (default) * `displayName`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * "desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `locationListId` (default) *
+         * `displayName` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -8630,28 +8286,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A token identifying a page of results the server should return.
-         *
-         * Typically, this is the value of next_page_token returned from the previous call to
-         * `ListLocationLists` method. If not specified, the first page of results will be returned.
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListLocationLists` method.
+         * If not specified, the first page of results will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A token identifying a page of results the server should return.
-
-       Typically, this is the value of next_page_token returned from the previous call to
-       `ListLocationLists` method. If not specified, the first page of results will be returned.
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListLocationLists` method. If not specified,
+       the first page of results will be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A token identifying a page of results the server should return.
-         *
-         * Typically, this is the value of next_page_token returned from the previous call to
-         * `ListLocationLists` method. If not specified, the first page of results will be returned.
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListLocationLists` method.
+         * If not specified, the first page of results will be returned.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -8841,9 +8494,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       public class AssignedLocations {
 
         /**
-         * Bulk edits multiple assignments between locations and a single location list.
-         *
-         * The operation will delete the assigned locations provided in
+         * Bulk edits multiple assignments between locations and a single location list. The operation will
+         * delete the assigned locations provided in
          * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
          * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
          *
@@ -8871,9 +8523,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
-           * Bulk edits multiple assignments between locations and a single location list.
-           *
-           * The operation will delete the assigned locations provided in
+           * Bulk edits multiple assignments between locations and a single location list. The operation
+           * will delete the assigned locations provided in
            * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
            * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
            *
@@ -9422,45 +9073,31 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by location list assignment fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by the logical operator `OR`. * A restriction has the form of `{field}
-           * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedLocationId`
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering by location list assignment fields. Supported syntax: * Filter
+           * expressions are made up of one or more restrictions. * Restrictions can be combined by
+           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
+           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedLocationId` The length of this field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by location list assignment fields.
-
-         Supported syntax:
-
-         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-         logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
-         must be `EQUALS (=)`. * Supported fields: - `assignedLocationId`
-
-         The length of this field should be no more than 500 characters.
+          /** Allows filtering by location list assignment fields. Supported syntax: * Filter expressions are
+         made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+         A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+         Supported fields: - `assignedLocationId` The length of this field should be no more than 500
+         characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by location list assignment fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by the logical operator `OR`. * A restriction has the form of `{field}
-           * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedLocationId`
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering by location list assignment fields. Supported syntax: * Filter
+           * expressions are made up of one or more restrictions. * Restrictions can be combined by
+           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
+           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedLocationId` The length of this field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -9468,21 +9105,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `assignedLocationId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `assignedLocationId desc`.
+           * Field by which to sort the list. Acceptable values are: * `assignedLocationId`
+           * (default) The default sorting order is ascending. To specify descending order for a
+           * field, a suffix " desc" should be added to the field name. Example: `assignedLocationId
+           * desc`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the list. Acceptable values are:
-
-         * `assignedLocationId` (default)
-
-         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+          /** Field by which to sort the list. Acceptable values are: * `assignedLocationId` (default) The
+         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
          should be added to the field name. Example: `assignedLocationId desc`.
            */
           public java.lang.String getOrderBy() {
@@ -9490,12 +9122,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `assignedLocationId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `assignedLocationId desc`.
+           * Field by which to sort the list. Acceptable values are: * `assignedLocationId`
+           * (default) The default sorting order is ascending. To specify descending order for a
+           * field, a suffix " desc" should be added to the field name. Example: `assignedLocationId
+           * desc`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -9526,30 +9156,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListAssignedLocations` method. If not specified, the first page of results will be
-           * returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListAssignedLocations`
+           * method. If not specified, the first page of results will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
-
-         Typically, this is the value of next_page_token returned from the previous call to
-         `ListAssignedLocations` method. If not specified, the first page of results will be returned.
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         next_page_token returned from the previous call to `ListAssignedLocations` method. If not
+         specified, the first page of results will be returned.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListAssignedLocations` method. If not specified, the first page of results will be
-           * returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListAssignedLocations`
+           * method. If not specified, the first page of results will be returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -9593,8 +9218,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list will
-      belong.
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
        * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeywordList}
        * @return the request
        */
@@ -9623,8 +9247,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list will
-      belong.
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the negative keyword list will belong.
          * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeywordList}
          * @since 1.13
          */
@@ -9862,8 +9485,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword list
-      belongs.
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword list belongs.
        * @param negativeKeywordListId Required. The ID of the negative keyword list to fetch.
        * @return the request
        */
@@ -9893,8 +9515,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword list
-      belongs.
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword list belongs.
          * @param negativeKeywordListId Required. The ID of the negative keyword list to fetch.
          * @since 1.13
          */
@@ -10020,8 +9641,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword lists
-      belong.
+       * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword lists belong.
        * @return the request
        */
       public List list(java.lang.Long advertiserId) throws java.io.IOException {
@@ -10047,8 +9667,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword lists
-      belong.
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the fetched negative keyword lists belong.
          * @since 1.13
          */
         protected List(java.lang.Long advertiserId) {
@@ -10167,30 +9786,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A token identifying a page of results the server should return.
-         *
-         * Typically, this is the value of next_page_token returned from the previous call to
-         * `ListNegativeKeywordLists` method. If not specified, the first page of results will be
-         * returned.
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListNegativeKeywordLists`
+         * method. If not specified, the first page of results will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A token identifying a page of results the server should return.
-
-       Typically, this is the value of next_page_token returned from the previous call to
-       `ListNegativeKeywordLists` method. If not specified, the first page of results will be returned.
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListNegativeKeywordLists` method. If not
+       specified, the first page of results will be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A token identifying a page of results the server should return.
-         *
-         * Typically, this is the value of next_page_token returned from the previous call to
-         * `ListNegativeKeywordLists` method. If not specified, the first page of results will be
-         * returned.
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListNegativeKeywordLists`
+         * method. If not specified, the first page of results will be returned.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -10380,24 +9994,19 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       public class NegativeKeywords {
 
         /**
-         * Bulk edits negative keywords in a single negative keyword list.
-         *
-         * The operation will delete the negative keywords provided in
-         * BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords
-         * provided in BulkEditNegativeKeywordsRequest.created_negative_keywords.
-         *
-         * This operation is guaranteed to be atomic and will never result in a partial success or partial
-         * failure.
+         * Bulk edits negative keywords in a single negative keyword list. The operation will delete the
+         * negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then
+         * create the negative keywords provided in
+         * BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be
+         * atomic and will never result in a partial success or partial failure.
          *
          * Create a request for the method "negativeKeywords.bulkEdit".
          *
          * This request holds the parameters needed by the displayvideo server.  After setting any optional
          * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords
-        belong.
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords belong.
          * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsRequest}
          * @return the request
          */
@@ -10415,14 +10024,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
-           * Bulk edits negative keywords in a single negative keyword list.
-           *
-           * The operation will delete the negative keywords provided in
-           * BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords
-           * provided in BulkEditNegativeKeywordsRequest.created_negative_keywords.
-           *
-           * This operation is guaranteed to be atomic and will never result in a partial success or partial
-           * failure.
+           * Bulk edits negative keywords in a single negative keyword list. The operation will delete the
+           * negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and
+           * then create the negative keywords provided in
+           * BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be
+           * atomic and will never result in a partial success or partial failure.
            *
            * Create a request for the method "negativeKeywords.bulkEdit".
            *
@@ -10432,10 +10038,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords
-        belong.
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords belong.
            * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditNegativeKeywordsRequest}
            * @since 1.13
            */
@@ -10557,10 +10161,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the displayvideo server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-         * @param negativeKeywordListId Required. The ID of the parent negative keyword list in which the negative keyword
-        will be created.
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list in which the negative keyword will be created.
          * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeyword}
          * @return the request
          */
@@ -10588,10 +10190,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-           * @param negativeKeywordListId Required. The ID of the parent negative keyword list in which the negative keyword
-        will be created.
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list in which the negative keyword will be created.
            * @param content the {@link com.google.api.services.displayvideo.v1.model.NegativeKeyword}
            * @since 1.13
            */
@@ -10713,10 +10313,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the displayvideo server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keyword
-        belongs.
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keyword belongs.
          * @param keywordValue Required. The keyword value of the negative keyword to delete.
          * @return the request
          */
@@ -10747,10 +10345,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keyword
-        belongs.
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keyword belongs.
            * @param keywordValue Required. The keyword value of the negative keyword to delete.
            * @since 1.13
            */
@@ -10899,10 +10495,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the displayvideo server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the requested negative
-        keywords
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the requested negative keywords
          *        belong.
          * @return the request
          */
@@ -10932,10 +10526,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list
-        belongs.
-           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the requested negative
-        keywords
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the requested negative keywords
          *        belong.
            * @since 1.13
            */
@@ -11056,51 +10648,31 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by negative keyword fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions for negative keyword currently can only contain at most one *
-           * restriction. * A restriction has the form of `{field} {operator} {value}`. * The
-           * operator must be `CONTAINS (:)`. * Supported fields: - `keywordValue`
-           *
-           * Examples:
-           *
-           * * All negative keywords for which the keyword value contains "google": `keywordValue :
-           * "google"`
+           * Allows filtering by negative keyword fields. Supported syntax: * Filter expressions for
+           * negative keyword currently can only contain at most one * restriction. * A restriction
+           * has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+           * Supported fields: - `keywordValue` Examples: * All negative keywords for which the
+           * keyword value contains "google": `keywordValue : "google"`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by negative keyword fields.
-
-         Supported syntax:
-
-         * Filter expressions for negative keyword currently can only contain at most one * restriction. * A
-         restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-         Supported fields: - `keywordValue`
-
-         Examples:
-
-         * All negative keywords for which the keyword value contains "google": `keywordValue : "google"`
+          /** Allows filtering by negative keyword fields. Supported syntax: * Filter expressions for negative
+         keyword currently can only contain at most one * restriction. * A restriction has the form of
+         `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+         `keywordValue` Examples: * All negative keywords for which the keyword value contains "google":
+         `keywordValue : "google"`
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by negative keyword fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions for negative keyword currently can only contain at most one *
-           * restriction. * A restriction has the form of `{field} {operator} {value}`. * The
-           * operator must be `CONTAINS (:)`. * Supported fields: - `keywordValue`
-           *
-           * Examples:
-           *
-           * * All negative keywords for which the keyword value contains "google": `keywordValue :
-           * "google"`
+           * Allows filtering by negative keyword fields. Supported syntax: * Filter expressions for
+           * negative keyword currently can only contain at most one * restriction. * A restriction
+           * has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+           * Supported fields: - `keywordValue` Examples: * All negative keywords for which the
+           * keyword value contains "google": `keywordValue : "google"`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -11108,34 +10680,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `keywordValue` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `keywordValue desc`.
+           * Field by which to sort the list. Acceptable values are: * `keywordValue` (default) The
+           * default sorting order is ascending. To specify descending order for a field, a suffix "
+           * desc" should be added to the field name. Example: `keywordValue desc`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the list. Acceptable values are:
-
-         * `keywordValue` (default)
-
-         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be added to the field name. Example: `keywordValue desc`.
+          /** Field by which to sort the list. Acceptable values are: * `keywordValue` (default) The default
+         sorting order is ascending. To specify descending order for a field, a suffix " desc" should be
+         added to the field name. Example: `keywordValue desc`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `keywordValue` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `keywordValue desc`.
+           * Field by which to sort the list. Acceptable values are: * `keywordValue` (default) The
+           * default sorting order is ascending. To specify descending order for a field, a suffix "
+           * desc" should be added to the field name. Example: `keywordValue desc`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -11166,30 +10729,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListNegativeKeywords` method. If not specified, the first page of results will be
-           * returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListNegativeKeywords`
+           * method. If not specified, the first page of results will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
-
-         Typically, this is the value of next_page_token returned from the previous call to
-         `ListNegativeKeywords` method. If not specified, the first page of results will be returned.
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         next_page_token returned from the previous call to `ListNegativeKeywords` method. If not specified,
+         the first page of results will be returned.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListNegativeKeywords` method. If not specified, the first page of results will be
-           * returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListNegativeKeywords`
+           * method. If not specified, the first page of results will be returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -11591,8 +11149,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *
          * @param advertiserId Required. The ID of the advertiser.
          * @param targetingType Required. Identifies the type of this assigned targeting option.
-         * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that
-        identifies the assigned
+         * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
          * @return the request
          */
@@ -11627,8 +11184,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *
            * @param advertiserId Required. The ID of the advertiser.
            * @param targetingType Required. Identifies the type of this assigned targeting option.
-           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that
-        identifies the assigned
+           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
            * @since 1.13
            */
@@ -11940,57 +11496,36 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by assigned targeting option properties.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by the logical operator `OR`. * A restriction has the form of `{field}
-           * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedTargetingOptionId`
-           *
-           * Examples:
-           *
-           * * AssignedTargetingOption with ID 123456 `assignedTargetingOptionId="123456"`
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * expressions are made up of one or more restrictions. * Restrictions can be combined by
+           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
+           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
+           * `assignedTargetingOptionId="123456"` The length of this field should be no more than
+           * 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by assigned targeting option properties.
-
-         Supported syntax:
-
-         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-         logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
-         must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId`
-
-         Examples:
-
-         * AssignedTargetingOption with ID 123456 `assignedTargetingOptionId="123456"`
-
-         The length of this field should be no more than 500 characters.
+          /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+         are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+         `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+         (=)`. * Supported fields: - `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID
+         123456 `assignedTargetingOptionId="123456"` The length of this field should be no more than 500
+         characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by assigned targeting option properties.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by the logical operator `OR`. * A restriction has the form of `{field}
-           * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedTargetingOptionId`
-           *
-           * Examples:
-           *
-           * * AssignedTargetingOption with ID 123456 `assignedTargetingOptionId="123456"`
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * expressions are made up of one or more restrictions. * Restrictions can be combined by
+           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
+           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
+           * `assignedTargetingOptionId="123456"` The length of this field should be no more than
+           * 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -11998,36 +11533,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `assignedTargetingOptionId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix "desc" should be added to the field name. Example: `assignedTargetingOptionId
-           * desc`.
+           * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+           * (default) The default sorting order is ascending. To specify descending order for a
+           * field, a suffix "desc" should be added to the field name. Example:
+           * `assignedTargetingOptionId desc`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the list. Acceptable values are:
-
-         * `assignedTargetingOptionId` (default)
-
-         The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-         should be added to the field name. Example: `assignedTargetingOptionId desc`.
+          /** Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId` (default) The
+         default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+         be added to the field name. Example: `assignedTargetingOptionId desc`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `assignedTargetingOptionId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix "desc" should be added to the field name. Example: `assignedTargetingOptionId
-           * desc`.
+           * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+           * (default) The default sorting order is ascending. To specify descending order for a
+           * field, a suffix "desc" should be added to the field name. Example:
+           * `assignedTargetingOptionId desc`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -12238,9 +11764,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * The ID of the advertiser that has access to the fetched combined audience.
-       */
+      /** The ID of the advertiser that has access to the fetched combined audience. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
@@ -12250,9 +11774,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return advertiserId;
       }
 
-      /**
-       * The ID of the advertiser that has access to the fetched combined audience.
-       */
+      /** The ID of the advertiser that has access to the fetched combined audience. */
       public Get setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -12280,9 +11802,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists combined audiences.
-     *
-     * The order is defined by the order_by parameter.
+     * Lists combined audiences. The order is defined by the order_by parameter.
      *
      * Create a request for the method "combinedAudiences.list".
      *
@@ -12302,9 +11822,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/combinedAudiences";
 
       /**
-       * Lists combined audiences.
-       *
-       * The order is defined by the order_by parameter.
+       * Lists combined audiences. The order is defined by the order_by parameter.
        *
        * Create a request for the method "combinedAudiences.list".
        *
@@ -12384,9 +11902,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The ID of the advertiser that has access to the fetched combined audiences.
-       */
+      /** The ID of the advertiser that has access to the fetched combined audiences. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
@@ -12396,66 +11912,40 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return advertiserId;
       }
 
-      /**
-       * The ID of the advertiser that has access to the fetched combined audiences.
-       */
+      /** The ID of the advertiser that has access to the fetched combined audiences. */
       public List setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
       }
 
       /**
-       * Allows filtering by combined audience fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for combined audiences currently can only contain at most one
-       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       * must be `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All combined audiences for which the display name contains "Google": `displayName :
-       * "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by combined audience fields. Supported syntax: * Filter expressions for
+       * combined audiences currently can only contain at most one restriction. * A restriction has
+       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+       * Supported fields: - `displayName` Examples: * All combined audiences for which the display
+       * name contains "Google": `displayName : "Google"`. The length of this field should be no
+       * more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by combined audience fields.
-
-     Supported syntax:
-
-     * Filter expressions for combined audiences currently can only contain at most one restriction. * A
-     restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-     Supported fields: - `displayName`
-
-     Examples:
-
-     * All combined audiences for which the display name contains "Google": `displayName : "Google"`.
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by combined audience fields. Supported syntax: * Filter expressions for combined
+     audiences currently can only contain at most one restriction. * A restriction has the form of
+     `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+     `displayName` Examples: * All combined audiences for which the display name contains "Google":
+     `displayName : "Google"`. The length of this field should be no more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by combined audience fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for combined audiences currently can only contain at most one
-       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       * must be `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All combined audiences for which the display name contains "Google": `displayName :
-       * "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by combined audience fields. Supported syntax: * Filter expressions for
+       * combined audiences currently can only contain at most one restriction. * A restriction has
+       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+       * Supported fields: - `displayName` Examples: * All combined audiences for which the display
+       * name contains "Google": `displayName : "Google"`. The length of this field should be no
+       * more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -12463,34 +11953,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `combinedAudienceId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `combinedAudienceId` (default) *
+       * `displayName` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `combinedAudienceId` (default) * `displayName`
-
-     The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-     should be added to the field name. Example: `displayName desc`.
+      /** Field by which to sort the list. Acceptable values are: * `combinedAudienceId` (default) *
+     `displayName` The default sorting order is ascending. To specify descending order for a field, a
+     suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `combinedAudienceId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `combinedAudienceId` (default) *
+       * `displayName` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -12713,9 +12194,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * The ID of the DV360 advertiser that has access to the fetched custom lists.
-       */
+      /** The ID of the DV360 advertiser that has access to the fetched custom lists. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
@@ -12725,9 +12204,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return advertiserId;
       }
 
-      /**
-       * The ID of the DV360 advertiser that has access to the fetched custom lists.
-       */
+      /** The ID of the DV360 advertiser that has access to the fetched custom lists. */
       public Get setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -12739,9 +12216,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists custom lists.
-     *
-     * The order is defined by the order_by parameter.
+     * Lists custom lists. The order is defined by the order_by parameter.
      *
      * Create a request for the method "customLists.list".
      *
@@ -12761,9 +12236,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/customLists";
 
       /**
-       * Lists custom lists.
-       *
-       * The order is defined by the order_by parameter.
+       * Lists custom lists. The order is defined by the order_by parameter.
        *
        * Create a request for the method "customLists.list".
        *
@@ -12843,9 +12316,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The ID of the DV360 advertiser that has access to the fetched custom lists.
-       */
+      /** The ID of the DV360 advertiser that has access to the fetched custom lists. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
@@ -12855,64 +12326,38 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return advertiserId;
       }
 
-      /**
-       * The ID of the DV360 advertiser that has access to the fetched custom lists.
-       */
+      /** The ID of the DV360 advertiser that has access to the fetched custom lists. */
       public List setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
       }
 
       /**
-       * Allows filtering by custom list fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for custom lists currently can only contain at most one restriction. *
-       * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-       * `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All custom lists for which the display name contains "Google": `displayName : "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom
+       * lists currently can only contain at most one restriction. * A restriction has the form of
+       * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+       * `displayName` Examples: * All custom lists for which the display name contains "Google":
+       * `displayName : "Google"`. The length of this field should be no more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by custom list fields.
-
-     Supported syntax:
-
-     * Filter expressions for custom lists currently can only contain at most one restriction. * A
-     restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-     Supported fields: - `displayName`
-
-     Examples:
-
-     * All custom lists for which the display name contains "Google": `displayName : "Google"`.
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom lists
+     currently can only contain at most one restriction. * A restriction has the form of `{field}
+     {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `displayName`
+     Examples: * All custom lists for which the display name contains "Google": `displayName :
+     "Google"`. The length of this field should be no more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by custom list fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for custom lists currently can only contain at most one restriction. *
-       * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-       * `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All custom lists for which the display name contains "Google": `displayName : "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom
+       * lists currently can only contain at most one restriction. * A restriction has the form of
+       * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+       * `displayName` Examples: * All custom lists for which the display name contains "Google":
+       * `displayName : "Google"`. The length of this field should be no more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -12920,20 +12365,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `customListId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `customListId` (default) *
+       * `displayName` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `customListId` (default) * `displayName`
-
+      /** Field by which to sort the list. Acceptable values are: * `customListId` (default) * `displayName`
      The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
      should be added to the field name. Example: `displayName desc`.
        */
@@ -12942,12 +12381,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `customListId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `customListId` (default) *
+       * `displayName` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -13174,9 +12610,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * The ID of the partner that has access to the fetched first and third party audience.
-       */
+      /** The ID of the partner that has access to the fetched first and third party audience. */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
@@ -13186,9 +12620,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return partnerId;
       }
 
-      /**
-       * The ID of the partner that has access to the fetched first and third party audience.
-       */
+      /** The ID of the partner that has access to the fetched first and third party audience. */
       public Get setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -13200,9 +12632,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists first and third party audiences.
-     *
-     * The order is defined by the order_by parameter.
+     * Lists first and third party audiences. The order is defined by the order_by parameter.
      *
      * Create a request for the method "firstAndThirdPartyAudiences.list".
      *
@@ -13222,9 +12652,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/firstAndThirdPartyAudiences";
 
       /**
-       * Lists first and third party audiences.
-       *
-       * The order is defined by the order_by parameter.
+       * Lists first and third party audiences. The order is defined by the order_by parameter.
        *
        * Create a request for the method "firstAndThirdPartyAudiences.list".
        *
@@ -13325,58 +12753,34 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by first and third party audience fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for first and third party audiences currently can only contain at most
-       * one restriction. * A restriction has the form of `{field} {operator} {value}`. * The
-       * operator must be `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All first and third party audiences for which the display name contains "Google":
-       * `displayName : "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by first and third party audience fields. Supported syntax: * Filter
+       * expressions for first and third party audiences currently can only contain at most one
+       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
+       * must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: * All first and third
+       * party audiences for which the display name contains "Google": `displayName : "Google"`. The
+       * length of this field should be no more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by first and third party audience fields.
-
-     Supported syntax:
-
-     * Filter expressions for first and third party audiences currently can only contain at most one
-     restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-     `CONTAINS (:)`. * Supported fields: - `displayName`
-
-     Examples:
-
-     * All first and third party audiences for which the display name contains "Google": `displayName :
-     "Google"`.
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by first and third party audience fields. Supported syntax: * Filter expressions
+     for first and third party audiences currently can only contain at most one restriction. * A
+     restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+     Supported fields: - `displayName` Examples: * All first and third party audiences for which the
+     display name contains "Google": `displayName : "Google"`. The length of this field should be no
+     more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by first and third party audience fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for first and third party audiences currently can only contain at most
-       * one restriction. * A restriction has the form of `{field} {operator} {value}`. * The
-       * operator must be `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All first and third party audiences for which the display name contains "Google":
-       * `displayName : "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by first and third party audience fields. Supported syntax: * Filter
+       * expressions for first and third party audiences currently can only contain at most one
+       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
+       * must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: * All first and third
+       * party audiences for which the display name contains "Google": `displayName : "Google"`. The
+       * length of this field should be no more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -13384,34 +12788,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `firstAndThirdPartyAudienceId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `firstAndThirdPartyAudienceId`
+       * (default) * `displayName` The default sorting order is ascending. To specify descending
+       * order for a field, a suffix "desc" should be added to the field name. Example: `displayName
+       * desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `firstAndThirdPartyAudienceId` (default) * `displayName`
-
-     The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-     should be added to the field name. Example: `displayName desc`.
+      /** Field by which to sort the list. Acceptable values are: * `firstAndThirdPartyAudienceId` (default)
+     * `displayName` The default sorting order is ascending. To specify descending order for a field, a
+     suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `firstAndThirdPartyAudienceId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `firstAndThirdPartyAudienceId`
+       * (default) * `displayName` The default sorting order is ascending. To specify descending
+       * order for a field, a suffix "desc" should be added to the field name. Example: `displayName
+       * desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -13469,9 +12866,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * The ID of the partner that has access to the fetched first and third party audiences.
-       */
+      /** The ID of the partner that has access to the fetched first and third party audiences. */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
@@ -13481,9 +12876,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return partnerId;
       }
 
-      /**
-       * The ID of the partner that has access to the fetched first and third party audiences.
-       */
+      /** The ID of the partner that has access to the fetched first and third party audiences. */
       public List setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -13995,9 +13388,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists Google audiences.
-     *
-     * The order is defined by the order_by parameter.
+     * Lists Google audiences. The order is defined by the order_by parameter.
      *
      * Create a request for the method "googleAudiences.list".
      *
@@ -14017,9 +13408,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/googleAudiences";
 
       /**
-       * Lists Google audiences.
-       *
-       * The order is defined by the order_by parameter.
+       * Lists Google audiences. The order is defined by the order_by parameter.
        *
        * Create a request for the method "googleAudiences.list".
        *
@@ -14116,57 +13505,33 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by Google audience fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for Google audiences currently can only contain at most one
-       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       * must be `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All Google audiences for which the display name contains "Google": `displayName :
-       * "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by Google audience fields. Supported syntax: * Filter expressions for
+       * Google audiences currently can only contain at most one restriction. * A restriction has
+       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+       * Supported fields: - `displayName` Examples: * All Google audiences for which the display
+       * name contains "Google": `displayName : "Google"`. The length of this field should be no
+       * more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by Google audience fields.
-
-     Supported syntax:
-
-     * Filter expressions for Google audiences currently can only contain at most one restriction. * A
-     restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-     Supported fields: - `displayName`
-
-     Examples:
-
-     * All Google audiences for which the display name contains "Google": `displayName : "Google"`.
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by Google audience fields. Supported syntax: * Filter expressions for Google
+     audiences currently can only contain at most one restriction. * A restriction has the form of
+     `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+     `displayName` Examples: * All Google audiences for which the display name contains "Google":
+     `displayName : "Google"`. The length of this field should be no more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by Google audience fields.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions for Google audiences currently can only contain at most one
-       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       * must be `CONTAINS (:)`. * Supported fields: - `displayName`
-       *
-       * Examples:
-       *
-       * * All Google audiences for which the display name contains "Google": `displayName :
-       * "Google"`.
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by Google audience fields. Supported syntax: * Filter expressions for
+       * Google audiences currently can only contain at most one restriction. * A restriction has
+       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
+       * Supported fields: - `displayName` Examples: * All Google audiences for which the display
+       * name contains "Google": `displayName : "Google"`. The length of this field should be no
+       * more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -14174,34 +13539,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `googleAudienceId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `googleAudienceId` (default) *
+       * `displayName` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `googleAudienceId` (default) * `displayName`
-
-     The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-     should be added to the field name. Example: `displayName desc`.
+      /** Field by which to sort the list. Acceptable values are: * `googleAudienceId` (default) *
+     `displayName` The default sorting order is ascending. To specify descending order for a field, a
+     suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `googleAudienceId` (default) * `displayName`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. Example: `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `googleAudienceId` (default) *
+       * `displayName` The default sorting order is ascending. To specify descending order for a
+       * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -14398,25 +13754,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the advertiser that owns the inventory source group.
-       *
-       * The parent partner will not have access to this group.
+       * The ID of the advertiser that owns the inventory source group. The parent partner will not
+       * have access to this group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the advertiser that owns the inventory source group.
-
-     The parent partner will not have access to this group.
+      /** The ID of the advertiser that owns the inventory source group. The parent partner will not have
+     access to this group.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
       /**
-       * The ID of the advertiser that owns the inventory source group.
-       *
-       * The parent partner will not have access to this group.
+       * The ID of the advertiser that owns the inventory source group. The parent partner will not
+       * have access to this group.
        */
       public Create setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
@@ -14424,28 +13777,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the partner that owns the inventory source group.
-       *
-       * Only this partner will have write access to this group. Only advertisers to which this
-       * group is explicitly shared will have read access to this group.
+       * The ID of the partner that owns the inventory source group. Only this partner will have
+       * write access to this group. Only advertisers to which this group is explicitly shared will
+       * have read access to this group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the partner that owns the inventory source group.
-
-     Only this partner will have write access to this group. Only advertisers to which this group is
-     explicitly shared will have read access to this group.
+      /** The ID of the partner that owns the inventory source group. Only this partner will have write
+     access to this group. Only advertisers to which this group is explicitly shared will have read
+     access to this group.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
       /**
-       * The ID of the partner that owns the inventory source group.
-       *
-       * Only this partner will have write access to this group. Only advertisers to which this
-       * group is explicitly shared will have read access to this group.
+       * The ID of the partner that owns the inventory source group. Only this partner will have
+       * write access to this group. Only advertisers to which this group is explicitly shared will
+       * have read access to this group.
        */
       public Create setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
@@ -14572,25 +13922,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the advertiser that owns the inventory source group.
-       *
-       * The parent partner does not have access to this group.
+       * The ID of the advertiser that owns the inventory source group. The parent partner does not
+       * have access to this group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the advertiser that owns the inventory source group.
-
-     The parent partner does not have access to this group.
+      /** The ID of the advertiser that owns the inventory source group. The parent partner does not have
+     access to this group.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
       /**
-       * The ID of the advertiser that owns the inventory source group.
-       *
-       * The parent partner does not have access to this group.
+       * The ID of the advertiser that owns the inventory source group. The parent partner does not
+       * have access to this group.
        */
       public Delete setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
@@ -14598,25 +13945,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the partner that owns the inventory source group.
-       *
-       * Only this partner has write access to this group.
+       * The ID of the partner that owns the inventory source group. Only this partner has write
+       * access to this group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the partner that owns the inventory source group.
-
-     Only this partner has write access to this group.
+      /** The ID of the partner that owns the inventory source group. Only this partner has write access to
+     this group.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
       /**
-       * The ID of the partner that owns the inventory source group.
-       *
-       * Only this partner has write access to this group.
+       * The ID of the partner that owns the inventory source group. Only this partner has write
+       * access to this group.
        */
       public Delete setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
@@ -14752,28 +14096,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the advertiser that has access to the inventory source group.
-       *
-       * If an inventory source group is partner-owned, only advertisers to which the group is
-       * explicitly shared can access the group.
+       * The ID of the advertiser that has access to the inventory source group. If an inventory
+       * source group is partner-owned, only advertisers to which the group is explicitly shared can
+       * access the group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the advertiser that has access to the inventory source group.
-
-     If an inventory source group is partner-owned, only advertisers to which the group is explicitly
-     shared can access the group.
+      /** The ID of the advertiser that has access to the inventory source group. If an inventory source
+     group is partner-owned, only advertisers to which the group is explicitly shared can access the
+     group.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
       /**
-       * The ID of the advertiser that has access to the inventory source group.
-       *
-       * If an inventory source group is partner-owned, only advertisers to which the group is
-       * explicitly shared can access the group.
+       * The ID of the advertiser that has access to the inventory source group. If an inventory
+       * source group is partner-owned, only advertisers to which the group is explicitly shared can
+       * access the group.
        */
       public Get setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
@@ -14781,25 +14122,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the partner that has access to the inventory source group.
-       *
-       * A partner cannot access an advertiser-owned inventory source group.
+       * The ID of the partner that has access to the inventory source group. A partner cannot
+       * access an advertiser-owned inventory source group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the partner that has access to the inventory source group.
-
-     A partner cannot access an advertiser-owned inventory source group.
+      /** The ID of the partner that has access to the inventory source group. A partner cannot access an
+     advertiser-owned inventory source group.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
       /**
-       * The ID of the partner that has access to the inventory source group.
-       *
-       * A partner cannot access an advertiser-owned inventory source group.
+       * The ID of the partner that has access to the inventory source group. A partner cannot
+       * access an advertiser-owned inventory source group.
        */
       public Get setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
@@ -14812,9 +14150,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists inventory source groups that are accessible to the current user.
-     *
-     * The order is defined by the order_by parameter.
+     * Lists inventory source groups that are accessible to the current user. The order is defined by
+     * the order_by parameter.
      *
      * Create a request for the method "inventorySourceGroups.list".
      *
@@ -14834,9 +14171,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/inventorySourceGroups";
 
       /**
-       * Lists inventory source groups that are accessible to the current user.
-       *
-       * The order is defined by the order_by parameter.
+       * Lists inventory source groups that are accessible to the current user. The order is defined by
+       * the order_by parameter.
        *
        * Create a request for the method "inventorySourceGroups.list".
        *
@@ -14917,28 +14253,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the advertiser that has access to the inventory source group.
-       *
-       * If an inventory source group is partner-owned, only advertisers to which the group is
-       * explicitly shared can access the group.
+       * The ID of the advertiser that has access to the inventory source group. If an inventory
+       * source group is partner-owned, only advertisers to which the group is explicitly shared can
+       * access the group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the advertiser that has access to the inventory source group.
-
-     If an inventory source group is partner-owned, only advertisers to which the group is explicitly
-     shared can access the group.
+      /** The ID of the advertiser that has access to the inventory source group. If an inventory source
+     group is partner-owned, only advertisers to which the group is explicitly shared can access the
+     group.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
       /**
-       * The ID of the advertiser that has access to the inventory source group.
-       *
-       * If an inventory source group is partner-owned, only advertisers to which the group is
-       * explicitly shared can access the group.
+       * The ID of the advertiser that has access to the inventory source group. If an inventory
+       * source group is partner-owned, only advertisers to which the group is explicitly shared can
+       * access the group.
        */
       public List setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
@@ -14946,45 +14279,31 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by inventory source group properties.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-       * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-       * `inventorySourceGroupId`
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by inventory source group properties. Supported syntax: * Filter
+       * expressions are made up of one or more restrictions. * Restrictions can be combined by the
+       * logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The
+       * operator must be `EQUALS (=)`. * Supported fields: - `inventorySourceGroupId` The length of
+       * this field should be no more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by inventory source group properties.
-
-     Supported syntax:
-
-     * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-     logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
-     must be `EQUALS (=)`. * Supported fields: - `inventorySourceGroupId`
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by inventory source group properties. Supported syntax: * Filter expressions are
+     made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+     A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+     Supported fields: - `inventorySourceGroupId` The length of this field should be no more than 500
+     characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by inventory source group properties.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-       * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-       * `inventorySourceGroupId`
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by inventory source group properties. Supported syntax: * Filter
+       * expressions are made up of one or more restrictions. * Restrictions can be combined by the
+       * logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The
+       * operator must be `EQUALS (=)`. * Supported fields: - `inventorySourceGroupId` The length of
+       * this field should be no more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -14992,34 +14311,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `displayName` (default) * `inventorySourceGroupId`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. For example, `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+       * `inventorySourceGroupId` The default sorting order is ascending. To specify descending
+       * order for a field, a suffix "desc" should be added to the field name. For example,
+       * `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `displayName` (default) * `inventorySourceGroupId`
-
-     The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-     should be added to the field name. For example, `displayName desc`.
+      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+     `inventorySourceGroupId` The default sorting order is ascending. To specify descending order for a
+     field, a suffix "desc" should be added to the field name. For example, `displayName desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `displayName` (default) * `inventorySourceGroupId`
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
-       * "desc" should be added to the field name. For example, `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+       * `inventorySourceGroupId` The default sorting order is ascending. To specify descending
+       * order for a field, a suffix "desc" should be added to the field name. For example,
+       * `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -15073,25 +14385,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the partner that has access to the inventory source group.
-       *
-       * A partner cannot access advertiser-owned inventory source groups.
+       * The ID of the partner that has access to the inventory source group. A partner cannot
+       * access advertiser-owned inventory source groups.
        */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the partner that has access to the inventory source group.
-
-     A partner cannot access advertiser-owned inventory source groups.
+      /** The ID of the partner that has access to the inventory source group. A partner cannot access
+     advertiser-owned inventory source groups.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
       /**
-       * The ID of the partner that has access to the inventory source group.
-       *
-       * A partner cannot access advertiser-owned inventory source groups.
+       * The ID of the partner that has access to the inventory source group. A partner cannot
+       * access advertiser-owned inventory source groups.
        */
       public List setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
@@ -15217,25 +14526,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the advertiser that owns the inventory source group.
-       *
-       * The parent partner does not have access to this group.
+       * The ID of the advertiser that owns the inventory source group. The parent partner does not
+       * have access to this group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the advertiser that owns the inventory source group.
-
-     The parent partner does not have access to this group.
+      /** The ID of the advertiser that owns the inventory source group. The parent partner does not have
+     access to this group.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
       /**
-       * The ID of the advertiser that owns the inventory source group.
-       *
-       * The parent partner does not have access to this group.
+       * The ID of the advertiser that owns the inventory source group. The parent partner does not
+       * have access to this group.
        */
       public Patch setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
@@ -15243,25 +14549,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The ID of the partner that owns the inventory source group.
-       *
-       * Only this partner has write access to this group.
+       * The ID of the partner that owns the inventory source group. Only this partner has write
+       * access to this group.
        */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the partner that owns the inventory source group.
-
-     Only this partner has write access to this group.
+      /** The ID of the partner that owns the inventory source group. Only this partner has write access to
+     this group.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
       /**
-       * The ID of the partner that owns the inventory source group.
-       *
-       * Only this partner has write access to this group.
+       * The ID of the partner that owns the inventory source group. Only this partner has write
+       * access to this group.
        */
       public Patch setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
@@ -15312,7 +14615,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Bulk edits multiple assignments between inventory sources and a single inventory source group.
-       *
        * The operation will delete the assigned inventory sources provided in
        * BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the
        * assigned inventory sources provided in
@@ -15323,8 +14625,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link BulkEdit#execute()} method to invoke the remote operation.
        *
-       * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignments are
-      assigned.
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignments are assigned.
        * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesRequest}
        * @return the request
        */
@@ -15343,7 +14644,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Bulk edits multiple assignments between inventory sources and a single inventory source group.
-         *
          * The operation will delete the assigned inventory sources provided in
          * BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the
          * assigned inventory sources provided in
@@ -15357,8 +14657,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * BulkEdit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignments are
-      assigned.
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignments are assigned.
          * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedInventorySourcesRequest}
          * @since 1.13
          */
@@ -15455,8 +14754,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignment will be
-      assigned.
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignment will be assigned.
        * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedInventorySource}
        * @return the request
        */
@@ -15484,8 +14782,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignment will be
-      assigned.
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which the assignment will be assigned.
          * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedInventorySource}
          * @since 1.13
          */
@@ -15570,25 +14867,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The ID of the advertiser that owns the parent inventory source group.
-         *
-         * The parent partner will not have access to this assigned inventory source.
+         * The ID of the advertiser that owns the parent inventory source group. The parent partner
+         * will not have access to this assigned inventory source.
          */
         @com.google.api.client.util.Key
         private java.lang.Long advertiserId;
 
-        /** The ID of the advertiser that owns the parent inventory source group.
-
-       The parent partner will not have access to this assigned inventory source.
+        /** The ID of the advertiser that owns the parent inventory source group. The parent partner will not
+       have access to this assigned inventory source.
          */
         public java.lang.Long getAdvertiserId() {
           return advertiserId;
         }
 
         /**
-         * The ID of the advertiser that owns the parent inventory source group.
-         *
-         * The parent partner will not have access to this assigned inventory source.
+         * The ID of the advertiser that owns the parent inventory source group. The parent partner
+         * will not have access to this assigned inventory source.
          */
         public Create setAdvertiserId(java.lang.Long advertiserId) {
           this.advertiserId = advertiserId;
@@ -15596,25 +14890,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The ID of the partner that owns the parent inventory source group.
-         *
-         * Only this partner will have write access to this assigned inventory source.
+         * The ID of the partner that owns the parent inventory source group. Only this partner will
+         * have write access to this assigned inventory source.
          */
         @com.google.api.client.util.Key
         private java.lang.Long partnerId;
 
-        /** The ID of the partner that owns the parent inventory source group.
-
-       Only this partner will have write access to this assigned inventory source.
+        /** The ID of the partner that owns the parent inventory source group. Only this partner will have
+       write access to this assigned inventory source.
          */
         public java.lang.Long getPartnerId() {
           return partnerId;
         }
 
         /**
-         * The ID of the partner that owns the parent inventory source group.
-         *
-         * Only this partner will have write access to this assigned inventory source.
+         * The ID of the partner that owns the parent inventory source group. Only this partner will
+         * have write access to this assigned inventory source.
          */
         public Create setPartnerId(java.lang.Long partnerId) {
           this.partnerId = partnerId;
@@ -15763,25 +15054,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The ID of the advertiser that owns the parent inventory source group.
-         *
-         * The parent partner does not have access to this assigned inventory source.
+         * The ID of the advertiser that owns the parent inventory source group. The parent partner
+         * does not have access to this assigned inventory source.
          */
         @com.google.api.client.util.Key
         private java.lang.Long advertiserId;
 
-        /** The ID of the advertiser that owns the parent inventory source group.
-
-       The parent partner does not have access to this assigned inventory source.
+        /** The ID of the advertiser that owns the parent inventory source group. The parent partner does not
+       have access to this assigned inventory source.
          */
         public java.lang.Long getAdvertiserId() {
           return advertiserId;
         }
 
         /**
-         * The ID of the advertiser that owns the parent inventory source group.
-         *
-         * The parent partner does not have access to this assigned inventory source.
+         * The ID of the advertiser that owns the parent inventory source group. The parent partner
+         * does not have access to this assigned inventory source.
          */
         public Delete setAdvertiserId(java.lang.Long advertiserId) {
           this.advertiserId = advertiserId;
@@ -15789,25 +15077,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The ID of the partner that owns the parent inventory source group.
-         *
-         * Only this partner has write access to this assigned inventory source.
+         * The ID of the partner that owns the parent inventory source group. Only this partner has
+         * write access to this assigned inventory source.
          */
         @com.google.api.client.util.Key
         private java.lang.Long partnerId;
 
-        /** The ID of the partner that owns the parent inventory source group.
-
-       Only this partner has write access to this assigned inventory source.
+        /** The ID of the partner that owns the parent inventory source group. Only this partner has write
+       access to this assigned inventory source.
          */
         public java.lang.Long getPartnerId() {
           return partnerId;
         }
 
         /**
-         * The ID of the partner that owns the parent inventory source group.
-         *
-         * Only this partner has write access to this assigned inventory source.
+         * The ID of the partner that owns the parent inventory source group. Only this partner has
+         * write access to this assigned inventory source.
          */
         public Delete setPartnerId(java.lang.Long partnerId) {
           this.partnerId = partnerId;
@@ -15827,8 +15112,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param inventorySourceGroupId Required. The ID of the inventory source group to which these assignments are
-      assigned.
+       * @param inventorySourceGroupId Required. The ID of the inventory source group to which these assignments are assigned.
        * @return the request
        */
       public List list(java.lang.Long inventorySourceGroupId) throws java.io.IOException {
@@ -15854,8 +15138,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param inventorySourceGroupId Required. The ID of the inventory source group to which these assignments are
-      assigned.
+         * @param inventorySourceGroupId Required. The ID of the inventory source group to which these assignments are assigned.
          * @since 1.13
          */
         protected List(java.lang.Long inventorySourceGroupId) {
@@ -15949,28 +15232,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The ID of the advertiser that has access to the assignment.
-         *
-         * If the parent inventory source group is partner-owned, only advertisers to which the
-         * parent group is explicitly shared can access the assigned inventory source.
+         * The ID of the advertiser that has access to the assignment. If the parent inventory
+         * source group is partner-owned, only advertisers to which the parent group is explicitly
+         * shared can access the assigned inventory source.
          */
         @com.google.api.client.util.Key
         private java.lang.Long advertiserId;
 
-        /** The ID of the advertiser that has access to the assignment.
-
-       If the parent inventory source group is partner-owned, only advertisers to which the parent group
-       is explicitly shared can access the assigned inventory source.
+        /** The ID of the advertiser that has access to the assignment. If the parent inventory source group is
+       partner-owned, only advertisers to which the parent group is explicitly shared can access the
+       assigned inventory source.
          */
         public java.lang.Long getAdvertiserId() {
           return advertiserId;
         }
 
         /**
-         * The ID of the advertiser that has access to the assignment.
-         *
-         * If the parent inventory source group is partner-owned, only advertisers to which the
-         * parent group is explicitly shared can access the assigned inventory source.
+         * The ID of the advertiser that has access to the assignment. If the parent inventory
+         * source group is partner-owned, only advertisers to which the parent group is explicitly
+         * shared can access the assigned inventory source.
          */
         public List setAdvertiserId(java.lang.Long advertiserId) {
           this.advertiserId = advertiserId;
@@ -15978,44 +15258,30 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by assigned inventory source fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by the logical operator `OR`. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `assignedInventorySourceId`
-         *
+         * Allows filtering by assigned inventory source fields. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
+         * * The operator must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId`
          * The length of this field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by assigned inventory source fields.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the
-       logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId`
-
-       The length of this field should be no more than 500 characters.
+        /** Allows filtering by assigned inventory source fields. Supported syntax: * Filter expressions are
+       made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+       A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+       Supported fields: - `assignedInventorySourceId` The length of this field should be no more than 500
+       characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by assigned inventory source fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by the logical operator `OR`. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `assignedInventorySourceId`
-         *
+         * Allows filtering by assigned inventory source fields. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
+         * * The operator must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId`
          * The length of this field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
@@ -16024,21 +15290,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `assignedInventorySourceId` (default)
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * " desc" should be added to the field name. Example: `assignedInventorySourceId desc`.
+         * Field by which to sort the list. Acceptable values are: * `assignedInventorySourceId`
+         * (default) The default sorting order is ascending. To specify descending order for a
+         * field, a suffix " desc" should be added to the field name. Example:
+         * `assignedInventorySourceId desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `assignedInventorySourceId` (default)
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+        /** Field by which to sort the list. Acceptable values are: * `assignedInventorySourceId` (default) The
+       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
        should be added to the field name. Example: `assignedInventorySourceId desc`.
          */
         public java.lang.String getOrderBy() {
@@ -16046,12 +15307,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `assignedInventorySourceId` (default)
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * " desc" should be added to the field name. Example: `assignedInventorySourceId desc`.
+         * Field by which to sort the list. Acceptable values are: * `assignedInventorySourceId`
+         * (default) The default sorting order is ascending. To specify descending order for a
+         * field, a suffix " desc" should be added to the field name. Example:
+         * `assignedInventorySourceId desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -16082,29 +15341,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A token identifying a page of results the server should return.
-         *
-         * Typically, this is the value of next_page_token returned from the previous call to
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to
          * `ListAssignedInventorySources` method. If not specified, the first page of results will
          * be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A token identifying a page of results the server should return.
-
-       Typically, this is the value of next_page_token returned from the previous call to
-       `ListAssignedInventorySources` method. If not specified, the first page of results will be
-       returned.
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListAssignedInventorySources` method. If not
+       specified, the first page of results will be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A token identifying a page of results the server should return.
-         *
-         * Typically, this is the value of next_page_token returned from the previous call to
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to
          * `ListAssignedInventorySources` method. If not specified, the first page of results will
          * be returned.
          */
@@ -16114,28 +15369,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The ID of the partner that has access to the assignment.
-         *
-         * If the parent inventory source group is advertiser-owned, the assignment cannot be
-         * accessed via a partner.
+         * The ID of the partner that has access to the assignment. If the parent inventory source
+         * group is advertiser-owned, the assignment cannot be accessed via a partner.
          */
         @com.google.api.client.util.Key
         private java.lang.Long partnerId;
 
-        /** The ID of the partner that has access to the assignment.
-
-       If the parent inventory source group is advertiser-owned, the assignment cannot be accessed via a
-       partner.
+        /** The ID of the partner that has access to the assignment. If the parent inventory source group is
+       advertiser-owned, the assignment cannot be accessed via a partner.
          */
         public java.lang.Long getPartnerId() {
           return partnerId;
         }
 
         /**
-         * The ID of the partner that has access to the assignment.
-         *
-         * If the parent inventory source group is advertiser-owned, the assignment cannot be
-         * accessed via a partner.
+         * The ID of the partner that has access to the assignment. If the parent inventory source
+         * group is advertiser-owned, the assignment cannot be accessed via a partner.
          */
         public List setPartnerId(java.lang.Long partnerId) {
           this.partnerId = partnerId;
@@ -16322,11 +15571,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists inventory sources that are accessible to the current user.
-     *
-     * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-     * inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the
-     * results.
+     * Lists inventory sources that are accessible to the current user. The order is defined by the
+     * order_by parameter. If a filter by entity_status is not specified, inventory sources with entity
+     * status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      *
      * Create a request for the method "inventorySources.list".
      *
@@ -16346,11 +15593,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/inventorySources";
 
       /**
-       * Lists inventory sources that are accessible to the current user.
-       *
-       * The order is defined by the order_by parameter. If a filter by entity_status is not specified,
-       * inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the
-       * results.
+       * Lists inventory sources that are accessible to the current user. The order is defined by the
+       * order_by parameter. If a filter by entity_status is not specified, inventory sources with
+       * entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
        *
        * Create a request for the method "inventorySources.list".
        *
@@ -16447,67 +15692,44 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by inventory source properties.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-       * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-       * `EQUALS (=)`. * Supported fields: - `status.entityStatus` - `commitment` - `deliveryMethod`
-       * - `rateDetails.rateType` - `exchange`
-       *
-       * Examples:
-       *
-       * * All active inventory sources: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory
-       * sources belonging to Google Ad Manager or Rubicon exchanges:
-       * `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR exchange="EXCHANGE_RUBICON"`
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by inventory source properties. Supported syntax: * Filter expressions are
+       * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+       * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
+       * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
+       * fields: - `status.entityStatus` - `commitment` - `deliveryMethod` - `rateDetails.rateType`
+       * - `exchange` Examples: * All active inventory sources:
+       * `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources belonging to Google Ad
+       * Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
+       * exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
+       * characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by inventory source properties.
-
-     Supported syntax:
-
-     * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-     `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-     has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-     fields: - `status.entityStatus` - `commitment` - `deliveryMethod` - `rateDetails.rateType` -
-     `exchange`
-
-     Examples:
-
-     * All active inventory sources: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources
-     belonging to Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
-     exchange="EXCHANGE_RUBICON"`
-
-     The length of this field should be no more than 500 characters.
+      /** Allows filtering by inventory source properties. Supported syntax: * Filter expressions are made up
+     of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+     sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `status.entityStatus` -
+     `commitment` - `deliveryMethod` - `rateDetails.rateType` - `exchange` Examples: * All active
+     inventory sources: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources belonging to
+     Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
+     exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by inventory source properties.
-       *
-       * Supported syntax:
-       *
-       * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-       * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-       * `AND`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-       * `EQUALS (=)`. * Supported fields: - `status.entityStatus` - `commitment` - `deliveryMethod`
-       * - `rateDetails.rateType` - `exchange`
-       *
-       * Examples:
-       *
-       * * All active inventory sources: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory
-       * sources belonging to Google Ad Manager or Rubicon exchanges:
-       * `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR exchange="EXCHANGE_RUBICON"`
-       *
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by inventory source properties. Supported syntax: * Filter expressions are
+       * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+       * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
+       * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
+       * fields: - `status.entityStatus` - `commitment` - `deliveryMethod` - `rateDetails.rateType`
+       * - `exchange` Examples: * All active inventory sources:
+       * `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources belonging to Google Ad
+       * Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
+       * exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
+       * characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -16515,33 +15737,24 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `displayName` (default)
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
        * "desc" should be added to the field name. For example, `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are:
-
-     * `displayName` (default)
-
-     The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-     should be added to the field name. For example, `displayName desc`.
+      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) The default
+     sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+     added to the field name. For example, `displayName desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are:
-       *
-       * * `displayName` (default)
-       *
-       * The default sorting order is ascending. To specify descending order for a field, a suffix
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
        * "desc" should be added to the field name. For example, `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
@@ -16641,7 +15854,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
     /**
      * Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.`
-     *
      * **Note**: Download requests will not be successful without including `alt=media` query string.
      *
      * Create a request for the method "media.download".
@@ -16649,8 +15861,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the displayvideo server.  After setting any optional
      * parameters, call the {@link Download#execute()} method to invoke the remote operation.
      *
-     * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @return the request
      */
     public Download download(java.lang.String resourceName) throws java.io.IOException {
@@ -16668,7 +15879,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.`
-       *
        * **Note**: Download requests will not be successful without including `alt=media` query string.
        *
        * Create a request for the method "media.download".
@@ -16679,8 +15889,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @since 1.13
        */
       protected Download(java.lang.String resourceName) {
@@ -16774,21 +15983,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Name of the media that is being downloaded.  See ReadRequest.resource_name.
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       public Download setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -17290,55 +16495,31 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by channel fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions for channel currently can only contain at most one * restriction. *
-         * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-         * `CONTAINS (:)`. * Supported fields: - `displayName`
-         *
-         * Examples:
-         *
-         * * All channels for which the display name contains "google": `displayName : "google"`.
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
+         * currently can only contain at most one * restriction. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
+         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * `displayName : "google"`. The length of this field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by channel fields.
-
-       Supported syntax:
-
-       * Filter expressions for channel currently can only contain at most one * restriction. * A
-       restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-       Supported fields: - `displayName`
-
-       Examples:
-
-       * All channels for which the display name contains "google": `displayName : "google"`.
-
-       The length of this field should be no more than 500 characters.
+        /** Allows filtering by channel fields. Supported syntax: * Filter expressions for channel currently
+       can only contain at most one * restriction. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: *
+       All channels for which the display name contains "google": `displayName : "google"`. The length of
+       this field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by channel fields.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions for channel currently can only contain at most one * restriction. *
-         * A restriction has the form of `{field} {operator} {value}`. * The operator must be
-         * `CONTAINS (:)`. * Supported fields: - `displayName`
-         *
-         * Examples:
-         *
-         * * All channels for which the display name contains "google": `displayName : "google"`.
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
+         * currently can only contain at most one * restriction. * A restriction has the form of
+         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
+         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * `displayName : "google"`. The length of this field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -17346,21 +16527,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `displayName` (default) * `channelId`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * " desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `channelId` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix " desc" should be added to the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `displayName` (default) * `channelId`
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `channelId` The
+       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
        should be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
@@ -17368,12 +16543,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `displayName` (default) * `channelId`
-         *
-         * The default sorting order is ascending. To specify descending order for a field, a suffix
-         * " desc" should be added to the field name. Example: `displayName desc`.
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `channelId` The default sorting order is ascending. To specify descending order for a
+         * field, a suffix " desc" should be added to the field name. Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -17628,10 +16800,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       public class Sites {
 
         /**
-         * Bulk edits sites under a single channel.
-         *
-         * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
-         * create the sites provided in BulkEditSitesRequest.created_sites.
+         * Bulk edits sites under a single channel. The operation will delete the sites provided in
+         * BulkEditSitesRequest.deleted_sites and then create the sites provided in
+         * BulkEditSitesRequest.created_sites.
          *
          * Create a request for the method "sites.bulkEdit".
          *
@@ -17657,10 +16828,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
-           * Bulk edits sites under a single channel.
-           *
-           * The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then
-           * create the sites provided in BulkEditSitesRequest.created_sites.
+           * Bulk edits sites under a single channel. The operation will delete the sites provided in
+           * BulkEditSitesRequest.deleted_sites and then create the sites provided in
+           * BulkEditSitesRequest.created_sites.
            *
            * Create a request for the method "sites.bulkEdit".
            *
@@ -18277,49 +17447,30 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by site fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions for site currently can only contain at most one * restriction. * A
-           * restriction has the form of `{field} {operator} {value}`. * The operator must be
-           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
-           *
-           * Examples:
-           *
-           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           * Allows filtering by site fields. Supported syntax: * Filter expressions for site
+           * currently can only contain at most one * restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
+           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by site fields.
-
-         Supported syntax:
-
-         * Filter expressions for site currently can only contain at most one * restriction. * A restriction
-         has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
-         fields: - `urlOrAppId`
-
-         Examples:
-
-         * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+          /** Allows filtering by site fields. Supported syntax: * Filter expressions for site currently can only
+         contain at most one * restriction. * A restriction has the form of `{field} {operator} {value}`. *
+         The operator must be `CONTAINS (:)`. * Supported fields: - `urlOrAppId` Examples: * All sites for
+         which the URL or app ID contains "google": `urlOrAppId : "google"`
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by site fields.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions for site currently can only contain at most one * restriction. * A
-           * restriction has the form of `{field} {operator} {value}`. * The operator must be
-           * `CONTAINS (:)`. * Supported fields: - `urlOrAppId`
-           *
-           * Examples:
-           *
-           * * All sites for which the URL or app ID contains "google": `urlOrAppId : "google"`
+           * Allows filtering by site fields. Supported syntax: * Filter expressions for site
+           * currently can only contain at most one * restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
+           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -18327,34 +17478,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `urlOrAppId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           * Field by which to sort the list. Acceptable values are: * `urlOrAppId` (default) The
+           * default sorting order is ascending. To specify descending order for a field, a suffix "
+           * desc" should be added to the field name. Example: `urlOrAppId desc`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the list. Acceptable values are:
-
-         * `urlOrAppId` (default)
-
-         The default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be added to the field name. Example: `urlOrAppId desc`.
+          /** Field by which to sort the list. Acceptable values are: * `urlOrAppId` (default) The default
+         sorting order is ascending. To specify descending order for a field, a suffix " desc" should be
+         added to the field name. Example: `urlOrAppId desc`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Field by which to sort the list. Acceptable values are:
-           *
-           * * `urlOrAppId` (default)
-           *
-           * The default sorting order is ascending. To specify descending order for a field, a
-           * suffix " desc" should be added to the field name. Example: `urlOrAppId desc`.
+           * Field by which to sort the list. Acceptable values are: * `urlOrAppId` (default) The
+           * default sorting order is ascending. To specify descending order for a field, a suffix "
+           * desc" should be added to the field name. Example: `urlOrAppId desc`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -18385,28 +17527,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListSites` method. If not specified, the first page of results will be returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListSites` method. If not
+           * specified, the first page of results will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
-
-         Typically, this is the value of next_page_token returned from the previous call to `ListSites`
-         method. If not specified, the first page of results will be returned.
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         next_page_token returned from the previous call to `ListSites` method. If not specified, the first
+         page of results will be returned.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A token identifying a page of results the server should return.
-           *
-           * Typically, this is the value of next_page_token returned from the previous call to
-           * `ListSites` method. If not specified, the first page of results will be returned.
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to `ListSites` method. If not
+           * specified, the first page of results will be returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -18444,15 +17583,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class Sdfdownloadtasks {
 
     /**
-     * Creates an SDF Download Task. Returns an Operation.
-     *
-     * An SDF Download Task is a long-running, asynchronous operation. The metadata type of this
-     * operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the
-     * operation is SdfDownloadTask. The response will not include the download files, which must be
-     * retrieved with media.download. The state of operation can be retrieved with
-     * sdfdownloadtask.operations.get.
-     *
-     * Any errors can be found in the error.message. Note that error.details is expected to be empty.
+     * Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running,
+     * asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the
+     * request is successful, the response type of the operation is SdfDownloadTask. The response will
+     * not include the download files, which must be retrieved with media.download. The state of
+     * operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the
+     * error.message. Note that error.details is expected to be empty.
      *
      * Create a request for the method "sdfdownloadtasks.create".
      *
@@ -18473,15 +17609,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/sdfdownloadtasks";
 
       /**
-       * Creates an SDF Download Task. Returns an Operation.
-       *
-       * An SDF Download Task is a long-running, asynchronous operation. The metadata type of this
-       * operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the
-       * operation is SdfDownloadTask. The response will not include the download files, which must be
-       * retrieved with media.download. The state of operation can be retrieved with
-       * sdfdownloadtask.operations.get.
-       *
-       * Any errors can be found in the error.message. Note that error.details is expected to be empty.
+       * Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running,
+       * asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the
+       * request is successful, the response type of the operation is SdfDownloadTask. The response will
+       * not include the download files, which must be retrieved with media.download. The state of
+       * operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the
+       * error.message. Note that error.details is expected to be empty.
        *
        * Create a request for the method "sdfdownloadtasks.create".
        *
@@ -19099,45 +18232,31 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by targeting option properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `OR` logical operators. * A restriction has the form of `{field} {operator}
-         * {value}`. * The operator must be "=" (equal sign). * Supported fields: -
-         * `targetingOptionId`
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by targeting option properties. Supported syntax: * Filter expressions
+         * are made up of one or more restrictions. * Restrictions can be combined by `OR` logical
+         * operators. * A restriction has the form of `{field} {operator} {value}`. * The operator
+         * must be "=" (equal sign). * Supported fields: - `targetingOptionId` The length of this
+         * field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by targeting option properties.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `OR` logical operators. * A restriction has the form of `{field} {operator} {value}`. * The
-       operator must be "=" (equal sign). * Supported fields: - `targetingOptionId`
-
-       The length of this field should be no more than 500 characters.
+        /** Allows filtering by targeting option properties. Supported syntax: * Filter expressions are made up
+       of one or more restrictions. * Restrictions can be combined by `OR` logical operators. * A
+       restriction has the form of `{field} {operator} {value}`. * The operator must be "=" (equal sign).
+       * Supported fields: - `targetingOptionId` The length of this field should be no more than 500
+       characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by targeting option properties.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `OR` logical operators. * A restriction has the form of `{field} {operator}
-         * {value}`. * The operator must be "=" (equal sign). * Supported fields: -
-         * `targetingOptionId`
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering by targeting option properties. Supported syntax: * Filter expressions
+         * are made up of one or more restrictions. * Restrictions can be combined by `OR` logical
+         * operators. * A restriction has the form of `{field} {operator} {value}`. * The operator
+         * must be "=" (equal sign). * Supported fields: - `targetingOptionId` The length of this
+         * field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -19145,32 +18264,23 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `targetingOptionId` (default)
-         *
+         * Field by which to sort the list. Acceptable values are: * `targetingOptionId` (default)
          * The default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `targetingOptionId desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are:
-
-       * `targetingOptionId` (default)
-
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `targetingOptionId desc`.
+        /** Field by which to sort the list. Acceptable values are: * `targetingOptionId` (default) The default
+       sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+       added to the field name. Example: `targetingOptionId desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are:
-         *
-         * * `targetingOptionId` (default)
-         *
+         * Field by which to sort the list. Acceptable values are: * `targetingOptionId` (default)
          * The default sorting order is ascending. To specify descending order for a field, a suffix
          * "desc" should be added to the field name. Example: `targetingOptionId desc`.
          */

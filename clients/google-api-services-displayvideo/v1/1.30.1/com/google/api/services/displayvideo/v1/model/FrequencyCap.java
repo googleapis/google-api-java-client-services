@@ -33,33 +33,25 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum number of times a user may be shown with the same ad during this period. Must be
-   * greater than 0.
-   *
-   * Applicable when unlimited is `false`.
+   * greater than 0. Applicable when unlimited is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxImpressions;
 
   /**
-   * The time unit in which the frequency cap will be applied.
-   *
-   * Applicable when unlimited is `false`.
+   * The time unit in which the frequency cap will be applied. Applicable when unlimited is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeUnit;
 
   /**
-   * The number of time_unit the frequency cap will last.
-   *
-   * Applicable when unlimited is `false`. The following restrictions apply based on the value of
-   * time_unit:
-   *
-   * * `TIME_UNIT_LIFETIME` - this field is output only and will default to 1 * `TIME_UNIT_MONTHS` -
-   * must be between 1 and 2 * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must
-   * be between 1 and 6 * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must
-   * be between 1 and 59
+   * The number of time_unit the frequency cap will last. Applicable when unlimited is `false`. The
+   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_LIFETIME` - this
+   * field is output only and will default to 1 * `TIME_UNIT_MONTHS` - must be between 1 and 2 *
+   * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
+   * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must be between 1 and 59
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +67,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum number of times a user may be shown with the same ad during this period. Must be
-   * greater than 0.
-   *
-   * Applicable when unlimited is `false`.
+   * greater than 0. Applicable when unlimited is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxImpressions() {
@@ -86,9 +76,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum number of times a user may be shown with the same ad during this period. Must be
-   * greater than 0.
-   *
-   * Applicable when unlimited is `false`.
+   * greater than 0. Applicable when unlimited is `false`.
    * @param maxImpressions maxImpressions or {@code null} for none
    */
   public FrequencyCap setMaxImpressions(java.lang.Integer maxImpressions) {
@@ -97,9 +85,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time unit in which the frequency cap will be applied.
-   *
-   * Applicable when unlimited is `false`.
+   * The time unit in which the frequency cap will be applied. Applicable when unlimited is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeUnit() {
@@ -107,9 +93,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time unit in which the frequency cap will be applied.
-   *
-   * Applicable when unlimited is `false`.
+   * The time unit in which the frequency cap will be applied. Applicable when unlimited is `false`.
    * @param timeUnit timeUnit or {@code null} for none
    */
   public FrequencyCap setTimeUnit(java.lang.String timeUnit) {
@@ -118,15 +102,11 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of time_unit the frequency cap will last.
-   *
-   * Applicable when unlimited is `false`. The following restrictions apply based on the value of
-   * time_unit:
-   *
-   * * `TIME_UNIT_LIFETIME` - this field is output only and will default to 1 * `TIME_UNIT_MONTHS` -
-   * must be between 1 and 2 * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must
-   * be between 1 and 6 * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must
-   * be between 1 and 59
+   * The number of time_unit the frequency cap will last. Applicable when unlimited is `false`. The
+   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_LIFETIME` - this
+   * field is output only and will default to 1 * `TIME_UNIT_MONTHS` - must be between 1 and 2 *
+   * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
+   * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must be between 1 and 59
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeUnitCount() {
@@ -134,15 +114,11 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of time_unit the frequency cap will last.
-   *
-   * Applicable when unlimited is `false`. The following restrictions apply based on the value of
-   * time_unit:
-   *
-   * * `TIME_UNIT_LIFETIME` - this field is output only and will default to 1 * `TIME_UNIT_MONTHS` -
-   * must be between 1 and 2 * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must
-   * be between 1 and 6 * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must
-   * be between 1 and 59
+   * The number of time_unit the frequency cap will last. Applicable when unlimited is `false`. The
+   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_LIFETIME` - this
+   * field is output only and will default to 1 * `TIME_UNIT_MONTHS` - must be between 1 and 2 *
+   * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
+   * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must be between 1 and 59
    * @param timeUnitCount timeUnitCount or {@code null} for none
    */
   public FrequencyCap setTimeUnitCount(java.lang.Integer timeUnitCount) {

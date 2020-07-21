@@ -31,27 +31,19 @@ package com.google.api.services.displayvideo.v1.model;
 public final class PerformanceGoal extends com.google.api.client.json.GenericJson {
 
   /**
-   * The goal amount, in micros of the advertiser's currency.
-   *
-   * Applicable when performance_goal_type is one of:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA` *
-   * `PERFORMANCE_GOAL_TYPE_CPIAVC`
-   *
-   * For example 1500000 represents 1.5 standard units of the currency.
+   * The goal amount, in micros of the advertiser's currency. Applicable when performance_goal_type
+   * is one of: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` *
+   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` For example 1500000 represents 1.5
+   * standard units of the currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long performanceGoalAmountMicros;
 
   /**
-   * The decimal representation of the goal percentage in micros.
-   *
-   * Applicable when performance_goal_type is one of:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CTR` * `PERFORMANCE_GOAL_TYPE_VIEWABILITY`
-   *
-   * For example, 70000 represents 7% (decimal 0.07).
+   * The decimal representation of the goal percentage in micros. Applicable when
+   * performance_goal_type is one of: * `PERFORMANCE_GOAL_TYPE_CTR` *
+   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` For example, 70000 represents 7% (decimal 0.07).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,9 +51,8 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
 
   /**
    * A key performance indicator (KPI) string, which can be empty. Must be UTF-8 encoded with a
-   * length of no more than 100 characters.
-   *
-   * Applicable when performance_goal_type is set to `PERFORMANCE_GOAL_TYPE_OTHER`.
+   * length of no more than 100 characters. Applicable when performance_goal_type is set to
+   * `PERFORMANCE_GOAL_TYPE_OTHER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,14 +66,10 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   private java.lang.String performanceGoalType;
 
   /**
-   * The goal amount, in micros of the advertiser's currency.
-   *
-   * Applicable when performance_goal_type is one of:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA` *
-   * `PERFORMANCE_GOAL_TYPE_CPIAVC`
-   *
-   * For example 1500000 represents 1.5 standard units of the currency.
+   * The goal amount, in micros of the advertiser's currency. Applicable when performance_goal_type
+   * is one of: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` *
+   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` For example 1500000 represents 1.5
+   * standard units of the currency.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPerformanceGoalAmountMicros() {
@@ -90,14 +77,10 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The goal amount, in micros of the advertiser's currency.
-   *
-   * Applicable when performance_goal_type is one of:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA` *
-   * `PERFORMANCE_GOAL_TYPE_CPIAVC`
-   *
-   * For example 1500000 represents 1.5 standard units of the currency.
+   * The goal amount, in micros of the advertiser's currency. Applicable when performance_goal_type
+   * is one of: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` *
+   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` For example 1500000 represents 1.5
+   * standard units of the currency.
    * @param performanceGoalAmountMicros performanceGoalAmountMicros or {@code null} for none
    */
   public PerformanceGoal setPerformanceGoalAmountMicros(java.lang.Long performanceGoalAmountMicros) {
@@ -106,13 +89,9 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The decimal representation of the goal percentage in micros.
-   *
-   * Applicable when performance_goal_type is one of:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CTR` * `PERFORMANCE_GOAL_TYPE_VIEWABILITY`
-   *
-   * For example, 70000 represents 7% (decimal 0.07).
+   * The decimal representation of the goal percentage in micros. Applicable when
+   * performance_goal_type is one of: * `PERFORMANCE_GOAL_TYPE_CTR` *
+   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` For example, 70000 represents 7% (decimal 0.07).
    * @return value or {@code null} for none
    */
   public java.lang.Long getPerformanceGoalPercentageMicros() {
@@ -120,13 +99,9 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The decimal representation of the goal percentage in micros.
-   *
-   * Applicable when performance_goal_type is one of:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CTR` * `PERFORMANCE_GOAL_TYPE_VIEWABILITY`
-   *
-   * For example, 70000 represents 7% (decimal 0.07).
+   * The decimal representation of the goal percentage in micros. Applicable when
+   * performance_goal_type is one of: * `PERFORMANCE_GOAL_TYPE_CTR` *
+   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` For example, 70000 represents 7% (decimal 0.07).
    * @param performanceGoalPercentageMicros performanceGoalPercentageMicros or {@code null} for none
    */
   public PerformanceGoal setPerformanceGoalPercentageMicros(java.lang.Long performanceGoalPercentageMicros) {
@@ -136,9 +111,8 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
 
   /**
    * A key performance indicator (KPI) string, which can be empty. Must be UTF-8 encoded with a
-   * length of no more than 100 characters.
-   *
-   * Applicable when performance_goal_type is set to `PERFORMANCE_GOAL_TYPE_OTHER`.
+   * length of no more than 100 characters. Applicable when performance_goal_type is set to
+   * `PERFORMANCE_GOAL_TYPE_OTHER`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPerformanceGoalString() {
@@ -147,9 +121,8 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
 
   /**
    * A key performance indicator (KPI) string, which can be empty. Must be UTF-8 encoded with a
-   * length of no more than 100 characters.
-   *
-   * Applicable when performance_goal_type is set to `PERFORMANCE_GOAL_TYPE_OTHER`.
+   * length of no more than 100 characters. Applicable when performance_goal_type is set to
+   * `PERFORMANCE_GOAL_TYPE_OTHER`.
    * @param performanceGoalString performanceGoalString or {@code null} for none
    */
   public PerformanceGoal setPerformanceGoalString(java.lang.String performanceGoalString) {

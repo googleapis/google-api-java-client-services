@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class IdFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * TrueView Ads to download by ID. All IDs must belong to the same Advertiser or Partner specified
+   * YouTube Ads to download by ID. All IDs must belong to the same Advertiser or Partner specified
    * in CreateSdfDownloadTaskRequest.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> adGroupAdIds;
 
   /**
-   * TrueView Ad Groups to download by ID. All IDs must belong to the same Advertiser or Partner
+   * YouTube Ad Groups to download by ID. All IDs must belong to the same Advertiser or Partner
    * specified in CreateSdfDownloadTaskRequest.
    * The value may be {@code null}.
    */
@@ -79,7 +79,7 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> mediaProductIds;
 
   /**
-   * TrueView Ads to download by ID. All IDs must belong to the same Advertiser or Partner specified
+   * YouTube Ads to download by ID. All IDs must belong to the same Advertiser or Partner specified
    * in CreateSdfDownloadTaskRequest.
    * @return value or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TrueView Ads to download by ID. All IDs must belong to the same Advertiser or Partner specified
+   * YouTube Ads to download by ID. All IDs must belong to the same Advertiser or Partner specified
    * in CreateSdfDownloadTaskRequest.
    * @param adGroupAdIds adGroupAdIds or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TrueView Ad Groups to download by ID. All IDs must belong to the same Advertiser or Partner
+   * YouTube Ad Groups to download by ID. All IDs must belong to the same Advertiser or Partner
    * specified in CreateSdfDownloadTaskRequest.
    * @return value or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TrueView Ad Groups to download by ID. All IDs must belong to the same Advertiser or Partner
+   * YouTube Ad Groups to download by ID. All IDs must belong to the same Advertiser or Partner
    * specified in CreateSdfDownloadTaskRequest.
    * @param adGroupIds adGroupIds or {@code null} for none
    */

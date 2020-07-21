@@ -32,12 +32,11 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
 
   /**
    * The flight start and end dates of the line item. They are resolved relative to the parent
-   * advertiser's time zone.
-   *
-   * * Required when flight_date_type is `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise.
-   * * When creating a new flight, both `start_date` and `end_date` must be in the future. * An
-   * existing flight with a `start_date` in the past has a mutable `end_date` but an immutable
-   * `start_date`. * `end_date` must be the `start_date` or later, both before the year 2037.
+   * advertiser's time zone. * Required when flight_date_type is
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise. * When creating a new flight, both
+   * `start_date` and `end_date` must be in the future. * An existing flight with a `start_date` in
+   * the past has a mutable `end_date` but an immutable `start_date`. * `end_date` must be the
+   * `start_date` or later, both before the year 2037.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,12 +51,11 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
 
   /**
    * The flight start and end dates of the line item. They are resolved relative to the parent
-   * advertiser's time zone.
-   *
-   * * Required when flight_date_type is `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise.
-   * * When creating a new flight, both `start_date` and `end_date` must be in the future. * An
-   * existing flight with a `start_date` in the past has a mutable `end_date` but an immutable
-   * `start_date`. * `end_date` must be the `start_date` or later, both before the year 2037.
+   * advertiser's time zone. * Required when flight_date_type is
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise. * When creating a new flight, both
+   * `start_date` and `end_date` must be in the future. * An existing flight with a `start_date` in
+   * the past has a mutable `end_date` but an immutable `start_date`. * `end_date` must be the
+   * `start_date` or later, both before the year 2037.
    * @return value or {@code null} for none
    */
   public DateRange getDateRange() {
@@ -66,12 +64,11 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
 
   /**
    * The flight start and end dates of the line item. They are resolved relative to the parent
-   * advertiser's time zone.
-   *
-   * * Required when flight_date_type is `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise.
-   * * When creating a new flight, both `start_date` and `end_date` must be in the future. * An
-   * existing flight with a `start_date` in the past has a mutable `end_date` but an immutable
-   * `start_date`. * `end_date` must be the `start_date` or later, both before the year 2037.
+   * advertiser's time zone. * Required when flight_date_type is
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM`. Output only otherwise. * When creating a new flight, both
+   * `start_date` and `end_date` must be in the future. * An existing flight with a `start_date` in
+   * the past has a mutable `end_date` but an immutable `start_date`. * `end_date` must be the
+   * `start_date` or later, both before the year 2037.
    * @param dateRange dateRange or {@code null} for none
    */
   public LineItemFlight setDateRange(DateRange dateRange) {

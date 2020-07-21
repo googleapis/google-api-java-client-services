@@ -72,12 +72,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Authorized seller status details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
-   *
-   * You can only target one authorized seller status option per line item.
-   *
-   * If a line item doesn't have an authorized seller status option, all authorized sellers
-   * indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
+   * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
+   * option per line item. If a line item doesn't have an authorized seller status option, all
+   * authorized sellers indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,10 +98,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Category details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_CATEGORY`.
-   *
-   * Targeting a category will also target its subcategories. If a category is excluded from
-   * targeting and a subcategory is included, the exclusion will take precedence.
+   * `TARGETING_TYPE_CATEGORY`. Targeting a category will also target its subcategories. If a
+   * category is excluded from targeting and a subcategory is included, the exclusion will take
+   * precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,13 +156,11 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Digital content label details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`.
-   *
-   * Digital content labels are targeting exclusions. Advertiser level digital content label
-   * exclusions, if set, are always applied in serving (even though they aren't visible in line item
-   * settings). Line item settings can exclude content labels in addition to advertiser exclusions,
-   * but can't override them. A line item won't serve if all the digital content labels are
-   * excluded.
+   * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`. Digital content labels are targeting
+   * exclusions. Advertiser level digital content label exclusions, if set, are always applied in
+   * serving (even though they aren't visible in line item settings). Line item settings can exclude
+   * content labels in addition to advertiser exclusions, but can't override them. A line item won't
+   * serve if all the digital content labels are excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,10 +230,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_KEYWORD`.
-   *
-   * A maximum of 5000 direct negative keywords can be assigned to a line item. No limit on number
-   * of positive keywords that can be assigned.
+   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a line
+   * item. No limit on number of positive keywords that can be assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,9 +254,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`.
-   *
-   * A maximum of 4 negative keyword lists can be assigned to a line item.
+   * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
+   * to a line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,12 +303,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Sensitive category details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
-   *
-   * Sensitive categories are targeting exclusions. Advertiser level sensitive category exclusions,
-   * if set, are always applied in serving (even though they aren't visible in line item settings).
-   * Line item settings can exclude sensitive categories in addition to advertiser exclusions, but
-   * can't override them.
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`. Sensitive categories are targeting exclusions.
+   * Advertiser level sensitive category exclusions, if set, are always applied in serving (even
+   * though they aren't visible in line item settings). Line item settings can exclude sensitive
+   * categories in addition to advertiser exclusions, but can't override them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -371,9 +360,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Viewability details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_VIEWABILITY`.
-   *
-   * You can only target one viewability option per line item.
+   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -474,12 +461,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Authorized seller status details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
-   *
-   * You can only target one authorized seller status option per line item.
-   *
-   * If a line item doesn't have an authorized seller status option, all authorized sellers
-   * indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
+   * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
+   * option per line item. If a line item doesn't have an authorized seller status option, all
+   * authorized sellers indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
    * @return value or {@code null} for none
    */
   public AuthorizedSellerStatusAssignedTargetingOptionDetails getAuthorizedSellerStatusDetails() {
@@ -488,12 +472,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Authorized seller status details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
-   *
-   * You can only target one authorized seller status option per line item.
-   *
-   * If a line item doesn't have an authorized seller status option, all authorized sellers
-   * indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
+   * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
+   * option per line item. If a line item doesn't have an authorized seller status option, all
+   * authorized sellers indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
    * @param authorizedSellerStatusDetails authorizedSellerStatusDetails or {@code null} for none
    */
   public AssignedTargetingOption setAuthorizedSellerStatusDetails(AuthorizedSellerStatusAssignedTargetingOptionDetails authorizedSellerStatusDetails) {
@@ -541,10 +522,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Category details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_CATEGORY`.
-   *
-   * Targeting a category will also target its subcategories. If a category is excluded from
-   * targeting and a subcategory is included, the exclusion will take precedence.
+   * `TARGETING_TYPE_CATEGORY`. Targeting a category will also target its subcategories. If a
+   * category is excluded from targeting and a subcategory is included, the exclusion will take
+   * precedence.
    * @return value or {@code null} for none
    */
   public CategoryAssignedTargetingOptionDetails getCategoryDetails() {
@@ -553,10 +533,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Category details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_CATEGORY`.
-   *
-   * Targeting a category will also target its subcategories. If a category is excluded from
-   * targeting and a subcategory is included, the exclusion will take precedence.
+   * `TARGETING_TYPE_CATEGORY`. Targeting a category will also target its subcategories. If a
+   * category is excluded from targeting and a subcategory is included, the exclusion will take
+   * precedence.
    * @param categoryDetails categoryDetails or {@code null} for none
    */
   public AssignedTargetingOption setCategoryDetails(CategoryAssignedTargetingOptionDetails categoryDetails) {
@@ -680,13 +659,11 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Digital content label details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`.
-   *
-   * Digital content labels are targeting exclusions. Advertiser level digital content label
-   * exclusions, if set, are always applied in serving (even though they aren't visible in line item
-   * settings). Line item settings can exclude content labels in addition to advertiser exclusions,
-   * but can't override them. A line item won't serve if all the digital content labels are
-   * excluded.
+   * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`. Digital content labels are targeting
+   * exclusions. Advertiser level digital content label exclusions, if set, are always applied in
+   * serving (even though they aren't visible in line item settings). Line item settings can exclude
+   * content labels in addition to advertiser exclusions, but can't override them. A line item won't
+   * serve if all the digital content labels are excluded.
    * @return value or {@code null} for none
    */
   public DigitalContentLabelAssignedTargetingOptionDetails getDigitalContentLabelExclusionDetails() {
@@ -695,13 +672,11 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Digital content label details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`.
-   *
-   * Digital content labels are targeting exclusions. Advertiser level digital content label
-   * exclusions, if set, are always applied in serving (even though they aren't visible in line item
-   * settings). Line item settings can exclude content labels in addition to advertiser exclusions,
-   * but can't override them. A line item won't serve if all the digital content labels are
-   * excluded.
+   * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`. Digital content labels are targeting
+   * exclusions. Advertiser level digital content label exclusions, if set, are always applied in
+   * serving (even though they aren't visible in line item settings). Line item settings can exclude
+   * content labels in addition to advertiser exclusions, but can't override them. A line item won't
+   * serve if all the digital content labels are excluded.
    * @param digitalContentLabelExclusionDetails digitalContentLabelExclusionDetails or {@code null} for none
    */
   public AssignedTargetingOption setDigitalContentLabelExclusionDetails(DigitalContentLabelAssignedTargetingOptionDetails digitalContentLabelExclusionDetails) {
@@ -859,10 +834,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_KEYWORD`.
-   *
-   * A maximum of 5000 direct negative keywords can be assigned to a line item. No limit on number
-   * of positive keywords that can be assigned.
+   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a line
+   * item. No limit on number of positive keywords that can be assigned.
    * @return value or {@code null} for none
    */
   public KeywordAssignedTargetingOptionDetails getKeywordDetails() {
@@ -871,10 +844,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_KEYWORD`.
-   *
-   * A maximum of 5000 direct negative keywords can be assigned to a line item. No limit on number
-   * of positive keywords that can be assigned.
+   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a line
+   * item. No limit on number of positive keywords that can be assigned.
    * @param keywordDetails keywordDetails or {@code null} for none
    */
   public AssignedTargetingOption setKeywordDetails(KeywordAssignedTargetingOptionDetails keywordDetails) {
@@ -920,9 +891,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`.
-   *
-   * A maximum of 4 negative keyword lists can be assigned to a line item.
+   * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
+   * to a line item.
    * @return value or {@code null} for none
    */
   public NegativeKeywordListAssignedTargetingOptionDetails getNegativeKeywordListDetails() {
@@ -931,9 +901,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`.
-   *
-   * A maximum of 4 negative keyword lists can be assigned to a line item.
+   * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
+   * to a line item.
    * @param negativeKeywordListDetails negativeKeywordListDetails or {@code null} for none
    */
   public AssignedTargetingOption setNegativeKeywordListDetails(NegativeKeywordListAssignedTargetingOptionDetails negativeKeywordListDetails) {
@@ -1038,12 +1007,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Sensitive category details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
-   *
-   * Sensitive categories are targeting exclusions. Advertiser level sensitive category exclusions,
-   * if set, are always applied in serving (even though they aren't visible in line item settings).
-   * Line item settings can exclude sensitive categories in addition to advertiser exclusions, but
-   * can't override them.
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`. Sensitive categories are targeting exclusions.
+   * Advertiser level sensitive category exclusions, if set, are always applied in serving (even
+   * though they aren't visible in line item settings). Line item settings can exclude sensitive
+   * categories in addition to advertiser exclusions, but can't override them.
    * @return value or {@code null} for none
    */
   public SensitiveCategoryAssignedTargetingOptionDetails getSensitiveCategoryExclusionDetails() {
@@ -1052,12 +1019,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Sensitive category details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
-   *
-   * Sensitive categories are targeting exclusions. Advertiser level sensitive category exclusions,
-   * if set, are always applied in serving (even though they aren't visible in line item settings).
-   * Line item settings can exclude sensitive categories in addition to advertiser exclusions, but
-   * can't override them.
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`. Sensitive categories are targeting exclusions.
+   * Advertiser level sensitive category exclusions, if set, are always applied in serving (even
+   * though they aren't visible in line item settings). Line item settings can exclude sensitive
+   * categories in addition to advertiser exclusions, but can't override them.
    * @param sensitiveCategoryExclusionDetails sensitiveCategoryExclusionDetails or {@code null} for none
    */
   public AssignedTargetingOption setSensitiveCategoryExclusionDetails(SensitiveCategoryAssignedTargetingOptionDetails sensitiveCategoryExclusionDetails) {
@@ -1177,9 +1142,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Viewability details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_VIEWABILITY`.
-   *
-   * You can only target one viewability option per line item.
+   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per line item.
    * @return value or {@code null} for none
    */
   public ViewabilityAssignedTargetingOptionDetails getViewabilityDetails() {
@@ -1188,9 +1151,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Viewability details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_VIEWABILITY`.
-   *
-   * You can only target one viewability option per line item.
+   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per line item.
    * @param viewabilityDetails viewabilityDetails or {@code null} for none
    */
   public AssignedTargetingOption setViewabilityDetails(ViewabilityAssignedTargetingOptionDetails viewabilityDetails) {

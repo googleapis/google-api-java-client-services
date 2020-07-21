@@ -31,22 +31,17 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AdvertiserGeneralConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. Advertiser's currency in ISO 4217 format.
-   *
-   * Accepted codes and the currencies they represent are:
-   *
-   * Currency Code : Currency Name
-   *
-   * * `ARS` : Argentine Peso * `AUD` : Australian Dollar * `BRL` : Brazilian Real * `CAD` :
-   * Canadian Dollar * `CHF` : Swiss Franc * `CLP` : Chilean Peso * `CNY` : Chinese Yuan * `COP` :
-   * Colombian Peso * `CZK` : Czech Koruna * `DKK` : Danish Krone * `EGP` : Egyption Pound * `EUR` :
-   * Euro * `GBP` : British Pound * `HKD` : Hong Kong Dollar * `HUF` : Hungarian Forint * `IDR` :
-   * Indonesian Rupiah * `ILS` : Israeli Shekel * `INR` : Indian Rupee * `JPY` : Japanese Yen *
-   * `KRW` : South Korean Won * `MXN` : Mexican Pesos * `MYR` : Malaysian Ringgit * `NGN` : Nigerian
-   * Naira * `NOK` : Norwegian Krone * `NZD` : New Zealand Dollar * `PEN` : Peruvian Nuevo Sol *
-   * `PLN` : Polish Zloty * `RON` : New Romanian Leu * `RUB` : Russian Ruble * `SEK` : Swedish Krona
-   * * `TRY` : Turkish Lira * `TWD` : New Taiwan Dollar * `USD` : US Dollar * `ZAR` : South African
-   * Rand
+   * Required. Immutable. Advertiser's currency in ISO 4217 format. Accepted codes and the
+   * currencies they represent are: Currency Code : Currency Name * `ARS` : Argentine Peso * `AUD` :
+   * Australian Dollar * `BRL` : Brazilian Real * `CAD` : Canadian Dollar * `CHF` : Swiss Franc *
+   * `CLP` : Chilean Peso * `CNY` : Chinese Yuan * `COP` : Colombian Peso * `CZK` : Czech Koruna *
+   * `DKK` : Danish Krone * `EGP` : Egyption Pound * `EUR` : Euro * `GBP` : British Pound * `HKD` :
+   * Hong Kong Dollar * `HUF` : Hungarian Forint * `IDR` : Indonesian Rupiah * `ILS` : Israeli
+   * Shekel * `INR` : Indian Rupee * `JPY` : Japanese Yen * `KRW` : South Korean Won * `MXN` :
+   * Mexican Pesos * `MYR` : Malaysian Ringgit * `NGN` : Nigerian Naira * `NOK` : Norwegian Krone *
+   * `NZD` : New Zealand Dollar * `PEN` : Peruvian Nuevo Sol * `PLN` : Polish Zloty * `RON` : New
+   * Romanian Leu * `RUB` : Russian Ruble * `SEK` : Swedish Krona * `TRY` : Turkish Lira * `TWD` :
+   * New Taiwan Dollar * `USD` : US Dollar * `ZAR` : South African Rand
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +50,6 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   /**
    * Required. The domain URL of the advertiser's primary website. The system will send this
    * information to publishers that require website URL to associate a campaign with an advertiser.
-   *
    * Provide a URL with no path or query string, beginning with `http:` or `https:`. For example,
    * http://www.example.com
    * The value may be {@code null}.
@@ -65,10 +59,7 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
 
   /**
    * Output only. The standard TZ database name of the advertiser's time zone. For example,
-   * `America/New_York`.
-   *
-   * See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-   *
+   * `America/New_York`. See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
    * For CM hybrid advertisers, the time zone is the same as that of the associated CM account; for
    * third-party only advertisers, the time zone is the same as that of the parent partner.
    * The value may be {@code null}.
@@ -77,22 +68,17 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   private java.lang.String timeZone;
 
   /**
-   * Required. Immutable. Advertiser's currency in ISO 4217 format.
-   *
-   * Accepted codes and the currencies they represent are:
-   *
-   * Currency Code : Currency Name
-   *
-   * * `ARS` : Argentine Peso * `AUD` : Australian Dollar * `BRL` : Brazilian Real * `CAD` :
-   * Canadian Dollar * `CHF` : Swiss Franc * `CLP` : Chilean Peso * `CNY` : Chinese Yuan * `COP` :
-   * Colombian Peso * `CZK` : Czech Koruna * `DKK` : Danish Krone * `EGP` : Egyption Pound * `EUR` :
-   * Euro * `GBP` : British Pound * `HKD` : Hong Kong Dollar * `HUF` : Hungarian Forint * `IDR` :
-   * Indonesian Rupiah * `ILS` : Israeli Shekel * `INR` : Indian Rupee * `JPY` : Japanese Yen *
-   * `KRW` : South Korean Won * `MXN` : Mexican Pesos * `MYR` : Malaysian Ringgit * `NGN` : Nigerian
-   * Naira * `NOK` : Norwegian Krone * `NZD` : New Zealand Dollar * `PEN` : Peruvian Nuevo Sol *
-   * `PLN` : Polish Zloty * `RON` : New Romanian Leu * `RUB` : Russian Ruble * `SEK` : Swedish Krona
-   * * `TRY` : Turkish Lira * `TWD` : New Taiwan Dollar * `USD` : US Dollar * `ZAR` : South African
-   * Rand
+   * Required. Immutable. Advertiser's currency in ISO 4217 format. Accepted codes and the
+   * currencies they represent are: Currency Code : Currency Name * `ARS` : Argentine Peso * `AUD` :
+   * Australian Dollar * `BRL` : Brazilian Real * `CAD` : Canadian Dollar * `CHF` : Swiss Franc *
+   * `CLP` : Chilean Peso * `CNY` : Chinese Yuan * `COP` : Colombian Peso * `CZK` : Czech Koruna *
+   * `DKK` : Danish Krone * `EGP` : Egyption Pound * `EUR` : Euro * `GBP` : British Pound * `HKD` :
+   * Hong Kong Dollar * `HUF` : Hungarian Forint * `IDR` : Indonesian Rupiah * `ILS` : Israeli
+   * Shekel * `INR` : Indian Rupee * `JPY` : Japanese Yen * `KRW` : South Korean Won * `MXN` :
+   * Mexican Pesos * `MYR` : Malaysian Ringgit * `NGN` : Nigerian Naira * `NOK` : Norwegian Krone *
+   * `NZD` : New Zealand Dollar * `PEN` : Peruvian Nuevo Sol * `PLN` : Polish Zloty * `RON` : New
+   * Romanian Leu * `RUB` : Russian Ruble * `SEK` : Swedish Krona * `TRY` : Turkish Lira * `TWD` :
+   * New Taiwan Dollar * `USD` : US Dollar * `ZAR` : South African Rand
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -100,22 +86,17 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Immutable. Advertiser's currency in ISO 4217 format.
-   *
-   * Accepted codes and the currencies they represent are:
-   *
-   * Currency Code : Currency Name
-   *
-   * * `ARS` : Argentine Peso * `AUD` : Australian Dollar * `BRL` : Brazilian Real * `CAD` :
-   * Canadian Dollar * `CHF` : Swiss Franc * `CLP` : Chilean Peso * `CNY` : Chinese Yuan * `COP` :
-   * Colombian Peso * `CZK` : Czech Koruna * `DKK` : Danish Krone * `EGP` : Egyption Pound * `EUR` :
-   * Euro * `GBP` : British Pound * `HKD` : Hong Kong Dollar * `HUF` : Hungarian Forint * `IDR` :
-   * Indonesian Rupiah * `ILS` : Israeli Shekel * `INR` : Indian Rupee * `JPY` : Japanese Yen *
-   * `KRW` : South Korean Won * `MXN` : Mexican Pesos * `MYR` : Malaysian Ringgit * `NGN` : Nigerian
-   * Naira * `NOK` : Norwegian Krone * `NZD` : New Zealand Dollar * `PEN` : Peruvian Nuevo Sol *
-   * `PLN` : Polish Zloty * `RON` : New Romanian Leu * `RUB` : Russian Ruble * `SEK` : Swedish Krona
-   * * `TRY` : Turkish Lira * `TWD` : New Taiwan Dollar * `USD` : US Dollar * `ZAR` : South African
-   * Rand
+   * Required. Immutable. Advertiser's currency in ISO 4217 format. Accepted codes and the
+   * currencies they represent are: Currency Code : Currency Name * `ARS` : Argentine Peso * `AUD` :
+   * Australian Dollar * `BRL` : Brazilian Real * `CAD` : Canadian Dollar * `CHF` : Swiss Franc *
+   * `CLP` : Chilean Peso * `CNY` : Chinese Yuan * `COP` : Colombian Peso * `CZK` : Czech Koruna *
+   * `DKK` : Danish Krone * `EGP` : Egyption Pound * `EUR` : Euro * `GBP` : British Pound * `HKD` :
+   * Hong Kong Dollar * `HUF` : Hungarian Forint * `IDR` : Indonesian Rupiah * `ILS` : Israeli
+   * Shekel * `INR` : Indian Rupee * `JPY` : Japanese Yen * `KRW` : South Korean Won * `MXN` :
+   * Mexican Pesos * `MYR` : Malaysian Ringgit * `NGN` : Nigerian Naira * `NOK` : Norwegian Krone *
+   * `NZD` : New Zealand Dollar * `PEN` : Peruvian Nuevo Sol * `PLN` : Polish Zloty * `RON` : New
+   * Romanian Leu * `RUB` : Russian Ruble * `SEK` : Swedish Krona * `TRY` : Turkish Lira * `TWD` :
+   * New Taiwan Dollar * `USD` : US Dollar * `ZAR` : South African Rand
    * @param currencyCode currencyCode or {@code null} for none
    */
   public AdvertiserGeneralConfig setCurrencyCode(java.lang.String currencyCode) {
@@ -126,7 +107,6 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   /**
    * Required. The domain URL of the advertiser's primary website. The system will send this
    * information to publishers that require website URL to associate a campaign with an advertiser.
-   *
    * Provide a URL with no path or query string, beginning with `http:` or `https:`. For example,
    * http://www.example.com
    * @return value or {@code null} for none
@@ -138,7 +118,6 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   /**
    * Required. The domain URL of the advertiser's primary website. The system will send this
    * information to publishers that require website URL to associate a campaign with an advertiser.
-   *
    * Provide a URL with no path or query string, beginning with `http:` or `https:`. For example,
    * http://www.example.com
    * @param domainUrl domainUrl or {@code null} for none
@@ -150,10 +129,7 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
 
   /**
    * Output only. The standard TZ database name of the advertiser's time zone. For example,
-   * `America/New_York`.
-   *
-   * See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-   *
+   * `America/New_York`. See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
    * For CM hybrid advertisers, the time zone is the same as that of the associated CM account; for
    * third-party only advertisers, the time zone is the same as that of the parent partner.
    * @return value or {@code null} for none
@@ -164,10 +140,7 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
 
   /**
    * Output only. The standard TZ database name of the advertiser's time zone. For example,
-   * `America/New_York`.
-   *
-   * See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-   *
+   * `America/New_York`. See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
    * For CM hybrid advertisers, the time zone is the same as that of the associated CM account; for
    * third-party only advertisers, the time zone is the same as that of the parent partner.
    * @param timeZone timeZone or {@code null} for none

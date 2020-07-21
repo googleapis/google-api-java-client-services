@@ -52,8 +52,8 @@ public final class CreateSdfDownloadTaskRequest extends com.google.api.client.js
   private InventorySourceFilter inventorySourceFilter;
 
   /**
-   * Filters on selected file types. The entities in each file are filtered  by a chosen set of
-   * filter entities. The filter entities must be the same  type as, or a parent type of, the
+   * Filters on selected file types. The entities in each file are filtered by a chosen set of
+   * filter entities. The filter entities must be the same type as, or a parent type of, the
    * selected file types.
    * The value may be {@code null}.
    */
@@ -128,8 +128,8 @@ public final class CreateSdfDownloadTaskRequest extends com.google.api.client.js
   }
 
   /**
-   * Filters on selected file types. The entities in each file are filtered  by a chosen set of
-   * filter entities. The filter entities must be the same  type as, or a parent type of, the
+   * Filters on selected file types. The entities in each file are filtered by a chosen set of
+   * filter entities. The filter entities must be the same type as, or a parent type of, the
    * selected file types.
    * @return value or {@code null} for none
    */
@@ -138,8 +138,8 @@ public final class CreateSdfDownloadTaskRequest extends com.google.api.client.js
   }
 
   /**
-   * Filters on selected file types. The entities in each file are filtered  by a chosen set of
-   * filter entities. The filter entities must be the same  type as, or a parent type of, the
+   * Filters on selected file types. The entities in each file are filtered by a chosen set of
+   * filter entities. The filter entities must be the same type as, or a parent type of, the
    * selected file types.
    * @param parentEntityFilter parentEntityFilter or {@code null} for none
    */

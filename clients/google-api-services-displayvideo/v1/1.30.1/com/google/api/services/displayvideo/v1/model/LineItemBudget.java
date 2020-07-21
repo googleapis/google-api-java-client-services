@@ -31,10 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class LineItemBudget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The type of the budget allocation.
-   *
-   * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is only applicable when automatic budget
-   * allocation is enabled for the parent insertion order.
+   * Required. The type of the budget allocation. `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is
+   * only applicable when automatic budget allocation is enabled for the parent insertion order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,27 +47,22 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
   private java.lang.String budgetUnit;
 
   /**
-   * The maximum budget amount the line item will spend. Must be greater than 0.
-   *
-   * When budget_allocation_type is:
-   *
-   * * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC`, this field is immutable and is set by the
-   * system. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`, if budget_unit is:     -
-   * `BUDGET_UNIT_CURRENCY`, this field represents maximum budget amount     to spend, in micros of
-   * the advertiser's currency. For example, 1500000     represents 1.5 standard units of the
-   * currency.     - `BUDGET_UNIT_IMPRESSIONS`, this field represents the maximum number     of
-   * impressions to serve. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED`, this field is not
-   * applicable and will be ignored by the system.
+   * The maximum budget amount the line item will spend. Must be greater than 0. When
+   * budget_allocation_type is: * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC`, this field is
+   * immutable and is set by the system. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`, if budget_unit
+   * is: - `BUDGET_UNIT_CURRENCY`, this field represents maximum budget amount to spend, in micros
+   * of the advertiser's currency. For example, 1500000 represents 1.5 standard units of the
+   * currency. - `BUDGET_UNIT_IMPRESSIONS`, this field represents the maximum number of impressions
+   * to serve. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED`, this field is not applicable and will
+   * be ignored by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxAmount;
 
   /**
-   * Required. The type of the budget allocation.
-   *
-   * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is only applicable when automatic budget
-   * allocation is enabled for the parent insertion order.
+   * Required. The type of the budget allocation. `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is
+   * only applicable when automatic budget allocation is enabled for the parent insertion order.
    * @return value or {@code null} for none
    */
   public java.lang.String getBudgetAllocationType() {
@@ -77,10 +70,8 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The type of the budget allocation.
-   *
-   * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is only applicable when automatic budget
-   * allocation is enabled for the parent insertion order.
+   * Required. The type of the budget allocation. `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is
+   * only applicable when automatic budget allocation is enabled for the parent insertion order.
    * @param budgetAllocationType budgetAllocationType or {@code null} for none
    */
   public LineItemBudget setBudgetAllocationType(java.lang.String budgetAllocationType) {
@@ -108,17 +99,14 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The maximum budget amount the line item will spend. Must be greater than 0.
-   *
-   * When budget_allocation_type is:
-   *
-   * * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC`, this field is immutable and is set by the
-   * system. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`, if budget_unit is:     -
-   * `BUDGET_UNIT_CURRENCY`, this field represents maximum budget amount     to spend, in micros of
-   * the advertiser's currency. For example, 1500000     represents 1.5 standard units of the
-   * currency.     - `BUDGET_UNIT_IMPRESSIONS`, this field represents the maximum number     of
-   * impressions to serve. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED`, this field is not
-   * applicable and will be ignored by the system.
+   * The maximum budget amount the line item will spend. Must be greater than 0. When
+   * budget_allocation_type is: * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC`, this field is
+   * immutable and is set by the system. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`, if budget_unit
+   * is: - `BUDGET_UNIT_CURRENCY`, this field represents maximum budget amount to spend, in micros
+   * of the advertiser's currency. For example, 1500000 represents 1.5 standard units of the
+   * currency. - `BUDGET_UNIT_IMPRESSIONS`, this field represents the maximum number of impressions
+   * to serve. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED`, this field is not applicable and will
+   * be ignored by the system.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxAmount() {
@@ -126,17 +114,14 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The maximum budget amount the line item will spend. Must be greater than 0.
-   *
-   * When budget_allocation_type is:
-   *
-   * * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC`, this field is immutable and is set by the
-   * system. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`, if budget_unit is:     -
-   * `BUDGET_UNIT_CURRENCY`, this field represents maximum budget amount     to spend, in micros of
-   * the advertiser's currency. For example, 1500000     represents 1.5 standard units of the
-   * currency.     - `BUDGET_UNIT_IMPRESSIONS`, this field represents the maximum number     of
-   * impressions to serve. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED`, this field is not
-   * applicable and will be ignored by the system.
+   * The maximum budget amount the line item will spend. Must be greater than 0. When
+   * budget_allocation_type is: * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC`, this field is
+   * immutable and is set by the system. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`, if budget_unit
+   * is: - `BUDGET_UNIT_CURRENCY`, this field represents maximum budget amount to spend, in micros
+   * of the advertiser's currency. For example, 1500000 represents 1.5 standard units of the
+   * currency. - `BUDGET_UNIT_IMPRESSIONS`, this field represents the maximum number of impressions
+   * to serve. * `LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED`, this field is not applicable and will
+   * be ignored by the system.
    * @param maxAmount maxAmount or {@code null} for none
    */
   public LineItemBudget setMaxAmount(java.lang.Long maxAmount) {

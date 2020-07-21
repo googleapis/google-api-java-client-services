@@ -31,10 +31,10 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class CreateTenancyUnitRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional service producer-provided identifier of the tenancy unit. Must be no longer than 40
-   * characters and preferably URI friendly. If it isn't provided, a UID for the tenancy unit is
-   * automatically generated. The identifier must be unique across a managed service. If the tenancy
-   * unit already exists for the managed service and service consumer pair, calling
+   * Optional. Optional service producer-provided identifier of the tenancy unit. Must be no longer
+   * than 40 characters and preferably URI friendly. If it isn't provided, a UID for the tenancy
+   * unit is automatically generated. The identifier must be unique across a managed service. If the
+   * tenancy unit already exists for the managed service and service consumer pair, calling
    * `CreateTenancyUnit` returns the existing tenancy unit if the provided identifier is identical
    * or empty, otherwise the call fails.
    * The value may be {@code null}.
@@ -43,10 +43,10 @@ public final class CreateTenancyUnitRequest extends com.google.api.client.json.G
   private java.lang.String tenancyUnitId;
 
   /**
-   * Optional service producer-provided identifier of the tenancy unit. Must be no longer than 40
-   * characters and preferably URI friendly. If it isn't provided, a UID for the tenancy unit is
-   * automatically generated. The identifier must be unique across a managed service. If the tenancy
-   * unit already exists for the managed service and service consumer pair, calling
+   * Optional. Optional service producer-provided identifier of the tenancy unit. Must be no longer
+   * than 40 characters and preferably URI friendly. If it isn't provided, a UID for the tenancy
+   * unit is automatically generated. The identifier must be unique across a managed service. If the
+   * tenancy unit already exists for the managed service and service consumer pair, calling
    * `CreateTenancyUnit` returns the existing tenancy unit if the provided identifier is identical
    * or empty, otherwise the call fails.
    * @return value or {@code null} for none
@@ -56,10 +56,10 @@ public final class CreateTenancyUnitRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional service producer-provided identifier of the tenancy unit. Must be no longer than 40
-   * characters and preferably URI friendly. If it isn't provided, a UID for the tenancy unit is
-   * automatically generated. The identifier must be unique across a managed service. If the tenancy
-   * unit already exists for the managed service and service consumer pair, calling
+   * Optional. Optional service producer-provided identifier of the tenancy unit. Must be no longer
+   * than 40 characters and preferably URI friendly. If it isn't provided, a UID for the tenancy
+   * unit is automatically generated. The identifier must be unique across a managed service. If the
+   * tenancy unit already exists for the managed service and service consumer pair, calling
    * `CreateTenancyUnit` returns the existing tenancy unit if the provided identifier is identical
    * or empty, otherwise the call fails.
    * @param tenancyUnitId tenancyUnitId or {@code null} for none

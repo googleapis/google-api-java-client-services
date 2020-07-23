@@ -34,9 +34,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
    * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
    * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
    * field is never set in Route's status, only its spec. This is mutually exclusive with
-   * RevisionName.
-   *
-   * Cloud Run currently supports a single ConfigurationName.
+   * RevisionName. Cloud Run currently supports a single ConfigurationName.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +51,6 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Name is optionally used to expose a dedicated hostname for referencing this target exclusively.
-   *
    * Not currently supported by Cloud Run. +optional
    * The value may be {@code null}.
    */
@@ -62,9 +59,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to
-   * zero if unspecified.
-   *
-   * Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.
+   * zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName
+   * TrafficTarget entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,18 +68,16 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName.
-   *
-   * Providing RevisionName in spec is not currently supported by Cloud Run.
+   * exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by
+   * Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revisionName;
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
-   *
-   * Not currently supported in Cloud Run. +optional
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively. Not
+   * currently supported in Cloud Run. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,9 +86,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Output only. URL displays the URL for accessing named traffic targets. URL is displayed in
    * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
-   * may not contain anything else (e.g. basic auth, url path, etc.
-   *
-   * Not currently supported in Cloud Run.
+   * may not contain anything else (e.g. basic auth, url path, etc. Not currently supported in Cloud
+   * Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +98,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
    * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
    * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
    * field is never set in Route's status, only its spec. This is mutually exclusive with
-   * RevisionName.
-   *
-   * Cloud Run currently supports a single ConfigurationName.
+   * RevisionName. Cloud Run currently supports a single ConfigurationName.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigurationName() {
@@ -119,9 +110,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
    * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
    * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
    * field is never set in Route's status, only its spec. This is mutually exclusive with
-   * RevisionName.
-   *
-   * Cloud Run currently supports a single ConfigurationName.
+   * RevisionName. Cloud Run currently supports a single ConfigurationName.
    * @param configurationName configurationName or {@code null} for none
    */
   public TrafficTarget setConfigurationName(java.lang.String configurationName) {
@@ -152,7 +141,6 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Name is optionally used to expose a dedicated hostname for referencing this target exclusively.
-   *
    * Not currently supported by Cloud Run. +optional
    * @return value or {@code null} for none
    */
@@ -162,7 +150,6 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Name is optionally used to expose a dedicated hostname for referencing this target exclusively.
-   *
    * Not currently supported by Cloud Run. +optional
    * @param name name or {@code null} for none
    */
@@ -173,9 +160,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to
-   * zero if unspecified.
-   *
-   * Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.
+   * zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName
+   * TrafficTarget entry.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercent() {
@@ -184,9 +170,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to
-   * zero if unspecified.
-   *
-   * Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.
+   * zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName
+   * TrafficTarget entry.
    * @param percent percent or {@code null} for none
    */
   public TrafficTarget setPercent(java.lang.Integer percent) {
@@ -196,9 +181,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName.
-   *
-   * Providing RevisionName in spec is not currently supported by Cloud Run.
+   * exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by
+   * Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionName() {
@@ -207,9 +191,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName.
-   *
-   * Providing RevisionName in spec is not currently supported by Cloud Run.
+   * exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by
+   * Cloud Run.
    * @param revisionName revisionName or {@code null} for none
    */
   public TrafficTarget setRevisionName(java.lang.String revisionName) {
@@ -218,9 +201,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
-   *
-   * Not currently supported in Cloud Run. +optional
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively. Not
+   * currently supported in Cloud Run. +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -228,9 +210,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
-   *
-   * Not currently supported in Cloud Run. +optional
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively. Not
+   * currently supported in Cloud Run. +optional
    * @param tag tag or {@code null} for none
    */
   public TrafficTarget setTag(java.lang.String tag) {
@@ -241,9 +222,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Output only. URL displays the URL for accessing named traffic targets. URL is displayed in
    * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
-   * may not contain anything else (e.g. basic auth, url path, etc.
-   *
-   * Not currently supported in Cloud Run.
+   * may not contain anything else (e.g. basic auth, url path, etc. Not currently supported in Cloud
+   * Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -253,9 +233,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Output only. URL displays the URL for accessing named traffic targets. URL is displayed in
    * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
-   * may not contain anything else (e.g. basic auth, url path, etc.
-   *
-   * Not currently supported in Cloud Run.
+   * may not contain anything else (e.g. basic auth, url path, etc. Not currently supported in Cloud
+   * Run.
    * @param url url or {@code null} for none
    */
   public TrafficTarget setUrl(java.lang.String url) {

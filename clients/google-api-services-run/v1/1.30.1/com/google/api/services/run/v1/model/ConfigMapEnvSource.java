@@ -17,14 +17,9 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run for Anthos: supported
- *
- * ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.
- *
- * The contents of the target ConfigMap's Data field will represent the key-value pairs as
- * environment variables.
+ * Cloud Run fully managed: not supported Cloud Run for Anthos: supported ConfigMapEnvSource selects
+ * a ConfigMap to populate the environment variables with. The contents of the target ConfigMap's
+ * Data field will represent the key-value pairs as environment variables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -45,24 +40,16 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   private LocalObjectReference localObjectReference;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The ConfigMap to select from.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select
+   * from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the ConfigMap must be defined
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify
+   * whether the ConfigMap must be defined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,11 +75,8 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The ConfigMap to select from.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select
+   * from.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -100,11 +84,8 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The ConfigMap to select from.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select
+   * from.
    * @param name name or {@code null} for none
    */
   public ConfigMapEnvSource setName(java.lang.String name) {
@@ -113,13 +94,8 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the ConfigMap must be defined
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify
+   * whether the ConfigMap must be defined
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -127,13 +103,8 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the ConfigMap must be defined
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify
+   * whether the ConfigMap must be defined
    * @param optional optional or {@code null} for none
    */
   public ConfigMapEnvSource setOptional(java.lang.Boolean optional) {

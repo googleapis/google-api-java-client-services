@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1beta1.model;
 
 /**
- * CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
- * name MUST be in the format <.spec.name>.<.spec.group>.
+ * CustomResourceDefinition represents a resource that should be exposed on the API server. Its name
+ * MUST be in the format <.spec.name>.<.spec.group>.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

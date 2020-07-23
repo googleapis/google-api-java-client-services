@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling
- * and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example,
+ * IntOrString is a type that can hold an int32 or a string. When used in JSON or YAML marshalling
+ * and unmarshalling, it produces or consumes the inner type. This allows you to have, for example,
  * a JSON field that can accept a name or number.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

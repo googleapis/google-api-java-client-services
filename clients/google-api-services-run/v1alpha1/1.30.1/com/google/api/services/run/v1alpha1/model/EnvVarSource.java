@@ -17,11 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run on GKE: supported
- *
- * EnvVarSource represents a source for the value of an EnvVar.
+ * Cloud Run fully managed: not supported Cloud Run on GKE: supported EnvVarSource represents a
+ * source for the value of an EnvVar.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -34,33 +31,24 @@ package com.google.api.services.run.v1alpha1.model;
 public final class EnvVarSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Selects a key of a ConfigMap. +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a
+   * ConfigMap. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigMapKeySelector configMapKeyRef;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Selects a key of a secret in the pod's namespace +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a secret in
+   * the pod's namespace +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecretKeySelector secretKeyRef;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Selects a key of a ConfigMap. +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a
+   * ConfigMap. +optional
    * @return value or {@code null} for none
    */
   public ConfigMapKeySelector getConfigMapKeyRef() {
@@ -68,11 +56,8 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Selects a key of a ConfigMap. +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a
+   * ConfigMap. +optional
    * @param configMapKeyRef configMapKeyRef or {@code null} for none
    */
   public EnvVarSource setConfigMapKeyRef(ConfigMapKeySelector configMapKeyRef) {
@@ -81,11 +66,8 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Selects a key of a secret in the pod's namespace +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a secret in
+   * the pod's namespace +optional
    * @return value or {@code null} for none
    */
   public SecretKeySelector getSecretKeyRef() {
@@ -93,11 +75,8 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Selects a key of a secret in the pod's namespace +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a secret in
+   * the pod's namespace +optional
    * @param secretKeyRef secretKeyRef or {@code null} for none
    */
   public EnvVarSource setSecretKeyRef(SecretKeySelector secretKeyRef) {

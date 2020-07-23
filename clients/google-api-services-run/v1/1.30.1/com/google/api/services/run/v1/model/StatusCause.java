@@ -32,18 +32,17 @@ public final class StatusCause extends com.google.api.client.json.GenericJson {
 
   /**
    * The field of the resource that has caused this error, as named by its JSON serialization. May
-   * include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may
+   * include dot and postfix notation for nested attributes. Arrays are zero-indexed. Fields may
    * appear more than once in an array of causes due to fields having multiple errors. Optional.
-   *
-   * Examples:   "name" - the field "name" on the current resource   "items[0].name" - the field
-   * "name" on the first array entry in "items" +optional
+   * Examples: "name" - the field "name" on the current resource "items[0].name" - the field "name"
+   * on the first array entry in "items" +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * A human-readable description of the cause of the error.  This field may be presented as-is to a
+   * A human-readable description of the cause of the error. This field may be presented as-is to a
    * reader. +optional
    * The value may be {@code null}.
    */
@@ -60,11 +59,10 @@ public final class StatusCause extends com.google.api.client.json.GenericJson {
 
   /**
    * The field of the resource that has caused this error, as named by its JSON serialization. May
-   * include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may
+   * include dot and postfix notation for nested attributes. Arrays are zero-indexed. Fields may
    * appear more than once in an array of causes due to fields having multiple errors. Optional.
-   *
-   * Examples:   "name" - the field "name" on the current resource   "items[0].name" - the field
-   * "name" on the first array entry in "items" +optional
+   * Examples: "name" - the field "name" on the current resource "items[0].name" - the field "name"
+   * on the first array entry in "items" +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -73,11 +71,10 @@ public final class StatusCause extends com.google.api.client.json.GenericJson {
 
   /**
    * The field of the resource that has caused this error, as named by its JSON serialization. May
-   * include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may
+   * include dot and postfix notation for nested attributes. Arrays are zero-indexed. Fields may
    * appear more than once in an array of causes due to fields having multiple errors. Optional.
-   *
-   * Examples:   "name" - the field "name" on the current resource   "items[0].name" - the field
-   * "name" on the first array entry in "items" +optional
+   * Examples: "name" - the field "name" on the current resource "items[0].name" - the field "name"
+   * on the first array entry in "items" +optional
    * @param field field or {@code null} for none
    */
   public StatusCause setField(java.lang.String field) {
@@ -86,7 +83,7 @@ public final class StatusCause extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-readable description of the cause of the error.  This field may be presented as-is to a
+   * A human-readable description of the cause of the error. This field may be presented as-is to a
    * reader. +optional
    * @return value or {@code null} for none
    */
@@ -95,7 +92,7 @@ public final class StatusCause extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-readable description of the cause of the error.  This field may be presented as-is to a
+   * A human-readable description of the cause of the error. This field may be presented as-is to a
    * reader. +optional
    * @param message message or {@code null} for none
    */

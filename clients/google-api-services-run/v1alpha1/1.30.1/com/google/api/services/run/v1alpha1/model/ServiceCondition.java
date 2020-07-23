@@ -67,10 +67,8 @@ public final class ServiceCondition extends com.google.api.client.json.GenericJs
   /**
    * ServiceConditionType is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting
-   *
-   * Types include: "Ready", "ConfigurationsReady", and "RoutesReady". "Ready" will be true when the
-   * underlying Route and Configuration are ready.
+   * reporting Types include: "Ready", "ConfigurationsReady", and "RoutesReady". "Ready" will be
+   * true when the underlying Route and Configuration are ready.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,10 +162,8 @@ public final class ServiceCondition extends com.google.api.client.json.GenericJs
   /**
    * ServiceConditionType is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting
-   *
-   * Types include: "Ready", "ConfigurationsReady", and "RoutesReady". "Ready" will be true when the
-   * underlying Route and Configuration are ready.
+   * reporting Types include: "Ready", "ConfigurationsReady", and "RoutesReady". "Ready" will be
+   * true when the underlying Route and Configuration are ready.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -177,10 +173,8 @@ public final class ServiceCondition extends com.google.api.client.json.GenericJs
   /**
    * ServiceConditionType is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting
-   *
-   * Types include: "Ready", "ConfigurationsReady", and "RoutesReady". "Ready" will be true when the
-   * underlying Route and Configuration are ready.
+   * reporting Types include: "Ready", "ConfigurationsReady", and "RoutesReady". "Ready" will be
+   * true when the underlying Route and Configuration are ready.
    * @param type type or {@code null} for none
    */
   public ServiceCondition setType(java.lang.String type) {

@@ -17,13 +17,10 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * Revision is an immutable snapshot of code and configuration.  A revision references a container
- * image. Revisions are created by updates to a Configuration.
- *
- * Cloud Run does not currently support referencing a build that is responsible for materializing
- * the container image from source.
- *
- * See also: https://github.com/knative/serving/blob/master/docs/spec/overview.md#revision
+ * Revision is an immutable snapshot of code and configuration. A revision references a container
+ * image. Revisions are created by updates to a Configuration. Cloud Run does not currently support
+ * referencing a build that is responsible for materializing the container image from source. See
+ * also: https://github.com/knative/serving/blob/master/docs/spec/overview.md#revision
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

@@ -77,7 +77,6 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
 
   /**
    * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
-   *
    * Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation and the Ready condition's status is True or False.
    * The value may be {@code null}.
@@ -200,7 +199,6 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
 
   /**
    * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
-   *
    * Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation and the Ready condition's status is True or False.
    * @return value or {@code null} for none
@@ -211,7 +209,6 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
 
   /**
    * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
-   *
    * Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation and the Ready condition's status is True or False.
    * @param observedGeneration observedGeneration or {@code null} for none

@@ -18,9 +18,7 @@ package com.google.api.services.run.v1alpha1.model;
 
 /**
  * ServiceSpecManualType contains the options for configuring a manual service. See ServiceSpec for
- * more details.
- *
- * Not currently supported by Cloud Run.
+ * more details. Not currently supported by Cloud Run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

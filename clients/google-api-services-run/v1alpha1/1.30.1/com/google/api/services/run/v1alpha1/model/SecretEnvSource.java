@@ -17,10 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * SecretEnvSource selects a Secret to populate the environment variables with.
- *
- * The contents of the target Secret's Data field will represent the key-value pairs as environment
- * variables.
+ * SecretEnvSource selects a Secret to populate the environment variables with. The contents of the
+ * target Secret's Data field will represent the key-value pairs as environment variables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -41,22 +39,16 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
   private LocalObjectReference localObjectReference;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The Secret to select from.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select
+   * from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the Secret must be defined +optional
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the
+   * Secret must be defined +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,11 +74,8 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The Secret to select from.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select
+   * from.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,11 +83,8 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The Secret to select from.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select
+   * from.
    * @param name name or {@code null} for none
    */
   public SecretEnvSource setName(java.lang.String name) {
@@ -107,11 +93,8 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the Secret must be defined +optional
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the
+   * Secret must be defined +optional
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -119,11 +102,8 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the Secret must be defined +optional
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the
+   * Secret must be defined +optional
    * @param optional optional or {@code null} for none
    */
   public SecretEnvSource setOptional(java.lang.Boolean optional) {

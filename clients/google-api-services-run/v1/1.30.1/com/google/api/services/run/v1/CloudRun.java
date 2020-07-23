@@ -190,8 +190,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+         * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
          * @return the request
          */
@@ -218,8 +217,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+           * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
            * @since 1.13
            */
@@ -339,8 +337,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+         * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
          * @param content the {@link com.google.api.services.run.v1.model.Namespace}
          * @return the request
@@ -368,8 +365,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+           * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
            * @param content the {@link com.google.api.services.run.v1.model.Namespace}
            * @since 1.13
@@ -524,8 +520,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the run server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The project ID or project number in which this secret should
-          be created.
+           * @param parent Required. The project ID or project number in which this secret should be created.
            * @param content the {@link com.google.api.services.run.v1.model.Secret}
            * @return the request
            */
@@ -552,8 +547,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The project ID or project number in which this secret should
-          be created.
+             * @param parent Required. The project ID or project number in which this secret should be created.
              * @param content the {@link com.google.api.services.run.v1.model.Secret}
              * @since 1.13
              */
@@ -660,8 +654,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the run server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the secret being retrieved. If needed, replace
-          {namespace_id} with the project
+           * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
            *        ID.
            * @return the request
            */
@@ -688,8 +681,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the secret being retrieved. If needed, replace
-          {namespace_id} with the project
+             * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
            *        ID.
              * @since 1.13
              */
@@ -802,12 +794,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Rpc to replace a secret.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-           * Run will work to make the 'status' match the requested 'spec'.
-           *
-           * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+           * Rpc to replace a secret. Only the spec and metadata labels and annotations are modifiable. After
+           * the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
+           * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
            * control.
            *
            * Create a request for the method "secrets.replaceSecret".
@@ -815,8 +804,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the run server.  After setting any optional
            * parameters, call the {@link ReplaceSecret#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the secret being retrieved. If needed, replace
-          {namespace_id} with the project
+           * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
            *        ID.
            * @param content the {@link com.google.api.services.run.v1.model.Secret}
            * @return the request
@@ -835,11 +823,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^namespaces/[^/]+/secrets/[^/]+$");
 
             /**
-             * Rpc to replace a secret.
-             *
-             * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-             * Cloud Run will work to make the 'status' match the requested 'spec'.
-             *
+             * Rpc to replace a secret. Only the spec and metadata labels and annotations are modifiable.
+             * After the Update request, Cloud Run will work to make the 'status' match the requested 'spec'.
              * May provide metadata.resourceVersion to enforce update from last read for optimistic
              * concurrency control.
              *
@@ -851,8 +836,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * equest)} must be called to initialize this instance immediately after invoking the constructor.
              * </p>
              *
-             * @param name Required. The name of the secret being retrieved. If needed, replace
-          {namespace_id} with the project
+             * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
            *        ID.
              * @param content the {@link com.google.api.services.run.v1.model.Secret}
              * @since 1.13
@@ -1201,10 +1185,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the configuration to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id}
-       *        with the project ID
-      or number.
+       * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1230,10 +1212,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the configuration to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id}
-       *        with the project ID
-      or number.
+         * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1352,10 +1332,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the configurations should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1381,10 +1359,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the configurations should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1664,10 +1640,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace in which the domain mapping should be created.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
        * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
        * @return the request
        */
@@ -1694,10 +1668,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace in which the domain mapping should be created.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
          * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
          * @since 1.13
          */
@@ -1807,10 +1779,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the domain mapping to delete.
-      For Cloud Run (fully managed), replace {namespace_id} with
-       *        the project ID
-      or number.
+       * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID or number.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1836,10 +1806,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the domain mapping to delete.
-      For Cloud Run (fully managed), replace {namespace_id} with
-       *        the project ID
-      or number.
+         * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID or number.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2006,10 +1974,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the domain mapping to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id}
-       *        with the project ID
-      or number.
+       * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2035,10 +2001,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the domain mapping to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id}
-       *        with the project ID
-      or number.
+         * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2157,10 +2121,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the domain mappings should be listed.
-      For Cloud Run (fully managed),
-       *        replace {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
+       *        replace {namespace_id} with the project ID or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2186,10 +2148,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the domain mappings should be listed.
-      For Cloud Run (fully managed),
-       *        replace {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
+       *        replace {namespace_id} with the project ID or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2469,10 +2429,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the revision to delete.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+       * @param name The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2498,10 +2456,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the revision to delete.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+         * @param name The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2668,10 +2624,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the revision to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+       * @param name The name of the revision to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2697,10 +2651,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the revision to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+         * @param name The name of the revision to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2819,10 +2771,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the revisions should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace from which the revisions should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2848,10 +2798,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the revisions should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace from which the revisions should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3131,10 +3079,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the route to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+       * @param name The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3160,10 +3106,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the route to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+         * @param name The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3282,10 +3226,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the routes should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace from which the routes should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3311,10 +3253,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the routes should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace from which the routes should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3594,10 +3534,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace in which the service should be created.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -3624,10 +3562,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace in which the service should be created.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -3738,10 +3674,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service to delete.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+       * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3768,10 +3702,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the service to delete.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+         * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -3938,10 +3870,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+       * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3967,10 +3897,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the service to retrieve.
-      For Cloud Run (fully managed), replace {namespace_id} with the
-       *        project ID
-      or number.
+         * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4089,10 +4017,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the services should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+       * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4118,10 +4044,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the services should be listed.
-      For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID
-      or number.
+         * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4372,23 +4296,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Replace a service.
-       *
-       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-       * Run will work to make the 'status' match the requested 'spec'.
-       *
-       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-       * control.
+       * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+       * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide
+       * metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
        *
        * Create a request for the method "services.replaceService".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service being replaced.
-      For Cloud Run (fully managed), replace {namespace_id} with
-       *        the project ID
-      or number.
+       * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID or number.
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -4406,13 +4324,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+/services/[^/]+$");
 
         /**
-         * Replace a service.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-         * Cloud Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic
-         * concurrency control.
+         * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+         * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
+         * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * control.
          *
          * Create a request for the method "services.replaceService".
          *
@@ -4422,10 +4337,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * ientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param name The name of the service being replaced.
-      For Cloud Run (fully managed), replace {namespace_id} with
-       *        the project ID
-      or number.
+         * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -4978,10 +4891,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the configuration to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id}
-         *        with the project ID
-        or number.
+         * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5007,10 +4918,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the configuration to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id}
-         *        with the project ID
-        or number.
+           * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5129,10 +5038,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the configurations should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5158,10 +5065,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the configurations should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5441,10 +5346,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace in which the domain mapping should be created.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
          * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
          * @return the request
          */
@@ -5471,10 +5374,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace in which the domain mapping should be created.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
            * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
            * @since 1.13
            */
@@ -5584,10 +5485,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the domain mapping to delete.
-        For Cloud Run (fully managed), replace {namespace_id} with
-         *        the project ID
-        or number.
+         * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5613,10 +5512,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the domain mapping to delete.
-        For Cloud Run (fully managed), replace {namespace_id} with
-         *        the project ID
-        or number.
+           * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -5785,10 +5682,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the domain mapping to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id}
-         *        with the project ID
-        or number.
+         * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5814,10 +5709,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the domain mapping to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id}
-         *        with the project ID
-        or number.
+           * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5936,10 +5829,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the domain mappings should be listed.
-        For Cloud Run (fully managed),
-         *        replace {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
+         *        replace {namespace_id} with the project ID or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5965,10 +5856,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the domain mappings should be listed.
-        For Cloud Run (fully managed),
-         *        replace {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
+         *        replace {namespace_id} with the project ID or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6248,8 +6137,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+         * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
          * @return the request
          */
@@ -6276,8 +6164,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+           * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
            * @since 1.13
            */
@@ -6397,8 +6284,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+         * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
          * @param content the {@link com.google.api.services.run.v1.model.Namespace}
          * @return the request
@@ -6426,8 +6312,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the namespace being retrieved. If needed, replace
-        {namespace_id} with the
+           * @param name Required. The name of the namespace being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
            * @param content the {@link com.google.api.services.run.v1.model.Namespace}
            * @since 1.13
@@ -6583,10 +6468,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the revision to delete.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+         * @param name The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6612,10 +6495,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the revision to delete.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+           * @param name The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6784,10 +6665,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the revision to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+         * @param name The name of the revision to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6813,10 +6692,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the revision to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+           * @param name The name of the revision to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6935,10 +6812,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the revisions should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace from which the revisions should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6964,10 +6839,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the revisions should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace from which the revisions should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7247,10 +7120,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the route to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+         * @param name The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7276,10 +7147,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the route to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+           * @param name The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7398,10 +7267,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the routes should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace from which the routes should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7427,10 +7294,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the routes should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace from which the routes should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7710,8 +7575,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project ID or project number in which this secret should
-        be created.
+         * @param parent Required. The project ID or project number in which this secret should be created.
          * @param content the {@link com.google.api.services.run.v1.model.Secret}
          * @return the request
          */
@@ -7738,8 +7602,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project ID or project number in which this secret should
-        be created.
+           * @param parent Required. The project ID or project number in which this secret should be created.
            * @param content the {@link com.google.api.services.run.v1.model.Secret}
            * @since 1.13
            */
@@ -7808,9 +7671,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The project ID or project number in which this secret should be created.
-           */
+          /** Required. The project ID or project number in which this secret should be created. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -7820,9 +7681,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return parent;
           }
 
-          /**
-           * Required. The project ID or project number in which this secret should be created.
-           */
+          /** Required. The project ID or project number in which this secret should be created. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7846,8 +7705,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the secret being retrieved. If needed, replace
-        {namespace_id} with the project
+         * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
          *        ID.
          * @return the request
          */
@@ -7874,8 +7732,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the secret being retrieved. If needed, replace
-        {namespace_id} with the project
+           * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
          *        ID.
            * @since 1.13
            */
@@ -7988,12 +7845,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Rpc to replace a secret.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-         * Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * Rpc to replace a secret. Only the spec and metadata labels and annotations are modifiable. After
+         * the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
+         * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
          * control.
          *
          * Create a request for the method "secrets.replaceSecret".
@@ -8001,8 +7855,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link ReplaceSecret#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the secret being retrieved. If needed, replace
-        {namespace_id} with the project
+         * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
          *        ID.
          * @param content the {@link com.google.api.services.run.v1.model.Secret}
          * @return the request
@@ -8021,11 +7874,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
 
           /**
-           * Rpc to replace a secret.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-           * Cloud Run will work to make the 'status' match the requested 'spec'.
-           *
+           * Rpc to replace a secret. Only the spec and metadata labels and annotations are modifiable.
+           * After the Update request, Cloud Run will work to make the 'status' match the requested 'spec'.
            * May provide metadata.resourceVersion to enforce update from last read for optimistic
            * concurrency control.
            *
@@ -8037,8 +7887,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name Required. The name of the secret being retrieved. If needed, replace
-        {namespace_id} with the project
+           * @param name Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the project
          *        ID.
            * @param content the {@link com.google.api.services.run.v1.model.Secret}
            * @since 1.13
@@ -8171,10 +8020,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace in which the service should be created.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -8201,10 +8048,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace in which the service should be created.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -8315,10 +8160,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service to delete.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+         * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8345,10 +8188,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the service to delete.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+           * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -8517,10 +8358,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+         * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -8546,10 +8385,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the service to retrieve.
-        For Cloud Run (fully managed), replace {namespace_id} with the
-         *        project ID
-        or number.
+           * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -8669,8 +8506,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -8699,8 +8535,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -8808,42 +8643,32 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
-
-         To learn which resources support conditions in their IAM policies, see the [IAM
-         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -8864,10 +8689,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the services should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+         * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -8893,10 +8716,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the services should be listed.
-        For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID
-        or number.
+           * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9147,23 +8968,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Replace a service.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-         * Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-         * control.
+         * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+         * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide
+         * metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
          *
          * Create a request for the method "services.replaceService".
          *
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service being replaced.
-        For Cloud Run (fully managed), replace {namespace_id} with
-         *        the project ID
-        or number.
+         * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -9181,13 +8996,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Replace a service.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-           * Cloud Run will work to make the 'status' match the requested 'spec'.
-           *
-           * May provide metadata.resourceVersion to enforce update from last read for optimistic
-           * concurrency control.
+           * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+           * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
+           * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+           * control.
            *
            * Create a request for the method "services.replaceService".
            *
@@ -9197,10 +9009,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * ientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param name The name of the service being replaced.
-        For Cloud Run (fully managed), replace {namespace_id} with
-         *        the project ID
-        or number.
+           * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID or number.
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -9310,8 +9120,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.run.v1.model.SetIamPolicyRequest}
          * @return the request
@@ -9340,8 +9149,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.run.v1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -9445,17 +9253,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Returns permissions that a caller has on the specified Project.
-         *
-         * There are no permissions required for making this API call.
+         * Returns permissions that a caller has on the specified Project. There are no permissions required
+         * for making this API call.
          *
          * Create a request for the method "services.testIamPermissions".
          *
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.run.v1.model.TestIamPermissionsRequest}
          * @return the request
@@ -9474,9 +9280,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Returns permissions that a caller has on the specified Project.
-           *
-           * There are no permissions required for making this API call.
+           * Returns permissions that a caller has on the specified Project. There are no permissions
+           * required for making this API call.
            *
            * Create a request for the method "services.testIamPermissions".
            *
@@ -9486,8 +9291,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.run.v1.model.TestIamPermissionsRequest}
            * @since 1.13

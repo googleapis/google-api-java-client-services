@@ -18,7 +18,7 @@ package com.google.api.services.run.v1alpha1.model;
 
 /**
  * SecurityContext holds security configuration that will be applied to a container. Some fields are
- * present in both SecurityContext and PodSecurityContext.  When both are set, the values in
+ * present in both SecurityContext and PodSecurityContext. When both are set, the values in
  * SecurityContext take precedence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -66,7 +66,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The GID to run the entrypoint of the container process. Uses runtime default if unset. May also
-   * be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
+   * be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
    * specified in SecurityContext takes precedence. +optional
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * Indicates that the container must run as a non-root user. If true, the Kubelet will validate
    * the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the
    * container if it does. If unset or false, no such validation will be performed. May also be set
-   * in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
+   * in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
    * specified in SecurityContext takes precedence. +optional
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The UID to run the entrypoint of the container process. Defaults to user specified in image
-   * metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext
+   * metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext
    * and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional
    * The value may be {@code null}.
    */
@@ -95,8 +95,8 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The SELinux context to be applied to the container. If unspecified, the container runtime will
-   * allocate a random SELinux context for each container.  May also be set in PodSecurityContext.
-   * If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext
+   * allocate a random SELinux context for each container. May also be set in PodSecurityContext. If
+   * set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext
    * takes precedence. +optional
    * The value may be {@code null}.
    */
@@ -183,7 +183,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The GID to run the entrypoint of the container process. Uses runtime default if unset. May also
-   * be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
+   * be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
    * specified in SecurityContext takes precedence. +optional
    * @return value or {@code null} for none
    */
@@ -193,7 +193,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The GID to run the entrypoint of the container process. Uses runtime default if unset. May also
-   * be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
+   * be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
    * specified in SecurityContext takes precedence. +optional
    * @param runAsGroup runAsGroup or {@code null} for none
    */
@@ -206,7 +206,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * Indicates that the container must run as a non-root user. If true, the Kubelet will validate
    * the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the
    * container if it does. If unset or false, no such validation will be performed. May also be set
-   * in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
+   * in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
    * specified in SecurityContext takes precedence. +optional
    * @return value or {@code null} for none
    */
@@ -218,7 +218,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * Indicates that the container must run as a non-root user. If true, the Kubelet will validate
    * the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the
    * container if it does. If unset or false, no such validation will be performed. May also be set
-   * in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
+   * in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
    * specified in SecurityContext takes precedence. +optional
    * @param runAsNonRoot runAsNonRoot or {@code null} for none
    */
@@ -229,7 +229,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The UID to run the entrypoint of the container process. Defaults to user specified in image
-   * metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext
+   * metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext
    * and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional
    * @return value or {@code null} for none
    */
@@ -239,7 +239,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The UID to run the entrypoint of the container process. Defaults to user specified in image
-   * metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext
+   * metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext
    * and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional
    * @param runAsUser runAsUser or {@code null} for none
    */
@@ -250,8 +250,8 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The SELinux context to be applied to the container. If unspecified, the container runtime will
-   * allocate a random SELinux context for each container.  May also be set in PodSecurityContext.
-   * If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext
+   * allocate a random SELinux context for each container. May also be set in PodSecurityContext. If
+   * set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext
    * takes precedence. +optional
    * @return value or {@code null} for none
    */
@@ -261,8 +261,8 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
 
   /**
    * The SELinux context to be applied to the container. If unspecified, the container runtime will
-   * allocate a random SELinux context for each container.  May also be set in PodSecurityContext.
-   * If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext
+   * allocate a random SELinux context for each container. May also be set in PodSecurityContext. If
+   * set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext
    * takes precedence. +optional
    * @param seLinuxOptions seLinuxOptions or {@code null} for none
    */

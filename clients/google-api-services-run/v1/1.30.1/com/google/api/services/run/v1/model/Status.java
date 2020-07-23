@@ -37,9 +37,9 @@ public final class Status extends com.google.api.client.json.GenericJson {
   private java.lang.Integer code;
 
   /**
-   * Extended data associated with the reason.  Each reason may define its own extended details.
-   * This field is optional and the data returned is not guaranteed to conform to any schema except
-   * that defined by the reason type. +optional
+   * Extended data associated with the reason. Each reason may define its own extended details. This
+   * field is optional and the data returned is not guaranteed to conform to any schema except that
+   * defined by the reason type. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +95,9 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Extended data associated with the reason.  Each reason may define its own extended details.
-   * This field is optional and the data returned is not guaranteed to conform to any schema except
-   * that defined by the reason type. +optional
+   * Extended data associated with the reason. Each reason may define its own extended details. This
+   * field is optional and the data returned is not guaranteed to conform to any schema except that
+   * defined by the reason type. +optional
    * @return value or {@code null} for none
    */
   public StatusDetails getDetails() {
@@ -105,9 +105,9 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Extended data associated with the reason.  Each reason may define its own extended details.
-   * This field is optional and the data returned is not guaranteed to conform to any schema except
-   * that defined by the reason type. +optional
+   * Extended data associated with the reason. Each reason may define its own extended details. This
+   * field is optional and the data returned is not guaranteed to conform to any schema except that
+   * defined by the reason type. +optional
    * @param details details or {@code null} for none
    */
   public Status setDetails(StatusDetails details) {

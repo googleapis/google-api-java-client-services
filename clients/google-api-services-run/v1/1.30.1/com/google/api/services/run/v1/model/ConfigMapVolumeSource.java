@@ -17,13 +17,10 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run for Anthos: supported
- *
- * Adapts a ConfigMap into a volume. The contents of the target ConfigMap's Data field will be
- * presented in a volume as files using the keys in the Data field as the file names, unless the
- * items element is populated with specific mappings of keys to paths.
+ * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Adapts a ConfigMap into a
+ * volume. The contents of the target ConfigMap's Data field will be presented in a volume as files
+ * using the keys in the Data field as the file names, unless the items element is populated with
+ * specific mappings of keys to paths.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -36,73 +33,49 @@ package com.google.api.services.run.v1.model;
 public final class ConfigMapVolumeSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to
-   * 0644. Directories within the path are not affected by this setting. This might be in conflict
-   * with other options that affect the file mode, like fsGroup, and the result can be other mode
-   * bits set.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
+   * use on created files by default. Must be a value between 0 and 0777. Defaults to 0644.
+   * Directories within the path are not affected by this setting. This might be in conflict with
+   * other options that affect the file mode, like fsGroup, and the result can be other mode bits
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer defaultMode;
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * If unspecified, each key-value pair in the Data field of the referenced Secret will be
-   * projected into the volume as a file whose name is the key and content is the value. If
-   * specified, the listed keys will be projected into the specified paths, and unlisted keys will
-   * not be present. If a key is specified which is not present in the Secret, the volume setup will
-   * error unless it is marked optional.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If
+   * unspecified, each key-value pair in the Data field of the referenced Secret will be projected
+   * into the volume as a file whose name is the key and content is the value. If specified, the
+   * listed keys will be projected into the specified paths, and unlisted keys will not be present.
+   * If a key is specified which is not present in the Secret, the volume setup will error unless it
+   * is marked optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<KeyToPath> items;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Name of the config.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the Secret or its keys must be defined.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify
+   * whether the Secret or its keys must be defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optional;
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to
-   * 0644. Directories within the path are not affected by this setting. This might be in conflict
-   * with other options that affect the file mode, like fsGroup, and the result can be other mode
-   * bits set.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
+   * use on created files by default. Must be a value between 0 and 0777. Defaults to 0644.
+   * Directories within the path are not affected by this setting. This might be in conflict with
+   * other options that affect the file mode, like fsGroup, and the result can be other mode bits
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultMode() {
@@ -110,16 +83,11 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to
-   * 0644. Directories within the path are not affected by this setting. This might be in conflict
-   * with other options that affect the file mode, like fsGroup, and the result can be other mode
-   * bits set.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
+   * use on created files by default. Must be a value between 0 and 0777. Defaults to 0644.
+   * Directories within the path are not affected by this setting. This might be in conflict with
+   * other options that affect the file mode, like fsGroup, and the result can be other mode bits
+   * set.
    * @param defaultMode defaultMode or {@code null} for none
    */
   public ConfigMapVolumeSource setDefaultMode(java.lang.Integer defaultMode) {
@@ -128,17 +96,12 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * If unspecified, each key-value pair in the Data field of the referenced Secret will be
-   * projected into the volume as a file whose name is the key and content is the value. If
-   * specified, the listed keys will be projected into the specified paths, and unlisted keys will
-   * not be present. If a key is specified which is not present in the Secret, the volume setup will
-   * error unless it is marked optional.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If
+   * unspecified, each key-value pair in the Data field of the referenced Secret will be projected
+   * into the volume as a file whose name is the key and content is the value. If specified, the
+   * listed keys will be projected into the specified paths, and unlisted keys will not be present.
+   * If a key is specified which is not present in the Secret, the volume setup will error unless it
+   * is marked optional.
    * @return value or {@code null} for none
    */
   public java.util.List<KeyToPath> getItems() {
@@ -146,17 +109,12 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * If unspecified, each key-value pair in the Data field of the referenced Secret will be
-   * projected into the volume as a file whose name is the key and content is the value. If
-   * specified, the listed keys will be projected into the specified paths, and unlisted keys will
-   * not be present. If a key is specified which is not present in the Secret, the volume setup will
-   * error unless it is marked optional.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If
+   * unspecified, each key-value pair in the Data field of the referenced Secret will be projected
+   * into the volume as a file whose name is the key and content is the value. If specified, the
+   * listed keys will be projected into the specified paths, and unlisted keys will not be present.
+   * If a key is specified which is not present in the Secret, the volume setup will error unless it
+   * is marked optional.
    * @param items items or {@code null} for none
    */
   public ConfigMapVolumeSource setItems(java.util.List<KeyToPath> items) {
@@ -165,11 +123,7 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Name of the config.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -177,11 +131,7 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Name of the config.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.
    * @param name name or {@code null} for none
    */
   public ConfigMapVolumeSource setName(java.lang.String name) {
@@ -190,13 +140,8 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the Secret or its keys must be defined.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify
+   * whether the Secret or its keys must be defined.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -204,13 +149,8 @@ public final class ConfigMapVolumeSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Specify whether the Secret or its keys must be defined.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify
+   * whether the Secret or its keys must be defined.
    * @param optional optional or {@code null} for none
    */
   public ConfigMapVolumeSource setOptional(java.lang.Boolean optional) {

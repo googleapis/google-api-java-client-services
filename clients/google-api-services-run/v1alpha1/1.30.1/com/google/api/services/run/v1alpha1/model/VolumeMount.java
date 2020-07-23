@@ -30,7 +30,7 @@ package com.google.api.services.run.v1alpha1.model;
 public final class VolumeMount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path within the container at which the volume should be mounted.  Must not contain ':'.
+   * Path within the container at which the volume should be mounted. Must not contain ':'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   private java.lang.String subPath;
 
   /**
-   * Path within the container at which the volume should be mounted.  Must not contain ':'.
+   * Path within the container at which the volume should be mounted. Must not contain ':'.
    * @return value or {@code null} for none
    */
   public java.lang.String getMountPath() {
@@ -77,7 +77,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path within the container at which the volume should be mounted.  Must not contain ':'.
+   * Path within the container at which the volume should be mounted. Must not contain ':'.
    * @param mountPath mountPath or {@code null} for none
    */
   public VolumeMount setMountPath(java.lang.String mountPath) {

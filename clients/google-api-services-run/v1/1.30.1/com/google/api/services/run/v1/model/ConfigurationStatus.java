@@ -56,10 +56,8 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
   /**
    * ObservedGeneration is the 'Generation' of the Configuration that was last processed by the
    * controller. The observed generation is updated even if the controller failed to process the
-   * spec and create the Revision.
-   *
-   * Clients polling for completed reconciliation should poll until observedGeneration =
-   * metadata.generation, and the Ready condition's status is True or False.
+   * spec and create the Revision. Clients polling for completed reconciliation should poll until
+   * observedGeneration = metadata.generation, and the Ready condition's status is True or False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,10 +123,8 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
   /**
    * ObservedGeneration is the 'Generation' of the Configuration that was last processed by the
    * controller. The observed generation is updated even if the controller failed to process the
-   * spec and create the Revision.
-   *
-   * Clients polling for completed reconciliation should poll until observedGeneration =
-   * metadata.generation, and the Ready condition's status is True or False.
+   * spec and create the Revision. Clients polling for completed reconciliation should poll until
+   * observedGeneration = metadata.generation, and the Ready condition's status is True or False.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getObservedGeneration() {
@@ -138,10 +134,8 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
   /**
    * ObservedGeneration is the 'Generation' of the Configuration that was last processed by the
    * controller. The observed generation is updated even if the controller failed to process the
-   * spec and create the Revision.
-   *
-   * Clients polling for completed reconciliation should poll until observedGeneration =
-   * metadata.generation, and the Ready condition's status is True or False.
+   * spec and create the Revision. Clients polling for completed reconciliation should poll until
+   * observedGeneration = metadata.generation, and the Ready condition's status is True or False.
    * @param observedGeneration observedGeneration or {@code null} for none
    */
   public ConfigurationStatus setObservedGeneration(java.lang.Integer observedGeneration) {

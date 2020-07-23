@@ -31,9 +31,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Broker is the broker that this trigger receives events from. If not specified, will default to
-   * 'default'.
-   *
-   * Not currently supported by Cloud Run.
+   * 'default'. Not currently supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +55,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Broker is the broker that this trigger receives events from. If not specified, will default to
-   * 'default'.
-   *
-   * Not currently supported by Cloud Run.
+   * 'default'. Not currently supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getBroker() {
@@ -68,9 +64,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Broker is the broker that this trigger receives events from. If not specified, will default to
-   * 'default'.
-   *
-   * Not currently supported by Cloud Run.
+   * 'default'. Not currently supported by Cloud Run.
    * @param broker broker or {@code null} for none
    */
   public TriggerSpec setBroker(java.lang.String broker) {

@@ -31,9 +31,7 @@ public final class RouteSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +47,7 @@ public final class RouteSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGeneration() {
@@ -60,9 +56,7 @@ public final class RouteSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @param generation generation or {@code null} for none
    */
   public RouteSpec setGeneration(java.lang.Integer generation) {

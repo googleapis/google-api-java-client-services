@@ -54,6 +54,20 @@ public final class File extends com.google.api.client.json.GenericJson {
   private ContentHints contentHints;
 
   /**
+   * Restrictions for accessing the content of the file. Only populated if such a restriction
+   * exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContentRestriction> contentRestrictions;
+
+  static {
+    // hack to force ProGuard to consider ContentRestriction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContentRestriction.class);
+  }
+
+  /**
    * Whether the options to copy, print, or download this file, should be disabled for readers and
    * commenters.
    * The value may be {@code null}.
@@ -380,7 +394,10 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file. The trashed item is excluded from all files.list responses returned for
+   * any user who does not own the file. However, all users with access to the file can see the
+   * trashed item metadata in an API response. All users with access can copy, download, export, and
+   * share the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -515,6 +532,25 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setContentHints(ContentHints contentHints) {
     this.contentHints = contentHints;
+    return this;
+  }
+
+  /**
+   * Restrictions for accessing the content of the file. Only populated if such a restriction
+   * exists.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContentRestriction> getContentRestrictions() {
+    return contentRestrictions;
+  }
+
+  /**
+   * Restrictions for accessing the content of the file. Only populated if such a restriction
+   * exists.
+   * @param contentRestrictions contentRestrictions or {@code null} for none
+   */
+  public File setContentRestrictions(java.util.List<ContentRestriction> contentRestrictions) {
+    this.contentRestrictions = contentRestrictions;
     return this;
   }
 
@@ -1296,7 +1332,10 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file. The trashed item is excluded from all files.list responses returned for
+   * any user who does not own the file. However, all users with access to the file can see the
+   * trashed item metadata in an API response. All users with access can copy, download, export, and
+   * share the file.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrashed() {
@@ -1305,7 +1344,10 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file. The trashed item is excluded from all files.list responses returned for
+   * any user who does not own the file. However, all users with access to the file can see the
+   * trashed item metadata in an API response. All users with access can copy, download, export, and
+   * share the file.
    * @param trashed trashed or {@code null} for none
    */
   public File setTrashed(java.lang.Boolean trashed) {
@@ -1607,6 +1649,13 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canModifyContent;
+
+    /**
+     * Whether the current user can modify restrictions on content of this file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canModifyContentRestriction;
 
     /**
      * Whether the current user can move children of this folder outside of the shared drive. This is
@@ -1995,6 +2044,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanModifyContent(java.lang.Boolean canModifyContent) {
       this.canModifyContent = canModifyContent;
+      return this;
+    }
+
+    /**
+     * Whether the current user can modify restrictions on content of this file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanModifyContentRestriction() {
+      return canModifyContentRestriction;
+    }
+
+    /**
+     * Whether the current user can modify restrictions on content of this file.
+     * @param canModifyContentRestriction canModifyContentRestriction or {@code null} for none
+     */
+    public Capabilities setCanModifyContentRestriction(java.lang.Boolean canModifyContentRestriction) {
+      this.canModifyContentRestriction = canModifyContentRestriction;
       return this;
     }
 

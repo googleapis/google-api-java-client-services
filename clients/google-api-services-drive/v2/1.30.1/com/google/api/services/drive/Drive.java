@@ -4800,7 +4800,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Files {
 
     /**
-     * Creates a copy of the specified file.
+     * Creates a copy of the specified file. Folders cannot be copied.
      *
      * Create a request for the method "files.copy".
      *
@@ -4822,7 +4822,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/copy";
 
       /**
-       * Creates a copy of the specified file.
+       * Creates a copy of the specified file. Folders cannot be copied.
        *
        * Create a request for the method "files.copy".
        *
@@ -6719,24 +6719,31 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Bodies of items (files/documents) to which the query applies. Supported bodies are
-       * 'default', 'domain', 'drive' and 'allDrives'. Prefer 'default' or 'drive' to 'allDrives'
-       * for efficiency.
+       * Groupings of files to which the query applies. Supported groupings are: 'user' (files
+       * created by, opened by, or shared directly with the user), 'drive' (files in the specified
+       * shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain),
+       * and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a
+       * member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
        */
       @com.google.api.client.util.Key
       private java.lang.String corpora;
 
-      /** Bodies of items (files/documents) to which the query applies. Supported bodies are 'default',
-     'domain', 'drive' and 'allDrives'. Prefer 'default' or 'drive' to 'allDrives' for efficiency.
+      /** Groupings of files to which the query applies. Supported groupings are: 'user' (files created by,
+     opened by, or shared directly with the user), 'drive' (files in the specified shared drive as
+     indicated by the 'driveId'), 'domain' (files shared to the user's domain), and 'allDrives' (A
+     combination of 'user' and 'drive' for all drives where the user is a member). When able, use 'user'
+     or 'drive', instead of 'allDrives', for efficiency.
        */
       public java.lang.String getCorpora() {
         return corpora;
       }
 
       /**
-       * Bodies of items (files/documents) to which the query applies. Supported bodies are
-       * 'default', 'domain', 'drive' and 'allDrives'. Prefer 'default' or 'drive' to 'allDrives'
-       * for efficiency.
+       * Groupings of files to which the query applies. Supported groupings are: 'user' (files
+       * created by, opened by, or shared directly with the user), 'drive' (files in the specified
+       * shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain),
+       * and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a
+       * member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
        */
       public List setCorpora(java.lang.String corpora) {
         this.corpora = corpora;
@@ -7983,7 +7990,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Moves a file to the trash. The currently authenticated user must own the file or be at least a
-     * fileOrganizer on the parent for shared drive files.
+     * fileOrganizer on the parent for shared drive files. Only the owner may trash a file. The trashed
+     * item is excluded from all files.list responses returned for any user who does not own the file.
+     * However, all users with access to the file can see the trashed item metadata in an API response.
+     * All users with access can copy, download, export, and share the file.
      *
      * Create a request for the method "files.trash".
      *
@@ -8005,7 +8015,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Moves a file to the trash. The currently authenticated user must own the file or be at least a
-       * fileOrganizer on the parent for shared drive files.
+       * fileOrganizer on the parent for shared drive files. Only the owner may trash a file. The
+       * trashed item is excluded from all files.list responses returned for any user who does not own
+       * the file. However, all users with access to the file can see the trashed item metadata in an
+       * API response. All users with access can copy, download, export, and share the file.
        *
        * Create a request for the method "files.trash".
        *
@@ -8165,7 +8178,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Restores a file from the trash.
+     * Restores a file from the trash. The currently authenticated user must own the file or be at least
+     * a fileOrganizer on the parent for shared drive files. Only the owner may untrash a file.
      *
      * Create a request for the method "files.untrash".
      *
@@ -8186,7 +8200,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/untrash";
 
       /**
-       * Restores a file from the trash.
+       * Restores a file from the trash. The currently authenticated user must own the file or be at
+       * least a fileOrganizer on the parent for shared drive files. Only the owner may untrash a file.
        *
        * Create a request for the method "files.untrash".
        *

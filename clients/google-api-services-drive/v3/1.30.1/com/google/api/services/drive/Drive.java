@@ -3297,7 +3297,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Files {
 
     /**
-     * Creates a copy of a file and applies any requested updates with patch semantics.
+     * Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot
+     * be copied.
      *
      * Create a request for the method "files.copy".
      *
@@ -3319,7 +3320,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/copy";
 
       /**
-       * Creates a copy of a file and applies any requested updates with patch semantics.
+       * Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot
+       * be copied.
        *
        * Create a request for the method "files.copy".
        *
@@ -4982,22 +4984,31 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Bodies of items (files/documents) to which the query applies. Supported bodies are 'user',
-       * 'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.
+       * Groupings of files to which the query applies. Supported groupings are: 'user' (files
+       * created by, opened by, or shared directly with the user), 'drive' (files in the specified
+       * shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain),
+       * and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a
+       * member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
        */
       @com.google.api.client.util.Key
       private java.lang.String corpora;
 
-      /** Bodies of items (files/documents) to which the query applies. Supported bodies are 'user',
-     'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.
+      /** Groupings of files to which the query applies. Supported groupings are: 'user' (files created by,
+     opened by, or shared directly with the user), 'drive' (files in the specified shared drive as
+     indicated by the 'driveId'), 'domain' (files shared to the user's domain), and 'allDrives' (A
+     combination of 'user' and 'drive' for all drives where the user is a member). When able, use 'user'
+     or 'drive', instead of 'allDrives', for efficiency.
        */
       public java.lang.String getCorpora() {
         return corpora;
       }
 
       /**
-       * Bodies of items (files/documents) to which the query applies. Supported bodies are 'user',
-       * 'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.
+       * Groupings of files to which the query applies. Supported groupings are: 'user' (files
+       * created by, opened by, or shared directly with the user), 'drive' (files in the specified
+       * shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain),
+       * and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a
+       * member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
        */
       public List setCorpora(java.lang.String corpora) {
         this.corpora = corpora;
@@ -5356,7 +5367,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a file's metadata and/or content with patch semantics.
+     * Updates a file's metadata and/or content. This method supports patch semantics.
      *
      * Create a request for the method "files.update".
      *
@@ -5374,7 +5385,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
 
     /**
-     * Updates a file's metadata and/or content with patch semantics.
+     * Updates a file's metadata and/or content. This method supports patch semantics.
      *
      * Create a request for the method "files.update".
      *
@@ -5402,7 +5413,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}";
 
       /**
-       * Updates a file's metadata and/or content with patch semantics.
+       * Updates a file's metadata and/or content. This method supports patch semantics.
        *
        * Create a request for the method "files.update".
        *
@@ -5421,7 +5432,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Updates a file's metadata and/or content with patch semantics.
+       * Updates a file's metadata and/or content. This method supports patch semantics.
        *
        * Create a request for the method "files.update".
        *

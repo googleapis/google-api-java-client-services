@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/kQu8Vg9hIDq0iLeHAOTEY97OKEg\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/9EfNrGrWjA9UfyKATju_Xd_tlwU\"",
  "discoveryVersion": "v1",
  "id": "drive:v3",
  "name": "drive",
  "version": "v3",
- "revision": "20200618",
+ "revision": "20200706",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -466,6 +466,34 @@
     }
    }
   },
+  "ContentRestriction": {
+   "id": "ContentRestriction",
+   "type": "object",
+   "description": "A restriction for accessing the content of the file.",
+   "properties": {
+    "readOnly": {
+     "type": "boolean",
+     "description": "Whether the content of the file is read-only."
+    },
+    "reason": {
+     "type": "string",
+     "description": "Reason for why the content of the file is restricted. This is only mutable on requests that also set readOnly=true."
+    },
+    "restrictingUser": {
+     "$ref": "User",
+     "description": "The user who set the content restriction. Only populated if readOnly is true."
+    },
+    "restrictionTime": {
+     "type": "string",
+     "description": "The time at which the content restriction was set (formatted RFC 3339 timestamp). Only populated if readOnly is true.",
+     "format": "date-time"
+    },
+    "type": {
+     "type": "string",
+     "description": "The type of the content restriction. Currently the only possible value is globalContentRestriction."
+    }
+   }
+  },
   "Drive": {
    "id": "Drive",
    "type": "object",
@@ -723,6 +751,10 @@
        "type": "boolean",
        "description": "Whether the current user can modify the content of this file."
       },
+      "canModifyContentRestriction": {
+       "type": "boolean",
+       "description": "Whether the current user can modify restrictions on content of this file."
+      },
       "canMoveChildrenOutOfDrive": {
        "type": "boolean",
        "description": "Whether the current user can move children of this folder outside of the shared drive. This is false when the item is not a folder. Only populated for items in shared drives."
@@ -828,6 +860,13 @@
         }
        }
       }
+     }
+    },
+    "contentRestrictions": {
+     "type": "array",
+     "description": "Restrictions for accessing the content of the file. Only populated if such a restriction exists.",
+     "items": {
+      "$ref": "ContentRestriction"
      }
     },
     "copyRequiresWriterPermission": {
@@ -1153,7 +1192,7 @@
     },
     "trashed": {
      "type": "boolean",
-     "description": "Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file, and other users cannot see files in the owner's trash."
+     "description": "Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file."
     },
     "trashedTime": {
      "type": "string",
@@ -2478,7 +2517,7 @@
      "id": "drive.files.copy",
      "path": "files/{fileId}/copy",
      "httpMethod": "POST",
-     "description": "Creates a copy of a file and applies any requested updates with patch semantics.",
+     "description": "Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied.",
      "parameters": {
       "enforceSingleParent": {
        "type": "boolean",
@@ -2778,7 +2817,7 @@
      "parameters": {
       "corpora": {
        "type": "string",
-       "description": "Bodies of items (files/documents) to which the query applies. Supported bodies are 'user', 'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.",
+       "description": "Groupings of files to which the query applies. Supported groupings are: 'user' (files created by, opened by, or shared directly with the user), 'drive' (files in the specified shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain), and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.",
        "location": "query"
       },
       "corpus": {
@@ -2790,7 +2829,7 @@
        ],
        "enumDescriptions": [
         "Files shared to the user's domain.",
-        "Files owned by or shared to the user."
+        "Files owned by or shared to the user. If a user has permissions on a Shared Drive, the files inside it won't be retrieved unless the user has created, opened, or shared the file."
        ],
        "location": "query"
       },
@@ -2876,7 +2915,7 @@
      "id": "drive.files.update",
      "path": "files/{fileId}",
      "httpMethod": "PATCH",
-     "description": "Updates a file's metadata and/or content with patch semantics.",
+     "description": "Updates a file's metadata and/or content. This method supports patch semantics.",
      "parameters": {
       "addParents": {
        "type": "string",

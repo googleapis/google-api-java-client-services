@@ -101,6 +101,13 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
   private RecurringSchedule recurringSchedule;
 
   /**
+   * Optional. Rollout strategy of the patch job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PatchRollout rollout;
+
+  /**
    * Output only. Time the patch deployment was last updated. Timestamp is in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
@@ -268,6 +275,23 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
    */
   public PatchDeployment setRecurringSchedule(RecurringSchedule recurringSchedule) {
     this.recurringSchedule = recurringSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. Rollout strategy of the patch job.
+   * @return value or {@code null} for none
+   */
+  public PatchRollout getRollout() {
+    return rollout;
+  }
+
+  /**
+   * Optional. Rollout strategy of the patch job.
+   * @param rollout rollout or {@code null} for none
+   */
+  public PatchDeployment setRollout(PatchRollout rollout) {
+    this.rollout = rollout;
     return this;
   }
 

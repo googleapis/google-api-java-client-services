@@ -122,6 +122,13 @@ public final class PatchJob extends com.google.api.client.json.GenericJson {
   private java.lang.Double percentComplete;
 
   /**
+   * Rollout strategy being applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PatchRollout rollout;
+
+  /**
    * The current state of the PatchJob.
    * The value may be {@code null}.
    */
@@ -340,6 +347,23 @@ public final class PatchJob extends com.google.api.client.json.GenericJson {
    */
   public PatchJob setPercentComplete(java.lang.Double percentComplete) {
     this.percentComplete = percentComplete;
+    return this;
+  }
+
+  /**
+   * Rollout strategy being applied.
+   * @return value or {@code null} for none
+   */
+  public PatchRollout getRollout() {
+    return rollout;
+  }
+
+  /**
+   * Rollout strategy being applied.
+   * @param rollout rollout or {@code null} for none
+   */
+  public PatchJob setRollout(PatchRollout rollout) {
+    this.rollout = rollout;
     return this;
   }
 

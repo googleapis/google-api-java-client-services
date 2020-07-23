@@ -74,6 +74,13 @@ public final class ExecutePatchJobRequest extends com.google.api.client.json.Gen
   private PatchConfig patchConfig;
 
   /**
+   * Rollout strategy of the patch job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PatchRollout rollout;
+
+  /**
    * Description of the patch job. Length of the description is limited to 1024 characters.
    * @return value or {@code null} for none
    */
@@ -176,6 +183,23 @@ public final class ExecutePatchJobRequest extends com.google.api.client.json.Gen
    */
   public ExecutePatchJobRequest setPatchConfig(PatchConfig patchConfig) {
     this.patchConfig = patchConfig;
+    return this;
+  }
+
+  /**
+   * Rollout strategy of the patch job.
+   * @return value or {@code null} for none
+   */
+  public PatchRollout getRollout() {
+    return rollout;
+  }
+
+  /**
+   * Rollout strategy of the patch job.
+   * @param rollout rollout or {@code null} for none
+   */
+  public ExecutePatchJobRequest setRollout(PatchRollout rollout) {
+    this.rollout = rollout;
     return this;
   }
 

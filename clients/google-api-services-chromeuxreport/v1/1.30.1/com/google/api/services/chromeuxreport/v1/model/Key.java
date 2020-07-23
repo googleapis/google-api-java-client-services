@@ -30,6 +30,18 @@ package com.google.api.services.chromeuxreport.v1.model;
 public final class Key extends com.google.api.client.json.GenericJson {
 
   /**
+   * The effective connection type is the general connection class that all users experienced for
+   * this record. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified
+   * in: https://wicg.github.io/netinfo/#effective-connection-types
+   *
+   * If the effective connection type is unspecified, then aggregated data over all effective
+   * connection types will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveConnectionType;
+
+  /**
    * The form factor is the device class that all users used to access the site for this record.
    *
    * If the form factor is unspecified, then aggregated data over all form factors will be returned.
@@ -56,6 +68,33 @@ public final class Key extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * The effective connection type is the general connection class that all users experienced for
+   * this record. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified
+   * in: https://wicg.github.io/netinfo/#effective-connection-types
+   *
+   * If the effective connection type is unspecified, then aggregated data over all effective
+   * connection types will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveConnectionType() {
+    return effectiveConnectionType;
+  }
+
+  /**
+   * The effective connection type is the general connection class that all users experienced for
+   * this record. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified
+   * in: https://wicg.github.io/netinfo/#effective-connection-types
+   *
+   * If the effective connection type is unspecified, then aggregated data over all effective
+   * connection types will be returned.
+   * @param effectiveConnectionType effectiveConnectionType or {@code null} for none
+   */
+  public Key setEffectiveConnectionType(java.lang.String effectiveConnectionType) {
+    this.effectiveConnectionType = effectiveConnectionType;
+    return this;
+  }
 
   /**
    * The form factor is the device class that all users used to access the site for this record.

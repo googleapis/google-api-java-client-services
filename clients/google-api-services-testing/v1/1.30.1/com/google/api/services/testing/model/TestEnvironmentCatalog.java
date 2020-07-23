@@ -37,6 +37,13 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   private AndroidDeviceCatalog androidDeviceCatalog;
 
   /**
+   * The IP blocks used by devices in the test environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceIpBlockCatalog deviceIpBlockCatalog;
+
+  /**
    * Supported iOS devices.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
    */
   public TestEnvironmentCatalog setAndroidDeviceCatalog(AndroidDeviceCatalog androidDeviceCatalog) {
     this.androidDeviceCatalog = androidDeviceCatalog;
+    return this;
+  }
+
+  /**
+   * The IP blocks used by devices in the test environment.
+   * @return value or {@code null} for none
+   */
+  public DeviceIpBlockCatalog getDeviceIpBlockCatalog() {
+    return deviceIpBlockCatalog;
+  }
+
+  /**
+   * The IP blocks used by devices in the test environment.
+   * @param deviceIpBlockCatalog deviceIpBlockCatalog or {@code null} for none
+   */
+  public TestEnvironmentCatalog setDeviceIpBlockCatalog(DeviceIpBlockCatalog deviceIpBlockCatalog) {
+    this.deviceIpBlockCatalog = deviceIpBlockCatalog;
     return this;
   }
 

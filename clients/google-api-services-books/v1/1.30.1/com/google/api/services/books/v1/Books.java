@@ -2493,9 +2493,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /**
-         * The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set.
-         */
+        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set. */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> annotationDataId;
 
@@ -2505,9 +2503,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return annotationDataId;
         }
 
-        /**
-         * The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set.
-         */
+        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set. */
         public List setAnnotationDataId(java.util.List<java.lang.String> annotationDataId) {
           this.annotationDataId = annotationDataId;
           return this;
@@ -2637,9 +2633,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive). */
         @com.google.api.client.util.Key
         private java.lang.String updatedMax;
 
@@ -2649,17 +2643,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return updatedMax;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive). */
         public List setUpdatedMax(java.lang.String updatedMax) {
           this.updatedMax = updatedMax;
           return this;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive). */
         @com.google.api.client.util.Key
         private java.lang.String updatedMin;
 
@@ -2669,9 +2659,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return updatedMin;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive). */
         public List setUpdatedMin(java.lang.String updatedMin) {
           this.updatedMin = updatedMin;
           return this;
@@ -3239,9 +3227,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive). */
         @com.google.api.client.util.Key
         private java.lang.String updatedMax;
 
@@ -3251,17 +3237,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return updatedMax;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive). */
         public List setUpdatedMax(java.lang.String updatedMax) {
           this.updatedMax = updatedMax;
           return this;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive). */
         @com.google.api.client.util.Key
         private java.lang.String updatedMin;
 
@@ -3271,9 +3253,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return updatedMin;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive). */
         public List setUpdatedMin(java.lang.String updatedMin) {
           this.updatedMin = updatedMin;
           return this;
@@ -3717,9 +3697,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /**
-       * The type of access license to request. If not specified, the default is BOTH.
-       */
+      /** The type of access license to request. If not specified, the default is BOTH. */
       @com.google.api.client.util.Key
       private java.lang.String licenseTypes;
 
@@ -3729,9 +3707,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return licenseTypes;
       }
 
-      /**
-       * The type of access license to request. If not specified, the default is BOTH.
-       */
+      /** The type of access license to request. If not specified, the default is BOTH. */
       public RequestAccess setLicenseTypes(java.lang.String licenseTypes) {
         this.licenseTypes = licenseTypes;
         return this;
@@ -4431,9 +4407,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /**
-         * Requests that only the summary of the specified layer be provided in the response.
-         */
+        /** Requests that only the summary of the specified layer be provided in the response. */
         @com.google.api.client.util.Key
         private java.lang.Boolean showOnlySummaryInResponse;
 
@@ -4443,9 +4417,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return showOnlySummaryInResponse;
         }
 
-        /**
-         * Requests that only the summary of the specified layer be provided in the response.
-         */
+        /** Requests that only the summary of the specified layer be provided in the response. */
         public Insert setShowOnlySummaryInResponse(java.lang.Boolean showOnlySummaryInResponse) {
           this.showOnlySummaryInResponse = showOnlySummaryInResponse;
           return this;
@@ -4692,9 +4664,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive). */
         @com.google.api.client.util.Key
         private java.lang.String updatedMax;
 
@@ -4704,17 +4674,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return updatedMax;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive). */
         public List setUpdatedMax(java.lang.String updatedMax) {
           this.updatedMax = updatedMax;
           return this;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive). */
         @com.google.api.client.util.Key
         private java.lang.String updatedMin;
 
@@ -4724,9 +4690,7 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return updatedMin;
         }
 
-        /**
-         * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
-         */
+        /** RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive). */
         public List setUpdatedMin(java.lang.String updatedMin) {
           this.updatedMin = updatedMin;
           return this;
@@ -8481,17 +8445,17 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** string  to identify the originator of this request. */
+      /** string to identify the originator of this request. */
       @com.google.api.client.util.Key
       private java.lang.String source;
 
-      /** string  to identify the originator of this request.
+      /** string to identify the originator of this request.
        */
       public java.lang.String getSource() {
         return source;
       }
 
-      /** string  to identify the originator of this request. */
+      /** string to identify the originator of this request. */
       public Get setSource(java.lang.String source) {
         this.source = source;
         return this;

@@ -80,8 +80,8 @@ public final class DownloadAccessRestriction extends com.google.api.client.json.
   private java.lang.String nonce;
 
   /**
-   * Error/warning reason code.  Additional codes may be added in the future. 0 OK 100
-   * ACCESS_DENIED_PUBLISHER_LIMIT 101   ACCESS_DENIED_LIMIT 200 WARNING_USED_LAST_ACCESS
+   * Error/warning reason code. Additional codes may be added in the future. 0 OK 100
+   * ACCESS_DENIED_PUBLISHER_LIMIT 101 ACCESS_DENIED_LIMIT 200 WARNING_USED_LAST_ACCESS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,8 +237,8 @@ public final class DownloadAccessRestriction extends com.google.api.client.json.
   }
 
   /**
-   * Error/warning reason code.  Additional codes may be added in the future. 0 OK 100
-   * ACCESS_DENIED_PUBLISHER_LIMIT 101   ACCESS_DENIED_LIMIT 200 WARNING_USED_LAST_ACCESS
+   * Error/warning reason code. Additional codes may be added in the future. 0 OK 100
+   * ACCESS_DENIED_PUBLISHER_LIMIT 101 ACCESS_DENIED_LIMIT 200 WARNING_USED_LAST_ACCESS
    * @return value or {@code null} for none
    */
   public java.lang.String getReasonCode() {
@@ -246,8 +246,8 @@ public final class DownloadAccessRestriction extends com.google.api.client.json.
   }
 
   /**
-   * Error/warning reason code.  Additional codes may be added in the future. 0 OK 100
-   * ACCESS_DENIED_PUBLISHER_LIMIT 101   ACCESS_DENIED_LIMIT 200 WARNING_USED_LAST_ACCESS
+   * Error/warning reason code. Additional codes may be added in the future. 0 OK 100
+   * ACCESS_DENIED_PUBLISHER_LIMIT 101 ACCESS_DENIED_LIMIT 200 WARNING_USED_LAST_ACCESS
    * @param reasonCode reasonCode or {@code null} for none
    */
   public DownloadAccessRestriction setReasonCode(java.lang.String reasonCode) {

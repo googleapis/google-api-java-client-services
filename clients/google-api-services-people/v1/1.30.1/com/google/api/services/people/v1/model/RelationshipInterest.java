@@ -46,9 +46,7 @@ public final class RelationshipInterest extends com.google.api.client.json.Gener
 
   /**
    * The kind of relationship the person is looking for. The value can be custom or one of these
-   * predefined values:
-   *
-   * * `friend` * `date` * `relationship` * `networking`
+   * predefined values: * `friend` * `date` * `relationship` * `networking`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,9 +90,7 @@ public final class RelationshipInterest extends com.google.api.client.json.Gener
 
   /**
    * The kind of relationship the person is looking for. The value can be custom or one of these
-   * predefined values:
-   *
-   * * `friend` * `date` * `relationship` * `networking`
+   * predefined values: * `friend` * `date` * `relationship` * `networking`
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -103,9 +99,7 @@ public final class RelationshipInterest extends com.google.api.client.json.Gener
 
   /**
    * The kind of relationship the person is looking for. The value can be custom or one of these
-   * predefined values:
-   *
-   * * `friend` * `date` * `relationship` * `networking`
+   * predefined values: * `friend` * `date` * `relationship` * `networking`
    * @param value value or {@code null} for none
    */
   public RelationshipInterest setValue(java.lang.String value) {

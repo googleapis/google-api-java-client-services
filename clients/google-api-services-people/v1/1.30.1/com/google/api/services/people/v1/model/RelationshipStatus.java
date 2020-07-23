@@ -45,10 +45,9 @@ public final class RelationshipStatus extends com.google.api.client.json.Generic
   private FieldMetadata metadata;
 
   /**
-   * The relationship status. The value can be custom or one of these predefined values:
-   *
-   * * `single` * `inARelationship` * `engaged` * `married` * `itsComplicated` * `openRelationship`
-   * * `widowed` * `inDomesticPartnership` * `inCivilUnion`
+   * The relationship status. The value can be custom or one of these predefined values: * `single`
+   * * `inARelationship` * `engaged` * `married` * `itsComplicated` * `openRelationship` * `widowed`
+   * * `inDomesticPartnership` * `inCivilUnion`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,10 +90,9 @@ public final class RelationshipStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * The relationship status. The value can be custom or one of these predefined values:
-   *
-   * * `single` * `inARelationship` * `engaged` * `married` * `itsComplicated` * `openRelationship`
-   * * `widowed` * `inDomesticPartnership` * `inCivilUnion`
+   * The relationship status. The value can be custom or one of these predefined values: * `single`
+   * * `inARelationship` * `engaged` * `married` * `itsComplicated` * `openRelationship` * `widowed`
+   * * `inDomesticPartnership` * `inCivilUnion`
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -102,10 +100,9 @@ public final class RelationshipStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * The relationship status. The value can be custom or one of these predefined values:
-   *
-   * * `single` * `inARelationship` * `engaged` * `married` * `itsComplicated` * `openRelationship`
-   * * `widowed` * `inDomesticPartnership` * `inCivilUnion`
+   * The relationship status. The value can be custom or one of these predefined values: * `single`
+   * * `inARelationship` * `engaged` * `married` * `itsComplicated` * `openRelationship` * `widowed`
+   * * `inDomesticPartnership` * `inCivilUnion`
    * @param value value or {@code null} for none
    */
   public RelationshipStatus setValue(java.lang.String value) {

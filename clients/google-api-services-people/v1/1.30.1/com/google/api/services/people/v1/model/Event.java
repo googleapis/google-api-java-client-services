@@ -52,9 +52,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * The type of the event. The type can be custom or one of these predefined values:
-   *
-   * * `anniversary` * `other`
+   * The type of the event. The type can be custom or one of these predefined values: *
+   * `anniversary` * `other`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,9 +113,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the event. The type can be custom or one of these predefined values:
-   *
-   * * `anniversary` * `other`
+   * The type of the event. The type can be custom or one of these predefined values: *
+   * `anniversary` * `other`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -124,9 +122,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the event. The type can be custom or one of these predefined values:
-   *
-   * * `anniversary` * `other`
+   * The type of the event. The type can be custom or one of these predefined values: *
+   * `anniversary` * `other`
    * @param type type or {@code null} for none
    */
   public Event setType(java.lang.String type) {

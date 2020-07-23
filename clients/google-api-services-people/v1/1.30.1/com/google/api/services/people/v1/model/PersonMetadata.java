@@ -47,9 +47,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType`
-   * instead)
-   *
-   * The type of the person object.
+   * instead) The type of the person object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +56,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   /**
    * Output only. Any former resource names this person has had. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
-   * token.
-   *
-   * The resource name may change when adding or removing fields that link a contact and profile
-   * such as a verified email, verified phone number, or profile URL.
+   * token. The resource name may change when adding or removing fields that link a contact and
+   * profile such as a verified email, verified phone number, or profile URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,9 +110,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType`
-   * instead)
-   *
-   * The type of the person object.
+   * instead) The type of the person object.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectType() {
@@ -125,9 +119,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType`
-   * instead)
-   *
-   * The type of the person object.
+   * instead) The type of the person object.
    * @param objectType objectType or {@code null} for none
    */
   public PersonMetadata setObjectType(java.lang.String objectType) {
@@ -138,10 +130,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   /**
    * Output only. Any former resource names this person has had. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
-   * token.
-   *
-   * The resource name may change when adding or removing fields that link a contact and profile
-   * such as a verified email, verified phone number, or profile URL.
+   * token. The resource name may change when adding or removing fields that link a contact and
+   * profile such as a verified email, verified phone number, or profile URL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPreviousResourceNames() {
@@ -151,10 +141,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   /**
    * Output only. Any former resource names this person has had. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
-   * token.
-   *
-   * The resource name may change when adding or removing fields that link a contact and profile
-   * such as a verified email, verified phone number, or profile URL.
+   * token. The resource name may change when adding or removing fields that link a contact and
+   * profile such as a verified email, verified phone number, or profile URL.
    * @param previousResourceNames previousResourceNames or {@code null} for none
    */
   public PersonMetadata setPreviousResourceNames(java.util.List<java.lang.String> previousResourceNames) {

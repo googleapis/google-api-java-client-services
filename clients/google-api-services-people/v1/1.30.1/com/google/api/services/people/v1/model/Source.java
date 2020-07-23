@@ -30,10 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
-   * **Only populated in `person.metadata.sources`.**
-   *
-   * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the source. Used for web
-   * cache validation.
+   * **Only populated in `person.metadata.sources`.** The [HTTP entity
+   * tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the source. Used for web cache validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Output only. **Only populated in `person.metadata.sources`.**
-   *
-   * Metadata about a source of type PROFILE.
+   * Output only. **Only populated in `person.metadata.sources`.** Metadata about a source of type
+   * PROFILE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,19 +60,16 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only. **Only populated in `person.metadata.sources`.**
-   *
-   * Last update timestamp of this source.
+   * Output only. **Only populated in `person.metadata.sources`.** Last update timestamp of this
+   * source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * **Only populated in `person.metadata.sources`.**
-   *
-   * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the source. Used for web
-   * cache validation.
+   * **Only populated in `person.metadata.sources`.** The [HTTP entity
+   * tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the source. Used for web cache validation.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -83,10 +77,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Only populated in `person.metadata.sources`.**
-   *
-   * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the source. Used for web
-   * cache validation.
+   * **Only populated in `person.metadata.sources`.** The [HTTP entity
+   * tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the source. Used for web cache validation.
    * @param etag etag or {@code null} for none
    */
   public Source setEtag(java.lang.String etag) {
@@ -112,9 +104,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **Only populated in `person.metadata.sources`.**
-   *
-   * Metadata about a source of type PROFILE.
+   * Output only. **Only populated in `person.metadata.sources`.** Metadata about a source of type
+   * PROFILE.
    * @return value or {@code null} for none
    */
   public ProfileMetadata getProfileMetadata() {
@@ -122,9 +113,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **Only populated in `person.metadata.sources`.**
-   *
-   * Metadata about a source of type PROFILE.
+   * Output only. **Only populated in `person.metadata.sources`.** Metadata about a source of type
+   * PROFILE.
    * @param profileMetadata profileMetadata or {@code null} for none
    */
   public Source setProfileMetadata(ProfileMetadata profileMetadata) {
@@ -150,9 +140,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **Only populated in `person.metadata.sources`.**
-   *
-   * Last update timestamp of this source.
+   * Output only. **Only populated in `person.metadata.sources`.** Last update timestamp of this
+   * source.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -160,9 +149,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **Only populated in `person.metadata.sources`.**
-   *
-   * Last update timestamp of this source.
+   * Output only. **Only populated in `person.metadata.sources`.** Last update timestamp of this
+   * source.
    * @param updateTime updateTime or {@code null} for none
    */
   public Source setUpdateTime(String updateTime) {

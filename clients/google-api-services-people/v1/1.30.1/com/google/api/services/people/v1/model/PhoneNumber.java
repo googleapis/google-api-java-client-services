@@ -54,9 +54,8 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * The type of the phone number. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` *
+   * The type of the phone number. The type can be custom or one of these predefined values: *
+   * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` *
    * `workPager` * `main` * `googleVoice` * `other`
    * The value may be {@code null}.
    */
@@ -128,9 +127,8 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the phone number. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` *
+   * The type of the phone number. The type can be custom or one of these predefined values: *
+   * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` *
    * `workPager` * `main` * `googleVoice` * `other`
    * @return value or {@code null} for none
    */
@@ -139,9 +137,8 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the phone number. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` *
+   * The type of the phone number. The type can be custom or one of these predefined values: *
+   * `home` * `work` * `mobile` * `homeFax` * `workFax` * `otherFax` * `pager` * `workMobile` *
    * `workPager` * `main` * `googleVoice` * `other`
    * @param type type or {@code null} for none
    */

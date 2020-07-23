@@ -109,9 +109,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String streetAddress;
 
   /**
-   * The type of the address. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `other`
+   * The type of the address. The type can be custom or one of these predefined values: * `home` *
+   * `work` * `other`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,9 +308,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the address. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `other`
+   * The type of the address. The type can be custom or one of these predefined values: * `home` *
+   * `work` * `other`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -319,9 +317,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the address. The type can be custom or one of these predefined values:
-   *
-   * * `home` * `work` * `other`
+   * The type of the address. The type can be custom or one of these predefined values: * `home` *
+   * `work` * `other`
    * @param type type or {@code null} for none
    */
   public Address setType(java.lang.String type) {

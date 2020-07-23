@@ -18,9 +18,7 @@ package com.google.api.services.run.v1alpha1.model;
 
 /**
  * ServiceSpecReleaseType contains the options for slowly releasing revisions. See ServiceSpec for
- * more details.
- *
- * Not currently supported by Cloud Run.
+ * more details. Not currently supported by Cloud Run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -43,10 +41,8 @@ public final class ServiceSpecReleaseType extends com.google.api.client.json.Gen
   /**
    * Revisions is an ordered list of 1 or 2 revisions. The first is the current revision, and the
    * second is the candidate revision. If a single revision is provided, traffic will be pinned at
-   * that revision.
-   *
-   * "@latest" is a shortcut for usage that refers to the latest created revision by the
-   * configuration.
+   * that revision. "@latest" is a shortcut for usage that refers to the latest created revision by
+   * the configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +78,8 @@ public final class ServiceSpecReleaseType extends com.google.api.client.json.Gen
   /**
    * Revisions is an ordered list of 1 or 2 revisions. The first is the current revision, and the
    * second is the candidate revision. If a single revision is provided, traffic will be pinned at
-   * that revision.
-   *
-   * "@latest" is a shortcut for usage that refers to the latest created revision by the
-   * configuration.
+   * that revision. "@latest" is a shortcut for usage that refers to the latest created revision by
+   * the configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRevisions() {
@@ -95,10 +89,8 @@ public final class ServiceSpecReleaseType extends com.google.api.client.json.Gen
   /**
    * Revisions is an ordered list of 1 or 2 revisions. The first is the current revision, and the
    * second is the candidate revision. If a single revision is provided, traffic will be pinned at
-   * that revision.
-   *
-   * "@latest" is a shortcut for usage that refers to the latest created revision by the
-   * configuration.
+   * that revision. "@latest" is a shortcut for usage that refers to the latest created revision by
+   * the configuration.
    * @param revisions revisions or {@code null} for none
    */
   public ServiceSpecReleaseType setRevisions(java.util.List<java.lang.String> revisions) {

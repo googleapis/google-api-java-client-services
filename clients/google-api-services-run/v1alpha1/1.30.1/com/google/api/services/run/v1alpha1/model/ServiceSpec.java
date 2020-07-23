@@ -32,9 +32,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +40,6 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Manual contains the options for configuring a manual service. See ServiceSpec for more details.
-   *
    * Not currently supported by Cloud Run.
    * The value may be {@code null}.
    */
@@ -51,9 +48,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Pins this service to a specific revision name. The revision must be owned by the configuration
-   * provided.
-   *
-   * Deprecated and not supported by Cloud Run. +optional
+   * provided. Deprecated and not supported by Cloud Run. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +56,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Release enables gradual promotion of new revisions by allowing traffic to be split between two
-   * revisions. This type replaces the deprecated Pinned type.
-   *
-   * Not currently supported by Cloud Run.
+   * revisions. This type replaces the deprecated Pinned type. Not currently supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +87,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGeneration() {
@@ -105,9 +96,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @param generation generation or {@code null} for none
    */
   public ServiceSpec setGeneration(java.lang.Integer generation) {
@@ -117,7 +106,6 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Manual contains the options for configuring a manual service. See ServiceSpec for more details.
-   *
    * Not currently supported by Cloud Run.
    * @return value or {@code null} for none
    */
@@ -127,7 +115,6 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Manual contains the options for configuring a manual service. See ServiceSpec for more details.
-   *
    * Not currently supported by Cloud Run.
    * @param manual manual or {@code null} for none
    */
@@ -138,9 +125,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Pins this service to a specific revision name. The revision must be owned by the configuration
-   * provided.
-   *
-   * Deprecated and not supported by Cloud Run. +optional
+   * provided. Deprecated and not supported by Cloud Run. +optional
    * @return value or {@code null} for none
    */
   public ServiceSpecPinnedType getPinned() {
@@ -149,9 +134,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Pins this service to a specific revision name. The revision must be owned by the configuration
-   * provided.
-   *
-   * Deprecated and not supported by Cloud Run. +optional
+   * provided. Deprecated and not supported by Cloud Run. +optional
    * @param pinned pinned or {@code null} for none
    */
   public ServiceSpec setPinned(ServiceSpecPinnedType pinned) {
@@ -161,9 +144,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Release enables gradual promotion of new revisions by allowing traffic to be split between two
-   * revisions. This type replaces the deprecated Pinned type.
-   *
-   * Not currently supported by Cloud Run.
+   * revisions. This type replaces the deprecated Pinned type. Not currently supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public ServiceSpecReleaseType getRelease() {
@@ -172,9 +153,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Release enables gradual promotion of new revisions by allowing traffic to be split between two
-   * revisions. This type replaces the deprecated Pinned type.
-   *
-   * Not currently supported by Cloud Run.
+   * revisions. This type replaces the deprecated Pinned type. Not currently supported by Cloud Run.
    * @param release release or {@code null} for none
    */
   public ServiceSpec setRelease(ServiceSpecReleaseType release) {

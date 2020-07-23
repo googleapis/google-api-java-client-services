@@ -32,11 +32,9 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Attributes filters events by exact match on event context attributes. Each key in the
    * map is compared with the equivalent key in the event context. An event passes the filter if all
-   * values are equal to the specified values.
-   *
-   * Nested context attributes are not supported as keys. Only string values are supported. Note
-   * that this field is optional in knative. In fully managed, 'type' attribute is required due to
-   * different broker implementation.
+   * values are equal to the specified values. Nested context attributes are not supported as keys.
+   * Only string values are supported. Note that this field is optional in knative. In fully
+   * managed, 'type' attribute is required due to different broker implementation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,11 +43,9 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Attributes filters events by exact match on event context attributes. Each key in the
    * map is compared with the equivalent key in the event context. An event passes the filter if all
-   * values are equal to the specified values.
-   *
-   * Nested context attributes are not supported as keys. Only string values are supported. Note
-   * that this field is optional in knative. In fully managed, 'type' attribute is required due to
-   * different broker implementation.
+   * values are equal to the specified values. Nested context attributes are not supported as keys.
+   * Only string values are supported. Note that this field is optional in knative. In fully
+   * managed, 'type' attribute is required due to different broker implementation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -59,11 +55,9 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional. Attributes filters events by exact match on event context attributes. Each key in the
    * map is compared with the equivalent key in the event context. An event passes the filter if all
-   * values are equal to the specified values.
-   *
-   * Nested context attributes are not supported as keys. Only string values are supported. Note
-   * that this field is optional in knative. In fully managed, 'type' attribute is required due to
-   * different broker implementation.
+   * values are equal to the specified values. Nested context attributes are not supported as keys.
+   * Only string values are supported. Note that this field is optional in knative. In fully
+   * managed, 'type' attribute is required due to different broker implementation.
    * @param attributes attributes or {@code null} for none
    */
   public TriggerFilter setAttributes(java.util.Map<String, java.lang.String> attributes) {

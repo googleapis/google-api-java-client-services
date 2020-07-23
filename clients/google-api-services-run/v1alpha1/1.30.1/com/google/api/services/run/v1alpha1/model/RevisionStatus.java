@@ -31,10 +31,9 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
 
   /**
    * Conditions communicates information about ongoing/complete reconciliation processes that bring
-   * the "spec" inline with the observed state of the world.
-   *
-   * As a Revision is being prepared, it will incrementally update conditions "ResourcesAvailable",
-   * "ContainerHealthy", and "Active", which contribute to the overall "Ready" condition.
+   * the "spec" inline with the observed state of the world. As a Revision is being prepared, it
+   * will incrementally update conditions "ResourcesAvailable", "ContainerHealthy", and "Active",
+   * which contribute to the overall "Ready" condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +64,7 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
 
   /**
    * ObservedGeneration is the 'Generation' of the Revision that was last processed by the
-   * controller.
-   *
-   * Clients polling for completed reconciliation should poll until observedGeneration =
+   * controller. Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation, and the Ready condition's status is True or False.
    * The value may be {@code null}.
    */
@@ -83,10 +80,9 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
 
   /**
    * Conditions communicates information about ongoing/complete reconciliation processes that bring
-   * the "spec" inline with the observed state of the world.
-   *
-   * As a Revision is being prepared, it will incrementally update conditions "ResourcesAvailable",
-   * "ContainerHealthy", and "Active", which contribute to the overall "Ready" condition.
+   * the "spec" inline with the observed state of the world. As a Revision is being prepared, it
+   * will incrementally update conditions "ResourcesAvailable", "ContainerHealthy", and "Active",
+   * which contribute to the overall "Ready" condition.
    * @return value or {@code null} for none
    */
   public java.util.List<RevisionCondition> getConditions() {
@@ -95,10 +91,9 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
 
   /**
    * Conditions communicates information about ongoing/complete reconciliation processes that bring
-   * the "spec" inline with the observed state of the world.
-   *
-   * As a Revision is being prepared, it will incrementally update conditions "ResourcesAvailable",
-   * "ContainerHealthy", and "Active", which contribute to the overall "Ready" condition.
+   * the "spec" inline with the observed state of the world. As a Revision is being prepared, it
+   * will incrementally update conditions "ResourcesAvailable", "ContainerHealthy", and "Active",
+   * which contribute to the overall "Ready" condition.
    * @param conditions conditions or {@code null} for none
    */
   public RevisionStatus setConditions(java.util.List<RevisionCondition> conditions) {
@@ -148,9 +143,7 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
 
   /**
    * ObservedGeneration is the 'Generation' of the Revision that was last processed by the
-   * controller.
-   *
-   * Clients polling for completed reconciliation should poll until observedGeneration =
+   * controller. Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation, and the Ready condition's status is True or False.
    * @return value or {@code null} for none
    */
@@ -160,9 +153,7 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
 
   /**
    * ObservedGeneration is the 'Generation' of the Revision that was last processed by the
-   * controller.
-   *
-   * Clients polling for completed reconciliation should poll until observedGeneration =
+   * controller. Clients polling for completed reconciliation should poll until observedGeneration =
    * metadata.generation, and the Ready condition's status is True or False.
    * @param observedGeneration observedGeneration or {@code null} for none
    */

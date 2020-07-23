@@ -31,9 +31,7 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,10 +43,8 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
    * should be attached to the Revision. To correlate a Revision, and/or to force a Revision to be
    * created when the spec doesn't otherwise change, a nonce label may be provided in the template
    * metadata. For more details, see: https://github.com/knative/serving/blob/master/docs/client-
-   * conventions.md#associate-modifications-with-revisions
-   *
-   * Cloud Run does not currently support referencing a build that is responsible for materializing
-   * the container image from source.
+   * conventions.md#associate-modifications-with-revisions Cloud Run does not currently support
+   * referencing a build that is responsible for materializing the container image from source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +59,7 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGeneration() {
@@ -74,9 +68,7 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @param generation generation or {@code null} for none
    */
   public ConfigurationSpec setGeneration(java.lang.Integer generation) {
@@ -90,10 +82,8 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
    * should be attached to the Revision. To correlate a Revision, and/or to force a Revision to be
    * created when the spec doesn't otherwise change, a nonce label may be provided in the template
    * metadata. For more details, see: https://github.com/knative/serving/blob/master/docs/client-
-   * conventions.md#associate-modifications-with-revisions
-   *
-   * Cloud Run does not currently support referencing a build that is responsible for materializing
-   * the container image from source.
+   * conventions.md#associate-modifications-with-revisions Cloud Run does not currently support
+   * referencing a build that is responsible for materializing the container image from source.
    * @return value or {@code null} for none
    */
   public RevisionTemplate getRevisionTemplate() {
@@ -106,10 +96,8 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
    * should be attached to the Revision. To correlate a Revision, and/or to force a Revision to be
    * created when the spec doesn't otherwise change, a nonce label may be provided in the template
    * metadata. For more details, see: https://github.com/knative/serving/blob/master/docs/client-
-   * conventions.md#associate-modifications-with-revisions
-   *
-   * Cloud Run does not currently support referencing a build that is responsible for materializing
-   * the container image from source.
+   * conventions.md#associate-modifications-with-revisions Cloud Run does not currently support
+   * referencing a build that is responsible for materializing the container image from source.
    * @param revisionTemplate revisionTemplate or {@code null} for none
    */
   public ConfigurationSpec setRevisionTemplate(RevisionTemplate revisionTemplate) {

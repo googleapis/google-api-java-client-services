@@ -17,11 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run on GKE: supported
- *
- * Selects a key from a ConfigMap.
+ * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key from a
+ * ConfigMap.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -34,11 +31,7 @@ package com.google.api.services.run.v1alpha1.model;
 public final class ConfigMapKeySelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The key to select.
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,33 +46,23 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   private LocalObjectReference localObjectReference;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The ConfigMap to select from.
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select
+   * from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Specify whether the ConfigMap or its key must be defined +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the
+   * ConfigMap or its key must be defined +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optional;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The key to select.
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -87,11 +70,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The key to select.
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.
    * @param key key or {@code null} for none
    */
   public ConfigMapKeySelector setKey(java.lang.String key) {
@@ -119,11 +98,8 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The ConfigMap to select from.
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select
+   * from.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -131,11 +107,8 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The ConfigMap to select from.
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select
+   * from.
    * @param name name or {@code null} for none
    */
   public ConfigMapKeySelector setName(java.lang.String name) {
@@ -144,11 +117,8 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Specify whether the ConfigMap or its key must be defined +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the
+   * ConfigMap or its key must be defined +optional
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -156,11 +126,8 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * Specify whether the ConfigMap or its key must be defined +optional
+   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the
+   * ConfigMap or its key must be defined +optional
    * @param optional optional or {@code null} for none
    */
   public ConfigMapKeySelector setOptional(java.lang.Boolean optional) {

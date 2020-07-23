@@ -18,9 +18,7 @@ package com.google.api.services.run.v1alpha1.model;
 
 /**
  * ServiceSpecPinnedType Pins this service to a specific revision name. The revision must be owned
- * by the configuration provided.
- *
- * Deprecated and not supported by Cloud Run.
+ * by the configuration provided. Deprecated and not supported by Cloud Run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

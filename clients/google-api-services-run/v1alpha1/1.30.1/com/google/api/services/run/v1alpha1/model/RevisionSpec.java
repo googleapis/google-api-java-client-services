@@ -48,13 +48,8 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private Container container;
 
   /**
-   * (Optional)
-   *
-   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision.
-   *
-   * Cloud Run fully managed: supported, defaults to 80
-   *
+   * (Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
+   * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
    * Cloud Run on GKE: supported, defaults to 0, which means concurrency to the application is not
    * limited, and the system decides the target concurrency for the autoscaler.
    * The value may be {@code null}.
@@ -79,9 +74,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,9 +93,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   /**
    * ServingState holds a value describing the state the resources are in for this Revision. Users
    * must not specify this when creating a revision. It is expected that the system will manipulate
-   * this based on routability and load.
-   *
-   * Populated by the system. Read-only.
+   * this based on routability and load. Populated by the system. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,13 +156,8 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision.
-   *
-   * Cloud Run fully managed: supported, defaults to 80
-   *
+   * (Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
+   * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
    * Cloud Run on GKE: supported, defaults to 0, which means concurrency to the application is not
    * limited, and the system decides the target concurrency for the autoscaler.
    * @return value or {@code null} for none
@@ -181,13 +167,8 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision.
-   *
-   * Cloud Run fully managed: supported, defaults to 80
-   *
+   * (Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
+   * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
    * Cloud Run on GKE: supported, defaults to 0, which means concurrency to the application is not
    * limited, and the system decides the target concurrency for the autoscaler.
    * @param containerConcurrency containerConcurrency or {@code null} for none
@@ -220,9 +201,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGeneration() {
@@ -231,9 +210,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
-   * the sequence number containing the latest generation of the desired state.
-   *
-   * Read-only.
+   * the sequence number containing the latest generation of the desired state. Read-only.
    * @param generation generation or {@code null} for none
    */
   public RevisionSpec setGeneration(java.lang.Integer generation) {
@@ -267,9 +244,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   /**
    * ServingState holds a value describing the state the resources are in for this Revision. Users
    * must not specify this when creating a revision. It is expected that the system will manipulate
-   * this based on routability and load.
-   *
-   * Populated by the system. Read-only.
+   * this based on routability and load. Populated by the system. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getServingState() {
@@ -279,9 +254,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   /**
    * ServingState holds a value describing the state the resources are in for this Revision. Users
    * must not specify this when creating a revision. It is expected that the system will manipulate
-   * this based on routability and load.
-   *
-   * Populated by the system. Read-only.
+   * this based on routability and load. Populated by the system. Read-only.
    * @param servingState servingState or {@code null} for none
    */
   public RevisionSpec setServingState(java.lang.String servingState) {

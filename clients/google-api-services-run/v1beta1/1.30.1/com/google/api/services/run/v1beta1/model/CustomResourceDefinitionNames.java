@@ -37,21 +37,21 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   private java.util.List<java.lang.String> categories;
 
   /**
-   * Kind is the serialized kind of the resource.  It is normally CamelCase and singular.
+   * Kind is the serialized kind of the resource. It is normally CamelCase and singular.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * ListKind is the serialized kind of the list for this resource.  Defaults to List. +optional
+   * ListKind is the serialized kind of the list for this resource. Defaults to List. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String listKind;
 
   /**
-   * Plural is the plural name of the resource to serve.  It must match the name of the
+   * Plural is the plural name of the resource to serve. It must match the name of the
    * CustomResourceDefinition-registration too: plural.group and it must be all lowercase.
    * The value may be {@code null}.
    */
@@ -59,14 +59,14 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   private java.lang.String plural;
 
   /**
-   * ShortNames are short names for the resource.  It must be all lowercase. +optional
+   * ShortNames are short names for the resource. It must be all lowercase. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> shortNames;
 
   /**
-   * Singular is the singular name of the resource.  It must be all lowercase Defaults to lowercased
+   * Singular is the singular name of the resource. It must be all lowercase Defaults to lowercased
    * +optional
    * The value may be {@code null}.
    */
@@ -91,7 +91,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * Kind is the serialized kind of the resource.  It is normally CamelCase and singular.
+   * Kind is the serialized kind of the resource. It is normally CamelCase and singular.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -99,7 +99,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * Kind is the serialized kind of the resource.  It is normally CamelCase and singular.
+   * Kind is the serialized kind of the resource. It is normally CamelCase and singular.
    * @param kind kind or {@code null} for none
    */
   public CustomResourceDefinitionNames setKind(java.lang.String kind) {
@@ -108,7 +108,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * ListKind is the serialized kind of the list for this resource.  Defaults to List. +optional
+   * ListKind is the serialized kind of the list for this resource. Defaults to List. +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getListKind() {
@@ -116,7 +116,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * ListKind is the serialized kind of the list for this resource.  Defaults to List. +optional
+   * ListKind is the serialized kind of the list for this resource. Defaults to List. +optional
    * @param listKind listKind or {@code null} for none
    */
   public CustomResourceDefinitionNames setListKind(java.lang.String listKind) {
@@ -125,7 +125,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * Plural is the plural name of the resource to serve.  It must match the name of the
+   * Plural is the plural name of the resource to serve. It must match the name of the
    * CustomResourceDefinition-registration too: plural.group and it must be all lowercase.
    * @return value or {@code null} for none
    */
@@ -134,7 +134,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * Plural is the plural name of the resource to serve.  It must match the name of the
+   * Plural is the plural name of the resource to serve. It must match the name of the
    * CustomResourceDefinition-registration too: plural.group and it must be all lowercase.
    * @param plural plural or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * ShortNames are short names for the resource.  It must be all lowercase. +optional
+   * ShortNames are short names for the resource. It must be all lowercase. +optional
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getShortNames() {
@@ -152,7 +152,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * ShortNames are short names for the resource.  It must be all lowercase. +optional
+   * ShortNames are short names for the resource. It must be all lowercase. +optional
    * @param shortNames shortNames or {@code null} for none
    */
   public CustomResourceDefinitionNames setShortNames(java.util.List<java.lang.String> shortNames) {
@@ -161,7 +161,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * Singular is the singular name of the resource.  It must be all lowercase Defaults to lowercased
+   * Singular is the singular name of the resource. It must be all lowercase Defaults to lowercased
    * +optional
    * @return value or {@code null} for none
    */
@@ -170,7 +170,7 @@ public final class CustomResourceDefinitionNames extends com.google.api.client.j
   }
 
   /**
-   * Singular is the singular name of the resource.  It must be all lowercase Defaults to lowercased
+   * Singular is the singular name of the resource. It must be all lowercase Defaults to lowercased
    * +optional
    * @param singular singular or {@code null} for none
    */

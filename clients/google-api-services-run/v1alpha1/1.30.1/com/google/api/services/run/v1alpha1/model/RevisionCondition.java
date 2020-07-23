@@ -67,11 +67,9 @@ public final class RevisionCondition extends com.google.api.client.json.GenericJ
   /**
    * RevisionConditionType is used to communicate the status of the reconciliation process. See
    * also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting Types include:
-   *
-   * * "Ready": True when the Revision is ready. * "ResourcesAvailable": True when underlying
-   * resources have been provisioned. * "ContainerHealthy": True when the Revision readiness check
-   * completes. * "Active": True when the Revision may receive traffic.
+   * reporting Types include: * "Ready": True when the Revision is ready. * "ResourcesAvailable":
+   * True when underlying resources have been provisioned. * "ContainerHealthy": True when the
+   * Revision readiness check completes. * "Active": True when the Revision may receive traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,11 +163,9 @@ public final class RevisionCondition extends com.google.api.client.json.GenericJ
   /**
    * RevisionConditionType is used to communicate the status of the reconciliation process. See
    * also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting Types include:
-   *
-   * * "Ready": True when the Revision is ready. * "ResourcesAvailable": True when underlying
-   * resources have been provisioned. * "ContainerHealthy": True when the Revision readiness check
-   * completes. * "Active": True when the Revision may receive traffic.
+   * reporting Types include: * "Ready": True when the Revision is ready. * "ResourcesAvailable":
+   * True when underlying resources have been provisioned. * "ContainerHealthy": True when the
+   * Revision readiness check completes. * "Active": True when the Revision may receive traffic.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -179,11 +175,9 @@ public final class RevisionCondition extends com.google.api.client.json.GenericJ
   /**
    * RevisionConditionType is used to communicate the status of the reconciliation process. See
    * also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting Types include:
-   *
-   * * "Ready": True when the Revision is ready. * "ResourcesAvailable": True when underlying
-   * resources have been provisioned. * "ContainerHealthy": True when the Revision readiness check
-   * completes. * "Active": True when the Revision may receive traffic.
+   * reporting Types include: * "Ready": True when the Revision is ready. * "ResourcesAvailable":
+   * True when underlying resources have been provisioned. * "ContainerHealthy": True when the
+   * Revision readiness check completes. * "Active": True when the Revision may receive traffic.
    * @param type type or {@code null} for none
    */
   public RevisionCondition setType(java.lang.String type) {

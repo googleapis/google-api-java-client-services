@@ -17,11 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run for Anthos: supported
- *
- * Maps a string key to a path within a volume.
+ * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Maps a string key to a
+ * path within a volume.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -34,49 +31,33 @@ package com.google.api.services.run.v1.model;
 public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The key to project.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume
-   * defaultMode will be used. This might be in conflict with other options that affect the file
-   * mode, like fsGroup, and the result can be other mode bits set.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
+   * use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode
+   * will be used. This might be in conflict with other options that affect the file mode, like
+   * fsGroup, and the result can be other mode bits set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer mode;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The relative path of the file to map the key to. May not be an absolute path. May not contain
-   * the path element '..'. May not start with the string '..'.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The relative path of the
+   * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
+   * not start with the string '..'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The key to project.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to project.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -84,11 +65,7 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The key to project.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to project.
    * @param key key or {@code null} for none
    */
   public KeyToPath setKey(java.lang.String key) {
@@ -97,15 +74,10 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume
-   * defaultMode will be used. This might be in conflict with other options that affect the file
-   * mode, like fsGroup, and the result can be other mode bits set.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
+   * use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode
+   * will be used. This might be in conflict with other options that affect the file mode, like
+   * fsGroup, and the result can be other mode bits set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMode() {
@@ -113,15 +85,10 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume
-   * defaultMode will be used. This might be in conflict with other options that affect the file
-   * mode, like fsGroup, and the result can be other mode bits set.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
+   * use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode
+   * will be used. This might be in conflict with other options that affect the file mode, like
+   * fsGroup, and the result can be other mode bits set.
    * @param mode mode or {@code null} for none
    */
   public KeyToPath setMode(java.lang.Integer mode) {
@@ -130,12 +97,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The relative path of the file to map the key to. May not be an absolute path. May not contain
-   * the path element '..'. May not start with the string '..'.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The relative path of the
+   * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
+   * not start with the string '..'.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -143,12 +107,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The relative path of the file to map the key to. May not be an absolute path. May not contain
-   * the path element '..'. May not start with the string '..'.
+   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The relative path of the
+   * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
+   * not start with the string '..'.
    * @param path path or {@code null} for none
    */
   public KeyToPath setPath(java.lang.String path) {

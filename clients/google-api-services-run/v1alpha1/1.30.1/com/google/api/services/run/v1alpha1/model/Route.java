@@ -22,7 +22,6 @@ package com.google.api.services.run.v1alpha1.model;
  * responsible for creating them; in these cases the Route is additionally responsible for
  * monitoring the Configuration for "latest ready" revision changes, and smoothly rolling out latest
  * revisions. See also: https://github.com/knative/serving/blob/master/docs/spec/overview.md#route
- *
  * Cloud Run currently supports referencing a single Configuration to automatically deploy the
  * "latest ready" Revision from that Configuration.
  *

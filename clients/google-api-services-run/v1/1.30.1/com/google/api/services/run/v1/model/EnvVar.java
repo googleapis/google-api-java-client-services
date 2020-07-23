@@ -37,26 +37,19 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * (Optional)
-   *
-   * Variable references $(VAR_NAME) are expanded using the previous defined environment variables
-   * in the container and any route environment variables. If a variable cannot be resolved, the
-   * reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether
-   * the variable exists or not. Defaults to "".
+   * (Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment
+   * variables in the container and any route environment variables. If a variable cannot be
+   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
+   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+   * regardless of whether the variable exists or not. Defaults to "".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Source for the environment variable's value. Cannot be used if value is not empty.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Source for
+   * the environment variable's value. Cannot be used if value is not empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,13 +73,11 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * Variable references $(VAR_NAME) are expanded using the previous defined environment variables
-   * in the container and any route environment variables. If a variable cannot be resolved, the
-   * reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether
-   * the variable exists or not. Defaults to "".
+   * (Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment
+   * variables in the container and any route environment variables. If a variable cannot be
+   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
+   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+   * regardless of whether the variable exists or not. Defaults to "".
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -94,13 +85,11 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * Variable references $(VAR_NAME) are expanded using the previous defined environment variables
-   * in the container and any route environment variables. If a variable cannot be resolved, the
-   * reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether
-   * the variable exists or not. Defaults to "".
+   * (Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment
+   * variables in the container and any route environment variables. If a variable cannot be
+   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
+   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+   * regardless of whether the variable exists or not. Defaults to "".
    * @param value value or {@code null} for none
    */
   public EnvVar setValue(java.lang.String value) {
@@ -109,13 +98,8 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Source for the environment variable's value. Cannot be used if value is not empty.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Source for
+   * the environment variable's value. Cannot be used if value is not empty.
    * @return value or {@code null} for none
    */
   public EnvVarSource getValueFrom() {
@@ -123,13 +107,8 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional)
-   *
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * Source for the environment variable's value. Cannot be used if value is not empty.
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Source for
+   * the environment variable's value. Cannot be used if value is not empty.
    * @param valueFrom valueFrom or {@code null} for none
    */
   public EnvVar setValueFrom(EnvVarSource valueFrom) {

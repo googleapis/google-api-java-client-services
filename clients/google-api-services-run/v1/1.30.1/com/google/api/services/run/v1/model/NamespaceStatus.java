@@ -17,11 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run on GKE: supported
- *
- * NamespaceStatus is information about the current status of a Namespace.
+ * Cloud Run fully managed: not supported Cloud Run on GKE: supported NamespaceStatus is information
+ * about the current status of a Namespace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

@@ -40,11 +40,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * The name of the cluster which the object belongs to. This is used to distinguish resources with
-   * same name and namespace in different clusters. This field is not set anywhere right now and
-   * apiserver is going to ignore it if set in create or update request. +optional
+   * Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This
+   * is used to distinguish resources with same name and namespace in different clusters. This field
+   * is not set anywhere right now and apiserver is going to ignore it if set in create or update
+   * request. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,21 +52,18 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * CreationTimestamp is a timestamp representing the server time when this object was created. It
    * is not guaranteed to be set in happens-before order across separate operations. Clients may not
-   * set this value. It is represented in RFC3339 form and is in UTC.
-   *
-   * Populated by the system. Read-only. Null for lists. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-
+   * only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-
+   * conventions.md#metadata +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTimestamp;
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * Number of seconds allowed for this object to gracefully terminate before it will be removed
-   * from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
-   * +optional
+   * Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully
+   * terminate before it will be removed from the system. Only set when deletionTimestamp is also
+   * set. May only be shortened. Read-only. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,9 +82,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the
    * pod from the API. In the presence of network partitions, this object may still exist after this
    * timestamp, until an administrator or automated process can determine the resource is fully
-   * terminated. If not set, graceful deletion of the object has not been requested.
-   *
-   * Populated by the system when a graceful deletion is requested. Read-only. More info:
+   * terminated. If not set, graceful deletion of the object has not been requested. Populated by
+   * the system when a graceful deletion is requested. Read-only. More info:
    * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
    * The value may be {@code null}.
    */
@@ -96,33 +91,27 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private String deletionTimestamp;
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * Must be empty before the object is deleted from the registry. Each entry is an identifier for
-   * the responsible component that will remove the entry from the list. If the deletionTimestamp of
-   * the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge
+   * Not currently supported by Cloud Run. Must be empty before the object is deleted from the
+   * registry. Each entry is an identifier for the responsible component that will remove the entry
+   * from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only
+   * be removed. +optional +patchStrategy=merge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> finalizers;
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the
-   * Name field has not been provided. If this field is used, the name returned to the client will
-   * be different than the name passed. This value will also be combined with a unique suffix. The
-   * provided value has the same validation rules as the Name field, and may be truncated by the
-   * length of the suffix required to make the value unique on the server.
-   *
-   * If this field is specified and the generated name exists, the server will NOT return a 409 -
-   * instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique
-   * name could not be found in the time allotted, and the client should retry (optionally after the
-   * time indicated in the Retry-After header).
-   *
-   * Applied only if Name is not specified. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional
-   * string generateName = 2;
+   * Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server,
+   * to generate a unique name ONLY IF the Name field has not been provided. If this field is used,
+   * the name returned to the client will be different than the name passed. This value will also be
+   * combined with a unique suffix. The provided value has the same validation rules as the Name
+   * field, and may be truncated by the length of the suffix required to make the value unique on
+   * the server. If this field is specified and the generated name exists, the server will NOT
+   * return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout
+   * indicating a unique name could not be found in the time allotted, and the client should retry
+   * (optionally after the time indicated in the Retry-After header). Applied only if Name is not
+   * specified. More info: https://git.k8s.io/community/contributors/devel/api-
+   * conventions.md#idempotency +optional string generateName = 2;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,11 +166,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * to determine when objects have changed. May be used for optimistic concurrency, change
    * detection, and the watch operation on a resource or set of resources. Clients must treat these
    * values as opaque and passed unmodified back to the server. They may only be valid for a
-   * particular resource or set of resources.
-   *
-   * Populated by the system. Read-only. Value must be treated as opaque by clients and . More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-
-   * consistency +optional
+   * particular resource or set of resources. Populated by the system. Read-only. Value must be
+   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
+   * /api-conventions.md#concurrency-control-and-consistency +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +185,6 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * UID is the unique in time and space value for this object. It is typically generated by the
    * server on successful creation of a resource and is not allowed to change on PUT operations.
-   *
    * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
    * guide/identifiers#uids +optional
    * The value may be {@code null}.
@@ -228,11 +214,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * The name of the cluster which the object belongs to. This is used to distinguish resources with
-   * same name and namespace in different clusters. This field is not set anywhere right now and
-   * apiserver is going to ignore it if set in create or update request. +optional
+   * Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This
+   * is used to distinguish resources with same name and namespace in different clusters. This field
+   * is not set anywhere right now and apiserver is going to ignore it if set in create or update
+   * request. +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterName() {
@@ -240,11 +225,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * The name of the cluster which the object belongs to. This is used to distinguish resources with
-   * same name and namespace in different clusters. This field is not set anywhere right now and
-   * apiserver is going to ignore it if set in create or update request. +optional
+   * Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This
+   * is used to distinguish resources with same name and namespace in different clusters. This field
+   * is not set anywhere right now and apiserver is going to ignore it if set in create or update
+   * request. +optional
    * @param clusterName clusterName or {@code null} for none
    */
   public ObjectMeta setClusterName(java.lang.String clusterName) {
@@ -255,10 +239,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * CreationTimestamp is a timestamp representing the server time when this object was created. It
    * is not guaranteed to be set in happens-before order across separate operations. Clients may not
-   * set this value. It is represented in RFC3339 form and is in UTC.
-   *
-   * Populated by the system. Read-only. Null for lists. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-
+   * only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-
+   * conventions.md#metadata +optional
    * @return value or {@code null} for none
    */
   public String getCreationTimestamp() {
@@ -268,10 +251,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * CreationTimestamp is a timestamp representing the server time when this object was created. It
    * is not guaranteed to be set in happens-before order across separate operations. Clients may not
-   * set this value. It is represented in RFC3339 form and is in UTC.
-   *
-   * Populated by the system. Read-only. Null for lists. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-
+   * only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-
+   * conventions.md#metadata +optional
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ObjectMeta setCreationTimestamp(String creationTimestamp) {
@@ -280,11 +262,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * Number of seconds allowed for this object to gracefully terminate before it will be removed
-   * from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
-   * +optional
+   * Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully
+   * terminate before it will be removed from the system. Only set when deletionTimestamp is also
+   * set. May only be shortened. Read-only. +optional
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDeletionGracePeriodSeconds() {
@@ -292,11 +272,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * Number of seconds allowed for this object to gracefully terminate before it will be removed
-   * from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.
-   * +optional
+   * Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully
+   * terminate before it will be removed from the system. Only set when deletionTimestamp is also
+   * set. May only be shortened. Read-only. +optional
    * @param deletionGracePeriodSeconds deletionGracePeriodSeconds or {@code null} for none
    */
   public ObjectMeta setDeletionGracePeriodSeconds(java.lang.Integer deletionGracePeriodSeconds) {
@@ -317,9 +295,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the
    * pod from the API. In the presence of network partitions, this object may still exist after this
    * timestamp, until an administrator or automated process can determine the resource is fully
-   * terminated. If not set, graceful deletion of the object has not been requested.
-   *
-   * Populated by the system when a graceful deletion is requested. Read-only. More info:
+   * terminated. If not set, graceful deletion of the object has not been requested. Populated by
+   * the system when a graceful deletion is requested. Read-only. More info:
    * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
    * @return value or {@code null} for none
    */
@@ -340,9 +317,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the
    * pod from the API. In the presence of network partitions, this object may still exist after this
    * timestamp, until an administrator or automated process can determine the resource is fully
-   * terminated. If not set, graceful deletion of the object has not been requested.
-   *
-   * Populated by the system when a graceful deletion is requested. Read-only. More info:
+   * terminated. If not set, graceful deletion of the object has not been requested. Populated by
+   * the system when a graceful deletion is requested. Read-only. More info:
    * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
    * @param deletionTimestamp deletionTimestamp or {@code null} for none
    */
@@ -352,11 +328,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * Must be empty before the object is deleted from the registry. Each entry is an identifier for
-   * the responsible component that will remove the entry from the list. If the deletionTimestamp of
-   * the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge
+   * Not currently supported by Cloud Run. Must be empty before the object is deleted from the
+   * registry. Each entry is an identifier for the responsible component that will remove the entry
+   * from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only
+   * be removed. +optional +patchStrategy=merge
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFinalizers() {
@@ -364,11 +339,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * Must be empty before the object is deleted from the registry. Each entry is an identifier for
-   * the responsible component that will remove the entry from the list. If the deletionTimestamp of
-   * the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge
+   * Not currently supported by Cloud Run. Must be empty before the object is deleted from the
+   * registry. Each entry is an identifier for the responsible component that will remove the entry
+   * from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only
+   * be removed. +optional +patchStrategy=merge
    * @param finalizers finalizers or {@code null} for none
    */
   public ObjectMeta setFinalizers(java.util.List<java.lang.String> finalizers) {
@@ -377,22 +351,17 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the
-   * Name field has not been provided. If this field is used, the name returned to the client will
-   * be different than the name passed. This value will also be combined with a unique suffix. The
-   * provided value has the same validation rules as the Name field, and may be truncated by the
-   * length of the suffix required to make the value unique on the server.
-   *
-   * If this field is specified and the generated name exists, the server will NOT return a 409 -
-   * instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique
-   * name could not be found in the time allotted, and the client should retry (optionally after the
-   * time indicated in the Retry-After header).
-   *
-   * Applied only if Name is not specified. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional
-   * string generateName = 2;
+   * Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server,
+   * to generate a unique name ONLY IF the Name field has not been provided. If this field is used,
+   * the name returned to the client will be different than the name passed. This value will also be
+   * combined with a unique suffix. The provided value has the same validation rules as the Name
+   * field, and may be truncated by the length of the suffix required to make the value unique on
+   * the server. If this field is specified and the generated name exists, the server will NOT
+   * return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout
+   * indicating a unique name could not be found in the time allotted, and the client should retry
+   * (optionally after the time indicated in the Retry-After header). Applied only if Name is not
+   * specified. More info: https://git.k8s.io/community/contributors/devel/api-
+   * conventions.md#idempotency +optional string generateName = 2;
    * @return value or {@code null} for none
    */
   public java.lang.String getGenerateName() {
@@ -400,22 +369,17 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the
-   * Name field has not been provided. If this field is used, the name returned to the client will
-   * be different than the name passed. This value will also be combined with a unique suffix. The
-   * provided value has the same validation rules as the Name field, and may be truncated by the
-   * length of the suffix required to make the value unique on the server.
-   *
-   * If this field is specified and the generated name exists, the server will NOT return a 409 -
-   * instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique
-   * name could not be found in the time allotted, and the client should retry (optionally after the
-   * time indicated in the Retry-After header).
-   *
-   * Applied only if Name is not specified. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional
-   * string generateName = 2;
+   * Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server,
+   * to generate a unique name ONLY IF the Name field has not been provided. If this field is used,
+   * the name returned to the client will be different than the name passed. This value will also be
+   * combined with a unique suffix. The provided value has the same validation rules as the Name
+   * field, and may be truncated by the length of the suffix required to make the value unique on
+   * the server. If this field is specified and the generated name exists, the server will NOT
+   * return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout
+   * indicating a unique name could not be found in the time allotted, and the client should retry
+   * (optionally after the time indicated in the Retry-After header). Applied only if Name is not
+   * specified. More info: https://git.k8s.io/community/contributors/devel/api-
+   * conventions.md#idempotency +optional string generateName = 2;
    * @param generateName generateName or {@code null} for none
    */
   public ObjectMeta setGenerateName(java.lang.String generateName) {
@@ -531,11 +495,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * to determine when objects have changed. May be used for optimistic concurrency, change
    * detection, and the watch operation on a resource or set of resources. Clients must treat these
    * values as opaque and passed unmodified back to the server. They may only be valid for a
-   * particular resource or set of resources.
-   *
-   * Populated by the system. Read-only. Value must be treated as opaque by clients and . More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-
-   * consistency +optional
+   * particular resource or set of resources. Populated by the system. Read-only. Value must be
+   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
+   * /api-conventions.md#concurrency-control-and-consistency +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -547,11 +509,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * to determine when objects have changed. May be used for optimistic concurrency, change
    * detection, and the watch operation on a resource or set of resources. Clients must treat these
    * values as opaque and passed unmodified back to the server. They may only be valid for a
-   * particular resource or set of resources.
-   *
-   * Populated by the system. Read-only. Value must be treated as opaque by clients and . More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-
-   * consistency +optional
+   * particular resource or set of resources. Populated by the system. Read-only. Value must be
+   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
+   * /api-conventions.md#concurrency-control-and-consistency +optional
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ObjectMeta setResourceVersion(java.lang.String resourceVersion) {
@@ -581,7 +541,6 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * UID is the unique in time and space value for this object. It is typically generated by the
    * server on successful creation of a resource and is not allowed to change on PUT operations.
-   *
    * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
    * guide/identifiers#uids +optional
    * @return value or {@code null} for none
@@ -593,7 +552,6 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * UID is the unique in time and space value for this object. It is typically generated by the
    * server on successful creation of a resource and is not allowed to change on PUT operations.
-   *
    * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
    * guide/identifiers#uids +optional
    * @param uid uid or {@code null} for none

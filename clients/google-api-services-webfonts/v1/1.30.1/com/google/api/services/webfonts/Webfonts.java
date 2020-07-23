@@ -56,7 +56,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://webfonts.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -72,7 +72,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/webfonts/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

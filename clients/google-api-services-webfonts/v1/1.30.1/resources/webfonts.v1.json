@@ -1,42 +1,182 @@
 {
-  "batchPath": "batch/webfonts/v1",
-  "rootUrl": "https://www.googleapis.com/",
+  "batchPath": "batch",
+  "baseUrl": "https://webfonts.googleapis.com/",
+  "schemas": {
+    "Webfont": {
+      "description": "Metadata describing a family of fonts.",
+      "id": "Webfont",
+      "properties": {
+        "subsets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The scripts supported by the font."
+        },
+        "family": {
+          "type": "string",
+          "description": "The name of the font."
+        },
+        "kind": {
+          "description": "This kind represents a webfont object in the webfonts service.",
+          "type": "string"
+        },
+        "variants": {
+          "type": "array",
+          "description": "The available variants for the font.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string",
+          "description": "The font version."
+        },
+        "lastModified": {
+          "description": "The date (format \"yyyy-MM-dd\") the font was modified for the last time.",
+          "type": "string"
+        },
+        "files": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object",
+          "description": "The font files (with all supported scripts) for each one of the available\nvariants, as a key : value map."
+        },
+        "category": {
+          "description": "The category of the font.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "WebfontList": {
+      "properties": {
+        "kind": {
+          "description": "This kind represents a list of webfont objects in the webfonts service.",
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "description": "The list of fonts currently served by the Google Fonts API.",
+          "items": {
+            "$ref": "Webfont"
+          }
+        }
+      },
+      "type": "object",
+      "id": "WebfontList",
+      "description": "Response containing the list of fonts currently served by the\nGoogle Fonts API."
+    }
+  },
+  "title": "Web Fonts Developer API",
+  "mtlsRootUrl": "https://webfonts.mtls.googleapis.com/",
+  "version": "v1",
+  "discoveryVersion": "v1",
+  "ownerName": "Google",
+  "protocol": "rest",
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
+  "name": "webfonts",
+  "rootUrl": "https://webfonts.googleapis.com/",
+  "resources": {
+    "webfonts": {
+      "methods": {
+        "list": {
+          "httpMethod": "GET",
+          "parameters": {
+            "sort": {
+              "enum": [
+                "SORT_UNDEFINED",
+                "ALPHA",
+                "DATE",
+                "POPULARITY",
+                "STYLE",
+                "TRENDING"
+              ],
+              "type": "string",
+              "description": "Enables sorting of the list.",
+              "location": "query"
+            }
+          },
+          "response": {
+            "$ref": "WebfontList"
+          },
+          "flatPath": "v1/webfonts",
+          "description": "Retrieves the list of fonts currently served by the Google Fonts Developer\nAPI.",
+          "id": "webfonts.webfonts.list",
+          "path": "v1/webfonts",
+          "parameterOrder": []
+        }
+      }
+    }
+  },
+  "canonicalName": "Webfonts",
+  "documentationLink": "https://developers.google.com/fonts/docs/developer_api",
+  "id": "webfonts:v1",
+  "servicePath": "",
   "ownerDomain": "google.com",
   "parameters": {
+    "fields": {
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string"
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "location": "query",
+      "default": "true",
+      "type": "boolean"
+    },
+    "oauth_token": {
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "location": "query",
+      "type": "string"
+    },
     "key": {
       "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
       "type": "string",
       "location": "query"
     },
-    "upload_protocol": {
+    "$.xgafv": {
+      "enum": [
+        "1",
+        "2"
+      ],
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "description": "V1 error format.",
       "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
       "location": "query"
-    },
-    "quotaUser": {
-      "location": "query",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "type": "string"
     },
     "uploadType": {
-      "location": "query",
       "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "location": "query"
     },
     "access_token": {
+      "location": "query",
       "description": "OAuth access token.",
-      "type": "string",
-      "location": "query"
+      "type": "string"
     },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
-    },
-    "oauth_token": {
+    "upload_protocol": {
       "location": "query",
       "type": "string",
-      "description": "OAuth 2.0 token for the current user."
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
+    },
+    "callback": {
+      "description": "JSONP",
+      "type": "string",
+      "location": "query"
     },
     "alt": {
       "enumDescriptions": [
@@ -53,150 +193,10 @@
       "default": "json",
       "location": "query",
       "type": "string"
-    },
-    "prettyPrint": {
-      "type": "boolean",
-      "description": "Returns response with indentations and line breaks.",
-      "default": "true",
-      "location": "query"
-    },
-    "callback": {
-      "type": "string",
-      "location": "query",
-      "description": "JSONP"
-    },
-    "$.xgafv": {
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "type": "string",
-      "description": "V1 error format.",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "location": "query"
     }
   },
-  "baseUrl": "https://www.googleapis.com/",
-  "schemas": {
-    "Webfont": {
-      "type": "object",
-      "properties": {
-        "category": {
-          "type": "string",
-          "description": "The category of the font."
-        },
-        "kind": {
-          "description": "This kind represents a webfont object in the webfonts service.",
-          "type": "string"
-        },
-        "family": {
-          "type": "string",
-          "description": "The name of the font."
-        },
-        "files": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "The font files (with all supported scripts) for each one of the available\nvariants, as a key : value map.",
-          "type": "object"
-        },
-        "version": {
-          "type": "string",
-          "description": "The font version."
-        },
-        "variants": {
-          "items": {
-            "type": "string"
-          },
-          "description": "The available variants for the font.",
-          "type": "array"
-        },
-        "lastModified": {
-          "type": "string",
-          "description": "The date (format \"yyyy-MM-dd\") the font was modified for the last time."
-        },
-        "subsets": {
-          "items": {
-            "type": "string"
-          },
-          "description": "The scripts supported by the font.",
-          "type": "array"
-        }
-      },
-      "id": "Webfont",
-      "description": "Metadata describing a family of fonts."
-    },
-    "WebfontList": {
-      "description": "Response containing the list of fonts currently served by the\nGoogle Fonts API.",
-      "id": "WebfontList",
-      "type": "object",
-      "properties": {
-        "kind": {
-          "description": "This kind represents a list of webfont objects in the webfonts service.",
-          "type": "string"
-        },
-        "items": {
-          "items": {
-            "$ref": "Webfont"
-          },
-          "type": "array",
-          "description": "The list of fonts currently served by the Google Fonts API."
-        }
-      }
-    }
-  },
+  "revision": "20200720",
   "description": "The Google Web Fonts Developer API lets you retrieve information about web fonts served\n    by Google.",
-  "ownerName": "Google",
-  "id": "webfonts:v1",
-  "version": "v1",
-  "discoveryVersion": "v1",
-  "protocol": "rest",
-  "canonicalName": "Webfonts",
-  "resources": {
-    "webfonts": {
-      "methods": {
-        "list": {
-          "parameterOrder": [],
-          "parameters": {
-            "sort": {
-              "description": "Enables sorting of the list.",
-              "enum": [
-                "SORT_UNDEFINED",
-                "ALPHA",
-                "DATE",
-                "POPULARITY",
-                "STYLE",
-                "TRENDING"
-              ],
-              "type": "string",
-              "location": "query"
-            }
-          },
-          "httpMethod": "GET",
-          "description": "Retrieves the list of fonts currently served by the Google Fonts Developer\nAPI.",
-          "flatPath": "v1/webfonts",
-          "id": "webfonts.webfonts.list",
-          "path": "v1/webfonts",
-          "response": {
-            "$ref": "WebfontList"
-          }
-        }
-      }
-    }
-  },
-  "mtlsRootUrl": "https://www.mtls.googleapis.com/",
-  "title": "Web Fonts Developer API",
-  "icons": {
-    "x32": "http://www.google.com/images/icons/product/search-32.gif",
-    "x16": "http://www.google.com/images/icons/product/search-16.gif"
-  },
   "basePath": "",
-  "kind": "discovery#restDescription",
-  "revision": "20200622",
-  "name": "webfonts",
-  "servicePath": "",
-  "documentationLink": "https://developers.google.com/fonts/docs/developer_api"
+  "kind": "discovery#restDescription"
 }

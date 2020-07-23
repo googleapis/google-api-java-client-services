@@ -31,29 +31,23 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ListSitesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve the next page of results.
-   *
-   * Pass this value in the page_token field in the subsequent call to `ListSites` method to
-   * retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListSites` method to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of sites.
-   *
-   * This list will be absent if empty.
+   * The list of sites. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Site> sites;
 
   /**
-   * A token to retrieve the next page of results.
-   *
-   * Pass this value in the page_token field in the subsequent call to `ListSites` method to
-   * retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListSites` method to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -61,10 +55,8 @@ public final class ListSitesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A token to retrieve the next page of results.
-   *
-   * Pass this value in the page_token field in the subsequent call to `ListSites` method to
-   * retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListSites` method to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSitesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -73,9 +65,7 @@ public final class ListSitesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The list of sites.
-   *
-   * This list will be absent if empty.
+   * The list of sites. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Site> getSites() {
@@ -83,9 +73,7 @@ public final class ListSitesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The list of sites.
-   *
-   * This list will be absent if empty.
+   * The list of sites. This list will be absent if empty.
    * @param sites sites or {@code null} for none
    */
   public ListSitesResponse setSites(java.util.List<Site> sites) {

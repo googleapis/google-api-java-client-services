@@ -73,22 +73,20 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> creativeIds;
 
   /**
-   * Required. The display name of the line item.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the line item. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. Controls whether or not the line item can spend its budget and bid on inventory.
-   *
-   * * For CreateLineItem method, only `ENTITY_STATUS_DRAFT` is allowed. To activate a line item,
-   * use UpdateLineItem method and update the status to `ENTITY_STATUS_ACTIVE` after creation. * A
-   * line item cannot be changed back to `ENTITY_STATUS_DRAFT` status from any other status. * If
-   * the line item's parent insertion order is not active, the line item can't spend its budget even
-   * if its own status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the line item can spend its budget and bid on inventory. *
+   * For CreateLineItem method, only `ENTITY_STATUS_DRAFT` is allowed. To activate a line item, use
+   * UpdateLineItem method and update the status to `ENTITY_STATUS_ACTIVE` after creation. * A line
+   * item cannot be changed back to `ENTITY_STATUS_DRAFT` status from any other status. * If the
+   * line item's parent insertion order is not active, the line item can't spend its budget even if
+   * its own status is `ENTITY_STATUS_ACTIVE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,10 +156,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private Pacing pacing;
 
   /**
-   * The partner costs associated with the line item.
-   *
-   * If absent or empty in CreateLineItem method, the newly created line item will inherit partner
-   * costs from its parent insertion order.
+   * The partner costs associated with the line item. If absent or empty in CreateLineItem method,
+   * the newly created line item will inherit partner costs from its parent insertion order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,9 +280,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name of the line item.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the line item. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -294,9 +289,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name of the line item.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the line item. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * @param displayName displayName or {@code null} for none
    */
   public LineItem setDisplayName(java.lang.String displayName) {
@@ -305,13 +299,12 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Controls whether or not the line item can spend its budget and bid on inventory.
-   *
-   * * For CreateLineItem method, only `ENTITY_STATUS_DRAFT` is allowed. To activate a line item,
-   * use UpdateLineItem method and update the status to `ENTITY_STATUS_ACTIVE` after creation. * A
-   * line item cannot be changed back to `ENTITY_STATUS_DRAFT` status from any other status. * If
-   * the line item's parent insertion order is not active, the line item can't spend its budget even
-   * if its own status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the line item can spend its budget and bid on inventory. *
+   * For CreateLineItem method, only `ENTITY_STATUS_DRAFT` is allowed. To activate a line item, use
+   * UpdateLineItem method and update the status to `ENTITY_STATUS_ACTIVE` after creation. * A line
+   * item cannot be changed back to `ENTITY_STATUS_DRAFT` status from any other status. * If the
+   * line item's parent insertion order is not active, the line item can't spend its budget even if
+   * its own status is `ENTITY_STATUS_ACTIVE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityStatus() {
@@ -319,13 +312,12 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Controls whether or not the line item can spend its budget and bid on inventory.
-   *
-   * * For CreateLineItem method, only `ENTITY_STATUS_DRAFT` is allowed. To activate a line item,
-   * use UpdateLineItem method and update the status to `ENTITY_STATUS_ACTIVE` after creation. * A
-   * line item cannot be changed back to `ENTITY_STATUS_DRAFT` status from any other status. * If
-   * the line item's parent insertion order is not active, the line item can't spend its budget even
-   * if its own status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the line item can spend its budget and bid on inventory. *
+   * For CreateLineItem method, only `ENTITY_STATUS_DRAFT` is allowed. To activate a line item, use
+   * UpdateLineItem method and update the status to `ENTITY_STATUS_ACTIVE` after creation. * A line
+   * item cannot be changed back to `ENTITY_STATUS_DRAFT` status from any other status. * If the
+   * line item's parent insertion order is not active, the line item can't spend its budget even if
+   * its own status is `ENTITY_STATUS_ACTIVE`.
    * @param entityStatus entityStatus or {@code null} for none
    */
   public LineItem setEntityStatus(java.lang.String entityStatus) {
@@ -487,10 +479,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The partner costs associated with the line item.
-   *
-   * If absent or empty in CreateLineItem method, the newly created line item will inherit partner
-   * costs from its parent insertion order.
+   * The partner costs associated with the line item. If absent or empty in CreateLineItem method,
+   * the newly created line item will inherit partner costs from its parent insertion order.
    * @return value or {@code null} for none
    */
   public java.util.List<PartnerCost> getPartnerCosts() {
@@ -498,10 +488,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The partner costs associated with the line item.
-   *
-   * If absent or empty in CreateLineItem method, the newly created line item will inherit partner
-   * costs from its parent insertion order.
+   * The partner costs associated with the line item. If absent or empty in CreateLineItem method,
+   * the newly created line item will inherit partner costs from its parent insertion order.
    * @param partnerCosts partnerCosts or {@code null} for none
    */
   public LineItem setPartnerCosts(java.util.List<PartnerCost> partnerCosts) {

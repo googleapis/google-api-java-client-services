@@ -34,9 +34,7 @@ public final class FixedBidStrategy extends com.google.api.client.json.GenericJs
    * The fixed bid amount, in micros of the advertiser's currency. For insertion order entity,
    * bid_amount_micros should be set as 0. For line item entity, bid_amount_micros must be greater
    * than or equal to billable unit of the given currency and smaller than or equal to the upper
-   * limit 1000000000.
-   *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * limit 1000000000. For example, 1500000 represents 1.5 standard units of the currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -46,9 +44,7 @@ public final class FixedBidStrategy extends com.google.api.client.json.GenericJs
    * The fixed bid amount, in micros of the advertiser's currency. For insertion order entity,
    * bid_amount_micros should be set as 0. For line item entity, bid_amount_micros must be greater
    * than or equal to billable unit of the given currency and smaller than or equal to the upper
-   * limit 1000000000.
-   *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * limit 1000000000. For example, 1500000 represents 1.5 standard units of the currency.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBidAmountMicros() {
@@ -59,9 +55,7 @@ public final class FixedBidStrategy extends com.google.api.client.json.GenericJs
    * The fixed bid amount, in micros of the advertiser's currency. For insertion order entity,
    * bid_amount_micros should be set as 0. For line item entity, bid_amount_micros must be greater
    * than or equal to billable unit of the given currency and smaller than or equal to the upper
-   * limit 1000000000.
-   *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * limit 1000000000. For example, 1500000 represents 1.5 standard units of the currency.
    * @param bidAmountMicros bidAmountMicros or {@code null} for none
    */
   public FixedBidStrategy setBidAmountMicros(java.lang.Long bidAmountMicros) {

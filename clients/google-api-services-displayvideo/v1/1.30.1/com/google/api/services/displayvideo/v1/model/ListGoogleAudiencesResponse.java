@@ -31,9 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ListGoogleAudiencesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Google audiences.
-   *
-   * This list will be absent if empty.
+   * The list of Google audiences. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +52,7 @@ public final class ListGoogleAudiencesResponse extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Google audiences.
-   *
-   * This list will be absent if empty.
+   * The list of Google audiences. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAudience> getGoogleAudiences() {
@@ -64,9 +60,7 @@ public final class ListGoogleAudiencesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The list of Google audiences.
-   *
-   * This list will be absent if empty.
+   * The list of Google audiences. This list will be absent if empty.
    * @param googleAudiences googleAudiences or {@code null} for none
    */
   public ListGoogleAudiencesResponse setGoogleAudiences(java.util.List<GoogleAudience> googleAudiences) {

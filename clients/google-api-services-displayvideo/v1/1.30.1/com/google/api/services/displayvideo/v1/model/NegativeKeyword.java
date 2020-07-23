@@ -31,13 +31,11 @@ package com.google.api.services.displayvideo.v1.model;
 public final class NegativeKeyword extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The negatively targeted keyword, for example `car insurance`.
-   *
-   * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
-   * Maximum number of words is 10.
-   *
-   * Valid characters are restricted to ASCII characters only. The only URL-escaping permitted is
-   * for representing whitespace between words. Leading or trailing whitespace is ignored.
+   * Required. Immutable. The negatively targeted keyword, for example `car insurance`. Must be
+   * UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80. Maximum
+   * number of words is 10. Valid characters are restricted to ASCII characters only. The only URL-
+   * escaping permitted is for representing whitespace between words. Leading or trailing whitespace
+   * is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,13 +49,11 @@ public final class NegativeKeyword extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The negatively targeted keyword, for example `car insurance`.
-   *
-   * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
-   * Maximum number of words is 10.
-   *
-   * Valid characters are restricted to ASCII characters only. The only URL-escaping permitted is
-   * for representing whitespace between words. Leading or trailing whitespace is ignored.
+   * Required. Immutable. The negatively targeted keyword, for example `car insurance`. Must be
+   * UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80. Maximum
+   * number of words is 10. Valid characters are restricted to ASCII characters only. The only URL-
+   * escaping permitted is for representing whitespace between words. Leading or trailing whitespace
+   * is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeywordValue() {
@@ -65,13 +61,11 @@ public final class NegativeKeyword extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Immutable. The negatively targeted keyword, for example `car insurance`.
-   *
-   * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
-   * Maximum number of words is 10.
-   *
-   * Valid characters are restricted to ASCII characters only. The only URL-escaping permitted is
-   * for representing whitespace between words. Leading or trailing whitespace is ignored.
+   * Required. Immutable. The negatively targeted keyword, for example `car insurance`. Must be
+   * UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80. Maximum
+   * number of words is 10. Valid characters are restricted to ASCII characters only. The only URL-
+   * escaping permitted is for representing whitespace between words. Leading or trailing whitespace
+   * is ignored.
    * @param keywordValue keywordValue or {@code null} for none
    */
   public NegativeKeyword setKeywordValue(java.lang.String keywordValue) {

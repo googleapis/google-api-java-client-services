@@ -31,32 +31,26 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AdvertiserSdfConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether or not this advertiser overrides the SDF configuration of its parent partner.
-   *
-   * By default, an advertiser inherits the SDF configuration from the parent partner. To override
-   * the partner configuration, set this field to `true` and provide the new configuration in
-   * sdfConfig.
+   * Whether or not this advertiser overrides the SDF configuration of its parent partner. By
+   * default, an advertiser inherits the SDF configuration from the parent partner. To override the
+   * partner configuration, set this field to `true` and provide the new configuration in sdfConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean overridePartnerSdfConfig;
 
   /**
-   * The SDF configuration for the advertiser.
-   *
-   * * Required when overridePartnerSdfConfig is `true`. * Output only when overridePartnerSdfConfig
-   * is `false`.
+   * The SDF configuration for the advertiser. * Required when overridePartnerSdfConfig is `true`. *
+   * Output only when overridePartnerSdfConfig is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SdfConfig sdfConfig;
 
   /**
-   * Whether or not this advertiser overrides the SDF configuration of its parent partner.
-   *
-   * By default, an advertiser inherits the SDF configuration from the parent partner. To override
-   * the partner configuration, set this field to `true` and provide the new configuration in
-   * sdfConfig.
+   * Whether or not this advertiser overrides the SDF configuration of its parent partner. By
+   * default, an advertiser inherits the SDF configuration from the parent partner. To override the
+   * partner configuration, set this field to `true` and provide the new configuration in sdfConfig.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOverridePartnerSdfConfig() {
@@ -64,11 +58,9 @@ public final class AdvertiserSdfConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether or not this advertiser overrides the SDF configuration of its parent partner.
-   *
-   * By default, an advertiser inherits the SDF configuration from the parent partner. To override
-   * the partner configuration, set this field to `true` and provide the new configuration in
-   * sdfConfig.
+   * Whether or not this advertiser overrides the SDF configuration of its parent partner. By
+   * default, an advertiser inherits the SDF configuration from the parent partner. To override the
+   * partner configuration, set this field to `true` and provide the new configuration in sdfConfig.
    * @param overridePartnerSdfConfig overridePartnerSdfConfig or {@code null} for none
    */
   public AdvertiserSdfConfig setOverridePartnerSdfConfig(java.lang.Boolean overridePartnerSdfConfig) {
@@ -77,10 +69,8 @@ public final class AdvertiserSdfConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * The SDF configuration for the advertiser.
-   *
-   * * Required when overridePartnerSdfConfig is `true`. * Output only when overridePartnerSdfConfig
-   * is `false`.
+   * The SDF configuration for the advertiser. * Required when overridePartnerSdfConfig is `true`. *
+   * Output only when overridePartnerSdfConfig is `false`.
    * @return value or {@code null} for none
    */
   public SdfConfig getSdfConfig() {
@@ -88,10 +78,8 @@ public final class AdvertiserSdfConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * The SDF configuration for the advertiser.
-   *
-   * * Required when overridePartnerSdfConfig is `true`. * Output only when overridePartnerSdfConfig
-   * is `false`.
+   * The SDF configuration for the advertiser. * Required when overridePartnerSdfConfig is `true`. *
+   * Output only when overridePartnerSdfConfig is `false`.
    * @param sdfConfig sdfConfig or {@code null} for none
    */
   public AdvertiserSdfConfig setSdfConfig(SdfConfig sdfConfig) {

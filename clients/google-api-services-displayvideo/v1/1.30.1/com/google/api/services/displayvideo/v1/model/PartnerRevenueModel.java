@@ -31,9 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class PartnerRevenueModel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The markup amount of the partner revenue model. Must be greater than or equal to 0.
-   *
-   * * When the markup_type is set to be `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field
+   * Required. The markup amount of the partner revenue model. Must be greater than or equal to 0. *
+   * When the markup_type is set to be `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field
    * represents the CPM markup in micros of advertiser's currency. For example, 1500000 represents
    * 1.5 standard units of the currency. * When the markup_type is set to be
    * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP`, this field represents the media cost
@@ -54,9 +53,8 @@ public final class PartnerRevenueModel extends com.google.api.client.json.Generi
   private java.lang.String markupType;
 
   /**
-   * Required. The markup amount of the partner revenue model. Must be greater than or equal to 0.
-   *
-   * * When the markup_type is set to be `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field
+   * Required. The markup amount of the partner revenue model. Must be greater than or equal to 0. *
+   * When the markup_type is set to be `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field
    * represents the CPM markup in micros of advertiser's currency. For example, 1500000 represents
    * 1.5 standard units of the currency. * When the markup_type is set to be
    * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP`, this field represents the media cost
@@ -71,9 +69,8 @@ public final class PartnerRevenueModel extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The markup amount of the partner revenue model. Must be greater than or equal to 0.
-   *
-   * * When the markup_type is set to be `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field
+   * Required. The markup amount of the partner revenue model. Must be greater than or equal to 0. *
+   * When the markup_type is set to be `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`, this field
    * represents the CPM markup in micros of advertiser's currency. For example, 1500000 represents
    * 1.5 standard units of the currency. * When the markup_type is set to be
    * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP`, this field represents the media cost

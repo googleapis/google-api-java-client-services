@@ -38,9 +38,7 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   private java.lang.String commitment;
 
   /**
-   * The creative requirements of the inventory source.
-   *
-   * Not applicable for auction packages.
+   * The creative requirements of the inventory source. Not applicable for auction packages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,20 +51,17 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ID in the exchange space that uniquely identifies the inventory source.
-   *
-   * Must be unique across buyers within each exchange but not necessarily unique across exchanges.
+   * The ID in the exchange space that uniquely identifies the inventory source. Must be unique
+   * across buyers within each exchange but not necessarily unique across exchanges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dealId;
 
   /**
-   * The delivery method of the inventory source.
-   *
-   * * For non-guaranteed inventory sources, the only acceptable value is
-   * `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`. * For guaranteed inventory sources, acceptable
-   * values are `INVENTORY_SOURCE_DELIVERY_METHOD_TAG` and
+   * The delivery method of the inventory source. * For non-guaranteed inventory sources, the only
+   * acceptable value is `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`. * For guaranteed inventory
+   * sources, acceptable values are `INVENTORY_SOURCE_DELIVERY_METHOD_TAG` and
    * `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`.
    * The value may be {@code null}.
    */
@@ -74,9 +69,8 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   private java.lang.String deliveryMethod;
 
   /**
-   * The display name of the inventory source.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * The display name of the inventory source. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,9 +157,7 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The creative requirements of the inventory source.
-   *
-   * Not applicable for auction packages.
+   * The creative requirements of the inventory source. Not applicable for auction packages.
    * @return value or {@code null} for none
    */
   public java.util.List<CreativeConfig> getCreativeConfigs() {
@@ -173,9 +165,7 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The creative requirements of the inventory source.
-   *
-   * Not applicable for auction packages.
+   * The creative requirements of the inventory source. Not applicable for auction packages.
    * @param creativeConfigs creativeConfigs or {@code null} for none
    */
   public InventorySource setCreativeConfigs(java.util.List<CreativeConfig> creativeConfigs) {
@@ -184,9 +174,8 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ID in the exchange space that uniquely identifies the inventory source.
-   *
-   * Must be unique across buyers within each exchange but not necessarily unique across exchanges.
+   * The ID in the exchange space that uniquely identifies the inventory source. Must be unique
+   * across buyers within each exchange but not necessarily unique across exchanges.
    * @return value or {@code null} for none
    */
   public java.lang.String getDealId() {
@@ -194,9 +183,8 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ID in the exchange space that uniquely identifies the inventory source.
-   *
-   * Must be unique across buyers within each exchange but not necessarily unique across exchanges.
+   * The ID in the exchange space that uniquely identifies the inventory source. Must be unique
+   * across buyers within each exchange but not necessarily unique across exchanges.
    * @param dealId dealId or {@code null} for none
    */
   public InventorySource setDealId(java.lang.String dealId) {
@@ -205,11 +193,9 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The delivery method of the inventory source.
-   *
-   * * For non-guaranteed inventory sources, the only acceptable value is
-   * `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`. * For guaranteed inventory sources, acceptable
-   * values are `INVENTORY_SOURCE_DELIVERY_METHOD_TAG` and
+   * The delivery method of the inventory source. * For non-guaranteed inventory sources, the only
+   * acceptable value is `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`. * For guaranteed inventory
+   * sources, acceptable values are `INVENTORY_SOURCE_DELIVERY_METHOD_TAG` and
    * `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`.
    * @return value or {@code null} for none
    */
@@ -218,11 +204,9 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The delivery method of the inventory source.
-   *
-   * * For non-guaranteed inventory sources, the only acceptable value is
-   * `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`. * For guaranteed inventory sources, acceptable
-   * values are `INVENTORY_SOURCE_DELIVERY_METHOD_TAG` and
+   * The delivery method of the inventory source. * For non-guaranteed inventory sources, the only
+   * acceptable value is `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`. * For guaranteed inventory
+   * sources, acceptable values are `INVENTORY_SOURCE_DELIVERY_METHOD_TAG` and
    * `INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC`.
    * @param deliveryMethod deliveryMethod or {@code null} for none
    */
@@ -232,9 +216,8 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The display name of the inventory source.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * The display name of the inventory source. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -242,9 +225,8 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The display name of the inventory source.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * The display name of the inventory source. Must be UTF-8 encoded with a maximum size of 240
+   * bytes.
    * @param displayName displayName or {@code null} for none
    */
   public InventorySource setDisplayName(java.lang.String displayName) {

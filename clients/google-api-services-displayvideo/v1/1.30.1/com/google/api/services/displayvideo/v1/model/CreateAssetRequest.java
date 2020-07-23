@@ -31,18 +31,16 @@ package com.google.api.services.displayvideo.v1.model;
 public final class CreateAssetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The filename of the asset, including the file extension.
-   *
-   * The filename must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The filename of the asset, including the file extension. The filename must be UTF-8
+   * encoded with a maximum size of 240 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filename;
 
   /**
-   * Required. The filename of the asset, including the file extension.
-   *
-   * The filename must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The filename of the asset, including the file extension. The filename must be UTF-8
+   * encoded with a maximum size of 240 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilename() {
@@ -50,9 +48,8 @@ public final class CreateAssetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The filename of the asset, including the file extension.
-   *
-   * The filename must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The filename of the asset, including the file extension. The filename must be UTF-8
+   * encoded with a maximum size of 240 bytes.
    * @param filename filename or {@code null} for none
    */
   public CreateAssetRequest setFilename(java.lang.String filename) {

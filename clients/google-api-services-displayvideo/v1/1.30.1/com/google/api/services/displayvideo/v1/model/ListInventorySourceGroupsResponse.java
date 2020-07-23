@@ -31,9 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ListInventorySourceGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of inventory source groups.
-   *
-   * This list will be absent if empty.
+   * The list of inventory source groups. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +52,7 @@ public final class ListInventorySourceGroupsResponse extends com.google.api.clie
   private java.lang.String nextPageToken;
 
   /**
-   * The list of inventory source groups.
-   *
-   * This list will be absent if empty.
+   * The list of inventory source groups. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<InventorySourceGroup> getInventorySourceGroups() {
@@ -64,9 +60,7 @@ public final class ListInventorySourceGroupsResponse extends com.google.api.clie
   }
 
   /**
-   * The list of inventory source groups.
-   *
-   * This list will be absent if empty.
+   * The list of inventory source groups. This list will be absent if empty.
    * @param inventorySourceGroups inventorySourceGroups or {@code null} for none
    */
   public ListInventorySourceGroupsResponse setInventorySourceGroups(java.util.List<InventorySourceGroup> inventorySourceGroups) {

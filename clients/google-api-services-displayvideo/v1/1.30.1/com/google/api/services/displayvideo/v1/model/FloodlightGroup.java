@@ -43,16 +43,12 @@ public final class FloodlightGroup extends com.google.api.client.json.GenericJso
    * variables use the keys `U1=`, `U2=`, and so on, and can take any values that you choose to pass
    * to them. You can use them to track virtually any type of data that you collect about your
    * customers, such as the genre of movie that a customer purchases, the country to which the item
-   * is shipped, and so on.
-   *
-   * Custom Floodlight variables may not be used to pass any data that could be used or recognized
-   * as personally identifiable information (PII).
-   *
-   * Example: `custom_variables {   fields {     "U1": value { number_value: 123.4 },     "U2":
-   * value { string_value: "MyVariable2" },     "U3": value { string_value: "MyVariable3" }   } }`
-   *
-   * Acceptable values for keys are "U1" through "U100", inclusive. String values must be less than
-   * 64 characters long, and cannot contain the following characters: `"<>`.
+   * is shipped, and so on. Custom Floodlight variables may not be used to pass any data that could
+   * be used or recognized as personally identifiable information (PII). Example: `custom_variables
+   * { fields { "U1": value { number_value: 123.4 }, "U2": value { string_value: "MyVariable2" },
+   * "U3": value { string_value: "MyVariable3" } } }` Acceptable values for keys are "U1" through
+   * "U100", inclusive. String values must be less than 64 characters long, and cannot contain the
+   * following characters: `"<>`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,16 +113,12 @@ public final class FloodlightGroup extends com.google.api.client.json.GenericJso
    * variables use the keys `U1=`, `U2=`, and so on, and can take any values that you choose to pass
    * to them. You can use them to track virtually any type of data that you collect about your
    * customers, such as the genre of movie that a customer purchases, the country to which the item
-   * is shipped, and so on.
-   *
-   * Custom Floodlight variables may not be used to pass any data that could be used or recognized
-   * as personally identifiable information (PII).
-   *
-   * Example: `custom_variables {   fields {     "U1": value { number_value: 123.4 },     "U2":
-   * value { string_value: "MyVariable2" },     "U3": value { string_value: "MyVariable3" }   } }`
-   *
-   * Acceptable values for keys are "U1" through "U100", inclusive. String values must be less than
-   * 64 characters long, and cannot contain the following characters: `"<>`.
+   * is shipped, and so on. Custom Floodlight variables may not be used to pass any data that could
+   * be used or recognized as personally identifiable information (PII). Example: `custom_variables
+   * { fields { "U1": value { number_value: 123.4 }, "U2": value { string_value: "MyVariable2" },
+   * "U3": value { string_value: "MyVariable3" } } }` Acceptable values for keys are "U1" through
+   * "U100", inclusive. String values must be less than 64 characters long, and cannot contain the
+   * following characters: `"<>`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomVariables() {
@@ -139,16 +131,12 @@ public final class FloodlightGroup extends com.google.api.client.json.GenericJso
    * variables use the keys `U1=`, `U2=`, and so on, and can take any values that you choose to pass
    * to them. You can use them to track virtually any type of data that you collect about your
    * customers, such as the genre of movie that a customer purchases, the country to which the item
-   * is shipped, and so on.
-   *
-   * Custom Floodlight variables may not be used to pass any data that could be used or recognized
-   * as personally identifiable information (PII).
-   *
-   * Example: `custom_variables {   fields {     "U1": value { number_value: 123.4 },     "U2":
-   * value { string_value: "MyVariable2" },     "U3": value { string_value: "MyVariable3" }   } }`
-   *
-   * Acceptable values for keys are "U1" through "U100", inclusive. String values must be less than
-   * 64 characters long, and cannot contain the following characters: `"<>`.
+   * is shipped, and so on. Custom Floodlight variables may not be used to pass any data that could
+   * be used or recognized as personally identifiable information (PII). Example: `custom_variables
+   * { fields { "U1": value { number_value: 123.4 }, "U2": value { string_value: "MyVariable2" },
+   * "U3": value { string_value: "MyVariable3" } } }` Acceptable values for keys are "U1" through
+   * "U100", inclusive. String values must be less than 64 characters long, and cannot contain the
+   * following characters: `"<>`.
    * @param customVariables customVariables or {@code null} for none
    */
   public FloodlightGroup setCustomVariables(java.util.Map<String, java.lang.Object> customVariables) {

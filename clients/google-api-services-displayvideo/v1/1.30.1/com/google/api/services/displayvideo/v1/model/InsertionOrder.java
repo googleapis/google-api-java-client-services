@@ -59,9 +59,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.Long campaignId;
 
   /**
-   * Required. The display name of the insertion order.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the insertion order. Must be UTF-8 encoded with a maximum size of
+   * 240 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +68,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Controls whether or not the insertion order can spend its budget and bid on
-   * inventory.
-   *
-   * * For CreateInsertionOrder method, only `ENTITY_STATUS_DRAFT` is allowed. To activate an
-   * insertion order, use UpdateInsertionOrder method and update the status to
+   * inventory. * For CreateInsertionOrder method, only `ENTITY_STATUS_DRAFT` is allowed. To
+   * activate an insertion order, use UpdateInsertionOrder method and update the status to
    * `ENTITY_STATUS_ACTIVE` after creation. * An insertion order cannot be changed back to
    * `ENTITY_STATUS_DRAFT` status from any other status. * An insertion order cannot be set to
    * `ENTITY_STATUS_ACTIVE` if its parent campaign is not active.
@@ -117,10 +114,9 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private Pacing pacing;
 
   /**
-   * The partner costs associated with the insertion order.
-   *
-   * If absent or empty in CreateInsertionOrder method, the newly created insertion order will
-   * inherit partner costs from the partner settings.
+   * The partner costs associated with the insertion order. If absent or empty in
+   * CreateInsertionOrder method, the newly created insertion order will inherit partner costs from
+   * the partner settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,9 +205,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The display name of the insertion order.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the insertion order. Must be UTF-8 encoded with a maximum size of
+   * 240 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -219,9 +214,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The display name of the insertion order.
-   *
-   * Must be UTF-8 encoded with a maximum size of 240 bytes.
+   * Required. The display name of the insertion order. Must be UTF-8 encoded with a maximum size of
+   * 240 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public InsertionOrder setDisplayName(java.lang.String displayName) {
@@ -231,10 +225,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Controls whether or not the insertion order can spend its budget and bid on
-   * inventory.
-   *
-   * * For CreateInsertionOrder method, only `ENTITY_STATUS_DRAFT` is allowed. To activate an
-   * insertion order, use UpdateInsertionOrder method and update the status to
+   * inventory. * For CreateInsertionOrder method, only `ENTITY_STATUS_DRAFT` is allowed. To
+   * activate an insertion order, use UpdateInsertionOrder method and update the status to
    * `ENTITY_STATUS_ACTIVE` after creation. * An insertion order cannot be changed back to
    * `ENTITY_STATUS_DRAFT` status from any other status. * An insertion order cannot be set to
    * `ENTITY_STATUS_ACTIVE` if its parent campaign is not active.
@@ -246,10 +238,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Controls whether or not the insertion order can spend its budget and bid on
-   * inventory.
-   *
-   * * For CreateInsertionOrder method, only `ENTITY_STATUS_DRAFT` is allowed. To activate an
-   * insertion order, use UpdateInsertionOrder method and update the status to
+   * inventory. * For CreateInsertionOrder method, only `ENTITY_STATUS_DRAFT` is allowed. To
+   * activate an insertion order, use UpdateInsertionOrder method and update the status to
    * `ENTITY_STATUS_ACTIVE` after creation. * An insertion order cannot be changed back to
    * `ENTITY_STATUS_DRAFT` status from any other status. * An insertion order cannot be set to
    * `ENTITY_STATUS_ACTIVE` if its parent campaign is not active.
@@ -346,10 +336,9 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The partner costs associated with the insertion order.
-   *
-   * If absent or empty in CreateInsertionOrder method, the newly created insertion order will
-   * inherit partner costs from the partner settings.
+   * The partner costs associated with the insertion order. If absent or empty in
+   * CreateInsertionOrder method, the newly created insertion order will inherit partner costs from
+   * the partner settings.
    * @return value or {@code null} for none
    */
   public java.util.List<PartnerCost> getPartnerCosts() {
@@ -357,10 +346,9 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The partner costs associated with the insertion order.
-   *
-   * If absent or empty in CreateInsertionOrder method, the newly created insertion order will
-   * inherit partner costs from the partner settings.
+   * The partner costs associated with the insertion order. If absent or empty in
+   * CreateInsertionOrder method, the newly created insertion order will inherit partner costs from
+   * the partner settings.
    * @param partnerCosts partnerCosts or {@code null} for none
    */
   public InsertionOrder setPartnerCosts(java.util.List<PartnerCost> partnerCosts) {

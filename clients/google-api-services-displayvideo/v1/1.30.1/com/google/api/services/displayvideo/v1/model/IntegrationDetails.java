@@ -31,9 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class IntegrationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional details of the entry in string format.
-   *
-   * Must be UTF-8 encoded with a length of no more than 1000 characters.
+   * Additional details of the entry in string format. Must be UTF-8 encoded with a length of no
+   * more than 1000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,18 +40,16 @@ public final class IntegrationDetails extends com.google.api.client.json.Generic
 
   /**
    * An external identifier to be associated with the entry. The integration code will show up
-   * together with the entry in many places in the system, for example, reporting.
-   *
-   * Must be UTF-8 encoded with a length of no more than 500 characters.
+   * together with the entry in many places in the system, for example, reporting. Must be UTF-8
+   * encoded with a length of no more than 500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrationCode;
 
   /**
-   * Additional details of the entry in string format.
-   *
-   * Must be UTF-8 encoded with a length of no more than 1000 characters.
+   * Additional details of the entry in string format. Must be UTF-8 encoded with a length of no
+   * more than 1000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -60,9 +57,8 @@ public final class IntegrationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional details of the entry in string format.
-   *
-   * Must be UTF-8 encoded with a length of no more than 1000 characters.
+   * Additional details of the entry in string format. Must be UTF-8 encoded with a length of no
+   * more than 1000 characters.
    * @param details details or {@code null} for none
    */
   public IntegrationDetails setDetails(java.lang.String details) {
@@ -72,9 +68,8 @@ public final class IntegrationDetails extends com.google.api.client.json.Generic
 
   /**
    * An external identifier to be associated with the entry. The integration code will show up
-   * together with the entry in many places in the system, for example, reporting.
-   *
-   * Must be UTF-8 encoded with a length of no more than 500 characters.
+   * together with the entry in many places in the system, for example, reporting. Must be UTF-8
+   * encoded with a length of no more than 500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrationCode() {
@@ -83,9 +78,8 @@ public final class IntegrationDetails extends com.google.api.client.json.Generic
 
   /**
    * An external identifier to be associated with the entry. The integration code will show up
-   * together with the entry in many places in the system, for example, reporting.
-   *
-   * Must be UTF-8 encoded with a length of no more than 500 characters.
+   * together with the entry in many places in the system, for example, reporting. Must be UTF-8
+   * encoded with a length of no more than 500 characters.
    * @param integrationCode integrationCode or {@code null} for none
    */
   public IntegrationDetails setIntegrationCode(java.lang.String integrationCode) {

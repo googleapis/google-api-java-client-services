@@ -31,18 +31,14 @@ package com.google.api.services.displayvideo.v1.model;
 public final class BulkEditSitesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of sites that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of sites that have been successfully created. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Site> sites;
 
   /**
-   * The list of sites that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of sites that have been successfully created. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Site> getSites() {
@@ -50,9 +46,7 @@ public final class BulkEditSitesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The list of sites that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of sites that have been successfully created. This list will be absent if empty.
    * @param sites sites or {@code null} for none
    */
   public BulkEditSitesResponse setSites(java.util.List<Site> sites) {

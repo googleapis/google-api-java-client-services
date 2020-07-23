@@ -31,28 +31,22 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ListNegativeKeywordsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of negative keywords.
-   *
-   * This list will be absent if empty.
+   * The list of negative keywords. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NegativeKeyword> negativeKeywords;
 
   /**
-   * A token to retrieve the next page of results.
-   *
-   * Pass this value in the page_token field in the subsequent call to `ListNegativeKeywords` method
-   * to retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListNegativeKeywords` method to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of negative keywords.
-   *
-   * This list will be absent if empty.
+   * The list of negative keywords. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<NegativeKeyword> getNegativeKeywords() {
@@ -60,9 +54,7 @@ public final class ListNegativeKeywordsResponse extends com.google.api.client.js
   }
 
   /**
-   * The list of negative keywords.
-   *
-   * This list will be absent if empty.
+   * The list of negative keywords. This list will be absent if empty.
    * @param negativeKeywords negativeKeywords or {@code null} for none
    */
   public ListNegativeKeywordsResponse setNegativeKeywords(java.util.List<NegativeKeyword> negativeKeywords) {
@@ -71,10 +63,8 @@ public final class ListNegativeKeywordsResponse extends com.google.api.client.js
   }
 
   /**
-   * A token to retrieve the next page of results.
-   *
-   * Pass this value in the page_token field in the subsequent call to `ListNegativeKeywords` method
-   * to retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListNegativeKeywords` method to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,10 +72,8 @@ public final class ListNegativeKeywordsResponse extends com.google.api.client.js
   }
 
   /**
-   * A token to retrieve the next page of results.
-   *
-   * Pass this value in the page_token field in the subsequent call to `ListNegativeKeywords` method
-   * to retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListNegativeKeywords` method to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListNegativeKeywordsResponse setNextPageToken(java.lang.String nextPageToken) {

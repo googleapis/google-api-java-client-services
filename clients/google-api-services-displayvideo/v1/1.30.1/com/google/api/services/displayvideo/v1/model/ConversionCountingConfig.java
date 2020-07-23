@@ -17,10 +17,8 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Settings that control how conversions are counted.
- *
- * All post-click conversions will be counted. A percentage value can be set for post-view
- * conversions counting.
+ * Settings that control how conversions are counted. All post-click conversions will be counted. A
+ * percentage value can be set for post-view conversions counting.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -34,10 +32,9 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ConversionCountingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Floodlight activity configs used to track conversions.
-   *
-   * The number of conversions counted is the sum of all of the conversions counted by all of the
-   * Floodlight activity IDs specified in this field.
+   * The Floodlight activity configs used to track conversions. The number of conversions counted is
+   * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
+   * this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,19 +42,17 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
 
   /**
    * The percentage of post-view conversions to count, in millis (1/1000 of a percent). Must be
-   * between 0 and 100000 inclusive.
-   *
-   * For example, to track 50% of the post-click conversions, set a value of 50000.
+   * between 0 and 100000 inclusive. For example, to track 50% of the post-click conversions, set a
+   * value of 50000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long postViewCountPercentageMillis;
 
   /**
-   * The Floodlight activity configs used to track conversions.
-   *
-   * The number of conversions counted is the sum of all of the conversions counted by all of the
-   * Floodlight activity IDs specified in this field.
+   * The Floodlight activity configs used to track conversions. The number of conversions counted is
+   * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
+   * this field.
    * @return value or {@code null} for none
    */
   public java.util.List<TrackingFloodlightActivityConfig> getFloodlightActivityConfigs() {
@@ -65,10 +60,9 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
   }
 
   /**
-   * The Floodlight activity configs used to track conversions.
-   *
-   * The number of conversions counted is the sum of all of the conversions counted by all of the
-   * Floodlight activity IDs specified in this field.
+   * The Floodlight activity configs used to track conversions. The number of conversions counted is
+   * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
+   * this field.
    * @param floodlightActivityConfigs floodlightActivityConfigs or {@code null} for none
    */
   public ConversionCountingConfig setFloodlightActivityConfigs(java.util.List<TrackingFloodlightActivityConfig> floodlightActivityConfigs) {
@@ -78,9 +72,8 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
 
   /**
    * The percentage of post-view conversions to count, in millis (1/1000 of a percent). Must be
-   * between 0 and 100000 inclusive.
-   *
-   * For example, to track 50% of the post-click conversions, set a value of 50000.
+   * between 0 and 100000 inclusive. For example, to track 50% of the post-click conversions, set a
+   * value of 50000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPostViewCountPercentageMillis() {
@@ -89,9 +82,8 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
 
   /**
    * The percentage of post-view conversions to count, in millis (1/1000 of a percent). Must be
-   * between 0 and 100000 inclusive.
-   *
-   * For example, to track 50% of the post-click conversions, set a value of 50000.
+   * between 0 and 100000 inclusive. For example, to track 50% of the post-click conversions, set a
+   * value of 50000.
    * @param postViewCountPercentageMillis postViewCountPercentageMillis or {@code null} for none
    */
   public ConversionCountingConfig setPostViewCountPercentageMillis(java.lang.Long postViewCountPercentageMillis) {

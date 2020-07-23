@@ -38,12 +38,9 @@ public final class CampaignGoal extends com.google.api.client.json.GenericJson {
   private java.lang.String campaignGoalType;
 
   /**
-   * Required. The performance goal of the campaign.
-   *
-   * Acceptable values for performance_goal_type are:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA` *
-   * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_CTR` *
+   * Required. The performance goal of the campaign. Acceptable values for performance_goal_type
+   * are: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA`
+   * * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_CTR` *
    * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` * `PERFORMANCE_GOAL_TYPE_OTHER`
    * The value may be {@code null}.
    */
@@ -68,12 +65,9 @@ public final class CampaignGoal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The performance goal of the campaign.
-   *
-   * Acceptable values for performance_goal_type are:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA` *
-   * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_CTR` *
+   * Required. The performance goal of the campaign. Acceptable values for performance_goal_type
+   * are: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA`
+   * * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_CTR` *
    * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` * `PERFORMANCE_GOAL_TYPE_OTHER`
    * @return value or {@code null} for none
    */
@@ -82,12 +76,9 @@ public final class CampaignGoal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The performance goal of the campaign.
-   *
-   * Acceptable values for performance_goal_type are:
-   *
-   * * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA` *
-   * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_CTR` *
+   * Required. The performance goal of the campaign. Acceptable values for performance_goal_type
+   * are: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` * `PERFORMANCE_GOAL_TYPE_CPA`
+   * * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_CTR` *
    * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` * `PERFORMANCE_GOAL_TYPE_OTHER`
    * @param performanceGoal performanceGoal or {@code null} for none
    */

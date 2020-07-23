@@ -32,10 +32,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AppAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of the app.
-   *
-   * Android's Play store app uses bundle ID, for example `com.google.android.gm`. Apple's App store
-   * app ID uses 9 digit string, for example `422689480`.
+   * Required. The ID of the app. Android's Play store app uses bundle ID, for example
+   * `com.google.android.gm`. Apple's App store app ID uses 9 digit string, for example `422689480`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +54,8 @@ public final class AppAssignedTargetingOptionDetails extends com.google.api.clie
   private java.lang.Boolean negative;
 
   /**
-   * Required. The ID of the app.
-   *
-   * Android's Play store app uses bundle ID, for example `com.google.android.gm`. Apple's App store
-   * app ID uses 9 digit string, for example `422689480`.
+   * Required. The ID of the app. Android's Play store app uses bundle ID, for example
+   * `com.google.android.gm`. Apple's App store app ID uses 9 digit string, for example `422689480`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -67,10 +63,8 @@ public final class AppAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Required. The ID of the app.
-   *
-   * Android's Play store app uses bundle ID, for example `com.google.android.gm`. Apple's App store
-   * app ID uses 9 digit string, for example `422689480`.
+   * Required. The ID of the app. Android's Play store app uses bundle ID, for example
+   * `com.google.android.gm`. Apple's App store app ID uses 9 digit string, for example `422689480`.
    * @param appId appId or {@code null} for none
    */
   public AppAssignedTargetingOptionDetails setAppId(java.lang.String appId) {

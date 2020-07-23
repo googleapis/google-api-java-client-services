@@ -31,9 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class BulkEditAssignedInventorySourcesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of assigned inventory sources that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of assigned inventory sources that have been successfully created. This list will be
+   * absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +45,8 @@ public final class BulkEditAssignedInventorySourcesResponse extends com.google.a
   }
 
   /**
-   * The list of assigned inventory sources that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of assigned inventory sources that have been successfully created. This list will be
+   * absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<AssignedInventorySource> getAssignedInventorySources() {
@@ -56,9 +54,8 @@ public final class BulkEditAssignedInventorySourcesResponse extends com.google.a
   }
 
   /**
-   * The list of assigned inventory sources that have been successfully created.
-   *
-   * This list will be absent if empty.
+   * The list of assigned inventory sources that have been successfully created. This list will be
+   * absent if empty.
    * @param assignedInventorySources assignedInventorySources or {@code null} for none
    */
   public BulkEditAssignedInventorySourcesResponse setAssignedInventorySources(java.util.List<AssignedInventorySource> assignedInventorySources) {

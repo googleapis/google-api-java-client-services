@@ -48,12 +48,10 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * Required. The start and end date settings of the budget segment. They are resolved relative to
-   * the parent advertiser's time zone.
-   *
-   * * When creating a new budget segment, both `start_date` and `end_date` must be in the future. *
-   * An existing budget segment with a `start_date` in the past has a mutable `end_date` but an
-   * immutable `start_date`. * `end_date` must be the `start_date` or later, both before the year
-   * 2037.
+   * the parent advertiser's time zone. * When creating a new budget segment, both `start_date` and
+   * `end_date` must be in the future. * An existing budget segment with a `start_date` in the past
+   * has a mutable `end_date` but an immutable `start_date`. * `end_date` must be the `start_date`
+   * or later, both before the year 2037.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +59,8 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * The budget segment description. It can be used to enter Purchase Order information for each
-   * budget segment and have that information printed on the invoices.
-   *
-   * Must be UTF-8 encoded with a length of no more than 80 characters.
+   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded with a
+   * length of no more than 80 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,12 +106,10 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * Required. The start and end date settings of the budget segment. They are resolved relative to
-   * the parent advertiser's time zone.
-   *
-   * * When creating a new budget segment, both `start_date` and `end_date` must be in the future. *
-   * An existing budget segment with a `start_date` in the past has a mutable `end_date` but an
-   * immutable `start_date`. * `end_date` must be the `start_date` or later, both before the year
-   * 2037.
+   * the parent advertiser's time zone. * When creating a new budget segment, both `start_date` and
+   * `end_date` must be in the future. * An existing budget segment with a `start_date` in the past
+   * has a mutable `end_date` but an immutable `start_date`. * `end_date` must be the `start_date`
+   * or later, both before the year 2037.
    * @return value or {@code null} for none
    */
   public DateRange getDateRange() {
@@ -123,12 +118,10 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * Required. The start and end date settings of the budget segment. They are resolved relative to
-   * the parent advertiser's time zone.
-   *
-   * * When creating a new budget segment, both `start_date` and `end_date` must be in the future. *
-   * An existing budget segment with a `start_date` in the past has a mutable `end_date` but an
-   * immutable `start_date`. * `end_date` must be the `start_date` or later, both before the year
-   * 2037.
+   * the parent advertiser's time zone. * When creating a new budget segment, both `start_date` and
+   * `end_date` must be in the future. * An existing budget segment with a `start_date` in the past
+   * has a mutable `end_date` but an immutable `start_date`. * `end_date` must be the `start_date`
+   * or later, both before the year 2037.
    * @param dateRange dateRange or {@code null} for none
    */
   public InsertionOrderBudgetSegment setDateRange(DateRange dateRange) {
@@ -138,9 +131,8 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * The budget segment description. It can be used to enter Purchase Order information for each
-   * budget segment and have that information printed on the invoices.
-   *
-   * Must be UTF-8 encoded with a length of no more than 80 characters.
+   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded with a
+   * length of no more than 80 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -149,9 +141,8 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
 
   /**
    * The budget segment description. It can be used to enter Purchase Order information for each
-   * budget segment and have that information printed on the invoices.
-   *
-   * Must be UTF-8 encoded with a length of no more than 80 characters.
+   * budget segment and have that information printed on the invoices. Must be UTF-8 encoded with a
+   * length of no more than 80 characters.
    * @param description description or {@code null} for none
    */
   public InsertionOrderBudgetSegment setDescription(java.lang.String description) {

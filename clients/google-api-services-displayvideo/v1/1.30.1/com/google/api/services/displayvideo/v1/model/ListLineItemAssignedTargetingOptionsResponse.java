@@ -31,9 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ListLineItemAssignedTargetingOptionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of assigned targeting options.
-   *
-   * This list will be absent if empty.
+   * The list of assigned targeting options. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +53,7 @@ public final class ListLineItemAssignedTargetingOptionsResponse extends com.goog
   private java.lang.String nextPageToken;
 
   /**
-   * The list of assigned targeting options.
-   *
-   * This list will be absent if empty.
+   * The list of assigned targeting options. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<AssignedTargetingOption> getAssignedTargetingOptions() {
@@ -65,9 +61,7 @@ public final class ListLineItemAssignedTargetingOptionsResponse extends com.goog
   }
 
   /**
-   * The list of assigned targeting options.
-   *
-   * This list will be absent if empty.
+   * The list of assigned targeting options. This list will be absent if empty.
    * @param assignedTargetingOptions assignedTargetingOptions or {@code null} for none
    */
   public ListLineItemAssignedTargetingOptionsResponse setAssignedTargetingOptions(java.util.List<AssignedTargetingOption> assignedTargetingOptions) {

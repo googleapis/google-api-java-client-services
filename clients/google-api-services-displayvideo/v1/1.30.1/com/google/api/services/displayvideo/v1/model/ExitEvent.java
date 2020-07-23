@@ -31,11 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ExitEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the click tag of the exit event.
-   *
-   * The name must be unique within one creative.
-   *
-   * Leave it empty or unset for creatives containing image assets only.
+   * The name of the click tag of the exit event. The name must be unique within one creative. Leave
+   * it empty or unset for creatives containing image assets only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,20 +54,16 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Required. The click through URL of the exit event. This is required when type is:
-   *
-   * * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
+   * Required. The click through URL of the exit event. This is required when type is: *
+   * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * The name of the click tag of the exit event.
-   *
-   * The name must be unique within one creative.
-   *
-   * Leave it empty or unset for creatives containing image assets only.
+   * The name of the click tag of the exit event. The name must be unique within one creative. Leave
+   * it empty or unset for creatives containing image assets only.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,11 +71,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the click tag of the exit event.
-   *
-   * The name must be unique within one creative.
-   *
-   * Leave it empty or unset for creatives containing image assets only.
+   * The name of the click tag of the exit event. The name must be unique within one creative. Leave
+   * it empty or unset for creatives containing image assets only.
    * @param name name or {@code null} for none
    */
   public ExitEvent setName(java.lang.String name) {
@@ -127,9 +117,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The click through URL of the exit event. This is required when type is:
-   *
-   * * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
+   * Required. The click through URL of the exit event. This is required when type is: *
+   * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -137,9 +126,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The click through URL of the exit event. This is required when type is:
-   *
-   * * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
+   * Required. The click through URL of the exit event. This is required when type is: *
+   * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
    * @param url url or {@code null} for none
    */
   public ExitEvent setUrl(java.lang.String url) {

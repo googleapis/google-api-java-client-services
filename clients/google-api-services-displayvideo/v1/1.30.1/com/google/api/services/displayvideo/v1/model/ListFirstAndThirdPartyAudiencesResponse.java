@@ -32,7 +32,6 @@ public final class ListFirstAndThirdPartyAudiencesResponse extends com.google.ap
 
   /**
    * The list of first and third party audiences. Audience size properties will not be included.
-   *
    * This list will be absent if empty.
    * The value may be {@code null}.
    */
@@ -56,7 +55,6 @@ public final class ListFirstAndThirdPartyAudiencesResponse extends com.google.ap
 
   /**
    * The list of first and third party audiences. Audience size properties will not be included.
-   *
    * This list will be absent if empty.
    * @return value or {@code null} for none
    */
@@ -66,7 +64,6 @@ public final class ListFirstAndThirdPartyAudiencesResponse extends com.google.ap
 
   /**
    * The list of first and third party audiences. Audience size properties will not be included.
-   *
    * This list will be absent if empty.
    * @param firstAndThirdPartyAudiences firstAndThirdPartyAudiences or {@code null} for none
    */

@@ -32,10 +32,9 @@ package com.google.api.services.displayvideo.v1.model;
 public final class KeywordAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The keyword, for example `car insurance`.
-   *
-   * Positive keyword cannot be offensive word. Must be UTF-8 encoded with a maximum size of 255
-   * bytes. Maximum number of characters is 80. Maximum number of words is 10.
+   * Required. The keyword, for example `car insurance`. Positive keyword cannot be offensive word.
+   * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
+   * Maximum number of words is 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,10 +48,9 @@ public final class KeywordAssignedTargetingOptionDetails extends com.google.api.
   private java.lang.Boolean negative;
 
   /**
-   * Required. The keyword, for example `car insurance`.
-   *
-   * Positive keyword cannot be offensive word. Must be UTF-8 encoded with a maximum size of 255
-   * bytes. Maximum number of characters is 80. Maximum number of words is 10.
+   * Required. The keyword, for example `car insurance`. Positive keyword cannot be offensive word.
+   * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
+   * Maximum number of words is 10.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyword() {
@@ -60,10 +58,9 @@ public final class KeywordAssignedTargetingOptionDetails extends com.google.api.
   }
 
   /**
-   * Required. The keyword, for example `car insurance`.
-   *
-   * Positive keyword cannot be offensive word. Must be UTF-8 encoded with a maximum size of 255
-   * bytes. Maximum number of characters is 80. Maximum number of words is 10.
+   * Required. The keyword, for example `car insurance`. Positive keyword cannot be offensive word.
+   * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
+   * Maximum number of words is 10.
    * @param keyword keyword or {@code null} for none
    */
   public KeywordAssignedTargetingOptionDetails setKeyword(java.lang.String keyword) {

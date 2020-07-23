@@ -31,9 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class BulkEditAssignedInventorySourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the advertiser that owns the parent inventory source group.
-   *
-   * The parent partner does not have access to these assigned inventory sources.
+   * The ID of the advertiser that owns the parent inventory source group. The parent partner does
+   * not have access to these assigned inventory sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -62,18 +61,16 @@ public final class BulkEditAssignedInventorySourcesRequest extends com.google.ap
   private java.util.List<java.lang.Long> deletedAssignedInventorySources;
 
   /**
-   * The ID of the partner that owns the inventory source group.
-   *
-   * Only this partner has write access to these assigned inventory sources.
+   * The ID of the partner that owns the inventory source group. Only this partner has write access
+   * to these assigned inventory sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long partnerId;
 
   /**
-   * The ID of the advertiser that owns the parent inventory source group.
-   *
-   * The parent partner does not have access to these assigned inventory sources.
+   * The ID of the advertiser that owns the parent inventory source group. The parent partner does
+   * not have access to these assigned inventory sources.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserId() {
@@ -81,9 +78,8 @@ public final class BulkEditAssignedInventorySourcesRequest extends com.google.ap
   }
 
   /**
-   * The ID of the advertiser that owns the parent inventory source group.
-   *
-   * The parent partner does not have access to these assigned inventory sources.
+   * The ID of the advertiser that owns the parent inventory source group. The parent partner does
+   * not have access to these assigned inventory sources.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public BulkEditAssignedInventorySourcesRequest setAdvertiserId(java.lang.Long advertiserId) {
@@ -130,9 +126,8 @@ public final class BulkEditAssignedInventorySourcesRequest extends com.google.ap
   }
 
   /**
-   * The ID of the partner that owns the inventory source group.
-   *
-   * Only this partner has write access to these assigned inventory sources.
+   * The ID of the partner that owns the inventory source group. Only this partner has write access
+   * to these assigned inventory sources.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPartnerId() {
@@ -140,9 +135,8 @@ public final class BulkEditAssignedInventorySourcesRequest extends com.google.ap
   }
 
   /**
-   * The ID of the partner that owns the inventory source group.
-   *
-   * Only this partner has write access to these assigned inventory sources.
+   * The ID of the partner that owns the inventory source group. Only this partner has write access
+   * to these assigned inventory sources.
    * @param partnerId partnerId or {@code null} for none
    */
   public BulkEditAssignedInventorySourcesRequest setPartnerId(java.lang.Long partnerId) {

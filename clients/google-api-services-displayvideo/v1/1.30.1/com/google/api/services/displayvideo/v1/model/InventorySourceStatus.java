@@ -31,23 +31,17 @@ package com.google.api.services.displayvideo.v1.model;
 public final class InventorySourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The configuration status of the inventory source.
-   *
-   * Only applicable for guaranteed inventory sources. Acceptable values are
-   * `INVENTORY_SOURCE_CONFIG_STATUS_PENDING` and `INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED`.
-   *
-   * An inventory source must be configured (fill in the required fields, choose creatives, and
-   * select a default campaign) before it can serve.
+   * Output only. The configuration status of the inventory source. Only applicable for guaranteed
+   * inventory sources. Acceptable values are `INVENTORY_SOURCE_CONFIG_STATUS_PENDING` and
+   * `INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED`. An inventory source must be configured (fill in the
+   * required fields, choose creatives, and select a default campaign) before it can serve.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String configStatus;
 
   /**
-   * The user-provided reason for pausing this inventory source.
-   *
-   * Must not exceed 100 characters.
-   *
+   * The user-provided reason for pausing this inventory source. Must not exceed 100 characters.
    * Only applicable when entity_status is set to `ENTITY_STATUS_PAUSED`.
    * The value may be {@code null}.
    */
@@ -55,43 +49,36 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   private java.lang.String entityPauseReason;
 
   /**
-   * Whether or not the inventory source is servable.
-   *
-   * Acceptable values are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
-   * `ENTITY_STATUS_PAUSED`. Default value is `ENTITY_STATUS_ACTIVE`.
+   * Whether or not the inventory source is servable. Acceptable values are `ENTITY_STATUS_ACTIVE`,
+   * `ENTITY_STATUS_ARCHIVED`, and `ENTITY_STATUS_PAUSED`. Default value is `ENTITY_STATUS_ACTIVE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityStatus;
 
   /**
-   * Output only. The seller-provided reason for pausing this inventory source.
-   *
-   * Only applicable for inventory sources synced directly from the publishers and when
-   * seller_status is set to `ENTITY_STATUS_PAUSED`.
+   * Output only. The seller-provided reason for pausing this inventory source. Only applicable for
+   * inventory sources synced directly from the publishers and when seller_status is set to
+   * `ENTITY_STATUS_PAUSED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sellerPauseReason;
 
   /**
-   * Output only. The status set by the seller for the inventory source.
-   *
-   * Only applicable for inventory sources synced directly from the publishers. Acceptable values
-   * are `ENTITY_STATUS_ACTIVE` and `ENTITY_STATUS_PAUSED`.
+   * Output only. The status set by the seller for the inventory source. Only applicable for
+   * inventory sources synced directly from the publishers. Acceptable values are
+   * `ENTITY_STATUS_ACTIVE` and `ENTITY_STATUS_PAUSED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sellerStatus;
 
   /**
-   * Output only. The configuration status of the inventory source.
-   *
-   * Only applicable for guaranteed inventory sources. Acceptable values are
-   * `INVENTORY_SOURCE_CONFIG_STATUS_PENDING` and `INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED`.
-   *
-   * An inventory source must be configured (fill in the required fields, choose creatives, and
-   * select a default campaign) before it can serve.
+   * Output only. The configuration status of the inventory source. Only applicable for guaranteed
+   * inventory sources. Acceptable values are `INVENTORY_SOURCE_CONFIG_STATUS_PENDING` and
+   * `INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED`. An inventory source must be configured (fill in the
+   * required fields, choose creatives, and select a default campaign) before it can serve.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigStatus() {
@@ -99,13 +86,10 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The configuration status of the inventory source.
-   *
-   * Only applicable for guaranteed inventory sources. Acceptable values are
-   * `INVENTORY_SOURCE_CONFIG_STATUS_PENDING` and `INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED`.
-   *
-   * An inventory source must be configured (fill in the required fields, choose creatives, and
-   * select a default campaign) before it can serve.
+   * Output only. The configuration status of the inventory source. Only applicable for guaranteed
+   * inventory sources. Acceptable values are `INVENTORY_SOURCE_CONFIG_STATUS_PENDING` and
+   * `INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED`. An inventory source must be configured (fill in the
+   * required fields, choose creatives, and select a default campaign) before it can serve.
    * @param configStatus configStatus or {@code null} for none
    */
   public InventorySourceStatus setConfigStatus(java.lang.String configStatus) {
@@ -114,10 +98,7 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * The user-provided reason for pausing this inventory source.
-   *
-   * Must not exceed 100 characters.
-   *
+   * The user-provided reason for pausing this inventory source. Must not exceed 100 characters.
    * Only applicable when entity_status is set to `ENTITY_STATUS_PAUSED`.
    * @return value or {@code null} for none
    */
@@ -126,10 +107,7 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * The user-provided reason for pausing this inventory source.
-   *
-   * Must not exceed 100 characters.
-   *
+   * The user-provided reason for pausing this inventory source. Must not exceed 100 characters.
    * Only applicable when entity_status is set to `ENTITY_STATUS_PAUSED`.
    * @param entityPauseReason entityPauseReason or {@code null} for none
    */
@@ -139,10 +117,8 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether or not the inventory source is servable.
-   *
-   * Acceptable values are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
-   * `ENTITY_STATUS_PAUSED`. Default value is `ENTITY_STATUS_ACTIVE`.
+   * Whether or not the inventory source is servable. Acceptable values are `ENTITY_STATUS_ACTIVE`,
+   * `ENTITY_STATUS_ARCHIVED`, and `ENTITY_STATUS_PAUSED`. Default value is `ENTITY_STATUS_ACTIVE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityStatus() {
@@ -150,10 +126,8 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether or not the inventory source is servable.
-   *
-   * Acceptable values are `ENTITY_STATUS_ACTIVE`, `ENTITY_STATUS_ARCHIVED`, and
-   * `ENTITY_STATUS_PAUSED`. Default value is `ENTITY_STATUS_ACTIVE`.
+   * Whether or not the inventory source is servable. Acceptable values are `ENTITY_STATUS_ACTIVE`,
+   * `ENTITY_STATUS_ARCHIVED`, and `ENTITY_STATUS_PAUSED`. Default value is `ENTITY_STATUS_ACTIVE`.
    * @param entityStatus entityStatus or {@code null} for none
    */
   public InventorySourceStatus setEntityStatus(java.lang.String entityStatus) {
@@ -162,10 +136,9 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The seller-provided reason for pausing this inventory source.
-   *
-   * Only applicable for inventory sources synced directly from the publishers and when
-   * seller_status is set to `ENTITY_STATUS_PAUSED`.
+   * Output only. The seller-provided reason for pausing this inventory source. Only applicable for
+   * inventory sources synced directly from the publishers and when seller_status is set to
+   * `ENTITY_STATUS_PAUSED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSellerPauseReason() {
@@ -173,10 +146,9 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The seller-provided reason for pausing this inventory source.
-   *
-   * Only applicable for inventory sources synced directly from the publishers and when
-   * seller_status is set to `ENTITY_STATUS_PAUSED`.
+   * Output only. The seller-provided reason for pausing this inventory source. Only applicable for
+   * inventory sources synced directly from the publishers and when seller_status is set to
+   * `ENTITY_STATUS_PAUSED`.
    * @param sellerPauseReason sellerPauseReason or {@code null} for none
    */
   public InventorySourceStatus setSellerPauseReason(java.lang.String sellerPauseReason) {
@@ -185,10 +157,9 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The status set by the seller for the inventory source.
-   *
-   * Only applicable for inventory sources synced directly from the publishers. Acceptable values
-   * are `ENTITY_STATUS_ACTIVE` and `ENTITY_STATUS_PAUSED`.
+   * Output only. The status set by the seller for the inventory source. Only applicable for
+   * inventory sources synced directly from the publishers. Acceptable values are
+   * `ENTITY_STATUS_ACTIVE` and `ENTITY_STATUS_PAUSED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSellerStatus() {
@@ -196,10 +167,9 @@ public final class InventorySourceStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The status set by the seller for the inventory source.
-   *
-   * Only applicable for inventory sources synced directly from the publishers. Acceptable values
-   * are `ENTITY_STATUS_ACTIVE` and `ENTITY_STATUS_PAUSED`.
+   * Output only. The status set by the seller for the inventory source. Only applicable for
+   * inventory sources synced directly from the publishers. Acceptable values are
+   * `ENTITY_STATUS_ACTIVE` and `ENTITY_STATUS_PAUSED`.
    * @param sellerStatus sellerStatus or {@code null} for none
    */
   public InventorySourceStatus setSellerStatus(java.lang.String sellerStatus) {

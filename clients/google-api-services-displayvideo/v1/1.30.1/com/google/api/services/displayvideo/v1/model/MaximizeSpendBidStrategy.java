@@ -33,9 +33,8 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
 
   /**
    * The maximum average CPM that may be bid, in micros of the advertiser's currency. Must be
-   * greater than or equal to a billable unit of the given currency.
-   *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * greater than or equal to a billable unit of the given currency. For example, 1500000 represents
+   * 1.5 standard units of the currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -52,9 +51,8 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
 
   /**
    * The maximum average CPM that may be bid, in micros of the advertiser's currency. Must be
-   * greater than or equal to a billable unit of the given currency.
-   *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * greater than or equal to a billable unit of the given currency. For example, 1500000 represents
+   * 1.5 standard units of the currency.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxAverageCpmBidAmountMicros() {
@@ -63,9 +61,8 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
 
   /**
    * The maximum average CPM that may be bid, in micros of the advertiser's currency. Must be
-   * greater than or equal to a billable unit of the given currency.
-   *
-   * For example, 1500000 represents 1.5 standard units of the currency.
+   * greater than or equal to a billable unit of the given currency. For example, 1500000 represents
+   * 1.5 standard units of the currency.
    * @param maxAverageCpmBidAmountMicros maxAverageCpmBidAmountMicros or {@code null} for none
    */
   public MaximizeSpendBidStrategy setMaxAverageCpmBidAmountMicros(java.lang.Long maxAverageCpmBidAmountMicros) {

@@ -39,11 +39,9 @@ public final class UrlAssignedTargetingOptionDetails extends com.google.api.clie
   private java.lang.Boolean negative;
 
   /**
-   * Required. The URL, for example `example.com`.
-   *
-   * DV360 supports two levels of subdirectory targeting, for example `www.example.com/one-
-   * subdirectory-level/second-level`, and five levels of subdomain targeting, for example
-   * `five.four.three.two.one.example.com`.
+   * Required. The URL, for example `example.com`. DV360 supports two levels of subdirectory
+   * targeting, for example `www.example.com/one-subdirectory-level/second-level`, and five levels
+   * of subdomain targeting, for example `five.four.three.two.one.example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,11 +65,9 @@ public final class UrlAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Required. The URL, for example `example.com`.
-   *
-   * DV360 supports two levels of subdirectory targeting, for example `www.example.com/one-
-   * subdirectory-level/second-level`, and five levels of subdomain targeting, for example
-   * `five.four.three.two.one.example.com`.
+   * Required. The URL, for example `example.com`. DV360 supports two levels of subdirectory
+   * targeting, for example `www.example.com/one-subdirectory-level/second-level`, and five levels
+   * of subdomain targeting, for example `five.four.three.two.one.example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -79,11 +75,9 @@ public final class UrlAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Required. The URL, for example `example.com`.
-   *
-   * DV360 supports two levels of subdirectory targeting, for example `www.example.com/one-
-   * subdirectory-level/second-level`, and five levels of subdomain targeting, for example
-   * `five.four.three.two.one.example.com`.
+   * Required. The URL, for example `example.com`. DV360 supports two levels of subdirectory
+   * targeting, for example `www.example.com/one-subdirectory-level/second-level`, and five levels
+   * of subdomain targeting, for example `five.four.three.two.one.example.com`.
    * @param url url or {@code null} for none
    */
   public UrlAssignedTargetingOptionDetails setUrl(java.lang.String url) {

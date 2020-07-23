@@ -1,595 +1,87 @@
 {
-  "batchPath": "batch",
+  "name": "osconfig",
+  "rootUrl": "https://osconfig.googleapis.com/",
   "mtlsRootUrl": "https://osconfig.mtls.googleapis.com/",
-  "version_module": true,
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
-  },
   "description": "OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
-  "fullyEncodeReservedExpansion": true,
-  "servicePath": "",
-  "ownerName": "Google",
-  "protocol": "rest",
   "parameters": {
-    "prettyPrint": {
-      "default": "true",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "location": "query"
+    "fields": {
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string"
     },
     "alt": {
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "location": "query",
+      "description": "Data format for response.",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
         "Media download with context-dependent Content-Type",
         "Responses with Content-Type of application/x-protobuf"
       ],
+      "location": "query",
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
       "type": "string",
-      "description": "Data format for response.",
       "default": "json"
     },
-    "oauth_token": {
-      "description": "OAuth 2.0 token for the current user.",
-      "type": "string",
-      "location": "query"
-    },
-    "callback": {
-      "description": "JSONP",
-      "location": "query",
-      "type": "string"
-    },
-    "uploadType": {
-      "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "location": "query"
-    },
-    "access_token": {
-      "location": "query",
-      "description": "OAuth access token.",
-      "type": "string"
-    },
     "$.xgafv": {
-      "description": "V1 error format.",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "location": "query",
       "type": "string",
+      "description": "V1 error format.",
       "enumDescriptions": [
         "v1 error format",
         "v2 error format"
+      ],
+      "location": "query",
+      "enum": [
+        "1",
+        "2"
       ]
     },
     "quotaUser": {
-      "type": "string",
       "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string",
       "location": "query"
     },
     "key": {
+      "type": "string",
       "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "uploadType": {
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "location": "query",
       "type": "string"
+    },
+    "prettyPrint": {
+      "default": "true",
+      "location": "query",
+      "type": "boolean",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "oauth_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user."
+    },
+    "access_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth access token."
+    },
+    "callback": {
+      "location": "query",
+      "type": "string",
+      "description": "JSONP"
     },
     "upload_protocol": {
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "location": "query",
-      "type": "string"
-    },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
       "type": "string",
-      "location": "query"
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
     }
   },
-  "resources": {
-    "projects": {
-      "resources": {
-        "zones": {
-          "resources": {
-            "instances": {
-              "methods": {
-                "lookupEffectiveGuestPolicy": {
-                  "parameterOrder": [
-                    "instance"
-                  ],
-                  "id": "osconfig.projects.zones.instances.lookupEffectiveGuestPolicy",
-                  "parameters": {
-                    "instance": {
-                      "description": "Required. The VM instance whose policies are being looked up.",
-                      "pattern": "^projects/[^/]+/zones/[^/]+/instances/[^/]+$",
-                      "required": true,
-                      "location": "path",
-                      "type": "string"
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "request": {
-                    "$ref": "LookupEffectiveGuestPolicyRequest"
-                  },
-                  "flatPath": "v1beta/projects/{projectsId}/zones/{zonesId}/instances/{instancesId}:lookupEffectiveGuestPolicy",
-                  "path": "v1beta/{+instance}:lookupEffectiveGuestPolicy",
-                  "response": {
-                    "$ref": "EffectiveGuestPolicy"
-                  },
-                  "description": "Lookup the effective guest policy that applies to a VM instance. This\nlookup merges all policies that are assigned to the instance ancestry.",
-                  "httpMethod": "POST"
-                }
-              }
-            }
-          }
-        },
-        "patchDeployments": {
-          "methods": {
-            "list": {
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "GET",
-              "id": "osconfig.projects.patchDeployments.list",
-              "response": {
-                "$ref": "ListPatchDeploymentsResponse"
-              },
-              "flatPath": "v1beta/projects/{projectsId}/patchDeployments",
-              "description": "Get a page of OS Config patch deployments.",
-              "parameters": {
-                "pageSize": {
-                  "location": "query",
-                  "description": "Optional. The maximum number of patch deployments to return. Default is 100.",
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "parent": {
-                  "location": "path",
-                  "pattern": "^projects/[^/]+$",
-                  "description": "Required. The resource name of the parent in the form `projects/*`.",
-                  "type": "string",
-                  "required": true
-                },
-                "pageToken": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "Optional. A pagination token returned from a previous call to ListPatchDeployments\nthat indicates where this listing should continue from."
-                }
-              },
-              "path": "v1beta/{+parent}/patchDeployments",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "delete": {
-              "httpMethod": "DELETE",
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "description": "Required. The resource name of the patch deployment in the form\n`projects/*/patchDeployments/*`.",
-                  "required": true,
-                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
-                  "type": "string"
-                }
-              },
-              "id": "osconfig.projects.patchDeployments.delete",
-              "description": "Delete an OS Config patch deployment.",
-              "flatPath": "v1beta/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
-              "response": {
-                "$ref": "Empty"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "path": "v1beta/{+name}",
-              "parameterOrder": [
-                "name"
-              ]
-            },
-            "get": {
-              "parameters": {
-                "name": {
-                  "description": "Required. The resource name of the patch deployment in the form\n`projects/*/patchDeployments/*`.",
-                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
-                  "location": "path",
-                  "type": "string",
-                  "required": true
-                }
-              },
-              "response": {
-                "$ref": "PatchDeployment"
-              },
-              "path": "v1beta/{+name}",
-              "flatPath": "v1beta/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "osconfig.projects.patchDeployments.get",
-              "httpMethod": "GET",
-              "description": "Get an OS Config patch deployment.",
-              "parameterOrder": [
-                "name"
-              ]
-            },
-            "create": {
-              "id": "osconfig.projects.patchDeployments.create",
-              "path": "v1beta/{+parent}/patchDeployments",
-              "request": {
-                "$ref": "PatchDeployment"
-              },
-              "flatPath": "v1beta/projects/{projectsId}/patchDeployments",
-              "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "PatchDeployment"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "patchDeploymentId": {
-                  "description": "Required. A name for the patch deployment in the project. When creating a name\nthe following rules apply:\n* Must contain only lowercase letters, numbers, and hyphens.\n* Must start with a letter.\n* Must be between 1-63 characters.\n* Must end with a number or a letter.\n* Must be unique within the project.",
-                  "location": "query",
-                  "type": "string"
-                },
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "description": "Required. The project to apply this patch deployment to in the form `projects/*`.",
-                  "location": "path",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "description": "Create an OS Config patch deployment."
-            }
-          }
-        },
-        "patchJobs": {
-          "resources": {
-            "instanceDetails": {
-              "methods": {
-                "list": {
-                  "httpMethod": "GET",
-                  "id": "osconfig.projects.patchJobs.instanceDetails.list",
-                  "description": "Get a list of instance details for a given patch job.",
-                  "flatPath": "v1beta/projects/{projectsId}/patchJobs/{patchJobsId}/instanceDetails",
-                  "parameters": {
-                    "filter": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "A filter expression that filters results listed in the response. This\nfield supports filtering results by instance zone, name, state, or\n`failure_reason`."
-                    },
-                    "pageSize": {
-                      "description": "The maximum number of instance details records to return.  Default is 100.",
-                      "location": "query",
-                      "format": "int32",
-                      "type": "integer"
-                    },
-                    "parent": {
-                      "type": "string",
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
-                      "required": true,
-                      "description": "Required. The parent for the instances are in the form of `projects/*/patchJobs/*`."
-                    },
-                    "pageToken": {
-                      "description": "A pagination token returned from a previous call\nthat indicates where this listing should continue from.",
-                      "type": "string",
-                      "location": "query"
-                    }
-                  },
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "path": "v1beta/{+parent}/instanceDetails",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "response": {
-                    "$ref": "ListPatchJobInstanceDetailsResponse"
-                  }
-                }
-              }
-            }
-          },
-          "methods": {
-            "execute": {
-              "parameters": {
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "description": "Required. The project in which to run this patch in the form `projects/*`",
-                  "location": "path",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "flatPath": "v1beta/projects/{projectsId}/patchJobs:execute",
-              "path": "v1beta/{+parent}/patchJobs:execute",
-              "request": {
-                "$ref": "ExecutePatchJobRequest"
-              },
-              "httpMethod": "POST",
-              "description": "Patch VM instances by creating and running a patch job.",
-              "id": "osconfig.projects.patchJobs.execute",
-              "parameterOrder": [
-                "parent"
-              ],
-              "response": {
-                "$ref": "PatchJob"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "get": {
-              "response": {
-                "$ref": "PatchJob"
-              },
-              "path": "v1beta/{+name}",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "description": "Get the patch job. This can be used to track the progress of an\nongoing patch job or review the details of completed jobs.",
-              "flatPath": "v1beta/projects/{projectsId}/patchJobs/{patchJobsId}",
-              "parameters": {
-                "name": {
-                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`",
-                  "location": "path",
-                  "type": "string",
-                  "required": true,
-                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$"
-                }
-              },
-              "httpMethod": "GET",
-              "parameterOrder": [
-                "name"
-              ],
-              "id": "osconfig.projects.patchJobs.get"
-            },
-            "list": {
-              "description": "Get a list of patch jobs.",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "osconfig.projects.patchJobs.list",
-              "path": "v1beta/{+parent}/patchJobs",
-              "httpMethod": "GET",
-              "flatPath": "v1beta/projects/{projectsId}/patchJobs",
-              "response": {
-                "$ref": "ListPatchJobsResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "filter": {
-                  "description": "If provided, this field specifies the criteria that must be met by patch\njobs to be included in the response.\nCurrently, filtering is only available on the patch_deployment field.",
-                  "location": "query",
-                  "type": "string"
-                },
-                "pageSize": {
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query",
-                  "description": "The maximum number of instance status to return."
-                },
-                "pageToken": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "A pagination token returned from a previous call\nthat indicates where this listing should continue from."
-                },
-                "parent": {
-                  "description": "Required. In the form of `projects/*`",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+$",
-                  "type": "string",
-                  "required": true
-                }
-              }
-            },
-            "cancel": {
-              "flatPath": "v1beta/projects/{projectsId}/patchJobs/{patchJobsId}:cancel",
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "type": "string",
-                  "location": "path",
-                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`",
-                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
-                  "required": true
-                }
-              },
-              "id": "osconfig.projects.patchJobs.cancel",
-              "description": "Cancel a patch job. The patch job must be active. Canceled patch jobs\ncannot be restarted.",
-              "request": {
-                "$ref": "CancelPatchJobRequest"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "httpMethod": "POST",
-              "path": "v1beta/{+name}:cancel",
-              "response": {
-                "$ref": "PatchJob"
-              }
-            }
-          }
-        },
-        "guestPolicies": {
-          "methods": {
-            "list": {
-              "parameters": {
-                "parent": {
-                  "type": "string",
-                  "description": "Required. The resource name of the parent using one of the following forms:\n`projects/{project_number}`.",
-                  "pattern": "^projects/[^/]+$",
-                  "required": true,
-                  "location": "path"
-                },
-                "pageToken": {
-                  "location": "query",
-                  "description": "A pagination token returned from a previous call to `ListGuestPolicies`\nthat indicates where this listing should continue from.",
-                  "type": "string"
-                },
-                "pageSize": {
-                  "type": "integer",
-                  "description": "The maximum number of guest policies to return.",
-                  "location": "query",
-                  "format": "int32"
-                }
-              },
-              "id": "osconfig.projects.guestPolicies.list",
-              "parameterOrder": [
-                "parent"
-              ],
-              "flatPath": "v1beta/projects/{projectsId}/guestPolicies",
-              "description": "Get a page of OS Config guest policies.",
-              "path": "v1beta/{+parent}/guestPolicies",
-              "response": {
-                "$ref": "ListGuestPoliciesResponse"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "httpMethod": "GET"
-            },
-            "delete": {
-              "httpMethod": "DELETE",
-              "id": "osconfig.projects.guestPolicies.delete",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "Empty"
-              },
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "type": "string",
-                  "location": "path",
-                  "description": "Required. The resource name of the guest policy  using one of the following forms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
-                  "pattern": "^projects/[^/]+/guestPolicies/[^/]+$"
-                }
-              },
-              "path": "v1beta/{+name}",
-              "parameterOrder": [
-                "name"
-              ],
-              "flatPath": "v1beta/projects/{projectsId}/guestPolicies/{guestPoliciesId}",
-              "description": "Delete an OS Config guest policy."
-            },
-            "create": {
-              "description": "Create an OS Config guest policy.",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "GuestPolicy"
-              },
-              "httpMethod": "POST",
-              "flatPath": "v1beta/projects/{projectsId}/guestPolicies",
-              "id": "osconfig.projects.guestPolicies.create",
-              "parameters": {
-                "parent": {
-                  "type": "string",
-                  "description": "Required. The resource name of the parent using one of the following forms:\n`projects/{project_number}`.",
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path",
-                  "required": true
-                },
-                "guestPolicyId": {
-                  "location": "query",
-                  "description": "Required. The logical name of the guest policy in the project\nwith the following restrictions:\n\n* Must contain only lowercase letters, numbers, and hyphens.\n* Must start with a letter.\n* Must be between 1-63 characters.\n* Must end with a number or a letter.\n* Must be unique within the project.",
-                  "type": "string"
-                }
-              },
-              "path": "v1beta/{+parent}/guestPolicies",
-              "parameterOrder": [
-                "parent"
-              ],
-              "request": {
-                "$ref": "GuestPolicy"
-              }
-            },
-            "get": {
-              "description": "Get an OS Config guest policy.",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "GuestPolicy"
-              },
-              "path": "v1beta/{+name}",
-              "flatPath": "v1beta/projects/{projectsId}/guestPolicies/{guestPoliciesId}",
-              "id": "osconfig.projects.guestPolicies.get",
-              "httpMethod": "GET",
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "description": "Required. The resource name of the guest policy using one of the following forms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/guestPolicies/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "parameterOrder": [
-                "name"
-              ]
-            },
-            "patch": {
-              "description": "Update an OS Config guest policy.",
-              "response": {
-                "$ref": "GuestPolicy"
-              },
-              "request": {
-                "$ref": "GuestPolicy"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "PATCH",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/guestPolicies/[^/]+$",
-                  "location": "path",
-                  "type": "string",
-                  "required": true,
-                  "description": "Required. Unique name of the resource in this project using one of the following\nforms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`."
-                },
-                "updateMask": {
-                  "type": "string",
-                  "format": "google-fieldmask",
-                  "location": "query",
-                  "description": "Field mask that controls which fields of the guest policy should be\nupdated."
-                }
-              },
-              "path": "v1beta/{+name}",
-              "id": "osconfig.projects.guestPolicies.patch",
-              "flatPath": "v1beta/projects/{projectsId}/guestPolicies/{guestPoliciesId}"
-            }
-          }
-        }
-      }
-    }
-  },
-  "title": "Cloud OS Config API",
-  "discoveryVersion": "v1",
+  "protocol": "rest",
   "id": "osconfig:v1beta",
-  "name": "osconfig",
-  "revision": "20200706",
-  "basePath": "",
-  "documentationLink": "https://cloud.google.com/",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -599,75 +91,771 @@
       }
     }
   },
-  "canonicalName": "Systems Management",
+  "ownerName": "Google",
+  "fullyEncodeReservedExpansion": true,
+  "version_module": true,
+  "baseUrl": "https://osconfig.googleapis.com/",
+  "resources": {
+    "projects": {
+      "resources": {
+        "patchJobs": {
+          "resources": {
+            "instanceDetails": {
+              "methods": {
+                "list": {
+                  "httpMethod": "GET",
+                  "flatPath": "v1beta/projects/{projectsId}/patchJobs/{patchJobsId}/instanceDetails",
+                  "description": "Get a list of instance details for a given patch job.",
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "id": "osconfig.projects.patchJobs.instanceDetails.list",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameters": {
+                    "filter": {
+                      "location": "query",
+                      "description": "A filter expression that filters results listed in the response. This\nfield supports filtering results by instance zone, name, state, or\n`failure_reason`.",
+                      "type": "string"
+                    },
+                    "pageToken": {
+                      "type": "string",
+                      "description": "A pagination token returned from a previous call\nthat indicates where this listing should continue from.",
+                      "location": "query"
+                    },
+                    "parent": {
+                      "location": "path",
+                      "description": "Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.",
+                      "type": "string",
+                      "required": true,
+                      "pattern": "^projects/[^/]+/patchJobs/[^/]+$"
+                    },
+                    "pageSize": {
+                      "format": "int32",
+                      "type": "integer",
+                      "location": "query",
+                      "description": "The maximum number of instance details records to return.  Default is 100."
+                    }
+                  },
+                  "path": "v1beta/{+parent}/instanceDetails",
+                  "response": {
+                    "$ref": "ListPatchJobInstanceDetailsResponse"
+                  }
+                }
+              }
+            }
+          },
+          "methods": {
+            "list": {
+              "parameters": {
+                "pageToken": {
+                  "description": "A pagination token returned from a previous call\nthat indicates where this listing should continue from.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "filter": {
+                  "location": "query",
+                  "type": "string",
+                  "description": "If provided, this field specifies the criteria that must be met by patch\njobs to be included in the response.\nCurrently, filtering is only available on the patch_deployment field."
+                },
+                "parent": {
+                  "location": "path",
+                  "required": true,
+                  "description": "Required. In the form of `projects/*`",
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$"
+                },
+                "pageSize": {
+                  "description": "The maximum number of instance status to return.",
+                  "type": "integer",
+                  "location": "query",
+                  "format": "int32"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "id": "osconfig.projects.patchJobs.list",
+              "path": "v1beta/{+parent}/patchJobs",
+              "flatPath": "v1beta/projects/{projectsId}/patchJobs",
+              "description": "Get a list of patch jobs.",
+              "response": {
+                "$ref": "ListPatchJobsResponse"
+              }
+            },
+            "cancel": {
+              "flatPath": "v1beta/projects/{projectsId}/patchJobs/{patchJobsId}:cancel",
+              "description": "Cancel a patch job. The patch job must be active. Canceled patch jobs\ncannot be restarted.",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "path": "v1beta/{+name}:cancel",
+              "httpMethod": "POST",
+              "id": "osconfig.projects.patchJobs.cancel",
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "required": true,
+                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
+                  "location": "path",
+                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`"
+                }
+              },
+              "request": {
+                "$ref": "CancelPatchJobRequest"
+              },
+              "response": {
+                "$ref": "PatchJob"
+              }
+            },
+            "execute": {
+              "id": "osconfig.projects.patchJobs.execute",
+              "httpMethod": "POST",
+              "request": {
+                "$ref": "ExecutePatchJobRequest"
+              },
+              "description": "Patch VM instances by creating and running a patch job.",
+              "response": {
+                "$ref": "PatchJob"
+              },
+              "parameters": {
+                "parent": {
+                  "description": "Required. The project in which to run this patch in the form `projects/*`",
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^projects/[^/]+$",
+                  "type": "string"
+                }
+              },
+              "flatPath": "v1beta/projects/{projectsId}/patchJobs:execute",
+              "parameterOrder": [
+                "parent"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "path": "v1beta/{+parent}/patchJobs:execute"
+            },
+            "get": {
+              "path": "v1beta/{+name}",
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "osconfig.projects.patchJobs.get",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "response": {
+                "$ref": "PatchJob"
+              },
+              "httpMethod": "GET",
+              "flatPath": "v1beta/projects/{projectsId}/patchJobs/{patchJobsId}",
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
+                  "required": true,
+                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`",
+                  "type": "string",
+                  "location": "path"
+                }
+              },
+              "description": "Get the patch job. This can be used to track the progress of an\nongoing patch job or review the details of completed jobs."
+            }
+          }
+        },
+        "patchDeployments": {
+          "methods": {
+            "get": {
+              "id": "osconfig.projects.patchDeployments.get",
+              "path": "v1beta/{+name}",
+              "response": {
+                "$ref": "PatchDeployment"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "description": "Get an OS Config patch deployment.",
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "description": "Required. The resource name of the patch deployment in the form\n`projects/*/patchDeployments/*`.",
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
+                  "location": "path",
+                  "required": true
+                }
+              },
+              "flatPath": "v1beta/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
+              "httpMethod": "GET"
+            },
+            "create": {
+              "response": {
+                "$ref": "PatchDeployment"
+              },
+              "id": "osconfig.projects.patchDeployments.create",
+              "request": {
+                "$ref": "PatchDeployment"
+              },
+              "flatPath": "v1beta/projects/{projectsId}/patchDeployments",
+              "httpMethod": "POST",
+              "parameters": {
+                "parent": {
+                  "required": true,
+                  "location": "path",
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "description": "Required. The project to apply this patch deployment to in the form `projects/*`."
+                },
+                "patchDeploymentId": {
+                  "location": "query",
+                  "description": "Required. A name for the patch deployment in the project. When creating a name\nthe following rules apply:\n* Must contain only lowercase letters, numbers, and hyphens.\n* Must start with a letter.\n* Must be between 1-63 characters.\n* Must end with a number or a letter.\n* Must be unique within the project.",
+                  "type": "string"
+                }
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "path": "v1beta/{+parent}/patchDeployments",
+              "description": "Create an OS Config patch deployment."
+            },
+            "list": {
+              "flatPath": "v1beta/projects/{projectsId}/patchDeployments",
+              "response": {
+                "$ref": "ListPatchDeploymentsResponse"
+              },
+              "id": "osconfig.projects.patchDeployments.list",
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "description": "Get a page of OS Config patch deployments.",
+              "path": "v1beta/{+parent}/patchDeployments",
+              "parameters": {
+                "pageSize": {
+                  "format": "int32",
+                  "description": "Optional. The maximum number of patch deployments to return. Default is 100.",
+                  "type": "integer",
+                  "location": "query"
+                },
+                "pageToken": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Optional. A pagination token returned from a previous call to ListPatchDeployments\nthat indicates where this listing should continue from."
+                },
+                "parent": {
+                  "required": true,
+                  "pattern": "^projects/[^/]+$",
+                  "type": "string",
+                  "location": "path",
+                  "description": "Required. The resource name of the parent in the form `projects/*`."
+                }
+              }
+            },
+            "delete": {
+              "flatPath": "v1beta/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
+              "path": "v1beta/{+name}",
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "location": "path",
+                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
+                  "required": true,
+                  "description": "Required. The resource name of the patch deployment in the form\n`projects/*/patchDeployments/*`."
+                }
+              },
+              "response": {
+                "$ref": "Empty"
+              },
+              "description": "Delete an OS Config patch deployment.",
+              "httpMethod": "DELETE",
+              "id": "osconfig.projects.patchDeployments.delete",
+              "parameterOrder": [
+                "name"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            }
+          }
+        },
+        "zones": {
+          "resources": {
+            "instances": {
+              "methods": {
+                "lookupEffectiveGuestPolicy": {
+                  "httpMethod": "POST",
+                  "response": {
+                    "$ref": "EffectiveGuestPolicy"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "description": "Lookup the effective guest policy that applies to a VM instance. This\nlookup merges all policies that are assigned to the instance ancestry.",
+                  "flatPath": "v1beta/projects/{projectsId}/zones/{zonesId}/instances/{instancesId}:lookupEffectiveGuestPolicy",
+                  "id": "osconfig.projects.zones.instances.lookupEffectiveGuestPolicy",
+                  "parameterOrder": [
+                    "instance"
+                  ],
+                  "path": "v1beta/{+instance}:lookupEffectiveGuestPolicy",
+                  "request": {
+                    "$ref": "LookupEffectiveGuestPolicyRequest"
+                  },
+                  "parameters": {
+                    "instance": {
+                      "location": "path",
+                      "description": "Required. The VM instance whose policies are being looked up.",
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/zones/[^/]+/instances/[^/]+$",
+                      "required": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "guestPolicies": {
+          "methods": {
+            "delete": {
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "type": "string",
+                  "description": "Required. The resource name of the guest policy  using one of the following forms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
+                  "location": "path",
+                  "pattern": "^projects/[^/]+/guestPolicies/[^/]+$"
+                }
+              },
+              "path": "v1beta/{+name}",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "httpMethod": "DELETE",
+              "flatPath": "v1beta/projects/{projectsId}/guestPolicies/{guestPoliciesId}",
+              "id": "osconfig.projects.guestPolicies.delete",
+              "description": "Delete an OS Config guest policy.",
+              "response": {
+                "$ref": "Empty"
+              }
+            },
+            "get": {
+              "response": {
+                "$ref": "GuestPolicy"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "flatPath": "v1beta/projects/{projectsId}/guestPolicies/{guestPoliciesId}",
+              "httpMethod": "GET",
+              "description": "Get an OS Config guest policy.",
+              "path": "v1beta/{+name}",
+              "id": "osconfig.projects.guestPolicies.get",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "name": {
+                  "description": "Required. The resource name of the guest policy using one of the following forms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
+                  "pattern": "^projects/[^/]+/guestPolicies/[^/]+$",
+                  "required": true,
+                  "type": "string",
+                  "location": "path"
+                }
+              }
+            },
+            "patch": {
+              "path": "v1beta/{+name}",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "request": {
+                "$ref": "GuestPolicy"
+              },
+              "httpMethod": "PATCH",
+              "flatPath": "v1beta/projects/{projectsId}/guestPolicies/{guestPoliciesId}",
+              "response": {
+                "$ref": "GuestPolicy"
+              },
+              "description": "Update an OS Config guest policy.",
+              "parameters": {
+                "updateMask": {
+                  "location": "query",
+                  "type": "string",
+                  "format": "google-fieldmask",
+                  "description": "Field mask that controls which fields of the guest policy should be\nupdated."
+                },
+                "name": {
+                  "description": "Required. Unique name of the resource in this project using one of the following\nforms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
+                  "type": "string",
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^projects/[^/]+/guestPolicies/[^/]+$"
+                }
+              },
+              "id": "osconfig.projects.guestPolicies.patch",
+              "parameterOrder": [
+                "name"
+              ]
+            },
+            "create": {
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "pattern": "^projects/[^/]+$",
+                  "required": true,
+                  "type": "string",
+                  "description": "Required. The resource name of the parent using one of the following forms:\n`projects/{project_number}`."
+                },
+                "guestPolicyId": {
+                  "type": "string",
+                  "description": "Required. The logical name of the guest policy in the project\nwith the following restrictions:\n\n* Must contain only lowercase letters, numbers, and hyphens.\n* Must start with a letter.\n* Must be between 1-63 characters.\n* Must end with a number or a letter.\n* Must be unique within the project.",
+                  "location": "query"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "description": "Create an OS Config guest policy.",
+              "response": {
+                "$ref": "GuestPolicy"
+              },
+              "request": {
+                "$ref": "GuestPolicy"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "id": "osconfig.projects.guestPolicies.create",
+              "path": "v1beta/{+parent}/guestPolicies",
+              "httpMethod": "POST",
+              "flatPath": "v1beta/projects/{projectsId}/guestPolicies"
+            },
+            "list": {
+              "parameterOrder": [
+                "parent"
+              ],
+              "response": {
+                "$ref": "ListGuestPoliciesResponse"
+              },
+              "path": "v1beta/{+parent}/guestPolicies",
+              "id": "osconfig.projects.guestPolicies.list",
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "pattern": "^projects/[^/]+$",
+                  "required": true,
+                  "description": "Required. The resource name of the parent using one of the following forms:\n`projects/{project_number}`.",
+                  "type": "string"
+                },
+                "pageToken": {
+                  "location": "query",
+                  "type": "string",
+                  "description": "A pagination token returned from a previous call to `ListGuestPolicies`\nthat indicates where this listing should continue from."
+                },
+                "pageSize": {
+                  "location": "query",
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "The maximum number of guest policies to return."
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "description": "Get a page of OS Config guest policies.",
+              "flatPath": "v1beta/projects/{projectsId}/guestPolicies",
+              "httpMethod": "GET"
+            }
+          }
+        }
+      }
+    }
+  },
+  "batchPath": "batch",
+  "title": "Cloud OS Config API",
+  "ownerDomain": "google.com",
+  "revision": "20200714",
   "schemas": {
-    "GcsObject": {
-      "type": "object",
-      "id": "GcsObject",
-      "description": "Google Cloud Storage object representation.",
+    "ListPatchJobsResponse": {
       "properties": {
-        "bucket": {
-          "type": "string",
-          "description": "Required. Bucket of the Google Cloud Storage object."
+        "patchJobs": {
+          "type": "array",
+          "items": {
+            "$ref": "PatchJob"
+          },
+          "description": "The list of patch jobs."
         },
-        "object": {
-          "type": "string",
-          "description": "Required. Name of the Google Cloud Storage object."
-        },
-        "generationNumber": {
-          "description": "Required. Generation number of the Google Cloud Storage object. This is used to\nensure that the ExecStep specified by this PatchJob does not change.",
-          "format": "int64",
-          "type": "string"
-        }
-      }
-    },
-    "GooSettings": {
-      "properties": {},
-      "description": "Googet patching is performed by running `googet update`.",
-      "type": "object",
-      "id": "GooSettings"
-    },
-    "TimeZone": {
-      "type": "object",
-      "id": "TimeZone",
-      "description": "Represents a time zone from the\n[IANA Time Zone Database](https://www.iana.org/time-zones).",
-      "properties": {
-        "version": {
-          "description": "Optional. IANA Time Zone Database version number, e.g. \"2019a\".",
-          "type": "string"
-        },
-        "id": {
-          "description": "IANA Time Zone Database time zone, e.g. \"America/New_York\".",
-          "type": "string"
-        }
-      }
-    },
-    "ListPatchJobInstanceDetailsResponse": {
-      "description": "A response message for listing the instances details for a patch job.",
-      "type": "object",
-      "properties": {
         "nextPageToken": {
           "description": "A pagination token that can be used to get the next page of results.",
           "type": "string"
-        },
-        "patchJobInstanceDetails": {
-          "items": {
-            "$ref": "PatchJobInstanceDetails"
-          },
-          "type": "array",
-          "description": "A list of instance status."
         }
       },
-      "id": "ListPatchJobInstanceDetailsResponse"
+      "id": "ListPatchJobsResponse",
+      "type": "object",
+      "description": "A response message for listing patch jobs."
+    },
+    "LookupEffectiveGuestPolicyRequest": {
+      "properties": {
+        "osShortName": {
+          "description": "Short name of the OS running on the instance. The OS Config agent only\nprovides this field for targeting if OS Inventory is enabled for that\ninstance.",
+          "type": "string"
+        },
+        "osArchitecture": {
+          "type": "string",
+          "description": "Architecture of OS running on the instance. The OS Config agent only\nprovides this field for targeting if OS Inventory is enabled for that\ninstance."
+        },
+        "osVersion": {
+          "type": "string",
+          "description": "Version of the OS running on the instance. The OS Config agent only\nprovides this field for targeting if OS Inventory is enabled for that\nVM instance."
+        }
+      },
+      "description": "A request message for getting the effective guest policy assigned to the\ninstance.",
+      "id": "LookupEffectiveGuestPolicyRequest",
+      "type": "object"
+    },
+    "AptRepository": {
+      "type": "object",
+      "properties": {
+        "distribution": {
+          "type": "string",
+          "description": "Required. Distribution of this repository."
+        },
+        "uri": {
+          "description": "Required. URI for this repository.",
+          "type": "string"
+        },
+        "gpgKey": {
+          "description": "URI of the key file for this repository. The agent maintains\na keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing\nall the keys in any applied guest policy.",
+          "type": "string"
+        },
+        "archiveType": {
+          "enumDescriptions": [
+            "Unspecified.",
+            "DEB indicates that the archive contains binary files.",
+            "DEB_SRC indicates that the archive contains source files."
+          ],
+          "type": "string",
+          "description": "Type of archive files in this repository. The default behavior is DEB.",
+          "enum": [
+            "ARCHIVE_TYPE_UNSPECIFIED",
+            "DEB",
+            "DEB_SRC"
+          ]
+        },
+        "components": {
+          "description": "Required. List of components for this repository. Must contain at least one item.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "id": "AptRepository",
+      "description": "Represents a single Apt package repository. This repository is added to\na repo file that is stored at\n`/etc/apt/sources.list.d/google_osconfig.list`."
+    },
+    "AssignmentOsType": {
+      "description": "Defines the criteria for selecting VM Instances by OS type.",
+      "type": "object",
+      "properties": {
+        "osShortName": {
+          "type": "string",
+          "description": "Targets VM instances with OS Inventory enabled and having the following\nOS short name, for example \"debian\" or \"windows\"."
+        },
+        "osArchitecture": {
+          "type": "string",
+          "description": "Targets VM instances with OS Inventory enabled and having the following\nOS architecture."
+        },
+        "osVersion": {
+          "type": "string",
+          "description": "Targets VM instances with OS Inventory enabled and having the following\nfollowing OS version."
+        }
+      },
+      "id": "AssignmentOsType"
+    },
+    "CancelPatchJobRequest": {
+      "id": "CancelPatchJobRequest",
+      "description": "Message for canceling a patch job.",
+      "properties": {},
+      "type": "object"
+    },
+    "PatchJob": {
+      "description": "A high level representation of a patch job that is either in progress\nor has completed.\n\nInstance details are not included in the job. To paginate through instance\ndetails, use `ListPatchJobInstanceDetails`.\n\nFor more information about patch jobs, see\n[Creating patch\njobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).",
+      "id": "PatchJob",
+      "type": "object",
+      "properties": {
+        "createTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Time this patch job was created."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the patch job. Length of the description is limited\nto 1024 characters."
+        },
+        "state": {
+          "enumDescriptions": [
+            "State must be specified.",
+            "The patch job was successfully initiated.",
+            "The patch job is looking up instances to run the patch on.",
+            "Instances are being patched.",
+            "Patch job completed successfully.",
+            "Patch job completed but there were errors.",
+            "The patch job was canceled.",
+            "The patch job timed out."
+          ],
+          "type": "string",
+          "description": "The current state of the PatchJob.",
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "STARTED",
+            "INSTANCE_LOOKUP",
+            "PATCHING",
+            "SUCCEEDED",
+            "COMPLETED_WITH_ERRORS",
+            "CANCELED",
+            "TIMED_OUT"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Unique identifier for this patch job in the form\n`projects/*/patchJobs/*`"
+        },
+        "rollout": {
+          "description": "Rollout strategy being applied.",
+          "$ref": "PatchRollout"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name for this patch job. This is not a unique identifier."
+        },
+        "patchConfig": {
+          "$ref": "PatchConfig",
+          "description": "Patch configuration being applied."
+        },
+        "instanceFilter": {
+          "$ref": "PatchInstanceFilter",
+          "description": "Instances to patch."
+        },
+        "dryRun": {
+          "type": "boolean",
+          "description": "If this patch job is a dry run, the agent reports that it has\nfinished without running any updates on the VM instance."
+        },
+        "duration": {
+          "type": "string",
+          "description": "Duration of the patch job. After the duration ends, the\npatch job times out.",
+          "format": "google-duration"
+        },
+        "instanceDetailsSummary": {
+          "description": "Summary of instance details.",
+          "$ref": "PatchJobInstanceDetailsSummary"
+        },
+        "patchDeployment": {
+          "type": "string",
+          "description": "Output only. Name of the patch deployment that created this patch job."
+        },
+        "errorMessage": {
+          "description": "If this patch job failed, this message provides information about the\nfailure.",
+          "type": "string"
+        },
+        "percentComplete": {
+          "description": "Reflects the overall progress of the patch job in the range of\n0.0 being no progress to 100.0 being complete.",
+          "format": "double",
+          "type": "number"
+        },
+        "updateTime": {
+          "description": "Last time this patch job was updated.",
+          "format": "google-datetime",
+          "type": "string"
+        }
+      }
+    },
+    "ListGuestPoliciesResponse": {
+      "description": "A response message for listing guest policies.",
+      "properties": {
+        "guestPolicies": {
+          "items": {
+            "$ref": "GuestPolicy"
+          },
+          "description": "The list of GuestPolicies.",
+          "type": "array"
+        },
+        "nextPageToken": {
+          "description": "A pagination token that can be used to get the next page\nof guest policies.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "id": "ListGuestPoliciesResponse"
+    },
+    "SoftwareRecipeStep": {
+      "type": "object",
+      "description": "An action that can be taken as part of installing or updating a recipe.",
+      "id": "SoftwareRecipeStep",
+      "properties": {
+        "msiInstallation": {
+          "$ref": "SoftwareRecipeStepInstallMsi",
+          "description": "Installs an MSI file."
+        },
+        "dpkgInstallation": {
+          "description": "Installs a deb file via dpkg.",
+          "$ref": "SoftwareRecipeStepInstallDpkg"
+        },
+        "scriptRun": {
+          "$ref": "SoftwareRecipeStepRunScript",
+          "description": "Runs commands in a shell."
+        },
+        "fileExec": {
+          "description": "Executes an artifact or local file.",
+          "$ref": "SoftwareRecipeStepExecFile"
+        },
+        "archiveExtraction": {
+          "$ref": "SoftwareRecipeStepExtractArchive",
+          "description": "Extracts an archive into the specified directory."
+        },
+        "fileCopy": {
+          "$ref": "SoftwareRecipeStepCopyFile",
+          "description": "Copies a file onto the instance."
+        },
+        "rpmInstallation": {
+          "$ref": "SoftwareRecipeStepInstallRpm",
+          "description": "Installs an rpm file via the rpm utility."
+        }
+      }
     },
     "YumSettings": {
       "type": "object",
-      "id": "YumSettings",
       "description": "Yum patching is performed by executing `yum update`. Additional options\ncan be set to control how this is executed.\n\nNote that not all settings are supported on all platforms.",
+      "id": "YumSettings",
       "properties": {
-        "minimal": {
-          "type": "boolean",
-          "description": "Will cause patch to run `yum update-minimal` instead."
+        "exclusivePackages": {
+          "description": "An exclusive list of packages to be updated. These are the only packages\nthat will be updated. If these packages are not installed, they will be\nignored. This field must not be specified with any other patch\nconfiguration fields.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "security": {
+          "description": "Adds the `--security` flag to `yum update`. Not supported on\nall platforms.",
+          "type": "boolean"
         },
         "excludes": {
           "type": "array",
@@ -676,34 +864,567 @@
           },
           "description": "List of packages to exclude from update. These packages are excluded by\nusing the yum `--exclude` flag."
         },
-        "exclusivePackages": {
-          "type": "array",
-          "description": "An exclusive list of packages to be updated. These are the only packages\nthat will be updated. If these packages are not installed, they will be\nignored. This field must not be specified with any other patch\nconfiguration fields.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "security": {
+        "minimal": {
           "type": "boolean",
-          "description": "Adds the `--security` flag to `yum update`. Not supported on\nall platforms."
+          "description": "Will cause patch to run `yum update-minimal` instead."
         }
       }
     },
-    "SoftwareRecipeStepInstallDpkg": {
-      "id": "SoftwareRecipeStepInstallDpkg",
-      "description": "Installs a deb via dpkg.",
+    "YumRepository": {
       "properties": {
-        "artifactId": {
+        "id": {
           "type": "string",
-          "description": "Required. The id of the relevant artifact in the recipe."
+          "description": "Required. A one word, unique name for this repository. This is\nthe `repo id` in the Yum config file and also the `display_name` if\n`display_name` is omitted. This id is also used as the unique identifier\nwhen checking for guest policy conflicts."
+        },
+        "baseUrl": {
+          "type": "string",
+          "description": "Required. The location of the repository directory."
+        },
+        "gpgKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "URIs of GPG keys."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The display name of the repository."
         }
       },
+      "type": "object",
+      "id": "YumRepository",
+      "description": "Represents a single Yum package repository. This repository is added to a\nrepo file that is stored at `/etc/yum.repos.d/google_osconfig.repo`."
+    },
+    "EffectiveGuestPolicySourcedPackage": {
+      "id": "EffectiveGuestPolicySourcedPackage",
+      "properties": {
+        "package": {
+          "description": "A software package to configure on the VM instance.",
+          "$ref": "Package"
+        },
+        "source": {
+          "type": "string",
+          "description": "Name of the guest policy providing this config."
+        }
+      },
+      "type": "object",
+      "description": "A guest policy package including its source."
+    },
+    "ListPatchJobInstanceDetailsResponse": {
+      "description": "A response message for listing the instances details for a patch job.",
+      "properties": {
+        "nextPageToken": {
+          "description": "A pagination token that can be used to get the next page of results.",
+          "type": "string"
+        },
+        "patchJobInstanceDetails": {
+          "type": "array",
+          "items": {
+            "$ref": "PatchJobInstanceDetails"
+          },
+          "description": "A list of instance status."
+        }
+      },
+      "id": "ListPatchJobInstanceDetailsResponse",
       "type": "object"
     },
-    "GuestPolicy": {
-      "type": "object",
-      "id": "GuestPolicy",
+    "PackageRepository": {
       "properties": {
+        "apt": {
+          "description": "An Apt Repository.",
+          "$ref": "AptRepository"
+        },
+        "goo": {
+          "$ref": "GooRepository",
+          "description": "A Goo Repository."
+        },
+        "zypper": {
+          "description": "A Zypper Repository.",
+          "$ref": "ZypperRepository"
+        },
+        "yum": {
+          "$ref": "YumRepository",
+          "description": "A Yum Repository."
+        }
+      },
+      "type": "object",
+      "description": "A package repository.",
+      "id": "PackageRepository"
+    },
+    "SoftwareRecipeArtifact": {
+      "id": "SoftwareRecipeArtifact",
+      "properties": {
+        "allowInsecure": {
+          "type": "boolean",
+          "description": "Defaults to false. When false, recipes are subject to validations\nbased on the artifact type:\n\nRemote: A checksum must be specified, and only protocols with\ntransport-layer security are permitted.\nGCS:    An object generation number must be specified."
+        },
+        "id": {
+          "description": "Required. Id of the artifact, which the installation and update steps of this\nrecipe can reference. Artifacts in a recipe cannot have the same id.",
+          "type": "string"
+        },
+        "gcs": {
+          "$ref": "SoftwareRecipeArtifactGcs",
+          "description": "A Google Cloud Storage artifact."
+        },
+        "remote": {
+          "description": "A generic remote artifact.",
+          "$ref": "SoftwareRecipeArtifactRemote"
+        }
+      },
+      "type": "object",
+      "description": "Specifies a resource to be used in the recipe."
+    },
+    "AssignmentGroupLabel": {
+      "type": "object",
+      "properties": {
+        "labels": {
+          "description": "Google Compute Engine instance labels that must be present for an\ninstance to be included in this assignment group.",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "id": "AssignmentGroupLabel",
+      "description": "Represents a group of VM intances that can be identified as having all\nthese labels, for example \"env=prod and app=web\"."
+    },
+    "PatchDeployment": {
+      "type": "object",
+      "id": "PatchDeployment",
+      "description": "Patch deployments are configurations that individual patch jobs use to\ncomplete a patch. These configurations include instance filter, package\nrepository settings, and a schedule. For more information about creating and\nmanaging patch deployments, see [Scheduling patch\njobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).",
+      "properties": {
+        "patchConfig": {
+          "$ref": "PatchConfig",
+          "description": "Optional. Patch configuration that is applied."
+        },
+        "recurringSchedule": {
+          "$ref": "RecurringSchedule",
+          "description": "Required. Schedule recurring executions."
+        },
+        "lastExecuteTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Output only. The last time a patch job was started by this deployment.\nTimestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text\nformat."
+        },
+        "instanceFilter": {
+          "$ref": "PatchInstanceFilter",
+          "description": "Required. VM instances to patch."
+        },
+        "duration": {
+          "description": "Optional. Duration of the patch. After the duration ends, the patch times out.",
+          "format": "google-duration",
+          "type": "string"
+        },
+        "rollout": {
+          "$ref": "PatchRollout",
+          "description": "Optional. Rollout strategy of the patch job."
+        },
+        "createTime": {
+          "description": "Output only. Time the patch deployment was created. Timestamp is in\n[RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "oneTimeSchedule": {
+          "$ref": "OneTimeSchedule",
+          "description": "Required. Schedule a one-time execution."
+        },
+        "updateTime": {
+          "format": "google-datetime",
+          "description": "Output only. Time the patch deployment was last updated. Timestamp is in\n[RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "description": "Optional. Description of the patch deployment. Length of the description is limited\nto 1024 characters."
+        },
+        "name": {
+          "type": "string",
+          "description": "Unique name for the patch deployment resource in a project. The patch\ndeployment name is in the form:\n`projects/{project_id}/patchDeployments/{patch_deployment_id}`.\nThis field is ignored when you create a new patch deployment."
+        }
+      }
+    },
+    "OneTimeSchedule": {
+      "properties": {
+        "executeTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Required. The desired patch job execution time."
+        }
+      },
+      "type": "object",
+      "id": "OneTimeSchedule",
+      "description": "Sets the time for a one time patch deployment. Timestamp is in\n[RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
+    },
+    "EffectiveGuestPolicySourcedPackageRepository": {
+      "properties": {
+        "source": {
+          "description": "Name of the guest policy providing this config.",
+          "type": "string"
+        },
+        "packageRepository": {
+          "$ref": "PackageRepository",
+          "description": "A software package repository to configure on the VM instance."
+        }
+      },
+      "id": "EffectiveGuestPolicySourcedPackageRepository",
+      "type": "object",
+      "description": "A guest policy package repository including its source."
+    },
+    "GcsObject": {
+      "description": "Google Cloud Storage object representation.",
+      "type": "object",
+      "id": "GcsObject",
+      "properties": {
+        "generationNumber": {
+          "format": "int64",
+          "description": "Required. Generation number of the Google Cloud Storage object. This is used to\nensure that the ExecStep specified by this PatchJob does not change.",
+          "type": "string"
+        },
+        "object": {
+          "description": "Required. Name of the Google Cloud Storage object.",
+          "type": "string"
+        },
+        "bucket": {
+          "type": "string",
+          "description": "Required. Bucket of the Google Cloud Storage object."
+        }
+      }
+    },
+    "ListPatchDeploymentsResponse": {
+      "type": "object",
+      "description": "A response message for listing patch deployments.",
+      "id": "ListPatchDeploymentsResponse",
+      "properties": {
+        "patchDeployments": {
+          "description": "The list of patch deployments.",
+          "items": {
+            "$ref": "PatchDeployment"
+          },
+          "type": "array"
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "A pagination token that can be used to get the next page of patch\ndeployments."
+        }
+      }
+    },
+    "SoftwareRecipe": {
+      "properties": {
+        "artifacts": {
+          "type": "array",
+          "description": "Resources available to be used in the steps in the recipe.",
+          "items": {
+            "$ref": "SoftwareRecipeArtifact"
+          }
+        },
+        "version": {
+          "type": "string",
+          "description": "The version of this software recipe. Version can be up to 4 period\nseparated numbers (e.g. 12.34.56.78)."
+        },
+        "desiredState": {
+          "enumDescriptions": [
+            "The default is to ensure the package is installed.",
+            "The agent ensures that the package is installed.",
+            "The agent ensures that the package is installed and\nperiodically checks for and install any updates.",
+            "The agent ensures that the package is not installed and uninstall it\nif detected."
+          ],
+          "enum": [
+            "DESIRED_STATE_UNSPECIFIED",
+            "INSTALLED",
+            "UPDATED",
+            "REMOVED"
+          ],
+          "type": "string",
+          "description": "Default is INSTALLED. The desired state the agent should maintain for this\nrecipe.\n\nINSTALLED: The software recipe is installed on the instance but\n           won't be updated to new versions.\nUPDATED: The software recipe is installed on the instance. The recipe is\n         updated to a higher version, if a higher version of the recipe is\n         assigned to this instance.\nREMOVE: Remove is unsupported for software recipes and attempts to\n        create or update a recipe to the REMOVE state is rejected."
+        },
+        "installSteps": {
+          "items": {
+            "$ref": "SoftwareRecipeStep"
+          },
+          "description": "Actions to be taken for installing this recipe. On failure it stops\nexecuting steps and does not attempt another installation. Any steps taken\n(including partially completed steps) are not rolled back.",
+          "type": "array"
+        },
+        "updateSteps": {
+          "type": "array",
+          "items": {
+            "$ref": "SoftwareRecipeStep"
+          },
+          "description": "Actions to be taken for updating this recipe. On failure it stops\nexecuting steps and  does not attempt another update for this recipe. Any\nsteps taken (including partially completed steps) are not rolled back."
+        },
+        "name": {
+          "description": "Required. Unique identifier for the recipe. Only one recipe with a given name is\ninstalled on an instance.\n\nNames are also used to identify resources which helps to determine whether\nguest policies have conflicts. This means that requests to create multiple\nrecipes with the same name and version are rejected since they\ncould potentially have conflicting assignments.",
+          "type": "string"
+        }
+      },
+      "description": "A software recipe is a set of instructions for installing and configuring a\npiece of software. It consists of a set of artifacts that are\ndownloaded, and a set of steps that install, configure, and/or update the\nsoftware.\n\nRecipes support installing and updating software from artifacts in the\nfollowing formats:\nZip archive, Tar archive, Windows MSI, Debian package, and RPM package.\n\nAdditionally, recipes support executing a script (either defined in a file or\ndirectly in this api) in bash, sh, cmd, and powershell.\n\nUpdating a software recipe\n\nIf a recipe is assigned to an instance and there is a recipe with the same\nname but a lower version already installed and the assigned state\nof the recipe is `UPDATED`, then the recipe is updated to\nthe new version.\n\nScript Working Directories\n\nEach script or execution step is run in its own temporary directory which\nis deleted after completing the step.",
+      "id": "SoftwareRecipe",
+      "type": "object"
+    },
+    "EffectiveGuestPolicy": {
+      "properties": {
+        "packages": {
+          "description": "List of package configurations assigned to the VM instance.",
+          "type": "array",
+          "items": {
+            "$ref": "EffectiveGuestPolicySourcedPackage"
+          }
+        },
+        "softwareRecipes": {
+          "items": {
+            "$ref": "EffectiveGuestPolicySourcedSoftwareRecipe"
+          },
+          "type": "array",
+          "description": "List of recipes assigned to the VM instance."
+        },
+        "packageRepositories": {
+          "type": "array",
+          "items": {
+            "$ref": "EffectiveGuestPolicySourcedPackageRepository"
+          },
+          "description": "List of package repository configurations assigned to the VM instance."
+        }
+      },
+      "type": "object",
+      "id": "EffectiveGuestPolicy",
+      "description": "The effective guest policy that applies to a VM instance."
+    },
+    "WeekDayOfMonth": {
+      "properties": {
+        "dayOfWeek": {
+          "description": "Required. A day of the week.",
+          "type": "string",
+          "enumDescriptions": [
+            "The day of the week is unspecified.",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "enum": [
+            "DAY_OF_WEEK_UNSPECIFIED",
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ]
+        },
+        "weekOrdinal": {
+          "description": "Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1\nindicates the last week of the month.",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "id": "WeekDayOfMonth",
+      "description": "Represents one week day in a month. An example is \"the 4th Sunday\".",
+      "type": "object"
+    },
+    "SoftwareRecipeStepRunScript": {
+      "type": "object",
+      "description": "Runs a script through an interpreter.",
+      "id": "SoftwareRecipeStepRunScript",
+      "properties": {
+        "script": {
+          "description": "Required. The shell script to be executed.",
+          "type": "string"
+        },
+        "interpreter": {
+          "description": "The script interpreter to use to run the script. If no interpreter is\nspecified the script is executed directly, which likely\nonly succeed for scripts with\n[shebang lines](https://en.wikipedia.org/wiki/Shebang_\\(Unix\\)).",
+          "enumDescriptions": [
+            "Default value for ScriptType.",
+            "Indicates that the script is run with `/bin/sh` on Linux and `cmd`\non windows.",
+            "Indicates that the script is run with powershell."
+          ],
+          "type": "string",
+          "enum": [
+            "INTERPRETER_UNSPECIFIED",
+            "SHELL",
+            "POWERSHELL"
+          ]
+        },
+        "allowedExitCodes": {
+          "type": "array",
+          "description": "Return codes that indicate that the software installed or updated\nsuccessfully. Behaviour defaults to [0]",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "Empty": {
+      "type": "object",
+      "id": "Empty",
+      "properties": {},
+      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`."
+    },
+    "RecurringSchedule": {
+      "id": "RecurringSchedule",
+      "description": "Sets the time for recurring patch deployments.",
+      "type": "object",
+      "properties": {
+        "timeZone": {
+          "description": "Required. Defines the time zone that `time_of_day` is relative to.\nThe rules for daylight saving time are determined by the chosen time zone.",
+          "$ref": "TimeZone"
+        },
+        "startTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Optional. The time that the recurring schedule becomes effective.\nDefaults to `create_time` of the patch deployment."
+        },
+        "weekly": {
+          "description": "Required. Schedule with weekly executions.",
+          "$ref": "WeeklySchedule"
+        },
+        "endTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Optional. The end time at which a recurring patch deployment schedule is no longer\nactive."
+        },
+        "nextExecuteTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Output only. The time the next patch job is scheduled to run."
+        },
+        "frequency": {
+          "enum": [
+            "FREQUENCY_UNSPECIFIED",
+            "WEEKLY",
+            "MONTHLY"
+          ],
+          "description": "Required. The frequency unit of this recurring schedule.",
+          "enumDescriptions": [
+            "Invalid. A frequency must be specified.",
+            "Indicates that the frequency should be expressed in terms of\nweeks.",
+            "Indicates that the frequency should be expressed in terms of\nmonths."
+          ],
+          "type": "string"
+        },
+        "lastExecuteTime": {
+          "description": "Output only. The time the last patch job ran successfully.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "monthly": {
+          "$ref": "MonthlySchedule",
+          "description": "Required. Schedule with monthly executions."
+        },
+        "timeOfDay": {
+          "$ref": "TimeOfDay",
+          "description": "Required. Time of the day to run a recurring deployment."
+        }
+      }
+    },
+    "PatchJobInstanceDetailsSummary": {
+      "properties": {
+        "succeededInstanceCount": {
+          "type": "string",
+          "description": "Number of instances that have completed successfully.",
+          "format": "int64"
+        },
+        "prePatchStepInstanceCount": {
+          "type": "string",
+          "description": "Number of instances that are running the pre-patch step.",
+          "format": "int64"
+        },
+        "inactiveInstanceCount": {
+          "type": "string",
+          "description": "Number of instances that are inactive.",
+          "format": "int64"
+        },
+        "applyingPatchesInstanceCount": {
+          "type": "string",
+          "format": "int64",
+          "description": "Number of instances that are applying patches."
+        },
+        "rebootingInstanceCount": {
+          "format": "int64",
+          "description": "Number of instances rebooting.",
+          "type": "string"
+        },
+        "pendingInstanceCount": {
+          "format": "int64",
+          "description": "Number of instances pending patch job.",
+          "type": "string"
+        },
+        "ackedInstanceCount": {
+          "format": "int64",
+          "type": "string",
+          "description": "Number of instances that have acked and will start shortly."
+        },
+        "succeededRebootRequiredInstanceCount": {
+          "description": "Number of instances that require reboot.",
+          "format": "int64",
+          "type": "string"
+        },
+        "downloadingPatchesInstanceCount": {
+          "format": "int64",
+          "type": "string",
+          "description": "Number of instances that are downloading patches."
+        },
+        "timedOutInstanceCount": {
+          "type": "string",
+          "description": "Number of instances that exceeded the time out while applying the patch.",
+          "format": "int64"
+        },
+        "noAgentDetectedInstanceCount": {
+          "description": "Number of instances that do not appear to be running the agent. Check to\nensure that the agent is installed, running, and able to communicate with\nthe service.",
+          "type": "string",
+          "format": "int64"
+        },
+        "startedInstanceCount": {
+          "description": "Number of instances that have started.",
+          "type": "string",
+          "format": "int64"
+        },
+        "postPatchStepInstanceCount": {
+          "type": "string",
+          "format": "int64",
+          "description": "Number of instances that are running the post-patch step."
+        },
+        "notifiedInstanceCount": {
+          "description": "Number of instances notified about patch job.",
+          "format": "int64",
+          "type": "string"
+        },
+        "failedInstanceCount": {
+          "type": "string",
+          "format": "int64",
+          "description": "Number of instances that failed."
+        }
+      },
+      "type": "object",
+      "id": "PatchJobInstanceDetailsSummary",
+      "description": "A summary of the current patch state across all instances that this patch\njob affects. Contains counts of instances in different states. These states\nmap to `InstancePatchState`. List patch job instance details to see the\nspecific states of each instance."
+    },
+    "GuestPolicy": {
+      "properties": {
+        "name": {
+          "description": "Required. Unique name of the resource in this project using one of the following\nforms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the guest policy. Length of the description is limited\nto 1024 characters.",
+          "type": "string"
+        },
+        "packageRepositories": {
+          "type": "array",
+          "items": {
+            "$ref": "PackageRepository"
+          },
+          "description": "A list of package repositories to configure on the VM instance. This is\ndone before any other configs are applied so they can use these repos.\nPackage repositories are only configured if the corresponding package\nmanager(s) are available."
+        },
+        "createTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Output only. Time this guest policy was created."
+        },
         "etag": {
           "type": "string",
           "description": "The etag for this guest policy.\nIf this is provided on update, it must match the server's etag."
@@ -715,106 +1436,714 @@
             "$ref": "Package"
           }
         },
-        "createTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. Time this guest policy was created."
-        },
-        "updateTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Output only. Last time this guest policy was updated."
-        },
-        "packageRepositories": {
-          "description": "A list of package repositories to configure on the VM instance. This is\ndone before any other configs are applied so they can use these repos.\nPackage repositories are only configured if the corresponding package\nmanager(s) are available.",
-          "items": {
-            "$ref": "PackageRepository"
-          },
-          "type": "array"
-        },
         "recipes": {
-          "type": "array",
           "description": "A list of Recipes to install on the VM instance.",
+          "type": "array",
           "items": {
             "$ref": "SoftwareRecipe"
           }
-        },
-        "name": {
-          "description": "Required. Unique name of the resource in this project using one of the following\nforms:\n`projects/{project_number}/guestPolicies/{guest_policy_id}`.",
-          "type": "string"
         },
         "assignment": {
           "description": "Required. Specifies the VM instances that are assigned to this policy. This allows\nyou to target sets or groups of VM instances by different parameters such\nas labels, names, OS, or zones.\n\nIf left empty, all VM instances underneath this policy are targeted.\n\nAt the same level in the resource hierarchy (that is within a project), the\nservice prevents the creation of multiple policies that conflict with\neach other. For more information, see how the service [handles assignment\nconflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).",
           "$ref": "Assignment"
         },
-        "description": {
-          "description": "Description of the guest policy. Length of the description is limited\nto 1024 characters.",
+        "updateTime": {
+          "type": "string",
+          "description": "Output only. Last time this guest policy was updated.",
+          "format": "google-datetime"
+        }
+      },
+      "description": "An OS Config resource representing a guest configuration policy. These\npolicies represent the desired state for VM instance guest environments\nincluding packages to install or remove, package repository configurations,\nand software to install.",
+      "id": "GuestPolicy",
+      "type": "object"
+    },
+    "PatchConfig": {
+      "type": "object",
+      "properties": {
+        "goo": {
+          "description": "Goo update settings. Use this setting to override the default `goo` patch\nrules.",
+          "$ref": "GooSettings"
+        },
+        "rebootConfig": {
+          "description": "Post-patch reboot settings.",
+          "enum": [
+            "REBOOT_CONFIG_UNSPECIFIED",
+            "DEFAULT",
+            "ALWAYS",
+            "NEVER"
+          ],
+          "enumDescriptions": [
+            "The default behavior is DEFAULT.",
+            "The agent decides if a reboot is necessary by checking signals such as\nregistry keys on Windows or `/var/run/reboot-required` on APT based\nsystems. On RPM based systems, a set of core system package install times\nare compared with system boot time.",
+            "Always reboot the machine after the update completes.",
+            "Never reboot the machine after the update completes."
+          ],
+          "type": "string"
+        },
+        "postStep": {
+          "description": "The `ExecStep` to run after the patch update.",
+          "$ref": "ExecStep"
+        },
+        "windowsUpdate": {
+          "description": "Windows update settings. Use this override the default windows patch rules.",
+          "$ref": "WindowsUpdateSettings"
+        },
+        "zypper": {
+          "$ref": "ZypperSettings",
+          "description": "Zypper update settings. Use this setting to override the default `zypper`\npatch rules."
+        },
+        "apt": {
+          "$ref": "AptSettings",
+          "description": "Apt update settings. Use this setting to override the default `apt` patch\nrules."
+        },
+        "yum": {
+          "description": "Yum update settings. Use this setting to override the default `yum` patch\nrules.",
+          "$ref": "YumSettings"
+        },
+        "preStep": {
+          "$ref": "ExecStep",
+          "description": "The `ExecStep` to run before the patch update."
+        }
+      },
+      "description": "Patch configuration specifications. Contains details on how to apply the\npatch(es) to a VM instance.",
+      "id": "PatchConfig"
+    },
+    "SoftwareRecipeStepInstallDpkg": {
+      "type": "object",
+      "description": "Installs a deb via dpkg.",
+      "properties": {
+        "artifactId": {
+          "description": "Required. The id of the relevant artifact in the recipe.",
           "type": "string"
         }
       },
-      "description": "An OS Config resource representing a guest configuration policy. These\npolicies represent the desired state for VM instance guest environments\nincluding packages to install or remove, package repository configurations,\nand software to install."
+      "id": "SoftwareRecipeStepInstallDpkg"
+    },
+    "TimeZone": {
+      "id": "TimeZone",
+      "properties": {
+        "version": {
+          "description": "Optional. IANA Time Zone Database version number, e.g. \"2019a\".",
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "description": "IANA Time Zone Database time zone, e.g. \"America/New_York\"."
+        }
+      },
+      "description": "Represents a time zone from the\n[IANA Time Zone Database](https://www.iana.org/time-zones).",
+      "type": "object"
+    },
+    "PatchInstanceFilter": {
+      "type": "object",
+      "description": "A filter to target VM instances for patching. The targeted\nVMs must meet all criteria specified. So if both labels and zones are\nspecified, the patch job targets only VMs with those labels and in those\nzones.",
+      "id": "PatchInstanceFilter",
+      "properties": {
+        "zones": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "Targets VM instances in ANY of these zones. Leave empty to target VM\ninstances in any zone."
+        },
+        "all": {
+          "type": "boolean",
+          "description": "Target all VM instances in the project. If true, no other criteria is\npermitted."
+        },
+        "instances": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Targets any of the VM instances specified. Instances are specified by their\nURI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`,\n`projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or\n`https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`"
+        },
+        "instanceNamePrefixes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Targets VMs whose name starts with one of these prefixes. Similar to\nlabels, this is another way to group VMs when targeting configs, for\nexample prefix=\"prod-\"."
+        },
+        "groupLabels": {
+          "type": "array",
+          "description": "Targets VM instances matching at least one of these label sets. This allows\ntargeting of disparate groups, for example \"env=prod or env=staging\".",
+          "items": {
+            "$ref": "PatchInstanceFilterGroupLabel"
+          }
+        }
+      }
+    },
+    "AptSettings": {
+      "id": "AptSettings",
+      "description": "Apt patching is completed by executing `apt-get update && apt-get\nupgrade`. Additional options can be set to control how this is executed.",
+      "properties": {
+        "exclusivePackages": {
+          "type": "array",
+          "description": "An exclusive list of packages to be updated. These are the only packages\nthat will be updated. If these packages are not installed, they will be\nignored. This field cannot be specified with any other patch configuration\nfields.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of packages to exclude from update. These packages will be excluded"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "TYPE_UNSPECIFIED",
+            "DIST",
+            "UPGRADE"
+          ],
+          "description": "By changing the type to DIST, the patching is performed\nusing `apt-get dist-upgrade` instead.",
+          "enumDescriptions": [
+            "By default, upgrade will be performed.",
+            "Runs `apt-get dist-upgrade`.",
+            "Runs `apt-get upgrade`."
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ExecStep": {
+      "description": "A step that runs an executable for a PatchJob.",
+      "properties": {
+        "linuxExecStepConfig": {
+          "description": "The ExecStepConfig for all Linux VMs targeted by the PatchJob.",
+          "$ref": "ExecStepConfig"
+        },
+        "windowsExecStepConfig": {
+          "$ref": "ExecStepConfig",
+          "description": "The ExecStepConfig for all Windows VMs targeted by the PatchJob."
+        }
+      },
+      "type": "object",
+      "id": "ExecStep"
+    },
+    "PatchRollout": {
+      "properties": {
+        "disruptionBudget": {
+          "description": "The maximum number (or percentage) of VMs per zone to disrupt at any given\nmoment. The number of VMs calculated from multiplying the percentage by the\ntotal number of VMs in a zone is rounded up.\n\nDuring patching, a VM is considered disrupted from the time the agent is\nnotified to begin until patching has completed. This disruption time\nincludes the time to complete reboot and any post-patch steps.\n\nA VM contributes to the disruption budget if its patching operation fails\neither when applying the patches, running pre or post patch steps, or if it\nfails to respond with a success notification before timing out. VMs that\nare not running or do not have an active agent do not count toward this\ndisruption budget.\n\nFor zone-by-zone rollouts, if the disruption budget in a zone is exceeded,\nthe patch job stops, because continuing to the next zone requires\ncompletion of the patch process in the previous zone.\n\nFor example, if the disruption budget has a fixed value of `10`, and 8 VMs\nfail to patch in the current zone, the patch job continues to patch 2 VMs\nat a time until the zone is completed. When that zone is completed\nsuccessfully, patching begins with 10 VMs at a time in the next zone. If 10\nVMs in the next zone fail to patch, the patch job stops.",
+          "$ref": "FixedOrPercent"
+        },
+        "mode": {
+          "enum": [
+            "MODE_UNSPECIFIED",
+            "ZONE_BY_ZONE",
+            "CONCURRENT_ZONES"
+          ],
+          "type": "string",
+          "description": "Mode of the patch rollout.",
+          "enumDescriptions": [
+            "Mode must be specified.",
+            "Patches are applied one zone at a time. The patch job begins in the\nregion with the lowest number of targeted VMs. Within the region,\npatching begins in the zone with the lowest number of targeted VMs. If\nmultiple regions (or zones within a region) have the same number of\ntargeted VMs, a tie-breaker is achieved by sorting the regions or zones\nin alphabetical order.",
+            "Patches are applied to VMs in all zones at the same time."
+          ]
+        }
+      },
+      "description": "Patch rollout configuration specifications. Contains details on the\nconcurrency control when applying patch(es) to all targeted VMs.",
+      "id": "PatchRollout",
+      "type": "object"
+    },
+    "WeeklySchedule": {
+      "type": "object",
+      "description": "Represents a weekly schedule.",
+      "id": "WeeklySchedule",
+      "properties": {
+        "dayOfWeek": {
+          "enumDescriptions": [
+            "The day of the week is unspecified.",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "description": "Required. Day of the week.",
+          "enum": [
+            "DAY_OF_WEEK_UNSPECIFIED",
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ],
+          "type": "string"
+        }
+      }
     },
     "PatchInstanceFilterGroupLabel": {
       "type": "object",
       "description": "Represents a group of VMs that can be identified as having all these\nlabels, for example \"env=prod and app=web\".",
       "properties": {
         "labels": {
+          "type": "object",
+          "description": "Compute Engine instance labels that must be present for a VM instance to\nbe targeted by this filter.",
           "additionalProperties": {
             "type": "string"
-          },
-          "type": "object",
-          "description": "Compute Engine instance labels that must be present for a VM instance to\nbe targeted by this filter."
+          }
         }
       },
       "id": "PatchInstanceFilterGroupLabel"
     },
-    "SoftwareRecipeStepRunScript": {
-      "id": "SoftwareRecipeStepRunScript",
-      "description": "Runs a script through an interpreter.",
+    "Package": {
       "properties": {
-        "interpreter": {
-          "enum": [
-            "INTERPRETER_UNSPECIFIED",
-            "SHELL",
-            "POWERSHELL"
-          ],
-          "description": "The script interpreter to use to run the script. If no interpreter is\nspecified the script is executed directly, which likely\nonly succeed for scripts with\n[shebang lines](https://en.wikipedia.org/wiki/Shebang_\\(Unix\\)).",
+        "manager": {
+          "description": "Type of package manager that can be used to install this package.\nIf a system does not have the package manager, the package is not\ninstalled or removed no error message is returned. By default,\nor if you specify `ANY`,\nthe agent attempts to install and remove this package using the default\npackage manager. This is useful when creating a policy that applies to\ndifferent types of systems.\n\nThe default behavior is ANY.",
           "enumDescriptions": [
-            "Default value for ScriptType.",
-            "Indicates that the script is run with `/bin/sh` on Linux and `cmd`\non windows.",
-            "Indicates that the script is run with powershell."
+            "The default behavior is ANY.",
+            "Apply this package config using the default system package manager.",
+            "Apply this package config only if Apt is available on the system.",
+            "Apply this package config only if Yum is available on the system.",
+            "Apply this package config only if Zypper is available on the system.",
+            "Apply this package config only if GooGet is available on the system."
+          ],
+          "enum": [
+            "MANAGER_UNSPECIFIED",
+            "ANY",
+            "APT",
+            "YUM",
+            "ZYPPER",
+            "GOO"
           ],
           "type": "string"
+        },
+        "name": {
+          "description": "Required. The name of the package. A package is uniquely identified for conflict\nvalidation by checking the package name and the manager(s) that the\npackage targets.",
+          "type": "string"
+        },
+        "desiredState": {
+          "description": "The desired_state the agent should maintain for this package. The\ndefault is to ensure the package is installed.",
+          "enum": [
+            "DESIRED_STATE_UNSPECIFIED",
+            "INSTALLED",
+            "UPDATED",
+            "REMOVED"
+          ],
+          "enumDescriptions": [
+            "The default is to ensure the package is installed.",
+            "The agent ensures that the package is installed.",
+            "The agent ensures that the package is installed and\nperiodically checks for and install any updates.",
+            "The agent ensures that the package is not installed and uninstall it\nif detected."
+          ],
+          "type": "string"
+        }
+      },
+      "id": "Package",
+      "type": "object",
+      "description": "Package is a reference to the software package to be installed or removed.\nThe agent on the VM instance uses the system package manager to apply the\nconfig.\n\n\nThese are the commands that the agent uses to install or remove\npackages.\n\nApt\ninstall: `apt-get update && apt-get -y install package1 package2 package3`\nremove: `apt-get -y remove package1 package2 package3`\n\nYum\ninstall: `yum -y install package1 package2 package3`\nremove: `yum -y remove package1 package2 package3`\n\nZypper\ninstall: `zypper install package1 package2 package3`\nremove: `zypper rm package1 package2`\n\nGooget\ninstall: `googet -noconfirm install package1 package2 package3`\nremove: `googet -noconfirm remove package1 package2 package3`"
+    },
+    "SoftwareRecipeStepExecFile": {
+      "id": "SoftwareRecipeStepExecFile",
+      "description": "Executes an artifact or local file.",
+      "type": "object",
+      "properties": {
+        "artifactId": {
+          "description": "The id of the relevant artifact in the recipe.",
+          "type": "string"
+        },
+        "localPath": {
+          "description": "The absolute path of the file on the local filesystem.",
+          "type": "string"
+        },
+        "args": {
+          "description": "Arguments to be passed to the provided executable.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "allowedExitCodes": {
           "items": {
             "type": "integer",
             "format": "int32"
           },
-          "type": "array",
-          "description": "Return codes that indicate that the software installed or updated\nsuccessfully. Behaviour defaults to [0]"
+          "description": "Defaults to [0]. A list of possible return values that the program\ncan return to indicate a success.",
+          "type": "array"
+        }
+      }
+    },
+    "EffectiveGuestPolicySourcedSoftwareRecipe": {
+      "id": "EffectiveGuestPolicySourcedSoftwareRecipe",
+      "properties": {
+        "softwareRecipe": {
+          "$ref": "SoftwareRecipe",
+          "description": "A software recipe to configure on the VM instance."
         },
-        "script": {
+        "source": {
+          "description": "Name of the guest policy providing this config.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "A guest policy recipe including its source."
+    },
+    "ExecStepConfig": {
+      "id": "ExecStepConfig",
+      "properties": {
+        "allowedSuccessCodes": {
+          "description": "Defaults to [0]. A list of possible return values that the\nexecution can return to indicate a success.",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "interpreter": {
+          "enum": [
+            "INTERPRETER_UNSPECIFIED",
+            "SHELL",
+            "POWERSHELL"
+          ],
+          "description": "The script interpreter to use to run the script. If no interpreter is\nspecified the script will be executed directly, which will likely\nonly succeed for scripts with [shebang lines]\n(https://en.wikipedia.org/wiki/Shebang_\\(Unix\\)).",
           "type": "string",
-          "description": "Required. The shell script to be executed."
+          "enumDescriptions": [
+            "Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the\ninterpreter will be parsed from the shebang line of the script if\nunspecified.",
+            "Indicates that the script is run with `/bin/sh` on Linux and `cmd`\non Windows.",
+            "Indicates that the file is run with PowerShell flags\n`-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`."
+          ]
+        },
+        "gcsObject": {
+          "description": "A Google Cloud Storage object containing the executable.",
+          "$ref": "GcsObject"
+        },
+        "localPath": {
+          "description": "An absolute path to the executable on the VM.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "Common configurations for an ExecStep."
+    },
+    "TimeOfDay": {
+      "description": "Represents a time of day. The date and time zone are either not significant\nor are specified elsewhere. An API may choose to allow leap seconds. Related\ntypes are google.type.Date and `google.protobuf.Timestamp`.",
+      "properties": {
+        "hours": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Hours of day in 24 hour format. Should be from 0 to 23. An API may choose\nto allow the value \"24:00:00\" for scenarios like business closing time."
+        },
+        "minutes": {
+          "description": "Minutes of hour of day. Must be from 0 to 59.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "seconds": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Seconds of minutes of the time. Must normally be from 0 to 59. An API may\nallow the value 60 if it allows leap-seconds."
+        },
+        "nanos": {
+          "description": "Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "id": "TimeOfDay",
+      "type": "object"
+    },
+    "WindowsUpdateSettings": {
+      "properties": {
+        "excludes": {
+          "description": "List of KBs to exclude from update.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "classifications": {
+          "enumDescriptions": [
+            "Invalid. If classifications are included, they must be specified.",
+            "\"A widely released fix for a specific problem that addresses a critical,\nnon-security-related bug.\" [1]",
+            "\"A widely released fix for a product-specific, security-related\nvulnerability. Security vulnerabilities are rated by their severity. The\nseverity rating is indicated in the Microsoft security bulletin as\ncritical, important, moderate, or low.\" [1]",
+            "\"A widely released and frequent software update that contains additions\nto a product's definition database. Definition databases are often used\nto detect objects that have specific attributes, such as malicious code,\nphishing websites, or junk mail.\" [1]",
+            "\"Software that controls the input and output of a device.\" [1]",
+            "\"New product functionality that is first distributed outside the context\nof a product release and that is typically included in the next full\nproduct release.\" [1]",
+            "\"A tested, cumulative set of all hotfixes, security updates, critical\nupdates, and updates. Additionally, service packs may contain additional\nfixes for problems that are found internally since the release of the\nproduct. Service packs my also contain a limited number of\ncustomer-requested design changes or features.\" [1]",
+            "\"A utility or feature that helps complete a task or set of tasks.\" [1]",
+            "\"A tested, cumulative set of hotfixes, security updates, critical\nupdates, and updates that are packaged together for easy deployment. A\nrollup generally targets a specific area, such as security, or a\ncomponent of a product, such as Internet Information Services (IIS).\" [1]",
+            "\"A widely released fix for a specific problem. An update addresses a\nnoncritical, non-security-related bug.\" [1]"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "CLASSIFICATION_UNSPECIFIED",
+              "CRITICAL",
+              "SECURITY",
+              "DEFINITION",
+              "DRIVER",
+              "FEATURE_PACK",
+              "SERVICE_PACK",
+              "TOOL",
+              "UPDATE_ROLLUP",
+              "UPDATE"
+            ]
+          },
+          "type": "array",
+          "description": "Only apply updates of these windows update classifications. If empty, all\nupdates are applied."
+        },
+        "exclusivePatches": {
+          "description": "An exclusive list of kbs to be updated. These are the only patches\nthat will be updated. This field must not be used with other\npatch configurations.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "id": "WindowsUpdateSettings",
+      "description": "Windows patching is performed using the Windows Update Agent.",
+      "type": "object"
+    },
+    "GooSettings": {
+      "id": "GooSettings",
+      "properties": {},
+      "type": "object",
+      "description": "Googet patching is performed by running `googet update`."
+    },
+    "SoftwareRecipeStepExtractArchive": {
+      "description": "Extracts an archive of the type specified in the specified directory.",
+      "properties": {
+        "destination": {
+          "description": "Directory to extract archive to.\nDefaults to `/` on Linux or `C:\\` on Windows.",
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "ARCHIVE_TYPE_UNSPECIFIED",
+            "TAR",
+            "TAR_GZIP",
+            "TAR_BZIP",
+            "TAR_LZMA",
+            "TAR_XZ",
+            "ZIP"
+          ],
+          "enumDescriptions": [
+            "Indicates that the archive type isn't specified.",
+            "Indicates that the archive is a tar archive with no encryption.",
+            "Indicates that the archive is a tar archive with gzip encryption.",
+            "Indicates that the archive is a tar archive with bzip encryption.",
+            "Indicates that the archive is a tar archive with lzma encryption.",
+            "Indicates that the archive is a tar archive with xz encryption.",
+            "Indicates that the archive is a zip archive."
+          ],
+          "description": "Required. The type of the archive to extract."
+        },
+        "artifactId": {
+          "type": "string",
+          "description": "Required. The id of the relevant artifact in the recipe."
+        }
+      },
+      "id": "SoftwareRecipeStepExtractArchive",
+      "type": "object"
+    },
+    "ZypperRepository": {
+      "properties": {
+        "baseUrl": {
+          "description": "Required. The location of the repository directory.",
+          "type": "string"
+        },
+        "gpgKeys": {
+          "type": "array",
+          "description": "URIs of GPG keys.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The display name of the repository."
+        },
+        "id": {
+          "description": "Required. A one word, unique name for this repository. This is\nthe `repo id` in the zypper config file and also the `display_name` if\n`display_name` is omitted. This id is also used as the unique identifier\nwhen checking for guest policy conflicts.",
+          "type": "string"
+        }
+      },
+      "description": "Represents a single Zypper package repository. This repository is added to a\nrepo file that is stored at `/etc/zypp/repos.d/google_osconfig.repo`.",
+      "id": "ZypperRepository",
+      "type": "object"
+    },
+    "GooRepository": {
+      "properties": {
+        "url": {
+          "description": "Required. The url of the repository.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Required. The name of the repository.",
+          "type": "string"
+        }
+      },
+      "id": "GooRepository",
+      "description": "Represents a Goo package repository. These is added to a repo file\nthat is stored at C:/ProgramData/GooGet/repos/google_osconfig.repo.",
+      "type": "object"
+    },
+    "FixedOrPercent": {
+      "properties": {
+        "percent": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Specifies the relative value defined as a percentage, which will be\nmultiplied by a reference value."
+        },
+        "fixed": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Specifies a fixed value."
+        }
+      },
+      "type": "object",
+      "description": "Message encapsulating a value that can be either absolute (\"fixed\") or\nrelative (\"percent\") to a value.",
+      "id": "FixedOrPercent"
+    },
+    "MonthlySchedule": {
+      "id": "MonthlySchedule",
+      "description": "Represents a monthly schedule. An example of a valid monthly schedule is\n\"on the third Tuesday of the month\" or \"on the 15th of the month\".",
+      "properties": {
+        "monthDay": {
+          "description": "Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1\nindicates the last day of the month.\nMonths without the target day will be skipped. For example, a schedule to\nrun \"every month on the 31st\" will not run in February, April, June, etc.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "weekDayOfMonth": {
+          "$ref": "WeekDayOfMonth",
+          "description": "Required. Week day in a month."
         }
       },
       "type": "object"
     },
+    "SoftwareRecipeStepInstallRpm": {
+      "id": "SoftwareRecipeStepInstallRpm",
+      "properties": {
+        "artifactId": {
+          "type": "string",
+          "description": "Required. The id of the relevant artifact in the recipe."
+        }
+      },
+      "description": "Installs an rpm file via the rpm utility.",
+      "type": "object"
+    },
+    "SoftwareRecipeStepCopyFile": {
+      "properties": {
+        "destination": {
+          "description": "Required. The absolute path on the instance to put the file.",
+          "type": "string"
+        },
+        "artifactId": {
+          "description": "Required. The id of the relevant artifact in the recipe.",
+          "type": "string"
+        },
+        "overwrite": {
+          "description": "Whether to allow this step to overwrite existing files. If this is\nfalse and the file already exists the file is not overwritten\nand the step is considered a success. Defaults to false.",
+          "type": "boolean"
+        },
+        "permissions": {
+          "type": "string",
+          "description": "Consists of three octal digits which represent, in\norder, the permissions of the owner, group, and other users for the\nfile (similarly to the numeric mode used in the linux chmod utility).\nEach digit represents a three bit number with the 4 bit\ncorresponding to the read permissions, the 2 bit corresponds to the\nwrite bit, and the one bit corresponds to the execute permission.\nDefault behavior is 755.\n\nBelow are some examples of permissions and their associated values:\nread, write, and execute: 7\nread and execute: 5\nread and write: 6\nread only: 4"
+        }
+      },
+      "id": "SoftwareRecipeStepCopyFile",
+      "description": "Copies the artifact to the specified path on the instance.",
+      "type": "object"
+    },
+    "Assignment": {
+      "properties": {
+        "instances": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "Targets any of the instances specified. Instances are specified by their\nURI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`.\n\nInstance targeting is uncommon and is supported to facilitate the\nmanagement of changes by the instance or to target specific VM instances\nfor development and testing.\n\nOnly supported for project-level policies and must reference instances\nwithin this project."
+        },
+        "zones": {
+          "description": "Targets instances in any of these zones. Leave empty to target instances\nin any zone.\n\nZonal targeting is uncommon and is supported to facilitate the management\nof changes by zone.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "instanceNamePrefixes": {
+          "description": "Targets VM instances whose name starts with one of these prefixes.\n\nLike labels, this is another way to group VM instances when targeting\nconfigs, for example prefix=\"prod-\".\n\nOnly supported for project-level policies.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "groupLabels": {
+          "type": "array",
+          "items": {
+            "$ref": "AssignmentGroupLabel"
+          },
+          "description": "Targets instances matching at least one of these label sets. This allows\nan assignment to target disparate groups, for example \"env=prod or\nenv=staging\"."
+        },
+        "osTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "AssignmentOsType"
+          },
+          "description": "Targets VM instances matching at least one of the following OS types.\n\nVM instances must match all supplied criteria for a given OsType to be\nincluded."
+        }
+      },
+      "id": "Assignment",
+      "type": "object",
+      "description": "An assignment represents the group or groups of VM instances that the policy\napplies to.\n\nIf an assignment is empty, it applies to all VM instances. Otherwise, the\ntargeted VM instances must meet all the criteria specified. So if both\nlabels and zones are specified, the policy applies to VM instances with those\nlabels and in those zones."
+    },
+    "SoftwareRecipeStepInstallMsi": {
+      "description": "Installs an MSI file.",
+      "id": "SoftwareRecipeStepInstallMsi",
+      "type": "object",
+      "properties": {
+        "artifactId": {
+          "type": "string",
+          "description": "Required. The id of the relevant artifact in the recipe."
+        },
+        "allowedExitCodes": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": "Return codes that indicate that the software installed or updated\nsuccessfully. Behaviour defaults to [0]"
+        },
+        "flags": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The flags to use when installing the MSI\ndefaults to [\"/i\"] (i.e. the install flag).",
+          "type": "array"
+        }
+      }
+    },
+    "SoftwareRecipeArtifactGcs": {
+      "id": "SoftwareRecipeArtifactGcs",
+      "type": "object",
+      "properties": {
+        "object": {
+          "type": "string",
+          "description": "Name of the Google Cloud Storage object.\nAs specified [here]\n(https://cloud.google.com/storage/docs/naming#objectnames)\nGiven an example URL:\n`https://storage.googleapis.com/my-bucket/foo/bar#1234567`\nthis value would be `foo/bar`."
+        },
+        "generation": {
+          "description": "Must be provided if allow_insecure is false.\nGeneration number of the Google Cloud Storage object.\n`https://storage.googleapis.com/my-bucket/foo/bar#1234567`\nthis value would be `1234567`.",
+          "format": "int64",
+          "type": "string"
+        },
+        "bucket": {
+          "type": "string",
+          "description": "Bucket of the Google Cloud Storage object.\nGiven an example URL:\n`https://storage.googleapis.com/my-bucket/foo/bar#1234567`\nthis value would be `my-bucket`."
+        }
+      },
+      "description": "Specifies an artifact available as a Google Cloud Storage object."
+    },
     "PatchJobInstanceDetails": {
       "type": "object",
       "description": "Patch details for a VM instance. For more information about reviewing VM\ninstance details, see\n[Listing all VM instance details for a specific patch\njob](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details).",
-      "id": "PatchJobInstanceDetails",
       "properties": {
-        "attemptCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "The number of times the agent that the agent attempts to apply the patch."
-        },
-        "failureReason": {
-          "type": "string",
-          "description": "If the patch fails, this field provides the reason."
-        },
         "state": {
           "description": "Current state of instance patch.",
           "enum": [
@@ -835,7 +2164,6 @@
             "RUNNING_POST_PATCH_STEP",
             "NO_AGENT_DETECTED"
           ],
-          "type": "string",
           "enumDescriptions": [
             "Unspecified.",
             "The instance is not yet notified.",
@@ -853,7 +2181,13 @@
             "The instance is running the pre-patch step.",
             "The instance is running the post-patch step.",
             "The service could not detect the presence of the agent. Check to ensure\nthat the agent is installed, running, and able to communicate with the\nservice."
-          ]
+          ],
+          "type": "string"
+        },
+        "attemptCount": {
+          "format": "int64",
+          "description": "The number of times the agent that the agent attempts to apply the patch.",
+          "type": "string"
         },
         "name": {
           "type": "string",
@@ -862,1311 +2196,68 @@
         "instanceSystemId": {
           "description": "The unique identifier for the instance. This identifier is\ndefined by the server.",
           "type": "string"
-        }
-      }
-    },
-    "PatchJob": {
-      "description": "A high level representation of a patch job that is either in progress\nor has completed.\n\nInstance details are not included in the job. To paginate through instance\ndetails, use `ListPatchJobInstanceDetails`.\n\nFor more information about patch jobs, see\n[Creating patch\njobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).",
-      "type": "object",
-      "properties": {
-        "instanceDetailsSummary": {
-          "$ref": "PatchJobInstanceDetailsSummary",
-          "description": "Summary of instance details."
         },
-        "instanceFilter": {
-          "$ref": "PatchInstanceFilter",
-          "description": "Instances to patch."
-        },
-        "errorMessage": {
-          "type": "string",
-          "description": "If this patch job failed, this message provides information about the\nfailure."
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of the patch job. Length of the description is limited\nto 1024 characters."
-        },
-        "displayName": {
-          "description": "Display name for this patch job. This is not a unique identifier.",
-          "type": "string"
-        },
-        "percentComplete": {
-          "description": "Reflects the overall progress of the patch job in the range of\n0.0 being no progress to 100.0 being complete.",
-          "format": "double",
-          "type": "number"
-        },
-        "state": {
-          "type": "string",
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "STARTED",
-            "INSTANCE_LOOKUP",
-            "PATCHING",
-            "SUCCEEDED",
-            "COMPLETED_WITH_ERRORS",
-            "CANCELED",
-            "TIMED_OUT"
-          ],
-          "enumDescriptions": [
-            "State must be specified.",
-            "The patch job was successfully initiated.",
-            "The patch job is looking up instances to run the patch on.",
-            "Instances are being patched.",
-            "Patch job completed successfully.",
-            "Patch job completed but there were errors.",
-            "The patch job was canceled.",
-            "The patch job timed out."
-          ],
-          "description": "The current state of the PatchJob."
-        },
-        "createTime": {
-          "description": "Time this patch job was created.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "name": {
-          "type": "string",
-          "description": "Unique identifier for this patch job in the form\n`projects/*/patchJobs/*`"
-        },
-        "patchConfig": {
-          "description": "Patch configuration being applied.",
-          "$ref": "PatchConfig"
-        },
-        "patchDeployment": {
-          "type": "string",
-          "description": "Output only. Name of the patch deployment that created this patch job."
-        },
-        "duration": {
-          "type": "string",
-          "description": "Duration of the patch job. After the duration ends, the\npatch job times out.",
-          "format": "google-duration"
-        },
-        "updateTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Last time this patch job was updated."
-        },
-        "dryRun": {
-          "description": "If this patch job is a dry run, the agent reports that it has\nfinished without running any updates on the VM instance.",
-          "type": "boolean"
-        }
-      },
-      "id": "PatchJob"
-    },
-    "Package": {
-      "properties": {
-        "manager": {
-          "description": "Type of package manager that can be used to install this package.\nIf a system does not have the package manager, the package is not\ninstalled or removed no error message is returned. By default,\nor if you specify `ANY`,\nthe agent attempts to install and remove this package using the default\npackage manager. This is useful when creating a policy that applies to\ndifferent types of systems.\n\nThe default behavior is ANY.",
-          "enum": [
-            "MANAGER_UNSPECIFIED",
-            "ANY",
-            "APT",
-            "YUM",
-            "ZYPPER",
-            "GOO"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "The default behavior is ANY.",
-            "Apply this package config using the default system package manager.",
-            "Apply this package config only if Apt is available on the system.",
-            "Apply this package config only if Yum is available on the system.",
-            "Apply this package config only if Zypper is available on the system.",
-            "Apply this package config only if GooGet is available on the system."
-          ]
-        },
-        "name": {
-          "description": "Required. The name of the package. A package is uniquely identified for conflict\nvalidation by checking the package name and the manager(s) that the\npackage targets.",
-          "type": "string"
-        },
-        "desiredState": {
-          "description": "The desired_state the agent should maintain for this package. The\ndefault is to ensure the package is installed.",
-          "enumDescriptions": [
-            "The default is to ensure the package is installed.",
-            "The agent ensures that the package is installed.",
-            "The agent ensures that the package is installed and\nperiodically checks for and install any updates.",
-            "The agent ensures that the package is not installed and uninstall it\nif detected."
-          ],
-          "enum": [
-            "DESIRED_STATE_UNSPECIFIED",
-            "INSTALLED",
-            "UPDATED",
-            "REMOVED"
-          ],
+        "failureReason": {
+          "description": "If the patch fails, this field provides the reason.",
           "type": "string"
         }
       },
-      "type": "object",
-      "id": "Package",
-      "description": "Package is a reference to the software package to be installed or removed.\nThe agent on the VM instance uses the system package manager to apply the\nconfig.\n\n\nThese are the commands that the agent uses to install or remove\npackages.\n\nApt\ninstall: `apt-get update && apt-get -y install package1 package2 package3`\nremove: `apt-get -y remove package1 package2 package3`\n\nYum\ninstall: `yum -y install package1 package2 package3`\nremove: `yum -y remove package1 package2 package3`\n\nZypper\ninstall: `zypper install package1 package2 package3`\nremove: `zypper rm package1 package2`\n\nGooget\ninstall: `googet -noconfirm install package1 package2 package3`\nremove: `googet -noconfirm remove package1 package2 package3`"
+      "id": "PatchJobInstanceDetails"
     },
-    "EffectiveGuestPolicy": {
+    "SoftwareRecipeArtifactRemote": {
       "type": "object",
-      "id": "EffectiveGuestPolicy",
+      "description": "Specifies an artifact available via some URI.",
       "properties": {
-        "packageRepositories": {
-          "items": {
-            "$ref": "EffectiveGuestPolicySourcedPackageRepository"
-          },
-          "description": "List of package repository configurations assigned to the VM instance.",
-          "type": "array"
-        },
-        "softwareRecipes": {
-          "type": "array",
-          "items": {
-            "$ref": "EffectiveGuestPolicySourcedSoftwareRecipe"
-          },
-          "description": "List of recipes assigned to the VM instance."
-        },
-        "packages": {
-          "items": {
-            "$ref": "EffectiveGuestPolicySourcedPackage"
-          },
-          "description": "List of package configurations assigned to the VM instance.",
-          "type": "array"
-        }
-      },
-      "description": "The effective guest policy that applies to a VM instance."
-    },
-    "EffectiveGuestPolicySourcedSoftwareRecipe": {
-      "description": "A guest policy recipe including its source.",
-      "id": "EffectiveGuestPolicySourcedSoftwareRecipe",
-      "type": "object",
-      "properties": {
-        "softwareRecipe": {
-          "description": "A software recipe to configure on the VM instance.",
-          "$ref": "SoftwareRecipe"
-        },
-        "source": {
-          "description": "Name of the guest policy providing this config.",
-          "type": "string"
-        }
-      }
-    },
-    "PatchDeployment": {
-      "description": "Patch deployments are configurations that individual patch jobs use to\ncomplete a patch. These configurations include instance filter, package\nrepository settings, and a schedule. For more information about creating and\nmanaging patch deployments, see [Scheduling patch\njobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).",
-      "properties": {
-        "name": {
-          "description": "Unique name for the patch deployment resource in a project. The patch\ndeployment name is in the form:\n`projects/{project_id}/patchDeployments/{patch_deployment_id}`.\nThis field is ignored when you create a new patch deployment.",
-          "type": "string"
-        },
-        "patchConfig": {
-          "description": "Optional. Patch configuration that is applied.",
-          "$ref": "PatchConfig"
-        },
-        "updateTime": {
+        "checksum": {
           "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. Time the patch deployment was last updated. Timestamp is in\n[RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
-        },
-        "description": {
-          "type": "string",
-          "description": "Optional. Description of the patch deployment. Length of the description is limited\nto 1024 characters."
-        },
-        "instanceFilter": {
-          "$ref": "PatchInstanceFilter",
-          "description": "Required. VM instances to patch."
-        },
-        "recurringSchedule": {
-          "description": "Required. Schedule recurring executions.",
-          "$ref": "RecurringSchedule"
-        },
-        "lastExecuteTime": {
-          "description": "Output only. The last time a patch job was started by this deployment.\nTimestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text\nformat.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "duration": {
-          "type": "string",
-          "description": "Optional. Duration of the patch. After the duration ends, the patch times out.",
-          "format": "google-duration"
-        },
-        "oneTimeSchedule": {
-          "$ref": "OneTimeSchedule",
-          "description": "Required. Schedule a one-time execution."
-        },
-        "createTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. Time the patch deployment was created. Timestamp is in\n[RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
-        }
-      },
-      "type": "object",
-      "id": "PatchDeployment"
-    },
-    "ListPatchJobsResponse": {
-      "properties": {
-        "patchJobs": {
-          "type": "array",
-          "description": "The list of patch jobs.",
-          "items": {
-            "$ref": "PatchJob"
-          }
-        },
-        "nextPageToken": {
-          "description": "A pagination token that can be used to get the next page of results.",
-          "type": "string"
-        }
-      },
-      "description": "A response message for listing patch jobs.",
-      "type": "object",
-      "id": "ListPatchJobsResponse"
-    },
-    "AptRepository": {
-      "type": "object",
-      "description": "Represents a single Apt package repository. This repository is added to\na repo file that is stored at\n`/etc/apt/sources.list.d/google_osconfig.list`.",
-      "properties": {
-        "gpgKey": {
-          "type": "string",
-          "description": "URI of the key file for this repository. The agent maintains\na keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing\nall the keys in any applied guest policy."
+          "description": "Must be provided if `allow_insecure` is `false`.\nSHA256 checksum in hex format, to compare to the checksum of the\nartifact. If the checksum is not empty and it doesn't match the\nartifact then the recipe installation fails before running any of the\nsteps."
         },
         "uri": {
           "type": "string",
-          "description": "Required. URI for this repository."
-        },
-        "distribution": {
-          "type": "string",
-          "description": "Required. Distribution of this repository."
-        },
-        "components": {
-          "description": "Required. List of components for this repository. Must contain at least one item.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "archiveType": {
-          "enum": [
-            "ARCHIVE_TYPE_UNSPECIFIED",
-            "DEB",
-            "DEB_SRC"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Unspecified.",
-            "DEB indicates that the archive contains binary files.",
-            "DEB_SRC indicates that the archive contains source files."
-          ],
-          "description": "Type of archive files in this repository. The default behavior is DEB."
+          "description": "URI from which to fetch the object. It should contain both the protocol\nand path following the format {protocol}://{location}."
         }
       },
-      "id": "AptRepository"
-    },
-    "WeeklySchedule": {
-      "description": "Represents a weekly schedule.",
-      "id": "WeeklySchedule",
-      "properties": {
-        "dayOfWeek": {
-          "description": "Required. Day of the week.",
-          "enumDescriptions": [
-            "The day of the week is unspecified.",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "enum": [
-            "DAY_OF_WEEK_UNSPECIFIED",
-            "MONDAY",
-            "TUESDAY",
-            "WEDNESDAY",
-            "THURSDAY",
-            "FRIDAY",
-            "SATURDAY",
-            "SUNDAY"
-          ],
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "PatchConfig": {
-      "id": "PatchConfig",
-      "type": "object",
-      "description": "Patch configuration specifications. Contains details on how to apply the\npatch(es) to a VM instance.",
-      "properties": {
-        "goo": {
-          "$ref": "GooSettings",
-          "description": "Goo update settings. Use this setting to override the default `goo` patch\nrules."
-        },
-        "preStep": {
-          "$ref": "ExecStep",
-          "description": "The `ExecStep` to run before the patch update."
-        },
-        "zypper": {
-          "$ref": "ZypperSettings",
-          "description": "Zypper update settings. Use this setting to override the default `zypper`\npatch rules."
-        },
-        "windowsUpdate": {
-          "$ref": "WindowsUpdateSettings",
-          "description": "Windows update settings. Use this override the default windows patch rules."
-        },
-        "postStep": {
-          "$ref": "ExecStep",
-          "description": "The `ExecStep` to run after the patch update."
-        },
-        "yum": {
-          "description": "Yum update settings. Use this setting to override the default `yum` patch\nrules.",
-          "$ref": "YumSettings"
-        },
-        "rebootConfig": {
-          "description": "Post-patch reboot settings.",
-          "type": "string",
-          "enumDescriptions": [
-            "The default behavior is DEFAULT.",
-            "The agent decides if a reboot is necessary by checking signals such as\nregistry keys on Windows or `/var/run/reboot-required` on APT based\nsystems. On RPM based systems, a set of core system package install times\nare compared with system boot time.",
-            "Always reboot the machine after the update completes.",
-            "Never reboot the machine after the update completes."
-          ],
-          "enum": [
-            "REBOOT_CONFIG_UNSPECIFIED",
-            "DEFAULT",
-            "ALWAYS",
-            "NEVER"
-          ]
-        },
-        "apt": {
-          "description": "Apt update settings. Use this setting to override the default `apt` patch\nrules.",
-          "$ref": "AptSettings"
-        }
-      }
-    },
-    "SoftwareRecipeStepInstallMsi": {
-      "type": "object",
-      "id": "SoftwareRecipeStepInstallMsi",
-      "description": "Installs an MSI file.",
-      "properties": {
-        "flags": {
-          "type": "array",
-          "description": "The flags to use when installing the MSI\ndefaults to [\"/i\"] (i.e. the install flag).",
-          "items": {
-            "type": "string"
-          }
-        },
-        "artifactId": {
-          "type": "string",
-          "description": "Required. The id of the relevant artifact in the recipe."
-        },
-        "allowedExitCodes": {
-          "description": "Return codes that indicate that the software installed or updated\nsuccessfully. Behaviour defaults to [0]",
-          "type": "array",
-          "items": {
-            "format": "int32",
-            "type": "integer"
-          }
-        }
-      }
-    },
-    "AssignmentOsType": {
-      "properties": {
-        "osArchitecture": {
-          "type": "string",
-          "description": "Targets VM instances with OS Inventory enabled and having the following\nOS architecture."
-        },
-        "osVersion": {
-          "description": "Targets VM instances with OS Inventory enabled and having the following\nfollowing OS version.",
-          "type": "string"
-        },
-        "osShortName": {
-          "type": "string",
-          "description": "Targets VM instances with OS Inventory enabled and having the following\nOS short name, for example \"debian\" or \"windows\"."
-        }
-      },
-      "id": "AssignmentOsType",
-      "type": "object",
-      "description": "Defines the criteria for selecting VM Instances by OS type."
-    },
-    "YumRepository": {
-      "type": "object",
-      "description": "Represents a single Yum package repository. This repository is added to a\nrepo file that is stored at `/etc/yum.repos.d/google_osconfig.repo`.",
-      "id": "YumRepository",
-      "properties": {
-        "displayName": {
-          "description": "The display name of the repository.",
-          "type": "string"
-        },
-        "id": {
-          "type": "string",
-          "description": "Required. A one word, unique name for this repository. This is\nthe `repo id` in the Yum config file and also the `display_name` if\n`display_name` is omitted. This id is also used as the unique identifier\nwhen checking for guest policy conflicts."
-        },
-        "gpgKeys": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "URIs of GPG keys."
-        },
-        "baseUrl": {
-          "description": "Required. The location of the repository directory.",
-          "type": "string"
-        }
-      }
-    },
-    "PatchInstanceFilter": {
-      "type": "object",
-      "description": "A filter to target VM instances for patching. The targeted\nVMs must meet all criteria specified. So if both labels and zones are\nspecified, the patch job targets only VMs with those labels and in those\nzones.",
-      "properties": {
-        "instanceNamePrefixes": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "Targets VMs whose name starts with one of these prefixes. Similar to\nlabels, this is another way to group VMs when targeting configs, for\nexample prefix=\"prod-\"."
-        },
-        "instances": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "Targets any of the VM instances specified. Instances are specified by their\nURI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`,\n`projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or\n`https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`"
-        },
-        "zones": {
-          "description": "Targets VM instances in ANY of these zones. Leave empty to target VM\ninstances in any zone.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "groupLabels": {
-          "description": "Targets VM instances matching at least one of these label sets. This allows\ntargeting of disparate groups, for example \"env=prod or env=staging\".",
-          "items": {
-            "$ref": "PatchInstanceFilterGroupLabel"
-          },
-          "type": "array"
-        },
-        "all": {
-          "description": "Target all VM instances in the project. If true, no other criteria is\npermitted.",
-          "type": "boolean"
-        }
-      },
-      "id": "PatchInstanceFilter"
-    },
-    "AssignmentGroupLabel": {
-      "type": "object",
-      "id": "AssignmentGroupLabel",
-      "properties": {
-        "labels": {
-          "type": "object",
-          "description": "Google Compute Engine instance labels that must be present for an\ninstance to be included in this assignment group.",
-          "additionalProperties": {
-            "type": "string"
-          }
-        }
-      },
-      "description": "Represents a group of VM intances that can be identified as having all\nthese labels, for example \"env=prod and app=web\"."
-    },
-    "EffectiveGuestPolicySourcedPackageRepository": {
-      "type": "object",
-      "description": "A guest policy package repository including its source.",
-      "id": "EffectiveGuestPolicySourcedPackageRepository",
-      "properties": {
-        "source": {
-          "description": "Name of the guest policy providing this config.",
-          "type": "string"
-        },
-        "packageRepository": {
-          "$ref": "PackageRepository",
-          "description": "A software package repository to configure on the VM instance."
-        }
-      }
-    },
-    "SoftwareRecipe": {
-      "type": "object",
-      "id": "SoftwareRecipe",
-      "description": "A software recipe is a set of instructions for installing and configuring a\npiece of software. It consists of a set of artifacts that are\ndownloaded, and a set of steps that install, configure, and/or update the\nsoftware.\n\nRecipes support installing and updating software from artifacts in the\nfollowing formats:\nZip archive, Tar archive, Windows MSI, Debian package, and RPM package.\n\nAdditionally, recipes support executing a script (either defined in a file or\ndirectly in this api) in bash, sh, cmd, and powershell.\n\nUpdating a software recipe\n\nIf a recipe is assigned to an instance and there is a recipe with the same\nname but a lower version already installed and the assigned state\nof the recipe is `UPDATED`, then the recipe is updated to\nthe new version.\n\nScript Working Directories\n\nEach script or execution step is run in its own temporary directory which\nis deleted after completing the step.",
-      "properties": {
-        "updateSteps": {
-          "type": "array",
-          "description": "Actions to be taken for updating this recipe. On failure it stops\nexecuting steps and  does not attempt another update for this recipe. Any\nsteps taken (including partially completed steps) are not rolled back.",
-          "items": {
-            "$ref": "SoftwareRecipeStep"
-          }
-        },
-        "name": {
-          "description": "Required. Unique identifier for the recipe. Only one recipe with a given name is\ninstalled on an instance.\n\nNames are also used to identify resources which helps to determine whether\nguest policies have conflicts. This means that requests to create multiple\nrecipes with the same name and version are rejected since they\ncould potentially have conflicting assignments.",
-          "type": "string"
-        },
-        "version": {
-          "description": "The version of this software recipe. Version can be up to 4 period\nseparated numbers (e.g. 12.34.56.78).",
-          "type": "string"
-        },
-        "artifacts": {
-          "items": {
-            "$ref": "SoftwareRecipeArtifact"
-          },
-          "type": "array",
-          "description": "Resources available to be used in the steps in the recipe."
-        },
-        "desiredState": {
-          "description": "Default is INSTALLED. The desired state the agent should maintain for this\nrecipe.\n\nINSTALLED: The software recipe is installed on the instance but\n           won't be updated to new versions.\nUPDATED: The software recipe is installed on the instance. The recipe is\n         updated to a higher version, if a higher version of the recipe is\n         assigned to this instance.\nREMOVE: Remove is unsupported for software recipes and attempts to\n        create or update a recipe to the REMOVE state is rejected.",
-          "enumDescriptions": [
-            "The default is to ensure the package is installed.",
-            "The agent ensures that the package is installed.",
-            "The agent ensures that the package is installed and\nperiodically checks for and install any updates.",
-            "The agent ensures that the package is not installed and uninstall it\nif detected."
-          ],
-          "type": "string",
-          "enum": [
-            "DESIRED_STATE_UNSPECIFIED",
-            "INSTALLED",
-            "UPDATED",
-            "REMOVED"
-          ]
-        },
-        "installSteps": {
-          "items": {
-            "$ref": "SoftwareRecipeStep"
-          },
-          "type": "array",
-          "description": "Actions to be taken for installing this recipe. On failure it stops\nexecuting steps and does not attempt another installation. Any steps taken\n(including partially completed steps) are not rolled back."
-        }
-      }
-    },
-    "ZypperRepository": {
-      "type": "object",
-      "description": "Represents a single Zypper package repository. This repository is added to a\nrepo file that is stored at `/etc/zypp/repos.d/google_osconfig.repo`.",
-      "properties": {
-        "gpgKeys": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "URIs of GPG keys."
-        },
-        "id": {
-          "type": "string",
-          "description": "Required. A one word, unique name for this repository. This is\nthe `repo id` in the zypper config file and also the `display_name` if\n`display_name` is omitted. This id is also used as the unique identifier\nwhen checking for guest policy conflicts."
-        },
-        "displayName": {
-          "description": "The display name of the repository.",
-          "type": "string"
-        },
-        "baseUrl": {
-          "description": "Required. The location of the repository directory.",
-          "type": "string"
-        }
-      },
-      "id": "ZypperRepository"
-    },
-    "WeekDayOfMonth": {
-      "type": "object",
-      "id": "WeekDayOfMonth",
-      "properties": {
-        "dayOfWeek": {
-          "type": "string",
-          "enumDescriptions": [
-            "The day of the week is unspecified.",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "description": "Required. A day of the week.",
-          "enum": [
-            "DAY_OF_WEEK_UNSPECIFIED",
-            "MONDAY",
-            "TUESDAY",
-            "WEDNESDAY",
-            "THURSDAY",
-            "FRIDAY",
-            "SATURDAY",
-            "SUNDAY"
-          ]
-        },
-        "weekOrdinal": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1\nindicates the last week of the month."
-        }
-      },
-      "description": "Represents one week day in a month. An example is \"the 4th Sunday\"."
-    },
-    "SoftwareRecipeStepInstallRpm": {
-      "type": "object",
-      "id": "SoftwareRecipeStepInstallRpm",
-      "description": "Installs an rpm file via the rpm utility.",
-      "properties": {
-        "artifactId": {
-          "type": "string",
-          "description": "Required. The id of the relevant artifact in the recipe."
-        }
-      }
+      "id": "SoftwareRecipeArtifactRemote"
     },
     "ExecutePatchJobRequest": {
       "id": "ExecutePatchJobRequest",
       "type": "object",
-      "description": "A request message to initiate patching across Compute Engine instances.",
       "properties": {
-        "displayName": {
-          "type": "string",
-          "description": "Display name for this patch job. This does not have to be unique."
+        "instanceFilter": {
+          "$ref": "PatchInstanceFilter",
+          "description": "Required. Instances to patch, either explicitly or filtered by some criteria such\nas zone or labels."
         },
-        "description": {
-          "type": "string",
-          "description": "Description of the patch job. Length of the description is limited\nto 1024 characters."
+        "displayName": {
+          "description": "Display name for this patch job. This does not have to be unique.",
+          "type": "string"
         },
         "duration": {
-          "format": "google-duration",
           "type": "string",
-          "description": "Duration of the patch job. After the duration ends, the patch job\ntimes out."
+          "description": "Duration of the patch job. After the duration ends, the patch job\ntimes out.",
+          "format": "google-duration"
         },
-        "instanceFilter": {
-          "description": "Required. Instances to patch, either explicitly or filtered by some criteria such\nas zone or labels.",
-          "$ref": "PatchInstanceFilter"
+        "description": {
+          "description": "Description of the patch job. Length of the description is limited\nto 1024 characters.",
+          "type": "string"
         },
-        "patchConfig": {
-          "description": "Patch configuration being applied. If omitted, instances are\npatched using the default configurations.",
-          "$ref": "PatchConfig"
+        "rollout": {
+          "description": "Rollout strategy of the patch job.",
+          "$ref": "PatchRollout"
         },
         "dryRun": {
           "type": "boolean",
           "description": "If this patch is a dry-run only, instances are contacted but\nwill do nothing."
-        }
-      }
-    },
-    "PatchJobInstanceDetailsSummary": {
-      "id": "PatchJobInstanceDetailsSummary",
-      "description": "A summary of the current patch state across all instances that this patch\njob affects. Contains counts of instances in different states. These states\nmap to `InstancePatchState`. List patch job instance details to see the\nspecific states of each instance.",
-      "properties": {
-        "inactiveInstanceCount": {
-          "type": "string",
-          "description": "Number of instances that are inactive.",
-          "format": "int64"
         },
-        "notifiedInstanceCount": {
-          "type": "string",
-          "format": "int64",
-          "description": "Number of instances notified about patch job."
-        },
-        "succeededInstanceCount": {
-          "type": "string",
-          "format": "int64",
-          "description": "Number of instances that have completed successfully."
-        },
-        "applyingPatchesInstanceCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "Number of instances that are applying patches."
-        },
-        "timedOutInstanceCount": {
-          "description": "Number of instances that exceeded the time out while applying the patch.",
-          "format": "int64",
-          "type": "string"
-        },
-        "downloadingPatchesInstanceCount": {
-          "type": "string",
-          "format": "int64",
-          "description": "Number of instances that are downloading patches."
-        },
-        "pendingInstanceCount": {
-          "format": "int64",
-          "description": "Number of instances pending patch job.",
-          "type": "string"
-        },
-        "startedInstanceCount": {
-          "type": "string",
-          "format": "int64",
-          "description": "Number of instances that have started."
-        },
-        "rebootingInstanceCount": {
-          "format": "int64",
-          "description": "Number of instances rebooting.",
-          "type": "string"
-        },
-        "failedInstanceCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "Number of instances that failed."
-        },
-        "prePatchStepInstanceCount": {
-          "format": "int64",
-          "description": "Number of instances that are running the pre-patch step.",
-          "type": "string"
-        },
-        "noAgentDetectedInstanceCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "Number of instances that do not appear to be running the agent. Check to\nensure that the agent is installed, running, and able to communicate with\nthe service."
-        },
-        "ackedInstanceCount": {
-          "description": "Number of instances that have acked and will start shortly.",
-          "type": "string",
-          "format": "int64"
-        },
-        "succeededRebootRequiredInstanceCount": {
-          "description": "Number of instances that require reboot.",
-          "format": "int64",
-          "type": "string"
-        },
-        "postPatchStepInstanceCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "Number of instances that are running the post-patch step."
+        "patchConfig": {
+          "description": "Patch configuration being applied. If omitted, instances are\npatched using the default configurations.",
+          "$ref": "PatchConfig"
         }
       },
-      "type": "object"
-    },
-    "SoftwareRecipeArtifact": {
-      "id": "SoftwareRecipeArtifact",
-      "properties": {
-        "allowInsecure": {
-          "type": "boolean",
-          "description": "Defaults to false. When false, recipes are subject to validations\nbased on the artifact type:\n\nRemote: A checksum must be specified, and only protocols with\ntransport-layer security are permitted.\nGCS:    An object generation number must be specified."
-        },
-        "gcs": {
-          "$ref": "SoftwareRecipeArtifactGcs",
-          "description": "A Google Cloud Storage artifact."
-        },
-        "remote": {
-          "description": "A generic remote artifact.",
-          "$ref": "SoftwareRecipeArtifactRemote"
-        },
-        "id": {
-          "type": "string",
-          "description": "Required. Id of the artifact, which the installation and update steps of this\nrecipe can reference. Artifacts in a recipe cannot have the same id."
-        }
-      },
-      "description": "Specifies a resource to be used in the recipe.",
-      "type": "object"
-    },
-    "Assignment": {
-      "properties": {
-        "groupLabels": {
-          "type": "array",
-          "description": "Targets instances matching at least one of these label sets. This allows\nan assignment to target disparate groups, for example \"env=prod or\nenv=staging\".",
-          "items": {
-            "$ref": "AssignmentGroupLabel"
-          }
-        },
-        "osTypes": {
-          "type": "array",
-          "items": {
-            "$ref": "AssignmentOsType"
-          },
-          "description": "Targets VM instances matching at least one of the following OS types.\n\nVM instances must match all supplied criteria for a given OsType to be\nincluded."
-        },
-        "instanceNamePrefixes": {
-          "description": "Targets VM instances whose name starts with one of these prefixes.\n\nLike labels, this is another way to group VM instances when targeting\nconfigs, for example prefix=\"prod-\".\n\nOnly supported for project-level policies.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "instances": {
-          "description": "Targets any of the instances specified. Instances are specified by their\nURI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`.\n\nInstance targeting is uncommon and is supported to facilitate the\nmanagement of changes by the instance or to target specific VM instances\nfor development and testing.\n\nOnly supported for project-level policies and must reference instances\nwithin this project.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "zones": {
-          "type": "array",
-          "description": "Targets instances in any of these zones. Leave empty to target instances\nin any zone.\n\nZonal targeting is uncommon and is supported to facilitate the management\nof changes by zone.",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "type": "object",
-      "id": "Assignment",
-      "description": "An assignment represents the group or groups of VM instances that the policy\napplies to.\n\nIf an assignment is empty, it applies to all VM instances. Otherwise, the\ntargeted VM instances must meet all the criteria specified. So if both\nlabels and zones are specified, the policy applies to VM instances with those\nlabels and in those zones."
-    },
-    "OneTimeSchedule": {
-      "id": "OneTimeSchedule",
-      "properties": {
-        "executeTime": {
-          "format": "google-datetime",
-          "description": "Required. The desired patch job execution time.",
-          "type": "string"
-        }
-      },
-      "description": "Sets the time for a one time patch deployment. Timestamp is in\n[RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
-      "type": "object"
-    },
-    "SoftwareRecipeStep": {
-      "properties": {
-        "rpmInstallation": {
-          "$ref": "SoftwareRecipeStepInstallRpm",
-          "description": "Installs an rpm file via the rpm utility."
-        },
-        "fileCopy": {
-          "$ref": "SoftwareRecipeStepCopyFile",
-          "description": "Copies a file onto the instance."
-        },
-        "fileExec": {
-          "$ref": "SoftwareRecipeStepExecFile",
-          "description": "Executes an artifact or local file."
-        },
-        "archiveExtraction": {
-          "$ref": "SoftwareRecipeStepExtractArchive",
-          "description": "Extracts an archive into the specified directory."
-        },
-        "scriptRun": {
-          "description": "Runs commands in a shell.",
-          "$ref": "SoftwareRecipeStepRunScript"
-        },
-        "msiInstallation": {
-          "$ref": "SoftwareRecipeStepInstallMsi",
-          "description": "Installs an MSI file."
-        },
-        "dpkgInstallation": {
-          "description": "Installs a deb file via dpkg.",
-          "$ref": "SoftwareRecipeStepInstallDpkg"
-        }
-      },
-      "description": "An action that can be taken as part of installing or updating a recipe.",
-      "type": "object",
-      "id": "SoftwareRecipeStep"
-    },
-    "TimeOfDay": {
-      "id": "TimeOfDay",
-      "properties": {
-        "hours": {
-          "description": "Hours of day in 24 hour format. Should be from 0 to 23. An API may choose\nto allow the value \"24:00:00\" for scenarios like business closing time.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "nanos": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999."
-        },
-        "seconds": {
-          "description": "Seconds of minutes of the time. Must normally be from 0 to 59. An API may\nallow the value 60 if it allows leap-seconds.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "minutes": {
-          "description": "Minutes of hour of day. Must be from 0 to 59.",
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "type": "object",
-      "description": "Represents a time of day. The date and time zone are either not significant\nor are specified elsewhere. An API may choose to allow leap seconds. Related\ntypes are google.type.Date and `google.protobuf.Timestamp`."
-    },
-    "WindowsUpdateSettings": {
-      "type": "object",
-      "description": "Windows patching is performed using the Windows Update Agent.",
-      "properties": {
-        "classifications": {
-          "description": "Only apply updates of these windows update classifications. If empty, all\nupdates are applied.",
-          "type": "array",
-          "enumDescriptions": [
-            "Invalid. If classifications are included, they must be specified.",
-            "\"A widely released fix for a specific problem that addresses a critical,\nnon-security-related bug.\" [1]",
-            "\"A widely released fix for a product-specific, security-related\nvulnerability. Security vulnerabilities are rated by their severity. The\nseverity rating is indicated in the Microsoft security bulletin as\ncritical, important, moderate, or low.\" [1]",
-            "\"A widely released and frequent software update that contains additions\nto a product's definition database. Definition databases are often used\nto detect objects that have specific attributes, such as malicious code,\nphishing websites, or junk mail.\" [1]",
-            "\"Software that controls the input and output of a device.\" [1]",
-            "\"New product functionality that is first distributed outside the context\nof a product release and that is typically included in the next full\nproduct release.\" [1]",
-            "\"A tested, cumulative set of all hotfixes, security updates, critical\nupdates, and updates. Additionally, service packs may contain additional\nfixes for problems that are found internally since the release of the\nproduct. Service packs my also contain a limited number of\ncustomer-requested design changes or features.\" [1]",
-            "\"A utility or feature that helps complete a task or set of tasks.\" [1]",
-            "\"A tested, cumulative set of hotfixes, security updates, critical\nupdates, and updates that are packaged together for easy deployment. A\nrollup generally targets a specific area, such as security, or a\ncomponent of a product, such as Internet Information Services (IIS).\" [1]",
-            "\"A widely released fix for a specific problem. An update addresses a\nnoncritical, non-security-related bug.\" [1]"
-          ],
-          "items": {
-            "enum": [
-              "CLASSIFICATION_UNSPECIFIED",
-              "CRITICAL",
-              "SECURITY",
-              "DEFINITION",
-              "DRIVER",
-              "FEATURE_PACK",
-              "SERVICE_PACK",
-              "TOOL",
-              "UPDATE_ROLLUP",
-              "UPDATE"
-            ],
-            "type": "string"
-          }
-        },
-        "excludes": {
-          "description": "List of KBs to exclude from update.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "exclusivePatches": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "An exclusive list of kbs to be updated. These are the only patches\nthat will be updated. This field must not be used with other\npatch configurations."
-        }
-      },
-      "id": "WindowsUpdateSettings"
-    },
-    "AptSettings": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "enum": [
-            "TYPE_UNSPECIFIED",
-            "DIST",
-            "UPGRADE"
-          ],
-          "description": "By changing the type to DIST, the patching is performed\nusing `apt-get dist-upgrade` instead.",
-          "enumDescriptions": [
-            "By default, upgrade will be performed.",
-            "Runs `apt-get dist-upgrade`.",
-            "Runs `apt-get upgrade`."
-          ],
-          "type": "string"
-        },
-        "exclusivePackages": {
-          "items": {
-            "type": "string"
-          },
-          "description": "An exclusive list of packages to be updated. These are the only packages\nthat will be updated. If these packages are not installed, they will be\nignored. This field cannot be specified with any other patch configuration\nfields.",
-          "type": "array"
-        },
-        "excludes": {
-          "items": {
-            "type": "string"
-          },
-          "description": "List of packages to exclude from update. These packages will be excluded",
-          "type": "array"
-        }
-      },
-      "id": "AptSettings",
-      "description": "Apt patching is completed by executing `apt-get update && apt-get\nupgrade`. Additional options can be set to control how this is executed."
-    },
-    "ListGuestPoliciesResponse": {
-      "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "A pagination token that can be used to get the next page\nof guest policies."
-        },
-        "guestPolicies": {
-          "description": "The list of GuestPolicies.",
-          "items": {
-            "$ref": "GuestPolicy"
-          },
-          "type": "array"
-        }
-      },
-      "type": "object",
-      "description": "A response message for listing guest policies.",
-      "id": "ListGuestPoliciesResponse"
-    },
-    "EffectiveGuestPolicySourcedPackage": {
-      "description": "A guest policy package including its source.",
-      "properties": {
-        "package": {
-          "description": "A software package to configure on the VM instance.",
-          "$ref": "Package"
-        },
-        "source": {
-          "description": "Name of the guest policy providing this config.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "EffectiveGuestPolicySourcedPackage"
-    },
-    "SoftwareRecipeStepExecFile": {
-      "type": "object",
-      "properties": {
-        "artifactId": {
-          "type": "string",
-          "description": "The id of the relevant artifact in the recipe."
-        },
-        "allowedExitCodes": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "description": "Defaults to [0]. A list of possible return values that the program\ncan return to indicate a success."
-        },
-        "args": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Arguments to be passed to the provided executable."
-        },
-        "localPath": {
-          "description": "The absolute path of the file on the local filesystem.",
-          "type": "string"
-        }
-      },
-      "id": "SoftwareRecipeStepExecFile",
-      "description": "Executes an artifact or local file."
-    },
-    "ExecStepConfig": {
-      "id": "ExecStepConfig",
-      "properties": {
-        "interpreter": {
-          "description": "The script interpreter to use to run the script. If no interpreter is\nspecified the script will be executed directly, which will likely\nonly succeed for scripts with [shebang lines]\n(https://en.wikipedia.org/wiki/Shebang_\\(Unix\\)).",
-          "enum": [
-            "INTERPRETER_UNSPECIFIED",
-            "SHELL",
-            "POWERSHELL"
-          ],
-          "enumDescriptions": [
-            "Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the\ninterpreter will be parsed from the shebang line of the script if\nunspecified.",
-            "Indicates that the script is run with `/bin/sh` on Linux and `cmd`\non Windows.",
-            "Indicates that the file is run with PowerShell flags\n`-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`."
-          ],
-          "type": "string"
-        },
-        "allowedSuccessCodes": {
-          "items": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "description": "Defaults to [0]. A list of possible return values that the\nexecution can return to indicate a success.",
-          "type": "array"
-        },
-        "gcsObject": {
-          "$ref": "GcsObject",
-          "description": "A Google Cloud Storage object containing the executable."
-        },
-        "localPath": {
-          "description": "An absolute path to the executable on the VM.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "description": "Common configurations for an ExecStep."
-    },
-    "RecurringSchedule": {
-      "description": "Sets the time for recurring patch deployments.",
-      "type": "object",
-      "id": "RecurringSchedule",
-      "properties": {
-        "timeZone": {
-          "$ref": "TimeZone",
-          "description": "Required. Defines the time zone that `time_of_day` is relative to.\nThe rules for daylight saving time are determined by the chosen time zone."
-        },
-        "monthly": {
-          "$ref": "MonthlySchedule",
-          "description": "Required. Schedule with monthly executions."
-        },
-        "nextExecuteTime": {
-          "format": "google-datetime",
-          "description": "Output only. The time the next patch job is scheduled to run.",
-          "type": "string"
-        },
-        "endTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Optional. The end time at which a recurring patch deployment schedule is no longer\nactive."
-        },
-        "frequency": {
-          "enumDescriptions": [
-            "Invalid. A frequency must be specified.",
-            "Indicates that the frequency should be expressed in terms of\nweeks.",
-            "Indicates that the frequency should be expressed in terms of\nmonths."
-          ],
-          "description": "Required. The frequency unit of this recurring schedule.",
-          "type": "string",
-          "enum": [
-            "FREQUENCY_UNSPECIFIED",
-            "WEEKLY",
-            "MONTHLY"
-          ]
-        },
-        "lastExecuteTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Output only. The time the last patch job ran successfully."
-        },
-        "startTime": {
-          "description": "Optional. The time that the recurring schedule becomes effective.\nDefaults to `create_time` of the patch deployment.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "timeOfDay": {
-          "$ref": "TimeOfDay",
-          "description": "Required. Time of the day to run a recurring deployment."
-        },
-        "weekly": {
-          "$ref": "WeeklySchedule",
-          "description": "Required. Schedule with weekly executions."
-        }
-      }
-    },
-    "Empty": {
-      "id": "Empty",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`.",
-      "properties": {},
-      "type": "object"
-    },
-    "SoftwareRecipeArtifactGcs": {
-      "properties": {
-        "object": {
-          "description": "Name of the Google Cloud Storage object.\nAs specified [here]\n(https://cloud.google.com/storage/docs/naming#objectnames)\nGiven an example URL:\n`https://storage.googleapis.com/my-bucket/foo/bar#1234567`\nthis value would be `foo/bar`.",
-          "type": "string"
-        },
-        "generation": {
-          "type": "string",
-          "format": "int64",
-          "description": "Must be provided if allow_insecure is false.\nGeneration number of the Google Cloud Storage object.\n`https://storage.googleapis.com/my-bucket/foo/bar#1234567`\nthis value would be `1234567`."
-        },
-        "bucket": {
-          "description": "Bucket of the Google Cloud Storage object.\nGiven an example URL:\n`https://storage.googleapis.com/my-bucket/foo/bar#1234567`\nthis value would be `my-bucket`.",
-          "type": "string"
-        }
-      },
-      "id": "SoftwareRecipeArtifactGcs",
-      "type": "object",
-      "description": "Specifies an artifact available as a Google Cloud Storage object."
-    },
-    "SoftwareRecipeArtifactRemote": {
-      "id": "SoftwareRecipeArtifactRemote",
-      "description": "Specifies an artifact available via some URI.",
-      "properties": {
-        "uri": {
-          "description": "URI from which to fetch the object. It should contain both the protocol\nand path following the format {protocol}://{location}.",
-          "type": "string"
-        },
-        "checksum": {
-          "description": "Must be provided if `allow_insecure` is `false`.\nSHA256 checksum in hex format, to compare to the checksum of the\nartifact. If the checksum is not empty and it doesn't match the\nartifact then the recipe installation fails before running any of the\nsteps.",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "SoftwareRecipeStepExtractArchive": {
-      "description": "Extracts an archive of the type specified in the specified directory.",
-      "id": "SoftwareRecipeStepExtractArchive",
-      "properties": {
-        "destination": {
-          "description": "Directory to extract archive to.\nDefaults to `/` on Linux or `C:\\` on Windows.",
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "description": "Required. The type of the archive to extract.",
-          "enumDescriptions": [
-            "Indicates that the archive type isn't specified.",
-            "Indicates that the archive is a tar archive with no encryption.",
-            "Indicates that the archive is a tar archive with gzip encryption.",
-            "Indicates that the archive is a tar archive with bzip encryption.",
-            "Indicates that the archive is a tar archive with lzma encryption.",
-            "Indicates that the archive is a tar archive with xz encryption.",
-            "Indicates that the archive is a zip archive."
-          ],
-          "enum": [
-            "ARCHIVE_TYPE_UNSPECIFIED",
-            "TAR",
-            "TAR_GZIP",
-            "TAR_BZIP",
-            "TAR_LZMA",
-            "TAR_XZ",
-            "ZIP"
-          ]
-        },
-        "artifactId": {
-          "type": "string",
-          "description": "Required. The id of the relevant artifact in the recipe."
-        }
-      },
-      "type": "object"
-    },
-    "MonthlySchedule": {
-      "id": "MonthlySchedule",
-      "type": "object",
-      "description": "Represents a monthly schedule. An example of a valid monthly schedule is\n\"on the third Tuesday of the month\" or \"on the 15th of the month\".",
-      "properties": {
-        "monthDay": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1\nindicates the last day of the month.\nMonths without the target day will be skipped. For example, a schedule to\nrun \"every month on the 31st\" will not run in February, April, June, etc."
-        },
-        "weekDayOfMonth": {
-          "$ref": "WeekDayOfMonth",
-          "description": "Required. Week day in a month."
-        }
-      }
-    },
-    "GooRepository": {
-      "id": "GooRepository",
-      "properties": {
-        "name": {
-          "description": "Required. The name of the repository.",
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "description": "Required. The url of the repository."
-        }
-      },
-      "type": "object",
-      "description": "Represents a Goo package repository. These is added to a repo file\nthat is stored at C:/ProgramData/GooGet/repos/google_osconfig.repo."
-    },
-    "CancelPatchJobRequest": {
-      "properties": {},
-      "description": "Message for canceling a patch job.",
-      "id": "CancelPatchJobRequest",
-      "type": "object"
-    },
-    "ListPatchDeploymentsResponse": {
-      "properties": {
-        "nextPageToken": {
-          "description": "A pagination token that can be used to get the next page of patch\ndeployments.",
-          "type": "string"
-        },
-        "patchDeployments": {
-          "items": {
-            "$ref": "PatchDeployment"
-          },
-          "description": "The list of patch deployments.",
-          "type": "array"
-        }
-      },
-      "type": "object",
-      "id": "ListPatchDeploymentsResponse",
-      "description": "A response message for listing patch deployments."
-    },
-    "ExecStep": {
-      "type": "object",
-      "description": "A step that runs an executable for a PatchJob.",
-      "id": "ExecStep",
-      "properties": {
-        "linuxExecStepConfig": {
-          "description": "The ExecStepConfig for all Linux VMs targeted by the PatchJob.",
-          "$ref": "ExecStepConfig"
-        },
-        "windowsExecStepConfig": {
-          "description": "The ExecStepConfig for all Windows VMs targeted by the PatchJob.",
-          "$ref": "ExecStepConfig"
-        }
-      }
-    },
-    "SoftwareRecipeStepCopyFile": {
-      "type": "object",
-      "description": "Copies the artifact to the specified path on the instance.",
-      "properties": {
-        "artifactId": {
-          "type": "string",
-          "description": "Required. The id of the relevant artifact in the recipe."
-        },
-        "permissions": {
-          "description": "Consists of three octal digits which represent, in\norder, the permissions of the owner, group, and other users for the\nfile (similarly to the numeric mode used in the linux chmod utility).\nEach digit represents a three bit number with the 4 bit\ncorresponding to the read permissions, the 2 bit corresponds to the\nwrite bit, and the one bit corresponds to the execute permission.\nDefault behavior is 755.\n\nBelow are some examples of permissions and their associated values:\nread, write, and execute: 7\nread and execute: 5\nread and write: 6\nread only: 4",
-          "type": "string"
-        },
-        "overwrite": {
-          "description": "Whether to allow this step to overwrite existing files. If this is\nfalse and the file already exists the file is not overwritten\nand the step is considered a success. Defaults to false.",
-          "type": "boolean"
-        },
-        "destination": {
-          "type": "string",
-          "description": "Required. The absolute path on the instance to put the file."
-        }
-      },
-      "id": "SoftwareRecipeStepCopyFile"
+      "description": "A request message to initiate patching across Compute Engine instances."
     },
     "ZypperSettings": {
-      "id": "ZypperSettings",
+      "type": "object",
+      "description": "Zypper patching is performed by running `zypper patch`.\nSee also https://en.opensuse.org/SDB:Zypper_manual.",
       "properties": {
         "severities": {
           "description": "Install only patches with these severities.\nCommon severities include critical, important, moderate, and low.",
@@ -2175,85 +2266,48 @@
             "type": "string"
           }
         },
-        "excludes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "List of patches to exclude from update."
-        },
-        "exclusivePatches": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "An exclusive list of patches to be updated. These are the only patches\nthat will be installed using 'zypper patch patch:\u003cpatch_name\u003e' command.\nThis field must not be used with any other patch configuration fields."
+        "withUpdate": {
+          "description": "Adds the `--with-update` flag, to `zypper patch`.",
+          "type": "boolean"
         },
         "categories": {
           "description": "Install only patches with these categories.\nCommon categories include security, recommended, and feature.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludes": {
           "items": {
             "type": "string"
           },
+          "description": "List of patches to exclude from update.",
           "type": "array"
         },
-        "withUpdate": {
-          "type": "boolean",
-          "description": "Adds the `--with-update` flag, to `zypper patch`."
+        "exclusivePatches": {
+          "description": "An exclusive list of patches to be updated. These are the only patches\nthat will be installed using 'zypper patch patch:\u003cpatch_name\u003e' command.\nThis field must not be used with any other patch configuration fields.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "withOptional": {
-          "type": "boolean",
-          "description": "Adds the `--with-optional` flag to `zypper patch`."
+          "description": "Adds the `--with-optional` flag to `zypper patch`.",
+          "type": "boolean"
         }
       },
-      "description": "Zypper patching is performed by running `zypper patch`.\nSee also https://en.opensuse.org/SDB:Zypper_manual.",
-      "type": "object"
-    },
-    "LookupEffectiveGuestPolicyRequest": {
-      "description": "A request message for getting the effective guest policy assigned to the\ninstance.",
-      "id": "LookupEffectiveGuestPolicyRequest",
-      "type": "object",
-      "properties": {
-        "osVersion": {
-          "type": "string",
-          "description": "Version of the OS running on the instance. The OS Config agent only\nprovides this field for targeting if OS Inventory is enabled for that\nVM instance."
-        },
-        "osShortName": {
-          "type": "string",
-          "description": "Short name of the OS running on the instance. The OS Config agent only\nprovides this field for targeting if OS Inventory is enabled for that\ninstance."
-        },
-        "osArchitecture": {
-          "type": "string",
-          "description": "Architecture of OS running on the instance. The OS Config agent only\nprovides this field for targeting if OS Inventory is enabled for that\ninstance."
-        }
-      }
-    },
-    "PackageRepository": {
-      "description": "A package repository.",
-      "properties": {
-        "zypper": {
-          "description": "A Zypper Repository.",
-          "$ref": "ZypperRepository"
-        },
-        "goo": {
-          "$ref": "GooRepository",
-          "description": "A Goo Repository."
-        },
-        "yum": {
-          "description": "A Yum Repository.",
-          "$ref": "YumRepository"
-        },
-        "apt": {
-          "$ref": "AptRepository",
-          "description": "An Apt Repository."
-        }
-      },
-      "type": "object",
-      "id": "PackageRepository"
+      "id": "ZypperSettings"
     }
   },
-  "rootUrl": "https://osconfig.googleapis.com/",
+  "servicePath": "",
   "kind": "discovery#restDescription",
+  "canonicalName": "Systems Management",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
+  "basePath": "",
   "version": "v1beta",
-  "ownerDomain": "google.com",
-  "baseUrl": "https://osconfig.googleapis.com/"
+  "discoveryVersion": "v1",
+  "documentationLink": "https://cloud.google.com/"
 }

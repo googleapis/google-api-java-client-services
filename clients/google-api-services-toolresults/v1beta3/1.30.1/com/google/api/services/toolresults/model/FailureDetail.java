@@ -38,6 +38,14 @@ public final class FailureDetail extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean crashed;
 
   /**
+   * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or
+   * assertion failed or a Roboscript action could not be matched during the entire crawl.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean failedRoboscript;
+
+  /**
    * If an app is not installed and thus no test can be run with the app. This might be caused by
    * trying to run a test on an unsupported platform.
    * The value may be {@code null}.
@@ -80,6 +88,25 @@ public final class FailureDetail extends com.google.api.client.json.GenericJson 
    */
   public FailureDetail setCrashed(java.lang.Boolean crashed) {
     this.crashed = crashed;
+    return this;
+  }
+
+  /**
+   * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or
+   * assertion failed or a Roboscript action could not be matched during the entire crawl.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFailedRoboscript() {
+    return failedRoboscript;
+  }
+
+  /**
+   * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or
+   * assertion failed or a Roboscript action could not be matched during the entire crawl.
+   * @param failedRoboscript failedRoboscript or {@code null} for none
+   */
+  public FailureDetail setFailedRoboscript(java.lang.Boolean failedRoboscript) {
+    this.failedRoboscript = failedRoboscript;
     return this;
   }
 

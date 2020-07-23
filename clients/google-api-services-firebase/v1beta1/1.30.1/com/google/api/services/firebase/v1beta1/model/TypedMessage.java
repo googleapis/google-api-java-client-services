@@ -21,13 +21,12 @@ package com.google.api.services.firebase.v1beta1.model;
  * that type.  Its use is similar to MessageSet, except it represents a single (type, encoded
  * message) instead of a set.
  *
- * To fill for known protocol type:   MyProtocolMsg proto;   TypedMessage typed_msg;
- * typed_msg.set_type_id(MyProtocolMsg::MESSAGE_TYPE_ID);
+ * To embed "proto" inside "typed_msg":   MyProtoMessage proto;   TypedMessage typed_msg;
+ * typed_msg.set_type_id(proto2::bridge::GetTypeId(proto));
  * proto.AppendToCord(typed_msg.mutable_message());
  *
- * To fill for unknown protocol type:   ProtocolMessage proto;   TypedMessage typed_msg;
- * typed_msg.set_type_id(proto.GetMapper()->type_id());
- * proto.AppendToCord(typed_msg.mutable_message());
+ * Error handling is omitted from the sample code above. GetTypeId() will return 0 for messages that
+ * don't have a TypeId specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Management API. For a detailed explanation

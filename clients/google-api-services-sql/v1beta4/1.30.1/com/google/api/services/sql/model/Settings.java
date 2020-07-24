@@ -31,29 +31,28 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values: ALWAYS: The instance is on, and remains so even in
-   * the absence of connection requests. NEVER: The instance is off; it is not activated, even if a
-   * connection request arrives. ON_DEMAND: First Generation instances only. The instance responds
-   * to incoming requests, and turns itself off when not in use. Instances with PER_USE pricing turn
-   * off after 15 minutes of inactivity. Instances with PER_PACKAGE pricing turn off after 12 hours
-   * of inactivity.
+   * instance state is RUNNABLE. Valid values:   ALWAYS: The instance is on, and remains so even in
+   * the absence of connection requests.   NEVER: The instance is off; it is not activated, even if
+   * a   connection request arrives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String activationPolicy;
 
   /**
-   * The App Engine app IDs that can access this instance. First Generation instances only.
+   * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
+   * instances only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> authorizedGaeApplications;
 
   /**
-   * Availability type (PostgreSQL and MySQL instances only). Potential values: ZONAL: The instance
-   * serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The
-   * instance can serve data from more than one zone in a region (it is highly available). For more
-   * information, see Overview of the High Availability Configuration.
+   * Availability type. Potential values:   ZONAL: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility.   REGIONAL: The instance can serve data from
+   * more than one zone   in a region (it is highly available). For more information, see
+   *
+   * Overview of the High Availability Configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,16 +66,22 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private BackupConfiguration backupConfiguration;
 
   /**
+   * The name of server Instance collation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String collation;
+
+  /**
    * Configuration specific to read replica instances. Indicates whether database flags for crash-
-   * safe replication are enabled. This property is only applicable to First Generation instances.
+   * safe replication are enabled. This property was only applicable to First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean crashSafeReplicationEnabled;
 
   /**
-   * The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation
-   * instances.
+   * The size of data disk, in GB. The data disk size minimum is 10GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -129,7 +134,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   /**
    * The location preference settings. This allows the instance to be located as near as possible to
    * either an App Engine app or Compute Engine zone for better performance. App Engine co-location
-   * is only applicable to First Generation instances.
+   * was only applicable to First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +142,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maintenance window for this instance. This specifies when the instance can be restarted for
-   * maintenance purposes. Not used for First Generation instances.
+   * maintenance purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +158,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS.
-   * This property is only applicable to First Generation instances.
+   * (Deprecated_ This property was only applicable to First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +174,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long settingsVersion;
 
   /**
-   * Configuration to increase storage size automatically. The default value is true. Not used for
-   * First Generation instances.
+   * Configuration to increase storage size automatically. The default value is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +182,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size to which storage capacity can be automatically increased. The default value is
-   * 0, which specifies that there is no limit. Not used for First Generation instances.
+   * 0, which specifies that there is no limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -186,8 +190,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
-   * db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether
-   * the instance is First or Second Generation. For more information, see Instance Settings.
+   * db-custom-1-3840 (PostgreSQL instances).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,12 +205,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values: ALWAYS: The instance is on, and remains so even in
-   * the absence of connection requests. NEVER: The instance is off; it is not activated, even if a
-   * connection request arrives. ON_DEMAND: First Generation instances only. The instance responds
-   * to incoming requests, and turns itself off when not in use. Instances with PER_USE pricing turn
-   * off after 15 minutes of inactivity. Instances with PER_PACKAGE pricing turn off after 12 hours
-   * of inactivity.
+   * instance state is RUNNABLE. Valid values:   ALWAYS: The instance is on, and remains so even in
+   * the absence of connection requests.   NEVER: The instance is off; it is not activated, even if
+   * a   connection request arrives.
    * @return value or {@code null} for none
    */
   public java.lang.String getActivationPolicy() {
@@ -216,12 +216,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values: ALWAYS: The instance is on, and remains so even in
-   * the absence of connection requests. NEVER: The instance is off; it is not activated, even if a
-   * connection request arrives. ON_DEMAND: First Generation instances only. The instance responds
-   * to incoming requests, and turns itself off when not in use. Instances with PER_USE pricing turn
-   * off after 15 minutes of inactivity. Instances with PER_PACKAGE pricing turn off after 12 hours
-   * of inactivity.
+   * instance state is RUNNABLE. Valid values:   ALWAYS: The instance is on, and remains so even in
+   * the absence of connection requests.   NEVER: The instance is off; it is not activated, even if
+   * a   connection request arrives.
    * @param activationPolicy activationPolicy or {@code null} for none
    */
   public Settings setActivationPolicy(java.lang.String activationPolicy) {
@@ -230,7 +227,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The App Engine app IDs that can access this instance. First Generation instances only.
+   * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
+   * instances only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAuthorizedGaeApplications() {
@@ -238,7 +236,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The App Engine app IDs that can access this instance. First Generation instances only.
+   * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
+   * instances only.
    * @param authorizedGaeApplications authorizedGaeApplications or {@code null} for none
    */
   public Settings setAuthorizedGaeApplications(java.util.List<java.lang.String> authorizedGaeApplications) {
@@ -247,10 +246,11 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type (PostgreSQL and MySQL instances only). Potential values: ZONAL: The instance
-   * serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The
-   * instance can serve data from more than one zone in a region (it is highly available). For more
-   * information, see Overview of the High Availability Configuration.
+   * Availability type. Potential values:   ZONAL: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility.   REGIONAL: The instance can serve data from
+   * more than one zone   in a region (it is highly available). For more information, see
+   *
+   * Overview of the High Availability Configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityType() {
@@ -258,10 +258,11 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type (PostgreSQL and MySQL instances only). Potential values: ZONAL: The instance
-   * serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The
-   * instance can serve data from more than one zone in a region (it is highly available). For more
-   * information, see Overview of the High Availability Configuration.
+   * Availability type. Potential values:   ZONAL: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility.   REGIONAL: The instance can serve data from
+   * more than one zone   in a region (it is highly available). For more information, see
+   *
+   * Overview of the High Availability Configuration.
    * @param availabilityType availabilityType or {@code null} for none
    */
   public Settings setAvailabilityType(java.lang.String availabilityType) {
@@ -287,8 +288,25 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The name of server Instance collation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCollation() {
+    return collation;
+  }
+
+  /**
+   * The name of server Instance collation.
+   * @param collation collation or {@code null} for none
+   */
+  public Settings setCollation(java.lang.String collation) {
+    this.collation = collation;
+    return this;
+  }
+
+  /**
    * Configuration specific to read replica instances. Indicates whether database flags for crash-
-   * safe replication are enabled. This property is only applicable to First Generation instances.
+   * safe replication are enabled. This property was only applicable to First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCrashSafeReplicationEnabled() {
@@ -297,7 +315,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration specific to read replica instances. Indicates whether database flags for crash-
-   * safe replication are enabled. This property is only applicable to First Generation instances.
+   * safe replication are enabled. This property was only applicable to First Generation instances.
    * @param crashSafeReplicationEnabled crashSafeReplicationEnabled or {@code null} for none
    */
   public Settings setCrashSafeReplicationEnabled(java.lang.Boolean crashSafeReplicationEnabled) {
@@ -306,8 +324,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation
-   * instances.
+   * The size of data disk, in GB. The data disk size minimum is 10GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDataDiskSizeGb() {
@@ -315,8 +332,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation
-   * instances.
+   * The size of data disk, in GB. The data disk size minimum is 10GB.
    * @param dataDiskSizeGb dataDiskSizeGb or {@code null} for none
    */
   public Settings setDataDiskSizeGb(java.lang.Long dataDiskSizeGb) {
@@ -418,7 +434,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   /**
    * The location preference settings. This allows the instance to be located as near as possible to
    * either an App Engine app or Compute Engine zone for better performance. App Engine co-location
-   * is only applicable to First Generation instances.
+   * was only applicable to First Generation instances.
    * @return value or {@code null} for none
    */
   public LocationPreference getLocationPreference() {
@@ -428,7 +444,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   /**
    * The location preference settings. This allows the instance to be located as near as possible to
    * either an App Engine app or Compute Engine zone for better performance. App Engine co-location
-   * is only applicable to First Generation instances.
+   * was only applicable to First Generation instances.
    * @param locationPreference locationPreference or {@code null} for none
    */
   public Settings setLocationPreference(LocationPreference locationPreference) {
@@ -438,7 +454,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maintenance window for this instance. This specifies when the instance can be restarted for
-   * maintenance purposes. Not used for First Generation instances.
+   * maintenance purposes.
    * @return value or {@code null} for none
    */
   public MaintenanceWindow getMaintenanceWindow() {
@@ -447,7 +463,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maintenance window for this instance. This specifies when the instance can be restarted for
-   * maintenance purposes. Not used for First Generation instances.
+   * maintenance purposes.
    * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
   public Settings setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
@@ -476,7 +492,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS.
-   * This property is only applicable to First Generation instances.
+   * (Deprecated_ This property was only applicable to First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplicationType() {
@@ -485,7 +501,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS.
-   * This property is only applicable to First Generation instances.
+   * (Deprecated_ This property was only applicable to First Generation instances.
    * @param replicationType replicationType or {@code null} for none
    */
   public Settings setReplicationType(java.lang.String replicationType) {
@@ -515,8 +531,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration to increase storage size automatically. The default value is true. Not used for
-   * First Generation instances.
+   * Configuration to increase storage size automatically. The default value is true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStorageAutoResize() {
@@ -524,8 +539,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration to increase storage size automatically. The default value is true. Not used for
-   * First Generation instances.
+   * Configuration to increase storage size automatically. The default value is true.
    * @param storageAutoResize storageAutoResize or {@code null} for none
    */
   public Settings setStorageAutoResize(java.lang.Boolean storageAutoResize) {
@@ -535,7 +549,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size to which storage capacity can be automatically increased. The default value is
-   * 0, which specifies that there is no limit. Not used for First Generation instances.
+   * 0, which specifies that there is no limit.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStorageAutoResizeLimit() {
@@ -544,7 +558,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size to which storage capacity can be automatically increased. The default value is
-   * 0, which specifies that there is no limit. Not used for First Generation instances.
+   * 0, which specifies that there is no limit.
    * @param storageAutoResizeLimit storageAutoResizeLimit or {@code null} for none
    */
   public Settings setStorageAutoResizeLimit(java.lang.Long storageAutoResizeLimit) {
@@ -554,8 +568,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
-   * db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether
-   * the instance is First or Second Generation. For more information, see Instance Settings.
+   * db-custom-1-3840 (PostgreSQL instances).
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -564,8 +577,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
-   * db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether
-   * the instance is First or Second Generation. For more information, see Instance Settings.
+   * db-custom-1-3840 (PostgreSQL instances).
    * @param tier tier or {@code null} for none
    */
   public Settings setTier(java.lang.String tier) {

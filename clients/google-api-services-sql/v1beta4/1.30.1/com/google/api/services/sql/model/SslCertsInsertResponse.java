@@ -30,8 +30,7 @@ package com.google.api.services.sql.model;
 public final class SslCertsInsertResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new client certificate and private key.  For First Generation instances, the new
-   * certificate does not take effect until the instance is restarted.
+   * The new client certificate and private key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class SslCertsInsertResponse extends com.google.api.client.json.Gen
   private SslCert serverCaCert;
 
   /**
-   * The new client certificate and private key.  For First Generation instances, the new
-   * certificate does not take effect until the instance is restarted.
+   * The new client certificate and private key.
    * @return value or {@code null} for none
    */
   public SslCertDetail getClientCert() {
@@ -69,8 +67,7 @@ public final class SslCertsInsertResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The new client certificate and private key.  For First Generation instances, the new
-   * certificate does not take effect until the instance is restarted.
+   * The new client certificate and private key.
    * @param clientCert clientCert or {@code null} for none
    */
   public SslCertsInsertResponse setClientCert(SslCertDetail clientCert) {

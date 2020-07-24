@@ -33,7 +33,7 @@ package com.google.api.services.sql.model;
 public final class LocationPreference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+   * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   private java.lang.String zone;
 
   /**
-   * The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+   * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getFollowGaeApplication() {
@@ -62,7 +62,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+   * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
    * @param followGaeApplication followGaeApplication or {@code null} for none
    */
   public LocationPreference setFollowGaeApplication(java.lang.String followGaeApplication) {

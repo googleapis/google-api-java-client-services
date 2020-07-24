@@ -89,8 +89,8 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   private java.lang.String platformSource;
 
   /**
-   * Returns metrics only for a specific type of product activity. Accepted values are:  "`sold`":
-   * returns metrics only for products that were sold "`advertised`": returns metrics only for
+   * Returns metrics only for a specific type of product activity. Accepted values are: - "`sold`":
+   * returns metrics only for products that were sold - "`advertised`": returns metrics only for
    * products that were advertised in a Shopping campaign, and that might or might not have been
    * sold
    * The value may be {@code null}.
@@ -254,8 +254,8 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Returns metrics only for a specific type of product activity. Accepted values are:  "`sold`":
-   * returns metrics only for products that were sold "`advertised`": returns metrics only for
+   * Returns metrics only for a specific type of product activity. Accepted values are: - "`sold`":
+   * returns metrics only for products that were sold - "`advertised`": returns metrics only for
    * products that were advertised in a Shopping campaign, and that might or might not have been
    * sold
    * @return value or {@code null} for none
@@ -265,8 +265,8 @@ public final class ReportApiColumnSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * Returns metrics only for a specific type of product activity. Accepted values are:  "`sold`":
-   * returns metrics only for products that were sold "`advertised`": returns metrics only for
+   * Returns metrics only for a specific type of product activity. Accepted values are: - "`sold`":
+   * returns metrics only for products that were sold - "`advertised`": returns metrics only for
    * products that were advertised in a Shopping campaign, and that might or might not have been
    * sold
    * @param productReportPerspective productReportPerspective or {@code null} for none

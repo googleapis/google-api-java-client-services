@@ -30,6 +30,13 @@ package com.google.api.services.sql.model;
 public final class BackupRun extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupKind;
+
+  /**
    * The description of this run, only applicable to on-demand backups.
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String windowStartTime;
+
+  /**
+   * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupKind() {
+    return backupKind;
+  }
+
+  /**
+   * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
+   * @param backupKind backupKind or {@code null} for none
+   */
+  public BackupRun setBackupKind(java.lang.String backupKind) {
+    this.backupKind = backupKind;
+    return this;
+  }
 
   /**
    * The description of this run, only applicable to on-demand backups.

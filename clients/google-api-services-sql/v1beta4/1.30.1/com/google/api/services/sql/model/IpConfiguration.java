@@ -30,8 +30,8 @@ package com.google.api.services.sql.model;
 public final class IpConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of external networks that are allowed to connect to the instance using the IP. In CIDR
-   * notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+   * The list of external networks that are allowed to connect to the instance using the IP. In
+   * 'CIDR' notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private java.lang.Boolean requireSsl;
 
   /**
-   * The list of external networks that are allowed to connect to the instance using the IP. In CIDR
-   * notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+   * The list of external networks that are allowed to connect to the instance using the IP. In
+   * 'CIDR' notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
    * @return value or {@code null} for none
    */
   public java.util.List<AclEntry> getAuthorizedNetworks() {
@@ -76,8 +76,8 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The list of external networks that are allowed to connect to the instance using the IP. In CIDR
-   * notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+   * The list of external networks that are allowed to connect to the instance using the IP. In
+   * 'CIDR' notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
    * @param authorizedNetworks authorizedNetworks or {@code null} for none
    */
   public IpConfiguration setAuthorizedNetworks(java.util.List<AclEntry> authorizedNetworks) {

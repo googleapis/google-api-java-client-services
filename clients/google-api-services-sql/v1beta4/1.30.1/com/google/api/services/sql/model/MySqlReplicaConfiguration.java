@@ -60,9 +60,9 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
 
   /**
    * Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created.
-   * The URI is in the form gs: //bucketName/fileName. Compressed gzip files (.gz) are also
-   * supported. // Dumps should have the binlog co-ordinates from which replication should // begin.
-   * This can be accomplished by setting --master-data to 1 when using // mysqldump.
+   * The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also
+   * supported. Dumps should have the binlog co-ordinates from which replication should begin. This
+   * can be accomplished by setting --master-data to 1 when using mysqldump.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,9 +183,9 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
 
   /**
    * Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created.
-   * The URI is in the form gs: //bucketName/fileName. Compressed gzip files (.gz) are also
-   * supported. // Dumps should have the binlog co-ordinates from which replication should // begin.
-   * This can be accomplished by setting --master-data to 1 when using // mysqldump.
+   * The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also
+   * supported. Dumps should have the binlog co-ordinates from which replication should begin. This
+   * can be accomplished by setting --master-data to 1 when using mysqldump.
    * @return value or {@code null} for none
    */
   public java.lang.String getDumpFilePath() {
@@ -194,9 +194,9 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
 
   /**
    * Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created.
-   * The URI is in the form gs: //bucketName/fileName. Compressed gzip files (.gz) are also
-   * supported. // Dumps should have the binlog co-ordinates from which replication should // begin.
-   * This can be accomplished by setting --master-data to 1 when using // mysqldump.
+   * The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also
+   * supported. Dumps should have the binlog co-ordinates from which replication should begin. This
+   * can be accomplished by setting --master-data to 1 when using mysqldump.
    * @param dumpFilePath dumpFilePath or {@code null} for none
    */
   public MySqlReplicaConfiguration setDumpFilePath(java.lang.String dumpFilePath) {

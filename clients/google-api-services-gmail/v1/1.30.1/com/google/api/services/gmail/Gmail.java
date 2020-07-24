@@ -3432,17 +3432,21 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** When given and format is METADATA, only include headers specified. */
+        /**
+         * When given and format is `METADATA`, only include headers specified.
+         */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> metadataHeaders;
 
-        /** When given and format is METADATA, only include headers specified.
+        /** When given and format is `METADATA`, only include headers specified.
          */
         public java.util.List<java.lang.String> getMetadataHeaders() {
           return metadataHeaders;
         }
 
-        /** When given and format is METADATA, only include headers specified. */
+        /**
+         * When given and format is `METADATA`, only include headers specified.
+         */
         public Get setMetadataHeaders(java.util.List<java.lang.String> metadataHeaders) {
           this.metadataHeaders = metadataHeaders;
           return this;

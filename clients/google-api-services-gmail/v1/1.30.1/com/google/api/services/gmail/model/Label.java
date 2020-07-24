@@ -53,8 +53,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   private java.lang.String labelListVisibility;
 
   /**
-   * The visibility of the label in the message list in the Gmail web interface. @mutable
-   * gmail.users.labels.create gmail.users.labels.update
+   * The visibility of messages with this label in the message list in the Gmail web interface.
+   * @mutable gmail.users.labels.create gmail.users.labels.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +163,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of the label in the message list in the Gmail web interface. @mutable
-   * gmail.users.labels.create gmail.users.labels.update
+   * The visibility of messages with this label in the message list in the Gmail web interface.
+   * @mutable gmail.users.labels.create gmail.users.labels.update
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageListVisibility() {
@@ -172,8 +172,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of the label in the message list in the Gmail web interface. @mutable
-   * gmail.users.labels.create gmail.users.labels.update
+   * The visibility of messages with this label in the message list in the Gmail web interface.
+   * @mutable gmail.users.labels.create gmail.users.labels.update
    * @param messageListVisibility messageListVisibility or {@code null} for none
    */
   public Label setMessageListVisibility(java.lang.String messageListVisibility) {

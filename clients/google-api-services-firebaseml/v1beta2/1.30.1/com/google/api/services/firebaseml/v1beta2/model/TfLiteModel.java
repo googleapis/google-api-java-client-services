@@ -39,6 +39,13 @@ public final class TfLiteModel extends com.google.api.client.json.GenericJson {
   private java.lang.String gcsTfliteUri;
 
   /**
+   * Output only. A boolean indicating that this model was uploaded from the console. Read only
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean managedUpload;
+
+  /**
    * Output only. The size of the TFLite model
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class TfLiteModel extends com.google.api.client.json.GenericJson {
    */
   public TfLiteModel setGcsTfliteUri(java.lang.String gcsTfliteUri) {
     this.gcsTfliteUri = gcsTfliteUri;
+    return this;
+  }
+
+  /**
+   * Output only. A boolean indicating that this model was uploaded from the console. Read only
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getManagedUpload() {
+    return managedUpload;
+  }
+
+  /**
+   * Output only. A boolean indicating that this model was uploaded from the console. Read only
+   * @param managedUpload managedUpload or {@code null} for none
+   */
+  public TfLiteModel setManagedUpload(java.lang.Boolean managedUpload) {
+    this.managedUpload = managedUpload;
     return this;
   }
 

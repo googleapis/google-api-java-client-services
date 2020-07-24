@@ -159,8 +159,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
      * @param rowCount The number of conversions to return per call.
     [minimum: 1]
     [maximum: 1000]
-     * @param startDate First date (inclusive) on which to retrieve conversions. Format is
-    yyyymmdd.
+     * @param startDate First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
     [minimum: 20091101]
      *        [maximum: 99991231]
      * @param startRow The 0-based starting index for retrieving conversions results.
@@ -196,8 +195,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
        * @param rowCount The number of conversions to return per call.
     [minimum: 1]
     [maximum: 1000]
-       * @param startDate First date (inclusive) on which to retrieve conversions. Format is
-    yyyymmdd.
+       * @param startDate First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
     [minimum: 20091101]
      *        [maximum: 99991231]
        * @param startRow The 0-based starting index for retrieving conversions results.
@@ -363,9 +361,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-       */
+      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
       @com.google.api.client.util.Key
       private java.lang.Integer startDate;
 
@@ -377,9 +373,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
         return startDate;
       }
 
-      /**
-       * First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
-       */
+      /** First date (inclusive) on which to retrieve conversions. Format is yyyymmdd. */
       public Get setStartDate(java.lang.Integer startDate) {
         this.startDate = startDate;
         return this;

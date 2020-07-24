@@ -72,8 +72,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long campaignId;
 
   /**
-   * Sales channel for the product. Acceptable values are: "`local`": a physical store "`online`":
-   * an online store
+   * Sales channel for the product. Acceptable values are: - "`local`": a physical store -
+   * "`online`": an online store
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,8 +222,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The revenue amount of this `TRANSACTION` conversion, in micros (value multiplied by 1000000, no
-   * decimal). For example, to specify a revenue value of "10"  enter "10000000" (10 million) in
-   * your request.
+   * decimal). For example, to specify a revenue value of "10" enter "10000000" (10 million) in your
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,8 +380,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sales channel for the product. Acceptable values are: "`local`": a physical store "`online`":
-   * an online store
+   * Sales channel for the product. Acceptable values are: - "`local`": a physical store -
+   * "`online`": an online store
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -389,8 +389,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sales channel for the product. Acceptable values are: "`local`": a physical store "`online`":
-   * an online store
+   * Sales channel for the product. Acceptable values are: - "`local`": a physical store -
+   * "`online`": an online store
    * @param channel channel or {@code null} for none
    */
   public Conversion setChannel(java.lang.String channel) {
@@ -739,8 +739,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The revenue amount of this `TRANSACTION` conversion, in micros (value multiplied by 1000000, no
-   * decimal). For example, to specify a revenue value of "10"  enter "10000000" (10 million) in
-   * your request.
+   * decimal). For example, to specify a revenue value of "10" enter "10000000" (10 million) in your
+   * request.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevenueMicros() {
@@ -749,8 +749,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The revenue amount of this `TRANSACTION` conversion, in micros (value multiplied by 1000000, no
-   * decimal). For example, to specify a revenue value of "10"  enter "10000000" (10 million) in
-   * your request.
+   * decimal). For example, to specify a revenue value of "10" enter "10000000" (10 million) in your
+   * request.
    * @param revenueMicros revenueMicros or {@code null} for none
    */
   public Conversion setRevenueMicros(java.lang.String revenueMicros) {

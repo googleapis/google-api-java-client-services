@@ -32,16 +32,11 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
 
   /**
    * An optional query string used to filter the Organizations to return in the response. Filter
-   * rules are case-insensitive.
-   *
-   * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain
-   * is a G Suite domain, for example:
-   *
-   * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+   * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or by
+   * `domain`, where the domain is a G Suite domain, for example: * Filter
+   * `owner.directorycustomerid:123456789` returns Organization resources with
    * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
-   * Organization resources corresponding to the domain `google.com`.
-   *
-   * This field is optional.
+   * Organization resources corresponding to the domain `google.com`. This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,16 +59,11 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
 
   /**
    * An optional query string used to filter the Organizations to return in the response. Filter
-   * rules are case-insensitive.
-   *
-   * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain
-   * is a G Suite domain, for example:
-   *
-   * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+   * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or by
+   * `domain`, where the domain is a G Suite domain, for example: * Filter
+   * `owner.directorycustomerid:123456789` returns Organization resources with
    * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
-   * Organization resources corresponding to the domain `google.com`.
-   *
-   * This field is optional.
+   * Organization resources corresponding to the domain `google.com`. This field is optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -82,16 +72,11 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
 
   /**
    * An optional query string used to filter the Organizations to return in the response. Filter
-   * rules are case-insensitive.
-   *
-   * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain
-   * is a G Suite domain, for example:
-   *
-   * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+   * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or by
+   * `domain`, where the domain is a G Suite domain, for example: * Filter
+   * `owner.directorycustomerid:123456789` returns Organization resources with
    * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
-   * Organization resources corresponding to the domain `google.com`.
-   *
-   * This field is optional.
+   * Organization resources corresponding to the domain `google.com`. This field is optional.
    * @param filter filter or {@code null} for none
    */
   public SearchOrganizationsRequest setFilter(java.lang.String filter) {

@@ -65,6 +65,15 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private DeadLetterPolicy deadLetterPolicy;
 
   /**
+   * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered
+   * to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise,
+   * they may be delivered in any order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableMessageOrdering;
+
+  /**
    * A policy that specifies the conditions for this subscription's expiration. A subscription is
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
@@ -224,6 +233,27 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setDeadLetterPolicy(DeadLetterPolicy deadLetterPolicy) {
     this.deadLetterPolicy = deadLetterPolicy;
+    return this;
+  }
+
+  /**
+   * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered
+   * to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise,
+   * they may be delivered in any order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableMessageOrdering() {
+    return enableMessageOrdering;
+  }
+
+  /**
+   * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered
+   * to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise,
+   * they may be delivered in any order.
+   * @param enableMessageOrdering enableMessageOrdering or {@code null} for none
+   */
+  public Subscription setEnableMessageOrdering(java.lang.Boolean enableMessageOrdering) {
+    this.enableMessageOrdering = enableMessageOrdering;
     return this;
   }
 

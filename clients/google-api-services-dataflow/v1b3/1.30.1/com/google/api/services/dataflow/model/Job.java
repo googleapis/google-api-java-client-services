@@ -215,7 +215,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Exactly one of step or steps_location should be specified.
    *
-   * The top-level steps that constitute the entire job.
+   * The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -672,7 +672,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Exactly one of step or steps_location should be specified.
    *
-   * The top-level steps that constitute the entire job.
+   * The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
    * @return value or {@code null} for none
    */
   public java.util.List<Step> getSteps() {
@@ -682,7 +682,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Exactly one of step or steps_location should be specified.
    *
-   * The top-level steps that constitute the entire job.
+   * The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
    * @param steps steps or {@code null} for none
    */
   public Job setSteps(java.util.List<Step> steps) {

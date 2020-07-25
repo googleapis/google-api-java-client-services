@@ -38,9 +38,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A system-generated unique identifier for this Lien.
-   *
-   * Example: `liens/1234abcd`
+   * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +46,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be
-   * inspected programmatically. Maximum length of 200 characters.
-   *
-   * Example: 'compute.googleapis.com'
+   * inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,9 +54,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * A reference to the resource this Lien is attached to. The server will validate the parent
-   * against those for which Liens are supported.
-   *
-   * Example: `projects/1234`
+   * against those for which Liens are supported. Example: `projects/1234`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +62,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * Concise user-visible strings indicating why an action cannot be performed on a resource.
-   * Maximum length of 200 characters.
-   *
-   * Example: 'Holds production API key'
+   * Maximum length of 200 characters. Example: 'Holds production API key'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,11 +71,8 @@ public final class Lien extends com.google.api.client.json.GenericJson {
   /**
    * The types of operations which should be blocked as a result of this Lien. Each value should
    * correspond to an IAM permission. The server will validate the permissions against those for
-   * which Liens are supported.
-   *
-   * An empty list is meaningless and will be rejected.
-   *
-   * Example: ['resourcemanager.projects.delete']
+   * which Liens are supported. An empty list is meaningless and will be rejected. Example:
+   * ['resourcemanager.projects.delete']
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,9 +96,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A system-generated unique identifier for this Lien.
-   *
-   * Example: `liens/1234abcd`
+   * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,9 +104,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A system-generated unique identifier for this Lien.
-   *
-   * Example: `liens/1234abcd`
+   * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
    * @param name name or {@code null} for none
    */
   public Lien setName(java.lang.String name) {
@@ -129,9 +114,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be
-   * inspected programmatically. Maximum length of 200 characters.
-   *
-   * Example: 'compute.googleapis.com'
+   * inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
    * @return value or {@code null} for none
    */
   public java.lang.String getOrigin() {
@@ -140,9 +123,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be
-   * inspected programmatically. Maximum length of 200 characters.
-   *
-   * Example: 'compute.googleapis.com'
+   * inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
    * @param origin origin or {@code null} for none
    */
   public Lien setOrigin(java.lang.String origin) {
@@ -152,9 +133,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * A reference to the resource this Lien is attached to. The server will validate the parent
-   * against those for which Liens are supported.
-   *
-   * Example: `projects/1234`
+   * against those for which Liens are supported. Example: `projects/1234`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -163,9 +142,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * A reference to the resource this Lien is attached to. The server will validate the parent
-   * against those for which Liens are supported.
-   *
-   * Example: `projects/1234`
+   * against those for which Liens are supported. Example: `projects/1234`
    * @param parent parent or {@code null} for none
    */
   public Lien setParent(java.lang.String parent) {
@@ -175,9 +152,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * Concise user-visible strings indicating why an action cannot be performed on a resource.
-   * Maximum length of 200 characters.
-   *
-   * Example: 'Holds production API key'
+   * Maximum length of 200 characters. Example: 'Holds production API key'
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -186,9 +161,7 @@ public final class Lien extends com.google.api.client.json.GenericJson {
 
   /**
    * Concise user-visible strings indicating why an action cannot be performed on a resource.
-   * Maximum length of 200 characters.
-   *
-   * Example: 'Holds production API key'
+   * Maximum length of 200 characters. Example: 'Holds production API key'
    * @param reason reason or {@code null} for none
    */
   public Lien setReason(java.lang.String reason) {
@@ -199,11 +172,8 @@ public final class Lien extends com.google.api.client.json.GenericJson {
   /**
    * The types of operations which should be blocked as a result of this Lien. Each value should
    * correspond to an IAM permission. The server will validate the permissions against those for
-   * which Liens are supported.
-   *
-   * An empty list is meaningless and will be rejected.
-   *
-   * Example: ['resourcemanager.projects.delete']
+   * which Liens are supported. An empty list is meaningless and will be rejected. Example:
+   * ['resourcemanager.projects.delete']
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRestrictions() {
@@ -213,11 +183,8 @@ public final class Lien extends com.google.api.client.json.GenericJson {
   /**
    * The types of operations which should be blocked as a result of this Lien. Each value should
    * correspond to an IAM permission. The server will validate the permissions against those for
-   * which Liens are supported.
-   *
-   * An empty list is meaningless and will be rejected.
-   *
-   * Example: ['resourcemanager.projects.delete']
+   * which Liens are supported. An empty list is meaningless and will be rejected. Example:
+   * ['resourcemanager.projects.delete']
    * @param restrictions restrictions or {@code null} for none
    */
   public Lien setRestrictions(java.util.List<java.lang.String> restrictions) {

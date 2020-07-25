@@ -17,10 +17,9 @@
 package com.google.api.services.cloudresourcemanager.model;
 
 /**
- * A `Constraint` that is either enforced or not.
- *
- * For example a constraint `constraints/compute.disableSerialPortAccess`. If it is enforced on a VM
- * instance, serial port connections will not be opened to that instance.
+ * A `Constraint` that is either enforced or not. For example a constraint
+ * `constraints/compute.disableSerialPortAccess`. If it is enforced on a VM instance, serial port
+ * connections will not be opened to that instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

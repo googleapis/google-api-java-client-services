@@ -24,11 +24,9 @@ package com.google.api.services.cloudresourcemanager.model;
  * setting Policies for `Constraints` at different locations in the organization's resource
  * hierarchy. Policies are inherited down the resource hierarchy from higher levels, but can also be
  * overridden. For details about the inheritance rules please read about [Policies](/resource-
- * manager/reference/rest/v1/Policy).
- *
- * `Constraints` have a default behavior determined by the `constraint_default` field, which is the
- * enforcement behavior that is used in the absence of a `Policy` being defined or inherited for the
- * resource in question.
+ * manager/reference/rest/v1/Policy). `Constraints` have a default behavior determined by the
+ * `constraint_default` field, which is the enforcement behavior that is used in the absence of a
+ * `Policy` being defined or inherited for the resource in question.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed
@@ -57,18 +55,14 @@ public final class Constraint extends com.google.api.client.json.GenericJson {
 
   /**
    * Detailed description of what this `Constraint` controls as well as how and where it is
-   * enforced.
-   *
-   * Mutable.
+   * enforced. Mutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The human readable name.
-   *
-   * Mutable.
+   * The human readable name. Mutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,9 +126,7 @@ public final class Constraint extends com.google.api.client.json.GenericJson {
 
   /**
    * Detailed description of what this `Constraint` controls as well as how and where it is
-   * enforced.
-   *
-   * Mutable.
+   * enforced. Mutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -143,9 +135,7 @@ public final class Constraint extends com.google.api.client.json.GenericJson {
 
   /**
    * Detailed description of what this `Constraint` controls as well as how and where it is
-   * enforced.
-   *
-   * Mutable.
+   * enforced. Mutable.
    * @param description description or {@code null} for none
    */
   public Constraint setDescription(java.lang.String description) {
@@ -154,9 +144,7 @@ public final class Constraint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name.
-   *
-   * Mutable.
+   * The human readable name. Mutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -164,9 +152,7 @@ public final class Constraint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name.
-   *
-   * Mutable.
+   * The human readable name. Mutable.
    * @param displayName displayName or {@code null} for none
    */
   public Constraint setDisplayName(java.lang.String displayName) {

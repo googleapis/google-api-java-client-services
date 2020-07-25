@@ -143,6 +143,165 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class Advertisers {
 
     /**
+     * Audits an advertiser. Returns the counts of used entities per resource type under the advertiser
+     * provided. Used entities count towards their [respective resource limit]:
+     * (https://support.google.com/displayvideo/answer/6071450?hl=en)
+     *
+     * Create a request for the method "advertisers.audit".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Audit#execute()} method to invoke the remote operation.
+     *
+     * @param advertiserId Required. The ID of the advertiser to audit.
+     * @return the request
+     */
+    public Audit audit(java.lang.Long advertiserId) throws java.io.IOException {
+      Audit result = new Audit(advertiserId);
+      initialize(result);
+      return result;
+    }
+
+    public class Audit extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AuditAdvertiserResponse> {
+
+      private static final String REST_PATH = "v1/advertisers/{+advertiserId}:audit";
+
+      private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Audits an advertiser. Returns the counts of used entities per resource type under the
+       * advertiser provided. Used entities count towards their [respective resource limit]:
+       * (https://support.google.com/displayvideo/answer/6071450?hl=en)
+       *
+       * Create a request for the method "advertisers.audit".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Audit#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Audit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param advertiserId Required. The ID of the advertiser to audit.
+       * @since 1.13
+       */
+      protected Audit(java.lang.Long advertiserId) {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.AuditAdvertiserResponse.class);
+        this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Audit set$Xgafv(java.lang.String $Xgafv) {
+        return (Audit) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Audit setAccessToken(java.lang.String accessToken) {
+        return (Audit) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Audit setAlt(java.lang.String alt) {
+        return (Audit) super.setAlt(alt);
+      }
+
+      @Override
+      public Audit setCallback(java.lang.String callback) {
+        return (Audit) super.setCallback(callback);
+      }
+
+      @Override
+      public Audit setFields(java.lang.String fields) {
+        return (Audit) super.setFields(fields);
+      }
+
+      @Override
+      public Audit setKey(java.lang.String key) {
+        return (Audit) super.setKey(key);
+      }
+
+      @Override
+      public Audit setOauthToken(java.lang.String oauthToken) {
+        return (Audit) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Audit setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Audit) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Audit setQuotaUser(java.lang.String quotaUser) {
+        return (Audit) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Audit setUploadType(java.lang.String uploadType) {
+        return (Audit) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Audit setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Audit) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the advertiser to audit. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** Required. The ID of the advertiser to audit.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** Required. The ID of the advertiser to audit. */
+      public Audit setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * Optional. The specific fields to return. If no mask is specified, all fields in the
+       * response proto will be filled. Valid values are: * usedLineItemsCount *
+       * usedInsertionOrdersCount * usedCampaignsCount
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Optional. The specific fields to return. If no mask is specified, all fields in the response proto
+     will be filled. Valid values are: * usedLineItemsCount * usedInsertionOrdersCount *
+     usedCampaignsCount
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Optional. The specific fields to return. If no mask is specified, all fields in the
+       * response proto will be filled. Valid values are: * usedLineItemsCount *
+       * usedInsertionOrdersCount * usedCampaignsCount
+       */
+      public Audit setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      @Override
+      public Audit set(String parameterName, Object value) {
+        return (Audit) super.set(parameterName, value);
+      }
+    }
+    /**
      * Bulk edits targeting options under a single advertiser. The operation will delete the assigned
      * targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.delete_requests
      * and then create the assigned targeting options provided in
@@ -6547,13 +6706,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by line item properties. Supported syntax: * Filter expressions are made
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
-         * - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType` Examples: * All
-         * line items under an insertion order: `insertionOrderId="1234"` * All
-         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
-         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
-         * The length of this field should be no more than 500 characters.
+         * of `{field} {operator} {value}`. * The operator used on `flight.dateRange.endDate` must
+         * be LESS THAN (<). * The operators used on all other fields must be `EQUALS (=)`. *
+         * Supported fields: - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType` -
+         * `flight.dateRange.endDate` (input formatted as YYYY-MM-DD) Examples: * All line items
+         * under an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or
+         * `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an
+         * advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")
+         * AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates
+         * end before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` The length of this
+         * field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -6561,13 +6723,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /** Allows filtering by line item properties. Supported syntax: * Filter expressions are made up of one
        or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
        of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `campaignId` -
-       `insertionOrderId` - `entityStatus` - `lineItemType` Examples: * All line items under an insertion
-       order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
-       `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
-       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
-       lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` The length of this field should be no more than 500
-       characters.
+       {value}`. * The operator used on `flight.dateRange.endDate` must be LESS THAN (<). * The operators
+       used on all other fields must be `EQUALS (=)`. * Supported fields: - `campaignId` -
+       `insertionOrderId` - `entityStatus` - `lineItemType` - `flight.dateRange.endDate` (input formatted
+       as YYYY-MM-DD) Examples: * All line items under an insertion order: `insertionOrderId="1234"` * All
+       `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items
+       under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")
+       AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end before
+       March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` The length of this field should be no more
+       than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6577,13 +6741,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by line item properties. Supported syntax: * Filter expressions are made
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
-         * - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType` Examples: * All
-         * line items under an insertion order: `insertionOrderId="1234"` * All
-         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
-         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"`
-         * The length of this field should be no more than 500 characters.
+         * of `{field} {operator} {value}`. * The operator used on `flight.dateRange.endDate` must
+         * be LESS THAN (<). * The operators used on all other fields must be `EQUALS (=)`. *
+         * Supported fields: - `campaignId` - `insertionOrderId` - `entityStatus` - `lineItemType` -
+         * `flight.dateRange.endDate` (input formatted as YYYY-MM-DD) Examples: * All line items
+         * under an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or
+         * `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an
+         * advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")
+         * AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates
+         * end before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` The length of this
+         * field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -16033,6 +16200,478 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class Partners {
 
     /**
+     * Bulk edits targeting options under a single partner. The operation will delete the assigned
+     * targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.delete_requests and
+     * then create the assigned targeting options provided in
+     * BulkEditPartnerAssignedTargetingOptionsRequest.create_requests .
+     *
+     * Create a request for the method "partners.bulkEditPartnerAssignedTargetingOptions".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link BulkEditPartnerAssignedTargetingOptions#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param partnerId Required. The ID of the partner.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditPartnerAssignedTargetingOptionsRequest}
+     * @return the request
+     */
+    public BulkEditPartnerAssignedTargetingOptions bulkEditPartnerAssignedTargetingOptions(java.lang.Long partnerId, com.google.api.services.displayvideo.v1.model.BulkEditPartnerAssignedTargetingOptionsRequest content) throws java.io.IOException {
+      BulkEditPartnerAssignedTargetingOptions result = new BulkEditPartnerAssignedTargetingOptions(partnerId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BulkEditPartnerAssignedTargetingOptions extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditPartnerAssignedTargetingOptionsResponse> {
+
+      private static final String REST_PATH = "v1/partners/{+partnerId}:bulkEditPartnerAssignedTargetingOptions";
+
+      private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Bulk edits targeting options under a single partner. The operation will delete the assigned
+       * targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.delete_requests
+       * and then create the assigned targeting options provided in
+       * BulkEditPartnerAssignedTargetingOptionsRequest.create_requests .
+       *
+       * Create a request for the method "partners.bulkEditPartnerAssignedTargetingOptions".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link BulkEditPartnerAssignedTargetingOptions#execute()} method
+       * to invoke the remote operation. <p> {@link BulkEditPartnerAssignedTargetingOptions#initialize(c
+       * om.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param partnerId Required. The ID of the partner.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditPartnerAssignedTargetingOptionsRequest}
+       * @since 1.13
+       */
+      protected BulkEditPartnerAssignedTargetingOptions(java.lang.Long partnerId, com.google.api.services.displayvideo.v1.model.BulkEditPartnerAssignedTargetingOptionsRequest content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditPartnerAssignedTargetingOptionsResponse.class);
+        this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions set$Xgafv(java.lang.String $Xgafv) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setAlt(java.lang.String alt) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setAlt(alt);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setCallback(java.lang.String callback) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setCallback(callback);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setFields(java.lang.String fields) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setFields(fields);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setKey(java.lang.String key) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setKey(key);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setQuotaUser(java.lang.String quotaUser) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setUploadType(java.lang.String uploadType) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the partner. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** Required. The ID of the partner.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** Required. The ID of the partner. */
+      public BulkEditPartnerAssignedTargetingOptions setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public BulkEditPartnerAssignedTargetingOptions set(String parameterName, Object value) {
+        return (BulkEditPartnerAssignedTargetingOptions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets a partner.
+     *
+     * Create a request for the method "partners.get".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param partnerId Required. The ID of the partner to fetch.
+     * @return the request
+     */
+    public Get get(java.lang.Long partnerId) throws java.io.IOException {
+      Get result = new Get(partnerId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Partner> {
+
+      private static final String REST_PATH = "v1/partners/{+partnerId}";
+
+      private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a partner.
+       *
+       * Create a request for the method "partners.get".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param partnerId Required. The ID of the partner to fetch.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long partnerId) {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Partner.class);
+        this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the partner to fetch. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** Required. The ID of the partner to fetch.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** Required. The ID of the partner to fetch. */
+      public Get setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists partners that are accessible to the current user. The order is defined by the order_by
+     * parameter.
+     *
+     * Create a request for the method "partners.list".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListPartnersResponse> {
+
+      private static final String REST_PATH = "v1/partners";
+
+      /**
+       * Lists partners that are accessible to the current user. The order is defined by the order_by
+       * parameter.
+       *
+       * Create a request for the method "partners.list".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListPartnersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Allows filtering by partner properties. Supported syntax: * Filter expressions are made up
+       * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `entityStatus` Examples: * All active partners: `entityStatus="ENTITY_STATUS_ACTIVE"` The
+       * length of this field should be no more than 500 characters.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Allows filtering by partner properties. Supported syntax: * Filter expressions are made up of one
+     or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
+     of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `entityStatus` Examples: * All
+     active partners: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more
+     than 500 characters.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Allows filtering by partner properties. Supported syntax: * Filter expressions are made up
+       * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `entityStatus` Examples: * All active partners: `entityStatus="ENTITY_STATUS_ACTIVE"` The
+       * length of this field should be no more than 500 characters.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` The default sorting
+       * order is ascending. To specify descending order for a field, a suffix "desc" should be
+       * added to the field name. For example, `displayName desc`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Field by which to sort the list. Acceptable values are: * `displayName` The default sorting order
+     is ascending. To specify descending order for a field, a suffix "desc" should be added to the field
+     name. For example, `displayName desc`.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` The default sorting
+       * order is ascending. To specify descending order for a field, a suffix "desc" should be
+       * added to the field name. For example, `displayName desc`.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListPartners` method. If not
+       * specified, the first page of results will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. Typically, this is the value of
+     next_page_token returned from the previous call to `ListPartners` method. If not specified, the
+     first page of results will be returned.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListPartners` method. If not
+       * specified, the first page of results will be returned.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Channels collection.
      *
      * <p>The typical use is:</p>
@@ -17560,6 +18199,898 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       }
     }
+    /**
+     * An accessor for creating requests from the TargetingTypes collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.TargetingTypes.List request = displayvideo.targetingTypes().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public TargetingTypes targetingTypes() {
+      return new TargetingTypes();
+    }
+
+    /**
+     * The "targetingTypes" collection of methods.
+     */
+    public class TargetingTypes {
+
+      /**
+       * An accessor for creating requests from the AssignedTargetingOptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.AssignedTargetingOptions.List request = displayvideo.assignedTargetingOptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AssignedTargetingOptions assignedTargetingOptions() {
+        return new AssignedTargetingOptions();
+      }
+
+      /**
+       * The "assignedTargetingOptions" collection of methods.
+       */
+      public class AssignedTargetingOptions {
+
+        /**
+         * Assigns a targeting option to a partner. Returns the assigned targeting option if successful.
+         *
+         * Create a request for the method "assignedTargetingOptions.create".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId Required. The ID of the partner.
+         * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedTargetingOption}
+         * @return the request
+         */
+        public Create create(java.lang.Long partnerId, java.lang.String targetingType, com.google.api.services.displayvideo.v1.model.AssignedTargetingOption content) throws java.io.IOException {
+          Create result = new Create(partnerId, targetingType, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AssignedTargetingOption> {
+
+          private static final String REST_PATH = "v1/partners/{+partnerId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+          private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Assigns a targeting option to a partner. Returns the assigned targeting option if successful.
+           *
+           * Create a request for the method "assignedTargetingOptions.create".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId Required. The ID of the partner.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedTargetingOption}
+           * @since 1.13
+           */
+          protected Create(java.lang.Long partnerId, java.lang.String targetingType, com.google.api.services.displayvideo.v1.model.AssignedTargetingOption content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.AssignedTargetingOption.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the partner. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** Required. The ID of the partner.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** Required. The ID of the partner. */
+          public Create setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String targetingType;
+
+          /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL`
+           */
+          public java.lang.String getTargetingType() {
+            return targetingType;
+          }
+
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL`
+           */
+          public Create setTargetingType(java.lang.String targetingType) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.targetingType = targetingType;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an assigned targeting option from a partner.
+         *
+         * Create a request for the method "assignedTargetingOptions.delete".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId Required. The ID of the partner.
+         * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+         * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.Long partnerId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+          Delete result = new Delete(partnerId, targetingType, assignedTargetingOptionId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/partners/{+partnerId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+          private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Deletes an assigned targeting option from a partner.
+           *
+           * Create a request for the method "assignedTargetingOptions.delete".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId Required. The ID of the partner.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+           * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.Long partnerId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+            super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                  "Parameter assignedTargetingOptionId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the partner. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** Required. The ID of the partner.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** Required. The ID of the partner. */
+          public Delete setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String targetingType;
+
+          /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL`
+           */
+          public java.lang.String getTargetingType() {
+            return targetingType;
+          }
+
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL`
+           */
+          public Delete setTargetingType(java.lang.String targetingType) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.targetingType = targetingType;
+            return this;
+          }
+
+          /** Required. The ID of the assigned targeting option to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String assignedTargetingOptionId;
+
+          /** Required. The ID of the assigned targeting option to delete.
+           */
+          public java.lang.String getAssignedTargetingOptionId() {
+            return assignedTargetingOptionId;
+          }
+
+          /** Required. The ID of the assigned targeting option to delete. */
+          public Delete setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                  "Parameter assignedTargetingOptionId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.assignedTargetingOptionId = assignedTargetingOptionId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a single targeting option assigned to a partner.
+         *
+         * Create a request for the method "assignedTargetingOptions.get".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId Required. The ID of the partner.
+         * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+         * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this partner that identifies the assigned
+         *        targeting option being requested.
+         * @return the request
+         */
+        public Get get(java.lang.Long partnerId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+          Get result = new Get(partnerId, targetingType, assignedTargetingOptionId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AssignedTargetingOption> {
+
+          private static final String REST_PATH = "v1/partners/{+partnerId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+          private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Gets a single targeting option assigned to a partner.
+           *
+           * Create a request for the method "assignedTargetingOptions.get".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId Required. The ID of the partner.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this partner that identifies the assigned
+         *        targeting option being requested.
+           * @since 1.13
+           */
+          protected Get(java.lang.Long partnerId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+            super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.AssignedTargetingOption.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                  "Parameter assignedTargetingOptionId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the partner. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** Required. The ID of the partner.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** Required. The ID of the partner. */
+          public Get setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String targetingType;
+
+          /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL`
+           */
+          public java.lang.String getTargetingType() {
+            return targetingType;
+          }
+
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL`
+           */
+          public Get setTargetingType(java.lang.String targetingType) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.targetingType = targetingType;
+            return this;
+          }
+
+          /**
+           * Required. An identifier unique to the targeting type in this partner that identifies
+           * the assigned targeting option being requested.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String assignedTargetingOptionId;
+
+          /** Required. An identifier unique to the targeting type in this partner that identifies the assigned
+         targeting option being requested.
+           */
+          public java.lang.String getAssignedTargetingOptionId() {
+            return assignedTargetingOptionId;
+          }
+
+          /**
+           * Required. An identifier unique to the targeting type in this partner that identifies
+           * the assigned targeting option being requested.
+           */
+          public Get setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                  "Parameter assignedTargetingOptionId must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.assignedTargetingOptionId = assignedTargetingOptionId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the targeting options assigned to a partner.
+         *
+         * Create a request for the method "assignedTargetingOptions.list".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId Required. The ID of the partner.
+         * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+         * @return the request
+         */
+        public List list(java.lang.Long partnerId, java.lang.String targetingType) throws java.io.IOException {
+          List result = new List(partnerId, targetingType);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListPartnerAssignedTargetingOptionsResponse> {
+
+          private static final String REST_PATH = "v1/partners/{+partnerId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+          private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Lists the targeting options assigned to a partner.
+           *
+           * Create a request for the method "assignedTargetingOptions.list".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId Required. The ID of the partner.
+           * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL`
+           * @since 1.13
+           */
+          protected List(java.lang.Long partnerId, java.lang.String targetingType) {
+            super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListPartnerAssignedTargetingOptionsResponse.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the partner. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** Required. The ID of the partner.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** Required. The ID of the partner. */
+          public List setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /**
+           * Required. Identifies the type of assigned targeting options to list. Supported
+           * targeting types: * `TARGETING_TYPE_CHANNEL`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String targetingType;
+
+          /** Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL`
+           */
+          public java.lang.String getTargetingType() {
+            return targetingType;
+          }
+
+          /**
+           * Required. Identifies the type of assigned targeting options to list. Supported
+           * targeting types: * `TARGETING_TYPE_CHANNEL`
+           */
+          public List setTargetingType(java.lang.String targetingType) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                  "Parameter targetingType must conform to the pattern " +
+                  "^[^/]+$");
+            }
+            this.targetingType = targetingType;
+            return this;
+          }
+
+          /**
+           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * expressions are made up of one or more restrictions. * Restrictions can be combined by
+           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
+           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
+           * `assignedTargetingOptionId="123456"` The length of this field should be no more than
+           * 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+         are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+         `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+         (=)`. * Supported fields: - `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID
+         123456 `assignedTargetingOptionId="123456"` The length of this field should be no more than 500
+         characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * expressions are made up of one or more restrictions. * Restrictions can be combined by
+           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
+           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
+           * `assignedTargetingOptionId="123456"` The length of this field should be no more than
+           * 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+           * (default) The default sorting order is ascending. To specify descending order for a
+           * field, a suffix "desc" should be added to the field name. Example:
+           * `assignedTargetingOptionId desc`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId` (default) The
+         default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+         be added to the field name. Example: `assignedTargetingOptionId desc`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+           * (default) The default sorting order is ascending. To specify descending order for a
+           * field, a suffix "desc" should be added to the field name. Example:
+           * `assignedTargetingOptionId desc`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+         error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Must be between `1` and `100`. If unspecified will default to
+           * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to
+           * `ListPartnerAssignedTargetingOptions` method. If not specified, the first page of
+           * results will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         next_page_token returned from the previous call to `ListPartnerAssignedTargetingOptions` method. If
+         not specified, the first page of results will be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of next_page_token returned from the previous call to
+           * `ListPartnerAssignedTargetingOptions` method. If not specified, the first page of
+           * results will be returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**
@@ -18345,6 +19876,890 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Users collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+   *   {@code DisplayVideo.Users.List request = displayvideo.users().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Users users() {
+    return new Users();
+  }
+
+  /**
+   * The "users" collection of methods.
+   */
+  public class Users {
+
+    /**
+     * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in
+     * BulkEditAssignedUserRolesRequest.deleted_assigned_user_roles and then assign the user roles
+     * provided in BulkEditAssignedUserRolesRequest.created_assigned_user_roles.
+     *
+     * Create a request for the method "users.bulkEditAssignedUserRoles".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link BulkEditAssignedUserRoles#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param userId Required. The ID of the user to which the assigned user roles belong.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedUserRolesRequest}
+     * @return the request
+     */
+    public BulkEditAssignedUserRoles bulkEditAssignedUserRoles(java.lang.Long userId, com.google.api.services.displayvideo.v1.model.BulkEditAssignedUserRolesRequest content) throws java.io.IOException {
+      BulkEditAssignedUserRoles result = new BulkEditAssignedUserRoles(userId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BulkEditAssignedUserRoles extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkEditAssignedUserRolesResponse> {
+
+      private static final String REST_PATH = "v1/users/{+userId}:bulkEditAssignedUserRoles";
+
+      private final java.util.regex.Pattern USER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in
+       * BulkEditAssignedUserRolesRequest.deleted_assigned_user_roles and then assign the user roles
+       * provided in BulkEditAssignedUserRolesRequest.created_assigned_user_roles.
+       *
+       * Create a request for the method "users.bulkEditAssignedUserRoles".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link BulkEditAssignedUserRoles#execute()} method to invoke the
+       * remote operation. <p> {@link BulkEditAssignedUserRoles#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param userId Required. The ID of the user to which the assigned user roles belong.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.BulkEditAssignedUserRolesRequest}
+       * @since 1.13
+       */
+      protected BulkEditAssignedUserRoles(java.lang.Long userId, com.google.api.services.displayvideo.v1.model.BulkEditAssignedUserRolesRequest content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.BulkEditAssignedUserRolesResponse.class);
+        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles set$Xgafv(java.lang.String $Xgafv) {
+        return (BulkEditAssignedUserRoles) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setAccessToken(java.lang.String accessToken) {
+        return (BulkEditAssignedUserRoles) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setAlt(java.lang.String alt) {
+        return (BulkEditAssignedUserRoles) super.setAlt(alt);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setCallback(java.lang.String callback) {
+        return (BulkEditAssignedUserRoles) super.setCallback(callback);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setFields(java.lang.String fields) {
+        return (BulkEditAssignedUserRoles) super.setFields(fields);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setKey(java.lang.String key) {
+        return (BulkEditAssignedUserRoles) super.setKey(key);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setOauthToken(java.lang.String oauthToken) {
+        return (BulkEditAssignedUserRoles) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BulkEditAssignedUserRoles) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setQuotaUser(java.lang.String quotaUser) {
+        return (BulkEditAssignedUserRoles) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setUploadType(java.lang.String uploadType) {
+        return (BulkEditAssignedUserRoles) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BulkEditAssignedUserRoles) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the user to which the assigned user roles belong. */
+      @com.google.api.client.util.Key
+      private java.lang.Long userId;
+
+      /** Required. The ID of the user to which the assigned user roles belong.
+       */
+      public java.lang.Long getUserId() {
+        return userId;
+      }
+
+      /** Required. The ID of the user to which the assigned user roles belong. */
+      public BulkEditAssignedUserRoles setUserId(java.lang.Long userId) {
+        this.userId = userId;
+        return this;
+      }
+
+      @Override
+      public BulkEditAssignedUserRoles set(String parameterName, Object value) {
+        return (BulkEditAssignedUserRoles) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new user. Returns the newly created user if successful.
+     *
+     * Create a request for the method "users.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.User}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.User content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.User> {
+
+      private static final String REST_PATH = "v1/users";
+
+      /**
+       * Creates a new user. Returns the newly created user if successful.
+       *
+       * Create a request for the method "users.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.User}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.User content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.User.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a user.
+     *
+     * Create a request for the method "users.delete".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param userId Required. The ID of the user to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long userId) throws java.io.IOException {
+      Delete result = new Delete(userId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/users/{+userId}";
+
+      private final java.util.regex.Pattern USER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Deletes a user.
+       *
+       * Create a request for the method "users.delete".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param userId Required. The ID of the user to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long userId) {
+        super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v1.model.Empty.class);
+        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the user to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.Long userId;
+
+      /** Required. The ID of the user to delete.
+       */
+      public java.lang.Long getUserId() {
+        return userId;
+      }
+
+      /** Required. The ID of the user to delete. */
+      public Delete setUserId(java.lang.Long userId) {
+        this.userId = userId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets a user.
+     *
+     * Create a request for the method "users.get".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param userId Required. The ID of the user to fetch.
+     * @return the request
+     */
+    public Get get(java.lang.Long userId) throws java.io.IOException {
+      Get result = new Get(userId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.User> {
+
+      private static final String REST_PATH = "v1/users/{+userId}";
+
+      private final java.util.regex.Pattern USER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a user.
+       *
+       * Create a request for the method "users.get".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param userId Required. The ID of the user to fetch.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long userId) {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.User.class);
+        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the user to fetch. */
+      @com.google.api.client.util.Key
+      private java.lang.Long userId;
+
+      /** Required. The ID of the user to fetch.
+       */
+      public java.lang.Long getUserId() {
+        return userId;
+      }
+
+      /** Required. The ID of the user to fetch. */
+      public Get setUserId(java.lang.Long userId) {
+        this.userId = userId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists users that are accessible to the current user. If two users have user roles on the same
+     * partner or advertiser, they can access each other.
+     *
+     * Create a request for the method "users.list".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListUsersResponse> {
+
+      private static final String REST_PATH = "v1/users";
+
+      /**
+       * Lists users that are accessible to the current user. If two users have user roles on the same
+       * partner or advertiser, they can access each other.
+       *
+       * Create a request for the method "users.list".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListUsersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Allows filtering by user properties. Supported syntax: * Filter expressions are made up of
+       * one or more restrictions. * Restrictions can be combined by the logical operator `AND`. * A
+       * restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS
+       * (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for the following fields: -
+       * `displayName` - `email` * The operator must be `EQUALS (=)` for the following fields: -
+       * `assignedUserRole.userRole` - `assignedUserRole.partnerId` -
+       * `assignedUserRole.advertiserId` - `assignedUserRole.entityType`: A synthetic field of
+       * AssignedUserRole used for filtering. Identifies the type of entity to which the user role
+       * is assigned. Valid values are `Partner` and `Advertiser`. -
+       * `assignedUserRole.parentPartnerId`: A synthetic field of AssignedUserRole used for
+       * filtering. Identifies the parent partner of the entity to which the user role is assigned."
+       * Examples: * The user with displayName containing `foo`: `displayName:"foo"` * The user with
+       * email containing `bar`: `email:"bar"` * All users with standard user roles:
+       * `assignedUserRole.userRole="STANDARD"` * All users with user roles for partner 123:
+       * `assignedUserRole.partnerId="123"` * All users with user roles for advertiser 123:
+       * `assignedUserRole.advertiserId="123"` * All users with partner level user roles:
+       * `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under
+       * partner 123: `parentPartnerId="123"` The length of this field should be no more than 500
+       * characters.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Allows filtering by user properties. Supported syntax: * Filter expressions are made up of one or
+     more restrictions. * Restrictions can be combined by the logical operator `AND`. * A restriction
+     has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS
+     (=)`. * The operator must be `CONTAINS (:)` for the following fields: - `displayName` - `email` *
+     The operator must be `EQUALS (=)` for the following fields: - `assignedUserRole.userRole` -
+     `assignedUserRole.partnerId` - `assignedUserRole.advertiserId` - `assignedUserRole.entityType`: A
+     synthetic field of AssignedUserRole used for filtering. Identifies the type of entity to which the
+     user role is assigned. Valid values are `Partner` and `Advertiser`. -
+     `assignedUserRole.parentPartnerId`: A synthetic field of AssignedUserRole used for filtering.
+     Identifies the parent partner of the entity to which the user role is assigned." Examples: * The
+     user with displayName containing `foo`: `displayName:"foo"` * The user with email containing `bar`:
+     `email:"bar"` * All users with standard user roles: `assignedUserRole.userRole="STANDARD"` * All
+     users with user roles for partner 123: `assignedUserRole.partnerId="123"` * All users with user
+     roles for advertiser 123: `assignedUserRole.advertiserId="123"` * All users with partner level user
+     roles: `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under
+     partner 123: `parentPartnerId="123"` The length of this field should be no more than 500
+     characters.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Allows filtering by user properties. Supported syntax: * Filter expressions are made up of
+       * one or more restrictions. * Restrictions can be combined by the logical operator `AND`. * A
+       * restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS
+       * (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for the following fields: -
+       * `displayName` - `email` * The operator must be `EQUALS (=)` for the following fields: -
+       * `assignedUserRole.userRole` - `assignedUserRole.partnerId` -
+       * `assignedUserRole.advertiserId` - `assignedUserRole.entityType`: A synthetic field of
+       * AssignedUserRole used for filtering. Identifies the type of entity to which the user role
+       * is assigned. Valid values are `Partner` and `Advertiser`. -
+       * `assignedUserRole.parentPartnerId`: A synthetic field of AssignedUserRole used for
+       * filtering. Identifies the parent partner of the entity to which the user role is assigned."
+       * Examples: * The user with displayName containing `foo`: `displayName:"foo"` * The user with
+       * email containing `bar`: `email:"bar"` * All users with standard user roles:
+       * `assignedUserRole.userRole="STANDARD"` * All users with user roles for partner 123:
+       * `assignedUserRole.partnerId="123"` * All users with user roles for advertiser 123:
+       * `assignedUserRole.advertiserId="123"` * All users with partner level user roles:
+       * `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under
+       * partner 123: `parentPartnerId="123"` The length of this field should be no more than 500
+       * characters.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
+       * "desc" should be added to the field name. For example, `displayName desc`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) The default
+     sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+     added to the field name. For example, `displayName desc`.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
+       * "desc" should be added to the field name. For example, `displayName desc`.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListUsers` method. If not
+       * specified, the first page of results will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. Typically, this is the value of
+     next_page_token returned from the previous call to `ListUsers` method. If not specified, the first
+     page of results will be returned.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListUsers` method. If not
+       * specified, the first page of results will be returned.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing user. Returns the updated user if successful.
+     *
+     * Create a request for the method "users.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param userId Output only. The unique ID of the user. Assigned by the system.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.User}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long userId, com.google.api.services.displayvideo.v1.model.User content) throws java.io.IOException {
+      Patch result = new Patch(userId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.User> {
+
+      private static final String REST_PATH = "v1/users/{+userId}";
+
+      private final java.util.regex.Pattern USER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates an existing user. Returns the updated user if successful.
+       *
+       * Create a request for the method "users.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param userId Output only. The unique ID of the user. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.User}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long userId, com.google.api.services.displayvideo.v1.model.User content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.User.class);
+        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Output only. The unique ID of the user. Assigned by the system. */
+      @com.google.api.client.util.Key
+      private java.lang.Long userId;
+
+      /** Output only. The unique ID of the user. Assigned by the system.
+       */
+      public java.lang.Long getUserId() {
+        return userId;
+      }
+
+      /** Output only. The unique ID of the user. Assigned by the system. */
+      public Patch setUserId(java.lang.Long userId) {
+        this.userId = userId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

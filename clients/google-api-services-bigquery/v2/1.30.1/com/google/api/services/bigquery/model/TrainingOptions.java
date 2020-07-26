@@ -30,11 +30,25 @@ package com.google.api.services.bigquery.model;
 public final class TrainingOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether to enable auto ARIMA or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoArima;
+
+  /**
    * Batch size for dnn models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long batchSize;
+
+  /**
+   * The data frequency of a time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataFrequency;
 
   /**
    * The column to split data with. This column won't be used as a feature. 1. When
@@ -100,6 +114,28 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> hiddenUnits;
+
+  /**
+   * The geographical region based on which the holidays are considered in time series modeling. If
+   * a valid value is specified, then holiday effects modeling is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String holidayRegion;
+
+  /**
+   * The number of periods ahead that need to be forecasted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long horizon;
+
+  /**
+   * Include drift when fitting an ARIMA model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeDrift;
 
   /**
    * Specifies the initial learning rate for the line search learn rate strategy.
@@ -218,6 +254,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String modelUri;
 
   /**
+   * A specification of the non-seasonal part of the ARIMA model: the three components (p, d, q) are
+   * the AR order, the degree of differencing, and the MA order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArimaOrder nonSeasonalOrder;
+
+  /**
    * Number of clusters for clustering models.
    * The value may be {@code null}.
    */
@@ -256,6 +300,27 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double subsample;
 
   /**
+   * Column to be designated as time series data for ARIMA model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeSeriesDataColumn;
+
+  /**
+   * The id column that will be used to indicate different time series to forecast in parallel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeSeriesIdColumn;
+
+  /**
+   * Column to be designated as time series timestamp for ARIMA model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeSeriesTimestampColumn;
+
+  /**
    * User column specified for matrix factorization models.
    * The value may be {@code null}.
    */
@@ -277,6 +342,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean warmStart;
 
   /**
+   * Whether to enable auto ARIMA or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoArima() {
+    return autoArima;
+  }
+
+  /**
+   * Whether to enable auto ARIMA or not.
+   * @param autoArima autoArima or {@code null} for none
+   */
+  public TrainingOptions setAutoArima(java.lang.Boolean autoArima) {
+    this.autoArima = autoArima;
+    return this;
+  }
+
+  /**
    * Batch size for dnn models.
    * @return value or {@code null} for none
    */
@@ -290,6 +372,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setBatchSize(java.lang.Long batchSize) {
     this.batchSize = batchSize;
+    return this;
+  }
+
+  /**
+   * The data frequency of a time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataFrequency() {
+    return dataFrequency;
+  }
+
+  /**
+   * The data frequency of a time series.
+   * @param dataFrequency dataFrequency or {@code null} for none
+   */
+  public TrainingOptions setDataFrequency(java.lang.String dataFrequency) {
+    this.dataFrequency = dataFrequency;
     return this;
   }
 
@@ -444,6 +543,59 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setHiddenUnits(java.util.List<java.lang.Long> hiddenUnits) {
     this.hiddenUnits = hiddenUnits;
+    return this;
+  }
+
+  /**
+   * The geographical region based on which the holidays are considered in time series modeling. If
+   * a valid value is specified, then holiday effects modeling is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHolidayRegion() {
+    return holidayRegion;
+  }
+
+  /**
+   * The geographical region based on which the holidays are considered in time series modeling. If
+   * a valid value is specified, then holiday effects modeling is enabled.
+   * @param holidayRegion holidayRegion or {@code null} for none
+   */
+  public TrainingOptions setHolidayRegion(java.lang.String holidayRegion) {
+    this.holidayRegion = holidayRegion;
+    return this;
+  }
+
+  /**
+   * The number of periods ahead that need to be forecasted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getHorizon() {
+    return horizon;
+  }
+
+  /**
+   * The number of periods ahead that need to be forecasted.
+   * @param horizon horizon or {@code null} for none
+   */
+  public TrainingOptions setHorizon(java.lang.Long horizon) {
+    this.horizon = horizon;
+    return this;
+  }
+
+  /**
+   * Include drift when fitting an ARIMA model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeDrift() {
+    return includeDrift;
+  }
+
+  /**
+   * Include drift when fitting an ARIMA model.
+   * @param includeDrift includeDrift or {@code null} for none
+   */
+  public TrainingOptions setIncludeDrift(java.lang.Boolean includeDrift) {
+    this.includeDrift = includeDrift;
     return this;
   }
 
@@ -728,6 +880,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * A specification of the non-seasonal part of the ARIMA model: the three components (p, d, q) are
+   * the AR order, the degree of differencing, and the MA order.
+   * @return value or {@code null} for none
+   */
+  public ArimaOrder getNonSeasonalOrder() {
+    return nonSeasonalOrder;
+  }
+
+  /**
+   * A specification of the non-seasonal part of the ARIMA model: the three components (p, d, q) are
+   * the AR order, the degree of differencing, and the MA order.
+   * @param nonSeasonalOrder nonSeasonalOrder or {@code null} for none
+   */
+  public TrainingOptions setNonSeasonalOrder(ArimaOrder nonSeasonalOrder) {
+    this.nonSeasonalOrder = nonSeasonalOrder;
+    return this;
+  }
+
+  /**
    * Number of clusters for clustering models.
    * @return value or {@code null} for none
    */
@@ -815,6 +986,57 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setSubsample(java.lang.Double subsample) {
     this.subsample = subsample;
+    return this;
+  }
+
+  /**
+   * Column to be designated as time series data for ARIMA model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeSeriesDataColumn() {
+    return timeSeriesDataColumn;
+  }
+
+  /**
+   * Column to be designated as time series data for ARIMA model.
+   * @param timeSeriesDataColumn timeSeriesDataColumn or {@code null} for none
+   */
+  public TrainingOptions setTimeSeriesDataColumn(java.lang.String timeSeriesDataColumn) {
+    this.timeSeriesDataColumn = timeSeriesDataColumn;
+    return this;
+  }
+
+  /**
+   * The id column that will be used to indicate different time series to forecast in parallel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeSeriesIdColumn() {
+    return timeSeriesIdColumn;
+  }
+
+  /**
+   * The id column that will be used to indicate different time series to forecast in parallel.
+   * @param timeSeriesIdColumn timeSeriesIdColumn or {@code null} for none
+   */
+  public TrainingOptions setTimeSeriesIdColumn(java.lang.String timeSeriesIdColumn) {
+    this.timeSeriesIdColumn = timeSeriesIdColumn;
+    return this;
+  }
+
+  /**
+   * Column to be designated as time series timestamp for ARIMA model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeSeriesTimestampColumn() {
+    return timeSeriesTimestampColumn;
+  }
+
+  /**
+   * Column to be designated as time series timestamp for ARIMA model.
+   * @param timeSeriesTimestampColumn timeSeriesTimestampColumn or {@code null} for none
+   */
+  public TrainingOptions setTimeSeriesTimestampColumn(java.lang.String timeSeriesTimestampColumn) {
+    this.timeSeriesTimestampColumn = timeSeriesTimestampColumn;
     return this;
   }
 

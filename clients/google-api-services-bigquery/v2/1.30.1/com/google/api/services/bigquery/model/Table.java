@@ -209,6 +209,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * [Output-only] Snapshot definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SnapshotDefinition snapshotDefinition;
+
+  /**
    * [Output-only] Contains information regarding this table's streaming buffer, if one is present.
    * This field will be absent if the table is not being streamed to or if there is no data in the
    * streaming buffer.
@@ -234,9 +241,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester]
-   * MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data
-   * stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester] SNAPSHOT: An
+   * immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW:
+   * SQL query whose result is persisted. EXTERNAL: A table that references data stored in an
+   * external storage system, such as Google Cloud Storage. The default value is TABLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -705,6 +713,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output-only] Snapshot definition.
+   * @return value or {@code null} for none
+   */
+  public SnapshotDefinition getSnapshotDefinition() {
+    return snapshotDefinition;
+  }
+
+  /**
+   * [Output-only] Snapshot definition.
+   * @param snapshotDefinition snapshotDefinition or {@code null} for none
+   */
+  public Table setSnapshotDefinition(SnapshotDefinition snapshotDefinition) {
+    this.snapshotDefinition = snapshotDefinition;
+    return this;
+  }
+
+  /**
    * [Output-only] Contains information regarding this table's streaming buffer, if one is present.
    * This field will be absent if the table is not being streamed to or if there is no data in the
    * streaming buffer.
@@ -763,9 +788,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester]
-   * MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data
-   * stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester] SNAPSHOT: An
+   * immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW:
+   * SQL query whose result is persisted. EXTERNAL: A table that references data stored in an
+   * external storage system, such as Google Cloud Storage. The default value is TABLE.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -774,9 +800,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester]
-   * MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data
-   * stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester] SNAPSHOT: An
+   * immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW:
+   * SQL query whose result is persisted. EXTERNAL: A table that references data stored in an
+   * external storage system, such as Google Cloud Storage. The default value is TABLE.
    * @param type type or {@code null} for none
    */
   public Table setType(java.lang.String type) {

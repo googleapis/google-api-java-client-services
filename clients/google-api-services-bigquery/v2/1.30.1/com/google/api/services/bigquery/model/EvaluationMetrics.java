@@ -32,6 +32,13 @@ package com.google.api.services.bigquery.model;
 public final class EvaluationMetrics extends com.google.api.client.json.GenericJson {
 
   /**
+   * Populated for ARIMA models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArimaForecastingMetrics arimaForecastingMetrics;
+
+  /**
    * Populated for binary classification/classifier models.
    * The value may be {@code null}.
    */
@@ -53,7 +60,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private MultiClassClassificationMetrics multiClassClassificationMetrics;
 
   /**
-   * [Alpha] Populated for implicit feedback type matrix factorization models.
+   * Populated for implicit feedback type matrix factorization models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,6 +72,23 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private RegressionMetrics regressionMetrics;
+
+  /**
+   * Populated for ARIMA models.
+   * @return value or {@code null} for none
+   */
+  public ArimaForecastingMetrics getArimaForecastingMetrics() {
+    return arimaForecastingMetrics;
+  }
+
+  /**
+   * Populated for ARIMA models.
+   * @param arimaForecastingMetrics arimaForecastingMetrics or {@code null} for none
+   */
+  public EvaluationMetrics setArimaForecastingMetrics(ArimaForecastingMetrics arimaForecastingMetrics) {
+    this.arimaForecastingMetrics = arimaForecastingMetrics;
+    return this;
+  }
 
   /**
    * Populated for binary classification/classifier models.
@@ -118,7 +142,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Alpha] Populated for implicit feedback type matrix factorization models.
+   * Populated for implicit feedback type matrix factorization models.
    * @return value or {@code null} for none
    */
   public RankingMetrics getRankingMetrics() {
@@ -126,7 +150,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Alpha] Populated for implicit feedback type matrix factorization models.
+   * Populated for implicit feedback type matrix factorization models.
    * @param rankingMetrics rankingMetrics or {@code null} for none
    */
   public EvaluationMetrics setRankingMetrics(RankingMetrics rankingMetrics) {

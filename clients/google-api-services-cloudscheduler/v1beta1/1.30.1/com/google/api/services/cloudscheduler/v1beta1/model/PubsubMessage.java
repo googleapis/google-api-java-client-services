@@ -61,6 +61,17 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   private java.lang.String messageId;
 
   /**
+   * If non-empty, identifies related messages for which publish order should be respected. If a
+   * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
+   * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
+   * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
+   * specify the same `ordering_key` value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orderingKey;
+
+  /**
    * The time at which the message was published, populated by the server when it receives the
    * `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * The value may be {@code null}.
@@ -156,6 +167,31 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
    */
   public PubsubMessage setMessageId(java.lang.String messageId) {
     this.messageId = messageId;
+    return this;
+  }
+
+  /**
+   * If non-empty, identifies related messages for which publish order should be respected. If a
+   * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
+   * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
+   * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
+   * specify the same `ordering_key` value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrderingKey() {
+    return orderingKey;
+  }
+
+  /**
+   * If non-empty, identifies related messages for which publish order should be respected. If a
+   * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
+   * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
+   * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
+   * specify the same `ordering_key` value.
+   * @param orderingKey orderingKey or {@code null} for none
+   */
+  public PubsubMessage setOrderingKey(java.lang.String orderingKey) {
+    this.orderingKey = orderingKey;
     return this;
   }
 

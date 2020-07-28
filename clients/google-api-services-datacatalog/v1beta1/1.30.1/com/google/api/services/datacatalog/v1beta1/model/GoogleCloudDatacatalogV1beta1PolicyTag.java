@@ -18,7 +18,7 @@ package com.google.api.services.datacatalog.v1beta1.model;
 
 /**
  * Denotes one policy tag in a taxonomy (e.g. ssn). Policy Tags can be defined in a hierarchy. For
- * example, consider the following hierarchy: Geolocation - (LatLong, City, ZipCode). PolicyTag
+ * example, consider the following hierarchy: Geolocation -> (LatLong, City, ZipCode). PolicyTag
  * "Geolocation" contains three child policy tags: "LatLong", "City", and "ZipCode".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

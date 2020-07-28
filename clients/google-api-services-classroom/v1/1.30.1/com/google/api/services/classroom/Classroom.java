@@ -8778,14 +8778,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
      * This method may return the following error codes:
      *
      * * `PERMISSION_DENIED` if:     * the authenticated user does not have permission to receive
-     * notifications from the requested field; or     * the credential provided does not include the
-     * appropriate scope for       the requested feed.     * another access error is encountered. *
-     * `INVALID_ARGUMENT` if:     * no `cloudPubsubTopic` is specified, or the specified
-     * `cloudPubsubTopic` is not valid; or     * no `feed` is specified, or the specified `feed` is not
-     * valid. * `NOT_FOUND` if:     * the specified `feed` cannot be located, or the requesting user
-     * does       not have permission to determine whether or not it exists; or     * the specified
-     * `cloudPubsubTopic` cannot be located, or Classroom has       not been granted permission to
-     * publish to it.
+     * notifications from the requested field; or     * the current user has not granted access to the
+     * current Cloud project       with the appropriate scope for the requested feed. Note that
+     * domain-wide delegation of authority is not currently supported for       this purpose. If the
+     * request has the appropriate scope, but no grant       exists, a Request Errors is returned.     *
+     * another access error is encountered. * `INVALID_ARGUMENT` if:     * no `cloudPubsubTopic` is
+     * specified, or the specified       `cloudPubsubTopic` is not valid; or     * no `feed` is
+     * specified, or the specified `feed` is not valid. * `NOT_FOUND` if:     * the specified `feed`
+     * cannot be located, or the requesting user does       not have permission to determine whether or
+     * not it exists; or     * the specified `cloudPubsubTopic` cannot be located, or Classroom has
+     * not been granted permission to publish to it.
      *
      * Create a request for the method "registrations.create".
      *
@@ -8821,14 +8823,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This method may return the following error codes:
        *
        * * `PERMISSION_DENIED` if:     * the authenticated user does not have permission to receive
-       * notifications from the requested field; or     * the credential provided does not include the
-       * appropriate scope for       the requested feed.     * another access error is encountered. *
-       * `INVALID_ARGUMENT` if:     * no `cloudPubsubTopic` is specified, or the specified
-       * `cloudPubsubTopic` is not valid; or     * no `feed` is specified, or the specified `feed` is
-       * not valid. * `NOT_FOUND` if:     * the specified `feed` cannot be located, or the requesting
-       * user does       not have permission to determine whether or not it exists; or     * the
-       * specified `cloudPubsubTopic` cannot be located, or Classroom has       not been granted
-       * permission to publish to it.
+       * notifications from the requested field; or     * the current user has not granted access to the
+       * current Cloud project       with the appropriate scope for the requested feed. Note that
+       * domain-wide delegation of authority is not currently supported for       this purpose. If the
+       * request has the appropriate scope, but no grant       exists, a Request Errors is returned.
+       * * another access error is encountered. * `INVALID_ARGUMENT` if:     * no `cloudPubsubTopic` is
+       * specified, or the specified       `cloudPubsubTopic` is not valid; or     * no `feed` is
+       * specified, or the specified `feed` is not valid. * `NOT_FOUND` if:     * the specified `feed`
+       * cannot be located, or the requesting user does       not have permission to determine whether
+       * or not it exists; or     * the specified `cloudPubsubTopic` cannot be located, or Classroom has
+       * not been granted permission to publish to it.
        *
        * Create a request for the method "registrations.create".
        *

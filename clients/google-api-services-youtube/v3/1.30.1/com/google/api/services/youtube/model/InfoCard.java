@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Model definition for InfoCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,42 +27,55 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class InfoCard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Etag of this resource.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
 
   /**
+   * UUID for this infocard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
+   * Identifies what kind of resource this is.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String kind;
 
   /**
+   * The snippet object contains basic details about the infocard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InfoCardSnippet snippet;
+
+  /**
+   * Etag of this resource.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public java.lang.String getEtag() {
+    return etag;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * Etag of this resource.
+   * @param etag etag or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  public InfoCard setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
   /**
+   * UUID for this infocard.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -70,36 +83,56 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * UUID for this infocard.
    * @param id id or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
+  public InfoCard setId(java.lang.String id) {
     this.id = id;
     return this;
   }
 
   /**
+   * Identifies what kind of resource this is.
    * @return value or {@code null} for none
    */
-  public TestItemTestItemSnippet getSnippet() {
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * Identifies what kind of resource this is.
+   * @param kind kind or {@code null} for none
+   */
+  public InfoCard setKind(java.lang.String kind) {
+    this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The snippet object contains basic details about the infocard.
+   * @return value or {@code null} for none
+   */
+  public InfoCardSnippet getSnippet() {
     return snippet;
   }
 
   /**
+   * The snippet object contains basic details about the infocard.
    * @param snippet snippet or {@code null} for none
    */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
+  public InfoCard setSnippet(InfoCardSnippet snippet) {
     this.snippet = snippet;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public InfoCard set(String fieldName, Object value) {
+    return (InfoCard) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public InfoCard clone() {
+    return (InfoCard) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Model definition for ChannelCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +27,64 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class ChannelCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
-
-  /**
+   * External channel ID. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.lang.String channelId;
 
   /**
+   * Each card can have a custom message. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String customMessage;
 
   /**
+   * External channel ID. Required.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public java.lang.String getChannelId() {
+    return channelId;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * External channel ID. Required.
+   * @param channelId channelId or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  public ChannelCard setChannelId(java.lang.String channelId) {
+    this.channelId = channelId;
     return this;
   }
 
   /**
+   * Each card can have a custom message. Required.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.lang.String getCustomMessage() {
+    return customMessage;
   }
 
   /**
-   * @param id id or {@code null} for none
+   * Each card can have a custom message. Required.
+   * @param customMessage customMessage or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
-  }
-
-  /**
-   * @param snippet snippet or {@code null} for none
-   */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public ChannelCard setCustomMessage(java.lang.String customMessage) {
+    this.customMessage = customMessage;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public ChannelCard set(String fieldName, Object value) {
+    return (ChannelCard) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public ChannelCard clone() {
+    return (ChannelCard) super.clone();
   }
 
 }

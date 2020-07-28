@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Model definition for PlaylistCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +27,88 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class PlaylistCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
-
-  /**
+   * Each card can have a custom message. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.lang.String customMessage;
 
   /**
+   * External playlist ID. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String playlistId;
 
   /**
+   * Starting video, if not the first. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startVideoId;
+
+  /**
+   * Each card can have a custom message. Optional.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public java.lang.String getCustomMessage() {
+    return customMessage;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * Each card can have a custom message. Optional.
+   * @param customMessage customMessage or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  public PlaylistCard setCustomMessage(java.lang.String customMessage) {
+    this.customMessage = customMessage;
     return this;
   }
 
   /**
+   * External playlist ID. Required.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.lang.String getPlaylistId() {
+    return playlistId;
   }
 
   /**
-   * @param id id or {@code null} for none
+   * External playlist ID. Required.
+   * @param playlistId playlistId or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
+  public PlaylistCard setPlaylistId(java.lang.String playlistId) {
+    this.playlistId = playlistId;
     return this;
   }
 
   /**
+   * Starting video, if not the first. Optional.
    * @return value or {@code null} for none
    */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
+  public java.lang.String getStartVideoId() {
+    return startVideoId;
   }
 
   /**
-   * @param snippet snippet or {@code null} for none
+   * Starting video, if not the first. Optional.
+   * @param startVideoId startVideoId or {@code null} for none
    */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public PlaylistCard setStartVideoId(java.lang.String startVideoId) {
+    this.startVideoId = startVideoId;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public PlaylistCard set(String fieldName, Object value) {
+    return (PlaylistCard) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public PlaylistCard clone() {
+    return (PlaylistCard) super.clone();
   }
 
 }

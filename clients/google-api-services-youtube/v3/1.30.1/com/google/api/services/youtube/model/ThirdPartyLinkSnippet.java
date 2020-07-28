@@ -17,7 +17,8 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Basic information about a third party account link, including its type and type-specific
+ * information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +28,64 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class ThirdPartyLinkSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
-
-  /**
+   * Information specific to a link between a channel and a store on a merchandising platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private ChannelToStoreLinkDetails channelToStoreLink;
 
   /**
+   * Type of the link named after the entities that are being linked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String type;
 
   /**
+   * Information specific to a link between a channel and a store on a merchandising platform.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public ChannelToStoreLinkDetails getChannelToStoreLink() {
+    return channelToStoreLink;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * Information specific to a link between a channel and a store on a merchandising platform.
+   * @param channelToStoreLink channelToStoreLink or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  public ThirdPartyLinkSnippet setChannelToStoreLink(ChannelToStoreLinkDetails channelToStoreLink) {
+    this.channelToStoreLink = channelToStoreLink;
     return this;
   }
 
   /**
+   * Type of the link named after the entities that are being linked.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * @param id id or {@code null} for none
+   * Type of the link named after the entities that are being linked.
+   * @param type type or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
-  }
-
-  /**
-   * @param snippet snippet or {@code null} for none
-   */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public ThirdPartyLinkSnippet setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public ThirdPartyLinkSnippet set(String fieldName, Object value) {
+    return (ThirdPartyLinkSnippet) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public ThirdPartyLinkSnippet clone() {
+    return (ThirdPartyLinkSnippet) super.clone();
   }
 
 }

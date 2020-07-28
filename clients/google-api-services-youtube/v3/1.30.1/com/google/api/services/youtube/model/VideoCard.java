@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Model definition for VideoCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +27,88 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class VideoCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
-
-  /**
+   * Each card can have a custom message. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.lang.String customMessage;
 
   /**
+   * Playback start time offset in milliseconds. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private String playbackStartOffset;
 
   /**
+   * Encrypted Video ID. Required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoId;
+
+  /**
+   * Each card can have a custom message. Optional.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public java.lang.String getCustomMessage() {
+    return customMessage;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * Each card can have a custom message. Optional.
+   * @param customMessage customMessage or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  public VideoCard setCustomMessage(java.lang.String customMessage) {
+    this.customMessage = customMessage;
     return this;
   }
 
   /**
+   * Playback start time offset in milliseconds. Optional.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public String getPlaybackStartOffset() {
+    return playbackStartOffset;
   }
 
   /**
-   * @param id id or {@code null} for none
+   * Playback start time offset in milliseconds. Optional.
+   * @param playbackStartOffset playbackStartOffset or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
+  public VideoCard setPlaybackStartOffset(String playbackStartOffset) {
+    this.playbackStartOffset = playbackStartOffset;
     return this;
   }
 
   /**
+   * Encrypted Video ID. Required.
    * @return value or {@code null} for none
    */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
+  public java.lang.String getVideoId() {
+    return videoId;
   }
 
   /**
-   * @param snippet snippet or {@code null} for none
+   * Encrypted Video ID. Required.
+   * @param videoId videoId or {@code null} for none
    */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public VideoCard setVideoId(java.lang.String videoId) {
+    this.videoId = videoId;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public VideoCard set(String fieldName, Object value) {
+    return (VideoCard) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public VideoCard clone() {
+    return (VideoCard) super.clone();
   }
 
 }

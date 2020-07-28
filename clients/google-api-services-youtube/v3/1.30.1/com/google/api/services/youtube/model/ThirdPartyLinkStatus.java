@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * The third-party link status object contains information about the status of the link.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +27,37 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
+public final class ThirdPartyLinkStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String linkStatus;
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public java.lang.String getLinkStatus() {
+    return linkStatus;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * @param linkStatus linkStatus or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * @param id id or {@code null} for none
-   */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
-  }
-
-  /**
-   * @param snippet snippet or {@code null} for none
-   */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public ThirdPartyLinkStatus setLinkStatus(java.lang.String linkStatus) {
+    this.linkStatus = linkStatus;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public ThirdPartyLinkStatus set(String fieldName, Object value) {
+    return (ThirdPartyLinkStatus) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public ThirdPartyLinkStatus clone() {
+    return (ThirdPartyLinkStatus) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Model definition for Entity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,13 +27,7 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
+public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
@@ -45,22 +39,13 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String typeId;
 
   /**
-   * @return value or {@code null} for none
+   * The value may be {@code null}.
    */
-  public java.lang.Long getGaia() {
-    return gaia;
-  }
-
-  /**
-   * @param gaia gaia or {@code null} for none
-   */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.String url;
 
   /**
    * @return value or {@code null} for none
@@ -72,7 +57,7 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
   /**
    * @param id id or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
+  public Entity setId(java.lang.String id) {
     this.id = id;
     return this;
   }
@@ -80,26 +65,41 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
   /**
    * @return value or {@code null} for none
    */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
+  public java.lang.String getTypeId() {
+    return typeId;
   }
 
   /**
-   * @param snippet snippet or {@code null} for none
+   * @param typeId typeId or {@code null} for none
    */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public Entity setTypeId(java.lang.String typeId) {
+    this.typeId = typeId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrl() {
+    return url;
+  }
+
+  /**
+   * @param url url or {@code null} for none
+   */
+  public Entity setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public Entity set(String fieldName, Object value) {
+    return (Entity) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public Entity clone() {
+    return (Entity) super.clone();
   }
 
 }

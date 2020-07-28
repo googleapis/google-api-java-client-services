@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Model definition for InfocardListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +27,94 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class InfocardListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
-
-  /**
+   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.lang.String etag;
 
   /**
+   * A list of infocards.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.util.List<InfoCard> items;
 
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getGaia() {
-    return gaia;
+  static {
+    // hack to force ProGuard to consider InfoCard used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InfoCard.class);
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * Identifies what kind of resource this is.
+   * The value may be {@code null}.
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
+   * Etag of this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Etag of this resource.
+   * @param etag etag or {@code null} for none
+   */
+  public InfocardListResponse setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
   /**
+   * A list of infocards.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.util.List<InfoCard> getItems() {
+    return items;
   }
 
   /**
-   * @param id id or {@code null} for none
+   * A list of infocards.
+   * @param items items or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
+  public InfocardListResponse setItems(java.util.List<InfoCard> items) {
+    this.items = items;
     return this;
   }
 
   /**
+   * Identifies what kind of resource this is.
    * @return value or {@code null} for none
    */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
+  public java.lang.String getKind() {
+    return kind;
   }
 
   /**
-   * @param snippet snippet or {@code null} for none
+   * Identifies what kind of resource this is.
+   * @param kind kind or {@code null} for none
    */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public InfocardListResponse setKind(java.lang.String kind) {
+    this.kind = kind;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public InfocardListResponse set(String fieldName, Object value) {
+    return (InfocardListResponse) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public InfocardListResponse clone() {
+    return (InfocardListResponse) super.clone();
   }
 
 }

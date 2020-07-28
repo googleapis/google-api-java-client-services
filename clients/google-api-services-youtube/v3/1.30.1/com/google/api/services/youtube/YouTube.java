@@ -46,7 +46,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the YouTube Data API v3 library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the YouTube Data API v3 library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -120,6 +120,159 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   @Override
   protected void initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest<?> httpClientRequest) throws java.io.IOException {
     super.initialize(httpClientRequest);
+  }
+
+  /**
+   * An accessor for creating requests from the AbuseReports collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.AbuseReports.List request = youtube.abuseReports().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AbuseReports abuseReports() {
+    return new AbuseReports();
+  }
+
+  /**
+   * The "abuseReports" collection of methods.
+   */
+  public class AbuseReports {
+
+    /**
+     * Inserts a new resource into this collection.
+     *
+     * Create a request for the method "abuseReports.insert".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param part The part parameter serves two purposes in
+    this operation. It identifies the properties that the
+     *        write operation will
+    set as well as the properties that the API response will include.
+     * @param content the {@link com.google.api.services.youtube.model.AbuseReport}
+     * @return the request
+     */
+    public Insert insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.AbuseReport content) throws java.io.IOException {
+      Insert result = new Insert(part, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends YouTubeRequest<com.google.api.services.youtube.model.AbuseReport> {
+
+      private static final String REST_PATH = "youtube/v3/abuseReports";
+
+      /**
+       * Inserts a new resource into this collection.
+       *
+       * Create a request for the method "abuseReports.insert".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part The part parameter serves two purposes in
+    this operation. It identifies the properties that the
+     *        write operation will
+    set as well as the properties that the API response will include.
+       * @param content the {@link com.google.api.services.youtube.model.AbuseReport}
+       * @since 1.13
+       */
+      protected Insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.AbuseReport content) {
+        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.AbuseReport.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The part parameter serves two purposes in this operation. It identifies the properties that
+       * the write operation will set as well as the properties that the API response will include.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The part parameter serves two purposes in this operation. It identifies the properties that the
+     write operation will set as well as the properties that the API response will include.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /**
+       * The part parameter serves two purposes in this operation. It identifies the properties that
+       * the write operation will set as well as the properties that the API response will include.
+       */
+      public Insert setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**
@@ -6231,7 +6384,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the youtube server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param id
+     * @param id Broadcast to delete.
      * @return the request
      */
     public Delete delete(java.lang.String id) throws java.io.IOException {
@@ -6254,7 +6407,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id
+       * @param id Broadcast to delete.
        * @since 1.13
        */
       protected Delete(java.lang.String id) {
@@ -6317,16 +6470,17 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Broadcast to delete. */
       @com.google.api.client.util.Key
       private java.lang.String id;
 
-      /**
-
+      /** Broadcast to delete.
        */
       public java.lang.String getId() {
         return id;
       }
 
+      /** Broadcast to delete. */
       public Delete setId(java.lang.String id) {
         this.id = id;
         return this;
@@ -14043,6 +14197,754 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the Tests collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.Tests.List request = youtube.tests().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Tests tests() {
+    return new Tests();
+  }
+
+  /**
+   * The "tests" collection of methods.
+   */
+  public class Tests {
+
+    /**
+     * POST method.
+     *
+     * Create a request for the method "tests.insert".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param part
+     * @param content the {@link com.google.api.services.youtube.model.TestItem}
+     * @return the request
+     */
+    public Insert insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.TestItem content) throws java.io.IOException {
+      Insert result = new Insert(part, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends YouTubeRequest<com.google.api.services.youtube.model.TestItem> {
+
+      private static final String REST_PATH = "youtube/v3/tests";
+
+      /**
+       * POST method.
+       *
+       * Create a request for the method "tests.insert".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part
+       * @param content the {@link com.google.api.services.youtube.model.TestItem}
+       * @since 1.13
+       */
+      protected Insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.TestItem content) {
+        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.TestItem.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /**
+
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      public Insert setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the ThirdPartyLinks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.ThirdPartyLinks.List request = youtube.thirdPartyLinks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ThirdPartyLinks thirdPartyLinks() {
+    return new ThirdPartyLinks();
+  }
+
+  /**
+   * The "thirdPartyLinks" collection of methods.
+   */
+  public class ThirdPartyLinks {
+
+    /**
+     * Deletes a resource.
+     *
+     * Create a request for the method "thirdPartyLinks.delete".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param linkingToken Delete the partner links with the given linking token.
+     * @param type Type of the link to be deleted.
+     * @return the request
+     */
+    public Delete delete(java.lang.String linkingToken, java.lang.String type) throws java.io.IOException {
+      Delete result = new Delete(linkingToken, type);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends YouTubeRequest<Void> {
+
+      private static final String REST_PATH = "youtube/v3/thirdPartyLinks";
+
+      /**
+       * Deletes a resource.
+       *
+       * Create a request for the method "thirdPartyLinks.delete".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param linkingToken Delete the partner links with the given linking token.
+       * @param type Type of the link to be deleted.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String linkingToken, java.lang.String type) {
+        super(YouTube.this, "DELETE", REST_PATH, null, Void.class);
+        this.linkingToken = com.google.api.client.util.Preconditions.checkNotNull(linkingToken, "Required parameter linkingToken must be specified.");
+        this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Delete the partner links with the given linking token. */
+      @com.google.api.client.util.Key
+      private java.lang.String linkingToken;
+
+      /** Delete the partner links with the given linking token.
+       */
+      public java.lang.String getLinkingToken() {
+        return linkingToken;
+      }
+
+      /** Delete the partner links with the given linking token. */
+      public Delete setLinkingToken(java.lang.String linkingToken) {
+        this.linkingToken = linkingToken;
+        return this;
+      }
+
+      /** Type of the link to be deleted. */
+      @com.google.api.client.util.Key
+      private java.lang.String type;
+
+      /** Type of the link to be deleted.
+       */
+      public java.lang.String getType() {
+        return type;
+      }
+
+      /** Type of the link to be deleted. */
+      public Delete setType(java.lang.String type) {
+        this.type = type;
+        return this;
+      }
+
+      /** Do not use. Required for compatibility. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** Do not use. Required for compatibility.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /** Do not use. Required for compatibility. */
+      public Delete setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Inserts a new resource into this collection.
+     *
+     * Create a request for the method "thirdPartyLinks.insert".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param part The part parameter specifies the
+    thirdPartyLink resource parts that the API request and
+    response
+     *        will include. Supported values are linkingToken,
+    status, and snippet.
+     * @param content the {@link com.google.api.services.youtube.model.ThirdPartyLink}
+     * @return the request
+     */
+    public Insert insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.ThirdPartyLink content) throws java.io.IOException {
+      Insert result = new Insert(part, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends YouTubeRequest<com.google.api.services.youtube.model.ThirdPartyLink> {
+
+      private static final String REST_PATH = "youtube/v3/thirdPartyLinks";
+
+      /**
+       * Inserts a new resource into this collection.
+       *
+       * Create a request for the method "thirdPartyLinks.insert".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part The part parameter specifies the
+    thirdPartyLink resource parts that the API request and
+    response
+     *        will include. Supported values are linkingToken,
+    status, and snippet.
+       * @param content the {@link com.google.api.services.youtube.model.ThirdPartyLink}
+       * @since 1.13
+       */
+      protected Insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.ThirdPartyLink content) {
+        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.ThirdPartyLink.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The part parameter specifies the thirdPartyLink resource parts that the API request and
+       * response will include. Supported values are linkingToken, status, and snippet.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The part parameter specifies the thirdPartyLink resource parts that the API request and response
+     will include. Supported values are linkingToken, status, and snippet.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /**
+       * The part parameter specifies the thirdPartyLink resource parts that the API request and
+       * response will include. Supported values are linkingToken, status, and snippet.
+       */
+      public Insert setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of resources, possibly filtered.
+     *
+     * Create a request for the method "thirdPartyLinks.list".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param part The part parameter specifies the
+    thirdPartyLink resource parts that the API response will
+    include.
+     *        Supported values are linkingToken,
+    status, and snippet.
+     * @return the request
+     */
+    public List list(java.util.List<java.lang.String> part) throws java.io.IOException {
+      List result = new List(part);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends YouTubeRequest<com.google.api.services.youtube.model.ThirdPartyLink> {
+
+      private static final String REST_PATH = "youtube/v3/thirdPartyLinks";
+
+      /**
+       * Retrieves a list of resources, possibly filtered.
+       *
+       * Create a request for the method "thirdPartyLinks.list".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part The part parameter specifies the
+    thirdPartyLink resource parts that the API response will
+    include.
+     *        Supported values are linkingToken,
+    status, and snippet.
+       * @since 1.13
+       */
+      protected List(java.util.List<java.lang.String> part) {
+        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.ThirdPartyLink.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The part parameter specifies the thirdPartyLink resource parts that the API response will
+       * include. Supported values are linkingToken, status, and snippet.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The part parameter specifies the thirdPartyLink resource parts that the API response will include.
+     Supported values are linkingToken, status, and snippet.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /**
+       * The part parameter specifies the thirdPartyLink resource parts that the API response will
+       * include. Supported values are linkingToken, status, and snippet.
+       */
+      public List setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      /** Get a third party link with the given linking token. */
+      @com.google.api.client.util.Key
+      private java.lang.String linkingToken;
+
+      /** Get a third party link with the given linking token.
+       */
+      public java.lang.String getLinkingToken() {
+        return linkingToken;
+      }
+
+      /** Get a third party link with the given linking token. */
+      public List setLinkingToken(java.lang.String linkingToken) {
+        this.linkingToken = linkingToken;
+        return this;
+      }
+
+      /** Get a third party link of the given type. */
+      @com.google.api.client.util.Key
+      private java.lang.String type;
+
+      /** Get a third party link of the given type.
+       */
+      public java.lang.String getType() {
+        return type;
+      }
+
+      /** Get a third party link of the given type. */
+      public List setType(java.lang.String type) {
+        this.type = type;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing resource.
+     *
+     * Create a request for the method "thirdPartyLinks.update".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param part The part parameter specifies the
+    thirdPartyLink resource parts that the API request and
+    response
+     *        will include. Supported values are linkingToken,
+    status, and snippet.
+     * @param content the {@link com.google.api.services.youtube.model.ThirdPartyLink}
+     * @return the request
+     */
+    public Update update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.ThirdPartyLink content) throws java.io.IOException {
+      Update result = new Update(part, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends YouTubeRequest<com.google.api.services.youtube.model.ThirdPartyLink> {
+
+      private static final String REST_PATH = "youtube/v3/thirdPartyLinks";
+
+      /**
+       * Updates an existing resource.
+       *
+       * Create a request for the method "thirdPartyLinks.update".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part The part parameter specifies the
+    thirdPartyLink resource parts that the API request and
+    response
+     *        will include. Supported values are linkingToken,
+    status, and snippet.
+       * @param content the {@link com.google.api.services.youtube.model.ThirdPartyLink}
+       * @since 1.13
+       */
+      protected Update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.ThirdPartyLink content) {
+        super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.ThirdPartyLink.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The part parameter specifies the thirdPartyLink resource parts that the API request and
+       * response will include. Supported values are linkingToken, status, and snippet.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The part parameter specifies the thirdPartyLink resource parts that the API request and response
+     will include. Supported values are linkingToken, status, and snippet.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /**
+       * The part parameter specifies the thirdPartyLink resource parts that the API request and
+       * response will include. Supported values are linkingToken, status, and snippet.
+       */
+      public Update setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Thumbnails collection.
    *
    * <p>The typical use is:</p>
@@ -14609,7 +15511,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String hl;
 
       /**
-     [ default: en_US]
+     [ default: en-US]
      [
 
        */
@@ -16800,136 +17702,335 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
     public class V3 {
 
       /**
-       * An accessor for creating requests from the Tests collection.
+       * Updates infocards for a given video. Note: * If the card id is not provided, a new card will be
+       * created. * If the card id is provided, that card will be updated. * Existing cards will be
+       * discarded if they're not included in the request.
+       *
+       * Create a request for the method "v3.infocards".
+       *
+       * This request holds the parameters needed by the youtube server.  After setting any optional
+       * parameters, call the {@link Infocards#execute()} method to invoke the remote operation.
+       *
+       * @param part The properties to update.
+       * @param content the {@link com.google.api.services.youtube.model.InfoCards}
+       * @return the request
+       */
+      public Infocards infocards(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.InfoCards content) throws java.io.IOException {
+        Infocards result = new Infocards(part, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Infocards extends YouTubeRequest<com.google.api.services.youtube.model.InfoCards> {
+
+        private static final String REST_PATH = "youtube/v3/infocards";
+
+        /**
+         * Updates infocards for a given video. Note: * If the card id is not provided, a new card will be
+         * created. * If the card id is provided, that card will be updated. * Existing cards will be
+         * discarded if they're not included in the request.
+         *
+         * Create a request for the method "v3.infocards".
+         *
+         * This request holds the parameters needed by the the youtube server.  After setting any optional
+         * parameters, call the {@link Infocards#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Infocards#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param part The properties to update.
+         * @param content the {@link com.google.api.services.youtube.model.InfoCards}
+         * @since 1.13
+         */
+        protected Infocards(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.InfoCards content) {
+          super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.InfoCards.class);
+          this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+        }
+
+        @Override
+        public Infocards set$Xgafv(java.lang.String $Xgafv) {
+          return (Infocards) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Infocards setAccessToken(java.lang.String accessToken) {
+          return (Infocards) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Infocards setAlt(java.lang.String alt) {
+          return (Infocards) super.setAlt(alt);
+        }
+
+        @Override
+        public Infocards setCallback(java.lang.String callback) {
+          return (Infocards) super.setCallback(callback);
+        }
+
+        @Override
+        public Infocards setFields(java.lang.String fields) {
+          return (Infocards) super.setFields(fields);
+        }
+
+        @Override
+        public Infocards setKey(java.lang.String key) {
+          return (Infocards) super.setKey(key);
+        }
+
+        @Override
+        public Infocards setOauthToken(java.lang.String oauthToken) {
+          return (Infocards) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Infocards setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Infocards) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Infocards setQuotaUser(java.lang.String quotaUser) {
+          return (Infocards) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Infocards setUploadType(java.lang.String uploadType) {
+          return (Infocards) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Infocards setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Infocards) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The properties to update. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> part;
+
+        /** The properties to update.
+         */
+        public java.util.List<java.lang.String> getPart() {
+          return part;
+        }
+
+        /** The properties to update. */
+        public Infocards setPart(java.util.List<java.lang.String> part) {
+          this.part = part;
+          return this;
+        }
+
+        /** Content owner of the video. */
+        @com.google.api.client.util.Key
+        private java.lang.String onBehalfOfContentOwner;
+
+        /** Content owner of the video.
+         */
+        public java.lang.String getOnBehalfOfContentOwner() {
+          return onBehalfOfContentOwner;
+        }
+
+        /** Content owner of the video. */
+        public Infocards setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+          this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+          return this;
+        }
+
+        /** Encrypted id of the video. */
+        @com.google.api.client.util.Key
+        private java.lang.String videoId;
+
+        /** Encrypted id of the video.
+         */
+        public java.lang.String getVideoId() {
+          return videoId;
+        }
+
+        /** Encrypted id of the video. */
+        public Infocards setVideoId(java.lang.String videoId) {
+          this.videoId = videoId;
+          return this;
+        }
+
+        @Override
+        public Infocards set(String parameterName, Object value) {
+          return (Infocards) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Infocards collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code YouTube youtube = new YouTube(...);}
-       *   {@code YouTube.Tests.List request = youtube.tests().list(parameters ...)}
+       *   {@code YouTube.Infocards.List request = youtube.infocards().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Tests tests() {
-        return new Tests();
+      public Infocards infocards() {
+        return new Infocards();
       }
 
       /**
-       * The "tests" collection of methods.
+       * The "infocards" collection of methods.
        */
-      public class Tests {
+      public class Infocards {
 
         /**
-         * POST method.
+         * Retrieves all infocards for a given video.
          *
-         * Create a request for the method "tests.create".
+         * Create a request for the method "infocards.list".
          *
          * This request holds the parameters needed by the youtube server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param content the {@link com.google.api.services.youtube.model.TestItem}
+         * @param part The properties to return.
          * @return the request
          */
-        public Create create(com.google.api.services.youtube.model.TestItem content) throws java.io.IOException {
-          Create result = new Create(content);
+        public List list(java.util.List<java.lang.String> part) throws java.io.IOException {
+          List result = new List(part);
           initialize(result);
           return result;
         }
 
-        public class Create extends YouTubeRequest<com.google.api.services.youtube.model.TestItem> {
+        public class List extends YouTubeRequest<com.google.api.services.youtube.model.InfocardListResponse> {
 
-          private static final String REST_PATH = "youtube/v3/tests";
+          private static final String REST_PATH = "youtube/v3/infocards";
 
           /**
-           * POST method.
+           * Retrieves all infocards for a given video.
            *
-           * Create a request for the method "tests.create".
+           * Create a request for the method "infocards.list".
            *
            * This request holds the parameters needed by the the youtube server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param content the {@link com.google.api.services.youtube.model.TestItem}
+           * @param part The properties to return.
            * @since 1.13
            */
-          protected Create(com.google.api.services.youtube.model.TestItem content) {
-            super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.TestItem.class);
+          protected List(java.util.List<java.lang.String> part) {
+            super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.InfocardListResponse.class);
+            this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
           }
 
           @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
           }
 
           @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
           }
 
           @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
           }
 
           @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
           }
 
           @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
           }
 
           @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
           }
 
           @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
           }
 
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The properties to return. */
           @com.google.api.client.util.Key
           private java.util.List<java.lang.String> part;
 
-          /**
-
+          /** The properties to return.
            */
           public java.util.List<java.lang.String> getPart() {
             return part;
           }
 
-          public Create setPart(java.util.List<java.lang.String> part) {
+          /** The properties to return. */
+          public List setPart(java.util.List<java.lang.String> part) {
             this.part = part;
             return this;
           }
 
+          /** Content owner of the video. */
+          @com.google.api.client.util.Key
+          private java.lang.String onBehalfOfContentOwner;
+
+          /** Content owner of the video.
+           */
+          public java.lang.String getOnBehalfOfContentOwner() {
+            return onBehalfOfContentOwner;
+          }
+
+          /** Content owner of the video. */
+          public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+            this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+            return this;
+          }
+
+          /** Encrypted id of the video. */
+          @com.google.api.client.util.Key
+          private java.lang.String videoId;
+
+          /** Encrypted id of the video.
+           */
+          public java.lang.String getVideoId() {
+            return videoId;
+          }
+
+          /** Encrypted id of the video. */
+          public List setVideoId(java.lang.String videoId) {
+            this.videoId = videoId;
+            return this;
+          }
+
           @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

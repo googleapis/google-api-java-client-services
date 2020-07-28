@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for TestItem.
+ * Information specific to a store on a merchandising platform linked to a YouTube channel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -27,79 +27,64 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestItem extends com.google.api.client.json.GenericJson {
+public final class ChannelToStoreLinkDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaia;
-
-  /**
+   * Name of the store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.lang.String storeName;
 
   /**
+   * Landing page of the store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TestItemTestItemSnippet snippet;
+  private java.lang.String storeUrl;
 
   /**
+   * Name of the store.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaia() {
-    return gaia;
+  public java.lang.String getStoreName() {
+    return storeName;
   }
 
   /**
-   * @param gaia gaia or {@code null} for none
+   * Name of the store.
+   * @param storeName storeName or {@code null} for none
    */
-  public TestItem setGaia(java.lang.Long gaia) {
-    this.gaia = gaia;
+  public ChannelToStoreLinkDetails setStoreName(java.lang.String storeName) {
+    this.storeName = storeName;
     return this;
   }
 
   /**
+   * Landing page of the store.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.lang.String getStoreUrl() {
+    return storeUrl;
   }
 
   /**
-   * @param id id or {@code null} for none
+   * Landing page of the store.
+   * @param storeUrl storeUrl or {@code null} for none
    */
-  public TestItem setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public TestItemTestItemSnippet getSnippet() {
-    return snippet;
-  }
-
-  /**
-   * @param snippet snippet or {@code null} for none
-   */
-  public TestItem setSnippet(TestItemTestItemSnippet snippet) {
-    this.snippet = snippet;
+  public ChannelToStoreLinkDetails setStoreUrl(java.lang.String storeUrl) {
+    this.storeUrl = storeUrl;
     return this;
   }
 
   @Override
-  public TestItem set(String fieldName, Object value) {
-    return (TestItem) super.set(fieldName, value);
+  public ChannelToStoreLinkDetails set(String fieldName, Object value) {
+    return (ChannelToStoreLinkDetails) super.set(fieldName, value);
   }
 
   @Override
-  public TestItem clone() {
-    return (TestItem) super.clone();
+  public ChannelToStoreLinkDetails clone() {
+    return (ChannelToStoreLinkDetails) super.clone();
   }
 
 }

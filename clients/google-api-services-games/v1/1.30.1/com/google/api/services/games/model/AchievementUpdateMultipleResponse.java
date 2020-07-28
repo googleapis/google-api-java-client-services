@@ -17,7 +17,7 @@
 package com.google.api.services.games.model;
 
 /**
- * Model definition for AchievementUpdateMultipleResponse.
+ * Response message for UpdateMultipleAchievements rpc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation

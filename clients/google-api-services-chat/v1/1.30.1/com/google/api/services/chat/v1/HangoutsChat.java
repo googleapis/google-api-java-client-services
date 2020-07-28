@@ -123,6 +123,190 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code HangoutsChat chat = new HangoutsChat(...);}
+   *   {@code HangoutsChat.Media.List request = chat.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+     *
+     * Create a request for the method "media.download".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+     *
+     * @param resourceName Name of the media that is being downloaded.  See
+    ReadRequest.resource_name.
+     * @return the request
+     */
+    public Download download(java.lang.String resourceName) throws java.io.IOException {
+      Download result = new Download(resourceName);
+      initialize(result);
+      return result;
+    }
+
+    public class Download extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Media> {
+
+      private static final String REST_PATH = "v1/media/{+resourceName}";
+
+      private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.*$");
+
+      /**
+       * Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+       *
+       * Create a request for the method "media.download".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Download#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resourceName Name of the media that is being downloaded.  See
+    ReadRequest.resource_name.
+       * @since 1.13
+       */
+      protected Download(java.lang.String resourceName) {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.Media.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** Name of the media that is being downloaded.  See ReadRequest.resource_name.
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
+       */
+      public Download setResourceName(java.lang.String resourceName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+        this.resourceName = resourceName;
+        return this;
+      }
+
+      @Override
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Spaces collection.
    *
    * <p>The typical use is:</p>

@@ -400,9 +400,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String cr;
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -844,9 +844,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * @return value or {@code null} for none
        */
       public java.lang.String getCx() {
@@ -854,9 +854,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * @param cx cx or {@code null} for none
        */
       public NextPage setCx(java.lang.String cx) {
@@ -1763,9 +1763,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String cr;
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2207,9 +2207,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * @return value or {@code null} for none
        */
       public java.lang.String getCx() {
@@ -2217,9 +2217,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * @param cx cx or {@code null} for none
        */
       public PreviousPage setCx(java.lang.String cx) {
@@ -3126,9 +3126,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String cr;
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -3570,9 +3570,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * @return value or {@code null} for none
        */
       public java.lang.String getCx() {
@@ -3580,9 +3580,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search [Control
-       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
-       * This parameter is **required**.
+       * The identifier of an engine created using the Programmable Search Engine [Control
+       * Panel](https://programmablesearchengine.google.com/). This is a custom property not defined in
+       * the OpenSearch spec. This parameter is **required**.
        * @param cx cx or {@code null} for none
        */
       public Request setCx(java.lang.String cx) {
@@ -4652,7 +4652,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
     private java.lang.String template;
 
     /**
-     * The MIME type of the OpenSearch URL template for the Custom Search API.
+     * The MIME type of the OpenSearch URL template for the Custom Search JSON API.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -4678,7 +4678,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The MIME type of the OpenSearch URL template for the Custom Search API.
+     * The MIME type of the OpenSearch URL template for the Custom Search JSON API.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -4686,7 +4686,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The MIME type of the OpenSearch URL template for the Custom Search API.
+     * The MIME type of the OpenSearch URL template for the Custom Search JSON API.
      * @param type type or {@code null} for none
      */
     public Url setType(java.lang.String type) {

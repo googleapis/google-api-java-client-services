@@ -5590,19 +5590,21 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * The alignment_period specifies a time interval, in seconds, that is used to divide the
          * data in all the time series into consistent blocks of time. This will be done before the
-         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
-         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
-         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
-         * specified, then this field is ignored.
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds, at
+         * most 104 weeks. If a per-series aligner other than ALIGN_NONE is specified, this field is
+         * required or an error is returned. If no per-series aligner is specified, or the aligner
+         * ALIGN_NONE is specified, then this field is ignored.The maximum value of the
+         * alignment_period is 2 years, or 104 weeks.
          */
         @com.google.api.client.util.Key("aggregation.alignmentPeriod")
         private String aggregationAlignmentPeriod;
 
         /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
        the time series into consistent blocks of time. This will be done before the per-series aligner can
-       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
-       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
-       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.
+       be applied to the data.The value must be at least 60 seconds, at most 104 weeks. If a per-series
+       aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no
+       per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is
+       ignored.The maximum value of the alignment_period is 2 years, or 104 weeks.
          */
         public String getAggregationAlignmentPeriod() {
           return aggregationAlignmentPeriod;
@@ -5611,10 +5613,11 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * The alignment_period specifies a time interval, in seconds, that is used to divide the
          * data in all the time series into consistent blocks of time. This will be done before the
-         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
-         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
-         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
-         * specified, then this field is ignored.
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds, at
+         * most 104 weeks. If a per-series aligner other than ALIGN_NONE is specified, this field is
+         * required or an error is returned. If no per-series aligner is specified, or the aligner
+         * ALIGN_NONE is specified, then this field is ignored.The maximum value of the
+         * alignment_period is 2 years, or 104 weeks.
          */
         public List setAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
           this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;

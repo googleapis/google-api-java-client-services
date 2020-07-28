@@ -338,7 +338,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         [SPAN_ID]
          *        is a unique identifier for a span within a trace; it
         is a 16-character hexadecimal
-         *        encoding of an 8-byte array.
+         *        encoding of an 8-byte array. It should not
+        be zero.
          * @param content the {@link com.google.api.services.cloudtrace.v2.model.Span}
          * @return the request
          */
@@ -373,7 +374,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         [SPAN_ID]
          *        is a unique identifier for a span within a trace; it
         is a 16-character hexadecimal
-         *        encoding of an 8-byte array.
+         *        encoding of an 8-byte array. It should not
+        be zero.
            * @param content the {@link com.google.api.services.cloudtrace.v2.model.Span}
            * @since 1.13
            */
@@ -449,7 +451,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
            * trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
            *
            * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character
-           * hexadecimal encoding of an 8-byte array.
+           * hexadecimal encoding of an 8-byte array. It should not be zero.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -460,7 +462,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          project; it is a 32-character hexadecimal encoding of a 16-byte array.
 
          [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-         encoding of an 8-byte array.
+         encoding of an 8-byte array. It should not be zero.
            */
           public java.lang.String getName() {
             return name;
@@ -473,7 +475,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
            * trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
            *
            * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character
-           * hexadecimal encoding of an 8-byte array.
+           * hexadecimal encoding of an 8-byte array. It should not be zero.
            */
           public CreateSpan setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

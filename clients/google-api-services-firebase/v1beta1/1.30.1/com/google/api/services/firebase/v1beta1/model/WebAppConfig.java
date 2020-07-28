@@ -31,14 +31,14 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API key associated with the web App.
+   * The API key associated with the `WebApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiKey;
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The domain Firebase Auth configures for OAuth redirects, in the format:
-   * projectId.firebaseapp.com
+   * PROJECT_ID.firebaseapp.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,12 +60,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseURL;
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).  This field is
-   * omitted if the default GCP resource location has not been finalized yet. To set your project's
-   * default GCP resource location, call
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
+   * Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * services to your project.
+   * resources to the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String messagingSenderId;
 
   /**
-   * Immutable. The globally unique, user-assigned project ID of the parent Project for the App.
+   * Immutable. A user-assigned unique identifier for the `FirebaseProject`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +101,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String storageBucket;
 
   /**
-   * The API key associated with the web App.
+   * The API key associated with the `WebApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKey() {
@@ -108,7 +109,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API key associated with the web App.
+   * The API key associated with the `WebApp`.
    * @param apiKey apiKey or {@code null} for none
    */
   public WebAppConfig setApiKey(java.lang.String apiKey) {
@@ -117,7 +118,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -125,7 +126,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    * @param appId appId or {@code null} for none
    */
   public WebAppConfig setAppId(java.lang.String appId) {
@@ -135,7 +136,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The domain Firebase Auth configures for OAuth redirects, in the format:
-   * projectId.firebaseapp.com
+   * PROJECT_ID.firebaseapp.com
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthDomain() {
@@ -144,7 +145,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The domain Firebase Auth configures for OAuth redirects, in the format:
-   * projectId.firebaseapp.com
+   * PROJECT_ID.firebaseapp.com
    * @param authDomain authDomain or {@code null} for none
    */
   public WebAppConfig setAuthDomain(java.lang.String authDomain) {
@@ -170,12 +171,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).  This field is
-   * omitted if the default GCP resource location has not been finalized yet. To set your project's
-   * default GCP resource location, call
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
+   * Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * services to your project.
+   * resources to the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -183,12 +185,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).  This field is
-   * omitted if the default GCP resource location has not been finalized yet. To set your project's
-   * default GCP resource location, call
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
+   * Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * services to your project.
+   * resources to the Project.
    * @param locationId locationId or {@code null} for none
    */
   public WebAppConfig setLocationId(java.lang.String locationId) {
@@ -231,7 +234,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, user-assigned project ID of the parent Project for the App.
+   * Immutable. A user-assigned unique identifier for the `FirebaseProject`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -239,7 +242,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, user-assigned project ID of the parent Project for the App.
+   * Immutable. A user-assigned unique identifier for the `FirebaseProject`.
    * @param projectId projectId or {@code null} for none
    */
   public WebAppConfig setProjectId(java.lang.String projectId) {

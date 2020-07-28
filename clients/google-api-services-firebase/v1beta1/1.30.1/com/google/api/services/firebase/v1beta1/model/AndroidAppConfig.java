@@ -38,8 +38,8 @@ public final class AndroidAppConfig extends com.google.api.client.json.GenericJs
   private java.lang.String configFileContents;
 
   /**
-   * The filename that the configuration artifact is typically saved as. For example: `google-
-   * services.json`
+   * The filename that the configuration artifact for the `AndroidApp` is typically saved as. For
+   * example: `google-services.json`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +91,8 @@ public final class AndroidAppConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filename that the configuration artifact is typically saved as. For example: `google-
-   * services.json`
+   * The filename that the configuration artifact for the `AndroidApp` is typically saved as. For
+   * example: `google-services.json`
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigFilename() {
@@ -100,8 +100,8 @@ public final class AndroidAppConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filename that the configuration artifact is typically saved as. For example: `google-
-   * services.json`
+   * The filename that the configuration artifact for the `AndroidApp` is typically saved as. For
+   * example: `google-services.json`
    * @param configFilename configFilename or {@code null} for none
    */
   public AndroidAppConfig setConfigFilename(java.lang.String configFilename) {

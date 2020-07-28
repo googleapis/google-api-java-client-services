@@ -31,7 +31,7 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class FirebaseAppInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    *
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * The value may be {@code null}.
@@ -47,8 +47,8 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
-   * The fully qualified resource name of the Firebase App, in the format:
-   * projects/projectId/iosApps/appId or projects/projectId/androidApps/appId
+   * The resource name of the Firebase App, in the format: projects/PROJECT_ID/iosApps/APP_ID or
+   * projects/PROJECT_ID/androidApps/APP_ID or projects/PROJECT_ID/webApps/APP_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String platform;
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    *
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
@@ -72,7 +72,7 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    *
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * @param appId appId or {@code null} for none
@@ -100,8 +100,8 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The fully qualified resource name of the Firebase App, in the format:
-   * projects/projectId/iosApps/appId or projects/projectId/androidApps/appId
+   * The resource name of the Firebase App, in the format: projects/PROJECT_ID/iosApps/APP_ID or
+   * projects/PROJECT_ID/androidApps/APP_ID or projects/PROJECT_ID/webApps/APP_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,8 +109,8 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The fully qualified resource name of the Firebase App, in the format:
-   * projects/projectId/iosApps/appId or projects/projectId/androidApps/appId
+   * The resource name of the Firebase App, in the format: projects/PROJECT_ID/iosApps/APP_ID or
+   * projects/PROJECT_ID/androidApps/APP_ID or projects/PROJECT_ID/webApps/APP_ID
    * @param name name or {@code null} for none
    */
   public FirebaseAppInfo setName(java.lang.String name) {

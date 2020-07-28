@@ -38,8 +38,8 @@ public final class IosAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String configFileContents;
 
   /**
-   * The filename that the configuration artifact is typically saved as. For example:
-   * `GoogleService-Info.plist`
+   * The filename that the configuration artifact for the `IosApp` is typically saved as. For
+   * example: `GoogleService-Info.plist`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +91,8 @@ public final class IosAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filename that the configuration artifact is typically saved as. For example:
-   * `GoogleService-Info.plist`
+   * The filename that the configuration artifact for the `IosApp` is typically saved as. For
+   * example: `GoogleService-Info.plist`
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigFilename() {
@@ -100,8 +100,8 @@ public final class IosAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filename that the configuration artifact is typically saved as. For example:
-   * `GoogleService-Info.plist`
+   * The filename that the configuration artifact for the `IosApp` is typically saved as. For
+   * example: `GoogleService-Info.plist`
    * @param configFilename configFilename or {@code null} for none
    */
   public IosAppConfig setConfigFilename(java.lang.String configFilename) {

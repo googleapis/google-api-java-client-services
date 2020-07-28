@@ -42,7 +42,7 @@ public final class AnalyticsProperty extends com.google.api.client.json.GenericJ
    * The globally unique, Google-assigned identifier of the Google Analytics property associated
    * with the specified `FirebaseProject`.
    *
-   * If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link your
+   * If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link the
    * `FirebaseProject` with a Google Analytics account, the value in this `id` field is the same as
    * the ID of the property either specified or provisioned with that call to `AddGoogleAnalytics`.
    * The value may be {@code null}.
@@ -73,7 +73,7 @@ public final class AnalyticsProperty extends com.google.api.client.json.GenericJ
    * The globally unique, Google-assigned identifier of the Google Analytics property associated
    * with the specified `FirebaseProject`.
    *
-   * If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link your
+   * If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link the
    * `FirebaseProject` with a Google Analytics account, the value in this `id` field is the same as
    * the ID of the property either specified or provisioned with that call to `AddGoogleAnalytics`.
    * @return value or {@code null} for none
@@ -86,7 +86,7 @@ public final class AnalyticsProperty extends com.google.api.client.json.GenericJ
    * The globally unique, Google-assigned identifier of the Google Analytics property associated
    * with the specified `FirebaseProject`.
    *
-   * If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link your
+   * If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link the
    * `FirebaseProject` with a Google Analytics account, the value in this `id` field is the same as
    * the ID of the property either specified or provisioned with that call to `AddGoogleAnalytics`.
    * @param id id or {@code null} for none

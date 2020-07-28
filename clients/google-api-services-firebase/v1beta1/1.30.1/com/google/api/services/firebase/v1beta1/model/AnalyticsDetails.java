@@ -33,19 +33,17 @@ public final class AnalyticsDetails extends com.google.api.client.json.GenericJs
   /**
    * The Analytics Property object associated with the specified `FirebaseProject`.
    *
-   * This object contains the details of the Google Analytics property associated with the specified
-   * `FirebaseProject`.
+   * This object contains the details of the Google Analytics property associated with the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AnalyticsProperty analyticsProperty;
 
   /**
-   * For Android Apps and iOS Apps: A map of `app` to `streamId` for each Firebase App in the
-   * specified `FirebaseProject`. Each `app` and `streamId` appears only once.
-   *
-   * For Web Apps: A map of `app` to `streamId` and `measurementId` for each Firebase App in the
-   * specified `FirebaseProject`. Each `app`, `streamId`, and `measurementId` appears only once.
+   * For `AndroidApps` and `IosApps`: a map of `app` to `streamId` for each   Firebase App in the
+   * specified `FirebaseProject`. Each `app` and   `streamId` appears only once. For `WebApps`: a
+   * map of `app` to `streamId` and `measurementId` for   each `WebApp` in the specified
+   * `FirebaseProject`. Each `app`, `streamId`,   and `measurementId` appears only once.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +52,7 @@ public final class AnalyticsDetails extends com.google.api.client.json.GenericJs
   /**
    * The Analytics Property object associated with the specified `FirebaseProject`.
    *
-   * This object contains the details of the Google Analytics property associated with the specified
-   * `FirebaseProject`.
+   * This object contains the details of the Google Analytics property associated with the Project.
    * @return value or {@code null} for none
    */
   public AnalyticsProperty getAnalyticsProperty() {
@@ -65,8 +62,7 @@ public final class AnalyticsDetails extends com.google.api.client.json.GenericJs
   /**
    * The Analytics Property object associated with the specified `FirebaseProject`.
    *
-   * This object contains the details of the Google Analytics property associated with the specified
-   * `FirebaseProject`.
+   * This object contains the details of the Google Analytics property associated with the Project.
    * @param analyticsProperty analyticsProperty or {@code null} for none
    */
   public AnalyticsDetails setAnalyticsProperty(AnalyticsProperty analyticsProperty) {
@@ -75,11 +71,10 @@ public final class AnalyticsDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * For Android Apps and iOS Apps: A map of `app` to `streamId` for each Firebase App in the
-   * specified `FirebaseProject`. Each `app` and `streamId` appears only once.
-   *
-   * For Web Apps: A map of `app` to `streamId` and `measurementId` for each Firebase App in the
-   * specified `FirebaseProject`. Each `app`, `streamId`, and `measurementId` appears only once.
+   * For `AndroidApps` and `IosApps`: a map of `app` to `streamId` for each   Firebase App in the
+   * specified `FirebaseProject`. Each `app` and   `streamId` appears only once. For `WebApps`: a
+   * map of `app` to `streamId` and `measurementId` for   each `WebApp` in the specified
+   * `FirebaseProject`. Each `app`, `streamId`,   and `measurementId` appears only once.
    * @return value or {@code null} for none
    */
   public java.util.List<StreamMapping> getStreamMappings() {
@@ -87,11 +82,10 @@ public final class AnalyticsDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * For Android Apps and iOS Apps: A map of `app` to `streamId` for each Firebase App in the
-   * specified `FirebaseProject`. Each `app` and `streamId` appears only once.
-   *
-   * For Web Apps: A map of `app` to `streamId` and `measurementId` for each Firebase App in the
-   * specified `FirebaseProject`. Each `app`, `streamId`, and `measurementId` appears only once.
+   * For `AndroidApps` and `IosApps`: a map of `app` to `streamId` for each   Firebase App in the
+   * specified `FirebaseProject`. Each `app` and   `streamId` appears only once. For `WebApps`: a
+   * map of `app` to `streamId` and `measurementId` for   each `WebApp` in the specified
+   * `FirebaseProject`. Each `app`, `streamId`,   and `measurementId` appears only once.
    * @param streamMappings streamMappings or {@code null} for none
    */
   public AnalyticsDetails setStreamMappings(java.util.List<StreamMapping> streamMappings) {

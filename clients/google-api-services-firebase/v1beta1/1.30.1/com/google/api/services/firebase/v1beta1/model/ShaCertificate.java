@@ -31,29 +31,37 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class ShaCertificate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The SHA certificate type.
+   * The type of SHA certificate encoded in the hash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certType;
 
   /**
-   * The fully qualified resource name of the `sha-key`, in the format:
-   * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
+   * The resource name of the ShaCertificate for the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH * PROJECT_IDENTIFIER: the parent
+   * Project's   [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+   * ***(recommended)***   or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+   * Learn more about using project identifiers in   Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510).   Note that the value for PROJECT_IDENTIFIER in
+   * any   response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned
+   * identifier   for the App   (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). *
+   * SHA_HASH: the certificate hash for the App (see
+   * [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The certificate hash for the App.
+   * The certificate hash for the `AndroidApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shaHash;
 
   /**
-   * The SHA certificate type.
+   * The type of SHA certificate encoded in the hash.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertType() {
@@ -61,7 +69,7 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The SHA certificate type.
+   * The type of SHA certificate encoded in the hash.
    * @param certType certType or {@code null} for none
    */
   public ShaCertificate setCertType(java.lang.String certType) {
@@ -70,8 +78,16 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The fully qualified resource name of the `sha-key`, in the format:
-   * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
+   * The resource name of the ShaCertificate for the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH * PROJECT_IDENTIFIER: the parent
+   * Project's   [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+   * ***(recommended)***   or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+   * Learn more about using project identifiers in   Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510).   Note that the value for PROJECT_IDENTIFIER in
+   * any   response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned
+   * identifier   for the App   (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). *
+   * SHA_HASH: the certificate hash for the App (see
+   * [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash)).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -79,8 +95,16 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The fully qualified resource name of the `sha-key`, in the format:
-   * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
+   * The resource name of the ShaCertificate for the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH * PROJECT_IDENTIFIER: the parent
+   * Project's   [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+   * ***(recommended)***   or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+   * Learn more about using project identifiers in   Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510).   Note that the value for PROJECT_IDENTIFIER in
+   * any   response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned
+   * identifier   for the App   (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). *
+   * SHA_HASH: the certificate hash for the App (see
+   * [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash)).
    * @param name name or {@code null} for none
    */
   public ShaCertificate setName(java.lang.String name) {
@@ -89,7 +113,7 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The certificate hash for the App.
+   * The certificate hash for the `AndroidApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getShaHash() {
@@ -97,7 +121,7 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The certificate hash for the App.
+   * The certificate hash for the `AndroidApp`.
    * @param shaHash shaHash or {@code null} for none
    */
   public ShaCertificate setShaHash(java.lang.String shaHash) {

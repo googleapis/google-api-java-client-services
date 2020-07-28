@@ -31,14 +31,14 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class ListShaCertificatesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of SHA certificates associated with the App.
+   * The list of each `ShaCertificate` associated with the `AndroidApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ShaCertificate> certificates;
 
   /**
-   * The list of SHA certificates associated with the App.
+   * The list of each `ShaCertificate` associated with the `AndroidApp`.
    * @return value or {@code null} for none
    */
   public java.util.List<ShaCertificate> getCertificates() {
@@ -46,7 +46,7 @@ public final class ListShaCertificatesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The list of SHA certificates associated with the App.
+   * The list of each `ShaCertificate` associated with the `AndroidApp`.
    * @param certificates certificates or {@code null} for none
    */
   public ListShaCertificatesResponse setCertificates(java.util.List<ShaCertificate> certificates) {

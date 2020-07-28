@@ -143,15 +143,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
   public class AvailableProjects {
 
     /**
-     * Returns a list of [Google Cloud Platform (GCP) `Projects`] (https://cloud.google.com/resource-
-     * manager/reference/rest/v1/projects) that are available to have Firebase resources added to them.
+     * Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-
+     * manager/reference/rest/v1/projects) that can have Firebase resources added to it.
      *
-     * A GCP `Project` will only be returned if:
+     * A Project will only be listed if:
      *
-     *   The caller has sufficient          [Google IAM](https://cloud.google.com/iam) permissions to
-     * call          AddFirebase.   The GCP `Project` is not already a FirebaseProject.   The GCP
-     * `Project` is not in an Organization which has policies          that prevent Firebase resources
-     * from being added.
+     * The caller has sufficient   [Google IAM](https://cloud.google.com/iam) permissions to call
+     * AddFirebase.
+     *
+     * The Project is not already a FirebaseProject.
+     *
+     * The Project is not in an Organization which has policies   that prevent Firebase resources from
+     * being added.
      *
      * Create a request for the method "availableProjects.list".
      *
@@ -171,16 +174,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       private static final String REST_PATH = "v1beta1/availableProjects";
 
       /**
-       * Returns a list of [Google Cloud Platform (GCP) `Projects`] (https://cloud.google.com/resource-
-       * manager/reference/rest/v1/projects) that are available to have Firebase resources added to
-       * them.
+       * Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects) that can have Firebase resources added to it.
        *
-       * A GCP `Project` will only be returned if:
+       * A Project will only be listed if:
        *
-       *   The caller has sufficient          [Google IAM](https://cloud.google.com/iam) permissions to
-       * call          AddFirebase.   The GCP `Project` is not already a FirebaseProject.   The GCP
-       * `Project` is not in an Organization which has policies          that prevent Firebase resources
-       * from being added.
+       * The caller has sufficient   [Google IAM](https://cloud.google.com/iam) permissions to call
+       * AddFirebase.
+       *
+       * The Project is not already a FirebaseProject.
+       *
+       * The Project is not in an Organization which has policies   that prevent Firebase resources from
+       * being added.
        *
        * Create a request for the method "availableProjects.list".
        *
@@ -261,7 +266,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The maximum number of GCP `Projects` to return in the response.
+       * The maximum number of Projects to return in the response.
        *
        * The server may return fewer than this value at its discretion. If no value is specified (or
        * too large a value is specified), the server will impose its own limit.
@@ -271,7 +276,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of GCP `Projects` to return in the response.
+      /** The maximum number of Projects to return in the response.
 
      The server may return fewer than this value at its discretion. If no value is specified (or too
      large a value is specified), the server will impose its own limit.
@@ -283,7 +288,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The maximum number of GCP `Projects` to return in the response.
+       * The maximum number of Projects to return in the response.
        *
        * The server may return fewer than this value at its discretion. If no value is specified (or
        * too large a value is specified), the server will impose its own limit.
@@ -297,13 +302,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * Token returned from a previous call to `ListAvailableProjects` indicating where in the set
-       * of GCP `Projects` to resume listing.
+       * of Projects to resume listing.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token returned from a previous call to `ListAvailableProjects` indicating where in the set of GCP
-     `Projects` to resume listing.
+      /** Token returned from a previous call to `ListAvailableProjects` indicating where in the set of
+     Projects to resume listing.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -311,7 +316,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * Token returned from a previous call to `ListAvailableProjects` indicating where in the set
-       * of GCP `Projects` to resume listing.
+       * of Projects to resume listing.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -513,8 +518,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * Adds Firebase resources to the specified existing [Google Cloud Platform (GCP) `Project`]
      * (https://cloud.google.com/resource-manager/reference/rest/v1/projects).
      *
-     * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` uses underlying GCP
-     * identifiers (most importantly, the `PROJECT_NUMBER`) as its own for easy interop with GCP APIs.
+     * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same
+     * underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with
+     * Google APIs.
      *
      * The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to
      * track the provisioning process by calling GetOperation until
@@ -538,12 +544,20 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * @param project The resource name of the GCP `Project` to which Firebase resources will be
     added, in the format:
-     *        projects/PROJECT_NUMBER
-    After calling `AddFirebase`, the
-     *        [`project_id`](https://cloud.google.com/resource-
-     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)
-    of the GCP `Project` is also
-     *        the `project_id` of the FirebaseProject.
+     *        projects/PROJECT_IDENTIFIER
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
+    After calling `AddFirebase`, the unique Project identifiers (
+     *        [`projectNumber`](https://cloud.google.com/resource-
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_number)
+    and
+     *        [`projectId`](https://cloud.google.com/resource-
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id))
+    of the underlying GCP
+     *        `Project` are also the identifiers of the
+    FirebaseProject.
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddFirebaseRequest}
      * @return the request
      */
@@ -564,9 +578,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * Adds Firebase resources to the specified existing [Google Cloud Platform (GCP) `Project`]
        * (https://cloud.google.com/resource-manager/reference/rest/v1/projects).
        *
-       * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` uses underlying
-       * GCP identifiers (most importantly, the `PROJECT_NUMBER`) as its own for easy interop with GCP
-       * APIs.
+       * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same
+       * underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with
+       * Google APIs.
        *
        * The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to
        * track the provisioning process by calling GetOperation until
@@ -594,12 +608,20 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * @param project The resource name of the GCP `Project` to which Firebase resources will be
     added, in the format:
-     *        projects/PROJECT_NUMBER
-    After calling `AddFirebase`, the
-     *        [`project_id`](https://cloud.google.com/resource-
-     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)
-    of the GCP `Project` is also
-     *        the `project_id` of the FirebaseProject.
+     *        projects/PROJECT_IDENTIFIER
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
+    After calling `AddFirebase`, the unique Project identifiers (
+     *        [`projectNumber`](https://cloud.google.com/resource-
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_number)
+    and
+     *        [`projectId`](https://cloud.google.com/resource-
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id))
+    of the underlying GCP
+     *        `Project` are also the identifiers of the
+    FirebaseProject.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddFirebaseRequest}
        * @since 1.13
        */
@@ -670,18 +692,31 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The resource name of the GCP `Project` to which Firebase resources will be added, in the
-       * format: projects/PROJECT_NUMBER After calling `AddFirebase`, the
-       * [`project_id`](https://cloud.google.com/resource-
-       * manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP `Project` is also
-       * the `project_id` of the FirebaseProject.
+       * format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
+       *
+       * After calling `AddFirebase`, the unique Project identifiers (
+       * [`projectNumber`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
+       * [`projectId`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP
+       * `Project` are also the identifiers of the FirebaseProject.
        */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
       /** The resource name of the GCP `Project` to which Firebase resources will be added, in the format:
-     projects/PROJECT_NUMBER After calling `AddFirebase`, the [`project_id`](https://cloud.google.com
-     /resource-manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP `Project` is
-     also the `project_id` of the FirebaseProject.
+     projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+     [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+     values.
+
+     After calling `AddFirebase`, the unique Project identifiers (
+     [`projectNumber`](https://cloud.google.com/resource-
+     manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
+     [`projectId`](https://cloud.google.com/resource-
+     manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP `Project` are
+     also the identifiers of the FirebaseProject.
        */
       public java.lang.String getProject() {
         return project;
@@ -689,10 +724,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
       /**
        * The resource name of the GCP `Project` to which Firebase resources will be added, in the
-       * format: projects/PROJECT_NUMBER After calling `AddFirebase`, the
-       * [`project_id`](https://cloud.google.com/resource-
-       * manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP `Project` is also
-       * the `project_id` of the FirebaseProject.
+       * format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
+       *
+       * After calling `AddFirebase`, the unique Project identifiers (
+       * [`projectNumber`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
+       * [`projectId`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP
+       * `Project` are also the identifiers of the FirebaseProject.
        */
       public AddFirebase setProject(java.lang.String project) {
         if (!getSuppressPatternChecks()) {
@@ -710,24 +751,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Links a FirebaseProject with an existing [Google Analytics
+     * Links the specified FirebaseProject with an existing [Google Analytics
      * account](http://www.google.com/analytics/).
      *
      * Using this call, you can either:
      *
-     * Specify an `analyticsAccountId` to provision a new Google Analytics property within the specified
-     * account and associate the new property with your `FirebaseProject`. Specify an existing
-     * `analyticsPropertyId` to associate the property with your `FirebaseProject`.
+     * Specify an `analyticsAccountId` to provision a new Google Analytics   property within the
+     * specified account and associate the new property with   the `FirebaseProject`. Specify an
+     * existing `analyticsPropertyId` to associate the property   with the `FirebaseProject`.
      *
      * Note that when you call `AddGoogleAnalytics`:
      *
-     * The first check determines if any existing data streams in the Google Analytics property
-     * correspond to any existing Firebase Apps in your `FirebaseProject` (based on the `packageName` or
-     * `bundleId` associated with the data stream). Then, as applicable, the data streams and apps are
-     * linked. Note that this auto-linking only applies to Android Apps and iOS Apps. If no
-     * corresponding data streams are found for your Firebase Apps, new data streams are provisioned in
-     * the Google Analytics property for each of your Firebase Apps. Note that a new data stream is
-     * always provisioned for a Web App even if it was previously associated with a data stream in your
+     * The first check determines if any existing data streams in the   Google Analytics property
+     * correspond to any existing Firebase Apps in the   `FirebaseProject` (based on the `packageName`
+     * or `bundleId` associated   with the data stream). Then, as applicable, the data streams and apps
+     * are   linked. Note that this auto-linking only applies to `AndroidApps` and   `IosApps`. If no
+     * corresponding data streams are found for the Firebase Apps, new   data streams are provisioned in
+     * the Google Analytics property for each of   the Firebase Apps. Note that a new data stream is
+     * always provisioned for   a Web App even if it was previously associated with a data stream in the
      * Analytics property.
      *
      * Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics
@@ -741,11 +782,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set
      * to a google.rpc.Status.
      *
-     * To call `AddGoogleAnalytics`, a member must be an Owner for the existing `FirebaseProject` and
-     * have the [`Edit` permission](https://support.google.com/analytics/answer/2884495) for the Google
-     * Analytics account.
+     * To call `AddGoogleAnalytics`, a project member must be an Owner for the existing
+     * `FirebaseProject` and have the [`Edit`
+     * permission](https://support.google.com/analytics/answer/2884495) for the Google Analytics
+     * account.
      *
-     * If a `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics`
+     * If the `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics`
      * using an `analyticsPropertyId` that's different from the currently associated property, then the
      * call will fail. Analytics may have already been enabled in the Firebase console or by specifying
      * `timeZone` and `regionCode` in the call to [`AddFirebase`](../../v1beta1/projects/addFirebase).
@@ -755,9 +797,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link AddGoogleAnalytics#execute()} method to invoke the remote operation.
      *
-     * @param parent The parent `FirebaseProject` to link to an existing Google Analytics
-    account, in the format:
-     *        projects/PROJECT_NUMBER
+     * @param parent The resource name of the FirebaseProject to link to an existing Google
+    Analytics account, in the
+     *        format:
+    projects/PROJECT_IDENTIFIER
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest}
      * @return the request
      */
@@ -775,25 +822,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Links a FirebaseProject with an existing [Google Analytics
+       * Links the specified FirebaseProject with an existing [Google Analytics
        * account](http://www.google.com/analytics/).
        *
        * Using this call, you can either:
        *
-       * Specify an `analyticsAccountId` to provision a new Google Analytics property within the
-       * specified account and associate the new property with your `FirebaseProject`. Specify an
-       * existing `analyticsPropertyId` to associate the property with your `FirebaseProject`.
+       * Specify an `analyticsAccountId` to provision a new Google Analytics   property within the
+       * specified account and associate the new property with   the `FirebaseProject`. Specify an
+       * existing `analyticsPropertyId` to associate the property   with the `FirebaseProject`.
        *
        * Note that when you call `AddGoogleAnalytics`:
        *
-       * The first check determines if any existing data streams in the Google Analytics property
-       * correspond to any existing Firebase Apps in your `FirebaseProject` (based on the `packageName`
-       * or `bundleId` associated with the data stream). Then, as applicable, the data streams and apps
-       * are linked. Note that this auto-linking only applies to Android Apps and iOS Apps. If no
-       * corresponding data streams are found for your Firebase Apps, new data streams are provisioned
-       * in the Google Analytics property for each of your Firebase Apps. Note that a new data stream is
-       * always provisioned for a Web App even if it was previously associated with a data stream in
-       * your Analytics property.
+       * The first check determines if any existing data streams in the   Google Analytics property
+       * correspond to any existing Firebase Apps in the   `FirebaseProject` (based on the `packageName`
+       * or `bundleId` associated   with the data stream). Then, as applicable, the data streams and
+       * apps are   linked. Note that this auto-linking only applies to `AndroidApps` and   `IosApps`.
+       * If no corresponding data streams are found for the Firebase Apps, new   data streams are
+       * provisioned in the Google Analytics property for each of   the Firebase Apps. Note that a new
+       * data stream is always provisioned for   a Web App even if it was previously associated with a
+       * data stream in the   Analytics property.
        *
        * Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics
        * documentation](https://support.google.com/analytics/answer/9303323).
@@ -806,14 +853,15 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is
        * set to a google.rpc.Status.
        *
-       * To call `AddGoogleAnalytics`, a member must be an Owner for the existing `FirebaseProject` and
-       * have the [`Edit` permission](https://support.google.com/analytics/answer/2884495) for the
-       * Google Analytics account.
+       * To call `AddGoogleAnalytics`, a project member must be an Owner for the existing
+       * `FirebaseProject` and have the [`Edit`
+       * permission](https://support.google.com/analytics/answer/2884495) for the Google Analytics
+       * account.
        *
-       * If a `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics`
-       * using an `analyticsPropertyId` that's different from the currently associated property, then
-       * the call will fail. Analytics may have already been enabled in the Firebase console or by
-       * specifying `timeZone` and `regionCode` in the call to
+       * If the `FirebaseProject` already has Google Analytics enabled, and you call
+       * `AddGoogleAnalytics` using an `analyticsPropertyId` that's different from the currently
+       * associated property, then the call will fail. Analytics may have already been enabled in the
+       * Firebase console or by specifying `timeZone` and `regionCode` in the call to
        * [`AddFirebase`](../../v1beta1/projects/addFirebase).
        *
        * Create a request for the method "projects.addGoogleAnalytics".
@@ -824,9 +872,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param parent The parent `FirebaseProject` to link to an existing Google Analytics
-    account, in the format:
-     *        projects/PROJECT_NUMBER
+       * @param parent The resource name of the FirebaseProject to link to an existing Google
+    Analytics account, in the
+     *        format:
+    projects/PROJECT_IDENTIFIER
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest}
        * @since 1.13
        */
@@ -896,22 +949,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The parent `FirebaseProject` to link to an existing Google Analytics account, in the
-       * format: projects/PROJECT_NUMBER
+       * The resource name of the FirebaseProject to link to an existing Google Analytics account,
+       * in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The parent `FirebaseProject` to link to an existing Google Analytics account, in the format:
-     projects/PROJECT_NUMBER
+      /** The resource name of the FirebaseProject to link to an existing Google Analytics account, in the
+     format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+     [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+     values.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The parent `FirebaseProject` to link to an existing Google Analytics account, in the
-       * format: projects/PROJECT_NUMBER
+       * The resource name of the FirebaseProject to link to an existing Google Analytics account,
+       * in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       public AddGoogleAnalytics setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -929,15 +988,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Gets the FirebaseProject identified by the specified resource name.
+     * Gets the specified FirebaseProject.
      *
      * Create a request for the method "projects.get".
      *
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The fully qualified resource name of the Project, in the format:
-    projects/PROJECT_NUMBER
+     * @param name The resource name of the FirebaseProject, in the format:
+    projects/PROJECT_IDENTIFIER
+    Refer to the
+     *        `FirebaseProject`
+    [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+     *        about PROJECT_IDENTIFIER values.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -954,7 +1017,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Gets the FirebaseProject identified by the specified resource name.
+       * Gets the specified FirebaseProject.
        *
        * Create a request for the method "projects.get".
        *
@@ -963,8 +1026,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The fully qualified resource name of the Project, in the format:
-    projects/PROJECT_NUMBER
+       * @param name The resource name of the FirebaseProject, in the format:
+    projects/PROJECT_IDENTIFIER
+    Refer to the
+     *        `FirebaseProject`
+    [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+     *        about PROJECT_IDENTIFIER values.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1043,19 +1110,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format: projects/PROJECT_NUMBER
+       * The resource name of the FirebaseProject, in the format: projects/PROJECT_IDENTIFIER Refer
+       * to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for
+       * details about PROJECT_IDENTIFIER values.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name of the Project, in the format: projects/PROJECT_NUMBER
+      /** The resource name of the FirebaseProject, in the format: projects/PROJECT_IDENTIFIER Refer to the
+     `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+     PROJECT_IDENTIFIER values.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format: projects/PROJECT_NUMBER
+       * The resource name of the FirebaseProject, in the format: projects/PROJECT_IDENTIFIER Refer
+       * to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for
+       * details about PROJECT_IDENTIFIER values.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1073,7 +1146,8 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Gets the configuration artifact used by servers to simplify initialization.
+     * Gets the configuration artifact associated with the specified FirebaseProject, which can be used
+     * by servers to simplify initialization.
      *
      * Typically, this configuration is used with the Firebase Admin SDK
      * [initializeApp](https://firebase.google.com/docs/admin/setup#initialize_the_sdk) command.
@@ -1083,8 +1157,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link GetAdminSdkConfig#execute()} method to invoke the remote operation.
      *
-     * @param name The fully qualified resource name of the Project, in the format:
-     *        projects/PROJECT_NUMBER/adminSdkConfig
+     * @param name The resource name of the FirebaseProject, in the format:
+    projects/PROJECT_IDENTIFIER/adminSdkConfig
+     *        Refer to the `FirebaseProject`
+    [`name`](../projects#FirebaseProject.FIELDS.name) field for
+     *        details
+    about PROJECT_IDENTIFIER values.
      * @return the request
      */
     public GetAdminSdkConfig getAdminSdkConfig(java.lang.String name) throws java.io.IOException {
@@ -1101,7 +1179,8 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+/adminSdkConfig$");
 
       /**
-       * Gets the configuration artifact used by servers to simplify initialization.
+       * Gets the configuration artifact associated with the specified FirebaseProject, which can be
+       * used by servers to simplify initialization.
        *
        * Typically, this configuration is used with the Firebase Admin SDK
        * [initializeApp](https://firebase.google.com/docs/admin/setup#initialize_the_sdk) command.
@@ -1114,8 +1193,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name The fully qualified resource name of the Project, in the format:
-     *        projects/PROJECT_NUMBER/adminSdkConfig
+       * @param name The resource name of the FirebaseProject, in the format:
+    projects/PROJECT_IDENTIFIER/adminSdkConfig
+     *        Refer to the `FirebaseProject`
+    [`name`](../projects#FirebaseProject.FIELDS.name) field for
+     *        details
+    about PROJECT_IDENTIFIER values.
        * @since 1.13
        */
       protected GetAdminSdkConfig(java.lang.String name) {
@@ -1194,22 +1277,27 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format:
-       * projects/PROJECT_NUMBER/adminSdkConfig
+       * The resource name of the FirebaseProject, in the format:
+       * projects/PROJECT_IDENTIFIER/adminSdkConfig Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name of the Project, in the format:
-     projects/PROJECT_NUMBER/adminSdkConfig
+      /** The resource name of the FirebaseProject, in the format: projects/PROJECT_IDENTIFIER/adminSdkConfig
+     Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+     about PROJECT_IDENTIFIER values.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format:
-       * projects/PROJECT_NUMBER/adminSdkConfig
+       * The resource name of the FirebaseProject, in the format:
+       * projects/PROJECT_IDENTIFIER/adminSdkConfig Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       public GetAdminSdkConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1227,18 +1315,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Gets the Google Analytics details currently associated with a FirebaseProject.
+     * Gets the Google Analytics details currently associated with the specified FirebaseProject.
      *
      * If the `FirebaseProject` is not yet linked to Google Analytics, then the response to
-     * `GetAnalyticsDetails` is NOT_FOUND.
+     * `GetAnalyticsDetails` is `NOT_FOUND`.
      *
      * Create a request for the method "projects.getAnalyticsDetails".
      *
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link GetAnalyticsDetails#execute()} method to invoke the remote operation.
      *
-     * @param name The fully qualified resource name, in the format:
-    projects/PROJECT_NUMBER/analyticsDetails
+     * @param name The resource name of the FirebaseProject, in the format:
+     *        projects/PROJECT_IDENTIFIER/analyticsDetails
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
      * @return the request
      */
     public GetAnalyticsDetails getAnalyticsDetails(java.lang.String name) throws java.io.IOException {
@@ -1255,10 +1347,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+/analyticsDetails$");
 
       /**
-       * Gets the Google Analytics details currently associated with a FirebaseProject.
+       * Gets the Google Analytics details currently associated with the specified FirebaseProject.
        *
        * If the `FirebaseProject` is not yet linked to Google Analytics, then the response to
-       * `GetAnalyticsDetails` is NOT_FOUND.
+       * `GetAnalyticsDetails` is `NOT_FOUND`.
        *
        * Create a request for the method "projects.getAnalyticsDetails".
        *
@@ -1268,8 +1360,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name The fully qualified resource name, in the format:
-    projects/PROJECT_NUMBER/analyticsDetails
+       * @param name The resource name of the FirebaseProject, in the format:
+     *        projects/PROJECT_IDENTIFIER/analyticsDetails
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
        * @since 1.13
        */
       protected GetAnalyticsDetails(java.lang.String name) {
@@ -1348,19 +1444,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The fully qualified resource name, in the format: projects/PROJECT_NUMBER/analyticsDetails
+       * The resource name of the FirebaseProject, in the format:
+       * projects/PROJECT_IDENTIFIER/analyticsDetails Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name, in the format: projects/PROJECT_NUMBER/analyticsDetails
+      /** The resource name of the FirebaseProject, in the format:
+     projects/PROJECT_IDENTIFIER/analyticsDetails Refer to the `FirebaseProject`
+     [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+     values.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The fully qualified resource name, in the format: projects/PROJECT_NUMBER/analyticsDetails
+       * The resource name of the FirebaseProject, in the format:
+       * projects/PROJECT_IDENTIFIER/analyticsDetails Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       public GetAnalyticsDetails setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1560,7 +1665,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Updates the attributes of the FirebaseProject identified by the specified resource name.
+     * Updates the attributes of the specified FirebaseProject.
      *
      * All [query parameters](#query-parameters) are required.
      *
@@ -1569,8 +1674,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name The fully qualified resource name of the Project, in the format:
-    projects/projectId
+     * @param name The resource name of the Project, in the format:
+    projects/PROJECT_IDENTIFIER
+    PROJECT_IDENTIFIER: the
+     *        Project's
+    [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+     *        ***(recommended)***
+    or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+     *        Learn more about using project identifiers in
+    Google's [AIP 2510
+     *        standard](https://google.aip.dev/cloud/2510).
+    Note that the value for PROJECT_IDENTIFIER
+     *        in any
+    response body will be the `ProjectId`.
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.FirebaseProject}
      * @return the request
      */
@@ -1588,7 +1704,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Updates the attributes of the FirebaseProject identified by the specified resource name.
+       * Updates the attributes of the specified FirebaseProject.
        *
        * All [query parameters](#query-parameters) are required.
        *
@@ -1600,8 +1716,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The fully qualified resource name of the Project, in the format:
-    projects/projectId
+       * @param name The resource name of the Project, in the format:
+    projects/PROJECT_IDENTIFIER
+    PROJECT_IDENTIFIER: the
+     *        Project's
+    [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+     *        ***(recommended)***
+    or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+     *        Learn more about using project identifiers in
+    Google's [AIP 2510
+     *        standard](https://google.aip.dev/cloud/2510).
+    Note that the value for PROJECT_IDENTIFIER
+     *        in any
+    response body will be the `ProjectId`.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.FirebaseProject}
        * @since 1.13
        */
@@ -1671,19 +1798,33 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format: projects/projectId
+       * The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER
+       * PROJECT_IDENTIFIER: the Project's
+       * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or
+       * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using
+       * project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+       * Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The fully qualified resource name of the Project, in the format: projects/projectId
+      /** The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER PROJECT_IDENTIFIER:
+     the Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+     ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more
+     about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+     Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The fully qualified resource name of the Project, in the format: projects/projectId
+       * The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER
+       * PROJECT_IDENTIFIER: the Project's
+       * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or
+       * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using
+       * project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+       * Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1698,16 +1839,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       /**
        * Specifies which fields to update.
        *
-       * If this list is empty, then no state will be updated. Note that the fields `name`,
-       * `project_id`, and `project_number` are all immutable.
+       * If this list is empty, then no state will be updated.
+       *
+       * Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Specifies which fields to update.
 
-     If this list is empty, then no state will be updated. Note that the fields `name`, `project_id`,
-     and `project_number` are all immutable.
+     If this list is empty, then no state will be updated.
+
+     Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1716,8 +1859,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       /**
        * Specifies which fields to update.
        *
-       * If this list is empty, then no state will be updated. Note that the fields `name`,
-       * `project_id`, and `project_number` are all immutable.
+       * If this list is empty, then no state will be updated.
+       *
+       * Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1730,7 +1874,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Unlinks the specified `FirebaseProject` from its Google Analytics account.
+     * Unlinks the specified FirebaseProject from its Google Analytics account.
      *
      * This call removes the association of the specified `FirebaseProject` with its current Google
      * Analytics property. However, this call does not delete the Google Analytics resources, such as
@@ -1739,19 +1883,23 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      * These resources may be re-associated later to the `FirebaseProject` by calling
      * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same
      * `analyticsPropertyId`. For Android Apps and iOS Apps, this call re-links data streams with their
-     * corresponding apps. However, for Web Apps, this call provisions a new data stream for each Web
+     * corresponding apps. However, for Web Apps, this call provisions a *new* data stream for each Web
      * App.
      *
-     * To call `RemoveAnalytics`, a member must be an Owner for the `FirebaseProject`.
+     * To call `RemoveAnalytics`, a project member must be an Owner for the `FirebaseProject`.
      *
      * Create a request for the method "projects.removeAnalytics".
      *
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link RemoveAnalytics#execute()} method to invoke the remote operation.
      *
-     * @param parent The parent `FirebaseProject` to unlink from its Google Analytics account,
-    in the format:
-     *        projects/PROJECT_NUMBER
+     * @param parent The resource name of the FirebaseProject to unlink from its Google
+    Analytics account, in the format:
+     *        projects/PROJECT_IDENTIFIER
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest}
      * @return the request
      */
@@ -1769,7 +1917,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Unlinks the specified `FirebaseProject` from its Google Analytics account.
+       * Unlinks the specified FirebaseProject from its Google Analytics account.
        *
        * This call removes the association of the specified `FirebaseProject` with its current Google
        * Analytics property. However, this call does not delete the Google Analytics resources, such as
@@ -1778,10 +1926,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * These resources may be re-associated later to the `FirebaseProject` by calling
        * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same
        * `analyticsPropertyId`. For Android Apps and iOS Apps, this call re-links data streams with
-       * their corresponding apps. However, for Web Apps, this call provisions a new data stream for
+       * their corresponding apps. However, for Web Apps, this call provisions a *new* data stream for
        * each Web App.
        *
-       * To call `RemoveAnalytics`, a member must be an Owner for the `FirebaseProject`.
+       * To call `RemoveAnalytics`, a project member must be an Owner for the `FirebaseProject`.
        *
        * Create a request for the method "projects.removeAnalytics".
        *
@@ -1791,9 +1939,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param parent The parent `FirebaseProject` to unlink from its Google Analytics account,
-    in the format:
-     *        projects/PROJECT_NUMBER
+       * @param parent The resource name of the FirebaseProject to unlink from its Google
+    Analytics account, in the format:
+     *        projects/PROJECT_IDENTIFIER
+    Refer to the `FirebaseProject`
+     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+    about
+     *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest}
        * @since 1.13
        */
@@ -1863,22 +2015,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
-       * projects/PROJECT_NUMBER
+       * The resource name of the FirebaseProject to unlink from its Google Analytics account, in
+       * the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
-     projects/PROJECT_NUMBER
+      /** The resource name of the FirebaseProject to unlink from its Google Analytics account, in the
+     format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+     [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+     values.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
-       * projects/PROJECT_NUMBER
+       * The resource name of the FirebaseProject to unlink from its Google Analytics account, in
+       * the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       public RemoveAnalytics setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -1896,18 +2054,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * A convenience method that lists all available Apps for the specified FirebaseProject.
+     * Lists all available Apps for the specified FirebaseProject.
      *
-     * Typically, interaction with an App should be done using the platform-specific service, but some
-     * tool use-cases require a summary of all known Apps (such as for App selector interfaces).
+     * This is a convenience method. Typically, interaction with an App should be done using the
+     * platform-specific service, but some tool use-cases require a summary of all known Apps (such as
+     * for App selector interfaces).
      *
      * Create a request for the method "projects.searchApps".
      *
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link SearchApps#execute()} method to invoke the remote operation.
      *
-     * @param parent The parent Project for which to list Apps, in the format:
-    projects/PROJECT_NUMBER
+     * @param parent The parent FirebaseProject for which to list Apps, in the format:
+    projects/PROJECT_IDENTIFIER
+    Refer
+     *        to the `FirebaseProject`
+    [`name`](../projects#FirebaseProject.FIELDS.name) field for
+     *        details
+    about PROJECT_IDENTIFIER values.
      * @return the request
      */
     public SearchApps searchApps(java.lang.String parent) throws java.io.IOException {
@@ -1924,10 +2088,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * A convenience method that lists all available Apps for the specified FirebaseProject.
+       * Lists all available Apps for the specified FirebaseProject.
        *
-       * Typically, interaction with an App should be done using the platform-specific service, but some
-       * tool use-cases require a summary of all known Apps (such as for App selector interfaces).
+       * This is a convenience method. Typically, interaction with an App should be done using the
+       * platform-specific service, but some tool use-cases require a summary of all known Apps (such as
+       * for App selector interfaces).
        *
        * Create a request for the method "projects.searchApps".
        *
@@ -1937,8 +2102,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * SearchApps#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent The parent Project for which to list Apps, in the format:
-    projects/PROJECT_NUMBER
+       * @param parent The parent FirebaseProject for which to list Apps, in the format:
+    projects/PROJECT_IDENTIFIER
+    Refer
+     *        to the `FirebaseProject`
+    [`name`](../projects#FirebaseProject.FIELDS.name) field for
+     *        details
+    about PROJECT_IDENTIFIER values.
        * @since 1.13
        */
       protected SearchApps(java.lang.String parent) {
@@ -2017,19 +2187,27 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+       * The parent FirebaseProject for which to list Apps, in the format:
+       * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+      /** The parent FirebaseProject for which to list Apps, in the format: projects/PROJECT_IDENTIFIER Refer
+     to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+     PROJECT_IDENTIFIER values.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+       * The parent FirebaseProject for which to list Apps, in the format:
+       * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * PROJECT_IDENTIFIER values.
        */
       public SearchApps setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -2126,7 +2304,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class AndroidApps {
 
       /**
-       * Requests that a new AndroidApp be created.
+       * Requests the creation of a new AndroidApp in the specified FirebaseProject.
        *
        * The result of this call is an `Operation` which can be used to track the provisioning process.
        * The `Operation` is automatically deleted after completion, so there is no need to call
@@ -2137,8 +2315,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project in which to create an App, in the format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the parent FirebaseProject in which to create an
+      AndroidApp, in the format:
+       *        projects/PROJECT_IDENTIFIER/androidApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
        * @return the request
        */
@@ -2156,7 +2339,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Requests that a new AndroidApp be created.
+         * Requests the creation of a new AndroidApp in the specified FirebaseProject.
          *
          * The result of this call is an `Operation` which can be used to track the provisioning process.
          * The `Operation` is automatically deleted after completion, so there is no need to call
@@ -2170,8 +2353,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project in which to create an App, in the format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the parent FirebaseProject in which to create an
+      AndroidApp, in the format:
+       *        projects/PROJECT_IDENTIFIER/androidApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
          * @since 1.13
          */
@@ -2241,19 +2429,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject in which to create an AndroidApp, in the
+         * format: projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+        /** The resource name of the parent FirebaseProject in which to create an AndroidApp, in the format:
+       projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject in which to create an AndroidApp, in the
+         * format: projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2271,19 +2468,23 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Gets the AndroidApp identified by the specified resource name.
+       * Gets the specified AndroidApp.
        *
        * Create a request for the method "androidApps.get".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified resource name of the App, in the format:
-       *        projects/PROJECT_NUMBER/androidApps/APP_ID
-      As an APP_ID is a unique identifier, the Unique
-       *        Resource
-      from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/androidApps/APP_ID
+       * @param name The resource name of the AndroidApp, in the format:
+      projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+       *        Since an APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access
+       *        pattern may be used here, in the format:
+      projects/-/androidApps/APP_ID
+      Refer to the
+       *        `AndroidApp`
+      [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+       *        about PROJECT_IDENTIFIER and APP_ID values.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2300,7 +2501,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
 
         /**
-         * Gets the AndroidApp identified by the specified resource name.
+         * Gets the specified AndroidApp.
          *
          * Create a request for the method "androidApps.get".
          *
@@ -2309,12 +2510,16 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified resource name of the App, in the format:
-       *        projects/PROJECT_NUMBER/androidApps/APP_ID
-      As an APP_ID is a unique identifier, the Unique
-       *        Resource
-      from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/androidApps/APP_ID
+         * @param name The resource name of the AndroidApp, in the format:
+      projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+       *        Since an APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access
+       *        pattern may be used here, in the format:
+      projects/-/androidApps/APP_ID
+      Refer to the
+       *        `AndroidApp`
+      [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+       *        about PROJECT_IDENTIFIER and APP_ID values.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2393,27 +2598,39 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/APP_ID
+         * The resource name of the AndroidApp, in the format:
+         * projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+         *
+         * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field
+         * for details about PROJECT_IDENTIFIER and APP_ID values.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format:
-       projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the Unique Resource
-       from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
+        /** The resource name of the AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+
+       Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+       be used here, in the format: projects/-/androidApps/APP_ID
+
+       Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for
+       details about PROJECT_IDENTIFIER and APP_ID values.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/APP_ID
+         * The resource name of the AndroidApp, in the format:
+         * projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+         *
+         * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field
+         * for details about PROJECT_IDENTIFIER and APP_ID values.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2438,12 +2655,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the App configuration to download, in the format:
-       *        projects/PROJECT_NUMBER/androidApps/APP_ID/config
-      As an APP_ID is a unique identifier, the
-       *        Unique Resource
-      from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/androidApps/APP_ID
+       * @param name The resource name of the AndroidApp configuration to download, in the
+      format:
+       *        projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config
+      Since an APP_ID is a unique
+       *        identifier, the Unique Resource
+      from Sub-Collection access pattern may be used here, in
+       *        the format:
+      projects/-/androidApps/APP_ID
+      Refer to the `AndroidApp`
+       *        [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
        * @return the request
        */
       public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -2470,12 +2693,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the App configuration to download, in the format:
-       *        projects/PROJECT_NUMBER/androidApps/APP_ID/config
-      As an APP_ID is a unique identifier, the
-       *        Unique Resource
-      from Sub-Collection access pattern may be used here, in the format:
-       *        projects/-/androidApps/APP_ID
+         * @param name The resource name of the AndroidApp configuration to download, in the
+      format:
+       *        projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config
+      Since an APP_ID is a unique
+       *        identifier, the Unique Resource
+      from Sub-Collection access pattern may be used here, in
+       *        the format:
+      projects/-/androidApps/APP_ID
+      Refer to the `AndroidApp`
+       *        [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
          * @since 1.13
          */
         protected GetConfig(java.lang.String name) {
@@ -2554,28 +2783,40 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The resource name of the App configuration to download, in the format:
-         * projects/PROJECT_NUMBER/androidApps/APP_ID/config As an APP_ID is a unique identifier,
-         * the Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/APP_ID
+         * The resource name of the AndroidApp configuration to download, in the format:
+         * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+         *
+         * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field
+         * for details about PROJECT_IDENTIFIER and APP_ID values.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the App configuration to download, in the format:
-       projects/PROJECT_NUMBER/androidApps/APP_ID/config As an APP_ID is a unique identifier, the Unique
-       Resource from Sub-Collection access pattern may be used here, in the format:
-       projects/-/androidApps/APP_ID
+        /** The resource name of the AndroidApp configuration to download, in the format:
+       projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config
+
+       Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+       be used here, in the format: projects/-/androidApps/APP_ID
+
+       Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for
+       details about PROJECT_IDENTIFIER and APP_ID values.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the App configuration to download, in the format:
-         * projects/PROJECT_NUMBER/androidApps/APP_ID/config As an APP_ID is a unique identifier,
-         * the Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/androidApps/APP_ID
+         * The resource name of the AndroidApp configuration to download, in the format:
+         * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+         *
+         * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field
+         * for details about PROJECT_IDENTIFIER and APP_ID values.
          */
         public GetConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2593,7 +2834,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Lists each AndroidApp associated with the specified parent Project.
+       * Lists each AndroidApp associated with the specified FirebaseProject.
        *
        * The elements are returned in no particular order, but will be a consistent view of the Apps when
        * additional requests are made with a `pageToken`.
@@ -2603,8 +2844,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project for which to list Apps, in the format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the parent FirebaseProject for which to list each
+      associated AndroidApp, in the
+       *        format:
+      projects/PROJECT_IDENTIFIER/androidApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2621,7 +2868,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists each AndroidApp associated with the specified parent Project.
+         * Lists each AndroidApp associated with the specified FirebaseProject.
          *
          * The elements are returned in no particular order, but will be a consistent view of the Apps
          * when additional requests are made with a `pageToken`.
@@ -2633,8 +2880,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project for which to list Apps, in the format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the parent FirebaseProject for which to list each
+      associated AndroidApp, in the
+       *        format:
+      projects/PROJECT_IDENTIFIER/androidApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2713,19 +2966,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject for which to list each associated
+         * AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps Refer to the
+         * `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+        /** The resource name of the parent FirebaseProject for which to list each associated AndroidApp, in
+       the format: projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject for which to list each associated
+         * AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps Refer to the
+         * `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER values.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2795,15 +3057,32 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Updates the attributes of the AndroidApp identified by the specified resource name.
+       * Updates the attributes of the specified AndroidApp.
        *
        * Create a request for the method "androidApps.patch".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/androidApps/appId
+       * @param name The resource name of the AndroidApp, in the format:
+      projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+      *
+       *        PROJECT_IDENTIFIER: the parent Project's
+       *        [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+        ***(recommended)***
+       *        or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+        Learn more about
+       *        using project identifiers in
+        Google's [AIP 2510
+       *        standard](https://google.aip.dev/cloud/2510).
+        Note that the value for PROJECT_IDENTIFIER
+       *        in any
+        response body will be the `ProjectId`.
+      * APP_ID: the globally unique, Firebase-
+       *        assigned identifier
+        for the App
+        (see
+       *        [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
        * @return the request
        */
@@ -2821,7 +3100,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
 
         /**
-         * Updates the attributes of the AndroidApp identified by the specified resource name.
+         * Updates the attributes of the specified AndroidApp.
          *
          * Create a request for the method "androidApps.patch".
          *
@@ -2831,8 +3110,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/androidApps/appId
+         * @param name The resource name of the AndroidApp, in the format:
+      projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+      *
+       *        PROJECT_IDENTIFIER: the parent Project's
+       *        [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+        ***(recommended)***
+       *        or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+        Learn more about
+       *        using project identifiers in
+        Google's [AIP 2510
+       *        standard](https://google.aip.dev/cloud/2510).
+        Note that the value for PROJECT_IDENTIFIER
+       *        in any
+        response body will be the `ProjectId`.
+      * APP_ID: the globally unique, Firebase-
+       *        assigned identifier
+        for the App
+        (see
+       *        [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
          * @since 1.13
          */
@@ -2902,21 +3198,42 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/projectId/androidApps/appId
+         * The resource name of the AndroidApp, in the format:
+         * projects/PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+         * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)***
+         * or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
+         * standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER
+         * in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-
+         * assigned identifier for the App (see
+         * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/projectId/androidApps/appId
+        /** The resource name of the AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+       * PROJECT_IDENTIFIER: the parent Project's
+       [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+       [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+       identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value
+       for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique,
+       Firebase-assigned identifier for the App (see
+       [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/projectId/androidApps/appId
+         * The resource name of the AndroidApp, in the format:
+         * projects/PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+         * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)***
+         * or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
+         * standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER
+         * in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-
+         * assigned identifier for the App (see
+         * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2929,22 +3246,27 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-         * and `package_name` are all immutable.
+         * Specifies which fields to update.
+         *
+         * Note that the fields `name`, `app_id`, `project_id`, and `package_name` are all
+         * immutable.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`, and
-       `package_name` are all immutable.
+        /** Specifies which fields to update.
+
+       Note that the fields `name`, `app_id`, `project_id`, and `package_name` are all immutable.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-         * and `package_name` are all immutable.
+         * Specifies which fields to update.
+         *
+         * Note that the fields `name`, `app_id`, `project_id`, and `package_name` are all
+         * immutable.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -2978,19 +3300,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       public class Sha {
 
         /**
-         * Adds a SHA certificate to the specified AndroidApp.
+         * Adds a ShaCertificate to the specified AndroidApp.
          *
          * Create a request for the method "sha.create".
          *
          * This request holds the parameters needed by the firebase server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent App to which a SHA certificate will be added, in the format:
-         *        projects/PROJECT_NUMBER/androidApps/APP_ID
-        As an APP_ID is a unique identifier, the Unique
-         *        Resource
+         * @param parent The resource name of the parent AndroidApp to which to add a
+        ShaCertificate, in the format:
+         *        projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+        Since an APP_ID is a unique identifier, the
+         *        Unique Resource
         from Sub-Collection access pattern may be used here, in the format:
          *        projects/-/androidApps/APP_ID
+        Refer to the `AndroidApp`
+         *        [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+        about
+         *        PROJECT_IDENTIFIER and APP_ID values.
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.ShaCertificate}
          * @return the request
          */
@@ -3008,7 +3335,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
               java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
 
           /**
-           * Adds a SHA certificate to the specified AndroidApp.
+           * Adds a ShaCertificate to the specified AndroidApp.
            *
            * Create a request for the method "sha.create".
            *
@@ -3018,12 +3345,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent App to which a SHA certificate will be added, in the format:
-         *        projects/PROJECT_NUMBER/androidApps/APP_ID
-        As an APP_ID is a unique identifier, the Unique
-         *        Resource
+           * @param parent The resource name of the parent AndroidApp to which to add a
+        ShaCertificate, in the format:
+         *        projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+        Since an APP_ID is a unique identifier, the
+         *        Unique Resource
         from Sub-Collection access pattern may be used here, in the format:
          *        projects/-/androidApps/APP_ID
+        Refer to the `AndroidApp`
+         *        [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+        about
+         *        PROJECT_IDENTIFIER and APP_ID values.
            * @param content the {@link com.google.api.services.firebase.v1beta1.model.ShaCertificate}
            * @since 1.13
            */
@@ -3093,27 +3425,40 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           }
 
           /**
-           * The parent App to which a SHA certificate will be added, in the format:
-           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
-           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/APP_ID
+           * The resource name of the parent AndroidApp to which to add a ShaCertificate, in the
+           * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+           *
+           * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+           * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+           *
+           * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name)
+           * field for details about PROJECT_IDENTIFIER and APP_ID values.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent App to which a SHA certificate will be added, in the format:
-         projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the Unique Resource
-         from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
+          /** The resource name of the parent AndroidApp to which to add a ShaCertificate, in the format:
+         projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+
+         Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+         be used here, in the format: projects/-/androidApps/APP_ID
+
+         Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for
+         details about PROJECT_IDENTIFIER and APP_ID values.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent App to which a SHA certificate will be added, in the format:
-           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
-           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/APP_ID
+           * The resource name of the parent AndroidApp to which to add a ShaCertificate, in the
+           * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+           *
+           * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+           * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+           *
+           * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name)
+           * field for details about PROJECT_IDENTIFIER and APP_ID values.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3131,18 +3476,26 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           }
         }
         /**
-         * Removes a SHA certificate from the specified AndroidApp.
+         * Removes a ShaCertificate from the specified AndroidApp.
          *
          * Create a request for the method "sha.delete".
          *
          * This request holds the parameters needed by the firebase server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The fully qualified resource name of the `sha-key`, in the format:
-         *        projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
-        You can obtain the full name from
-         *        the response of
-        [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+         * @param name The resource name of the ShaCertificate to remove from the parent
+        AndroidApp, in the format:
+         *        projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH
+        Refer to the `ShaCertificate`
+         *        [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for
+        details about
+         *        PROJECT_IDENTIFIER, APP_ID, and
+        SHA_HASH values.
+        You can obtain the full resource name of
+         *        the `ShaCertificate` from the
+        response of
+         *        [`ListShaCertificates`](../projects.androidApps.sha/list) or
+        the original
          *        [`CreateShaCertificate`](../projects.androidApps.sha/create).
          * @return the request
          */
@@ -3160,7 +3513,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
               java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+/sha/[^/]+$");
 
           /**
-           * Removes a SHA certificate from the specified AndroidApp.
+           * Removes a ShaCertificate from the specified AndroidApp.
            *
            * Create a request for the method "sha.delete".
            *
@@ -3170,11 +3523,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The fully qualified resource name of the `sha-key`, in the format:
-         *        projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID
-        You can obtain the full name from
-         *        the response of
-        [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+           * @param name The resource name of the ShaCertificate to remove from the parent
+        AndroidApp, in the format:
+         *        projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH
+        Refer to the `ShaCertificate`
+         *        [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for
+        details about
+         *        PROJECT_IDENTIFIER, APP_ID, and
+        SHA_HASH values.
+        You can obtain the full resource name of
+         *        the `ShaCertificate` from the
+        response of
+         *        [`ListShaCertificates`](../projects.androidApps.sha/list) or
+        the original
          *        [`CreateShaCertificate`](../projects.androidApps.sha/create).
            * @since 1.13
            */
@@ -3244,17 +3605,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           }
 
           /**
-           * The fully qualified resource name of the `sha-key`, in the format:
-           * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID You can obtain the full name from
-           * the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the
-           * original [`CreateShaCertificate`](../projects.androidApps.sha/create).
+           * The resource name of the ShaCertificate to remove from the parent AndroidApp, in the
+           * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH Refer to the
+           * `ShaCertificate` [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field
+           * for details about PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values.
+           *
+           * You can obtain the full resource name of the `ShaCertificate` from the response of
+           * [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+           * [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The fully qualified resource name of the `sha-key`, in the format:
-         projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID You can obtain the full name from the
-         response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+          /** The resource name of the ShaCertificate to remove from the parent AndroidApp, in the format:
+         projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH Refer to the `ShaCertificate`
+         [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for details about
+         PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values.
+
+         You can obtain the full resource name of the `ShaCertificate` from the response of
+         [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
          [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           public java.lang.String getName() {
@@ -3262,10 +3631,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           }
 
           /**
-           * The fully qualified resource name of the `sha-key`, in the format:
-           * projects/PROJECT_NUMBER/androidApps/APP_ID/sha/SHA_ID You can obtain the full name from
-           * the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the
-           * original [`CreateShaCertificate`](../projects.androidApps.sha/create).
+           * The resource name of the ShaCertificate to remove from the parent AndroidApp, in the
+           * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH Refer to the
+           * `ShaCertificate` [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field
+           * for details about PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values.
+           *
+           * You can obtain the full resource name of the `ShaCertificate` from the response of
+           * [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+           * [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3283,19 +3656,26 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           }
         }
         /**
-         * Returns the list of SHA-1 and SHA-256 certificates for the specified AndroidApp.
+         * Lists the SHA-1 and SHA-256 certificates for the specified AndroidApp.
          *
          * Create a request for the method "sha.list".
          *
          * This request holds the parameters needed by the firebase server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent App for which to list SHA certificates, in the format:
-         *        projects/PROJECT_NUMBER/androidApps/APP_ID
-        As an APP_ID is a unique identifier, the Unique
-         *        Resource
-        from Sub-Collection access pattern may be used here, in the format:
-         *        projects/-/androidApps/APP_ID
+         * @param parent The resource name of the parent AndroidApp for which to list each
+        associated ShaCertificate, in the
+         *        format:
+        projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+        Since an APP_ID is a unique
+         *        identifier, the Unique Resource
+        from Sub-Collection access pattern may be used here, in
+         *        the format:
+        projects/-/androidApps/APP_ID
+        Refer to the `AndroidApp`
+         *        [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+        about
+         *        PROJECT_IDENTIFIER and APP_ID values.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3312,7 +3692,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
               java.util.regex.Pattern.compile("^projects/[^/]+/androidApps/[^/]+$");
 
           /**
-           * Returns the list of SHA-1 and SHA-256 certificates for the specified AndroidApp.
+           * Lists the SHA-1 and SHA-256 certificates for the specified AndroidApp.
            *
            * Create a request for the method "sha.list".
            *
@@ -3321,12 +3701,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent App for which to list SHA certificates, in the format:
-         *        projects/PROJECT_NUMBER/androidApps/APP_ID
-        As an APP_ID is a unique identifier, the Unique
-         *        Resource
-        from Sub-Collection access pattern may be used here, in the format:
-         *        projects/-/androidApps/APP_ID
+           * @param parent The resource name of the parent AndroidApp for which to list each
+        associated ShaCertificate, in the
+         *        format:
+        projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+        Since an APP_ID is a unique
+         *        identifier, the Unique Resource
+        from Sub-Collection access pattern may be used here, in
+         *        the format:
+        projects/-/androidApps/APP_ID
+        Refer to the `AndroidApp`
+         *        [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details
+        about
+         *        PROJECT_IDENTIFIER and APP_ID values.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3405,27 +3792,40 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           }
 
           /**
-           * The parent App for which to list SHA certificates, in the format:
-           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
-           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/APP_ID
+           * The resource name of the parent AndroidApp for which to list each associated
+           * ShaCertificate, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+           *
+           * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+           * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+           *
+           * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name)
+           * field for details about PROJECT_IDENTIFIER and APP_ID values.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent App for which to list SHA certificates, in the format:
-         projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the Unique Resource
-         from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID
+          /** The resource name of the parent AndroidApp for which to list each associated ShaCertificate, in the
+         format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+
+         Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+         be used here, in the format: projects/-/androidApps/APP_ID
+
+         Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for
+         details about PROJECT_IDENTIFIER and APP_ID values.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent App for which to list SHA certificates, in the format:
-           * projects/PROJECT_NUMBER/androidApps/APP_ID As an APP_ID is a unique identifier, the
-           * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-           * projects/-/androidApps/APP_ID
+           * The resource name of the parent AndroidApp for which to list each associated
+           * ShaCertificate, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+           *
+           * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+           * pattern may be used here, in the format: projects/-/androidApps/APP_ID
+           *
+           * Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name)
+           * field for details about PROJECT_IDENTIFIER and APP_ID values.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3466,35 +3866,42 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class AvailableLocations {
 
       /**
-       * Returns a list of valid Google Cloud Platform (GCP) resource locations for the specified Project
+       * Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project
        * (including a FirebaseProject).
        *
        * One of these locations can be selected as the Project's [_default_ GCP resource
        * location](https://firebase.google.com/docs/projects/locations), which is the geographical
-       * location where project resources, such as Cloud Firestore, will be provisioned by default.
+       * location where the Project's resources, such as Cloud Firestore, will be provisioned by default.
        * However, if the default GCP resource location has already been set for the Project, then this
        * setting cannot be changed.
        *
        * This call checks for any possible [location restrictions](https://cloud.google.com/resource-
        * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
        * return a subset of all possible GCP resource locations. To list all GCP resource locations
-       * (regardless of any restrictions), call the endpoint without specifying a `PROJECT_NUMBER` (that
-       * is, `/v1beta1/{parent=projects/-}/listAvailableLocations`).  To call `ListAvailableLocations`
-       * with a specified project, a member must be at minimum a Viewer of the project. Calls without a
-       * specified project do not require any specific project permissions.
+       * (regardless of any restrictions), call the endpoint without specifying a unique project
+       * identifier (that is, `/v1beta1/{parent=projects/-}/listAvailableLocations`).
+       *
+       * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
+       * of the Project. Calls without a specified project do not require any specific project
+       * permissions.
        *
        * Create a request for the method "availableLocations.list".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The Project for which to list GCP resource locations, in the format:
-      projects/PROJECT_NUMBER
-      If no
-       *        project is specified (that is, `projects/-`), the returned list
-      does not take into account
-       *        org-specific or project-specific location
-      restrictions.
+       * @param parent The FirebaseProject for which to list GCP resource locations,
+      in the format:
+       *        projects/PROJECT_IDENTIFIER
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
+      If no unique project identifier is specified (that is,
+       *        `projects/-`),
+      the returned list does not take into account org-specific or
+      project-
+       *        specific location restrictions.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3511,22 +3918,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Returns a list of valid Google Cloud Platform (GCP) resource locations for the specified
-         * Project (including a FirebaseProject).
+         * Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project
+         * (including a FirebaseProject).
          *
          * One of these locations can be selected as the Project's [_default_ GCP resource
          * location](https://firebase.google.com/docs/projects/locations), which is the geographical
-         * location where project resources, such as Cloud Firestore, will be provisioned by default.
-         * However, if the default GCP resource location has already been set for the Project, then this
-         * setting cannot be changed.
+         * location where the Project's resources, such as Cloud Firestore, will be provisioned by
+         * default. However, if the default GCP resource location has already been set for the Project,
+         * then this setting cannot be changed.
          *
          * This call checks for any possible [location restrictions](https://cloud.google.com/resource-
          * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
          * return a subset of all possible GCP resource locations. To list all GCP resource locations
-         * (regardless of any restrictions), call the endpoint without specifying a `PROJECT_NUMBER` (that
-         * is, `/v1beta1/{parent=projects/-}/listAvailableLocations`).  To call `ListAvailableLocations`
-         * with a specified project, a member must be at minimum a Viewer of the project. Calls without a
-         * specified project do not require any specific project permissions.
+         * (regardless of any restrictions), call the endpoint without specifying a unique project
+         * identifier (that is, `/v1beta1/{parent=projects/-}/listAvailableLocations`).
+         *
+         * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
+         * of the Project. Calls without a specified project do not require any specific project
+         * permissions.
          *
          * Create a request for the method "availableLocations.list".
          *
@@ -3535,13 +3944,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The Project for which to list GCP resource locations, in the format:
-      projects/PROJECT_NUMBER
-      If no
-       *        project is specified (that is, `projects/-`), the returned list
-      does not take into account
-       *        org-specific or project-specific location
-      restrictions.
+         * @param parent The FirebaseProject for which to list GCP resource locations,
+      in the format:
+       *        projects/PROJECT_IDENTIFIER
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
+      If no unique project identifier is specified (that is,
+       *        `projects/-`),
+      the returned list does not take into account org-specific or
+      project-
+       *        specific location restrictions.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3620,25 +4034,37 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The Project for which to list GCP resource locations, in the format:
-         * projects/PROJECT_NUMBER If no project is specified (that is, `projects/-`), the returned
-         * list does not take into account org-specific or project-specific location restrictions.
+         * The FirebaseProject for which to list GCP resource locations, in the format:
+         * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
+         *
+         * If no unique project identifier is specified (that is, `projects/-`), the returned list
+         * does not take into account org-specific or project-specific location restrictions.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The Project for which to list GCP resource locations, in the format: projects/PROJECT_NUMBER If no
-       project is specified (that is, `projects/-`), the returned list does not take into account org-
-       specific or project-specific location restrictions.
+        /** The FirebaseProject for which to list GCP resource locations, in the format:
+       projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
+
+       If no unique project identifier is specified (that is, `projects/-`), the returned list does not
+       take into account org-specific or project-specific location restrictions.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The Project for which to list GCP resource locations, in the format:
-         * projects/PROJECT_NUMBER If no project is specified (that is, `projects/-`), the returned
-         * list does not take into account org-specific or project-specific location restrictions.
+         * The FirebaseProject for which to list GCP resource locations, in the format:
+         * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
+         *
+         * If no unique project identifier is specified (that is, `projects/-`), the returned list
+         * does not take into account org-specific or project-specific location restrictions.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3741,13 +4167,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This method creates an App Engine application with a [default Cloud Storage
        * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/setting-
        * up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
-       * [`location_id`](#body.request_body.FIELDS.location_id). This location must be one of the
-       * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).  After
-       * the default GCP resource location is finalized, or if it was already set, it cannot be changed.
-       * The default GCP resource location for the specified FirebaseProject might already be set because
-       * either the GCP `Project` already has an App Engine application or `FinalizeDefaultLocation` was
-       * previously called with a specified `location_id`. Any new calls to `FinalizeDefaultLocation` with
-       * a different specified `location_id` will return a 409 error.
+       * [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the available
+       * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+       *
+       * After the default GCP resource location is finalized, or if it was already set, it cannot be
+       * changed. The default GCP resource location for the specified `FirebaseProject` might already be
+       * set because either the underlying GCP `Project` already has an App Engine application or
+       * `FinalizeDefaultLocation` was previously called with a specified `locationId`. Any new calls to
+       * `FinalizeDefaultLocation` with a *different* specified `locationId` will return a 409 error.
        *
        * The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to track
        * the provisioning process. The [`response`](../../v1beta1/operations#Operation.FIELDS.response)
@@ -3762,17 +4189,21 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * All fields listed in the [request body](#request-body) are required.
        *
-       * To call `FinalizeDefaultLocation`, a member must be an Owner of the project.
+       * To call `FinalizeDefaultLocation`, a member must be an Owner of the Project.
        *
        * Create a request for the method "defaultLocation.finalize".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Finalize#execute()} method to invoke the remote operation.
        *
-       * @param parent The resource name of the Project for which the default GCP resource
-      location will be set, in the
-       *        format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the FirebaseProject for which the default GCP
+      resource location will be set, in
+       *        the format:
+      projects/PROJECT_IDENTIFIER
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
        * @return the request
        */
@@ -3796,13 +4227,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * This method creates an App Engine application with a [default Cloud Storage
          * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
          * /setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
-         * [`location_id`](#body.request_body.FIELDS.location_id). This location must be one of the
-         * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).  After
-         * the default GCP resource location is finalized, or if it was already set, it cannot be changed.
-         * The default GCP resource location for the specified FirebaseProject might already be set
-         * because either the GCP `Project` already has an App Engine application or
-         * `FinalizeDefaultLocation` was previously called with a specified `location_id`. Any new calls
-         * to `FinalizeDefaultLocation` with a different specified `location_id` will return a 409 error.
+         * [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the
+         * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+         *
+         * After the default GCP resource location is finalized, or if it was already set, it cannot be
+         * changed. The default GCP resource location for the specified `FirebaseProject` might already be
+         * set because either the underlying GCP `Project` already has an App Engine application or
+         * `FinalizeDefaultLocation` was previously called with a specified `locationId`. Any new calls to
+         * `FinalizeDefaultLocation` with a *different* specified `locationId` will return a 409 error.
          *
          * The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to
          * track the provisioning process. The
@@ -3818,7 +4250,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          *
          * All fields listed in the [request body](#request-body) are required.
          *
-         * To call `FinalizeDefaultLocation`, a member must be an Owner of the project.
+         * To call `FinalizeDefaultLocation`, a member must be an Owner of the Project.
          *
          * Create a request for the method "defaultLocation.finalize".
          *
@@ -3828,10 +4260,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Finalize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The resource name of the Project for which the default GCP resource
-      location will be set, in the
-       *        format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the FirebaseProject for which the default GCP
+      resource location will be set, in
+       *        the format:
+      projects/PROJECT_IDENTIFIER
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
          * @since 1.13
          */
@@ -3901,22 +4337,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The resource name of the Project for which the default GCP resource location will be set,
-         * in the format: projects/PROJECT_NUMBER
+         * The resource name of the FirebaseProject for which the default GCP resource location will
+         * be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource name of the Project for which the default GCP resource location will be set, in the
-       format: projects/PROJECT_NUMBER
+        /** The resource name of the FirebaseProject for which the default GCP resource location will be set,
+       in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The resource name of the Project for which the default GCP resource location will be set,
-         * in the format: projects/PROJECT_NUMBER
+         * The resource name of the FirebaseProject for which the default GCP resource location will
+         * be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         public Finalize setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3956,7 +4398,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class IosApps {
 
       /**
-       * Requests that a new IosApp be created.
+       * Requests the creation of a new IosApp in the specified FirebaseProject.
        *
        * The result of this call is an `Operation` which can be used to track the provisioning process.
        * The `Operation` is automatically deleted after completion, so there is no need to call
@@ -3967,8 +4409,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project in which to create an App, in the format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the parent FirebaseProject in which to create an
+      IosApp, in the format:
+       *        projects/PROJECT_IDENTIFIER/iosApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
        * @return the request
        */
@@ -3986,7 +4433,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Requests that a new IosApp be created.
+         * Requests the creation of a new IosApp in the specified FirebaseProject.
          *
          * The result of this call is an `Operation` which can be used to track the provisioning process.
          * The `Operation` is automatically deleted after completion, so there is no need to call
@@ -4000,8 +4447,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project in which to create an App, in the format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the parent FirebaseProject in which to create an
+      IosApp, in the format:
+       *        projects/PROJECT_IDENTIFIER/iosApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
          * @since 1.13
          */
@@ -4071,19 +4523,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject in which to create an IosApp, in the
+         * format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+        /** The resource name of the parent FirebaseProject in which to create an IosApp, in the format:
+       projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject in which to create an IosApp, in the
+         * format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4101,19 +4562,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Gets the IosApp identified by the specified resource name.
+       * Gets the specified IosApp.
        *
        * Create a request for the method "iosApps.get".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified resource name of the App, in the format:
-      projects/PROJECT_NUMBER/iosApps/APP_ID
-       *        As an APP_ID is a unique identifier, the Unique Resource
-      from Sub-Collection access
-       *        pattern may be used here, in the format:
+       * @param name The resource name of the IosApp, in the format:
+      projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+      Since an
+       *        APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access pattern may
+       *        be used here, in the format:
       projects/-/iosApps/APP_ID
+      Refer to the `IosApp`
+       *        [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4130,7 +4596,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/iosApps/[^/]+$");
 
         /**
-         * Gets the IosApp identified by the specified resource name.
+         * Gets the specified IosApp.
          *
          * Create a request for the method "iosApps.get".
          *
@@ -4139,12 +4605,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified resource name of the App, in the format:
-      projects/PROJECT_NUMBER/iosApps/APP_ID
-       *        As an APP_ID is a unique identifier, the Unique Resource
-      from Sub-Collection access
-       *        pattern may be used here, in the format:
+         * @param name The resource name of the IosApp, in the format:
+      projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+      Since an
+       *        APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access pattern may
+       *        be used here, in the format:
       projects/-/iosApps/APP_ID
+      Refer to the `IosApp`
+       *        [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4223,27 +4694,39 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/PROJECT_NUMBER/iosApps/APP_ID As an APP_ID is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/APP_ID
+         * The resource name of the IosApp, in the format:
+         * projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/iosApps/APP_ID
+         *
+         * Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/PROJECT_NUMBER/iosApps/APP_ID
-       As an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be
-       used here, in the format: projects/-/iosApps/APP_ID
+        /** The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+
+       Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+       be used here, in the format: projects/-/iosApps/APP_ID
+
+       Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details about
+       PROJECT_IDENTIFIER and APP_ID values.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/PROJECT_NUMBER/iosApps/APP_ID As an APP_ID is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/APP_ID
+         * The resource name of the IosApp, in the format:
+         * projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/iosApps/APP_ID
+         *
+         * Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4269,11 +4752,15 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
        *
        * @param name The resource name of the App configuration to download, in the format:
-       *        projects/PROJECT_NUMBER/iosApps/APP_ID/config
-      As an APP_ID is a unique identifier, the
-       *        Unique Resource
+       *        projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config
+      Since an APP_ID is a unique identifier,
+       *        the Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
        *        projects/-/iosApps/APP_ID
+      Refer to the `IosApp`
+       *        [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
        * @return the request
        */
       public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -4301,11 +4788,15 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The resource name of the App configuration to download, in the format:
-       *        projects/PROJECT_NUMBER/iosApps/APP_ID/config
-      As an APP_ID is a unique identifier, the
-       *        Unique Resource
+       *        projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config
+      Since an APP_ID is a unique identifier,
+       *        the Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
        *        projects/-/iosApps/APP_ID
+      Refer to the `IosApp`
+       *        [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
          * @since 1.13
          */
         protected GetConfig(java.lang.String name) {
@@ -4385,17 +4876,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/PROJECT_NUMBER/iosApps/APP_ID/config As an APP_ID is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/APP_ID
+         * projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/iosApps/APP_ID
+         *
+         * Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the App configuration to download, in the format:
-       projects/PROJECT_NUMBER/iosApps/APP_ID/config As an APP_ID is a unique identifier, the Unique
-       Resource from Sub-Collection access pattern may be used here, in the format:
-       projects/-/iosApps/APP_ID
+       projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config
+
+       Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+       be used here, in the format: projects/-/iosApps/APP_ID
+
+       Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details about
+       PROJECT_IDENTIFIER and APP_ID values.
          */
         public java.lang.String getName() {
           return name;
@@ -4403,9 +4902,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * The resource name of the App configuration to download, in the format:
-         * projects/PROJECT_NUMBER/iosApps/APP_ID/config As an APP_ID is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/iosApps/APP_ID
+         * projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/iosApps/APP_ID
+         *
+         * Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         public GetConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4423,7 +4926,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Lists each IosApp associated with the specified parent Project.
+       * Lists each IosApp associated with the specified FirebaseProject.
        *
        * The elements are returned in no particular order, but will be a consistent view of the Apps when
        * additional requests are made with a `pageToken`.
@@ -4433,8 +4936,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project for which to list Apps, in the format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the parent FirebaseProject for which to list each
+      associated IosApp, in the
+       *        format:
+      projects/PROJECT_IDENTIFIER/iosApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4451,7 +4960,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists each IosApp associated with the specified parent Project.
+         * Lists each IosApp associated with the specified FirebaseProject.
          *
          * The elements are returned in no particular order, but will be a consistent view of the Apps
          * when additional requests are made with a `pageToken`.
@@ -4463,8 +4972,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project for which to list Apps, in the format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the parent FirebaseProject for which to list each
+      associated IosApp, in the
+       *        format:
+      projects/PROJECT_IDENTIFIER/iosApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4543,19 +5058,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject for which to list each associated IosApp,
+         * in the format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+        /** The resource name of the parent FirebaseProject for which to list each associated IosApp, in the
+       format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject for which to list each associated IosApp,
+         * in the format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4625,15 +5149,31 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Updates the attributes of the IosApp identified by the specified resource name.
+       * Updates the attributes of the specified IosApp.
        *
        * Create a request for the method "iosApps.patch".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/iosApps/appId
+       * @param name The resource name of the IosApp, in the format:
+      projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+      *
+       *        PROJECT_IDENTIFIER: the parent Project's
+       *        [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+        ***(recommended)***
+       *        or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+        Learn more about
+       *        using project identifiers in
+        Google's [AIP 2510
+       *        standard](https://google.aip.dev/cloud/2510).
+        Note that the value for PROJECT_IDENTIFIER
+       *        in any
+        response body will be the `ProjectId`.
+      * APP_ID: the globally unique, Firebase-
+       *        assigned identifier
+        for the App (see
+       *        [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
        * @return the request
        */
@@ -4651,7 +5191,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/iosApps/[^/]+$");
 
         /**
-         * Updates the attributes of the IosApp identified by the specified resource name.
+         * Updates the attributes of the specified IosApp.
          *
          * Create a request for the method "iosApps.patch".
          *
@@ -4661,8 +5201,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified resource name of the App, in the format:
-      projects/projectId/iosApps/appId
+         * @param name The resource name of the IosApp, in the format:
+      projects/PROJECT_IDENTIFIER/iosApps/APP_ID
+      *
+       *        PROJECT_IDENTIFIER: the parent Project's
+       *        [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+        ***(recommended)***
+       *        or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+        Learn more about
+       *        using project identifiers in
+        Google's [AIP 2510
+       *        standard](https://google.aip.dev/cloud/2510).
+        Note that the value for PROJECT_IDENTIFIER
+       *        in any
+        response body will be the `ProjectId`.
+      * APP_ID: the globally unique, Firebase-
+       *        assigned identifier
+        for the App (see
+       *        [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
          * @since 1.13
          */
@@ -4732,21 +5288,41 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/projectId/iosApps/appId
+         * The resource name of the IosApp, in the format:
+         * projects/PROJECT_IDENTIFIER/iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+         * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)***
+         * or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
+         * standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER
+         * in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-
+         * assigned identifier for the App (see
+         * [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/projectId/iosApps/appId
+        /** The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID *
+       PROJECT_IDENTIFIER: the parent Project's
+       [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+       [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+       identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value
+       for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique,
+       Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/projectId/iosApps/appId
+         * The resource name of the IosApp, in the format:
+         * projects/PROJECT_IDENTIFIER/iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+         * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)***
+         * or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
+         * standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER
+         * in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-
+         * assigned identifier for the App (see
+         * [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4759,22 +5335,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-         * `bundleId` are all immutable.
+         * Specifies which fields to update.
+         *
+         * Note that the fields `name`, `appId`, `projectId`, and `bundleId` are all immutable.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and `bundleId`
-       are all immutable.
+        /** Specifies which fields to update.
+
+       Note that the fields `name`, `appId`, `projectId`, and `bundleId` are all immutable.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-         * `bundleId` are all immutable.
+         * Specifies which fields to update.
+         *
+         * Note that the fields `name`, `appId`, `projectId`, and `bundleId` are all immutable.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -4809,7 +5388,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class WebApps {
 
       /**
-       * Requests that a new WebApp be created.
+       * Requests the creation of a new WebApp in the specified FirebaseProject.
        *
        * The result of this call is an `Operation` which can be used to track the provisioning process.
        * The `Operation` is automatically deleted after completion, so there is no need to call
@@ -4820,8 +5399,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project in which to create an App, in the format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the parent FirebaseProject in which to create a
+      WebApp, in the format:
+       *        projects/PROJECT_IDENTIFIER/webApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
        * @return the request
        */
@@ -4839,7 +5423,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Requests that a new WebApp be created.
+         * Requests the creation of a new WebApp in the specified FirebaseProject.
          *
          * The result of this call is an `Operation` which can be used to track the provisioning process.
          * The `Operation` is automatically deleted after completion, so there is no need to call
@@ -4853,8 +5437,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project in which to create an App, in the format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the parent FirebaseProject in which to create a
+      WebApp, in the format:
+       *        projects/PROJECT_IDENTIFIER/webApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
          * @since 1.13
          */
@@ -4924,19 +5513,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject in which to create a WebApp, in the
+         * format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+        /** The resource name of the parent FirebaseProject in which to create a WebApp, in the format:
+       projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project in which to create an App, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject in which to create a WebApp, in the
+         * format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4954,19 +5552,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Gets the WebApp identified by the specified resource name.
+       * Gets the specified WebApp.
        *
        * Create a request for the method "webApps.get".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified resource name of the App, in the format:
-      projects/PROJECT_NUMBER/webApps/APP_ID
-       *        As an APP_ID is a unique identifier, the Unique Resource
-      from Sub-Collection access
-       *        pattern may be used here, in the format:
+       * @param name The resource name of the WebApp, in the format:
+      projects/PROJECT_IDENTIFIER/webApps/APP_ID
+      Since an
+       *        APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access pattern may
+       *        be used here, in the format:
       projects/-/webApps/APP_ID
+      Refer to the `WebApp`
+       *        [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4983,7 +5586,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/webApps/[^/]+$");
 
         /**
-         * Gets the WebApp identified by the specified resource name.
+         * Gets the specified WebApp.
          *
          * Create a request for the method "webApps.get".
          *
@@ -4992,12 +5595,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified resource name of the App, in the format:
-      projects/PROJECT_NUMBER/webApps/APP_ID
-       *        As an APP_ID is a unique identifier, the Unique Resource
-      from Sub-Collection access
-       *        pattern may be used here, in the format:
+         * @param name The resource name of the WebApp, in the format:
+      projects/PROJECT_IDENTIFIER/webApps/APP_ID
+      Since an
+       *        APP_ID is a unique identifier, the Unique Resource
+      from Sub-Collection access pattern may
+       *        be used here, in the format:
       projects/-/webApps/APP_ID
+      Refer to the `WebApp`
+       *        [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5076,27 +5684,39 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/PROJECT_NUMBER/webApps/APP_ID As an APP_ID is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/APP_ID
+         * The resource name of the WebApp, in the format:
+         * projects/PROJECT_IDENTIFIER/webApps/APP_ID
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/webApps/APP_ID
+         *
+         * Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, in the format: projects/PROJECT_NUMBER/webApps/APP_ID
-       As an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be
-       used here, in the format: projects/-/webApps/APP_ID
+        /** The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps/APP_ID
+
+       Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+       be used here, in the format: projects/-/webApps/APP_ID
+
+       Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details about
+       PROJECT_IDENTIFIER and APP_ID values.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The fully qualified resource name of the App, in the format:
-         * projects/PROJECT_NUMBER/webApps/APP_ID As an APP_ID is a unique identifier, the Unique
-         * Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/APP_ID
+         * The resource name of the WebApp, in the format:
+         * projects/PROJECT_IDENTIFIER/webApps/APP_ID
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/webApps/APP_ID
+         *
+         * Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5121,12 +5741,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the App configuration to download, in the format:
-       *        projects/PROJECT_NUMBER/webApps/APP_ID/config
-      As an APP_ID is a unique identifier, the
-       *        Unique Resource
+       * @param name The resource name of the WebApp configuration to download,
+      in the format:
+       *        projects/PROJECT_IDENTIFIER/webApps/APP_ID/config
+      Since an APP_ID is a unique identifier,
+       *        the Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
        *        projects/-/webApps/APP_ID
+      Refer to the `WebApp`
+       *        [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
        * @return the request
        */
       public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -5153,12 +5778,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the App configuration to download, in the format:
-       *        projects/PROJECT_NUMBER/webApps/APP_ID/config
-      As an APP_ID is a unique identifier, the
-       *        Unique Resource
+         * @param name The resource name of the WebApp configuration to download,
+      in the format:
+       *        projects/PROJECT_IDENTIFIER/webApps/APP_ID/config
+      Since an APP_ID is a unique identifier,
+       *        the Unique Resource
       from Sub-Collection access pattern may be used here, in the format:
        *        projects/-/webApps/APP_ID
+      Refer to the `WebApp`
+       *        [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER and APP_ID values.
          * @since 1.13
          */
         protected GetConfig(java.lang.String name) {
@@ -5237,28 +5867,40 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The resource name of the App configuration to download, in the format:
-         * projects/PROJECT_NUMBER/webApps/APP_ID/config As an APP_ID is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/APP_ID
+         * The resource name of the WebApp configuration to download, in the format:
+         * projects/PROJECT_IDENTIFIER/webApps/APP_ID/config
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/webApps/APP_ID
+         *
+         * Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the App configuration to download, in the format:
-       projects/PROJECT_NUMBER/webApps/APP_ID/config As an APP_ID is a unique identifier, the Unique
-       Resource from Sub-Collection access pattern may be used here, in the format:
-       projects/-/webApps/APP_ID
+        /** The resource name of the WebApp configuration to download, in the format:
+       projects/PROJECT_IDENTIFIER/webApps/APP_ID/config
+
+       Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may
+       be used here, in the format: projects/-/webApps/APP_ID
+
+       Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details about
+       PROJECT_IDENTIFIER and APP_ID values.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the App configuration to download, in the format:
-         * projects/PROJECT_NUMBER/webApps/APP_ID/config As an APP_ID is a unique identifier, the
-         * Unique Resource from Sub-Collection access pattern may be used here, in the format:
-         * projects/-/webApps/APP_ID
+         * The resource name of the WebApp configuration to download, in the format:
+         * projects/PROJECT_IDENTIFIER/webApps/APP_ID/config
+         *
+         * Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access
+         * pattern may be used here, in the format: projects/-/webApps/APP_ID
+         *
+         * Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER and APP_ID values.
          */
         public GetConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5276,7 +5918,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Lists each WebApp associated with the specified parent Project.
+       * Lists each WebApp associated with the specified FirebaseProject.
        *
        * The elements are returned in no particular order, but will be a consistent view of the Apps when
        * additional requests are made with a `pageToken`.
@@ -5286,8 +5928,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project for which to list Apps, in the format:
-      projects/PROJECT_NUMBER
+       * @param parent The resource name of the parent FirebaseProject for which to list each
+      associated WebApp, in the
+       *        format:
+      projects/PROJECT_IDENTIFIER/webApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5304,7 +5952,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists each WebApp associated with the specified parent Project.
+         * Lists each WebApp associated with the specified FirebaseProject.
          *
          * The elements are returned in no particular order, but will be a consistent view of the Apps
          * when additional requests are made with a `pageToken`.
@@ -5316,8 +5964,14 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project for which to list Apps, in the format:
-      projects/PROJECT_NUMBER
+         * @param parent The resource name of the parent FirebaseProject for which to list each
+      associated WebApp, in the
+       *        format:
+      projects/PROJECT_IDENTIFIER/webApps
+      Refer to the `FirebaseProject`
+       *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+      about
+       *        PROJECT_IDENTIFIER values.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5396,19 +6050,28 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject for which to list each associated WebApp,
+         * in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+        /** The resource name of the parent FirebaseProject for which to list each associated WebApp, in the
+       format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject`
+       [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+       values.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/PROJECT_NUMBER
+         * The resource name of the parent FirebaseProject for which to list each associated WebApp,
+         * in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject`
+         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+         * PROJECT_IDENTIFIER values.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5478,15 +6141,31 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Updates the attributes of the WebApp identified by the specified resource name.
+       * Updates the attributes of the specified WebApp.
        *
        * Create a request for the method "webApps.patch".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The fully qualified resource name of the App, for example:
-      projects/projectId/webApps/appId
+       * @param name The resource name of the WebApp, in the format:
+      projects/PROJECT_IDENTIFIER/webApps/APP_ID
+      *
+       *        PROJECT_IDENTIFIER: the parent Project's
+       *        [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+        ***(recommended)***
+       *        or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+        Learn more about
+       *        using project identifiers in
+        Google's [AIP 2510
+       *        standard](https://google.aip.dev/cloud/2510).
+        Note that the value for PROJECT_IDENTIFIER
+       *        in any
+        response body will be the `ProjectId`.
+      * APP_ID: the globally unique, Firebase-
+       *        assigned identifier
+        for the App (see
+       *        [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
        * @return the request
        */
@@ -5504,7 +6183,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/webApps/[^/]+$");
 
         /**
-         * Updates the attributes of the WebApp identified by the specified resource name.
+         * Updates the attributes of the specified WebApp.
          *
          * Create a request for the method "webApps.patch".
          *
@@ -5514,8 +6193,24 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fully qualified resource name of the App, for example:
-      projects/projectId/webApps/appId
+         * @param name The resource name of the WebApp, in the format:
+      projects/PROJECT_IDENTIFIER/webApps/APP_ID
+      *
+       *        PROJECT_IDENTIFIER: the parent Project's
+       *        [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+        ***(recommended)***
+       *        or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).
+        Learn more about
+       *        using project identifiers in
+        Google's [AIP 2510
+       *        standard](https://google.aip.dev/cloud/2510).
+        Note that the value for PROJECT_IDENTIFIER
+       *        in any
+        response body will be the `ProjectId`.
+      * APP_ID: the globally unique, Firebase-
+       *        assigned identifier
+        for the App (see
+       *        [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
          * @since 1.13
          */
@@ -5585,21 +6280,41 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The fully qualified resource name of the App, for example:
-         * projects/projectId/webApps/appId
+         * The resource name of the WebApp, in the format:
+         * projects/PROJECT_IDENTIFIER/webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+         * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)***
+         * or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
+         * standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER
+         * in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-
+         * assigned identifier for the App (see
+         * [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fully qualified resource name of the App, for example: projects/projectId/webApps/appId
+        /** The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps/APP_ID *
+       PROJECT_IDENTIFIER: the parent Project's
+       [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+       [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+       identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value
+       for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique,
+       Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The fully qualified resource name of the App, for example:
-         * projects/projectId/webApps/appId
+         * The resource name of the WebApp, in the format:
+         * projects/PROJECT_IDENTIFIER/webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+         * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)***
+         * or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
+         * standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER
+         * in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-
+         * assigned identifier for the App (see
+         * [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5612,22 +6327,25 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId`
-         * are all immutable.
+         * Specifies which fields to update.
+         *
+         * Note that the fields `name`, `appId`, and `projectId` are all immutable.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId` are all
-       immutable.
+        /** Specifies which fields to update.
+
+       Note that the fields `name`, `appId`, and `projectId` are all immutable.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId`
-         * are all immutable.
+         * Specifies which fields to update.
+         *
+         * Note that the fields `name`, `appId`, and `projectId` are all immutable.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

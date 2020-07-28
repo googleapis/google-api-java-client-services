@@ -31,19 +31,20 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user-assigned display name of the GCP `Project`, for example: My App
+   * The user-assigned display name of the GCP `Project`, for example: `My App`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).   Not all
-   * projects will have this field populated. If it is not populated, it means that the project does
-   * not yet have a default GCP resource location. To set your project's default GCP resource
-   * location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add
-   * Firebase resources to your project.
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * Not all Projects will have this field populated. If it is not populated, it means that the
+   * Project does not yet have a default GCP resource location. To set a Project's default GCP
+   * resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after
+   * you add Firebase resources to the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +52,16 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the GCP `Project` to which Firebase resources can be added, in the format:
-   * projects/PROJECT_NUMBER
+   * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The user-assigned display name of the GCP `Project`, for example: My App
+   * The user-assigned display name of the GCP `Project`, for example: `My App`
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -66,7 +69,7 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-assigned display name of the GCP `Project`, for example: My App
+   * The user-assigned display name of the GCP `Project`, for example: `My App`
    * @param displayName displayName or {@code null} for none
    */
   public ProjectInfo setDisplayName(java.lang.String displayName) {
@@ -75,12 +78,13 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).   Not all
-   * projects will have this field populated. If it is not populated, it means that the project does
-   * not yet have a default GCP resource location. To set your project's default GCP resource
-   * location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add
-   * Firebase resources to your project.
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * Not all Projects will have this field populated. If it is not populated, it means that the
+   * Project does not yet have a default GCP resource location. To set a Project's default GCP
+   * resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after
+   * you add Firebase resources to the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -88,12 +92,13 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).   Not all
-   * projects will have this field populated. If it is not populated, it means that the project does
-   * not yet have a default GCP resource location. To set your project's default GCP resource
-   * location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add
-   * Firebase resources to your project.
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * Not all Projects will have this field populated. If it is not populated, it means that the
+   * Project does not yet have a default GCP resource location. To set a Project's default GCP
+   * resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after
+   * you add Firebase resources to the Project.
    * @param locationId locationId or {@code null} for none
    */
   public ProjectInfo setLocationId(java.lang.String locationId) {
@@ -103,7 +108,9 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the GCP `Project` to which Firebase resources can be added, in the format:
-   * projects/PROJECT_NUMBER
+   * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+   * values.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -112,7 +119,9 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the GCP `Project` to which Firebase resources can be added, in the format:
-   * projects/PROJECT_NUMBER
+   * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
+   * values.
    * @param project project or {@code null} for none
    */
   public ProjectInfo setProject(java.lang.String project) {

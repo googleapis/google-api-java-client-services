@@ -31,7 +31,7 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class AndroidApp extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`.
    *
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * The value may be {@code null}.
@@ -40,37 +40,44 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   private java.lang.String appId;
 
   /**
-   * The user-assigned display name of the App.
+   * The user-assigned display name for the `AndroidApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The fully qualified resource name of the App, in the format:
-   * projects/projectId/androidApps/appId
+   * The resource name of the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)   ***(recommended)***   or
+   * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).   Learn more about using
+   * project identifiers in   Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+   * Note that the value for PROJECT_IDENTIFIER in any   response body will be the `ProjectId`. *
+   * APP_ID: the globally unique, Firebase-assigned identifier   for the App   (see
+   * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The canonical package name of the Android App as would appear in the Google Play Developer
-   * Console.
+   * Immutable. The canonical package name of the Android app as would appear in the Google Play
+   * Developer Console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageName;
 
   /**
-   * The globally unique, user-assigned ID of the parent Project for the App.
+   * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the
+   * `AndroidApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`.
    *
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
@@ -80,7 +87,7 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier of the App.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`.
    *
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * @param appId appId or {@code null} for none
@@ -91,7 +98,7 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-assigned display name of the App.
+   * The user-assigned display name for the `AndroidApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -99,7 +106,7 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-assigned display name of the App.
+   * The user-assigned display name for the `AndroidApp`.
    * @param displayName displayName or {@code null} for none
    */
   public AndroidApp setDisplayName(java.lang.String displayName) {
@@ -108,8 +115,14 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully qualified resource name of the App, in the format:
-   * projects/projectId/androidApps/appId
+   * The resource name of the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)   ***(recommended)***   or
+   * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).   Learn more about using
+   * project identifiers in   Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+   * Note that the value for PROJECT_IDENTIFIER in any   response body will be the `ProjectId`. *
+   * APP_ID: the globally unique, Firebase-assigned identifier   for the App   (see
+   * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,8 +130,14 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully qualified resource name of the App, in the format:
-   * projects/projectId/androidApps/appId
+   * The resource name of the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)   ***(recommended)***   or
+   * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).   Learn more about using
+   * project identifiers in   Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+   * Note that the value for PROJECT_IDENTIFIER in any   response body will be the `ProjectId`. *
+   * APP_ID: the globally unique, Firebase-assigned identifier   for the App   (see
+   * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
    * @param name name or {@code null} for none
    */
   public AndroidApp setName(java.lang.String name) {
@@ -127,8 +146,8 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical package name of the Android App as would appear in the Google Play Developer
-   * Console.
+   * Immutable. The canonical package name of the Android app as would appear in the Google Play
+   * Developer Console.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageName() {
@@ -136,8 +155,8 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical package name of the Android App as would appear in the Google Play Developer
-   * Console.
+   * Immutable. The canonical package name of the Android app as would appear in the Google Play
+   * Developer Console.
    * @param packageName packageName or {@code null} for none
    */
   public AndroidApp setPackageName(java.lang.String packageName) {
@@ -146,7 +165,8 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The globally unique, user-assigned ID of the parent Project for the App.
+   * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the
+   * `AndroidApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -154,7 +174,8 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The globally unique, user-assigned ID of the parent Project for the App.
+   * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the
+   * `AndroidApp`.
    * @param projectId projectId or {@code null} for none
    */
   public AndroidApp setProjectId(java.lang.String projectId) {

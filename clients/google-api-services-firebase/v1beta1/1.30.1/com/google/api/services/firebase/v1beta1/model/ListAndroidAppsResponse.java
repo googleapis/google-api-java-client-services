@@ -31,7 +31,7 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class ListAndroidAppsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of each AndroidApp that is in the parent Firebase Project.
+   * List of each `AndroidApp` associated with the specified `FirebaseProject`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ListAndroidAppsResponse extends com.google.api.client.json.Ge
   private java.lang.String nextPageToken;
 
   /**
-   * List of each AndroidApp that is in the parent Firebase Project.
+   * List of each `AndroidApp` associated with the specified `FirebaseProject`.
    * @return value or {@code null} for none
    */
   public java.util.List<AndroidApp> getApps() {
@@ -65,7 +65,7 @@ public final class ListAndroidAppsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of each AndroidApp that is in the parent Firebase Project.
+   * List of each `AndroidApp` associated with the specified `FirebaseProject`.
    * @param apps apps or {@code null} for none
    */
   public ListAndroidAppsResponse setApps(java.util.List<AndroidApp> apps) {

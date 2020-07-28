@@ -19,15 +19,15 @@ package com.google.api.services.firebase.v1beta1.model;
 /**
  * A `FirebaseProject` is the top-level Firebase entity. It is the container for Firebase Apps,
  * Firebase Hosting sites, storage systems (Firebase Realtime Database, Cloud Firestore, Cloud
- * Storage buckets) and other Firebase and Google Cloud Platform (GCP) resources.
+ * Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources.
  *
- * You can create a new `FirebaseProject` in the [Firebase
- * console](https://console.firebase.google.com/), or you can add Firebase resources to an existing
- * [GCP `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects) by calling
- * AddFirebase.
+ * You create a `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP
+ * `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). This adds
+ * Firebase resources to the existing GCP `Project`.
  *
- * A `FirebaseProject` is actually also a GCP `Project`, so a `FirebaseProject` uses underlying GCP
- * identifiers (most importantly, `projectId`) as its own for easy interop with GCP APIs.
+ * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same
+ * underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with
+ * Google APIs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Management API. For a detailed explanation
@@ -48,21 +48,31 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
-   * The fully qualified resource name of the Project, in the format: projects/projectId
+   * The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER
+   * PROJECT_IDENTIFIER: the Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+   * identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the
+   * value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Immutable. The globally unique, user-assigned ID of the Project.
+   * Immutable. A user-assigned unique identifier for the Project.
+   *
+   * This identifier may appear in URLs or names for some Firebase resources associated with the
+   * Project, but it should generally be treated as a convenience alias to reference the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * The globally unique, Google-assigned identifier of the Project.
+   * Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this
+   * identifier when configuring integrations and/or making API calls to Firebase or third-party
+   * services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -93,7 +103,12 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The fully qualified resource name of the Project, in the format: projects/projectId
+   * The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER
+   * PROJECT_IDENTIFIER: the Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+   * identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the
+   * value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +116,12 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The fully qualified resource name of the Project, in the format: projects/projectId
+   * The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER
+   * PROJECT_IDENTIFIER: the Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+   * identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the
+   * value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
    * @param name name or {@code null} for none
    */
   public FirebaseProject setName(java.lang.String name) {
@@ -110,7 +130,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The globally unique, user-assigned ID of the Project.
+   * Immutable. A user-assigned unique identifier for the Project.
+   *
+   * This identifier may appear in URLs or names for some Firebase resources associated with the
+   * Project, but it should generally be treated as a convenience alias to reference the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -118,7 +141,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The globally unique, user-assigned ID of the Project.
+   * Immutable. A user-assigned unique identifier for the Project.
+   *
+   * This identifier may appear in URLs or names for some Firebase resources associated with the
+   * Project, but it should generally be treated as a convenience alias to reference the Project.
    * @param projectId projectId or {@code null} for none
    */
   public FirebaseProject setProjectId(java.lang.String projectId) {
@@ -127,7 +153,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The globally unique, Google-assigned identifier of the Project.
+   * Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this
+   * identifier when configuring integrations and/or making API calls to Firebase or third-party
+   * services.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -135,7 +163,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The globally unique, Google-assigned identifier of the Project.
+   * Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this
+   * identifier when configuring integrations and/or making API calls to Firebase or third-party
+   * services.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public FirebaseProject setProjectNumber(java.lang.Long projectNumber) {

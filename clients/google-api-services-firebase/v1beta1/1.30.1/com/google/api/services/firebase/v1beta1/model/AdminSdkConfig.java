@@ -38,19 +38,22 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   private java.lang.String databaseURL;
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).  This field is
-   * omitted if the default GCP resource location has not been finalized yet. To set your project's
-   * default GCP resource location, call
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
+   * Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * services to your project.
+   * resources to the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * Immutable. The globally unique, user-assigned project ID of the parent Project.
+   * Immutable. A user-assigned unique identifier for the `FirebaseProject`. This identifier may
+   * appear in URLs or names for some Firebase resources associated with the Project, but it should
+   * generally be treated as a convenience alias to reference the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,12 +84,13 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).  This field is
-   * omitted if the default GCP resource location has not been finalized yet. To set your project's
-   * default GCP resource location, call
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
+   * Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * services to your project.
+   * resources to the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -94,12 +98,13 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of the project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).  This field is
-   * omitted if the default GCP resource location has not been finalized yet. To set your project's
-   * default GCP resource location, call
+   * The ID of the Project's default GCP resource location. The location is one of the available
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
+   * Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * services to your project.
+   * resources to the Project.
    * @param locationId locationId or {@code null} for none
    */
   public AdminSdkConfig setLocationId(java.lang.String locationId) {
@@ -108,7 +113,9 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The globally unique, user-assigned project ID of the parent Project.
+   * Immutable. A user-assigned unique identifier for the `FirebaseProject`. This identifier may
+   * appear in URLs or names for some Firebase resources associated with the Project, but it should
+   * generally be treated as a convenience alias to reference the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -116,7 +123,9 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The globally unique, user-assigned project ID of the parent Project.
+   * Immutable. A user-assigned unique identifier for the `FirebaseProject`. This identifier may
+   * appear in URLs or names for some Firebase resources associated with the Project, but it should
+   * generally be treated as a convenience alias to reference the Project.
    * @param projectId projectId or {@code null} for none
    */
   public AdminSdkConfig setProjectId(java.lang.String projectId) {

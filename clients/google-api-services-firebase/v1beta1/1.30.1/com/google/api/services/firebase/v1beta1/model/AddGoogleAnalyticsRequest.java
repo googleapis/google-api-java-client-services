@@ -32,17 +32,17 @@ public final class AddGoogleAnalyticsRequest extends com.google.api.client.json.
 
   /**
    * The ID for the existing [Google Analytics account](http://www.google.com/analytics/) that you
-   * want to link with your `FirebaseProject`.
+   * want to link with the `FirebaseProject`.
    *
    * Specifying this field will provision a new Google Analytics property in your Google Analytics
-   * account and associate the new property with your `FirebaseProject`.
+   * account and associate the new property with the `FirebaseProject`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String analyticsAccountId;
 
   /**
-   * The ID for the existing Google Analytics property that you want to associate with your
+   * The ID for the existing Google Analytics property that you want to associate with the
    * `FirebaseProject`.
    * The value may be {@code null}.
    */
@@ -51,10 +51,10 @@ public final class AddGoogleAnalyticsRequest extends com.google.api.client.json.
 
   /**
    * The ID for the existing [Google Analytics account](http://www.google.com/analytics/) that you
-   * want to link with your `FirebaseProject`.
+   * want to link with the `FirebaseProject`.
    *
    * Specifying this field will provision a new Google Analytics property in your Google Analytics
-   * account and associate the new property with your `FirebaseProject`.
+   * account and associate the new property with the `FirebaseProject`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnalyticsAccountId() {
@@ -63,10 +63,10 @@ public final class AddGoogleAnalyticsRequest extends com.google.api.client.json.
 
   /**
    * The ID for the existing [Google Analytics account](http://www.google.com/analytics/) that you
-   * want to link with your `FirebaseProject`.
+   * want to link with the `FirebaseProject`.
    *
    * Specifying this field will provision a new Google Analytics property in your Google Analytics
-   * account and associate the new property with your `FirebaseProject`.
+   * account and associate the new property with the `FirebaseProject`.
    * @param analyticsAccountId analyticsAccountId or {@code null} for none
    */
   public AddGoogleAnalyticsRequest setAnalyticsAccountId(java.lang.String analyticsAccountId) {
@@ -75,7 +75,7 @@ public final class AddGoogleAnalyticsRequest extends com.google.api.client.json.
   }
 
   /**
-   * The ID for the existing Google Analytics property that you want to associate with your
+   * The ID for the existing Google Analytics property that you want to associate with the
    * `FirebaseProject`.
    * @return value or {@code null} for none
    */
@@ -84,7 +84,7 @@ public final class AddGoogleAnalyticsRequest extends com.google.api.client.json.
   }
 
   /**
-   * The ID for the existing Google Analytics property that you want to associate with your
+   * The ID for the existing Google Analytics property that you want to associate with the
    * `FirebaseProject`.
    * @param analyticsPropertyId analyticsPropertyId or {@code null} for none
    */

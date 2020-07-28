@@ -143,8 +143,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
   public class Cse {
 
     /**
-     * Returns metadata about the search performed, metadata about the custom search engine used for the
-     * search, and the search results.
+     * Returns metadata about the search performed, metadata about the engine used for the search, and
+     * the search results.
      *
      * Create a request for the method "cse.list".
      *
@@ -164,8 +164,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "customsearch/v1";
 
       /**
-       * Returns metadata about the search performed, metadata about the custom search engine used for
-       * the search, and the search results.
+       * Returns metadata about the search performed, metadata about the engine used for the search, and
+       * the search results.
        *
        * Create a request for the method "cse.list".
        *
@@ -345,17 +345,17 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The custom search engine ID to use for this request. */
+      /** The Programmable Search Engine ID to use for this request. */
       @com.google.api.client.util.Key
       private java.lang.String cx;
 
-      /** The custom search engine ID to use for this request.
+      /** The Programmable Search Engine ID to use for this request.
        */
       public java.lang.String getCx() {
         return cx;
       }
 
-      /** The custom search engine ID to use for this request. */
+      /** The Programmable Search Engine ID to use for this request. */
       public List setCx(java.lang.String cx) {
         this.cx = cx;
         return this;
@@ -1475,17 +1475,29 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The sort expression to apply to the results. */
+      /**
+       * The sort expression to apply to the results. The sort parameter specifies that the results
+       * be sorted according to the specified expression i.e. sort by date. [Example:
+       * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+       * attribute).
+       */
       @com.google.api.client.util.Key
       private java.lang.String sort;
 
-      /** The sort expression to apply to the results.
+      /** The sort expression to apply to the results. The sort parameter specifies that the results be
+     sorted according to the specified expression i.e. sort by date. [Example:
+     sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
        */
       public java.lang.String getSort() {
         return sort;
       }
 
-      /** The sort expression to apply to the results. */
+      /**
+       * The sort expression to apply to the results. The sort parameter specifies that the results
+       * be sorted according to the specified expression i.e. sort by date. [Example:
+       * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+       * attribute).
+       */
       public List setSort(java.lang.String sort) {
         this.sort = sort;
         return this;
@@ -1550,8 +1562,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
     public class Siterestrict {
 
       /**
-       * Returns metadata about the search performed, metadata about the custom search engine used for the
-       * search, and the search results. Uses a small set of url patterns.
+       * Returns metadata about the search performed, metadata about the engine used for the search, and
+       * the search results. Uses a small set of url patterns.
        *
        * Create a request for the method "siterestrict.list".
        *
@@ -1571,8 +1583,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         private static final String REST_PATH = "customsearch/v1/siterestrict";
 
         /**
-         * Returns metadata about the search performed, metadata about the custom search engine used for
-         * the search, and the search results. Uses a small set of url patterns.
+         * Returns metadata about the search performed, metadata about the engine used for the search, and
+         * the search results. Uses a small set of url patterns.
          *
          * Create a request for the method "siterestrict.list".
          *
@@ -1752,17 +1764,17 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The custom search engine ID to use for this request. */
+        /** The Programmable Search Engine ID to use for this request. */
         @com.google.api.client.util.Key
         private java.lang.String cx;
 
-        /** The custom search engine ID to use for this request.
+        /** The Programmable Search Engine ID to use for this request.
          */
         public java.lang.String getCx() {
           return cx;
         }
 
-        /** The custom search engine ID to use for this request. */
+        /** The Programmable Search Engine ID to use for this request. */
         public List setCx(java.lang.String cx) {
           this.cx = cx;
           return this;
@@ -2884,17 +2896,29 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The sort expression to apply to the results. */
+        /**
+         * The sort expression to apply to the results. The sort parameter specifies that the
+         * results be sorted according to the specified expression i.e. sort by date. [Example:
+         * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+         * attribute).
+         */
         @com.google.api.client.util.Key
         private java.lang.String sort;
 
-        /** The sort expression to apply to the results.
+        /** The sort expression to apply to the results. The sort parameter specifies that the results be
+       sorted according to the specified expression i.e. sort by date. [Example:
+       sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
          */
         public java.lang.String getSort() {
           return sort;
         }
 
-        /** The sort expression to apply to the results. */
+        /**
+         * The sort expression to apply to the results. The sort parameter specifies that the
+         * results be sorted according to the specified expression i.e. sort by date. [Example:
+         * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+         * attribute).
+         */
         public List setSort(java.lang.String sort) {
           this.sort = sort;
           return this;

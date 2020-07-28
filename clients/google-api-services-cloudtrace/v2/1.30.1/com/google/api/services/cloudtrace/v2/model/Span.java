@@ -48,8 +48,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.Integer childSpanCount;
 
   /**
-   * Required. A description of the span's operation (up to 128 bytes). Stackdriver Trace displays
-   * the description in the Google Cloud Platform Console. For example, the display name can be a
+   * Required. A description of the span's operation (up to 128 bytes). Trace displays the
+   * description in the Google Cloud Platform Console. For example, the display name can be a
    * qualified method name or a file name and a line number where the operation is called. A best
    * practice is to use the same display name within an application and at the same call point. This
    * makes it easier to correlate spans in different traces.
@@ -81,7 +81,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
    * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
    *
    * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-   * encoding of an 8-byte array.
+   * encoding of an 8-byte array. It should not be zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +97,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Set this parameter to indicate whether this span is in the same process as its
-   * parent. If you do not set this parameter, Stackdriver Trace is unable to take advantage of this
-   * helpful information.
+   * parent. If you do not set this parameter, Trace is unable to take advantage of this helpful
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +187,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A description of the span's operation (up to 128 bytes). Stackdriver Trace displays
-   * the description in the Google Cloud Platform Console. For example, the display name can be a
+   * Required. A description of the span's operation (up to 128 bytes). Trace displays the
+   * description in the Google Cloud Platform Console. For example, the display name can be a
    * qualified method name or a file name and a line number where the operation is called. A best
    * practice is to use the same display name within an application and at the same call point. This
    * makes it easier to correlate spans in different traces.
@@ -199,8 +199,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A description of the span's operation (up to 128 bytes). Stackdriver Trace displays
-   * the description in the Google Cloud Platform Console. For example, the display name can be a
+   * Required. A description of the span's operation (up to 128 bytes). Trace displays the
+   * description in the Google Cloud Platform Console. For example, the display name can be a
    * qualified method name or a file name and a line number where the operation is called. A best
    * practice is to use the same display name within an application and at the same call point. This
    * makes it easier to correlate spans in different traces.
@@ -256,7 +256,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
    * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
    *
    * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-   * encoding of an 8-byte array.
+   * encoding of an 8-byte array. It should not be zero.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -270,7 +270,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
    * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
    *
    * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-   * encoding of an 8-byte array.
+   * encoding of an 8-byte array. It should not be zero.
    * @param name name or {@code null} for none
    */
   public Span setName(java.lang.String name) {
@@ -299,8 +299,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Set this parameter to indicate whether this span is in the same process as its
-   * parent. If you do not set this parameter, Stackdriver Trace is unable to take advantage of this
-   * helpful information.
+   * parent. If you do not set this parameter, Trace is unable to take advantage of this helpful
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSameProcessAsParentSpan() {
@@ -309,8 +309,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Set this parameter to indicate whether this span is in the same process as its
-   * parent. If you do not set this parameter, Stackdriver Trace is unable to take advantage of this
-   * helpful information.
+   * parent. If you do not set this parameter, Trace is unable to take advantage of this helpful
+   * information.
    * @param sameProcessAsParentSpan sameProcessAsParentSpan or {@code null} for none
    */
   public Span setSameProcessAsParentSpan(java.lang.Boolean sameProcessAsParentSpan) {

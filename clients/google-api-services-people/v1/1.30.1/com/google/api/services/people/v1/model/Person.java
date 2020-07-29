@@ -66,7 +66,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's biographies.
+   * The person's biographies. This field is a singleton for contact sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's birthdays.
+   * The person's birthdays. This field is a singleton for contact sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,6 +102,19 @@ public final class Person extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider BraggingRights used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(BraggingRights.class);
+  }
+
+  /**
+   * The person's calendar URLs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CalendarUrl> calendarUrls;
+
+  static {
+    // hack to force ProGuard to consider CalendarUrl used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CalendarUrl.class);
   }
 
   /**
@@ -152,6 +165,19 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The person's external IDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalId> externalIds;
+
+  static {
+    // hack to force ProGuard to consider ExternalId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExternalId.class);
+  }
+
+  /**
    * The person's file-ases.
    * The value may be {@code null}.
    */
@@ -165,7 +191,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's genders.
+   * The person's genders. This field is a singleton for contact sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,7 +263,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private PersonMetadata metadata;
 
   /**
-   * The person's names.
+   * The person's names. This field is a singleton for contact sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -425,7 +451,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's biographies.
+   * The person's biographies. This field is a singleton for contact sources.
    * @return value or {@code null} for none
    */
   public java.util.List<Biography> getBiographies() {
@@ -433,7 +459,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's biographies.
+   * The person's biographies. This field is a singleton for contact sources.
    * @param biographies biographies or {@code null} for none
    */
   public Person setBiographies(java.util.List<Biography> biographies) {
@@ -442,7 +468,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's birthdays.
+   * The person's birthdays. This field is a singleton for contact sources.
    * @return value or {@code null} for none
    */
   public java.util.List<Birthday> getBirthdays() {
@@ -450,7 +476,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's birthdays.
+   * The person's birthdays. This field is a singleton for contact sources.
    * @param birthdays birthdays or {@code null} for none
    */
   public Person setBirthdays(java.util.List<Birthday> birthdays) {
@@ -472,6 +498,23 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   public Person setBraggingRights(java.util.List<BraggingRights> braggingRights) {
     this.braggingRights = braggingRights;
+    return this;
+  }
+
+  /**
+   * The person's calendar URLs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CalendarUrl> getCalendarUrls() {
+    return calendarUrls;
+  }
+
+  /**
+   * The person's calendar URLs.
+   * @param calendarUrls calendarUrls or {@code null} for none
+   */
+  public Person setCalendarUrls(java.util.List<CalendarUrl> calendarUrls) {
+    this.calendarUrls = calendarUrls;
     return this;
   }
 
@@ -546,6 +589,23 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The person's external IDs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalId> getExternalIds() {
+    return externalIds;
+  }
+
+  /**
+   * The person's external IDs.
+   * @param externalIds externalIds or {@code null} for none
+   */
+  public Person setExternalIds(java.util.List<ExternalId> externalIds) {
+    this.externalIds = externalIds;
+    return this;
+  }
+
+  /**
    * The person's file-ases.
    * @return value or {@code null} for none
    */
@@ -563,7 +623,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's genders.
+   * The person's genders. This field is a singleton for contact sources.
    * @return value or {@code null} for none
    */
   public java.util.List<Gender> getGenders() {
@@ -571,7 +631,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's genders.
+   * The person's genders. This field is a singleton for contact sources.
    * @param genders genders or {@code null} for none
    */
   public Person setGenders(java.util.List<Gender> genders) {
@@ -665,7 +725,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's names.
+   * The person's names. This field is a singleton for contact sources.
    * @return value or {@code null} for none
    */
   public java.util.List<Name> getNames() {
@@ -673,7 +733,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's names.
+   * The person's names. This field is a singleton for contact sources.
    * @param names names or {@code null} for none
    */
   public Person setNames(java.util.List<Name> names) {

@@ -34,9 +34,9 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
    * be specified by separating them with commas. Defaults to empty if not set, which will skip the
    * post mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays *
-   * coverPhotos * emailAddresses * events * genders * imClients * interests * locales * memberships
-   * * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-   * relations * residences * sipAddresses * skills * urls * userDefined
+   * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+   * interests * locales * memberships * metadata * names * nicknames * occupations * organizations
+   * * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +61,9 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
    * be specified by separating them with commas. Defaults to empty if not set, which will skip the
    * post mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays *
-   * coverPhotos * emailAddresses * events * genders * imClients * interests * locales * memberships
-   * * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-   * relations * residences * sipAddresses * skills * urls * userDefined
+   * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+   * interests * locales * memberships * metadata * names * nicknames * occupations * organizations
+   * * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
    * @return value or {@code null} for none
    */
   public String getPersonFields() {
@@ -74,9 +74,9 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
    * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
    * be specified by separating them with commas. Defaults to empty if not set, which will skip the
    * post mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays *
-   * coverPhotos * emailAddresses * events * genders * imClients * interests * locales * memberships
-   * * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-   * relations * residences * sipAddresses * skills * urls * userDefined
+   * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+   * interests * locales * memberships * metadata * names * nicknames * occupations * organizations
+   * * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
    * @param personFields personFields or {@code null} for none
    */
   public UpdateContactPhotoRequest setPersonFields(String personFields) {

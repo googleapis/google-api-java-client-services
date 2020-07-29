@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * A result of Resource Search, containing information of a cloud resoure.
+ * A result of Resource Search, containing information of a cloud resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,15 +30,16 @@ package com.google.api.services.cloudasset.v1.model;
 public final class ResourceSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The additional attributes of this resource. The attributes may vary from one resource type to
-   * another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone. This field contains
-   * a subset of the resource metadata fields that are returned by the List or Get APIs provided by
-   * the corresponding GCP service (e.g., Compute Engine). see [API
-   * references](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#supported_resource_types) of CAIS supported resource types. You can search values of
-   * these fields through free text search. However, you should not consume the field programically
-   * as the field names and values may change as the GCP service (e.g., Compute Engine) updates to a
-   * new incompatible API version.
+   * The additional searchable attributes of this resource. The attributes may vary from one
+   * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
+   * This field contains a subset of the resource metadata fields that are returned by the List or
+   * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
+   * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
+   * asset-types#searchable_asset_types) for more information.
+   *
+   * You can search values of these fields through free text search. However, you should not consume
+   * the field programically as the field names and values may change as the GCP service updates to
+   * a new incompatible API version.
    *
    * To search against the `additional_attributes`:
    *
@@ -154,15 +155,16 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String project;
 
   /**
-   * The additional attributes of this resource. The attributes may vary from one resource type to
-   * another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone. This field contains
-   * a subset of the resource metadata fields that are returned by the List or Get APIs provided by
-   * the corresponding GCP service (e.g., Compute Engine). see [API
-   * references](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#supported_resource_types) of CAIS supported resource types. You can search values of
-   * these fields through free text search. However, you should not consume the field programically
-   * as the field names and values may change as the GCP service (e.g., Compute Engine) updates to a
-   * new incompatible API version.
+   * The additional searchable attributes of this resource. The attributes may vary from one
+   * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
+   * This field contains a subset of the resource metadata fields that are returned by the List or
+   * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
+   * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
+   * asset-types#searchable_asset_types) for more information.
+   *
+   * You can search values of these fields through free text search. However, you should not consume
+   * the field programically as the field names and values may change as the GCP service updates to
+   * a new incompatible API version.
    *
    * To search against the `additional_attributes`:
    *
@@ -175,15 +177,16 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The additional attributes of this resource. The attributes may vary from one resource type to
-   * another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone. This field contains
-   * a subset of the resource metadata fields that are returned by the List or Get APIs provided by
-   * the corresponding GCP service (e.g., Compute Engine). see [API
-   * references](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#supported_resource_types) of CAIS supported resource types. You can search values of
-   * these fields through free text search. However, you should not consume the field programically
-   * as the field names and values may change as the GCP service (e.g., Compute Engine) updates to a
-   * new incompatible API version.
+   * The additional searchable attributes of this resource. The attributes may vary from one
+   * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
+   * This field contains a subset of the resource metadata fields that are returned by the List or
+   * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
+   * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
+   * asset-types#searchable_asset_types) for more information.
+   *
+   * You can search values of these fields through free text search. However, you should not consume
+   * the field programically as the field names and values may change as the GCP service updates to
+   * a new incompatible API version.
    *
    * To search against the `additional_attributes`:
    *

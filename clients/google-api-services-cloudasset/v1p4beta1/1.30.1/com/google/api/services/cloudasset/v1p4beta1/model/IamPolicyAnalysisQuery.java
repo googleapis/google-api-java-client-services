@@ -37,8 +37,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   private AccessSelector accessSelector;
 
   /**
-   * Optional. Specifies an identity for analysis. Either ResourceSelector or IdentitySelector must
-   * be specified.
+   * Optional. Specifies an identity for analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   private java.lang.String parent;
 
   /**
-   * Optional. Specifies a resource for analysis. Either ResourceSelector or IdentitySelector must
-   * be specified.
+   * Optional. Specifies a resource for analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +83,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies an identity for analysis. Either ResourceSelector or IdentitySelector must
-   * be specified.
+   * Optional. Specifies an identity for analysis.
    * @return value or {@code null} for none
    */
   public IdentitySelector getIdentitySelector() {
@@ -94,8 +91,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies an identity for analysis. Either ResourceSelector or IdentitySelector must
-   * be specified.
+   * Optional. Specifies an identity for analysis.
    * @param identitySelector identitySelector or {@code null} for none
    */
   public IamPolicyAnalysisQuery setIdentitySelector(IdentitySelector identitySelector) {
@@ -137,8 +133,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies a resource for analysis. Either ResourceSelector or IdentitySelector must
-   * be specified.
+   * Optional. Specifies a resource for analysis.
    * @return value or {@code null} for none
    */
   public ResourceSelector getResourceSelector() {
@@ -146,8 +141,7 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies a resource for analysis. Either ResourceSelector or IdentitySelector must
-   * be specified.
+   * Optional. Specifies a resource for analysis.
    * @param resourceSelector resourceSelector or {@code null} for none
    */
   public IamPolicyAnalysisQuery setResourceSelector(ResourceSelector resourceSelector) {

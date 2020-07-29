@@ -75,6 +75,13 @@ public final class Client extends com.google.api.client.json.GenericJson {
   private java.util.List<Parameter> parameter;
 
   /**
+   * Parent folder id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentFolderId;
+
+  /**
    * GTM client's API relative path.
    * The value may be {@code null}.
    */
@@ -217,6 +224,23 @@ public final class Client extends com.google.api.client.json.GenericJson {
    */
   public Client setParameter(java.util.List<Parameter> parameter) {
     this.parameter = parameter;
+    return this;
+  }
+
+  /**
+   * Parent folder id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentFolderId() {
+    return parentFolderId;
+  }
+
+  /**
+   * Parent folder id.
+   * @param parentFolderId parentFolderId or {@code null} for none
+   */
+  public Client setParentFolderId(java.lang.String parentFolderId) {
+    this.parentFolderId = parentFolderId;
     return this;
   }
 

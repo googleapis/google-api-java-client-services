@@ -86,6 +86,15 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private DefaultResources resources;
 
   /**
+   * Output only. The lifecycle state of the Project. Updates to the state must be performed via
+   * com.google.cloudresourcemanager.v1.Projects.DeleteProject and
+   * com.google.cloudresourcemanager.v1.Projects.UndeleteProject
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The user-assigned display name of the Project.
    * @return value or {@code null} for none
    */
@@ -187,6 +196,27 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
    */
   public FirebaseProject setResources(DefaultResources resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Output only. The lifecycle state of the Project. Updates to the state must be performed via
+   * com.google.cloudresourcemanager.v1.Projects.DeleteProject and
+   * com.google.cloudresourcemanager.v1.Projects.UndeleteProject
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The lifecycle state of the Project. Updates to the state must be performed via
+   * com.google.cloudresourcemanager.v1.Projects.DeleteProject and
+   * com.google.cloudresourcemanager.v1.Projects.UndeleteProject
+   * @param state state or {@code null} for none
+   */
+  public FirebaseProject setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

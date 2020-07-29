@@ -12219,6 +12219,459 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the CustomBiddingAlgorithms collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+   *   {@code DisplayVideo.CustomBiddingAlgorithms.List request = displayvideo.customBiddingAlgorithms().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public CustomBiddingAlgorithms customBiddingAlgorithms() {
+    return new CustomBiddingAlgorithms();
+  }
+
+  /**
+   * The "customBiddingAlgorithms" collection of methods.
+   */
+  public class CustomBiddingAlgorithms {
+
+    /**
+     * Gets a custom bidding algorithm.
+     *
+     * Create a request for the method "customBiddingAlgorithms.get".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm to fetch.
+     * @return the request
+     */
+    public Get get(java.lang.Long customBiddingAlgorithmId) throws java.io.IOException {
+      Get result = new Get(customBiddingAlgorithmId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}";
+
+      private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a custom bidding algorithm.
+       *
+       * Create a request for the method "customBiddingAlgorithms.get".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm to fetch.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long customBiddingAlgorithmId) {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm.class);
+        this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the custom bidding algorithm to fetch. */
+      @com.google.api.client.util.Key
+      private java.lang.Long customBiddingAlgorithmId;
+
+      /** Required. The ID of the custom bidding algorithm to fetch.
+       */
+      public java.lang.Long getCustomBiddingAlgorithmId() {
+        return customBiddingAlgorithmId;
+      }
+
+      /** Required. The ID of the custom bidding algorithm to fetch. */
+      public Get setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+        this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+        return this;
+      }
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      public Get setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      public Get setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists custom bidding algorithms that are accessible to the current user and can be used in
+     * bidding stratgies. The order is defined by the order_by parameter.
+     *
+     * Create a request for the method "customBiddingAlgorithms.list".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListCustomBiddingAlgorithmsResponse> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms";
+
+      /**
+       * Lists custom bidding algorithms that are accessible to the current user and can be used in
+       * bidding stratgies. The order is defined by the order_by parameter.
+       *
+       * Create a request for the method "customBiddingAlgorithms.list".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListCustomBiddingAlgorithmsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the DV3 advertiser that has access to the custom bidding algorithm. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the DV3 advertiser that has access to the custom bidding algorithm.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the DV3 advertiser that has access to the custom bidding algorithm. */
+      public List setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * Allows filtering by custom bidding algorithm fields. Supported syntax: * Filter expressions
+       * are made up of one or more restrictions. * Restrictions can be combined by `AND`. A
+       * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field}
+       * {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator
+       * must be `CONTAINS (:)` for the following field: - `displayName` * The operator must be
+       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` * For `displayName`,
+       * the value is a string. We return all custom bidding algorithms whose display_name contains
+       * such string. * For `customBiddingAlgorithmType`, the value is a string. We return all
+       * algorithms whose custom_bidding_algorithm_type is equal to the given type. Examples: * All
+       * custom bidding algorithms for which the display name contains "politics":
+       * `displayName:politics`. * All custom bidding algorithms for which the type is
+       * "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should
+       * be no more than 500 characters.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Allows filtering by custom bidding algorithm fields. Supported syntax: * Filter expressions are
+     made up of one or more restrictions. * Restrictions can be combined by `AND`. A sequence of
+     restrictions * implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`.
+     * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for
+     the following field: - `displayName` * The operator must be `EQUALS (=)` for the following field: -
+     `customBiddingAlgorithmType` * For `displayName`, the value is a string. We return all custom
+     bidding algorithms whose display_name contains such string. * For `customBiddingAlgorithmType`, the
+     value is a string. We return all algorithms whose custom_bidding_algorithm_type is equal to the
+     given type. Examples: * All custom bidding algorithms for which the display name contains
+     "politics": `displayName:politics`. * All custom bidding algorithms for which the type is
+     "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should be no
+     more than 500 characters.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Allows filtering by custom bidding algorithm fields. Supported syntax: * Filter expressions
+       * are made up of one or more restrictions. * Restrictions can be combined by `AND`. A
+       * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field}
+       * {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator
+       * must be `CONTAINS (:)` for the following field: - `displayName` * The operator must be
+       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` * For `displayName`,
+       * the value is a string. We return all custom bidding algorithms whose display_name contains
+       * such string. * For `customBiddingAlgorithmType`, the value is a string. We return all
+       * algorithms whose custom_bidding_algorithm_type is equal to the given type. Examples: * All
+       * custom bidding algorithms for which the display name contains "politics":
+       * `displayName:politics`. * All custom bidding algorithms for which the type is
+       * "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should
+       * be no more than 500 characters.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
+       * "desc" should be added to the field name. Example: `displayName desc`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) The default
+     sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+     added to the field name. Example: `displayName desc`.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
+       * "desc" should be added to the field name. Example: `displayName desc`.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+     error code `INVALID_ARGUMENT` if an invalid value is specified.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListCustomBiddingAlgorithms`
+       * method. If not specified, the first page of results will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. Typically, this is the value of
+     next_page_token returned from the previous call to `ListCustomBiddingAlgorithms` method. If not
+     specified, the first page of results will be returned.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListCustomBiddingAlgorithms`
+       * method. If not specified, the first page of results will be returned.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      public List setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the CustomLists collection.
    *
    * <p>The typical use is:</p>

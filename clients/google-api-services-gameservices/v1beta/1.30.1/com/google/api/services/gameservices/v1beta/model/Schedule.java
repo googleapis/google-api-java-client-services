@@ -21,9 +21,8 @@ package com.google.api.services.gameservices.v1beta.model;
  * and end_time. If the scheduled event's timespan is larger than the cron_spec + cron_job_duration,
  * the event will be recurring. If only cron_spec + cron_job_duration are specified, the event is
  * effective starting at the local time specified by cron_spec, and is recurring.
- *
- *   start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time   cron job: cron
- * spec start time + duration
+ * start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time cron job: cron spec
+ * start time + duration
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:

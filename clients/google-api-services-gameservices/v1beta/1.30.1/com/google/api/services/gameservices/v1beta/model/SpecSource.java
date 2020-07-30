@@ -30,10 +30,8 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class SpecSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The game server config resource. Uses the form:
-   *
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_
-   * id}`.
+   * The game server config resource. Uses the form: `projects/{project}/locations/{location}/gameSe
+   * rverDeployments/{deployment_id}/configs/{config_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,10 +46,8 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The game server config resource. Uses the form:
-   *
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_
-   * id}`.
+   * The game server config resource. Uses the form: `projects/{project}/locations/{location}/gameSe
+   * rverDeployments/{deployment_id}/configs/{config_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGameServerConfigName() {
@@ -59,10 +55,8 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The game server config resource. Uses the form:
-   *
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_
-   * id}`.
+   * The game server config resource. Uses the form: `projects/{project}/locations/{location}/gameSe
+   * rverDeployments/{deployment_id}/configs/{config_id}`.
    * @param gameServerConfigName gameServerConfigName or {@code null} for none
    */
   public SpecSource setGameServerConfigName(java.lang.String gameServerConfigName) {

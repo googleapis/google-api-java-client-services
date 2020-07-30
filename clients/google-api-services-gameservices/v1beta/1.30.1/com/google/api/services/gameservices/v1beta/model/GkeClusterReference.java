@@ -30,9 +30,9 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class GkeClusterReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full or partial name of a GKE cluster, using one of the following forms:  *
-   * `projects/{project}/locations/{location}/clusters/{cluster}`  *
-   * `locations/{location}/clusters/{cluster}`  * `{cluster}` If project and location are not
+   * The full or partial name of a GKE cluster, using one of the following forms: *
+   * `projects/{project}/locations/{location}/clusters/{cluster}` *
+   * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not
    * specified, the project and location of the GameServerCluster resource are used to generate the
    * full name of the GKE cluster.
    * The value may be {@code null}.
@@ -41,9 +41,9 @@ public final class GkeClusterReference extends com.google.api.client.json.Generi
   private java.lang.String cluster;
 
   /**
-   * The full or partial name of a GKE cluster, using one of the following forms:  *
-   * `projects/{project}/locations/{location}/clusters/{cluster}`  *
-   * `locations/{location}/clusters/{cluster}`  * `{cluster}` If project and location are not
+   * The full or partial name of a GKE cluster, using one of the following forms: *
+   * `projects/{project}/locations/{location}/clusters/{cluster}` *
+   * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not
    * specified, the project and location of the GameServerCluster resource are used to generate the
    * full name of the GKE cluster.
    * @return value or {@code null} for none
@@ -53,9 +53,9 @@ public final class GkeClusterReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full or partial name of a GKE cluster, using one of the following forms:  *
-   * `projects/{project}/locations/{location}/clusters/{cluster}`  *
-   * `locations/{location}/clusters/{cluster}`  * `{cluster}` If project and location are not
+   * The full or partial name of a GKE cluster, using one of the following forms: *
+   * `projects/{project}/locations/{location}/clusters/{cluster}` *
+   * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not
    * specified, the project and location of the GameServerCluster resource are used to generate the
    * full name of the GKE cluster.
    * @param cluster cluster or {@code null} for none

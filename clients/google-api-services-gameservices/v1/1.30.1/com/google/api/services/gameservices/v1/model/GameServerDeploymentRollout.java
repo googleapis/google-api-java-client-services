@@ -38,9 +38,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The default game server config is applied to all realms unless overridden in the rollout. For
-   * example,
-   *
-   * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+   * example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-
+   * config`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,11 +68,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The resource name of the game server deployment rollout. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
-   * example,
-   *
-   * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+   * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +101,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The default game server config is applied to all realms unless overridden in the rollout. For
-   * example,
-   *
-   * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+   * example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-
+   * config`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultGameServerConfig() {
@@ -116,9 +111,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The default game server config is applied to all realms unless overridden in the rollout. For
-   * example,
-   *
-   * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+   * example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-
+   * config`.
    * @param defaultGameServerConfig defaultGameServerConfig or {@code null} for none
    */
   public GameServerDeploymentRollout setDefaultGameServerConfig(java.lang.String defaultGameServerConfig) {
@@ -164,11 +158,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The resource name of the game server deployment rollout. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
-   * example,
-   *
-   * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+   * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -177,11 +168,8 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The resource name of the game server deployment rollout. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
-   * example,
-   *
-   * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+   * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
    * @param name name or {@code null} for none
    */
   public GameServerDeploymentRollout setName(java.lang.String name) {

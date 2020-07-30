@@ -449,9 +449,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUnrevealedLocations;
 
@@ -461,9 +459,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           return includeUnrevealedLocations;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
           this.includeUnrevealedLocations = includeUnrevealedLocations;
           return this;
@@ -535,8 +531,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
          * @return the request
          */
@@ -564,8 +559,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
            * @since 1.13
            */
@@ -789,14 +783,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment to delete. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the game server delpoyment to delete. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public java.lang.String getName() {
@@ -805,7 +797,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment to delete. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public Delete setName(java.lang.String name) {
@@ -937,14 +928,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the game server delpoyment. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public java.lang.String getName() {
@@ -953,7 +942,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public FetchDeploymentState setName(java.lang.String name) {
@@ -1087,14 +1075,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment to retrieve. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the game server delpoyment to retrieve. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public java.lang.String getName() {
@@ -1103,7 +1089,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment to retrieve. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public Get setName(java.lang.String name) {
@@ -1130,8 +1115,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -1160,8 +1144,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -1269,42 +1252,32 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
-
-         To learn which resources support conditions in their IAM policies, see the [IAM
-         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -1434,14 +1407,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment to retrieve. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the game server delpoyment to retrieve. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            */
           public java.lang.String getName() {
@@ -1450,7 +1421,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The name of the game server delpoyment to retrieve. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            */
           public GetRollout setName(java.lang.String name) {
@@ -1476,8 +1446,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1503,8 +1472,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1649,7 +1617,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The maximum number of items to return.  If unspecified, the server will pick
+           * Optional. The maximum number of items to return. If unspecified, the server will pick
            * an appropriate default. The server may return fewer items than requested. A caller
            * should only rely on response's next_page_token to determine if there are more
            * GameServerDeployments left to be queried.
@@ -1657,7 +1625,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of items to return.  If unspecified, the server will pick an
+          /** Optional. The maximum number of items to return. If unspecified, the server will pick an
          appropriate default. The server may return fewer items than requested. A caller should only rely on
          response's next_page_token to determine if there are more GameServerDeployments left to be queried.
            */
@@ -1666,7 +1634,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The maximum number of items to return.  If unspecified, the server will pick
+           * Optional. The maximum number of items to return. If unspecified, the server will pick
            * an appropriate default. The server may return fewer items than requested. A caller
            * should only rely on response's next_page_token to determine if there are more
            * GameServerDeployments left to be queried.
@@ -1676,9 +1644,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /**
-           * Optional. The next_page_token value returned from a previous List request, if any.
-           */
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
@@ -1688,9 +1654,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             return pageToken;
           }
 
-          /**
-           * Optional. The next_page_token value returned from a previous List request, if any.
-           */
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1710,9 +1674,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name The resource name of the game server deployment. Uses the form:
-         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
-        For example,
-         *        `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
+         *        `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
          * @return the request
          */
@@ -1741,9 +1704,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The resource name of the game server deployment. Uses the form:
-         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
-        For example,
-         *        `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
+         *        `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
            * @since 1.13
            */
@@ -1814,20 +1776,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * The resource name of the game server deployment. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For
-           * example,
-           *
-           * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+           * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The resource name of the game server deployment. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
-
-         `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+         `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            */
           public java.lang.String getName() {
             return name;
@@ -1835,11 +1792,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * The resource name of the game server deployment. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For
-           * example,
-           *
-           * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+           * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1853,18 +1807,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see
-           *
-           * https: //developers.google.com/protocol-buffers //
+           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-         `FieldMask` definition, see
-
-         https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+         `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
+         /docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1872,9 +1823,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see
-           *
-           * https: //developers.google.com/protocol-buffers //
+           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           public Patch setUpdateMask(String updateMask) {
@@ -1896,10 +1845,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link PreviewRollout#execute()} method to invoke the remote operation.
          *
          * @param name The resource name of the game server deployment rollout. Uses the form:
-         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-        For
-         *        example,
-        `projects/my-project/locations/{location}/gameServerDeployments/my-
+         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+         *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeploymentRollout}
          * @return the request
@@ -1929,10 +1876,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * the constructor. </p>
            *
            * @param name The resource name of the game server deployment rollout. Uses the form:
-         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-        For
-         *        example,
-        `projects/my-project/locations/{location}/gameServerDeployments/my-
+         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+         *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeploymentRollout}
            * @since 1.13
@@ -2004,20 +1949,16 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * The resource name of the game server deployment rollout. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-           * For example,
-           *
-           * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+           * For example, `projects/my-project/locations/global/gameServerDeployments/my-
+           * deployment/rollout`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The resource name of the game server deployment rollout. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For example,
-
-         `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+         `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
            */
           public java.lang.String getName() {
             return name;
@@ -2025,11 +1966,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * The resource name of the game server deployment rollout. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-           * For example,
-           *
-           * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+           * For example, `projects/my-project/locations/global/gameServerDeployments/my-
+           * deployment/rollout`.
            */
           public PreviewRollout setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2066,18 +2005,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Optional. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see
-           *
-           * https: //developers.google.com/protocol-buffers //
+           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Optional. Mask of fields to update. At least one path must be supplied in this field. For the
-         `FieldMask` definition, see
-
-         https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+         `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
+         /docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2085,9 +2021,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Optional. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see
-           *
-           * https: //developers.google.com/protocol-buffers //
+           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           public PreviewRollout setUpdateMask(String updateMask) {
@@ -2101,17 +2035,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "gameServerDeployments.setIamPolicy".
          *
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.gameservices.v1.model.SetIamPolicyRequest}
          * @return the request
@@ -2130,9 +2062,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gameServerDeployments/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "gameServerDeployments.setIamPolicy".
            *
@@ -2142,8 +2073,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.gameservices.v1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -2248,18 +2178,16 @@ public class GameServices extends com.google.api.client.googleapis.services.json
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a `NOT_FOUND` error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "gameServerDeployments.testIamPermissions".
          *
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.gameservices.v1.model.TestIamPermissionsRequest}
          * @return the request
@@ -2279,10 +2207,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "gameServerDeployments.testIamPermissions".
            *
@@ -2292,8 +2219,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.gameservices.v1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2409,10 +2335,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link UpdateRollout#execute()} method to invoke the remote operation.
          *
          * @param name The resource name of the game server deployment rollout. Uses the form:
-         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-        For
-         *        example,
-        `projects/my-project/locations/{location}/gameServerDeployments/my-
+         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+         *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeploymentRollout}
          * @return the request
@@ -2446,10 +2370,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * the constructor. </p>
            *
            * @param name The resource name of the game server deployment rollout. Uses the form:
-         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-        For
-         *        example,
-        `projects/my-project/locations/{location}/gameServerDeployments/my-
+         *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+         *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeploymentRollout}
            * @since 1.13
@@ -2521,20 +2443,16 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * The resource name of the game server deployment rollout. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-           * For example,
-           *
-           * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+           * For example, `projects/my-project/locations/global/gameServerDeployments/my-
+           * deployment/rollout`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The resource name of the game server deployment rollout. Uses the form:
-
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For example,
-
-         `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+         `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
            */
           public java.lang.String getName() {
             return name;
@@ -2542,11 +2460,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * The resource name of the game server deployment rollout. Uses the form:
-           *
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
-           * For example,
-           *
-           * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
+           * For example, `projects/my-project/locations/global/gameServerDeployments/my-
+           * deployment/rollout`.
            */
           public UpdateRollout setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2560,18 +2476,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see
-           *
-           * https: //developers.google.com/protocol-buffers //
+           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-         `FieldMask` definition, see
-
-         https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+         `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
+         /docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2579,9 +2492,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see
-           *
-           * https: //developers.google.com/protocol-buffers //
+           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           public UpdateRollout setUpdateMask(String updateMask) {
@@ -2728,14 +2639,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource name. Uses the form:
-             *
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource name. Uses the form:
-
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              */
             public java.lang.String getParent() {
@@ -2744,7 +2653,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource name. Uses the form:
-             *
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              */
             public Create setParent(java.lang.String parent) {
@@ -2888,16 +2796,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to delete. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{
-             * config}`.
+             * Required. The name of the game server config to delete. Uses the form: `projects/{pro
+             * ject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the game server config to delete. Uses the form:
-
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             public java.lang.String getName() {
@@ -2905,10 +2810,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to delete. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{
-             * config}`.
+             * Required. The name of the game server config to delete. Uses the form: `projects/{pro
+             * ject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3042,16 +2945,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to retrieve. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{
-             * config}`.
+             * Required. The name of the game server config to retrieve. Uses the form: `projects/{p
+             * roject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the game server config to retrieve. Uses the form:
-
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             public java.lang.String getName() {
@@ -3059,10 +2959,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to retrieve. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{
-             * config}`.
+             * Required. The name of the game server config to retrieve. Uses the form: `projects/{p
+             * roject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3195,14 +3093,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource name. Uses the form:
-             *
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource name. Uses the form:
-
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              */
             public java.lang.String getParent() {
@@ -3211,7 +3107,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource name. Uses the form:
-             *
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              */
             public List setParent(java.lang.String parent) {
@@ -3264,7 +3159,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. The maximum number of items to return.  If unspecified, server will pick an
+             * Optional. The maximum number of items to return. If unspecified, server will pick an
              * appropriate default. Server may return fewer items than requested. A caller should
              * only rely on response's next_page_token to determine if there are more
              * GameServerConfigs left to be queried.
@@ -3272,7 +3167,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of items to return.  If unspecified, server will pick an appropriate
+            /** Optional. The maximum number of items to return. If unspecified, server will pick an appropriate
            default. Server may return fewer items than requested. A caller should only rely on response's
            next_page_token to determine if there are more GameServerConfigs left to be queried.
              */
@@ -3281,7 +3176,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. The maximum number of items to return.  If unspecified, server will pick an
+             * Optional. The maximum number of items to return. If unspecified, server will pick an
              * appropriate default. Server may return fewer items than requested. A caller should
              * only rely on response's next_page_token to determine if there are more
              * GameServerConfigs left to be queried.
@@ -3340,9 +3235,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -3371,13 +3266,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -3616,7 +3511,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -3641,7 +3536,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -3757,13 +3652,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -3788,13 +3682,12 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -3985,8 +3878,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
          * @return the request
          */
@@ -4014,8 +3906,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
            * @since 1.13
            */
@@ -4425,8 +4316,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4452,8 +4342,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form:
-        `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4598,7 +4487,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The maximum number of items to return.  If unspecified, server will pick an
+           * Optional. The maximum number of items to return. If unspecified, server will pick an
            * appropriate default. Server may return fewer items than requested. A caller should only
            * rely on response's next_page_token to determine if there are more realms left to be
            * queried.
@@ -4606,7 +4495,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of items to return.  If unspecified, server will pick an appropriate
+          /** Optional. The maximum number of items to return. If unspecified, server will pick an appropriate
          default. Server may return fewer items than requested. A caller should only rely on response's
          next_page_token to determine if there are more realms left to be queried.
            */
@@ -4615,7 +4504,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The maximum number of items to return.  If unspecified, server will pick an
+           * Optional. The maximum number of items to return. If unspecified, server will pick an
            * appropriate default. Server may return fewer items than requested. A caller should only
            * rely on response's next_page_token to determine if there are more realms left to be
            * queried.
@@ -4625,9 +4514,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /**
-           * Optional. The next_page_token value returned from a previous List request, if any.
-           */
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
@@ -4637,9 +4524,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             return pageToken;
           }
 
-          /**
-           * Optional. The next_page_token value returned from a previous List request, if any.
-           */
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -4659,8 +4544,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name The resource name of the realm. Uses the form:
-         *        `projects/{project}/locations/{location}/realms/{realm}`. For
-        example, `projects/my-
+         *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
          * @return the request
@@ -4690,8 +4574,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The resource name of the realm. Uses the form:
-         *        `projects/{project}/locations/{location}/realms/{realm}`. For
-        example, `projects/my-
+         *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
            * @since 1.13
@@ -4794,16 +4677,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           *
            * https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
-
-         https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see https:
+         //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4811,7 +4692,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           *
            * https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
@@ -4834,8 +4714,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link PreviewUpdate#execute()} method to invoke the remote operation.
          *
          * @param name The resource name of the realm. Uses the form:
-         *        `projects/{project}/locations/{location}/realms/{realm}`. For
-        example, `projects/my-
+         *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
          * @return the request
@@ -4865,8 +4744,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * the constructor. </p>
            *
            * @param name The resource name of the realm. Uses the form:
-         *        `projects/{project}/locations/{location}/realms/{realm}`. For
-        example, `projects/my-
+         *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
            * @since 1.13
@@ -4985,16 +4863,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           *
            * https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
-
-         https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see https:
+         //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5002,7 +4878,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           *
            * https: //developers.google.com/protocol-buffers //
            * /docs/reference/google.protobuf#fieldmask
            */
@@ -5045,8 +4920,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Uses the form:
-          `projects/{project}/locations/{location}/realms
+           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}/realms
            *        /{realm-id}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
            * @return the request
@@ -5075,8 +4949,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Uses the form:
-          `projects/{project}/locations/{location}/realms
+             * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}/realms
            *        /{realm-id}`.
              * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
              * @since 1.13
@@ -5449,7 +5322,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The name of the game server cluster to retrieve. Uses the form:
-             *
              * `projects/{project}/locations/{location}/realms/{realm-
              * id}/gameServerClusters/{cluster}`.
              */
@@ -5457,7 +5329,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             private java.lang.String name;
 
             /** Required. The name of the game server cluster to retrieve. Uses the form:
-
            `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
              */
             public java.lang.String getName() {
@@ -5466,7 +5337,6 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The name of the game server cluster to retrieve. Uses the form:
-             *
              * `projects/{project}/locations/{location}/realms/{realm-
              * id}/gameServerClusters/{cluster}`.
              */
@@ -5667,15 +5537,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. The maximum number of items to return.  If unspecified, the server will
-             * pick an appropriate default. The server may return fewer items than requested. A
-             * caller should only rely on response's next_page_token to determine if there are more
+             * Optional. The maximum number of items to return. If unspecified, the server will pick
+             * an appropriate default. The server may return fewer items than requested. A caller
+             * should only rely on response's next_page_token to determine if there are more
              * GameServerClusters left to be queried.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of items to return.  If unspecified, the server will pick an
+            /** Optional. The maximum number of items to return. If unspecified, the server will pick an
            appropriate default. The server may return fewer items than requested. A caller should only rely on
            response's next_page_token to determine if there are more GameServerClusters left to be queried.
              */
@@ -5684,9 +5554,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. The maximum number of items to return.  If unspecified, the server will
-             * pick an appropriate default. The server may return fewer items than requested. A
-             * caller should only rely on response's next_page_token to determine if there are more
+             * Optional. The maximum number of items to return. If unspecified, the server will pick
+             * an appropriate default. The server may return fewer items than requested. A caller
+             * should only rely on response's next_page_token to determine if there are more
              * GameServerClusters left to be queried.
              */
             public List setPageSize(java.lang.Integer pageSize) {
@@ -5728,10 +5598,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the game server cluster. Uses the form:
-           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
-          For
-           *        example,
-          `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+           *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
            * @return the request
@@ -5761,10 +5629,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the game server cluster. Uses the form:
-           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
-          For
-           *        example,
-          `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+           *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
              * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
              * @since 1.13
@@ -5835,11 +5701,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`
-             * . For example,
-             *
+             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
+             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
              * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
              * onprem-cluster`.
              */
@@ -5847,9 +5710,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             private java.lang.String name;
 
             /** Required. The resource name of the game server cluster. Uses the form:
-
            `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
-
            `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
              */
             public java.lang.String getName() {
@@ -5857,11 +5718,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`
-             * . For example,
-             *
+             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
+             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
              * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
              * onprem-cluster`.
              */
@@ -5877,18 +5735,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see
-             *
-             * https: //developers.google.com/protocol-buffers //
-             * /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
+             * // /docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-           `FieldMask` definition, see
-
-           https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+           `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
+           /docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
               return updateMask;
@@ -5896,10 +5751,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see
-             *
-             * https: //developers.google.com/protocol-buffers //
-             * /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
+             * // /docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -6246,10 +6099,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link PreviewUpdate#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the game server cluster. Uses the form:
-           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
-          For
-           *        example,
-          `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+           *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
            * @return the request
@@ -6279,10 +6130,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * the constructor. </p>
              *
              * @param name Required. The resource name of the game server cluster. Uses the form:
-           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
-          For
-           *        example,
-          `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+           *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+           *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
              * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
              * @since 1.13
@@ -6353,11 +6202,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`
-             * . For example,
-             *
+             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
+             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
              * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
              * onprem-cluster`.
              */
@@ -6365,9 +6211,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             private java.lang.String name;
 
             /** Required. The resource name of the game server cluster. Uses the form:
-
            `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
-
            `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
              */
             public java.lang.String getName() {
@@ -6375,11 +6219,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form:
-             *
-             * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`
-             * . For example,
-             *
+             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
+             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
              * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
              * onprem-cluster`.
              */
@@ -6411,18 +6252,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see
-             *
-             * https: //developers.google.com/protocol-buffers //
-             * /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
+             * // /docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-           `FieldMask` definition, see
-
-           https: //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+           `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
+           /docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
               return updateMask;
@@ -6430,10 +6268,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see
-             *
-             * https: //developers.google.com/protocol-buffers //
-             * /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
+             * // /docs/reference/google.protobuf#fieldmask
              */
             public PreviewUpdate setUpdateMask(String updateMask) {
               this.updateMask = updateMask;

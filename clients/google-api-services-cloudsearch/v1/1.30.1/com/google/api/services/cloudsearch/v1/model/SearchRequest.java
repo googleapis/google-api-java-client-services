@@ -65,7 +65,7 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The raw query string. See supported search operators in the [Cloud search Cheat
-   * Sheet](https://gsuite.google.com/learning-center/products/cloudsearch/cheat-sheet/)
+   * Sheet](https://support.google.com/a/users/answer/9299929)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The raw query string. See supported search operators in the [Cloud search Cheat
-   * Sheet](https://gsuite.google.com/learning-center/products/cloudsearch/cheat-sheet/)
+   * Sheet](https://support.google.com/a/users/answer/9299929)
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -163,7 +163,7 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The raw query string. See supported search operators in the [Cloud search Cheat
-   * Sheet](https://gsuite.google.com/learning-center/products/cloudsearch/cheat-sheet/)
+   * Sheet](https://support.google.com/a/users/answer/9299929)
    * @param query query or {@code null} for none
    */
   public SearchRequest setQuery(java.lang.String query) {

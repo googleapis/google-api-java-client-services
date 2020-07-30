@@ -65,11 +65,9 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The resource name of the game server config. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
-   * For example,
-   *
-   * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+   * For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-
+   * config`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,11 +157,9 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The resource name of the game server config. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
-   * For example,
-   *
-   * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+   * For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-
+   * config`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -172,11 +168,9 @@ public final class GameServerConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The resource name of the game server config. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
-   * For example,
-   *
-   * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+   * For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-
+   * config`.
    * @param name name or {@code null} for none
    */
   public GameServerConfig setName(java.lang.String name) {

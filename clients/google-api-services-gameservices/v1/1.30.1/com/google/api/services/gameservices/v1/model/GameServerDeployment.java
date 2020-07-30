@@ -59,10 +59,8 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
 
   /**
    * The resource name of the game server deployment. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
-   *
-   * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+   * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,10 +143,8 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
 
   /**
    * The resource name of the game server deployment. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
-   *
-   * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+   * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -157,10 +153,8 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
 
   /**
    * The resource name of the game server deployment. Uses the form:
-   *
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
-   *
-   * `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
+   * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * @param name name or {@code null} for none
    */
   public GameServerDeployment setName(java.lang.String name) {

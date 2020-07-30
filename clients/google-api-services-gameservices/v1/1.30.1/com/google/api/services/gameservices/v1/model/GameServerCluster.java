@@ -67,12 +67,9 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The resource name of the game server cluster. Uses the form:
-   *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
-   * example,
-   *
-   * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-
-   * cluster`.
+   * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+   * onprem-cluster`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,12 +171,9 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The resource name of the game server cluster. Uses the form:
-   *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
-   * example,
-   *
-   * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-
-   * cluster`.
+   * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+   * onprem-cluster`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -188,12 +182,9 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The resource name of the game server cluster. Uses the form:
-   *
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
-   * example,
-   *
-   * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-
-   * cluster`.
+   * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
+   * onprem-cluster`.
    * @param name name or {@code null} for none
    */
   public GameServerCluster setName(java.lang.String name) {

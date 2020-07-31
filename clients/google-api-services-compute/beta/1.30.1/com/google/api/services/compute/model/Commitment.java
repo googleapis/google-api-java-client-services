@@ -141,7 +141,9 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of commitment, which affects the discount rate and the eligible resources. Type
-   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines.
+   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
+   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
+   * machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,7 +403,9 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of commitment, which affects the discount rate and the eligible resources. Type
-   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines.
+   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
+   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
+   * machines.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -410,7 +414,9 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of commitment, which affects the discount rate and the eligible resources. Type
-   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines.
+   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
+   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
+   * machines.
    * @param type type or {@code null} for none
    */
   public Commitment setType(java.lang.String type) {

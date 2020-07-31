@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/aiaC9Rw_fZJ7w0-G7Lmr6jieeQA\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/X6Y8lGxo9UpbIUm1urqOSAixTR0\"",
  "discoveryVersion": "v1",
  "id": "compute:v1",
  "name": "compute",
  "version": "v1",
- "revision": "20200629",
+ "revision": "20200704",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -1835,6 +1835,9 @@
       "",
       ""
      ]
+    },
+    "scaleInControl": {
+     "$ref": "AutoscalingPolicyScaleInControl"
     }
    }
   },
@@ -1889,6 +1892,22 @@
      "type": "number",
      "description": "Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that autoscaler should maintain. Must be a positive float value. If not defined, the default is 0.8.",
      "format": "double"
+    }
+   }
+  },
+  "AutoscalingPolicyScaleInControl": {
+   "id": "AutoscalingPolicyScaleInControl",
+   "type": "object",
+   "description": "Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt scale in of a MIG, it will be throttled as specified by the parameters below.",
+   "properties": {
+    "maxScaledInReplicas": {
+     "$ref": "FixedOrPercent",
+     "description": "Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step."
+    },
+    "timeWindowSec": {
+     "type": "integer",
+     "description": "How long back autoscaling should look when computing recommendations to include directives regarding slower scale in, as described above.",
+     "format": "int32"
     }
    }
   },
@@ -3312,11 +3331,13 @@
       "ATTRIBUTION",
       "AUTHORITY",
       "CREDENTIALS_TYPE",
+      "CREDS_ASSERTION",
       "JUSTIFICATION_TYPE",
       "NO_ATTR",
       "SECURITY_REALM"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -5250,6 +5271,18 @@
     "enable": {
      "type": "boolean",
      "description": "This field denotes whether to enable logging for a particular firewall rule."
+    },
+    "metadata": {
+     "type": "string",
+     "description": "This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.",
+     "enum": [
+      "EXCLUDE_ALL_METADATA",
+      "INCLUDE_ALL_METADATA"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
     }
    }
   },
@@ -6122,7 +6155,7 @@
   "HealthCheck": {
    "id": "HealthCheck",
    "type": "object",
-   "description": "Represents a Health Check resource.\n\nGoogle Compute Engine has two Health Check resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)\n\nInternal HTTP(S) load balancers use regional health checks. All other types of GCP load balancers and managed instance group auto-healing use global health checks. For more information, read Health Check Concepts.\n\nTo perform health checks on network load balancers, you must use either httpHealthChecks or httpsHealthChecks.",
+   "description": "Represents a Health Check resource.\n\nGoogle Compute Engine has two Health Check resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)\n\nInternal HTTP(S) load balancers must use regional health checks. Internal TCP/UDP load balancers can use either regional or global health checks. All other types of GCP load balancers and managed instance group auto-healing must use global health checks. For more information, read Health Check Concepts.\n\nTo perform health checks on network load balancers, you must use either httpHealthChecks or httpsHealthChecks.",
    "properties": {
     "checkIntervalSec": {
      "type": "integer",
@@ -6163,10 +6196,6 @@
      "type": "string",
      "description": "Type of the resource.",
      "default": "compute#healthCheck"
-    },
-    "logConfig": {
-     "$ref": "HealthCheckLogConfig",
-     "description": "Configure logging on this health check."
     },
     "name": {
      "type": "string",
@@ -6330,17 +6359,6 @@
        "description": "[Output Only] A human-readable description of the warning code."
       }
      }
-    }
-   }
-  },
-  "HealthCheckLogConfig": {
-   "id": "HealthCheckLogConfig",
-   "type": "object",
-   "description": "Configuration of logging on a health check. If logging is enabled, logs will be exported to Stackdriver.",
-   "properties": {
-    "enable": {
-     "type": "boolean",
-     "description": "Indicates whether or not to export logs. This is false by default, which means no health check logging will be done."
     }
    }
   },
@@ -12748,7 +12766,7 @@
     },
     "autoCreateSubnetworks": {
      "type": "boolean",
-     "description": "When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode.\n\nAn auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges.\n\nFor custom mode VPC networks, you can add subnets using the subnetworks insert method."
+     "description": "Must be set to create a VPC network. If not set, a legacy network is created.\n\nWhen set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode.\n\nAn auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges.\n\nFor custom mode VPC networks, you can add subnets using the subnetworks insert method."
     },
     "creationTimestamp": {
      "type": "string",
@@ -12841,7 +12859,7 @@
   "NetworkEndpointGroup": {
    "id": "NetworkEndpointGroup",
    "type": "object",
-   "description": "Represents a collection of network endpoints.\n\nA network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are reachable, and where they are located. For more information about using NEGs, see  Setting up internet NEGs or  Setting up zonal NEGs. (== resource_for {$api_version}.networkEndpointGroups ==) (== resource_for {$api_version}.globalNetworkEndpointGroups ==)",
+   "description": "Represents a collection of network endpoints.\n\nA network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are reachable, and where they are located. For more information about using NEGs, see  Setting up internet NEGs or  Setting up zonal NEGs. (== resource_for {$api_version}.networkEndpointGroups ==) (== resource_for {$api_version}.globalNetworkEndpointGroups ==) (== resource_for {$api_version}.regionNetworkEndpointGroups ==)",
    "properties": {
     "annotations": {
      "type": "object",
@@ -16707,6 +16725,7 @@
       "CPUS",
       "CPUS_ALL_REGIONS",
       "DISKS_TOTAL_GB",
+      "EXTERNAL_NETWORK_LB_FORWARDING_RULES",
       "EXTERNAL_VPN_GATEWAYS",
       "FIREWALLS",
       "FORWARDING_RULES",
@@ -16723,6 +16742,7 @@
       "INTERCONNECT_ATTACHMENTS_TOTAL_MBPS",
       "INTERCONNECT_TOTAL_GBPS",
       "INTERNAL_ADDRESSES",
+      "INTERNAL_TRAFFIC_DIRECTOR_FORWARDING_RULES",
       "IN_PLACE_SNAPSHOTS",
       "IN_USE_ADDRESSES",
       "IN_USE_BACKUP_SCHEDULES",
@@ -16788,6 +16808,8 @@
       "VPN_TUNNELS"
      ],
      "enumDescriptions": [
+      "",
+      "",
       "",
       "",
       "",
@@ -20707,7 +20729,7 @@
     },
     "next": {
      "type": "string",
-     "description": "[Output Only] The position of the next byte of content from the serial console output. Use this value in the next request as the start parameter.",
+     "description": "[Output Only] The position of the next byte of content, regardless of whether the content exists, following the output returned in the `contents` property. Use this value in the next request as the start parameter.",
      "format": "int64"
     },
     "selfLink": {
@@ -20716,7 +20738,7 @@
     },
     "start": {
      "type": "string",
-     "description": "The starting byte position of the output that was returned. This should match the start parameter sent with the request. If the serial console output exceeds the size of the buffer, older output will be overwritten by newer content and the start values will be mismatched.",
+     "description": "The starting byte position of the output that was returned. This should match the start parameter sent with the request. If the serial console output exceeds the size of the buffer (1 MB), older output is overwritten by newer content. The output start value will indicate the byte position of the output that was returned, which might be different than the `start` value that was specified in the request.",
      "format": "int64"
     }
    }
@@ -21902,7 +21924,7 @@
     },
     "ipCidrRange": {
      "type": "string",
-     "description": "The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. The range can be expanded after creation using expandIpCidrRange."
+     "description": "The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range, not belonging to Google. The range can be expanded after creation using expandIpCidrRange."
     },
     "ipv6CidrRange": {
      "type": "string",
@@ -22291,7 +22313,7 @@
    "properties": {
     "ipCidrRange": {
      "type": "string",
-     "description": "The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported."
+     "description": "The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. This may be a RFC 1918 IP range, or a privately, non-RFC 1918 IP range, not belonging to Google."
     },
     "rangeName": {
      "type": "string",
@@ -29158,6 +29180,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -32172,6 +32200,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -33713,6 +33747,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -34067,7 +34107,7 @@
      "parameters": {
       "forceAttach": {
        "type": "boolean",
-       "description": "Whether to force attach the disk even if it's currently attached to another instance.",
+       "description": "Whether to force attach the regional disk even if it's currently attached to another instance.",
        "location": "query"
       },
       "instance": {
@@ -34372,6 +34412,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -34416,7 +34462,7 @@
      "parameters": {
       "instance": {
        "type": "string",
-       "description": "Name of the instance scoping this request.",
+       "description": "Name of the instance for this request.",
        "required": true,
        "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
        "location": "path"
@@ -34439,7 +34485,7 @@
       },
       "start": {
        "type": "string",
-       "description": "Returns output starting from a specific byte position. Use this to page through output when the output is too large to return in a single request. For the initial request, leave this field unspecified. For subsequent calls, this field should be set to the next value returned in the previous call.",
+       "description": "Specifies the starting byte position of the output to return. To start with the first byte of output to the specified port, omit this field or set it to `0`.\n\nIf the output for that byte position is available, this field matches the `start` parameter sent with the request. If the amount of serial console output exceeds the size of the buffer (1 MB), the oldest output is discarded and is no longer available. If the requested start position refers to discarded output, the start position is adjusted to the oldest output still available, and the adjusted start position is returned as the `start` property value.\n\nYou can also provide a negative start position, which translates to the most recent number of bytes written to the serial port. For example, -3 is interpreted as the most recent 3 bytes written to the serial console.",
        "format": "int64",
        "location": "query"
       },
@@ -36663,6 +36709,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.  Caution This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -38139,6 +38191,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -38685,6 +38743,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -40963,6 +41027,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -44470,6 +44540,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -44894,6 +44970,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -46255,6 +46337,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -47099,6 +47187,12 @@
      "httpMethod": "GET",
      "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
      "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",

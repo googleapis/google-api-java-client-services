@@ -42,6 +42,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
    * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
    * is created in custom mode.
    *
@@ -151,6 +153,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
    * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
    * is created in custom mode.
    *
@@ -165,6 +169,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
    * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
    * is created in custom mode.
    *

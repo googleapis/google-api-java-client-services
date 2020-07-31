@@ -53,6 +53,13 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String locality;
 
   /**
+   * Scope specifies the availability domain to which the VMs should be spread.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scope;
+
+  /**
    * Specifies instances to hosts placement relationship
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setLocality(java.lang.String locality) {
     this.locality = locality;
+    return this;
+  }
+
+  /**
+   * Scope specifies the availability domain to which the VMs should be spread.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScope() {
+    return scope;
+  }
+
+  /**
+   * Scope specifies the availability domain to which the VMs should be spread.
+   * @param scope scope or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setScope(java.lang.String scope) {
+    this.scope = scope;
     return this;
   }
 

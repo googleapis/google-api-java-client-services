@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class BackendBucketCdnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
+   * of requests to the origin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requestCoalescing;
+
+  /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
@@ -47,6 +55,25 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signedUrlKeyNames;
+
+  /**
+   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
+   * of requests to the origin.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequestCoalescing() {
+    return requestCoalescing;
+  }
+
+  /**
+   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
+   * of requests to the origin.
+   * @param requestCoalescing requestCoalescing or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setRequestCoalescing(java.lang.Boolean requestCoalescing) {
+    this.requestCoalescing = requestCoalescing;
+    return this;
+  }
 
   /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After

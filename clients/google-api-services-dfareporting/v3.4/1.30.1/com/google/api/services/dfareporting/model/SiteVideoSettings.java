@@ -46,6 +46,21 @@ public final class SiteVideoSettings extends com.google.api.client.json.GenericJ
   private java.lang.String kind;
 
   /**
+   * Whether OBA icons are enabled for this placement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean obaEnabled;
+
+  /**
+   * Settings for the OBA icon of video creatives served to this site. This will act as default for
+   * new placements created under this site.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObaIcon obaSettings;
+
+  /**
    * Orientation of a site template used for video. This will act as default for new placements
    * created under this site.
    * The value may be {@code null}.
@@ -102,6 +117,42 @@ public final class SiteVideoSettings extends com.google.api.client.json.GenericJ
    */
   public SiteVideoSettings setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Whether OBA icons are enabled for this placement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getObaEnabled() {
+    return obaEnabled;
+  }
+
+  /**
+   * Whether OBA icons are enabled for this placement.
+   * @param obaEnabled obaEnabled or {@code null} for none
+   */
+  public SiteVideoSettings setObaEnabled(java.lang.Boolean obaEnabled) {
+    this.obaEnabled = obaEnabled;
+    return this;
+  }
+
+  /**
+   * Settings for the OBA icon of video creatives served to this site. This will act as default for
+   * new placements created under this site.
+   * @return value or {@code null} for none
+   */
+  public ObaIcon getObaSettings() {
+    return obaSettings;
+  }
+
+  /**
+   * Settings for the OBA icon of video creatives served to this site. This will act as default for
+   * new placements created under this site.
+   * @param obaSettings obaSettings or {@code null} for none
+   */
+  public SiteVideoSettings setObaSettings(ObaIcon obaSettings) {
+    this.obaSettings = obaSettings;
     return this;
   }
 

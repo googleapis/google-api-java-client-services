@@ -113,6 +113,13 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean published;
 
   /**
+   * A link to the published revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publishedLink;
+
+  /**
    * Whether this revision is published outside the domain. This is only applicable to Google Docs.
    * The value may be {@code null}.
    */
@@ -323,6 +330,23 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    */
   public Revision setPublished(java.lang.Boolean published) {
     this.published = published;
+    return this;
+  }
+
+  /**
+   * A link to the published revision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublishedLink() {
+    return publishedLink;
+  }
+
+  /**
+   * A link to the published revision.
+   * @param publishedLink publishedLink or {@code null} for none
+   */
+  public Revision setPublishedLink(java.lang.String publishedLink) {
+    this.publishedLink = publishedLink;
     return this;
   }
 

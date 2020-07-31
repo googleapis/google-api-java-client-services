@@ -30,7 +30,9 @@ package com.google.api.services.drive.model;
 public final class ContentRestriction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the content of the file is read-only.
+   * Whether the content of the file is read-only. If a file is read-only, a new revision of the
+   * file may not be added, comments may not be added or modified, and the title of the file may not
+   * be modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +70,9 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   private java.lang.String type;
 
   /**
-   * Whether the content of the file is read-only.
+   * Whether the content of the file is read-only. If a file is read-only, a new revision of the
+   * file may not be added, comments may not be added or modified, and the title of the file may not
+   * be modified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadOnly() {
@@ -76,7 +80,9 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether the content of the file is read-only.
+   * Whether the content of the file is read-only. If a file is read-only, a new revision of the
+   * file may not be added, comments may not be added or modified, and the title of the file may not
+   * be modified.
    * @param readOnly readOnly or {@code null} for none
    */
   public ContentRestriction setReadOnly(java.lang.Boolean readOnly) {

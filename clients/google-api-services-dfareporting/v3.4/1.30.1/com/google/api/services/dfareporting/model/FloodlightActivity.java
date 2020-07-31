@@ -53,6 +53,13 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
   private DimensionValue advertiserIdDimensionValue;
 
   /**
+   * Whether the activity is enabled for attribution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean attributionEnabled;
+
+  /**
    * Code type used for cache busting in the generated tag. Applicable only when
    * floodlightActivityGroupType is COUNTER and countingMethod is STANDARD_COUNTING or
    * UNIQUE_COUNTING.
@@ -296,6 +303,23 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
    */
   public FloodlightActivity setAdvertiserIdDimensionValue(DimensionValue advertiserIdDimensionValue) {
     this.advertiserIdDimensionValue = advertiserIdDimensionValue;
+    return this;
+  }
+
+  /**
+   * Whether the activity is enabled for attribution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAttributionEnabled() {
+    return attributionEnabled;
+  }
+
+  /**
+   * Whether the activity is enabled for attribution.
+   * @param attributionEnabled attributionEnabled or {@code null} for none
+   */
+  public FloodlightActivity setAttributionEnabled(java.lang.Boolean attributionEnabled) {
+    this.attributionEnabled = attributionEnabled;
     return this;
   }
 

@@ -45,6 +45,21 @@ public final class VideoSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
+   * Whether OBA icons are enabled for this placement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean obaEnabled;
+
+  /**
+   * Settings for the OBA icon of video creatives served to this placement. If this object is
+   * provided, the creative-level OBA settings will be overridden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObaIcon obaSettings;
+
+  /**
    * Orientation of a video placement. If this value is set, placement will return assets matching
    * the specified orientation.
    * The value may be {@code null}.
@@ -99,6 +114,42 @@ public final class VideoSettings extends com.google.api.client.json.GenericJson 
    */
   public VideoSettings setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Whether OBA icons are enabled for this placement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getObaEnabled() {
+    return obaEnabled;
+  }
+
+  /**
+   * Whether OBA icons are enabled for this placement.
+   * @param obaEnabled obaEnabled or {@code null} for none
+   */
+  public VideoSettings setObaEnabled(java.lang.Boolean obaEnabled) {
+    this.obaEnabled = obaEnabled;
+    return this;
+  }
+
+  /**
+   * Settings for the OBA icon of video creatives served to this placement. If this object is
+   * provided, the creative-level OBA settings will be overridden.
+   * @return value or {@code null} for none
+   */
+  public ObaIcon getObaSettings() {
+    return obaSettings;
+  }
+
+  /**
+   * Settings for the OBA icon of video creatives served to this placement. If this object is
+   * provided, the creative-level OBA settings will be overridden.
+   * @param obaSettings obaSettings or {@code null} for none
+   */
+  public VideoSettings setObaSettings(ObaIcon obaSettings) {
+    this.obaSettings = obaSettings;
     return this;
   }
 

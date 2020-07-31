@@ -32,6 +32,9 @@ public final class GoogleCloudVisionV1p2beta1Image extends com.google.api.client
   /**
    * Image content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
    * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateImages requests. It does not work for
+   * AsyncBatchAnnotateImages requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +52,9 @@ public final class GoogleCloudVisionV1p2beta1Image extends com.google.api.client
   /**
    * Image content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
    * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateImages requests. It does not work for
+   * AsyncBatchAnnotateImages requests.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -59,6 +65,9 @@ public final class GoogleCloudVisionV1p2beta1Image extends com.google.api.client
   /**
    * Image content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
    * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateImages requests. It does not work for
+   * AsyncBatchAnnotateImages requests.
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -71,6 +80,9 @@ public final class GoogleCloudVisionV1p2beta1Image extends com.google.api.client
   /**
    * Image content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
    * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateImages requests. It does not work for
+   * AsyncBatchAnnotateImages requests.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -82,6 +94,9 @@ public final class GoogleCloudVisionV1p2beta1Image extends com.google.api.client
   /**
    * Image content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
    * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateImages requests. It does not work for
+   * AsyncBatchAnnotateImages requests.
    * @see #setContent()
    *
    * <p>

@@ -46,13 +46,15 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "`jd logistics`" (JD Logistics)  - "`yunexpress`" (YunExpress)  - "`china post`" (China Post)
    * - "`china ems`" (China Post Express Mail Service)  - "`singapore post`" (Singapore Post)  -
    * "`pos malaysia`" (Pos Malaysia)  - "`postnl`" (PostNL)  - "`ptt`" (PTT Turkish Post)  - "`eub`"
-   * (ePacket)  - "`chukou1`" (Chukou1 Logistics)   Supported carriers for FR are:   - "`la poste`"
-   * (La Poste) automatic status updates   - "`colissimo`" (Colissimo by La Poste) automatic status
-   * updates  - "`ups`" (United Parcel Service) automatic status updates   - "`chronopost`"
-   * (Chronopost by La Poste)  - "`gls`" (General Logistics Systems France)  - "`dpd`" (DPD Group by
-   * GeoPost)  - "`bpost`" (Belgian Post Group)  - "`colis prive`" (Colis Privé)  - "`boxtal`"
-   * (Boxtal)  - "`geodis`" (GEODIS)  - "`tnt`" (TNT)  - "`db schenker`" (DB Schenker)  - "`aramex`"
-   * (Aramex)
+   * (ePacket)  - "`chukou1`" (Chukou1 Logistics)  - "`bestex`" (Best Express)  - "`canada post`"
+   * (Canada Post)  - "`purolator`" (Purolator)  - "`canpar`" (Canpar)  - "`india post`" (India
+   * Post)  - "`blue dart`" (Blue Dart)  - "`delhivery`" (Delhivery)  - "`dtdc`" (DTDC)  - "`tpc
+   * india`" (TPC India)   Supported carriers for FR are:   - "`la poste`" (La Poste) automatic
+   * status updates   - "`colissimo`" (Colissimo by La Poste) automatic status updates  - "`ups`"
+   * (United Parcel Service) automatic status updates   - "`chronopost`" (Chronopost by La Poste)  -
+   * "`gls`" (General Logistics Systems France)  - "`dpd`" (DPD Group by GeoPost)  - "`bpost`"
+   * (Belgian Post Group)  - "`colis prive`" (Colis Privé)  - "`boxtal`" (Boxtal)  - "`geodis`"
+   * (GEODIS)  - "`tnt`" (TNT)  - "`db schenker`" (DB Schenker)  - "`aramex`" (Aramex)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,13 +136,15 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "`jd logistics`" (JD Logistics)  - "`yunexpress`" (YunExpress)  - "`china post`" (China Post)
    * - "`china ems`" (China Post Express Mail Service)  - "`singapore post`" (Singapore Post)  -
    * "`pos malaysia`" (Pos Malaysia)  - "`postnl`" (PostNL)  - "`ptt`" (PTT Turkish Post)  - "`eub`"
-   * (ePacket)  - "`chukou1`" (Chukou1 Logistics)   Supported carriers for FR are:   - "`la poste`"
-   * (La Poste) automatic status updates   - "`colissimo`" (Colissimo by La Poste) automatic status
-   * updates  - "`ups`" (United Parcel Service) automatic status updates   - "`chronopost`"
-   * (Chronopost by La Poste)  - "`gls`" (General Logistics Systems France)  - "`dpd`" (DPD Group by
-   * GeoPost)  - "`bpost`" (Belgian Post Group)  - "`colis prive`" (Colis Privé)  - "`boxtal`"
-   * (Boxtal)  - "`geodis`" (GEODIS)  - "`tnt`" (TNT)  - "`db schenker`" (DB Schenker)  - "`aramex`"
-   * (Aramex)
+   * (ePacket)  - "`chukou1`" (Chukou1 Logistics)  - "`bestex`" (Best Express)  - "`canada post`"
+   * (Canada Post)  - "`purolator`" (Purolator)  - "`canpar`" (Canpar)  - "`india post`" (India
+   * Post)  - "`blue dart`" (Blue Dart)  - "`delhivery`" (Delhivery)  - "`dtdc`" (DTDC)  - "`tpc
+   * india`" (TPC India)   Supported carriers for FR are:   - "`la poste`" (La Poste) automatic
+   * status updates   - "`colissimo`" (Colissimo by La Poste) automatic status updates  - "`ups`"
+   * (United Parcel Service) automatic status updates   - "`chronopost`" (Chronopost by La Poste)  -
+   * "`gls`" (General Logistics Systems France)  - "`dpd`" (DPD Group by GeoPost)  - "`bpost`"
+   * (Belgian Post Group)  - "`colis prive`" (Colis Privé)  - "`boxtal`" (Boxtal)  - "`geodis`"
+   * (GEODIS)  - "`tnt`" (TNT)  - "`db schenker`" (DB Schenker)  - "`aramex`" (Aramex)
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -163,13 +167,15 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "`jd logistics`" (JD Logistics)  - "`yunexpress`" (YunExpress)  - "`china post`" (China Post)
    * - "`china ems`" (China Post Express Mail Service)  - "`singapore post`" (Singapore Post)  -
    * "`pos malaysia`" (Pos Malaysia)  - "`postnl`" (PostNL)  - "`ptt`" (PTT Turkish Post)  - "`eub`"
-   * (ePacket)  - "`chukou1`" (Chukou1 Logistics)   Supported carriers for FR are:   - "`la poste`"
-   * (La Poste) automatic status updates   - "`colissimo`" (Colissimo by La Poste) automatic status
-   * updates  - "`ups`" (United Parcel Service) automatic status updates   - "`chronopost`"
-   * (Chronopost by La Poste)  - "`gls`" (General Logistics Systems France)  - "`dpd`" (DPD Group by
-   * GeoPost)  - "`bpost`" (Belgian Post Group)  - "`colis prive`" (Colis Privé)  - "`boxtal`"
-   * (Boxtal)  - "`geodis`" (GEODIS)  - "`tnt`" (TNT)  - "`db schenker`" (DB Schenker)  - "`aramex`"
-   * (Aramex)
+   * (ePacket)  - "`chukou1`" (Chukou1 Logistics)  - "`bestex`" (Best Express)  - "`canada post`"
+   * (Canada Post)  - "`purolator`" (Purolator)  - "`canpar`" (Canpar)  - "`india post`" (India
+   * Post)  - "`blue dart`" (Blue Dart)  - "`delhivery`" (Delhivery)  - "`dtdc`" (DTDC)  - "`tpc
+   * india`" (TPC India)   Supported carriers for FR are:   - "`la poste`" (La Poste) automatic
+   * status updates   - "`colissimo`" (Colissimo by La Poste) automatic status updates  - "`ups`"
+   * (United Parcel Service) automatic status updates   - "`chronopost`" (Chronopost by La Poste)  -
+   * "`gls`" (General Logistics Systems France)  - "`dpd`" (DPD Group by GeoPost)  - "`bpost`"
+   * (Belgian Post Group)  - "`colis prive`" (Colis Privé)  - "`boxtal`" (Boxtal)  - "`geodis`"
+   * (GEODIS)  - "`tnt`" (TNT)  - "`db schenker`" (DB Schenker)  - "`aramex`" (Aramex)
    * @param carrier carrier or {@code null} for none
    */
   public OrderShipment setCarrier(java.lang.String carrier) {

@@ -76,6 +76,13 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   private java.lang.Integer numVmEndpointsWithNatMappings;
 
   /**
+   * Status of rules in this NAT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterStatusNatStatusNatRuleStatus> ruleStatus;
+
+  /**
    * A list of fully qualified URLs of reserved IP address resources.
    * The value may be {@code null}.
    */
@@ -196,6 +203,23 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
    */
   public RouterStatusNatStatus setNumVmEndpointsWithNatMappings(java.lang.Integer numVmEndpointsWithNatMappings) {
     this.numVmEndpointsWithNatMappings = numVmEndpointsWithNatMappings;
+    return this;
+  }
+
+  /**
+   * Status of rules in this NAT.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterStatusNatStatusNatRuleStatus> getRuleStatus() {
+    return ruleStatus;
+  }
+
+  /**
+   * Status of rules in this NAT.
+   * @param ruleStatus ruleStatus or {@code null} for none
+   */
+  public RouterStatusNatStatus setRuleStatus(java.util.List<RouterStatusNatStatusNatRuleStatus> ruleStatus) {
+    this.ruleStatus = ruleStatus;
     return this;
   }
 

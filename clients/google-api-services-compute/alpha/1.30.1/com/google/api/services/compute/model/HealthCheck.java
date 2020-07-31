@@ -24,8 +24,9 @@ package com.google.api.services.compute.model;
  * * [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) *
  * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)
  *
- * Internal HTTP(S) load balancers use regional health checks. All other types of GCP load balancers
- * and managed instance group auto-healing use global health checks. For more information, read
+ * Internal HTTP(S) load balancers must use regional health checks. Internal TCP/UDP load balancers
+ * can use either regional or global health checks. All other types of GCP load balancers and
+ * managed instance group auto-healing must use global health checks. For more information, read
  * Health Check Concepts.
  *
  * To perform health checks on network load balancers, you must use either httpHealthChecks or

@@ -44,8 +44,9 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   private java.lang.String kind;
 
   /**
-   * [Output Only] The position of the next byte of content from the serial console output. Use this
-   * value in the next request as the start parameter.
+   * [Output Only] The position of the next byte of content, regardless of whether the content
+   * exists, following the output returned in the `contents` property. Use this value in the next
+   * request as the start parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -60,8 +61,10 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
 
   /**
    * The starting byte position of the output that was returned. This should match the start
-   * parameter sent with the request. If the serial console output exceeds the size of the buffer,
-   * older output will be overwritten by newer content and the start values will be mismatched.
+   * parameter sent with the request. If the serial console output exceeds the size of the buffer (1
+   * MB), older output is overwritten by newer content. The output start value will indicate the
+   * byte position of the output that was returned, which might be different than the `start` value
+   * that was specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -102,8 +105,9 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The position of the next byte of content from the serial console output. Use this
-   * value in the next request as the start parameter.
+   * [Output Only] The position of the next byte of content, regardless of whether the content
+   * exists, following the output returned in the `contents` property. Use this value in the next
+   * request as the start parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNext() {
@@ -111,8 +115,9 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The position of the next byte of content from the serial console output. Use this
-   * value in the next request as the start parameter.
+   * [Output Only] The position of the next byte of content, regardless of whether the content
+   * exists, following the output returned in the `contents` property. Use this value in the next
+   * request as the start parameter.
    * @param next next or {@code null} for none
    */
   public SerialPortOutput setNext(java.lang.Long next) {
@@ -139,8 +144,10 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
 
   /**
    * The starting byte position of the output that was returned. This should match the start
-   * parameter sent with the request. If the serial console output exceeds the size of the buffer,
-   * older output will be overwritten by newer content and the start values will be mismatched.
+   * parameter sent with the request. If the serial console output exceeds the size of the buffer (1
+   * MB), older output is overwritten by newer content. The output start value will indicate the
+   * byte position of the output that was returned, which might be different than the `start` value
+   * that was specified in the request.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStart() {
@@ -149,8 +156,10 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
 
   /**
    * The starting byte position of the output that was returned. This should match the start
-   * parameter sent with the request. If the serial console output exceeds the size of the buffer,
-   * older output will be overwritten by newer content and the start values will be mismatched.
+   * parameter sent with the request. If the serial console output exceeds the size of the buffer (1
+   * MB), older output is overwritten by newer content. The output start value will indicate the
+   * byte position of the output that was returned, which might be different than the `start` value
+   * that was specified in the request.
    * @param start start or {@code null} for none
    */
   public SerialPortOutput setStart(java.lang.Long start) {

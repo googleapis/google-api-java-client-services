@@ -43,6 +43,13 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private Instance instance;
 
   /**
+   * The instance properties for the request. Required if sourceInstanceTemplate is not provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceProperties instanceProperties;
+
+  /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
    * the default value. If min_count instances cannot be created, then no instances will be created.
    * The value may be {@code null}.
@@ -58,11 +65,16 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.util.List<java.lang.String> predefinedNames;
 
   /**
-   * Specifies the instance template from which to create the instance. This field is optional. This
-   * field is optional. It can be a full or partial URL. For example, the following are all valid
-   * URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/i
-   * nstanceTemplates/instanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate
-   * - global/instanceTemplates/instanceTemplate
+   * Specifies the instance template from which to create instances. You may combine
+   * sourceInstanceTemplate with instanceProperties to override specific values from an existing
+   * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
+   *
+   * It can be a full or partial URL. For example, the following are all valid URLs to an instance
+   * template:   - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/i
+   * nstanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate  -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +109,23 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setInstance(Instance instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * The instance properties for the request. Required if sourceInstanceTemplate is not provided.
+   * @return value or {@code null} for none
+   */
+  public InstanceProperties getInstanceProperties() {
+    return instanceProperties;
+  }
+
+  /**
+   * The instance properties for the request. Required if sourceInstanceTemplate is not provided.
+   * @param instanceProperties instanceProperties or {@code null} for none
+   */
+  public BulkInsertInstanceResource setInstanceProperties(InstanceProperties instanceProperties) {
+    this.instanceProperties = instanceProperties;
     return this;
   }
 
@@ -137,11 +166,16 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Specifies the instance template from which to create the instance. This field is optional. This
-   * field is optional. It can be a full or partial URL. For example, the following are all valid
-   * URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/i
-   * nstanceTemplates/instanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate
-   * - global/instanceTemplates/instanceTemplate
+   * Specifies the instance template from which to create instances. You may combine
+   * sourceInstanceTemplate with instanceProperties to override specific values from an existing
+   * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
+   *
+   * It can be a full or partial URL. For example, the following are all valid URLs to an instance
+   * template:   - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/i
+   * nstanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate  -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * This field is optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInstanceTemplate() {
@@ -149,11 +183,16 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Specifies the instance template from which to create the instance. This field is optional. This
-   * field is optional. It can be a full or partial URL. For example, the following are all valid
-   * URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/i
-   * nstanceTemplates/instanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate
-   * - global/instanceTemplates/instanceTemplate
+   * Specifies the instance template from which to create instances. You may combine
+   * sourceInstanceTemplate with instanceProperties to override specific values from an existing
+   * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
+   *
+   * It can be a full or partial URL. For example, the following are all valid URLs to an instance
+   * template:   - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/i
+   * nstanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate  -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * This field is optional.
    * @param sourceInstanceTemplate sourceInstanceTemplate or {@code null} for none
    */
   public BulkInsertInstanceResource setSourceInstanceTemplate(java.lang.String sourceInstanceTemplate) {

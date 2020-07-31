@@ -64,6 +64,13 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   private java.lang.Integer numTotalNatPorts;
 
   /**
+   * Information about mappings provided by rules in this NAT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings> ruleMappings;
+
+  /**
    * Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP range. Examples:
    * "10.33.4.55/32", or "192.168.5.0/24".
    * The value may be {@code null}.
@@ -155,6 +162,23 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
    */
   public VmEndpointNatMappingsInterfaceNatMappings setNumTotalNatPorts(java.lang.Integer numTotalNatPorts) {
     this.numTotalNatPorts = numTotalNatPorts;
+    return this;
+  }
+
+  /**
+   * Information about mappings provided by rules in this NAT.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings> getRuleMappings() {
+    return ruleMappings;
+  }
+
+  /**
+   * Information about mappings provided by rules in this NAT.
+   * @param ruleMappings ruleMappings or {@code null} for none
+   */
+  public VmEndpointNatMappingsInterfaceNatMappings setRuleMappings(java.util.List<VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings> ruleMappings) {
+    this.ruleMappings = ruleMappings;
     return this;
   }
 

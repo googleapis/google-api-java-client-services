@@ -37,8 +37,12 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * Optional. Timeout for DAG of jobs. The timer begins when the first job is submitted. Minimum
-   * duration of 10 minutes, max of 24 hours.
+   * Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for
+   * second, minute, hour, and day duration values, respectively. The timeout duration must be from
+   * 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is
+   * submitted. If the workflow is running at the end of the timeout period, any remaining jobs are
+   * cancelled, the workflow is terminated, and if the workflow was running on a managed cluster,
+   * the cluster is deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,10 +85,10 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +152,12 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Timeout for DAG of jobs. The timer begins when the first job is submitted. Minimum
-   * duration of 10 minutes, max of 24 hours.
+   * Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for
+   * second, minute, hour, and day duration values, respectively. The timeout duration must be from
+   * 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is
+   * submitted. If the workflow is running at the end of the timeout period, any remaining jobs are
+   * cancelled, the workflow is terminated, and if the workflow was running on a managed cluster,
+   * the cluster is deleted.
    * @return value or {@code null} for none
    */
   public String getDagTimeout() {
@@ -157,8 +165,12 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Timeout for DAG of jobs. The timer begins when the first job is submitted. Minimum
-   * duration of 10 minutes, max of 24 hours.
+   * Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for
+   * second, minute, hour, and day duration values, respectively. The timeout duration must be from
+   * 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is
+   * submitted. If the workflow is running at the end of the timeout period, any remaining jobs are
+   * cancelled, the workflow is terminated, and if the workflow was running on a managed cluster,
+   * the cluster is deleted.
    * @param dagTimeout dagTimeout or {@code null} for none
    */
   public WorkflowTemplate setDagTimeout(String dagTimeout) {
@@ -234,10 +246,10 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -247,10 +259,10 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @param name name or {@code null} for none
    */
   public WorkflowTemplate setName(java.lang.String name) {

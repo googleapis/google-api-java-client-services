@@ -79,8 +79,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
   private java.lang.String mainClass;
 
   /**
-   * The HCFS URI of the jar file containing the main class. Examples:  'gs://foo-bucket/analytics-
-   * binaries/extract-useful-metrics-mr.jar'  'hdfs:/tmp/test-samples/custom-wordcount.jar'
+   * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-
+   * binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar'
    * 'file:home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
    * The value may be {@code null}.
    */
@@ -209,8 +209,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HCFS URI of the jar file containing the main class. Examples:  'gs://foo-bucket/analytics-
-   * binaries/extract-useful-metrics-mr.jar'  'hdfs:/tmp/test-samples/custom-wordcount.jar'
+   * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-
+   * binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar'
    * 'file:home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
    * @return value or {@code null} for none
    */
@@ -219,8 +219,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HCFS URI of the jar file containing the main class. Examples:  'gs://foo-bucket/analytics-
-   * binaries/extract-useful-metrics-mr.jar'  'hdfs:/tmp/test-samples/custom-wordcount.jar'
+   * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-
+   * binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar'
    * 'file:home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
    * @param mainJarFileUri mainJarFileUri or {@code null} for none
    */

@@ -38,8 +38,8 @@ public final class AuthorizedDomain extends com.google.api.client.json.GenericJs
   private java.lang.String id;
 
   /**
-   * Read only. Full path to the `AuthorizedDomain` resource in the API. Example:
-   * `apps/myapp/authorizedDomains/example.com`.
+   * Deprecated Read only. Full path to the `AuthorizedDomain` resource in the API. Example:
+   * `projects/myproject/authorizedDomains/example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class AuthorizedDomain extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Read only. Full path to the `AuthorizedDomain` resource in the API. Example:
-   * `apps/myapp/authorizedDomains/example.com`.
+   * Deprecated Read only. Full path to the `AuthorizedDomain` resource in the API. Example:
+   * `projects/myproject/authorizedDomains/example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,8 +72,8 @@ public final class AuthorizedDomain extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Read only. Full path to the `AuthorizedDomain` resource in the API. Example:
-   * `apps/myapp/authorizedDomains/example.com`.
+   * Deprecated Read only. Full path to the `AuthorizedDomain` resource in the API. Example:
+   * `projects/myproject/authorizedDomains/example.com`.
    * @param name name or {@code null} for none
    */
   public AuthorizedDomain setName(java.lang.String name) {

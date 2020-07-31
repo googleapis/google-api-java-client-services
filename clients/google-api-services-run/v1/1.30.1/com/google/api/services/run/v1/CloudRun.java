@@ -993,7 +993,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Name of the parent Application resource. Example: `apps/myapp`.
+       * @param parent Name of the parent Project resource. Example: `projects/myproject`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1019,7 +1019,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Name of the parent Application resource. Example: `apps/myapp`.
+         * @param parent Name of the parent Project resource. Example: `projects/myproject`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1097,17 +1097,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the parent Application resource. Example: `apps/myapp`. */
+        /** Name of the parent Project resource. Example: `projects/myproject`. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Name of the parent Application resource. Example: `apps/myapp`.
+        /** Name of the parent Project resource. Example: `projects/myproject`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Name of the parent Application resource. Example: `apps/myapp`. */
+        /** Name of the parent Project resource. Example: `projects/myproject`. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4465,6 +4465,198 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
   public class Projects {
 
     /**
+     * An accessor for creating requests from the Authorizeddomains collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Authorizeddomains.List request = run.authorizeddomains().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Authorizeddomains authorizeddomains() {
+      return new Authorizeddomains();
+    }
+
+    /**
+     * The "authorizeddomains" collection of methods.
+     */
+    public class Authorizeddomains {
+
+      /**
+       * List authorized domains.
+       *
+       * Create a request for the method "authorizeddomains.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Name of the parent Project resource. Example: `projects/myproject`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1.model.ListAuthorizedDomainsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/authorizeddomains";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * List authorized domains.
+         *
+         * Create a request for the method "authorizeddomains.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Name of the parent Project resource. Example: `projects/myproject`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.ListAuthorizedDomainsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name of the parent Project resource. Example: `projects/myproject`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Name of the parent Project resource. Example: `projects/myproject`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Name of the parent Project resource. Example: `projects/myproject`. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Maximum results to return per page. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum results to return per page.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Maximum results to return per page. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Continuation token for fetching the next page of results. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Continuation token for fetching the next page of results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Continuation token for fetching the next page of results. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -4699,7 +4891,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Name of the parent Application resource. Example: `apps/myapp`.
+         * @param parent Name of the parent Project resource. Example: `projects/myproject`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4725,7 +4917,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Name of the parent Application resource. Example: `apps/myapp`.
+           * @param parent Name of the parent Project resource. Example: `projects/myproject`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4803,17 +4995,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Name of the parent Application resource. Example: `apps/myapp`. */
+          /** Name of the parent Project resource. Example: `projects/myproject`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Name of the parent Application resource. Example: `apps/myapp`.
+          /** Name of the parent Project resource. Example: `projects/myproject`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Name of the parent Application resource. Example: `apps/myapp`. */
+          /** Name of the parent Project resource. Example: `projects/myproject`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

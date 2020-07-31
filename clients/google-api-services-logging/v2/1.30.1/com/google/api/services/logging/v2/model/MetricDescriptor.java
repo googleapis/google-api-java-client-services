@@ -19,12 +19,11 @@ package com.google.api.services.logging.v2.model;
 /**
  * Defines a metric type and its schema. Once a metric descriptor is created, deleting or altering
  * it stops data collection and makes the metric type's existing data unusable.The following are
- * specific rules for service defined Monitoring metric descriptors: type, metric_kind, value_type,
- * description, display_name,  launch_stage fields are all required. The unit field must be
- * specified  if the value_type is any of DOUBLE, INT64, DISTRIBUTION. Maximum of default 500 metric
- * descriptors per service is allowed. Maximum of default 10 labels per metric descriptor is
- * allowed.The default maximum limit can be overridden. Please follow
- * https://cloud.google.com/monitoring/quotas
+ * specific rules for service defined Monitoring metric descriptors: type, metric_kind, value_type
+ * and description  fields are all required. The unit field must be specified  if the value_type is
+ * any of DOUBLE, INT64, DISTRIBUTION. Maximum of default 500 metric descriptors per service is
+ * allowed. Maximum of default 10 labels per metric descriptor is allowed.The default maximum limit
+ * can be overridden. Please follow https://cloud.google.com/monitoring/quotas
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:

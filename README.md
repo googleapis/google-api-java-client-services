@@ -74,7 +74,7 @@ packages on [Maven Central][maven-search].
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
-| Cloud Memorystore for Memcached API | [v1beta2](clients/google-api-services-memcache/v1beta2) |
+| Cloud Memorystore for Memcached API | [v1](clients/google-api-services-memcache/v1), [v1beta2](clients/google-api-services-memcache/v1beta2) |
 | Cloud Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |

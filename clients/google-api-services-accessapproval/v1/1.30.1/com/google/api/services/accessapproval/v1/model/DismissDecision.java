@@ -37,6 +37,15 @@ public final class DismissDecision extends com.google.api.client.json.GenericJso
   private String dismissTime;
 
   /**
+   * This field will be true if the ApprovalRequest was implcitly dismissed due to inaction by the
+   * access approval approvers (the request is not acted on by the approvers before the exiration
+   * time).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean implicit;
+
+  /**
    * The time at which the approval request was dismissed.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class DismissDecision extends com.google.api.client.json.GenericJso
    */
   public DismissDecision setDismissTime(String dismissTime) {
     this.dismissTime = dismissTime;
+    return this;
+  }
+
+  /**
+   * This field will be true if the ApprovalRequest was implcitly dismissed due to inaction by the
+   * access approval approvers (the request is not acted on by the approvers before the exiration
+   * time).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImplicit() {
+    return implicit;
+  }
+
+  /**
+   * This field will be true if the ApprovalRequest was implcitly dismissed due to inaction by the
+   * access approval approvers (the request is not acted on by the approvers before the exiration
+   * time).
+   * @param implicit implicit or {@code null} for none
+   */
+  public DismissDecision setImplicit(java.lang.Boolean implicit) {
+    this.implicit = implicit;
     return this;
   }
 

@@ -23,9 +23,6 @@ package com.google.api.services.realtimebidding.v1;
  */
 public class RealTimeBiddingScopes {
 
-  /** Manage your Ad Exchange buyer account configuration. */
-  public static final String ADEXCHANGE_BUYER = "https://www.googleapis.com/auth/adexchange.buyer";
-
   /** See, create, edit, and delete your Authorized Buyers and Open Bidding account entities. */
   public static final String REALTIME_BIDDING = "https://www.googleapis.com/auth/realtime-bidding";
 
@@ -36,7 +33,6 @@ public class RealTimeBiddingScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(ADEXCHANGE_BUYER);
     set.add(REALTIME_BIDDING);
     return java.util.Collections.unmodifiableSet(set);
   }

@@ -60,6 +60,13 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   private java.lang.Boolean force;
 
   /**
+   * Label IDs for the 'updatelabels' request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.math.BigInteger> labelIds;
+
+  /**
    * Details about the `link` request.
    * The value may be {@code null}.
    */
@@ -158,6 +165,23 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
    */
   public AccountsCustomBatchRequestEntry setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Label IDs for the 'updatelabels' request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.math.BigInteger> getLabelIds() {
+    return labelIds;
+  }
+
+  /**
+   * Label IDs for the 'updatelabels' request.
+   * @param labelIds labelIds or {@code null} for none
+   */
+  public AccountsCustomBatchRequestEntry setLabelIds(java.util.List<java.math.BigInteger> labelIds) {
+    this.labelIds = labelIds;
     return this;
   }
 

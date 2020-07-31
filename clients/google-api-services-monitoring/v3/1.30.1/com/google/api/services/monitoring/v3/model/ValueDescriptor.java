@@ -44,6 +44,15 @@ public final class ValueDescriptor extends com.google.api.client.json.GenericJso
   private java.lang.String metricKind;
 
   /**
+   * The unit in which time_series point values are reported. unit follows the UCUM format for units
+   * as seen in https://unitsofmeasure.org/ucum.html. unit is only valid if value_type is INTEGER,
+   * DOUBLE, DISTRIBUTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unit;
+
+  /**
    * The value type.
    * The value may be {@code null}.
    */
@@ -81,6 +90,27 @@ public final class ValueDescriptor extends com.google.api.client.json.GenericJso
    */
   public ValueDescriptor setMetricKind(java.lang.String metricKind) {
     this.metricKind = metricKind;
+    return this;
+  }
+
+  /**
+   * The unit in which time_series point values are reported. unit follows the UCUM format for units
+   * as seen in https://unitsofmeasure.org/ucum.html. unit is only valid if value_type is INTEGER,
+   * DOUBLE, DISTRIBUTION.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnit() {
+    return unit;
+  }
+
+  /**
+   * The unit in which time_series point values are reported. unit follows the UCUM format for units
+   * as seen in https://unitsofmeasure.org/ucum.html. unit is only valid if value_type is INTEGER,
+   * DOUBLE, DISTRIBUTION.
+   * @param unit unit or {@code null} for none
+   */
+  public ValueDescriptor setUnit(java.lang.String unit) {
+    this.unit = unit;
     return this;
   }
 

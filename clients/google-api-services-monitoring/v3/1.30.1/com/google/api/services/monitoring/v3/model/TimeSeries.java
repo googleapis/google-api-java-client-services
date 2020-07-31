@@ -85,6 +85,15 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   private MonitoredResource resource;
 
   /**
+   * The units in which the metric value is reported. It is only applicable if the value_type is
+   * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
+   * values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unit;
+
+  /**
    * The value type of the time series. When listing time series, this value type might be different
    * from the value type of the associated metric if this time series is an alignment or reduction
    * of other time series.When creating a time series, this field is optional. If present, it must
@@ -200,6 +209,27 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
    */
   public TimeSeries setResource(MonitoredResource resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * The units in which the metric value is reported. It is only applicable if the value_type is
+   * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
+   * values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnit() {
+    return unit;
+  }
+
+  /**
+   * The units in which the metric value is reported. It is only applicable if the value_type is
+   * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
+   * values.
+   * @param unit unit or {@code null} for none
+   */
+  public TimeSeries setUnit(java.lang.String unit) {
+    this.unit = unit;
     return this;
   }
 

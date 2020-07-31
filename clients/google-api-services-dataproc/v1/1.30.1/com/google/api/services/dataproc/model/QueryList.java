@@ -33,8 +33,7 @@ public final class QueryList extends com.google.api.client.json.GenericJson {
    * Required. The queries to execute. You do not need to terminate a query with a semicolon.
    * Multiple queries can be specified in one string by separating each with a semicolon. Here is an
    * example of an Cloud Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob":
-   * {   "queryList": {     "queries": [       "query1",       "query2",       "query3;query4",
-   * ]   } }
+   * { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +43,7 @@ public final class QueryList extends com.google.api.client.json.GenericJson {
    * Required. The queries to execute. You do not need to terminate a query with a semicolon.
    * Multiple queries can be specified in one string by separating each with a semicolon. Here is an
    * example of an Cloud Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob":
-   * {   "queryList": {     "queries": [       "query1",       "query2",       "query3;query4",
-   * ]   } }
+   * { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getQueries() {
@@ -56,8 +54,7 @@ public final class QueryList extends com.google.api.client.json.GenericJson {
    * Required. The queries to execute. You do not need to terminate a query with a semicolon.
    * Multiple queries can be specified in one string by separating each with a semicolon. Here is an
    * example of an Cloud Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob":
-   * {   "queryList": {     "queries": [       "query1",       "query2",       "query3;query4",
-   * ]   } }
+   * { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }
    * @param queries queries or {@code null} for none
    */
   public QueryList setQueries(java.util.List<java.lang.String> queries) {

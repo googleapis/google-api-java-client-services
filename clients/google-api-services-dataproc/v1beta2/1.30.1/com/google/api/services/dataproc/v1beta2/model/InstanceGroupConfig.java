@@ -103,7 +103,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private ManagedGroupConfig managedGroupConfig;
 
   /**
-   * Specifies the minimum cpu platform for the Instance Group. See Dataproc - Minimum CPU Platform
+   * Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform
    * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * The value may be {@code null}.
    */
@@ -281,7 +281,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Specifies the minimum cpu platform for the Instance Group. See Dataproc - Minimum CPU Platform
+   * Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform
    * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * @return value or {@code null} for none
    */
@@ -290,7 +290,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Specifies the minimum cpu platform for the Instance Group. See Dataproc - Minimum CPU Platform
+   * Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform
    * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */

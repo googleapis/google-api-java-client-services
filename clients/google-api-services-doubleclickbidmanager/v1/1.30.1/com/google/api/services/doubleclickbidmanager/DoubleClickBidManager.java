@@ -143,7 +143,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
   public class Lineitems {
 
     /**
-     * Retrieves line items in CSV format. TrueView line items are not supported.
+     * Retrieves line items in CSV format. YouTube & partners line items are not supported.
      *
      * Create a request for the method "lineitems.downloadlineitems".
      *
@@ -165,7 +165,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "lineitems/downloadlineitems";
 
       /**
-       * Retrieves line items in CSV format. TrueView line items are not supported.
+       * Retrieves line items in CSV format. YouTube & partners line items are not supported.
        *
        * Create a request for the method "lineitems.downloadlineitems".
        *
@@ -223,7 +223,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Uploads line items in CSV format. TrueView line items are not supported.
+     * Uploads line items in CSV format. YouTube & partners line items are not supported.
      *
      * Create a request for the method "lineitems.uploadlineitems".
      *
@@ -245,7 +245,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "lineitems/uploadlineitems";
 
       /**
-       * Uploads line items in CSV format. TrueView line items are not supported.
+       * Uploads line items in CSV format. YouTube & partners line items are not supported.
        *
        * Create a request for the method "lineitems.uploadlineitems".
        *

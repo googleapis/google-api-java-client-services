@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/w_quvq82pzU5rXpQEUZ-IAPLomU\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/165lTXtW-FpZSH7zsUKApJrU7EM\"",
  "discoveryVersion": "v1",
  "id": "doubleclickbidmanager:v1",
  "name": "doubleclickbidmanager",
  "canonicalName": "DoubleClick Bid Manager",
  "version": "v1",
- "revision": "20200220",
+ "revision": "20200723",
  "title": "DoubleClick Bid Manager API",
  "description": "API for viewing and managing your reports in DoubleClick Bid Manager.",
  "ownerDomain": "google.com",
@@ -143,7 +143,7 @@
   "DownloadRequest": {
    "id": "DownloadRequest",
    "type": "object",
-   "description": "Request to fetch stored inventory sources, campaigns, insertion orders, line items, TrueView ad groups and ads.",
+   "description": "Request to fetch stored inventory sources, campaigns, insertion orders, line items, YouTube ad groups and ads.",
    "properties": {
     "fileTypes": {
      "type": "array",
@@ -1929,7 +1929,7 @@
      "id": "doubleclickbidmanager.lineitems.downloadlineitems",
      "path": "lineitems/downloadlineitems",
      "httpMethod": "POST",
-     "description": "Retrieves line items in CSV format. TrueView line items are not supported.",
+     "description": "Retrieves line items in CSV format. YouTube & partners line items are not supported.",
      "request": {
       "$ref": "DownloadLineItemsRequest"
      },
@@ -1944,7 +1944,7 @@
      "id": "doubleclickbidmanager.lineitems.uploadlineitems",
      "path": "lineitems/uploadlineitems",
      "httpMethod": "POST",
-     "description": "Uploads line items in CSV format. TrueView line items are not supported.",
+     "description": "Uploads line items in CSV format. YouTube & partners line items are not supported.",
      "request": {
       "$ref": "UploadLineItemsRequest"
      },

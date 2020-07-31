@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Request to fetch stored inventory sources, campaigns, insertion orders, line items, TrueView ad
+ * Request to fetch stored inventory sources, campaigns, insertion orders, line items, YouTube ad
  * groups and ads.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

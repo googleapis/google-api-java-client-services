@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * The BigQuery table where the server writes the output.
+ * The BigQuery table where the server writes output.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,9 +30,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
-   * the contents of the DICOM store. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * This flag is being replaced by write_disposition which provides additional options. force=false
+   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +46,8 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
   private java.lang.String tableUri;
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
-   * the contents of the DICOM store. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * This flag is being replaced by write_disposition which provides additional options. force=false
+   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -57,9 +55,8 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
   }
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
-   * the contents of the DICOM store. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * This flag is being replaced by write_disposition which provides additional options. force=false
+   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setForce(java.lang.Boolean force) {

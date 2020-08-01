@@ -53,7 +53,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how messages that don't parse successfully are handled.
+   * Determines how messages that fail to parse are handled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how messages that don't parse successfully are handled.
+   * Determines how messages that fail to parse are handled.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchematizedParsingType() {
@@ -123,7 +123,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how messages that don't parse successfully are handled.
+   * Determines how messages that fail to parse are handled.
    * @param schematizedParsingType schematizedParsingType or {@code null} for none
    */
   public SchemaPackage setSchematizedParsingType(java.lang.String schematizedParsingType) {

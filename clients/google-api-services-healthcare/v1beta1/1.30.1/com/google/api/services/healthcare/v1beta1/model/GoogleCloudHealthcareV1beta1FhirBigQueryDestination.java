@@ -38,9 +38,8 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   private java.lang.String datasetUri;
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error.
+   * This flag is being replaced by write_disposition which provides additional options. force=false
+   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +72,8 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error.
+   * This flag is being replaced by write_disposition which provides additional options. force=false
+   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -83,9 +81,8 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error.
+   * This flag is being replaced by write_disposition which provides additional options. force=false
+   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setForce(java.lang.Boolean force) {

@@ -31,9 +31,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ImportAnnotationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The annotation_store that the annotations were imported to. The name is in the format `projects
-   * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_
-   * id}`.
+   * The annotation_store that the annotations were imported to, in the format `projects/{project_id
+   * }/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +46,8 @@ public final class ImportAnnotationsResponse extends com.google.api.client.json.
   private java.lang.Long successCount;
 
   /**
-   * The annotation_store that the annotations were imported to. The name is in the format `projects
-   * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_
-   * id}`.
+   * The annotation_store that the annotations were imported to, in the format `projects/{project_id
+   * }/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnnotationStore() {
@@ -57,9 +55,8 @@ public final class ImportAnnotationsResponse extends com.google.api.client.json.
   }
 
   /**
-   * The annotation_store that the annotations were imported to. The name is in the format `projects
-   * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_
-   * id}`.
+   * The annotation_store that the annotations were imported to, in the format `projects/{project_id
+   * }/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
    * @param annotationStore annotationStore or {@code null} for none
    */
   public ImportAnnotationsResponse setAnnotationStore(java.lang.String annotationStore) {

@@ -57,7 +57,8 @@ public final class GoogleCloudRecommendationengineV1beta1BigQuerySource extends 
   private java.lang.String datasetId;
 
   /**
-   * Required. Intermediate gcs dir used for the import. .
+   * Optional. Intermediate Cloud Storage directory used for the import. Can be specified if one
+   * wants to have the BigQuery export to a specific Cloud Storage directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +140,8 @@ public final class GoogleCloudRecommendationengineV1beta1BigQuerySource extends 
   }
 
   /**
-   * Required. Intermediate gcs dir used for the import. .
+   * Optional. Intermediate Cloud Storage directory used for the import. Can be specified if one
+   * wants to have the BigQuery export to a specific Cloud Storage directory.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsStagingDir() {
@@ -147,7 +149,8 @@ public final class GoogleCloudRecommendationengineV1beta1BigQuerySource extends 
   }
 
   /**
-   * Required. Intermediate gcs dir used for the import. .
+   * Optional. Intermediate Cloud Storage directory used for the import. Can be specified if one
+   * wants to have the BigQuery export to a specific Cloud Storage directory.
    * @param gcsStagingDir gcsStagingDir or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1BigQuerySource setGcsStagingDir(java.lang.String gcsStagingDir) {

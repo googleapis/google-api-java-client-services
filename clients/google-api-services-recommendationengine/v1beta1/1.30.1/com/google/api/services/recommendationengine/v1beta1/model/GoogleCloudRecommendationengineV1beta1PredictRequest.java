@@ -56,8 +56,8 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
    *  * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional")  * filterOutOfStockItems
    * tag=(-"promotional")  * filterOutOfStockItems
    *
-   * If your filter blocks all prediction results, generic (unfiltered) popular items are returned.
-   * This behavior can be overridden by setting `strictFiltering` to true in
+   * If your filter blocks all prediction results, nothing will be returned. If you want generic
+   * (unfiltered) popular items to be returned instead, set `strictFiltering` to false in
    * `PredictRequest.params`.
    * The value may be {@code null}.
    */
@@ -103,9 +103,9 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
    * response. * `returnItemScore`: Boolean. If set to true, the prediction 'score'    corresponding
    * to each returned item will be set in the `metadata`    field in the prediction response. The
    * given 'score' indicates the    probability of an item being clicked/purchased given the user's
-   * context    and history. * `strictFiltering`: Boolean. If set to true, the service will return
-   * empty    instead of generic (unfiltered) popular items if your filter blocks all    prediction
-   * results.
+   * context    and history. * `strictFiltering`: Boolean. True by default. If set to false, the
+   * service    will return generic (unfiltered) popular items instead of empty if your    filter
+   * blocks all prediction results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,8 +159,8 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
    *  * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional")  * filterOutOfStockItems
    * tag=(-"promotional")  * filterOutOfStockItems
    *
-   * If your filter blocks all prediction results, generic (unfiltered) popular items are returned.
-   * This behavior can be overridden by setting `strictFiltering` to true in
+   * If your filter blocks all prediction results, nothing will be returned. If you want generic
+   * (unfiltered) popular items to be returned instead, set `strictFiltering` to false in
    * `PredictRequest.params`.
    * @return value or {@code null} for none
    */
@@ -186,8 +186,8 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
    *  * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional")  * filterOutOfStockItems
    * tag=(-"promotional")  * filterOutOfStockItems
    *
-   * If your filter blocks all prediction results, generic (unfiltered) popular items are returned.
-   * This behavior can be overridden by setting `strictFiltering` to true in
+   * If your filter blocks all prediction results, nothing will be returned. If you want generic
+   * (unfiltered) popular items to be returned instead, set `strictFiltering` to false in
    * `PredictRequest.params`.
    * @param filter filter or {@code null} for none
    */
@@ -273,9 +273,9 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
    * response. * `returnItemScore`: Boolean. If set to true, the prediction 'score'    corresponding
    * to each returned item will be set in the `metadata`    field in the prediction response. The
    * given 'score' indicates the    probability of an item being clicked/purchased given the user's
-   * context    and history. * `strictFiltering`: Boolean. If set to true, the service will return
-   * empty    instead of generic (unfiltered) popular items if your filter blocks all    prediction
-   * results.
+   * context    and history. * `strictFiltering`: Boolean. True by default. If set to false, the
+   * service    will return generic (unfiltered) popular items instead of empty if your    filter
+   * blocks all prediction results.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -292,9 +292,9 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
    * response. * `returnItemScore`: Boolean. If set to true, the prediction 'score'    corresponding
    * to each returned item will be set in the `metadata`    field in the prediction response. The
    * given 'score' indicates the    probability of an item being clicked/purchased given the user's
-   * context    and history. * `strictFiltering`: Boolean. If set to true, the service will return
-   * empty    instead of generic (unfiltered) popular items if your filter blocks all    prediction
-   * results.
+   * context    and history. * `strictFiltering`: Boolean. True by default. If set to false, the
+   * service    will return generic (unfiltered) popular items instead of empty if your    filter
+   * blocks all prediction results.
    * @param params params or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1PredictRequest setParams(java.util.Map<String, java.lang.Object> params) {

@@ -18,8 +18,10 @@ package com.google.api.services.datacatalog.v1beta1.model;
 
 /**
  * Tags are used to attach custom metadata to Data Catalog resources. Tags conform to the
- * specifications within their tag template. See [Data Catalog IAM](https://cloud.google.com/data-
- * catalog/docs/concepts/iam) for information on the permissions needed to create or view tags.
+ * specifications within their tag template.
+ *
+ * See [Data Catalog IAM](https://cloud.google.com/data-catalog/docs/concepts/iam) for information
+ * on the permissions needed to create or view tags.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -34,8 +36,11 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
 
   /**
    * Resources like Entry can have schemas associated with them. This scope allows users to attach
-   * tags to an individual column based on that schema. For attaching a tag to a nested column, use
-   * `.` to separate the column names. Example: * `outer_column.inner_column`
+   * tags to an individual column based on that schema.
+   *
+   * For attaching a tag to a nested column, use `.` to separate the column names. Example:
+   *
+   * * `outer_column.inner_column`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,19 +56,24 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   private java.util.Map<String, GoogleCloudDatacatalogV1beta1TagField> fields;
 
   /**
-   * The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{locatio
-   * n}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-   * generated identifier. Note that this Tag may not actually be stored in the location in this
-   * name.
+   * The resource name of the tag in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/ta
+   * gs/{tag_id}
+   *
+   * where `tag_id` is a system-generated identifier. Note that this Tag may not actually be stored
+   * in the location in this name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The resource name of the tag template that this tag uses. Example: *
-   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} This field cannot be
-   * modified after creation.
+   * Required. The resource name of the tag template that this tag uses. Example:
+   *
+   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+   *
+   * This field cannot be modified after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +88,11 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
 
   /**
    * Resources like Entry can have schemas associated with them. This scope allows users to attach
-   * tags to an individual column based on that schema. For attaching a tag to a nested column, use
-   * `.` to separate the column names. Example: * `outer_column.inner_column`
+   * tags to an individual column based on that schema.
+   *
+   * For attaching a tag to a nested column, use `.` to separate the column names. Example:
+   *
+   * * `outer_column.inner_column`
    * @return value or {@code null} for none
    */
   public java.lang.String getColumn() {
@@ -88,8 +101,11 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
 
   /**
    * Resources like Entry can have schemas associated with them. This scope allows users to attach
-   * tags to an individual column based on that schema. For attaching a tag to a nested column, use
-   * `.` to separate the column names. Example: * `outer_column.inner_column`
+   * tags to an individual column based on that schema.
+   *
+   * For attaching a tag to a nested column, use `.` to separate the column names. Example:
+   *
+   * * `outer_column.inner_column`
    * @param column column or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Tag setColumn(java.lang.String column) {
@@ -119,10 +135,13 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   }
 
   /**
-   * The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{locatio
-   * n}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-   * generated identifier. Note that this Tag may not actually be stored in the location in this
-   * name.
+   * The resource name of the tag in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/ta
+   * gs/{tag_id}
+   *
+   * where `tag_id` is a system-generated identifier. Note that this Tag may not actually be stored
+   * in the location in this name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -130,10 +149,13 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   }
 
   /**
-   * The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{locatio
-   * n}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-   * generated identifier. Note that this Tag may not actually be stored in the location in this
-   * name.
+   * The resource name of the tag in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/ta
+   * gs/{tag_id}
+   *
+   * where `tag_id` is a system-generated identifier. Note that this Tag may not actually be stored
+   * in the location in this name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Tag setName(java.lang.String name) {
@@ -142,9 +164,11 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   }
 
   /**
-   * Required. The resource name of the tag template that this tag uses. Example: *
-   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} This field cannot be
-   * modified after creation.
+   * Required. The resource name of the tag template that this tag uses. Example:
+   *
+   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+   *
+   * This field cannot be modified after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplate() {
@@ -152,9 +176,11 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   }
 
   /**
-   * Required. The resource name of the tag template that this tag uses. Example: *
-   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} This field cannot be
-   * modified after creation.
+   * Required. The resource name of the tag template that this tag uses. Example:
+   *
+   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+   *
+   * This field cannot be modified after creation.
    * @param template template or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Tag setTemplate(java.lang.String template) {

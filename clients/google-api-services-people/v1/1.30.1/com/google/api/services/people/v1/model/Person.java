@@ -263,6 +263,19 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private PersonMetadata metadata;
 
   /**
+   * The person's miscellaneous keywords.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MiscKeyword> miscKeywords;
+
+  static {
+    // hack to force ProGuard to consider MiscKeyword used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MiscKeyword.class);
+  }
+
+  /**
    * The person's names. This field is a singleton for contact sources.
    * The value may be {@code null}.
    */
@@ -721,6 +734,23 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   public Person setMetadata(PersonMetadata metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * The person's miscellaneous keywords.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MiscKeyword> getMiscKeywords() {
+    return miscKeywords;
+  }
+
+  /**
+   * The person's miscellaneous keywords.
+   * @param miscKeywords miscKeywords or {@code null} for none
+   */
+  public Person setMiscKeywords(java.util.List<MiscKeyword> miscKeywords) {
+    this.miscKeywords = miscKeywords;
     return this;
   }
 

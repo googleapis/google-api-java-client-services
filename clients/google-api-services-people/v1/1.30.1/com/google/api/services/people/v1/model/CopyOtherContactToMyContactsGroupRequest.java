@@ -42,9 +42,9 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
    * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
    * birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-   * imClients * interests * locales * memberships * metadata * names * nicknames * occupations *
-   * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls *
-   * userDefined
+   * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
+   * skills * urls * userDefined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +82,9 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
    * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
    * birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-   * imClients * interests * locales * memberships * metadata * names * nicknames * occupations *
-   * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls *
-   * userDefined
+   * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
+   * skills * urls * userDefined
    * @return value or {@code null} for none
    */
   public String getReadMask() {
@@ -96,9 +96,9 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
    * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
    * birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-   * imClients * interests * locales * memberships * metadata * names * nicknames * occupations *
-   * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls *
-   * userDefined
+   * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
+   * skills * urls * userDefined
    * @param readMask readMask or {@code null} for none
    */
   public CopyOtherContactToMyContactsGroupRequest setReadMask(String readMask) {

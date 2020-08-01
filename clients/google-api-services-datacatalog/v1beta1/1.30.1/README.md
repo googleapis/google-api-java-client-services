@@ -1,6 +1,7 @@
 # Google Cloud Data Catalog API Client Library for Java
 
-A fully managed and highly scalable data discovery and metadata management service. 
+A fully managed and highly scalable data discovery and metadata management service.
+
 
 This page contains information about getting started with the Google Cloud Data Catalog API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-datacatalog</artifactId>
-      <version>v1beta1-rev20200719-1.30.10</version>
+      <version>v1beta1-rev20200728-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-datacatalog:v1beta1-rev20200719-1.30.10'
+  compile 'com.google.apis:google-api-services-datacatalog:v1beta1-rev20200728-1.30.10'
 }
 ```
 

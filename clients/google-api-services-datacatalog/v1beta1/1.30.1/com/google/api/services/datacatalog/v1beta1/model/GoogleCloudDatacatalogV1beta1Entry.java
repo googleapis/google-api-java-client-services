@@ -20,8 +20,10 @@ package com.google.api.services.datacatalog.v1beta1.model;
  * Entry Metadata. A Data Catalog Entry resource represents another resource in Google Cloud
  * Platform (such as a BigQuery dataset or a Pub/Sub topic), or outside of Google Cloud Platform.
  * Clients can use the `linked_resource` field in the Entry resource to refer to the original
- * resource ID of the source system. An Entry resource contains resource details, such as its
- * schema. An Entry can also be used to attach flexible metadata, such as a Tag.
+ * resource ID of the source system.
+ *
+ * An Entry resource contains resource details, such as its schema. An Entry can also be used to
+ * attach flexible metadata, such as a Tag.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -82,22 +84,27 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   private java.lang.String integratedSystem;
 
   /**
-   * The resource this metadata entry refers to. For Google Cloud Platform resources,
-   * `linked_resource` is the [full name of the
+   * The resource this metadata entry refers to.
+   *
+   * For Google Cloud Platform resources, `linked_resource` is the [full name of the
    * resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example,
-   * the `linked_resource` for a table resource from BigQuery is: *
-   * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when
-   * Entry is of type in the EntryType enum. For entries with user_specified_type, this field is
-   * optional and defaults to an empty string.
+   * the `linked_resource` for a table resource from BigQuery is:
+   *
+   * * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+   *
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String linkedResource;
 
   /**
-   * The Data Catalog resource name of the entry in URL format. Example: *
-   * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
-   * that this Entry and its child resources may not actually be stored in the location in this
+   * The Data Catalog resource name of the entry in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+   *
+   * Note that this Entry and its child resources may not actually be stored in the location in this
    * name.
    * The value may be {@code null}.
    */
@@ -143,8 +150,10 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
    * to be created, then provide a custom value, for example "my_special_type".
    * `user_specified_type` strings must begin with a letter or underscore and can only contain
    * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
-   * most 64 characters long. Currently, only FILESET enum value is allowed. All other entries
-   * created through Data Catalog must use `user_specified_type`.
+   * most 64 characters long.
+   *
+   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog
+   * must use `user_specified_type`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,13 +272,16 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * The resource this metadata entry refers to. For Google Cloud Platform resources,
-   * `linked_resource` is the [full name of the
+   * The resource this metadata entry refers to.
+   *
+   * For Google Cloud Platform resources, `linked_resource` is the [full name of the
    * resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example,
-   * the `linked_resource` for a table resource from BigQuery is: *
-   * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when
-   * Entry is of type in the EntryType enum. For entries with user_specified_type, this field is
-   * optional and defaults to an empty string.
+   * the `linked_resource` for a table resource from BigQuery is:
+   *
+   * * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+   *
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty string.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedResource() {
@@ -277,13 +289,16 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * The resource this metadata entry refers to. For Google Cloud Platform resources,
-   * `linked_resource` is the [full name of the
+   * The resource this metadata entry refers to.
+   *
+   * For Google Cloud Platform resources, `linked_resource` is the [full name of the
    * resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example,
-   * the `linked_resource` for a table resource from BigQuery is: *
-   * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when
-   * Entry is of type in the EntryType enum. For entries with user_specified_type, this field is
-   * optional and defaults to an empty string.
+   * the `linked_resource` for a table resource from BigQuery is:
+   *
+   * * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+   *
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty string.
    * @param linkedResource linkedResource or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Entry setLinkedResource(java.lang.String linkedResource) {
@@ -292,9 +307,11 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * The Data Catalog resource name of the entry in URL format. Example: *
-   * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
-   * that this Entry and its child resources may not actually be stored in the location in this
+   * The Data Catalog resource name of the entry in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+   *
+   * Note that this Entry and its child resources may not actually be stored in the location in this
    * name.
    * @return value or {@code null} for none
    */
@@ -303,9 +320,11 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * The Data Catalog resource name of the entry in URL format. Example: *
-   * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
-   * that this Entry and its child resources may not actually be stored in the location in this
+   * The Data Catalog resource name of the entry in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+   *
+   * Note that this Entry and its child resources may not actually be stored in the location in this
    * name.
    * @param name name or {@code null} for none
    */
@@ -398,8 +417,10 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
    * to be created, then provide a custom value, for example "my_special_type".
    * `user_specified_type` strings must begin with a letter or underscore and can only contain
    * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
-   * most 64 characters long. Currently, only FILESET enum value is allowed. All other entries
-   * created through Data Catalog must use `user_specified_type`.
+   * most 64 characters long.
+   *
+   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog
+   * must use `user_specified_type`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserSpecifiedType() {
@@ -412,8 +433,10 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
    * to be created, then provide a custom value, for example "my_special_type".
    * `user_specified_type` strings must begin with a letter or underscore and can only contain
    * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
-   * most 64 characters long. Currently, only FILESET enum value is allowed. All other entries
-   * created through Data Catalog must use `user_specified_type`.
+   * most 64 characters long.
+   *
+   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog
+   * must use `user_specified_type`.
    * @param userSpecifiedType userSpecifiedType or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Entry setUserSpecifiedType(java.lang.String userSpecifiedType) {

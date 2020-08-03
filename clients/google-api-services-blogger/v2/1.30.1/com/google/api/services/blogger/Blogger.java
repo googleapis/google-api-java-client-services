@@ -20,8 +20,7 @@ package com.google.api.services.blogger;
  * Service definition for Blogger (v2).
  *
  * <p>
- * The Blogger API provides access to posts, comments and pages of a
-    Blogger blog.
+ * The Blogger API provides access to posts, comments and pages of a Blogger blog.
  * </p>
  *
  * <p>

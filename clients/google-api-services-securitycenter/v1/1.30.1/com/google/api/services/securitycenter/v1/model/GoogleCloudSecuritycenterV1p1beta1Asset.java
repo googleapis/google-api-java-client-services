@@ -17,11 +17,10 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Security Command Center representation of a Google Cloud resource.
- *
- * The Asset is a Security Command Center resource that captures information about a single Google
- * Cloud resource. All modifications to an Asset are only within the context of Security Command
- * Center and don't affect the referenced Google Cloud resource.
+ * Security Command Center representation of a Google Cloud resource. The Asset is a Security
+ * Command Center resource that captures information about a single Google Cloud resource. All
+ * modifications to an Asset are only within the context of Security Command Center and don't affect
+ * the referenced Google Cloud resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

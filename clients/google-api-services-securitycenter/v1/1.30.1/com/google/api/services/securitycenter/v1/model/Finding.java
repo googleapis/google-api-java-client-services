@@ -17,12 +17,10 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Security Command Center finding.
- *
- * A finding is a record of assessment data like security, risk, health, or privacy, that is
- * ingested into Security Command Center for presentation, notification, analysis, policy testing,
- * and enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine
- * application is a finding.
+ * Security Command Center finding. A finding is a record of assessment data like security, risk,
+ * health, or privacy, that is ingested into Security Command Center for presentation, notification,
+ * analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS)
+ * vulnerability in an App Engine application is a finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

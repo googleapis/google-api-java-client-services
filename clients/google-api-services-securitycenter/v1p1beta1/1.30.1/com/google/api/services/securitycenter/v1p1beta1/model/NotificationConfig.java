@@ -17,10 +17,9 @@
 package com.google.api.services.securitycenter.v1p1beta1.model;
 
 /**
- * Security Command Center notification configs.
- *
- * A notification config is a Security Command Center resource that contains the configuration to
- * send notifications for create/update events of findings, assets and etc.
+ * Security Command Center notification configs. A notification config is a Security Command Center
+ * resource that contains the configuration to send notifications for create/update events of
+ * findings, assets and etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

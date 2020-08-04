@@ -55,9 +55,9 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The reason why a subscription was canceled or is not auto-renewing. Possible values are: 0.
-   * User canceled the subscription 1. Subscription was canceled by the system,       for example
-   * because of a billing problem 2. Subscription was replaced with a new subscription 3.
-   * Subscription was canceled by the developer
+   * User canceled the subscription 1. Subscription was canceled by the system, for example because
+   * of a billing problem 2. Subscription was replaced with a new subscription 3. Subscription was
+   * canceled by the developer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +127,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * Introductory price information of the subscription. This is only present when the subscription
-   * was purchased with an introductory price.
-   *
-   * This field does not indicate the subscription is currently in introductory price period.
+   * was purchased with an introductory price. This field does not indicate the subscription is
+   * currently in introductory price period.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,14 +144,12 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The purchase token of the originating purchase if this subscription is one of the following: 0.
    * Re-signup of a canceled but non-lapsed subscription 1. Upgrade/downgrade from a previous
-   * subscription
-   *
-   * For example, suppose a user originally signs up and you receive purchase token X, then the user
-   * cancels and goes through the resignup flow (before their subscription lapses) and you receive
-   * purchase token Y, and finally the user upgrades their subscription and you receive purchase
-   * token Z. If you call this API with purchase token Z, this field will be set to Y. If you call
-   * this API with purchase token Y, this field will be set to X. If you call this API with purchase
-   * token X, this field will not be set.
+   * subscription For example, suppose a user originally signs up and you receive purchase token X,
+   * then the user cancels and goes through the resignup flow (before their subscription lapses) and
+   * you receive purchase token Y, and finally the user upgrades their subscription and you receive
+   * purchase token Z. If you call this API with purchase token Z, this field will be set to Y. If
+   * you call this API with purchase token Y, this field will be set to X. If you call this API with
+   * purchase token X, this field will not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,10 +157,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * An obfuscated version of the id that is uniquely associated with the user's account in your
-   * app. Present for the following purchases:   * If account linking happened as part of the
-   * subscription purchase flow.   * It was specified using     https://developer.android.com/refere
-   * nce/com/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid     when the
-   * purchase was made.
+   * app. Present for the following purchases: * If account linking happened as part of the
+   * subscription purchase flow. * It was specified using https://developer.android.com/reference/co
+   * m/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid when the purchase
+   * was made.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +193,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * Price of the subscription, not including tax. Price is expressed in micro-units, where
    * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is 1.99, price_amount_micros is 1990000.
+   * price is €1.99, price_amount_micros is 1990000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -204,10 +201,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The latest price change information available. This is present only when there is an upcoming
-   * price change for the subscription yet to be applied.
-   *
-   * Once the subscription renews with the new price or the subscription is canceled, no price
-   * change information will be returned.
+   * price change for the subscription yet to be applied. Once the subscription renews with the new
+   * price or the subscription is canceled, no price change information will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -335,9 +330,9 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The reason why a subscription was canceled or is not auto-renewing. Possible values are: 0.
-   * User canceled the subscription 1. Subscription was canceled by the system,       for example
-   * because of a billing problem 2. Subscription was replaced with a new subscription 3.
-   * Subscription was canceled by the developer
+   * User canceled the subscription 1. Subscription was canceled by the system, for example because
+   * of a billing problem 2. Subscription was replaced with a new subscription 3. Subscription was
+   * canceled by the developer
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCancelReason() {
@@ -346,9 +341,9 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The reason why a subscription was canceled or is not auto-renewing. Possible values are: 0.
-   * User canceled the subscription 1. Subscription was canceled by the system,       for example
-   * because of a billing problem 2. Subscription was replaced with a new subscription 3.
-   * Subscription was canceled by the developer
+   * User canceled the subscription 1. Subscription was canceled by the system, for example because
+   * of a billing problem 2. Subscription was replaced with a new subscription 3. Subscription was
+   * canceled by the developer
    * @param cancelReason cancelReason or {@code null} for none
    */
   public SubscriptionPurchase setCancelReason(java.lang.Integer cancelReason) {
@@ -506,9 +501,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * Introductory price information of the subscription. This is only present when the subscription
-   * was purchased with an introductory price.
-   *
-   * This field does not indicate the subscription is currently in introductory price period.
+   * was purchased with an introductory price. This field does not indicate the subscription is
+   * currently in introductory price period.
    * @return value or {@code null} for none
    */
   public IntroductoryPriceInfo getIntroductoryPriceInfo() {
@@ -517,9 +511,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * Introductory price information of the subscription. This is only present when the subscription
-   * was purchased with an introductory price.
-   *
-   * This field does not indicate the subscription is currently in introductory price period.
+   * was purchased with an introductory price. This field does not indicate the subscription is
+   * currently in introductory price period.
    * @param introductoryPriceInfo introductoryPriceInfo or {@code null} for none
    */
   public SubscriptionPurchase setIntroductoryPriceInfo(IntroductoryPriceInfo introductoryPriceInfo) {
@@ -547,14 +540,12 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The purchase token of the originating purchase if this subscription is one of the following: 0.
    * Re-signup of a canceled but non-lapsed subscription 1. Upgrade/downgrade from a previous
-   * subscription
-   *
-   * For example, suppose a user originally signs up and you receive purchase token X, then the user
-   * cancels and goes through the resignup flow (before their subscription lapses) and you receive
-   * purchase token Y, and finally the user upgrades their subscription and you receive purchase
-   * token Z. If you call this API with purchase token Z, this field will be set to Y. If you call
-   * this API with purchase token Y, this field will be set to X. If you call this API with purchase
-   * token X, this field will not be set.
+   * subscription For example, suppose a user originally signs up and you receive purchase token X,
+   * then the user cancels and goes through the resignup flow (before their subscription lapses) and
+   * you receive purchase token Y, and finally the user upgrades their subscription and you receive
+   * purchase token Z. If you call this API with purchase token Z, this field will be set to Y. If
+   * you call this API with purchase token Y, this field will be set to X. If you call this API with
+   * purchase token X, this field will not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedPurchaseToken() {
@@ -564,14 +555,12 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The purchase token of the originating purchase if this subscription is one of the following: 0.
    * Re-signup of a canceled but non-lapsed subscription 1. Upgrade/downgrade from a previous
-   * subscription
-   *
-   * For example, suppose a user originally signs up and you receive purchase token X, then the user
-   * cancels and goes through the resignup flow (before their subscription lapses) and you receive
-   * purchase token Y, and finally the user upgrades their subscription and you receive purchase
-   * token Z. If you call this API with purchase token Z, this field will be set to Y. If you call
-   * this API with purchase token Y, this field will be set to X. If you call this API with purchase
-   * token X, this field will not be set.
+   * subscription For example, suppose a user originally signs up and you receive purchase token X,
+   * then the user cancels and goes through the resignup flow (before their subscription lapses) and
+   * you receive purchase token Y, and finally the user upgrades their subscription and you receive
+   * purchase token Z. If you call this API with purchase token Z, this field will be set to Y. If
+   * you call this API with purchase token Y, this field will be set to X. If you call this API with
+   * purchase token X, this field will not be set.
    * @param linkedPurchaseToken linkedPurchaseToken or {@code null} for none
    */
   public SubscriptionPurchase setLinkedPurchaseToken(java.lang.String linkedPurchaseToken) {
@@ -581,10 +570,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * An obfuscated version of the id that is uniquely associated with the user's account in your
-   * app. Present for the following purchases:   * If account linking happened as part of the
-   * subscription purchase flow.   * It was specified using     https://developer.android.com/refere
-   * nce/com/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid     when the
-   * purchase was made.
+   * app. Present for the following purchases: * If account linking happened as part of the
+   * subscription purchase flow. * It was specified using https://developer.android.com/reference/co
+   * m/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid when the purchase
+   * was made.
    * @return value or {@code null} for none
    */
   public java.lang.String getObfuscatedExternalAccountId() {
@@ -593,10 +582,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * An obfuscated version of the id that is uniquely associated with the user's account in your
-   * app. Present for the following purchases:   * If account linking happened as part of the
-   * subscription purchase flow.   * It was specified using     https://developer.android.com/refere
-   * nce/com/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid     when the
-   * purchase was made.
+   * app. Present for the following purchases: * If account linking happened as part of the
+   * subscription purchase flow. * It was specified using https://developer.android.com/reference/co
+   * m/android/billingclient/api/BillingFlowParams.Builder#setobfuscatedaccountid when the purchase
+   * was made.
    * @param obfuscatedExternalAccountId obfuscatedExternalAccountId or {@code null} for none
    */
   public SubscriptionPurchase setObfuscatedExternalAccountId(java.lang.String obfuscatedExternalAccountId) {
@@ -664,7 +653,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * Price of the subscription, not including tax. Price is expressed in micro-units, where
    * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is 1.99, price_amount_micros is 1990000.
+   * price is €1.99, price_amount_micros is 1990000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriceAmountMicros() {
@@ -674,7 +663,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * Price of the subscription, not including tax. Price is expressed in micro-units, where
    * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is 1.99, price_amount_micros is 1990000.
+   * price is €1.99, price_amount_micros is 1990000.
    * @param priceAmountMicros priceAmountMicros or {@code null} for none
    */
   public SubscriptionPurchase setPriceAmountMicros(java.lang.Long priceAmountMicros) {
@@ -684,10 +673,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The latest price change information available. This is present only when there is an upcoming
-   * price change for the subscription yet to be applied.
-   *
-   * Once the subscription renews with the new price or the subscription is canceled, no price
-   * change information will be returned.
+   * price change for the subscription yet to be applied. Once the subscription renews with the new
+   * price or the subscription is canceled, no price change information will be returned.
    * @return value or {@code null} for none
    */
   public SubscriptionPriceChange getPriceChange() {
@@ -696,10 +683,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The latest price change information available. This is present only when there is an upcoming
-   * price change for the subscription yet to be applied.
-   *
-   * Once the subscription renews with the new price or the subscription is canceled, no price
-   * change information will be returned.
+   * price change for the subscription yet to be applied. Once the subscription renews with the new
+   * price or the subscription is canceled, no price change information will be returned.
    * @param priceChange priceChange or {@code null} for none
    */
   public SubscriptionPurchase setPriceChange(SubscriptionPriceChange priceChange) {

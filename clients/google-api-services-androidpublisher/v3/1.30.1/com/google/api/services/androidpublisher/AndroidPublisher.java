@@ -1717,8 +1717,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Unique identifier for the Android app.
        * @param editId Unique identifier for this edit.
-       * @param apkVersionCode The version code of the APK whose Deobfuscation File is being
-      uploaded.
+       * @param apkVersionCode The version code of the APK whose Deobfuscation File is being uploaded.
        * @param deobfuscationFileType The type of the deobfuscation file.
        * @return the request
        */
@@ -1740,8 +1739,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being
-      uploaded.@param deobfuscationFileType The type of the deobfuscation file.
+       * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being uploaded.@param deobfuscationFileType The type of the deobfuscation file.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -1769,8 +1767,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Unique identifier for the Android app.
          * @param editId Unique identifier for this edit.
-         * @param apkVersionCode The version code of the APK whose Deobfuscation File is being
-      uploaded.
+         * @param apkVersionCode The version code of the APK whose Deobfuscation File is being uploaded.
          * @param deobfuscationFileType The type of the deobfuscation file.
          * @since 1.13
          */
@@ -1797,8 +1794,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being
-      uploaded.@param deobfuscationFileType The type of the deobfuscation file.
+         * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being uploaded.@param deobfuscationFileType The type of the deobfuscation file.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -1898,9 +1894,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The version code of the APK whose Deobfuscation File is being uploaded.
-         */
+        /** The version code of the APK whose Deobfuscation File is being uploaded. */
         @com.google.api.client.util.Key
         private java.lang.Integer apkVersionCode;
 
@@ -1910,9 +1904,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return apkVersionCode;
         }
 
-        /**
-         * The version code of the APK whose Deobfuscation File is being uploaded.
-         */
+        /** The version code of the APK whose Deobfuscation File is being uploaded. */
         public Upload setApkVersionCode(java.lang.Integer apkVersionCode) {
           this.apkVersionCode = apkVersionCode;
           return this;
@@ -2411,8 +2403,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
        * @param expansionFileType The file type of the file configuration which is being read or modified.
        * @return the request
        */
@@ -2438,8 +2429,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
          * @param expansionFileType The file type of the file configuration which is being read or modified.
          * @since 1.13
          */
@@ -2600,8 +2590,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
        * @param expansionFileType The file type of the expansion file configuration which is being updated.
        * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
        * @return the request
@@ -2630,8 +2619,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
          * @param expansionFileType The file type of the expansion file configuration which is being updated.
          * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
          * @since 1.13
@@ -2783,8 +2771,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
        * @param expansionFileType The file type of the file configuration which is being read or modified.
        * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
        * @return the request
@@ -2813,8 +2800,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
          * @param expansionFileType The file type of the file configuration which is being read or modified.
          * @param content the {@link com.google.api.services.androidpublisher.model.ExpansionFile}
          * @since 1.13
@@ -2965,8 +2951,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+       * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
        * @param expansionFileType The file type of the expansion file configuration which is being updated.
        * @return the request
        */
@@ -2988,8 +2973,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
+       * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
@@ -3017,8 +3001,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.
+         * @param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.
          * @param expansionFileType The file type of the expansion file configuration which is being updated.
          * @since 1.13
          */
@@ -3045,8 +3028,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being
-      read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
+         * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
          */
@@ -3219,8 +3201,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        * @param imageType Type of the Image.
        * @param imageId Unique identifier an image within the set of images attached to this edit.
        * @return the request
@@ -3248,8 +3229,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          * @param imageType Type of the Image.
          * @param imageId Unique identifier an image within the set of images attached to this edit.
          * @since 1.13
@@ -3420,11 +3400,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.
-       * @param imageType Type of the Image.
-      Providing an image type that refers to no images is a no-op.
+       * @param imageType Type of the Image. Providing an image type that refers to no images is a no-op.
        * @return the request
        */
       public Deleteall deleteall(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) throws java.io.IOException {
@@ -3451,11 +3429,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.
-         * @param imageType Type of the Image.
-      Providing an image type that refers to no images is a no-op.
+         * @param imageType Type of the Image. Providing an image type that refers to no images is a no-op.
          * @since 1.13
          */
         protected Deleteall(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) {
@@ -3576,9 +3552,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * Type of the Image. Providing an image type that refers to no images is a no-op.
-         */
+        /** Type of the Image. Providing an image type that refers to no images is a no-op. */
         @com.google.api.client.util.Key
         private java.lang.String imageType;
 
@@ -3588,9 +3562,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return imageType;
         }
 
-        /**
-         * Type of the Image. Providing an image type that refers to no images is a no-op.
-         */
+        /** Type of the Image. Providing an image type that refers to no images is a no-op. */
         public Deleteall setImageType(java.lang.String imageType) {
           this.imageType = imageType;
           return this;
@@ -3611,12 +3583,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
-      There
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German). There
        *        must be a store listing for the specified language.
-       * @param imageType Type of the Image. Providing an image type that refers to no images will
-      return an empty response.
+       * @param imageType Type of the Image. Providing an image type that refers to no images will return an empty response.
        * @return the request
        */
       public List list(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) throws java.io.IOException {
@@ -3641,12 +3610,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
-      There
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German). There
        *        must be a store listing for the specified language.
-         * @param imageType Type of the Image. Providing an image type that refers to no images will
-      return an empty response.
+         * @param imageType Type of the Image. Providing an image type that refers to no images will return an empty response.
          * @since 1.13
          */
         protected List(java.lang.String packageName, java.lang.String editId, java.lang.String language, java.lang.String imageType) {
@@ -3814,8 +3780,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.
        * @param imageType Type of the Image.
        * @return the request
@@ -3838,8 +3803,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This method should be used for uploading media content.
        * </p>
        *
-       * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.@param imageType Type of the Image.
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @return the request
@@ -3868,8 +3832,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.
          * @param imageType Type of the Image.
          * @since 1.13
@@ -3897,8 +3860,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * This constructor should be used for uploading media content.
          * </p>
          *
-         * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.@param imageType Type of the Image.
          * @param mediaContent The media HTTP content or {@code null} if none.
          * @since 1.13
@@ -4075,8 +4037,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        * @return the request
        */
       public Delete delete(java.lang.String packageName, java.lang.String editId, java.lang.String language) throws java.io.IOException {
@@ -4102,8 +4063,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          * @since 1.13
          */
         protected Delete(java.lang.String packageName, java.lang.String editId, java.lang.String language) {
@@ -4372,8 +4332,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String language) throws java.io.IOException {
@@ -4398,8 +4357,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String language) {
@@ -4687,8 +4645,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
        * @return the request
        */
@@ -4715,8 +4672,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
          * @since 1.13
          */
@@ -4851,8 +4807,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+       * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
        * @return the request
        */
@@ -4879,8 +4834,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT"
-      for Austrian German).
+         * @param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
          * @param content the {@link com.google.api.services.androidpublisher.model.Listing}
          * @since 1.13
          */
@@ -7115,10 +7069,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
      * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
-     * recommended).
-     *
-     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
-     * client/errors) for an example in java.
+     * recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java
+     * /google-api-java-client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadapk".
      *
@@ -7137,10 +7089,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
      * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
-     * recommended).
-     *
-     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
-     * client/errors) for an example in java.
+     * recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java
+     * /google-api-java-client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadapk".
      *
@@ -7169,10 +7119,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an APK to internal app sharing. If you are using the Google API client libraries,
        * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-       * minutes is recommended).
-       *
-       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors) for an example in java.
+       * minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
+       * library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadapk".
        *
@@ -7193,10 +7141,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an APK to internal app sharing. If you are using the Google API client libraries,
        * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-       * minutes is recommended).
-       *
-       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors) for an example in java.
+       * minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
+       * library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadapk".
        *
@@ -7299,10 +7245,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries,
      * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-     * minutes is recommended).
-     *
-     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
-     * client/errors) for an example in java.
+     * minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
+     * library/java/google-api-java-client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadbundle".
      *
@@ -7322,10 +7266,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries,
      * please increase the timeout of the http request before calling this endpoint (a timeout of 2
-     * minutes is recommended).
-     *
-     * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-
-     * client/errors) for an example in java.
+     * minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
+     * library/java/google-api-java-client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadbundle".
      *
@@ -7355,10 +7297,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an app bundle to internal app sharing. If you are using the Google API client
        * libraries, please increase the timeout of the http request before calling this endpoint (a
-       * timeout of 2 minutes is recommended).
-       *
-       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors) for an example in java.
+       * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+       * /api-client-library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadbundle".
        *
@@ -7379,10 +7319,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an app bundle to internal app sharing. If you are using the Google API client
        * libraries, please increase the timeout of the http request before calling this endpoint (a
-       * timeout of 2 minutes is recommended).
-       *
-       * See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-
-       * java-client/errors) for an example in java.
+       * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+       * /api-client-library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadbundle".
        *
@@ -7513,11 +7451,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * This request holds the parameters needed by the androidpublisher server.  After setting any
      * optional parameters, call the {@link Refund#execute()} method to invoke the remote operation.
      *
-     * @param packageName The package name of the application for which this subscription or in-app
-    item was purchased (for
+     * @param packageName The package name of the application for which this subscription or in-app item was purchased (for
      *        example, 'com.some.thing').
-     * @param orderId The order ID provided to the user when the subscription or in-app order was
-    purchased.
+     * @param orderId The order ID provided to the user when the subscription or in-app order was purchased.
      * @return the request
      */
     public Refund refund(java.lang.String packageName, java.lang.String orderId) throws java.io.IOException {
@@ -7541,11 +7477,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Refund#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param packageName The package name of the application for which this subscription or in-app
-    item was purchased (for
+       * @param packageName The package name of the application for which this subscription or in-app item was purchased (for
      *        example, 'com.some.thing').
-       * @param orderId The order ID provided to the user when the subscription or in-app order was
-    purchased.
+       * @param orderId The order ID provided to the user when the subscription or in-app order was purchased.
        * @since 1.13
        */
       protected Refund(java.lang.String packageName, java.lang.String orderId) {
@@ -7632,9 +7566,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
-      /**
-       * The order ID provided to the user when the subscription or in-app order was purchased.
-       */
+      /** The order ID provided to the user when the subscription or in-app order was purchased. */
       @com.google.api.client.util.Key
       private java.lang.String orderId;
 
@@ -7644,9 +7576,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return orderId;
       }
 
-      /**
-       * The order ID provided to the user when the subscription or in-app order was purchased.
-       */
+      /** The order ID provided to the user when the subscription or in-app order was purchased. */
       public Refund setOrderId(java.lang.String orderId) {
         this.orderId = orderId;
         return this;
@@ -7737,11 +7667,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
        * operation.
        *
-       * @param packageName The package name of the application the inapp product was sold in (for
-      example, 'com.some.thing').
+       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
        * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-       * @param token The token provided to the user's device when the inapp product was
-      purchased.
+       * @param token The token provided to the user's device when the inapp product was purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest}
        * @return the request
        */
@@ -7766,11 +7694,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application the inapp product was sold in (for
-      example, 'com.some.thing').
+         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
          * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-         * @param token The token provided to the user's device when the inapp product was
-      purchased.
+         * @param token The token provided to the user's device when the inapp product was purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest}
          * @since 1.13
          */
@@ -7874,9 +7800,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the inapp product was purchased.
-         */
+        /** The token provided to the user's device when the inapp product was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -7886,9 +7810,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the inapp product was purchased.
-         */
+        /** The token provided to the user's device when the inapp product was purchased. */
         public Acknowledge setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -7907,11 +7829,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application the inapp product was sold in (for
-      example, 'com.some.thing').
+       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
        * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-       * @param token The token provided to the user's device when the inapp product was
-      purchased.
+       * @param token The token provided to the user's device when the inapp product was purchased.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String productId, java.lang.String token) throws java.io.IOException {
@@ -7934,11 +7854,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application the inapp product was sold in (for
-      example, 'com.some.thing').
+         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
          * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
-         * @param token The token provided to the user's device when the inapp product was
-      purchased.
+         * @param token The token provided to the user's device when the inapp product was purchased.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String productId, java.lang.String token) {
@@ -8051,9 +7969,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the inapp product was purchased.
-         */
+        /** The token provided to the user's device when the inapp product was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8063,9 +7979,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the inapp product was purchased.
-         */
+        /** The token provided to the user's device when the inapp product was purchased. */
         public Get setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8107,12 +8021,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
        * operation.
        *
-       * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was
-      purchased.
+       * @param token The token provided to the user's device when the subscription was purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
        * @return the request
        */
@@ -8137,12 +8049,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was
-      purchased.
+         * @param token The token provided to the user's device when the subscription was purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
          * @since 1.13
          */
@@ -8247,9 +8157,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8259,9 +8167,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         public Acknowledge setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8280,12 +8186,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was
-      purchased.
+       * @param token The token provided to the user's device when the subscription was purchased.
        * @return the request
        */
       public Cancel cancel(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -8310,12 +8214,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was
-      purchased.
+         * @param token The token provided to the user's device when the subscription was purchased.
          * @since 1.13
          */
         protected Cancel(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -8419,9 +8321,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8431,9 +8331,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         public Cancel setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8452,12 +8350,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Defer#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was
-      purchased.
+       * @param token The token provided to the user's device when the subscription was purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesDeferRequest}
        * @return the request
        */
@@ -8482,12 +8378,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Defer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was
-      purchased.
+         * @param token The token provided to the user's device when the subscription was purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesDeferRequest}
          * @since 1.13
          */
@@ -8592,9 +8486,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8604,9 +8496,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         public Defer setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8625,12 +8515,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was
-      purchased.
+       * @param token The token provided to the user's device when the subscription was purchased.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -8653,12 +8541,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was
-      purchased.
+         * @param token The token provided to the user's device when the subscription was purchased.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -8772,9 +8658,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8784,9 +8668,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         public Get setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8806,12 +8688,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Refund#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId "The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was
-      purchased.
+       * @param token The token provided to the user's device when the subscription was purchased.
        * @return the request
        */
       public Refund refund(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -8836,12 +8716,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Refund#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId "The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was
-      purchased.
+         * @param token The token provided to the user's device when the subscription was purchased.
          * @since 1.13
          */
         protected Refund(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -8947,9 +8825,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -8959,9 +8835,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         public Refund setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -8981,12 +8855,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
        * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was
-      purchased.
+       * @param token The token provided to the user's device when the subscription was purchased.
        * @return the request
        */
       public Revoke revoke(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
@@ -9011,12 +8883,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which this subscription was
-      purchased (for example,
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
          * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was
-      purchased.
+         * @param token The token provided to the user's device when the subscription was purchased.
          * @since 1.13
          */
         protected Revoke(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
@@ -9120,9 +8990,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         @com.google.api.client.util.Key
         private java.lang.String token;
 
@@ -9132,9 +9000,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return token;
         }
 
-        /**
-         * The token provided to the user's device when the subscription was purchased.
-         */
+        /** The token provided to the user's device when the subscription was purchased. */
         public Revoke setToken(java.lang.String token) {
           this.token = token;
           return this;
@@ -9175,8 +9041,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName The package name of the application for which voided purchases need to be
-      returned (for example,
+       * @param packageName The package name of the application for which voided purchases need to be returned (for example,
        *        'com.some.thing').
        * @return the request
        */
@@ -9200,8 +9065,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName The package name of the application for which voided purchases need to be
-      returned (for example,
+         * @param packageName The package name of the application for which voided purchases need to be returned (for example,
        *        'com.some.thing').
          * @since 1.13
          */
@@ -9435,12 +9299,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * The type of voided purchases that you want to see in the response. Possible values are:
          * 0. Only voided in-app product purchases will be returned in the response. This is the
          * default value. 1. Both voided in-app purchases and voided subscription purchases will be
-         * returned in the response.
-         *
-         * Note: Before requesting to receive voided subscription purchases, you must switch to use
-         * orderId in the response which uniquely identifies one-time purchases and subscriptions.
-         * Otherwise, you will receive multiple subscription orders with the same PurchaseToken,
-         * because subscription renewal orders share the same PurchaseToken.
+         * returned in the response. Note: Before requesting to receive voided subscription
+         * purchases, you must switch to use orderId in the response which uniquely identifies one-
+         * time purchases and subscriptions. Otherwise, you will receive multiple subscription
+         * orders with the same PurchaseToken, because subscription renewal orders share the same
+         * PurchaseToken.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer type;
@@ -9448,7 +9311,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /** The type of voided purchases that you want to see in the response. Possible values are: 0. Only
        voided in-app product purchases will be returned in the response. This is the default value. 1.
        Both voided in-app purchases and voided subscription purchases will be returned in the response.
-
        Note: Before requesting to receive voided subscription purchases, you must switch to use orderId in
        the response which uniquely identifies one-time purchases and subscriptions. Otherwise, you will
        receive multiple subscription orders with the same PurchaseToken, because subscription renewal
@@ -9462,12 +9324,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * The type of voided purchases that you want to see in the response. Possible values are:
          * 0. Only voided in-app product purchases will be returned in the response. This is the
          * default value. 1. Both voided in-app purchases and voided subscription purchases will be
-         * returned in the response.
-         *
-         * Note: Before requesting to receive voided subscription purchases, you must switch to use
-         * orderId in the response which uniquely identifies one-time purchases and subscriptions.
-         * Otherwise, you will receive multiple subscription orders with the same PurchaseToken,
-         * because subscription renewal orders share the same PurchaseToken.
+         * returned in the response. Note: Before requesting to receive voided subscription
+         * purchases, you must switch to use orderId in the response which uniquely identifies one-
+         * time purchases and subscriptions. Otherwise, you will receive multiple subscription
+         * orders with the same PurchaseToken, because subscription renewal orders share the same
+         * PurchaseToken.
          */
         public List setType(java.lang.Integer type) {
           this.type = type;

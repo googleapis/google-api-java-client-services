@@ -39,9 +39,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
 
   /**
    * The time at which [enforcement](https://support.google.com/webtools/answer/7308033) against the
-   * site began or will begin on this platform.
-   *
-   * Not set when the filter_status is OFF.
+   * site began or will begin on this platform. Not set when the filter_status is OFF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,21 +61,16 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   private String lastChangeTime;
 
   /**
-   * The site's regions on this platform.
-   *
-   * No longer populated, because there is no longer any semantic difference between sites in
-   * different regions.
+   * The site's regions on this platform. No longer populated, because there is no longer any
+   * semantic difference between sites in different regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> region;
 
   /**
-   * A link to the full Ad Experience Report for the site on this platform..
-   *
-   * Not set in ViolatingSitesResponse.
-   *
-   * Note that you must complete the [Search Console verification
+   * A link to the full Ad Experience Report for the site on this platform.. Not set in
+   * ViolatingSitesResponse. Note that you must complete the [Search Console verification
    * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
    * access the full report.
    * The value may be {@code null}.
@@ -111,9 +104,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
 
   /**
    * The time at which [enforcement](https://support.google.com/webtools/answer/7308033) against the
-   * site began or will begin on this platform.
-   *
-   * Not set when the filter_status is OFF.
+   * site began or will begin on this platform. Not set when the filter_status is OFF.
    * @return value or {@code null} for none
    */
   public String getEnforcementTime() {
@@ -122,9 +113,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
 
   /**
    * The time at which [enforcement](https://support.google.com/webtools/answer/7308033) against the
-   * site began or will begin on this platform.
-   *
-   * Not set when the filter_status is OFF.
+   * site began or will begin on this platform. Not set when the filter_status is OFF.
    * @param enforcementTime enforcementTime or {@code null} for none
    */
   public PlatformSummary setEnforcementTime(String enforcementTime) {
@@ -169,10 +158,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The site's regions on this platform.
-   *
-   * No longer populated, because there is no longer any semantic difference between sites in
-   * different regions.
+   * The site's regions on this platform. No longer populated, because there is no longer any
+   * semantic difference between sites in different regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegion() {
@@ -180,10 +167,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The site's regions on this platform.
-   *
-   * No longer populated, because there is no longer any semantic difference between sites in
-   * different regions.
+   * The site's regions on this platform. No longer populated, because there is no longer any
+   * semantic difference between sites in different regions.
    * @param region region or {@code null} for none
    */
   public PlatformSummary setRegion(java.util.List<java.lang.String> region) {
@@ -192,11 +177,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to the full Ad Experience Report for the site on this platform..
-   *
-   * Not set in ViolatingSitesResponse.
-   *
-   * Note that you must complete the [Search Console verification
+   * A link to the full Ad Experience Report for the site on this platform.. Not set in
+   * ViolatingSitesResponse. Note that you must complete the [Search Console verification
    * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
    * access the full report.
    * @return value or {@code null} for none
@@ -206,11 +188,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to the full Ad Experience Report for the site on this platform..
-   *
-   * Not set in ViolatingSitesResponse.
-   *
-   * Note that you must complete the [Search Console verification
+   * A link to the full Ad Experience Report for the site on this platform.. Not set in
+   * ViolatingSitesResponse. Note that you must complete the [Search Console verification
    * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
    * access the full report.
    * @param reportUrl reportUrl or {@code null} for none

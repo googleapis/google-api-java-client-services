@@ -55,12 +55,9 @@ public final class Company extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The API resource name of the company. The resource name is one of the following
-   * formats:
-   *
-   * * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]` * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`
-   * * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]/customers/[CUSTOMER_ID]`
-   *
-   * Assigned by the server.
+   * formats: * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]` *
+   * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]` *
+   * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]/customers/[CUSTOMER_ID]` Assigned by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,12 +138,9 @@ public final class Company extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The API resource name of the company. The resource name is one of the following
-   * formats:
-   *
-   * * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]` * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`
-   * * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]/customers/[CUSTOMER_ID]`
-   *
-   * Assigned by the server.
+   * formats: * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]` *
+   * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]` *
+   * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]/customers/[CUSTOMER_ID]` Assigned by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -155,12 +149,9 @@ public final class Company extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The API resource name of the company. The resource name is one of the following
-   * formats:
-   *
-   * * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]` * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`
-   * * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]/customers/[CUSTOMER_ID]`
-   *
-   * Assigned by the server.
+   * formats: * `partners/[PARTNER_ID]/customers/[CUSTOMER_ID]` *
+   * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]` *
+   * `partners/[PARTNER_ID]/vendors/[VENDOR_ID]/customers/[CUSTOMER_ID]` Assigned by the server.
    * @param name name or {@code null} for none
    */
   public Company setName(java.lang.String name) {

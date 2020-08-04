@@ -32,7 +32,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Member to bind the role with. See /iam/docs/reference/rest/v1/Policy#Binding for how
-   * to format each member. Eg.   - user:myuser@mydomain.com   - serviceAccount:my-service-
+   * to format each member. Eg. - user:myuser@mydomain.com - serviceAccount:my-service-
    * account@app.gserviceaccount.com
    * The value may be {@code null}.
    */
@@ -41,9 +41,8 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Role to apply. Only whitelisted roles can be used at the specified granularity. The
-   * role must be one of the following:   - 'roles/container.hostServiceAgentUser' applied on the
-   * shared VPC host     project   - 'roles/compute.securityAdmin' applied on the shared VPC host
-   * project
+   * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
+   * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +50,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Member to bind the role with. See /iam/docs/reference/rest/v1/Policy#Binding for how
-   * to format each member. Eg.   - user:myuser@mydomain.com   - serviceAccount:my-service-
+   * to format each member. Eg. - user:myuser@mydomain.com - serviceAccount:my-service-
    * account@app.gserviceaccount.com
    * @return value or {@code null} for none
    */
@@ -61,7 +60,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Member to bind the role with. See /iam/docs/reference/rest/v1/Policy#Binding for how
-   * to format each member. Eg.   - user:myuser@mydomain.com   - serviceAccount:my-service-
+   * to format each member. Eg. - user:myuser@mydomain.com - serviceAccount:my-service-
    * account@app.gserviceaccount.com
    * @param member member or {@code null} for none
    */
@@ -72,9 +71,8 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Role to apply. Only whitelisted roles can be used at the specified granularity. The
-   * role must be one of the following:   - 'roles/container.hostServiceAgentUser' applied on the
-   * shared VPC host     project   - 'roles/compute.securityAdmin' applied on the shared VPC host
-   * project
+   * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
+   * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -83,9 +81,8 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Role to apply. Only whitelisted roles can be used at the specified granularity. The
-   * role must be one of the following:   - 'roles/container.hostServiceAgentUser' applied on the
-   * shared VPC host     project   - 'roles/compute.securityAdmin' applied on the shared VPC host
-   * project
+   * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
+   * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
    * @param role role or {@code null} for none
    */
   public PolicyBinding setRole(java.lang.String role) {

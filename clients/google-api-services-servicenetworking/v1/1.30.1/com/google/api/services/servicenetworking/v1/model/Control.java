@@ -17,8 +17,8 @@
 package com.google.api.services.servicenetworking.v1.model;
 
 /**
- * Selects and configures the service controller used by the service.  The service controller
- * handles features like abuse, quota, billing, logging, monitoring, etc.
+ * Selects and configures the service controller used by the service. The service controller handles
+ * features like abuse, quota, billing, logging, monitoring, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation

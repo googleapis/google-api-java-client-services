@@ -33,18 +33,16 @@ public final class Http extends com.google.api.client.json.GenericJson {
 
   /**
    * When set to true, URL path parameters will be fully URI-decoded except in cases of single
-   * segment matches in reserved expansion, where "%2F" will be left encoded.
-   *
-   * The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+   * segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior
+   * is to not decode RFC 6570 reserved characters in multi segment matches.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean fullyDecodeReservedExpansion;
 
   /**
-   * A list of HTTP configuration rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +50,8 @@ public final class Http extends com.google.api.client.json.GenericJson {
 
   /**
    * When set to true, URL path parameters will be fully URI-decoded except in cases of single
-   * segment matches in reserved expansion, where "%2F" will be left encoded.
-   *
-   * The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+   * segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior
+   * is to not decode RFC 6570 reserved characters in multi segment matches.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullyDecodeReservedExpansion() {
@@ -63,9 +60,8 @@ public final class Http extends com.google.api.client.json.GenericJson {
 
   /**
    * When set to true, URL path parameters will be fully URI-decoded except in cases of single
-   * segment matches in reserved expansion, where "%2F" will be left encoded.
-   *
-   * The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+   * segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior
+   * is to not decode RFC 6570 reserved characters in multi segment matches.
    * @param fullyDecodeReservedExpansion fullyDecodeReservedExpansion or {@code null} for none
    */
   public Http setFullyDecodeReservedExpansion(java.lang.Boolean fullyDecodeReservedExpansion) {
@@ -74,9 +70,8 @@ public final class Http extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of HTTP configuration rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpRule> getRules() {
@@ -84,9 +79,8 @@ public final class Http extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of HTTP configuration rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * @param rules rules or {@code null} for none
    */
   public Http setRules(java.util.List<HttpRule> rules) {

@@ -17,13 +17,9 @@
 package com.google.api.services.servicenetworking.v1beta.model;
 
 /**
- * Customize service error responses.  For example, list any service specific protobuf types that
- * can appear in error detail lists of error responses.
- *
- * Example:
- *
- *     custom_error:       types:       - google.foo.v1.CustomError       -
- * google.foo.v1.AnotherError
+ * Customize service error responses. For example, list any service specific protobuf types that can
+ * appear in error detail lists of error responses. Example: custom_error: types: -
+ * google.foo.v1.CustomError - google.foo.v1.AnotherError
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -37,9 +33,8 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class CustomError extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of custom error rules that apply to individual API messages.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * The list of custom error rules that apply to individual API messages. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,9 +48,8 @@ public final class CustomError extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> types;
 
   /**
-   * The list of custom error rules that apply to individual API messages.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * The list of custom error rules that apply to individual API messages. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomErrorRule> getRules() {
@@ -63,9 +57,8 @@ public final class CustomError extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of custom error rules that apply to individual API messages.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * The list of custom error rules that apply to individual API messages. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * @param rules rules or {@code null} for none
    */
   public CustomError setRules(java.util.List<CustomErrorRule> rules) {

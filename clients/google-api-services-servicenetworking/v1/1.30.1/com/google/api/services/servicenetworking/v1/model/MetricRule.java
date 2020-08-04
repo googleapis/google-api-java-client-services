@@ -33,19 +33,15 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
 
   /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each
-   * metric.
-   *
-   * The key of the map is the metric name, and the values are the amount increased for the metric
-   * against which the quota limits are defined. The value must not be negative.
+   * metric. The key of the map is the metric name, and the values are the amount increased for the
+   * metric against which the quota limits are defined. The value must not be negative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.Map<String, java.lang.Long> metricCosts;
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,10 +49,8 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
 
   /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each
-   * metric.
-   *
-   * The key of the map is the metric name, and the values are the amount increased for the metric
-   * against which the quota limits are defined. The value must not be negative.
+   * metric. The key of the map is the metric name, and the values are the amount increased for the
+   * metric against which the quota limits are defined. The value must not be negative.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Long> getMetricCosts() {
@@ -65,10 +59,8 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
 
   /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each
-   * metric.
-   *
-   * The key of the map is the metric name, and the values are the amount increased for the metric
-   * against which the quota limits are defined. The value must not be negative.
+   * metric. The key of the map is the metric name, and the values are the amount increased for the
+   * metric against which the quota limits are defined. The value must not be negative.
    * @param metricCosts metricCosts or {@code null} for none
    */
   public MetricRule setMetricCosts(java.util.Map<String, java.lang.Long> metricCosts) {
@@ -77,9 +69,7 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelector() {
@@ -87,9 +77,7 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * @param selector selector or {@code null} for none
    */
   public MetricRule setSelector(java.lang.String selector) {

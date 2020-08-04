@@ -1,725 +1,315 @@
 {
-  "description": "Allows external bidders to manage their RTB integration with Google. This includes managing bidder endpoints, QPS quotas, configuring what ad inventory to receive via pretargeting, submitting creatives for verification, and accessing creative metadata such as approval status.",
-  "fullyEncodeReservedExpansion": true,
   "name": "realtimebidding",
-  "ownerDomain": "google.com",
   "kind": "discovery#restDescription",
-  "mtlsRootUrl": "https://realtimebidding.mtls.googleapis.com/",
-  "ownerName": "Google",
-  "basePath": "",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/realtime-bidding": {
-          "description": "See, create, edit, and delete your Authorized Buyers and Open Bidding account entities"
-        }
-      }
-    }
-  },
-  "revision": "20200730",
-  "resources": {
-    "bidders": {
-      "resources": {
-        "creatives": {
-          "methods": {
-            "list": {
-              "flatPath": "v1/bidders/{biddersId}/creatives",
-              "response": {
-                "$ref": "ListCreativesResponse"
-              },
-              "parameters": {
-                "pageToken": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "A token identifying a page of results the server should return.\nTypically, this is the value of\nListCreativesResponse.nextPageToken\nreturned from the previous call to the 'ListCreatives' method."
-                },
-                "parent": {
-                  "description": "Required. Name of the parent buyer that owns the creatives.\n\nThe pattern for this resource is either `buyers/{buyerAccountId}` or\n`bidders/{bidderAccountId}`.\n\nFor `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the\nfollowing:\n1. The ID of the buyer that is accessing their own creatives.\n2. The ID of the child seat buyer under a bidder account.\n   So for listing creatives pertaining to the child seat buyer (`456`)\n   under bidder account (`123`), you would use the pattern: `buyers/456`.\n3. The ID of the bidder itself.\n   So for listing creatives pertaining to bidder (`123`),\n   you would use `buyers/123`.\n\nIf you want to access all creatives pertaining to both the bidder and all\nof its child seat accounts, you would use `bidders/{bidderAccountId}`,\ne.g., for all creatives pertaining to bidder (`123`), use `bidders/123`.",
-                  "location": "path",
-                  "type": "string",
-                  "required": true,
-                  "pattern": "^bidders/[^/]+$"
-                },
-                "filter": {
-                  "type": "string",
-                  "description": "Query string to filter creatives. If no filter is specified,\nall active creatives will be returned.\n\nExample: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND\ndisapprovalReason:UNACCEPTABLE_CONTENT) OR\ndeclaredAttributes:IS_COOKIE_TARGETED'",
-                  "location": "query"
-                },
-                "view": {
-                  "location": "query",
-                  "description": "Controls the amount of information included in the response.\nBy default only\ncreativeServingDecision\nis included. To retrieve the entire creative\nresource (including the declared\nfields and the creative content) specify the view as \"FULL\".",
-                  "enum": [
-                    "CREATIVE_VIEW_UNSPECIFIED",
-                    "SERVING_DECISION_ONLY",
-                    "FULL"
-                  ],
-                  "type": "string"
-                },
-                "pageSize": {
-                  "format": "int32",
-                  "location": "query",
-                  "description": "Requested page size. The server may return fewer creatives than requested\n(due to timeout constraint) even if more are available via another call.\nIf unspecified, server will pick an appropriate default.\nAcceptable values are 1 to 1000, inclusive.",
-                  "type": "integer"
-                }
-              },
-              "path": "v1/{+parent}/creatives",
-              "parameterOrder": [
-                "parent"
-              ],
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "id": "realtimebidding.bidders.creatives.list",
-              "description": "Lists creatives.",
-              "httpMethod": "GET"
-            },
-            "watch": {
-              "id": "realtimebidding.bidders.creatives.watch",
-              "description": "Watches all creatives pertaining to a bidder. It is sufficient to invoke\nthis endpoint once per bidder. A Pub/Sub topic will be created and\nnotifications will be pushed to the topic when any of the bidder's\ncreatives change status. All of the bidder's service accounts will have\naccess to read from the topic.\nSubsequent invocations of this method will return the existing\nPub/Sub configuration.",
-              "request": {
-                "$ref": "WatchCreativesRequest"
-              },
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "description": "Required. To watch all creatives pertaining to the bidder and all its child seat\naccounts, the bidder must follow the pattern `bidders/{bidderAccountId}`.",
-                  "pattern": "^bidders/[^/]+$",
-                  "location": "path",
-                  "type": "string"
-                }
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "response": {
-                "$ref": "WatchCreativesResponse"
-              },
-              "flatPath": "v1/bidders/{biddersId}/creatives:watch",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "path": "v1/{+parent}/creatives:watch",
-              "httpMethod": "POST"
-            }
-          }
-        }
-      }
-    },
-    "buyers": {
-      "resources": {
-        "userLists": {
-          "methods": {
-            "close": {
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "parameterOrder": [
-                "name"
-              ],
-              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}:close",
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "type": "string",
-                  "required": true,
-                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
-                  "description": "Required. The name of the user list to close.\nSee UserList.name"
-                }
-              },
-              "request": {
-                "$ref": "CloseUserListRequest"
-              },
-              "httpMethod": "POST",
-              "path": "v1/{+name}:close",
-              "description": "Change the status of a user list to CLOSED. This prevents new users from\nbeing added to the user list.",
-              "response": {
-                "$ref": "UserList"
-              },
-              "id": "realtimebidding.buyers.userLists.close"
-            },
-            "get": {
-              "parameterOrder": [
-                "name"
-              ],
-              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}",
-              "description": "Gets a user list by its name.",
-              "id": "realtimebidding.buyers.userLists.get",
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
-                  "required": true,
-                  "type": "string",
-                  "description": "Required. The name of the user list to be retrieved. See\nUserList.name."
-                }
-              },
-              "httpMethod": "GET",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "path": "v1/{+name}",
-              "response": {
-                "$ref": "UserList"
-              }
-            },
-            "list": {
-              "parameterOrder": [
-                "parent"
-              ],
-              "id": "realtimebidding.buyers.userLists.list",
-              "flatPath": "v1/buyers/{buyersId}/userLists",
-              "parameters": {
-                "pageSize": {
-                  "description": "The number of results to return per page.",
-                  "type": "integer",
-                  "location": "query",
-                  "format": "int32"
-                },
-                "pageToken": {
-                  "location": "query",
-                  "description": "Continuation page token (as received from a previous response).",
-                  "type": "string"
-                },
-                "parent": {
-                  "type": "string",
-                  "description": "Required. The name of the parent buyer for the user lists to be returned that must\nfollow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}`\nrepresents the account ID of the buyer who owns user lists. For a bidder\naccessing user lists on behalf of a child seat buyer , `{buyerAccountId}`\nshould represent the account ID of the child seat buyer.",
-                  "required": true,
-                  "location": "path",
-                  "pattern": "^buyers/[^/]+$"
-                }
-              },
-              "path": "v1/{+parent}/userLists",
-              "httpMethod": "GET",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "description": "Lists the user lists visible to the current user.",
-              "response": {
-                "$ref": "ListUserListsResponse"
-              }
-            },
-            "getRemarketingTag": {
-              "response": {
-                "$ref": "GetRemarketingTagResponse"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "description": "Gets remarketing tag for a buyer. A remarketing tag is a piece of\nJavaScript code that can be placed on a web page. When a user\nvisits a page containing a remarketing tag, Google adds the user to a user\nlist.",
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "GET",
-              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}:getRemarketingTag",
-              "path": "v1/{+name}:getRemarketingTag",
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "type": "string",
-                  "description": "Required. To fetch remarketing tag for an account, name must follow the pattern\n`buyers/{accountId}` where `{accountId}`\nrepresents ID of a buyer that owns the remarketing tag. For a\nbidder accessing remarketing tag on behalf of a child seat buyer,\n`{accountId}` should represent the ID of the child seat buyer.\nTo fetch remarketing tag for a specific user list, name\nmust follow the pattern\n`buyers/{accountId}/userLists/{userListId}`. See\nUserList.name.",
-                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "id": "realtimebidding.buyers.userLists.getRemarketingTag"
-            },
-            "open": {
-              "description": "Change the status of a user list to OPEN. This allows new users to be added\nto the user list.",
-              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}:open",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "httpMethod": "POST",
-              "request": {
-                "$ref": "OpenUserListRequest"
-              },
-              "path": "v1/{+name}:open",
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
-                  "description": "Required. The name of the user list to open.\nSee UserList.name",
-                  "required": true,
-                  "location": "path",
-                  "type": "string"
-                }
-              },
-              "response": {
-                "$ref": "UserList"
-              },
-              "id": "realtimebidding.buyers.userLists.open"
-            },
-            "update": {
-              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "response": {
-                "$ref": "UserList"
-              },
-              "httpMethod": "PUT",
-              "path": "v1/{+name}",
-              "id": "realtimebidding.buyers.userLists.update",
-              "request": {
-                "$ref": "UserList"
-              },
-              "description": "Update the given user list. Only user lists with URLRestrictions can be\nupdated.",
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
-                  "location": "path",
-                  "type": "string",
-                  "description": "Output only. Name of the user list that must follow the pattern\n`buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents\nthe account ID of the buyer who owns the user list. For a bidder accessing\nuser lists on behalf of a child seat buyer, `{buyer}` represents\nthe account ID of the child seat buyer. `{user_list}` is an int64\nidentifier assigned by Google to uniquely identify a user list.",
-                  "required": true
-                }
-              }
-            },
-            "create": {
-              "parameters": {
-                "parent": {
-                  "type": "string",
-                  "description": "Required. The name of the parent buyer of the user list to be retrieved that\nmust follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}`\nrepresents the account ID of the buyer who owns user lists. For a bidder\naccessing user lists on behalf of a child seat buyer , `{buyerAccountId}`\nshould represent the account ID of the child seat buyer.",
-                  "required": true,
-                  "pattern": "^buyers/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "flatPath": "v1/buyers/{buyersId}/userLists",
-              "id": "realtimebidding.buyers.userLists.create",
-              "path": "v1/{+parent}/userLists",
-              "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "description": "Create a new user list.",
-              "response": {
-                "$ref": "UserList"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "request": {
-                "$ref": "UserList"
-              }
-            }
-          }
-        },
-        "creatives": {
-          "methods": {
-            "get": {
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "description": "Required. Name of the creative to retrieve. See\ncreative.name.",
-                  "pattern": "^buyers/[^/]+/creatives/[^/]+$",
-                  "type": "string",
-                  "required": true
-                },
-                "view": {
-                  "enum": [
-                    "CREATIVE_VIEW_UNSPECIFIED",
-                    "SERVING_DECISION_ONLY",
-                    "FULL"
-                  ],
-                  "type": "string",
-                  "location": "query",
-                  "description": "Controls the amount of information included in the response.\nBy default only\ncreativeServingDecision\nis included. To retrieve the entire creative\nresource (including the declared\nfields and the creative content) specify the view as \"FULL\"."
-                }
-              },
-              "flatPath": "v1/buyers/{buyersId}/creatives/{creativesId}",
-              "description": "Gets a creative.",
-              "id": "realtimebidding.buyers.creatives.get",
-              "path": "v1/{+name}",
-              "httpMethod": "GET",
-              "parameterOrder": [
-                "name"
-              ],
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "response": {
-                "$ref": "Creative"
-              }
-            },
-            "create": {
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "id": "realtimebidding.buyers.creatives.create",
-              "flatPath": "v1/buyers/{buyersId}/creatives",
-              "request": {
-                "$ref": "Creative"
-              },
-              "response": {
-                "$ref": "Creative"
-              },
-              "httpMethod": "POST",
-              "path": "v1/{+parent}/creatives",
-              "description": "Creates a creative.",
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^buyers/[^/]+$",
-                  "location": "path",
-                  "description": "Required. The name of the parent buyer that the new creative belongs to that must\nfollow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}`\nrepresents the account ID of the buyer who owns a creative. For a bidder\naccessing creatives on behalf of a child seat buyer, `{buyerAccountId}`\nshould represent the account ID of the child seat buyer."
-                }
-              }
-            },
-            "patch": {
-              "response": {
-                "$ref": "Creative"
-              },
-              "parameters": {
-                "updateMask": {
-                  "location": "query",
-                  "format": "google-fieldmask",
-                  "description": "Field mask to use for partial in-place updates.",
-                  "type": "string"
-                },
-                "name": {
-                  "required": true,
-                  "pattern": "^buyers/[^/]+/creatives/[^/]+$",
-                  "location": "path",
-                  "description": "Name of the creative to update. See\ncreative.name.",
-                  "type": "string"
-                }
-              },
-              "httpMethod": "PATCH",
-              "flatPath": "v1/buyers/{buyersId}/creatives/{creativesId}",
-              "path": "v1/{+name}",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ],
-              "id": "realtimebidding.buyers.creatives.patch",
-              "parameterOrder": [
-                "name"
-              ],
-              "request": {
-                "$ref": "Creative"
-              },
-              "description": "Updates a creative."
-            },
-            "list": {
-              "parameters": {
-                "filter": {
-                  "type": "string",
-                  "description": "Query string to filter creatives. If no filter is specified,\nall active creatives will be returned.\n\nExample: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND\ndisapprovalReason:UNACCEPTABLE_CONTENT) OR\ndeclaredAttributes:IS_COOKIE_TARGETED'",
-                  "location": "query"
-                },
-                "parent": {
-                  "type": "string",
-                  "required": true,
-                  "description": "Required. Name of the parent buyer that owns the creatives.\n\nThe pattern for this resource is either `buyers/{buyerAccountId}` or\n`bidders/{bidderAccountId}`.\n\nFor `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the\nfollowing:\n1. The ID of the buyer that is accessing their own creatives.\n2. The ID of the child seat buyer under a bidder account.\n   So for listing creatives pertaining to the child seat buyer (`456`)\n   under bidder account (`123`), you would use the pattern: `buyers/456`.\n3. The ID of the bidder itself.\n   So for listing creatives pertaining to bidder (`123`),\n   you would use `buyers/123`.\n\nIf you want to access all creatives pertaining to both the bidder and all\nof its child seat accounts, you would use `bidders/{bidderAccountId}`,\ne.g., for all creatives pertaining to bidder (`123`), use `bidders/123`.",
-                  "location": "path",
-                  "pattern": "^buyers/[^/]+$"
-                },
-                "pageSize": {
-                  "description": "Requested page size. The server may return fewer creatives than requested\n(due to timeout constraint) even if more are available via another call.\nIf unspecified, server will pick an appropriate default.\nAcceptable values are 1 to 1000, inclusive.",
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query"
-                },
-                "pageToken": {
-                  "location": "query",
-                  "description": "A token identifying a page of results the server should return.\nTypically, this is the value of\nListCreativesResponse.nextPageToken\nreturned from the previous call to the 'ListCreatives' method.",
-                  "type": "string"
-                },
-                "view": {
-                  "type": "string",
-                  "enum": [
-                    "CREATIVE_VIEW_UNSPECIFIED",
-                    "SERVING_DECISION_ONLY",
-                    "FULL"
-                  ],
-                  "description": "Controls the amount of information included in the response.\nBy default only\ncreativeServingDecision\nis included. To retrieve the entire creative\nresource (including the declared\nfields and the creative content) specify the view as \"FULL\".",
-                  "location": "query"
-                }
-              },
-              "path": "v1/{+parent}/creatives",
-              "description": "Lists creatives.",
-              "httpMethod": "GET",
-              "flatPath": "v1/buyers/{buyersId}/creatives",
-              "response": {
-                "$ref": "ListCreativesResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "id": "realtimebidding.buyers.creatives.list",
-              "scopes": [
-                "https://www.googleapis.com/auth/realtime-bidding"
-              ]
-            }
-          }
-        }
-      },
-      "methods": {
-        "getRemarketingTag": {
-          "flatPath": "v1/buyers/{buyersId}:getRemarketingTag",
-          "parameters": {
-            "name": {
-              "location": "path",
-              "required": true,
-              "description": "Required. To fetch remarketing tag for an account, name must follow the pattern\n`buyers/{accountId}` where `{accountId}`\nrepresents ID of a buyer that owns the remarketing tag. For a\nbidder accessing remarketing tag on behalf of a child seat buyer,\n`{accountId}` should represent the ID of the child seat buyer.\nTo fetch remarketing tag for a specific user list, name\nmust follow the pattern\n`buyers/{accountId}/userLists/{userListId}`. See\nUserList.name.",
-              "type": "string",
-              "pattern": "^buyers/[^/]+$"
-            }
-          },
-          "httpMethod": "GET",
-          "response": {
-            "$ref": "GetRemarketingTagResponse"
-          },
-          "id": "realtimebidding.buyers.getRemarketingTag",
-          "path": "v1/{+name}:getRemarketingTag",
-          "description": "Gets remarketing tag for a buyer. A remarketing tag is a piece of\nJavaScript code that can be placed on a web page. When a user\nvisits a page containing a remarketing tag, Google adds the user to a user\nlist.",
-          "scopes": [
-            "https://www.googleapis.com/auth/realtime-bidding"
-          ],
-          "parameterOrder": [
-            "name"
-          ]
-        }
-      }
-    }
-  },
-  "title": "Real-time Bidding API",
-  "baseUrl": "https://realtimebidding.googleapis.com/",
   "schemas": {
-    "WatchCreativesRequest": {
-      "properties": {},
-      "id": "WatchCreativesRequest",
+    "GetRemarketingTagResponse": {
       "type": "object",
-      "description": "A request to receive push notifications when any of the creatives belonging\nto the bidder changes status."
-    },
-    "HttpCallEvidence": {
-      "description": "HTTP calls made by a creative that resulted in policy violations.",
-      "id": "HttpCallEvidence",
-      "type": "object",
+      "id": "GetRemarketingTagResponse",
+      "description": "Response for a request to get remarketing tag.",
       "properties": {
-        "urls": {
-          "items": {
-            "type": "string"
-          },
-          "description": "URLs of HTTP calls made by the creative.",
-          "type": "array"
+        "snippet": {
+          "description": "A HTML tag that can be placed on the advertiser's page to add users to a user list. For more information and code samples on using snippet on your website refer to [Tag your site for remarketing]( https://support.google.com/google-ads/answer/2476688).",
+          "type": "string"
         }
       }
-    },
-    "WatchCreativesResponse": {
-      "description": "A response for the request to receive push notification when a bidder's\ncreatives change status.",
-      "id": "WatchCreativesResponse",
-      "properties": {
-        "subscription": {
-          "description": "The Pub/Sub subscription that can be used to pull creative status\nnotifications. This would be of the format\n`projects/{project_id}/subscriptions/{subscription_id}`.\nSubscription is created with pull delivery. All service accounts belonging\nto the bidder will have read access to this subscription.\nSubscriptions that are inactive for more than 90 days will be disabled.\nPlease use\nwatchCreatives to\nre-enable the subscription.",
-          "type": "string"
-        },
-        "topic": {
-          "description": "The Pub/Sub topic that will be used to publish creative serving\nstatus notifications. This would be of the format\n`projects/{project_id}/topics/{topic_id}`.",
-          "type": "string"
-        }
-      },
-      "type": "object"
     },
     "Date": {
+      "description": "Represents a whole or partial calendar date, e.g. a birthday. The time of day and time zone are either specified elsewhere or are not significant. The date is relative to the Proleptic Gregorian Calendar. This can represent: * A full date, with non-zero year, month and day values * A month and day value, with a zero year, e.g. an anniversary * A year on its own, with zero month and day values * A year and month value, with a zero day, e.g. a credit card expiration date Related types are google.type.TimeOfDay and `google.protobuf.Timestamp`.",
       "type": "object",
       "properties": {
+        "month": {
+          "description": "Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.",
+          "format": "int32",
+          "type": "integer"
+        },
         "year": {
           "format": "int32",
           "type": "integer",
-          "description": "Year of date. Must be from 1 to 9999, or 0 if specifying a date without\na year."
+          "description": "Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year."
         },
         "day": {
+          "format": "int32",
           "type": "integer",
-          "format": "int32",
-          "description": "Day of month. Must be from 1 to 31 and valid for the year and month, or 0\nif specifying a year by itself or a year and month where the day is not\nsignificant."
-        },
-        "month": {
-          "format": "int32",
-          "description": "Month of year. Must be from 1 to 12, or 0 if specifying a year without a\nmonth and day.",
-          "type": "integer"
+          "description": "Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year by itself or a year and month where the day is not significant."
         }
       },
-      "description": "Represents a whole or partial calendar date, e.g. a birthday. The time of day\nand time zone are either specified elsewhere or are not significant. The date\nis relative to the Proleptic Gregorian Calendar. This can represent:\n\n* A full date, with non-zero year, month and day values\n* A month and day value, with a zero year, e.g. an anniversary\n* A year on its own, with zero month and day values\n* A year and month value, with a zero day, e.g. a credit card expiration date\n\nRelated types are google.type.TimeOfDay and `google.protobuf.Timestamp`.",
       "id": "Date"
     },
-    "PolicyTopicEntry": {
-      "description": "Each policy topic entry will represent a violation of a policy topic for a\ncreative, with the policy topic information and optional evidence for the\npolicy violation.",
-      "id": "PolicyTopicEntry",
+    "ListCreativesResponse": {
+      "description": "A response for listing creatives.",
       "properties": {
-        "helpCenterUrl": {
+        "nextPageToken": {
+          "description": "A token to retrieve the next page of results. Pass this value in the ListCreativesRequest.pageToken field in the subsequent call to the `ListCreatives` method to retrieve the next page of results.",
+          "type": "string"
+        },
+        "creatives": {
+          "description": "The list of creatives.",
+          "type": "array",
+          "items": {
+            "$ref": "Creative"
+          }
+        }
+      },
+      "type": "object",
+      "id": "ListCreativesResponse"
+    },
+    "DownloadSizeEvidence": {
+      "description": "Total download size and URL-level download size breakdown for resources in a creative.",
+      "properties": {
+        "topUrlDownloadSizeBreakdowns": {
+          "type": "array",
+          "items": {
+            "$ref": "UrlDownloadSize"
+          },
+          "description": "Download size broken down by URLs with the top download size."
+        },
+        "totalDownloadSizeKb": {
+          "description": "Total download size (in kilobytes) for all the resources in the creative.",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "type": "object",
+      "id": "DownloadSizeEvidence"
+    },
+    "DestinationNotCrawlableEvidence": {
+      "description": "Evidence that the creative's destination URL was not crawlable by Google.",
+      "properties": {
+        "crawledUrl": {
+          "description": "Destination URL that was attempted to be crawled.",
+          "type": "string"
+        },
+        "crawlTime": {
+          "description": "Approximate time of the crawl.",
           "type": "string",
-          "description": "URL of the help center article describing this policy topic."
+          "format": "google-datetime"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Reason of destination not crawlable.",
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "Site's robots exclusion file (e.g., robots.txt) was unreachable.",
+            "Timed out reading site's robots exclusion file (e.g., robots.txt).",
+            "Crawler was disallowed by the site's robots exclusion file (e.g., robots.txt).",
+            "Unknown reason."
+          ],
+          "enum": [
+            "REASON_UNSPECIFIED",
+            "UNREACHABLE_ROBOTS",
+            "TIMEOUT_ROBOTS",
+            "ROBOTED_DENIED",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "id": "DestinationNotCrawlableEvidence",
+      "type": "object"
+    },
+    "AdTechnologyProviders": {
+      "description": "Detected ad technology provider information.",
+      "type": "object",
+      "id": "AdTechnologyProviders",
+      "properties": {
+        "hasUnidentifiedProvider": {
+          "type": "boolean",
+          "description": "Whether the creative contains an unidentified ad technology provider. If true for a given creative, any bid submitted with that creative for an impression that will serve to an EEA user will be filtered before the auction."
+        },
+        "detectedProviderIds": {
+          "type": "array",
+          "description": "The detected ad technology provider IDs for this creative. See https://storage.googleapis.com/adx-rtb-dictionaries/providers.csv for mapping of provider ID to provided name, a privacy policy URL, and a list of domains which can be attributed to the provider. If the creative contains provider IDs that are outside of those listed in the `BidRequest.adslot.consented_providers_settings.consented_providers` field on the [Google bid protocol](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto) and the `BidRequest.user.ext.consented_providers_settings.consented_providers` field on the [OpenRTB protocol](https://developers.google.com/authorized-buyers/rtb/downloads/openrtb-adx-proto), and a bid is submitted with that creative for an impression that will serve to an EEA user, the bid will be filtered before the auction.",
+          "items": {
+            "format": "int64",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "VideoMetadata": {
+      "type": "object",
+      "properties": {
+        "duration": {
+          "type": "string",
+          "description": "The duration of the ad. Can be used to filter the response of the creatives.list method.",
+          "format": "google-duration"
+        },
+        "skipOffset": {
+          "format": "google-duration",
+          "description": "The minimum duration that the user has to watch before being able to skip this ad. If the field is not set, the ad is not skippable. If the field is set, the ad is skippable. Can be used to filter the response of the creatives.list method.",
+          "type": "string"
+        },
+        "vastVersion": {
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "VAST 1.0",
+            "VAST 2.0",
+            "VAST 3.0",
+            "VAST 4.0"
+          ],
+          "enum": [
+            "VAST_VERSION_UNSPECIFIED",
+            "VAST_VERSION_1_0",
+            "VAST_VERSION_2_0",
+            "VAST_VERSION_3_0",
+            "VAST_VERSION_4_0"
+          ],
+          "description": "The maximum VAST version across all wrapped VAST documents. Can be used to filter the response of the creatives.list method.",
+          "type": "string"
+        },
+        "isVpaid": {
+          "description": "Is this a VPAID ad? Can be used to filter the response of the creatives.list method.",
+          "type": "boolean"
+        },
+        "mediaFiles": {
+          "type": "array",
+          "items": {
+            "$ref": "MediaFile"
+          },
+          "description": "The list of all media files declared in the VAST. If there are multiple VASTs in a wrapper chain, this includes the media files from the deepest one in the chain."
+        },
+        "isValidVast": {
+          "description": "Is this a valid VAST ad? Can be used to filter the response of the creatives.list method.",
+          "type": "boolean"
+        }
+      },
+      "id": "VideoMetadata",
+      "description": "Video metadata for a creative."
+    },
+    "PolicyTopicEntry": {
+      "description": "Each policy topic entry will represent a violation of a policy topic for a creative, with the policy topic information and optional evidence for the policy violation.",
+      "type": "object",
+      "properties": {
+        "policyTopic": {
+          "description": "Policy topic this entry refers to. For example, \"ALCOHOL\", \"TRADEMARKS_IN_AD_TEXT\", or \"DESTINATION_NOT_WORKING\". The set of possible policy topics is not fixed for a particular API version and may change at any time. Can be used to filter the response of the creatives.list method",
+          "type": "string"
         },
         "evidences": {
           "description": "Pieces of evidence associated with this policy topic entry.",
-          "type": "array",
           "items": {
             "$ref": "PolicyTopicEvidence"
-          }
+          },
+          "type": "array"
         },
-        "policyTopic": {
+        "helpCenterUrl": {
           "type": "string",
-          "description": "Policy topic this entry refers to. For example, \"ALCOHOL\",\n\"TRADEMARKS_IN_AD_TEXT\", or \"DESTINATION_NOT_WORKING\". The set of possible\npolicy topics is not fixed for a particular API version and may change at\nany time.\nCan be used to filter the response of the\ncreatives.list\nmethod"
+          "description": "URL of the help center article describing this policy topic."
         }
       },
-      "type": "object"
+      "id": "PolicyTopicEntry"
     },
-    "NativeContent": {
-      "id": "NativeContent",
+    "Creative": {
+      "description": "A creative and its classification data.",
+      "id": "Creative",
       "type": "object",
       "properties": {
-        "image": {
-          "$ref": "Image",
-          "description": "A large image."
+        "native": {
+          "$ref": "NativeContent",
+          "description": "A native creative."
         },
-        "advertiserName": {
-          "description": "The name of the advertiser or sponsor, to be displayed in the ad creative.",
-          "type": "string"
-        },
-        "priceDisplayText": {
+        "creativeId": {
           "type": "string",
-          "description": "The price of the promoted app including currency info."
+          "description": "Buyer-specific creative ID that references this creative in bid responses. This field is Ignored in update operations. Can be used to filter the response of the creatives.list method. The maximum length of the creative ID is 128 bytes."
         },
-        "clickTrackingUrl": {
-          "description": "The URL to use for click tracking.",
-          "type": "string"
-        },
-        "clickLinkUrl": {
+        "name": {
+          "readOnly": true,
           "type": "string",
-          "description": "The URL that the browser/SDK will load when the user clicks the ad."
+          "description": "Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}` is the buyer-specific creative ID that references this creative in the bid response."
         },
-        "callToAction": {
-          "type": "string",
-          "description": "A label for the button that the user is supposed to click."
+        "creativeServingDecision": {
+          "$ref": "CreativeServingDecision",
+          "description": "Output only. Top level status and detected attributes of a creative (for example domain, language, advertiser, product category, etc.) that affect whether (status) and where (context) a creative will be allowed to serve.",
+          "readOnly": true
         },
-        "videoUrl": {
-          "description": "The URL to fetch a native video ad.",
-          "type": "string"
-        },
-        "headline": {
-          "description": "A short title for the ad.",
-          "type": "string"
-        },
-        "starRating": {
-          "description": "The app rating in the app store. Must be in the range [0-5].",
-          "type": "number",
-          "format": "double"
-        },
-        "body": {
-          "type": "string",
-          "description": "A long description of the ad."
-        },
-        "logo": {
-          "$ref": "Image",
-          "description": "A smaller image, for the advertiser's logo."
-        },
-        "appIcon": {
-          "$ref": "Image",
-          "description": "The app icon, for app download ads."
-        }
-      },
-      "description": "Native content for a creative."
-    },
-    "ServingStatus": {
-      "description": "Serving status of the creative for a transaction type or a region.",
-      "id": "ServingStatus",
-      "properties": {
-        "status": {
+        "creativeFormat": {
+          "description": "Output only. The format of this creative. Can be used to filter the response of the creatives.list method.",
           "enum": [
-            "STATUS_UNSPECIFIED",
-            "PENDING_REVIEW",
-            "DISAPPROVED",
-            "APPROVED"
+            "CREATIVE_FORMAT_UNSPECIFIED",
+            "HTML",
+            "VIDEO",
+            "NATIVE"
           ],
+          "readOnly": true,
+          "type": "string",
+          "enumDescriptions": [
+            "The format is unknown.",
+            "HTML creative.",
+            "Video creative.",
+            "Native creative."
+          ]
+        },
+        "html": {
+          "description": "An HTML creative.",
+          "$ref": "HtmlContent"
+        },
+        "declaredRestrictedCategories": {
+          "description": "All declared restricted categories for the ads that may be shown from this creative. Can be used to filter the response of the creatives.list method.",
+          "type": "array",
+          "items": {
+            "enumDescriptions": [
+              "Default value that should never be used.",
+              "The alcohol restricted category."
+            ],
+            "type": "string",
+            "enum": [
+              "RESTRICTED_CATEGORY_UNSPECIFIED",
+              "ALCOHOL"
+            ]
+          },
           "enumDescriptions": [
             "Default value that should never be used.",
-            "Creative is pending review.",
-            "Creative cannot serve.",
-            "Creative is approved."
-          ],
-          "description": "Serving status for the given transaction type (e.g., open auction,\ndeals) or region (e.g., China, Russia).\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "string"
+            "The alcohol restricted category."
+          ]
         },
-        "topics": {
-          "items": {
-            "$ref": "PolicyTopicEntry"
-          },
-          "description": "Policy topics related to the serving decision for this transaction type\n(e.g., open auction, deals) or region (e.g., China, Russia).\nTopics may be present only if status is DISAPPROVED.",
-          "type": "array"
-        }
-      },
-      "type": "object"
-    },
-    "CreativeServingDecision": {
-      "properties": {
-        "detectedSensitiveCategories": {
-          "description": "Detected sensitive categories, if any.\nCan be used to filter the response of the\ncreatives.list\nmethod.\n\nSee the ad-sensitive-categories.txt file in the technical documentation\nfor a list of IDs. You should use these IDs along with the\nexcluded-sensitive-category field in the bid request to filter your bids.",
-          "items": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "type": "array"
-        },
-        "chinaServingStatus": {
-          "description": "The serving status of this creative in China.\nWhen approved or disapproved, this status applies to both deals and open\nauction in China. When pending review, this creative is allowed to serve\nfor deals but not for open auction.",
-          "$ref": "ServingStatus"
-        },
-        "dealsServingStatus": {
-          "description": "Status of this creative when bidding on PG and PD deals (outside of\nRussia and China).",
-          "$ref": "ServingStatus"
-        },
-        "russiaServingStatus": {
-          "$ref": "ServingStatus",
-          "description": "The serving status of this creative in Russia.\nWhen approved or disapproved, this status applies to both deals and open\nauction in Russia. When pending review, this creative is allowed to serve\nfor deals but not for open auction."
-        },
-        "openAuctionServingStatus": {
-          "description": "Status of this creative when bidding in open auction, private auction, or\nauction packages (outside of Russia and China).",
-          "$ref": "ServingStatus"
-        },
-        "adTechnologyProviders": {
-          "$ref": "AdTechnologyProviders",
-          "description": "The detected ad technology providers."
-        },
-        "detectedVendorIds": {
+        "dealIds": {
+          "readOnly": true,
           "type": "array",
-          "description": "IDs of the ad technology vendors that were detected to be\nused by this creative. See\nhttps://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for\npossible values.\nCan be used to filter the response of the\ncreatives.list\nmethod.\n\nIf the `allowed_vendor_type` field of a [bid\nrequest](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)\ndoes not contain one of the vendor type IDs that were declared or\ndetected for a given creative, and a bid is submitted with that creative,\nthe bid will be filtered before the auction.",
+          "description": "Output only. IDs of all of the deals with which this creative has been used in bidding. Can be used to filter the response of the creatives.list method.",
           "items": {
-            "format": "int32",
-            "type": "integer"
+            "type": "string"
           }
         },
-        "detectedLanguages": {
+        "accountId": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. ID of the buyer account that this creative is owned by. Can be used to filter the response of the creatives.list method with equality and inequality check.",
+          "format": "int64"
+        },
+        "video": {
+          "description": "A video creative.",
+          "$ref": "VideoContent"
+        },
+        "declaredClickThroughUrls": {
+          "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "The detected languages for this creative. The order is\narbitrary. The codes are 2 or 5 characters and are documented at\nhttps://developers.google.com/adwords/api/docs/appendix/languagecodes.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "array"
+          "description": "The set of declared destination URLs for the creative. Can be used to filter the response of the creatives.list method."
         },
-        "detectedAdvertisers": {
+        "adChoicesDestinationUrl": {
+          "description": "The link to AdChoices destination page. This is only supported for native ads.",
+          "type": "string"
+        },
+        "restrictedCategories": {
           "type": "array",
-          "description": "Detected advertisers and brands.",
           "items": {
-            "$ref": "AdvertiserAndBrand"
-          }
+            "enumDescriptions": [
+              "Default value that should never be used.",
+              "The alcohol restricted category."
+            ],
+            "type": "string",
+            "enum": [
+              "RESTRICTED_CATEGORY_UNSPECIFIED",
+              "ALCOHOL"
+            ]
+          },
+          "description": "All restricted categories for the ads that may be shown from this creative.",
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "The alcohol restricted category."
+          ]
         },
-        "detectedProductCategories": {
+        "declaredAttributes": {
           "type": "array",
-          "description": "Detected product categories, if any.\nSee the ad-product-categories.txt file in the technical documentation\nfor a list of IDs.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "items": {
-            "format": "int32",
-            "type": "integer"
-          }
-        },
-        "detectedAttributes": {
           "enumDescriptions": [
             "Do not use. This is a placeholder value only.",
             "The creative is of type image/rich media. For pretargeting.",
@@ -746,20 +336,273 @@
             "The creative is MRAID.",
             "The creative is Flash.",
             "The creative is HTML5.",
-            "The creative has an instream VAST video type of skippable instream video.\nFor pretargeting.",
+            "The creative has an instream VAST video type of skippable instream video. For pretargeting.",
             "The creative is SSL.",
             "The creative is non-SSL.",
             "The creative is an interstitial.",
-            "The creative has an instream VAST video type of non-skippable instream\nvideo. For pretargeting.",
+            "The creative has an instream VAST video type of non-skippable instream video. For pretargeting.",
             "The creative is eligible for native.",
-            "The creative has an instream VAST video type of non-VPAID. For\npretargeting.",
+            "The creative has an instream VAST video type of non-VPAID. For pretargeting.",
             "The creative is not eligible for native.",
-            "The creative has an interstitial size of any interstitial. For\npretargeting.",
-            "The creative has an interstitial size of non interstitial. For\npretargeting.",
+            "The creative has an interstitial size of any interstitial. For pretargeting.",
+            "The creative has an interstitial size of non interstitial. For pretargeting.",
             "The video type is in-banner video.",
             "The creative can dynamically resize to fill a variety of slot sizes.",
             "The open measurement SDK is supported."
           ],
+          "description": "All declared attributes for the ads that may be shown from this creative. Can be used to filter the response of the creatives.list method. If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto\") contains one of the attributes that were declared or detected for a given creative, and a bid is submitted with that creative, the bid will be filtered before the auction.",
+          "items": {
+            "enumDescriptions": [
+              "Do not use. This is a placeholder value only.",
+              "The creative is of type image/rich media. For pretargeting.",
+              "The creative is of video type Adobe Flash FLV. For pretargeting.",
+              "The creative is tagged.",
+              "The creative is cookie targeted.",
+              "The creative is user interest targeted.",
+              "The creative does not expand.",
+              "The creative expands up.",
+              "The creative expands down.",
+              "The creative expands left.",
+              "The creative expands right.",
+              "The creative expands up and left.",
+              "The creative expands up and right.",
+              "The creative expands down and left.",
+              "The creative expands down and right.",
+              "The creative type is HTML.",
+              "The creative type is VAST video.",
+              "The creative expands up or down.",
+              "The creative expands left or right.",
+              "The creative expands on any diagonal.",
+              "The creative expands when rolled over.",
+              "The instream vast video type is vpaid flash.",
+              "The creative is MRAID.",
+              "The creative is Flash.",
+              "The creative is HTML5.",
+              "The creative has an instream VAST video type of skippable instream video. For pretargeting.",
+              "The creative is SSL.",
+              "The creative is non-SSL.",
+              "The creative is an interstitial.",
+              "The creative has an instream VAST video type of non-skippable instream video. For pretargeting.",
+              "The creative is eligible for native.",
+              "The creative has an instream VAST video type of non-VPAID. For pretargeting.",
+              "The creative is not eligible for native.",
+              "The creative has an interstitial size of any interstitial. For pretargeting.",
+              "The creative has an interstitial size of non interstitial. For pretargeting.",
+              "The video type is in-banner video.",
+              "The creative can dynamically resize to fill a variety of slot sizes.",
+              "The open measurement SDK is supported."
+            ],
+            "type": "string",
+            "enum": [
+              "ATTRIBUTE_UNSPECIFIED",
+              "IMAGE_RICH_MEDIA",
+              "ADOBE_FLASH_FLV",
+              "IS_TAGGED",
+              "IS_COOKIE_TARGETED",
+              "IS_USER_INTEREST_TARGETED",
+              "EXPANDING_DIRECTION_NONE",
+              "EXPANDING_DIRECTION_UP",
+              "EXPANDING_DIRECTION_DOWN",
+              "EXPANDING_DIRECTION_LEFT",
+              "EXPANDING_DIRECTION_RIGHT",
+              "EXPANDING_DIRECTION_UP_LEFT",
+              "EXPANDING_DIRECTION_UP_RIGHT",
+              "EXPANDING_DIRECTION_DOWN_LEFT",
+              "EXPANDING_DIRECTION_DOWN_RIGHT",
+              "CREATIVE_TYPE_HTML",
+              "CREATIVE_TYPE_VAST_VIDEO",
+              "EXPANDING_DIRECTION_UP_OR_DOWN",
+              "EXPANDING_DIRECTION_LEFT_OR_RIGHT",
+              "EXPANDING_DIRECTION_ANY_DIAGONAL",
+              "EXPANDING_ACTION_ROLLOVER_TO_EXPAND",
+              "INSTREAM_VAST_VIDEO_TYPE_VPAID_FLASH",
+              "RICH_MEDIA_CAPABILITY_TYPE_MRAID",
+              "RICH_MEDIA_CAPABILITY_TYPE_FLASH",
+              "RICH_MEDIA_CAPABILITY_TYPE_HTML5",
+              "SKIPPABLE_INSTREAM_VIDEO",
+              "RICH_MEDIA_CAPABILITY_TYPE_SSL",
+              "RICH_MEDIA_CAPABILITY_TYPE_NON_SSL",
+              "RICH_MEDIA_CAPABILITY_TYPE_INTERSTITIAL",
+              "NON_SKIPPABLE_INSTREAM_VIDEO",
+              "NATIVE_ELIGIBILITY_ELIGIBLE",
+              "NON_VPAID",
+              "NATIVE_ELIGIBILITY_NOT_ELIGIBLE",
+              "ANY_INTERSTITIAL",
+              "NON_INTERSTITIAL",
+              "IN_BANNER_VIDEO",
+              "RENDERING_SIZELESS_ADX",
+              "OMSDK_1_0"
+            ]
+          }
+        },
+        "impressionTrackingUrls": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "The set of URLs to be called to record an impression."
+        },
+        "version": {
+          "readOnly": true,
+          "format": "int32",
+          "type": "integer",
+          "description": "Output only. The version of this creative. Version for a new creative is 1 and it increments during subsequent creative updates."
+        },
+        "declaredVendorIds": {
+          "type": "array",
+          "description": "IDs for the declared ad technology vendors that may be used by this creative. See https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for possible values. Can be used to filter the response of the creatives.list method.",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "agencyId": {
+          "format": "int64",
+          "description": "The agency ID for this creative.",
+          "type": "string"
+        },
+        "apiUpdateTime": {
+          "description": "Output only. The last update timestamp of the creative via API.",
+          "format": "google-datetime",
+          "type": "string",
+          "readOnly": true
+        },
+        "advertiserName": {
+          "type": "string",
+          "description": "The name of the company being advertised in the creative. Can be used to filter the response of the creatives.list method."
+        }
+      }
+    },
+    "HtmlContent": {
+      "type": "object",
+      "description": "HTML content for a creative.",
+      "properties": {
+        "width": {
+          "description": "The width of the HTML snippet in pixels. Can be used to filter the response of the creatives.list method.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "height": {
+          "format": "int32",
+          "type": "integer",
+          "description": "The height of the HTML snippet in pixels. Can be used to filter the response of the creatives.list method."
+        },
+        "snippet": {
+          "type": "string",
+          "description": "The HTML snippet that displays the ad when inserted in the web page."
+        }
+      },
+      "id": "HtmlContent"
+    },
+    "UrlRestriction": {
+      "properties": {
+        "startDate": {
+          "$ref": "Date",
+          "description": "Start date (if specified) of the URL restriction."
+        },
+        "restrictionType": {
+          "enum": [
+            "RESTRICTION_TYPE_UNSPECIFIED",
+            "CONTAINS",
+            "EQUALS",
+            "STARTS_WITH",
+            "ENDS_WITH",
+            "DOES_NOT_EQUAL",
+            "DOES_NOT_CONTAIN",
+            "DOES_NOT_START_WITH",
+            "DOES_NOT_END_WITH"
+          ],
+          "description": "The restriction type for the specified URL.",
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "The tag URL (as recorded by the pixel callback) contains the specified URL.",
+            "The tag URL (as recorded by the pixel callback) exactly matches the specified URL.",
+            "The tag URL (as recorded by the pixel callback) starts with the specified URL.",
+            "The tag URL (as recorded by the pixel callback) ends with the specified URL.",
+            "The tag URL (as recorded by the pixel callback) does not equal the specified URL.",
+            "The tag URL (as recorded by the pixel callback) does not contain the specified URL.",
+            "The tag URL (as recorded by the pixel callback) does not start with the specified URL.",
+            "The tag URL (as recorded by the pixel callback) does not end with the specified URL."
+          ],
+          "type": "string"
+        },
+        "url": {
+          "description": "Required. The URL to use for applying the restriction on the user list.",
+          "type": "string"
+        },
+        "endDate": {
+          "$ref": "Date",
+          "description": "End date (if specified) of the URL restriction. End date should be later than the start date for the date range to be valid."
+        }
+      },
+      "id": "UrlRestriction",
+      "type": "object",
+      "description": "Represents the URL restriction (for the URL captured by the pixel callback) for a user list."
+    },
+    "CreativeServingDecision": {
+      "properties": {
+        "detectedVendorIds": {
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "description": "IDs of the ad technology vendors that were detected to be used by this creative. See https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for possible values. Can be used to filter the response of the creatives.list method. If the `allowed_vendor_type` field of a [bid request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto) does not contain one of the vendor type IDs that were declared or detected for a given creative, and a bid is submitted with that creative, the bid will be filtered before the auction.",
+          "type": "array"
+        },
+        "detectedProductCategories": {
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": "array",
+          "description": "Detected product categories, if any. See the ad-product-categories.txt file in the technical documentation for a list of IDs. Can be used to filter the response of the creatives.list method."
+        },
+        "lastStatusUpdate": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "The last time the creative status was updated. Can be used to filter the response of the creatives.list method."
+        },
+        "detectedClickThroughUrls": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The set of detected destination URLs for the creative. Can be used to filter the response of the creatives.list method.",
+          "type": "array"
+        },
+        "detectedLanguages": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "The detected languages for this creative. The order is arbitrary. The codes are 2 or 5 characters and are documented at https://developers.google.com/adwords/api/docs/appendix/languagecodes. Can be used to filter the response of the creatives.list method."
+        },
+        "detectedDomains": {
+          "description": "The detected domains for this creative.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "chinaServingStatus": {
+          "description": "The serving status of this creative in China. When approved or disapproved, this status applies to both deals and open auction in China. When pending review, this creative is allowed to serve for deals but not for open auction.",
+          "$ref": "ServingStatus"
+        },
+        "detectedAdvertisers": {
+          "items": {
+            "$ref": "AdvertiserAndBrand"
+          },
+          "type": "array",
+          "description": "Detected advertisers and brands."
+        },
+        "russiaServingStatus": {
+          "description": "The serving status of this creative in Russia. When approved or disapproved, this status applies to both deals and open auction in Russia. When pending review, this creative is allowed to serve for deals but not for open auction.",
+          "$ref": "ServingStatus"
+        },
+        "openAuctionServingStatus": {
+          "$ref": "ServingStatus",
+          "description": "Status of this creative when bidding in open auction, private auction, or auction packages (outside of Russia and China)."
+        },
+        "detectedAttributes": {
           "items": {
             "enum": [
               "ATTRIBUTE_UNSPECIFIED",
@@ -801,47 +644,134 @@
               "RENDERING_SIZELESS_ADX",
               "OMSDK_1_0"
             ],
-            "type": "string"
+            "type": "string",
+            "enumDescriptions": [
+              "Do not use. This is a placeholder value only.",
+              "The creative is of type image/rich media. For pretargeting.",
+              "The creative is of video type Adobe Flash FLV. For pretargeting.",
+              "The creative is tagged.",
+              "The creative is cookie targeted.",
+              "The creative is user interest targeted.",
+              "The creative does not expand.",
+              "The creative expands up.",
+              "The creative expands down.",
+              "The creative expands left.",
+              "The creative expands right.",
+              "The creative expands up and left.",
+              "The creative expands up and right.",
+              "The creative expands down and left.",
+              "The creative expands down and right.",
+              "The creative type is HTML.",
+              "The creative type is VAST video.",
+              "The creative expands up or down.",
+              "The creative expands left or right.",
+              "The creative expands on any diagonal.",
+              "The creative expands when rolled over.",
+              "The instream vast video type is vpaid flash.",
+              "The creative is MRAID.",
+              "The creative is Flash.",
+              "The creative is HTML5.",
+              "The creative has an instream VAST video type of skippable instream video. For pretargeting.",
+              "The creative is SSL.",
+              "The creative is non-SSL.",
+              "The creative is an interstitial.",
+              "The creative has an instream VAST video type of non-skippable instream video. For pretargeting.",
+              "The creative is eligible for native.",
+              "The creative has an instream VAST video type of non-VPAID. For pretargeting.",
+              "The creative is not eligible for native.",
+              "The creative has an interstitial size of any interstitial. For pretargeting.",
+              "The creative has an interstitial size of non interstitial. For pretargeting.",
+              "The video type is in-banner video.",
+              "The creative can dynamically resize to fill a variety of slot sizes.",
+              "The open measurement SDK is supported."
+            ]
           },
-          "description": "Publisher-excludable attributes that were detected for this creative.\nCan be used to filter the response of the\ncreatives.list\nmethod.\n\nIf the `excluded_attribute` field of a [bid\nrequest](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)\ncontains one of the attributes that were declared or detected for a given\ncreative, and a bid is submitted with that creative, the bid will be\nfiltered before the auction.",
-          "type": "array"
-        },
-        "detectedDomains": {
+          "enumDescriptions": [
+            "Do not use. This is a placeholder value only.",
+            "The creative is of type image/rich media. For pretargeting.",
+            "The creative is of video type Adobe Flash FLV. For pretargeting.",
+            "The creative is tagged.",
+            "The creative is cookie targeted.",
+            "The creative is user interest targeted.",
+            "The creative does not expand.",
+            "The creative expands up.",
+            "The creative expands down.",
+            "The creative expands left.",
+            "The creative expands right.",
+            "The creative expands up and left.",
+            "The creative expands up and right.",
+            "The creative expands down and left.",
+            "The creative expands down and right.",
+            "The creative type is HTML.",
+            "The creative type is VAST video.",
+            "The creative expands up or down.",
+            "The creative expands left or right.",
+            "The creative expands on any diagonal.",
+            "The creative expands when rolled over.",
+            "The instream vast video type is vpaid flash.",
+            "The creative is MRAID.",
+            "The creative is Flash.",
+            "The creative is HTML5.",
+            "The creative has an instream VAST video type of skippable instream video. For pretargeting.",
+            "The creative is SSL.",
+            "The creative is non-SSL.",
+            "The creative is an interstitial.",
+            "The creative has an instream VAST video type of non-skippable instream video. For pretargeting.",
+            "The creative is eligible for native.",
+            "The creative has an instream VAST video type of non-VPAID. For pretargeting.",
+            "The creative is not eligible for native.",
+            "The creative has an interstitial size of any interstitial. For pretargeting.",
+            "The creative has an interstitial size of non interstitial. For pretargeting.",
+            "The video type is in-banner video.",
+            "The creative can dynamically resize to fill a variety of slot sizes.",
+            "The open measurement SDK is supported."
+          ],
           "type": "array",
-          "description": "The detected domains for this creative.",
-          "items": {
-            "type": "string"
-          }
+          "description": "Publisher-excludable attributes that were detected for this creative. Can be used to filter the response of the creatives.list method. If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto) contains one of the attributes that were declared or detected for a given creative, and a bid is submitted with that creative, the bid will be filtered before the auction."
         },
-        "detectedClickThroughUrls": {
-          "description": "The set of detected destination URLs for the creative.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
+        "adTechnologyProviders": {
+          "$ref": "AdTechnologyProviders",
+          "description": "The detected ad technology providers."
+        },
+        "detectedSensitiveCategories": {
           "items": {
-            "type": "string"
+            "type": "integer",
+            "format": "int32"
           },
-          "type": "array"
+          "type": "array",
+          "description": "Detected sensitive categories, if any. Can be used to filter the response of the creatives.list method. See the ad-sensitive-categories.txt file in the technical documentation for a list of IDs. You should use these IDs along with the excluded-sensitive-category field in the bid request to filter your bids."
         },
-        "lastStatusUpdate": {
-          "type": "string",
-          "description": "The last time the creative status was updated.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "format": "google-datetime"
+        "dealsServingStatus": {
+          "$ref": "ServingStatus",
+          "description": "Status of this creative when bidding on PG and PD deals (outside of Russia and China)."
         }
       },
-      "description": "Top level status and detected attributes of a creative.",
-      "id": "CreativeServingDecision",
-      "type": "object"
-    },
-    "CloseUserListRequest": {
-      "id": "CloseUserListRequest",
       "type": "object",
-      "description": "A request to close a specified user list.",
-      "properties": {}
+      "description": "Top level status and detected attributes of a creative.",
+      "id": "CreativeServingDecision"
+    },
+    "DomainCalls": {
+      "properties": {
+        "httpCallCount": {
+          "description": "Number of HTTP calls made to the domain.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "domain": {
+          "type": "string",
+          "description": "The domain name."
+        }
+      },
+      "type": "object",
+      "id": "DomainCalls",
+      "description": "The number of HTTP calls made to the given domain."
     },
     "MediaFile": {
-      "description": "Information about each media file in the VAST.",
-      "type": "object",
       "id": "MediaFile",
+      "description": "Information about each media file in the VAST.",
       "properties": {
         "mimeType": {
+          "description": "The MIME type of this media file. Can be used to filter the response of the creatives.list method.",
           "enum": [
             "VIDEO_MIME_TYPE_UNSPECIFIED",
             "MIME_VIDEO_XFLV",
@@ -862,7 +792,6 @@
             "MIME_AUDIO_MP3",
             "MIME_AUDIO_OGG"
           ],
-          "description": "The MIME type of this media file.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
           "enumDescriptions": [
             "Default value that should never be used.",
             "Flash container.",
@@ -886,126 +815,155 @@
           "type": "string"
         },
         "bitrate": {
+          "description": "Bitrate of the video file, in Kbps. Can be used to filter the response of the creatives.list method.",
           "format": "int64",
-          "description": "Bitrate of the video file, in Kbps.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
           "type": "string"
         }
-      }
-    },
-    "HttpCookieEvidence": {
-      "properties": {
-        "maxCookieCount": {
-          "description": "The largest number of cookies set by a creative. If this field is set,\ncookie_names above will be set to the cookie names of top domains with\nthe largest number of cookies.\nThis field will only be set for TOO_MANY_COOKIES policy.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "cookieNames": {
-          "type": "array",
-          "description": "Names of cookies that violate Google policies.\nFor TOO_MANY_COOKIES policy, this will be the cookie names of top domains\nwith the largest number of cookies. For other policies, this will be all\nthe cookie names that violate the policy.",
-          "items": {
-            "type": "string"
-          }
-        }
       },
-      "type": "object",
-      "description": "Evidence for HTTP cookie-related policy violations.",
-      "id": "HttpCookieEvidence"
+      "type": "object"
     },
-    "DownloadSizeEvidence": {
+    "UserList": {
+      "description": "Represents an Authorized Buyers user list. Authorized Buyers can create/update/list user lists. Once a user list is created in the system, Authorized Buyers can add users to the user list using the bulk uploader API. Alternatively, users can be added by hosting a tag on the advertiser's page.",
       "properties": {
-        "topUrlDownloadSizeBreakdowns": {
-          "type": "array",
-          "items": {
-            "$ref": "UrlDownloadSize"
-          },
-          "description": "Download size broken down by URLs with the top download size."
+        "description": {
+          "description": "The description for the user list.",
+          "type": "string"
         },
-        "totalDownloadSizeKb": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Total download size (in kilobytes) for all the resources in the creative."
-        }
-      },
-      "description": "Total download size and URL-level download size breakdown for resources in\na creative.",
-      "type": "object",
-      "id": "DownloadSizeEvidence"
-    },
-    "UrlDownloadSize": {
-      "description": "The URL-level breakdown for the download size.",
-      "type": "object",
-      "id": "UrlDownloadSize",
-      "properties": {
-        "normalizedUrl": {
+        "status": {
+          "enum": [
+            "STATUS_UNSPECIFIED",
+            "OPEN",
+            "CLOSED"
+          ],
+          "readOnly": true,
+          "description": "Output only. The status of the user list. A new user list starts out as open.",
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "New users can be added to the user list.",
+            "New users cannot be added to the user list."
+          ],
+          "type": "string"
+        },
+        "urlRestriction": {
+          "$ref": "UrlRestriction",
+          "description": "Required. The URL restriction for the user list."
+        },
+        "displayName": {
+          "description": "Required. Display name of the user list. This must be unique across all user lists for a given account.",
+          "type": "string"
+        },
+        "membershipDurationDays": {
+          "description": "Required. The number of days a user's cookie stays on the user list. The field must be between 0 and 540 inclusive.",
           "type": "string",
-          "description": "The normalized URL with query parameters and fragment removed."
+          "format": "int64"
         },
-        "downloadSizeKb": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Download size of the URL in kilobytes."
+        "name": {
+          "type": "string",
+          "description": "Output only. Name of the user list that must follow the pattern `buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents the account ID of the buyer who owns the user list. For a bidder accessing user lists on behalf of a child seat buyer, `{buyer}` represents the account ID of the child seat buyer. `{user_list}` is an int64 identifier assigned by Google to uniquely identify a user list.",
+          "readOnly": true
+        }
+      },
+      "id": "UserList",
+      "type": "object"
+    },
+    "DestinationUrlEvidence": {
+      "id": "DestinationUrlEvidence",
+      "properties": {
+        "destinationUrl": {
+          "description": "The full landing page URL of the destination.",
+          "type": "string"
+        }
+      },
+      "description": "The full landing page URL of the destination.",
+      "type": "object"
+    },
+    "AdvertiserAndBrand": {
+      "id": "AdvertiserAndBrand",
+      "type": "object",
+      "description": "Detected advertiser and brand information.",
+      "properties": {
+        "advertiserName": {
+          "description": "Advertiser name. Can be used to filter the response of the creatives.list method.",
+          "type": "string"
+        },
+        "brandName": {
+          "type": "string",
+          "description": "Brand name. Can be used to filter the response of the creatives.list method."
+        },
+        "brandId": {
+          "description": "Detected brand ID or zero if no brand has been detected. See https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for the list of possible values. Can be used to filter the response of the creatives.list method.",
+          "format": "int64",
+          "type": "string"
+        },
+        "advertiserId": {
+          "format": "int64",
+          "description": "See https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt for the list of possible values. Can be used to filter the response of the creatives.list method.",
+          "type": "string"
         }
       }
     },
     "OpenUserListRequest": {
-      "properties": {},
       "id": "OpenUserListRequest",
+      "type": "object",
       "description": "A request to open a specified user list.",
-      "type": "object"
+      "properties": {}
     },
-    "GetRemarketingTagResponse": {
+    "HttpCallEvidence": {
       "properties": {
-        "snippet": {
-          "description": "A HTML tag that can be placed on the advertiser's page to add users to a\nuser list. For more information and code samples on using snippet on your\nwebsite refer to [Tag your site for remarketing](\nhttps://support.google.com/google-ads/answer/2476688).",
-          "type": "string"
+        "urls": {
+          "items": {
+            "type": "string"
+          },
+          "description": "URLs of HTTP calls made by the creative.",
+          "type": "array"
         }
       },
-      "description": "Response for a request to get remarketing tag.",
-      "id": "GetRemarketingTagResponse",
-      "type": "object"
+      "type": "object",
+      "id": "HttpCallEvidence",
+      "description": "HTTP calls made by a creative that resulted in policy violations."
+    },
+    "CloseUserListRequest": {
+      "type": "object",
+      "properties": {},
+      "description": "A request to close a specified user list.",
+      "id": "CloseUserListRequest"
     },
     "DestinationNotWorkingEvidence": {
-      "id": "DestinationNotWorkingEvidence",
-      "type": "object",
       "properties": {
+        "httpError": {
+          "format": "int32",
+          "description": "HTTP error code (e.g. 404 or 5xx)",
+          "type": "integer"
+        },
+        "redirectionError": {
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "Too many redirect hops.",
+            "Got a redirect but it was invalid.",
+            "Got a redirect but it was empty.",
+            "Unknown redirect error."
+          ],
+          "enum": [
+            "REDIRECTION_ERROR_UNSPECIFIED",
+            "TOO_MANY_REDIRECTS",
+            "INVALID_REDIRECT",
+            "EMPTY_REDIRECT",
+            "REDIRECT_ERROR_UNKNOWN"
+          ],
+          "type": "string",
+          "description": "HTTP redirect chain error."
+        },
         "lastCheckTime": {
           "type": "string",
-          "description": "Approximate time when the ad destination was last checked.",
-          "format": "google-datetime"
-        },
-        "urlRejected": {
-          "enum": [
-            "URL_REJECTED_UNSPECIFIED",
-            "BAD_REQUEST",
-            "MALFORMED_URL",
-            "URL_REJECTED_UNKNOWN"
-          ],
-          "description": "Rejected because of malformed URLs or invalid requests.",
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "URL rejected because of a malformed request.",
-            "URL rejected because of a malformed URL.",
-            "URL rejected because of unknown reason."
-          ],
-          "type": "string"
-        },
-        "invalidPage": {
-          "type": "string",
-          "enum": [
-            "INVALID_PAGE_UNSPECIFIED",
-            "EMPTY_OR_ERROR_PAGE"
-          ],
-          "description": "Page was crawled successfully, but was detected as either a page with\nno content or an error page.",
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "Page was empty or had an error."
-          ]
+          "format": "google-datetime",
+          "description": "Approximate time when the ad destination was last checked."
         },
         "expandedUrl": {
-          "description": "The full non-working URL.",
-          "type": "string"
+          "type": "string",
+          "description": "The full non-working URL."
         },
         "platform": {
-          "description": "Platform of the non-working URL.",
+          "type": "string",
           "enum": [
             "PLATFORM_UNSPECIFIED",
             "PERSONAL_COMPUTER",
@@ -1018,365 +976,56 @@
             "The Android platform.",
             "The iOS platform."
           ],
-          "type": "string"
+          "description": "Platform of the non-working URL."
         },
         "dnsError": {
+          "description": "DNS lookup errors.",
+          "type": "string",
           "enumDescriptions": [
             "Default value that should never be used.",
             "DNS name was not found.",
-            "An internal issue occurred when Google's crawler tried to resolve the\nDNS entry. This is a Google-internal issue and may not be the result\nof an issue with the landing page."
+            "An internal issue occurred when Google's crawler tried to resolve the DNS entry. This is a Google-internal issue and may not be the result of an issue with the landing page."
           ],
-          "description": "DNS lookup errors.",
           "enum": [
             "DNS_ERROR_UNSPECIFIED",
             "ERROR_DNS",
             "GOOGLE_CRAWLER_DNS_ISSUE"
-          ],
-          "type": "string"
-        },
-        "httpError": {
-          "format": "int32",
-          "type": "integer",
-          "description": "HTTP error code (e.g. 404 or 5xx)"
-        },
-        "redirectionError": {
-          "description": "HTTP redirect chain error.",
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "Too many redirect hops.",
-            "Got a redirect but it was invalid.",
-            "Got a redirect but it was empty.",
-            "Unknown redirect error."
-          ],
-          "type": "string",
-          "enum": [
-            "REDIRECTION_ERROR_UNSPECIFIED",
-            "TOO_MANY_REDIRECTS",
-            "INVALID_REDIRECT",
-            "EMPTY_REDIRECT",
-            "REDIRECT_ERROR_UNKNOWN"
           ]
-        }
-      },
-      "description": "Evidence of the creative's destination URL not functioning properly or\nhaving been incorrectly set up."
-    },
-    "DomainCallEvidence": {
-      "type": "object",
-      "id": "DomainCallEvidence",
-      "properties": {
-        "totalHttpCallCount": {
-          "description": "The total number of HTTP calls made by the creative, including but not\nlimited to the number of calls in the top_http_call_domains.",
-          "type": "integer",
-          "format": "int32"
         },
-        "topHttpCallDomains": {
-          "description": "Breakdown of the most frequent domains called via HTTP by the creative.",
-          "type": "array",
-          "items": {
-            "$ref": "DomainCalls"
-          }
-        }
-      },
-      "description": "Number of HTTP calls made by a creative, broken down by domain."
-    },
-    "VideoContent": {
-      "type": "object",
-      "id": "VideoContent",
-      "properties": {
-        "videoVastXml": {
+        "urlRejected": {
+          "enum": [
+            "URL_REJECTED_UNSPECIFIED",
+            "BAD_REQUEST",
+            "MALFORMED_URL",
+            "URL_REJECTED_UNKNOWN"
+          ],
           "type": "string",
-          "description": "The contents of a VAST document for a video ad.\nThis document should conform to the VAST 2.0 or 3.0 standard."
-        },
-        "videoMetadata": {
-          "description": "Output only. Video metadata.",
-          "$ref": "VideoMetadata"
-        },
-        "videoUrl": {
-          "description": "The URL to fetch a video ad.",
-          "type": "string"
-        }
-      },
-      "description": "Video content for a creative."
-    },
-    "UrlRestriction": {
-      "type": "object",
-      "description": "Represents the URL restriction (for the URL captured by the pixel callback)\nfor a user list.",
-      "id": "UrlRestriction",
-      "properties": {
-        "restrictionType": {
           "enumDescriptions": [
             "Default value that should never be used.",
-            "The tag URL (as recorded by the pixel callback) contains the specified\nURL.",
-            "The tag URL (as recorded by the pixel callback) exactly matches the\nspecified URL.",
-            "The tag URL (as recorded by the pixel callback) starts with the specified\nURL.",
-            "The tag URL (as recorded by the pixel callback) ends with the specified\nURL.",
-            "The tag URL (as recorded by the pixel callback) does not equal the\nspecified URL.",
-            "The tag URL (as recorded by the pixel callback) does not contain the\nspecified URL.",
-            "The tag URL (as recorded by the pixel callback) does not start with the\nspecified URL.",
-            "The tag URL (as recorded by the pixel callback) does not end with the\nspecified URL."
+            "URL rejected because of a malformed request.",
+            "URL rejected because of a malformed URL.",
+            "URL rejected because of unknown reason."
+          ],
+          "description": "Rejected because of malformed URLs or invalid requests."
+        },
+        "invalidPage": {
+          "type": "string",
+          "enumDescriptions": [
+            "Default value that should never be used.",
+            "Page was empty or had an error."
           ],
           "enum": [
-            "RESTRICTION_TYPE_UNSPECIFIED",
-            "CONTAINS",
-            "EQUALS",
-            "STARTS_WITH",
-            "ENDS_WITH",
-            "DOES_NOT_EQUAL",
-            "DOES_NOT_CONTAIN",
-            "DOES_NOT_START_WITH",
-            "DOES_NOT_END_WITH"
+            "INVALID_PAGE_UNSPECIFIED",
+            "EMPTY_OR_ERROR_PAGE"
           ],
-          "description": "The restriction type for the specified URL.",
-          "type": "string"
-        },
-        "endDate": {
-          "description": "End date (if specified) of the URL restriction.\nEnd date should be later than the start date for the date range to be\nvalid.",
-          "$ref": "Date"
-        },
-        "url": {
-          "type": "string",
-          "description": "Required. The URL to use for applying the restriction on the user list."
-        },
-        "startDate": {
-          "$ref": "Date",
-          "description": "Start date (if specified) of the URL restriction."
-        }
-      }
-    },
-    "AdvertiserAndBrand": {
-      "properties": {
-        "brandName": {
-          "description": "Brand name.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "string"
-        },
-        "advertiserName": {
-          "type": "string",
-          "description": "Advertiser name.\nCan be used to filter the response of the\ncreatives.list\nmethod."
-        },
-        "brandId": {
-          "type": "string",
-          "format": "int64",
-          "description": "Detected brand ID or zero if no brand has been detected.\nSee https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for\nthe list of possible values.\nCan be used to filter the response of the\ncreatives.list\nmethod."
-        },
-        "advertiserId": {
-          "format": "int64",
-          "type": "string",
-          "description": "See https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt\nfor the list of possible values.\nCan be used to filter the response of the\ncreatives.list\nmethod."
+          "description": "Page was crawled successfully, but was detected as either a page with no content or an error page."
         }
       },
-      "description": "Detected advertiser and brand information.",
-      "id": "AdvertiserAndBrand",
+      "id": "DestinationNotWorkingEvidence",
+      "description": "Evidence of the creative's destination URL not functioning properly or having been incorrectly set up.",
       "type": "object"
-    },
-    "UserList": {
-      "type": "object",
-      "description": "Represents an Authorized Buyers user list. Authorized Buyers can\ncreate/update/list user lists. Once a user list is created\nin the system, Authorized Buyers can add users to the user list using\nthe bulk uploader API. Alternatively, users can be added by hosting a\ntag on the advertiser's page.",
-      "properties": {
-        "status": {
-          "enum": [
-            "STATUS_UNSPECIFIED",
-            "OPEN",
-            "CLOSED"
-          ],
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "New users can be added to the user list.",
-            "New users cannot be added to the user list."
-          ],
-          "type": "string",
-          "description": "Output only. The status of the user list. A new user list starts out as open."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "Required. Display name of the user list. This must be unique across all user lists\nfor a given account."
-        },
-        "description": {
-          "description": "The description for the user list.",
-          "type": "string"
-        },
-        "membershipDurationDays": {
-          "description": "Required. The number of days a user's cookie stays on the user list.\nThe field must be between 0 and 540 inclusive.",
-          "type": "string",
-          "format": "int64"
-        },
-        "urlRestriction": {
-          "$ref": "UrlRestriction",
-          "description": "Required. The URL restriction for the user list."
-        },
-        "name": {
-          "type": "string",
-          "description": "Output only. Name of the user list that must follow the pattern\n`buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents\nthe account ID of the buyer who owns the user list. For a bidder accessing\nuser lists on behalf of a child seat buyer, `{buyer}` represents\nthe account ID of the child seat buyer. `{user_list}` is an int64\nidentifier assigned by Google to uniquely identify a user list."
-        }
-      },
-      "id": "UserList"
-    },
-    "VideoMetadata": {
-      "description": "Video metadata for a creative.",
-      "id": "VideoMetadata",
-      "type": "object",
-      "properties": {
-        "isVpaid": {
-          "type": "boolean",
-          "description": "Is this a VPAID ad?\nCan be used to filter the response of the\ncreatives.list\nmethod."
-        },
-        "mediaFiles": {
-          "items": {
-            "$ref": "MediaFile"
-          },
-          "description": "The list of all media files declared in the VAST. If there are multiple\nVASTs in a wrapper chain, this includes the media files from the deepest\none in the chain.",
-          "type": "array"
-        },
-        "skipOffset": {
-          "format": "google-duration",
-          "type": "string",
-          "description": "The minimum duration that the user has to watch before being able to\nskip this ad. If the field is not set, the ad is not skippable. If\nthe field is set, the ad is skippable.\nCan be used to filter the response of the\ncreatives.list\nmethod."
-        },
-        "vastVersion": {
-          "enum": [
-            "VAST_VERSION_UNSPECIFIED",
-            "VAST_VERSION_1_0",
-            "VAST_VERSION_2_0",
-            "VAST_VERSION_3_0",
-            "VAST_VERSION_4_0"
-          ],
-          "description": "The maximum VAST version across all wrapped VAST documents.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "string",
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "VAST 1.0",
-            "VAST 2.0",
-            "VAST 3.0",
-            "VAST 4.0"
-          ]
-        },
-        "isValidVast": {
-          "description": "Is this a valid VAST ad?\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "boolean"
-        },
-        "duration": {
-          "description": "The duration of the ad.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "format": "google-duration",
-          "type": "string"
-        }
-      }
-    },
-    "AdTechnologyProviders": {
-      "id": "AdTechnologyProviders",
-      "properties": {
-        "hasUnidentifiedProvider": {
-          "description": "Whether the creative contains an unidentified ad technology provider.\n\nIf true for a given creative, any bid submitted with that creative for an\nimpression that will serve to an EEA user will be filtered before the\nauction.",
-          "type": "boolean"
-        },
-        "detectedProviderIds": {
-          "type": "array",
-          "description": "The detected ad technology provider IDs for this creative.\nSee https://storage.googleapis.com/adx-rtb-dictionaries/providers.csv for\nmapping of provider ID to provided name, a privacy policy URL, and a list\nof domains which can be attributed to the provider.\n\nIf the creative contains provider IDs that are outside of those listed in\nthe `BidRequest.adslot.consented_providers_settings.consented_providers`\nfield on the [Google bid\nprotocol](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)\nand the\n`BidRequest.user.ext.consented_providers_settings.consented_providers`\nfield on the [OpenRTB\nprotocol](https://developers.google.com/authorized-buyers/rtb/downloads/openrtb-adx-proto),\nand a bid is submitted with that creative for an impression\nthat will serve to an EEA user, the bid will be filtered before the\nauction.",
-          "items": {
-            "type": "string",
-            "format": "int64"
-          }
-        }
-      },
-      "description": "Detected ad technology provider information.",
-      "type": "object"
-    },
-    "DestinationUrlEvidence": {
-      "properties": {
-        "destinationUrl": {
-          "type": "string",
-          "description": "The full landing page URL of the destination."
-        }
-      },
-      "type": "object",
-      "id": "DestinationUrlEvidence",
-      "description": "The full landing page URL of the destination."
-    },
-    "DomainCalls": {
-      "type": "object",
-      "description": "The number of HTTP calls made to the given domain.",
-      "properties": {
-        "httpCallCount": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Number of HTTP calls made to the domain."
-        },
-        "domain": {
-          "type": "string",
-          "description": "The domain name."
-        }
-      },
-      "id": "DomainCalls"
-    },
-    "DestinationNotCrawlableEvidence": {
-      "id": "DestinationNotCrawlableEvidence",
-      "type": "object",
-      "description": "Evidence that the creative's destination URL was not crawlable by Google.",
-      "properties": {
-        "reason": {
-          "type": "string",
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "Site's robots exclusion file (e.g., robots.txt) was unreachable.",
-            "Timed out reading site's robots exclusion file (e.g., robots.txt).",
-            "Crawler was disallowed by the site's robots exclusion file (e.g.,\nrobots.txt).",
-            "Unknown reason."
-          ],
-          "description": "Reason of destination not crawlable.",
-          "enum": [
-            "REASON_UNSPECIFIED",
-            "UNREACHABLE_ROBOTS",
-            "TIMEOUT_ROBOTS",
-            "ROBOTED_DENIED",
-            "UNKNOWN"
-          ]
-        },
-        "crawlTime": {
-          "type": "string",
-          "description": "Approximate time of the crawl.",
-          "format": "google-datetime"
-        },
-        "crawledUrl": {
-          "type": "string",
-          "description": "Destination URL that was attempted to be crawled."
-        }
-      }
-    },
-    "PolicyTopicEvidence": {
-      "id": "PolicyTopicEvidence",
-      "type": "object",
-      "properties": {
-        "destinationNotWorking": {
-          "$ref": "DestinationNotWorkingEvidence",
-          "description": "The creative's destination URL did not function properly or was\nincorrectly set up."
-        },
-        "httpCookie": {
-          "description": "Evidence for HTTP cookie-related policy violations.",
-          "$ref": "HttpCookieEvidence"
-        },
-        "destinationNotCrawlable": {
-          "description": "The creative's destination URL was not crawlable by Google.",
-          "$ref": "DestinationNotCrawlableEvidence"
-        },
-        "destinationUrl": {
-          "$ref": "DestinationUrlEvidence",
-          "description": "URL of the actual landing page."
-        },
-        "httpCall": {
-          "description": "HTTP calls made by the creative that resulted in policy violations.",
-          "$ref": "HttpCallEvidence"
-        },
-        "downloadSize": {
-          "description": "Total download size and URL-level download size breakdown for resources\nin a creative.",
-          "$ref": "DownloadSizeEvidence"
-        },
-        "domainCall": {
-          "description": "Number of HTTP calls made by the creative, broken down by domain.",
-          "$ref": "DomainCallEvidence"
-        }
-      },
-      "description": "Evidence associated with a policy topic entry."
     },
     "ListUserListsResponse": {
-      "description": "The list user list response.",
       "properties": {
         "userLists": {
           "description": "List of user lists from the search.",
@@ -1387,383 +1036,847 @@
         },
         "nextPageToken": {
           "type": "string",
-          "description": "The continuation page token to send back to the server in a subsequent\nrequest.\nDue to a currently known issue, it is recommended that the caller keep\ninvoking the list method till the time a next page token is not returned\n(even if the result set is empty)."
+          "description": "The continuation page token to send back to the server in a subsequent request. Due to a currently known issue, it is recommended that the caller keep invoking the list method till the time a next page token is not returned (even if the result set is empty)."
         }
       },
+      "description": "The list user list response.",
       "id": "ListUserListsResponse",
       "type": "object"
     },
-    "Image": {
+    "UrlDownloadSize": {
+      "type": "object",
+      "id": "UrlDownloadSize",
       "properties": {
-        "width": {
-          "description": "Image width in pixels.",
+        "normalizedUrl": {
+          "type": "string",
+          "description": "The normalized URL with query parameters and fragment removed."
+        },
+        "downloadSizeKb": {
           "type": "integer",
+          "description": "Download size of the URL in kilobytes.",
           "format": "int32"
+        }
+      },
+      "description": "The URL-level breakdown for the download size."
+    },
+    "Image": {
+      "id": "Image",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL of the image."
+        },
+        "width": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Image width in pixels."
         },
         "height": {
-          "description": "Image height in pixels.",
           "type": "integer",
+          "description": "Image height in pixels.",
           "format": "int32"
-        },
-        "url": {
-          "description": "The URL of the image.",
-          "type": "string"
         }
       },
       "type": "object",
-      "description": "An image resource. You may provide a larger image than was requested,\nso long as the aspect ratio is preserved.",
-      "id": "Image"
+      "description": "An image resource. You may provide a larger image than was requested, so long as the aspect ratio is preserved."
     },
-    "Creative": {
-      "description": "A creative and its classification data.",
+    "VideoContent": {
       "properties": {
-        "dealIds": {
-          "description": "Output only. IDs of all of the deals with which this creative has been used\nin bidding.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "videoMetadata": {
+          "description": "Output only. Video metadata.",
+          "$ref": "VideoMetadata",
+          "readOnly": true
         },
-        "html": {
-          "description": "An HTML creative.",
-          "$ref": "HtmlContent"
-        },
-        "declaredRestrictedCategories": {
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "The alcohol restricted category."
-          ],
-          "items": {
-            "type": "string",
-            "enum": [
-              "RESTRICTED_CATEGORY_UNSPECIFIED",
-              "ALCOHOL"
-            ]
-          },
-          "type": "array",
-          "description": "All declared restricted categories for the ads that may be shown from this\ncreative. Can be used to filter the response of the\ncreatives.list\nmethod."
-        },
-        "native": {
-          "$ref": "NativeContent",
-          "description": "A native creative."
-        },
-        "restrictedCategories": {
-          "items": {
-            "enum": [
-              "RESTRICTED_CATEGORY_UNSPECIFIED",
-              "ALCOHOL"
-            ],
-            "type": "string"
-          },
-          "type": "array",
-          "description": "All restricted categories for the ads that may be shown from this creative.",
-          "enumDescriptions": [
-            "Default value that should never be used.",
-            "The alcohol restricted category."
-          ]
-        },
-        "apiUpdateTime": {
-          "format": "google-datetime",
-          "description": "Output only. The last update timestamp of the creative via API.",
+        "videoVastXml": {
+          "description": "The contents of a VAST document for a video ad. This document should conform to the VAST 2.0 or 3.0 standard.",
           "type": "string"
         },
-        "creativeServingDecision": {
-          "$ref": "CreativeServingDecision",
-          "description": "Output only. Top level status and detected attributes of a creative (for example domain,\nlanguage, advertiser, product category, etc.) that affect whether (status)\nand where (context) a creative will be allowed to serve."
-        },
-        "accountId": {
-          "description": "Output only. ID of the buyer account that this creative is owned by.\nCan be used to filter the response of the\ncreatives.list\nmethod with equality and inequality check.",
+        "videoUrl": {
           "type": "string",
-          "format": "int64"
+          "description": "The URL to fetch a video ad."
+        }
+      },
+      "id": "VideoContent",
+      "type": "object",
+      "description": "Video content for a creative."
+    },
+    "DomainCallEvidence": {
+      "type": "object",
+      "description": "Number of HTTP calls made by a creative, broken down by domain.",
+      "id": "DomainCallEvidence",
+      "properties": {
+        "totalHttpCallCount": {
+          "format": "int32",
+          "description": "The total number of HTTP calls made by the creative, including but not limited to the number of calls in the top_http_call_domains.",
+          "type": "integer"
         },
-        "version": {
-          "description": "Output only. The version of this creative.\nVersion for a new creative is 1 and it increments during subsequent\ncreative updates.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "declaredClickThroughUrls": {
+        "topHttpCallDomains": {
           "items": {
-            "type": "string"
+            "$ref": "DomainCalls"
           },
-          "type": "array",
-          "description": "The set of declared destination URLs for the creative.\nCan be used to filter the response of the\ncreatives.list\nmethod."
-        },
-        "creativeId": {
-          "type": "string",
-          "description": "Buyer-specific creative ID that references this creative in bid responses.\nThis field is Ignored in update operations. Can be used to filter the\nresponse of the\ncreatives.list\nmethod.\nThe maximum length of the creative ID is 128 bytes."
-        },
-        "name": {
-          "type": "string",
-          "description": "Output only. Name of the creative.\nFollows the pattern `buyers/{buyer}/creatives/{creative}`, where\n`{buyer}` represents the account ID of the buyer who owns the creative,\nand `{creative}` is the buyer-specific creative ID that references this\ncreative in the bid response."
-        },
-        "adChoicesDestinationUrl": {
-          "type": "string",
-          "description": "The link to AdChoices destination page. This is only supported for native\nads."
-        },
-        "declaredAttributes": {
-          "type": "array",
-          "description": "All declared attributes for the ads that may be shown from this creative.\nCan be used to filter the response of the\ncreatives.list\nmethod.\n\nIf the `excluded_attribute` field of a [bid\nrequest](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto\")\ncontains one of the attributes that were declared or detected for a given\ncreative, and a bid is submitted with that creative, the bid will be\nfiltered before the auction.",
-          "items": {
-            "enum": [
-              "ATTRIBUTE_UNSPECIFIED",
-              "IMAGE_RICH_MEDIA",
-              "ADOBE_FLASH_FLV",
-              "IS_TAGGED",
-              "IS_COOKIE_TARGETED",
-              "IS_USER_INTEREST_TARGETED",
-              "EXPANDING_DIRECTION_NONE",
-              "EXPANDING_DIRECTION_UP",
-              "EXPANDING_DIRECTION_DOWN",
-              "EXPANDING_DIRECTION_LEFT",
-              "EXPANDING_DIRECTION_RIGHT",
-              "EXPANDING_DIRECTION_UP_LEFT",
-              "EXPANDING_DIRECTION_UP_RIGHT",
-              "EXPANDING_DIRECTION_DOWN_LEFT",
-              "EXPANDING_DIRECTION_DOWN_RIGHT",
-              "CREATIVE_TYPE_HTML",
-              "CREATIVE_TYPE_VAST_VIDEO",
-              "EXPANDING_DIRECTION_UP_OR_DOWN",
-              "EXPANDING_DIRECTION_LEFT_OR_RIGHT",
-              "EXPANDING_DIRECTION_ANY_DIAGONAL",
-              "EXPANDING_ACTION_ROLLOVER_TO_EXPAND",
-              "INSTREAM_VAST_VIDEO_TYPE_VPAID_FLASH",
-              "RICH_MEDIA_CAPABILITY_TYPE_MRAID",
-              "RICH_MEDIA_CAPABILITY_TYPE_FLASH",
-              "RICH_MEDIA_CAPABILITY_TYPE_HTML5",
-              "SKIPPABLE_INSTREAM_VIDEO",
-              "RICH_MEDIA_CAPABILITY_TYPE_SSL",
-              "RICH_MEDIA_CAPABILITY_TYPE_NON_SSL",
-              "RICH_MEDIA_CAPABILITY_TYPE_INTERSTITIAL",
-              "NON_SKIPPABLE_INSTREAM_VIDEO",
-              "NATIVE_ELIGIBILITY_ELIGIBLE",
-              "NON_VPAID",
-              "NATIVE_ELIGIBILITY_NOT_ELIGIBLE",
-              "ANY_INTERSTITIAL",
-              "NON_INTERSTITIAL",
-              "IN_BANNER_VIDEO",
-              "RENDERING_SIZELESS_ADX",
-              "OMSDK_1_0"
-            ],
-            "type": "string"
-          },
-          "enumDescriptions": [
-            "Do not use. This is a placeholder value only.",
-            "The creative is of type image/rich media. For pretargeting.",
-            "The creative is of video type Adobe Flash FLV. For pretargeting.",
-            "The creative is tagged.",
-            "The creative is cookie targeted.",
-            "The creative is user interest targeted.",
-            "The creative does not expand.",
-            "The creative expands up.",
-            "The creative expands down.",
-            "The creative expands left.",
-            "The creative expands right.",
-            "The creative expands up and left.",
-            "The creative expands up and right.",
-            "The creative expands down and left.",
-            "The creative expands down and right.",
-            "The creative type is HTML.",
-            "The creative type is VAST video.",
-            "The creative expands up or down.",
-            "The creative expands left or right.",
-            "The creative expands on any diagonal.",
-            "The creative expands when rolled over.",
-            "The instream vast video type is vpaid flash.",
-            "The creative is MRAID.",
-            "The creative is Flash.",
-            "The creative is HTML5.",
-            "The creative has an instream VAST video type of skippable instream video.\nFor pretargeting.",
-            "The creative is SSL.",
-            "The creative is non-SSL.",
-            "The creative is an interstitial.",
-            "The creative has an instream VAST video type of non-skippable instream\nvideo. For pretargeting.",
-            "The creative is eligible for native.",
-            "The creative has an instream VAST video type of non-VPAID. For\npretargeting.",
-            "The creative is not eligible for native.",
-            "The creative has an interstitial size of any interstitial. For\npretargeting.",
-            "The creative has an interstitial size of non interstitial. For\npretargeting.",
-            "The video type is in-banner video.",
-            "The creative can dynamically resize to fill a variety of slot sizes.",
-            "The open measurement SDK is supported."
-          ]
-        },
-        "impressionTrackingUrls": {
-          "description": "The set of URLs to be called to record an impression.",
+          "description": "Breakdown of the most frequent domains called via HTTP by the creative.",
+          "type": "array"
+        }
+      }
+    },
+    "ServingStatus": {
+      "description": "Serving status of the creative for a transaction type or a region.",
+      "properties": {
+        "topics": {
+          "description": "Policy topics related to the serving decision for this transaction type (e.g., open auction, deals) or region (e.g., China, Russia). Topics may be present only if status is DISAPPROVED.",
           "type": "array",
           "items": {
-            "type": "string"
+            "$ref": "PolicyTopicEntry"
           }
         },
-        "creativeFormat": {
-          "type": "string",
+        "status": {
           "enum": [
-            "CREATIVE_FORMAT_UNSPECIFIED",
-            "HTML",
-            "VIDEO",
-            "NATIVE"
+            "STATUS_UNSPECIFIED",
+            "PENDING_REVIEW",
+            "DISAPPROVED",
+            "APPROVED"
           ],
           "enumDescriptions": [
-            "The format is unknown.",
-            "HTML creative.",
-            "Video creative.",
-            "Native creative."
+            "Default value that should never be used.",
+            "Creative is pending review.",
+            "Creative cannot serve.",
+            "Creative is approved."
           ],
-          "description": "Output only. The format of this creative.\nCan be used to filter the response of the\ncreatives.list\nmethod."
+          "type": "string",
+          "description": "Serving status for the given transaction type (e.g., open auction, deals) or region (e.g., China, Russia). Can be used to filter the response of the creatives.list method."
+        }
+      },
+      "type": "object",
+      "id": "ServingStatus"
+    },
+    "NativeContent": {
+      "description": "Native content for a creative.",
+      "properties": {
+        "body": {
+          "type": "string",
+          "description": "A long description of the ad."
         },
-        "video": {
-          "description": "A video creative.",
-          "$ref": "VideoContent"
+        "callToAction": {
+          "description": "A label for the button that the user is supposed to click.",
+          "type": "string"
         },
-        "declaredVendorIds": {
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "type": "array",
-          "description": "IDs for the declared ad technology vendors that may be used by this\ncreative. See\nhttps://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for\npossible values.\nCan be used to filter the response of the\ncreatives.list\nmethod."
+        "clickTrackingUrl": {
+          "description": "The URL to use for click tracking.",
+          "type": "string"
+        },
+        "image": {
+          "$ref": "Image",
+          "description": "A large image."
+        },
+        "headline": {
+          "description": "A short title for the ad.",
+          "type": "string"
+        },
+        "appIcon": {
+          "description": "The app icon, for app download ads.",
+          "$ref": "Image"
+        },
+        "clickLinkUrl": {
+          "description": "The URL that the browser/SDK will load when the user clicks the ad.",
+          "type": "string"
+        },
+        "priceDisplayText": {
+          "type": "string",
+          "description": "The price of the promoted app including currency info."
+        },
+        "logo": {
+          "description": "A smaller image, for the advertiser's logo.",
+          "$ref": "Image"
         },
         "advertiserName": {
-          "type": "string",
-          "description": "The name of the company being advertised in the creative.\nCan be used to filter the response of the\ncreatives.list\nmethod."
+          "description": "The name of the advertiser or sponsor, to be displayed in the ad creative.",
+          "type": "string"
         },
-        "agencyId": {
+        "starRating": {
+          "description": "The app rating in the app store. Must be in the range [0-5].",
+          "format": "double",
+          "type": "number"
+        },
+        "videoUrl": {
           "type": "string",
-          "format": "int64",
-          "description": "The agency ID for this creative."
+          "description": "The URL to fetch a native video ad."
         }
       },
       "type": "object",
-      "id": "Creative"
+      "id": "NativeContent"
     },
-    "ListCreativesResponse": {
+    "WatchCreativesResponse": {
+      "description": "A response for the request to receive push notification when a bidder's creatives change status.",
+      "id": "WatchCreativesResponse",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "description": "The Pub/Sub topic that will be used to publish creative serving status notifications. This would be of the format `projects/{project_id}/topics/{topic_id}`."
+        },
+        "subscription": {
+          "description": "The Pub/Sub subscription that can be used to pull creative status notifications. This would be of the format `projects/{project_id}/subscriptions/{subscription_id}`. Subscription is created with pull delivery. All service accounts belonging to the bidder will have read access to this subscription. Subscriptions that are inactive for more than 90 days will be disabled. Please use watchCreatives to re-enable the subscription.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "PolicyTopicEvidence": {
       "type": "object",
       "properties": {
-        "creatives": {
+        "httpCall": {
+          "description": "HTTP calls made by the creative that resulted in policy violations.",
+          "$ref": "HttpCallEvidence"
+        },
+        "httpCookie": {
+          "description": "Evidence for HTTP cookie-related policy violations.",
+          "$ref": "HttpCookieEvidence"
+        },
+        "destinationUrl": {
+          "$ref": "DestinationUrlEvidence",
+          "description": "URL of the actual landing page."
+        },
+        "domainCall": {
+          "$ref": "DomainCallEvidence",
+          "description": "Number of HTTP calls made by the creative, broken down by domain."
+        },
+        "destinationNotWorking": {
+          "description": "The creative's destination URL did not function properly or was incorrectly set up.",
+          "$ref": "DestinationNotWorkingEvidence"
+        },
+        "destinationNotCrawlable": {
+          "description": "The creative's destination URL was not crawlable by Google.",
+          "$ref": "DestinationNotCrawlableEvidence"
+        },
+        "downloadSize": {
+          "$ref": "DownloadSizeEvidence",
+          "description": "Total download size and URL-level download size breakdown for resources in a creative."
+        }
+      },
+      "description": "Evidence associated with a policy topic entry.",
+      "id": "PolicyTopicEvidence"
+    },
+    "WatchCreativesRequest": {
+      "properties": {},
+      "type": "object",
+      "id": "WatchCreativesRequest",
+      "description": "A request to receive push notifications when any of the creatives belonging to the bidder changes status."
+    },
+    "HttpCookieEvidence": {
+      "description": "Evidence for HTTP cookie-related policy violations.",
+      "properties": {
+        "cookieNames": {
+          "description": "Names of cookies that violate Google policies. For TOO_MANY_COOKIES policy, this will be the cookie names of top domains with the largest number of cookies. For other policies, this will be all the cookie names that violate the policy.",
           "type": "array",
-          "description": "The list of creatives.",
           "items": {
-            "$ref": "Creative"
+            "type": "string"
           }
         },
-        "nextPageToken": {
-          "description": "A token to retrieve the next page of results.\nPass this value in the\nListCreativesRequest.pageToken\nfield in the subsequent call to the `ListCreatives` method to retrieve the\nnext page of results.",
-          "type": "string"
-        }
-      },
-      "description": "A response for listing creatives.",
-      "id": "ListCreativesResponse"
-    },
-    "HtmlContent": {
-      "description": "HTML content for a creative.",
-      "properties": {
-        "width": {
-          "format": "int32",
-          "description": "The width of the HTML snippet in pixels.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
-          "type": "integer"
-        },
-        "height": {
-          "description": "The height of the HTML snippet in pixels.\nCan be used to filter the response of the\ncreatives.list\nmethod.",
+        "maxCookieCount": {
+          "description": "The largest number of cookies set by a creative. If this field is set, cookie_names above will be set to the cookie names of top domains with the largest number of cookies. This field will only be set for TOO_MANY_COOKIES policy.",
           "format": "int32",
           "type": "integer"
-        },
-        "snippet": {
-          "description": "The HTML snippet that displays the ad when inserted in the web page.",
-          "type": "string"
         }
       },
-      "type": "object",
-      "id": "HtmlContent"
+      "id": "HttpCookieEvidence",
+      "type": "object"
     }
   },
-  "discoveryVersion": "v1",
-  "version": "v1",
-  "documentationLink": "https://developers.google.com/authorized-buyers/apis/realtimebidding/reference/rest/",
-  "rootUrl": "https://realtimebidding.googleapis.com/",
-  "protocol": "rest",
-  "id": "realtimebidding:v1",
-  "version_module": true,
-  "canonicalName": "Real-time Bidding",
+  "baseUrl": "https://realtimebidding.googleapis.com/",
+  "fullyEncodeReservedExpansion": true,
   "servicePath": "",
+  "batchPath": "batch",
+  "protocol": "rest",
+  "documentationLink": "https://developers.google.com/authorized-buyers/apis/realtimebidding/reference/rest/",
+  "ownerName": "Google",
+  "rootUrl": "https://realtimebidding.googleapis.com/",
+  "resources": {
+    "buyers": {
+      "resources": {
+        "creatives": {
+          "methods": {
+            "patch": {
+              "description": "Updates a creative.",
+              "response": {
+                "$ref": "Creative"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "flatPath": "v1/buyers/{buyersId}/creatives/{creativesId}",
+              "parameterOrder": [
+                "name"
+              ],
+              "request": {
+                "$ref": "Creative"
+              },
+              "parameters": {
+                "updateMask": {
+                  "description": "Field mask to use for partial in-place updates.",
+                  "location": "query",
+                  "format": "google-fieldmask",
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string",
+                  "pattern": "^buyers/[^/]+/creatives/[^/]+$",
+                  "description": "Name of the creative to update. See creative.name.",
+                  "location": "path",
+                  "required": true
+                }
+              },
+              "id": "realtimebidding.buyers.creatives.patch",
+              "path": "v1/{+name}",
+              "httpMethod": "PATCH"
+            },
+            "create": {
+              "id": "realtimebidding.buyers.creatives.create",
+              "request": {
+                "$ref": "Creative"
+              },
+              "httpMethod": "POST",
+              "description": "Creates a creative.",
+              "response": {
+                "$ref": "Creative"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "parameterOrder": [
+                "parent"
+              ],
+              "flatPath": "v1/buyers/{buyersId}/creatives",
+              "path": "v1/{+parent}/creatives",
+              "parameters": {
+                "parent": {
+                  "required": true,
+                  "pattern": "^buyers/[^/]+$",
+                  "description": "Required. The name of the parent buyer that the new creative belongs to that must follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer who owns a creative. For a bidder accessing creatives on behalf of a child seat buyer, `{buyerAccountId}` should represent the account ID of the child seat buyer.",
+                  "location": "path",
+                  "type": "string"
+                }
+              }
+            },
+            "get": {
+              "id": "realtimebidding.buyers.creatives.get",
+              "flatPath": "v1/buyers/{buyersId}/creatives/{creativesId}",
+              "path": "v1/{+name}",
+              "response": {
+                "$ref": "Creative"
+              },
+              "httpMethod": "GET",
+              "parameters": {
+                "view": {
+                  "enumDescriptions": [
+                    "Not specified, equivalent to SERVING_DECISION_ONLY.",
+                    "Only creativeServingDecision is included in the response.",
+                    "The entire creative resource (including the declared fields and the creative content) is included in the response."
+                  ],
+                  "location": "query",
+                  "enum": [
+                    "CREATIVE_VIEW_UNSPECIFIED",
+                    "SERVING_DECISION_ONLY",
+                    "FULL"
+                  ],
+                  "type": "string",
+                  "description": "Controls the amount of information included in the response. By default only creativeServingDecision is included. To retrieve the entire creative resource (including the declared fields and the creative content) specify the view as \"FULL\"."
+                },
+                "name": {
+                  "pattern": "^buyers/[^/]+/creatives/[^/]+$",
+                  "description": "Required. Name of the creative to retrieve. See creative.name.",
+                  "type": "string",
+                  "location": "path",
+                  "required": true
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Gets a creative."
+            },
+            "list": {
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^buyers/[^/]+$",
+                  "description": "Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing their own creatives. 2. The ID of the child seat buyer under a bidder account. So for listing creatives pertaining to the child seat buyer (`456`) under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access all creatives pertaining to both the bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use `bidders/123`."
+                },
+                "pageSize": {
+                  "format": "int32",
+                  "type": "integer",
+                  "location": "query",
+                  "description": "Requested page size. The server may return fewer creatives than requested (due to timeout constraint) even if more are available via another call. If unspecified, server will pick an appropriate default. Acceptable values are 1 to 1000, inclusive."
+                },
+                "filter": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Query string to filter creatives. If no filter is specified, all active creatives will be returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'"
+                },
+                "pageToken": {
+                  "description": "A token identifying a page of results the server should return. Typically, this is the value of ListCreativesResponse.nextPageToken returned from the previous call to the 'ListCreatives' method.",
+                  "type": "string",
+                  "location": "query"
+                },
+                "view": {
+                  "type": "string",
+                  "location": "query",
+                  "enum": [
+                    "CREATIVE_VIEW_UNSPECIFIED",
+                    "SERVING_DECISION_ONLY",
+                    "FULL"
+                  ],
+                  "enumDescriptions": [
+                    "Not specified, equivalent to SERVING_DECISION_ONLY.",
+                    "Only creativeServingDecision is included in the response.",
+                    "The entire creative resource (including the declared fields and the creative content) is included in the response."
+                  ],
+                  "description": "Controls the amount of information included in the response. By default only creativeServingDecision is included. To retrieve the entire creative resource (including the declared fields and the creative content) specify the view as \"FULL\"."
+                }
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "path": "v1/{+parent}/creatives",
+              "description": "Lists creatives.",
+              "id": "realtimebidding.buyers.creatives.list",
+              "flatPath": "v1/buyers/{buyersId}/creatives",
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "ListCreativesResponse"
+              }
+            }
+          }
+        },
+        "userLists": {
+          "methods": {
+            "open": {
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}:open",
+              "parameterOrder": [
+                "name"
+              ],
+              "request": {
+                "$ref": "OpenUserListRequest"
+              },
+              "httpMethod": "POST",
+              "description": "Change the status of a user list to OPEN. This allows new users to be added to the user list.",
+              "path": "v1/{+name}:open",
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "description": "Required. The name of the user list to open. See UserList.name",
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^buyers/[^/]+/userLists/[^/]+$"
+                }
+              },
+              "id": "realtimebidding.buyers.userLists.open",
+              "response": {
+                "$ref": "UserList"
+              }
+            },
+            "close": {
+              "parameters": {
+                "name": {
+                  "description": "Required. The name of the user list to close. See UserList.name",
+                  "location": "path",
+                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
+                  "required": true,
+                  "type": "string"
+                }
+              },
+              "id": "realtimebidding.buyers.userLists.close",
+              "httpMethod": "POST",
+              "request": {
+                "$ref": "CloseUserListRequest"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "description": "Change the status of a user list to CLOSED. This prevents new users from being added to the user list.",
+              "path": "v1/{+name}:close",
+              "parameterOrder": [
+                "name"
+              ],
+              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}:close",
+              "response": {
+                "$ref": "UserList"
+              }
+            },
+            "create": {
+              "description": "Create a new user list.",
+              "parameters": {
+                "parent": {
+                  "required": true,
+                  "location": "path",
+                  "type": "string",
+                  "pattern": "^buyers/[^/]+$",
+                  "description": "Required. The name of the parent buyer of the user list to be retrieved that must follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer."
+                }
+              },
+              "request": {
+                "$ref": "UserList"
+              },
+              "path": "v1/{+parent}/userLists",
+              "response": {
+                "$ref": "UserList"
+              },
+              "flatPath": "v1/buyers/{buyersId}/userLists",
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "httpMethod": "POST",
+              "parameterOrder": [
+                "parent"
+              ],
+              "id": "realtimebidding.buyers.userLists.create"
+            },
+            "list": {
+              "parameterOrder": [
+                "parent"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "pattern": "^buyers/[^/]+$",
+                  "description": "Required. The name of the parent buyer for the user lists to be returned that must follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.",
+                  "required": true,
+                  "location": "path"
+                },
+                "pageToken": {
+                  "type": "string",
+                  "description": "Continuation page token (as received from a previous response).",
+                  "location": "query"
+                },
+                "pageSize": {
+                  "format": "int32",
+                  "description": "The number of results to return per page.",
+                  "location": "query",
+                  "type": "integer"
+                }
+              },
+              "flatPath": "v1/buyers/{buyersId}/userLists",
+              "description": "Lists the user lists visible to the current user.",
+              "id": "realtimebidding.buyers.userLists.list",
+              "path": "v1/{+parent}/userLists",
+              "response": {
+                "$ref": "ListUserListsResponse"
+              },
+              "httpMethod": "GET"
+            },
+            "update": {
+              "httpMethod": "PUT",
+              "response": {
+                "$ref": "UserList"
+              },
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
+                  "location": "path",
+                  "description": "Output only. Name of the user list that must follow the pattern `buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents the account ID of the buyer who owns the user list. For a bidder accessing user lists on behalf of a child seat buyer, `{buyer}` represents the account ID of the child seat buyer. `{user_list}` is an int64 identifier assigned by Google to uniquely identify a user list.",
+                  "type": "string"
+                }
+              },
+              "path": "v1/{+name}",
+              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}",
+              "description": "Update the given user list. Only user lists with URLRestrictions can be updated.",
+              "id": "realtimebidding.buyers.userLists.update",
+              "parameterOrder": [
+                "name"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "request": {
+                "$ref": "UserList"
+              }
+            },
+            "getRemarketingTag": {
+              "parameters": {
+                "name": {
+                  "description": "Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.",
+                  "type": "string",
+                  "location": "path",
+                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
+                  "required": true
+                }
+              },
+              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}:getRemarketingTag",
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "id": "realtimebidding.buyers.userLists.getRemarketingTag",
+              "httpMethod": "GET",
+              "path": "v1/{+name}:getRemarketingTag",
+              "response": {
+                "$ref": "GetRemarketingTagResponse"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Gets remarketing tag for a buyer. A remarketing tag is a piece of JavaScript code that can be placed on a web page. When a user visits a page containing a remarketing tag, Google adds the user to a user list."
+            },
+            "get": {
+              "httpMethod": "GET",
+              "description": "Gets a user list by its name.",
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "pattern": "^buyers/[^/]+/userLists/[^/]+$",
+                  "location": "path",
+                  "type": "string",
+                  "description": "Required. The name of the user list to be retrieved. See UserList.name."
+                }
+              },
+              "id": "realtimebidding.buyers.userLists.get",
+              "path": "v1/{+name}",
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "flatPath": "v1/buyers/{buyersId}/userLists/{userListsId}",
+              "response": {
+                "$ref": "UserList"
+              },
+              "parameterOrder": [
+                "name"
+              ]
+            }
+          }
+        }
+      },
+      "methods": {
+        "getRemarketingTag": {
+          "parameterOrder": [
+            "name"
+          ],
+          "flatPath": "v1/buyers/{buyersId}:getRemarketingTag",
+          "path": "v1/{+name}:getRemarketingTag",
+          "description": "Gets remarketing tag for a buyer. A remarketing tag is a piece of JavaScript code that can be placed on a web page. When a user visits a page containing a remarketing tag, Google adds the user to a user list.",
+          "parameters": {
+            "name": {
+              "required": true,
+              "location": "path",
+              "pattern": "^buyers/[^/]+$",
+              "description": "Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.",
+              "type": "string"
+            }
+          },
+          "id": "realtimebidding.buyers.getRemarketingTag",
+          "scopes": [
+            "https://www.googleapis.com/auth/realtime-bidding"
+          ],
+          "response": {
+            "$ref": "GetRemarketingTagResponse"
+          },
+          "httpMethod": "GET"
+        }
+      }
+    },
+    "bidders": {
+      "resources": {
+        "creatives": {
+          "methods": {
+            "list": {
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "flatPath": "v1/bidders/{biddersId}/creatives",
+              "parameterOrder": [
+                "parent"
+              ],
+              "response": {
+                "$ref": "ListCreativesResponse"
+              },
+              "httpMethod": "GET",
+              "path": "v1/{+parent}/creatives",
+              "id": "realtimebidding.bidders.creatives.list",
+              "description": "Lists creatives.",
+              "parameters": {
+                "filter": {
+                  "type": "string",
+                  "description": "Query string to filter creatives. If no filter is specified, all active creatives will be returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'",
+                  "location": "query"
+                },
+                "pageSize": {
+                  "description": "Requested page size. The server may return fewer creatives than requested (due to timeout constraint) even if more are available via another call. If unspecified, server will pick an appropriate default. Acceptable values are 1 to 1000, inclusive.",
+                  "location": "query",
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "pageToken": {
+                  "location": "query",
+                  "description": "A token identifying a page of results the server should return. Typically, this is the value of ListCreativesResponse.nextPageToken returned from the previous call to the 'ListCreatives' method.",
+                  "type": "string"
+                },
+                "view": {
+                  "type": "string",
+                  "description": "Controls the amount of information included in the response. By default only creativeServingDecision is included. To retrieve the entire creative resource (including the declared fields and the creative content) specify the view as \"FULL\".",
+                  "enumDescriptions": [
+                    "Not specified, equivalent to SERVING_DECISION_ONLY.",
+                    "Only creativeServingDecision is included in the response.",
+                    "The entire creative resource (including the declared fields and the creative content) is included in the response."
+                  ],
+                  "enum": [
+                    "CREATIVE_VIEW_UNSPECIFIED",
+                    "SERVING_DECISION_ONLY",
+                    "FULL"
+                  ],
+                  "location": "query"
+                },
+                "parent": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "description": "Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing their own creatives. 2. The ID of the child seat buyer under a bidder account. So for listing creatives pertaining to the child seat buyer (`456`) under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access all creatives pertaining to both the bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use `bidders/123`.",
+                  "pattern": "^bidders/[^/]+$"
+                }
+              }
+            },
+            "watch": {
+              "request": {
+                "$ref": "WatchCreativesRequest"
+              },
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "pattern": "^bidders/[^/]+$",
+                  "required": true,
+                  "type": "string",
+                  "description": "Required. To watch all creatives pertaining to the bidder and all its child seat accounts, the bidder must follow the pattern `bidders/{bidderAccountId}`."
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/realtime-bidding"
+              ],
+              "flatPath": "v1/bidders/{biddersId}/creatives:watch",
+              "id": "realtimebidding.bidders.creatives.watch",
+              "response": {
+                "$ref": "WatchCreativesResponse"
+              },
+              "description": "Watches all creatives pertaining to a bidder. It is sufficient to invoke this endpoint once per bidder. A Pub/Sub topic will be created and notifications will be pushed to the topic when any of the bidder's creatives change status. All of the bidder's service accounts will have access to read from the topic. Subsequent invocations of this method will return the existing Pub/Sub configuration.",
+              "httpMethod": "POST",
+              "path": "v1/{+parent}/creatives:watch",
+              "parameterOrder": [
+                "parent"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "description": "Allows external bidders to manage their RTB integration with Google. This includes managing bidder endpoints, QPS quotas, configuring what ad inventory to receive via pretargeting, submitting creatives for verification, and accessing creative metadata such as approval status.",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/realtime-bidding": {
+          "description": "See, create, edit, and delete your Authorized Buyers and Open Bidding account entities"
+        }
+      }
+    }
+  },
+  "revision": "20200803",
+  "canonicalName": "Real-time Bidding",
+  "title": "Real-time Bidding API",
+  "mtlsRootUrl": "https://realtimebidding.mtls.googleapis.com/",
   "parameters": {
-    "quotaUser": {
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query"
-    },
-    "upload_protocol": {
+    "oauth_token": {
       "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "description": "OAuth 2.0 token for the current user.",
       "type": "string"
-    },
-    "callback": {
-      "location": "query",
-      "type": "string",
-      "description": "JSONP"
-    },
-    "access_token": {
-      "location": "query",
-      "type": "string",
-      "description": "OAuth access token."
     },
     "uploadType": {
-      "location": "query",
       "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "location": "query",
       "type": "string"
     },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+    },
+    "$.xgafv": {
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "description": "V1 error format.",
+      "type": "string",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "location": "query"
+    },
+    "fields": {
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "location": "query"
+    },
+    "access_token": {
+      "description": "OAuth access token.",
+      "location": "query",
+      "type": "string"
+    },
+    "prettyPrint": {
+      "type": "boolean",
+      "location": "query",
+      "default": "true",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "callback": {
+      "type": "string",
+      "description": "JSONP",
+      "location": "query"
+    },
+    "key": {
+      "location": "query",
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
     "alt": {
-      "default": "json",
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "location": "query",
+      "description": "Data format for response.",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
         "Media download with context-dependent Content-Type",
         "Responses with Content-Type of application/x-protobuf"
       ],
       "type": "string",
-      "description": "Data format for response.",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "location": "query"
-    },
-    "oauth_token": {
-      "type": "string",
-      "location": "query",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "prettyPrint": {
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true",
-      "location": "query"
-    },
-    "$.xgafv": {
-      "location": "query",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "type": "string",
-      "description": "V1 error format.",
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ]
-    },
-    "fields": {
-      "location": "query",
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string"
-    },
-    "key": {
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "location": "query",
-      "type": "string"
+      "default": "json"
     }
   },
+  "discoveryVersion": "v1",
+  "id": "realtimebidding:v1",
+  "version_module": true,
+  "version": "v1",
   "icons": {
     "x16": "http://www.google.com/images/icons/product/search-16.gif",
     "x32": "http://www.google.com/images/icons/product/search-32.gif"
   },
-  "batchPath": "batch"
+  "ownerDomain": "google.com",
+  "basePath": ""
 }

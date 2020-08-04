@@ -170,30 +170,16 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent buyer that owns the creatives.
-      The pattern for this resource is either
-       *        `buyers/{buyerAccountId}` or
-      `bidders/{bidderAccountId}`.
-      For `buyers/{buyerAccountId}`,
-       *        the `buyerAccountId` can be one of the
-      following:
-      1. The ID of the buyer that is accessing
-       *        their own creatives.
-      2. The ID of the child seat buyer under a bidder account.
-         So for
-       *        listing creatives pertaining to the child seat buyer (`456`)
-         under bidder account
-       *        (`123`), you would use the pattern: `buyers/456`.
-      3. The ID of the bidder itself.
-         So
-       *        for listing creatives pertaining to bidder (`123`),
-         you would use `buyers/123`.
-      If you
-       *        want to access all creatives pertaining to both the bidder and all
-      of its child seat
-       *        accounts, you would use `bidders/{bidderAccountId}`,
-      e.g., for all creatives pertaining to
-       *        bidder (`123`), use `bidders/123`.
+       * @param parent Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either
+       *        `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`,
+       *        the `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing
+       *        their own creatives. 2. The ID of the child seat buyer under a bidder account. So for
+       *        listing creatives pertaining to the child seat buyer (`456`) under bidder account (`123`),
+       *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
+       *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
+       *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
+       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
+       *        `bidders/123`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -219,30 +205,16 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent buyer that owns the creatives.
-      The pattern for this resource is either
-       *        `buyers/{buyerAccountId}` or
-      `bidders/{bidderAccountId}`.
-      For `buyers/{buyerAccountId}`,
-       *        the `buyerAccountId` can be one of the
-      following:
-      1. The ID of the buyer that is accessing
-       *        their own creatives.
-      2. The ID of the child seat buyer under a bidder account.
-         So for
-       *        listing creatives pertaining to the child seat buyer (`456`)
-         under bidder account
-       *        (`123`), you would use the pattern: `buyers/456`.
-      3. The ID of the bidder itself.
-         So
-       *        for listing creatives pertaining to bidder (`123`),
-         you would use `buyers/123`.
-      If you
-       *        want to access all creatives pertaining to both the bidder and all
-      of its child seat
-       *        accounts, you would use `bidders/{bidderAccountId}`,
-      e.g., for all creatives pertaining to
-       *        bidder (`123`), use `bidders/123`.
+         * @param parent Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either
+       *        `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`,
+       *        the `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing
+       *        their own creatives. 2. The ID of the child seat buyer under a bidder account. So for
+       *        listing creatives pertaining to the child seat buyer (`456`) under bidder account (`123`),
+       *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
+       *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
+       *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
+       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
+       *        `bidders/123`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -321,59 +293,45 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. Name of the parent buyer that owns the creatives.
-         *
-         * The pattern for this resource is either `buyers/{buyerAccountId}` or
-         * `bidders/{bidderAccountId}`.
-         *
-         * For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The
-         * ID of the buyer that is accessing their own creatives. 2. The ID of the child seat buyer
-         * under a bidder account. So for listing creatives pertaining to the child seat buyer
-         * (`456`) under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID
-         * of the bidder itself. So for listing creatives pertaining to bidder (`123`), you would
-         * use `buyers/123`.
-         *
-         * If you want to access all creatives pertaining to both the bidder and all of its child
-         * seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives
-         * pertaining to bidder (`123`), use `bidders/123`.
+         * Required. Name of the parent buyer that owns the creatives. The pattern for this resource
+         * is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For
+         * `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of
+         * the buyer that is accessing their own creatives. 2. The ID of the child seat buyer under
+         * a bidder account. So for listing creatives pertaining to the child seat buyer (`456`)
+         * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
+         * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
+         * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
+         * creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent buyer that owns the creatives.
-
-       The pattern for this resource is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`.
-
-       For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of the
-       buyer that is accessing their own creatives. 2. The ID of the child seat buyer under a bidder
-       account. So for listing creatives pertaining to the child seat buyer (`456`) under bidder account
-       (`123`), you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
-       creatives pertaining to bidder (`123`), you would use `buyers/123`.
-
-       If you want to access all creatives pertaining to both the bidder and all of its child seat
-       accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder
-       (`123`), use `bidders/123`.
+        /** Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either
+       `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`, the
+       `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing their own
+       creatives. 2. The ID of the child seat buyer under a bidder account. So for listing creatives
+       pertaining to the child seat buyer (`456`) under bidder account (`123`), you would use the pattern:
+       `buyers/456`. 3. The ID of the bidder itself. So for listing creatives pertaining to bidder
+       (`123`), you would use `buyers/123`. If you want to access all creatives pertaining to both the
+       bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
+       creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent buyer that owns the creatives.
-         *
-         * The pattern for this resource is either `buyers/{buyerAccountId}` or
-         * `bidders/{bidderAccountId}`.
-         *
-         * For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The
-         * ID of the buyer that is accessing their own creatives. 2. The ID of the child seat buyer
-         * under a bidder account. So for listing creatives pertaining to the child seat buyer
-         * (`456`) under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID
-         * of the bidder itself. So for listing creatives pertaining to bidder (`123`), you would
-         * use `buyers/123`.
-         *
-         * If you want to access all creatives pertaining to both the bidder and all of its child
-         * seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives
-         * pertaining to bidder (`123`), use `bidders/123`.
+         * Required. Name of the parent buyer that owns the creatives. The pattern for this resource
+         * is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For
+         * `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of
+         * the buyer that is accessing their own creatives. 2. The ID of the child seat buyer under
+         * a bidder account. So for listing creatives pertaining to the child seat buyer (`456`)
+         * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
+         * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
+         * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
+         * creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -387,16 +345,13 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Query string to filter creatives. If no filter is specified, all active creatives will be
-         * returned.
-         *
-         * Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
+         * returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
          * disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Query string to filter creatives. If no filter is specified, all active creatives will be returned.
-
        Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT)
        OR declaredAttributes:IS_COOKIE_TARGETED'
          */
@@ -406,9 +361,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Query string to filter creatives. If no filter is specified, all active creatives will be
-         * returned.
-         *
-         * Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
+         * returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
          * disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'
          */
         public List setFilter(java.lang.String filter) {
@@ -510,8 +463,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Watch#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. To watch all creatives pertaining to the bidder and all its child seat
-      accounts, the
+       * @param parent Required. To watch all creatives pertaining to the bidder and all its child seat accounts, the
        *        bidder must follow the pattern `bidders/{bidderAccountId}`.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.WatchCreativesRequest}
        * @return the request
@@ -544,8 +496,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Watch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. To watch all creatives pertaining to the bidder and all its child seat
-      accounts, the
+         * @param parent Required. To watch all creatives pertaining to the bidder and all its child seat accounts, the
        *        bidder must follow the pattern `bidders/{bidderAccountId}`.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.WatchCreativesRequest}
          * @since 1.13
@@ -683,18 +634,11 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link GetRemarketingTag#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Required. To fetch remarketing tag for an account, name must follow the pattern
-    `buyers/{accountId}`
-     *        where `{accountId}`
-    represents ID of a buyer that owns the remarketing tag. For a
-    bidder
-     *        accessing remarketing tag on behalf of a child seat buyer,
-    `{accountId}` should represent
-     *        the ID of the child seat buyer.
-    To fetch remarketing tag for a specific user list, name
-     *        must follow the pattern
-    `buyers/{accountId}/userLists/{userListId}`. See
-    UserList.name.
+     * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
+     *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
+     *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
+     *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
+     *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
      * @return the request
      */
     public GetRemarketingTag getRemarketingTag(java.lang.String name) throws java.io.IOException {
@@ -723,18 +667,11 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. To fetch remarketing tag for an account, name must follow the pattern
-    `buyers/{accountId}`
-     *        where `{accountId}`
-    represents ID of a buyer that owns the remarketing tag. For a
-    bidder
-     *        accessing remarketing tag on behalf of a child seat buyer,
-    `{accountId}` should represent
-     *        the ID of the child seat buyer.
-    To fetch remarketing tag for a specific user list, name
-     *        must follow the pattern
-    `buyers/{accountId}/userLists/{userListId}`. See
-    UserList.name.
+       * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
+     *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
+     *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
+     *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
+     *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
        * @since 1.13
        */
       protected GetRemarketingTag(java.lang.String name) {
@@ -885,14 +822,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent buyer that the new creative belongs to that must
-      follow the pattern
-       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}`
-      represents the account ID of the buyer
-       *        who owns a creative. For a bidder
-      accessing creatives on behalf of a child seat buyer,
-       *        `{buyerAccountId}`
-      should represent the account ID of the child seat buyer.
+       * @param parent Required. The name of the parent buyer that the new creative belongs to that must follow the pattern
+       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
+       *        who owns a creative. For a bidder accessing creatives on behalf of a child seat buyer,
+       *        `{buyerAccountId}` should represent the account ID of the child seat buyer.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.Creative}
        * @return the request
        */
@@ -920,14 +853,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent buyer that the new creative belongs to that must
-      follow the pattern
-       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}`
-      represents the account ID of the buyer
-       *        who owns a creative. For a bidder
-      accessing creatives on behalf of a child seat buyer,
-       *        `{buyerAccountId}`
-      should represent the account ID of the child seat buyer.
+         * @param parent Required. The name of the parent buyer that the new creative belongs to that must follow the pattern
+       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
+       *        who owns a creative. For a bidder accessing creatives on behalf of a child seat buyer,
+       *        `{buyerAccountId}` should represent the account ID of the child seat buyer.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.Creative}
          * @since 1.13
          */
@@ -1043,8 +972,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the creative to retrieve. See
-      creative.name.
+       * @param name Required. Name of the creative to retrieve. See creative.name.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1070,8 +998,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the creative to retrieve. See
-      creative.name.
+         * @param name Required. Name of the creative to retrieve. See creative.name.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1149,9 +1076,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the creative to retrieve. See creative.name.
-         */
+        /** Required. Name of the creative to retrieve. See creative.name. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -1161,9 +1086,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return name;
         }
 
-        /**
-         * Required. Name of the creative to retrieve. See creative.name.
-         */
+        /** Required. Name of the creative to retrieve. See creative.name. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1213,30 +1136,16 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent buyer that owns the creatives.
-      The pattern for this resource is either
-       *        `buyers/{buyerAccountId}` or
-      `bidders/{bidderAccountId}`.
-      For `buyers/{buyerAccountId}`,
-       *        the `buyerAccountId` can be one of the
-      following:
-      1. The ID of the buyer that is accessing
-       *        their own creatives.
-      2. The ID of the child seat buyer under a bidder account.
-         So for
-       *        listing creatives pertaining to the child seat buyer (`456`)
-         under bidder account
-       *        (`123`), you would use the pattern: `buyers/456`.
-      3. The ID of the bidder itself.
-         So
-       *        for listing creatives pertaining to bidder (`123`),
-         you would use `buyers/123`.
-      If you
-       *        want to access all creatives pertaining to both the bidder and all
-      of its child seat
-       *        accounts, you would use `bidders/{bidderAccountId}`,
-      e.g., for all creatives pertaining to
-       *        bidder (`123`), use `bidders/123`.
+       * @param parent Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either
+       *        `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`,
+       *        the `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing
+       *        their own creatives. 2. The ID of the child seat buyer under a bidder account. So for
+       *        listing creatives pertaining to the child seat buyer (`456`) under bidder account (`123`),
+       *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
+       *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
+       *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
+       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
+       *        `bidders/123`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1262,30 +1171,16 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent buyer that owns the creatives.
-      The pattern for this resource is either
-       *        `buyers/{buyerAccountId}` or
-      `bidders/{bidderAccountId}`.
-      For `buyers/{buyerAccountId}`,
-       *        the `buyerAccountId` can be one of the
-      following:
-      1. The ID of the buyer that is accessing
-       *        their own creatives.
-      2. The ID of the child seat buyer under a bidder account.
-         So for
-       *        listing creatives pertaining to the child seat buyer (`456`)
-         under bidder account
-       *        (`123`), you would use the pattern: `buyers/456`.
-      3. The ID of the bidder itself.
-         So
-       *        for listing creatives pertaining to bidder (`123`),
-         you would use `buyers/123`.
-      If you
-       *        want to access all creatives pertaining to both the bidder and all
-      of its child seat
-       *        accounts, you would use `bidders/{bidderAccountId}`,
-      e.g., for all creatives pertaining to
-       *        bidder (`123`), use `bidders/123`.
+         * @param parent Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either
+       *        `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`,
+       *        the `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing
+       *        their own creatives. 2. The ID of the child seat buyer under a bidder account. So for
+       *        listing creatives pertaining to the child seat buyer (`456`) under bidder account (`123`),
+       *        you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
+       *        creatives pertaining to bidder (`123`), you would use `buyers/123`. If you want to access
+       *        all creatives pertaining to both the bidder and all of its child seat accounts, you would
+       *        use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder (`123`), use
+       *        `bidders/123`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1364,59 +1259,45 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. Name of the parent buyer that owns the creatives.
-         *
-         * The pattern for this resource is either `buyers/{buyerAccountId}` or
-         * `bidders/{bidderAccountId}`.
-         *
-         * For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The
-         * ID of the buyer that is accessing their own creatives. 2. The ID of the child seat buyer
-         * under a bidder account. So for listing creatives pertaining to the child seat buyer
-         * (`456`) under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID
-         * of the bidder itself. So for listing creatives pertaining to bidder (`123`), you would
-         * use `buyers/123`.
-         *
-         * If you want to access all creatives pertaining to both the bidder and all of its child
-         * seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives
-         * pertaining to bidder (`123`), use `bidders/123`.
+         * Required. Name of the parent buyer that owns the creatives. The pattern for this resource
+         * is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For
+         * `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of
+         * the buyer that is accessing their own creatives. 2. The ID of the child seat buyer under
+         * a bidder account. So for listing creatives pertaining to the child seat buyer (`456`)
+         * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
+         * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
+         * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
+         * creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent buyer that owns the creatives.
-
-       The pattern for this resource is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`.
-
-       For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of the
-       buyer that is accessing their own creatives. 2. The ID of the child seat buyer under a bidder
-       account. So for listing creatives pertaining to the child seat buyer (`456`) under bidder account
-       (`123`), you would use the pattern: `buyers/456`. 3. The ID of the bidder itself. So for listing
-       creatives pertaining to bidder (`123`), you would use `buyers/123`.
-
-       If you want to access all creatives pertaining to both the bidder and all of its child seat
-       accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives pertaining to bidder
-       (`123`), use `bidders/123`.
+        /** Required. Name of the parent buyer that owns the creatives. The pattern for this resource is either
+       `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For `buyers/{buyerAccountId}`, the
+       `buyerAccountId` can be one of the following: 1. The ID of the buyer that is accessing their own
+       creatives. 2. The ID of the child seat buyer under a bidder account. So for listing creatives
+       pertaining to the child seat buyer (`456`) under bidder account (`123`), you would use the pattern:
+       `buyers/456`. 3. The ID of the bidder itself. So for listing creatives pertaining to bidder
+       (`123`), you would use `buyers/123`. If you want to access all creatives pertaining to both the
+       bidder and all of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
+       creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent buyer that owns the creatives.
-         *
-         * The pattern for this resource is either `buyers/{buyerAccountId}` or
-         * `bidders/{bidderAccountId}`.
-         *
-         * For `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The
-         * ID of the buyer that is accessing their own creatives. 2. The ID of the child seat buyer
-         * under a bidder account. So for listing creatives pertaining to the child seat buyer
-         * (`456`) under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID
-         * of the bidder itself. So for listing creatives pertaining to bidder (`123`), you would
-         * use `buyers/123`.
-         *
-         * If you want to access all creatives pertaining to both the bidder and all of its child
-         * seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all creatives
-         * pertaining to bidder (`123`), use `bidders/123`.
+         * Required. Name of the parent buyer that owns the creatives. The pattern for this resource
+         * is either `buyers/{buyerAccountId}` or `bidders/{bidderAccountId}`. For
+         * `buyers/{buyerAccountId}`, the `buyerAccountId` can be one of the following: 1. The ID of
+         * the buyer that is accessing their own creatives. 2. The ID of the child seat buyer under
+         * a bidder account. So for listing creatives pertaining to the child seat buyer (`456`)
+         * under bidder account (`123`), you would use the pattern: `buyers/456`. 3. The ID of the
+         * bidder itself. So for listing creatives pertaining to bidder (`123`), you would use
+         * `buyers/123`. If you want to access all creatives pertaining to both the bidder and all
+         * of its child seat accounts, you would use `bidders/{bidderAccountId}`, e.g., for all
+         * creatives pertaining to bidder (`123`), use `bidders/123`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1430,16 +1311,13 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Query string to filter creatives. If no filter is specified, all active creatives will be
-         * returned.
-         *
-         * Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
+         * returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
          * disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Query string to filter creatives. If no filter is specified, all active creatives will be returned.
-
        Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT)
        OR declaredAttributes:IS_COOKIE_TARGETED'
          */
@@ -1449,9 +1327,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Query string to filter creatives. If no filter is specified, all active creatives will be
-         * returned.
-         *
-         * Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
+         * returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
          * disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'
          */
         public List setFilter(java.lang.String filter) {
@@ -1549,8 +1425,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the creative to update. See
-      creative.name.
+       * @param name Name of the creative to update. See creative.name.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.Creative}
        * @return the request
        */
@@ -1578,8 +1453,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the creative to update. See
-      creative.name.
+         * @param name Name of the creative to update. See creative.name.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.Creative}
          * @since 1.13
          */
@@ -1648,9 +1522,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the creative to update. See creative.name.
-         */
+        /** Name of the creative to update. See creative.name. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -1660,9 +1532,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return name;
         }
 
-        /**
-         * Name of the creative to update. See creative.name.
-         */
+        /** Name of the creative to update. See creative.name. */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1725,8 +1595,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Close#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the user list to close.
-      See UserList.name
+       * @param name Required. The name of the user list to close. See UserList.name
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.CloseUserListRequest}
        * @return the request
        */
@@ -1755,8 +1624,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Close#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the user list to close.
-      See UserList.name
+         * @param name Required. The name of the user list to close. See UserList.name
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.CloseUserListRequest}
          * @since 1.13
          */
@@ -1825,9 +1693,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return (Close) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the user list to close. See UserList.name
-         */
+        /** Required. The name of the user list to close. See UserList.name */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -1837,9 +1703,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return name;
         }
 
-        /**
-         * Required. The name of the user list to close. See UserList.name
-         */
+        /** Required. The name of the user list to close. See UserList.name */
         public Close setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1863,14 +1727,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent buyer of the user list to be retrieved that
-      must follow the pattern
-       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}`
-      represents the account ID of the buyer
-       *        who owns user lists. For a bidder
-      accessing user lists on behalf of a child seat buyer ,
-       *        `{buyerAccountId}`
-      should represent the account ID of the child seat buyer.
+       * @param parent Required. The name of the parent buyer of the user list to be retrieved that must follow the pattern
+       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
+       *        who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer ,
+       *        `{buyerAccountId}` should represent the account ID of the child seat buyer.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.UserList}
        * @return the request
        */
@@ -1898,14 +1758,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent buyer of the user list to be retrieved that
-      must follow the pattern
-       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}`
-      represents the account ID of the buyer
-       *        who owns user lists. For a bidder
-      accessing user lists on behalf of a child seat buyer ,
-       *        `{buyerAccountId}`
-      should represent the account ID of the child seat buyer.
+         * @param parent Required. The name of the parent buyer of the user list to be retrieved that must follow the pattern
+       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
+       *        who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer ,
+       *        `{buyerAccountId}` should represent the account ID of the child seat buyer.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.UserList}
          * @since 1.13
          */
@@ -2021,8 +1877,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the user list to be retrieved. See
-      UserList.name.
+       * @param name Required. The name of the user list to be retrieved. See UserList.name.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2048,8 +1903,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the user list to be retrieved. See
-      UserList.name.
+         * @param name Required. The name of the user list to be retrieved. See UserList.name.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2127,9 +1981,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the user list to be retrieved. See UserList.name.
-         */
+        /** Required. The name of the user list to be retrieved. See UserList.name. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -2139,9 +1991,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return name;
         }
 
-        /**
-         * Required. The name of the user list to be retrieved. See UserList.name.
-         */
+        /** Required. The name of the user list to be retrieved. See UserList.name. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2168,18 +2018,11 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link GetRemarketingTag#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. To fetch remarketing tag for an account, name must follow the pattern
-      `buyers/{accountId}`
-       *        where `{accountId}`
-      represents ID of a buyer that owns the remarketing tag. For a
-      bidder
-       *        accessing remarketing tag on behalf of a child seat buyer,
-      `{accountId}` should represent
-       *        the ID of the child seat buyer.
-      To fetch remarketing tag for a specific user list, name
-       *        must follow the pattern
-      `buyers/{accountId}/userLists/{userListId}`. See
-      UserList.name.
+       * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
+       *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
+       *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
+       *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
+       *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
        * @return the request
        */
       public GetRemarketingTag getRemarketingTag(java.lang.String name) throws java.io.IOException {
@@ -2208,18 +2051,11 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * stractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. To fetch remarketing tag for an account, name must follow the pattern
-      `buyers/{accountId}`
-       *        where `{accountId}`
-      represents ID of a buyer that owns the remarketing tag. For a
-      bidder
-       *        accessing remarketing tag on behalf of a child seat buyer,
-      `{accountId}` should represent
-       *        the ID of the child seat buyer.
-      To fetch remarketing tag for a specific user list, name
-       *        must follow the pattern
-      `buyers/{accountId}/userLists/{userListId}`. See
-      UserList.name.
+         * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
+       *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
+       *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
+       *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
+       *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
          * @since 1.13
          */
         protected GetRemarketingTag(java.lang.String name) {
@@ -2349,14 +2185,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent buyer for the user lists to be returned that must
-      follow the
-       *        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}`
-      represents the account ID of
-       *        the buyer who owns user lists. For a bidder
-      accessing user lists on behalf of a child seat
-       *        buyer , `{buyerAccountId}`
-      should represent the account ID of the child seat buyer.
+       * @param parent Required. The name of the parent buyer for the user lists to be returned that must follow the
+       *        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of
+       *        the buyer who owns user lists. For a bidder accessing user lists on behalf of a child seat
+       *        buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2382,14 +2214,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent buyer for the user lists to be returned that must
-      follow the
-       *        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}`
-      represents the account ID of
-       *        the buyer who owns user lists. For a bidder
-      accessing user lists on behalf of a child seat
-       *        buyer , `{buyerAccountId}`
-      should represent the account ID of the child seat buyer.
+         * @param parent Required. The name of the parent buyer for the user lists to be returned that must follow the
+       *        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of
+       *        the buyer who owns user lists. For a bidder accessing user lists on behalf of a child seat
+       *        buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2546,8 +2374,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Open#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the user list to open.
-      See UserList.name
+       * @param name Required. The name of the user list to open. See UserList.name
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.OpenUserListRequest}
        * @return the request
        */
@@ -2574,8 +2401,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * {@link Open#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the user list to open.
-      See UserList.name
+         * @param name Required. The name of the user list to open. See UserList.name
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.OpenUserListRequest}
          * @since 1.13
          */
@@ -2644,9 +2470,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return (Open) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the user list to open. See UserList.name
-         */
+        /** Required. The name of the user list to open. See UserList.name */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -2656,9 +2480,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return name;
         }
 
-        /**
-         * Required. The name of the user list to open. See UserList.name
-         */
+        /** Required. The name of the user list to open. See UserList.name */
         public Open setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2683,14 +2505,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param name Output only. Name of the user list that must follow the pattern
-       *        `buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents
-      the account ID of the
-       *        buyer who owns the user list. For a bidder accessing
-      user lists on behalf of a child seat
-       *        buyer, `{buyer}` represents
-      the account ID of the child seat buyer. `{user_list}` is an
-       *        int64
-      identifier assigned by Google to uniquely identify a user list.
+       *        `buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents the account ID of the
+       *        buyer who owns the user list. For a bidder accessing user lists on behalf of a child seat
+       *        buyer, `{buyer}` represents the account ID of the child seat buyer. `{user_list}` is an
+       *        int64 identifier assigned by Google to uniquely identify a user list.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.UserList}
        * @return the request
        */
@@ -2719,14 +2537,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Output only. Name of the user list that must follow the pattern
-       *        `buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents
-      the account ID of the
-       *        buyer who owns the user list. For a bidder accessing
-      user lists on behalf of a child seat
-       *        buyer, `{buyer}` represents
-      the account ID of the child seat buyer. `{user_list}` is an
-       *        int64
-      identifier assigned by Google to uniquely identify a user list.
+       *        `buyers/{buyer}/userLists/{user_list}`, where `{buyer}` represents the account ID of the
+       *        buyer who owns the user list. For a bidder accessing user lists on behalf of a child seat
+       *        buyer, `{buyer}` represents the account ID of the child seat buyer. `{user_list}` is an
+       *        int64 identifier assigned by Google to uniquely identify a user list.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.UserList}
          * @since 1.13
          */

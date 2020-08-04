@@ -17,7 +17,7 @@
 package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
- * A client resource represents a client buyeran agency, a brand, or an advertiser customer of the
+ * A client resource represents a client buyer—an agency, a brand, or an advertiser customer of the
  * sponsor buyer. Users associated with the client buyer have restricted access to the Marketplace
  * and certain other sections of the Authorized Buyers UI based on the role granted to the client
  * buyer. All fields are required unless otherwise specified.
@@ -53,15 +53,11 @@ public final class Client extends com.google.api.client.json.GenericJson {
   /**
    * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an
    * agency. This identifier is unique among all the entities with the same type. The value of this
-   * field is ignored if the entity type is not provided.
-   *
-   * A list of all known advertisers with their identifiers is available in the
-   * [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file.
-   *
-   * A list of all known brands with their identifiers is available in the
-   * [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt) file.
-   *
-   * A list of all known agencies with their identifiers is available in the
+   * field is ignored if the entity type is not provided. A list of all known advertisers with their
+   * identifiers is available in the [advertisers.txt](https://storage.googleapis.com/adx-rtb-
+   * dictionaries/advertisers.txt) file. A list of all known brands with their identifiers is
+   * available in the [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt)
+   * file. A list of all known agencies with their identifiers is available in the
    * [agencies.txt](https://storage.googleapis.com/adx-rtb-dictionaries/agencies.txt) file.
    * The value may be {@code null}.
    */
@@ -86,13 +82,10 @@ public final class Client extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional arbitrary unique identifier of this client buyer from the standpoint of its Ad
-   * Exchange sponsor buyer.
-   *
-   * This field can be used to associate a client buyer with the identifier in the namespace of its
-   * sponsor buyer, lookup client buyers by that identifier and verify whether an Ad Exchange
-   * counterpart of a given client buyer already exists.
-   *
-   * If present, must be unique among all the client buyers for its Ad Exchange sponsor buyer.
+   * Exchange sponsor buyer. This field can be used to associate a client buyer with the identifier
+   * in the namespace of its sponsor buyer, lookup client buyers by that identifier and verify
+   * whether an Ad Exchange counterpart of a given client buyer already exists. If present, must be
+   * unique among all the client buyers for its Ad Exchange sponsor buyer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,15 +157,11 @@ public final class Client extends com.google.api.client.json.GenericJson {
   /**
    * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an
    * agency. This identifier is unique among all the entities with the same type. The value of this
-   * field is ignored if the entity type is not provided.
-   *
-   * A list of all known advertisers with their identifiers is available in the
-   * [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file.
-   *
-   * A list of all known brands with their identifiers is available in the
-   * [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt) file.
-   *
-   * A list of all known agencies with their identifiers is available in the
+   * field is ignored if the entity type is not provided. A list of all known advertisers with their
+   * identifiers is available in the [advertisers.txt](https://storage.googleapis.com/adx-rtb-
+   * dictionaries/advertisers.txt) file. A list of all known brands with their identifiers is
+   * available in the [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt)
+   * file. A list of all known agencies with their identifiers is available in the
    * [agencies.txt](https://storage.googleapis.com/adx-rtb-dictionaries/agencies.txt) file.
    * @return value or {@code null} for none
    */
@@ -183,15 +172,11 @@ public final class Client extends com.google.api.client.json.GenericJson {
   /**
    * Numerical identifier of the client entity. The entity can be an advertiser, a brand, or an
    * agency. This identifier is unique among all the entities with the same type. The value of this
-   * field is ignored if the entity type is not provided.
-   *
-   * A list of all known advertisers with their identifiers is available in the
-   * [advertisers.txt](https://storage.googleapis.com/adx-rtb-dictionaries/advertisers.txt) file.
-   *
-   * A list of all known brands with their identifiers is available in the
-   * [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt) file.
-   *
-   * A list of all known agencies with their identifiers is available in the
+   * field is ignored if the entity type is not provided. A list of all known advertisers with their
+   * identifiers is available in the [advertisers.txt](https://storage.googleapis.com/adx-rtb-
+   * dictionaries/advertisers.txt) file. A list of all known brands with their identifiers is
+   * available in the [brands.txt](https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt)
+   * file. A list of all known agencies with their identifiers is available in the
    * [agencies.txt](https://storage.googleapis.com/adx-rtb-dictionaries/agencies.txt) file.
    * @param entityId entityId or {@code null} for none
    */
@@ -240,13 +225,10 @@ public final class Client extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional arbitrary unique identifier of this client buyer from the standpoint of its Ad
-   * Exchange sponsor buyer.
-   *
-   * This field can be used to associate a client buyer with the identifier in the namespace of its
-   * sponsor buyer, lookup client buyers by that identifier and verify whether an Ad Exchange
-   * counterpart of a given client buyer already exists.
-   *
-   * If present, must be unique among all the client buyers for its Ad Exchange sponsor buyer.
+   * Exchange sponsor buyer. This field can be used to associate a client buyer with the identifier
+   * in the namespace of its sponsor buyer, lookup client buyers by that identifier and verify
+   * whether an Ad Exchange counterpart of a given client buyer already exists. If present, must be
+   * unique among all the client buyers for its Ad Exchange sponsor buyer.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartnerClientId() {
@@ -255,13 +237,10 @@ public final class Client extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional arbitrary unique identifier of this client buyer from the standpoint of its Ad
-   * Exchange sponsor buyer.
-   *
-   * This field can be used to associate a client buyer with the identifier in the namespace of its
-   * sponsor buyer, lookup client buyers by that identifier and verify whether an Ad Exchange
-   * counterpart of a given client buyer already exists.
-   *
-   * If present, must be unique among all the client buyers for its Ad Exchange sponsor buyer.
+   * Exchange sponsor buyer. This field can be used to associate a client buyer with the identifier
+   * in the namespace of its sponsor buyer, lookup client buyers by that identifier and verify
+   * whether an Ad Exchange counterpart of a given client buyer already exists. If present, must be
+   * unique among all the client buyers for its Ad Exchange sponsor buyer.
    * @param partnerClientId partnerClientId or {@code null} for none
    */
   public Client setPartnerClientId(java.lang.String partnerClientId) {

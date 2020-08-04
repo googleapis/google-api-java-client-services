@@ -93,12 +93,9 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-defined name of the filter set. Filter set names must be unique globally and match one
-   * of the patterns:
-   *
-   * - `bidders/filterSets` (for accessing bidder-level troubleshooting data) -
-   * `bidders/accounts/filterSets` (for accessing account-level troubleshooting data)
-   *
-   * This field is required in create operations.
+   * of the patterns: - `bidders/filterSets` (for accessing bidder-level troubleshooting data) -
+   * `bidders/accounts/filterSets` (for accessing account-level troubleshooting data) This field is
+   * required in create operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,12 +289,9 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-defined name of the filter set. Filter set names must be unique globally and match one
-   * of the patterns:
-   *
-   * - `bidders/filterSets` (for accessing bidder-level troubleshooting data) -
-   * `bidders/accounts/filterSets` (for accessing account-level troubleshooting data)
-   *
-   * This field is required in create operations.
+   * of the patterns: - `bidders/filterSets` (for accessing bidder-level troubleshooting data) -
+   * `bidders/accounts/filterSets` (for accessing account-level troubleshooting data) This field is
+   * required in create operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -306,12 +300,9 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-defined name of the filter set. Filter set names must be unique globally and match one
-   * of the patterns:
-   *
-   * - `bidders/filterSets` (for accessing bidder-level troubleshooting data) -
-   * `bidders/accounts/filterSets` (for accessing account-level troubleshooting data)
-   *
-   * This field is required in create operations.
+   * of the patterns: - `bidders/filterSets` (for accessing bidder-level troubleshooting data) -
+   * `bidders/accounts/filterSets` (for accessing account-level troubleshooting data) This field is
+   * required in create operations.
    * @param name name or {@code null} for none
    */
   public FilterSet setName(java.lang.String name) {

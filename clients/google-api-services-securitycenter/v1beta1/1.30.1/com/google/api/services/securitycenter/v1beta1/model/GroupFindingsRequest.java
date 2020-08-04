@@ -33,24 +33,13 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Expression that defines the filter to apply across findings. The expression is a list of one or
    * more restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported,
-   * and `OR` has higher precedence than `AND`.
-   *
-   * Restrictions have the form `  ` and may have a `-` character in front of them to indicate
-   * negation. Examples include:
-   *
-   *  * name  * source_properties.a_property  * security_marks.marks.marka
-   *
-   * The supported operators are:
-   *
-   * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
-   * matching, for strings.
-   *
-   * The supported value types are:
-   *
-   * * string literals in quotes. * integer literals without quotes. * boolean literals `true` and
-   * `false` without quotes.
-   *
-   * For example, `source_properties.size = 100` is a valid filter string.
+   * and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
+   * character in front of them to indicate negation. Examples include: * name *
+   * source_properties.a_property * security_marks.marks.marka The supported operators are: * `=`
+   * for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
+   * matching, for strings. The supported value types are: * string literals in quotes. * integer
+   * literals without quotes. * boolean literals `true` and `false` without quotes. For example,
+   * `source_properties.size = 100` is a valid filter string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,11 +48,8 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Required. Expression that defines what assets fields to use for grouping (including `state`).
    * The string value should follow SQL syntax: comma separated list of fields. For example:
-   * "parent,resource_name".
-   *
-   * The following fields are supported:
-   *
-   * * resource_name * category * state * parent
+   * "parent,resource_name". The following fields are supported: * resource_name * category * state
+   * * parent
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,24 +83,13 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Expression that defines the filter to apply across findings. The expression is a list of one or
    * more restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported,
-   * and `OR` has higher precedence than `AND`.
-   *
-   * Restrictions have the form `  ` and may have a `-` character in front of them to indicate
-   * negation. Examples include:
-   *
-   *  * name  * source_properties.a_property  * security_marks.marks.marka
-   *
-   * The supported operators are:
-   *
-   * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
-   * matching, for strings.
-   *
-   * The supported value types are:
-   *
-   * * string literals in quotes. * integer literals without quotes. * boolean literals `true` and
-   * `false` without quotes.
-   *
-   * For example, `source_properties.size = 100` is a valid filter string.
+   * and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
+   * character in front of them to indicate negation. Examples include: * name *
+   * source_properties.a_property * security_marks.marks.marka The supported operators are: * `=`
+   * for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
+   * matching, for strings. The supported value types are: * string literals in quotes. * integer
+   * literals without quotes. * boolean literals `true` and `false` without quotes. For example,
+   * `source_properties.size = 100` is a valid filter string.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -124,24 +99,13 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Expression that defines the filter to apply across findings. The expression is a list of one or
    * more restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported,
-   * and `OR` has higher precedence than `AND`.
-   *
-   * Restrictions have the form `  ` and may have a `-` character in front of them to indicate
-   * negation. Examples include:
-   *
-   *  * name  * source_properties.a_property  * security_marks.marks.marka
-   *
-   * The supported operators are:
-   *
-   * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
-   * matching, for strings.
-   *
-   * The supported value types are:
-   *
-   * * string literals in quotes. * integer literals without quotes. * boolean literals `true` and
-   * `false` without quotes.
-   *
-   * For example, `source_properties.size = 100` is a valid filter string.
+   * and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
+   * character in front of them to indicate negation. Examples include: * name *
+   * source_properties.a_property * security_marks.marks.marka The supported operators are: * `=`
+   * for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
+   * matching, for strings. The supported value types are: * string literals in quotes. * integer
+   * literals without quotes. * boolean literals `true` and `false` without quotes. For example,
+   * `source_properties.size = 100` is a valid filter string.
    * @param filter filter or {@code null} for none
    */
   public GroupFindingsRequest setFilter(java.lang.String filter) {
@@ -152,11 +116,8 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Required. Expression that defines what assets fields to use for grouping (including `state`).
    * The string value should follow SQL syntax: comma separated list of fields. For example:
-   * "parent,resource_name".
-   *
-   * The following fields are supported:
-   *
-   * * resource_name * category * state * parent
+   * "parent,resource_name". The following fields are supported: * resource_name * category * state
+   * * parent
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupBy() {
@@ -166,11 +127,8 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Required. Expression that defines what assets fields to use for grouping (including `state`).
    * The string value should follow SQL syntax: comma separated list of fields. For example:
-   * "parent,resource_name".
-   *
-   * The following fields are supported:
-   *
-   * * resource_name * category * state * parent
+   * "parent,resource_name". The following fields are supported: * resource_name * category * state
+   * * parent
    * @param groupBy groupBy or {@code null} for none
    */
   public GroupFindingsRequest setGroupBy(java.lang.String groupBy) {

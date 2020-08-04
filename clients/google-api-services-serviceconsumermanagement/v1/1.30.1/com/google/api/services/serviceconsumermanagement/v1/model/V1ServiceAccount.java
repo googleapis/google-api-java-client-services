@@ -45,9 +45,7 @@ public final class V1ServiceAccount extends com.google.api.client.json.GenericJs
   private java.lang.String iamAccountName;
 
   /**
-   * P4 SA resource name.
-   *
-   * An example name would be:
+   * P4 SA resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/serviceAccounts/default`
    * The value may be {@code null}.
    */
@@ -104,9 +102,7 @@ public final class V1ServiceAccount extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * P4 SA resource name.
-   *
-   * An example name would be:
+   * P4 SA resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/serviceAccounts/default`
    * @return value or {@code null} for none
    */
@@ -115,9 +111,7 @@ public final class V1ServiceAccount extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * P4 SA resource name.
-   *
-   * An example name would be:
+   * P4 SA resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/serviceAccounts/default`
    * @param name name or {@code null} for none
    */

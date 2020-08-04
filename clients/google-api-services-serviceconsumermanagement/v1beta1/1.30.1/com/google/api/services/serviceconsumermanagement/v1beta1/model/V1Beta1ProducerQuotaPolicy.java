@@ -40,31 +40,24 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
 
   /**
    * If this map is nonempty, then this policy applies only to specific values for dimensions
-   * defined in the limit unit.
-   *
-   * For example, an policy on a limit with the unit 1/{project}/{region} could contain an entry
-   * with the key "region" and the value "us-east-1"; the policy is only applied to quota consumed
-   * in that region.
-   *
-   * This map has the following restrictions:
-   *
-   * *   Keys that are not defined in the limit's unit are not valid keys.     Any string appearing
-   * in {brackets} in the unit (besides {project} or     {user}) is a defined key. *   "project" is
-   * not a valid key; the project is already specified in     the parent resource name. *   "user"
-   * is not a valid key; the API does not support quota polcies     that apply only to a specific
-   * user. *   If "region" appears as a key, its value must be a valid Cloud region. *   If "zone"
-   * appears as a key, its value must be a valid Cloud zone. *   If any valid key other than
-   * "region" or "zone" appears in the map, then     all valid keys other than "region" or "zone"
-   * must also appear in the     map.
+   * defined in the limit unit. For example, an policy on a limit with the unit 1/{project}/{region}
+   * could contain an entry with the key "region" and the value "us-east-1"; the policy is only
+   * applied to quota consumed in that region. This map has the following restrictions: * Keys that
+   * are not defined in the limit's unit are not valid keys. Any string appearing in {brackets} in
+   * the unit (besides {project} or {user}) is a defined key. * "project" is not a valid key; the
+   * project is already specified in the parent resource name. * "user" is not a valid key; the API
+   * does not support quota polcies that apply only to a specific user. * If "region" appears as a
+   * key, its value must be a valid Cloud region. * If "zone" appears as a key, its value must be a
+   * valid Cloud zone. * If any valid key other than "region" or "zone" appears in the map, then all
+   * valid keys other than "region" or "zone" must also appear in the map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> dimensions;
 
   /**
-   * The name of the metric to which this policy applies.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the metric to which this policy applies. An example name would be:
+   * `compute.googleapis.com/cpus`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,10 +80,9 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
   private java.lang.Long policyValue;
 
   /**
-   * The limit unit of the limit to which this policy applies.
-   *
-   * An example unit would be: `1/{project}/{region}` Note that `{project}` and `{region}` are not
-   * placeholders in this example; the literal characters `{` and `}` occur in the string.
+   * The limit unit of the limit to which this policy applies. An example unit would be:
+   * `1/{project}/{region}` Note that `{project}` and `{region}` are not placeholders in this
+   * example; the literal characters `{` and `}` occur in the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,22 +109,16 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
 
   /**
    * If this map is nonempty, then this policy applies only to specific values for dimensions
-   * defined in the limit unit.
-   *
-   * For example, an policy on a limit with the unit 1/{project}/{region} could contain an entry
-   * with the key "region" and the value "us-east-1"; the policy is only applied to quota consumed
-   * in that region.
-   *
-   * This map has the following restrictions:
-   *
-   * *   Keys that are not defined in the limit's unit are not valid keys.     Any string appearing
-   * in {brackets} in the unit (besides {project} or     {user}) is a defined key. *   "project" is
-   * not a valid key; the project is already specified in     the parent resource name. *   "user"
-   * is not a valid key; the API does not support quota polcies     that apply only to a specific
-   * user. *   If "region" appears as a key, its value must be a valid Cloud region. *   If "zone"
-   * appears as a key, its value must be a valid Cloud zone. *   If any valid key other than
-   * "region" or "zone" appears in the map, then     all valid keys other than "region" or "zone"
-   * must also appear in the     map.
+   * defined in the limit unit. For example, an policy on a limit with the unit 1/{project}/{region}
+   * could contain an entry with the key "region" and the value "us-east-1"; the policy is only
+   * applied to quota consumed in that region. This map has the following restrictions: * Keys that
+   * are not defined in the limit's unit are not valid keys. Any string appearing in {brackets} in
+   * the unit (besides {project} or {user}) is a defined key. * "project" is not a valid key; the
+   * project is already specified in the parent resource name. * "user" is not a valid key; the API
+   * does not support quota polcies that apply only to a specific user. * If "region" appears as a
+   * key, its value must be a valid Cloud region. * If "zone" appears as a key, its value must be a
+   * valid Cloud zone. * If any valid key other than "region" or "zone" appears in the map, then all
+   * valid keys other than "region" or "zone" must also appear in the map.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDimensions() {
@@ -141,22 +127,16 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
 
   /**
    * If this map is nonempty, then this policy applies only to specific values for dimensions
-   * defined in the limit unit.
-   *
-   * For example, an policy on a limit with the unit 1/{project}/{region} could contain an entry
-   * with the key "region" and the value "us-east-1"; the policy is only applied to quota consumed
-   * in that region.
-   *
-   * This map has the following restrictions:
-   *
-   * *   Keys that are not defined in the limit's unit are not valid keys.     Any string appearing
-   * in {brackets} in the unit (besides {project} or     {user}) is a defined key. *   "project" is
-   * not a valid key; the project is already specified in     the parent resource name. *   "user"
-   * is not a valid key; the API does not support quota polcies     that apply only to a specific
-   * user. *   If "region" appears as a key, its value must be a valid Cloud region. *   If "zone"
-   * appears as a key, its value must be a valid Cloud zone. *   If any valid key other than
-   * "region" or "zone" appears in the map, then     all valid keys other than "region" or "zone"
-   * must also appear in the     map.
+   * defined in the limit unit. For example, an policy on a limit with the unit 1/{project}/{region}
+   * could contain an entry with the key "region" and the value "us-east-1"; the policy is only
+   * applied to quota consumed in that region. This map has the following restrictions: * Keys that
+   * are not defined in the limit's unit are not valid keys. Any string appearing in {brackets} in
+   * the unit (besides {project} or {user}) is a defined key. * "project" is not a valid key; the
+   * project is already specified in the parent resource name. * "user" is not a valid key; the API
+   * does not support quota polcies that apply only to a specific user. * If "region" appears as a
+   * key, its value must be a valid Cloud region. * If "zone" appears as a key, its value must be a
+   * valid Cloud zone. * If any valid key other than "region" or "zone" appears in the map, then all
+   * valid keys other than "region" or "zone" must also appear in the map.
    * @param dimensions dimensions or {@code null} for none
    */
   public V1Beta1ProducerQuotaPolicy setDimensions(java.util.Map<String, java.lang.String> dimensions) {
@@ -165,9 +145,8 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
   }
 
   /**
-   * The name of the metric to which this policy applies.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the metric to which this policy applies. An example name would be:
+   * `compute.googleapis.com/cpus`
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -175,9 +154,8 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
   }
 
   /**
-   * The name of the metric to which this policy applies.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the metric to which this policy applies. An example name would be:
+   * `compute.googleapis.com/cpus`
    * @param metric metric or {@code null} for none
    */
   public V1Beta1ProducerQuotaPolicy setMetric(java.lang.String metric) {
@@ -224,10 +202,9 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
   }
 
   /**
-   * The limit unit of the limit to which this policy applies.
-   *
-   * An example unit would be: `1/{project}/{region}` Note that `{project}` and `{region}` are not
-   * placeholders in this example; the literal characters `{` and `}` occur in the string.
+   * The limit unit of the limit to which this policy applies. An example unit would be:
+   * `1/{project}/{region}` Note that `{project}` and `{region}` are not placeholders in this
+   * example; the literal characters `{` and `}` occur in the string.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -235,10 +212,9 @@ public final class V1Beta1ProducerQuotaPolicy extends com.google.api.client.json
   }
 
   /**
-   * The limit unit of the limit to which this policy applies.
-   *
-   * An example unit would be: `1/{project}/{region}` Note that `{project}` and `{region}` are not
-   * placeholders in this example; the literal characters `{` and `}` occur in the string.
+   * The limit unit of the limit to which this policy applies. An example unit would be:
+   * `1/{project}/{region}` Note that `{project}` and `{region}` are not placeholders in this
+   * example; the literal characters `{` and `}` occur in the string.
    * @param unit unit or {@code null} for none
    */
   public V1Beta1ProducerQuotaPolicy setUnit(java.lang.String unit) {

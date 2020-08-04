@@ -38,9 +38,7 @@ public final class V1DefaultIdentity extends com.google.api.client.json.GenericJ
   private java.lang.String email;
 
   /**
-   * Default identity resource name.
-   *
-   * An example name would be:
+   * Default identity resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/defaultIdentity`
    * The value may be {@code null}.
    */
@@ -72,9 +70,7 @@ public final class V1DefaultIdentity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Default identity resource name.
-   *
-   * An example name would be:
+   * Default identity resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/defaultIdentity`
    * @return value or {@code null} for none
    */
@@ -83,9 +79,7 @@ public final class V1DefaultIdentity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Default identity resource name.
-   *
-   * An example name would be:
+   * Default identity resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/defaultIdentity`
    * @param name name or {@code null} for none
    */

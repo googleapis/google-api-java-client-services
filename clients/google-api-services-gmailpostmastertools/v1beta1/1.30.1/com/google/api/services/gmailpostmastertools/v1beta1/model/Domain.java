@@ -39,7 +39,7 @@ public final class Domain extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the Domain. Domain names have the form `domains/{domain_name}`, where
-   * domain_name is the fully qualified domain name (i.e.,  mymail.mydomain.com).
+   * domain_name is the fully qualified domain name (i.e., mymail.mydomain.com).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class Domain extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the Domain. Domain names have the form `domains/{domain_name}`, where
-   * domain_name is the fully qualified domain name (i.e.,  mymail.mydomain.com).
+   * domain_name is the fully qualified domain name (i.e., mymail.mydomain.com).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +80,7 @@ public final class Domain extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the Domain. Domain names have the form `domains/{domain_name}`, where
-   * domain_name is the fully qualified domain name (i.e.,  mymail.mydomain.com).
+   * domain_name is the fully qualified domain name (i.e., mymail.mydomain.com).
    * @param name name or {@code null} for none
    */
   public Domain setName(java.lang.String name) {

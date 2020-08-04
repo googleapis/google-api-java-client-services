@@ -31,13 +31,12 @@ package com.google.api.services.managedidentities.v1beta1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Exclusion duration. No restrictions on the possible values.
-   *
-   * When an ongoing operation is taking longer than initially expected, an existing entry in the
-   * exclusion list can be updated by extending the duration. This is supported by the subsystem
-   * exporting eligibility data as long as such extension is committed at least 10 minutes before
-   * the original exclusion expiration - otherwise it is possible that there will be "gaps" in the
-   * exclusion application in the exported timeseries.
+   * Exclusion duration. No restrictions on the possible values. When an ongoing operation is taking
+   * longer than initially expected, an existing entry in the exclusion list can be updated by
+   * extending the duration. This is supported by the subsystem exporting eligibility data as long
+   * as such extension is committed at least 10 minutes before the original exclusion expiration -
+   * otherwise it is possible that there will be "gaps" in the exclusion application in the exported
+   * timeseries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,13 +67,12 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
   private String startTime;
 
   /**
-   * Exclusion duration. No restrictions on the possible values.
-   *
-   * When an ongoing operation is taking longer than initially expected, an existing entry in the
-   * exclusion list can be updated by extending the duration. This is supported by the subsystem
-   * exporting eligibility data as long as such extension is committed at least 10 minutes before
-   * the original exclusion expiration - otherwise it is possible that there will be "gaps" in the
-   * exclusion application in the exported timeseries.
+   * Exclusion duration. No restrictions on the possible values. When an ongoing operation is taking
+   * longer than initially expected, an existing entry in the exclusion list can be updated by
+   * extending the duration. This is supported by the subsystem exporting eligibility data as long
+   * as such extension is committed at least 10 minutes before the original exclusion expiration -
+   * otherwise it is possible that there will be "gaps" in the exclusion application in the exported
+   * timeseries.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -82,13 +80,12 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
   }
 
   /**
-   * Exclusion duration. No restrictions on the possible values.
-   *
-   * When an ongoing operation is taking longer than initially expected, an existing entry in the
-   * exclusion list can be updated by extending the duration. This is supported by the subsystem
-   * exporting eligibility data as long as such extension is committed at least 10 minutes before
-   * the original exclusion expiration - otherwise it is possible that there will be "gaps" in the
-   * exclusion application in the exported timeseries.
+   * Exclusion duration. No restrictions on the possible values. When an ongoing operation is taking
+   * longer than initially expected, an existing entry in the exclusion list can be updated by
+   * extending the duration. This is supported by the subsystem exporting eligibility data as long
+   * as such extension is committed at least 10 minutes before the original exclusion expiration -
+   * otherwise it is possible that there will be "gaps" in the exclusion application in the exported
+   * timeseries.
    * @param duration duration or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setDuration(String duration) {

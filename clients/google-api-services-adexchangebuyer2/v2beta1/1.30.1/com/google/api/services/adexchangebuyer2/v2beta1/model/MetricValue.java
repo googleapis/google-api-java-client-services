@@ -42,9 +42,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
    * The variance (i.e. square of the standard deviation) of the metric value. If value is exact,
    * variance is 0. Can be used to calculate margin of error as a percentage of value, using the
    * following formula, where Z is the standard constant that depends on the desired size of the
-   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645):
-   *
-   *   marginOfError = 100 * Z * sqrt(variance) / value
+   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645): marginOfError = 100 * Z
+   * * sqrt(variance) / value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -71,9 +70,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
    * The variance (i.e. square of the standard deviation) of the metric value. If value is exact,
    * variance is 0. Can be used to calculate margin of error as a percentage of value, using the
    * following formula, where Z is the standard constant that depends on the desired size of the
-   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645):
-   *
-   *   marginOfError = 100 * Z * sqrt(variance) / value
+   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645): marginOfError = 100 * Z
+   * * sqrt(variance) / value
    * @return value or {@code null} for none
    */
   public java.lang.Long getVariance() {
@@ -84,9 +82,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
    * The variance (i.e. square of the standard deviation) of the metric value. If value is exact,
    * variance is 0. Can be used to calculate margin of error as a percentage of value, using the
    * following formula, where Z is the standard constant that depends on the desired size of the
-   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645):
-   *
-   *   marginOfError = 100 * Z * sqrt(variance) / value
+   * confidence interval (e.g. for 90% confidence interval, use Z = 1.645): marginOfError = 100 * Z
+   * * sqrt(variance) / value
    * @param variance variance or {@code null} for none
    */
   public MetricValue setVariance(java.lang.Long variance) {

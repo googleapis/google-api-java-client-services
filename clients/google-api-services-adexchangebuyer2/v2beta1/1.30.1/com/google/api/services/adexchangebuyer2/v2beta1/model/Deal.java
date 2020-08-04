@@ -57,10 +57,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private PrivateData buyerPrivateData;
 
   /**
-   * The product ID from which this deal was created.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The product ID from which this deal was created. Note: This field may be set only when creating
+   * the resource. Modifying this field while updating the resource will result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +67,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Optional revision number of the product that the deal was created from. If present on create,
    * and the server `product_revision` has advanced sinced the passed-in `create_product_revision`,
-   * an `ABORTED` error will be returned.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * an `ABORTED` error will be returned. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -194,10 +190,9 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The syndication product associated with the deal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The syndication product associated with the deal. Note: This field may be set only when
+   * creating the resource. Modifying this field while updating the resource will result in an
+   * error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,10 +287,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The product ID from which this deal was created.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The product ID from which this deal was created. Note: This field may be set only when creating
+   * the resource. Modifying this field while updating the resource will result in an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreateProductId() {
@@ -303,10 +296,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The product ID from which this deal was created.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The product ID from which this deal was created. Note: This field may be set only when creating
+   * the resource. Modifying this field while updating the resource will result in an error.
    * @param createProductId createProductId or {@code null} for none
    */
   public Deal setCreateProductId(java.lang.String createProductId) {
@@ -317,10 +308,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Optional revision number of the product that the deal was created from. If present on create,
    * and the server `product_revision` has advanced sinced the passed-in `create_product_revision`,
-   * an `ABORTED` error will be returned.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * an `ABORTED` error will be returned. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreateProductRevision() {
@@ -330,10 +319,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Optional revision number of the product that the deal was created from. If present on create,
    * and the server `product_revision` has advanced sinced the passed-in `create_product_revision`,
-   * an `ABORTED` error will be returned.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * an `ABORTED` error will be returned. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * @param createProductRevision createProductRevision or {@code null} for none
    */
   public Deal setCreateProductRevision(java.lang.Long createProductRevision) {
@@ -605,10 +592,9 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The syndication product associated with the deal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The syndication product associated with the deal. Note: This field may be set only when
+   * creating the resource. Modifying this field while updating the resource will result in an
+   * error.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyndicationProduct() {
@@ -616,10 +602,9 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The syndication product associated with the deal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The syndication product associated with the deal. Note: This field may be set only when
+   * creating the resource. Modifying this field while updating the resource will result in an
+   * error.
    * @param syndicationProduct syndicationProduct or {@code null} for none
    */
   public Deal setSyndicationProduct(java.lang.String syndicationProduct) {

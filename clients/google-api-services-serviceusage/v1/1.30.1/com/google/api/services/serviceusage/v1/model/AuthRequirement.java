@@ -32,30 +32,20 @@ public final class AuthRequirement extends com.google.api.client.json.GenericJso
 
   /**
    * NOTE: This will be deprecated soon, once AuthProvider.audiences is implemented and accepted in
-   * all the runtime components.
-   *
-   * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
-   * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
-   * will be accepted. When this setting is absent, only JWTs with audience
+   * all the runtime components. The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-
+   * oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of
+   * these audiences will be accepted. When this setting is absent, only JWTs with audience
    * "https://Service_name/API_name" will be accepted. For example, if no audiences are in the
    * setting, LibraryService API will only accept JWTs with the following audience "https://library-
-   * example.googleapis.com/google.example.library.v1.LibraryService".
-   *
-   * Example:
-   *
-   *     audiences: bookstore_android.apps.googleusercontent.com,
-   * bookstore_web.apps.googleusercontent.com
+   * example.googleapis.com/google.example.library.v1.LibraryService". Example: audiences:
+   * bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audiences;
 
   /**
-   * id from authentication provider.
-   *
-   * Example:
-   *
-   *     provider_id: bookstore_auth
+   * id from authentication provider. Example: provider_id: bookstore_auth
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,19 +53,13 @@ public final class AuthRequirement extends com.google.api.client.json.GenericJso
 
   /**
    * NOTE: This will be deprecated soon, once AuthProvider.audiences is implemented and accepted in
-   * all the runtime components.
-   *
-   * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
-   * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
-   * will be accepted. When this setting is absent, only JWTs with audience
+   * all the runtime components. The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-
+   * oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of
+   * these audiences will be accepted. When this setting is absent, only JWTs with audience
    * "https://Service_name/API_name" will be accepted. For example, if no audiences are in the
    * setting, LibraryService API will only accept JWTs with the following audience "https://library-
-   * example.googleapis.com/google.example.library.v1.LibraryService".
-   *
-   * Example:
-   *
-   *     audiences: bookstore_android.apps.googleusercontent.com,
-   * bookstore_web.apps.googleusercontent.com
+   * example.googleapis.com/google.example.library.v1.LibraryService". Example: audiences:
+   * bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
    * @return value or {@code null} for none
    */
   public java.lang.String getAudiences() {
@@ -84,19 +68,13 @@ public final class AuthRequirement extends com.google.api.client.json.GenericJso
 
   /**
    * NOTE: This will be deprecated soon, once AuthProvider.audiences is implemented and accepted in
-   * all the runtime components.
-   *
-   * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
-   * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
-   * will be accepted. When this setting is absent, only JWTs with audience
+   * all the runtime components. The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-
+   * oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of
+   * these audiences will be accepted. When this setting is absent, only JWTs with audience
    * "https://Service_name/API_name" will be accepted. For example, if no audiences are in the
    * setting, LibraryService API will only accept JWTs with the following audience "https://library-
-   * example.googleapis.com/google.example.library.v1.LibraryService".
-   *
-   * Example:
-   *
-   *     audiences: bookstore_android.apps.googleusercontent.com,
-   * bookstore_web.apps.googleusercontent.com
+   * example.googleapis.com/google.example.library.v1.LibraryService". Example: audiences:
+   * bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
    * @param audiences audiences or {@code null} for none
    */
   public AuthRequirement setAudiences(java.lang.String audiences) {
@@ -105,11 +83,7 @@ public final class AuthRequirement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * id from authentication provider.
-   *
-   * Example:
-   *
-   *     provider_id: bookstore_auth
+   * id from authentication provider. Example: provider_id: bookstore_auth
    * @return value or {@code null} for none
    */
   public java.lang.String getProviderId() {
@@ -117,11 +91,7 @@ public final class AuthRequirement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * id from authentication provider.
-   *
-   * Example:
-   *
-   *     provider_id: bookstore_auth
+   * id from authentication provider. Example: provider_id: bookstore_auth
    * @param providerId providerId or {@code null} for none
    */
   public AuthRequirement setProviderId(java.lang.String providerId) {

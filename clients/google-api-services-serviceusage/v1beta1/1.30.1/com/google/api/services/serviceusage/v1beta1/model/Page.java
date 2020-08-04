@@ -31,7 +31,7 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Markdown content of the page. You can use == include {path} == to include content from a
+   * The Markdown content of the page. You can use (== include {path} ==) to include content from a
    * Markdown file.
    * The value may be {@code null}.
    */
@@ -42,10 +42,9 @@ public final class Page extends com.google.api.client.json.GenericJson {
    * The name of the page. It will be used as an identity of the page to generate URI of the page,
    * text of the link to this page in navigation, etc. The full page name (start from the root page
    * name to this page concatenated with `.`) can be used as reference to the page in your
-   * documentation. For example: pages: - name: Tutorial   content: == include tutorial.md ==
-   * subpages:   - name: Java     content: == include tutorial_java.md ==
-   *
-   * You can reference `Java` page using Markdown reference link syntax: `Java`.
+   * documentation. For example: pages: - name: Tutorial content: (== include tutorial.md ==)
+   * subpages: - name: Java content: (== include tutorial_java.md ==) You can reference `Java` page
+   * using Markdown reference link syntax: `Java`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +59,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   private java.util.List<Page> subpages;
 
   /**
-   * The Markdown content of the page. You can use == include {path} == to include content from a
+   * The Markdown content of the page. You can use (== include {path} ==) to include content from a
    * Markdown file.
    * @return value or {@code null} for none
    */
@@ -69,7 +68,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Markdown content of the page. You can use == include {path} == to include content from a
+   * The Markdown content of the page. You can use (== include {path} ==) to include content from a
    * Markdown file.
    * @param content content or {@code null} for none
    */
@@ -82,10 +81,9 @@ public final class Page extends com.google.api.client.json.GenericJson {
    * The name of the page. It will be used as an identity of the page to generate URI of the page,
    * text of the link to this page in navigation, etc. The full page name (start from the root page
    * name to this page concatenated with `.`) can be used as reference to the page in your
-   * documentation. For example: pages: - name: Tutorial   content: == include tutorial.md ==
-   * subpages:   - name: Java     content: == include tutorial_java.md ==
-   *
-   * You can reference `Java` page using Markdown reference link syntax: `Java`.
+   * documentation. For example: pages: - name: Tutorial content: (== include tutorial.md ==)
+   * subpages: - name: Java content: (== include tutorial_java.md ==) You can reference `Java` page
+   * using Markdown reference link syntax: `Java`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -96,10 +94,9 @@ public final class Page extends com.google.api.client.json.GenericJson {
    * The name of the page. It will be used as an identity of the page to generate URI of the page,
    * text of the link to this page in navigation, etc. The full page name (start from the root page
    * name to this page concatenated with `.`) can be used as reference to the page in your
-   * documentation. For example: pages: - name: Tutorial   content: == include tutorial.md ==
-   * subpages:   - name: Java     content: == include tutorial_java.md ==
-   *
-   * You can reference `Java` page using Markdown reference link syntax: `Java`.
+   * documentation. For example: pages: - name: Tutorial content: (== include tutorial.md ==)
+   * subpages: - name: Java content: (== include tutorial_java.md ==) You can reference `Java` page
+   * using Markdown reference link syntax: `Java`.
    * @param name name or {@code null} for none
    */
   public Page setName(java.lang.String name) {

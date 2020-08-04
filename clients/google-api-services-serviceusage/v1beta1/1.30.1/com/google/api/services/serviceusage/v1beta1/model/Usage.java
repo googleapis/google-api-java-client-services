@@ -31,7 +31,6 @@ public final class Usage extends com.google.api.client.json.GenericJson {
 
   /**
    * The full resource name of a channel used for sending notifications to the service producer.
-   *
    * Google Service Management currently only supports [Google Cloud
    * Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud
    * Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud
@@ -50,9 +49,8 @@ public final class Usage extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> requirements;
 
   /**
-   * A list of usage rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration
+   * rules follow "last one wins" order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +65,6 @@ public final class Usage extends com.google.api.client.json.GenericJson {
 
   /**
    * The full resource name of a channel used for sending notifications to the service producer.
-   *
    * Google Service Management currently only supports [Google Cloud
    * Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud
    * Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud
@@ -80,7 +77,6 @@ public final class Usage extends com.google.api.client.json.GenericJson {
 
   /**
    * The full resource name of a channel used for sending notifications to the service producer.
-   *
    * Google Service Management currently only supports [Google Cloud
    * Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud
    * Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud
@@ -112,9 +108,8 @@ public final class Usage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of usage rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration
+   * rules follow "last one wins" order.
    * @return value or {@code null} for none
    */
   public java.util.List<UsageRule> getRules() {
@@ -122,9 +117,8 @@ public final class Usage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of usage rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration
+   * rules follow "last one wins" order.
    * @param rules rules or {@code null} for none
    */
   public Usage setRules(java.util.List<UsageRule> rules) {

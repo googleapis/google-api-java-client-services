@@ -17,23 +17,14 @@
 package com.google.api.services.serviceusage.v1.model;
 
 /**
- * Usage configuration rules for the service.
- *
- * NOTE: Under development.
- *
- * Use this rule to configure unregistered calls for the service. Unregistered calls are calls that
- * do not contain consumer project identity. (Example: calls that do not contain an API key). By
- * default, API methods do not allow unregistered calls, and each method call must be identified by
- * a consumer project identity. Use this rule to allow/disallow unregistered calls.
- *
- * Example of an API that wants to allow unregistered calls for entire service.
- *
- *     usage:       rules:       - selector: "*"         allow_unregistered_calls: true
- *
- * Example of a method that wants to allow unregistered calls.
- *
- *     usage:       rules:       - selector: "google.example.library.v1.LibraryService.CreateBook"
- * allow_unregistered_calls: true
+ * Usage configuration rules for the service. NOTE: Under development. Use this rule to configure
+ * unregistered calls for the service. Unregistered calls are calls that do not contain consumer
+ * project identity. (Example: calls that do not contain an API key). By default, API methods do not
+ * allow unregistered calls, and each method call must be identified by a consumer project identity.
+ * Use this rule to allow/disallow unregistered calls. Example of an API that wants to allow
+ * unregistered calls for entire service. usage: rules: - selector: "*" allow_unregistered_calls:
+ * true Example of a method that wants to allow unregistered calls. usage: rules: - selector:
+ * "google.example.library.v1.LibraryService.CreateBook" allow_unregistered_calls: true
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -55,7 +46,6 @@ public final class UsageRule extends com.google.api.client.json.GenericJson {
 
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
-   *
    * Refer to selector for syntax details.
    * The value may be {@code null}.
    */
@@ -92,7 +82,6 @@ public final class UsageRule extends com.google.api.client.json.GenericJson {
 
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
-   *
    * Refer to selector for syntax details.
    * @return value or {@code null} for none
    */
@@ -102,7 +91,6 @@ public final class UsageRule extends com.google.api.client.json.GenericJson {
 
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
-   *
    * Refer to selector for syntax details.
    * @param selector selector or {@code null} for none
    */

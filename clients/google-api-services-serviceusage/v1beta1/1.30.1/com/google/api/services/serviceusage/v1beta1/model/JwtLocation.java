@@ -47,9 +47,8 @@ public final class JwtLocation extends com.google.api.client.json.GenericJson {
    * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type.
    * Must be empty for "in" query type. If not empty, the header value has to match (case sensitive)
    * this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after
-   * the prefix is removed.
-   *
-   * For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
+   * the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer "
+   * with a space at the end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +92,8 @@ public final class JwtLocation extends com.google.api.client.json.GenericJson {
    * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type.
    * Must be empty for "in" query type. If not empty, the header value has to match (case sensitive)
    * this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after
-   * the prefix is removed.
-   *
-   * For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
+   * the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer "
+   * with a space at the end.
    * @return value or {@code null} for none
    */
   public java.lang.String getValuePrefix() {
@@ -106,9 +104,8 @@ public final class JwtLocation extends com.google.api.client.json.GenericJson {
    * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type.
    * Must be empty for "in" query type. If not empty, the header value has to match (case sensitive)
    * this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after
-   * the prefix is removed.
-   *
-   * For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
+   * the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer "
+   * with a space at the end.
    * @param valuePrefix valuePrefix or {@code null} for none
    */
   public JwtLocation setValuePrefix(java.lang.String valuePrefix) {

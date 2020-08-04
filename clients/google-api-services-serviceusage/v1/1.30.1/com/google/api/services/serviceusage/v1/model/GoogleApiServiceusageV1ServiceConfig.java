@@ -71,9 +71,8 @@ public final class GoogleApiServiceusageV1ServiceConfig extends com.google.api.c
   }
 
   /**
-   * The DNS address at which this service is available.
-   *
-   * An example DNS address would be: `calendar.googleapis.com`.
+   * The DNS address at which this service is available. An example DNS address would be:
+   * `calendar.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,9 +170,8 @@ public final class GoogleApiServiceusageV1ServiceConfig extends com.google.api.c
   }
 
   /**
-   * The DNS address at which this service is available.
-   *
-   * An example DNS address would be: `calendar.googleapis.com`.
+   * The DNS address at which this service is available. An example DNS address would be:
+   * `calendar.googleapis.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -181,9 +179,8 @@ public final class GoogleApiServiceusageV1ServiceConfig extends com.google.api.c
   }
 
   /**
-   * The DNS address at which this service is available.
-   *
-   * An example DNS address would be: `calendar.googleapis.com`.
+   * The DNS address at which this service is available. An example DNS address would be:
+   * `calendar.googleapis.com`.
    * @param name name or {@code null} for none
    */
   public GoogleApiServiceusageV1ServiceConfig setName(java.lang.String name) {

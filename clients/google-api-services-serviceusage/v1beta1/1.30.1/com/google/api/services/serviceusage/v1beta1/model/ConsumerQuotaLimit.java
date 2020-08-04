@@ -44,20 +44,16 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   private java.lang.Boolean isPrecise;
 
   /**
-   * The name of the parent metric of this limit.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the parent metric of this limit. An example name would be:
+   * `compute.googleapis.com/cpus`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
 
   /**
-   * The resource name of the quota limit.
-   *
-   * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/co
-   * mpute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-   *
+   * The resource name of the quota limit. An example name would be: `projects/123/services/compute.
+   * googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
    * The resource name is intended to be opaque and should not be parsed for its component strings,
    * since its representation could change in the future.
    * The value may be {@code null}.
@@ -75,10 +71,9 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   private java.util.List<QuotaBucket> quotaBuckets;
 
   /**
-   * The limit unit.
-   *
-   * An example unit would be `1/{project}/{region}` Note that `{project}` and `{region}` are not
-   * placeholders in this example; the literal characters `{` and `}` occur in the string.
+   * The limit unit. An example unit would be `1/{project}/{region}` Note that `{project}` and
+   * `{region}` are not placeholders in this example; the literal characters `{` and `}` occur in
+   * the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,9 +114,8 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the parent metric of this limit.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the parent metric of this limit. An example name would be:
+   * `compute.googleapis.com/cpus`
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -129,9 +123,8 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the parent metric of this limit.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the parent metric of this limit. An example name would be:
+   * `compute.googleapis.com/cpus`
    * @param metric metric or {@code null} for none
    */
   public ConsumerQuotaLimit setMetric(java.lang.String metric) {
@@ -140,11 +133,8 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resource name of the quota limit.
-   *
-   * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/co
-   * mpute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-   *
+   * The resource name of the quota limit. An example name would be: `projects/123/services/compute.
+   * googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
    * The resource name is intended to be opaque and should not be parsed for its component strings,
    * since its representation could change in the future.
    * @return value or {@code null} for none
@@ -154,11 +144,8 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resource name of the quota limit.
-   *
-   * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/co
-   * mpute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
-   *
+   * The resource name of the quota limit. An example name would be: `projects/123/services/compute.
+   * googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
    * The resource name is intended to be opaque and should not be parsed for its component strings,
    * since its representation could change in the future.
    * @param name name or {@code null} for none
@@ -190,10 +177,9 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   }
 
   /**
-   * The limit unit.
-   *
-   * An example unit would be `1/{project}/{region}` Note that `{project}` and `{region}` are not
-   * placeholders in this example; the literal characters `{` and `}` occur in the string.
+   * The limit unit. An example unit would be `1/{project}/{region}` Note that `{project}` and
+   * `{region}` are not placeholders in this example; the literal characters `{` and `}` occur in
+   * the string.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -201,10 +187,9 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   }
 
   /**
-   * The limit unit.
-   *
-   * An example unit would be `1/{project}/{region}` Note that `{project}` and `{region}` are not
-   * placeholders in this example; the literal characters `{` and `}` occur in the string.
+   * The limit unit. An example unit would be `1/{project}/{region}` Note that `{project}` and
+   * `{region}` are not placeholders in this example; the literal characters `{` and `}` occur in
+   * the string.
    * @param unit unit or {@code null} for none
    */
   public ConsumerQuotaLimit setUnit(java.lang.String unit) {

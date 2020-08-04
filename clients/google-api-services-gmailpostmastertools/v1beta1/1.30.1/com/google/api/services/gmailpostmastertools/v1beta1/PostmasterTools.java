@@ -150,10 +150,8 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the domain. It should have the form
-    `domains/{domain_name}`, where domain_name
-     *        is the fully qualified
-    domain name.
+     * @param name The resource name of the domain. It should have the form `domains/{domain_name}`, where domain_name
+     *        is the fully qualified domain name.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -181,10 +179,8 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the domain. It should have the form
-    `domains/{domain_name}`, where domain_name
-     *        is the fully qualified
-    domain name.
+       * @param name The resource name of the domain. It should have the form `domains/{domain_name}`, where domain_name
+     *        is the fully qualified domain name.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -484,8 +480,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the traffic statistics to get.
-      E.g.,
+       * @param name The resource name of the traffic statistics to get. E.g.,
        *        domains/mymail.mydomain.com/trafficStats/20160807.
        * @return the request
        */
@@ -514,8 +509,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the traffic statistics to get.
-      E.g.,
+         * @param name The resource name of the traffic statistics to get. E.g.,
        *        domains/mymail.mydomain.com/trafficStats/20160807.
          * @since 1.13
          */
@@ -636,10 +630,8 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The resource name of the domain whose traffic statistics we'd like to list.
-      It should have the form
-       *        `domains/{domain_name}`, where domain_name is
-      the fully qualified domain name.
+       * @param parent The resource name of the domain whose traffic statistics we'd like to list. It should have the form
+       *        `domains/{domain_name}`, where domain_name is the fully qualified domain name.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -667,10 +659,8 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The resource name of the domain whose traffic statistics we'd like to list.
-      It should have the form
-       *        `domains/{domain_name}`, where domain_name is
-      the fully qualified domain name.
+         * @param parent The resource name of the domain whose traffic statistics we'd like to list. It should have the form
+       *        `domains/{domain_name}`, where domain_name is the fully qualified domain name.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -821,9 +811,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
           return this;
         }
 
-        /**
-         * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-         */
+        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
         @com.google.api.client.util.Key("endDate.year")
         private java.lang.Integer endDateYear;
 
@@ -833,9 +821,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
           return endDateYear;
         }
 
-        /**
-         * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-         */
+        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
         public List setEndDateYear(java.lang.Integer endDateYear) {
           this.endDateYear = endDateYear;
           return this;
@@ -933,9 +919,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
           return this;
         }
 
-        /**
-         * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-         */
+        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
         @com.google.api.client.util.Key("startDate.year")
         private java.lang.Integer startDateYear;
 
@@ -945,9 +929,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
           return startDateYear;
         }
 
-        /**
-         * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
-         */
+        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
         public List setStartDateYear(java.lang.Integer startDateYear) {
           this.startDateYear = startDateYear;
           return this;

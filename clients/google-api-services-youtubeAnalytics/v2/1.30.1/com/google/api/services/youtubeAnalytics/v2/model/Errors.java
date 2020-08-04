@@ -17,9 +17,7 @@
 package com.google.api.services.youtubeAnalytics.v2.model;
 
 /**
- * Request Error information.
- *
- * The presence of an error field signals that the operation has failed.
+ * Request Error information. The presence of an error field signals that the operation has failed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Analytics API. For a detailed explanation

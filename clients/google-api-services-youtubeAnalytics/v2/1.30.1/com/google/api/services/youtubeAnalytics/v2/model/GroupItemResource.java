@@ -39,10 +39,8 @@ public final class GroupItemResource extends com.google.api.client.json.GenericJ
   private java.lang.String id;
 
   /**
-   * Identifies the type of resource being added to the group.
-   *
-   * Valid values for this property are:  * `youtube#channel`  * `youtube#playlist`  *
-   * `youtube#video`  * `youtubePartner#asset`
+   * Identifies the type of resource being added to the group. Valid values for this property are: *
+   * `youtube#channel` * `youtube#playlist` * `youtube#video` * `youtubePartner#asset`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,10 +66,8 @@ public final class GroupItemResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies the type of resource being added to the group.
-   *
-   * Valid values for this property are:  * `youtube#channel`  * `youtube#playlist`  *
-   * `youtube#video`  * `youtubePartner#asset`
+   * Identifies the type of resource being added to the group. Valid values for this property are: *
+   * `youtube#channel` * `youtube#playlist` * `youtube#video` * `youtubePartner#asset`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,10 +75,8 @@ public final class GroupItemResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies the type of resource being added to the group.
-   *
-   * Valid values for this property are:  * `youtube#channel`  * `youtube#playlist`  *
-   * `youtube#video`  * `youtubePartner#asset`
+   * Identifies the type of resource being added to the group. Valid values for this property are: *
+   * `youtube#channel` * `youtube#playlist` * `youtube#video` * `youtubePartner#asset`
    * @param kind kind or {@code null} for none
    */
   public GroupItemResource setKind(java.lang.String kind) {

@@ -32,7 +32,7 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
 
   /**
    * Error arguments, to be used when building user-friendly error messages given the error domain
-   * and code.  Different error codes require different arguments.
+   * and code. Different error codes require different arguments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,26 +62,22 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
   private java.lang.String domain;
 
   /**
-   * A short explanation for the error, which can be shared outside Google.
-   *
-   * Please set domain, code and arguments whenever possible instead of this error message so that
-   * external APIs can build safe error messages themselves.
-   *
-   * External messages built in a RoSy interface will most likely refer to information and concepts
-   * that are not available externally and should not be exposed. It is safer if external APIs can
-   * understand the errors and decide what the error message should look like.
+   * A short explanation for the error, which can be shared outside Google. Please set domain, code
+   * and arguments whenever possible instead of this error message so that external APIs can build
+   * safe error messages themselves. External messages built in a RoSy interface will most likely
+   * refer to information and concepts that are not available externally and should not be exposed.
+   * It is safer if external APIs can understand the errors and decide what the error message should
+   * look like.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalErrorMessage;
 
   /**
-   * Location of the error, as specified by the location type.
-   *
-   * If location_type is PATH, this should be a path to a field that's relative to the request,
-   * using FieldPath notation (net/proto2/util/public/field_path.h).
-   *
-   * Examples:   authenticated_user.gaia_id   resource.address[2].country
+   * Location of the error, as specified by the location type. If location_type is PATH, this should
+   * be a path to a field that's relative to the request, using FieldPath notation
+   * (net/proto2/util/public/field_path.h). Examples: authenticated_user.gaia_id
+   * resource.address[2].country
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +91,7 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
 
   /**
    * Error arguments, to be used when building user-friendly error messages given the error domain
-   * and code.  Different error codes require different arguments.
+   * and code. Different error codes require different arguments.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgument() {
@@ -104,7 +100,7 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
 
   /**
    * Error arguments, to be used when building user-friendly error messages given the error domain
-   * and code.  Different error codes require different arguments.
+   * and code. Different error codes require different arguments.
    * @param argument argument or {@code null} for none
    */
   public ErrorProto setArgument(java.util.List<java.lang.String> argument) {
@@ -168,14 +164,12 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short explanation for the error, which can be shared outside Google.
-   *
-   * Please set domain, code and arguments whenever possible instead of this error message so that
-   * external APIs can build safe error messages themselves.
-   *
-   * External messages built in a RoSy interface will most likely refer to information and concepts
-   * that are not available externally and should not be exposed. It is safer if external APIs can
-   * understand the errors and decide what the error message should look like.
+   * A short explanation for the error, which can be shared outside Google. Please set domain, code
+   * and arguments whenever possible instead of this error message so that external APIs can build
+   * safe error messages themselves. External messages built in a RoSy interface will most likely
+   * refer to information and concepts that are not available externally and should not be exposed.
+   * It is safer if external APIs can understand the errors and decide what the error message should
+   * look like.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalErrorMessage() {
@@ -183,14 +177,12 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short explanation for the error, which can be shared outside Google.
-   *
-   * Please set domain, code and arguments whenever possible instead of this error message so that
-   * external APIs can build safe error messages themselves.
-   *
-   * External messages built in a RoSy interface will most likely refer to information and concepts
-   * that are not available externally and should not be exposed. It is safer if external APIs can
-   * understand the errors and decide what the error message should look like.
+   * A short explanation for the error, which can be shared outside Google. Please set domain, code
+   * and arguments whenever possible instead of this error message so that external APIs can build
+   * safe error messages themselves. External messages built in a RoSy interface will most likely
+   * refer to information and concepts that are not available externally and should not be exposed.
+   * It is safer if external APIs can understand the errors and decide what the error message should
+   * look like.
    * @param externalErrorMessage externalErrorMessage or {@code null} for none
    */
   public ErrorProto setExternalErrorMessage(java.lang.String externalErrorMessage) {
@@ -199,12 +191,10 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Location of the error, as specified by the location type.
-   *
-   * If location_type is PATH, this should be a path to a field that's relative to the request,
-   * using FieldPath notation (net/proto2/util/public/field_path.h).
-   *
-   * Examples:   authenticated_user.gaia_id   resource.address[2].country
+   * Location of the error, as specified by the location type. If location_type is PATH, this should
+   * be a path to a field that's relative to the request, using FieldPath notation
+   * (net/proto2/util/public/field_path.h). Examples: authenticated_user.gaia_id
+   * resource.address[2].country
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -212,12 +202,10 @@ public final class ErrorProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Location of the error, as specified by the location type.
-   *
-   * If location_type is PATH, this should be a path to a field that's relative to the request,
-   * using FieldPath notation (net/proto2/util/public/field_path.h).
-   *
-   * Examples:   authenticated_user.gaia_id   resource.address[2].country
+   * Location of the error, as specified by the location type. If location_type is PATH, this should
+   * be a path to a field that's relative to the request, using FieldPath notation
+   * (net/proto2/util/public/field_path.h). Examples: authenticated_user.gaia_id
+   * resource.address[2].country
    * @param location location or {@code null} for none
    */
   public ErrorProto setLocation(java.lang.String location) {

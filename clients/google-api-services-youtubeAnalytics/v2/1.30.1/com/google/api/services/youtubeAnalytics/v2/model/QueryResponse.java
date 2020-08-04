@@ -61,13 +61,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   /**
    * The list contains all rows of the result table. Each item in the list is an array that contains
    * comma-delimited data corresponding to a single row of data. The order of the comma-delimited
-   * data fields will match the order of the columns listed in the `columnHeaders` field.
-   *
-   * If no data is available for the given query, the `rows` element will be omitted from the
-   * response.
-   *
-   * The response for a query with the `day` dimension will not contain rows for the most recent
-   * days.
+   * data fields will match the order of the columns listed in the `columnHeaders` field. If no data
+   * is available for the given query, the `rows` element will be omitted from the response. The
+   * response for a query with the `day` dimension will not contain rows for the most recent days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,13 +137,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   /**
    * The list contains all rows of the result table. Each item in the list is an array that contains
    * comma-delimited data corresponding to a single row of data. The order of the comma-delimited
-   * data fields will match the order of the columns listed in the `columnHeaders` field.
-   *
-   * If no data is available for the given query, the `rows` element will be omitted from the
-   * response.
-   *
-   * The response for a query with the `day` dimension will not contain rows for the most recent
-   * days.
+   * data fields will match the order of the columns listed in the `columnHeaders` field. If no data
+   * is available for the given query, the `rows` element will be omitted from the response. The
+   * response for a query with the `day` dimension will not contain rows for the most recent days.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.List<java.lang.Object>> getRows() {
@@ -157,13 +149,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   /**
    * The list contains all rows of the result table. Each item in the list is an array that contains
    * comma-delimited data corresponding to a single row of data. The order of the comma-delimited
-   * data fields will match the order of the columns listed in the `columnHeaders` field.
-   *
-   * If no data is available for the given query, the `rows` element will be omitted from the
-   * response.
-   *
-   * The response for a query with the `day` dimension will not contain rows for the most recent
-   * days.
+   * data fields will match the order of the columns listed in the `columnHeaders` field. If no data
+   * is available for the given query, the `rows` element will be omitted from the response. The
+   * response for a query with the `day` dimension will not contain rows for the most recent days.
    * @param rows rows or {@code null} for none
    */
   public QueryResponse setRows(java.util.List<java.util.List<java.lang.Object>> rows) {

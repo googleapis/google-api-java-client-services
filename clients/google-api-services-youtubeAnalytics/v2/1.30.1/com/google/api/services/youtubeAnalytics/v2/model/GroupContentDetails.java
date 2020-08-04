@@ -38,10 +38,8 @@ public final class GroupContentDetails extends com.google.api.client.json.Generi
   private java.math.BigInteger itemCount;
 
   /**
-   * The type of resources that the group contains.
-   *
-   * Valid values for this property are:  * `youtube#channel`  * `youtube#playlist`  *
-   * `youtube#video`  * `youtubePartner#asset`
+   * The type of resources that the group contains. Valid values for this property are: *
+   * `youtube#channel` * `youtube#playlist` * `youtube#video` * `youtubePartner#asset`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,10 +63,8 @@ public final class GroupContentDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The type of resources that the group contains.
-   *
-   * Valid values for this property are:  * `youtube#channel`  * `youtube#playlist`  *
-   * `youtube#video`  * `youtubePartner#asset`
+   * The type of resources that the group contains. Valid values for this property are: *
+   * `youtube#channel` * `youtube#playlist` * `youtube#video` * `youtubePartner#asset`
    * @return value or {@code null} for none
    */
   public java.lang.String getItemType() {
@@ -76,10 +72,8 @@ public final class GroupContentDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The type of resources that the group contains.
-   *
-   * Valid values for this property are:  * `youtube#channel`  * `youtube#playlist`  *
-   * `youtube#video`  * `youtubePartner#asset`
+   * The type of resources that the group contains. Valid values for this property are: *
+   * `youtube#channel` * `youtube#playlist` * `youtube#video` * `youtubePartner#asset`
    * @param itemType itemType or {@code null} for none
    */
   public GroupContentDetails setItemType(java.lang.String itemType) {

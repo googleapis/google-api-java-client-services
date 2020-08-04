@@ -39,9 +39,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
 
   /**
    * The time at which [enforcement](https://support.google.com/webtools/answer/7538608) against the
-   * site began or will begin.
-   *
-   * Not set when the filter_status is OFF.
+   * site began or will begin. Not set when the filter_status is OFF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,10 +60,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   private String lastChangeTime;
 
   /**
-   * A link to the full Abusive Experience Report for the site.
-   *
-   * Not set in ViolatingSitesResponse.
-   *
+   * A link to the full Abusive Experience Report for the site. Not set in ViolatingSitesResponse.
    * Note that you must complete the [Search Console verification
    * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
    * access the full report.
@@ -107,9 +102,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
 
   /**
    * The time at which [enforcement](https://support.google.com/webtools/answer/7538608) against the
-   * site began or will begin.
-   *
-   * Not set when the filter_status is OFF.
+   * site began or will begin. Not set when the filter_status is OFF.
    * @return value or {@code null} for none
    */
   public String getEnforcementTime() {
@@ -118,9 +111,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
 
   /**
    * The time at which [enforcement](https://support.google.com/webtools/answer/7538608) against the
-   * site began or will begin.
-   *
-   * Not set when the filter_status is OFF.
+   * site began or will begin. Not set when the filter_status is OFF.
    * @param enforcementTime enforcementTime or {@code null} for none
    */
   public SiteSummaryResponse setEnforcementTime(String enforcementTime) {
@@ -163,10 +154,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A link to the full Abusive Experience Report for the site.
-   *
-   * Not set in ViolatingSitesResponse.
-   *
+   * A link to the full Abusive Experience Report for the site. Not set in ViolatingSitesResponse.
    * Note that you must complete the [Search Console verification
    * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
    * access the full report.
@@ -177,10 +165,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A link to the full Abusive Experience Report for the site.
-   *
-   * Not set in ViolatingSitesResponse.
-   *
+   * A link to the full Abusive Experience Report for the site. Not set in ViolatingSitesResponse.
    * Note that you must complete the [Search Console verification
    * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
    * access the full report.

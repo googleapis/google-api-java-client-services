@@ -150,8 +150,7 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the abusiveexperiencereport server.  After setting
      * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The name of the site whose summary to get, e.g.
-    `sites/http%3A%2F%2Fwww.google.com%2F`.
+     * @param name Required. The name of the site whose summary to get, e.g. `sites/http%3A%2F%2Fwww.google.com%2F`.
      *        Format: `sites/{site}`
      * @return the request
      */
@@ -179,8 +178,7 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the site whose summary to get, e.g.
-    `sites/http%3A%2F%2Fwww.google.com%2F`.
+       * @param name Required. The name of the site whose summary to get, e.g. `sites/http%3A%2F%2Fwww.google.com%2F`.
      *        Format: `sites/{site}`
        * @since 1.13
        */
@@ -261,15 +259,12 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
 
       /**
        * Required. The name of the site whose summary to get, e.g.
-       * `sites/http%3A%2F%2Fwww.google.com%2F`.
-       *
-       * Format: `sites/{site}`
+       * `sites/http%3A%2F%2Fwww.google.com%2F`. Format: `sites/{site}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The name of the site whose summary to get, e.g. `sites/http%3A%2F%2Fwww.google.com%2F`.
-
      Format: `sites/{site}`
        */
       public java.lang.String getName() {
@@ -278,9 +273,7 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
 
       /**
        * Required. The name of the site whose summary to get, e.g.
-       * `sites/http%3A%2F%2Fwww.google.com%2F`.
-       *
-       * Format: `sites/{site}`
+       * `sites/http%3A%2F%2Fwww.google.com%2F`. Format: `sites/{site}`
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

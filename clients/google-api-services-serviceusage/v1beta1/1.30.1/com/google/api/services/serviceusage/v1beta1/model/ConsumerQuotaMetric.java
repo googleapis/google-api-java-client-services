@@ -43,31 +43,24 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name of the metric.
-   *
-   * An example name would be: "CPUs"
+   * The display name of the metric. An example name would be: "CPUs"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The name of the metric.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the metric. An example name would be: `compute.googleapis.com/cpus`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
 
   /**
-   * The resource name of the quota settings on this metric for this consumer.
-   *
-   * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/co
-   * mpute.googleapis.com%2Fcpus
-   *
-   * The resource name is intended to be opaque and should not be parsed for its component strings,
-   * since its representation could change in the future.
+   * The resource name of the quota settings on this metric for this consumer. An example name would
+   * be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2
+   * Fcpus The resource name is intended to be opaque and should not be parsed for its component
+   * strings, since its representation could change in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,9 +91,7 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name of the metric.
-   *
-   * An example name would be: "CPUs"
+   * The display name of the metric. An example name would be: "CPUs"
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -108,9 +99,7 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name of the metric.
-   *
-   * An example name would be: "CPUs"
+   * The display name of the metric. An example name would be: "CPUs"
    * @param displayName displayName or {@code null} for none
    */
   public ConsumerQuotaMetric setDisplayName(java.lang.String displayName) {
@@ -119,9 +108,7 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the metric.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the metric. An example name would be: `compute.googleapis.com/cpus`
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -129,9 +116,7 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the metric.
-   *
-   * An example name would be: `compute.googleapis.com/cpus`
+   * The name of the metric. An example name would be: `compute.googleapis.com/cpus`
    * @param metric metric or {@code null} for none
    */
   public ConsumerQuotaMetric setMetric(java.lang.String metric) {
@@ -140,13 +125,10 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The resource name of the quota settings on this metric for this consumer.
-   *
-   * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/co
-   * mpute.googleapis.com%2Fcpus
-   *
-   * The resource name is intended to be opaque and should not be parsed for its component strings,
-   * since its representation could change in the future.
+   * The resource name of the quota settings on this metric for this consumer. An example name would
+   * be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2
+   * Fcpus The resource name is intended to be opaque and should not be parsed for its component
+   * strings, since its representation could change in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -154,13 +136,10 @@ public final class ConsumerQuotaMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * The resource name of the quota settings on this metric for this consumer.
-   *
-   * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/co
-   * mpute.googleapis.com%2Fcpus
-   *
-   * The resource name is intended to be opaque and should not be parsed for its component strings,
-   * since its representation could change in the future.
+   * The resource name of the quota settings on this metric for this consumer. An example name would
+   * be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2
+   * Fcpus The resource name is intended to be opaque and should not be parsed for its component
+   * strings, since its representation could change in the future.
    * @param name name or {@code null} for none
    */
   public ConsumerQuotaMetric setName(java.lang.String name) {

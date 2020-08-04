@@ -46,7 +46,6 @@ public final class SystemParameterRule extends com.google.api.client.json.Generi
 
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
-   *
    * Refer to selector for syntax details.
    * The value may be {@code null}.
    */
@@ -76,7 +75,6 @@ public final class SystemParameterRule extends com.google.api.client.json.Generi
 
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
-   *
    * Refer to selector for syntax details.
    * @return value or {@code null} for none
    */
@@ -86,7 +84,6 @@ public final class SystemParameterRule extends com.google.api.client.json.Generi
 
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
-   *
    * Refer to selector for syntax details.
    * @param selector selector or {@code null} for none
    */

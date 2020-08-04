@@ -17,13 +17,10 @@
 package com.google.api.services.serviceusage.v1beta1.model;
 
 /**
- * Authentication rules for the service.
- *
- * By default, if a method has any authentication requirements, every request must include a valid
- * credential matching one of the requirements. It's an error to include more than one kind of
- * credential in a single request.
- *
- * If a method doesn't have any auth requirements, request credentials will be ignored.
+ * Authentication rules for the service. By default, if a method has any authentication
+ * requirements, every request must include a valid credential matching one of the requirements.
+ * It's an error to include more than one kind of credential in a single request. If a method
+ * doesn't have any auth requirements, request credentials will be ignored.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -63,9 +60,7 @@ public final class AuthenticationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,9 +118,7 @@ public final class AuthenticationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelector() {
@@ -133,9 +126,7 @@ public final class AuthenticationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * @param selector selector or {@code null} for none
    */
   public AuthenticationRule setSelector(java.lang.String selector) {

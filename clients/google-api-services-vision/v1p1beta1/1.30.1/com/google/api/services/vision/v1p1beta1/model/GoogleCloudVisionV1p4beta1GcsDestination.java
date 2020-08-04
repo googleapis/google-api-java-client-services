@@ -34,20 +34,14 @@ public final class GoogleCloudVisionV1p4beta1GcsDestination extends com.google.a
    * format and preceded by its corresponding input URI prefix. This field can either represent a
    * gcs file prefix or gcs directory. In either case, the uri should be unique because in order to
    * get all of the output files, you will need to do a wildcard gcs search on the uri prefix you
-   * provide.
-   *
-   * Examples:
-   *
-   * *    File Prefix: gs://bucket-name/here/filenameprefix   The output files will be created in gs
-   * ://bucket-name/here/ and the names of the output files will begin with "filenameprefix".
-   *
-   * *    Directory Prefix: gs://bucket-name/some/location/   The output files will be created in gs
-   * ://bucket-name/some/location/ and the names of the output files could be anything because there
-   * was no filename prefix specified.
-   *
-   * If multiple outputs, each response is still AnnotateFileResponse, each of which contains some
-   * subset of the full list of AnnotateImageResponse. Multiple outputs can happen if, for example,
-   * the output JSON is too large and overflows into multiple sharded files.
+   * provide. Examples: * File Prefix: gs://bucket-name/here/filenameprefix The output files will be
+   * created in gs://bucket-name/here/ and the names of the output files will begin with
+   * "filenameprefix". * Directory Prefix: gs://bucket-name/some/location/ The output files will be
+   * created in gs://bucket-name/some/location/ and the names of the output files could be anything
+   * because there was no filename prefix specified. If multiple outputs, each response is still
+   * AnnotateFileResponse, each of which contains some subset of the full list of
+   * AnnotateImageResponse. Multiple outputs can happen if, for example, the output JSON is too
+   * large and overflows into multiple sharded files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,20 +52,14 @@ public final class GoogleCloudVisionV1p4beta1GcsDestination extends com.google.a
    * format and preceded by its corresponding input URI prefix. This field can either represent a
    * gcs file prefix or gcs directory. In either case, the uri should be unique because in order to
    * get all of the output files, you will need to do a wildcard gcs search on the uri prefix you
-   * provide.
-   *
-   * Examples:
-   *
-   * *    File Prefix: gs://bucket-name/here/filenameprefix   The output files will be created in gs
-   * ://bucket-name/here/ and the names of the output files will begin with "filenameprefix".
-   *
-   * *    Directory Prefix: gs://bucket-name/some/location/   The output files will be created in gs
-   * ://bucket-name/some/location/ and the names of the output files could be anything because there
-   * was no filename prefix specified.
-   *
-   * If multiple outputs, each response is still AnnotateFileResponse, each of which contains some
-   * subset of the full list of AnnotateImageResponse. Multiple outputs can happen if, for example,
-   * the output JSON is too large and overflows into multiple sharded files.
+   * provide. Examples: * File Prefix: gs://bucket-name/here/filenameprefix The output files will be
+   * created in gs://bucket-name/here/ and the names of the output files will begin with
+   * "filenameprefix". * Directory Prefix: gs://bucket-name/some/location/ The output files will be
+   * created in gs://bucket-name/some/location/ and the names of the output files could be anything
+   * because there was no filename prefix specified. If multiple outputs, each response is still
+   * AnnotateFileResponse, each of which contains some subset of the full list of
+   * AnnotateImageResponse. Multiple outputs can happen if, for example, the output JSON is too
+   * large and overflows into multiple sharded files.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -83,20 +71,14 @@ public final class GoogleCloudVisionV1p4beta1GcsDestination extends com.google.a
    * format and preceded by its corresponding input URI prefix. This field can either represent a
    * gcs file prefix or gcs directory. In either case, the uri should be unique because in order to
    * get all of the output files, you will need to do a wildcard gcs search on the uri prefix you
-   * provide.
-   *
-   * Examples:
-   *
-   * *    File Prefix: gs://bucket-name/here/filenameprefix   The output files will be created in gs
-   * ://bucket-name/here/ and the names of the output files will begin with "filenameprefix".
-   *
-   * *    Directory Prefix: gs://bucket-name/some/location/   The output files will be created in gs
-   * ://bucket-name/some/location/ and the names of the output files could be anything because there
-   * was no filename prefix specified.
-   *
-   * If multiple outputs, each response is still AnnotateFileResponse, each of which contains some
-   * subset of the full list of AnnotateImageResponse. Multiple outputs can happen if, for example,
-   * the output JSON is too large and overflows into multiple sharded files.
+   * provide. Examples: * File Prefix: gs://bucket-name/here/filenameprefix The output files will be
+   * created in gs://bucket-name/here/ and the names of the output files will begin with
+   * "filenameprefix". * Directory Prefix: gs://bucket-name/some/location/ The output files will be
+   * created in gs://bucket-name/some/location/ and the names of the output files could be anything
+   * because there was no filename prefix specified. If multiple outputs, each response is still
+   * AnnotateFileResponse, each of which contains some subset of the full list of
+   * AnnotateImageResponse. Multiple outputs can happen if, for example, the output JSON is too
+   * large and overflows into multiple sharded files.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudVisionV1p4beta1GcsDestination setUri(java.lang.String uri) {

@@ -33,11 +33,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   /**
    * Optional. Bounding polygons around the areas of interest in the reference image. If this field
    * is empty, the system will try to detect regions of interest. At most 10 bounding polygons will
-   * be used.
-   *
-   * The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of
-   * the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less
-   * (i.e. 1:3 is ok; 1:5 is not).
+   * be used. The provided shape is converted into a non-rotated rectangle. Once converted, the
+   * small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must
+   * be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,22 +48,16 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * The resource name of the reference image.
-   *
-   * Format is:
-   *
-   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
-   *
-   * This field is ignored when creating a reference image.
+   * The resource name of the reference image. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field
+   * is ignored when creating a reference image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The Google Cloud Storage URI of the reference image.
-   *
-   * The URI must start with `gs://`.
+   * Required. The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,11 +66,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   /**
    * Optional. Bounding polygons around the areas of interest in the reference image. If this field
    * is empty, the system will try to detect regions of interest. At most 10 bounding polygons will
-   * be used.
-   *
-   * The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of
-   * the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less
-   * (i.e. 1:3 is ok; 1:5 is not).
+   * be used. The provided shape is converted into a non-rotated rectangle. Once converted, the
+   * small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must
+   * be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVisionV1p3beta1BoundingPoly> getBoundingPolys() {
@@ -88,11 +78,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   /**
    * Optional. Bounding polygons around the areas of interest in the reference image. If this field
    * is empty, the system will try to detect regions of interest. At most 10 bounding polygons will
-   * be used.
-   *
-   * The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of
-   * the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less
-   * (i.e. 1:3 is ok; 1:5 is not).
+   * be used. The provided shape is converted into a non-rotated rectangle. Once converted, the
+   * small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must
+   * be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
    * @param boundingPolys boundingPolys or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1ReferenceImage setBoundingPolys(java.util.List<GoogleCloudVisionV1p3beta1BoundingPoly> boundingPolys) {
@@ -101,13 +89,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * The resource name of the reference image.
-   *
-   * Format is:
-   *
-   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
-   *
-   * This field is ignored when creating a reference image.
+   * The resource name of the reference image. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field
+   * is ignored when creating a reference image.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,13 +99,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * The resource name of the reference image.
-   *
-   * Format is:
-   *
-   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
-   *
-   * This field is ignored when creating a reference image.
+   * The resource name of the reference image. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field
+   * is ignored when creating a reference image.
    * @param name name or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1ReferenceImage setName(java.lang.String name) {
@@ -130,9 +110,7 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * Required. The Google Cloud Storage URI of the reference image.
-   *
-   * The URI must start with `gs://`.
+   * Required. The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -140,9 +118,7 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * Required. The Google Cloud Storage URI of the reference image.
-   *
-   * The URI must start with `gs://`.
+   * Required. The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1ReferenceImage setUri(java.lang.String uri) {

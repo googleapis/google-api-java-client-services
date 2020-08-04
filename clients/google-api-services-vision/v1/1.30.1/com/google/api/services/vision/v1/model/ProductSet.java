@@ -39,9 +39,8 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only. If there was an error with indexing the product set, the field is populated.
-   *
-   * This field is ignored when creating a ProductSet.
+   * Output only. If there was an error with indexing the product set, the field is populated. This
+   * field is ignored when creating a ProductSet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,20 +49,16 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The time at which this ProductSet was last indexed. Query results will reflect all
    * updates before this time. If this ProductSet has never been indexed, this timestamp is the
-   * default value "1970-01-01T00:00:00Z".
-   *
-   * This field is ignored when creating a ProductSet.
+   * default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String indexTime;
 
   /**
-   * The resource name of the ProductSet.
-   *
-   * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-   *
-   * This field is ignored when creating a ProductSet.
+   * The resource name of the ProductSet. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when
+   * creating a ProductSet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +84,8 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If there was an error with indexing the product set, the field is populated.
-   *
-   * This field is ignored when creating a ProductSet.
+   * Output only. If there was an error with indexing the product set, the field is populated. This
+   * field is ignored when creating a ProductSet.
    * @return value or {@code null} for none
    */
   public Status getIndexError() {
@@ -99,9 +93,8 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If there was an error with indexing the product set, the field is populated.
-   *
-   * This field is ignored when creating a ProductSet.
+   * Output only. If there was an error with indexing the product set, the field is populated. This
+   * field is ignored when creating a ProductSet.
    * @param indexError indexError or {@code null} for none
    */
   public ProductSet setIndexError(Status indexError) {
@@ -112,9 +105,7 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The time at which this ProductSet was last indexed. Query results will reflect all
    * updates before this time. If this ProductSet has never been indexed, this timestamp is the
-   * default value "1970-01-01T00:00:00Z".
-   *
-   * This field is ignored when creating a ProductSet.
+   * default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
    * @return value or {@code null} for none
    */
   public String getIndexTime() {
@@ -124,9 +115,7 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The time at which this ProductSet was last indexed. Query results will reflect all
    * updates before this time. If this ProductSet has never been indexed, this timestamp is the
-   * default value "1970-01-01T00:00:00Z".
-   *
-   * This field is ignored when creating a ProductSet.
+   * default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
    * @param indexTime indexTime or {@code null} for none
    */
   public ProductSet setIndexTime(String indexTime) {
@@ -135,11 +124,9 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the ProductSet.
-   *
-   * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-   *
-   * This field is ignored when creating a ProductSet.
+   * The resource name of the ProductSet. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when
+   * creating a ProductSet.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -147,11 +134,9 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the ProductSet.
-   *
-   * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-   *
-   * This field is ignored when creating a ProductSet.
+   * The resource name of the ProductSet. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when
+   * creating a ProductSet.
    * @param name name or {@code null} for none
    */
   public ProductSet setName(java.lang.String name) {

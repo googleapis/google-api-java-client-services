@@ -17,10 +17,9 @@
 package com.google.api.services.vision.v1.model;
 
 /**
- * Metadata for the batch operations such as the current state.
- *
- * This is included in the `metadata` field of the `Operation` returned by the `GetOperation` call
- * of the `google::longrunning::Operations` service.
+ * Metadata for the batch operations such as the current state. This is included in the `metadata`
+ * field of the `Operation` returned by the `GetOperation` call of the
+ * `google::longrunning::Operations` service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Vision API. For a detailed explanation see:

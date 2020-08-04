@@ -32,18 +32,16 @@ package com.google.api.services.toolresults.model;
 public final class ToolExecutionStep extends com.google.api.client.json.GenericJson {
 
   /**
-   * A Tool execution.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * A Tool execution. - In response: present if set by create/update request - In create/update
+   * request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ToolExecution toolExecution;
 
   /**
-   * A Tool execution.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * A Tool execution. - In response: present if set by create/update request - In create/update
+   * request: optional
    * @return value or {@code null} for none
    */
   public ToolExecution getToolExecution() {
@@ -51,9 +49,8 @@ public final class ToolExecutionStep extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A Tool execution.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * A Tool execution. - In response: present if set by create/update request - In create/update
+   * request: optional
    * @param toolExecution toolExecution or {@code null} for none
    */
   public ToolExecutionStep setToolExecution(ToolExecution toolExecution) {

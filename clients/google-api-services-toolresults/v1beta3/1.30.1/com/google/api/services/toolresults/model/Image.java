@@ -38,20 +38,15 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
-   * A reference to the full-size, original image.
-   *
-   * This is the same as the tool_outputs entry for the image under its Step.
-   *
-   * Always set.
+   * A reference to the full-size, original image. This is the same as the tool_outputs entry for
+   * the image under its Step. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ToolOutputReference sourceImage;
 
   /**
-   * The step to which the image is attached.
-   *
-   * Always set.
+   * The step to which the image is attached. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,11 +77,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the full-size, original image.
-   *
-   * This is the same as the tool_outputs entry for the image under its Step.
-   *
-   * Always set.
+   * A reference to the full-size, original image. This is the same as the tool_outputs entry for
+   * the image under its Step. Always set.
    * @return value or {@code null} for none
    */
   public ToolOutputReference getSourceImage() {
@@ -94,11 +86,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the full-size, original image.
-   *
-   * This is the same as the tool_outputs entry for the image under its Step.
-   *
-   * Always set.
+   * A reference to the full-size, original image. This is the same as the tool_outputs entry for
+   * the image under its Step. Always set.
    * @param sourceImage sourceImage or {@code null} for none
    */
   public Image setSourceImage(ToolOutputReference sourceImage) {
@@ -107,9 +96,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The step to which the image is attached.
-   *
-   * Always set.
+   * The step to which the image is attached. Always set.
    * @return value or {@code null} for none
    */
   public java.lang.String getStepId() {
@@ -117,9 +104,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The step to which the image is attached.
-   *
-   * Always set.
+   * The step to which the image is attached. Always set.
    * @param stepId stepId or {@code null} for none
    */
   public Image setStepId(java.lang.String stepId) {

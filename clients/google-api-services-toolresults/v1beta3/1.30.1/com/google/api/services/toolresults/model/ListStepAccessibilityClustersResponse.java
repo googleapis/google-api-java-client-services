@@ -43,7 +43,6 @@ public final class ListStepAccessibilityClustersResponse extends com.google.api.
   /**
    * A full resource name of the step. For example, projects/my-
    * project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef
-   *
    * Always presents.
    * The value may be {@code null}.
    */
@@ -76,7 +75,6 @@ public final class ListStepAccessibilityClustersResponse extends com.google.api.
   /**
    * A full resource name of the step. For example, projects/my-
    * project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef
-   *
    * Always presents.
    * @return value or {@code null} for none
    */
@@ -87,7 +85,6 @@ public final class ListStepAccessibilityClustersResponse extends com.google.api.
   /**
    * A full resource name of the step. For example, projects/my-
    * project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef
-   *
    * Always presents.
    * @param name name or {@code null} for none
    */

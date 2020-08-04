@@ -31,18 +31,16 @@ package com.google.api.services.toolresults.model;
 public final class TestTiming extends com.google.api.client.json.GenericJson {
 
   /**
-   * How long it took to run the test process.
-   *
-   * - In response: present if previously set. - In create/update request: optional
+   * How long it took to run the test process. - In response: present if previously set. - In
+   * create/update request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Duration testProcessDuration;
 
   /**
-   * How long it took to run the test process.
-   *
-   * - In response: present if previously set. - In create/update request: optional
+   * How long it took to run the test process. - In response: present if previously set. - In
+   * create/update request: optional
    * @return value or {@code null} for none
    */
   public Duration getTestProcessDuration() {
@@ -50,9 +48,8 @@ public final class TestTiming extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * How long it took to run the test process.
-   *
-   * - In response: present if previously set. - In create/update request: optional
+   * How long it took to run the test process. - In response: present if previously set. - In
+   * create/update request: optional
    * @param testProcessDuration testProcessDuration or {@code null} for none
    */
   public TestTiming setTestProcessDuration(Duration testProcessDuration) {

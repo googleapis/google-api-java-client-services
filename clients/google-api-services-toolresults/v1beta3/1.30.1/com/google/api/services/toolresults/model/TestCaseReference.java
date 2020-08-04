@@ -17,10 +17,8 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * A reference to a test case.
- *
- * Test case references are canonically ordered lexicographically by these three factors: * First,
- * by test_suite_name. * Second, by class_name. * Third, by name.
+ * A reference to a test case. Test case references are canonically ordered lexicographically by
+ * these three factors: * First, by test_suite_name. * Second, by class_name. * Third, by name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -41,9 +39,7 @@ public final class TestCaseReference extends com.google.api.client.json.GenericJ
   private java.lang.String className;
 
   /**
-   * The name of the test case.
-   *
-   * Required.
+   * The name of the test case. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,9 +70,7 @@ public final class TestCaseReference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the test case.
-   *
-   * Required.
+   * The name of the test case. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,9 +78,7 @@ public final class TestCaseReference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the test case.
-   *
-   * Required.
+   * The name of the test case. Required.
    * @param name name or {@code null} for none
    */
   public TestCaseReference setName(java.lang.String name) {

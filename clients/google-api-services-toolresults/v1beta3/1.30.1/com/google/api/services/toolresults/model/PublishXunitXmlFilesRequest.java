@@ -31,11 +31,8 @@ package com.google.api.services.toolresults.model;
 public final class PublishXunitXmlFilesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of the Xunit XML files to publish.
-   *
-   * The maximum size of the file this reference is pointing to is 50MB.
-   *
-   * Required.
+   * URI of the Xunit XML files to publish. The maximum size of the file this reference is pointing
+   * to is 50MB. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,11 +45,8 @@ public final class PublishXunitXmlFilesRequest extends com.google.api.client.jso
   }
 
   /**
-   * URI of the Xunit XML files to publish.
-   *
-   * The maximum size of the file this reference is pointing to is 50MB.
-   *
-   * Required.
+   * URI of the Xunit XML files to publish. The maximum size of the file this reference is pointing
+   * to is 50MB. Required.
    * @return value or {@code null} for none
    */
   public java.util.List<FileReference> getXunitXmlFiles() {
@@ -60,11 +54,8 @@ public final class PublishXunitXmlFilesRequest extends com.google.api.client.jso
   }
 
   /**
-   * URI of the Xunit XML files to publish.
-   *
-   * The maximum size of the file this reference is pointing to is 50MB.
-   *
-   * Required.
+   * URI of the Xunit XML files to publish. The maximum size of the file this reference is pointing
+   * to is 50MB. Required.
    * @param xunitXmlFiles xunitXmlFiles or {@code null} for none
    */
   public PublishXunitXmlFilesRequest setXunitXmlFiles(java.util.List<FileReference> xunitXmlFiles) {

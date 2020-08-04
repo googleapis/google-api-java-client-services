@@ -31,18 +31,14 @@ package com.google.api.services.toolresults.model;
 public final class StackTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * The stack trace message.
-   *
-   * Required
+   * The stack trace message. Required
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exception;
 
   /**
-   * The stack trace message.
-   *
-   * Required
+   * The stack trace message. Required
    * @return value or {@code null} for none
    */
   public java.lang.String getException() {
@@ -50,9 +46,7 @@ public final class StackTrace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack trace message.
-   *
-   * Required
+   * The stack trace message. Required
    * @param exception exception or {@code null} for none
    */
   public StackTrace setException(java.lang.String exception) {

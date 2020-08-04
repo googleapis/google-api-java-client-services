@@ -31,9 +31,7 @@ package com.google.api.services.toolresults.model;
 public final class ListEnvironmentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Environments.
-   *
-   * Always set.
+   * Environments. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,45 +44,36 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A Execution id
-   *
-   * Always set.
+   * A Execution id Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String executionId;
 
   /**
-   * A History id.
-   *
-   * Always set.
+   * A History id. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String historyId;
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more Environments to fetch.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * Environments to fetch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A Project id.
-   *
-   * Always set.
+   * A Project id. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Environments.
-   *
-   * Always set.
+   * Environments. Always set.
    * @return value or {@code null} for none
    */
   public java.util.List<Environment> getEnvironments() {
@@ -92,9 +81,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Environments.
-   *
-   * Always set.
+   * Environments. Always set.
    * @param environments environments or {@code null} for none
    */
   public ListEnvironmentsResponse setEnvironments(java.util.List<Environment> environments) {
@@ -103,9 +90,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A Execution id
-   *
-   * Always set.
+   * A Execution id Always set.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionId() {
@@ -113,9 +98,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A Execution id
-   *
-   * Always set.
+   * A Execution id Always set.
    * @param executionId executionId or {@code null} for none
    */
   public ListEnvironmentsResponse setExecutionId(java.lang.String executionId) {
@@ -124,9 +107,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A History id.
-   *
-   * Always set.
+   * A History id. Always set.
    * @return value or {@code null} for none
    */
   public java.lang.String getHistoryId() {
@@ -134,9 +115,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A History id.
-   *
-   * Always set.
+   * A History id. Always set.
    * @param historyId historyId or {@code null} for none
    */
   public ListEnvironmentsResponse setHistoryId(java.lang.String historyId) {
@@ -145,9 +124,8 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more Environments to fetch.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * Environments to fetch.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -155,9 +133,8 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more Environments to fetch.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * Environments to fetch.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListEnvironmentsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -166,9 +143,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A Project id.
-   *
-   * Always set.
+   * A Project id. Always set.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -176,9 +151,7 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A Project id.
-   *
-   * Always set.
+   * A Project id. Always set.
    * @param projectId projectId or {@code null} for none
    */
   public ListEnvironmentsResponse setProjectId(java.lang.String projectId) {

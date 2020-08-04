@@ -18,9 +18,7 @@ package com.google.api.services.toolresults.model;
 
 /**
  * A test of an Android application that can control an Android component independently of its
- * normal lifecycle.
- *
- * See  for more information on types of Android tests.
+ * normal lifecycle. See for more information on types of Android tests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -49,10 +47,8 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
-   * package_name.class_name#method_name"
-   *
-   * If empty, all targets in the module will be run.
+   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * package_name.class_name#method_name" If empty, all targets in the module will be run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,10 +97,8 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
-   * package_name.class_name#method_name"
-   *
-   * If empty, all targets in the module will be run.
+   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * package_name.class_name#method_name" If empty, all targets in the module will be run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestTargets() {
@@ -113,10 +107,8 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
-   * package_name.class_name#method_name"
-   *
-   * If empty, all targets in the module will be run.
+   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * package_name.class_name#method_name" If empty, all targets in the module will be run.
    * @param testTargets testTargets or {@code null} for none
    */
   public AndroidInstrumentationTest setTestTargets(java.util.List<java.lang.String> testTargets) {

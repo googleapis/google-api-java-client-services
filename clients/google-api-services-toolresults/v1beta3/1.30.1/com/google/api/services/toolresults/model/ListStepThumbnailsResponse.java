@@ -31,23 +31,19 @@ package com.google.api.services.toolresults.model;
 public final class ListStepThumbnailsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * If set, indicates that there are more thumbnails to read, by calling list again with this value
-   * in the page_token field.
+   * A continuation token to resume the query at the next item. If set, indicates that there are
+   * more thumbnails to read, by calling list again with this value in the page_token field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of image data.
-   *
-   * Images are returned in a deterministic order; they are ordered by these factors, in order of
-   * importance: * First, by their associated test case. Images without a test case are   considered
-   * greater than images with one. * Second, by their creation time. Images without a creation time
-   * are   greater than images with one. * Third, by the order in which they were added to the step
-   * (by calls to   CreateStep or UpdateStep).
+   * A list of image data. Images are returned in a deterministic order; they are ordered by these
+   * factors, in order of importance: * First, by their associated test case. Images without a test
+   * case are considered greater than images with one. * Second, by their creation time. Images
+   * without a creation time are greater than images with one. * Third, by the order in which they
+   * were added to the step (by calls to CreateStep or UpdateStep).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,10 +56,8 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * If set, indicates that there are more thumbnails to read, by calling list again with this value
-   * in the page_token field.
+   * A continuation token to resume the query at the next item. If set, indicates that there are
+   * more thumbnails to read, by calling list again with this value in the page_token field.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -71,10 +65,8 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * If set, indicates that there are more thumbnails to read, by calling list again with this value
-   * in the page_token field.
+   * A continuation token to resume the query at the next item. If set, indicates that there are
+   * more thumbnails to read, by calling list again with this value in the page_token field.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListStepThumbnailsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -83,13 +75,11 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
   }
 
   /**
-   * A list of image data.
-   *
-   * Images are returned in a deterministic order; they are ordered by these factors, in order of
-   * importance: * First, by their associated test case. Images without a test case are   considered
-   * greater than images with one. * Second, by their creation time. Images without a creation time
-   * are   greater than images with one. * Third, by the order in which they were added to the step
-   * (by calls to   CreateStep or UpdateStep).
+   * A list of image data. Images are returned in a deterministic order; they are ordered by these
+   * factors, in order of importance: * First, by their associated test case. Images without a test
+   * case are considered greater than images with one. * Second, by their creation time. Images
+   * without a creation time are greater than images with one. * Third, by the order in which they
+   * were added to the step (by calls to CreateStep or UpdateStep).
    * @return value or {@code null} for none
    */
   public java.util.List<Image> getThumbnails() {
@@ -97,13 +87,11 @@ public final class ListStepThumbnailsResponse extends com.google.api.client.json
   }
 
   /**
-   * A list of image data.
-   *
-   * Images are returned in a deterministic order; they are ordered by these factors, in order of
-   * importance: * First, by their associated test case. Images without a test case are   considered
-   * greater than images with one. * Second, by their creation time. Images without a creation time
-   * are   greater than images with one. * Third, by the order in which they were added to the step
-   * (by calls to   CreateStep or UpdateStep).
+   * A list of image data. Images are returned in a deterministic order; they are ordered by these
+   * factors, in order of importance: * First, by their associated test case. Images without a test
+   * case are considered greater than images with one. * Second, by their creation time. Images
+   * without a creation time are greater than images with one. * Third, by the order in which they
+   * were added to the step (by calls to CreateStep or UpdateStep).
    * @param thumbnails thumbnails or {@code null} for none
    */
   public ListStepThumbnailsResponse setThumbnails(java.util.List<Image> thumbnails) {

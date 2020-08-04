@@ -31,9 +31,7 @@ package com.google.api.services.toolresults.model;
 public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
-   * The elapsed run time of the test case.
-   *
-   * Required.
+   * The elapsed run time of the test case. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,20 +45,16 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   private Timestamp endTime;
 
   /**
-   * Why the test case was skipped.
-   *
-   * Present only for skipped test case
+   * Why the test case was skipped. Present only for skipped test case
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String skippedMessage;
 
   /**
-   * The stack trace details if the test case failed or encountered an error.
-   *
-   * The maximum size of the stack traces is 100KiB, beyond which the stack track will be truncated.
-   *
-   * Zero if the test case passed.
+   * The stack trace details if the test case failed or encountered an error. The maximum size of
+   * the stack traces is 100KiB, beyond which the stack track will be truncated. Zero if the test
+   * case passed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +74,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   private Timestamp startTime;
 
   /**
-   * The status of the test case.
-   *
-   * Required.
+   * The status of the test case. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,27 +88,21 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   private java.lang.String testCaseId;
 
   /**
-   * Test case reference, e.g. name, class name and test suite name.
-   *
-   * Required.
+   * Test case reference, e.g. name, class name and test suite name. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestCaseReference testCaseReference;
 
   /**
-   * References to opaque files of any format output by the tool execution.
-   *
-   * @OutputOnly
+   * References to opaque files of any format output by the tool execution. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ToolOutputReference> toolOutputs;
 
   /**
-   * The elapsed run time of the test case.
-   *
-   * Required.
+   * The elapsed run time of the test case. Required.
    * @return value or {@code null} for none
    */
   public Duration getElapsedTime() {
@@ -124,9 +110,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The elapsed run time of the test case.
-   *
-   * Required.
+   * The elapsed run time of the test case. Required.
    * @param elapsedTime elapsedTime or {@code null} for none
    */
   public TestCase setElapsedTime(Duration elapsedTime) {
@@ -152,9 +136,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Why the test case was skipped.
-   *
-   * Present only for skipped test case
+   * Why the test case was skipped. Present only for skipped test case
    * @return value or {@code null} for none
    */
   public java.lang.String getSkippedMessage() {
@@ -162,9 +144,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Why the test case was skipped.
-   *
-   * Present only for skipped test case
+   * Why the test case was skipped. Present only for skipped test case
    * @param skippedMessage skippedMessage or {@code null} for none
    */
   public TestCase setSkippedMessage(java.lang.String skippedMessage) {
@@ -173,11 +153,9 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack trace details if the test case failed or encountered an error.
-   *
-   * The maximum size of the stack traces is 100KiB, beyond which the stack track will be truncated.
-   *
-   * Zero if the test case passed.
+   * The stack trace details if the test case failed or encountered an error. The maximum size of
+   * the stack traces is 100KiB, beyond which the stack track will be truncated. Zero if the test
+   * case passed.
    * @return value or {@code null} for none
    */
   public java.util.List<StackTrace> getStackTraces() {
@@ -185,11 +163,9 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack trace details if the test case failed or encountered an error.
-   *
-   * The maximum size of the stack traces is 100KiB, beyond which the stack track will be truncated.
-   *
-   * Zero if the test case passed.
+   * The stack trace details if the test case failed or encountered an error. The maximum size of
+   * the stack traces is 100KiB, beyond which the stack track will be truncated. Zero if the test
+   * case passed.
    * @param stackTraces stackTraces or {@code null} for none
    */
   public TestCase setStackTraces(java.util.List<StackTrace> stackTraces) {
@@ -215,9 +191,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the test case.
-   *
-   * Required.
+   * The status of the test case. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -225,9 +199,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the test case.
-   *
-   * Required.
+   * The status of the test case. Required.
    * @param status status or {@code null} for none
    */
   public TestCase setStatus(java.lang.String status) {
@@ -253,9 +225,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Test case reference, e.g. name, class name and test suite name.
-   *
-   * Required.
+   * Test case reference, e.g. name, class name and test suite name. Required.
    * @return value or {@code null} for none
    */
   public TestCaseReference getTestCaseReference() {
@@ -263,9 +233,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Test case reference, e.g. name, class name and test suite name.
-   *
-   * Required.
+   * Test case reference, e.g. name, class name and test suite name. Required.
    * @param testCaseReference testCaseReference or {@code null} for none
    */
   public TestCase setTestCaseReference(TestCaseReference testCaseReference) {
@@ -274,9 +242,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * References to opaque files of any format output by the tool execution.
-   *
-   * @OutputOnly
+   * References to opaque files of any format output by the tool execution. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.util.List<ToolOutputReference> getToolOutputs() {
@@ -284,9 +250,7 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * References to opaque files of any format output by the tool execution.
-   *
-   * @OutputOnly
+   * References to opaque files of any format output by the tool execution. @OutputOnly
    * @param toolOutputs toolOutputs or {@code null} for none
    */
   public TestCase setToolOutputs(java.util.List<ToolOutputReference> toolOutputs) {

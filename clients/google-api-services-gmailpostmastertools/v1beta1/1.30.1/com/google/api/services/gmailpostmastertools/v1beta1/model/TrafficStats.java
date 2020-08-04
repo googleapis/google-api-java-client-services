@@ -94,7 +94,7 @@ public final class TrafficStats extends com.google.api.client.json.GenericJson {
   /**
    * The resource name of the traffic statistics. Traffic statistic names have the form
    * `domains/{domain}/trafficStats/{date}`, where domain_name is the fully qualified domain name
-   * (i.e.,  mymail.mydomain.com) of the domain this traffic statistics pertains to and date is the
+   * (i.e., mymail.mydomain.com) of the domain this traffic statistics pertains to and date is the
    * date in yyyymmdd format that these statistics corresponds to. For example:
    * domains/mymail.mydomain.com/trafficStats/20160807
    * The value may be {@code null}.
@@ -259,7 +259,7 @@ public final class TrafficStats extends com.google.api.client.json.GenericJson {
   /**
    * The resource name of the traffic statistics. Traffic statistic names have the form
    * `domains/{domain}/trafficStats/{date}`, where domain_name is the fully qualified domain name
-   * (i.e.,  mymail.mydomain.com) of the domain this traffic statistics pertains to and date is the
+   * (i.e., mymail.mydomain.com) of the domain this traffic statistics pertains to and date is the
    * date in yyyymmdd format that these statistics corresponds to. For example:
    * domains/mymail.mydomain.com/trafficStats/20160807
    * @return value or {@code null} for none
@@ -271,7 +271,7 @@ public final class TrafficStats extends com.google.api.client.json.GenericJson {
   /**
    * The resource name of the traffic statistics. Traffic statistic names have the form
    * `domains/{domain}/trafficStats/{date}`, where domain_name is the fully qualified domain name
-   * (i.e.,  mymail.mydomain.com) of the domain this traffic statistics pertains to and date is the
+   * (i.e., mymail.mydomain.com) of the domain this traffic statistics pertains to and date is the
    * date in yyyymmdd format that these statistics corresponds to. For example:
    * domains/mymail.mydomain.com/trafficStats/20160807
    * @param name name or {@code null} for none

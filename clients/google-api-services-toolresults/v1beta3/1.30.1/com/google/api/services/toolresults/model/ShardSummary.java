@@ -31,10 +31,9 @@ package com.google.api.services.toolresults.model;
 public final class ShardSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Summaries of the steps belonging to the shard. With flaky_test_attempts enabled from
+   * TestExecutionService, more than one run (Step) can present. And the runs will be sorted by
+   * multistep_number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,10 +47,9 @@ public final class ShardSummary extends com.google.api.client.json.GenericJson {
   private MergedResult shardResult;
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Summaries of the steps belonging to the shard. With flaky_test_attempts enabled from
+   * TestExecutionService, more than one run (Step) can present. And the runs will be sorted by
+   * multistep_number.
    * @return value or {@code null} for none
    */
   public java.util.List<StepSummary> getRuns() {
@@ -59,10 +57,9 @@ public final class ShardSummary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Summaries of the steps belonging to the shard.
-   *
-   * With flaky_test_attempts enabled from TestExecutionService, more than one run (Step) can
-   * present. And the runs will be sorted by multistep_number.
+   * Summaries of the steps belonging to the shard. With flaky_test_attempts enabled from
+   * TestExecutionService, more than one run (Step) can present. And the runs will be sorted by
+   * multistep_number.
    * @param runs runs or {@code null} for none
    */
   public ShardSummary setRuns(java.util.List<StepSummary> runs) {

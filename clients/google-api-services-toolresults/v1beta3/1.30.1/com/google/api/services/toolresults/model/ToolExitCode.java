@@ -31,18 +31,16 @@ package com.google.api.services.toolresults.model;
 public final class ToolExitCode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tool execution exit code. A value of 0 means that the execution was successful.
-   *
-   * - In response: always set - In create/update request: always set
+   * Tool execution exit code. A value of 0 means that the execution was successful. - In response:
+   * always set - In create/update request: always set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer number;
 
   /**
-   * Tool execution exit code. A value of 0 means that the execution was successful.
-   *
-   * - In response: always set - In create/update request: always set
+   * Tool execution exit code. A value of 0 means that the execution was successful. - In response:
+   * always set - In create/update request: always set
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumber() {
@@ -50,9 +48,8 @@ public final class ToolExitCode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tool execution exit code. A value of 0 means that the execution was successful.
-   *
-   * - In response: always set - In create/update request: always set
+   * Tool execution exit code. A value of 0 means that the execution was successful. - In response:
+   * always set - In create/update request: always set
    * @param number number or {@code null} for none
    */
   public ToolExitCode setNumber(java.lang.Integer number) {

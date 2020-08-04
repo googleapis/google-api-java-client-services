@@ -31,9 +31,7 @@ package com.google.api.services.toolresults.model;
 public final class ListExecutionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Executions.
-   *
-   * Always set.
+   * Executions. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,18 +44,15 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more Executions to fetch.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * Executions to fetch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Executions.
-   *
-   * Always set.
+   * Executions. Always set.
    * @return value or {@code null} for none
    */
   public java.util.List<Execution> getExecutions() {
@@ -65,9 +60,7 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Executions.
-   *
-   * Always set.
+   * Executions. Always set.
    * @param executions executions or {@code null} for none
    */
   public ListExecutionsResponse setExecutions(java.util.List<Execution> executions) {
@@ -76,9 +69,8 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more Executions to fetch.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * Executions to fetch.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -86,9 +78,8 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more Executions to fetch.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * Executions to fetch.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListExecutionsResponse setNextPageToken(java.lang.String nextPageToken) {

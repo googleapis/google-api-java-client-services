@@ -48,10 +48,8 @@ public final class InconclusiveDetail extends com.google.api.client.json.Generic
 
   /**
    * If the test runner could not determine success or failure because the test depends on a
-   * component other than the system under test which failed.
-   *
-   * For example, a mobile test requires provisioning a device where the test executes, and that
-   * provisioning can fail.
+   * component other than the system under test which failed. For example, a mobile test requires
+   * provisioning a device where the test executes, and that provisioning can fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,10 +95,8 @@ public final class InconclusiveDetail extends com.google.api.client.json.Generic
 
   /**
    * If the test runner could not determine success or failure because the test depends on a
-   * component other than the system under test which failed.
-   *
-   * For example, a mobile test requires provisioning a device where the test executes, and that
-   * provisioning can fail.
+   * component other than the system under test which failed. For example, a mobile test requires
+   * provisioning a device where the test executes, and that provisioning can fail.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInfrastructureFailure() {
@@ -109,10 +105,8 @@ public final class InconclusiveDetail extends com.google.api.client.json.Generic
 
   /**
    * If the test runner could not determine success or failure because the test depends on a
-   * component other than the system under test which failed.
-   *
-   * For example, a mobile test requires provisioning a device where the test executes, and that
-   * provisioning can fail.
+   * component other than the system under test which failed. For example, a mobile test requires
+   * provisioning a device where the test executes, and that provisioning can fail.
    * @param infrastructureFailure infrastructureFailure or {@code null} for none
    */
   public InconclusiveDetail setInfrastructureFailure(java.lang.Boolean infrastructureFailure) {

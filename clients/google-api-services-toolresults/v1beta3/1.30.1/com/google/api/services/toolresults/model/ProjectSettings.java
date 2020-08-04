@@ -31,33 +31,24 @@ package com.google.api.services.toolresults.model;
 public final class ProjectSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Google Cloud Storage bucket to which results are written.
-   *
-   * By default, this is unset.
-   *
-   * In update request: optional In response: optional
+   * The name of the Google Cloud Storage bucket to which results are written. By default, this is
+   * unset. In update request: optional In response: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultBucket;
 
   /**
-   * The name of the project's settings.
-   *
-   * Always of the form: projects/{project-id}/settings
-   *
-   * In update request: never set In response: always set
+   * The name of the project's settings. Always of the form: projects/{project-id}/settings In
+   * update request: never set In response: always set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the Google Cloud Storage bucket to which results are written.
-   *
-   * By default, this is unset.
-   *
-   * In update request: optional In response: optional
+   * The name of the Google Cloud Storage bucket to which results are written. By default, this is
+   * unset. In update request: optional In response: optional
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBucket() {
@@ -65,11 +56,8 @@ public final class ProjectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the Google Cloud Storage bucket to which results are written.
-   *
-   * By default, this is unset.
-   *
-   * In update request: optional In response: optional
+   * The name of the Google Cloud Storage bucket to which results are written. By default, this is
+   * unset. In update request: optional In response: optional
    * @param defaultBucket defaultBucket or {@code null} for none
    */
   public ProjectSettings setDefaultBucket(java.lang.String defaultBucket) {
@@ -78,11 +66,8 @@ public final class ProjectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the project's settings.
-   *
-   * Always of the form: projects/{project-id}/settings
-   *
-   * In update request: never set In response: always set
+   * The name of the project's settings. Always of the form: projects/{project-id}/settings In
+   * update request: never set In response: always set
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -90,11 +75,8 @@ public final class ProjectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the project's settings.
-   *
-   * Always of the form: projects/{project-id}/settings
-   *
-   * In update request: never set In response: always set
+   * The name of the project's settings. Always of the form: projects/{project-id}/settings In
+   * update request: never set In response: always set
    * @param name name or {@code null} for none
    */
   public ProjectSettings setName(java.lang.String name) {

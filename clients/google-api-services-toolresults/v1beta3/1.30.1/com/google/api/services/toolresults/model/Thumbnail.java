@@ -31,20 +31,15 @@ package com.google.api.services.toolresults.model;
 public final class Thumbnail extends com.google.api.client.json.GenericJson {
 
   /**
-   * The thumbnail's content type, i.e. "image/png".
-   *
-   * Always set.
+   * The thumbnail's content type, i.e. "image/png". Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentType;
 
   /**
-   * The thumbnail file itself.
-   *
-   * That is, the bytes here are precisely the bytes that make up the thumbnail file; they can be
-   * served as an image as-is (with the appropriate content type.)
-   *
+   * The thumbnail file itself. That is, the bytes here are precisely the bytes that make up the
+   * thumbnail file; they can be served as an image as-is (with the appropriate content type.)
    * Always set.
    * The value may be {@code null}.
    */
@@ -52,27 +47,21 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   private java.lang.String data;
 
   /**
-   * The height of the thumbnail, in pixels.
-   *
-   * Always set.
+   * The height of the thumbnail, in pixels. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer heightPx;
 
   /**
-   * The width of the thumbnail, in pixels.
-   *
-   * Always set.
+   * The width of the thumbnail, in pixels. Always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer widthPx;
 
   /**
-   * The thumbnail's content type, i.e. "image/png".
-   *
-   * Always set.
+   * The thumbnail's content type, i.e. "image/png". Always set.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -80,9 +69,7 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thumbnail's content type, i.e. "image/png".
-   *
-   * Always set.
+   * The thumbnail's content type, i.e. "image/png". Always set.
    * @param contentType contentType or {@code null} for none
    */
   public Thumbnail setContentType(java.lang.String contentType) {
@@ -91,11 +78,8 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thumbnail file itself.
-   *
-   * That is, the bytes here are precisely the bytes that make up the thumbnail file; they can be
-   * served as an image as-is (with the appropriate content type.)
-   *
+   * The thumbnail file itself. That is, the bytes here are precisely the bytes that make up the
+   * thumbnail file; they can be served as an image as-is (with the appropriate content type.)
    * Always set.
    * @see #decodeData()
    * @return value or {@code null} for none
@@ -105,11 +89,8 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thumbnail file itself.
-   *
-   * That is, the bytes here are precisely the bytes that make up the thumbnail file; they can be
-   * served as an image as-is (with the appropriate content type.)
-   *
+   * The thumbnail file itself. That is, the bytes here are precisely the bytes that make up the
+   * thumbnail file; they can be served as an image as-is (with the appropriate content type.)
    * Always set.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
@@ -121,11 +102,8 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thumbnail file itself.
-   *
-   * That is, the bytes here are precisely the bytes that make up the thumbnail file; they can be
-   * served as an image as-is (with the appropriate content type.)
-   *
+   * The thumbnail file itself. That is, the bytes here are precisely the bytes that make up the
+   * thumbnail file; they can be served as an image as-is (with the appropriate content type.)
    * Always set.
    * @see #encodeData()
    * @param data data or {@code null} for none
@@ -136,11 +114,8 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thumbnail file itself.
-   *
-   * That is, the bytes here are precisely the bytes that make up the thumbnail file; they can be
-   * served as an image as-is (with the appropriate content type.)
-   *
+   * The thumbnail file itself. That is, the bytes here are precisely the bytes that make up the
+   * thumbnail file; they can be served as an image as-is (with the appropriate content type.)
    * Always set.
    * @see #setData()
    *
@@ -156,9 +131,7 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The height of the thumbnail, in pixels.
-   *
-   * Always set.
+   * The height of the thumbnail, in pixels. Always set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHeightPx() {
@@ -166,9 +139,7 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The height of the thumbnail, in pixels.
-   *
-   * Always set.
+   * The height of the thumbnail, in pixels. Always set.
    * @param heightPx heightPx or {@code null} for none
    */
   public Thumbnail setHeightPx(java.lang.Integer heightPx) {
@@ -177,9 +148,7 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The width of the thumbnail, in pixels.
-   *
-   * Always set.
+   * The width of the thumbnail, in pixels. Always set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWidthPx() {
@@ -187,9 +156,7 @@ public final class Thumbnail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The width of the thumbnail, in pixels.
-   *
-   * Always set.
+   * The width of the thumbnail, in pixels. Always set.
    * @param widthPx widthPx or {@code null} for none
    */
   public Thumbnail setWidthPx(java.lang.Integer widthPx) {

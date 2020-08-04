@@ -18,10 +18,9 @@ package com.google.api.services.toolresults.model;
 
 /**
  * A History represents a sorted list of Executions ordered by the start_timestamp_millis field
- * (descending). It can be used to group all the Executions of a continuous build.
- *
- * Note that the ordering only operates on one-dimension. If a repository has multiple branches, it
- * means that multiple histories will need to be used in order to order Executions per branch.
+ * (descending). It can be used to group all the Executions of a continuous build. Note that the
+ * ordering only operates on one-dimension. If a repository has multiple branches, it means that
+ * multiple histories will need to be used in order to order Executions per branch.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -35,47 +34,40 @@ package com.google.api.services.toolresults.model;
 public final class History extends com.google.api.client.json.GenericJson {
 
   /**
-   * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters.
-   *
-   * - In response: present if set during create. - In create request: optional
+   * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In
+   * response: present if set during create. - In create request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * A unique identifier within a project for this History.
-   *
-   * Returns INVALID_ARGUMENT if this field is set or overwritten by the caller.
-   *
-   * - In response always set - In create request: never set
+   * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field
+   * is set or overwritten by the caller. - In response always set - In create request: never set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String historyId;
 
   /**
-   * A name to uniquely identify a history within a project. Maximum of 200 characters.
-   *
-   * - In response always set - In create request: always set
+   * A name to uniquely identify a history within a project. Maximum of 200 characters. - In
+   * response always set - In create request: always set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The platform of the test history.
-   *
-   * - In response: always set. Returns the platform of the last execution if unknown.
+   * The platform of the test history. - In response: always set. Returns the platform of the last
+   * execution if unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String testPlatform;
 
   /**
-   * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters.
-   *
-   * - In response: present if set during create. - In create request: optional
+   * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In
+   * response: present if set during create. - In create request: optional
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -83,9 +75,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters.
-   *
-   * - In response: present if set during create. - In create request: optional
+   * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In
+   * response: present if set during create. - In create request: optional
    * @param displayName displayName or {@code null} for none
    */
   public History setDisplayName(java.lang.String displayName) {
@@ -94,11 +85,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier within a project for this History.
-   *
-   * Returns INVALID_ARGUMENT if this field is set or overwritten by the caller.
-   *
-   * - In response always set - In create request: never set
+   * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field
+   * is set or overwritten by the caller. - In response always set - In create request: never set
    * @return value or {@code null} for none
    */
   public java.lang.String getHistoryId() {
@@ -106,11 +94,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier within a project for this History.
-   *
-   * Returns INVALID_ARGUMENT if this field is set or overwritten by the caller.
-   *
-   * - In response always set - In create request: never set
+   * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field
+   * is set or overwritten by the caller. - In response always set - In create request: never set
    * @param historyId historyId or {@code null} for none
    */
   public History setHistoryId(java.lang.String historyId) {
@@ -119,9 +104,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A name to uniquely identify a history within a project. Maximum of 200 characters.
-   *
-   * - In response always set - In create request: always set
+   * A name to uniquely identify a history within a project. Maximum of 200 characters. - In
+   * response always set - In create request: always set
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -129,9 +113,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A name to uniquely identify a history within a project. Maximum of 200 characters.
-   *
-   * - In response always set - In create request: always set
+   * A name to uniquely identify a history within a project. Maximum of 200 characters. - In
+   * response always set - In create request: always set
    * @param name name or {@code null} for none
    */
   public History setName(java.lang.String name) {
@@ -140,9 +123,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The platform of the test history.
-   *
-   * - In response: always set. Returns the platform of the last execution if unknown.
+   * The platform of the test history. - In response: always set. Returns the platform of the last
+   * execution if unknown.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestPlatform() {
@@ -150,9 +132,8 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The platform of the test history.
-   *
-   * - In response: always set. Returns the platform of the last execution if unknown.
+   * The platform of the test history. - In response: always set. Returns the platform of the last
+   * execution if unknown.
    * @param testPlatform testPlatform or {@code null} for none
    */
   public History setTestPlatform(java.lang.String testPlatform) {

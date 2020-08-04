@@ -17,12 +17,10 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * A step that represents running tests.
- *
- * It accepts ant-junit xml files which will be parsed into structured test results by the service.
- * Xml file paths are updated in order to append more files, however they can't be deleted.
- *
- * Users can also add test results manually by using the test_result field.
+ * A step that represents running tests. It accepts ant-junit xml files which will be parsed into
+ * structured test results by the service. Xml file paths are updated in order to append more files,
+ * however they can't be deleted. Users can also add test results manually by using the test_result
+ * field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -36,12 +34,10 @@ package com.google.api.services.toolresults.model;
 public final class TestExecutionStep extends com.google.api.client.json.GenericJson {
 
   /**
-   * Issues observed during the test execution.
-   *
-   * For example, if the mobile app under test crashed during the test, the error message and the
-   * stack trace content can be recorded here to assist debugging.
-   *
-   * - In response: present if set by create or update - In create/update request: optional
+   * Issues observed during the test execution. For example, if the mobile app under test crashed
+   * during the test, the error message and the stack trace content can be recorded here to assist
+   * debugging. - In response: present if set by create or update - In create/update request:
+   * optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,11 +46,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   /**
    * List of test suite overview contents. This could be parsed from xUnit XML log by server, or
    * uploaded directly by user. This references should only be called when test suites are fully
-   * parsed or uploaded.
-   *
-   * The maximum allowed number of test suite overviews per step is 1000.
-   *
-   * - In response: always set - In create request: optional - In update request: never (use
+   * parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In
+   * response: always set - In create request: optional - In update request: never (use
    * publishXunitXmlFiles custom method instead)
    * The value may be {@code null}.
    */
@@ -62,32 +55,26 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   private java.util.List<TestSuiteOverview> testSuiteOverviews;
 
   /**
-   * The timing break down of the test execution.
-   *
-   * - In response: present if set by create or update - In create/update request: optional
+   * The timing break down of the test execution. - In response: present if set by create or update
+   * - In create/update request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestTiming testTiming;
 
   /**
-   * Represents the execution of the test runner.
-   *
-   * The exit code of this tool will be used to determine if the test passed.
-   *
-   * - In response: always set - In create/update request: optional
+   * Represents the execution of the test runner. The exit code of this tool will be used to
+   * determine if the test passed. - In response: always set - In create/update request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ToolExecution toolExecution;
 
   /**
-   * Issues observed during the test execution.
-   *
-   * For example, if the mobile app under test crashed during the test, the error message and the
-   * stack trace content can be recorded here to assist debugging.
-   *
-   * - In response: present if set by create or update - In create/update request: optional
+   * Issues observed during the test execution. For example, if the mobile app under test crashed
+   * during the test, the error message and the stack trace content can be recorded here to assist
+   * debugging. - In response: present if set by create or update - In create/update request:
+   * optional
    * @return value or {@code null} for none
    */
   public java.util.List<TestIssue> getTestIssues() {
@@ -95,12 +82,10 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Issues observed during the test execution.
-   *
-   * For example, if the mobile app under test crashed during the test, the error message and the
-   * stack trace content can be recorded here to assist debugging.
-   *
-   * - In response: present if set by create or update - In create/update request: optional
+   * Issues observed during the test execution. For example, if the mobile app under test crashed
+   * during the test, the error message and the stack trace content can be recorded here to assist
+   * debugging. - In response: present if set by create or update - In create/update request:
+   * optional
    * @param testIssues testIssues or {@code null} for none
    */
   public TestExecutionStep setTestIssues(java.util.List<TestIssue> testIssues) {
@@ -111,11 +96,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   /**
    * List of test suite overview contents. This could be parsed from xUnit XML log by server, or
    * uploaded directly by user. This references should only be called when test suites are fully
-   * parsed or uploaded.
-   *
-   * The maximum allowed number of test suite overviews per step is 1000.
-   *
-   * - In response: always set - In create request: optional - In update request: never (use
+   * parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In
+   * response: always set - In create request: optional - In update request: never (use
    * publishXunitXmlFiles custom method instead)
    * @return value or {@code null} for none
    */
@@ -126,11 +108,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   /**
    * List of test suite overview contents. This could be parsed from xUnit XML log by server, or
    * uploaded directly by user. This references should only be called when test suites are fully
-   * parsed or uploaded.
-   *
-   * The maximum allowed number of test suite overviews per step is 1000.
-   *
-   * - In response: always set - In create request: optional - In update request: never (use
+   * parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In
+   * response: always set - In create request: optional - In update request: never (use
    * publishXunitXmlFiles custom method instead)
    * @param testSuiteOverviews testSuiteOverviews or {@code null} for none
    */
@@ -140,9 +119,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The timing break down of the test execution.
-   *
-   * - In response: present if set by create or update - In create/update request: optional
+   * The timing break down of the test execution. - In response: present if set by create or update
+   * - In create/update request: optional
    * @return value or {@code null} for none
    */
   public TestTiming getTestTiming() {
@@ -150,9 +128,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The timing break down of the test execution.
-   *
-   * - In response: present if set by create or update - In create/update request: optional
+   * The timing break down of the test execution. - In response: present if set by create or update
+   * - In create/update request: optional
    * @param testTiming testTiming or {@code null} for none
    */
   public TestExecutionStep setTestTiming(TestTiming testTiming) {
@@ -161,11 +138,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Represents the execution of the test runner.
-   *
-   * The exit code of this tool will be used to determine if the test passed.
-   *
-   * - In response: always set - In create/update request: optional
+   * Represents the execution of the test runner. The exit code of this tool will be used to
+   * determine if the test passed. - In response: always set - In create/update request: optional
    * @return value or {@code null} for none
    */
   public ToolExecution getToolExecution() {
@@ -173,11 +147,8 @@ public final class TestExecutionStep extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Represents the execution of the test runner.
-   *
-   * The exit code of this tool will be used to determine if the test passed.
-   *
-   * - In response: always set - In create/update request: optional
+   * Represents the execution of the test runner. The exit code of this tool will be used to
+   * determine if the test passed. - In response: always set - In create/update request: optional
    * @param toolExecution toolExecution or {@code null} for none
    */
   public TestExecutionStep setToolExecution(ToolExecution toolExecution) {

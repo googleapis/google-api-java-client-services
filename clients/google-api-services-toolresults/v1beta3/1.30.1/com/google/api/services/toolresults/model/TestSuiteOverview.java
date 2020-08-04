@@ -17,9 +17,8 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * A summary of a test suite result either parsed from XML or uploaded directly by a user.
- *
- * Note: the API related comments are for StepService only. This message is also being used in
+ * A summary of a test suite result either parsed from XML or uploaded directly by a user. Note: the
+ * API related comments are for StepService only. This message is also being used in
  * ExecutionService in a read only mode for the corresponding step.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -41,9 +40,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   private Duration elapsedTime;
 
   /**
-   * Number of test cases in error, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases in error, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,46 +49,38 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
 
   /**
    * Number of failed test cases, typically set by the service by parsing the xml_source. May also
-   * be set by the user.
-   *
-   * - In create/response: always set - In update request: never
+   * be set by the user. - In create/response: always set - In update request: never
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer failureCount;
 
   /**
-   * Number of flaky test cases, set by the service by rolling up flaky test attempts.
-   *
-   * Present only for rollup test suite overview at environment level. A step cannot have flaky test
-   * cases.
+   * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only
+   * for rollup test suite overview at environment level. A step cannot have flaky test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer flakyCount;
 
   /**
-   * The name of the test suite.
-   *
-   * - In create/response: always set - In update request: never
+   * The name of the test suite. - In create/response: always set - In update request: never
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Number of test cases not run, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases not run, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer skippedCount;
 
   /**
-   * Number of test cases, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,12 +88,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
 
   /**
    * If this test suite was parsed from XML, this is the URI where the original XML file is stored.
-   *
-   * Note: Multiple test suites can share the same xml_source
-   *
-   * Returns INVALID_ARGUMENT if the uri format is not supported.
-   *
-   * - In create/response: optional - In update request: never
+   * Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri
+   * format is not supported. - In create/response: optional - In update request: never
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +113,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of test cases in error, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases in error, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * @return value or {@code null} for none
    */
   public java.lang.Integer getErrorCount() {
@@ -137,9 +122,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of test cases in error, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases in error, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * @param errorCount errorCount or {@code null} for none
    */
   public TestSuiteOverview setErrorCount(java.lang.Integer errorCount) {
@@ -149,9 +133,7 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
 
   /**
    * Number of failed test cases, typically set by the service by parsing the xml_source. May also
-   * be set by the user.
-   *
-   * - In create/response: always set - In update request: never
+   * be set by the user. - In create/response: always set - In update request: never
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFailureCount() {
@@ -160,9 +142,7 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
 
   /**
    * Number of failed test cases, typically set by the service by parsing the xml_source. May also
-   * be set by the user.
-   *
-   * - In create/response: always set - In update request: never
+   * be set by the user. - In create/response: always set - In update request: never
    * @param failureCount failureCount or {@code null} for none
    */
   public TestSuiteOverview setFailureCount(java.lang.Integer failureCount) {
@@ -171,10 +151,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of flaky test cases, set by the service by rolling up flaky test attempts.
-   *
-   * Present only for rollup test suite overview at environment level. A step cannot have flaky test
-   * cases.
+   * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only
+   * for rollup test suite overview at environment level. A step cannot have flaky test cases.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFlakyCount() {
@@ -182,10 +160,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of flaky test cases, set by the service by rolling up flaky test attempts.
-   *
-   * Present only for rollup test suite overview at environment level. A step cannot have flaky test
-   * cases.
+   * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only
+   * for rollup test suite overview at environment level. A step cannot have flaky test cases.
    * @param flakyCount flakyCount or {@code null} for none
    */
   public TestSuiteOverview setFlakyCount(java.lang.Integer flakyCount) {
@@ -194,9 +170,7 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the test suite.
-   *
-   * - In create/response: always set - In update request: never
+   * The name of the test suite. - In create/response: always set - In update request: never
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -204,9 +178,7 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the test suite.
-   *
-   * - In create/response: always set - In update request: never
+   * The name of the test suite. - In create/response: always set - In update request: never
    * @param name name or {@code null} for none
    */
   public TestSuiteOverview setName(java.lang.String name) {
@@ -215,9 +187,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of test cases not run, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases not run, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSkippedCount() {
@@ -225,9 +196,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of test cases not run, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases not run, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * @param skippedCount skippedCount or {@code null} for none
    */
   public TestSuiteOverview setSkippedCount(java.lang.Integer skippedCount) {
@@ -236,9 +206,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of test cases, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalCount() {
@@ -246,9 +215,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of test cases, typically set by the service by parsing the xml_source.
-   *
-   * - In create/response: always set - In update request: never
+   * Number of test cases, typically set by the service by parsing the xml_source. - In
+   * create/response: always set - In update request: never
    * @param totalCount totalCount or {@code null} for none
    */
   public TestSuiteOverview setTotalCount(java.lang.Integer totalCount) {
@@ -258,12 +226,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
 
   /**
    * If this test suite was parsed from XML, this is the URI where the original XML file is stored.
-   *
-   * Note: Multiple test suites can share the same xml_source
-   *
-   * Returns INVALID_ARGUMENT if the uri format is not supported.
-   *
-   * - In create/response: optional - In update request: never
+   * Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri
+   * format is not supported. - In create/response: optional - In update request: never
    * @return value or {@code null} for none
    */
   public FileReference getXmlSource() {
@@ -272,12 +236,8 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
 
   /**
    * If this test suite was parsed from XML, this is the URI where the original XML file is stored.
-   *
-   * Note: Multiple test suites can share the same xml_source
-   *
-   * Returns INVALID_ARGUMENT if the uri format is not supported.
-   *
-   * - In create/response: optional - In update request: never
+   * Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri
+   * format is not supported. - In create/response: optional - In update request: never
    * @param xmlSource xmlSource or {@code null} for none
    */
   public TestSuiteOverview setXmlSource(FileReference xmlSource) {

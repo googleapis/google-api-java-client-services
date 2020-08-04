@@ -17,11 +17,9 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * A set of similar suggestions that we suspect are closely related.
- *
- * This proto and most of the nested protos are branched from
- * foxandcrown.prelaunchreport.service.SuggestionClusterProto, replacing PLR's dependencies with
- * FTL's.
+ * A set of similar suggestions that we suspect are closely related. This proto and most of the
+ * nested protos are branched from foxandcrown.prelaunchreport.service.SuggestionClusterProto,
+ * replacing PLR's dependencies with FTL's.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation

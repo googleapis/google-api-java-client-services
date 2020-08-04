@@ -44,13 +44,11 @@ public final class ListHistoriesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more histories to fetch.
-   *
-   * Tokens are valid for up to one hour from the time of the first list request. For instance, if
-   * you make a list request at 1PM and use the token from this first request 10 minutes later, the
-   * token from this second response will only be valid for 50 minutes.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * histories to fetch. Tokens are valid for up to one hour from the time of the first list
+   * request. For instance, if you make a list request at 1PM and use the token from this first
+   * request 10 minutes later, the token from this second response will only be valid for 50
+   * minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,13 +72,11 @@ public final class ListHistoriesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more histories to fetch.
-   *
-   * Tokens are valid for up to one hour from the time of the first list request. For instance, if
-   * you make a list request at 1PM and use the token from this first request 10 minutes later, the
-   * token from this second response will only be valid for 50 minutes.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * histories to fetch. Tokens are valid for up to one hour from the time of the first list
+   * request. For instance, if you make a list request at 1PM and use the token from this first
+   * request 10 minutes later, the token from this second response will only be valid for 50
+   * minutes.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -88,13 +84,11 @@ public final class ListHistoriesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * Will only be set if there are more histories to fetch.
-   *
-   * Tokens are valid for up to one hour from the time of the first list request. For instance, if
-   * you make a list request at 1PM and use the token from this first request 10 minutes later, the
-   * token from this second response will only be valid for 50 minutes.
+   * A continuation token to resume the query at the next item. Will only be set if there are more
+   * histories to fetch. Tokens are valid for up to one hour from the time of the first list
+   * request. For instance, if you make a list request at 1PM and use the token from this first
+   * request 10 minutes later, the token from this second response will only be valid for 50
+   * minutes.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListHistoriesResponse setNextPageToken(java.lang.String nextPageToken) {

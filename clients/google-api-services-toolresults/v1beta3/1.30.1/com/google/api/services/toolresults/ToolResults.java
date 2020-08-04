@@ -143,19 +143,15 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
   public class Projects {
 
     /**
-     * Gets the Tool Results settings for a project.
-     *
-     * May return any of the following canonical error codes:
-     *
-     * - PERMISSION_DENIED - if the user is not authorized to read from project
+     * Gets the Tool Results settings for a project. May return any of the following canonical error
+     * codes: - PERMISSION_DENIED - if the user is not authorized to read from project
      *
      * Create a request for the method "projects.getSettings".
      *
      * This request holds the parameters needed by the toolresults server.  After setting any optional
      * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
      *
-     * @param projectId A Project id.
-    Required.
+     * @param projectId A Project id. Required.
      * @return the request
      */
     public GetSettings getSettings(java.lang.String projectId) throws java.io.IOException {
@@ -169,11 +165,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/settings";
 
       /**
-       * Gets the Tool Results settings for a project.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to read from project
+       * Gets the Tool Results settings for a project. May return any of the following canonical error
+       * codes: - PERMISSION_DENIED - if the user is not authorized to read from project
        *
        * Create a request for the method "projects.getSettings".
        *
@@ -183,8 +176,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
        * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId A Project id.
-    Required.
+       * @param projectId A Project id. Required.
        * @since 1.13
        */
       protected GetSettings(java.lang.String projectId) {
@@ -257,27 +249,17 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         return (GetSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A Project id.
-       *
-       * Required.
-       */
+      /** A Project id. Required. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** A Project id.
-
-     Required.
+      /** A Project id. Required.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * A Project id.
-       *
-       * Required.
-       */
+      /** A Project id. Required. */
       public GetSettings setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -289,36 +271,27 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Creates resources for settings which have not yet been set.
-     *
-     * Currently, this creates a single resource: a Google Cloud Storage bucket, to be used as the
-     * default bucket for this project. The bucket is created in an FTL-own storage project. Except for
-     * in rare cases, calling this method in parallel from multiple clients will only create a single
-     * bucket. In order to avoid unnecessary storage charges, the bucket is configured to automatically
-     * delete objects older than 90 days.
-     *
-     * The bucket is created with the following permissions: - Owner access for owners of central
-     * storage project (FTL-owned) - Writer access for owners/editors of customer project - Reader
-     * access for viewers of customer project The default ACL on objects created in the bucket is: -
-     * Owner access for owners of central storage project - Reader access for owners/editors/viewers of
-     * customer project See Google Cloud Storage documentation for more details.
-     *
-     * If there is already a default bucket set and the project can access the bucket, this call does
-     * nothing. However, if the project doesn't have the permission to access the bucket or the bucket
-     * is deleted, a new bucket will be created.
-     *
-     * May return any canonical error codes, including the following:
-     *
-     * - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised
-     * by Google Cloud Storage
+     * Creates resources for settings which have not yet been set. Currently, this creates a single
+     * resource: a Google Cloud Storage bucket, to be used as the default bucket for this project. The
+     * bucket is created in an FTL-own storage project. Except for in rare cases, calling this method in
+     * parallel from multiple clients will only create a single bucket. In order to avoid unnecessary
+     * storage charges, the bucket is configured to automatically delete objects older than 90 days. The
+     * bucket is created with the following permissions: - Owner access for owners of central storage
+     * project (FTL-owned) - Writer access for owners/editors of customer project - Reader access for
+     * viewers of customer project The default ACL on objects created in the bucket is: - Owner access
+     * for owners of central storage project - Reader access for owners/editors/viewers of customer
+     * project See Google Cloud Storage documentation for more details. If there is already a default
+     * bucket set and the project can access the bucket, this call does nothing. However, if the project
+     * doesn't have the permission to access the bucket or the bucket is deleted, a new bucket will be
+     * created. May return any canonical error codes, including the following: - PERMISSION_DENIED - if
+     * the user is not authorized to write to project - Any error code raised by Google Cloud Storage
      *
      * Create a request for the method "projects.initializeSettings".
      *
      * This request holds the parameters needed by the toolresults server.  After setting any optional
      * parameters, call the {@link InitializeSettings#execute()} method to invoke the remote operation.
      *
-     * @param projectId A Project id.
-    Required.
+     * @param projectId A Project id. Required.
      * @return the request
      */
     public InitializeSettings initializeSettings(java.lang.String projectId) throws java.io.IOException {
@@ -332,28 +305,21 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}:initializeSettings";
 
       /**
-       * Creates resources for settings which have not yet been set.
-       *
-       * Currently, this creates a single resource: a Google Cloud Storage bucket, to be used as the
-       * default bucket for this project. The bucket is created in an FTL-own storage project. Except
-       * for in rare cases, calling this method in parallel from multiple clients will only create a
-       * single bucket. In order to avoid unnecessary storage charges, the bucket is configured to
-       * automatically delete objects older than 90 days.
-       *
-       * The bucket is created with the following permissions: - Owner access for owners of central
-       * storage project (FTL-owned) - Writer access for owners/editors of customer project - Reader
-       * access for viewers of customer project The default ACL on objects created in the bucket is: -
-       * Owner access for owners of central storage project - Reader access for owners/editors/viewers
-       * of customer project See Google Cloud Storage documentation for more details.
-       *
-       * If there is already a default bucket set and the project can access the bucket, this call does
-       * nothing. However, if the project doesn't have the permission to access the bucket or the bucket
-       * is deleted, a new bucket will be created.
-       *
-       * May return any canonical error codes, including the following:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised
-       * by Google Cloud Storage
+       * Creates resources for settings which have not yet been set. Currently, this creates a single
+       * resource: a Google Cloud Storage bucket, to be used as the default bucket for this project. The
+       * bucket is created in an FTL-own storage project. Except for in rare cases, calling this method
+       * in parallel from multiple clients will only create a single bucket. In order to avoid
+       * unnecessary storage charges, the bucket is configured to automatically delete objects older
+       * than 90 days. The bucket is created with the following permissions: - Owner access for owners
+       * of central storage project (FTL-owned) - Writer access for owners/editors of customer project -
+       * Reader access for viewers of customer project The default ACL on objects created in the bucket
+       * is: - Owner access for owners of central storage project - Reader access for
+       * owners/editors/viewers of customer project See Google Cloud Storage documentation for more
+       * details. If there is already a default bucket set and the project can access the bucket, this
+       * call does nothing. However, if the project doesn't have the permission to access the bucket or
+       * the bucket is deleted, a new bucket will be created. May return any canonical error codes,
+       * including the following: - PERMISSION_DENIED - if the user is not authorized to write to
+       * project - Any error code raised by Google Cloud Storage
        *
        * Create a request for the method "projects.initializeSettings".
        *
@@ -363,8 +329,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param projectId A Project id.
-    Required.
+       * @param projectId A Project id. Required.
        * @since 1.13
        */
       protected InitializeSettings(java.lang.String projectId) {
@@ -427,27 +392,17 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         return (InitializeSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A Project id.
-       *
-       * Required.
-       */
+      /** A Project id. Required. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** A Project id.
-
-     Required.
+      /** A Project id. Required.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * A Project id.
-       *
-       * Required.
-       */
+      /** A Project id. Required. */
       public InitializeSettings setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -480,22 +435,17 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
     public class Histories {
 
       /**
-       * Creates a History.
-       *
-       * The returned History will have the id set.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-       * the request is malformed - NOT_FOUND - if the containing project does not exist
+       * Creates a History. The returned History will have the id set. May return any of the following
+       * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project -
+       * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not
+       * exist
        *
        * Create a request for the method "histories.create".
        *
        * This request holds the parameters needed by the toolresults server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param projectId A Project id.
-      Required.
+       * @param projectId A Project id. Required.
        * @param content the {@link com.google.api.services.toolresults.model.History}
        * @return the request
        */
@@ -510,14 +460,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories";
 
         /**
-         * Creates a History.
-         *
-         * The returned History will have the id set.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-         * the request is malformed - NOT_FOUND - if the containing project does not exist
+         * Creates a History. The returned History will have the id set. May return any of the following
+         * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project
+         * - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does
+         * not exist
          *
          * Create a request for the method "histories.create".
          *
@@ -527,8 +473,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId A Project id.
-      Required.
+         * @param projectId A Project id. Required.
          * @param content the {@link com.google.api.services.toolresults.model.History}
          * @since 1.13
          */
@@ -592,27 +537,17 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * A Project id.
-         *
-         * Required.
-         */
+        /** A Project id. Required. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** A Project id.
-
-       Required.
+        /** A Project id. Required.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /**
-         * A Project id.
-         *
-         * Required.
-         */
+        /** A Project id. Required. */
         public Create setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
@@ -620,15 +555,13 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
         /**
          * A unique request ID for server to detect duplicated requests. For example, a UUID.
-         *
          * Optional, but strongly recommended.
          */
         @com.google.api.client.util.Key
         private java.lang.String requestId;
 
-        /** A unique request ID for server to detect duplicated requests. For example, a UUID.
-
-       Optional, but strongly recommended.
+        /** A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but
+       strongly recommended.
          */
         public java.lang.String getRequestId() {
           return requestId;
@@ -636,7 +569,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
         /**
          * A unique request ID for server to detect duplicated requests. For example, a UUID.
-         *
          * Optional, but strongly recommended.
          */
         public Create setRequestId(java.lang.String requestId) {
@@ -650,22 +582,17 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Gets a History.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-       * request is malformed - NOT_FOUND - if the History does not exist
+       * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if
+       * the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed -
+       * NOT_FOUND - if the History does not exist
        *
        * Create a request for the method "histories.get".
        *
        * This request holds the parameters needed by the toolresults server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param projectId A Project id.
-      Required.
-       * @param historyId A History id.
-      Required.
+       * @param projectId A Project id. Required.
+       * @param historyId A History id. Required.
        * @return the request
        */
       public Get get(java.lang.String projectId, java.lang.String historyId) throws java.io.IOException {
@@ -679,12 +606,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}";
 
         /**
-         * Gets a History.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-         * request is malformed - NOT_FOUND - if the History does not exist
+         * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if
+         * the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed -
+         * NOT_FOUND - if the History does not exist
          *
          * Create a request for the method "histories.get".
          *
@@ -693,10 +617,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId A Project id.
-      Required.
-         * @param historyId A History id.
-      Required.
+         * @param projectId A Project id. Required.
+         * @param historyId A History id. Required.
          * @since 1.13
          */
         protected Get(java.lang.String projectId, java.lang.String historyId) {
@@ -770,53 +692,33 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * A Project id.
-         *
-         * Required.
-         */
+        /** A Project id. Required. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** A Project id.
-
-       Required.
+        /** A Project id. Required.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /**
-         * A Project id.
-         *
-         * Required.
-         */
+        /** A Project id. Required. */
         public Get setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /**
-         * A History id.
-         *
-         * Required.
-         */
+        /** A History id. Required. */
         @com.google.api.client.util.Key
         private java.lang.String historyId;
 
-        /** A History id.
-
-       Required.
+        /** A History id. Required.
          */
         public java.lang.String getHistoryId() {
           return historyId;
         }
 
-        /**
-         * A History id.
-         *
-         * Required.
-         */
+        /** A History id. Required. */
         public Get setHistoryId(java.lang.String historyId) {
           this.historyId = historyId;
           return this;
@@ -828,23 +730,18 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Lists Histories for a given Project.
-       *
-       * The histories are sorted by modification time in descending order. The history_id key will be
-       * used to order the history with the same modification time.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-       * request is malformed - NOT_FOUND - if the History does not exist
+       * Lists Histories for a given Project. The histories are sorted by modification time in descending
+       * order. The history_id key will be used to order the history with the same modification time. May
+       * return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+       * authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
+       * History does not exist
        *
        * Create a request for the method "histories.list".
        *
        * This request holds the parameters needed by the toolresults server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectId A Project id.
-      Required.
+       * @param projectId A Project id. Required.
        * @return the request
        */
       public List list(java.lang.String projectId) throws java.io.IOException {
@@ -858,15 +755,11 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories";
 
         /**
-         * Lists Histories for a given Project.
-         *
-         * The histories are sorted by modification time in descending order. The history_id key will be
-         * used to order the history with the same modification time.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-         * request is malformed - NOT_FOUND - if the History does not exist
+         * Lists Histories for a given Project. The histories are sorted by modification time in
+         * descending order. The history_id key will be used to order the history with the same
+         * modification time. May return any of the following canonical error codes: - PERMISSION_DENIED -
+         * if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed
+         * - NOT_FOUND - if the History does not exist
          *
          * Create a request for the method "histories.list".
          *
@@ -875,8 +768,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId A Project id.
-      Required.
+         * @param projectId A Project id. Required.
          * @since 1.13
          */
         protected List(java.lang.String projectId) {
@@ -949,74 +841,48 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * A Project id.
-         *
-         * Required.
-         */
+        /** A Project id. Required. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** A Project id.
-
-       Required.
+        /** A Project id. Required.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /**
-         * A Project id.
-         *
-         * Required.
-         */
+        /** A Project id. Required. */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /**
-         * If set, only return histories with the given name.
-         *
-         * Optional.
-         */
+        /** If set, only return histories with the given name. Optional. */
         @com.google.api.client.util.Key
         private java.lang.String filterByName;
 
-        /** If set, only return histories with the given name.
-
-       Optional.
+        /** If set, only return histories with the given name. Optional.
          */
         public java.lang.String getFilterByName() {
           return filterByName;
         }
 
-        /**
-         * If set, only return histories with the given name.
-         *
-         * Optional.
-         */
+        /** If set, only return histories with the given name. Optional. */
         public List setFilterByName(java.lang.String filterByName) {
           this.filterByName = filterByName;
           return this;
         }
 
         /**
-         * The maximum number of Histories to fetch.
-         *
-         * Default value: 20. The server will use this default if the field is not set or has a
-         * value of 0. Any value greater than 100 will be treated as 100.
-         *
-         * Optional.
+         * The maximum number of Histories to fetch. Default value: 20. The server will use this
+         * default if the field is not set or has a value of 0. Any value greater than 100 will be
+         * treated as 100. Optional.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of Histories to fetch.
-
-       Default value: 20. The server will use this default if the field is not set or has a value of 0.
-       Any value greater than 100 will be treated as 100.
-
+        /** The maximum number of Histories to fetch. Default value: 20. The server will use this default if
+       the field is not set or has a value of 0. Any value greater than 100 will be treated as 100.
        Optional.
          */
         public java.lang.Integer getPageSize() {
@@ -1024,39 +890,26 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * The maximum number of Histories to fetch.
-         *
-         * Default value: 20. The server will use this default if the field is not set or has a
-         * value of 0. Any value greater than 100 will be treated as 100.
-         *
-         * Optional.
+         * The maximum number of Histories to fetch. Default value: 20. The server will use this
+         * default if the field is not set or has a value of 0. Any value greater than 100 will be
+         * treated as 100. Optional.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A continuation token to resume the query at the next item.
-         *
-         * Optional.
-         */
+        /** A continuation token to resume the query at the next item. Optional. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A continuation token to resume the query at the next item.
-
-       Optional.
+        /** A continuation token to resume the query at the next item. Optional.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A continuation token to resume the query at the next item.
-         *
-         * Optional.
-         */
+        /** A continuation token to resume the query at the next item. Optional. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1089,24 +942,18 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
       public class Executions {
 
         /**
-         * Creates an Execution.
-         *
-         * The returned Execution will have the id set.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-         * the request is malformed - NOT_FOUND - if the containing History does not exist
+         * Creates an Execution. The returned Execution will have the id set. May return any of the
+         * following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to
+         * project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History
+         * does not exist
          *
          * Create a request for the method "executions.create".
          *
          * This request holds the parameters needed by the toolresults server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param projectId A Project id.
-        Required.
-         * @param historyId A History id.
-        Required.
+         * @param projectId A Project id. Required.
+         * @param historyId A History id. Required.
          * @param content the {@link com.google.api.services.toolresults.model.Execution}
          * @return the request
          */
@@ -1121,14 +968,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions";
 
           /**
-           * Creates an Execution.
-           *
-           * The returned Execution will have the id set.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-           * the request is malformed - NOT_FOUND - if the containing History does not exist
+           * Creates an Execution. The returned Execution will have the id set. May return any of the
+           * following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write
+           * to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing
+           * History does not exist
            *
            * Create a request for the method "executions.create".
            *
@@ -1138,10 +981,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId A Project id.
-        Required.
-           * @param historyId A History id.
-        Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
            * @param content the {@link com.google.api.services.toolresults.model.Execution}
            * @since 1.13
            */
@@ -1206,53 +1047,33 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * A Project id.
-           *
-           * Required.
-           */
+          /** A Project id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** A Project id.
-
-         Required.
+          /** A Project id. Required.
            */
           public java.lang.String getProjectId() {
             return projectId;
           }
 
-          /**
-           * A Project id.
-           *
-           * Required.
-           */
+          /** A Project id. Required. */
           public Create setProjectId(java.lang.String projectId) {
             this.projectId = projectId;
             return this;
           }
 
-          /**
-           * A History id.
-           *
-           * Required.
-           */
+          /** A History id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String historyId;
 
-          /** A History id.
-
-         Required.
+          /** A History id. Required.
            */
           public java.lang.String getHistoryId() {
             return historyId;
           }
 
-          /**
-           * A History id.
-           *
-           * Required.
-           */
+          /** A History id. Required. */
           public Create setHistoryId(java.lang.String historyId) {
             this.historyId = historyId;
             return this;
@@ -1260,15 +1081,13 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           /**
            * A unique request ID for server to detect duplicated requests. For example, a UUID.
-           *
            * Optional, but strongly recommended.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique request ID for server to detect duplicated requests. For example, a UUID.
-
-         Optional, but strongly recommended.
+          /** A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but
+         strongly recommended.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -1276,7 +1095,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           /**
            * A unique request ID for server to detect duplicated requests. For example, a UUID.
-           *
            * Optional, but strongly recommended.
            */
           public Create setRequestId(java.lang.String requestId) {
@@ -1290,24 +1108,18 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Gets an Execution.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-         * the request is malformed - NOT_FOUND - if the Execution does not exist
+         * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED -
+         * if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is
+         * malformed - NOT_FOUND - if the Execution does not exist
          *
          * Create a request for the method "executions.get".
          *
          * This request holds the parameters needed by the toolresults server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param projectId A Project id.
-        Required.
-         * @param historyId A History id.
-        Required.
-         * @param executionId An Execution id.
-        Required.
+         * @param projectId A Project id. Required.
+         * @param historyId A History id. Required.
+         * @param executionId An Execution id. Required.
          * @return the request
          */
         public Get get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId) throws java.io.IOException {
@@ -1321,12 +1133,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}";
 
           /**
-           * Gets an Execution.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-           * the request is malformed - NOT_FOUND - if the Execution does not exist
+           * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED -
+           * if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is
+           * malformed - NOT_FOUND - if the Execution does not exist
            *
            * Create a request for the method "executions.get".
            *
@@ -1335,12 +1144,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId A Project id.
-        Required.
-           * @param historyId A History id.
-        Required.
-           * @param executionId An Execution id.
-        Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId An Execution id. Required.
            * @since 1.13
            */
           protected Get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId) {
@@ -1415,79 +1221,49 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * A Project id.
-           *
-           * Required.
-           */
+          /** A Project id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** A Project id.
-
-         Required.
+          /** A Project id. Required.
            */
           public java.lang.String getProjectId() {
             return projectId;
           }
 
-          /**
-           * A Project id.
-           *
-           * Required.
-           */
+          /** A Project id. Required. */
           public Get setProjectId(java.lang.String projectId) {
             this.projectId = projectId;
             return this;
           }
 
-          /**
-           * A History id.
-           *
-           * Required.
-           */
+          /** A History id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String historyId;
 
-          /** A History id.
-
-         Required.
+          /** A History id. Required.
            */
           public java.lang.String getHistoryId() {
             return historyId;
           }
 
-          /**
-           * A History id.
-           *
-           * Required.
-           */
+          /** A History id. Required. */
           public Get setHistoryId(java.lang.String historyId) {
             this.historyId = historyId;
             return this;
           }
 
-          /**
-           * An Execution id.
-           *
-           * Required.
-           */
+          /** An Execution id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String executionId;
 
-          /** An Execution id.
-
-         Required.
+          /** An Execution id. Required.
            */
           public java.lang.String getExecutionId() {
             return executionId;
           }
 
-          /**
-           * An Execution id.
-           *
-           * Required.
-           */
+          /** An Execution id. Required. */
           public Get setExecutionId(java.lang.String executionId) {
             this.executionId = executionId;
             return this;
@@ -1499,25 +1275,19 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Lists Executions for a given History.
-         *
-         * The executions are sorted by creation_time in descending order. The execution_id key will be used
-         * to order the executions with the same creation_time.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-         * request is malformed - NOT_FOUND - if the containing History does not exist
+         * Lists Executions for a given History. The executions are sorted by creation_time in descending
+         * order. The execution_id key will be used to order the executions with the same creation_time. May
+         * return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+         * authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
+         * containing History does not exist
          *
          * Create a request for the method "executions.list".
          *
          * This request holds the parameters needed by the toolresults server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param projectId A Project id.
-        Required.
-         * @param historyId A History id.
-        Required.
+         * @param projectId A Project id. Required.
+         * @param historyId A History id. Required.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String historyId) throws java.io.IOException {
@@ -1531,15 +1301,11 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions";
 
           /**
-           * Lists Executions for a given History.
-           *
-           * The executions are sorted by creation_time in descending order. The execution_id key will be
-           * used to order the executions with the same creation_time.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-           * request is malformed - NOT_FOUND - if the containing History does not exist
+           * Lists Executions for a given History. The executions are sorted by creation_time in descending
+           * order. The execution_id key will be used to order the executions with the same creation_time.
+           * May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+           * authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if
+           * the containing History does not exist
            *
            * Create a request for the method "executions.list".
            *
@@ -1548,10 +1314,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId A Project id.
-        Required.
-           * @param historyId A History id.
-        Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String historyId) {
@@ -1625,113 +1389,72 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * A Project id.
-           *
-           * Required.
-           */
+          /** A Project id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** A Project id.
-
-         Required.
+          /** A Project id. Required.
            */
           public java.lang.String getProjectId() {
             return projectId;
           }
 
-          /**
-           * A Project id.
-           *
-           * Required.
-           */
+          /** A Project id. Required. */
           public List setProjectId(java.lang.String projectId) {
             this.projectId = projectId;
             return this;
           }
 
-          /**
-           * A History id.
-           *
-           * Required.
-           */
+          /** A History id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String historyId;
 
-          /** A History id.
-
-         Required.
+          /** A History id. Required.
            */
           public java.lang.String getHistoryId() {
             return historyId;
           }
 
-          /**
-           * A History id.
-           *
-           * Required.
-           */
+          /** A History id. Required. */
           public List setHistoryId(java.lang.String historyId) {
             this.historyId = historyId;
             return this;
           }
 
           /**
-           * The maximum number of Executions to fetch.
-           *
-           * Default value: 25. The server will use this default if the field is not set or has a
-           * value of 0.
-           *
-           * Optional.
+           * The maximum number of Executions to fetch. Default value: 25. The server will use this
+           * default if the field is not set or has a value of 0. Optional.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of Executions to fetch.
-
-         Default value: 25. The server will use this default if the field is not set or has a value of 0.
-
-         Optional.
+          /** The maximum number of Executions to fetch. Default value: 25. The server will use this default if
+         the field is not set or has a value of 0. Optional.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of Executions to fetch.
-           *
-           * Default value: 25. The server will use this default if the field is not set or has a
-           * value of 0.
-           *
-           * Optional.
+           * The maximum number of Executions to fetch. Default value: 25. The server will use this
+           * default if the field is not set or has a value of 0. Optional.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A continuation token to resume the query at the next item.
-           *
-           * Optional.
-           */
+          /** A continuation token to resume the query at the next item. Optional. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A continuation token to resume the query at the next item.
-
-         Optional.
+          /** A continuation token to resume the query at the next item. Optional.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A continuation token to resume the query at the next item.
-           *
-           * Optional.
-           */
+          /** A continuation token to resume the query at the next item. Optional. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1743,21 +1466,17 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Updates an existing Execution with the supplied partial entity.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-         * the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal -
-         * NOT_FOUND - if the containing History does not exist
+         * Updates an existing Execution with the supplied partial entity. May return any of the following
+         * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project -
+         * INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state
+         * transition is illegal - NOT_FOUND - if the containing History does not exist
          *
          * Create a request for the method "executions.patch".
          *
          * This request holds the parameters needed by the toolresults server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param projectId A Project id.
-        Required.
+         * @param projectId A Project id. Required.
          * @param historyId Required.
          * @param executionId Required.
          * @param content the {@link com.google.api.services.toolresults.model.Execution}
@@ -1774,13 +1493,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}";
 
           /**
-           * Updates an existing Execution with the supplied partial entity.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-           * the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal -
-           * NOT_FOUND - if the containing History does not exist
+           * Updates an existing Execution with the supplied partial entity. May return any of the following
+           * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project
+           * - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state
+           * transition is illegal - NOT_FOUND - if the containing History does not exist
            *
            * Create a request for the method "executions.patch".
            *
@@ -1790,8 +1506,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId A Project id.
-        Required.
+           * @param projectId A Project id. Required.
            * @param historyId Required.
            * @param executionId Required.
            * @param content the {@link com.google.api.services.toolresults.model.Execution}
@@ -1859,9 +1574,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * A Project id. Required.
-           */
+          /** A Project id. Required. */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
@@ -1871,9 +1584,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             return projectId;
           }
 
-          /**
-           * A Project id. Required.
-           */
+          /** A Project id. Required. */
           public Patch setProjectId(java.lang.String projectId) {
             this.projectId = projectId;
             return this;
@@ -1913,15 +1624,13 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           /**
            * A unique request ID for server to detect duplicated requests. For example, a UUID.
-           *
            * Optional, but strongly recommended.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique request ID for server to detect duplicated requests. For example, a UUID.
-
-         Optional, but strongly recommended.
+          /** A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but
+         strongly recommended.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -1929,7 +1638,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           /**
            * A unique request ID for server to detect duplicated requests. For example, a UUID.
-           *
            * Optional, but strongly recommended.
            */
           public Patch setRequestId(java.lang.String requestId) {
@@ -1971,14 +1679,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the toolresults server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId An Execution id.
-          Required.
-           * @param clusterId A Cluster id
-          Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId An Execution id. Required.
+           * @param clusterId A Cluster id Required.
            * @return the request
            */
           public Get get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String clusterId) throws java.io.IOException {
@@ -2001,14 +1705,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId An Execution id.
-          Required.
-             * @param clusterId A Cluster id
-          Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId An Execution id. Required.
+             * @param clusterId A Cluster id Required.
              * @since 1.13
              */
             protected Get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String clusterId) {
@@ -2084,105 +1784,65 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** A Project id. Required.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             public Get setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** A History id. Required.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             public Get setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * An Execution id.
-             *
-             * Required.
-             */
+            /** An Execution id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** An Execution id.
-
-           Required.
+            /** An Execution id. Required.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * An Execution id.
-             *
-             * Required.
-             */
+            /** An Execution id. Required. */
             public Get setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;
             }
 
-            /**
-             * A Cluster id
-             *
-             * Required.
-             */
+            /** A Cluster id Required. */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** A Cluster id
-
-           Required.
+            /** A Cluster id Required.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
-            /**
-             * A Cluster id
-             *
-             * Required.
-             */
+            /** A Cluster id Required. */
             public Get setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
               return this;
@@ -2194,25 +1854,20 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists Screenshot Clusters
-           *
-           * Returns the list of screenshot clusters corresponding to an execution. Screenshot clusters are
-           * created after the execution is finished. Clusters are created from a set of screenshots. Between
-           * any two screenshots, a matching score is calculated based off their metadata that determines how
-           * similar they are. Screenshots are placed in the cluster that has screens which have the highest
-           * matching scores.
+           * Lists Screenshot Clusters Returns the list of screenshot clusters corresponding to an execution.
+           * Screenshot clusters are created after the execution is finished. Clusters are created from a set
+           * of screenshots. Between any two screenshots, a matching score is calculated based off their
+           * metadata that determines how similar they are. Screenshots are placed in the cluster that has
+           * screens which have the highest matching scores.
            *
            * Create a request for the method "clusters.list".
            *
            * This request holds the parameters needed by the toolresults server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId An Execution id.
-          Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId An Execution id. Required.
            * @return the request
            */
           public List list(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId) throws java.io.IOException {
@@ -2226,13 +1881,11 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters";
 
             /**
-             * Lists Screenshot Clusters
-             *
-             * Returns the list of screenshot clusters corresponding to an execution. Screenshot clusters are
-             * created after the execution is finished. Clusters are created from a set of screenshots.
-             * Between any two screenshots, a matching score is calculated based off their metadata that
-             * determines how similar they are. Screenshots are placed in the cluster that has screens which
-             * have the highest matching scores.
+             * Lists Screenshot Clusters Returns the list of screenshot clusters corresponding to an
+             * execution. Screenshot clusters are created after the execution is finished. Clusters are
+             * created from a set of screenshots. Between any two screenshots, a matching score is calculated
+             * based off their metadata that determines how similar they are. Screenshots are placed in the
+             * cluster that has screens which have the highest matching scores.
              *
              * Create a request for the method "clusters.list".
              *
@@ -2241,12 +1894,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId An Execution id.
-          Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId An Execution id. Required.
              * @since 1.13
              */
             protected List(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId) {
@@ -2321,79 +1971,49 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** A Project id. Required.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             public List setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** A History id. Required.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             public List setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * An Execution id.
-             *
-             * Required.
-             */
+            /** An Execution id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** An Execution id.
-
-           Required.
+            /** An Execution id. Required.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * An Execution id.
-             *
-             * Required.
-             */
+            /** An Execution id. Required. */
             public List setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;
@@ -2427,12 +2047,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         public class Environments {
 
           /**
-           * Gets an Environment.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-           * request is malformed - NOT_FOUND - if the Environment does not exist
+           * Gets an Environment. May return any of the following canonical error codes: - PERMISSION_DENIED -
+           * if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed -
+           * NOT_FOUND - if the Environment does not exist
            *
            * Create a request for the method "environments.get".
            *
@@ -2456,12 +2073,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}";
 
             /**
-             * Gets an Environment.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-             * request is malformed - NOT_FOUND - if the Environment does not exist
+             * Gets an Environment. May return any of the following canonical error codes: - PERMISSION_DENIED
+             * - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is
+             * malformed - NOT_FOUND - if the Environment does not exist
              *
              * Create a request for the method "environments.get".
              *
@@ -2619,14 +2233,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists Environments for a given Execution.
-           *
-           * The Environments are sorted by display name.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-           * request is malformed - NOT_FOUND - if the containing Execution does not exist
+           * Lists Environments for a given Execution. The Environments are sorted by display name. May return
+           * any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized
+           * to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing
+           * Execution does not exist
            *
            * Create a request for the method "environments.list".
            *
@@ -2649,14 +2259,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/environments";
 
             /**
-             * Lists Environments for a given Execution.
-             *
-             * The Environments are sorted by display name.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-             * request is malformed - NOT_FOUND - if the containing Execution does not exist
+             * Lists Environments for a given Execution. The Environments are sorted by display name. May
+             * return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+             * authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if
+             * the containing Execution does not exist
              *
              * Create a request for the method "environments.list".
              *
@@ -2791,27 +2397,22 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The maximum number of Environments to fetch.
-             *
-             * Default value: 25. The server will use this default if the field is not set or has a
-             * value of 0.
+             * The maximum number of Environments to fetch. Default value: 25. The server will use
+             * this default if the field is not set or has a value of 0.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of Environments to fetch.
-
-           Default value: 25. The server will use this default if the field is not set or has a value of 0.
+            /** The maximum number of Environments to fetch. Default value: 25. The server will use this default if
+           the field is not set or has a value of 0.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of Environments to fetch.
-             *
-             * Default value: 25. The server will use this default if the field is not set or has a
-             * value of 0.
+             * The maximum number of Environments to fetch. Default value: 25. The server will use
+             * this default if the field is not set or has a value of 0.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -2862,12 +2463,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         public class Steps {
 
           /**
-           * Lists accessibility clusters for a given Step
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-           * request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
+           * Lists accessibility clusters for a given Step May return any of the following canonical error
+           * codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT -
+           * if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
            * invalid; e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step does not
            * exist
            *
@@ -2877,11 +2475,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link AccessibilityClusters#execute()} method to invoke the remote
            * operation.
            *
-           * @param name A full resource name of the step.
-          For example, projects/my-
+           * @param name A full resource name of the step. For example, projects/my-
            *        project/histories/bh.1234567890abcdef/executions/
-           *        1234567890123456789/steps/bs.1234567890abcdef
-          Required.
+           *        1234567890123456789/steps/bs.1234567890abcdef Required.
            * @return the request
            */
           public AccessibilityClusters accessibilityClusters(java.lang.String name) throws java.io.IOException {
@@ -2898,12 +2494,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/histories/[^/]+/executions/[^/]+/steps/[^/]+$");
 
             /**
-             * Lists accessibility clusters for a given Step
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-             * request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
+             * Lists accessibility clusters for a given Step May return any of the following canonical error
+             * codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT -
+             * if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
              * invalid; e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step does not
              * exist
              *
@@ -2915,11 +2508,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name A full resource name of the step.
-          For example, projects/my-
+             * @param name A full resource name of the step. For example, projects/my-
            *        project/histories/bh.1234567890abcdef/executions/
-           *        1234567890123456789/steps/bs.1234567890abcdef
-          Required.
+           *        1234567890123456789/steps/bs.1234567890abcdef Required.
              * @since 1.13
              */
             protected AccessibilityClusters(java.lang.String name) {
@@ -3000,16 +2591,13 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             /**
              * A full resource name of the step. For example, projects/my-
              * project/histories/bh.1234567890abcdef/executions/
-             * 1234567890123456789/steps/bs.1234567890abcdef
-             *
-             * Required.
+             * 1234567890123456789/steps/bs.1234567890abcdef Required.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** A full resource name of the step. For example, projects/my-
            project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef
-
            Required.
              */
             public java.lang.String getName() {
@@ -3019,9 +2607,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             /**
              * A full resource name of the step. For example, projects/my-
              * project/histories/bh.1234567890abcdef/executions/
-             * 1234567890123456789/steps/bs.1234567890abcdef
-             *
-             * Required.
+             * 1234567890123456789/steps/bs.1234567890abcdef Required.
              */
             public AccessibilityClusters setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3036,18 +2622,14 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             /**
              * The accepted format is the canonical Unicode format with hyphen as a delimiter.
              * Language must be lowercase, Language Script - Capitalized, Region - UPPERCASE. See
-             * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.
-             *
-             * Required.
+             * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details. Required.
              */
             @com.google.api.client.util.Key
             private java.lang.String locale;
 
             /** The accepted format is the canonical Unicode format with hyphen as a delimiter. Language must be
            lowercase, Language Script - Capitalized, Region - UPPERCASE. See
-           http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.
-
-           Required.
+           http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details. Required.
              */
             public java.lang.String getLocale() {
               return locale;
@@ -3056,9 +2638,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             /**
              * The accepted format is the canonical Unicode format with hyphen as a delimiter.
              * Language must be lowercase, Language Script - Capitalized, Region - UPPERCASE. See
-             * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.
-             *
-             * Required.
+             * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details. Required.
              */
             public AccessibilityClusters setLocale(java.lang.String locale) {
               this.locale = locale;
@@ -3071,15 +2651,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Creates a Step.
-           *
-           * The returned Step will have the id set.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-           * the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) -
-           * NOT_FOUND - if the containing Execution does not exist
+           * Creates a Step. The returned Step will have the id set. May return any of the following canonical
+           * error codes: - PERMISSION_DENIED - if the user is not authorized to write to project -
+           * INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too large
+           * (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
            *
            * Create a request for the method "steps.create".
            *
@@ -3103,15 +2678,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps";
 
             /**
-             * Creates a Step.
-             *
-             * The returned Step will have the id set.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-             * the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) -
-             * NOT_FOUND - if the containing Execution does not exist
+             * Creates a Step. The returned Step will have the id set. May return any of the following
+             * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project
+             * - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too
+             * large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
              *
              * Create a request for the method "steps.create".
              *
@@ -3239,15 +2809,13 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             /**
              * A unique request ID for server to detect duplicated requests. For example, a UUID.
-             *
              * Optional, but strongly recommended.
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
-            /** A unique request ID for server to detect duplicated requests. For example, a UUID.
-
-           Optional, but strongly recommended.
+            /** A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but
+           strongly recommended.
              */
             public java.lang.String getRequestId() {
               return requestId;
@@ -3255,7 +2823,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             /**
              * A unique request ID for server to detect duplicated requests. For example, a UUID.
-             *
              * Optional, but strongly recommended.
              */
             public Create setRequestId(java.lang.String requestId) {
@@ -3269,26 +2836,19 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Gets a Step.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-           * request is malformed - NOT_FOUND - if the Step does not exist
+           * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the
+           * user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed -
+           * NOT_FOUND - if the Step does not exist
            *
            * Create a request for the method "steps.get".
            *
            * This request holds the parameters needed by the toolresults server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId A Execution id.
-          Required.
-           * @param stepId A Step id.
-          Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId A Execution id. Required.
+           * @param stepId A Step id. Required.
            * @return the request
            */
           public Get get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) throws java.io.IOException {
@@ -3302,12 +2862,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}";
 
             /**
-             * Gets a Step.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-             * request is malformed - NOT_FOUND - if the Step does not exist
+             * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if
+             * the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed -
+             * NOT_FOUND - if the Step does not exist
              *
              * Create a request for the method "steps.get".
              *
@@ -3316,14 +2873,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId A Execution id.
-          Required.
-             * @param stepId A Step id.
-          Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId A Execution id. Required.
+             * @param stepId A Step id. Required.
              * @since 1.13
              */
             protected Get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) {
@@ -3399,105 +2952,65 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** A Project id. Required.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             public Get setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** A History id. Required.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             public Get setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** A Execution id.
-
-           Required.
+            /** A Execution id. Required.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             public Get setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;
             }
 
-            /**
-             * A Step id.
-             *
-             * Required.
-             */
+            /** A Step id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String stepId;
 
-            /** A Step id.
-
-           Required.
+            /** A Step id. Required.
              */
             public java.lang.String getStepId() {
               return stepId;
             }
 
-            /**
-             * A Step id.
-             *
-             * Required.
-             */
+            /** A Step id. Required. */
             public Get setStepId(java.lang.String stepId) {
               this.stepId = stepId;
               return this;
@@ -3509,10 +3022,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Retrieves a PerfMetricsSummary.
-           *
-           * May return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary
-           * does not exist
+           * Retrieves a PerfMetricsSummary. May return any of the following error code(s): - NOT_FOUND - The
+           * specified PerfMetricsSummary does not exist
            *
            * Create a request for the method "steps.getPerfMetricsSummary".
            *
@@ -3537,10 +3048,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary";
 
             /**
-             * Retrieves a PerfMetricsSummary.
-             *
-             * May return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary
-             * does not exist
+             * Retrieves a PerfMetricsSummary. May return any of the following error code(s): - NOT_FOUND -
+             * The specified PerfMetricsSummary does not exist
              *
              * Create a request for the method "steps.getPerfMetricsSummary".
              *
@@ -3699,29 +3208,21 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists Steps for a given Execution.
-           *
-           * The steps are sorted by creation_time in descending order. The step_id key will be used to order
-           * the steps with the same creation_time.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-           * request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
-           * invalid; e.g. if an attempt is made to list the                         children of a nonexistent
-           * Step - NOT_FOUND - if the containing Execution does not exist
+           * Lists Steps for a given Execution. The steps are sorted by creation_time in descending order. The
+           * step_id key will be used to order the steps with the same creation_time. May return any of the
+           * following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read
+           * project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument
+           * in the request happens to be invalid; e.g. if an attempt is made to list the children of a
+           * nonexistent Step - NOT_FOUND - if the containing Execution does not exist
            *
            * Create a request for the method "steps.list".
            *
            * This request holds the parameters needed by the toolresults server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId A Execution id.
-          Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId A Execution id. Required.
            * @return the request
            */
           public List list(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId) throws java.io.IOException {
@@ -3735,17 +3236,12 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps";
 
             /**
-             * Lists Steps for a given Execution.
-             *
-             * The steps are sorted by creation_time in descending order. The step_id key will be used to
-             * order the steps with the same creation_time.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-             * request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
-             * invalid; e.g. if an attempt is made to list the                         children of a
-             * nonexistent Step - NOT_FOUND - if the containing Execution does not exist
+             * Lists Steps for a given Execution. The steps are sorted by creation_time in descending order.
+             * The step_id key will be used to order the steps with the same creation_time. May return any of
+             * the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to
+             * read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an
+             * argument in the request happens to be invalid; e.g. if an attempt is made to list the children
+             * of a nonexistent Step - NOT_FOUND - if the containing Execution does not exist
              *
              * Create a request for the method "steps.list".
              *
@@ -3754,12 +3250,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId A Execution id.
-          Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId A Execution id. Required.
              * @since 1.13
              */
             protected List(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId) {
@@ -3834,139 +3327,88 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** A Project id. Required.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             public List setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** A History id. Required.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             public List setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** A Execution id.
-
-           Required.
+            /** A Execution id. Required.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             public List setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;
             }
 
             /**
-             * The maximum number of Steps to fetch.
-             *
-             * Default value: 25. The server will use this default if the field is not set or has a
-             * value of 0.
-             *
-             * Optional.
+             * The maximum number of Steps to fetch. Default value: 25. The server will use this
+             * default if the field is not set or has a value of 0. Optional.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of Steps to fetch.
-
-           Default value: 25. The server will use this default if the field is not set or has a value of 0.
-
-           Optional.
+            /** The maximum number of Steps to fetch. Default value: 25. The server will use this default if the
+           field is not set or has a value of 0. Optional.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of Steps to fetch.
-             *
-             * Default value: 25. The server will use this default if the field is not set or has a
-             * value of 0.
-             *
-             * Optional.
+             * The maximum number of Steps to fetch. Default value: 25. The server will use this
+             * default if the field is not set or has a value of 0. Optional.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /**
-             * A continuation token to resume the query at the next item.
-             *
-             * Optional.
-             */
+            /** A continuation token to resume the query at the next item. Optional. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A continuation token to resume the query at the next item.
-
-           Optional.
+            /** A continuation token to resume the query at the next item. Optional.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /**
-             * A continuation token to resume the query at the next item.
-             *
-             * Optional.
-             */
+            /** A continuation token to resume the query at the next item. Optional. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -3978,28 +3420,21 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Updates an existing Step with the supplied partial entity.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the
-           * request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal
-           * (e.g try to upload a duplicate xml file), if the                         updated step is too
-           * large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
+           * Updates an existing Step with the supplied partial entity. May return any of the following
+           * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write project -
+           * INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state
+           * transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too large
+           * (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
            *
            * Create a request for the method "steps.patch".
            *
            * This request holds the parameters needed by the toolresults server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId A Execution id.
-          Required.
-           * @param stepId A Step id.
-          Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId A Execution id. Required.
+           * @param stepId A Step id. Required.
            * @param content the {@link com.google.api.services.toolresults.model.Step}
            * @return the request
            */
@@ -4014,13 +3449,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}";
 
             /**
-             * Updates an existing Step with the supplied partial entity.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if
-             * the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal
-             * (e.g try to upload a duplicate xml file), if the                         updated step is too
+             * Updates an existing Step with the supplied partial entity. May return any of the following
+             * canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write project -
+             * INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state
+             * transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too
              * large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
              *
              * Create a request for the method "steps.patch".
@@ -4031,14 +3463,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId A Execution id.
-          Required.
-             * @param stepId A Step id.
-          Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId A Execution id. Required.
+             * @param stepId A Step id. Required.
              * @param content the {@link com.google.api.services.toolresults.model.Step}
              * @since 1.13
              */
@@ -4105,105 +3533,65 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** A Project id. Required.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             public Patch setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** A History id. Required.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             public Patch setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** A Execution id.
-
-           Required.
+            /** A Execution id. Required.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             public Patch setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;
             }
 
-            /**
-             * A Step id.
-             *
-             * Required.
-             */
+            /** A Step id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String stepId;
 
-            /** A Step id.
-
-           Required.
+            /** A Step id. Required.
              */
             public java.lang.String getStepId() {
               return stepId;
             }
 
-            /**
-             * A Step id.
-             *
-             * Required.
-             */
+            /** A Step id. Required. */
             public Patch setStepId(java.lang.String stepId) {
               this.stepId = stepId;
               return this;
@@ -4211,15 +3599,13 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             /**
              * A unique request ID for server to detect duplicated requests. For example, a UUID.
-             *
              * Optional, but strongly recommended.
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
-            /** A unique request ID for server to detect duplicated requests. For example, a UUID.
-
-           Optional, but strongly recommended.
+            /** A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but
+           strongly recommended.
              */
             public java.lang.String getRequestId() {
               return requestId;
@@ -4227,7 +3613,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             /**
              * A unique request ID for server to detect duplicated requests. For example, a UUID.
-             *
              * Optional, but strongly recommended.
              */
             public Patch setRequestId(java.lang.String requestId) {
@@ -4241,11 +3626,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Publish xml files to an existing Step.
-           *
-           * May return any of the following canonical error codes:
-           *
-           * - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the
+           * Publish xml files to an existing Step. May return any of the following canonical error codes: -
+           * PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the
            * request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g
            * try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing Execution
            * does not exist
@@ -4256,15 +3638,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link PublishXunitXmlFiles#execute()} method to invoke the remote
            * operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId A Execution id.
-          Required.
-           * @param stepId A Step id.
-          Note: This step must include a TestExecutionStep.
-          Required.
+           * @param projectId A Project id. Required.
+           * @param historyId A History id. Required.
+           * @param executionId A Execution id. Required.
+           * @param stepId A Step id. Note: This step must include a TestExecutionStep. Required.
            * @param content the {@link com.google.api.services.toolresults.model.PublishXunitXmlFilesRequest}
            * @return the request
            */
@@ -4279,13 +3656,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles";
 
             /**
-             * Publish xml files to an existing Step.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if
-             * the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal,
-             * e.g try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing
+             * Publish xml files to an existing Step. May return any of the following canonical error codes: -
+             * PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the
+             * request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g
+             * try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing
              * Execution does not exist
              *
              * Create a request for the method "steps.publishXunitXmlFiles".
@@ -4296,15 +3670,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId A Execution id.
-          Required.
-             * @param stepId A Step id.
-          Note: This step must include a TestExecutionStep.
-          Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId A Execution id. Required.
+             * @param stepId A Step id. Note: This step must include a TestExecutionStep. Required.
              * @param content the {@link com.google.api.services.toolresults.model.PublishXunitXmlFilesRequest}
              * @since 1.13
              */
@@ -4371,105 +3740,65 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (PublishXunitXmlFiles) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** A Project id. Required.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** A Project id. Required. */
             public PublishXunitXmlFiles setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** A History id. Required.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** A History id. Required. */
             public PublishXunitXmlFiles setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** A Execution id.
-
-           Required.
+            /** A Execution id. Required.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** A Execution id. Required. */
             public PublishXunitXmlFiles setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;
             }
 
-            /**
-             * A Step id. Note: This step must include a TestExecutionStep.
-             *
-             * Required.
-             */
+            /** A Step id. Note: This step must include a TestExecutionStep. Required. */
             @com.google.api.client.util.Key
             private java.lang.String stepId;
 
-            /** A Step id. Note: This step must include a TestExecutionStep.
-
-           Required.
+            /** A Step id. Note: This step must include a TestExecutionStep. Required.
              */
             public java.lang.String getStepId() {
               return stepId;
             }
 
-            /**
-             * A Step id. Note: This step must include a TestExecutionStep.
-             *
-             * Required.
-             */
+            /** A Step id. Note: This step must include a TestExecutionStep. Required. */
             public PublishXunitXmlFiles setStepId(java.lang.String stepId) {
               this.stepId = stepId;
               return this;
@@ -4503,7 +3832,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             /**
              * Creates a PerfMetricsSummary resource. Returns the existing one if it has already been created.
-             *
              * May return any of the following error code(s): - NOT_FOUND - The containing Step does not exist
              *
              * Create a request for the method "perfMetricsSummary.create".
@@ -4530,7 +3858,6 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
               /**
                * Creates a PerfMetricsSummary resource. Returns the existing one if it has already been created.
-               *
                * May return any of the following error code(s): - NOT_FOUND - The containing Step does not exist
                *
                * Create a request for the method "perfMetricsSummary.create".
@@ -4703,10 +4030,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           public class PerfSampleSeries {
 
             /**
-             * Creates a PerfSampleSeries.
-             *
-             * May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already
-             * exists for the given Step - NOT_FOUND - The containing Step does not exist
+             * Creates a PerfSampleSeries. May return any of the following error code(s): - ALREADY_EXISTS -
+             * PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not
+             * exist
              *
              * Create a request for the method "perfSampleSeries.create".
              *
@@ -4731,10 +4057,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries";
 
               /**
-               * Creates a PerfSampleSeries.
-               *
-               * May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already
-               * exists for the given Step - NOT_FOUND - The containing Step does not exist
+               * Creates a PerfSampleSeries. May return any of the following error code(s): - ALREADY_EXISTS -
+               * PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not
+               * exist
                *
                * Create a request for the method "perfSampleSeries.create".
                *
@@ -4884,10 +4209,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * Gets a PerfSampleSeries.
-             *
-             * May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does
-             * not exist
+             * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The
+             * specified PerfSampleSeries does not exist
              *
              * Create a request for the method "perfSampleSeries.get".
              *
@@ -4912,10 +4235,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}";
 
               /**
-               * Gets a PerfSampleSeries.
-               *
-               * May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries
-               * does not exist
+               * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The
+               * specified PerfSampleSeries does not exist
                *
                * Create a request for the method "perfSampleSeries.get".
                *
@@ -5091,13 +4412,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * Lists PerfSampleSeries for a given Step.
-             *
-             * The request provides an optional filter which specifies one or more PerfMetricsType to include in
-             * the result; if none returns all. The resulting PerfSampleSeries are sorted by ids.
-             *
-             * May return any of the following canonical error codes: - NOT_FOUND - The containing Step does not
-             * exist
+             * Lists PerfSampleSeries for a given Step. The request provides an optional filter which specifies
+             * one or more PerfMetricsType to include in the result; if none returns all. The resulting
+             * PerfSampleSeries are sorted by ids. May return any of the following canonical error codes: -
+             * NOT_FOUND - The containing Step does not exist
              *
              * Create a request for the method "perfSampleSeries.list".
              *
@@ -5121,13 +4439,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries";
 
               /**
-               * Lists PerfSampleSeries for a given Step.
-               *
-               * The request provides an optional filter which specifies one or more PerfMetricsType to include
-               * in the result; if none returns all. The resulting PerfSampleSeries are sorted by ids.
-               *
-               * May return any of the following canonical error codes: - NOT_FOUND - The containing Step does
-               * not exist
+               * Lists PerfSampleSeries for a given Step. The request provides an optional filter which
+               * specifies one or more PerfMetricsType to include in the result; if none returns all. The
+               * resulting PerfSampleSeries are sorted by ids. May return any of the following canonical error
+               * codes: - NOT_FOUND - The containing Step does not exist
                *
                * Create a request for the method "perfSampleSeries.list".
                *
@@ -5326,10 +4641,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                * repeated calls to this method in order to split up a large request payload - duplicates and
                * existing timestamp entries will be ignored. - the batch operation may partially succeed - the set
                * of elements successfully inserted is returned in the response (omits items which already existed
-               * in the database).
-               *
-               * May return any of the following canonical error codes: - NOT_FOUND - The containing
-               * PerfSampleSeries does not exist
+               * in the database). May return any of the following canonical error codes: - NOT_FOUND - The
+               * containing PerfSampleSeries does not exist
                *
                * Create a request for the method "samples.batchCreate".
                *
@@ -5359,10 +4672,8 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                  * repeated calls to this method in order to split up a large request payload - duplicates and
                  * existing timestamp entries will be ignored. - the batch operation may partially succeed - the
                  * set of elements successfully inserted is returned in the response (omits items which already
-                 * existed in the database).
-                 *
-                 * May return any of the following canonical error codes: - NOT_FOUND - The containing
-                 * PerfSampleSeries does not exist
+                 * existed in the database). May return any of the following canonical error codes: - NOT_FOUND -
+                 * The containing PerfSampleSeries does not exist
                  *
                  * Create a request for the method "samples.batchCreate".
                  *
@@ -5534,10 +4845,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                * timestamps ascending - The default page size is 500 samples; and maximum size allowed 5000 - The
                * response token indicates the last returned PerfSample timestamp - When the results size exceeds
                * the page size, submit a subsequent request including the page token to return the rest of the
-               * samples up to the page limit
-               *
-               * May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request
-               * page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist
+               * samples up to the page limit May return any of the following canonical error codes: -
+               * OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The
+               * containing PerfSampleSeries does not exist
                *
                * Create a request for the method "samples.list".
                *
@@ -5566,10 +4876,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                  * timestamps ascending - The default page size is 500 samples; and maximum size allowed 5000 -
                  * The response token indicates the last returned PerfSample timestamp - When the results size
                  * exceeds the page size, submit a subsequent request including the page token to return the rest
-                 * of the samples up to the page limit
-                 *
-                 * May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request
-                 * page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist
+                 * of the samples up to the page limit May return any of the following canonical error codes: -
+                 * OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The
+                 * containing PerfSampleSeries does not exist
                  *
                  * Create a request for the method "samples.list".
                  *
@@ -5808,28 +5117,20 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             /**
              * Gets details of a Test Case for a Step. Experimental test cases API. Still in active development.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-             * the request is malformed - NOT_FOUND - if the containing Test Case does not exist
+             * May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+             * authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if
+             * the containing Test Case does not exist
              *
              * Create a request for the method "testCases.get".
              *
              * This request holds the parameters needed by the toolresults server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param projectId A Project id.
-            Required.
-             * @param historyId A History id.
-            Required.
-             * @param executionId A Execution id
-            Required.
-             * @param stepId A Step id.
-            Note: This step must include a TestExecutionStep.
-            Required.
-             * @param testCaseId A Test Case id.
-            Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId A Execution id Required.
+             * @param stepId A Step id. Note: This step must include a TestExecutionStep. Required.
+             * @param testCaseId A Test Case id. Required.
              * @return the request
              */
             public Get get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId, java.lang.String testCaseId) throws java.io.IOException {
@@ -5844,12 +5145,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
               /**
                * Gets details of a Test Case for a Step. Experimental test cases API. Still in active
-               * development.
-               *
-               * May return any of the following canonical error codes:
-               *
-               * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-               * the request is malformed - NOT_FOUND - if the containing Test Case does not exist
+               * development. May return any of the following canonical error codes: - PERMISSION_DENIED - if
+               * the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed
+               * - NOT_FOUND - if the containing Test Case does not exist
                *
                * Create a request for the method "testCases.get".
                *
@@ -5858,17 +5156,11 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param projectId A Project id.
-            Required.
-               * @param historyId A History id.
-            Required.
-               * @param executionId A Execution id
-            Required.
-               * @param stepId A Step id.
-            Note: This step must include a TestExecutionStep.
-            Required.
-               * @param testCaseId A Test Case id.
-            Required.
+               * @param projectId A Project id. Required.
+               * @param historyId A History id. Required.
+               * @param executionId A Execution id Required.
+               * @param stepId A Step id. Note: This step must include a TestExecutionStep. Required.
+               * @param testCaseId A Test Case id. Required.
                * @since 1.13
                */
               protected Get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId, java.lang.String testCaseId) {
@@ -5945,131 +5237,81 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * A Project id.
-               *
-               * Required.
-               */
+              /** A Project id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String projectId;
 
-              /** A Project id.
-
-             Required.
+              /** A Project id. Required.
                */
               public java.lang.String getProjectId() {
                 return projectId;
               }
 
-              /**
-               * A Project id.
-               *
-               * Required.
-               */
+              /** A Project id. Required. */
               public Get setProjectId(java.lang.String projectId) {
                 this.projectId = projectId;
                 return this;
               }
 
-              /**
-               * A History id.
-               *
-               * Required.
-               */
+              /** A History id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String historyId;
 
-              /** A History id.
-
-             Required.
+              /** A History id. Required.
                */
               public java.lang.String getHistoryId() {
                 return historyId;
               }
 
-              /**
-               * A History id.
-               *
-               * Required.
-               */
+              /** A History id. Required. */
               public Get setHistoryId(java.lang.String historyId) {
                 this.historyId = historyId;
                 return this;
               }
 
-              /**
-               * A Execution id
-               *
-               * Required.
-               */
+              /** A Execution id Required. */
               @com.google.api.client.util.Key
               private java.lang.String executionId;
 
-              /** A Execution id
-
-             Required.
+              /** A Execution id Required.
                */
               public java.lang.String getExecutionId() {
                 return executionId;
               }
 
-              /**
-               * A Execution id
-               *
-               * Required.
-               */
+              /** A Execution id Required. */
               public Get setExecutionId(java.lang.String executionId) {
                 this.executionId = executionId;
                 return this;
               }
 
-              /**
-               * A Step id. Note: This step must include a TestExecutionStep.
-               *
-               * Required.
-               */
+              /** A Step id. Note: This step must include a TestExecutionStep. Required. */
               @com.google.api.client.util.Key
               private java.lang.String stepId;
 
-              /** A Step id. Note: This step must include a TestExecutionStep.
-
-             Required.
+              /** A Step id. Note: This step must include a TestExecutionStep. Required.
                */
               public java.lang.String getStepId() {
                 return stepId;
               }
 
-              /**
-               * A Step id. Note: This step must include a TestExecutionStep.
-               *
-               * Required.
-               */
+              /** A Step id. Note: This step must include a TestExecutionStep. Required. */
               public Get setStepId(java.lang.String stepId) {
                 this.stepId = stepId;
                 return this;
               }
 
-              /**
-               * A Test Case id.
-               *
-               * Required.
-               */
+              /** A Test Case id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String testCaseId;
 
-              /** A Test Case id.
-
-             Required.
+              /** A Test Case id. Required.
                */
               public java.lang.String getTestCaseId() {
                 return testCaseId;
               }
 
-              /**
-               * A Test Case id.
-               *
-               * Required.
-               */
+              /** A Test Case id. Required. */
               public Get setTestCaseId(java.lang.String testCaseId) {
                 this.testCaseId = testCaseId;
                 return this;
@@ -6082,26 +5324,19 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
             /**
              * Lists Test Cases attached to a Step. Experimental test cases API. Still in active development.
-             *
-             * May return any of the following canonical error codes:
-             *
-             * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-             * the request is malformed - NOT_FOUND - if the containing Step does not exist
+             * May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+             * authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if
+             * the containing Step does not exist
              *
              * Create a request for the method "testCases.list".
              *
              * This request holds the parameters needed by the toolresults server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param projectId A Project id.
-            Required.
-             * @param historyId A History id.
-            Required.
-             * @param executionId A Execution id
-            Required.
-             * @param stepId A Step id.
-            Note: This step must include a TestExecutionStep.
-            Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId A Execution id Required.
+             * @param stepId A Step id. Note: This step must include a TestExecutionStep. Required.
              * @return the request
              */
             public List list(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) throws java.io.IOException {
@@ -6116,11 +5351,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
               /**
                * Lists Test Cases attached to a Step. Experimental test cases API. Still in active development.
-               *
-               * May return any of the following canonical error codes:
-               *
-               * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-               * the request is malformed - NOT_FOUND - if the containing Step does not exist
+               * May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
+               * authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND -
+               * if the containing Step does not exist
                *
                * Create a request for the method "testCases.list".
                *
@@ -6129,15 +5362,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param projectId A Project id.
-            Required.
-               * @param historyId A History id.
-            Required.
-               * @param executionId A Execution id
-            Required.
-               * @param stepId A Step id.
-            Note: This step must include a TestExecutionStep.
-            Required.
+               * @param projectId A Project id. Required.
+               * @param historyId A History id. Required.
+               * @param executionId A Execution id Required.
+               * @param stepId A Step id. Note: This step must include a TestExecutionStep. Required.
                * @since 1.13
                */
               protected List(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) {
@@ -6213,165 +5441,104 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * A Project id.
-               *
-               * Required.
-               */
+              /** A Project id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String projectId;
 
-              /** A Project id.
-
-             Required.
+              /** A Project id. Required.
                */
               public java.lang.String getProjectId() {
                 return projectId;
               }
 
-              /**
-               * A Project id.
-               *
-               * Required.
-               */
+              /** A Project id. Required. */
               public List setProjectId(java.lang.String projectId) {
                 this.projectId = projectId;
                 return this;
               }
 
-              /**
-               * A History id.
-               *
-               * Required.
-               */
+              /** A History id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String historyId;
 
-              /** A History id.
-
-             Required.
+              /** A History id. Required.
                */
               public java.lang.String getHistoryId() {
                 return historyId;
               }
 
-              /**
-               * A History id.
-               *
-               * Required.
-               */
+              /** A History id. Required. */
               public List setHistoryId(java.lang.String historyId) {
                 this.historyId = historyId;
                 return this;
               }
 
-              /**
-               * A Execution id
-               *
-               * Required.
-               */
+              /** A Execution id Required. */
               @com.google.api.client.util.Key
               private java.lang.String executionId;
 
-              /** A Execution id
-
-             Required.
+              /** A Execution id Required.
                */
               public java.lang.String getExecutionId() {
                 return executionId;
               }
 
-              /**
-               * A Execution id
-               *
-               * Required.
-               */
+              /** A Execution id Required. */
               public List setExecutionId(java.lang.String executionId) {
                 this.executionId = executionId;
                 return this;
               }
 
-              /**
-               * A Step id. Note: This step must include a TestExecutionStep.
-               *
-               * Required.
-               */
+              /** A Step id. Note: This step must include a TestExecutionStep. Required. */
               @com.google.api.client.util.Key
               private java.lang.String stepId;
 
-              /** A Step id. Note: This step must include a TestExecutionStep.
-
-             Required.
+              /** A Step id. Note: This step must include a TestExecutionStep. Required.
                */
               public java.lang.String getStepId() {
                 return stepId;
               }
 
-              /**
-               * A Step id. Note: This step must include a TestExecutionStep.
-               *
-               * Required.
-               */
+              /** A Step id. Note: This step must include a TestExecutionStep. Required. */
               public List setStepId(java.lang.String stepId) {
                 this.stepId = stepId;
                 return this;
               }
 
               /**
-               * The maximum number of TestCases to fetch.
-               *
-               * Default value: 100. The server will use this default if the field is not set or has
-               * a value of 0.
-               *
-               * Optional.
+               * The maximum number of TestCases to fetch. Default value: 100. The server will use
+               * this default if the field is not set or has a value of 0. Optional.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of TestCases to fetch.
-
-             Default value: 100. The server will use this default if the field is not set or has a value of 0.
-
-             Optional.
+              /** The maximum number of TestCases to fetch. Default value: 100. The server will use this default if
+             the field is not set or has a value of 0. Optional.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The maximum number of TestCases to fetch.
-               *
-               * Default value: 100. The server will use this default if the field is not set or has
-               * a value of 0.
-               *
-               * Optional.
+               * The maximum number of TestCases to fetch. Default value: 100. The server will use
+               * this default if the field is not set or has a value of 0. Optional.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /**
-               * A continuation token to resume the query at the next item.
-               *
-               * Optional.
-               */
+              /** A continuation token to resume the query at the next item. Optional. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** A continuation token to resume the query at the next item.
-
-             Optional.
+              /** A continuation token to resume the query at the next item. Optional.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /**
-               * A continuation token to resume the query at the next item.
-               *
-               * Optional.
-               */
+              /** A continuation token to resume the query at the next item. Optional. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -6405,26 +5572,20 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           public class Thumbnails {
 
             /**
-             * Lists thumbnails of images attached to a step.
-             *
-             * May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
-             * authorized to read from the                       project, or from any of the images -
-             * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if
-             * any of the images               do not exist
+             * Lists thumbnails of images attached to a step. May return any of the following canonical error
+             * codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from any
+             * of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not
+             * exist, or if any of the images do not exist
              *
              * Create a request for the method "thumbnails.list".
              *
              * This request holds the parameters needed by the toolresults server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param projectId A Project id.
-            Required.
-             * @param historyId A History id.
-            Required.
-             * @param executionId An Execution id.
-            Required.
-             * @param stepId A Step id.
-            Required.
+             * @param projectId A Project id. Required.
+             * @param historyId A History id. Required.
+             * @param executionId An Execution id. Required.
+             * @param stepId A Step id. Required.
              * @return the request
              */
             public List list(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) throws java.io.IOException {
@@ -6438,12 +5599,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               private static final String REST_PATH = "toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails";
 
               /**
-               * Lists thumbnails of images attached to a step.
-               *
-               * May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not
-               * authorized to read from the                       project, or from any of the images -
-               * INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if
-               * any of the images               do not exist
+               * Lists thumbnails of images attached to a step. May return any of the following canonical error
+               * codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from
+               * any of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step
+               * does not exist, or if any of the images do not exist
                *
                * Create a request for the method "thumbnails.list".
                *
@@ -6452,14 +5611,10 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param projectId A Project id.
-            Required.
-               * @param historyId A History id.
-            Required.
-               * @param executionId An Execution id.
-            Required.
-               * @param stepId A Step id.
-            Required.
+               * @param projectId A Project id. Required.
+               * @param historyId A History id. Required.
+               * @param executionId An Execution id. Required.
+               * @param stepId A Step id. Required.
                * @since 1.13
                */
               protected List(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) {
@@ -6535,165 +5690,104 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * A Project id.
-               *
-               * Required.
-               */
+              /** A Project id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String projectId;
 
-              /** A Project id.
-
-             Required.
+              /** A Project id. Required.
                */
               public java.lang.String getProjectId() {
                 return projectId;
               }
 
-              /**
-               * A Project id.
-               *
-               * Required.
-               */
+              /** A Project id. Required. */
               public List setProjectId(java.lang.String projectId) {
                 this.projectId = projectId;
                 return this;
               }
 
-              /**
-               * A History id.
-               *
-               * Required.
-               */
+              /** A History id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String historyId;
 
-              /** A History id.
-
-             Required.
+              /** A History id. Required.
                */
               public java.lang.String getHistoryId() {
                 return historyId;
               }
 
-              /**
-               * A History id.
-               *
-               * Required.
-               */
+              /** A History id. Required. */
               public List setHistoryId(java.lang.String historyId) {
                 this.historyId = historyId;
                 return this;
               }
 
-              /**
-               * An Execution id.
-               *
-               * Required.
-               */
+              /** An Execution id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String executionId;
 
-              /** An Execution id.
-
-             Required.
+              /** An Execution id. Required.
                */
               public java.lang.String getExecutionId() {
                 return executionId;
               }
 
-              /**
-               * An Execution id.
-               *
-               * Required.
-               */
+              /** An Execution id. Required. */
               public List setExecutionId(java.lang.String executionId) {
                 this.executionId = executionId;
                 return this;
               }
 
-              /**
-               * A Step id.
-               *
-               * Required.
-               */
+              /** A Step id. Required. */
               @com.google.api.client.util.Key
               private java.lang.String stepId;
 
-              /** A Step id.
-
-             Required.
+              /** A Step id. Required.
                */
               public java.lang.String getStepId() {
                 return stepId;
               }
 
-              /**
-               * A Step id.
-               *
-               * Required.
-               */
+              /** A Step id. Required. */
               public List setStepId(java.lang.String stepId) {
                 this.stepId = stepId;
                 return this;
               }
 
               /**
-               * The maximum number of thumbnails to fetch.
-               *
-               * Default value: 50. The server will use this default if the field is not set or has
-               * a value of 0.
-               *
-               * Optional.
+               * The maximum number of thumbnails to fetch. Default value: 50. The server will use
+               * this default if the field is not set or has a value of 0. Optional.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of thumbnails to fetch.
-
-             Default value: 50. The server will use this default if the field is not set or has a value of 0.
-
-             Optional.
+              /** The maximum number of thumbnails to fetch. Default value: 50. The server will use this default if
+             the field is not set or has a value of 0. Optional.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The maximum number of thumbnails to fetch.
-               *
-               * Default value: 50. The server will use this default if the field is not set or has
-               * a value of 0.
-               *
-               * Optional.
+               * The maximum number of thumbnails to fetch. Default value: 50. The server will use
+               * this default if the field is not set or has a value of 0. Optional.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /**
-               * A continuation token to resume the query at the next item.
-               *
-               * Optional.
-               */
+              /** A continuation token to resume the query at the next item. Optional. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** A continuation token to resume the query at the next item.
-
-             Optional.
+              /** A continuation token to resume the query at the next item. Optional.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /**
-               * A continuation token to resume the query at the next item.
-               *
-               * Optional.
-               */
+              /** A continuation token to resume the query at the next item. Optional. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;

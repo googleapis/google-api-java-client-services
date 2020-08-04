@@ -31,36 +31,32 @@ package com.google.api.services.toolresults.model;
 public final class ToolOutputReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation time of the file.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * The creation time of the file. - In response: present if set by create/update request - In
+   * create/update request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Timestamp creationTime;
 
   /**
-   * A FileReference to an output file.
-   *
-   * - In response: always set - In create/update request: always set
+   * A FileReference to an output file. - In response: always set - In create/update request: always
+   * set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FileReference output;
 
   /**
-   * The test case to which this output file belongs.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * The test case to which this output file belongs. - In response: present if set by create/update
+   * request - In create/update request: optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestCaseReference testCase;
 
   /**
-   * The creation time of the file.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * The creation time of the file. - In response: present if set by create/update request - In
+   * create/update request: optional
    * @return value or {@code null} for none
    */
   public Timestamp getCreationTime() {
@@ -68,9 +64,8 @@ public final class ToolOutputReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * The creation time of the file.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * The creation time of the file. - In response: present if set by create/update request - In
+   * create/update request: optional
    * @param creationTime creationTime or {@code null} for none
    */
   public ToolOutputReference setCreationTime(Timestamp creationTime) {
@@ -79,9 +74,8 @@ public final class ToolOutputReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * A FileReference to an output file.
-   *
-   * - In response: always set - In create/update request: always set
+   * A FileReference to an output file. - In response: always set - In create/update request: always
+   * set
    * @return value or {@code null} for none
    */
   public FileReference getOutput() {
@@ -89,9 +83,8 @@ public final class ToolOutputReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * A FileReference to an output file.
-   *
-   * - In response: always set - In create/update request: always set
+   * A FileReference to an output file. - In response: always set - In create/update request: always
+   * set
    * @param output output or {@code null} for none
    */
   public ToolOutputReference setOutput(FileReference output) {
@@ -100,9 +93,8 @@ public final class ToolOutputReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * The test case to which this output file belongs.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * The test case to which this output file belongs. - In response: present if set by create/update
+   * request - In create/update request: optional
    * @return value or {@code null} for none
    */
   public TestCaseReference getTestCase() {
@@ -110,9 +102,8 @@ public final class ToolOutputReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * The test case to which this output file belongs.
-   *
-   * - In response: present if set by create/update request - In create/update request: optional
+   * The test case to which this output file belongs. - In response: present if set by create/update
+   * request - In create/update request: optional
    * @param testCase testCase or {@code null} for none
    */
   public ToolOutputReference setTestCase(TestCaseReference testCase) {

@@ -35,9 +35,8 @@ package com.google.api.services.toolresults.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time when the Environment status was set to complete.
-   *
-   * This value will be set automatically when state transitions to COMPLETE.
+   * Output only. The time when the Environment status was set to complete. This value will be set
+   * automatically when state transitions to COMPLETE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +51,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * Dimension values describing the environment. Dimension values always consist of "Model",
-   * "Version", "Locale", and "Orientation".
-   *
-   * - In response: always set - In create request: always set - In update request: never set
+   * "Version", "Locale", and "Orientation". - In response: always set - In create request: always
+   * set - In update request: never set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,18 +109,16 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private ResultsStorage resultsStorage;
 
   /**
-   * Output only. Summaries of shards.
-   *
-   * Only one shard will present unless sharding feature is enabled in TestExecutionService.
+   * Output only. Summaries of shards. Only one shard will present unless sharding feature is
+   * enabled in TestExecutionService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ShardSummary> shardSummaries;
 
   /**
-   * Output only. The time when the Environment status was set to complete.
-   *
-   * This value will be set automatically when state transitions to COMPLETE.
+   * Output only. The time when the Environment status was set to complete. This value will be set
+   * automatically when state transitions to COMPLETE.
    * @return value or {@code null} for none
    */
   public Timestamp getCompletionTime() {
@@ -130,9 +126,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Environment status was set to complete.
-   *
-   * This value will be set automatically when state transitions to COMPLETE.
+   * Output only. The time when the Environment status was set to complete. This value will be set
+   * automatically when state transitions to COMPLETE.
    * @param completionTime completionTime or {@code null} for none
    */
   public Environment setCompletionTime(Timestamp completionTime) {
@@ -159,9 +154,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * Dimension values describing the environment. Dimension values always consist of "Model",
-   * "Version", "Locale", and "Orientation".
-   *
-   * - In response: always set - In create request: always set - In update request: never set
+   * "Version", "Locale", and "Orientation". - In response: always set - In create request: always
+   * set - In update request: never set
    * @return value or {@code null} for none
    */
   public java.util.List<EnvironmentDimensionValueEntry> getDimensionValue() {
@@ -170,9 +164,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * Dimension values describing the environment. Dimension values always consist of "Model",
-   * "Version", "Locale", and "Orientation".
-   *
-   * - In response: always set - In create request: always set - In update request: never set
+   * "Version", "Locale", and "Orientation". - In response: always set - In create request: always
+   * set - In update request: never set
    * @param dimensionValue dimensionValue or {@code null} for none
    */
   public Environment setDimensionValue(java.util.List<EnvironmentDimensionValueEntry> dimensionValue) {
@@ -302,9 +295,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Summaries of shards.
-   *
-   * Only one shard will present unless sharding feature is enabled in TestExecutionService.
+   * Output only. Summaries of shards. Only one shard will present unless sharding feature is
+   * enabled in TestExecutionService.
    * @return value or {@code null} for none
    */
   public java.util.List<ShardSummary> getShardSummaries() {
@@ -312,9 +304,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Summaries of shards.
-   *
-   * Only one shard will present unless sharding feature is enabled in TestExecutionService.
+   * Output only. Summaries of shards. Only one shard will present unless sharding feature is
+   * enabled in TestExecutionService.
    * @param shardSummaries shardSummaries or {@code null} for none
    */
   public Environment setShardSummaries(java.util.List<ShardSummary> shardSummaries) {

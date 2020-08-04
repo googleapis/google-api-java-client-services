@@ -31,10 +31,8 @@ package com.google.api.services.toolresults.model;
 public final class ListStepsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * If set, indicates that there are more steps to read, by calling list again with this value in
-   * the page_token field.
+   * A continuation token to resume the query at the next item. If set, indicates that there are
+   * more steps to read, by calling list again with this value in the page_token field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,10 +46,8 @@ public final class ListStepsResponse extends com.google.api.client.json.GenericJ
   private java.util.List<Step> steps;
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * If set, indicates that there are more steps to read, by calling list again with this value in
-   * the page_token field.
+   * A continuation token to resume the query at the next item. If set, indicates that there are
+   * more steps to read, by calling list again with this value in the page_token field.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -59,10 +55,8 @@ public final class ListStepsResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A continuation token to resume the query at the next item.
-   *
-   * If set, indicates that there are more steps to read, by calling list again with this value in
-   * the page_token field.
+   * A continuation token to resume the query at the next item. If set, indicates that there are
+   * more steps to read, by calling list again with this value in the page_token field.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListStepsResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -31,64 +31,47 @@ package com.google.api.services.toolresults.model;
 public final class Outcome extends com.google.api.client.json.GenericJson {
 
   /**
-   * More information about a FAILURE outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE.
-   *
-   * Optional
+   * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not FAILURE. Optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FailureDetail failureDetail;
 
   /**
-   * More information about an INCONCLUSIVE outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE.
-   *
-   * Optional
+   * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set
+   * but the summary is not INCONCLUSIVE. Optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InconclusiveDetail inconclusiveDetail;
 
   /**
-   * More information about a SKIPPED outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED.
-   *
-   * Optional
+   * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not SKIPPED. Optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SkippedDetail skippedDetail;
 
   /**
-   * More information about a SUCCESS outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS.
-   *
-   * Optional
+   * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not SUCCESS. Optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SuccessDetail successDetail;
 
   /**
-   * The simplest way to interpret a result.
-   *
-   * Required
+   * The simplest way to interpret a result. Required
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String summary;
 
   /**
-   * More information about a FAILURE outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE.
-   *
-   * Optional
+   * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not FAILURE. Optional
    * @return value or {@code null} for none
    */
   public FailureDetail getFailureDetail() {
@@ -96,11 +79,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about a FAILURE outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE.
-   *
-   * Optional
+   * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not FAILURE. Optional
    * @param failureDetail failureDetail or {@code null} for none
    */
   public Outcome setFailureDetail(FailureDetail failureDetail) {
@@ -109,11 +89,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about an INCONCLUSIVE outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE.
-   *
-   * Optional
+   * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set
+   * but the summary is not INCONCLUSIVE. Optional
    * @return value or {@code null} for none
    */
   public InconclusiveDetail getInconclusiveDetail() {
@@ -121,11 +98,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about an INCONCLUSIVE outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE.
-   *
-   * Optional
+   * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set
+   * but the summary is not INCONCLUSIVE. Optional
    * @param inconclusiveDetail inconclusiveDetail or {@code null} for none
    */
   public Outcome setInconclusiveDetail(InconclusiveDetail inconclusiveDetail) {
@@ -134,11 +108,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about a SKIPPED outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED.
-   *
-   * Optional
+   * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not SKIPPED. Optional
    * @return value or {@code null} for none
    */
   public SkippedDetail getSkippedDetail() {
@@ -146,11 +117,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about a SKIPPED outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED.
-   *
-   * Optional
+   * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not SKIPPED. Optional
    * @param skippedDetail skippedDetail or {@code null} for none
    */
   public Outcome setSkippedDetail(SkippedDetail skippedDetail) {
@@ -159,11 +127,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about a SUCCESS outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS.
-   *
-   * Optional
+   * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not SUCCESS. Optional
    * @return value or {@code null} for none
    */
   public SuccessDetail getSuccessDetail() {
@@ -171,11 +136,8 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * More information about a SUCCESS outcome.
-   *
-   * Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS.
-   *
-   * Optional
+   * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the
+   * summary is not SUCCESS. Optional
    * @param successDetail successDetail or {@code null} for none
    */
   public Outcome setSuccessDetail(SuccessDetail successDetail) {
@@ -184,9 +146,7 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The simplest way to interpret a result.
-   *
-   * Required
+   * The simplest way to interpret a result. Required
    * @return value or {@code null} for none
    */
   public java.lang.String getSummary() {
@@ -194,9 +154,7 @@ public final class Outcome extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The simplest way to interpret a result.
-   *
-   * Required
+   * The simplest way to interpret a result. Required
    * @param summary summary or {@code null} for none
    */
   public Outcome setSummary(java.lang.String summary) {

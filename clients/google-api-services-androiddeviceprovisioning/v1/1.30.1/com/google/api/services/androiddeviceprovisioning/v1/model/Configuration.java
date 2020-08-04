@@ -18,11 +18,8 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 
 /**
  * A configuration collects the provisioning options for Android devices. Each configuration
- * combines the following:
- *
- * * The EMM device policy controller (DPC) installed on the devices. * EMM policies enforced on the
- * devices. * Metadata displayed on the device to help users during setup.
- *
+ * combines the following: * The EMM device policy controller (DPC) installed on the devices. * EMM
+ * policies enforced on the devices. * Metadata displayed on the device to help users during setup.
  * Customers can add as many configurations as they need. However, zero-touch enrollment works best
  * when a customer sets a default configuration that's applied to any new devices the organization
  * purchases.

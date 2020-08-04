@@ -40,10 +40,8 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private java.util.List<EntityMention> mentions;
 
   /**
-   * Metadata associated with the entity.
-   *
-   * Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if available. The associated
-   * keys are "wikipedia_url" and "mid", respectively.
+   * Metadata associated with the entity. Currently, Wikipedia URLs and Knowledge Graph MIDs are
+   * provided, if available. The associated keys are "wikipedia_url" and "mid", respectively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,11 +55,10 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The salience score associated with the entity in the [0, 1.0] range.
-   *
-   * The salience score for an entity provides information about the importance or centrality of
-   * that entity to the entire document text. Scores closer to 0 are less salient, while scores
-   * closer to 1.0 are highly salient.
+   * The salience score associated with the entity in the [0, 1.0] range. The salience score for an
+   * entity provides information about the importance or centrality of that entity to the entire
+   * document text. Scores closer to 0 are less salient, while scores closer to 1.0 are highly
+   * salient.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,10 +91,8 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with the entity.
-   *
-   * Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if available. The associated
-   * keys are "wikipedia_url" and "mid", respectively.
+   * Metadata associated with the entity. Currently, Wikipedia URLs and Knowledge Graph MIDs are
+   * provided, if available. The associated keys are "wikipedia_url" and "mid", respectively.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -105,10 +100,8 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with the entity.
-   *
-   * Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if available. The associated
-   * keys are "wikipedia_url" and "mid", respectively.
+   * Metadata associated with the entity. Currently, Wikipedia URLs and Knowledge Graph MIDs are
+   * provided, if available. The associated keys are "wikipedia_url" and "mid", respectively.
    * @param metadata metadata or {@code null} for none
    */
   public Entity setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -134,11 +127,10 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The salience score associated with the entity in the [0, 1.0] range.
-   *
-   * The salience score for an entity provides information about the importance or centrality of
-   * that entity to the entire document text. Scores closer to 0 are less salient, while scores
-   * closer to 1.0 are highly salient.
+   * The salience score associated with the entity in the [0, 1.0] range. The salience score for an
+   * entity provides information about the importance or centrality of that entity to the entire
+   * document text. Scores closer to 0 are less salient, while scores closer to 1.0 are highly
+   * salient.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSalience() {
@@ -146,11 +138,10 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The salience score associated with the entity in the [0, 1.0] range.
-   *
-   * The salience score for an entity provides information about the importance or centrality of
-   * that entity to the entire document text. Scores closer to 0 are less salient, while scores
-   * closer to 1.0 are highly salient.
+   * The salience score associated with the entity in the [0, 1.0] range. The salience score for an
+   * entity provides information about the importance or centrality of that entity to the entire
+   * document text. Scores closer to 0 are less salient, while scores closer to 1.0 are highly
+   * salient.
    * @param salience salience or {@code null} for none
    */
   public Entity setSalience(java.lang.Float salience) {

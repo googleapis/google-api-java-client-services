@@ -247,27 +247,16 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Enables or disables [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch).
-       *
-       * The default value for this parameter is 0 (zero), meaning that the feature is enabled.
-       * Supported values are:
-       *
-       * * `1`: Disabled
-       *
-       * * `0`: Enabled (default)
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+       * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+       * Supported values are: * `1`: Disabled * `0`: Enabled (default)
        */
       @com.google.api.client.util.Key
       private java.lang.String c2coff;
 
       /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
-     /custom-search/docs/xml_results#chineseSearch).
-
-     The default value for this parameter is 0 (zero), meaning that the feature is enabled. Supported
-     values are:
-
-     * `1`: Disabled
-
-     * `0`: Enabled (default)
+     /custom-search/docs/xml_results#chineseSearch). The default value for this parameter is 0 (zero),
+     meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled (default)
        */
       public java.lang.String getC2coff() {
         return c2coff;
@@ -275,14 +264,9 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Enables or disables [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch).
-       *
-       * The default value for this parameter is 0 (zero), meaning that the feature is enabled.
-       * Supported values are:
-       *
-       * * `1`: Disabled
-       *
-       * * `0`: Enabled (default)
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+       * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+       * Supported values are: * `1`: Disabled * `0`: Enabled (default)
        */
       public List setC2coff(java.lang.String c2coff) {
         this.c2coff = c2coff;
@@ -292,15 +276,10 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       /**
        * Restricts search results to documents originating in a particular country. You may use
        * [Boolean operators](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value.
-       *
-       * Google Search determines the country of a document by analyzing:
-       *
-       * * the top-level domain (TLD) of the document's URL
-       *
-       * * the geographic location of the Web server's IP address
-       *
-       * See the [Country Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+       * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+       * the document's URL * the geographic location of the Web server's IP address See the
+       * [Country Parameter Values](https://developers.google.com/custom-
        * search/docs/xml_results_appendices#countryCollections) page for a list of valid values for
        * this parameter.
        */
@@ -309,17 +288,11 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /** Restricts search results to documents originating in a particular country. You may use [Boolean
      operators](https://developers.google.com/custom-
-     search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value.
-
-     Google Search determines the country of a document by analyzing:
-
-     * the top-level domain (TLD) of the document's URL
-
-     * the geographic location of the Web server's IP address
-
-     See the [Country Parameter Values](https://developers.google.com/custom-
-     search/docs/xml_results_appendices#countryCollections) page for a list of valid values for this
-     parameter.
+     search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google Search
+     determines the country of a document by analyzing: * the top-level domain (TLD) of the document's
+     URL * the geographic location of the Web server's IP address See the [Country Parameter
+     Values](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCollections)
+     page for a list of valid values for this parameter.
        */
       public java.lang.String getCr() {
         return cr;
@@ -328,15 +301,10 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       /**
        * Restricts search results to documents originating in a particular country. You may use
        * [Boolean operators](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value.
-       *
-       * Google Search determines the country of a document by analyzing:
-       *
-       * * the top-level domain (TLD) of the document's URL
-       *
-       * * the geographic location of the Web server's IP address
-       *
-       * See the [Country Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+       * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+       * the document's URL * the geographic location of the Web server's IP address See the
+       * [Country Parameter Values](https://developers.google.com/custom-
        * search/docs/xml_results_appendices#countryCollections) page for a list of valid values for
        * this parameter.
        */
@@ -362,43 +330,28 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include:
-       *
-       * * `d[number]`: requests results from the specified number of past days.
-       *
-       * * `w[number]`: requests results from the specified number of past weeks.
-       *
-       * * `m[number]`: requests results from the specified number of past months.
-       *
-       * * `y[number]`: requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include: * `d[number]`: requests
+       * results from the specified number of past days. * `w[number]`: requests results from the
+       * specified number of past weeks. * `m[number]`: requests results from the specified number
+       * of past months. * `y[number]`: requests results from the specified number of past years.
        */
       @com.google.api.client.util.Key
       private java.lang.String dateRestrict;
 
-      /** Restricts results to URLs based on date. Supported values include:
-
-     * `d[number]`: requests results from the specified number of past days.
-
-     * `w[number]`: requests results from the specified number of past weeks.
-
-     * `m[number]`: requests results from the specified number of past months.
-
-     * `y[number]`: requests results from the specified number of past years.
+      /** Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+     from the specified number of past days. * `w[number]`: requests results from the specified number
+     of past weeks. * `m[number]`: requests results from the specified number of past months. *
+     `y[number]`: requests results from the specified number of past years.
        */
       public java.lang.String getDateRestrict() {
         return dateRestrict;
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include:
-       *
-       * * `d[number]`: requests results from the specified number of past days.
-       *
-       * * `w[number]`: requests results from the specified number of past weeks.
-       *
-       * * `m[number]`: requests results from the specified number of past months.
-       *
-       * * `y[number]`: requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include: * `d[number]`: requests
+       * results from the specified number of past days. * `w[number]`: requests results from the
+       * specified number of past weeks. * `m[number]`: requests results from the specified number
+       * of past months. * `y[number]`: requests results from the specified number of past years.
        */
       public List setDateRestrict(java.lang.String dateRestrict) {
         this.dateRestrict = dateRestrict;
@@ -467,58 +420,34 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Controls turning on or off the duplicate content filter.
-       *
-       * * See [Automatic Filtering](https://developers.google.com/custom-
-       * search/docs/xml_results#automaticFiltering) for more information about Google's search
-       * results filters. Note that host crowding filtering applies only to multi-site searches.
-       *
-       * * By default, Google applies filtering to all search results to improve the quality of
-       * those results.
-       *
-       * Acceptable values are:
-       *
-       * * `0`: Turns off duplicate content filter.
-       *
-       * * `1`: Turns on duplicate content filter.
+       * Controls turning on or off the duplicate content filter. * See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering)
+       * for more information about Google's search results filters. Note that host crowding
+       * filtering applies only to multi-site searches. * By default, Google applies filtering to
+       * all search results to improve the quality of those results. Acceptable values are: * `0`:
+       * Turns off duplicate content filter. * `1`: Turns on duplicate content filter.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Controls turning on or off the duplicate content filter.
-
-     * See [Automatic Filtering](https://developers.google.com/custom-
-     search/docs/xml_results#automaticFiltering) for more information about Google's search results
-     filters. Note that host crowding filtering applies only to multi-site searches.
-
-     * By default, Google applies filtering to all search results to improve the quality of those
-     results.
-
-     Acceptable values are:
-
-     * `0`: Turns off duplicate content filter.
-
-     * `1`: Turns on duplicate content filter.
+      /** Controls turning on or off the duplicate content filter. * See [Automatic
+     Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+     more information about Google's search results filters. Note that host crowding filtering applies
+     only to multi-site searches. * By default, Google applies filtering to all search results to
+     improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+     filter. * `1`: Turns on duplicate content filter.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Controls turning on or off the duplicate content filter.
-       *
-       * * See [Automatic Filtering](https://developers.google.com/custom-
-       * search/docs/xml_results#automaticFiltering) for more information about Google's search
-       * results filters. Note that host crowding filtering applies only to multi-site searches.
-       *
-       * * By default, Google applies filtering to all search results to improve the quality of
-       * those results.
-       *
-       * Acceptable values are:
-       *
-       * * `0`: Turns off duplicate content filter.
-       *
-       * * `1`: Turns on duplicate content filter.
+       * Controls turning on or off the duplicate content filter. * See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering)
+       * for more information about Google's search results filters. Note that host crowding
+       * filtering applies only to multi-site searches. * By default, Google applies filtering to
+       * all search results to improve the quality of those results. Acceptable values are: * `0`:
+       * Turns off duplicate content filter. * `1`: Turns on duplicate content filter.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -526,44 +455,35 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Geolocation of end user.
-       *
-       * * The `gl` parameter value is a two-letter country code. The `gl` parameter boosts search
-       * results whose country of origin matches the parameter value. See the [Country
-       * Codes](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values.
-       *
-       * * Specifying a `gl` parameter value should lead to more relevant results. This is
+       * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+       * parameter boosts search results whose country of origin matches the parameter value. See
+       * the [Country Codes](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+       * Specifying a `gl` parameter value should lead to more relevant results. This is
        * particularly true for international customers and, even more specifically, for customers in
        * English- speaking countries other than the United States.
        */
       @com.google.api.client.util.Key
       private java.lang.String gl;
 
-      /** Geolocation of end user.
-
-     * The `gl` parameter value is a two-letter country code. The `gl` parameter boosts search results
-     whose country of origin matches the parameter value. See the [Country
-     Codes](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCodes) page
-     for a list of valid values.
-
-     * Specifying a `gl` parameter value should lead to more relevant results. This is particularly true
-     for international customers and, even more specifically, for customers in English- speaking
-     countries other than the United States.
+      /** Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+     parameter boosts search results whose country of origin matches the parameter value. See the
+     [Country Codes](https://developers.google.com/custom-
+     search/docs/xml_results_appendices#countryCodes) page for a list of valid values. * Specifying a
+     `gl` parameter value should lead to more relevant results. This is particularly true for
+     international customers and, even more specifically, for customers in English- speaking countries
+     other than the United States.
        */
       public java.lang.String getGl() {
         return gl;
       }
 
       /**
-       * Geolocation of end user.
-       *
-       * * The `gl` parameter value is a two-letter country code. The `gl` parameter boosts search
-       * results whose country of origin matches the parameter value. See the [Country
-       * Codes](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values.
-       *
-       * * Specifying a `gl` parameter value should lead to more relevant results. This is
+       * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+       * parameter boosts search results whose country of origin matches the parameter value. See
+       * the [Country Codes](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+       * Specifying a `gl` parameter value should lead to more relevant results. This is
        * particularly true for international customers and, even more specifically, for customers in
        * English- speaking countries other than the United States.
        */
@@ -573,18 +493,14 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * **Deprecated**. Use the `gl` parameter for a similar effect.
-       *
-       * The local Google domain (for example, google.com, google.de, or google.fr) to use to
-       * perform the search.
+       * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+       * example, google.com, google.de, or google.fr) to use to perform the search.
        */
       @com.google.api.client.util.Key
       private java.lang.String googlehost;
 
-      /**** Deprecated**. Use the `gl` parameter for a similar effect.
-    **
-    ** The local Google domain (for example, google.com, google.de, or google.fr) to use to perform the
-    ** search.
+      /**** Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for example,
+    ** google.com, google.de, or google.fr) to use to perform the search.
     **
 
        */
@@ -593,10 +509,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * **Deprecated**. Use the `gl` parameter for a similar effect.
-       *
-       * The local Google domain (for example, google.com, google.de, or google.fr) to use to
-       * perform the search.
+       * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+       * example, google.com, google.de, or google.fr) to use to perform the search.
        */
       public List setGooglehost(java.lang.String googlehost) {
         this.googlehost = googlehost;
@@ -604,28 +518,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Specifies the ending value for a search range.
-       *
-       * * Use `lowRange` and `highRange` to append an inclusive search range of
-       * `lowRange...highRange` to the query.
+       * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        */
       @com.google.api.client.util.Key
       private java.lang.String highRange;
 
-      /** Specifies the ending value for a search range.
-
-     * Use `lowRange` and `highRange` to append an inclusive search range of `lowRange...highRange` to
-     the query.
+      /** Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append an
+     inclusive search range of `lowRange...highRange` to the query.
        */
       public java.lang.String getHighRange() {
         return highRange;
       }
 
       /**
-       * Specifies the ending value for a search range.
-       *
-       * * Use `lowRange` and `highRange` to append an inclusive search range of
-       * `lowRange...highRange` to the query.
+       * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        */
       public List setHighRange(java.lang.String highRange) {
         this.highRange = highRange;
@@ -633,12 +541,9 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Sets the user interface language.
-       *
-       * * Explicitly setting this parameter improves the performance and the quality of your search
-       * results.
-       *
-       * * See the [Interface Languages](https://developers.google.com/custom-
+       * Sets the user interface language. * Explicitly setting this parameter improves the
+       * performance and the quality of your search results. * See the [Interface
+       * Languages](https://developers.google.com/custom-
        * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
        * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
@@ -648,15 +553,12 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
-      /** Sets the user interface language.
-
-     * Explicitly setting this parameter improves the performance and the quality of your search
-     results.
-
-     * See the [Interface Languages](https://developers.google.com/custom-
-     search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and Results
-     Presentation](https://developers.google.com/custom-search/docs/xml_results#wsInternationalizing)
-     for more information, and (Supported Interface Languages)[https://developers.google.com/custom-
+      /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
+     the quality of your search results. * See the [Interface Languages](https://developers.google.com
+     /custom-search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+     Results Presentation](https://developers.google.com/custom-
+     search/docs/xml_results#wsInternationalizing) for more information, and (Supported Interface
+     Languages)[https://developers.google.com/custom-
      search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
        */
       public java.lang.String getHl() {
@@ -664,12 +566,9 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Sets the user interface language.
-       *
-       * * Explicitly setting this parameter improves the performance and the quality of your search
-       * results.
-       *
-       * * See the [Interface Languages](https://developers.google.com/custom-
+       * Sets the user interface language. * Explicitly setting this parameter improves the
+       * performance and the quality of your search results. * See the [Interface
+       * Languages](https://developers.google.com/custom-
        * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
        * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
@@ -705,43 +604,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns black and white, grayscale, transparent, or color images. Acceptable values are:
-       *
-       * * `"color"`
-       *
-       * * `"gray"`
-       *
-       * * `"mono"`: black and white
-       *
-       * * `"trans"`: transparent background
+       * Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+       * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
        */
       @com.google.api.client.util.Key
       private java.lang.String imgColorType;
 
-      /** Returns black and white, grayscale, transparent, or color images. Acceptable values are:
-
-     * `"color"`
-
-     * `"gray"`
-
-     * `"mono"`: black and white
-
-     * `"trans"`: transparent background
+      /** Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+     `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
        */
       public java.lang.String getImgColorType() {
         return imgColorType;
       }
 
       /**
-       * Returns black and white, grayscale, transparent, or color images. Acceptable values are:
-       *
-       * * `"color"`
-       *
-       * * `"gray"`
-       *
-       * * `"mono"`: black and white
-       *
-       * * `"trans"`: transparent background
+       * Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+       * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
        */
       public List setImgColorType(java.lang.String imgColorType) {
         this.imgColorType = imgColorType;
@@ -749,91 +627,25 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a specific dominant color. Acceptable values are:
-       *
-       * * `"black"`
-       *
-       * * `"blue"`
-       *
-       * * `"brown"`
-       *
-       * * `"gray"`
-       *
-       * * `"green"`
-       *
-       * * `"orange"`
-       *
-       * * `"pink"`
-       *
-       * * `"purple"`
-       *
-       * * `"red"`
-       *
-       * * `"teal"`
-       *
-       * * `"white"`
-       *
-       * * `"yellow"`
+       * Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"`
+       * * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` *
+       * `"teal"` * `"white"` * `"yellow"`
        */
       @com.google.api.client.util.Key
       private java.lang.String imgDominantColor;
 
-      /** Returns images of a specific dominant color. Acceptable values are:
-
-     * `"black"`
-
-     * `"blue"`
-
-     * `"brown"`
-
-     * `"gray"`
-
-     * `"green"`
-
-     * `"orange"`
-
-     * `"pink"`
-
-     * `"purple"`
-
-     * `"red"`
-
-     * `"teal"`
-
-     * `"white"`
-
-     * `"yellow"`
+      /** Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` *
+     `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` *
+     `"white"` * `"yellow"`
        */
       public java.lang.String getImgDominantColor() {
         return imgDominantColor;
       }
 
       /**
-       * Returns images of a specific dominant color. Acceptable values are:
-       *
-       * * `"black"`
-       *
-       * * `"blue"`
-       *
-       * * `"brown"`
-       *
-       * * `"gray"`
-       *
-       * * `"green"`
-       *
-       * * `"orange"`
-       *
-       * * `"pink"`
-       *
-       * * `"purple"`
-       *
-       * * `"red"`
-       *
-       * * `"teal"`
-       *
-       * * `"white"`
-       *
-       * * `"yellow"`
+       * Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"`
+       * * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` *
+       * `"teal"` * `"white"` * `"yellow"`
        */
       public List setImgDominantColor(java.lang.String imgDominantColor) {
         this.imgDominantColor = imgDominantColor;
@@ -841,61 +653,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a specified size. Acceptable values are:
-       *
-       * * `"huge"`
-       *
-       * * `"icon"`
-       *
-       * * `"large"`
-       *
-       * * `"medium"`
-       *
-       * * `"small"`
-       *
-       * * `"xlarge"`
-       *
-       * * `"xxlarge"`
+       * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+       * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
        */
       @com.google.api.client.util.Key
       private java.lang.String imgSize;
 
-      /** Returns images of a specified size. Acceptable values are:
-
-     * `"huge"`
-
-     * `"icon"`
-
-     * `"large"`
-
-     * `"medium"`
-
-     * `"small"`
-
-     * `"xlarge"`
-
-     * `"xxlarge"`
+      /** Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+     `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
        */
       public java.lang.String getImgSize() {
         return imgSize;
       }
 
       /**
-       * Returns images of a specified size. Acceptable values are:
-       *
-       * * `"huge"`
-       *
-       * * `"icon"`
-       *
-       * * `"large"`
-       *
-       * * `"medium"`
-       *
-       * * `"small"`
-       *
-       * * `"xlarge"`
-       *
-       * * `"xxlarge"`
+       * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+       * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
        */
       public List setImgSize(java.lang.String imgSize) {
         this.imgSize = imgSize;
@@ -903,64 +676,29 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a type. Acceptable values are:
-       *
-       * * `"clipart"`
-       *
-       * * `"face"`
-       *
-       * * `"lineart"`
-       *
-       * * `"stock"`
-       *
-       * * `"photo"`
-       *
-       * * `"animated"`
+       * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+       * `"stock"` * `"photo"` * `"animated"`
        */
       @com.google.api.client.util.Key
       private java.lang.String imgType;
 
-      /** Returns images of a type. Acceptable values are:
-
-     * `"clipart"`
-
-     * `"face"`
-
-     * `"lineart"`
-
-     * `"stock"`
-
-     * `"photo"`
-
-     * `"animated"`
+      /** Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"`
+     * `"photo"` * `"animated"`
        */
       public java.lang.String getImgType() {
         return imgType;
       }
 
       /**
-       * Returns images of a type. Acceptable values are:
-       *
-       * * `"clipart"`
-       *
-       * * `"face"`
-       *
-       * * `"lineart"`
-       *
-       * * `"stock"`
-       *
-       * * `"photo"`
-       *
-       * * `"animated"`
+       * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+       * `"stock"` * `"photo"` * `"animated"`
        */
       public List setImgType(java.lang.String imgType) {
         this.imgType = imgType;
         return this;
       }
 
-      /**
-       * Specifies that all search results should contain a link to a particular URL.
-       */
+      /** Specifies that all search results should contain a link to a particular URL. */
       @com.google.api.client.util.Key
       private java.lang.String linkSite;
 
@@ -970,9 +708,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         return linkSite;
       }
 
-      /**
-       * Specifies that all search results should contain a link to a particular URL.
-       */
+      /** Specifies that all search results should contain a link to a particular URL. */
       public List setLinkSite(java.lang.String linkSite) {
         this.linkSite = linkSite;
         return this;
@@ -1003,155 +739,31 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
-       *
-       * Acceptable values are:
-       *
-       * * `"lang_ar"`: Arabic
-       *
-       * * `"lang_bg"`: Bulgarian
-       *
-       * * `"lang_ca"`: Catalan
-       *
-       * * `"lang_cs"`: Czech
-       *
-       * * `"lang_da"`: Danish
-       *
-       * * `"lang_de"`: German
-       *
-       * * `"lang_el"`: Greek
-       *
-       * * `"lang_en"`: English
-       *
-       * * `"lang_es"`: Spanish
-       *
-       * * `"lang_et"`: Estonian
-       *
-       * * `"lang_fi"`: Finnish
-       *
-       * * `"lang_fr"`: French
-       *
-       * * `"lang_hr"`: Croatian
-       *
-       * * `"lang_hu"`: Hungarian
-       *
-       * * `"lang_id"`: Indonesian
-       *
-       * * `"lang_is"`: Icelandic
-       *
-       * * `"lang_it"`: Italian
-       *
-       * * `"lang_iw"`: Hebrew
-       *
-       * * `"lang_ja"`: Japanese
-       *
-       * * `"lang_ko"`: Korean
-       *
-       * * `"lang_lt"`: Lithuanian
-       *
-       * * `"lang_lv"`: Latvian
-       *
-       * * `"lang_nl"`: Dutch
-       *
-       * * `"lang_no"`: Norwegian
-       *
-       * * `"lang_pl"`: Polish
-       *
-       * * `"lang_pt"`: Portuguese
-       *
-       * * `"lang_ro"`: Romanian
-       *
-       * * `"lang_ru"`: Russian
-       *
-       * * `"lang_sk"`: Slovak
-       *
-       * * `"lang_sl"`: Slovenian
-       *
-       * * `"lang_sr"`: Serbian
-       *
-       * * `"lang_sv"`: Swedish
-       *
-       * * `"lang_tr"`: Turkish
-       *
-       * * `"lang_zh-CN"`: Chinese (Simplified)
-       *
-       * * `"lang_zh-TW"`: Chinese (Traditional)
+       * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+       * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+       * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`:
+       * Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian *
+       * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian * `"lang_iw"`:
+       * Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`: Lithuanian *
+       * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian * `"lang_pl"`: Polish *
+       * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian * `"lang_sk"`:
+       * Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+       * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese
+       * (Traditional)
        */
       @com.google.api.client.util.Key
       private java.lang.String lr;
 
-      /** Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
-
-     Acceptable values are:
-
-     * `"lang_ar"`: Arabic
-
-     * `"lang_bg"`: Bulgarian
-
-     * `"lang_ca"`: Catalan
-
-     * `"lang_cs"`: Czech
-
-     * `"lang_da"`: Danish
-
-     * `"lang_de"`: German
-
-     * `"lang_el"`: Greek
-
-     * `"lang_en"`: English
-
-     * `"lang_es"`: Spanish
-
-     * `"lang_et"`: Estonian
-
-     * `"lang_fi"`: Finnish
-
-     * `"lang_fr"`: French
-
-     * `"lang_hr"`: Croatian
-
-     * `"lang_hu"`: Hungarian
-
-     * `"lang_id"`: Indonesian
-
-     * `"lang_is"`: Icelandic
-
-     * `"lang_it"`: Italian
-
-     * `"lang_iw"`: Hebrew
-
-     * `"lang_ja"`: Japanese
-
-     * `"lang_ko"`: Korean
-
-     * `"lang_lt"`: Lithuanian
-
-     * `"lang_lv"`: Latvian
-
-     * `"lang_nl"`: Dutch
-
-     * `"lang_no"`: Norwegian
-
-     * `"lang_pl"`: Polish
-
-     * `"lang_pt"`: Portuguese
-
-     * `"lang_ro"`: Romanian
-
-     * `"lang_ru"`: Russian
-
-     * `"lang_sk"`: Slovak
-
-     * `"lang_sl"`: Slovenian
-
-     * `"lang_sr"`: Serbian
-
-     * `"lang_sv"`: Swedish
-
-     * `"lang_tr"`: Turkish
-
-     * `"lang_zh-CN"`: Chinese (Simplified)
-
-     * `"lang_zh-TW"`: Chinese (Traditional)
+      /** Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`). Acceptable
+     values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`: Catalan * `"lang_cs"`:
+     Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`: Greek * `"lang_en"`: English *
+     `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`: Finnish * `"lang_fr"`: French *
+     `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic *
+     `"lang_it"`: Italian * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean *
+     `"lang_lt"`: Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+     `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian *
+     `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+     `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese (Traditional)
        */
       public java.lang.String getLr() {
         return lr;
@@ -1159,78 +771,17 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
-       *
-       * Acceptable values are:
-       *
-       * * `"lang_ar"`: Arabic
-       *
-       * * `"lang_bg"`: Bulgarian
-       *
-       * * `"lang_ca"`: Catalan
-       *
-       * * `"lang_cs"`: Czech
-       *
-       * * `"lang_da"`: Danish
-       *
-       * * `"lang_de"`: German
-       *
-       * * `"lang_el"`: Greek
-       *
-       * * `"lang_en"`: English
-       *
-       * * `"lang_es"`: Spanish
-       *
-       * * `"lang_et"`: Estonian
-       *
-       * * `"lang_fi"`: Finnish
-       *
-       * * `"lang_fr"`: French
-       *
-       * * `"lang_hr"`: Croatian
-       *
-       * * `"lang_hu"`: Hungarian
-       *
-       * * `"lang_id"`: Indonesian
-       *
-       * * `"lang_is"`: Icelandic
-       *
-       * * `"lang_it"`: Italian
-       *
-       * * `"lang_iw"`: Hebrew
-       *
-       * * `"lang_ja"`: Japanese
-       *
-       * * `"lang_ko"`: Korean
-       *
-       * * `"lang_lt"`: Lithuanian
-       *
-       * * `"lang_lv"`: Latvian
-       *
-       * * `"lang_nl"`: Dutch
-       *
-       * * `"lang_no"`: Norwegian
-       *
-       * * `"lang_pl"`: Polish
-       *
-       * * `"lang_pt"`: Portuguese
-       *
-       * * `"lang_ro"`: Romanian
-       *
-       * * `"lang_ru"`: Russian
-       *
-       * * `"lang_sk"`: Slovak
-       *
-       * * `"lang_sl"`: Slovenian
-       *
-       * * `"lang_sr"`: Serbian
-       *
-       * * `"lang_sv"`: Swedish
-       *
-       * * `"lang_tr"`: Turkish
-       *
-       * * `"lang_zh-CN"`: Chinese (Simplified)
-       *
-       * * `"lang_zh-TW"`: Chinese (Traditional)
+       * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+       * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+       * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`:
+       * Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian *
+       * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian * `"lang_iw"`:
+       * Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`: Lithuanian *
+       * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian * `"lang_pl"`: Polish *
+       * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian * `"lang_sk"`:
+       * Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+       * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese
+       * (Traditional)
        */
       public List setLr(java.lang.String lr) {
         this.lr = lr;
@@ -1238,25 +789,21 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Number of search results to return.
-       *
-       * * Valid values are integers between 1 and 10, inclusive.
+       * Number of search results to return. * Valid values are integers between 1 and 10,
+       * inclusive.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer num;
 
-      /** Number of search results to return.
-
-     * Valid values are integers between 1 and 10, inclusive.
+      /** Number of search results to return. * Valid values are integers between 1 and 10, inclusive.
        */
       public java.lang.Integer getNum() {
         return num;
       }
 
       /**
-       * Number of search results to return.
-       *
-       * * Valid values are integers between 1 and 10, inclusive.
+       * Number of search results to return. * Valid values are integers between 1 and 10,
+       * inclusive.
        */
       public List setNum(java.lang.Integer num) {
         this.num = num;
@@ -1349,31 +896,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Search safety level. Acceptable values are:
-       *
-       * * `"active"`: Enables SafeSearch filtering.
-       *
-       * * `"off"`: Disables SafeSearch filtering. (default)
+       * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+       * `"off"`: Disables SafeSearch filtering. (default)
        */
       @com.google.api.client.util.Key
       private java.lang.String safe;
 
-      /** Search safety level. Acceptable values are:
-
-     * `"active"`: Enables SafeSearch filtering.
-
-     * `"off"`: Disables SafeSearch filtering. (default)
+      /** Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+     Disables SafeSearch filtering. (default)
        */
       public java.lang.String getSafe() {
         return safe;
       }
 
       /**
-       * Search safety level. Acceptable values are:
-       *
-       * * `"active"`: Enables SafeSearch filtering.
-       *
-       * * `"off"`: Disables SafeSearch filtering. (default)
+       * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+       * `"off"`: Disables SafeSearch filtering. (default)
        */
       public List setSafe(java.lang.String safe) {
         this.safe = safe;
@@ -1382,19 +920,13 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Specifies the search type: `image`. If unspecified, results are limited to webpages.
-       *
-       * Acceptable values are:
-       *
-       * * `"image"`: custom image search.
+       * Acceptable values are: * `"image"`: custom image search.
        */
       @com.google.api.client.util.Key
       private java.lang.String searchType;
 
-      /** Specifies the search type: `image`. If unspecified, results are limited to webpages.
-
-     Acceptable values are:
-
-     * `"image"`: custom image search.
+      /** Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable
+     values are: * `"image"`: custom image search.
        */
       public java.lang.String getSearchType() {
         return searchType;
@@ -1402,10 +934,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Specifies the search type: `image`. If unspecified, results are limited to webpages.
-       *
-       * Acceptable values are:
-       *
-       * * `"image"`: custom image search.
+       * Acceptable values are: * `"image"`: custom image search.
        */
       public List setSearchType(java.lang.String searchType) {
         this.searchType = searchType;
@@ -1437,24 +966,13 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Controls whether to include or exclude results from the site named in the `siteSearch`
-       * parameter.
-       *
-       * Acceptable values are:
-       *
-       * * `"e"`: exclude
-       *
-       * * `"i"`: include
+       * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
        */
       @com.google.api.client.util.Key
       private java.lang.String siteSearchFilter;
 
       /** Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
-
-     Acceptable values are:
-
-     * `"e"`: exclude
-
-     * `"i"`: include
+     Acceptable values are: * `"e"`: exclude * `"i"`: include
        */
       public java.lang.String getSiteSearchFilter() {
         return siteSearchFilter;
@@ -1462,13 +980,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Controls whether to include or exclude results from the site named in the `siteSearch`
-       * parameter.
-       *
-       * Acceptable values are:
-       *
-       * * `"e"`: exclude
-       *
-       * * `"i"`: include
+       * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
        */
       public List setSiteSearchFilter(java.lang.String siteSearchFilter) {
         this.siteSearchFilter = siteSearchFilter;
@@ -1666,27 +1178,16 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Enables or disables [Simplified and Traditional Chinese
-         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch).
-         *
-         * The default value for this parameter is 0 (zero), meaning that the feature is enabled.
-         * Supported values are:
-         *
-         * * `1`: Disabled
-         *
-         * * `0`: Enabled (default)
+         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+         * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+         * Supported values are: * `1`: Disabled * `0`: Enabled (default)
          */
         @com.google.api.client.util.Key
         private java.lang.String c2coff;
 
         /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
-       /custom-search/docs/xml_results#chineseSearch).
-
-       The default value for this parameter is 0 (zero), meaning that the feature is enabled. Supported
-       values are:
-
-       * `1`: Disabled
-
-       * `0`: Enabled (default)
+       /custom-search/docs/xml_results#chineseSearch). The default value for this parameter is 0 (zero),
+       meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled (default)
          */
         public java.lang.String getC2coff() {
           return c2coff;
@@ -1694,14 +1195,9 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Enables or disables [Simplified and Traditional Chinese
-         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch).
-         *
-         * The default value for this parameter is 0 (zero), meaning that the feature is enabled.
-         * Supported values are:
-         *
-         * * `1`: Disabled
-         *
-         * * `0`: Enabled (default)
+         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+         * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+         * Supported values are: * `1`: Disabled * `0`: Enabled (default)
          */
         public List setC2coff(java.lang.String c2coff) {
           this.c2coff = c2coff;
@@ -1711,15 +1207,10 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         /**
          * Restricts search results to documents originating in a particular country. You may use
          * [Boolean operators](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value.
-         *
-         * Google Search determines the country of a document by analyzing:
-         *
-         * * the top-level domain (TLD) of the document's URL
-         *
-         * * the geographic location of the Web server's IP address
-         *
-         * See the [Country Parameter Values](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+         * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+         * the document's URL * the geographic location of the Web server's IP address See the
+         * [Country Parameter Values](https://developers.google.com/custom-
          * search/docs/xml_results_appendices#countryCollections) page for a list of valid values
          * for this parameter.
          */
@@ -1728,17 +1219,11 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /** Restricts search results to documents originating in a particular country. You may use [Boolean
        operators](https://developers.google.com/custom-
-       search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value.
-
-       Google Search determines the country of a document by analyzing:
-
-       * the top-level domain (TLD) of the document's URL
-
-       * the geographic location of the Web server's IP address
-
-       See the [Country Parameter Values](https://developers.google.com/custom-
-       search/docs/xml_results_appendices#countryCollections) page for a list of valid values for this
-       parameter.
+       search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google Search
+       determines the country of a document by analyzing: * the top-level domain (TLD) of the document's
+       URL * the geographic location of the Web server's IP address See the [Country Parameter
+       Values](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCollections)
+       page for a list of valid values for this parameter.
          */
         public java.lang.String getCr() {
           return cr;
@@ -1747,15 +1232,10 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         /**
          * Restricts search results to documents originating in a particular country. You may use
          * [Boolean operators](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value.
-         *
-         * Google Search determines the country of a document by analyzing:
-         *
-         * * the top-level domain (TLD) of the document's URL
-         *
-         * * the geographic location of the Web server's IP address
-         *
-         * See the [Country Parameter Values](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+         * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+         * the document's URL * the geographic location of the Web server's IP address See the
+         * [Country Parameter Values](https://developers.google.com/custom-
          * search/docs/xml_results_appendices#countryCollections) page for a list of valid values
          * for this parameter.
          */
@@ -1781,43 +1261,30 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Restricts results to URLs based on date. Supported values include:
-         *
-         * * `d[number]`: requests results from the specified number of past days.
-         *
-         * * `w[number]`: requests results from the specified number of past weeks.
-         *
-         * * `m[number]`: requests results from the specified number of past months.
-         *
-         * * `y[number]`: requests results from the specified number of past years.
+         * Restricts results to URLs based on date. Supported values include: * `d[number]`:
+         * requests results from the specified number of past days. * `w[number]`: requests results
+         * from the specified number of past weeks. * `m[number]`: requests results from the
+         * specified number of past months. * `y[number]`: requests results from the specified
+         * number of past years.
          */
         @com.google.api.client.util.Key
         private java.lang.String dateRestrict;
 
-        /** Restricts results to URLs based on date. Supported values include:
-
-       * `d[number]`: requests results from the specified number of past days.
-
-       * `w[number]`: requests results from the specified number of past weeks.
-
-       * `m[number]`: requests results from the specified number of past months.
-
-       * `y[number]`: requests results from the specified number of past years.
+        /** Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+       from the specified number of past days. * `w[number]`: requests results from the specified number
+       of past weeks. * `m[number]`: requests results from the specified number of past months. *
+       `y[number]`: requests results from the specified number of past years.
          */
         public java.lang.String getDateRestrict() {
           return dateRestrict;
         }
 
         /**
-         * Restricts results to URLs based on date. Supported values include:
-         *
-         * * `d[number]`: requests results from the specified number of past days.
-         *
-         * * `w[number]`: requests results from the specified number of past weeks.
-         *
-         * * `m[number]`: requests results from the specified number of past months.
-         *
-         * * `y[number]`: requests results from the specified number of past years.
+         * Restricts results to URLs based on date. Supported values include: * `d[number]`:
+         * requests results from the specified number of past days. * `w[number]`: requests results
+         * from the specified number of past weeks. * `m[number]`: requests results from the
+         * specified number of past months. * `y[number]`: requests results from the specified
+         * number of past years.
          */
         public List setDateRestrict(java.lang.String dateRestrict) {
           this.dateRestrict = dateRestrict;
@@ -1888,58 +1355,36 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Controls turning on or off the duplicate content filter.
-         *
-         * * See [Automatic Filtering](https://developers.google.com/custom-
+         * Controls turning on or off the duplicate content filter. * See [Automatic
+         * Filtering](https://developers.google.com/custom-
          * search/docs/xml_results#automaticFiltering) for more information about Google's search
-         * results filters. Note that host crowding filtering applies only to multi-site searches.
-         *
-         * * By default, Google applies filtering to all search results to improve the quality of
-         * those results.
-         *
-         * Acceptable values are:
-         *
-         * * `0`: Turns off duplicate content filter.
-         *
-         * * `1`: Turns on duplicate content filter.
+         * results filters. Note that host crowding filtering applies only to multi-site searches. *
+         * By default, Google applies filtering to all search results to improve the quality of
+         * those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`:
+         * Turns on duplicate content filter.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Controls turning on or off the duplicate content filter.
-
-       * See [Automatic Filtering](https://developers.google.com/custom-
-       search/docs/xml_results#automaticFiltering) for more information about Google's search results
-       filters. Note that host crowding filtering applies only to multi-site searches.
-
-       * By default, Google applies filtering to all search results to improve the quality of those
-       results.
-
-       Acceptable values are:
-
-       * `0`: Turns off duplicate content filter.
-
-       * `1`: Turns on duplicate content filter.
+        /** Controls turning on or off the duplicate content filter. * See [Automatic
+       Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       more information about Google's search results filters. Note that host crowding filtering applies
+       only to multi-site searches. * By default, Google applies filtering to all search results to
+       improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+       filter. * `1`: Turns on duplicate content filter.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Controls turning on or off the duplicate content filter.
-         *
-         * * See [Automatic Filtering](https://developers.google.com/custom-
+         * Controls turning on or off the duplicate content filter. * See [Automatic
+         * Filtering](https://developers.google.com/custom-
          * search/docs/xml_results#automaticFiltering) for more information about Google's search
-         * results filters. Note that host crowding filtering applies only to multi-site searches.
-         *
-         * * By default, Google applies filtering to all search results to improve the quality of
-         * those results.
-         *
-         * Acceptable values are:
-         *
-         * * `0`: Turns off duplicate content filter.
-         *
-         * * `1`: Turns on duplicate content filter.
+         * results filters. Note that host crowding filtering applies only to multi-site searches. *
+         * By default, Google applies filtering to all search results to improve the quality of
+         * those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`:
+         * Turns on duplicate content filter.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -1947,44 +1392,35 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Geolocation of end user.
-         *
-         * * The `gl` parameter value is a two-letter country code. The `gl` parameter boosts search
-         * results whose country of origin matches the parameter value. See the [Country
-         * Codes](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values.
-         *
-         * * Specifying a `gl` parameter value should lead to more relevant results. This is
+         * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The
+         * `gl` parameter boosts search results whose country of origin matches the parameter value.
+         * See the [Country Codes](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+         * Specifying a `gl` parameter value should lead to more relevant results. This is
          * particularly true for international customers and, even more specifically, for customers
          * in English- speaking countries other than the United States.
          */
         @com.google.api.client.util.Key
         private java.lang.String gl;
 
-        /** Geolocation of end user.
-
-       * The `gl` parameter value is a two-letter country code. The `gl` parameter boosts search results
-       whose country of origin matches the parameter value. See the [Country
-       Codes](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCodes) page
-       for a list of valid values.
-
-       * Specifying a `gl` parameter value should lead to more relevant results. This is particularly true
-       for international customers and, even more specifically, for customers in English- speaking
-       countries other than the United States.
+        /** Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+       parameter boosts search results whose country of origin matches the parameter value. See the
+       [Country Codes](https://developers.google.com/custom-
+       search/docs/xml_results_appendices#countryCodes) page for a list of valid values. * Specifying a
+       `gl` parameter value should lead to more relevant results. This is particularly true for
+       international customers and, even more specifically, for customers in English- speaking countries
+       other than the United States.
          */
         public java.lang.String getGl() {
           return gl;
         }
 
         /**
-         * Geolocation of end user.
-         *
-         * * The `gl` parameter value is a two-letter country code. The `gl` parameter boosts search
-         * results whose country of origin matches the parameter value. See the [Country
-         * Codes](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values.
-         *
-         * * Specifying a `gl` parameter value should lead to more relevant results. This is
+         * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The
+         * `gl` parameter boosts search results whose country of origin matches the parameter value.
+         * See the [Country Codes](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+         * Specifying a `gl` parameter value should lead to more relevant results. This is
          * particularly true for international customers and, even more specifically, for customers
          * in English- speaking countries other than the United States.
          */
@@ -1994,18 +1430,14 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * **Deprecated**. Use the `gl` parameter for a similar effect.
-         *
-         * The local Google domain (for example, google.com, google.de, or google.fr) to use to
-         * perform the search.
+         * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+         * example, google.com, google.de, or google.fr) to use to perform the search.
          */
         @com.google.api.client.util.Key
         private java.lang.String googlehost;
 
-        /**** Deprecated**. Use the `gl` parameter for a similar effect.
-      **
-      ** The local Google domain (for example, google.com, google.de, or google.fr) to use to perform the
-      ** search.
+        /**** Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for example,
+      ** google.com, google.de, or google.fr) to use to perform the search.
       **
 
          */
@@ -2014,10 +1446,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * **Deprecated**. Use the `gl` parameter for a similar effect.
-         *
-         * The local Google domain (for example, google.com, google.de, or google.fr) to use to
-         * perform the search.
+         * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+         * example, google.com, google.de, or google.fr) to use to perform the search.
          */
         public List setGooglehost(java.lang.String googlehost) {
           this.googlehost = googlehost;
@@ -2025,28 +1455,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Specifies the ending value for a search range.
-         *
-         * * Use `lowRange` and `highRange` to append an inclusive search range of
-         * `lowRange...highRange` to the query.
+         * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+         * an inclusive search range of `lowRange...highRange` to the query.
          */
         @com.google.api.client.util.Key
         private java.lang.String highRange;
 
-        /** Specifies the ending value for a search range.
-
-       * Use `lowRange` and `highRange` to append an inclusive search range of `lowRange...highRange` to
-       the query.
+        /** Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append an
+       inclusive search range of `lowRange...highRange` to the query.
          */
         public java.lang.String getHighRange() {
           return highRange;
         }
 
         /**
-         * Specifies the ending value for a search range.
-         *
-         * * Use `lowRange` and `highRange` to append an inclusive search range of
-         * `lowRange...highRange` to the query.
+         * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+         * an inclusive search range of `lowRange...highRange` to the query.
          */
         public List setHighRange(java.lang.String highRange) {
           this.highRange = highRange;
@@ -2054,12 +1478,9 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Sets the user interface language.
-         *
-         * * Explicitly setting this parameter improves the performance and the quality of your
-         * search results.
-         *
-         * * See the [Interface Languages](https://developers.google.com/custom-
+         * Sets the user interface language. * Explicitly setting this parameter improves the
+         * performance and the quality of your search results. * See the [Interface
+         * Languages](https://developers.google.com/custom-
          * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
          * Results Presentation](https://developers.google.com/custom-
          * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
@@ -2069,15 +1490,12 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String hl;
 
-        /** Sets the user interface language.
-
-       * Explicitly setting this parameter improves the performance and the quality of your search
-       results.
-
-       * See the [Interface Languages](https://developers.google.com/custom-
-       search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and Results
-       Presentation](https://developers.google.com/custom-search/docs/xml_results#wsInternationalizing)
-       for more information, and (Supported Interface Languages)[https://developers.google.com/custom-
+        /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
+       the quality of your search results. * See the [Interface Languages](https://developers.google.com
+       /custom-search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       Results Presentation](https://developers.google.com/custom-
+       search/docs/xml_results#wsInternationalizing) for more information, and (Supported Interface
+       Languages)[https://developers.google.com/custom-
        search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
          */
         public java.lang.String getHl() {
@@ -2085,12 +1503,9 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Sets the user interface language.
-         *
-         * * Explicitly setting this parameter improves the performance and the quality of your
-         * search results.
-         *
-         * * See the [Interface Languages](https://developers.google.com/custom-
+         * Sets the user interface language. * Explicitly setting this parameter improves the
+         * performance and the quality of your search results. * See the [Interface
+         * Languages](https://developers.google.com/custom-
          * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
          * Results Presentation](https://developers.google.com/custom-
          * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
@@ -2127,27 +1542,13 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Returns black and white, grayscale, transparent, or color images. Acceptable values are:
-         *
-         * * `"color"`
-         *
-         * * `"gray"`
-         *
-         * * `"mono"`: black and white
-         *
-         * * `"trans"`: transparent background
+         * * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
          */
         @com.google.api.client.util.Key
         private java.lang.String imgColorType;
 
-        /** Returns black and white, grayscale, transparent, or color images. Acceptable values are:
-
-       * `"color"`
-
-       * `"gray"`
-
-       * `"mono"`: black and white
-
-       * `"trans"`: transparent background
+        /** Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+       `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
          */
         public java.lang.String getImgColorType() {
           return imgColorType;
@@ -2155,14 +1556,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Returns black and white, grayscale, transparent, or color images. Acceptable values are:
-         *
-         * * `"color"`
-         *
-         * * `"gray"`
-         *
-         * * `"mono"`: black and white
-         *
-         * * `"trans"`: transparent background
+         * * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
          */
         public List setImgColorType(java.lang.String imgColorType) {
           this.imgColorType = imgColorType;
@@ -2170,91 +1564,25 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Returns images of a specific dominant color. Acceptable values are:
-         *
-         * * `"black"`
-         *
-         * * `"blue"`
-         *
-         * * `"brown"`
-         *
-         * * `"gray"`
-         *
-         * * `"green"`
-         *
-         * * `"orange"`
-         *
-         * * `"pink"`
-         *
-         * * `"purple"`
-         *
-         * * `"red"`
-         *
-         * * `"teal"`
-         *
-         * * `"white"`
-         *
-         * * `"yellow"`
+         * Returns images of a specific dominant color. Acceptable values are: * `"black"` *
+         * `"blue"` * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` *
+         * `"red"` * `"teal"` * `"white"` * `"yellow"`
          */
         @com.google.api.client.util.Key
         private java.lang.String imgDominantColor;
 
-        /** Returns images of a specific dominant color. Acceptable values are:
-
-       * `"black"`
-
-       * `"blue"`
-
-       * `"brown"`
-
-       * `"gray"`
-
-       * `"green"`
-
-       * `"orange"`
-
-       * `"pink"`
-
-       * `"purple"`
-
-       * `"red"`
-
-       * `"teal"`
-
-       * `"white"`
-
-       * `"yellow"`
+        /** Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` *
+       `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` *
+       `"white"` * `"yellow"`
          */
         public java.lang.String getImgDominantColor() {
           return imgDominantColor;
         }
 
         /**
-         * Returns images of a specific dominant color. Acceptable values are:
-         *
-         * * `"black"`
-         *
-         * * `"blue"`
-         *
-         * * `"brown"`
-         *
-         * * `"gray"`
-         *
-         * * `"green"`
-         *
-         * * `"orange"`
-         *
-         * * `"pink"`
-         *
-         * * `"purple"`
-         *
-         * * `"red"`
-         *
-         * * `"teal"`
-         *
-         * * `"white"`
-         *
-         * * `"yellow"`
+         * Returns images of a specific dominant color. Acceptable values are: * `"black"` *
+         * `"blue"` * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` *
+         * `"red"` * `"teal"` * `"white"` * `"yellow"`
          */
         public List setImgDominantColor(java.lang.String imgDominantColor) {
           this.imgDominantColor = imgDominantColor;
@@ -2262,61 +1590,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Returns images of a specified size. Acceptable values are:
-         *
-         * * `"huge"`
-         *
-         * * `"icon"`
-         *
-         * * `"large"`
-         *
-         * * `"medium"`
-         *
-         * * `"small"`
-         *
-         * * `"xlarge"`
-         *
-         * * `"xxlarge"`
+         * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+         * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
          */
         @com.google.api.client.util.Key
         private java.lang.String imgSize;
 
-        /** Returns images of a specified size. Acceptable values are:
-
-       * `"huge"`
-
-       * `"icon"`
-
-       * `"large"`
-
-       * `"medium"`
-
-       * `"small"`
-
-       * `"xlarge"`
-
-       * `"xxlarge"`
+        /** Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+       `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
          */
         public java.lang.String getImgSize() {
           return imgSize;
         }
 
         /**
-         * Returns images of a specified size. Acceptable values are:
-         *
-         * * `"huge"`
-         *
-         * * `"icon"`
-         *
-         * * `"large"`
-         *
-         * * `"medium"`
-         *
-         * * `"small"`
-         *
-         * * `"xlarge"`
-         *
-         * * `"xxlarge"`
+         * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+         * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
          */
         public List setImgSize(java.lang.String imgSize) {
           this.imgSize = imgSize;
@@ -2324,64 +1613,29 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Returns images of a type. Acceptable values are:
-         *
-         * * `"clipart"`
-         *
-         * * `"face"`
-         *
-         * * `"lineart"`
-         *
-         * * `"stock"`
-         *
-         * * `"photo"`
-         *
-         * * `"animated"`
+         * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+         * `"stock"` * `"photo"` * `"animated"`
          */
         @com.google.api.client.util.Key
         private java.lang.String imgType;
 
-        /** Returns images of a type. Acceptable values are:
-
-       * `"clipart"`
-
-       * `"face"`
-
-       * `"lineart"`
-
-       * `"stock"`
-
-       * `"photo"`
-
-       * `"animated"`
+        /** Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"`
+       * `"photo"` * `"animated"`
          */
         public java.lang.String getImgType() {
           return imgType;
         }
 
         /**
-         * Returns images of a type. Acceptable values are:
-         *
-         * * `"clipart"`
-         *
-         * * `"face"`
-         *
-         * * `"lineart"`
-         *
-         * * `"stock"`
-         *
-         * * `"photo"`
-         *
-         * * `"animated"`
+         * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+         * `"stock"` * `"photo"` * `"animated"`
          */
         public List setImgType(java.lang.String imgType) {
           this.imgType = imgType;
           return this;
         }
 
-        /**
-         * Specifies that all search results should contain a link to a particular URL.
-         */
+        /** Specifies that all search results should contain a link to a particular URL. */
         @com.google.api.client.util.Key
         private java.lang.String linkSite;
 
@@ -2391,9 +1645,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
           return linkSite;
         }
 
-        /**
-         * Specifies that all search results should contain a link to a particular URL.
-         */
+        /** Specifies that all search results should contain a link to a particular URL. */
         public List setLinkSite(java.lang.String linkSite) {
           this.linkSite = linkSite;
           return this;
@@ -2424,155 +1676,31 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
-         *
-         * Acceptable values are:
-         *
-         * * `"lang_ar"`: Arabic
-         *
-         * * `"lang_bg"`: Bulgarian
-         *
-         * * `"lang_ca"`: Catalan
-         *
-         * * `"lang_cs"`: Czech
-         *
-         * * `"lang_da"`: Danish
-         *
-         * * `"lang_de"`: German
-         *
-         * * `"lang_el"`: Greek
-         *
-         * * `"lang_en"`: English
-         *
-         * * `"lang_es"`: Spanish
-         *
-         * * `"lang_et"`: Estonian
-         *
-         * * `"lang_fi"`: Finnish
-         *
-         * * `"lang_fr"`: French
-         *
-         * * `"lang_hr"`: Croatian
-         *
-         * * `"lang_hu"`: Hungarian
-         *
-         * * `"lang_id"`: Indonesian
-         *
-         * * `"lang_is"`: Icelandic
-         *
-         * * `"lang_it"`: Italian
-         *
-         * * `"lang_iw"`: Hebrew
-         *
-         * * `"lang_ja"`: Japanese
-         *
-         * * `"lang_ko"`: Korean
-         *
-         * * `"lang_lt"`: Lithuanian
-         *
-         * * `"lang_lv"`: Latvian
-         *
-         * * `"lang_nl"`: Dutch
-         *
-         * * `"lang_no"`: Norwegian
-         *
-         * * `"lang_pl"`: Polish
-         *
-         * * `"lang_pt"`: Portuguese
-         *
-         * * `"lang_ro"`: Romanian
-         *
-         * * `"lang_ru"`: Russian
-         *
-         * * `"lang_sk"`: Slovak
-         *
-         * * `"lang_sl"`: Slovenian
-         *
-         * * `"lang_sr"`: Serbian
-         *
-         * * `"lang_sv"`: Swedish
-         *
-         * * `"lang_tr"`: Turkish
-         *
-         * * `"lang_zh-CN"`: Chinese (Simplified)
-         *
-         * * `"lang_zh-TW"`: Chinese (Traditional)
+         * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+         * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+         * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian *
+         * `"lang_fi"`: Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`:
+         * Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian *
+         * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`:
+         * Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+         * `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`:
+         * Russian * `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian *
+         * `"lang_sv"`: Swedish * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) *
+         * `"lang_zh-TW"`: Chinese (Traditional)
          */
         @com.google.api.client.util.Key
         private java.lang.String lr;
 
-        /** Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
-
-       Acceptable values are:
-
-       * `"lang_ar"`: Arabic
-
-       * `"lang_bg"`: Bulgarian
-
-       * `"lang_ca"`: Catalan
-
-       * `"lang_cs"`: Czech
-
-       * `"lang_da"`: Danish
-
-       * `"lang_de"`: German
-
-       * `"lang_el"`: Greek
-
-       * `"lang_en"`: English
-
-       * `"lang_es"`: Spanish
-
-       * `"lang_et"`: Estonian
-
-       * `"lang_fi"`: Finnish
-
-       * `"lang_fr"`: French
-
-       * `"lang_hr"`: Croatian
-
-       * `"lang_hu"`: Hungarian
-
-       * `"lang_id"`: Indonesian
-
-       * `"lang_is"`: Icelandic
-
-       * `"lang_it"`: Italian
-
-       * `"lang_iw"`: Hebrew
-
-       * `"lang_ja"`: Japanese
-
-       * `"lang_ko"`: Korean
-
-       * `"lang_lt"`: Lithuanian
-
-       * `"lang_lv"`: Latvian
-
-       * `"lang_nl"`: Dutch
-
-       * `"lang_no"`: Norwegian
-
-       * `"lang_pl"`: Polish
-
-       * `"lang_pt"`: Portuguese
-
-       * `"lang_ro"`: Romanian
-
-       * `"lang_ru"`: Russian
-
-       * `"lang_sk"`: Slovak
-
-       * `"lang_sl"`: Slovenian
-
-       * `"lang_sr"`: Serbian
-
-       * `"lang_sv"`: Swedish
-
-       * `"lang_tr"`: Turkish
-
-       * `"lang_zh-CN"`: Chinese (Simplified)
-
-       * `"lang_zh-TW"`: Chinese (Traditional)
+        /** Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`). Acceptable
+       values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`: Catalan * `"lang_cs"`:
+       Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`: Greek * `"lang_en"`: English *
+       `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`: Finnish * `"lang_fr"`: French *
+       `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic *
+       `"lang_it"`: Italian * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean *
+       `"lang_lt"`: Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+       `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian *
+       `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+       `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese (Traditional)
          */
         public java.lang.String getLr() {
           return lr;
@@ -2580,78 +1708,17 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
-         *
-         * Acceptable values are:
-         *
-         * * `"lang_ar"`: Arabic
-         *
-         * * `"lang_bg"`: Bulgarian
-         *
-         * * `"lang_ca"`: Catalan
-         *
-         * * `"lang_cs"`: Czech
-         *
-         * * `"lang_da"`: Danish
-         *
-         * * `"lang_de"`: German
-         *
-         * * `"lang_el"`: Greek
-         *
-         * * `"lang_en"`: English
-         *
-         * * `"lang_es"`: Spanish
-         *
-         * * `"lang_et"`: Estonian
-         *
-         * * `"lang_fi"`: Finnish
-         *
-         * * `"lang_fr"`: French
-         *
-         * * `"lang_hr"`: Croatian
-         *
-         * * `"lang_hu"`: Hungarian
-         *
-         * * `"lang_id"`: Indonesian
-         *
-         * * `"lang_is"`: Icelandic
-         *
-         * * `"lang_it"`: Italian
-         *
-         * * `"lang_iw"`: Hebrew
-         *
-         * * `"lang_ja"`: Japanese
-         *
-         * * `"lang_ko"`: Korean
-         *
-         * * `"lang_lt"`: Lithuanian
-         *
-         * * `"lang_lv"`: Latvian
-         *
-         * * `"lang_nl"`: Dutch
-         *
-         * * `"lang_no"`: Norwegian
-         *
-         * * `"lang_pl"`: Polish
-         *
-         * * `"lang_pt"`: Portuguese
-         *
-         * * `"lang_ro"`: Romanian
-         *
-         * * `"lang_ru"`: Russian
-         *
-         * * `"lang_sk"`: Slovak
-         *
-         * * `"lang_sl"`: Slovenian
-         *
-         * * `"lang_sr"`: Serbian
-         *
-         * * `"lang_sv"`: Swedish
-         *
-         * * `"lang_tr"`: Turkish
-         *
-         * * `"lang_zh-CN"`: Chinese (Simplified)
-         *
-         * * `"lang_zh-TW"`: Chinese (Traditional)
+         * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+         * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+         * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian *
+         * `"lang_fi"`: Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`:
+         * Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian *
+         * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`:
+         * Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+         * `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`:
+         * Russian * `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian *
+         * `"lang_sv"`: Swedish * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) *
+         * `"lang_zh-TW"`: Chinese (Traditional)
          */
         public List setLr(java.lang.String lr) {
           this.lr = lr;
@@ -2659,25 +1726,21 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Number of search results to return.
-         *
-         * * Valid values are integers between 1 and 10, inclusive.
+         * Number of search results to return. * Valid values are integers between 1 and 10,
+         * inclusive.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer num;
 
-        /** Number of search results to return.
-
-       * Valid values are integers between 1 and 10, inclusive.
+        /** Number of search results to return. * Valid values are integers between 1 and 10, inclusive.
          */
         public java.lang.Integer getNum() {
           return num;
         }
 
         /**
-         * Number of search results to return.
-         *
-         * * Valid values are integers between 1 and 10, inclusive.
+         * Number of search results to return. * Valid values are integers between 1 and 10,
+         * inclusive.
          */
         public List setNum(java.lang.Integer num) {
           this.num = num;
@@ -2770,31 +1833,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Search safety level. Acceptable values are:
-         *
-         * * `"active"`: Enables SafeSearch filtering.
-         *
-         * * `"off"`: Disables SafeSearch filtering. (default)
+         * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+         * `"off"`: Disables SafeSearch filtering. (default)
          */
         @com.google.api.client.util.Key
         private java.lang.String safe;
 
-        /** Search safety level. Acceptable values are:
-
-       * `"active"`: Enables SafeSearch filtering.
-
-       * `"off"`: Disables SafeSearch filtering. (default)
+        /** Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+       Disables SafeSearch filtering. (default)
          */
         public java.lang.String getSafe() {
           return safe;
         }
 
         /**
-         * Search safety level. Acceptable values are:
-         *
-         * * `"active"`: Enables SafeSearch filtering.
-         *
-         * * `"off"`: Disables SafeSearch filtering. (default)
+         * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+         * `"off"`: Disables SafeSearch filtering. (default)
          */
         public List setSafe(java.lang.String safe) {
           this.safe = safe;
@@ -2803,19 +1857,13 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Specifies the search type: `image`. If unspecified, results are limited to webpages.
-         *
-         * Acceptable values are:
-         *
-         * * `"image"`: custom image search.
+         * Acceptable values are: * `"image"`: custom image search.
          */
         @com.google.api.client.util.Key
         private java.lang.String searchType;
 
-        /** Specifies the search type: `image`. If unspecified, results are limited to webpages.
-
-       Acceptable values are:
-
-       * `"image"`: custom image search.
+        /** Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable
+       values are: * `"image"`: custom image search.
          */
         public java.lang.String getSearchType() {
           return searchType;
@@ -2823,10 +1871,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Specifies the search type: `image`. If unspecified, results are limited to webpages.
-         *
-         * Acceptable values are:
-         *
-         * * `"image"`: custom image search.
+         * Acceptable values are: * `"image"`: custom image search.
          */
         public List setSearchType(java.lang.String searchType) {
           this.searchType = searchType;
@@ -2858,24 +1903,13 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Controls whether to include or exclude results from the site named in the `siteSearch`
-         * parameter.
-         *
-         * Acceptable values are:
-         *
-         * * `"e"`: exclude
-         *
-         * * `"i"`: include
+         * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
          */
         @com.google.api.client.util.Key
         private java.lang.String siteSearchFilter;
 
         /** Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
-
-       Acceptable values are:
-
-       * `"e"`: exclude
-
-       * `"i"`: include
+       Acceptable values are: * `"e"`: exclude * `"i"`: include
          */
         public java.lang.String getSiteSearchFilter() {
           return siteSearchFilter;
@@ -2883,13 +1917,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
         /**
          * Controls whether to include or exclude results from the site named in the `siteSearch`
-         * parameter.
-         *
-         * Acceptable values are:
-         *
-         * * `"e"`: exclude
-         *
-         * * `"i"`: include
+         * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
          */
         public List setSiteSearchFilter(java.lang.String siteSearchFilter) {
           this.siteSearchFilter = siteSearchFilter;

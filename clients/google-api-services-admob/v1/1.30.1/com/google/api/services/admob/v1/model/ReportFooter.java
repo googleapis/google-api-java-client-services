@@ -31,10 +31,8 @@ package com.google.api.services.admob.v1.model;
 public final class ReportFooter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Total number of rows that matched the request.
-   *
-   * Warning: This count does NOT always match the number of rows in the response. Do not make that
-   * assumption when processing the response.
+   * Total number of rows that matched the request. Warning: This count does NOT always match the
+   * number of rows in the response. Do not make that assumption when processing the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -48,10 +46,8 @@ public final class ReportFooter extends com.google.api.client.json.GenericJson {
   private java.util.List<ReportWarning> warnings;
 
   /**
-   * Total number of rows that matched the request.
-   *
-   * Warning: This count does NOT always match the number of rows in the response. Do not make that
-   * assumption when processing the response.
+   * Total number of rows that matched the request. Warning: This count does NOT always match the
+   * number of rows in the response. Do not make that assumption when processing the response.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMatchingRowCount() {
@@ -59,10 +55,8 @@ public final class ReportFooter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total number of rows that matched the request.
-   *
-   * Warning: This count does NOT always match the number of rows in the response. Do not make that
-   * assumption when processing the response.
+   * Total number of rows that matched the request. Warning: This count does NOT always match the
+   * number of rows in the response. Do not make that assumption when processing the response.
    * @param matchingRowCount matchingRowCount or {@code null} for none
    */
   public ReportFooter setMatchingRowCount(java.lang.Long matchingRowCount) {

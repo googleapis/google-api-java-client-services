@@ -19,22 +19,15 @@ package com.google.api.services.admob.v1.model;
 /**
  * The specification for generating an AdMob Mediation report. For example, the specification to get
  * observed ECPM sliced by ad source and app for the 'US' and 'CN' countries can look like the
- * following example:
- *
- *     {       "date_range": {         "start_date": {"year": 2018, "month": 9, "day": 1},
- * "end_date": {"year": 2018, "month": 9, "day": 30}       },       "dimensions": ["AD_SOURCE",
- * "APP", "COUNTRY"],       "metrics": ["OBSERVED_ECPM"],       "dimension_filters": [         {
- * "dimension": "COUNTRY",           "matches_any": {"values": [{"value": "US", "value": "CN"}]}
- * }       ],       "sort_conditions": [         {"dimension":"APP", order: "ASCENDING"}       ],
- * "localization_settings": {         "currency_code": "USD",         "language_code": "en-US"
- * }     }
- *
- * For a better understanding, you can treat the preceding specification like the following pseudo
- * SQL:
- *
- *     SELECT AD_SOURCE, APP, COUNTRY, OBSERVED_ECPM     FROM MEDIATION_REPORT     WHERE DATE >=
- * '2018-09-01' AND DATE <= '2018-09-30'         AND COUNTRY IN ('US', 'CN')     GROUP BY AD_SOURCE,
- * APP, COUNTRY     ORDER BY APP ASC;
+ * following example: { "date_range": { "start_date": {"year": 2018, "month": 9, "day": 1},
+ * "end_date": {"year": 2018, "month": 9, "day": 30} }, "dimensions": ["AD_SOURCE", "APP",
+ * "COUNTRY"], "metrics": ["OBSERVED_ECPM"], "dimension_filters": [ { "dimension": "COUNTRY",
+ * "matches_any": {"values": [{"value": "US", "value": "CN"}]} } ], "sort_conditions": [
+ * {"dimension":"APP", order: "ASCENDING"} ], "localization_settings": { "currency_code": "USD",
+ * "language_code": "en-US" } } For a better understanding, you can treat the preceding
+ * specification like the following pseudo SQL: SELECT AD_SOURCE, APP, COUNTRY, OBSERVED_ECPM FROM
+ * MEDIATION_REPORT WHERE DATE >= '2018-09-01' AND DATE <= '2018-09-30' AND COUNTRY IN ('US', 'CN')
+ * GROUP BY AD_SOURCE, APP, COUNTRY ORDER BY APP ASC;
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AdMob API. For a detailed explanation see:
@@ -102,11 +95,9 @@ public final class MediationReportSpec extends com.google.api.client.json.Generi
   private java.util.List<MediationReportSpecSortCondition> sortConditions;
 
   /**
-   * A report time zone. Accepts an IANA TZ name values, such as "America/Los_Angeles."  If no time
+   * A report time zone. Accepts an IANA TZ name values, such as "America/Los_Angeles." If no time
    * zone is defined, the account default takes effect. Check default value by the get account
-   * action.
-   *
-   * **Warning:** The "America/Los_Angeles" is the only supported value at the moment.
+   * action. **Warning:** The "America/Los_Angeles" is the only supported value at the moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,11 +235,9 @@ public final class MediationReportSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * A report time zone. Accepts an IANA TZ name values, such as "America/Los_Angeles."  If no time
+   * A report time zone. Accepts an IANA TZ name values, such as "America/Los_Angeles." If no time
    * zone is defined, the account default takes effect. Check default value by the get account
-   * action.
-   *
-   * **Warning:** The "America/Los_Angeles" is the only supported value at the moment.
+   * action. **Warning:** The "America/Los_Angeles" is the only supported value at the moment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -256,11 +245,9 @@ public final class MediationReportSpec extends com.google.api.client.json.Generi
   }
 
   /**
-   * A report time zone. Accepts an IANA TZ name values, such as "America/Los_Angeles."  If no time
+   * A report time zone. Accepts an IANA TZ name values, such as "America/Los_Angeles." If no time
    * zone is defined, the account default takes effect. Check default value by the get account
-   * action.
-   *
-   * **Warning:** The "America/Los_Angeles" is the only supported value at the moment.
+   * action. **Warning:** The "America/Los_Angeles" is the only supported value at the moment.
    * @param timeZone timeZone or {@code null} for none
    */
   public MediationReportSpec setTimeZone(java.lang.String timeZone) {

@@ -89,8 +89,8 @@ public final class Trust extends com.google.api.client.json.GenericJson {
   private java.lang.String trustDirection;
 
   /**
-   * Input only, and will not be stored. The trust secret used for the handshake with the target
-   * domain.
+   * Input only. The trust secret used for the handshake with the target domain. It will not be
+   * stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,8 +249,8 @@ public final class Trust extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only, and will not be stored. The trust secret used for the handshake with the target
-   * domain.
+   * Input only. The trust secret used for the handshake with the target domain. It will not be
+   * stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrustHandshakeSecret() {
@@ -258,8 +258,8 @@ public final class Trust extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only, and will not be stored. The trust secret used for the handshake with the target
-   * domain.
+   * Input only. The trust secret used for the handshake with the target domain. It will not be
+   * stored.
    * @param trustHandshakeSecret trustHandshakeSecret or {@code null} for none
    */
   public Trust setTrustHandshakeSecret(java.lang.String trustHandshakeSecret) {

@@ -17,14 +17,12 @@
 package com.google.api.services.servicenetworking.v1beta.model;
 
 /**
- * Api is a light-weight descriptor for an API Interface.
- *
- * Interfaces are also described as "protocol buffer services" in some contexts, such as by the
- * "service" keyword in a .proto file, but they are different from API Services, which represent a
- * concrete implementation of an interface as opposed to simply a description of methods and
- * bindings. They are also sometimes simply referred to as "APIs" in other contexts, such as the
- * name of this message itself. See https://cloud.google.com/apis/design/glossary for detailed
- * terminology.
+ * Api is a light-weight descriptor for an API Interface. Interfaces are also described as "protocol
+ * buffer services" in some contexts, such as by the "service" keyword in a .proto file, but they
+ * are different from API Services, which represent a concrete implementation of an interface as
+ * opposed to simply a description of methods and bindings. They are also sometimes simply referred
+ * to as "APIs" in other contexts, such as the name of this message itself. See
+ * https://cloud.google.com/apis/design/glossary for detailed terminology.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -85,16 +83,13 @@ public final class Api extends com.google.api.client.json.GenericJson {
    * version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire
    * version field is empty, the major version is derived from the package name, as outlined below.
    * If the field is not empty, the version in the package name will be verified to be consistent
-   * with what is provided here.
-   *
-   * The versioning schema uses [semantic versioning](http://semver.org) where the major version
-   * number indicates a breaking change and the minor version an additive, non-breaking change. Both
-   * version numbers are signals to users what to expect from different versions, and should be
-   * carefully chosen based on the product plan.
-   *
-   * The major version is also reflected in the package name of the interface, which must end in
-   * `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero
-   * major versions must only be used for experimental, non-GA interfaces.
+   * with what is provided here. The versioning schema uses [semantic versioning](http://semver.org)
+   * where the major version number indicates a breaking change and the minor version an additive,
+   * non-breaking change. Both version numbers are signals to users what to expect from different
+   * versions, and should be carefully chosen based on the product plan. The major version is also
+   * reflected in the package name of the interface, which must end in `v`, as in
+   * `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions
+   * must only be used for experimental, non-GA interfaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,16 +204,13 @@ public final class Api extends com.google.api.client.json.GenericJson {
    * version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire
    * version field is empty, the major version is derived from the package name, as outlined below.
    * If the field is not empty, the version in the package name will be verified to be consistent
-   * with what is provided here.
-   *
-   * The versioning schema uses [semantic versioning](http://semver.org) where the major version
-   * number indicates a breaking change and the minor version an additive, non-breaking change. Both
-   * version numbers are signals to users what to expect from different versions, and should be
-   * carefully chosen based on the product plan.
-   *
-   * The major version is also reflected in the package name of the interface, which must end in
-   * `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero
-   * major versions must only be used for experimental, non-GA interfaces.
+   * with what is provided here. The versioning schema uses [semantic versioning](http://semver.org)
+   * where the major version number indicates a breaking change and the minor version an additive,
+   * non-breaking change. Both version numbers are signals to users what to expect from different
+   * versions, and should be carefully chosen based on the product plan. The major version is also
+   * reflected in the package name of the interface, which must end in `v`, as in
+   * `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions
+   * must only be used for experimental, non-GA interfaces.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -230,16 +222,13 @@ public final class Api extends com.google.api.client.json.GenericJson {
    * version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire
    * version field is empty, the major version is derived from the package name, as outlined below.
    * If the field is not empty, the version in the package name will be verified to be consistent
-   * with what is provided here.
-   *
-   * The versioning schema uses [semantic versioning](http://semver.org) where the major version
-   * number indicates a breaking change and the minor version an additive, non-breaking change. Both
-   * version numbers are signals to users what to expect from different versions, and should be
-   * carefully chosen based on the product plan.
-   *
-   * The major version is also reflected in the package name of the interface, which must end in
-   * `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero
-   * major versions must only be used for experimental, non-GA interfaces.
+   * with what is provided here. The versioning schema uses [semantic versioning](http://semver.org)
+   * where the major version number indicates a breaking change and the minor version an additive,
+   * non-breaking change. Both version numbers are signals to users what to expect from different
+   * versions, and should be carefully chosen based on the product plan. The major version is also
+   * reflected in the package name of the interface, which must end in `v`, as in
+   * `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions
+   * must only be used for experimental, non-GA interfaces.
    * @param version version or {@code null} for none
    */
   public Api setVersion(java.lang.String version) {

@@ -58,7 +58,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
-   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range.
    * The value may be {@code null}.
@@ -172,7 +172,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range.
    * @return value or {@code null} for none
@@ -182,7 +182,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range.
    * @param ipPrefixLength ipPrefixLength or {@code null} for none

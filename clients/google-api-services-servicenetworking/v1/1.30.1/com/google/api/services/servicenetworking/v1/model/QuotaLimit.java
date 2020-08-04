@@ -35,13 +35,10 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   /**
    * Default number of tokens that can be consumed during the specified duration. This is the number
    * of tokens assigned when a client application developer activates the service for his/her
-   * project.
-   *
-   * Specifying a value of 0 will block all requests. This can be used if you are provisioning quota
-   * to selected consumers and blocking others. Similarly, a value of -1 will indicate an unlimited
-   * quota. No other negative values are allowed.
-   *
-   * Used by group-based quotas only.
+   * project. Specifying a value of 0 will block all requests. This can be used if you are
+   * provisioning quota to selected consumers and blocking others. Similarly, a value of -1 will
+   * indicate an unlimited quota. No other negative values are allowed. Used by group-based quotas
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -66,9 +63,8 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Duration of this limit in textual notation. Must be "100s" or "1d".
-   *
-   * Used by group-based quotas only.
+   * Duration of this limit in textual notation. Must be "100s" or "1d". Used by group-based quotas
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +75,7 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    * of tokens that will be subtracted from the billed amount when billing is enabled. This field
    * can only be set on a limit with duration "1d", in a billable group; it is invalid on any other
    * limit. If this field is not set, it defaults to 0, indicating that there is no free tier for
-   * this service.
-   *
-   * Used by group-based quotas only.
+   * this service. Used by group-based quotas only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -91,12 +85,8 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    * Maximum number of tokens that can be consumed during the specified duration. Client application
    * developers can override the default limit up to this maximum. If specified, this value cannot
    * be set to a value less than the default limit. If not specified, it is set to the default
-   * limit.
-   *
-   * To allow clients to apply overrides with no upper bound, set this to -1, indicating unlimited
-   * maximum quota.
-   *
-   * Used by group-based quotas only.
+   * limit. To allow clients to apply overrides with no upper bound, set this to -1, indicating
+   * unlimited maximum quota. Used by group-based quotas only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -111,12 +101,9 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   private java.lang.String metric;
 
   /**
-   * Name of the quota limit.
-   *
-   * The name must be provided, and it must be unique within the service. The name can only include
-   * alphanumeric characters as well as '-'.
-   *
-   * The maximum length of the limit name is 64 characters.
+   * Name of the quota limit. The name must be provided, and it must be unique within the service.
+   * The name can only include alphanumeric characters as well as '-'. The maximum length of the
+   * limit name is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,12 +111,9 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit
-   * kinds are determined by the quota backend system.
-   *
-   * Here are some examples: * "1/min/{project}" for quota per minute per project.
-   *
-   * Note: the order of unit components is insignificant. The "1" at the beginning is required to
-   * follow the metric unit syntax.
+   * kinds are determined by the quota backend system. Here are some examples: * "1/min/{project}"
+   * for quota per minute per project. Note: the order of unit components is insignificant. The "1"
+   * at the beginning is required to follow the metric unit syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,13 +131,10 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   /**
    * Default number of tokens that can be consumed during the specified duration. This is the number
    * of tokens assigned when a client application developer activates the service for his/her
-   * project.
-   *
-   * Specifying a value of 0 will block all requests. This can be used if you are provisioning quota
-   * to selected consumers and blocking others. Similarly, a value of -1 will indicate an unlimited
-   * quota. No other negative values are allowed.
-   *
-   * Used by group-based quotas only.
+   * project. Specifying a value of 0 will block all requests. This can be used if you are
+   * provisioning quota to selected consumers and blocking others. Similarly, a value of -1 will
+   * indicate an unlimited quota. No other negative values are allowed. Used by group-based quotas
+   * only.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDefaultLimit() {
@@ -163,13 +144,10 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   /**
    * Default number of tokens that can be consumed during the specified duration. This is the number
    * of tokens assigned when a client application developer activates the service for his/her
-   * project.
-   *
-   * Specifying a value of 0 will block all requests. This can be used if you are provisioning quota
-   * to selected consumers and blocking others. Similarly, a value of -1 will indicate an unlimited
-   * quota. No other negative values are allowed.
-   *
-   * Used by group-based quotas only.
+   * project. Specifying a value of 0 will block all requests. This can be used if you are
+   * provisioning quota to selected consumers and blocking others. Similarly, a value of -1 will
+   * indicate an unlimited quota. No other negative values are allowed. Used by group-based quotas
+   * only.
    * @param defaultLimit defaultLimit or {@code null} for none
    */
   public QuotaLimit setDefaultLimit(java.lang.Long defaultLimit) {
@@ -220,9 +198,8 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration of this limit in textual notation. Must be "100s" or "1d".
-   *
-   * Used by group-based quotas only.
+   * Duration of this limit in textual notation. Must be "100s" or "1d". Used by group-based quotas
+   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDuration() {
@@ -230,9 +207,8 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration of this limit in textual notation. Must be "100s" or "1d".
-   *
-   * Used by group-based quotas only.
+   * Duration of this limit in textual notation. Must be "100s" or "1d". Used by group-based quotas
+   * only.
    * @param duration duration or {@code null} for none
    */
   public QuotaLimit setDuration(java.lang.String duration) {
@@ -245,9 +221,7 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    * of tokens that will be subtracted from the billed amount when billing is enabled. This field
    * can only be set on a limit with duration "1d", in a billable group; it is invalid on any other
    * limit. If this field is not set, it defaults to 0, indicating that there is no free tier for
-   * this service.
-   *
-   * Used by group-based quotas only.
+   * this service. Used by group-based quotas only.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFreeTier() {
@@ -259,9 +233,7 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    * of tokens that will be subtracted from the billed amount when billing is enabled. This field
    * can only be set on a limit with duration "1d", in a billable group; it is invalid on any other
    * limit. If this field is not set, it defaults to 0, indicating that there is no free tier for
-   * this service.
-   *
-   * Used by group-based quotas only.
+   * this service. Used by group-based quotas only.
    * @param freeTier freeTier or {@code null} for none
    */
   public QuotaLimit setFreeTier(java.lang.Long freeTier) {
@@ -273,12 +245,8 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    * Maximum number of tokens that can be consumed during the specified duration. Client application
    * developers can override the default limit up to this maximum. If specified, this value cannot
    * be set to a value less than the default limit. If not specified, it is set to the default
-   * limit.
-   *
-   * To allow clients to apply overrides with no upper bound, set this to -1, indicating unlimited
-   * maximum quota.
-   *
-   * Used by group-based quotas only.
+   * limit. To allow clients to apply overrides with no upper bound, set this to -1, indicating
+   * unlimited maximum quota. Used by group-based quotas only.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxLimit() {
@@ -289,12 +257,8 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    * Maximum number of tokens that can be consumed during the specified duration. Client application
    * developers can override the default limit up to this maximum. If specified, this value cannot
    * be set to a value less than the default limit. If not specified, it is set to the default
-   * limit.
-   *
-   * To allow clients to apply overrides with no upper bound, set this to -1, indicating unlimited
-   * maximum quota.
-   *
-   * Used by group-based quotas only.
+   * limit. To allow clients to apply overrides with no upper bound, set this to -1, indicating
+   * unlimited maximum quota. Used by group-based quotas only.
    * @param maxLimit maxLimit or {@code null} for none
    */
   public QuotaLimit setMaxLimit(java.lang.Long maxLimit) {
@@ -322,12 +286,9 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the quota limit.
-   *
-   * The name must be provided, and it must be unique within the service. The name can only include
-   * alphanumeric characters as well as '-'.
-   *
-   * The maximum length of the limit name is 64 characters.
+   * Name of the quota limit. The name must be provided, and it must be unique within the service.
+   * The name can only include alphanumeric characters as well as '-'. The maximum length of the
+   * limit name is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -335,12 +296,9 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the quota limit.
-   *
-   * The name must be provided, and it must be unique within the service. The name can only include
-   * alphanumeric characters as well as '-'.
-   *
-   * The maximum length of the limit name is 64 characters.
+   * Name of the quota limit. The name must be provided, and it must be unique within the service.
+   * The name can only include alphanumeric characters as well as '-'. The maximum length of the
+   * limit name is 64 characters.
    * @param name name or {@code null} for none
    */
   public QuotaLimit setName(java.lang.String name) {
@@ -350,12 +308,9 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit
-   * kinds are determined by the quota backend system.
-   *
-   * Here are some examples: * "1/min/{project}" for quota per minute per project.
-   *
-   * Note: the order of unit components is insignificant. The "1" at the beginning is required to
-   * follow the metric unit syntax.
+   * kinds are determined by the quota backend system. Here are some examples: * "1/min/{project}"
+   * for quota per minute per project. Note: the order of unit components is insignificant. The "1"
+   * at the beginning is required to follow the metric unit syntax.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -364,12 +319,9 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit
-   * kinds are determined by the quota backend system.
-   *
-   * Here are some examples: * "1/min/{project}" for quota per minute per project.
-   *
-   * Note: the order of unit components is insignificant. The "1" at the beginning is required to
-   * follow the metric unit syntax.
+   * kinds are determined by the quota backend system. Here are some examples: * "1/min/{project}"
+   * for quota per minute per project. Note: the order of unit components is insignificant. The "1"
+   * at the beginning is required to follow the metric unit syntax.
    * @param unit unit or {@code null} for none
    */
   public QuotaLimit setUnit(java.lang.String unit) {

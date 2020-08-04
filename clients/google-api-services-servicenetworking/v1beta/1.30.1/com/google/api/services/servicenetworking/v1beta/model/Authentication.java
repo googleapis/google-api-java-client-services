@@ -17,14 +17,11 @@
 package com.google.api.services.servicenetworking.v1beta.model;
 
 /**
- * `Authentication` defines the authentication configuration for an API.
- *
- * Example for an API targeted for external use:
- *
- *     name: calendar.googleapis.com     authentication:       providers:       - id:
- * google_calendar_auth         jwks_uri: https://www.googleapis.com/oauth2/v1/certs         issuer:
- * https://securetoken.google.com       rules:       - selector: "*"         requirements:
- * provider_id: google_calendar_auth
+ * `Authentication` defines the authentication configuration for an API. Example for an API targeted
+ * for external use: name: calendar.googleapis.com authentication: providers: - id:
+ * google_calendar_auth jwks_uri: https://www.googleapis.com/oauth2/v1/certs issuer:
+ * https://securetoken.google.com rules: - selector: "*" requirements: provider_id:
+ * google_calendar_auth
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -51,9 +48,8 @@ public final class Authentication extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of authentication rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of authentication rules that apply to individual API methods. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +73,8 @@ public final class Authentication extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of authentication rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of authentication rules that apply to individual API methods. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthenticationRule> getRules() {
@@ -87,9 +82,8 @@ public final class Authentication extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of authentication rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * A list of authentication rules that apply to individual API methods. **NOTE:** All service
+   * configuration rules follow "last one wins" order.
    * @param rules rules or {@code null} for none
    */
   public Authentication setRules(java.util.List<AuthenticationRule> rules) {

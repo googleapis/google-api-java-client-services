@@ -32,7 +32,7 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class SourceContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The path-qualified name of the .proto file that contained the associated protobuf element.  For
+   * The path-qualified name of the .proto file that contained the associated protobuf element. For
    * example: `"google/protobuf/source_context.proto"`.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class SourceContext extends com.google.api.client.json.GenericJson 
   private java.lang.String fileName;
 
   /**
-   * The path-qualified name of the .proto file that contained the associated protobuf element.  For
+   * The path-qualified name of the .proto file that contained the associated protobuf element. For
    * example: `"google/protobuf/source_context.proto"`.
    * @return value or {@code null} for none
    */
@@ -49,7 +49,7 @@ public final class SourceContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The path-qualified name of the .proto file that contained the associated protobuf element.  For
+   * The path-qualified name of the .proto file that contained the associated protobuf element. For
    * example: `"google/protobuf/source_context.proto"`.
    * @param fileName fileName or {@code null} for none
    */

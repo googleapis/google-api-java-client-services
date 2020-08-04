@@ -45,10 +45,9 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.lang.String creatorRole;
 
   /**
-   * The actual note to attach. (max-length: 1024 unicode code units)
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The actual note to attach. (max-length: 1024 unicode code units) Note: This field may be set
+   * only when creating the resource. Modifying this field while updating the resource will result
+   * in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,10 +102,9 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The actual note to attach. (max-length: 1024 unicode code units)
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The actual note to attach. (max-length: 1024 unicode code units) Note: This field may be set
+   * only when creating the resource. Modifying this field while updating the resource will result
+   * in an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getNote() {
@@ -114,10 +112,9 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The actual note to attach. (max-length: 1024 unicode code units)
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * The actual note to attach. (max-length: 1024 unicode code units) Note: This field may be set
+   * only when creating the resource. Modifying this field while updating the resource will result
+   * in an error.
    * @param note note or {@code null} for none
    */
   public Note setNote(java.lang.String note) {

@@ -68,12 +68,10 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
 
   /**
    * Publisher-excludable attributes that were detected for this creative. Can be used to filter the
-   * response of the creatives.list method.
-   *
-   * If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto) contains one of the attributes that were declared
-   * or detected for a given creative, and a bid is submitted with that creative, the bid will be
-   * filtered before the auction.
+   * response of the creatives.list method. If the `excluded_attribute` field of a [bid
+   * request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)
+   * contains one of the attributes that were declared or detected for a given creative, and a bid
+   * is submitted with that creative, the bid will be filtered before the auction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,11 +113,9 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
 
   /**
    * Detected sensitive categories, if any. Can be used to filter the response of the creatives.list
-   * method.
-   *
-   * See the ad-sensitive-categories.txt file in the technical documentation for a list of IDs. You
-   * should use these IDs along with the excluded-sensitive-category field in the bid request to
-   * filter your bids.
+   * method. See the ad-sensitive-categories.txt file in the technical documentation for a list of
+   * IDs. You should use these IDs along with the excluded-sensitive-category field in the bid
+   * request to filter your bids.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,12 +124,11 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   /**
    * IDs of the ad technology vendors that were detected to be used by this creative. See
    * https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for possible values. Can be
-   * used to filter the response of the creatives.list method.
-   *
-   * If the `allowed_vendor_type` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto) does not contain one of the vendor type IDs that
-   * were declared or detected for a given creative, and a bid is submitted with that creative, the
-   * bid will be filtered before the auction.
+   * used to filter the response of the creatives.list method. If the `allowed_vendor_type` field of
+   * a [bid request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-
+   * proto) does not contain one of the vendor type IDs that were declared or detected for a given
+   * creative, and a bid is submitted with that creative, the bid will be filtered before the
+   * auction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,12 +233,10 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
 
   /**
    * Publisher-excludable attributes that were detected for this creative. Can be used to filter the
-   * response of the creatives.list method.
-   *
-   * If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto) contains one of the attributes that were declared
-   * or detected for a given creative, and a bid is submitted with that creative, the bid will be
-   * filtered before the auction.
+   * response of the creatives.list method. If the `excluded_attribute` field of a [bid
+   * request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)
+   * contains one of the attributes that were declared or detected for a given creative, and a bid
+   * is submitted with that creative, the bid will be filtered before the auction.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDetectedAttributes() {
@@ -252,12 +245,10 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
 
   /**
    * Publisher-excludable attributes that were detected for this creative. Can be used to filter the
-   * response of the creatives.list method.
-   *
-   * If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto) contains one of the attributes that were declared
-   * or detected for a given creative, and a bid is submitted with that creative, the bid will be
-   * filtered before the auction.
+   * response of the creatives.list method. If the `excluded_attribute` field of a [bid
+   * request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto)
+   * contains one of the attributes that were declared or detected for a given creative, and a bid
+   * is submitted with that creative, the bid will be filtered before the auction.
    * @param detectedAttributes detectedAttributes or {@code null} for none
    */
   public CreativeServingDecision setDetectedAttributes(java.util.List<java.lang.String> detectedAttributes) {
@@ -347,11 +338,9 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
 
   /**
    * Detected sensitive categories, if any. Can be used to filter the response of the creatives.list
-   * method.
-   *
-   * See the ad-sensitive-categories.txt file in the technical documentation for a list of IDs. You
-   * should use these IDs along with the excluded-sensitive-category field in the bid request to
-   * filter your bids.
+   * method. See the ad-sensitive-categories.txt file in the technical documentation for a list of
+   * IDs. You should use these IDs along with the excluded-sensitive-category field in the bid
+   * request to filter your bids.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getDetectedSensitiveCategories() {
@@ -360,11 +349,9 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
 
   /**
    * Detected sensitive categories, if any. Can be used to filter the response of the creatives.list
-   * method.
-   *
-   * See the ad-sensitive-categories.txt file in the technical documentation for a list of IDs. You
-   * should use these IDs along with the excluded-sensitive-category field in the bid request to
-   * filter your bids.
+   * method. See the ad-sensitive-categories.txt file in the technical documentation for a list of
+   * IDs. You should use these IDs along with the excluded-sensitive-category field in the bid
+   * request to filter your bids.
    * @param detectedSensitiveCategories detectedSensitiveCategories or {@code null} for none
    */
   public CreativeServingDecision setDetectedSensitiveCategories(java.util.List<java.lang.Integer> detectedSensitiveCategories) {
@@ -375,12 +362,11 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   /**
    * IDs of the ad technology vendors that were detected to be used by this creative. See
    * https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for possible values. Can be
-   * used to filter the response of the creatives.list method.
-   *
-   * If the `allowed_vendor_type` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto) does not contain one of the vendor type IDs that
-   * were declared or detected for a given creative, and a bid is submitted with that creative, the
-   * bid will be filtered before the auction.
+   * used to filter the response of the creatives.list method. If the `allowed_vendor_type` field of
+   * a [bid request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-
+   * proto) does not contain one of the vendor type IDs that were declared or detected for a given
+   * creative, and a bid is submitted with that creative, the bid will be filtered before the
+   * auction.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getDetectedVendorIds() {
@@ -390,12 +376,11 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   /**
    * IDs of the ad technology vendors that were detected to be used by this creative. See
    * https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for possible values. Can be
-   * used to filter the response of the creatives.list method.
-   *
-   * If the `allowed_vendor_type` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto) does not contain one of the vendor type IDs that
-   * were declared or detected for a given creative, and a bid is submitted with that creative, the
-   * bid will be filtered before the auction.
+   * used to filter the response of the creatives.list method. If the `allowed_vendor_type` field of
+   * a [bid request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-
+   * proto) does not contain one of the vendor type IDs that were declared or detected for a given
+   * creative, and a bid is submitted with that creative, the bid will be filtered before the
+   * auction.
    * @param detectedVendorIds detectedVendorIds or {@code null} for none
    */
   public CreativeServingDecision setDetectedVendorIds(java.util.List<java.lang.Integer> detectedVendorIds) {

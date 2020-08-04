@@ -103,12 +103,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * All declared attributes for the ads that may be shown from this creative. Can be used to filter
-   * the response of the creatives.list method.
-   *
-   * If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto") contains one of the attributes that were declared
-   * or detected for a given creative, and a bid is submitted with that creative, the bid will be
-   * filtered before the auction.
+   * the response of the creatives.list method. If the `excluded_attribute` field of a [bid
+   * request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto")
+   * contains one of the attributes that were declared or detected for a given creative, and a bid
+   * is submitted with that creative, the bid will be filtered before the auction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -362,12 +360,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * All declared attributes for the ads that may be shown from this creative. Can be used to filter
-   * the response of the creatives.list method.
-   *
-   * If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto") contains one of the attributes that were declared
-   * or detected for a given creative, and a bid is submitted with that creative, the bid will be
-   * filtered before the auction.
+   * the response of the creatives.list method. If the `excluded_attribute` field of a [bid
+   * request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto")
+   * contains one of the attributes that were declared or detected for a given creative, and a bid
+   * is submitted with that creative, the bid will be filtered before the auction.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeclaredAttributes() {
@@ -376,12 +372,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * All declared attributes for the ads that may be shown from this creative. Can be used to filter
-   * the response of the creatives.list method.
-   *
-   * If the `excluded_attribute` field of a [bid request](https://developers.google.com/authorized-
-   * buyers/rtb/downloads/realtime-bidding-proto") contains one of the attributes that were declared
-   * or detected for a given creative, and a bid is submitted with that creative, the bid will be
-   * filtered before the auction.
+   * the response of the creatives.list method. If the `excluded_attribute` field of a [bid
+   * request](https://developers.google.com/authorized-buyers/rtb/downloads/realtime-bidding-proto")
+   * contains one of the attributes that were declared or detected for a given creative, and a bid
+   * is submitted with that creative, the bid will be filtered before the auction.
    * @param declaredAttributes declaredAttributes or {@code null} for none
    */
   public Creative setDeclaredAttributes(java.util.List<java.lang.String> declaredAttributes) {

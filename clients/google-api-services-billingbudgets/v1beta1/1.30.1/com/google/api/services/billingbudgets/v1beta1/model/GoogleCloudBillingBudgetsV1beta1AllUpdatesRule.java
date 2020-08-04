@@ -43,9 +43,9 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   private java.util.List<java.lang.String> monitoringNotificationChannels;
 
   /**
-   * Required. The name of the Cloud Pub/Sub topic where budget related messages will be published,
-   * in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to
-   * the topic. The topic needs to be created before the budget is created; see
+   * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the
+   * form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the
+   * topic. The topic needs to be created before the budget is created; see
    * https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications for more details.
    * Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set
    * for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
@@ -57,7 +57,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   private java.lang.String pubsubTopic;
 
   /**
-   * Required. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
+   * Optional. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
    * accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs
    * /how-to/budgets-programmatic-notifications#notification_format
    * The value may be {@code null}.
@@ -93,9 +93,9 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   }
 
   /**
-   * Required. The name of the Cloud Pub/Sub topic where budget related messages will be published,
-   * in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to
-   * the topic. The topic needs to be created before the budget is created; see
+   * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the
+   * form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the
+   * topic. The topic needs to be created before the budget is created; see
    * https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications for more details.
    * Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set
    * for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
@@ -108,9 +108,9 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   }
 
   /**
-   * Required. The name of the Cloud Pub/Sub topic where budget related messages will be published,
-   * in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to
-   * the topic. The topic needs to be created before the budget is created; see
+   * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the
+   * form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the
+   * topic. The topic needs to be created before the budget is created; see
    * https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications for more details.
    * Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set
    * for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
@@ -124,7 +124,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   }
 
   /**
-   * Required. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
+   * Optional. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
    * accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs
    * /how-to/budgets-programmatic-notifications#notification_format
    * @return value or {@code null} for none
@@ -134,7 +134,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   }
 
   /**
-   * Required. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
+   * Optional. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
    * accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs
    * /how-to/budgets-programmatic-notifications#notification_format
    * @param schemaVersion schemaVersion or {@code null} for none

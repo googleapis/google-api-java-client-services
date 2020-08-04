@@ -31,14 +31,14 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
-   * The deploy description when the release was created. The value can be up to 512characters.
+   * The deploy description when the release was created. The value can be up to 512 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * Output only. The unique identifier for the release, in the format: sites/site-
+   * Output only. The unique identifier for the release, in the format: sites/ site-
    * name/releases/releaseID This name is provided in the response body when you call the
    * [`CreateRelease`](sites.releases/create) endpoint.
    * The value may be {@code null}.
@@ -76,7 +76,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private Version version;
 
   /**
-   * The deploy description when the release was created. The value can be up to 512characters.
+   * The deploy description when the release was created. The value can be up to 512 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -84,7 +84,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The deploy description when the release was created. The value can be up to 512characters.
+   * The deploy description when the release was created. The value can be up to 512 characters.
    * @param message message or {@code null} for none
    */
   public Release setMessage(java.lang.String message) {
@@ -93,7 +93,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique identifier for the release, in the format: sites/site-
+   * Output only. The unique identifier for the release, in the format: sites/ site-
    * name/releases/releaseID This name is provided in the response body when you call the
    * [`CreateRelease`](sites.releases/create) endpoint.
    * @return value or {@code null} for none
@@ -103,7 +103,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique identifier for the release, in the format: sites/site-
+   * Output only. The unique identifier for the release, in the format: sites/ site-
    * name/releases/releaseID This name is provided in the response body when you call the
    * [`CreateRelease`](sites.releases/create) endpoint.
    * @param name name or {@code null} for none

@@ -96,7 +96,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The unique identifier for a version, in the format: sites/site-name/versions/versionID This
+   * The unique identifier for a version, in the format: sites/site-name /versions/versionID This
    * name is provided in the response body when you call the
    * [`CreateVersion`](../sites.versions/create) endpoint.
    * The value may be {@code null}.
@@ -114,17 +114,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private PreviewConfig preview;
 
   /**
-   * The deploy status of a version.
-   *
-   * For a successful deploy, call the [`CreateVersion`](sites.versions/create) endpoint to make a
-   * new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the
-   * version, then [update](sites.versions/patch) the version to the `FINALIZED` status.
-   *
-   * Note that if you leave the version in the `CREATED` state for more than 12hours, the system
-   * will automatically mark the version as `ABANDONED`.
-   *
-   * You can also change the status of a version to `DELETED` by calling the
-   * [`DeleteVersion`](sites.versions/delete) endpoint.
+   * The deploy status of a version. For a successful deploy, call the
+   * [`CreateVersion`](sites.versions/create) endpoint to make a new version (`CREATED` status),
+   * [upload all desired files](sites.versions/populateFiles) to the version, then
+   * [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave
+   * the version in the `CREATED` state for more than 12 hours, the system will automatically mark
+   * the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling
+   * the [`DeleteVersion`](sites.versions/delete) endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,7 +292,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier for a version, in the format: sites/site-name/versions/versionID This
+   * The unique identifier for a version, in the format: sites/site-name /versions/versionID This
    * name is provided in the response body when you call the
    * [`CreateVersion`](../sites.versions/create) endpoint.
    * @return value or {@code null} for none
@@ -306,7 +302,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier for a version, in the format: sites/site-name/versions/versionID This
+   * The unique identifier for a version, in the format: sites/site-name /versions/versionID This
    * name is provided in the response body when you call the
    * [`CreateVersion`](../sites.versions/create) endpoint.
    * @param name name or {@code null} for none
@@ -338,17 +334,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The deploy status of a version.
-   *
-   * For a successful deploy, call the [`CreateVersion`](sites.versions/create) endpoint to make a
-   * new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the
-   * version, then [update](sites.versions/patch) the version to the `FINALIZED` status.
-   *
-   * Note that if you leave the version in the `CREATED` state for more than 12hours, the system
-   * will automatically mark the version as `ABANDONED`.
-   *
-   * You can also change the status of a version to `DELETED` by calling the
-   * [`DeleteVersion`](sites.versions/delete) endpoint.
+   * The deploy status of a version. For a successful deploy, call the
+   * [`CreateVersion`](sites.versions/create) endpoint to make a new version (`CREATED` status),
+   * [upload all desired files](sites.versions/populateFiles) to the version, then
+   * [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave
+   * the version in the `CREATED` state for more than 12 hours, the system will automatically mark
+   * the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling
+   * the [`DeleteVersion`](sites.versions/delete) endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -356,17 +348,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The deploy status of a version.
-   *
-   * For a successful deploy, call the [`CreateVersion`](sites.versions/create) endpoint to make a
-   * new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the
-   * version, then [update](sites.versions/patch) the version to the `FINALIZED` status.
-   *
-   * Note that if you leave the version in the `CREATED` state for more than 12hours, the system
-   * will automatically mark the version as `ABANDONED`.
-   *
-   * You can also change the status of a version to `DELETED` by calling the
-   * [`DeleteVersion`](sites.versions/delete) endpoint.
+   * The deploy status of a version. For a successful deploy, call the
+   * [`CreateVersion`](sites.versions/create) endpoint to make a new version (`CREATED` status),
+   * [upload all desired files](sites.versions/populateFiles) to the version, then
+   * [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave
+   * the version in the `CREATED` state for more than 12 hours, the system will automatically mark
+   * the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling
+   * the [`DeleteVersion`](sites.versions/delete) endpoint.
    * @param status status or {@code null} for none
    */
   public Version setStatus(java.lang.String status) {

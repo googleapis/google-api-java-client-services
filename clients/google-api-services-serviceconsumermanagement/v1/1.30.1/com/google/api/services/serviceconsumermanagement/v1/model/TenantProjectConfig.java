@@ -65,7 +65,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   private ServiceAccountConfig serviceAccountConfig;
 
   /**
-   * Google Cloud API names of services that are activated on this project during provisioning.  If
+   * Google Cloud API names of services that are activated on this project during provisioning. If
    * any of these services can't be activated, the request fails. For example:
    * 'compute.googleapis.com','cloudfunctions.googleapis.com'
    * The value may be {@code null}.
@@ -155,7 +155,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Google Cloud API names of services that are activated on this project during provisioning.  If
+   * Google Cloud API names of services that are activated on this project during provisioning. If
    * any of these services can't be activated, the request fails. For example:
    * 'compute.googleapis.com','cloudfunctions.googleapis.com'
    * @return value or {@code null} for none
@@ -165,7 +165,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Google Cloud API names of services that are activated on this project during provisioning.  If
+   * Google Cloud API names of services that are activated on this project during provisioning. If
    * any of these services can't be activated, the request fails. For example:
    * 'compute.googleapis.com','cloudfunctions.googleapis.com'
    * @param services services or {@code null} for none

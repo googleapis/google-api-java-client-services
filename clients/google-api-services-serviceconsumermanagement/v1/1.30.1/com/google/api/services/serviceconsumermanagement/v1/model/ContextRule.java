@@ -61,9 +61,7 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> requested;
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,9 +140,7 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelector() {
@@ -152,9 +148,7 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Selects the methods to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * @param selector selector or {@code null} for none
    */
   public ContextRule setSelector(java.lang.String selector) {

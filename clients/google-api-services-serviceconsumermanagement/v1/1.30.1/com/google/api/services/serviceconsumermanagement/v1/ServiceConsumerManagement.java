@@ -143,9 +143,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
   public class Operations {
 
     /**
-     * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-     * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
      * methods to check whether the cancellation succeeded or whether the operation completed despite
      * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
      * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -174,13 +174,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-       * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-       * other methods to check whether the cancellation succeeded or whether the operation completed
-       * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-       * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-       * corresponding to `Code.CANCELLED`.
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
        *
@@ -419,7 +419,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       }
     }
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -444,7 +444,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -561,13 +561,12 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -592,13 +591,12 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -791,9 +789,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
      * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
      * any optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
      *
-     * @param parent Service for which search is performed.
-    services/{service}
-    {service} the name of a service, for
+     * @param parent Service for which search is performed. services/{service} {service} the name of a service, for
      *        example 'service.googleapis.com'.
      * @return the request
      */
@@ -821,9 +817,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Service for which search is performed.
-    services/{service}
-    {service} the name of a service, for
+       * @param parent Service for which search is performed. services/{service} {service} the name of a service, for
      *        example 'service.googleapis.com'.
        * @since 1.13
        */
@@ -985,15 +979,12 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * Optional. Set a query `{expression}` for querying tenancy units. Your `{expression}` must
        * be in the format: `field_name=literal_string`. The `field_name` is the name of the field
        * you want to compare. Supported fields are `tenant_resources.tag` and
-       * `tenant_resources.resource`.
-       *
-       * For example, to search tenancy units that contain at least one tenant resource with a given
-       * tag 'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain
-       * at least one tenant resource with a given resource name 'projects/123456', use the query
-       * `tenant_resources.resource=projects/123456`.
-       *
-       * Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to
-       * be included in the result set. For example, `tenant_resources.tag=xyz AND
+       * `tenant_resources.resource`. For example, to search tenancy units that contain at least one
+       * tenant resource with a given tag 'xyz', use the query `tenant_resources.tag=xyz`. To search
+       * tenancy units that contain at least one tenant resource with a given resource name
+       * 'projects/123456', use the query `tenant_resources.resource=projects/123456`. Multiple
+       * expressions can be joined with `AND`s. Tenancy units must match all expressions to be
+       * included in the result set. For example, `tenant_resources.tag=xyz AND
        * tenant_resources.resource=projects/123456`
        */
       @com.google.api.client.util.Key
@@ -1001,13 +992,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /** Optional. Set a query `{expression}` for querying tenancy units. Your `{expression}` must be in the
      format: `field_name=literal_string`. The `field_name` is the name of the field you want to compare.
-     Supported fields are `tenant_resources.tag` and `tenant_resources.resource`.
-
-     For example, to search tenancy units that contain at least one tenant resource with a given tag
-     'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain at least one
-     tenant resource with a given resource name 'projects/123456', use the query
-     `tenant_resources.resource=projects/123456`.
-
+     Supported fields are `tenant_resources.tag` and `tenant_resources.resource`. For example, to search
+     tenancy units that contain at least one tenant resource with a given tag 'xyz', use the query
+     `tenant_resources.tag=xyz`. To search tenancy units that contain at least one tenant resource with
+     a given resource name 'projects/123456', use the query `tenant_resources.resource=projects/123456`.
      Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to be
      included in the result set. For example, `tenant_resources.tag=xyz AND
      tenant_resources.resource=projects/123456`
@@ -1020,15 +1008,12 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * Optional. Set a query `{expression}` for querying tenancy units. Your `{expression}` must
        * be in the format: `field_name=literal_string`. The `field_name` is the name of the field
        * you want to compare. Supported fields are `tenant_resources.tag` and
-       * `tenant_resources.resource`.
-       *
-       * For example, to search tenancy units that contain at least one tenant resource with a given
-       * tag 'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain
-       * at least one tenant resource with a given resource name 'projects/123456', use the query
-       * `tenant_resources.resource=projects/123456`.
-       *
-       * Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to
-       * be included in the result set. For example, `tenant_resources.tag=xyz AND
+       * `tenant_resources.resource`. For example, to search tenancy units that contain at least one
+       * tenant resource with a given tag 'xyz', use the query `tenant_resources.tag=xyz`. To search
+       * tenancy units that contain at least one tenant resource with a given resource name
+       * 'projects/123456', use the query `tenant_resources.resource=projects/123456`. Multiple
+       * expressions can be joined with `AND`s. Tenancy units must match all expressions to be
+       * included in the result set. For example, `tenant_resources.tag=xyz AND
        * tenant_resources.resource=projects/123456`
        */
       public Search setQuery(java.lang.String query) {
@@ -1074,8 +1059,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link AddProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Name of the tenancy unit.
-      Such as
+       * @param parent Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AddTenantProjectRequest}
        * @return the request
@@ -1107,8 +1091,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * AddProject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Name of the tenancy unit.
-      Such as
+         * @param parent Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AddTenantProjectRequest}
          * @since 1.13
@@ -1230,8 +1213,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link ApplyProjectConfig#execute()} method to invoke the
        * remote operation.
        *
-       * @param name Name of the tenancy unit.
-      Such as
+       * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
        * @return the request
@@ -1270,8 +1252,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit.
-      Such as
+         * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
          * @since 1.13
@@ -1389,8 +1370,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link AttachProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit that the project will be attached to.
-      Such as
+       * @param name Name of the tenancy unit that the project will be attached to. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
        * @return the request
@@ -1426,8 +1406,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit that the project will be attached to.
-      Such as
+         * @param name Name of the tenancy unit that the project will be attached to. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
          * @since 1.13
@@ -1540,14 +1519,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent services/{service}/{collection id}/{resource id}
-      {collection id} is the cloud resource collection
-       *        type representing the
-      service consumer, for example 'projects', or 'organizations'.
-       *        {resource id} is the consumer numeric id, such as project number: '123456'.
-      {service} the
-       *        name of a managed service, such as 'service.googleapis.com'.
-      Enables service binding using
+       * @param parent services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection
+       *        type representing the service consumer, for example 'projects', or 'organizations'.
+       *        {resource id} is the consumer numeric id, such as project number: '123456'. {service} the
+       *        name of a managed service, such as 'service.googleapis.com'. Enables service binding using
        *        the new tenancy unit.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.CreateTenancyUnitRequest}
        * @return the request
@@ -1578,14 +1553,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent services/{service}/{collection id}/{resource id}
-      {collection id} is the cloud resource collection
-       *        type representing the
-      service consumer, for example 'projects', or 'organizations'.
-       *        {resource id} is the consumer numeric id, such as project number: '123456'.
-      {service} the
-       *        name of a managed service, such as 'service.googleapis.com'.
-      Enables service binding using
+         * @param parent services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection
+       *        type representing the service consumer, for example 'projects', or 'organizations'.
+       *        {resource id} is the consumer numeric id, such as project number: '123456'. {service} the
+       *        name of a managed service, such as 'service.googleapis.com'. Enables service binding using
        *        the new tenancy unit.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.CreateTenancyUnitRequest}
          * @since 1.13
@@ -1831,7 +1802,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * Deletes the specified project resource identified by a tenant resource tag. The mothod removes a
        * project lien with a 'TenantManager' origin if that was added. It will then attempt to delete the
        * project. If that operation fails, this method also fails. After the project has been deleted, the
-       * tenant resource state is set to DELETED.  To permanently remove resource metadata, call the
+       * tenant resource state is set to DELETED. To permanently remove resource metadata, call the
        * `RemoveTenantProject` method. New resources with the same tag can't be added if there are
        * existing resources in a DELETED state. Operation.
        *
@@ -1841,8 +1812,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link DeleteProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit.
-      Such as
+       * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest}
        * @return the request
@@ -1864,7 +1834,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * Deletes the specified project resource identified by a tenant resource tag. The mothod removes
          * a project lien with a 'TenantManager' origin if that was added. It will then attempt to delete
          * the project. If that operation fails, this method also fails. After the project has been
-         * deleted, the tenant resource state is set to DELETED.  To permanently remove resource metadata,
+         * deleted, the tenant resource state is set to DELETED. To permanently remove resource metadata,
          * call the `RemoveTenantProject` method. New resources with the same tag can't be added if there
          * are existing resources in a DELETED state. Operation.
          *
@@ -1876,8 +1846,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit.
-      Such as
+         * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest}
          * @since 1.13
@@ -1991,14 +1960,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Managed service and service consumer. Required.
-      services/{service}/{collection id}/{resource id}
-       *        {collection id} is the cloud resource collection type representing the
-      service consumer,
-       *        for example 'projects', or 'organizations'.
-      {resource id} is the consumer numeric id, such
-       *        as project number: '123456'.
-      {service} the name of a service, such as
+       * @param parent Managed service and service consumer. Required. services/{service}/{collection id}/{resource id}
+       *        {collection id} is the cloud resource collection type representing the service consumer,
+       *        for example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such
+       *        as project number: '123456'. {service} the name of a service, such as
        *        'service.googleapis.com'.
        * @return the request
        */
@@ -2029,14 +1994,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Managed service and service consumer. Required.
-      services/{service}/{collection id}/{resource id}
-       *        {collection id} is the cloud resource collection type representing the
-      service consumer,
-       *        for example 'projects', or 'organizations'.
-      {resource id} is the consumer numeric id, such
-       *        as project number: '123456'.
-      {service} the name of a service, such as
+         * @param parent Managed service and service consumer. Required. services/{service}/{collection id}/{resource id}
+       *        {collection id} is the cloud resource collection type representing the service consumer,
+       *        for example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such
+       *        as project number: '123456'. {service} the name of a service, such as
        *        'service.googleapis.com'.
          * @since 1.13
          */
@@ -2226,8 +2187,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link RemoveProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit.
-      Such as
+       * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.RemoveTenantProjectRequest}
        * @return the request
@@ -2260,8 +2220,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit.
-      Such as
+         * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.RemoveTenantProjectRequest}
          * @since 1.13
@@ -2376,8 +2335,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link UndeleteProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit.
-      Such as
+       * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest}
        * @return the request
@@ -2409,8 +2367,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit.
-      Such as
+         * @param name Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest}
          * @since 1.13

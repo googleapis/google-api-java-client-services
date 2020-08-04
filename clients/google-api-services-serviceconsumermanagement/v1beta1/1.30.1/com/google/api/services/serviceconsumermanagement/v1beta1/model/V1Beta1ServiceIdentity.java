@@ -38,9 +38,7 @@ public final class V1Beta1ServiceIdentity extends com.google.api.client.json.Gen
   private java.lang.String email;
 
   /**
-   * P4 service identity resource name.
-   *
-   * An example name would be:
+   * P4 service identity resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/serviceIdentities/default`
    * The value may be {@code null}.
    */
@@ -80,9 +78,7 @@ public final class V1Beta1ServiceIdentity extends com.google.api.client.json.Gen
   }
 
   /**
-   * P4 service identity resource name.
-   *
-   * An example name would be:
+   * P4 service identity resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/serviceIdentities/default`
    * @return value or {@code null} for none
    */
@@ -91,9 +87,7 @@ public final class V1Beta1ServiceIdentity extends com.google.api.client.json.Gen
   }
 
   /**
-   * P4 service identity resource name.
-   *
-   * An example name would be:
+   * P4 service identity resource name. An example name would be:
    * `services/serviceconsumermanagement.googleapis.com/projects/123/serviceIdentities/default`
    * @param name name or {@code null} for none
    */

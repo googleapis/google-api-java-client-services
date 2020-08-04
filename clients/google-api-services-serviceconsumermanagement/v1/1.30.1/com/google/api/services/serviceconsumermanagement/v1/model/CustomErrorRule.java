@@ -31,7 +31,7 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class CustomErrorRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Mark this message as possible payload in error response.  Otherwise, objects of this type will
+   * Mark this message as possible payload in error response. Otherwise, objects of this type will
    * be filtered when they appear in error payload.
    * The value may be {@code null}.
    */
@@ -39,16 +39,14 @@ public final class CustomErrorRule extends com.google.api.client.json.GenericJso
   private java.lang.Boolean isErrorType;
 
   /**
-   * Selects messages to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects messages to which this rule applies. Refer to selector for syntax details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selector;
 
   /**
-   * Mark this message as possible payload in error response.  Otherwise, objects of this type will
+   * Mark this message as possible payload in error response. Otherwise, objects of this type will
    * be filtered when they appear in error payload.
    * @return value or {@code null} for none
    */
@@ -57,7 +55,7 @@ public final class CustomErrorRule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Mark this message as possible payload in error response.  Otherwise, objects of this type will
+   * Mark this message as possible payload in error response. Otherwise, objects of this type will
    * be filtered when they appear in error payload.
    * @param isErrorType isErrorType or {@code null} for none
    */
@@ -67,9 +65,7 @@ public final class CustomErrorRule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Selects messages to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects messages to which this rule applies. Refer to selector for syntax details.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelector() {
@@ -77,9 +73,7 @@ public final class CustomErrorRule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Selects messages to which this rule applies.
-   *
-   * Refer to selector for syntax details.
+   * Selects messages to which this rule applies. Refer to selector for syntax details.
    * @param selector selector or {@code null} for none
    */
   public CustomErrorRule setSelector(java.lang.String selector) {

@@ -30,7 +30,7 @@ package com.google.api.services.gmail.model;
 public final class SmtpMsa extends com.google.api.client.json.GenericJson {
 
   /**
-   * The hostname of the SMTP service.  Required.
+   * The hostname of the SMTP service. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   private java.lang.String password;
 
   /**
-   * The port of the SMTP service.  Required.
+   * The port of the SMTP service. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * The protocol that will be used to secure communication with the SMTP service.  Required.
+   * The protocol that will be used to secure communication with the SMTP service. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   private java.lang.String username;
 
   /**
-   * The hostname of the SMTP service.  Required.
+   * The hostname of the SMTP service. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -77,7 +77,7 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hostname of the SMTP service.  Required.
+   * The hostname of the SMTP service. Required.
    * @param host host or {@code null} for none
    */
   public SmtpMsa setHost(java.lang.String host) {
@@ -107,7 +107,7 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port of the SMTP service.  Required.
+   * The port of the SMTP service. Required.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -115,7 +115,7 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port of the SMTP service.  Required.
+   * The port of the SMTP service. Required.
    * @param port port or {@code null} for none
    */
   public SmtpMsa setPort(java.lang.Integer port) {
@@ -124,7 +124,7 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The protocol that will be used to secure communication with the SMTP service.  Required.
+   * The protocol that will be used to secure communication with the SMTP service. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityMode() {
@@ -132,7 +132,7 @@ public final class SmtpMsa extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The protocol that will be used to secure communication with the SMTP service.  Required.
+   * The protocol that will be used to secure communication with the SMTP service. Required.
    * @param securityMode securityMode or {@code null} for none
    */
   public SmtpMsa setSecurityMode(java.lang.String securityMode) {

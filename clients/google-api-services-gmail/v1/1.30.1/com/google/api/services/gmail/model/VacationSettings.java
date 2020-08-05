@@ -17,7 +17,7 @@
 package com.google.api.services.gmail.model;
 
 /**
- * Vacation auto-reply settings for an account.  These settings correspond to the "Vacation
+ * Vacation auto-reply settings for an account. These settings correspond to the "Vacation
  * responder" feature in the web interface.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -39,7 +39,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * An optional end time for sending auto-replies (epoch ms). When this is specified, Gmail will
-   * automatically reply only to messages that it receives before the end time.  If both `startTime`
+   * automatically reply only to messages that it receives before the end time. If both `startTime`
    * and `endTime` are specified, `startTime` must precede `endTime`.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
   private java.lang.Long endTime;
 
   /**
-   * Response body in HTML format.  Gmail will sanitize the HTML before storing it. If both
+   * Response body in HTML format. Gmail will sanitize the HTML before storing it. If both
    * `response_body_plain_text` and `response_body_html` are specified, `response_body_html` will be
    * used.
    * The value may be {@code null}.
@@ -64,7 +64,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
   private java.lang.String responseBodyPlainText;
 
   /**
-   * Optional text to prepend to the subject line in vacation responses.  In order to enable auto-
+   * Optional text to prepend to the subject line in vacation responses. In order to enable auto-
    * replies, either the response subject or the response body must be nonempty.
    * The value may be {@code null}.
    */
@@ -89,8 +89,8 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * An optional start time for sending auto-replies (epoch ms). When this is specified, Gmail will
-   * automatically reply only to messages that it receives after the start time.  If both
-   * `startTime` and `endTime` are specified, `startTime` must precede `endTime`.
+   * automatically reply only to messages that it receives after the start time. If both `startTime`
+   * and `endTime` are specified, `startTime` must precede `endTime`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -115,7 +115,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * An optional end time for sending auto-replies (epoch ms). When this is specified, Gmail will
-   * automatically reply only to messages that it receives before the end time.  If both `startTime`
+   * automatically reply only to messages that it receives before the end time. If both `startTime`
    * and `endTime` are specified, `startTime` must precede `endTime`.
    * @return value or {@code null} for none
    */
@@ -125,7 +125,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * An optional end time for sending auto-replies (epoch ms). When this is specified, Gmail will
-   * automatically reply only to messages that it receives before the end time.  If both `startTime`
+   * automatically reply only to messages that it receives before the end time. If both `startTime`
    * and `endTime` are specified, `startTime` must precede `endTime`.
    * @param endTime endTime or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Response body in HTML format.  Gmail will sanitize the HTML before storing it. If both
+   * Response body in HTML format. Gmail will sanitize the HTML before storing it. If both
    * `response_body_plain_text` and `response_body_html` are specified, `response_body_html` will be
    * used.
    * @return value or {@code null} for none
@@ -145,7 +145,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Response body in HTML format.  Gmail will sanitize the HTML before storing it. If both
+   * Response body in HTML format. Gmail will sanitize the HTML before storing it. If both
    * `response_body_plain_text` and `response_body_html` are specified, `response_body_html` will be
    * used.
    * @param responseBodyHtml responseBodyHtml or {@code null} for none
@@ -175,7 +175,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional text to prepend to the subject line in vacation responses.  In order to enable auto-
+   * Optional text to prepend to the subject line in vacation responses. In order to enable auto-
    * replies, either the response subject or the response body must be nonempty.
    * @return value or {@code null} for none
    */
@@ -184,7 +184,7 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional text to prepend to the subject line in vacation responses.  In order to enable auto-
+   * Optional text to prepend to the subject line in vacation responses. In order to enable auto-
    * replies, either the response subject or the response body must be nonempty.
    * @param responseSubject responseSubject or {@code null} for none
    */
@@ -233,8 +233,8 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * An optional start time for sending auto-replies (epoch ms). When this is specified, Gmail will
-   * automatically reply only to messages that it receives after the start time.  If both
-   * `startTime` and `endTime` are specified, `startTime` must precede `endTime`.
+   * automatically reply only to messages that it receives after the start time. If both `startTime`
+   * and `endTime` are specified, `startTime` must precede `endTime`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStartTime() {
@@ -243,8 +243,8 @@ public final class VacationSettings extends com.google.api.client.json.GenericJs
 
   /**
    * An optional start time for sending auto-replies (epoch ms). When this is specified, Gmail will
-   * automatically reply only to messages that it receives after the start time.  If both
-   * `startTime` and `endTime` are specified, `startTime` must precede `endTime`.
+   * automatically reply only to messages that it receives after the start time. If both `startTime`
+   * and `endTime` are specified, `startTime` must precede `endTime`.
    * @param startTime startTime or {@code null} for none
    */
   public VacationSettings setStartTime(java.lang.Long startTime) {

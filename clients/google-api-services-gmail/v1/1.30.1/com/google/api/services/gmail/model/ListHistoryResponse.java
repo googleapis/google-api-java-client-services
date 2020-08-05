@@ -30,8 +30,8 @@ package com.google.api.services.gmail.model;
 public final class ListHistoryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of history records.  Any `messages` contained in the response will typically only have
-   * `id` and `threadId` fields populated.
+   * List of history records. Any `messages` contained in the response will typically only have `id`
+   * and `threadId` fields populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class ListHistoryResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
-   * List of history records.  Any `messages` contained in the response will typically only have
-   * `id` and `threadId` fields populated.
+   * List of history records. Any `messages` contained in the response will typically only have `id`
+   * and `threadId` fields populated.
    * @return value or {@code null} for none
    */
   public java.util.List<History> getHistory() {
@@ -67,8 +67,8 @@ public final class ListHistoryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * List of history records.  Any `messages` contained in the response will typically only have
-   * `id` and `threadId` fields populated.
+   * List of history records. Any `messages` contained in the response will typically only have `id`
+   * and `threadId` fields populated.
    * @param history history or {@code null} for none
    */
   public ListHistoryResponse setHistory(java.util.List<History> history) {

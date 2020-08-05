@@ -32,13 +32,13 @@ package com.google.api.services.androidenterprise.model;
 public final class WebApp extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display mode of the web app. Possible values include: "minimalUi", the device's status bar,
-   * navigation bar, the app's URL, and a refresh button are visible when the app is open. For HTTP
-   * URLs, you can only select this option. "standalone", the device's status bar and navigation bar
-   * are visible when the app is open. "fullScreen", the app opens in full screen mode, hiding the
-   * device's status and navigation bars.  All browser UI elements, page URL, system status bar and
-   * back button are not visible, and the web app takes up the entirety of the available display
-   * area.
+   * The display mode of the web app. Possible values include: - "minimalUi", the device's status
+   * bar, navigation bar, the app's URL, and a refresh button are visible when the app is open. For
+   * HTTP URLs, you can only select this option. - "standalone", the device's status bar and
+   * navigation bar are visible when the app is open. - "fullScreen", the app opens in full screen
+   * mode, hiding the device's status and navigation bars. All browser UI elements, page URL, system
+   * status bar and back button are not visible, and the web app takes up the entirety of the
+   * available display area.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,31 +75,30 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The current version of the app.
-   *
-   * Note that the version can automatically increase during the lifetime of the web app, while
-   * Google does internal housekeeping to keep the web app up-to-date.
+   * The current version of the app. Note that the version can automatically increase during the
+   * lifetime of the web app, while Google does internal housekeeping to keep the web app up-to-
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long versionCode;
 
   /**
-   * The ID of the application.  A string of the form app:package name where the package name always
-   * starts with the prefix com.google.enterprise.webapp. followed by a random id.
+   * The ID of the application. A string of the form "app:" where the package name always starts
+   * with the prefix "com.google.enterprise.webapp." followed by a random id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webAppId;
 
   /**
-   * The display mode of the web app. Possible values include: "minimalUi", the device's status bar,
-   * navigation bar, the app's URL, and a refresh button are visible when the app is open. For HTTP
-   * URLs, you can only select this option. "standalone", the device's status bar and navigation bar
-   * are visible when the app is open. "fullScreen", the app opens in full screen mode, hiding the
-   * device's status and navigation bars.  All browser UI elements, page URL, system status bar and
-   * back button are not visible, and the web app takes up the entirety of the available display
-   * area.
+   * The display mode of the web app. Possible values include: - "minimalUi", the device's status
+   * bar, navigation bar, the app's URL, and a refresh button are visible when the app is open. For
+   * HTTP URLs, you can only select this option. - "standalone", the device's status bar and
+   * navigation bar are visible when the app is open. - "fullScreen", the app opens in full screen
+   * mode, hiding the device's status and navigation bars. All browser UI elements, page URL, system
+   * status bar and back button are not visible, and the web app takes up the entirety of the
+   * available display area.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayMode() {
@@ -107,13 +106,13 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display mode of the web app. Possible values include: "minimalUi", the device's status bar,
-   * navigation bar, the app's URL, and a refresh button are visible when the app is open. For HTTP
-   * URLs, you can only select this option. "standalone", the device's status bar and navigation bar
-   * are visible when the app is open. "fullScreen", the app opens in full screen mode, hiding the
-   * device's status and navigation bars.  All browser UI elements, page URL, system status bar and
-   * back button are not visible, and the web app takes up the entirety of the available display
-   * area.
+   * The display mode of the web app. Possible values include: - "minimalUi", the device's status
+   * bar, navigation bar, the app's URL, and a refresh button are visible when the app is open. For
+   * HTTP URLs, you can only select this option. - "standalone", the device's status bar and
+   * navigation bar are visible when the app is open. - "fullScreen", the app opens in full screen
+   * mode, hiding the device's status and navigation bars. All browser UI elements, page URL, system
+   * status bar and back button are not visible, and the web app takes up the entirety of the
+   * available display area.
    * @param displayMode displayMode or {@code null} for none
    */
   public WebApp setDisplayMode(java.lang.String displayMode) {
@@ -194,10 +193,9 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current version of the app.
-   *
-   * Note that the version can automatically increase during the lifetime of the web app, while
-   * Google does internal housekeeping to keep the web app up-to-date.
+   * The current version of the app. Note that the version can automatically increase during the
+   * lifetime of the web app, while Google does internal housekeeping to keep the web app up-to-
+   * date.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersionCode() {
@@ -205,10 +203,9 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current version of the app.
-   *
-   * Note that the version can automatically increase during the lifetime of the web app, while
-   * Google does internal housekeeping to keep the web app up-to-date.
+   * The current version of the app. Note that the version can automatically increase during the
+   * lifetime of the web app, while Google does internal housekeeping to keep the web app up-to-
+   * date.
    * @param versionCode versionCode or {@code null} for none
    */
   public WebApp setVersionCode(java.lang.Long versionCode) {
@@ -217,8 +214,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the application.  A string of the form app:package name where the package name always
-   * starts with the prefix com.google.enterprise.webapp. followed by a random id.
+   * The ID of the application. A string of the form "app:" where the package name always starts
+   * with the prefix "com.google.enterprise.webapp." followed by a random id.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebAppId() {
@@ -226,8 +223,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the application.  A string of the form app:package name where the package name always
-   * starts with the prefix com.google.enterprise.webapp. followed by a random id.
+   * The ID of the application. A string of the form "app:" where the package name always starts
+   * with the prefix "com.google.enterprise.webapp." followed by a random id.
    * @param webAppId webAppId or {@code null} for none
    */
   public WebApp setWebAppId(java.lang.String webAppId) {

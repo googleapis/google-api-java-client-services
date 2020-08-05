@@ -18,22 +18,15 @@ package com.google.api.services.androidenterprise.model;
 
 /**
  * The existence of an Installs resource indicates that an app is installed on a particular device
- * (or that an install is pending).
- *
- * The API can be used to create an install resource using the update method. This triggers the
- * actual install of the app on the device. If the user does not already have an entitlement for the
- * app, then an attempt is made to create one. If this fails (for example, because the app is not
- * free and there is no available license), then the creation of the install fails.
- *
- * The API can also be used to update an installed app. If theupdatemethod is used on an existing
- * install, then the app will be updated to the latest available version.
- *
+ * (or that an install is pending). The API can be used to create an install resource using the
+ * update method. This triggers the actual install of the app on the device. If the user does not
+ * already have an entitlement for the app, then an attempt is made to create one. If this fails
+ * (for example, because the app is not free and there is no available license), then the creation
+ * of the install fails. The API can also be used to update an installed app. If the update method
+ * is used on an existing install, then the app will be updated to the latest available version.
  * Note that it is not possible to force the installation of a specific version of an app: the
- * version code is read-only.
- *
- * If a user installs an app themselves (as permitted by the enterprise), then again an install
- * resource and possibly an entitlement resource are automatically created.
- *
+ * version code is read-only. If a user installs an app themselves (as permitted by the enterprise),
+ * then again an install resource and possibly an entitlement resource are automatically created.
  * The API can also be used to delete an install resource, which triggers the removal of the app
  * from the device. Note that deleting an install does not automatically remove the corresponding
  * entitlement, even if there are no remaining installs. The install resource will also be deleted
@@ -50,8 +43,8 @@ package com.google.api.services.androidenterprise.model;
 public final class Install extends com.google.api.client.json.GenericJson {
 
   /**
-   * Install state. The state installPending means that an install request has recently been made
-   * and download to the device is in progress. The state installed means that the app has been
+   * Install state. The state "installPending" means that an install request has recently been made
+   * and download to the device is in progress. The state "installed" means that the app has been
    * installed. This field is read-only.
    * The value may be {@code null}.
    */
@@ -59,7 +52,7 @@ public final class Install extends com.google.api.client.json.GenericJson {
   private java.lang.String installState;
 
   /**
-   * The ID of the product that the install is for. For example, app:com.google.android.gm.
+   * The ID of the product that the install is for. For example, "app:com.google.android.gm".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,15 +60,15 @@ public final class Install extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of the installed product. Guaranteed to be set only if the install state is
-   * installed.
+   * "installed".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer versionCode;
 
   /**
-   * Install state. The state installPending means that an install request has recently been made
-   * and download to the device is in progress. The state installed means that the app has been
+   * Install state. The state "installPending" means that an install request has recently been made
+   * and download to the device is in progress. The state "installed" means that the app has been
    * installed. This field is read-only.
    * @return value or {@code null} for none
    */
@@ -84,8 +77,8 @@ public final class Install extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Install state. The state installPending means that an install request has recently been made
-   * and download to the device is in progress. The state installed means that the app has been
+   * Install state. The state "installPending" means that an install request has recently been made
+   * and download to the device is in progress. The state "installed" means that the app has been
    * installed. This field is read-only.
    * @param installState installState or {@code null} for none
    */
@@ -95,7 +88,7 @@ public final class Install extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the product that the install is for. For example, app:com.google.android.gm.
+   * The ID of the product that the install is for. For example, "app:com.google.android.gm".
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -103,7 +96,7 @@ public final class Install extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the product that the install is for. For example, app:com.google.android.gm.
+   * The ID of the product that the install is for. For example, "app:com.google.android.gm".
    * @param productId productId or {@code null} for none
    */
   public Install setProductId(java.lang.String productId) {
@@ -113,7 +106,7 @@ public final class Install extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of the installed product. Guaranteed to be set only if the install state is
-   * installed.
+   * "installed".
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersionCode() {
@@ -122,7 +115,7 @@ public final class Install extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of the installed product. Guaranteed to be set only if the install state is
-   * installed.
+   * "installed".
    * @param versionCode versionCode or {@code null} for none
    */
   public Install setVersionCode(java.lang.Integer versionCode) {

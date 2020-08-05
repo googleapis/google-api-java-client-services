@@ -40,9 +40,7 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   /**
    * Ordered list of pages a user should be able to reach from this page. The list can't include
    * this page. It is recommended that the basic pages are created first, before adding the links
-   * between pages.
-   *
-   * The API doesn't verify that the pages exist or the pages are reachable.
+   * between pages. The API doesn't verify that the pages exist or the pages are reachable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,9 +81,7 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   /**
    * Ordered list of pages a user should be able to reach from this page. The list can't include
    * this page. It is recommended that the basic pages are created first, before adding the links
-   * between pages.
-   *
-   * The API doesn't verify that the pages exist or the pages are reachable.
+   * between pages. The API doesn't verify that the pages exist or the pages are reachable.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLink() {
@@ -95,9 +91,7 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   /**
    * Ordered list of pages a user should be able to reach from this page. The list can't include
    * this page. It is recommended that the basic pages are created first, before adding the links
-   * between pages.
-   *
-   * The API doesn't verify that the pages exist or the pages are reachable.
+   * between pages. The API doesn't verify that the pages exist or the pages are reachable.
    * @param link link or {@code null} for none
    */
   public StorePage setLink(java.util.List<java.lang.String> link) {

@@ -1095,17 +1095,13 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Mask that identifies which fields to update. If not set, all modifiable fields will be
-       * modified.
-       *
-       * When set in a query parameter, this field should be specified as
-       * updateMask=field1,field2,...
+       * modified. When set in a query parameter, this field should be specified as updateMask=,,...
        */
       @com.google.api.client.util.Key
       private java.lang.String updateMask;
 
       /** Mask that identifies which fields to update. If not set, all modifiable fields will be modified.
-
-     When set in a query parameter, this field should be specified as updateMask=field1,field2,...
+     When set in a query parameter, this field should be specified as updateMask=,,...
        */
       public java.lang.String getUpdateMask() {
         return updateMask;
@@ -1113,10 +1109,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Mask that identifies which fields to update. If not set, all modifiable fields will be
-       * modified.
-       *
-       * When set in a query parameter, this field should be specified as
-       * updateMask=field1,field2,...
+       * modified. When set in a query parameter, this field should be specified as updateMask=,,...
        */
       public Update setUpdateMask(java.lang.String updateMask) {
         this.updateMask = updateMask;
@@ -1909,10 +1902,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * Returns a service account and credentials. The service account can be bound to the enterprise by
      * calling setAccount. The service account is unique to this enterprise and EMM, and will be deleted
      * if the enterprise is unbound. The credentials contain private key data and are not stored server-
-     * side.   This method can only be called after calling Enterprises.Enroll or
+     * side. This method can only be called after calling Enterprises.Enroll or
      * Enterprises.CompleteSignup, and before Enterprises.SetAccount; at other times it will return an
-     * error.   Subsequent calls after the first will generate a new, unique set of credentials, and
-     * invalidate the previously generated credentials.   Once the service account is bound to the
+     * error. Subsequent calls after the first will generate a new, unique set of credentials, and
+     * invalidate the previously generated credentials. Once the service account is bound to the
      * enterprise, it can be managed using the serviceAccountKeys resource.
      *
      * Create a request for the method "enterprises.getServiceAccount".
@@ -1938,10 +1931,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * Returns a service account and credentials. The service account can be bound to the enterprise
        * by calling setAccount. The service account is unique to this enterprise and EMM, and will be
        * deleted if the enterprise is unbound. The credentials contain private key data and are not
-       * stored server-side.   This method can only be called after calling Enterprises.Enroll or
+       * stored server-side. This method can only be called after calling Enterprises.Enroll or
        * Enterprises.CompleteSignup, and before Enterprises.SetAccount; at other times it will return an
-       * error.   Subsequent calls after the first will generate a new, unique set of credentials, and
-       * invalidate the previously generated credentials.   Once the service account is bound to the
+       * error. Subsequent calls after the first will generate a new, unique set of credentials, and
+       * invalidate the previously generated credentials. Once the service account is bound to the
        * enterprise, it can be managed using the serviceAccountKeys resource.
        *
        * Create a request for the method "enterprises.getServiceAccount".
@@ -2193,7 +2186,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     }
     /**
      * Looks up an enterprise by domain name. This is only supported for enterprises created via the
-     * Google-initiated creation flow.  Lookup of the id is not needed for enterprises created via the
+     * Google-initiated creation flow. Lookup of the id is not needed for enterprises created via the
      * EMM-initiated flow since the EMM learns the enterprise ID in the callback specified in the
      * Enterprises.generateSignupUrl call.
      *
@@ -2217,7 +2210,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Looks up an enterprise by domain name. This is only supported for enterprises created via the
-       * Google-initiated creation flow.  Lookup of the id is not needed for enterprises created via the
+       * Google-initiated creation flow. Lookup of the id is not needed for enterprises created via the
        * EMM-initiated flow since the EMM learns the enterprise ID in the callback specified in the
        * Enterprises.generateSignupUrl call.
        *
@@ -2326,19 +2319,15 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Pulls and returns a notification set for the enterprises associated with the service account
      * authenticated for the request. The notification set may be empty if no notification are pending.
-     *
      * A notification set returned needs to be acknowledged within 20 seconds by calling
-     * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty.
-     *
-     * Notifications that are not acknowledged within the 20 seconds will eventually be included again
-     * in the response to another PullNotificationSet request, and those that are never acknowledged
-     * will ultimately be deleted according to the Google Cloud Platform Pub/Sub system policy.
-     *
-     * Multiple requests might be performed concurrently to retrieve notifications, in which case the
-     * pending notifications (if any) will be split among each caller, if any are pending.
-     *
-     * If no notifications are present, an empty notification list is returned. Subsequent requests may
-     * return more notifications once they become available.
+     * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty. Notifications that
+     * are not acknowledged within the 20 seconds will eventually be included again in the response to
+     * another PullNotificationSet request, and those that are never acknowledged will ultimately be
+     * deleted according to the Google Cloud Platform Pub/Sub system policy. Multiple requests might be
+     * performed concurrently to retrieve notifications, in which case the pending notifications (if
+     * any) will be split among each caller, if any are pending. If no notifications are present, an
+     * empty notification list is returned. Subsequent requests may return more notifications once they
+     * become available.
      *
      * Create a request for the method "enterprises.pullNotificationSet".
      *
@@ -2361,20 +2350,15 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Pulls and returns a notification set for the enterprises associated with the service account
        * authenticated for the request. The notification set may be empty if no notification are
-       * pending.
-       *
-       * A notification set returned needs to be acknowledged within 20 seconds by calling
-       * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty.
-       *
-       * Notifications that are not acknowledged within the 20 seconds will eventually be included again
-       * in the response to another PullNotificationSet request, and those that are never acknowledged
-       * will ultimately be deleted according to the Google Cloud Platform Pub/Sub system policy.
-       *
-       * Multiple requests might be performed concurrently to retrieve notifications, in which case the
-       * pending notifications (if any) will be split among each caller, if any are pending.
-       *
-       * If no notifications are present, an empty notification list is returned. Subsequent requests
-       * may return more notifications once they become available.
+       * pending. A notification set returned needs to be acknowledged within 20 seconds by calling
+       * Enterprises.AcknowledgeNotificationSet, unless the notification set is empty. Notifications
+       * that are not acknowledged within the 20 seconds will eventually be included again in the
+       * response to another PullNotificationSet request, and those that are never acknowledged will
+       * ultimately be deleted according to the Google Cloud Platform Pub/Sub system policy. Multiple
+       * requests might be performed concurrently to retrieve notifications, in which case the pending
+       * notifications (if any) will be split among each caller, if any are pending. If no notifications
+       * are present, an empty notification list is returned. Subsequent requests may return more
+       * notifications once they become available.
        *
        * Create a request for the method "enterprises.pullNotificationSet".
        *
@@ -2446,29 +2430,20 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The request mode for pulling notifications.
-       *
-       * Specifying waitForNotifications will cause the request to block and wait until one or more
-       * notifications are present, or return an empty notification list if no notifications are
-       * present after some time.
-       *
-       * Speciying returnImmediately will cause the request to immediately return the pending
-       * notifications, or an empty list if no notifications are present.
-       *
-       * If omitted, defaults to waitForNotifications.
+       * The request mode for pulling notifications. Specifying waitForNotifications will cause the
+       * request to block and wait until one or more notifications are present, or return an empty
+       * notification list if no notifications are present after some time. Speciying
+       * returnImmediately will cause the request to immediately return the pending notifications,
+       * or an empty list if no notifications are present. If omitted, defaults to
+       * waitForNotifications.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestMode;
 
-      /** The request mode for pulling notifications.
-
-     Specifying waitForNotifications will cause the request to block and wait until one or more
-     notifications are present, or return an empty notification list if no notifications are present
-     after some time.
-
-     Speciying returnImmediately will cause the request to immediately return the pending notifications,
-     or an empty list if no notifications are present.
-
+      /** The request mode for pulling notifications. Specifying waitForNotifications will cause the request
+     to block and wait until one or more notifications are present, or return an empty notification list
+     if no notifications are present after some time. Speciying returnImmediately will cause the request
+     to immediately return the pending notifications, or an empty list if no notifications are present.
      If omitted, defaults to waitForNotifications.
        */
       public java.lang.String getRequestMode() {
@@ -2476,16 +2451,12 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The request mode for pulling notifications.
-       *
-       * Specifying waitForNotifications will cause the request to block and wait until one or more
-       * notifications are present, or return an empty notification list if no notifications are
-       * present after some time.
-       *
-       * Speciying returnImmediately will cause the request to immediately return the pending
-       * notifications, or an empty list if no notifications are present.
-       *
-       * If omitted, defaults to waitForNotifications.
+       * The request mode for pulling notifications. Specifying waitForNotifications will cause the
+       * request to block and wait until one or more notifications are present, or return an empty
+       * notification list if no notifications are present after some time. Speciying
+       * returnImmediately will cause the request to immediately return the pending notifications,
+       * or an empty list if no notifications are present. If omitted, defaults to
+       * waitForNotifications.
        */
       public PullNotificationSet setRequestMode(java.lang.String requestMode) {
         this.requestMode = requestMode;
@@ -2737,11 +2708,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Sets the store layout for the enterprise. By default, storeLayoutType is set to "basic" and the
      * basic store layout is enabled. The basic layout only contains apps approved by the admin, and
-     * that have been added to the available product set for a user (using the
-     *
-     * setAvailableProductSet call). Apps on the page are sorted in order of their product ID value. If
-     * you create a custom store layout (by setting storeLayoutType = "custom" and setting a homepage),
-     * the basic store layout is disabled.
+     * that have been added to the available product set for a user (using the setAvailableProductSet
+     * call). Apps on the page are sorted in order of their product ID value. If you create a custom
+     * store layout (by setting storeLayoutType = "custom" and setting a homepage), the basic store
+     * layout is disabled.
      *
      * Create a request for the method "enterprises.setStoreLayout".
      *
@@ -2766,11 +2736,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Sets the store layout for the enterprise. By default, storeLayoutType is set to "basic" and the
        * basic store layout is enabled. The basic layout only contains apps approved by the admin, and
-       * that have been added to the available product set for a user (using the
-       *
-       * setAvailableProductSet call). Apps on the page are sorted in order of their product ID value.
-       * If you create a custom store layout (by setting storeLayoutType = "custom" and setting a
-       * homepage), the basic store layout is disabled.
+       * that have been added to the available product set for a user (using the setAvailableProductSet
+       * call). Apps on the page are sorted in order of their product ID value. If you create a custom
+       * store layout (by setting storeLayoutType = "custom" and setting a homepage), the basic store
+       * layout is disabled.
        *
        * Create a request for the method "enterprises.setStoreLayout".
        *
@@ -3681,8 +3650,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param groupLicenseId The ID of the product the group license is for, e.g.
-    "app:com.google.android.gm".
+     * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String groupLicenseId) throws java.io.IOException {
@@ -3707,8 +3675,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param groupLicenseId The ID of the product the group license is for, e.g.
-    "app:com.google.android.gm".
+       * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String groupLicenseId) {
@@ -3798,9 +3765,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String groupLicenseId;
 
@@ -3810,9 +3775,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return groupLicenseId;
       }
 
-      /**
-       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
       public Get setGroupLicenseId(java.lang.String groupLicenseId) {
         this.groupLicenseId = groupLicenseId;
         return this;
@@ -3981,8 +3944,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param groupLicenseId The ID of the product the group license is for, e.g.
-    "app:com.google.android.gm".
+     * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
      * @return the request
      */
     public List list(java.lang.String enterpriseId, java.lang.String groupLicenseId) throws java.io.IOException {
@@ -4007,8 +3969,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param groupLicenseId The ID of the product the group license is for, e.g.
-    "app:com.google.android.gm".
+       * @param groupLicenseId The ID of the product the group license is for, e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected List(java.lang.String enterpriseId, java.lang.String groupLicenseId) {
@@ -4098,9 +4059,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String groupLicenseId;
 
@@ -4110,9 +4069,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return groupLicenseId;
       }
 
-      /**
-       * The ID of the product the group license is for, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product the group license is for, e.g. "app:com.google.android.gm". */
       public List setGroupLicenseId(java.lang.String groupLicenseId) {
         this.groupLicenseId = groupLicenseId;
         return this;
@@ -4158,8 +4115,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param installId The ID of the product represented by the install, e.g.
-    "app:com.google.android.gm".
+     * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Delete delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) throws java.io.IOException {
@@ -4187,8 +4143,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param installId The ID of the product represented by the install, e.g.
-    "app:com.google.android.gm".
+       * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) {
@@ -4302,9 +4257,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String installId;
 
@@ -4314,9 +4267,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return installId;
       }
 
-      /**
-       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
       public Delete setInstallId(java.lang.String installId) {
         this.installId = installId;
         return this;
@@ -4338,8 +4289,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param installId The ID of the product represented by the install, e.g.
-    "app:com.google.android.gm".
+     * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) throws java.io.IOException {
@@ -4366,8 +4316,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param installId The ID of the product represented by the install, e.g.
-    "app:com.google.android.gm".
+       * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String installId) {
@@ -4491,9 +4440,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String installId;
 
@@ -4503,9 +4450,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return installId;
       }
 
-      /**
-       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
       public Get setInstallId(java.lang.String installId) {
         this.installId = installId;
         return this;
@@ -4692,8 +4637,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param installId The ID of the product represented by the install, e.g.
-    "app:com.google.android.gm".
+     * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
      * @param content the {@link com.google.api.services.androidenterprise.model.Install}
      * @return the request
      */
@@ -4722,8 +4666,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param installId The ID of the product represented by the install, e.g.
-    "app:com.google.android.gm".
+       * @param installId The ID of the product represented by the install, e.g. "app:com.google.android.gm".
        * @param content the {@link com.google.api.services.androidenterprise.model.Install}
        * @since 1.13
        */
@@ -4838,9 +4781,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String installId;
 
@@ -4850,9 +4791,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return installId;
       }
 
-      /**
-       * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the product represented by the install, e.g. "app:com.google.android.gm". */
       public Update setInstallId(java.lang.String installId) {
         this.installId = installId;
         return this;
@@ -4897,8 +4836,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Delete delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) throws java.io.IOException {
@@ -4925,8 +4863,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) {
@@ -5040,9 +4977,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForDeviceId;
 
@@ -5052,9 +4987,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForDeviceId;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       public Delete setManagedConfigurationForDeviceId(java.lang.String managedConfigurationForDeviceId) {
         this.managedConfigurationForDeviceId = managedConfigurationForDeviceId;
         return this;
@@ -5076,8 +5009,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) throws java.io.IOException {
@@ -5104,8 +5036,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId, java.lang.String managedConfigurationForDeviceId) {
@@ -5229,9 +5160,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForDeviceId;
 
@@ -5241,9 +5170,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForDeviceId;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       public Get setManagedConfigurationForDeviceId(java.lang.String managedConfigurationForDeviceId) {
         this.managedConfigurationForDeviceId = managedConfigurationForDeviceId;
         return this;
@@ -5429,8 +5356,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
      * @param deviceId The Android ID of the device.
-     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+     * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
      * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
      * @return the request
      */
@@ -5458,8 +5384,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
        * @param deviceId The Android ID of the device.
-       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+       * @param managedConfigurationForDeviceId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
        * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
        * @since 1.13
        */
@@ -5574,9 +5499,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForDeviceId;
 
@@ -5586,9 +5509,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForDeviceId;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       public Update setManagedConfigurationForDeviceId(java.lang.String managedConfigurationForDeviceId) {
         this.managedConfigurationForDeviceId = managedConfigurationForDeviceId;
         return this;
@@ -5632,8 +5553,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      *
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
-     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Delete delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) throws java.io.IOException {
@@ -5659,8 +5579,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        *
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
-       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Delete(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) {
@@ -5757,9 +5676,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForUserId;
 
@@ -5769,9 +5686,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForUserId;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       public Delete setManagedConfigurationForUserId(java.lang.String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -5792,8 +5707,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      *
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
-     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
      * @return the request
      */
     public Get get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) throws java.io.IOException {
@@ -5819,8 +5733,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        *
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
-       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
        * @since 1.13
        */
       protected Get(java.lang.String enterpriseId, java.lang.String userId, java.lang.String managedConfigurationForUserId) {
@@ -5927,9 +5840,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForUserId;
 
@@ -5939,9 +5850,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForUserId;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       public Get setManagedConfigurationForUserId(java.lang.String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -6110,8 +6019,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      *
      * @param enterpriseId The ID of the enterprise.
      * @param userId The ID of the user.
-     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+     * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
      * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
      * @return the request
      */
@@ -6142,8 +6050,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        *
        * @param enterpriseId The ID of the enterprise.
        * @param userId The ID of the user.
-       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g.
-    "app:com.google.android.gm".
+       * @param managedConfigurationForUserId The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
        * @param content the {@link com.google.api.services.androidenterprise.model.ManagedConfiguration}
        * @since 1.13
        */
@@ -6241,9 +6148,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       @com.google.api.client.util.Key
       private java.lang.String managedConfigurationForUserId;
 
@@ -6253,9 +6158,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return managedConfigurationForUserId;
       }
 
-      /**
-       * The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm".
-       */
+      /** The ID of the managed configuration (a product ID), e.g. "app:com.google.android.gm". */
       public Update setManagedConfigurationForUserId(java.lang.String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -6298,8 +6201,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param enterpriseId The ID of the enterprise.
-     * @param productId The ID of the product for which the managed configurations settings applies
-    to.
+     * @param productId The ID of the product for which the managed configurations settings applies to.
      * @return the request
      */
     public List list(java.lang.String enterpriseId, java.lang.String productId) throws java.io.IOException {
@@ -6324,8 +6226,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param enterpriseId The ID of the enterprise.
-       * @param productId The ID of the product for which the managed configurations settings applies
-    to.
+       * @param productId The ID of the product for which the managed configurations settings applies to.
        * @since 1.13
        */
       protected List(java.lang.String enterpriseId, java.lang.String productId) {
@@ -6415,9 +6316,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The ID of the product for which the managed configurations settings applies to.
-       */
+      /** The ID of the product for which the managed configurations settings applies to. */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
@@ -6427,9 +6326,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return productId;
       }
 
-      /**
-       * The ID of the product for which the managed configurations settings applies to.
-       */
+      /** The ID of the product for which the managed configurations settings applies to. */
       public List setProductId(java.lang.String productId) {
         this.productId = productId;
         return this;
@@ -6774,7 +6671,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Generates a URL that can be rendered in an iframe to display the permissions (if any) of a
      * product. An enterprise admin must view these permissions and accept them on behalf of their
-     * organization in order to approve that product.  Admins should accept the displayed permissions by
+     * organization in order to approve that product. Admins should accept the displayed permissions by
      * interacting with a separate UI element in the EMM console, which in turn should trigger the use
      * of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to approve the
      * product. This URL can only be used to display permissions for up to 1 day.
@@ -6802,7 +6699,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Generates a URL that can be rendered in an iframe to display the permissions (if any) of a
        * product. An enterprise admin must view these permissions and accept them on behalf of their
-       * organization in order to approve that product.  Admins should accept the displayed permissions
+       * organization in order to approve that product. Admins should accept the displayed permissions
        * by interacting with a separate UI element in the EMM console, which in turn should trigger the
        * use of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to
        * approve the product. This URL can only be used to display permissions for up to 1 day.
@@ -7963,7 +7860,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Generates new credentials for the service account associated with this enterprise. The calling
      * service account must have been retrieved by calling Enterprises.GetServiceAccount and must have
-     * been set as the enterprise service account by calling Enterprises.SetAccount.  Only the type of
+     * been set as the enterprise service account by calling Enterprises.SetAccount. Only the type of
      * the key should be populated in the resource to be inserted.
      *
      * Create a request for the method "serviceaccountkeys.insert".
@@ -7988,7 +7885,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Generates new credentials for the service account associated with this enterprise. The calling
        * service account must have been retrieved by calling Enterprises.GetServiceAccount and must have
-       * been set as the enterprise service account by calling Enterprises.SetAccount.  Only the type of
+       * been set as the enterprise service account by calling Enterprises.SetAccount. Only the type of
        * the key should be populated in the resource to be inserted.
        *
        * Create a request for the method "serviceaccountkeys.insert".
@@ -9842,11 +9739,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Generates an authentication token which the device policy client can use to provision the given
      * EMM-managed user account on a device. The generated token is single-use and expires after a few
-     * minutes.
-     *
-     * You can provision a maximum of 10 devices per user.
-     *
-     * This call only works with EMM-managed accounts.
+     * minutes. You can provision a maximum of 10 devices per user. This call only works with EMM-
+     * managed accounts.
      *
      * Create a request for the method "users.generateAuthenticationToken".
      *
@@ -9871,11 +9765,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Generates an authentication token which the device policy client can use to provision the given
        * EMM-managed user account on a device. The generated token is single-use and expires after a few
-       * minutes.
-       *
-       * You can provision a maximum of 10 devices per user.
-       *
-       * This call only works with EMM-managed accounts.
+       * minutes. You can provision a maximum of 10 devices per user. This call only works with EMM-
+       * managed accounts.
        *
        * Create a request for the method "users.generateAuthenticationToken".
        *
@@ -10279,11 +10170,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Creates a new EMM-managed user.
-     *
-     * The Users resource passed in the body of the request should include an accountIdentifier and an
-     * accountType. If a corresponding user already exists with the same account identifier, the user
-     * will be updated with the resource. In this case only the displayName field can be changed.
+     * Creates a new EMM-managed user. The Users resource passed in the body of the request should
+     * include an accountIdentifier and an accountType. If a corresponding user already exists with the
+     * same account identifier, the user will be updated with the resource. In this case only the
+     * displayName field can be changed.
      *
      * Create a request for the method "users.insert".
      *
@@ -10305,11 +10195,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users";
 
       /**
-       * Creates a new EMM-managed user.
-       *
-       * The Users resource passed in the body of the request should include an accountIdentifier and an
-       * accountType. If a corresponding user already exists with the same account identifier, the user
-       * will be updated with the resource. In this case only the displayName field can be changed.
+       * Creates a new EMM-managed user. The Users resource passed in the body of the request should
+       * include an accountIdentifier and an accountType. If a corresponding user already exists with
+       * the same account identifier, the user will be updated with the resource. In this case only the
+       * displayName field can be changed.
        *
        * Create a request for the method "users.insert".
        *
@@ -10409,9 +10298,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Looks up a user by primary email address. This is only supported for Google-managed users.
-     * Lookup of the id is not needed for EMM-managed users because the id is already returned in the
-     * result of the Users.insert call.
+     * Looks up a user by primary email address. This is only supported for Google-managed users. Lookup
+     * of the id is not needed for EMM-managed users because the id is already returned in the result of
+     * the Users.insert call.
      *
      * Create a request for the method "users.list".
      *
@@ -10559,9 +10448,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     }
     /**
      * Revokes access to all devices currently provisioned to the user. The user will no longer be able
-     * to use the managed Play store on any of their managed devices.
-     *
-     * This call only works with EMM-managed accounts.
+     * to use the managed Play store on any of their managed devices. This call only works with EMM-
+     * managed accounts.
      *
      * Create a request for the method "users.revokeDeviceAccess".
      *
@@ -10585,9 +10473,8 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Revokes access to all devices currently provisioned to the user. The user will no longer be
-       * able to use the managed Play store on any of their managed devices.
-       *
-       * This call only works with EMM-managed accounts.
+       * able to use the managed Play store on any of their managed devices. This call only works with
+       * EMM-managed accounts.
        *
        * Create a request for the method "users.revokeDeviceAccess".
        *
@@ -10700,7 +10587,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Modifies the set of products that a user is entitled to access (referred to as whitelisted
+     * Modifies the set of products that a user is entitled to access (referred to as *whitelisted*
      * products). Only products that are approved or products that were previously approved (products
      * with revoked approval) can be whitelisted.
      *
@@ -10726,7 +10613,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/availableProductSet";
 
       /**
-       * Modifies the set of products that a user is entitled to access (referred to as whitelisted
+       * Modifies the set of products that a user is entitled to access (referred to as *whitelisted*
        * products). Only products that are approved or products that were previously approved (products
        * with revoked approval) can be whitelisted.
        *
@@ -10842,11 +10729,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Updates the details of an EMM-managed user.
-     *
-     * Can be used with EMM-managed users only (not Google managed users). Pass the new details in the
-     * Users resource in the request body. Only the displayName field can be changed. Other fields must
-     * either be unset or have the currently active value.
+     * Updates the details of an EMM-managed user. Can be used with EMM-managed users only (not Google
+     * managed users). Pass the new details in the Users resource in the request body. Only the
+     * displayName field can be changed. Other fields must either be unset or have the currently active
+     * value.
      *
      * Create a request for the method "users.update".
      *
@@ -10869,11 +10755,10 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}";
 
       /**
-       * Updates the details of an EMM-managed user.
-       *
-       * Can be used with EMM-managed users only (not Google managed users). Pass the new details in the
-       * Users resource in the request body. Only the displayName field can be changed. Other fields
-       * must either be unset or have the currently active value.
+       * Updates the details of an EMM-managed user. Can be used with EMM-managed users only (not Google
+       * managed users). Pass the new details in the Users resource in the request body. Only the
+       * displayName field can be changed. Other fields must either be unset or have the currently
+       * active value.
        *
        * Create a request for the method "users.update".
        *

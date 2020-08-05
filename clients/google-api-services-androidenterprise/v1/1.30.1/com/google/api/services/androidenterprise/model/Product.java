@@ -19,11 +19,9 @@ package com.google.api.services.androidenterprise.model;
 /**
  * A Products resource represents an app in the Google Play store that is available to at least some
  * users in the enterprise. (Some apps are restricted to a single enterprise, and no information
- * about them is made available outside that enterprise.)
- *
- * The information provided for each product (localized name, icon, link to the full Google Play
- * details page) is intended to allow a basic representation of the product within an EMM user
- * interface.
+ * about them is made available outside that enterprise.) The information provided for each product
+ * (localized name, icon, link to the full Google Play details page) is intended to allow a basic
+ * representation of the product within an EMM user interface.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -153,8 +151,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<ProductPermission> permissions;
 
   /**
-   * A string of the form app:package name. For example, app:com.google.android.gm represents the
-   * Gmail app.
+   * A string of the form *app:*. For example, app:com.google.android.gm represents the Gmail app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -487,8 +484,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string of the form app:package name. For example, app:com.google.android.gm represents the
-   * Gmail app.
+   * A string of the form *app:*. For example, app:com.google.android.gm represents the Gmail app.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -496,8 +492,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string of the form app:package name. For example, app:com.google.android.gm represents the
-   * Gmail app.
+   * A string of the form *app:*. For example, app:com.google.android.gm represents the Gmail app.
    * @param productId productId or {@code null} for none
    */
   public Product setProductId(java.lang.String productId) {

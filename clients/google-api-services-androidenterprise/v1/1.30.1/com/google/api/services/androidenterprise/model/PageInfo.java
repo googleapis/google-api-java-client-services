@@ -17,10 +17,8 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * Information about the current page.
- *
- * List operations that supports paging return only one "page" of results. This protocol buffer
- * message describes the page that has been returned.
+ * Information about the current page. List operations that supports paging return only one "page"
+ * of results. This protocol buffer message describes the page that has been returned.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

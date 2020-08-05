@@ -31,10 +31,8 @@ public final class WebAppIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * The actual bytes of the image in a base64url encoded string (c.f. RFC4648, section 5 "Base 64
-   * Encoding with URL and Filename Safe Alphabet").
-   *
-   * The image type can be png or jpg. The image should ideally be square. The image should ideally
-   * have a size of 512x512.
+   * Encoding with URL and Filename Safe Alphabet"). - The image type can be png or jpg. - The image
+   * should ideally be square. - The image should ideally have a size of 512x512.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,10 +40,8 @@ public final class WebAppIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * The actual bytes of the image in a base64url encoded string (c.f. RFC4648, section 5 "Base 64
-   * Encoding with URL and Filename Safe Alphabet").
-   *
-   * The image type can be png or jpg. The image should ideally be square. The image should ideally
-   * have a size of 512x512.
+   * Encoding with URL and Filename Safe Alphabet"). - The image type can be png or jpg. - The image
+   * should ideally be square. - The image should ideally have a size of 512x512.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageData() {
@@ -54,10 +50,8 @@ public final class WebAppIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * The actual bytes of the image in a base64url encoded string (c.f. RFC4648, section 5 "Base 64
-   * Encoding with URL and Filename Safe Alphabet").
-   *
-   * The image type can be png or jpg. The image should ideally be square. The image should ideally
-   * have a size of 512x512.
+   * Encoding with URL and Filename Safe Alphabet"). - The image type can be png or jpg. - The image
+   * should ideally be square. - The image should ideally have a size of 512x512.
    * @param imageData imageData or {@code null} for none
    */
   public WebAppIcon setImageData(java.lang.String imageData) {

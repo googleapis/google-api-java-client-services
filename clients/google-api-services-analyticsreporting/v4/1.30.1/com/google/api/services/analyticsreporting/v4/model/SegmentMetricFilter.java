@@ -60,7 +60,7 @@ public final class SegmentMetricFilter extends com.google.api.client.json.Generi
   private java.lang.String operator;
 
   /**
-   * Scope for a metric defines the level at which that metric is defined.  The specified metric
+   * Scope for a metric defines the level at which that metric is defined. The specified metric
    * scope must be equal to or greater than its primary scope as defined in the data model. The
    * primary scope is defined by if the segment is selecting users or sessions.
    * The value may be {@code null}.
@@ -139,7 +139,7 @@ public final class SegmentMetricFilter extends com.google.api.client.json.Generi
   }
 
   /**
-   * Scope for a metric defines the level at which that metric is defined.  The specified metric
+   * Scope for a metric defines the level at which that metric is defined. The specified metric
    * scope must be equal to or greater than its primary scope as defined in the data model. The
    * primary scope is defined by if the segment is selecting users or sessions.
    * @return value or {@code null} for none
@@ -149,7 +149,7 @@ public final class SegmentMetricFilter extends com.google.api.client.json.Generi
   }
 
   /**
-   * Scope for a metric defines the level at which that metric is defined.  The specified metric
+   * Scope for a metric defines the level at which that metric is defined. The specified metric
    * scope must be equal to or greater than its primary scope as defined in the data model. The
    * primary scope is defined by if the segment is selecting users or sessions.
    * @param scope scope or {@code null} for none

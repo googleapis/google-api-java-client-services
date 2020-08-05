@@ -17,9 +17,8 @@
 package com.google.api.services.vision.v1p2beta1.model;
 
 /**
- * Response message for the `ImportProductSets` method.
- *
- * This message is returned by the google.longrunning.Operations.GetOperation method in the returned
+ * Response message for the `ImportProductSets` method. This message is returned by the
+ * google.longrunning.Operations.GetOperation method in the returned
  * google.longrunning.Operation.response field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -40,10 +39,9 @@ public final class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends c
   private java.util.List<GoogleCloudVisionV1p3beta1ReferenceImage> referenceImages;
 
   /**
-   * The rpc status for each ImportProductSet request, including both successes and errors.
-   *
-   * The number of statuses here matches the number of lines in the csv file, and statuses[i] stores
-   * the success or failure status of processing the i-th line of the csv, starting from line 0.
+   * The rpc status for each ImportProductSet request, including both successes and errors. The
+   * number of statuses here matches the number of lines in the csv file, and statuses[i] stores the
+   * success or failure status of processing the i-th line of the csv, starting from line 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +65,9 @@ public final class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends c
   }
 
   /**
-   * The rpc status for each ImportProductSet request, including both successes and errors.
-   *
-   * The number of statuses here matches the number of lines in the csv file, and statuses[i] stores
-   * the success or failure status of processing the i-th line of the csv, starting from line 0.
+   * The rpc status for each ImportProductSet request, including both successes and errors. The
+   * number of statuses here matches the number of lines in the csv file, and statuses[i] stores the
+   * success or failure status of processing the i-th line of the csv, starting from line 0.
    * @return value or {@code null} for none
    */
   public java.util.List<Status> getStatuses() {
@@ -78,10 +75,9 @@ public final class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends c
   }
 
   /**
-   * The rpc status for each ImportProductSet request, including both successes and errors.
-   *
-   * The number of statuses here matches the number of lines in the csv file, and statuses[i] stores
-   * the success or failure status of processing the i-th line of the csv, starting from line 0.
+   * The rpc status for each ImportProductSet request, including both successes and errors. The
+   * number of statuses here matches the number of lines in the csv file, and statuses[i] stores the
+   * success or failure status of processing the i-th line of the csv, starting from line 0.
    * @param statuses statuses or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1ImportProductSetsResponse setStatuses(java.util.List<Status> statuses) {

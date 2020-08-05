@@ -45,20 +45,19 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The resource name of the product.
-   *
-   * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-   *
-   * This field is ignored when creating a product.
+   * The resource name of the product. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating
+   * a product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Immutable. The category for the product identified by the reference image. This should be
-   * either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods",
-   * "apparel", and "toys" are still supported, but these should not be used for new products.
+   * Immutable. The category for the product identified by the reference image. This should be one
+   * of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or "general-v1". The legacy
+   * categories "homegoods", "apparel", and "toys" are still supported, but these should not be used
+   * for new products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,16 +65,12 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Key-value pairs that can be attached to a product. At query time, constraints can be specified
-   * based on the product_labels.
-   *
-   * Note that integer values can be provided as strings, e.g. "1199". Only strings with integer
-   * values can match a range-based restriction which is to be supported soon.
-   *
-   * Multiple values can be assigned to the same key. One product may have up to 500 product_labels.
-   *
-   * Notice that the total number of distinct product_labels over all products in one ProductSet
-   * cannot exceed 1M, otherwise the product search pipeline will refuse to work for that
-   * ProductSet.
+   * based on the product_labels. Note that integer values can be provided as strings, e.g. "1199".
+   * Only strings with integer values can match a range-based restriction which is to be supported
+   * soon. Multiple values can be assigned to the same key. One product may have up to 500
+   * product_labels. Notice that the total number of distinct product_labels over all products in
+   * one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for
+   * that ProductSet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,11 +119,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the product.
-   *
-   * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-   *
-   * This field is ignored when creating a product.
+   * The resource name of the product. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating
+   * a product.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -136,11 +129,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the product.
-   *
-   * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-   *
-   * This field is ignored when creating a product.
+   * The resource name of the product. Format is:
+   * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating
+   * a product.
    * @param name name or {@code null} for none
    */
   public Product setName(java.lang.String name) {
@@ -149,9 +140,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The category for the product identified by the reference image. This should be
-   * either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods",
-   * "apparel", and "toys" are still supported, but these should not be used for new products.
+   * Immutable. The category for the product identified by the reference image. This should be one
+   * of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or "general-v1". The legacy
+   * categories "homegoods", "apparel", and "toys" are still supported, but these should not be used
+   * for new products.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductCategory() {
@@ -159,9 +151,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The category for the product identified by the reference image. This should be
-   * either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods",
-   * "apparel", and "toys" are still supported, but these should not be used for new products.
+   * Immutable. The category for the product identified by the reference image. This should be one
+   * of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or "general-v1". The legacy
+   * categories "homegoods", "apparel", and "toys" are still supported, but these should not be used
+   * for new products.
    * @param productCategory productCategory or {@code null} for none
    */
   public Product setProductCategory(java.lang.String productCategory) {
@@ -171,16 +164,12 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Key-value pairs that can be attached to a product. At query time, constraints can be specified
-   * based on the product_labels.
-   *
-   * Note that integer values can be provided as strings, e.g. "1199". Only strings with integer
-   * values can match a range-based restriction which is to be supported soon.
-   *
-   * Multiple values can be assigned to the same key. One product may have up to 500 product_labels.
-   *
-   * Notice that the total number of distinct product_labels over all products in one ProductSet
-   * cannot exceed 1M, otherwise the product search pipeline will refuse to work for that
-   * ProductSet.
+   * based on the product_labels. Note that integer values can be provided as strings, e.g. "1199".
+   * Only strings with integer values can match a range-based restriction which is to be supported
+   * soon. Multiple values can be assigned to the same key. One product may have up to 500
+   * product_labels. Notice that the total number of distinct product_labels over all products in
+   * one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for
+   * that ProductSet.
    * @return value or {@code null} for none
    */
   public java.util.List<KeyValue> getProductLabels() {
@@ -189,16 +178,12 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Key-value pairs that can be attached to a product. At query time, constraints can be specified
-   * based on the product_labels.
-   *
-   * Note that integer values can be provided as strings, e.g. "1199". Only strings with integer
-   * values can match a range-based restriction which is to be supported soon.
-   *
-   * Multiple values can be assigned to the same key. One product may have up to 500 product_labels.
-   *
-   * Notice that the total number of distinct product_labels over all products in one ProductSet
-   * cannot exceed 1M, otherwise the product search pipeline will refuse to work for that
-   * ProductSet.
+   * based on the product_labels. Note that integer values can be provided as strings, e.g. "1199".
+   * Only strings with integer values can match a range-based restriction which is to be supported
+   * soon. Multiple values can be assigned to the same key. One product may have up to 500
+   * product_labels. Notice that the total number of distinct product_labels over all products in
+   * one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for
+   * that ProductSet.
    * @param productLabels productLabels or {@code null} for none
    */
   public Product setProductLabels(java.util.List<KeyValue> productLabels) {

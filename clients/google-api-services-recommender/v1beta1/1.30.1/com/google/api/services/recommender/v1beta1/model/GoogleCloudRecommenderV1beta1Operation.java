@@ -17,11 +17,10 @@
 package com.google.api.services.recommender.v1beta1.model;
 
 /**
- * Contains an operation for a resource loosely based on the JSON-PATCH format with support for:
- *
- * * Custom filters for describing partial array patch. * Extended path values for describing nested
- * arrays. * Custom fields for describing the resource for which the operation is being   described.
- * * Allows extension to custom operations not natively supported by RFC6902. See
+ * Contains an operation for a resource loosely based on the JSON-PATCH format with support for: *
+ * Custom filters for describing partial array patch. * Extended path values for describing nested
+ * arrays. * Custom fields for describing the resource for which the operation is being described. *
+ * Allows extension to custom operations not natively supported by RFC6902. See
  * https://tools.ietf.org/html/rfc6902 for details on the original RFC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -53,12 +52,11 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   /**
    * Set of filters to apply if `path` refers to array elements or nested array elements in order to
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
-   * exact match per filter. To perform advanced matching, use path_value_matchers.
-   *
-   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20   } * Example:
-   * {   "/bindings/role": "roles/admin"   "/bindings/condition" : null   } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]   }
-   * When both path_filters and path_value_matchers are set, an implicit AND must be performed.
+   * exact match per filter. To perform advanced matching, use path_value_matchers. * Example: {
+   * "/versions/name" : "it-123" "/versions/targetSize/percent": 20 } * Example: { "/bindings/role":
+   * "roles/admin" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/admin"
+   * "/bindings/members" : ["x@google.com", "y@google.com"] } When both path_filters and
+   * path_value_matchers are set, an implicit AND must be performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +99,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   /**
    * Can be set with action 'copy' to copy resource configuration across different resources of the
    * same type. Example: A resource clone can be done via action = 'copy', path = "/", from = "/",
-   * source_resource =  and resource_name = . This field is empty for all other values of `action`.
+   * source_resource = and resource_name = . This field is empty for all other values of `action`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,12 +163,11 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   /**
    * Set of filters to apply if `path` refers to array elements or nested array elements in order to
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
-   * exact match per filter. To perform advanced matching, use path_value_matchers.
-   *
-   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20   } * Example:
-   * {   "/bindings/role": "roles/admin"   "/bindings/condition" : null   } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]   }
-   * When both path_filters and path_value_matchers are set, an implicit AND must be performed.
+   * exact match per filter. To perform advanced matching, use path_value_matchers. * Example: {
+   * "/versions/name" : "it-123" "/versions/targetSize/percent": 20 } * Example: { "/bindings/role":
+   * "roles/admin" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/admin"
+   * "/bindings/members" : ["x@google.com", "y@google.com"] } When both path_filters and
+   * path_value_matchers are set, an implicit AND must be performed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPathFilters() {
@@ -180,12 +177,11 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   /**
    * Set of filters to apply if `path` refers to array elements or nested array elements in order to
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
-   * exact match per filter. To perform advanced matching, use path_value_matchers.
-   *
-   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20   } * Example:
-   * {   "/bindings/role": "roles/admin"   "/bindings/condition" : null   } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]   }
-   * When both path_filters and path_value_matchers are set, an implicit AND must be performed.
+   * exact match per filter. To perform advanced matching, use path_value_matchers. * Example: {
+   * "/versions/name" : "it-123" "/versions/targetSize/percent": 20 } * Example: { "/bindings/role":
+   * "roles/admin" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/admin"
+   * "/bindings/members" : ["x@google.com", "y@google.com"] } When both path_filters and
+   * path_value_matchers are set, an implicit AND must be performed.
    * @param pathFilters pathFilters or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1Operation setPathFilters(java.util.Map<String, java.lang.Object> pathFilters) {
@@ -276,7 +272,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   /**
    * Can be set with action 'copy' to copy resource configuration across different resources of the
    * same type. Example: A resource clone can be done via action = 'copy', path = "/", from = "/",
-   * source_resource =  and resource_name = . This field is empty for all other values of `action`.
+   * source_resource = and resource_name = . This field is empty for all other values of `action`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceResource() {
@@ -286,7 +282,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   /**
    * Can be set with action 'copy' to copy resource configuration across different resources of the
    * same type. Example: A resource clone can be done via action = 'copy', path = "/", from = "/",
-   * source_resource =  and resource_name = . This field is empty for all other values of `action`.
+   * source_resource = and resource_name = . This field is empty for all other values of `action`.
    * @param sourceResource sourceResource or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1Operation setSourceResource(java.lang.String sourceResource) {

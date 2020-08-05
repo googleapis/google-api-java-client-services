@@ -18,13 +18,11 @@ package com.google.api.services.chromeuxreport.v1.model;
 
 /**
  * A bin is a discrete portion of data spanning from start to end, or if no end is given, then from
- * start to +inf.
- *
- * A bin's start and end values are given in the value type of the metric it represents. For
- * example, "first contentful paint" is measured in milliseconds and exposed as ints, therefore its
- * metric bins will use int32s for its start and end types. However, "cumulative layout shift" is
- * measured in unitless decimals and is exposed as a decimal encoded as a string, therefore its
- * metric bins will use strings for its value type.
+ * start to +inf. A bin's start and end values are given in the value type of the metric it
+ * represents. For example, "first contentful paint" is measured in milliseconds and exposed as
+ * ints, therefore its metric bins will use int32s for its start and end types. However, "cumulative
+ * layout shift" is measured in unitless decimals and is exposed as a decimal encoded as a string,
+ * therefore its metric bins will use strings for its value type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome UX Report API. For a detailed explanation see:

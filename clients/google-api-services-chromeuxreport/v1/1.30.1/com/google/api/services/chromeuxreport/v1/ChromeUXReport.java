@@ -20,8 +20,7 @@ package com.google.api.services.chromeuxreport.v1;
  * Service definition for ChromeUXReport (v1).
  *
  * <p>
- * The Chrome UX Report API lets you view real user experience data for millions of websites.
-
+ * The Chrome UX Report API lets you view real user experience data for millions of websites. 
  * </p>
  *
  * <p>
@@ -144,10 +143,8 @@ public class ChromeUXReport extends com.google.api.client.googleapis.services.js
   public class Records {
 
     /**
-     * Queries the Chrome User Experience for a single `record` for a given site.
-     *
-     * Returns a `record` that contains one or more `metrics` corresponding to performance data about
-     * the requested site.
+     * Queries the Chrome User Experience for a single `record` for a given site. Returns a `record`
+     * that contains one or more `metrics` corresponding to performance data about the requested site.
      *
      * Create a request for the method "records.queryRecord".
      *
@@ -169,10 +166,8 @@ public class ChromeUXReport extends com.google.api.client.googleapis.services.js
       private static final String REST_PATH = "v1/records:queryRecord";
 
       /**
-       * Queries the Chrome User Experience for a single `record` for a given site.
-       *
-       * Returns a `record` that contains one or more `metrics` corresponding to performance data about
-       * the requested site.
+       * Queries the Chrome User Experience for a single `record` for a given site. Returns a `record`
+       * that contains one or more `metrics` corresponding to performance data about the requested site.
        *
        * Create a request for the method "records.queryRecord".
        *

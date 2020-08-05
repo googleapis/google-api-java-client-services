@@ -39,10 +39,8 @@ public final class Record extends com.google.api.client.json.GenericJson {
 
   /**
    * Metrics is the map of user experience data available for the record defined in the key field.
-   * Metrics are keyed on the metric name.
-   *
-   * Allowed key values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint",
-   * "cumulative_layout_shift"]
+   * Metrics are keyed on the metric name. Allowed key values: ["first_contentful_paint",
+   * "first_input_delay", "largest_contentful_paint", "cumulative_layout_shift"]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,10 +71,8 @@ public final class Record extends com.google.api.client.json.GenericJson {
 
   /**
    * Metrics is the map of user experience data available for the record defined in the key field.
-   * Metrics are keyed on the metric name.
-   *
-   * Allowed key values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint",
-   * "cumulative_layout_shift"]
+   * Metrics are keyed on the metric name. Allowed key values: ["first_contentful_paint",
+   * "first_input_delay", "largest_contentful_paint", "cumulative_layout_shift"]
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Metric> getMetrics() {
@@ -85,10 +81,8 @@ public final class Record extends com.google.api.client.json.GenericJson {
 
   /**
    * Metrics is the map of user experience data available for the record defined in the key field.
-   * Metrics are keyed on the metric name.
-   *
-   * Allowed key values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint",
-   * "cumulative_layout_shift"]
+   * Metrics are keyed on the metric name. Allowed key values: ["first_contentful_paint",
+   * "first_input_delay", "largest_contentful_paint", "cumulative_layout_shift"]
    * @param metrics metrics or {@code null} for none
    */
   public Record setMetrics(java.util.Map<String, Metric> metrics) {

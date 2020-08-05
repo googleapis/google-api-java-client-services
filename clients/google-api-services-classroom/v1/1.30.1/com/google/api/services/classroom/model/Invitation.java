@@ -37,9 +37,7 @@ public final class Invitation extends com.google.api.client.json.GenericJson {
   private java.lang.String courseId;
 
   /**
-   * Identifier assigned by Classroom.
-   *
-   * Read-only.
+   * Identifier assigned by Classroom. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,12 +51,9 @@ public final class Invitation extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * Identifier of the invited user.
-   *
-   * When specified as a parameter of a request, this identifier can be set to one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
+   * Identifier of the invited user. When specified as a parameter of a request, this identifier can
+   * be set to one of the following: * the numeric identifier for the user * the email address of
+   * the user * the string literal `"me"`, indicating the requesting user
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +77,7 @@ public final class Invitation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier assigned by Classroom.
-   *
-   * Read-only.
+   * Identifier assigned by Classroom. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -92,9 +85,7 @@ public final class Invitation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier assigned by Classroom.
-   *
-   * Read-only.
+   * Identifier assigned by Classroom. Read-only.
    * @param id id or {@code null} for none
    */
   public Invitation setId(java.lang.String id) {
@@ -120,12 +111,9 @@ public final class Invitation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the invited user.
-   *
-   * When specified as a parameter of a request, this identifier can be set to one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
+   * Identifier of the invited user. When specified as a parameter of a request, this identifier can
+   * be set to one of the following: * the numeric identifier for the user * the email address of
+   * the user * the string literal `"me"`, indicating the requesting user
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -133,12 +121,9 @@ public final class Invitation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the invited user.
-   *
-   * When specified as a parameter of a request, this identifier can be set to one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
+   * Identifier of the invited user. When specified as a parameter of a request, this identifier can
+   * be set to one of the following: * the numeric identifier for the user * the email address of
+   * the user * the string literal `"me"`, indicating the requesting user
    * @param userId userId or {@code null} for none
    */
   public Invitation setUserId(java.lang.String userId) {

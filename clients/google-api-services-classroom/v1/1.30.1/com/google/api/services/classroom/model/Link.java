@@ -30,18 +30,14 @@ package com.google.api.services.classroom.model;
 public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL of a thumbnail image of the target URL.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the target URL. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUrl;
 
   /**
-   * Title of the target of the URL.
-   *
-   * Read-only.
+   * Title of the target of the URL. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +51,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private java.lang.String url;
 
   /**
-   * URL of a thumbnail image of the target URL.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the target URL. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUrl() {
@@ -65,9 +59,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image of the target URL.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the target URL. Read-only.
    * @param thumbnailUrl thumbnailUrl or {@code null} for none
    */
   public Link setThumbnailUrl(java.lang.String thumbnailUrl) {
@@ -76,9 +68,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the target of the URL.
-   *
-   * Read-only.
+   * Title of the target of the URL. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -86,9 +76,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the target of the URL.
-   *
-   * Read-only.
+   * Title of the target of the URL. Read-only.
    * @param title title or {@code null} for none
    */
   public Link setTitle(java.lang.String title) {

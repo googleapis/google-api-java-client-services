@@ -30,9 +30,7 @@ package com.google.api.services.classroom.model;
 public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL that can be used to view the YouTube video.
-   *
-   * Read-only.
+   * URL that can be used to view the YouTube video. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,27 +44,21 @@ public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * URL of a thumbnail image of the YouTube video.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the YouTube video. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUrl;
 
   /**
-   * Title of the YouTube video.
-   *
-   * Read-only.
+   * Title of the YouTube video. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URL that can be used to view the YouTube video.
-   *
-   * Read-only.
+   * URL that can be used to view the YouTube video. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -74,9 +66,7 @@ public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL that can be used to view the YouTube video.
-   *
-   * Read-only.
+   * URL that can be used to view the YouTube video. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public YouTubeVideo setAlternateLink(java.lang.String alternateLink) {
@@ -102,9 +92,7 @@ public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image of the YouTube video.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the YouTube video. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUrl() {
@@ -112,9 +100,7 @@ public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image of the YouTube video.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the YouTube video. Read-only.
    * @param thumbnailUrl thumbnailUrl or {@code null} for none
    */
   public YouTubeVideo setThumbnailUrl(java.lang.String thumbnailUrl) {
@@ -123,9 +109,7 @@ public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the YouTube video.
-   *
-   * Read-only.
+   * Title of the YouTube video. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -133,9 +117,7 @@ public final class YouTubeVideo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the YouTube video.
-   *
-   * Read-only.
+   * Title of the YouTube video. Read-only.
    * @param title title or {@code null} for none
    */
   public YouTubeVideo setTitle(java.lang.String title) {

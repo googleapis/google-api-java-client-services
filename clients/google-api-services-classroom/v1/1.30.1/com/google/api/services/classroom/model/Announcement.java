@@ -31,9 +31,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
 
   /**
    * Absolute link to this announcement in the Classroom web UI. This is only populated if `state`
-   * is `PUBLISHED`.
-   *
-   * Read-only.
+   * is `PUBLISHED`. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,36 +45,28 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   private java.lang.String assigneeMode;
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseId;
 
   /**
-   * Timestamp when this announcement was created.
-   *
-   * Read-only.
+   * Timestamp when this announcement was created. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTime;
 
   /**
-   * Identifier for the user that created the announcement.
-   *
-   * Read-only.
+   * Identifier for the user that created the announcement. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creatorUserId;
 
   /**
-   * Classroom-assigned identifier of this announcement, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this announcement, unique per course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,9 +82,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   private IndividualStudentsOptions individualStudentsOptions;
 
   /**
-   * Additional materials.
-   *
-   * Announcements must have no more than 20 material items.
+   * Additional materials. Announcements must have no more than 20 material items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,9 +111,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * Timestamp of the most recent change to this announcement.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this announcement. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,9 +119,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
 
   /**
    * Absolute link to this announcement in the Classroom web UI. This is only populated if `state`
-   * is `PUBLISHED`.
-   *
-   * Read-only.
+   * is `PUBLISHED`. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -144,9 +128,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
 
   /**
    * Absolute link to this announcement in the Classroom web UI. This is only populated if `state`
-   * is `PUBLISHED`.
-   *
-   * Read-only.
+   * is `PUBLISHED`. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public Announcement setAlternateLink(java.lang.String alternateLink) {
@@ -172,9 +154,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseId() {
@@ -182,9 +162,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @param courseId courseId or {@code null} for none
    */
   public Announcement setCourseId(java.lang.String courseId) {
@@ -193,9 +171,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp when this announcement was created.
-   *
-   * Read-only.
+   * Timestamp when this announcement was created. Read-only.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -203,9 +179,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp when this announcement was created.
-   *
-   * Read-only.
+   * Timestamp when this announcement was created. Read-only.
    * @param creationTime creationTime or {@code null} for none
    */
   public Announcement setCreationTime(String creationTime) {
@@ -214,9 +188,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the user that created the announcement.
-   *
-   * Read-only.
+   * Identifier for the user that created the announcement. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatorUserId() {
@@ -224,9 +196,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the user that created the announcement.
-   *
-   * Read-only.
+   * Identifier for the user that created the announcement. Read-only.
    * @param creatorUserId creatorUserId or {@code null} for none
    */
   public Announcement setCreatorUserId(java.lang.String creatorUserId) {
@@ -235,9 +205,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Classroom-assigned identifier of this announcement, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this announcement, unique per course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -245,9 +213,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Classroom-assigned identifier of this announcement, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this announcement, unique per course. Read-only.
    * @param id id or {@code null} for none
    */
   public Announcement setId(java.lang.String id) {
@@ -277,9 +243,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional materials.
-   *
-   * Announcements must have no more than 20 material items.
+   * Additional materials. Announcements must have no more than 20 material items.
    * @return value or {@code null} for none
    */
   public java.util.List<Material> getMaterials() {
@@ -287,9 +251,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional materials.
-   *
-   * Announcements must have no more than 20 material items.
+   * Additional materials. Announcements must have no more than 20 material items.
    * @param materials materials or {@code null} for none
    */
   public Announcement setMaterials(java.util.List<Material> materials) {
@@ -351,9 +313,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the most recent change to this announcement.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this announcement. Read-only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -361,9 +321,7 @@ public final class Announcement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the most recent change to this announcement.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this announcement. Read-only.
    * @param updateTime updateTime or {@code null} for none
    */
   public Announcement setUpdateTime(String updateTime) {

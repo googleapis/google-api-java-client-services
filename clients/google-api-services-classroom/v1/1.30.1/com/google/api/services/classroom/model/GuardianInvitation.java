@@ -30,18 +30,14 @@ package com.google.api.services.classroom.model;
 public final class GuardianInvitation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time that this invitation was created.
-   *
-   * Read-only.
+   * The time that this invitation was created. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTime;
 
   /**
-   * Unique identifier for this invitation.
-   *
-   * Read-only.
+   * Unique identifier for this invitation. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +66,7 @@ public final class GuardianInvitation extends com.google.api.client.json.Generic
   private java.lang.String studentId;
 
   /**
-   * The time that this invitation was created.
-   *
-   * Read-only.
+   * The time that this invitation was created. Read-only.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -80,9 +74,7 @@ public final class GuardianInvitation extends com.google.api.client.json.Generic
   }
 
   /**
-   * The time that this invitation was created.
-   *
-   * Read-only.
+   * The time that this invitation was created. Read-only.
    * @param creationTime creationTime or {@code null} for none
    */
   public GuardianInvitation setCreationTime(String creationTime) {
@@ -91,9 +83,7 @@ public final class GuardianInvitation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Unique identifier for this invitation.
-   *
-   * Read-only.
+   * Unique identifier for this invitation. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvitationId() {
@@ -101,9 +91,7 @@ public final class GuardianInvitation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Unique identifier for this invitation.
-   *
-   * Read-only.
+   * Unique identifier for this invitation. Read-only.
    * @param invitationId invitationId or {@code null} for none
    */
   public GuardianInvitation setInvitationId(java.lang.String invitationId) {

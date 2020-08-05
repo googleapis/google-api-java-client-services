@@ -30,9 +30,7 @@ package com.google.api.services.classroom.model;
 public final class DriveFolder extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL that can be used to access the Drive folder.
-   *
-   * Read-only.
+   * URL that can be used to access the Drive folder. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,18 +44,14 @@ public final class DriveFolder extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Title of the Drive folder.
-   *
-   * Read-only.
+   * Title of the Drive folder. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URL that can be used to access the Drive folder.
-   *
-   * Read-only.
+   * URL that can be used to access the Drive folder. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -65,9 +59,7 @@ public final class DriveFolder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL that can be used to access the Drive folder.
-   *
-   * Read-only.
+   * URL that can be used to access the Drive folder. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public DriveFolder setAlternateLink(java.lang.String alternateLink) {
@@ -93,9 +85,7 @@ public final class DriveFolder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the Drive folder.
-   *
-   * Read-only.
+   * Title of the Drive folder. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -103,9 +93,7 @@ public final class DriveFolder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the Drive folder.
-   *
-   * Read-only.
+   * Title of the Drive folder. Read-only.
    * @param title title or {@code null} for none
    */
   public DriveFolder setTitle(java.lang.String title) {

@@ -32,7 +32,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Play Services Android ID for the device encoded as a lowercase hex string. For
-   * example, 123456789abcdef0.
+   * example, "123456789abcdef0".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,10 +40,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the extent to which the device is controlled by a managed Google Play EMM in various
-   * deployment configurations.  Possible values include: "managedDevice", a device that has the
-   * EMM's device policy controller (DPC) as the device owner. "managedProfile", a device that has a
-   * profile managed by the DPC (DPC is profile owner) in addition to a separate, personal profile
-   * that is unavailable to the DPC. "containerApp", no longer used (deprecated).
+   * deployment configurations. Possible values include: - "managedDevice", a device that has the
+   * EMM's device policy controller (DPC) as the device owner. - "managedProfile", a device that has
+   * a profile managed by the DPC (DPC is profile owner) in addition to a separate, personal profile
+   * that is unavailable to the DPC. - "containerApp", no longer used (deprecated). -
    * "unmanagedProfile", a device that has been allowed (by the domain's admin, using the Admin
    * Console to enable the privilege) to use managed Google Play, but the profile is itself not
    * owned by a DPC.
@@ -68,7 +68,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Play Services Android ID for the device encoded as a lowercase hex string. For
-   * example, 123456789abcdef0.
+   * example, "123456789abcdef0".
    * @return value or {@code null} for none
    */
   public java.lang.String getAndroidId() {
@@ -77,7 +77,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Play Services Android ID for the device encoded as a lowercase hex string. For
-   * example, 123456789abcdef0.
+   * example, "123456789abcdef0".
    * @param androidId androidId or {@code null} for none
    */
   public Device setAndroidId(java.lang.String androidId) {
@@ -87,10 +87,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the extent to which the device is controlled by a managed Google Play EMM in various
-   * deployment configurations.  Possible values include: "managedDevice", a device that has the
-   * EMM's device policy controller (DPC) as the device owner. "managedProfile", a device that has a
-   * profile managed by the DPC (DPC is profile owner) in addition to a separate, personal profile
-   * that is unavailable to the DPC. "containerApp", no longer used (deprecated).
+   * deployment configurations. Possible values include: - "managedDevice", a device that has the
+   * EMM's device policy controller (DPC) as the device owner. - "managedProfile", a device that has
+   * a profile managed by the DPC (DPC is profile owner) in addition to a separate, personal profile
+   * that is unavailable to the DPC. - "containerApp", no longer used (deprecated). -
    * "unmanagedProfile", a device that has been allowed (by the domain's admin, using the Admin
    * Console to enable the privilege) to use managed Google Play, but the profile is itself not
    * owned by a DPC.
@@ -102,10 +102,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the extent to which the device is controlled by a managed Google Play EMM in various
-   * deployment configurations.  Possible values include: "managedDevice", a device that has the
-   * EMM's device policy controller (DPC) as the device owner. "managedProfile", a device that has a
-   * profile managed by the DPC (DPC is profile owner) in addition to a separate, personal profile
-   * that is unavailable to the DPC. "containerApp", no longer used (deprecated).
+   * deployment configurations. Possible values include: - "managedDevice", a device that has the
+   * EMM's device policy controller (DPC) as the device owner. - "managedProfile", a device that has
+   * a profile managed by the DPC (DPC is profile owner) in addition to a separate, personal profile
+   * that is unavailable to the DPC. - "containerApp", no longer used (deprecated). -
    * "unmanagedProfile", a device that has been allowed (by the domain's admin, using the Admin
    * Console to enable the privilege) to use managed Google Play, but the profile is itself not
    * owned by a DPC.

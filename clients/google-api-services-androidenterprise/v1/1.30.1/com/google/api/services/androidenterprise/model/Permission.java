@@ -19,11 +19,9 @@ package com.google.api.services.androidenterprise.model;
 /**
  * A Permissions resource represents some extra capability, to be granted to an Android app, which
  * requires explicit consent. An enterprise admin must consent to these permissions on behalf of
- * their users before an entitlement for the app can be created.
- *
- * The permissions collection is read-only. The information provided for each permission (localized
- * name and description) is intended to be used in the MDM user interface when obtaining consent
- * from the enterprise.
+ * their users before an entitlement for the app can be created. The permissions collection is read-
+ * only. The information provided for each permission (localized name and description) is intended
+ * to be used in the MDM user interface when obtaining consent from the enterprise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

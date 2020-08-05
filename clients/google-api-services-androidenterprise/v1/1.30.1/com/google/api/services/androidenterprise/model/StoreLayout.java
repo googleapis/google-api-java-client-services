@@ -32,9 +32,8 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the store page to be used as the homepage. The homepage is the first page shown in
-   * the managed Google Play Store.
-   *
-   * Not specifying a homepage is equivalent to setting the store layout type to "basic".
+   * the managed Google Play Store. Not specifying a homepage is equivalent to setting the store
+   * layout type to "basic".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,9 +50,8 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the store page to be used as the homepage. The homepage is the first page shown in
-   * the managed Google Play Store.
-   *
-   * Not specifying a homepage is equivalent to setting the store layout type to "basic".
+   * the managed Google Play Store. Not specifying a homepage is equivalent to setting the store
+   * layout type to "basic".
    * @return value or {@code null} for none
    */
   public java.lang.String getHomepageId() {
@@ -62,9 +60,8 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the store page to be used as the homepage. The homepage is the first page shown in
-   * the managed Google Play Store.
-   *
-   * Not specifying a homepage is equivalent to setting the store layout type to "basic".
+   * the managed Google Play Store. Not specifying a homepage is equivalent to setting the store
+   * layout type to "basic".
    * @param homepageId homepageId or {@code null} for none
    */
   public StoreLayout setHomepageId(java.lang.String homepageId) {

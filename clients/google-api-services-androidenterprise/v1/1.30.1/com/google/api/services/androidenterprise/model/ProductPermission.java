@@ -18,10 +18,8 @@ package com.google.api.services.androidenterprise.model;
 
 /**
  * A product permissions resource represents the set of permissions required by a specific app and
- * whether or not they have been accepted by an enterprise admin.
- *
- * The API can be used to read the set of permissions, and also to update the set to indicate that
- * permissions have been accepted.
+ * whether or not they have been accepted by an enterprise admin. The API can be used to read the
+ * set of permissions, and also to update the set to indicate that permissions have been accepted.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

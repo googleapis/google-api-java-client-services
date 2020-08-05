@@ -55,10 +55,9 @@ public final class StoreCluster extends com.google.api.client.json.GenericJson {
   /**
    * String (US-ASCII only) used to determine order of this cluster within the parent page's
    * elements. Page elements are sorted in lexicographic order of this field. Duplicated values are
-   * allowed, but ordering between elements with duplicate order is undefined.
-   *
-   * The value of this field is never visible to a user, it is used solely for the purpose of
-   * defining an ordering. Maximum length is 256 characters.
+   * allowed, but ordering between elements with duplicate order is undefined. The value of this
+   * field is never visible to a user, it is used solely for the purpose of defining an ordering.
+   * Maximum length is 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,10 +112,9 @@ public final class StoreCluster extends com.google.api.client.json.GenericJson {
   /**
    * String (US-ASCII only) used to determine order of this cluster within the parent page's
    * elements. Page elements are sorted in lexicographic order of this field. Duplicated values are
-   * allowed, but ordering between elements with duplicate order is undefined.
-   *
-   * The value of this field is never visible to a user, it is used solely for the purpose of
-   * defining an ordering. Maximum length is 256 characters.
+   * allowed, but ordering between elements with duplicate order is undefined. The value of this
+   * field is never visible to a user, it is used solely for the purpose of defining an ordering.
+   * Maximum length is 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderInPage() {
@@ -126,10 +124,9 @@ public final class StoreCluster extends com.google.api.client.json.GenericJson {
   /**
    * String (US-ASCII only) used to determine order of this cluster within the parent page's
    * elements. Page elements are sorted in lexicographic order of this field. Duplicated values are
-   * allowed, but ordering between elements with duplicate order is undefined.
-   *
-   * The value of this field is never visible to a user, it is used solely for the purpose of
-   * defining an ordering. Maximum length is 256 characters.
+   * allowed, but ordering between elements with duplicate order is undefined. The value of this
+   * field is never visible to a user, it is used solely for the purpose of defining an ordering.
+   * Maximum length is 256 characters.
    * @param orderInPage orderInPage or {@code null} for none
    */
   public StoreCluster setOrderInPage(java.lang.String orderInPage) {

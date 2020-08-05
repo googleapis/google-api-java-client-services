@@ -45,12 +45,9 @@ public final class ListAndroidAppsResponse extends com.google.api.client.json.Ge
 
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
-   * string is empty, then this response is the last page of results.
-   *
-   * This token can be used in a subsequent call to `ListAndroidApps` to find the next group of
-   * Apps.
-   *
-   * Page tokens are short-lived and should not be persisted.
+   * string is empty, then this response is the last page of results. This token can be used in a
+   * subsequent call to `ListAndroidApps` to find the next group of Apps. Page tokens are short-
+   * lived and should not be persisted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,12 +72,9 @@ public final class ListAndroidAppsResponse extends com.google.api.client.json.Ge
 
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
-   * string is empty, then this response is the last page of results.
-   *
-   * This token can be used in a subsequent call to `ListAndroidApps` to find the next group of
-   * Apps.
-   *
-   * Page tokens are short-lived and should not be persisted.
+   * string is empty, then this response is the last page of results. This token can be used in a
+   * subsequent call to `ListAndroidApps` to find the next group of Apps. Page tokens are short-
+   * lived and should not be persisted.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -89,12 +83,9 @@ public final class ListAndroidAppsResponse extends com.google.api.client.json.Ge
 
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
-   * string is empty, then this response is the last page of results.
-   *
-   * This token can be used in a subsequent call to `ListAndroidApps` to find the next group of
-   * Apps.
-   *
-   * Page tokens are short-lived and should not be persisted.
+   * string is empty, then this response is the last page of results. This token can be used in a
+   * subsequent call to `ListAndroidApps` to find the next group of Apps. Page tokens are short-
+   * lived and should not be persisted.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListAndroidAppsResponse setNextPageToken(java.lang.String nextPageToken) {

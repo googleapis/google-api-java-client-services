@@ -45,11 +45,9 @@ public final class ListIosAppsResponse extends com.google.api.client.json.Generi
 
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
-   * string is empty, then this response is the last page of results.
-   *
-   * This token can be used in a subsequent call to `ListIosApps` to find the next group of Apps.
-   *
-   * Page tokens are short-lived and should not be persisted.
+   * string is empty, then this response is the last page of results. This token can be used in a
+   * subsequent call to `ListIosApps` to find the next group of Apps. Page tokens are short-lived
+   * and should not be persisted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,11 +72,9 @@ public final class ListIosAppsResponse extends com.google.api.client.json.Generi
 
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
-   * string is empty, then this response is the last page of results.
-   *
-   * This token can be used in a subsequent call to `ListIosApps` to find the next group of Apps.
-   *
-   * Page tokens are short-lived and should not be persisted.
+   * string is empty, then this response is the last page of results. This token can be used in a
+   * subsequent call to `ListIosApps` to find the next group of Apps. Page tokens are short-lived
+   * and should not be persisted.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -87,11 +83,9 @@ public final class ListIosAppsResponse extends com.google.api.client.json.Generi
 
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
-   * string is empty, then this response is the last page of results.
-   *
-   * This token can be used in a subsequent call to `ListIosApps` to find the next group of Apps.
-   *
-   * Page tokens are short-lived and should not be persisted.
+   * string is empty, then this response is the last page of results. This token can be used in a
+   * subsequent call to `ListIosApps` to find the next group of Apps. Page tokens are short-lived
+   * and should not be persisted.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListIosAppsResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -31,9 +31,8 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class IosApp extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`.
-   *
-   * This identifier should be treated as an opaque token, as the data format is not specified.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier
+   * should be treated as an opaque token, as the data format is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,13 +60,13 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID *
+   * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID *
    * PROJECT_IDENTIFIER: the parent Project's
-   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)   ***(recommended)***   or
-   * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).   Learn more about using
-   * project identifiers in   Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
-   * Note that the value for PROJECT_IDENTIFIER in any   response body will be the `ProjectId`. *
-   * APP_ID: the globally unique, Firebase-assigned identifier   for the App (see
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+   * identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the
+   * value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the
+   * globally unique, Firebase-assigned identifier for the App (see
    * [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
    * The value may be {@code null}.
    */
@@ -82,9 +81,8 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`.
-   *
-   * This identifier should be treated as an opaque token, as the data format is not specified.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier
+   * should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -92,9 +90,8 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`.
-   *
-   * This identifier should be treated as an opaque token, as the data format is not specified.
+   * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier
+   * should be treated as an opaque token, as the data format is not specified.
    * @param appId appId or {@code null} for none
    */
   public IosApp setAppId(java.lang.String appId) {
@@ -154,13 +151,13 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID *
+   * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID *
    * PROJECT_IDENTIFIER: the parent Project's
-   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)   ***(recommended)***   or
-   * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).   Learn more about using
-   * project identifiers in   Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
-   * Note that the value for PROJECT_IDENTIFIER in any   response body will be the `ProjectId`. *
-   * APP_ID: the globally unique, Firebase-assigned identifier   for the App (see
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+   * identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the
+   * value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the
+   * globally unique, Firebase-assigned identifier for the App (see
    * [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
    * @return value or {@code null} for none
    */
@@ -169,13 +166,13 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID *
+   * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID *
    * PROJECT_IDENTIFIER: the parent Project's
-   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)   ***(recommended)***   or
-   * its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id).   Learn more about using
-   * project identifiers in   Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
-   * Note that the value for PROJECT_IDENTIFIER in any   response body will be the `ProjectId`. *
-   * APP_ID: the globally unique, Firebase-assigned identifier   for the App (see
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project
+   * identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the
+   * value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the
+   * globally unique, Firebase-assigned identifier for the App (see
    * [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
    * @param name name or {@code null} for none
    */

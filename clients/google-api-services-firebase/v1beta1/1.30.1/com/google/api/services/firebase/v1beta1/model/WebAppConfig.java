@@ -61,10 +61,9 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-   *
-   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
-   * Project's default GCP resource location, call
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is
+   * omitted if the default GCP resource location has not been finalized yet. To set a Project's
+   * default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
    * resources to the Project.
    * The value may be {@code null}.
@@ -73,7 +72,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String locationId;
 
   /**
-   * This field will no longer be provided here. Instead, use `GetAnalyticsDetails`
+   * The unique Google-assigned identifier of the Google Analytics web stream associated with the
+   * Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs. This field
+   * is only present if the App is linked to a web stream in a Google Analytics App + Web property.
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/topic/9303475). To generate a
+   * `measurementId` and link the Web App with a Google Analytics web stream, call
+   * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,10 +177,9 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-   *
-   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
-   * Project's default GCP resource location, call
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is
+   * omitted if the default GCP resource location has not been finalized yet. To set a Project's
+   * default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
    * resources to the Project.
    * @return value or {@code null} for none
@@ -186,10 +190,9 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-   *
-   * This field is omitted if the default GCP resource location has not been finalized yet. To set a
-   * Project's default GCP resource location, call
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is
+   * omitted if the default GCP resource location has not been finalized yet. To set a Project's
+   * default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
    * resources to the Project.
    * @param locationId locationId or {@code null} for none
@@ -200,7 +203,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field will no longer be provided here. Instead, use `GetAnalyticsDetails`
+   * The unique Google-assigned identifier of the Google Analytics web stream associated with the
+   * Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs. This field
+   * is only present if the App is linked to a web stream in a Google Analytics App + Web property.
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/topic/9303475). To generate a
+   * `measurementId` and link the Web App with a Google Analytics web stream, call
+   * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics).
    * @return value or {@code null} for none
    */
   public java.lang.String getMeasurementId() {
@@ -208,7 +217,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field will no longer be provided here. Instead, use `GetAnalyticsDetails`
+   * The unique Google-assigned identifier of the Google Analytics web stream associated with the
+   * Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs. This field
+   * is only present if the App is linked to a web stream in a Google Analytics App + Web property.
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/topic/9303475). To generate a
+   * `measurementId` and link the Web App with a Google Analytics web stream, call
+   * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics).
    * @param measurementId measurementId or {@code null} for none
    */
   public WebAppConfig setMeasurementId(java.lang.String measurementId) {

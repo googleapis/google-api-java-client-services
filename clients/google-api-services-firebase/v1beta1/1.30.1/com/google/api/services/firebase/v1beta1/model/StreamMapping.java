@@ -33,7 +33,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   /**
    * The resource name of the Firebase App associated with the Google Analytics data stream, in the
    * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID or
-   * projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER/webApps/APP_ID Refer
+   * projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer
    * to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
    * about PROJECT_IDENTIFIER values.
    * The value may be {@code null}.
@@ -42,13 +42,10 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   private java.lang.String app;
 
   /**
-   * Applicable for Firebase Web Apps only.
-   *
-   * The unique Google-assigned identifier of the Google Analytics web stream associated with the
-   * Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs.
-   *
-   * Learn more about this ID and Google Analytics web streams in the [Analytics
-   * documentation](https://support.google.com/analytics/topic/9303475).
+   * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
+   * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
+   * interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams
+   * in the [Analytics documentation](https://support.google.com/analytics/topic/9303475).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +53,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The unique Google-assigned identifier of the Google Analytics data stream associated with the
-   * Firebase App.
-   *
-   * Learn more about Google Analytics data streams in the [Analytics
+   * Firebase App. Learn more about Google Analytics data streams in the [Analytics
    * documentation](https://support.google.com/analytics/answer/9303323).
    * The value may be {@code null}.
    */
@@ -68,7 +63,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   /**
    * The resource name of the Firebase App associated with the Google Analytics data stream, in the
    * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID or
-   * projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER/webApps/APP_ID Refer
+   * projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer
    * to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
    * about PROJECT_IDENTIFIER values.
    * @return value or {@code null} for none
@@ -80,7 +75,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   /**
    * The resource name of the Firebase App associated with the Google Analytics data stream, in the
    * format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID or
-   * projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER/webApps/APP_ID Refer
+   * projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer
    * to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
    * about PROJECT_IDENTIFIER values.
    * @param app app or {@code null} for none
@@ -91,13 +86,10 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Applicable for Firebase Web Apps only.
-   *
-   * The unique Google-assigned identifier of the Google Analytics web stream associated with the
-   * Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs.
-   *
-   * Learn more about this ID and Google Analytics web streams in the [Analytics
-   * documentation](https://support.google.com/analytics/topic/9303475).
+   * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
+   * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
+   * interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams
+   * in the [Analytics documentation](https://support.google.com/analytics/topic/9303475).
    * @return value or {@code null} for none
    */
   public java.lang.String getMeasurementId() {
@@ -105,13 +97,10 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Applicable for Firebase Web Apps only.
-   *
-   * The unique Google-assigned identifier of the Google Analytics web stream associated with the
-   * Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs.
-   *
-   * Learn more about this ID and Google Analytics web streams in the [Analytics
-   * documentation](https://support.google.com/analytics/topic/9303475).
+   * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
+   * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
+   * interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams
+   * in the [Analytics documentation](https://support.google.com/analytics/topic/9303475).
    * @param measurementId measurementId or {@code null} for none
    */
   public StreamMapping setMeasurementId(java.lang.String measurementId) {
@@ -121,9 +110,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The unique Google-assigned identifier of the Google Analytics data stream associated with the
-   * Firebase App.
-   *
-   * Learn more about Google Analytics data streams in the [Analytics
+   * Firebase App. Learn more about Google Analytics data streams in the [Analytics
    * documentation](https://support.google.com/analytics/answer/9303323).
    * @return value or {@code null} for none
    */
@@ -133,9 +120,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The unique Google-assigned identifier of the Google Analytics data stream associated with the
-   * Firebase App.
-   *
-   * Learn more about Google Analytics data streams in the [Analytics
+   * Firebase App. Learn more about Google Analytics data streams in the [Analytics
    * documentation](https://support.google.com/analytics/answer/9303323).
    * @param streamId streamId or {@code null} for none
    */

@@ -33,10 +33,9 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to set a Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The ID of the Project's default GCP resource location. The location must be one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   * resources to the GCP `Project`. The ID of the Project's default GCP resource location. The
+   * location must be one of the available [GCP resource
+   * locations](https://firebase.google.com/docs/projects/locations).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,12 +44,9 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to link a Project with a Google Analytics account, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The region code (CLDR) that the account will use for Google Analytics data For example: US, GB,
-   * or DE
-   *
-   * In Java, use `com.google.i18n.identifiers.RegionCode`.
+   * resources to the GCP `Project`. The region code (CLDR) that the account will use for Google
+   * Analytics data For example: US, GB, or DE In Java, use
+   * `com.google.i18n.identifiers.RegionCode`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,10 +55,8 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to link a Project with a Google Analytics account, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The time zone that the account will use for Google Analytics data. For example:
-   * America/Los_Angeles or Africa/Abidjan
+   * resources to the GCP `Project`. The time zone that the account will use for Google Analytics
+   * data. For example: America/Los_Angeles or Africa/Abidjan
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +65,9 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to set a Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The ID of the Project's default GCP resource location. The location must be one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   * resources to the GCP `Project`. The ID of the Project's default GCP resource location. The
+   * location must be one of the available [GCP resource
+   * locations](https://firebase.google.com/docs/projects/locations).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -84,10 +77,9 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to set a Project's default GCP resource location, call
    * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The ID of the Project's default GCP resource location. The location must be one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   * resources to the GCP `Project`. The ID of the Project's default GCP resource location. The
+   * location must be one of the available [GCP resource
+   * locations](https://firebase.google.com/docs/projects/locations).
    * @param locationId locationId or {@code null} for none
    */
   public AddFirebaseRequest setLocationId(java.lang.String locationId) {
@@ -98,12 +90,9 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to link a Project with a Google Analytics account, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The region code (CLDR) that the account will use for Google Analytics data For example: US, GB,
-   * or DE
-   *
-   * In Java, use `com.google.i18n.identifiers.RegionCode`.
+   * resources to the GCP `Project`. The region code (CLDR) that the account will use for Google
+   * Analytics data For example: US, GB, or DE In Java, use
+   * `com.google.i18n.identifiers.RegionCode`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -113,12 +102,9 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to link a Project with a Google Analytics account, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The region code (CLDR) that the account will use for Google Analytics data For example: US, GB,
-   * or DE
-   *
-   * In Java, use `com.google.i18n.identifiers.RegionCode`.
+   * resources to the GCP `Project`. The region code (CLDR) that the account will use for Google
+   * Analytics data For example: US, GB, or DE In Java, use
+   * `com.google.i18n.identifiers.RegionCode`.
    * @param regionCode regionCode or {@code null} for none
    */
   public AddFirebaseRequest setRegionCode(java.lang.String regionCode) {
@@ -129,10 +115,8 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to link a Project with a Google Analytics account, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The time zone that the account will use for Google Analytics data. For example:
-   * America/Los_Angeles or Africa/Abidjan
+   * resources to the GCP `Project`. The time zone that the account will use for Google Analytics
+   * data. For example: America/Los_Angeles or Africa/Abidjan
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -142,10 +126,8 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   /**
    * Deprecated. Instead, to link a Project with a Google Analytics account, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase
-   * resources to the GCP `Project`.
-   *
-   * The time zone that the account will use for Google Analytics data. For example:
-   * America/Los_Angeles or Africa/Abidjan
+   * resources to the GCP `Project`. The time zone that the account will use for Google Analytics
+   * data. For example: America/Los_Angeles or Africa/Abidjan
    * @param timeZone timeZone or {@code null} for none
    */
   public AddFirebaseRequest setTimeZone(java.lang.String timeZone) {

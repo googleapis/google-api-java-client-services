@@ -52,18 +52,14 @@ public final class ManagedShortLink extends com.google.api.client.json.GenericJs
   private DynamicLinkInfo info;
 
   /**
-   * Short durable link url, for example, "https://sample.app.goo.gl/xyz123".
-   *
-   * Required.
+   * Short durable link url, for example, "https://sample.app.goo.gl/xyz123". Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String link;
 
   /**
-   * Link name defined by the creator.
-   *
-   * Required.
+   * Link name defined by the creator. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +124,7 @@ public final class ManagedShortLink extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Short durable link url, for example, "https://sample.app.goo.gl/xyz123".
-   *
-   * Required.
+   * Short durable link url, for example, "https://sample.app.goo.gl/xyz123". Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getLink() {
@@ -138,9 +132,7 @@ public final class ManagedShortLink extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Short durable link url, for example, "https://sample.app.goo.gl/xyz123".
-   *
-   * Required.
+   * Short durable link url, for example, "https://sample.app.goo.gl/xyz123". Required.
    * @param link link or {@code null} for none
    */
   public ManagedShortLink setLink(java.lang.String link) {
@@ -149,9 +141,7 @@ public final class ManagedShortLink extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Link name defined by the creator.
-   *
-   * Required.
+   * Link name defined by the creator. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkName() {
@@ -159,9 +149,7 @@ public final class ManagedShortLink extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Link name defined by the creator.
-   *
-   * Required.
+   * Link name defined by the creator. Required.
    * @param linkName linkName or {@code null} for none
    */
   public ManagedShortLink setLinkName(java.lang.String linkName) {

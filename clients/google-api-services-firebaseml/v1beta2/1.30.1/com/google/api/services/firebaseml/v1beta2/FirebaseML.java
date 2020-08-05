@@ -170,8 +170,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the firebaseml server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent project resource where the model is to be created.
-      The parent must have the
+       * @param parent Required. The parent project resource where the model is to be created. The parent must have the
        *        form `projects/{project_id}`
        * @param content the {@link com.google.api.services.firebaseml.v1beta2.model.Model}
        * @return the request
@@ -200,8 +199,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent project resource where the model is to be created.
-      The parent must have the
+         * @param parent Required. The parent project resource where the model is to be created. The parent must have the
        *        form `projects/{project_id}`
          * @param content the {@link com.google.api.services.firebaseml.v1beta2.model.Model}
          * @since 1.13
@@ -312,8 +310,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the firebaseml server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the model to delete.
-      The name must have the form
+       * @param name Required. The name of the model to delete. The name must have the form
        *        `projects/{project_id}/models/{model_id}`
        * @return the request
        */
@@ -341,8 +338,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the model to delete.
-      The name must have the form
+         * @param name Required. The name of the model to delete. The name must have the form
        *        `projects/{project_id}/models/{model_id}`
          * @since 1.13
          */
@@ -452,8 +448,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the firebaseml server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the model to get.
-      The name must have the form
+       * @param name Required. The name of the model to get. The name must have the form
        *        `projects/{project_id}/models/{model_id}`
        * @return the request
        */
@@ -480,8 +475,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the model to get.
-      The name must have the form
+         * @param name Required. The name of the model to get. The name must have the form
        *        `projects/{project_id}/models/{model_id}`
          * @since 1.13
          */
@@ -601,8 +595,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the firebaseml server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent to list models for.
-      The parent must have the form
+       * @param parent Required. The name of the parent to list models for. The parent must have the form
        *        `projects/{project_id}'
        * @return the request
        */
@@ -629,8 +622,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent to list models for.
-      The parent must have the form
+         * @param parent Required. The name of the parent to list models for. The parent must have the form
        *        `projects/{project_id}'
          * @since 1.13
          */
@@ -737,9 +729,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * A filter for the list e.g. 'tags: abc' to list models which are tagged with "abc"
-         */
+        /** A filter for the list e.g. 'tags: abc' to list models which are tagged with "abc" */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
@@ -749,9 +739,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
           return filter;
         }
 
-        /**
-         * A filter for the list e.g. 'tags: abc' to list models which are tagged with "abc"
-         */
+        /** A filter for the list e.g. 'tags: abc' to list models which are tagged with "abc" */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
@@ -802,8 +790,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the firebaseml server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the Model.
-      Model names have the form `projects/{project_id}/models/{model_id}`
+       * @param name The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}`
        *        The name is ignored when creating a model.
        * @param content the {@link com.google.api.services.firebaseml.v1beta2.model.Model}
        * @return the request
@@ -832,8 +819,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the Model.
-      Model names have the form `projects/{project_id}/models/{model_id}`
+         * @param name The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}`
        *        The name is ignored when creating a model.
          * @param content the {@link com.google.api.services.firebaseml.v1beta2.model.Model}
          * @since 1.13
@@ -975,7 +961,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1000,7 +986,7 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".

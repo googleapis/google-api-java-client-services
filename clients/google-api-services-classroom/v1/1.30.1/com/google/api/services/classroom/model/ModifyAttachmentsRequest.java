@@ -30,9 +30,8 @@ package com.google.api.services.classroom.model;
 public final class ModifyAttachmentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attachments to add. A student submission may not have more than 20 attachments.
-   *
-   * Form attachments are not supported.
+   * Attachments to add. A student submission may not have more than 20 attachments. Form
+   * attachments are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +44,8 @@ public final class ModifyAttachmentsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Attachments to add. A student submission may not have more than 20 attachments.
-   *
-   * Form attachments are not supported.
+   * Attachments to add. A student submission may not have more than 20 attachments. Form
+   * attachments are not supported.
    * @return value or {@code null} for none
    */
   public java.util.List<Attachment> getAddAttachments() {
@@ -55,9 +53,8 @@ public final class ModifyAttachmentsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Attachments to add. A student submission may not have more than 20 attachments.
-   *
-   * Form attachments are not supported.
+   * Attachments to add. A student submission may not have more than 20 attachments. Form
+   * attachments are not supported.
    * @param addAttachments addAttachments or {@code null} for none
    */
   public ModifyAttachmentsRequest setAddAttachments(java.util.List<Attachment> addAttachments) {

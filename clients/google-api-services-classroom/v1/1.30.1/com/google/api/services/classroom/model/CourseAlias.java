@@ -17,19 +17,15 @@
 package com.google.api.services.classroom.model;
 
 /**
- * Alternative identifier for a course.
- *
- * An alias uniquely identifies a course. It must be unique within one of the following scopes:
- *
- * * domain: A domain-scoped alias is visible to all users within the alias creator's domain and can
- * be created only by a domain admin. A domain-scoped alias is often used when a course has an
- * identifier external to Classroom.
- *
- * * project: A project-scoped alias is visible to any request from an application using the
- * Developer Console project ID that created the alias and can be created by any project. A project-
- * scoped alias is often used when an application has alternative identifiers. A random value can
- * also be used to avoid duplicate courses in the event of transmission failures, as retrying a
- * request will return `ALREADY_EXISTS` if a previous one has succeeded.
+ * Alternative identifier for a course. An alias uniquely identifies a course. It must be unique
+ * within one of the following scopes: * domain: A domain-scoped alias is visible to all users
+ * within the alias creator's domain and can be created only by a domain admin. A domain-scoped
+ * alias is often used when a course has an identifier external to Classroom. * project: A project-
+ * scoped alias is visible to any request from an application using the Developer Console project ID
+ * that created the alias and can be created by any project. A project-scoped alias is often used
+ * when an application has alternative identifiers. A random value can also be used to avoid
+ * duplicate courses in the event of transmission failures, as retrying a request will return
+ * `ALREADY_EXISTS` if a previous one has succeeded.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Classroom API. For a detailed explanation see:
@@ -42,24 +38,18 @@ package com.google.api.services.classroom.model;
 public final class CourseAlias extends com.google.api.client.json.GenericJson {
 
   /**
-   * Alias string. The format of the string indicates the desired alias scoping.
-   *
-   * * `d:` indicates a domain-scoped alias.   Example: `d:math_101` * `p:` indicates a project-
-   * scoped alias.   Example: `p:abc123`
-   *
-   * This field has a maximum length of 256 characters.
+   * Alias string. The format of the string indicates the desired alias scoping. * `d:` indicates a
+   * domain-scoped alias. Example: `d:math_101` * `p:` indicates a project-scoped alias. Example:
+   * `p:abc123` This field has a maximum length of 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String alias;
 
   /**
-   * Alias string. The format of the string indicates the desired alias scoping.
-   *
-   * * `d:` indicates a domain-scoped alias.   Example: `d:math_101` * `p:` indicates a project-
-   * scoped alias.   Example: `p:abc123`
-   *
-   * This field has a maximum length of 256 characters.
+   * Alias string. The format of the string indicates the desired alias scoping. * `d:` indicates a
+   * domain-scoped alias. Example: `d:math_101` * `p:` indicates a project-scoped alias. Example:
+   * `p:abc123` This field has a maximum length of 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlias() {
@@ -67,12 +57,9 @@ public final class CourseAlias extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Alias string. The format of the string indicates the desired alias scoping.
-   *
-   * * `d:` indicates a domain-scoped alias.   Example: `d:math_101` * `p:` indicates a project-
-   * scoped alias.   Example: `p:abc123`
-   *
-   * This field has a maximum length of 256 characters.
+   * Alias string. The format of the string indicates the desired alias scoping. * `d:` indicates a
+   * domain-scoped alias. Example: `d:math_101` * `p:` indicates a project-scoped alias. Example:
+   * `p:abc123` This field has a maximum length of 256 characters.
    * @param alias alias or {@code null} for none
    */
   public CourseAlias setAlias(java.lang.String alias) {

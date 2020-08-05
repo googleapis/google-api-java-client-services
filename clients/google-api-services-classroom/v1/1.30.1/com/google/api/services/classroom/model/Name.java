@@ -30,36 +30,28 @@ package com.google.api.services.classroom.model;
 public final class Name extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user's last name.
-   *
-   * Read-only.
+   * The user's last name. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String familyName;
 
   /**
-   * The user's full name formed by concatenating the first and last name values.
-   *
-   * Read-only.
+   * The user's full name formed by concatenating the first and last name values. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullName;
 
   /**
-   * The user's first name.
-   *
-   * Read-only.
+   * The user's first name. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String givenName;
 
   /**
-   * The user's last name.
-   *
-   * Read-only.
+   * The user's last name. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getFamilyName() {
@@ -67,9 +59,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's last name.
-   *
-   * Read-only.
+   * The user's last name. Read-only.
    * @param familyName familyName or {@code null} for none
    */
   public Name setFamilyName(java.lang.String familyName) {
@@ -78,9 +68,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's full name formed by concatenating the first and last name values.
-   *
-   * Read-only.
+   * The user's full name formed by concatenating the first and last name values. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullName() {
@@ -88,9 +76,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's full name formed by concatenating the first and last name values.
-   *
-   * Read-only.
+   * The user's full name formed by concatenating the first and last name values. Read-only.
    * @param fullName fullName or {@code null} for none
    */
   public Name setFullName(java.lang.String fullName) {
@@ -99,9 +85,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's first name.
-   *
-   * Read-only.
+   * The user's first name. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getGivenName() {
@@ -109,9 +93,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's first name.
-   *
-   * Read-only.
+   * The user's first name. Read-only.
    * @param givenName givenName or {@code null} for none
    */
   public Name setGivenName(java.lang.String givenName) {

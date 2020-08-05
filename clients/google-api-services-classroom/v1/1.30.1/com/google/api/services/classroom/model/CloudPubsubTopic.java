@@ -17,10 +17,9 @@
 package com.google.api.services.classroom.model;
 
 /**
- * A reference to a Cloud Pub/Sub topic.
- *
- * To register for notifications, the owner of the topic must grant `classroom-
- * notifications@system.gserviceaccount.com` the  `projects.topics.publish` permission.
+ * A reference to a Cloud Pub/Sub topic. To register for notifications, the owner of the topic must
+ * grant `classroom-notifications@system.gserviceaccount.com` the `projects.topics.publish`
+ * permission.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Classroom API. For a detailed explanation see:

@@ -30,9 +30,7 @@ package com.google.api.services.classroom.model;
 public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
-   * Absolute link to this course in the Classroom web UI.
-   *
-   * Read-only.
+   * Absolute link to this course in the Classroom web UI. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,9 +38,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The Calendar ID for a calendar that all course members can see, to which Classroom adds events
-   * for course work and announcements in the course.
-   *
-   * Read-only.
+   * for course work and announcements in the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,18 +46,14 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of a Google group containing all members of the course. This group does not
-   * accept email and can only be used for permissions.
-   *
-   * Read-only.
+   * accept email and can only be used for permissions. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseGroupEmail;
 
   /**
-   * Sets of materials that appear on the "about" page of this course.
-   *
-   * Read-only.
+   * Sets of materials that appear on the "about" page of this course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +68,6 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Creation time of the course. Specifying this field in a course update mask results in an error.
-   *
    * Read-only.
    * The value may be {@code null}.
    */
@@ -102,31 +93,24 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Enrollment code to use when joining this course. Specifying this field in a course update mask
-   * results in an error.
-   *
-   * Read-only.
+   * results in an error. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enrollmentCode;
 
   /**
-   * Whether or not guardian notifications are enabled for this course.
-   *
-   * Read-only.
+   * Whether or not guardian notifications are enabled for this course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean guardiansEnabled;
 
   /**
-   * Identifier for this course assigned by Classroom.
-   *
-   * When creating a course, you may optionally set this identifier to an alias string in the
-   * request to create a corresponding alias. The `id` is still assigned by Classroom and cannot be
-   * updated after the course is created.
-   *
-   * Specifying this field in a course update mask results in an error.
+   * Identifier for this course assigned by Classroom. When creating a course, you may optionally
+   * set this identifier to an alias string in the request to create a corresponding alias. The `id`
+   * is still assigned by Classroom and cannot be updated after the course is created. Specifying
+   * this field in a course update mask results in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,16 +125,11 @@ public final class Course extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The identifier of the owner of a course.
-   *
-   * When specified as a parameter of a create course request, this field is required. The
-   * identifier can be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
-   *
-   * This must be set in a create request. Admins can also specify this field in a patch course
-   * request to transfer ownership. In other contexts, it is read-only.
+   * The identifier of the owner of a course. When specified as a parameter of a create course
+   * request, this field is required. The identifier can be one of the following: * the numeric
+   * identifier for the user * the email address of the user * the string literal `"me"`, indicating
+   * the requesting user This must be set in a create request. Admins can also specify this field in
+   * a patch course request to transfer ownership. In other contexts, it is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,11 +152,8 @@ public final class Course extends com.google.api.client.json.GenericJson {
   private java.lang.String section;
 
   /**
-   * Information about a Drive Folder that is shared with all teachers of the course.
-   *
-   * This field will only be set for teachers of the course and domain administrators.
-   *
-   * Read-only.
+   * Information about a Drive Folder that is shared with all teachers of the course. This field
+   * will only be set for teachers of the course and domain administrators. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,9 +161,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of a Google group containing all teachers of the course. This group does not
-   * accept email and can only be used for permissions.
-   *
-   * Read-only.
+   * accept email and can only be used for permissions. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,18 +169,14 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Time of the most recent update to this course. Specifying this field in a course update mask
-   * results in an error.
-   *
-   * Read-only.
+   * results in an error. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Absolute link to this course in the Classroom web UI.
-   *
-   * Read-only.
+   * Absolute link to this course in the Classroom web UI. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -214,9 +184,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute link to this course in the Classroom web UI.
-   *
-   * Read-only.
+   * Absolute link to this course in the Classroom web UI. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public Course setAlternateLink(java.lang.String alternateLink) {
@@ -226,9 +194,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The Calendar ID for a calendar that all course members can see, to which Classroom adds events
-   * for course work and announcements in the course.
-   *
-   * Read-only.
+   * for course work and announcements in the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCalendarId() {
@@ -237,9 +203,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The Calendar ID for a calendar that all course members can see, to which Classroom adds events
-   * for course work and announcements in the course.
-   *
-   * Read-only.
+   * for course work and announcements in the course. Read-only.
    * @param calendarId calendarId or {@code null} for none
    */
   public Course setCalendarId(java.lang.String calendarId) {
@@ -249,9 +213,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of a Google group containing all members of the course. This group does not
-   * accept email and can only be used for permissions.
-   *
-   * Read-only.
+   * accept email and can only be used for permissions. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseGroupEmail() {
@@ -260,9 +222,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of a Google group containing all members of the course. This group does not
-   * accept email and can only be used for permissions.
-   *
-   * Read-only.
+   * accept email and can only be used for permissions. Read-only.
    * @param courseGroupEmail courseGroupEmail or {@code null} for none
    */
   public Course setCourseGroupEmail(java.lang.String courseGroupEmail) {
@@ -271,9 +231,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sets of materials that appear on the "about" page of this course.
-   *
-   * Read-only.
+   * Sets of materials that appear on the "about" page of this course. Read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<CourseMaterialSet> getCourseMaterialSets() {
@@ -281,9 +239,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sets of materials that appear on the "about" page of this course.
-   *
-   * Read-only.
+   * Sets of materials that appear on the "about" page of this course. Read-only.
    * @param courseMaterialSets courseMaterialSets or {@code null} for none
    */
   public Course setCourseMaterialSets(java.util.List<CourseMaterialSet> courseMaterialSets) {
@@ -310,7 +266,6 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Creation time of the course. Specifying this field in a course update mask results in an error.
-   *
    * Read-only.
    * @return value or {@code null} for none
    */
@@ -320,7 +275,6 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Creation time of the course. Specifying this field in a course update mask results in an error.
-   *
    * Read-only.
    * @param creationTime creationTime or {@code null} for none
    */
@@ -371,9 +325,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Enrollment code to use when joining this course. Specifying this field in a course update mask
-   * results in an error.
-   *
-   * Read-only.
+   * results in an error. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnrollmentCode() {
@@ -382,9 +334,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Enrollment code to use when joining this course. Specifying this field in a course update mask
-   * results in an error.
-   *
-   * Read-only.
+   * results in an error. Read-only.
    * @param enrollmentCode enrollmentCode or {@code null} for none
    */
   public Course setEnrollmentCode(java.lang.String enrollmentCode) {
@@ -393,9 +343,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not guardian notifications are enabled for this course.
-   *
-   * Read-only.
+   * Whether or not guardian notifications are enabled for this course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGuardiansEnabled() {
@@ -403,9 +351,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not guardian notifications are enabled for this course.
-   *
-   * Read-only.
+   * Whether or not guardian notifications are enabled for this course. Read-only.
    * @param guardiansEnabled guardiansEnabled or {@code null} for none
    */
   public Course setGuardiansEnabled(java.lang.Boolean guardiansEnabled) {
@@ -414,13 +360,10 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for this course assigned by Classroom.
-   *
-   * When creating a course, you may optionally set this identifier to an alias string in the
-   * request to create a corresponding alias. The `id` is still assigned by Classroom and cannot be
-   * updated after the course is created.
-   *
-   * Specifying this field in a course update mask results in an error.
+   * Identifier for this course assigned by Classroom. When creating a course, you may optionally
+   * set this identifier to an alias string in the request to create a corresponding alias. The `id`
+   * is still assigned by Classroom and cannot be updated after the course is created. Specifying
+   * this field in a course update mask results in an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -428,13 +371,10 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for this course assigned by Classroom.
-   *
-   * When creating a course, you may optionally set this identifier to an alias string in the
-   * request to create a corresponding alias. The `id` is still assigned by Classroom and cannot be
-   * updated after the course is created.
-   *
-   * Specifying this field in a course update mask results in an error.
+   * Identifier for this course assigned by Classroom. When creating a course, you may optionally
+   * set this identifier to an alias string in the request to create a corresponding alias. The `id`
+   * is still assigned by Classroom and cannot be updated after the course is created. Specifying
+   * this field in a course update mask results in an error.
    * @param id id or {@code null} for none
    */
   public Course setId(java.lang.String id) {
@@ -462,16 +402,11 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier of the owner of a course.
-   *
-   * When specified as a parameter of a create course request, this field is required. The
-   * identifier can be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
-   *
-   * This must be set in a create request. Admins can also specify this field in a patch course
-   * request to transfer ownership. In other contexts, it is read-only.
+   * The identifier of the owner of a course. When specified as a parameter of a create course
+   * request, this field is required. The identifier can be one of the following: * the numeric
+   * identifier for the user * the email address of the user * the string literal `"me"`, indicating
+   * the requesting user This must be set in a create request. Admins can also specify this field in
+   * a patch course request to transfer ownership. In other contexts, it is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getOwnerId() {
@@ -479,16 +414,11 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier of the owner of a course.
-   *
-   * When specified as a parameter of a create course request, this field is required. The
-   * identifier can be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
-   *
-   * This must be set in a create request. Admins can also specify this field in a patch course
-   * request to transfer ownership. In other contexts, it is read-only.
+   * The identifier of the owner of a course. When specified as a parameter of a create course
+   * request, this field is required. The identifier can be one of the following: * the numeric
+   * identifier for the user * the email address of the user * the string literal `"me"`, indicating
+   * the requesting user This must be set in a create request. Admins can also specify this field in
+   * a patch course request to transfer ownership. In other contexts, it is read-only.
    * @param ownerId ownerId or {@code null} for none
    */
   public Course setOwnerId(java.lang.String ownerId) {
@@ -535,11 +465,8 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about a Drive Folder that is shared with all teachers of the course.
-   *
-   * This field will only be set for teachers of the course and domain administrators.
-   *
-   * Read-only.
+   * Information about a Drive Folder that is shared with all teachers of the course. This field
+   * will only be set for teachers of the course and domain administrators. Read-only.
    * @return value or {@code null} for none
    */
   public DriveFolder getTeacherFolder() {
@@ -547,11 +474,8 @@ public final class Course extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about a Drive Folder that is shared with all teachers of the course.
-   *
-   * This field will only be set for teachers of the course and domain administrators.
-   *
-   * Read-only.
+   * Information about a Drive Folder that is shared with all teachers of the course. This field
+   * will only be set for teachers of the course and domain administrators. Read-only.
    * @param teacherFolder teacherFolder or {@code null} for none
    */
   public Course setTeacherFolder(DriveFolder teacherFolder) {
@@ -561,9 +485,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of a Google group containing all teachers of the course. This group does not
-   * accept email and can only be used for permissions.
-   *
-   * Read-only.
+   * accept email and can only be used for permissions. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTeacherGroupEmail() {
@@ -572,9 +494,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of a Google group containing all teachers of the course. This group does not
-   * accept email and can only be used for permissions.
-   *
-   * Read-only.
+   * accept email and can only be used for permissions. Read-only.
    * @param teacherGroupEmail teacherGroupEmail or {@code null} for none
    */
   public Course setTeacherGroupEmail(java.lang.String teacherGroupEmail) {
@@ -584,9 +504,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Time of the most recent update to this course. Specifying this field in a course update mask
-   * results in an error.
-   *
-   * Read-only.
+   * results in an error. Read-only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -595,9 +513,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * Time of the most recent update to this course. Specifying this field in a course update mask
-   * results in an error.
-   *
-   * Read-only.
+   * results in an error. Read-only.
    * @param updateTime updateTime or {@code null} for none
    */
   public Course setUpdateTime(String updateTime) {

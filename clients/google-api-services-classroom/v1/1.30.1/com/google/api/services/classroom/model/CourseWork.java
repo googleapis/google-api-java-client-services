@@ -31,9 +31,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
 
   /**
    * Absolute link to this course work in the Classroom web UI. This is only populated if `state` is
-   * `PUBLISHED`.
-   *
-   * Read-only.
+   * `PUBLISHED`. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private java.lang.String assigneeMode;
 
   /**
-   * Assignment details. This is populated only when `work_type` is `ASSIGNMENT`.
-   *
-   * Read-only.
+   * Assignment details. This is populated only when `work_type` is `ASSIGNMENT`. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,38 +53,28 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this course work item is associated with the Developer Console project making the
-   * request.
-   *
-   * See CreateCourseWork for more details.
-   *
-   * Read-only.
+   * request. See CreateCourseWork for more details. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean associatedWithDeveloper;
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseId;
 
   /**
-   * Timestamp when this course work was created.
-   *
-   * Read-only.
+   * Timestamp when this course work was created. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTime;
 
   /**
-   * Identifier for the user that created the coursework.
-   *
-   * Read-only.
+   * Identifier for the user that created the coursework. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,9 +105,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private TimeOfDay dueTime;
 
   /**
-   * Classroom-assigned identifier of this course work, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this course work, unique per course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,9 +121,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private IndividualStudentsOptions individualStudentsOptions;
 
   /**
-   * Additional materials.
-   *
-   * CourseWork must have no more than 20 material items.
+   * Additional materials. CourseWork must have no more than 20 material items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,18 +184,15 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private java.lang.String topicId;
 
   /**
-   * Timestamp of the most recent change to this course work.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this course work. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Type of this course work.
-   *
-   * The type is set when the course work is created and cannot be changed.
+   * Type of this course work. The type is set when the course work is created and cannot be
+   * changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,9 +200,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
 
   /**
    * Absolute link to this course work in the Classroom web UI. This is only populated if `state` is
-   * `PUBLISHED`.
-   *
-   * Read-only.
+   * `PUBLISHED`. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -232,9 +209,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
 
   /**
    * Absolute link to this course work in the Classroom web UI. This is only populated if `state` is
-   * `PUBLISHED`.
-   *
-   * Read-only.
+   * `PUBLISHED`. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public CourseWork setAlternateLink(java.lang.String alternateLink) {
@@ -260,9 +235,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Assignment details. This is populated only when `work_type` is `ASSIGNMENT`.
-   *
-   * Read-only.
+   * Assignment details. This is populated only when `work_type` is `ASSIGNMENT`. Read-only.
    * @return value or {@code null} for none
    */
   public Assignment getAssignment() {
@@ -270,9 +243,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Assignment details. This is populated only when `work_type` is `ASSIGNMENT`.
-   *
-   * Read-only.
+   * Assignment details. This is populated only when `work_type` is `ASSIGNMENT`. Read-only.
    * @param assignment assignment or {@code null} for none
    */
   public CourseWork setAssignment(Assignment assignment) {
@@ -282,11 +253,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this course work item is associated with the Developer Console project making the
-   * request.
-   *
-   * See CreateCourseWork for more details.
-   *
-   * Read-only.
+   * request. See CreateCourseWork for more details. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAssociatedWithDeveloper() {
@@ -295,11 +262,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this course work item is associated with the Developer Console project making the
-   * request.
-   *
-   * See CreateCourseWork for more details.
-   *
-   * Read-only.
+   * request. See CreateCourseWork for more details. Read-only.
    * @param associatedWithDeveloper associatedWithDeveloper or {@code null} for none
    */
   public CourseWork setAssociatedWithDeveloper(java.lang.Boolean associatedWithDeveloper) {
@@ -308,9 +271,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseId() {
@@ -318,9 +279,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @param courseId courseId or {@code null} for none
    */
   public CourseWork setCourseId(java.lang.String courseId) {
@@ -329,9 +288,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp when this course work was created.
-   *
-   * Read-only.
+   * Timestamp when this course work was created. Read-only.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -339,9 +296,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp when this course work was created.
-   *
-   * Read-only.
+   * Timestamp when this course work was created. Read-only.
    * @param creationTime creationTime or {@code null} for none
    */
   public CourseWork setCreationTime(String creationTime) {
@@ -350,9 +305,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the user that created the coursework.
-   *
-   * Read-only.
+   * Identifier for the user that created the coursework. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatorUserId() {
@@ -360,9 +313,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the user that created the coursework.
-   *
-   * Read-only.
+   * Identifier for the user that created the coursework. Read-only.
    * @param creatorUserId creatorUserId or {@code null} for none
    */
   public CourseWork setCreatorUserId(java.lang.String creatorUserId) {
@@ -428,9 +379,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Classroom-assigned identifier of this course work, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this course work, unique per course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -438,9 +387,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Classroom-assigned identifier of this course work, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this course work, unique per course. Read-only.
    * @param id id or {@code null} for none
    */
   public CourseWork setId(java.lang.String id) {
@@ -470,9 +417,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional materials.
-   *
-   * CourseWork must have no more than 20 material items.
+   * Additional materials. CourseWork must have no more than 20 material items.
    * @return value or {@code null} for none
    */
   public java.util.List<Material> getMaterials() {
@@ -480,9 +425,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional materials.
-   *
-   * CourseWork must have no more than 20 material items.
+   * Additional materials. CourseWork must have no more than 20 material items.
    * @param materials materials or {@code null} for none
    */
   public CourseWork setMaterials(java.util.List<Material> materials) {
@@ -624,9 +567,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the most recent change to this course work.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this course work. Read-only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -634,9 +575,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the most recent change to this course work.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this course work. Read-only.
    * @param updateTime updateTime or {@code null} for none
    */
   public CourseWork setUpdateTime(String updateTime) {
@@ -645,9 +584,8 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of this course work.
-   *
-   * The type is set when the course work is created and cannot be changed.
+   * Type of this course work. The type is set when the course work is created and cannot be
+   * changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkType() {
@@ -655,9 +593,8 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of this course work.
-   *
-   * The type is set when the course work is created and cannot be changed.
+   * Type of this course work. The type is set when the course work is created and cannot be
+   * changed.
    * @param workType workType or {@code null} for none
    */
   public CourseWork setWorkType(java.lang.String workType) {

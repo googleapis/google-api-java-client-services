@@ -30,9 +30,7 @@ package com.google.api.services.classroom.model;
 public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,27 +47,21 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Unique identifier for the topic.
-   *
-   * Read-only.
+   * Unique identifier for the topic. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topicId;
 
   /**
-   * The time the topic was last updated by the system.
-   *
-   * Read-only.
+   * The time the topic was last updated by the system. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseId() {
@@ -77,9 +69,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @param courseId courseId or {@code null} for none
    */
   public Topic setCourseId(java.lang.String courseId) {
@@ -111,9 +101,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the topic.
-   *
-   * Read-only.
+   * Unique identifier for the topic. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopicId() {
@@ -121,9 +109,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the topic.
-   *
-   * Read-only.
+   * Unique identifier for the topic. Read-only.
    * @param topicId topicId or {@code null} for none
    */
   public Topic setTopicId(java.lang.String topicId) {
@@ -132,9 +118,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the topic was last updated by the system.
-   *
-   * Read-only.
+   * The time the topic was last updated by the system. Read-only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -142,9 +126,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the topic was last updated by the system.
-   *
-   * Read-only.
+   * The time the topic was last updated by the system. Read-only.
    * @param updateTime updateTime or {@code null} for none
    */
   public Topic setUpdateTime(String updateTime) {

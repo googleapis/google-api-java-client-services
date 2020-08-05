@@ -30,18 +30,14 @@ package com.google.api.services.classroom.model;
 public final class Student extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseId;
 
   /**
-   * Global user information for the student.
-   *
-   * Read-only.
+   * Global user information for the student. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,30 +45,23 @@ public final class Student extends com.google.api.client.json.GenericJson {
 
   /**
    * Information about a Drive Folder for this student's work in this course. Only visible to the
-   * student and domain administrators.
-   *
-   * Read-only.
+   * student and domain administrators. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DriveFolder studentWorkFolder;
 
   /**
-   * Identifier of the user.
-   *
-   * When specified as a parameter of a request, this identifier can be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
+   * Identifier of the user. When specified as a parameter of a request, this identifier can be one
+   * of the following: * the numeric identifier for the user * the email address of the user * the
+   * string literal `"me"`, indicating the requesting user
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseId() {
@@ -80,9 +69,7 @@ public final class Student extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @param courseId courseId or {@code null} for none
    */
   public Student setCourseId(java.lang.String courseId) {
@@ -91,9 +78,7 @@ public final class Student extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global user information for the student.
-   *
-   * Read-only.
+   * Global user information for the student. Read-only.
    * @return value or {@code null} for none
    */
   public UserProfile getProfile() {
@@ -101,9 +86,7 @@ public final class Student extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global user information for the student.
-   *
-   * Read-only.
+   * Global user information for the student. Read-only.
    * @param profile profile or {@code null} for none
    */
   public Student setProfile(UserProfile profile) {
@@ -113,9 +96,7 @@ public final class Student extends com.google.api.client.json.GenericJson {
 
   /**
    * Information about a Drive Folder for this student's work in this course. Only visible to the
-   * student and domain administrators.
-   *
-   * Read-only.
+   * student and domain administrators. Read-only.
    * @return value or {@code null} for none
    */
   public DriveFolder getStudentWorkFolder() {
@@ -124,9 +105,7 @@ public final class Student extends com.google.api.client.json.GenericJson {
 
   /**
    * Information about a Drive Folder for this student's work in this course. Only visible to the
-   * student and domain administrators.
-   *
-   * Read-only.
+   * student and domain administrators. Read-only.
    * @param studentWorkFolder studentWorkFolder or {@code null} for none
    */
   public Student setStudentWorkFolder(DriveFolder studentWorkFolder) {
@@ -135,12 +114,9 @@ public final class Student extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the user.
-   *
-   * When specified as a parameter of a request, this identifier can be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
+   * Identifier of the user. When specified as a parameter of a request, this identifier can be one
+   * of the following: * the numeric identifier for the user * the email address of the user * the
+   * string literal `"me"`, indicating the requesting user
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -148,12 +124,9 @@ public final class Student extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the user.
-   *
-   * When specified as a parameter of a request, this identifier can be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the string literal
-   * `"me"`, indicating the requesting user
+   * Identifier of the user. When specified as a parameter of a request, this identifier can be one
+   * of the following: * the numeric identifier for the user * the email address of the user * the
+   * string literal `"me"`, indicating the requesting user
    * @param userId userId or {@code null} for none
    */
   public Student setUserId(java.lang.String userId) {

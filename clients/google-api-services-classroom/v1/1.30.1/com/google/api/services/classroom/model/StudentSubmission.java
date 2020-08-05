@@ -17,12 +17,9 @@
 package com.google.api.services.classroom.model;
 
 /**
- * Student submission for course work.
- *
- * StudentSubmission items are generated when a CourseWork item is created.
- *
- * StudentSubmissions that have never been accessed (i.e. with `state` = NEW) may not have a
- * creation time or update time.
+ * Student submission for course work. StudentSubmission items are generated when a CourseWork item
+ * is created. StudentSubmissions that have never been accessed (i.e. with `state` = NEW) may not
+ * have a creation time or update time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Classroom API. For a detailed explanation see:
@@ -35,9 +32,7 @@ package com.google.api.services.classroom.model;
 public final class StudentSubmission extends com.google.api.client.json.GenericJson {
 
   /**
-   * Absolute link to the submission in the Classroom web UI.
-   *
-   * Read-only.
+   * Absolute link to the submission in the Classroom web UI. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,18 +40,16 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (that is,
-   * non-integer) values are allowed, but are rounded to two decimal places.
-   *
-   * This may be modified only by course teachers.
+   * non-integer) values are allowed, but are rounded to two decimal places. This may be modified
+   * only by course teachers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double assignedGrade;
 
   /**
-   * Submission content when course_work_type is ASSIGNMENT.
-   *
-   * Students can modify this content using ModifyAttachments.
+   * Submission content when course_work_type is ASSIGNMENT. Students can modify this content using
+   * ModifyAttachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,38 +57,28 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Whether this student submission is associated with the Developer Console project making the
-   * request.
-   *
-   * See CreateCourseWork for more details.
-   *
-   * Read-only.
+   * request. See CreateCourseWork for more details. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean associatedWithDeveloper;
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseId;
 
   /**
-   * Identifier for the course work this corresponds to.
-   *
-   * Read-only.
+   * Identifier for the course work this corresponds to. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseWorkId;
 
   /**
-   * Type of course work this submission is for.
-   *
-   * Read-only.
+   * Type of course work this submission is for. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +86,6 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Creation time of this submission. This may be unset if the student has not accessed this item.
-   *
    * Read-only.
    * The value may be {@code null}.
    */
@@ -112,9 +94,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional pending grade. If unset, no grade was set. This value must be non-negative. Decimal
-   * (that is, non-integer) values are allowed, but are rounded to two decimal places.
-   *
-   * This is only visible to and modifiable by course teachers.
+   * (that is, non-integer) values are allowed, but are rounded to two decimal places. This is only
+   * visible to and modifiable by course teachers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,18 +103,14 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Classroom-assigned Identifier for the student submission. This is unique among submissions for
-   * the relevant course work.
-   *
-   * Read-only.
+   * the relevant course work. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Whether this submission is late.
-   *
-   * Read-only.
+   * Whether this submission is late. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,18 +131,14 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   private ShortAnswerSubmission shortAnswerSubmission;
 
   /**
-   * State of this submission.
-   *
-   * Read-only.
+   * State of this submission. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The history of the submission (includes state and grade histories).
-   *
-   * Read-only.
+   * The history of the submission (includes state and grade histories). Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,27 +146,21 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Last update time of this submission. This may be unset if the student has not accessed this
-   * item.
-   *
-   * Read-only.
+   * item. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Identifier for the student that owns this submission.
-   *
-   * Read-only.
+   * Identifier for the student that owns this submission. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
 
   /**
-   * Absolute link to the submission in the Classroom web UI.
-   *
-   * Read-only.
+   * Absolute link to the submission in the Classroom web UI. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -201,9 +168,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Absolute link to the submission in the Classroom web UI.
-   *
-   * Read-only.
+   * Absolute link to the submission in the Classroom web UI. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public StudentSubmission setAlternateLink(java.lang.String alternateLink) {
@@ -213,9 +178,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (that is,
-   * non-integer) values are allowed, but are rounded to two decimal places.
-   *
-   * This may be modified only by course teachers.
+   * non-integer) values are allowed, but are rounded to two decimal places. This may be modified
+   * only by course teachers.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAssignedGrade() {
@@ -224,9 +188,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (that is,
-   * non-integer) values are allowed, but are rounded to two decimal places.
-   *
-   * This may be modified only by course teachers.
+   * non-integer) values are allowed, but are rounded to two decimal places. This may be modified
+   * only by course teachers.
    * @param assignedGrade assignedGrade or {@code null} for none
    */
   public StudentSubmission setAssignedGrade(java.lang.Double assignedGrade) {
@@ -235,9 +198,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Submission content when course_work_type is ASSIGNMENT.
-   *
-   * Students can modify this content using ModifyAttachments.
+   * Submission content when course_work_type is ASSIGNMENT. Students can modify this content using
+   * ModifyAttachments.
    * @return value or {@code null} for none
    */
   public AssignmentSubmission getAssignmentSubmission() {
@@ -245,9 +207,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Submission content when course_work_type is ASSIGNMENT.
-   *
-   * Students can modify this content using ModifyAttachments.
+   * Submission content when course_work_type is ASSIGNMENT. Students can modify this content using
+   * ModifyAttachments.
    * @param assignmentSubmission assignmentSubmission or {@code null} for none
    */
   public StudentSubmission setAssignmentSubmission(AssignmentSubmission assignmentSubmission) {
@@ -257,11 +218,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Whether this student submission is associated with the Developer Console project making the
-   * request.
-   *
-   * See CreateCourseWork for more details.
-   *
-   * Read-only.
+   * request. See CreateCourseWork for more details. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAssociatedWithDeveloper() {
@@ -270,11 +227,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Whether this student submission is associated with the Developer Console project making the
-   * request.
-   *
-   * See CreateCourseWork for more details.
-   *
-   * Read-only.
+   * request. See CreateCourseWork for more details. Read-only.
    * @param associatedWithDeveloper associatedWithDeveloper or {@code null} for none
    */
   public StudentSubmission setAssociatedWithDeveloper(java.lang.Boolean associatedWithDeveloper) {
@@ -283,9 +236,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseId() {
@@ -293,9 +244,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @param courseId courseId or {@code null} for none
    */
   public StudentSubmission setCourseId(java.lang.String courseId) {
@@ -304,9 +253,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier for the course work this corresponds to.
-   *
-   * Read-only.
+   * Identifier for the course work this corresponds to. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseWorkId() {
@@ -314,9 +261,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier for the course work this corresponds to.
-   *
-   * Read-only.
+   * Identifier for the course work this corresponds to. Read-only.
    * @param courseWorkId courseWorkId or {@code null} for none
    */
   public StudentSubmission setCourseWorkId(java.lang.String courseWorkId) {
@@ -325,9 +270,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Type of course work this submission is for.
-   *
-   * Read-only.
+   * Type of course work this submission is for. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseWorkType() {
@@ -335,9 +278,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Type of course work this submission is for.
-   *
-   * Read-only.
+   * Type of course work this submission is for. Read-only.
    * @param courseWorkType courseWorkType or {@code null} for none
    */
   public StudentSubmission setCourseWorkType(java.lang.String courseWorkType) {
@@ -347,7 +288,6 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Creation time of this submission. This may be unset if the student has not accessed this item.
-   *
    * Read-only.
    * @return value or {@code null} for none
    */
@@ -357,7 +297,6 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Creation time of this submission. This may be unset if the student has not accessed this item.
-   *
    * Read-only.
    * @param creationTime creationTime or {@code null} for none
    */
@@ -368,9 +307,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional pending grade. If unset, no grade was set. This value must be non-negative. Decimal
-   * (that is, non-integer) values are allowed, but are rounded to two decimal places.
-   *
-   * This is only visible to and modifiable by course teachers.
+   * (that is, non-integer) values are allowed, but are rounded to two decimal places. This is only
+   * visible to and modifiable by course teachers.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDraftGrade() {
@@ -379,9 +317,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional pending grade. If unset, no grade was set. This value must be non-negative. Decimal
-   * (that is, non-integer) values are allowed, but are rounded to two decimal places.
-   *
-   * This is only visible to and modifiable by course teachers.
+   * (that is, non-integer) values are allowed, but are rounded to two decimal places. This is only
+   * visible to and modifiable by course teachers.
    * @param draftGrade draftGrade or {@code null} for none
    */
   public StudentSubmission setDraftGrade(java.lang.Double draftGrade) {
@@ -391,9 +328,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Classroom-assigned Identifier for the student submission. This is unique among submissions for
-   * the relevant course work.
-   *
-   * Read-only.
+   * the relevant course work. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -402,9 +337,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Classroom-assigned Identifier for the student submission. This is unique among submissions for
-   * the relevant course work.
-   *
-   * Read-only.
+   * the relevant course work. Read-only.
    * @param id id or {@code null} for none
    */
   public StudentSubmission setId(java.lang.String id) {
@@ -413,9 +346,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether this submission is late.
-   *
-   * Read-only.
+   * Whether this submission is late. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLate() {
@@ -423,9 +354,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether this submission is late.
-   *
-   * Read-only.
+   * Whether this submission is late. Read-only.
    * @param late late or {@code null} for none
    */
   public StudentSubmission setLate(java.lang.Boolean late) {
@@ -468,9 +397,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * State of this submission.
-   *
-   * Read-only.
+   * State of this submission. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -478,9 +405,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * State of this submission.
-   *
-   * Read-only.
+   * State of this submission. Read-only.
    * @param state state or {@code null} for none
    */
   public StudentSubmission setState(java.lang.String state) {
@@ -489,9 +414,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The history of the submission (includes state and grade histories).
-   *
-   * Read-only.
+   * The history of the submission (includes state and grade histories). Read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<SubmissionHistory> getSubmissionHistory() {
@@ -499,9 +422,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The history of the submission (includes state and grade histories).
-   *
-   * Read-only.
+   * The history of the submission (includes state and grade histories). Read-only.
    * @param submissionHistory submissionHistory or {@code null} for none
    */
   public StudentSubmission setSubmissionHistory(java.util.List<SubmissionHistory> submissionHistory) {
@@ -511,9 +432,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Last update time of this submission. This may be unset if the student has not accessed this
-   * item.
-   *
-   * Read-only.
+   * item. Read-only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -522,9 +441,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Last update time of this submission. This may be unset if the student has not accessed this
-   * item.
-   *
-   * Read-only.
+   * item. Read-only.
    * @param updateTime updateTime or {@code null} for none
    */
   public StudentSubmission setUpdateTime(String updateTime) {
@@ -533,9 +450,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier for the student that owns this submission.
-   *
-   * Read-only.
+   * Identifier for the student that owns this submission. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -543,9 +458,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier for the student that owns this submission.
-   *
-   * Read-only.
+   * Identifier for the student that owns this submission. Read-only.
    * @param userId userId or {@code null} for none
    */
   public StudentSubmission setUserId(java.lang.String userId) {

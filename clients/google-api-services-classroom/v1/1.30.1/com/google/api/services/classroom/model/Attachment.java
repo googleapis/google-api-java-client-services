@@ -17,9 +17,8 @@
 package com.google.api.services.classroom.model;
 
 /**
- * Attachment added to student assignment work.
- *
- * When creating attachments, setting the `form` field is not supported.
+ * Attachment added to student assignment work. When creating attachments, setting the `form` field
+ * is not supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Classroom API. For a detailed explanation see:

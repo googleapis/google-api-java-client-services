@@ -37,9 +37,8 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   private CloudPubsubTopic cloudPubsubTopic;
 
   /**
-   * The time until which the `Registration` is effective.
-   *
-   * This is a read-only field assigned by the server.
+   * The time until which the `Registration` is effective. This is a read-only field assigned by the
+   * server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,9 +52,7 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   private Feed feed;
 
   /**
-   * A server-generated unique identifier for this `Registration`.
-   *
-   * Read-only.
+   * A server-generated unique identifier for this `Registration`. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +76,8 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time until which the `Registration` is effective.
-   *
-   * This is a read-only field assigned by the server.
+   * The time until which the `Registration` is effective. This is a read-only field assigned by the
+   * server.
    * @return value or {@code null} for none
    */
   public String getExpiryTime() {
@@ -89,9 +85,8 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time until which the `Registration` is effective.
-   *
-   * This is a read-only field assigned by the server.
+   * The time until which the `Registration` is effective. This is a read-only field assigned by the
+   * server.
    * @param expiryTime expiryTime or {@code null} for none
    */
   public Registration setExpiryTime(String expiryTime) {
@@ -117,9 +112,7 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A server-generated unique identifier for this `Registration`.
-   *
-   * Read-only.
+   * A server-generated unique identifier for this `Registration`. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegistrationId() {
@@ -127,9 +120,7 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A server-generated unique identifier for this `Registration`.
-   *
-   * Read-only.
+   * A server-generated unique identifier for this `Registration`. Read-only.
    * @param registrationId registrationId or {@code null} for none
    */
   public Registration setRegistrationId(java.lang.String registrationId) {

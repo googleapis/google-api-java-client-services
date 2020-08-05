@@ -38,27 +38,21 @@ public final class Form extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the form responses document. Only set if respsonses have been recorded and only when the
-   * requesting user is an editor of the form.
-   *
-   * Read-only.
+   * requesting user is an editor of the form. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseUrl;
 
   /**
-   * URL of a thumbnail image of the Form.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the Form. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUrl;
 
   /**
-   * Title of the Form.
-   *
-   * Read-only.
+   * Title of the Form. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,9 +77,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the form responses document. Only set if respsonses have been recorded and only when the
-   * requesting user is an editor of the form.
-   *
-   * Read-only.
+   * requesting user is an editor of the form. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseUrl() {
@@ -94,9 +86,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the form responses document. Only set if respsonses have been recorded and only when the
-   * requesting user is an editor of the form.
-   *
-   * Read-only.
+   * requesting user is an editor of the form. Read-only.
    * @param responseUrl responseUrl or {@code null} for none
    */
   public Form setResponseUrl(java.lang.String responseUrl) {
@@ -105,9 +95,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image of the Form.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the Form. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUrl() {
@@ -115,9 +103,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image of the Form.
-   *
-   * Read-only.
+   * URL of a thumbnail image of the Form. Read-only.
    * @param thumbnailUrl thumbnailUrl or {@code null} for none
    */
   public Form setThumbnailUrl(java.lang.String thumbnailUrl) {
@@ -126,9 +112,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the Form.
-   *
-   * Read-only.
+   * Title of the Form. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -136,9 +120,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the Form.
-   *
-   * Read-only.
+   * Title of the Form. Read-only.
    * @param title title or {@code null} for none
    */
   public Form setTitle(java.lang.String title) {

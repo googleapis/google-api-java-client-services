@@ -62,6 +62,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
    * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
    * are optional.
+   *
+   * See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-
+   * changes#feed_with_condition) for detailed instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,6 +157,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
    * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
    * are optional.
+   *
+   * See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-
+   * changes#feed_with_condition) for detailed instructions.
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -167,6 +173,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
    * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
    * are optional.
+   *
+   * See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-
+   * changes#feed_with_condition) for detailed instructions.
    * @param condition condition or {@code null} for none
    */
   public Feed setCondition(Expr condition) {

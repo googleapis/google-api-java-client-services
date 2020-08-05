@@ -97,9 +97,7 @@ public final class ActivityRule extends com.google.api.client.json.GenericJson {
   private java.lang.String threshold;
 
   /**
-   * The trigger sources for this rule.
-   *
-   * * GMAIL_EVENTS * DEVICE_EVENTS * USER_EVENTS
+   * The trigger sources for this rule. * GMAIL_EVENTS * DEVICE_EVENTS * USER_EVENTS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,9 +277,7 @@ public final class ActivityRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The trigger sources for this rule.
-   *
-   * * GMAIL_EVENTS * DEVICE_EVENTS * USER_EVENTS
+   * The trigger sources for this rule. * GMAIL_EVENTS * DEVICE_EVENTS * USER_EVENTS
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerSource() {
@@ -289,9 +285,7 @@ public final class ActivityRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The trigger sources for this rule.
-   *
-   * * GMAIL_EVENTS * DEVICE_EVENTS * USER_EVENTS
+   * The trigger sources for this rule. * GMAIL_EVENTS * DEVICE_EVENTS * USER_EVENTS
    * @param triggerSource triggerSource or {@code null} for none
    */
   public ActivityRule setTriggerSource(java.lang.String triggerSource) {

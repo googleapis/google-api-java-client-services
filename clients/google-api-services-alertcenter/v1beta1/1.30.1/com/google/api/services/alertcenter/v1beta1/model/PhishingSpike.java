@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Alert for a spike in user reported phishing. Warning: This type has been deprecated. Use
+ * Alert for a spike in user reported phishing. *Warning*: This type has been deprecated. Use
  * [MailPhishing](/admin-sdk/alertcenter/reference/rest/v1beta1/MailPhishing) instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

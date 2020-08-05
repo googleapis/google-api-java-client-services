@@ -57,10 +57,9 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
    * that systems make use of the `etag` in the read-modify-write cycle to perform metatdata updates
    * in order to avoid race conditions: An `etag` is returned in the response which contains alert
    * metadata, and systems are expected to put that etag in the request to update alert metadata to
-   * ensure that their change will be applied to the same version of the alert metadata.
-   *
-   * If no `etag` is provided in the call to update alert metadata, then the existing alert metadata
-   * is overwritten blindly.
+   * ensure that their change will be applied to the same version of the alert metadata. If no
+   * `etag` is provided in the call to update alert metadata, then the existing alert metadata is
+   * overwritten blindly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,18 +68,15 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   /**
    * The severity value of the alert. Alert Center will set this field at alert creation time,
    * default's to an empty string when it could not be determined. The supported values for update
-   * actions on this field are the following:
-   *
-   * * HIGH * MEDIUM * LOW
+   * actions on this field are the following: * HIGH * MEDIUM * LOW
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * The current status of the alert. The supported values are the following:
-   *
-   * * NOT_STARTED * IN_PROGRESS * CLOSED
+   * The current status of the alert. The supported values are the following: * NOT_STARTED *
+   * IN_PROGRESS * CLOSED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,10 +146,9 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
    * that systems make use of the `etag` in the read-modify-write cycle to perform metatdata updates
    * in order to avoid race conditions: An `etag` is returned in the response which contains alert
    * metadata, and systems are expected to put that etag in the request to update alert metadata to
-   * ensure that their change will be applied to the same version of the alert metadata.
-   *
-   * If no `etag` is provided in the call to update alert metadata, then the existing alert metadata
-   * is overwritten blindly.
+   * ensure that their change will be applied to the same version of the alert metadata. If no
+   * `etag` is provided in the call to update alert metadata, then the existing alert metadata is
+   * overwritten blindly.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -166,10 +161,9 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
    * that systems make use of the `etag` in the read-modify-write cycle to perform metatdata updates
    * in order to avoid race conditions: An `etag` is returned in the response which contains alert
    * metadata, and systems are expected to put that etag in the request to update alert metadata to
-   * ensure that their change will be applied to the same version of the alert metadata.
-   *
-   * If no `etag` is provided in the call to update alert metadata, then the existing alert metadata
-   * is overwritten blindly.
+   * ensure that their change will be applied to the same version of the alert metadata. If no
+   * `etag` is provided in the call to update alert metadata, then the existing alert metadata is
+   * overwritten blindly.
    * @param etag etag or {@code null} for none
    */
   public AlertMetadata setEtag(java.lang.String etag) {
@@ -180,9 +174,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   /**
    * The severity value of the alert. Alert Center will set this field at alert creation time,
    * default's to an empty string when it could not be determined. The supported values for update
-   * actions on this field are the following:
-   *
-   * * HIGH * MEDIUM * LOW
+   * actions on this field are the following: * HIGH * MEDIUM * LOW
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -192,9 +184,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   /**
    * The severity value of the alert. Alert Center will set this field at alert creation time,
    * default's to an empty string when it could not be determined. The supported values for update
-   * actions on this field are the following:
-   *
-   * * HIGH * MEDIUM * LOW
+   * actions on this field are the following: * HIGH * MEDIUM * LOW
    * @param severity severity or {@code null} for none
    */
   public AlertMetadata setSeverity(java.lang.String severity) {
@@ -203,9 +193,8 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The current status of the alert. The supported values are the following:
-   *
-   * * NOT_STARTED * IN_PROGRESS * CLOSED
+   * The current status of the alert. The supported values are the following: * NOT_STARTED *
+   * IN_PROGRESS * CLOSED
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -213,9 +202,8 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The current status of the alert. The supported values are the following:
-   *
-   * * NOT_STARTED * IN_PROGRESS * CLOSED
+   * The current status of the alert. The supported values are the following: * NOT_STARTED *
+   * IN_PROGRESS * CLOSED
    * @param status status or {@code null} for none
    */
   public AlertMetadata setStatus(java.lang.String status) {

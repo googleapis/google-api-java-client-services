@@ -1316,8 +1316,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the alertcenter server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param alertId Required. The alert identifier.
-      The "-" wildcard could be used to represent all alerts.
+       * @param alertId Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
        * @return the request
        */
       public List list(java.lang.String alertId) throws java.io.IOException {
@@ -1341,8 +1340,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param alertId Required. The alert identifier.
-      The "-" wildcard could be used to represent all alerts.
+         * @param alertId Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
          * @since 1.13
          */
         protected List(java.lang.String alertId) {

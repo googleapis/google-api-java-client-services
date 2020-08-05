@@ -31,22 +31,18 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class DlpRuleViolation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details about the violated DLP rule.
-   *
-   * Admins can use the predefined detectors provided by Google Cloud DLP
-   * https://cloud.google.com/dlp/ when setting up a DLP rule. Matched Cloud DLP detectors in this
-   * violation if any will be captured in the MatchInfo.predefined_detector.
+   * Details about the violated DLP rule. Admins can use the predefined detectors provided by Google
+   * Cloud DLP https://cloud.google.com/dlp/ when setting up a DLP rule. Matched Cloud DLP detectors
+   * in this violation if any will be captured in the MatchInfo.predefined_detector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RuleViolationInfo ruleViolationInfo;
 
   /**
-   * Details about the violated DLP rule.
-   *
-   * Admins can use the predefined detectors provided by Google Cloud DLP
-   * https://cloud.google.com/dlp/ when setting up a DLP rule. Matched Cloud DLP detectors in this
-   * violation if any will be captured in the MatchInfo.predefined_detector.
+   * Details about the violated DLP rule. Admins can use the predefined detectors provided by Google
+   * Cloud DLP https://cloud.google.com/dlp/ when setting up a DLP rule. Matched Cloud DLP detectors
+   * in this violation if any will be captured in the MatchInfo.predefined_detector.
    * @return value or {@code null} for none
    */
   public RuleViolationInfo getRuleViolationInfo() {
@@ -54,11 +50,9 @@ public final class DlpRuleViolation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details about the violated DLP rule.
-   *
-   * Admins can use the predefined detectors provided by Google Cloud DLP
-   * https://cloud.google.com/dlp/ when setting up a DLP rule. Matched Cloud DLP detectors in this
-   * violation if any will be captured in the MatchInfo.predefined_detector.
+   * Details about the violated DLP rule. Admins can use the predefined detectors provided by Google
+   * Cloud DLP https://cloud.google.com/dlp/ when setting up a DLP rule. Matched Cloud DLP detectors
+   * in this violation if any will be captured in the MatchInfo.predefined_detector.
    * @param ruleViolationInfo ruleViolationInfo or {@code null} for none
    */
   public DlpRuleViolation setRuleViolationInfo(RuleViolationInfo ruleViolationInfo) {

@@ -32,11 +32,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource.
-   *
-   * This field does _not_ indicate whether the member actually has the permission for the resource.
-   * There might be another policy that overrides this policy. To determine whether the member
-   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+   * the specified resource. This field does _not_ indicate whether the member actually has the
+   * permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the member actually has the permission, use the `access` field in the
+   * TroubleshootIamPolicyResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,9 +43,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource.
-   *
-   * If the sender of the request does not have access to the policy, this field is omitted.
+   * the permission for the resource. If the sender of the request does not have access to the
+   * policy, this field is omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,11 +58,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * The full resource name that identifies the resource. For example,
-   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
-   *
-   * If the sender of the request does not have access to the policy, this field is omitted.
-   *
-   * For examples of full resource names for Google Cloud services, see
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. If
+   * the sender of the request does not have access to the policy, this field is omitted. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * The value may be {@code null}.
    */
@@ -72,9 +68,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
   private java.lang.String fullResourceName;
 
   /**
-   * The IAM policy attached to the resource.
-   *
-   * If the sender of the request does not have access to the policy, this field is empty.
+   * The IAM policy attached to the resource. If the sender of the request does not have access to
+   * the policy, this field is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +77,6 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * The relevance of this policy to the overall determination in the TroubleshootIamPolicyResponse.
-   *
    * If the sender of the request does not have access to the policy, this field is omitted.
    * The value may be {@code null}.
    */
@@ -91,11 +85,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource.
-   *
-   * This field does _not_ indicate whether the member actually has the permission for the resource.
-   * There might be another policy that overrides this policy. To determine whether the member
-   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+   * the specified resource. This field does _not_ indicate whether the member actually has the
+   * permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the member actually has the permission, use the `access` field in the
+   * TroubleshootIamPolicyResponse.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccess() {
@@ -104,11 +97,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource.
-   *
-   * This field does _not_ indicate whether the member actually has the permission for the resource.
-   * There might be another policy that overrides this policy. To determine whether the member
-   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+   * the specified resource. This field does _not_ indicate whether the member actually has the
+   * permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the member actually has the permission, use the `access` field in the
+   * TroubleshootIamPolicyResponse.
    * @param access access or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaExplainedPolicy setAccess(java.lang.String access) {
@@ -118,9 +110,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource.
-   *
-   * If the sender of the request does not have access to the policy, this field is omitted.
+   * the permission for the resource. If the sender of the request does not have access to the
+   * policy, this field is omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicytroubleshooterV1betaBindingExplanation> getBindingExplanations() {
@@ -129,9 +120,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource.
-   *
-   * If the sender of the request does not have access to the policy, this field is omitted.
+   * the permission for the resource. If the sender of the request does not have access to the
+   * policy, this field is omitted.
    * @param bindingExplanations bindingExplanations or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaExplainedPolicy setBindingExplanations(java.util.List<GoogleCloudPolicytroubleshooterV1betaBindingExplanation> bindingExplanations) {
@@ -141,11 +131,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * The full resource name that identifies the resource. For example,
-   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
-   *
-   * If the sender of the request does not have access to the policy, this field is omitted.
-   *
-   * For examples of full resource names for Google Cloud services, see
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. If
+   * the sender of the request does not have access to the policy, this field is omitted. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @return value or {@code null} for none
    */
@@ -155,11 +143,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * The full resource name that identifies the resource. For example,
-   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
-   *
-   * If the sender of the request does not have access to the policy, this field is omitted.
-   *
-   * For examples of full resource names for Google Cloud services, see
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. If
+   * the sender of the request does not have access to the policy, this field is omitted. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
@@ -169,9 +155,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
   }
 
   /**
-   * The IAM policy attached to the resource.
-   *
-   * If the sender of the request does not have access to the policy, this field is empty.
+   * The IAM policy attached to the resource. If the sender of the request does not have access to
+   * the policy, this field is empty.
    * @return value or {@code null} for none
    */
   public GoogleIamV1Policy getPolicy() {
@@ -179,9 +164,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
   }
 
   /**
-   * The IAM policy attached to the resource.
-   *
-   * If the sender of the request does not have access to the policy, this field is empty.
+   * The IAM policy attached to the resource. If the sender of the request does not have access to
+   * the policy, this field is empty.
    * @param policy policy or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaExplainedPolicy setPolicy(GoogleIamV1Policy policy) {
@@ -191,7 +175,6 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * The relevance of this policy to the overall determination in the TroubleshootIamPolicyResponse.
-   *
    * If the sender of the request does not have access to the policy, this field is omitted.
    * @return value or {@code null} for none
    */
@@ -201,7 +184,6 @@ public final class GoogleCloudPolicytroubleshooterV1betaExplainedPolicy extends 
 
   /**
    * The relevance of this policy to the overall determination in the TroubleshootIamPolicyResponse.
-   *
    * If the sender of the request does not have access to the policy, this field is omitted.
    * @param relevance relevance or {@code null} for none
    */

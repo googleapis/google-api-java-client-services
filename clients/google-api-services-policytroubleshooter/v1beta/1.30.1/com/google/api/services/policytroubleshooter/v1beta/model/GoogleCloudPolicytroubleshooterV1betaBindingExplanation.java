@@ -32,20 +32,18 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
 
   /**
    * Indicates whether _this binding_ provides the specified permission to the specified member for
-   * the specified resource.
-   *
-   * This field does _not_ indicate whether the member actually has the permission for the resource.
-   * There might be another binding that overrides this binding. To determine whether the member
-   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+   * the specified resource. This field does _not_ indicate whether the member actually has the
+   * permission for the resource. There might be another binding that overrides this binding. To
+   * determine whether the member actually has the permission, use the `access` field in the
+   * TroubleshootIamPolicyResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String access;
 
   /**
-   * A condition expression that prevents access unless the expression evaluates to `true`.
-   *
-   * To learn about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
+   * A condition expression that prevents access unless the expression evaluates to `true`. To learn
+   * about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,20 +52,13 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   /**
    * Indicates whether each member in the binding includes the member specified in the request,
    * either directly or indirectly. Each key identifies a member in the binding, and each value
-   * indicates whether the member in the binding includes the member in the request.
-   *
-   * For example, suppose that a binding includes the following members:
-   *
-   * * `user:alice@example.com` * `group:product-eng@example.com`
-   *
-   * You want to troubleshoot access for `user:bob@example.com`. This user is a member of the group
-   * `group:product-eng@example.com`.
-   *
-   * For the first member in the binding, the key is `user:alice@example.com`, and the `membership`
-   * field in the value is set to `MEMBERSHIP_NOT_INCLUDED`.
-   *
-   * For the second member in the binding, the key is `group:product-eng@example.com`, and the
-   * `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+   * indicates whether the member in the binding includes the member in the request. For example,
+   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
+   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
+   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
+   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
+   * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +72,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   private java.lang.String relevance;
 
   /**
-   * The role that this binding grants. For example, `roles/compute.serviceAgent`.
-   *
-   * For a complete list of predefined IAM roles, as well as the permissions in each role, see
+   * The role that this binding grants. For example, `roles/compute.serviceAgent`. For a complete
+   * list of predefined IAM roles, as well as the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
    * The value may be {@code null}.
    */
@@ -107,11 +97,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
 
   /**
    * Indicates whether _this binding_ provides the specified permission to the specified member for
-   * the specified resource.
-   *
-   * This field does _not_ indicate whether the member actually has the permission for the resource.
-   * There might be another binding that overrides this binding. To determine whether the member
-   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+   * the specified resource. This field does _not_ indicate whether the member actually has the
+   * permission for the resource. There might be another binding that overrides this binding. To
+   * determine whether the member actually has the permission, use the `access` field in the
+   * TroubleshootIamPolicyResponse.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccess() {
@@ -120,11 +109,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
 
   /**
    * Indicates whether _this binding_ provides the specified permission to the specified member for
-   * the specified resource.
-   *
-   * This field does _not_ indicate whether the member actually has the permission for the resource.
-   * There might be another binding that overrides this binding. To determine whether the member
-   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
+   * the specified resource. This field does _not_ indicate whether the member actually has the
+   * permission for the resource. There might be another binding that overrides this binding. To
+   * determine whether the member actually has the permission, use the `access` field in the
+   * TroubleshootIamPolicyResponse.
    * @param access access or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setAccess(java.lang.String access) {
@@ -133,9 +121,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * A condition expression that prevents access unless the expression evaluates to `true`.
-   *
-   * To learn about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
+   * A condition expression that prevents access unless the expression evaluates to `true`. To learn
+   * about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -143,9 +130,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * A condition expression that prevents access unless the expression evaluates to `true`.
-   *
-   * To learn about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
+   * A condition expression that prevents access unless the expression evaluates to `true`. To learn
+   * about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setCondition(GoogleTypeExpr condition) {
@@ -156,20 +142,13 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   /**
    * Indicates whether each member in the binding includes the member specified in the request,
    * either directly or indirectly. Each key identifies a member in the binding, and each value
-   * indicates whether the member in the binding includes the member in the request.
-   *
-   * For example, suppose that a binding includes the following members:
-   *
-   * * `user:alice@example.com` * `group:product-eng@example.com`
-   *
-   * You want to troubleshoot access for `user:bob@example.com`. This user is a member of the group
-   * `group:product-eng@example.com`.
-   *
-   * For the first member in the binding, the key is `user:alice@example.com`, and the `membership`
-   * field in the value is set to `MEMBERSHIP_NOT_INCLUDED`.
-   *
-   * For the second member in the binding, the key is `group:product-eng@example.com`, and the
-   * `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+   * indicates whether the member in the binding includes the member in the request. For example,
+   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
+   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
+   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
+   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
+   * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership> getMemberships() {
@@ -179,20 +158,13 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   /**
    * Indicates whether each member in the binding includes the member specified in the request,
    * either directly or indirectly. Each key identifies a member in the binding, and each value
-   * indicates whether the member in the binding includes the member in the request.
-   *
-   * For example, suppose that a binding includes the following members:
-   *
-   * * `user:alice@example.com` * `group:product-eng@example.com`
-   *
-   * You want to troubleshoot access for `user:bob@example.com`. This user is a member of the group
-   * `group:product-eng@example.com`.
-   *
-   * For the first member in the binding, the key is `user:alice@example.com`, and the `membership`
-   * field in the value is set to `MEMBERSHIP_NOT_INCLUDED`.
-   *
-   * For the second member in the binding, the key is `group:product-eng@example.com`, and the
-   * `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+   * indicates whether the member in the binding includes the member in the request. For example,
+   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
+   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
+   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
+   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
+   * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @param memberships memberships or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setMemberships(java.util.Map<String, GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership> memberships) {
@@ -218,9 +190,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The role that this binding grants. For example, `roles/compute.serviceAgent`.
-   *
-   * For a complete list of predefined IAM roles, as well as the permissions in each role, see
+   * The role that this binding grants. For example, `roles/compute.serviceAgent`. For a complete
+   * list of predefined IAM roles, as well as the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
    * @return value or {@code null} for none
    */
@@ -229,9 +200,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The role that this binding grants. For example, `roles/compute.serviceAgent`.
-   *
-   * For a complete list of predefined IAM roles, as well as the permissions in each role, see
+   * The role that this binding grants. For example, `roles/compute.serviceAgent`. For a complete
+   * list of predefined IAM roles, as well as the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
    * @param role role or {@code null} for none
    */

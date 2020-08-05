@@ -40,13 +40,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRes
 
   /**
    * List of IAM policies that were evaluated to check the member's permissions, with annotations to
-   * indicate how each policy contributed to the final result.
-   *
-   * The list of policies can include the policy for the resource itself. It can also include
-   * policies that are inherited from higher levels of the resource hierarchy, including the
-   * organization, the folder, and the project.
-   *
-   * To learn more about the resource hierarchy, see https://cloud.google.com/iam/help/resource-
+   * indicate how each policy contributed to the final result. The list of policies can include the
+   * policy for the resource itself. It can also include policies that are inherited from higher
+   * levels of the resource hierarchy, including the organization, the folder, and the project. To
+   * learn more about the resource hierarchy, see https://cloud.google.com/iam/help/resource-
    * hierarchy.
    * The value may be {@code null}.
    */
@@ -80,13 +77,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRes
 
   /**
    * List of IAM policies that were evaluated to check the member's permissions, with annotations to
-   * indicate how each policy contributed to the final result.
-   *
-   * The list of policies can include the policy for the resource itself. It can also include
-   * policies that are inherited from higher levels of the resource hierarchy, including the
-   * organization, the folder, and the project.
-   *
-   * To learn more about the resource hierarchy, see https://cloud.google.com/iam/help/resource-
+   * indicate how each policy contributed to the final result. The list of policies can include the
+   * policy for the resource itself. It can also include policies that are inherited from higher
+   * levels of the resource hierarchy, including the organization, the folder, and the project. To
+   * learn more about the resource hierarchy, see https://cloud.google.com/iam/help/resource-
    * hierarchy.
    * @return value or {@code null} for none
    */
@@ -96,13 +90,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRes
 
   /**
    * List of IAM policies that were evaluated to check the member's permissions, with annotations to
-   * indicate how each policy contributed to the final result.
-   *
-   * The list of policies can include the policy for the resource itself. It can also include
-   * policies that are inherited from higher levels of the resource hierarchy, including the
-   * organization, the folder, and the project.
-   *
-   * To learn more about the resource hierarchy, see https://cloud.google.com/iam/help/resource-
+   * indicate how each policy contributed to the final result. The list of policies can include the
+   * policy for the resource itself. It can also include policies that are inherited from higher
+   * levels of the resource hierarchy, including the organization, the folder, and the project. To
+   * learn more about the resource hierarchy, see https://cloud.google.com/iam/help/resource-
    * hierarchy.
    * @param explainedPolicies explainedPolicies or {@code null} for none
    */

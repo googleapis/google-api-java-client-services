@@ -97,10 +97,9 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
    * Contains an identifier for a subtype of recommendations produced for the same recommender.
    * Subtype is a function of content and impact, meaning a new subtype might be added when
    * significant changes to `content` or `primary_impact.category` are introduced. See the
-   * Recommenders section to see a list of subtypes for a given Recommender.
-   *
-   * Examples:   For recommender = "google.iam.policy.Recommender",   recommender_subtype can be one
-   * of "REMOVE_ROLE"/"REPLACE_ROLE"
+   * Recommenders section to see a list of subtypes for a given Recommender. Examples: For
+   * recommender = "google.iam.policy.Recommender", recommender_subtype can be one of
+   * "REMOVE_ROLE"/"REPLACE_ROLE"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,10 +254,9 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
    * Contains an identifier for a subtype of recommendations produced for the same recommender.
    * Subtype is a function of content and impact, meaning a new subtype might be added when
    * significant changes to `content` or `primary_impact.category` are introduced. See the
-   * Recommenders section to see a list of subtypes for a given Recommender.
-   *
-   * Examples:   For recommender = "google.iam.policy.Recommender",   recommender_subtype can be one
-   * of "REMOVE_ROLE"/"REPLACE_ROLE"
+   * Recommenders section to see a list of subtypes for a given Recommender. Examples: For
+   * recommender = "google.iam.policy.Recommender", recommender_subtype can be one of
+   * "REMOVE_ROLE"/"REPLACE_ROLE"
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommenderSubtype() {
@@ -269,10 +267,9 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
    * Contains an identifier for a subtype of recommendations produced for the same recommender.
    * Subtype is a function of content and impact, meaning a new subtype might be added when
    * significant changes to `content` or `primary_impact.category` are introduced. See the
-   * Recommenders section to see a list of subtypes for a given Recommender.
-   *
-   * Examples:   For recommender = "google.iam.policy.Recommender",   recommender_subtype can be one
-   * of "REMOVE_ROLE"/"REPLACE_ROLE"
+   * Recommenders section to see a list of subtypes for a given Recommender. Examples: For
+   * recommender = "google.iam.policy.Recommender", recommender_subtype can be one of
+   * "REMOVE_ROLE"/"REPLACE_ROLE"
    * @param recommenderSubtype recommenderSubtype or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1Recommendation setRecommenderSubtype(java.lang.String recommenderSubtype) {

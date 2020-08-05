@@ -351,13 +351,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request.
-          Acceptable formats:
-          1.
-           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
-          LOCATION
-           *        here refers to GCP Locations:
-          https://cloud.google.com/about/locations/
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
+           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -384,13 +380,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request.
-          Acceptable formats:
-          1.
-           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
-          LOCATION
-           *        here refers to GCP Locations:
-          https://cloud.google.com/about/locations/
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
+           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -470,19 +462,15 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             *
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
-             *
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats:
-
-           1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
-
-           LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
+           "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION here
+           refers to GCP Locations: https://cloud.google.com/about/locations/
              */
             public java.lang.String getParent() {
               return parent;
@@ -490,9 +478,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             *
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
-             *
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              */
             public List setParent(java.lang.String parent) {
@@ -529,14 +515,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. The maximum number of results to return from this request.  Non-positive
+             * Optional. The maximum number of results to return from this request. Non-positive
              * values are ignored. If not specified, the server will determine the number of results
              * to return.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of results to return from this request.  Non-positive values are
+            /** Optional. The maximum number of results to return from this request. Non-positive values are
            ignored. If not specified, the server will determine the number of results to return.
              */
             public java.lang.Integer getPageSize() {
@@ -544,7 +530,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. The maximum number of results to return from this request.  Non-positive
+             * Optional. The maximum number of results to return from this request. Non-positive
              * values are ignored. If not specified, the server will determine the number of results
              * to return.
              */
@@ -589,10 +575,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /**
            * Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender API
            * that they have applied some action based on the insight. This stops the insight content from
-           * being updated.
-           *
-           * MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the recommender.*.update
-           * IAM permission for the specified insight.
+           * being updated. MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the
+           * recommender.*.update IAM permission for the specified insight.
            *
            * Create a request for the method "insights.markAccepted".
            *
@@ -619,10 +603,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             /**
              * Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender
              * API that they have applied some action based on the insight. This stops the insight content
-             * from being updated.
-             *
-             * MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the
-             * recommender.*.update IAM permission for the specified insight.
+             * from being updated. MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+             * the recommender.*.update IAM permission for the specified insight.
              *
              * Create a request for the method "insights.markAccepted".
              *
@@ -919,13 +901,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request.
-          Acceptable formats:
-          1.
-           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
-          LOCATION
-           *        here refers to GCP Locations:
-          https://cloud.google.com/about/locations/
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
+           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]", LOCATION
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -952,13 +930,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request.
-          Acceptable formats:
-          1.
-           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
-          LOCATION
-           *        here refers to GCP Locations:
-          https://cloud.google.com/about/locations/
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
+           *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]", LOCATION
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1038,19 +1012,15 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             *
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
-             *
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats:
-
-           1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
-
-           LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
+           "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]", LOCATION here
+           refers to GCP Locations: https://cloud.google.com/about/locations/
              */
             public java.lang.String getParent() {
               return parent;
@@ -1058,9 +1028,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             *
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
-             *
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              */
             public List setParent(java.lang.String parent) {
@@ -1097,14 +1065,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. The maximum number of results to return from this request.  Non-positive
+             * Optional. The maximum number of results to return from this request. Non-positive
              * values are ignored. If not specified, the server will determine the number of results
              * to return.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of results to return from this request.  Non-positive values are
+            /** Optional. The maximum number of results to return from this request. Non-positive values are
            ignored. If not specified, the server will determine the number of results to return.
              */
             public java.lang.Integer getPageSize() {
@@ -1112,7 +1080,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. The maximum number of results to return from this request.  Non-positive
+             * Optional. The maximum number of results to return from this request. Non-positive
              * values are ignored. If not specified, the server will determine the number of results
              * to return.
              */
@@ -1158,11 +1126,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * Marks the Recommendation State as Claimed. Users can use this method to indicate to the
            * Recommender API that they are starting to apply the recommendation themselves. This stops the
            * recommendation content from being updated. Associated insights are frozen and placed in the
-           * ACCEPTED state.
-           *
-           * MarkRecommendationClaimed can be applied to recommendations in CLAIMED or ACTIVE state.
-           *
-           * Requires the recommender.*.update IAM permission for the specified recommender.
+           * ACCEPTED state. MarkRecommendationClaimed can be applied to recommendations in CLAIMED or ACTIVE
+           * state. Requires the recommender.*.update IAM permission for the specified recommender.
            *
            * Create a request for the method "recommendations.markClaimed".
            *
@@ -1190,11 +1155,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Marks the Recommendation State as Claimed. Users can use this method to indicate to the
              * Recommender API that they are starting to apply the recommendation themselves. This stops the
              * recommendation content from being updated. Associated insights are frozen and placed in the
-             * ACCEPTED state.
-             *
-             * MarkRecommendationClaimed can be applied to recommendations in CLAIMED or ACTIVE state.
-             *
-             * Requires the recommender.*.update IAM permission for the specified recommender.
+             * ACCEPTED state. MarkRecommendationClaimed can be applied to recommendations in CLAIMED or
+             * ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
              *
              * Create a request for the method "recommendations.markClaimed".
              *
@@ -1303,12 +1265,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * Marks the Recommendation State as Failed. Users can use this method to indicate to the
            * Recommender API that they have applied the recommendation themselves, and the operation failed.
            * This stops the recommendation content from being updated. Associated insights are frozen and
-           * placed in the ACCEPTED state.
-           *
-           * MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or
-           * FAILED state.
-           *
-           * Requires the recommender.*.update IAM permission for the specified recommender.
+           * placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in
+           * ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for
+           * the specified recommender.
            *
            * Create a request for the method "recommendations.markFailed".
            *
@@ -1336,12 +1295,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Marks the Recommendation State as Failed. Users can use this method to indicate to the
              * Recommender API that they have applied the recommendation themselves, and the operation failed.
              * This stops the recommendation content from being updated. Associated insights are frozen and
-             * placed in the ACCEPTED state.
-             *
-             * MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or
-             * FAILED state.
-             *
-             * Requires the recommender.*.update IAM permission for the specified recommender.
+             * placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in
+             * ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission
+             * for the specified recommender.
              *
              * Create a request for the method "recommendations.markFailed".
              *
@@ -1450,12 +1406,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * Marks the Recommendation State as Succeeded. Users can use this method to indicate to the
            * Recommender API that they have applied the recommendation themselves, and the operation was
            * successful. This stops the recommendation content from being updated. Associated insights are
-           * frozen and placed in the ACCEPTED state.
-           *
-           * MarkRecommendationSucceeded can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or
-           * FAILED state.
-           *
-           * Requires the recommender.*.update IAM permission for the specified recommender.
+           * frozen and placed in the ACCEPTED state. MarkRecommendationSucceeded can be applied to
+           * recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update
+           * IAM permission for the specified recommender.
            *
            * Create a request for the method "recommendations.markSucceeded".
            *
@@ -1483,12 +1436,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Marks the Recommendation State as Succeeded. Users can use this method to indicate to the
              * Recommender API that they have applied the recommendation themselves, and the operation was
              * successful. This stops the recommendation content from being updated. Associated insights are
-             * frozen and placed in the ACCEPTED state.
-             *
-             * MarkRecommendationSucceeded can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or
-             * FAILED state.
-             *
-             * Requires the recommender.*.update IAM permission for the specified recommender.
+             * frozen and placed in the ACCEPTED state. MarkRecommendationSucceeded can be applied to
+             * recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the
+             * recommender.*.update IAM permission for the specified recommender.
              *
              * Create a request for the method "recommendations.markSucceeded".
              *

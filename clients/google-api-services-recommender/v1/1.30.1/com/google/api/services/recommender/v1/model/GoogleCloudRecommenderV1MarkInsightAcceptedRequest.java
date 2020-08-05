@@ -37,7 +37,7 @@ public final class GoogleCloudRecommenderV1MarkInsightAcceptedRequest extends co
   private java.lang.String etag;
 
   /**
-   * Optional. State properties user wish to include with this state.  Full replace of the current
+   * Optional. State properties user wish to include with this state. Full replace of the current
    * state_metadata.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GoogleCloudRecommenderV1MarkInsightAcceptedRequest extends co
   }
 
   /**
-   * Optional. State properties user wish to include with this state.  Full replace of the current
+   * Optional. State properties user wish to include with this state. Full replace of the current
    * state_metadata.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GoogleCloudRecommenderV1MarkInsightAcceptedRequest extends co
   }
 
   /**
-   * Optional. State properties user wish to include with this state.  Full replace of the current
+   * Optional. State properties user wish to include with this state. Full replace of the current
    * state_metadata.
    * @param stateMetadata stateMetadata or {@code null} for none
    */

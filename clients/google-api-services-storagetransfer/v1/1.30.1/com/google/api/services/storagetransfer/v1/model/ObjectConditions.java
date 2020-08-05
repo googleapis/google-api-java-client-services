@@ -17,12 +17,12 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Conditions that determine which objects will be transferred. Applies only to S3 and Cloud Storage
- * objects.
+ * Conditions that determine which objects will be transferred. Applies only to Cloud Data Sources
+ * such as S3, Azure, and Cloud Storage.
  *
  * The "last modification time" refers to the time of the last change to the object's content or
- * metadata — specifically, this is the `updated` property of Cloud Storage objects and the
- * `LastModified` field of S3 objects.
+ * metadata — specifically, this is the `updated` property of Cloud Storage objects, the
+ * `LastModified` field of S3 objects, and the `Last-Modified` header of Azure blobs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:

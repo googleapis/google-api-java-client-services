@@ -37,8 +37,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag     will not fire.
-   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and     all of its
+   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
    * blockingRuleIds (if any specified) are false. @mutable
    * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
@@ -100,10 +100,9 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of key-value pairs of tag metadata to be included in the event data for tag monitoring.
-   * Notes: This parameter must be type MAP. Each parameter in the map are type TEMPLATE, however
-   * cannot contain variable references.
-   *
-   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * Notes: - This parameter must be type MAP. - Each parameter in the map are type TEMPLATE,
+   * however cannot contain variable references. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * The value may be {@code null}.
    */
@@ -275,8 +274,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag     will not fire.
-   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * @return value or {@code null} for none
    */
@@ -285,8 +284,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag     will not fire.
-   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * @param blockingRuleId blockingRuleId or {@code null} for none
    */
@@ -353,7 +352,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and     all of its
+   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
    * blockingRuleIds (if any specified) are false. @mutable
    * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
@@ -364,7 +363,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and     all of its
+   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
    * blockingRuleIds (if any specified) are false. @mutable
    * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
@@ -421,10 +420,9 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of key-value pairs of tag metadata to be included in the event data for tag monitoring.
-   * Notes: This parameter must be type MAP. Each parameter in the map are type TEMPLATE, however
-   * cannot contain variable references.
-   *
-   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * Notes: - This parameter must be type MAP. - Each parameter in the map are type TEMPLATE,
+   * however cannot contain variable references. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * @return value or {@code null} for none
    */
@@ -434,10 +432,9 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of key-value pairs of tag metadata to be included in the event data for tag monitoring.
-   * Notes: This parameter must be type MAP. Each parameter in the map are type TEMPLATE, however
-   * cannot contain variable references.
-   *
-   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * Notes: - This parameter must be type MAP. - Each parameter in the map are type TEMPLATE,
+   * however cannot contain variable references. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * @param monitoringMetadata monitoringMetadata or {@code null} for none
    */

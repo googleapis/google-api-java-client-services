@@ -37,17 +37,16 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag     will not fire.
-   * @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
+   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> blockingRuleId;
 
   /**
-   * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag     will not
-   * fire. @mutable tagmanager.accounts.containers.tags.create @mutable
+   * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
+   * @mutable tagmanager.accounts.containers.tags.create @mutable
    * tagmanager.accounts.containers.tags.update
    * The value may be {@code null}.
    */
@@ -70,7 +69,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and     all of its
+   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
    * blockingRuleIds (if any specified) are false. @mutable
    * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
    * The value may be {@code null}.
@@ -227,9 +226,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag     will not fire.
-   * @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
+   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlockingRuleId() {
@@ -237,9 +235,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag     will not fire.
-   * @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
+   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
    * @param blockingRuleId blockingRuleId or {@code null} for none
    */
   public Tag setBlockingRuleId(java.util.List<java.lang.String> blockingRuleId) {
@@ -248,8 +245,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag     will not
-   * fire. @mutable tagmanager.accounts.containers.tags.create @mutable
+   * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
+   * @mutable tagmanager.accounts.containers.tags.create @mutable
    * tagmanager.accounts.containers.tags.update
    * @return value or {@code null} for none
    */
@@ -258,8 +255,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag     will not
-   * fire. @mutable tagmanager.accounts.containers.tags.create @mutable
+   * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
+   * @mutable tagmanager.accounts.containers.tags.create @mutable
    * tagmanager.accounts.containers.tags.update
    * @param blockingTriggerId blockingTriggerId or {@code null} for none
    */
@@ -305,7 +302,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and     all of its
+   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
    * blockingRuleIds (if any specified) are false. @mutable
    * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
    * @return value or {@code null} for none
@@ -315,7 +312,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and     all of its
+   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
    * blockingRuleIds (if any specified) are false. @mutable
    * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
    * @param firingRuleId firingRuleId or {@code null} for none

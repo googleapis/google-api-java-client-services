@@ -38,7 +38,7 @@ public final class GalleryReference extends com.google.api.client.json.GenericJs
   private java.lang.String host;
 
   /**
-   * If a user has manually edited the community  gallery template.
+   * If a user has manually edited the community gallery template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class GalleryReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * If a user has manually edited the community  gallery template.
+   * If a user has manually edited the community gallery template.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsModified() {
@@ -99,7 +99,7 @@ public final class GalleryReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * If a user has manually edited the community  gallery template.
+   * If a user has manually edited the community gallery template.
    * @param isModified isModified or {@code null} for none
    */
   public GalleryReference setIsModified(java.lang.Boolean isModified) {

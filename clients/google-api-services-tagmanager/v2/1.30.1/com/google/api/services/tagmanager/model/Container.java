@@ -53,7 +53,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> domainName;
 
   /**
-   * The fingerprint of the GTM Container as computed at storage time.  This value is recomputed
+   * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
    * whenever the account is modified.
    * The value may be {@code null}.
    */
@@ -159,7 +159,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fingerprint of the GTM Container as computed at storage time.  This value is recomputed
+   * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
    * whenever the account is modified.
    * @return value or {@code null} for none
    */
@@ -168,7 +168,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fingerprint of the GTM Container as computed at storage time.  This value is recomputed
+   * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
    * whenever the account is modified.
    * @param fingerprint fingerprint or {@code null} for none
    */

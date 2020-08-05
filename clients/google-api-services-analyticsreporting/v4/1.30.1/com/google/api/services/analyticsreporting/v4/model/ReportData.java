@@ -112,7 +112,7 @@ public final class ReportData extends com.google.api.client.json.GenericJson {
    * For each requested date range, for the set of all rows that match the query, every requested
    * value format gets a total. The total for a value format is computed by first totaling the
    * metrics mentioned in the value format and then evaluating the value format as a scalar
-   * expression.  E.g., The "totals" for `3 / (ga:sessions + 2)` we compute `3 / ((sum of all
+   * expression. E.g., The "totals" for `3 / (ga:sessions + 2)` we compute `3 / ((sum of all
    * relevant ga:sessions) + 2)`. Totals are computed before pagination.
    * The value may be {@code null}.
    */
@@ -285,7 +285,7 @@ public final class ReportData extends com.google.api.client.json.GenericJson {
    * For each requested date range, for the set of all rows that match the query, every requested
    * value format gets a total. The total for a value format is computed by first totaling the
    * metrics mentioned in the value format and then evaluating the value format as a scalar
-   * expression.  E.g., The "totals" for `3 / (ga:sessions + 2)` we compute `3 / ((sum of all
+   * expression. E.g., The "totals" for `3 / (ga:sessions + 2)` we compute `3 / ((sum of all
    * relevant ga:sessions) + 2)`. Totals are computed before pagination.
    * @return value or {@code null} for none
    */
@@ -297,7 +297,7 @@ public final class ReportData extends com.google.api.client.json.GenericJson {
    * For each requested date range, for the set of all rows that match the query, every requested
    * value format gets a total. The total for a value format is computed by first totaling the
    * metrics mentioned in the value format and then evaluating the value format as a scalar
-   * expression.  E.g., The "totals" for `3 / (ga:sessions + 2)` we compute `3 / ((sum of all
+   * expression. E.g., The "totals" for `3 / (ga:sessions + 2)` we compute `3 / ((sum of all
    * relevant ga:sessions) + 2)`. Totals are computed before pagination.
    * @param totals totals or {@code null} for none
    */

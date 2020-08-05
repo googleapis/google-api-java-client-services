@@ -34,13 +34,10 @@ public final class SegmentFilter extends com.google.api.client.json.GenericJson 
 
   /**
    * If true, match the complement of simple or sequence segment. For example, to match all visits
-   * not from "New York", we can define the segment as follows:
-   *
-   *       "sessionSegment": {         "segmentFilters": [{           "simpleSegment" :{
-   * "orFiltersForSegment": [{               "segmentFilterClauses":[{
-   * "dimensionFilter": {                   "dimensionName": "ga:city",
-   * "expressions": ["New York"]                 }               }]             }]           },
-   * "not": "True"         }]       },
+   * not from "New York", we can define the segment as follows: "sessionSegment": {
+   * "segmentFilters": [{ "simpleSegment" :{ "orFiltersForSegment": [{ "segmentFilterClauses":[{
+   * "dimensionFilter": { "dimensionName": "ga:city", "expressions": ["New York"] } }] }] }, "not":
+   * "True" }] },
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,13 +61,10 @@ public final class SegmentFilter extends com.google.api.client.json.GenericJson 
 
   /**
    * If true, match the complement of simple or sequence segment. For example, to match all visits
-   * not from "New York", we can define the segment as follows:
-   *
-   *       "sessionSegment": {         "segmentFilters": [{           "simpleSegment" :{
-   * "orFiltersForSegment": [{               "segmentFilterClauses":[{
-   * "dimensionFilter": {                   "dimensionName": "ga:city",
-   * "expressions": ["New York"]                 }               }]             }]           },
-   * "not": "True"         }]       },
+   * not from "New York", we can define the segment as follows: "sessionSegment": {
+   * "segmentFilters": [{ "simpleSegment" :{ "orFiltersForSegment": [{ "segmentFilterClauses":[{
+   * "dimensionFilter": { "dimensionName": "ga:city", "expressions": ["New York"] } }] }] }, "not":
+   * "True" }] },
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNot() {
@@ -79,13 +73,10 @@ public final class SegmentFilter extends com.google.api.client.json.GenericJson 
 
   /**
    * If true, match the complement of simple or sequence segment. For example, to match all visits
-   * not from "New York", we can define the segment as follows:
-   *
-   *       "sessionSegment": {         "segmentFilters": [{           "simpleSegment" :{
-   * "orFiltersForSegment": [{               "segmentFilterClauses":[{
-   * "dimensionFilter": {                   "dimensionName": "ga:city",
-   * "expressions": ["New York"]                 }               }]             }]           },
-   * "not": "True"         }]       },
+   * not from "New York", we can define the segment as follows: "sessionSegment": {
+   * "segmentFilters": [{ "simpleSegment" :{ "orFiltersForSegment": [{ "segmentFilterClauses":[{
+   * "dimensionFilter": { "dimensionName": "ga:city", "expressions": ["New York"] } }] }] }, "not":
+   * "True" }] },
    * @param not not or {@code null} for none
    */
   public SegmentFilter setNot(java.lang.Boolean not) {

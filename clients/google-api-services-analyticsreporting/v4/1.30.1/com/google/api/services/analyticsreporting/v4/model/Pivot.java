@@ -88,15 +88,14 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
 
   /**
    * If k metrics were requested, then the response will contain some data-dependent multiple of k
-   * columns in the report.  E.g., if you pivoted on the dimension `ga:browser` then you'd get k
+   * columns in the report. E.g., if you pivoted on the dimension `ga:browser` then you'd get k
    * columns for "Firefox", k columns for "IE", k columns for "Chrome", etc. The ordering of the
    * groups of columns is determined by descending order of "total" for the first of the k values.
    * Ties are broken by lexicographic ordering of the first pivot dimension, then lexicographic
-   * ordering of the second pivot dimension, and so on.  E.g., if the totals for the first value for
+   * ordering of the second pivot dimension, and so on. E.g., if the totals for the first value for
    * Firefox, IE, and Chrome were 8, 2, 8, respectively, the order of columns would be Chrome,
-   * Firefox, IE.
-   *
-   * The following let you choose which of the groups of k columns are included in the response.
+   * Firefox, IE. The following let you choose which of the groups of k columns are included in the
+   * response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,15 +189,14 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
 
   /**
    * If k metrics were requested, then the response will contain some data-dependent multiple of k
-   * columns in the report.  E.g., if you pivoted on the dimension `ga:browser` then you'd get k
+   * columns in the report. E.g., if you pivoted on the dimension `ga:browser` then you'd get k
    * columns for "Firefox", k columns for "IE", k columns for "Chrome", etc. The ordering of the
    * groups of columns is determined by descending order of "total" for the first of the k values.
    * Ties are broken by lexicographic ordering of the first pivot dimension, then lexicographic
-   * ordering of the second pivot dimension, and so on.  E.g., if the totals for the first value for
+   * ordering of the second pivot dimension, and so on. E.g., if the totals for the first value for
    * Firefox, IE, and Chrome were 8, 2, 8, respectively, the order of columns would be Chrome,
-   * Firefox, IE.
-   *
-   * The following let you choose which of the groups of k columns are included in the response.
+   * Firefox, IE. The following let you choose which of the groups of k columns are included in the
+   * response.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartGroup() {
@@ -207,15 +205,14 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
 
   /**
    * If k metrics were requested, then the response will contain some data-dependent multiple of k
-   * columns in the report.  E.g., if you pivoted on the dimension `ga:browser` then you'd get k
+   * columns in the report. E.g., if you pivoted on the dimension `ga:browser` then you'd get k
    * columns for "Firefox", k columns for "IE", k columns for "Chrome", etc. The ordering of the
    * groups of columns is determined by descending order of "total" for the first of the k values.
    * Ties are broken by lexicographic ordering of the first pivot dimension, then lexicographic
-   * ordering of the second pivot dimension, and so on.  E.g., if the totals for the first value for
+   * ordering of the second pivot dimension, and so on. E.g., if the totals for the first value for
    * Firefox, IE, and Chrome were 8, 2, 8, respectively, the order of columns would be Chrome,
-   * Firefox, IE.
-   *
-   * The following let you choose which of the groups of k columns are included in the response.
+   * Firefox, IE. The following let you choose which of the groups of k columns are included in the
+   * response.
    * @param startGroup startGroup or {@code null} for none
    */
   public Pivot setStartGroup(java.lang.Integer startGroup) {

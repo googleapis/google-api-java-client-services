@@ -17,11 +17,10 @@
 package com.google.api.services.chromeuxreport.v1.model;
 
 /**
- * Response payload sent back to a physical web client.
- *
- * This response contains the record found based on the identiers present in a `QueryRequest`.  The
- * returned response will have a record, and sometimes details on normalization actions taken on the
- * request that were necessary to make the request successful.
+ * Response payload sent back to a physical web client. This response contains the record found
+ * based on the identiers present in a `QueryRequest`. The returned response will have a record, and
+ * sometimes details on normalization actions taken on the request that were necessary to make the
+ * request successful.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome UX Report API. For a detailed explanation see:

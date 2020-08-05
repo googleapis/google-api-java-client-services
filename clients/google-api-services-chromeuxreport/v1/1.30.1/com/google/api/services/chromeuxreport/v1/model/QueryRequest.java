@@ -17,9 +17,8 @@
 package com.google.api.services.chromeuxreport.v1.model;
 
 /**
- * Request payload sent by a physical web client.
- *
- * This request includes all necessary context to load a particular user experience record.
+ * Request payload sent by a physical web client. This request includes all necessary context to
+ * load a particular user experience record.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome UX Report API. For a detailed explanation see:
@@ -35,7 +34,6 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * The effective connection type is a query dimension that specifies the effective network class
    * that the record's data should belong to. This field uses the values ["offline", "slow-2G",
    * "2G", "3G", "4G"] as specified in: https://wicg.github.io/netinfo/#effective-connection-types
-   *
    * Note: If no effective connection type is specified, then a special record with aggregated data
    * over all effective connection types will be returned.
    * The value may be {@code null}.
@@ -45,10 +43,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The form factor is a query dimension that specifies the device class that the record's data
-   * should belong to.
-   *
-   * Note: If no form factor is specified, then a special record with aggregated data over all form
-   * factors will be returned.
+   * should belong to. Note: If no form factor is specified, then a special record with aggregated
+   * data over all form factors will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,28 +52,24 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The metrics that should be included in the response. If none are specified then any metrics
-   * found will be returned.
-   *
-   * Allowed values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint",
-   * "cumulative_layout_shift"]
+   * found will be returned. Allowed values: ["first_contentful_paint", "first_input_delay",
+   * "largest_contentful_paint", "cumulative_layout_shift"]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> metrics;
 
   /**
-   * The url pattern "origin" refers to a url pattern that is the origin of a website.
-   *
-   * Examples: "https://example.com", "https://cloud.google.com"
+   * The url pattern "origin" refers to a url pattern that is the origin of a website. Examples:
+   * "https://example.com", "https://cloud.google.com"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String origin;
 
   /**
-   * The url pattern "url" refers to a url pattern that is any arbitrary url.
-   *
-   * Examples: "https://example.com/",   "https://cloud.google.com/why-google-cloud/"
+   * The url pattern "url" refers to a url pattern that is any arbitrary url. Examples:
+   * "https://example.com/", "https://cloud.google.com/why-google-cloud/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +79,6 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * The effective connection type is a query dimension that specifies the effective network class
    * that the record's data should belong to. This field uses the values ["offline", "slow-2G",
    * "2G", "3G", "4G"] as specified in: https://wicg.github.io/netinfo/#effective-connection-types
-   *
    * Note: If no effective connection type is specified, then a special record with aggregated data
    * over all effective connection types will be returned.
    * @return value or {@code null} for none
@@ -100,7 +91,6 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * The effective connection type is a query dimension that specifies the effective network class
    * that the record's data should belong to. This field uses the values ["offline", "slow-2G",
    * "2G", "3G", "4G"] as specified in: https://wicg.github.io/netinfo/#effective-connection-types
-   *
    * Note: If no effective connection type is specified, then a special record with aggregated data
    * over all effective connection types will be returned.
    * @param effectiveConnectionType effectiveConnectionType or {@code null} for none
@@ -112,10 +102,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The form factor is a query dimension that specifies the device class that the record's data
-   * should belong to.
-   *
-   * Note: If no form factor is specified, then a special record with aggregated data over all form
-   * factors will be returned.
+   * should belong to. Note: If no form factor is specified, then a special record with aggregated
+   * data over all form factors will be returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormFactor() {
@@ -124,10 +112,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The form factor is a query dimension that specifies the device class that the record's data
-   * should belong to.
-   *
-   * Note: If no form factor is specified, then a special record with aggregated data over all form
-   * factors will be returned.
+   * should belong to. Note: If no form factor is specified, then a special record with aggregated
+   * data over all form factors will be returned.
    * @param formFactor formFactor or {@code null} for none
    */
   public QueryRequest setFormFactor(java.lang.String formFactor) {
@@ -137,10 +123,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The metrics that should be included in the response. If none are specified then any metrics
-   * found will be returned.
-   *
-   * Allowed values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint",
-   * "cumulative_layout_shift"]
+   * found will be returned. Allowed values: ["first_contentful_paint", "first_input_delay",
+   * "largest_contentful_paint", "cumulative_layout_shift"]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -149,10 +133,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The metrics that should be included in the response. If none are specified then any metrics
-   * found will be returned.
-   *
-   * Allowed values: ["first_contentful_paint", "first_input_delay", "largest_contentful_paint",
-   * "cumulative_layout_shift"]
+   * found will be returned. Allowed values: ["first_contentful_paint", "first_input_delay",
+   * "largest_contentful_paint", "cumulative_layout_shift"]
    * @param metrics metrics or {@code null} for none
    */
   public QueryRequest setMetrics(java.util.List<java.lang.String> metrics) {
@@ -161,9 +143,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url pattern "origin" refers to a url pattern that is the origin of a website.
-   *
-   * Examples: "https://example.com", "https://cloud.google.com"
+   * The url pattern "origin" refers to a url pattern that is the origin of a website. Examples:
+   * "https://example.com", "https://cloud.google.com"
    * @return value or {@code null} for none
    */
   public java.lang.String getOrigin() {
@@ -171,9 +152,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url pattern "origin" refers to a url pattern that is the origin of a website.
-   *
-   * Examples: "https://example.com", "https://cloud.google.com"
+   * The url pattern "origin" refers to a url pattern that is the origin of a website. Examples:
+   * "https://example.com", "https://cloud.google.com"
    * @param origin origin or {@code null} for none
    */
   public QueryRequest setOrigin(java.lang.String origin) {
@@ -182,9 +162,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url pattern "url" refers to a url pattern that is any arbitrary url.
-   *
-   * Examples: "https://example.com/",   "https://cloud.google.com/why-google-cloud/"
+   * The url pattern "url" refers to a url pattern that is any arbitrary url. Examples:
+   * "https://example.com/", "https://cloud.google.com/why-google-cloud/"
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -192,9 +171,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url pattern "url" refers to a url pattern that is any arbitrary url.
-   *
-   * Examples: "https://example.com/",   "https://cloud.google.com/why-google-cloud/"
+   * The url pattern "url" refers to a url pattern that is any arbitrary url. Examples:
+   * "https://example.com/", "https://cloud.google.com/why-google-cloud/"
    * @param url url or {@code null} for none
    */
   public QueryRequest setUrl(java.lang.String url) {

@@ -38,7 +38,7 @@ public final class GoogleCloudVisionV1p3beta1CropHint extends com.google.api.cli
   private GoogleCloudVisionV1p3beta1BoundingPoly boundingPoly;
 
   /**
-   * Confidence of this being a salient region.  Range [0, 1].
+   * Confidence of this being a salient region. Range [0, 1].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudVisionV1p3beta1CropHint extends com.google.api.cli
   }
 
   /**
-   * Confidence of this being a salient region.  Range [0, 1].
+   * Confidence of this being a salient region. Range [0, 1].
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -79,7 +79,7 @@ public final class GoogleCloudVisionV1p3beta1CropHint extends com.google.api.cli
   }
 
   /**
-   * Confidence of this being a salient region.  Range [0, 1].
+   * Confidence of this being a salient region. Range [0, 1].
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1CropHint setConfidence(java.lang.Float confidence) {

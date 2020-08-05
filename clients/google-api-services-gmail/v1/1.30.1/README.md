@@ -1,7 +1,6 @@
 # Gmail API Client Library for Java
 
-The Gmail API lets you view and manage Gmail mailbox data like
-    threads, messages, and labels.
+The Gmail API lets you view and manage Gmail mailbox data like threads, messages, and labels.
 
 This page contains information about getting started with the Gmail API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-gmail</artifactId>
-      <version>v1-rev20200720-1.30.10</version>
+      <version>v1-rev20200803-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-gmail:v1-rev20200720-1.30.10'
+  compile 'com.google.apis:google-api-services-gmail:v1-rev20200803-1.30.10'
 }
 ```
 

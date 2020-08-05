@@ -44,8 +44,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox.
-   * For normal SMTP-received email, this represents the time the message was originally accepted by
+   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox. For
+   * normal SMTP-received email, this represents the time the message was originally accepted by
    * Google, which is more reliable than the `Date` header. However, for API-migrated mail, it can
    * be configured by client to be based on the `Date` header.
    * The value may be {@code null}.
@@ -94,11 +94,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the thread the message belongs to. To add a message or draft to a thread, the
-   * following criteria must be met: The requested `threadId` must be specified on the `Message` or
-   * `Draft.Message` you supply with your request. The `References` and `In-Reply-To` headers must
-   * be set in compliance with the RFC 2822 standard. The `Subject` headers must match. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * following criteria must be met: 1. The requested `threadId` must be specified on the `Message`
+   * or `Draft.Message` you supply with your request. 2. The `References` and `In-Reply-To` headers
+   * must be set in compliance with the RFC 2822 standard. 3. The `Subject` headers must match.
+   * @mutable gmail.users.messages.insert gmail.users.messages.send @mutable
+   * gmail.users.drafts.create gmail.users.drafts.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +139,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox.
-   * For normal SMTP-received email, this represents the time the message was originally accepted by
+   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox. For
+   * normal SMTP-received email, this represents the time the message was originally accepted by
    * Google, which is more reliable than the `Date` header. However, for API-migrated mail, it can
    * be configured by client to be based on the `Date` header.
    * @return value or {@code null} for none
@@ -150,8 +150,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox.
-   * For normal SMTP-received email, this represents the time the message was originally accepted by
+   * The internal message creation timestamp (epoch ms), which determines ordering in the inbox. For
+   * normal SMTP-received email, this represents the time the message was originally accepted by
    * Google, which is more reliable than the `Date` header. However, for API-migrated mail, it can
    * be configured by client to be based on the `Date` header.
    * @param internalDate internalDate or {@code null} for none
@@ -290,11 +290,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the thread the message belongs to. To add a message or draft to a thread, the
-   * following criteria must be met: The requested `threadId` must be specified on the `Message` or
-   * `Draft.Message` you supply with your request. The `References` and `In-Reply-To` headers must
-   * be set in compliance with the RFC 2822 standard. The `Subject` headers must match. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * following criteria must be met: 1. The requested `threadId` must be specified on the `Message`
+   * or `Draft.Message` you supply with your request. 2. The `References` and `In-Reply-To` headers
+   * must be set in compliance with the RFC 2822 standard. 3. The `Subject` headers must match.
+   * @mutable gmail.users.messages.insert gmail.users.messages.send @mutable
+   * gmail.users.drafts.create gmail.users.drafts.update
    * @return value or {@code null} for none
    */
   public java.lang.String getThreadId() {
@@ -303,11 +303,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the thread the message belongs to. To add a message or draft to a thread, the
-   * following criteria must be met: The requested `threadId` must be specified on the `Message` or
-   * `Draft.Message` you supply with your request. The `References` and `In-Reply-To` headers must
-   * be set in compliance with the RFC 2822 standard. The `Subject` headers must match. @mutable
-   * gmail.users.messages.insert gmail.users.messages.send @mutable gmail.users.drafts.create
-   * gmail.users.drafts.update
+   * following criteria must be met: 1. The requested `threadId` must be specified on the `Message`
+   * or `Draft.Message` you supply with your request. 2. The `References` and `In-Reply-To` headers
+   * must be set in compliance with the RFC 2822 standard. 3. The `Subject` headers must match.
+   * @mutable gmail.users.messages.insert gmail.users.messages.send @mutable
+   * gmail.users.drafts.create gmail.users.drafts.update
    * @param threadId threadId or {@code null} for none
    */
   public Message setThreadId(java.lang.String threadId) {

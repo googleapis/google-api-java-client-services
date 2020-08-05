@@ -37,8 +37,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String labelFilterAction;
 
   /**
-   * List of label_ids to restrict notifications about.  By default, if unspecified, all changes are
-   * pushed out.  If specified then dictates which labels are required for a push notification to be
+   * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
+   * pushed out. If specified then dictates which labels are required for a push notification to be
    * generated.
    * The value may be {@code null}.
    */
@@ -49,10 +49,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
    * A fully qualified Google Cloud Pub/Sub API topic name to publish the events to. This topic name
    * **must** already exist in Cloud Pub/Sub and you **must** have already granted gmail "publish"
    * permission on it. For example, "projects/my-project-identifier/topics/my-topic-name" (using the
-   * Cloud Pub/Sub "v1" topic naming format).
-   *
-   * Note that the "my-project-identifier" portion must exactly match your Google developer project
-   * id (the one executing this watch request).
+   * Cloud Pub/Sub "v1" topic naming format). Note that the "my-project-identifier" portion must
+   * exactly match your Google developer project id (the one executing this watch request).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +74,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of label_ids to restrict notifications about.  By default, if unspecified, all changes are
-   * pushed out.  If specified then dictates which labels are required for a push notification to be
+   * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
+   * pushed out. If specified then dictates which labels are required for a push notification to be
    * generated.
    * @return value or {@code null} for none
    */
@@ -86,8 +84,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of label_ids to restrict notifications about.  By default, if unspecified, all changes are
-   * pushed out.  If specified then dictates which labels are required for a push notification to be
+   * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
+   * pushed out. If specified then dictates which labels are required for a push notification to be
    * generated.
    * @param labelIds labelIds or {@code null} for none
    */
@@ -100,10 +98,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
    * A fully qualified Google Cloud Pub/Sub API topic name to publish the events to. This topic name
    * **must** already exist in Cloud Pub/Sub and you **must** have already granted gmail "publish"
    * permission on it. For example, "projects/my-project-identifier/topics/my-topic-name" (using the
-   * Cloud Pub/Sub "v1" topic naming format).
-   *
-   * Note that the "my-project-identifier" portion must exactly match your Google developer project
-   * id (the one executing this watch request).
+   * Cloud Pub/Sub "v1" topic naming format). Note that the "my-project-identifier" portion must
+   * exactly match your Google developer project id (the one executing this watch request).
    * @return value or {@code null} for none
    */
   public java.lang.String getTopicName() {
@@ -114,10 +110,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
    * A fully qualified Google Cloud Pub/Sub API topic name to publish the events to. This topic name
    * **must** already exist in Cloud Pub/Sub and you **must** have already granted gmail "publish"
    * permission on it. For example, "projects/my-project-identifier/topics/my-topic-name" (using the
-   * Cloud Pub/Sub "v1" topic naming format).
-   *
-   * Note that the "my-project-identifier" portion must exactly match your Google developer project
-   * id (the one executing this watch request).
+   * Cloud Pub/Sub "v1" topic naming format). Note that the "my-project-identifier" portion must
+   * exactly match your Google developer project id (the one executing this watch request).
    * @param topicName topicName or {@code null} for none
    */
   public WatchRequest setTopicName(java.lang.String topicName) {

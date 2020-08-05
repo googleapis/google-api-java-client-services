@@ -32,9 +32,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
 
   /**
    * Required. The full resource name that identifies the resource. For example,
-   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
-   *
-   * For examples of full resource names for Google Cloud services, see
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * The value may be {@code null}.
    */
@@ -42,12 +41,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   private java.lang.String fullResourceName;
 
   /**
-   * Required. The IAM permission to check for the specified member and resource.
-   *
-   * For a complete list of IAM permissions, see
-   * https://cloud.google.com/iam/help/permissions/reference.
-   *
-   * For a complete list of predefined IAM roles and the permissions in each role, see
+   * Required. The IAM permission to check for the specified member and resource. For a complete
+   * list of IAM permissions, see https://cloud.google.com/iam/help/permissions/reference. For a
+   * complete list of predefined IAM roles and the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
    * The value may be {@code null}.
    */
@@ -57,10 +53,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   /**
    * Required. The member, or principal, whose access you want to check, in the form of the email
    * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`.
-   *
-   * The member must be a Google Account or a service account. Other types of members are not
-   * supported.
+   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
+   * Other types of members are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +62,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
 
   /**
    * Required. The full resource name that identifies the resource. For example,
-   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
-   *
-   * For examples of full resource names for Google Cloud services, see
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @return value or {@code null} for none
    */
@@ -80,9 +73,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
 
   /**
    * Required. The full resource name that identifies the resource. For example,
-   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
-   *
-   * For examples of full resource names for Google Cloud services, see
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
@@ -92,12 +84,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. The IAM permission to check for the specified member and resource.
-   *
-   * For a complete list of IAM permissions, see
-   * https://cloud.google.com/iam/help/permissions/reference.
-   *
-   * For a complete list of predefined IAM roles and the permissions in each role, see
+   * Required. The IAM permission to check for the specified member and resource. For a complete
+   * list of IAM permissions, see https://cloud.google.com/iam/help/permissions/reference. For a
+   * complete list of predefined IAM roles and the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
    * @return value or {@code null} for none
    */
@@ -106,12 +95,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. The IAM permission to check for the specified member and resource.
-   *
-   * For a complete list of IAM permissions, see
-   * https://cloud.google.com/iam/help/permissions/reference.
-   *
-   * For a complete list of predefined IAM roles and the permissions in each role, see
+   * Required. The IAM permission to check for the specified member and resource. For a complete
+   * list of IAM permissions, see https://cloud.google.com/iam/help/permissions/reference. For a
+   * complete list of predefined IAM roles and the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
    * @param permission permission or {@code null} for none
    */
@@ -123,10 +109,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   /**
    * Required. The member, or principal, whose access you want to check, in the form of the email
    * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`.
-   *
-   * The member must be a Google Account or a service account. Other types of members are not
-   * supported.
+   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
+   * Other types of members are not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -136,10 +120,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   /**
    * Required. The member, or principal, whose access you want to check, in the form of the email
    * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`.
-   *
-   * The member must be a Google Account or a service account. Other types of members are not
-   * supported.
+   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
+   * Other types of members are not supported.
    * @param principal principal or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple setPrincipal(java.lang.String principal) {

@@ -145,14 +145,11 @@ public class FirebaseDynamicLinks extends com.google.api.client.googleapis.servi
     /**
      * Creates a managed short Dynamic Link given either a valid long Dynamic Link or details such as
      * Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not
-     * expire.
-     *
-     * This differs from CreateShortDynamicLink in the following ways:   - The request will also contain
-     * a name for the link (non unique name     for the front end).   - The response must be
-     * authenticated with an auth token (generated with     the admin service account).   - The link
-     * will appear in the FDL list of links in the console front end.
-     *
-     * The Dynamic Link domain in the request must be owned by requester's Firebase project.
+     * expire. This differs from CreateShortDynamicLink in the following ways: - The request will also
+     * contain a name for the link (non unique name for the front end). - The response must be
+     * authenticated with an auth token (generated with the admin service account). - The link will
+     * appear in the FDL list of links in the console front end. The Dynamic Link domain in the request
+     * must be owned by requester's Firebase project.
      *
      * Create a request for the method "managedShortLinks.create".
      *
@@ -175,14 +172,11 @@ public class FirebaseDynamicLinks extends com.google.api.client.googleapis.servi
       /**
        * Creates a managed short Dynamic Link given either a valid long Dynamic Link or details such as
        * Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not
-       * expire.
-       *
-       * This differs from CreateShortDynamicLink in the following ways:   - The request will also
-       * contain a name for the link (non unique name     for the front end).   - The response must be
-       * authenticated with an auth token (generated with     the admin service account).   - The link
-       * will appear in the FDL list of links in the console front end.
-       *
-       * The Dynamic Link domain in the request must be owned by requester's Firebase project.
+       * expire. This differs from CreateShortDynamicLink in the following ways: - The request will also
+       * contain a name for the link (non unique name for the front end). - The response must be
+       * authenticated with an auth token (generated with the admin service account). - The link will
+       * appear in the FDL list of links in the console front end. The Dynamic Link domain in the
+       * request must be owned by requester's Firebase project.
        *
        * Create a request for the method "managedShortLinks.create".
        *
@@ -285,11 +279,9 @@ public class FirebaseDynamicLinks extends com.google.api.client.googleapis.servi
     /**
      * Creates a short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic
      * Link domain, Android and iOS app information. The created short Dynamic Link will not expire.
-     *
      * Repeated calls with the same long Dynamic Link or Dynamic Link information will produce the same
-     * short Dynamic Link.
-     *
-     * The Dynamic Link domain in the request must be owned by requester's Firebase project.
+     * short Dynamic Link. The Dynamic Link domain in the request must be owned by requester's Firebase
+     * project.
      *
      * Create a request for the method "shortLinks.create".
      *
@@ -312,11 +304,9 @@ public class FirebaseDynamicLinks extends com.google.api.client.googleapis.servi
       /**
        * Creates a short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic
        * Link domain, Android and iOS app information. The created short Dynamic Link will not expire.
-       *
        * Repeated calls with the same long Dynamic Link or Dynamic Link information will produce the
-       * same short Dynamic Link.
-       *
-       * The Dynamic Link domain in the request must be owned by requester's Firebase project.
+       * same short Dynamic Link. The Dynamic Link domain in the request must be owned by requester's
+       * Firebase project.
        *
        * Create a request for the method "shortLinks.create".
        *

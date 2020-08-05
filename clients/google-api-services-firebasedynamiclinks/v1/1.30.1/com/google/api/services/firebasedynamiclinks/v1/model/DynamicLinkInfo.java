@@ -57,9 +57,8 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   /**
    * E.g. https://maps.app.goo.gl, https://maps.page.link, https://g.co/maps More examples can be
    * found in description of getNormalizedUriPrefix in
-   * j/c/g/firebase/dynamiclinks/uri/DdlDomain.java
-   *
-   * Will fallback to dynamic_link_domain is this field is missing
+   * j/c/g/firebase/dynamiclinks/uri/DdlDomain.java Will fallback to dynamic_link_domain is this
+   * field is missing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +67,7 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   /**
    * Dynamic Links domain that the project owns, e.g. abcd.app.goo.gl [Learn
    * more](https://firebase.google.com/docs/dynamic-links/android/receive) on how to set up Dynamic
-   * Link domain associated with your Firebase project.
-   *
-   * Required if missing domain_uri_prefix.
+   * Link domain associated with your Firebase project. Required if missing domain_uri_prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +85,7 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
    * The link your app will open, You can specify any URL your app can handle. This link must be a
    * well-formatted URL, be properly URL-encoded, and use the HTTP or HTTPS scheme. See 'link'
    * parameters in the [documentation](https://firebase.google.com/docs/dynamic-links/create-
-   * manually).
-   *
-   * Required.
+   * manually). Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,9 +166,8 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   /**
    * E.g. https://maps.app.goo.gl, https://maps.page.link, https://g.co/maps More examples can be
    * found in description of getNormalizedUriPrefix in
-   * j/c/g/firebase/dynamiclinks/uri/DdlDomain.java
-   *
-   * Will fallback to dynamic_link_domain is this field is missing
+   * j/c/g/firebase/dynamiclinks/uri/DdlDomain.java Will fallback to dynamic_link_domain is this
+   * field is missing
    * @return value or {@code null} for none
    */
   public java.lang.String getDomainUriPrefix() {
@@ -183,9 +177,8 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   /**
    * E.g. https://maps.app.goo.gl, https://maps.page.link, https://g.co/maps More examples can be
    * found in description of getNormalizedUriPrefix in
-   * j/c/g/firebase/dynamiclinks/uri/DdlDomain.java
-   *
-   * Will fallback to dynamic_link_domain is this field is missing
+   * j/c/g/firebase/dynamiclinks/uri/DdlDomain.java Will fallback to dynamic_link_domain is this
+   * field is missing
    * @param domainUriPrefix domainUriPrefix or {@code null} for none
    */
   public DynamicLinkInfo setDomainUriPrefix(java.lang.String domainUriPrefix) {
@@ -196,9 +189,7 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   /**
    * Dynamic Links domain that the project owns, e.g. abcd.app.goo.gl [Learn
    * more](https://firebase.google.com/docs/dynamic-links/android/receive) on how to set up Dynamic
-   * Link domain associated with your Firebase project.
-   *
-   * Required if missing domain_uri_prefix.
+   * Link domain associated with your Firebase project. Required if missing domain_uri_prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getDynamicLinkDomain() {
@@ -208,9 +199,7 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   /**
    * Dynamic Links domain that the project owns, e.g. abcd.app.goo.gl [Learn
    * more](https://firebase.google.com/docs/dynamic-links/android/receive) on how to set up Dynamic
-   * Link domain associated with your Firebase project.
-   *
-   * Required if missing domain_uri_prefix.
+   * Link domain associated with your Firebase project. Required if missing domain_uri_prefix.
    * @param dynamicLinkDomain dynamicLinkDomain or {@code null} for none
    */
   public DynamicLinkInfo setDynamicLinkDomain(java.lang.String dynamicLinkDomain) {
@@ -241,9 +230,7 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
    * The link your app will open, You can specify any URL your app can handle. This link must be a
    * well-formatted URL, be properly URL-encoded, and use the HTTP or HTTPS scheme. See 'link'
    * parameters in the [documentation](https://firebase.google.com/docs/dynamic-links/create-
-   * manually).
-   *
-   * Required.
+   * manually). Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getLink() {
@@ -254,9 +241,7 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
    * The link your app will open, You can specify any URL your app can handle. This link must be a
    * well-formatted URL, be properly URL-encoded, and use the HTTP or HTTPS scheme. See 'link'
    * parameters in the [documentation](https://firebase.google.com/docs/dynamic-links/create-
-   * manually).
-   *
-   * Required.
+   * manually). Required.
    * @param link link or {@code null} for none
    */
   public DynamicLinkInfo setLink(java.lang.String link) {

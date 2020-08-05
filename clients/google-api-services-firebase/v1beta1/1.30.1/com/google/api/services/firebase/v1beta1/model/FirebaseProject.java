@@ -19,15 +19,12 @@ package com.google.api.services.firebase.v1beta1.model;
 /**
  * A `FirebaseProject` is the top-level Firebase entity. It is the container for Firebase Apps,
  * Firebase Hosting sites, storage systems (Firebase Realtime Database, Cloud Firestore, Cloud
- * Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources.
- *
- * You create a `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP
+ * Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources. You create a
+ * `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP
  * `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). This adds
- * Firebase resources to the existing GCP `Project`.
- *
- * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same
- * underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with
- * Google APIs.
+ * Firebase resources to the existing GCP `Project`. Since a FirebaseProject is actually also a GCP
+ * `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and
+ * `projectId`). This allows for easy interop with Google APIs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Management API. For a detailed explanation
@@ -60,10 +57,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Immutable. A user-assigned unique identifier for the Project.
-   *
-   * This identifier may appear in URLs or names for some Firebase resources associated with the
-   * Project, but it should generally be treated as a convenience alias to reference the Project.
+   * Immutable. A user-assigned unique identifier for the Project. This identifier may appear in
+   * URLs or names for some Firebase resources associated with the Project, but it should generally
+   * be treated as a convenience alias to reference the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,10 +135,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. A user-assigned unique identifier for the Project.
-   *
-   * This identifier may appear in URLs or names for some Firebase resources associated with the
-   * Project, but it should generally be treated as a convenience alias to reference the Project.
+   * Immutable. A user-assigned unique identifier for the Project. This identifier may appear in
+   * URLs or names for some Firebase resources associated with the Project, but it should generally
+   * be treated as a convenience alias to reference the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -150,10 +145,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. A user-assigned unique identifier for the Project.
-   *
-   * This identifier may appear in URLs or names for some Firebase resources associated with the
-   * Project, but it should generally be treated as a convenience alias to reference the Project.
+   * Immutable. A user-assigned unique identifier for the Project. This identifier may appear in
+   * URLs or names for some Firebase resources associated with the Project, but it should generally
+   * be treated as a convenience alias to reference the Project.
    * @param projectId projectId or {@code null} for none
    */
   public FirebaseProject setProjectId(java.lang.String projectId) {

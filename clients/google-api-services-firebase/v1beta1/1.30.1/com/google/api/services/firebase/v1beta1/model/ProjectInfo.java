@@ -39,12 +39,11 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-   *
-   * Not all Projects will have this field populated. If it is not populated, it means that the
-   * Project does not yet have a default GCP resource location. To set a Project's default GCP
-   * resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after
-   * you add Firebase resources to the Project.
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations). Not all Projects
+   * will have this field populated. If it is not populated, it means that the Project does not yet
+   * have a default GCP resource location. To set a Project's default GCP resource location, call
+   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
+   * resources to the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,12 +78,11 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-   *
-   * Not all Projects will have this field populated. If it is not populated, it means that the
-   * Project does not yet have a default GCP resource location. To set a Project's default GCP
-   * resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after
-   * you add Firebase resources to the Project.
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations). Not all Projects
+   * will have this field populated. If it is not populated, it means that the Project does not yet
+   * have a default GCP resource location. To set a Project's default GCP resource location, call
+   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
+   * resources to the Project.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -93,12 +91,11 @@ public final class ProjectInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Project's default GCP resource location. The location is one of the available
-   * [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-   *
-   * Not all Projects will have this field populated. If it is not populated, it means that the
-   * Project does not yet have a default GCP resource location. To set a Project's default GCP
-   * resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after
-   * you add Firebase resources to the Project.
+   * [GCP resource locations](https://firebase.google.com/docs/projects/locations). Not all Projects
+   * will have this field populated. If it is not populated, it means that the Project does not yet
+   * have a default GCP resource location. To set a Project's default GCP resource location, call
+   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
+   * resources to the Project.
    * @param locationId locationId or {@code null} for none
    */
   public ProjectInfo setLocationId(java.lang.String locationId) {

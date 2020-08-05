@@ -30,8 +30,8 @@ package com.google.api.services.tagmanager.model;
 public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The named key that uniquely identifies a parameter.  Required for top-level parameters, as well
-   * as map values.  Ignored for list values. @mutable
+   * The named key that uniquely identifies a parameter. Required for top-level parameters, as well
+   * as map values. Ignored for list values. @mutable
    * tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
@@ -67,15 +67,13 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   private java.util.List<Parameter> map;
 
   /**
-   * The parameter type.  Valid values are: boolean: The value represents a boolean, represented as
-   * 'true' or 'false' integer: The value represents a 64-bit signed integer     value, in base 10
-   * list: A list of parameters should be specified map: A map of parameters should be specified
-   * template: The value represents any text; this can include     variable references (even
-   * variable references that might return     non-string types) trigger_reference: The value
-   * represents a trigger,     represented as the trigger id tag_reference: The value represents a
-   * tag, represented as     the tag name
-   *
-   * @mutable tagmanager.accounts.containers.variables.create @mutable
+   * The parameter type. Valid values are: - boolean: The value represents a boolean, represented as
+   * 'true' or 'false' - integer: The value represents a 64-bit signed integer value, in base 10 -
+   * list: A list of parameters should be specified - map: A map of parameters should be specified -
+   * template: The value represents any text; this can include variable references (even variable
+   * references that might return non-string types) - trigger_reference: The value represents a
+   * trigger, represented as the trigger id - tag_reference: The value represents a tag, represented
+   * as the tag name @mutable tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
    * tagmanager.accounts.containers.triggers.update @mutable
@@ -98,8 +96,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The named key that uniquely identifies a parameter.  Required for top-level parameters, as well
-   * as map values.  Ignored for list values. @mutable
+   * The named key that uniquely identifies a parameter. Required for top-level parameters, as well
+   * as map values. Ignored for list values. @mutable
    * tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
@@ -112,8 +110,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named key that uniquely identifies a parameter.  Required for top-level parameters, as well
-   * as map values.  Ignored for list values. @mutable
+   * The named key that uniquely identifies a parameter. Required for top-level parameters, as well
+   * as map values. Ignored for list values. @mutable
    * tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
@@ -181,15 +179,13 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parameter type.  Valid values are: boolean: The value represents a boolean, represented as
-   * 'true' or 'false' integer: The value represents a 64-bit signed integer     value, in base 10
-   * list: A list of parameters should be specified map: A map of parameters should be specified
-   * template: The value represents any text; this can include     variable references (even
-   * variable references that might return     non-string types) trigger_reference: The value
-   * represents a trigger,     represented as the trigger id tag_reference: The value represents a
-   * tag, represented as     the tag name
-   *
-   * @mutable tagmanager.accounts.containers.variables.create @mutable
+   * The parameter type. Valid values are: - boolean: The value represents a boolean, represented as
+   * 'true' or 'false' - integer: The value represents a 64-bit signed integer value, in base 10 -
+   * list: A list of parameters should be specified - map: A map of parameters should be specified -
+   * template: The value represents any text; this can include variable references (even variable
+   * references that might return non-string types) - trigger_reference: The value represents a
+   * trigger, represented as the trigger id - tag_reference: The value represents a tag, represented
+   * as the tag name @mutable tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
    * tagmanager.accounts.containers.triggers.update @mutable
@@ -201,15 +197,13 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parameter type.  Valid values are: boolean: The value represents a boolean, represented as
-   * 'true' or 'false' integer: The value represents a 64-bit signed integer     value, in base 10
-   * list: A list of parameters should be specified map: A map of parameters should be specified
-   * template: The value represents any text; this can include     variable references (even
-   * variable references that might return     non-string types) trigger_reference: The value
-   * represents a trigger,     represented as the trigger id tag_reference: The value represents a
-   * tag, represented as     the tag name
-   *
-   * @mutable tagmanager.accounts.containers.variables.create @mutable
+   * The parameter type. Valid values are: - boolean: The value represents a boolean, represented as
+   * 'true' or 'false' - integer: The value represents a 64-bit signed integer value, in base 10 -
+   * list: A list of parameters should be specified - map: A map of parameters should be specified -
+   * template: The value represents any text; this can include variable references (even variable
+   * references that might return non-string types) - trigger_reference: The value represents a
+   * trigger, represented as the trigger id - tag_reference: The value represents a tag, represented
+   * as the tag name @mutable tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
    * tagmanager.accounts.containers.triggers.update @mutable

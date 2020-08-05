@@ -296,7 +296,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * How long to wait (in milliseconds) for tags to fire when 'waits_for_tags' above evaluates to
-   * true.  Only valid for Form Submission and Link Click triggers. @mutable
+   * true. Only valid for Form Submission and Link Click triggers. @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
    * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
@@ -869,7 +869,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * How long to wait (in milliseconds) for tags to fire when 'waits_for_tags' above evaluates to
-   * true.  Only valid for Form Submission and Link Click triggers. @mutable
+   * true. Only valid for Form Submission and Link Click triggers. @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
    * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
@@ -880,7 +880,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * How long to wait (in milliseconds) for tags to fire when 'waits_for_tags' above evaluates to
-   * true.  Only valid for Form Submission and Link Click triggers. @mutable
+   * true. Only valid for Form Submission and Link Click triggers. @mutable
    * tagmanager.accounts.containers.triggers.create @mutable
    * tagmanager.accounts.containers.triggers.update
    * @param waitForTagsTimeout waitForTagsTimeout or {@code null} for none

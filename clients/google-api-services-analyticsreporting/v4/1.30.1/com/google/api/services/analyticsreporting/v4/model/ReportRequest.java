@@ -124,7 +124,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean includeEmptyRows;
 
   /**
-   * The metric filter clauses. They are logically combined with the `AND` operator.  Metric filters
+   * The metric filter clauses. They are logically combined with the `AND` operator. Metric filters
    * look at only the first date range and not the comparing date range. Note that filtering on
    * metrics occurs after the metrics are aggregated.
    * The value may be {@code null}.
@@ -154,7 +154,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Sort order on output rows. To compare two rows, the elements of the following are applied in
-   * order until a difference is found.  All date ranges in the output get the same row order.
+   * order until a difference is found. All date ranges in the output get the same row order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    * the `samplingLevel` field is unspecified the `DEFAULT` sampling level is used. Every
    * [ReportRequest](#ReportRequest) within a `batchGet` method must contain the same
    * `samplingLevel` definition. See [developer
-   * guide](/analytics/devguides/reporting/core/v4/basics#sampling)  for details.
+   * guide](/analytics/devguides/reporting/core/v4/basics#sampling) for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -405,7 +405,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The metric filter clauses. They are logically combined with the `AND` operator.  Metric filters
+   * The metric filter clauses. They are logically combined with the `AND` operator. Metric filters
    * look at only the first date range and not the comparing date range. Note that filtering on
    * metrics occurs after the metrics are aggregated.
    * @return value or {@code null} for none
@@ -415,7 +415,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The metric filter clauses. They are logically combined with the `AND` operator.  Metric filters
+   * The metric filter clauses. They are logically combined with the `AND` operator. Metric filters
    * look at only the first date range and not the comparing date range. Note that filtering on
    * metrics occurs after the metrics are aggregated.
    * @param metricFilterClauses metricFilterClauses or {@code null} for none
@@ -446,7 +446,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Sort order on output rows. To compare two rows, the elements of the following are applied in
-   * order until a difference is found.  All date ranges in the output get the same row order.
+   * order until a difference is found. All date ranges in the output get the same row order.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderBy> getOrderBys() {
@@ -455,7 +455,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Sort order on output rows. To compare two rows, the elements of the following are applied in
-   * order until a difference is found.  All date ranges in the output get the same row order.
+   * order until a difference is found. All date ranges in the output get the same row order.
    * @param orderBys orderBys or {@code null} for none
    */
   public ReportRequest setOrderBys(java.util.List<OrderBy> orderBys) {
@@ -533,7 +533,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    * the `samplingLevel` field is unspecified the `DEFAULT` sampling level is used. Every
    * [ReportRequest](#ReportRequest) within a `batchGet` method must contain the same
    * `samplingLevel` definition. See [developer
-   * guide](/analytics/devguides/reporting/core/v4/basics#sampling)  for details.
+   * guide](/analytics/devguides/reporting/core/v4/basics#sampling) for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getSamplingLevel() {
@@ -545,7 +545,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    * the `samplingLevel` field is unspecified the `DEFAULT` sampling level is used. Every
    * [ReportRequest](#ReportRequest) within a `batchGet` method must contain the same
    * `samplingLevel` definition. See [developer
-   * guide](/analytics/devguides/reporting/core/v4/basics#sampling)  for details.
+   * guide](/analytics/devguides/reporting/core/v4/basics#sampling) for details.
    * @param samplingLevel samplingLevel or {@code null} for none
    */
   public ReportRequest setSamplingLevel(java.lang.String samplingLevel) {

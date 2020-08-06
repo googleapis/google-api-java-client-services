@@ -35,20 +35,15 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the variable resource, in the format:
-   *
-   *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]
-   *
-   * The `[PROJECT_ID]` must be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig
-   * resource and `[VARIABLE_NAME]` follows Unix file system file path naming.
-   *
-   * The `[VARIABLE_NAME]` can contain ASCII letters, numbers, slashes and dashes. Slashes are used
-   * as path element separators and are not part of the `[VARIABLE_NAME]` itself, so
-   * `[VARIABLE_NAME]` must contain at least one non-slash character. Multiple slashes are coalesced
-   * into single slash character. Each path segment should match [0-9A-
-   * Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])? regular expression. The length of a
-   * `[VARIABLE_NAME]` must be less than 256 characters.
-   *
-   * Once you create a variable, you cannot change the variable name.
+   * projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME] The `[PROJECT_ID]` must
+   * be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig resource and
+   * `[VARIABLE_NAME]` follows Unix file system file path naming. The `[VARIABLE_NAME]` can contain
+   * ASCII letters, numbers, slashes and dashes. Slashes are used as path element separators and are
+   * not part of the `[VARIABLE_NAME]` itself, so `[VARIABLE_NAME]` must contain at least one non-
+   * slash character. Multiple slashes are coalesced into single slash character. Each path segment
+   * should match [0-9A-Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])? regular expression. The length
+   * of a `[VARIABLE_NAME]` must be less than 256 characters. Once you create a variable, you cannot
+   * change the variable name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,20 +83,15 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the variable resource, in the format:
-   *
-   *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]
-   *
-   * The `[PROJECT_ID]` must be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig
-   * resource and `[VARIABLE_NAME]` follows Unix file system file path naming.
-   *
-   * The `[VARIABLE_NAME]` can contain ASCII letters, numbers, slashes and dashes. Slashes are used
-   * as path element separators and are not part of the `[VARIABLE_NAME]` itself, so
-   * `[VARIABLE_NAME]` must contain at least one non-slash character. Multiple slashes are coalesced
-   * into single slash character. Each path segment should match [0-9A-
-   * Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])? regular expression. The length of a
-   * `[VARIABLE_NAME]` must be less than 256 characters.
-   *
-   * Once you create a variable, you cannot change the variable name.
+   * projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME] The `[PROJECT_ID]` must
+   * be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig resource and
+   * `[VARIABLE_NAME]` follows Unix file system file path naming. The `[VARIABLE_NAME]` can contain
+   * ASCII letters, numbers, slashes and dashes. Slashes are used as path element separators and are
+   * not part of the `[VARIABLE_NAME]` itself, so `[VARIABLE_NAME]` must contain at least one non-
+   * slash character. Multiple slashes are coalesced into single slash character. Each path segment
+   * should match [0-9A-Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])? regular expression. The length
+   * of a `[VARIABLE_NAME]` must be less than 256 characters. Once you create a variable, you cannot
+   * change the variable name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -110,20 +100,15 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the variable resource, in the format:
-   *
-   *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]
-   *
-   * The `[PROJECT_ID]` must be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig
-   * resource and `[VARIABLE_NAME]` follows Unix file system file path naming.
-   *
-   * The `[VARIABLE_NAME]` can contain ASCII letters, numbers, slashes and dashes. Slashes are used
-   * as path element separators and are not part of the `[VARIABLE_NAME]` itself, so
-   * `[VARIABLE_NAME]` must contain at least one non-slash character. Multiple slashes are coalesced
-   * into single slash character. Each path segment should match [0-9A-
-   * Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])? regular expression. The length of a
-   * `[VARIABLE_NAME]` must be less than 256 characters.
-   *
-   * Once you create a variable, you cannot change the variable name.
+   * projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME] The `[PROJECT_ID]` must
+   * be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig resource and
+   * `[VARIABLE_NAME]` follows Unix file system file path naming. The `[VARIABLE_NAME]` can contain
+   * ASCII letters, numbers, slashes and dashes. Slashes are used as path element separators and are
+   * not part of the `[VARIABLE_NAME]` itself, so `[VARIABLE_NAME]` must contain at least one non-
+   * slash character. Multiple slashes are coalesced into single slash character. Each path segment
+   * should match [0-9A-Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])? regular expression. The length
+   * of a `[VARIABLE_NAME]` must be less than 256 characters. Once you create a variable, you cannot
+   * change the variable name.
    * @param name name or {@code null} for none
    */
   public Variable setName(java.lang.String name) {

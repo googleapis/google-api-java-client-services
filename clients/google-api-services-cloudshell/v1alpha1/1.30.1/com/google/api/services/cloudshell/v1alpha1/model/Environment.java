@@ -67,7 +67,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.List<PublicKey> publicKeys;
 
   /**
-   * Indicates the size of the backing VM running the environment.  If set to something other than
+   * Indicates the size of the backing VM running the environment. If set to something other than
    * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
    * The value may be {@code null}.
    */
@@ -209,7 +209,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the size of the backing VM running the environment.  If set to something other than
+   * Indicates the size of the backing VM running the environment. If set to something other than
    * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
    * @return value or {@code null} for none
    */
@@ -218,7 +218,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the size of the backing VM running the environment.  If set to something other than
+   * Indicates the size of the backing VM running the environment. If set to something other than
    * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
    * @param size size or {@code null} for none
    */

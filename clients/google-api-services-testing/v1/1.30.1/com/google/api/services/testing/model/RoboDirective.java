@@ -46,8 +46,8 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
   private java.lang.String inputText;
 
   /**
-   * Required. The android resource name of the target UI element. For example,    in Java:
-   * R.string.foo    in xml: @string/foo Only the "foo" part is needed. Reference doc:
+   * Required. The android resource name of the target UI element. For example, in Java:
+   * R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc:
    * https://developer.android.com/guide/topics/resources/accessing-resources.html
    * The value may be {@code null}.
    */
@@ -91,8 +91,8 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The android resource name of the target UI element. For example,    in Java:
-   * R.string.foo    in xml: @string/foo Only the "foo" part is needed. Reference doc:
+   * Required. The android resource name of the target UI element. For example, in Java:
+   * R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc:
    * https://developer.android.com/guide/topics/resources/accessing-resources.html
    * @return value or {@code null} for none
    */
@@ -101,8 +101,8 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The android resource name of the target UI element. For example,    in Java:
-   * R.string.foo    in xml: @string/foo Only the "foo" part is needed. Reference doc:
+   * Required. The android resource name of the target UI element. For example, in Java:
+   * R.string.foo in xml: @string/foo Only the "foo" part is needed. Reference doc:
    * https://developer.android.com/guide/topics/resources/accessing-resources.html
    * @param resourceName resourceName or {@code null} for none
    */

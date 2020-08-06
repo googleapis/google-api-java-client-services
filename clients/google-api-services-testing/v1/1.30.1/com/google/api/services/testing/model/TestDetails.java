@@ -39,9 +39,8 @@ public final class TestDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Human-readable, detailed descriptions of the test's progress. For example:
-   * "Provisioning a device", "Starting Test".
-   *
-   * During the course of execution new data may be appended to the end of progress_messages.
+   * "Provisioning a device", "Starting Test". During the course of execution new data may be
+   * appended to the end of progress_messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +67,8 @@ public final class TestDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Human-readable, detailed descriptions of the test's progress. For example:
-   * "Provisioning a device", "Starting Test".
-   *
-   * During the course of execution new data may be appended to the end of progress_messages.
+   * "Provisioning a device", "Starting Test". During the course of execution new data may be
+   * appended to the end of progress_messages.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProgressMessages() {
@@ -79,9 +77,8 @@ public final class TestDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Human-readable, detailed descriptions of the test's progress. For example:
-   * "Provisioning a device", "Starting Test".
-   *
-   * During the course of execution new data may be appended to the end of progress_messages.
+   * "Provisioning a device", "Starting Test". During the course of execution new data may be
+   * appended to the end of progress_messages.
    * @param progressMessages progressMessages or {@code null} for none
    */
   public TestDetails setProgressMessages(java.util.List<java.lang.String> progressMessages) {

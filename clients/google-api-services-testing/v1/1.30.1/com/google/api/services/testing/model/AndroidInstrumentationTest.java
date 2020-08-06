@@ -19,10 +19,9 @@ package com.google.api.services.testing.model;
 /**
  * A test of an Android application that can control an Android component independently of its
  * normal lifecycle. Android instrumentation tests run an application APK and test APK inside the
- * same process on a virtual or physical AndroidDevice.  They also specify a test runner class, such
+ * same process on a virtual or physical AndroidDevice. They also specify a test runner class, such
  * as com.google.GoogleTestRunner, which can vary on the specific instrumentation framework chosen.
- *
- * See  for more information on types of Android tests.
+ * See for more information on types of Android tests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -59,14 +58,9 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   /**
    * The option of whether running each test within its own invocation of instrumentation with
    * Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner
-   * version 1.0 or higher! ** Orchestrator offers the following benefits:  - No shared state  -
-   * Crashes are isolated  - Logs are scoped per test
-   *
-   * See
-   *
-   * for more information about Android Test Orchestrator.
-   *
-   * If not set, the test will be run without the orchestrator.
+   * version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state -
+   * Crashes are isolated - Logs are scoped per test See for more information about Android Test
+   * Orchestrator. If not set, the test will be run without the orchestrator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,10 +98,8 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
-   * package_name.class_name#method_name"
-   *
-   * If empty, all targets in the module will be run.
+   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * package_name.class_name#method_name" If empty, all targets in the module will be run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,14 +161,9 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   /**
    * The option of whether running each test within its own invocation of instrumentation with
    * Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner
-   * version 1.0 or higher! ** Orchestrator offers the following benefits:  - No shared state  -
-   * Crashes are isolated  - Logs are scoped per test
-   *
-   * See
-   *
-   * for more information about Android Test Orchestrator.
-   *
-   * If not set, the test will be run without the orchestrator.
+   * version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state -
+   * Crashes are isolated - Logs are scoped per test See for more information about Android Test
+   * Orchestrator. If not set, the test will be run without the orchestrator.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrchestratorOption() {
@@ -186,14 +173,9 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   /**
    * The option of whether running each test within its own invocation of instrumentation with
    * Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner
-   * version 1.0 or higher! ** Orchestrator offers the following benefits:  - No shared state  -
-   * Crashes are isolated  - Logs are scoped per test
-   *
-   * See
-   *
-   * for more information about Android Test Orchestrator.
-   *
-   * If not set, the test will be run without the orchestrator.
+   * version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state -
+   * Crashes are isolated - Logs are scoped per test See for more information about Android Test
+   * Orchestrator. If not set, the test will be run without the orchestrator.
    * @param orchestratorOption orchestratorOption or {@code null} for none
    */
   public AndroidInstrumentationTest setOrchestratorOption(java.lang.String orchestratorOption) {
@@ -275,10 +257,8 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
-   * package_name.class_name#method_name"
-   *
-   * If empty, all targets in the module will be run.
+   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * package_name.class_name#method_name" If empty, all targets in the module will be run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestTargets() {
@@ -287,10 +267,8 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
 
   /**
    * Each target must be fully qualified with the package name or class name, in one of these
-   * formats:  - "package package_name"  - "class package_name.class_name"  - "class
-   * package_name.class_name#method_name"
-   *
-   * If empty, all targets in the module will be run.
+   * formats: - "package package_name" - "class package_name.class_name" - "class
+   * package_name.class_name#method_name" If empty, all targets in the module will be run.
    * @param testTargets testTargets or {@code null} for none
    */
   public AndroidInstrumentationTest setTestTargets(java.util.List<java.lang.String> testTargets) {

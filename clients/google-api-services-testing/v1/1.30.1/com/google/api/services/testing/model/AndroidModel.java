@@ -111,7 +111,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    * The list of supported ABIs for this device. This corresponds to either
    * android.os.Build.SUPPORTED_ABIS (for API level 21 and above) or
    * android.os.Build.CPU_ABI/CPU_ABI2. The most preferred ABI is the first element in the list.
-   *
    * Elements are optionally prefixed by "version_id:" (where version_id is the id of an
    * AndroidVersion), denoting an ABI that is supported only on a particular version.
    * The value may be {@code null}.
@@ -334,7 +333,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    * The list of supported ABIs for this device. This corresponds to either
    * android.os.Build.SUPPORTED_ABIS (for API level 21 and above) or
    * android.os.Build.CPU_ABI/CPU_ABI2. The most preferred ABI is the first element in the list.
-   *
    * Elements are optionally prefixed by "version_id:" (where version_id is the id of an
    * AndroidVersion), denoting an ABI that is supported only on a particular version.
    * @return value or {@code null} for none
@@ -347,7 +345,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    * The list of supported ABIs for this device. This corresponds to either
    * android.os.Build.SUPPORTED_ABIS (for API level 21 and above) or
    * android.os.Build.CPU_ABI/CPU_ABI2. The most preferred ABI is the first element in the list.
-   *
    * Elements are optionally prefixed by "version_id:" (where version_id is the id of an
    * AndroidVersion), denoting an ABI that is supported only on a particular version.
    * @param supportedAbis supportedAbis or {@code null} for none

@@ -17,9 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * Represents a tool results step resource.
- *
- * This has the results of a TestExecution.
+ * Represents a tool results step resource. This has the results of a TestExecution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:

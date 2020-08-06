@@ -17,10 +17,9 @@
 package com.google.api.services.testing.model;
 
 /**
- * Shards test cases into the specified groups of packages, classes, and/or methods.
- *
- * With manual sharding enabled, specifying test targets via environment_variables or in
- * InstrumentationTest is invalid.
+ * Shards test cases into the specified groups of packages, classes, and/or methods. With manual
+ * sharding enabled, specifying test targets via environment_variables or in InstrumentationTest is
+ * invalid.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -34,7 +33,7 @@ public final class ManualSharding extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Group of packages, classes, and/or test methods to be run for each shard. When any
-   * physical devices are selected,  the number of test_targets_for_shard must be >= 1 and <= 50.
+   * physical devices are selected, the number of test_targets_for_shard must be >= 1 and <= 50.
    * When no physical devices are selected, the number must be >= 1 and <= 250.
    * The value may be {@code null}.
    */
@@ -43,7 +42,7 @@ public final class ManualSharding extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Group of packages, classes, and/or test methods to be run for each shard. When any
-   * physical devices are selected,  the number of test_targets_for_shard must be >= 1 and <= 50.
+   * physical devices are selected, the number of test_targets_for_shard must be >= 1 and <= 50.
    * When no physical devices are selected, the number must be >= 1 and <= 250.
    * @return value or {@code null} for none
    */
@@ -53,7 +52,7 @@ public final class ManualSharding extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Group of packages, classes, and/or test methods to be run for each shard. When any
-   * physical devices are selected,  the number of test_targets_for_shard must be >= 1 and <= 50.
+   * physical devices are selected, the number of test_targets_for_shard must be >= 1 and <= 50.
    * When no physical devices are selected, the number must be >= 1 and <= 250.
    * @param testTargetsForShard testTargetsForShard or {@code null} for none
    */

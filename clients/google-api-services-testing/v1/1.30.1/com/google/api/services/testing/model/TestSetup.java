@@ -52,11 +52,10 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
    * absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to
-   * characters a-z A-Z 0-9 _ - . + and /
-   *
-   * Note: The paths /sdcard and /data will be made available and treated as implicit path
-   * substitutions. E.g. if /sdcard on a particular device does not map to external storage, the
-   * system will replace it with the external storage path prefix for that device.
+   * characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available
+   * and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map
+   * to external storage, the system will replace it with the external storage path prefix for that
+   * device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,11 +149,10 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
    * absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to
-   * characters a-z A-Z 0-9 _ - . + and /
-   *
-   * Note: The paths /sdcard and /data will be made available and treated as implicit path
-   * substitutions. E.g. if /sdcard on a particular device does not map to external storage, the
-   * system will replace it with the external storage path prefix for that device.
+   * characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available
+   * and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map
+   * to external storage, the system will replace it with the external storage path prefix for that
+   * device.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDirectoriesToPull() {
@@ -164,11 +162,10 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
    * absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to
-   * characters a-z A-Z 0-9 _ - . + and /
-   *
-   * Note: The paths /sdcard and /data will be made available and treated as implicit path
-   * substitutions. E.g. if /sdcard on a particular device does not map to external storage, the
-   * system will replace it with the external storage path prefix for that device.
+   * characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available
+   * and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map
+   * to external storage, the system will replace it with the external storage path prefix for that
+   * device.
    * @param directoriesToPull directoriesToPull or {@code null} for none
    */
   public TestSetup setDirectoriesToPull(java.util.List<java.lang.String> directoriesToPull) {

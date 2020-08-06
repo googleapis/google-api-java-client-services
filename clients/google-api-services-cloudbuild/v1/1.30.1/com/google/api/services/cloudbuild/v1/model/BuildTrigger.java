@@ -66,9 +66,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
-   * GitHub event is received.
-   *
-   * Mutually exclusive with `trigger_template`.
+   * GitHub event is received. Mutually exclusive with `trigger_template`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,14 +81,11 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * ignored_files and included_files are file glob matches using
-   * https://golang.org/pkg/path/filepath/#Match extended with support for "**".
-   *
-   * If ignored_files and changed files are both empty, then they are not used to determine whether
-   * or not to trigger a build.
-   *
-   * If ignored_files is not empty, then we ignore any files that match any of the ignored_file
-   * globs. If the change has no files that are outside of the ignored_files globs, then we do not
-   * trigger a build.
+   * https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files
+   * and changed files are both empty, then they are not used to determine whether or not to trigger
+   * a build. If ignored_files is not empty, then we ignore any files that match any of the
+   * ignored_file globs. If the change has no files that are outside of the ignored_files globs,
+   * then we do not trigger a build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,11 +93,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * If any of the files altered in the commit pass the ignored_files filter and included_files is
-   * empty, then as far as this filter is concerned, we should trigger the build.
-   *
-   * If any of the files altered in the commit pass the ignored_files filter and included_files is
-   * not empty, then we make sure that at least one of those files matches a included_files glob. If
-   * not, then we do not trigger a build.
+   * empty, then as far as this filter is concerned, we should trigger the build. If any of the
+   * files altered in the commit pass the ignored_files filter and included_files is not empty, then
+   * we make sure that at least one of those files matches a included_files glob. If not, then we do
+   * not trigger a build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,10 +104,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet
-   * the following requirements:
-   *
-   * + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters
-   * long. + They must begin and end with an alphanumeric character.
+   * the following requirements: + They must contain only alphanumeric characters and dashes. + They
+   * can be 1-64 characters long. + They must begin and end with an alphanumeric character.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,12 +127,9 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Template describing the types of source changes to trigger a build.
-   *
-   * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
-   * tag change that matches that regular expression will trigger a build.
-   *
-   * Mutually exclusive with `github`.
+   * Template describing the types of source changes to trigger a build. Branch and tag names in
+   * trigger templates are interpreted as regular expressions. Any branch or tag change that matches
+   * that regular expression will trigger a build. Mutually exclusive with `github`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,9 +222,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
-   * GitHub event is received.
-   *
-   * Mutually exclusive with `trigger_template`.
+   * GitHub event is received. Mutually exclusive with `trigger_template`.
    * @return value or {@code null} for none
    */
   public GitHubEventsConfig getGithub() {
@@ -244,9 +231,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
-   * GitHub event is received.
-   *
-   * Mutually exclusive with `trigger_template`.
+   * GitHub event is received. Mutually exclusive with `trigger_template`.
    * @param github github or {@code null} for none
    */
   public BuildTrigger setGithub(GitHubEventsConfig github) {
@@ -273,14 +258,11 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * ignored_files and included_files are file glob matches using
-   * https://golang.org/pkg/path/filepath/#Match extended with support for "**".
-   *
-   * If ignored_files and changed files are both empty, then they are not used to determine whether
-   * or not to trigger a build.
-   *
-   * If ignored_files is not empty, then we ignore any files that match any of the ignored_file
-   * globs. If the change has no files that are outside of the ignored_files globs, then we do not
-   * trigger a build.
+   * https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files
+   * and changed files are both empty, then they are not used to determine whether or not to trigger
+   * a build. If ignored_files is not empty, then we ignore any files that match any of the
+   * ignored_file globs. If the change has no files that are outside of the ignored_files globs,
+   * then we do not trigger a build.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIgnoredFiles() {
@@ -289,14 +271,11 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * ignored_files and included_files are file glob matches using
-   * https://golang.org/pkg/path/filepath/#Match extended with support for "**".
-   *
-   * If ignored_files and changed files are both empty, then they are not used to determine whether
-   * or not to trigger a build.
-   *
-   * If ignored_files is not empty, then we ignore any files that match any of the ignored_file
-   * globs. If the change has no files that are outside of the ignored_files globs, then we do not
-   * trigger a build.
+   * https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files
+   * and changed files are both empty, then they are not used to determine whether or not to trigger
+   * a build. If ignored_files is not empty, then we ignore any files that match any of the
+   * ignored_file globs. If the change has no files that are outside of the ignored_files globs,
+   * then we do not trigger a build.
    * @param ignoredFiles ignoredFiles or {@code null} for none
    */
   public BuildTrigger setIgnoredFiles(java.util.List<java.lang.String> ignoredFiles) {
@@ -306,11 +285,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * If any of the files altered in the commit pass the ignored_files filter and included_files is
-   * empty, then as far as this filter is concerned, we should trigger the build.
-   *
-   * If any of the files altered in the commit pass the ignored_files filter and included_files is
-   * not empty, then we make sure that at least one of those files matches a included_files glob. If
-   * not, then we do not trigger a build.
+   * empty, then as far as this filter is concerned, we should trigger the build. If any of the
+   * files altered in the commit pass the ignored_files filter and included_files is not empty, then
+   * we make sure that at least one of those files matches a included_files glob. If not, then we do
+   * not trigger a build.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedFiles() {
@@ -319,11 +297,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * If any of the files altered in the commit pass the ignored_files filter and included_files is
-   * empty, then as far as this filter is concerned, we should trigger the build.
-   *
-   * If any of the files altered in the commit pass the ignored_files filter and included_files is
-   * not empty, then we make sure that at least one of those files matches a included_files glob. If
-   * not, then we do not trigger a build.
+   * empty, then as far as this filter is concerned, we should trigger the build. If any of the
+   * files altered in the commit pass the ignored_files filter and included_files is not empty, then
+   * we make sure that at least one of those files matches a included_files glob. If not, then we do
+   * not trigger a build.
    * @param includedFiles includedFiles or {@code null} for none
    */
   public BuildTrigger setIncludedFiles(java.util.List<java.lang.String> includedFiles) {
@@ -333,10 +310,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet
-   * the following requirements:
-   *
-   * + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters
-   * long. + They must begin and end with an alphanumeric character.
+   * the following requirements: + They must contain only alphanumeric characters and dashes. + They
+   * can be 1-64 characters long. + They must begin and end with an alphanumeric character.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -345,10 +320,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet
-   * the following requirements:
-   *
-   * + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters
-   * long. + They must begin and end with an alphanumeric character.
+   * the following requirements: + They must contain only alphanumeric characters and dashes. + They
+   * can be 1-64 characters long. + They must begin and end with an alphanumeric character.
    * @param name name or {@code null} for none
    */
   public BuildTrigger setName(java.lang.String name) {
@@ -393,12 +366,9 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Template describing the types of source changes to trigger a build.
-   *
-   * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
-   * tag change that matches that regular expression will trigger a build.
-   *
-   * Mutually exclusive with `github`.
+   * Template describing the types of source changes to trigger a build. Branch and tag names in
+   * trigger templates are interpreted as regular expressions. Any branch or tag change that matches
+   * that regular expression will trigger a build. Mutually exclusive with `github`.
    * @return value or {@code null} for none
    */
   public RepoSource getTriggerTemplate() {
@@ -406,12 +376,9 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Template describing the types of source changes to trigger a build.
-   *
-   * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
-   * tag change that matches that regular expression will trigger a build.
-   *
-   * Mutually exclusive with `github`.
+   * Template describing the types of source changes to trigger a build. Branch and tag names in
+   * trigger templates are interpreted as regular expressions. Any branch or tag change that matches
+   * that regular expression will trigger a build. Mutually exclusive with `github`.
    * @param triggerTemplate triggerTemplate or {@code null} for none
    */
   public BuildTrigger setTriggerTemplate(RepoSource triggerTemplate) {

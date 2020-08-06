@@ -32,10 +32,8 @@ public final class ArtifactObjects extends com.google.api.client.json.GenericJso
   /**
    * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
    * (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-
-   * naming#requirements)).
-   *
-   * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this
-   * location as a prefix.
+   * naming#requirements)). Files in the workspace matching any path pattern will be uploaded to
+   * Cloud Storage with this location as a prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +56,8 @@ public final class ArtifactObjects extends com.google.api.client.json.GenericJso
   /**
    * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
    * (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-
-   * naming#requirements)).
-   *
-   * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this
-   * location as a prefix.
+   * naming#requirements)). Files in the workspace matching any path pattern will be uploaded to
+   * Cloud Storage with this location as a prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -71,10 +67,8 @@ public final class ArtifactObjects extends com.google.api.client.json.GenericJso
   /**
    * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
    * (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-
-   * naming#requirements)).
-   *
-   * Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this
-   * location as a prefix.
+   * naming#requirements)). Files in the workspace matching any path pattern will be uploaded to
+   * Cloud Storage with this location as a prefix.
    * @param location location or {@code null} for none
    */
   public ArtifactObjects setLocation(java.lang.String location) {

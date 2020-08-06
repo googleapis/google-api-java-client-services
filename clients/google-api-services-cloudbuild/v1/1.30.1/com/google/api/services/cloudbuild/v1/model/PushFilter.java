@@ -30,10 +30,8 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class PushFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Regexes matching branches to build.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regexes matching branches to build. The syntax of the regular expressions accepted is the
+   * syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,20 +45,16 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean invertRegex;
 
   /**
-   * Regexes matching tags to build.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax
+   * accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
 
   /**
-   * Regexes matching branches to build.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regexes matching branches to build. The syntax of the regular expressions accepted is the
+   * syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getBranch() {
@@ -68,10 +62,8 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Regexes matching branches to build.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regexes matching branches to build. The syntax of the regular expressions accepted is the
+   * syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * @param branch branch or {@code null} for none
    */
   public PushFilter setBranch(java.lang.String branch) {
@@ -97,10 +89,8 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Regexes matching tags to build.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax
+   * accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -108,10 +98,8 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Regexes matching tags to build.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax
+   * accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * @param tag tag or {@code null} for none
    */
   public PushFilter setTag(java.lang.String tag) {

@@ -183,9 +183,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -214,13 +214,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -326,7 +326,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -351,7 +351,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -496,8 +496,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource where this book will be created.
-      Format: projects/{project}
+       * @param parent Required. The parent resource where this book will be created. Format: projects/{project}
        * @param content the {@link com.google.api.services.cloudbuild.v1alpha2.model.WorkerPool}
        * @return the request
        */
@@ -525,8 +524,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource where this book will be created.
-      Format: projects/{project}
+         * @param parent Required. The parent resource where this book will be created. Format: projects/{project}
          * @param content the {@link com.google.api.services.cloudbuild.v1alpha2.model.WorkerPool}
          * @since 1.13
          */
@@ -622,17 +620,14 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. Immutable. The ID to use for the `WorkerPool`, which will become the final
-         * component of the resource name.
-         *
-         * This value should be 1-63 characters, and valid characters are /a-z-/.
+         * component of the resource name. This value should be 1-63 characters, and valid
+         * characters are /a-z-/.
          */
         @com.google.api.client.util.Key
         private java.lang.String workerPoolId;
 
         /** Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of
-       the resource name.
-
-       This value should be 1-63 characters, and valid characters are /a-z-/.
+       the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
          */
         public java.lang.String getWorkerPoolId() {
           return workerPoolId;
@@ -640,9 +635,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. Immutable. The ID to use for the `WorkerPool`, which will become the final
-         * component of the resource name.
-         *
-         * This value should be 1-63 characters, and valid characters are /a-z-/.
+         * component of the resource name. This value should be 1-63 characters, and valid
+         * characters are /a-z-/.
          */
         public Create setWorkerPoolId(java.lang.String workerPoolId) {
           this.workerPoolId = workerPoolId;
@@ -662,8 +656,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the `WorkerPool` to delete.
-      Format:
+       * @param name Required. The name of the `WorkerPool` to delete. Format:
        *        projects/{project}/workerPools/{workerPool}
        * @return the request
        */
@@ -691,8 +684,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the `WorkerPool` to delete.
-      Format:
+         * @param name Required. The name of the `WorkerPool` to delete. Format:
        *        projects/{project}/workerPools/{workerPool}
          * @since 1.13
          */
@@ -802,8 +794,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the `WorkerPool` to retrieve.
-      Format:
+       * @param name Required. The name of the `WorkerPool` to retrieve. Format:
        *        projects/{project}/workerPools/{workerPool}
        * @return the request
        */
@@ -830,8 +821,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the `WorkerPool` to retrieve.
-      Format:
+         * @param name Required. The name of the `WorkerPool` to retrieve. Format:
        *        projects/{project}/workerPools/{workerPool}
          * @since 1.13
          */
@@ -951,8 +941,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns this collection of `WorkerPools`.
-      Format: projects/{project}
+       * @param parent Required. The parent, which owns this collection of `WorkerPools`. Format: projects/{project}
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -978,8 +967,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns this collection of `WorkerPools`.
-      Format: projects/{project}
+         * @param parent Required. The parent, which owns this collection of `WorkerPools`. Format: projects/{project}
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1097,12 +1085,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. The resource name of the `WorkerPool`.
-      Format of the name is
-       *        `projects/{project_id}/workerPools/{worker_pool_id}`,
-      where the value of {worker_pool_id}
-       *        is provided in the CreateWorkerPool
-      request.
+       * @param name Output only. The resource name of the `WorkerPool`. Format of the name is
+       *        `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id}
+       *        is provided in the CreateWorkerPool request.
        * @param content the {@link com.google.api.services.cloudbuild.v1alpha2.model.WorkerPool}
        * @return the request
        */
@@ -1130,12 +1115,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. The resource name of the `WorkerPool`.
-      Format of the name is
-       *        `projects/{project_id}/workerPools/{worker_pool_id}`,
-      where the value of {worker_pool_id}
-       *        is provided in the CreateWorkerPool
-      request.
+         * @param name Output only. The resource name of the `WorkerPool`. Format of the name is
+       *        `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id}
+       *        is provided in the CreateWorkerPool request.
          * @param content the {@link com.google.api.services.cloudbuild.v1alpha2.model.WorkerPool}
          * @since 1.13
          */

@@ -30,10 +30,8 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class PullRequestFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Regex of branches to match.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regex of branches to match. The syntax of the regular expressions accepted is the syntax
+   * accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,10 +52,8 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   private java.lang.Boolean invertRegex;
 
   /**
-   * Regex of branches to match.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regex of branches to match. The syntax of the regular expressions accepted is the syntax
+   * accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getBranch() {
@@ -65,10 +61,8 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Regex of branches to match.
-   *
-   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
-   * https://github.com/google/re2/wiki/Syntax
+   * Regex of branches to match. The syntax of the regular expressions accepted is the syntax
+   * accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
    * @param branch branch or {@code null} for none
    */
   public PullRequestFilter setBranch(java.lang.String branch) {

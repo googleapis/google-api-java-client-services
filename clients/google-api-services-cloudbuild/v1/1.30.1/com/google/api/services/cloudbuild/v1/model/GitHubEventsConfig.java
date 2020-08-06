@@ -18,9 +18,7 @@ package com.google.api.services.cloudbuild.v1.model;
 
 /**
  * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
- * GitHub event is received.
- *
- * This message is experimental.
+ * GitHub event is received. This message is experimental.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

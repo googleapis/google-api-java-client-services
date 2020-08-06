@@ -42,7 +42,6 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify whether or not to apply bash style string operations to the substitutions.
-   *
    * NOTE: this is always enabled for triggered builds and cannot be overridden in the build
    * configuration file.
    * The value may be {@code null}.
@@ -53,10 +52,8 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   /**
    * A list of global environment variable definitions that will exist for all build steps in this
    * build. If a variable is defined in both globally and in a build step, the variable will use the
-   * build step value.
-   *
-   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
-   * value "VALUE".
+   * build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY"
+   * being given the value "VALUE".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,24 +104,20 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> sourceProvenanceHash;
 
   /**
-   * Option to specify behavior when there is an error in the substitution checks.
-   *
-   * NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the
-   * build configuration file.
+   * Option to specify behavior when there is an error in the substitution checks. NOTE: this is
+   * always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build
+   * configuration file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String substitutionOption;
 
   /**
-   * Global list of volumes to mount for ALL build steps
-   *
-   * Each volume is created as an empty volume prior to starting the build process. Upon completion
-   * of the build, volumes and their contents are discarded. Global volume names and paths cannot
-   * conflict with the volumes defined a build step.
-   *
-   * Using a global volume in a build with only one step is not valid as it is indicative of a build
-   * request with an incorrect configuration.
+   * Global list of volumes to mount for ALL build steps Each volume is created as an empty volume
+   * prior to starting the build process. Upon completion of the build, volumes and their contents
+   * are discarded. Global volume names and paths cannot conflict with the volumes defined a build
+   * step. Using a global volume in a build with only one step is not valid as it is indicative of a
+   * build request with an incorrect configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,9 +125,7 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify a `WorkerPool` for the build. Format:
-   * projects/{project}/workerPools/{workerPool}
-   *
-   * This field is experimental.
+   * projects/{project}/locations/{location}/workerPools/{workerPool} This field is experimental.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +158,6 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify whether or not to apply bash style string operations to the substitutions.
-   *
    * NOTE: this is always enabled for triggered builds and cannot be overridden in the build
    * configuration file.
    * @return value or {@code null} for none
@@ -178,7 +168,6 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify whether or not to apply bash style string operations to the substitutions.
-   *
    * NOTE: this is always enabled for triggered builds and cannot be overridden in the build
    * configuration file.
    * @param dynamicSubstitutions dynamicSubstitutions or {@code null} for none
@@ -191,10 +180,8 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   /**
    * A list of global environment variable definitions that will exist for all build steps in this
    * build. If a variable is defined in both globally and in a build step, the variable will use the
-   * build step value.
-   *
-   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
-   * value "VALUE".
+   * build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY"
+   * being given the value "VALUE".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnv() {
@@ -204,10 +191,8 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   /**
    * A list of global environment variable definitions that will exist for all build steps in this
    * build. If a variable is defined in both globally and in a build step, the variable will use the
-   * build step value.
-   *
-   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
-   * value "VALUE".
+   * build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY"
+   * being given the value "VALUE".
    * @param env env or {@code null} for none
    */
   public BuildOptions setEnv(java.util.List<java.lang.String> env) {
@@ -322,10 +307,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Option to specify behavior when there is an error in the substitution checks.
-   *
-   * NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the
-   * build configuration file.
+   * Option to specify behavior when there is an error in the substitution checks. NOTE: this is
+   * always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build
+   * configuration file.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubstitutionOption() {
@@ -333,10 +317,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Option to specify behavior when there is an error in the substitution checks.
-   *
-   * NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the
-   * build configuration file.
+   * Option to specify behavior when there is an error in the substitution checks. NOTE: this is
+   * always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build
+   * configuration file.
    * @param substitutionOption substitutionOption or {@code null} for none
    */
   public BuildOptions setSubstitutionOption(java.lang.String substitutionOption) {
@@ -345,14 +328,11 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global list of volumes to mount for ALL build steps
-   *
-   * Each volume is created as an empty volume prior to starting the build process. Upon completion
-   * of the build, volumes and their contents are discarded. Global volume names and paths cannot
-   * conflict with the volumes defined a build step.
-   *
-   * Using a global volume in a build with only one step is not valid as it is indicative of a build
-   * request with an incorrect configuration.
+   * Global list of volumes to mount for ALL build steps Each volume is created as an empty volume
+   * prior to starting the build process. Upon completion of the build, volumes and their contents
+   * are discarded. Global volume names and paths cannot conflict with the volumes defined a build
+   * step. Using a global volume in a build with only one step is not valid as it is indicative of a
+   * build request with an incorrect configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<Volume> getVolumes() {
@@ -360,14 +340,11 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global list of volumes to mount for ALL build steps
-   *
-   * Each volume is created as an empty volume prior to starting the build process. Upon completion
-   * of the build, volumes and their contents are discarded. Global volume names and paths cannot
-   * conflict with the volumes defined a build step.
-   *
-   * Using a global volume in a build with only one step is not valid as it is indicative of a build
-   * request with an incorrect configuration.
+   * Global list of volumes to mount for ALL build steps Each volume is created as an empty volume
+   * prior to starting the build process. Upon completion of the build, volumes and their contents
+   * are discarded. Global volume names and paths cannot conflict with the volumes defined a build
+   * step. Using a global volume in a build with only one step is not valid as it is indicative of a
+   * build request with an incorrect configuration.
    * @param volumes volumes or {@code null} for none
    */
   public BuildOptions setVolumes(java.util.List<Volume> volumes) {
@@ -377,9 +354,7 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify a `WorkerPool` for the build. Format:
-   * projects/{project}/workerPools/{workerPool}
-   *
-   * This field is experimental.
+   * projects/{project}/locations/{location}/workerPools/{workerPool} This field is experimental.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPool() {
@@ -388,9 +363,7 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Option to specify a `WorkerPool` for the build. Format:
-   * projects/{project}/workerPools/{workerPool}
-   *
-   * This field is experimental.
+   * projects/{project}/locations/{location}/workerPools/{workerPool} This field is experimental.
    * @param workerPool workerPool or {@code null} for none
    */
   public BuildOptions setWorkerPool(java.lang.String workerPool) {

@@ -183,9 +183,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -214,13 +214,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -326,7 +326,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -351,7 +351,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -627,8 +627,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The field will contain name of the resource requested, for example:
-      "projects/project-1/workerPools
+       * @param name The field will contain name of the resource requested, for example: "projects/project-1/workerPools
        *        /workerpool-name"
        * @return the request
        */
@@ -656,8 +655,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The field will contain name of the resource requested, for example:
-      "projects/project-1/workerPools
+         * @param name The field will contain name of the resource requested, for example: "projects/project-1/workerPools
        *        /workerpool-name"
          * @since 1.13
          */
@@ -767,8 +765,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The field will contain name of the resource requested, for example:
-      "projects/project-1/workerPools
+       * @param name The field will contain name of the resource requested, for example: "projects/project-1/workerPools
        *        /workerpool-name"
        * @return the request
        */
@@ -795,8 +792,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The field will contain name of the resource requested, for example:
-      "projects/project-1/workerPools
+         * @param name The field will contain name of the resource requested, for example: "projects/project-1/workerPools
        *        /workerpool-name"
          * @since 1.13
          */
@@ -1054,8 +1050,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The field will contain name of the resource requested, for example:
-      "projects/project-1/workerPools
+       * @param name The field will contain name of the resource requested, for example: "projects/project-1/workerPools
        *        /workerpool-name"
        * @param content the {@link com.google.api.services.cloudbuild.v1alpha1.model.WorkerPool}
        * @return the request
@@ -1084,8 +1079,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The field will contain name of the resource requested, for example:
-      "projects/project-1/workerPools
+         * @param name The field will contain name of the resource requested, for example: "projects/project-1/workerPools
        *        /workerpool-name"
          * @param content the {@link com.google.api.services.cloudbuild.v1alpha1.model.WorkerPool}
          * @since 1.13

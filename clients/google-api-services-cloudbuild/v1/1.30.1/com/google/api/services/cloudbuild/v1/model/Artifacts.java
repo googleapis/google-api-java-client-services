@@ -31,13 +31,10 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of images to be pushed upon the successful completion of all build steps.
-   *
-   * The images will be pushed using the builder service account's credentials.
-   *
-   * The digests of the pushed images will be stored in the Build resource's results field.
-   *
-   * If any of the images fail to be pushed, the build is marked FAILURE.
+   * A list of images to be pushed upon the successful completion of all build steps. The images
+   * will be pushed using the builder service account's credentials. The digests of the pushed
+   * images will be stored in the Build resource's results field. If any of the images fail to be
+   * pushed, the build is marked FAILURE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,28 +42,20 @@ public final class Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of objects to be uploaded to Cloud Storage upon successful completion of all build
-   * steps.
-   *
-   * Files in the workspace matching specified paths globs will be uploaded to the specified Cloud
-   * Storage location using the builder service account's credentials.
-   *
-   * The location and generation of the uploaded objects will be stored in the Build resource's
-   * results field.
-   *
-   * If any objects fail to be pushed, the build is marked FAILURE.
+   * steps. Files in the workspace matching specified paths globs will be uploaded to the specified
+   * Cloud Storage location using the builder service account's credentials. The location and
+   * generation of the uploaded objects will be stored in the Build resource's results field. If any
+   * objects fail to be pushed, the build is marked FAILURE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ArtifactObjects objects;
 
   /**
-   * A list of images to be pushed upon the successful completion of all build steps.
-   *
-   * The images will be pushed using the builder service account's credentials.
-   *
-   * The digests of the pushed images will be stored in the Build resource's results field.
-   *
-   * If any of the images fail to be pushed, the build is marked FAILURE.
+   * A list of images to be pushed upon the successful completion of all build steps. The images
+   * will be pushed using the builder service account's credentials. The digests of the pushed
+   * images will be stored in the Build resource's results field. If any of the images fail to be
+   * pushed, the build is marked FAILURE.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getImages() {
@@ -74,13 +63,10 @@ public final class Artifacts extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of images to be pushed upon the successful completion of all build steps.
-   *
-   * The images will be pushed using the builder service account's credentials.
-   *
-   * The digests of the pushed images will be stored in the Build resource's results field.
-   *
-   * If any of the images fail to be pushed, the build is marked FAILURE.
+   * A list of images to be pushed upon the successful completion of all build steps. The images
+   * will be pushed using the builder service account's credentials. The digests of the pushed
+   * images will be stored in the Build resource's results field. If any of the images fail to be
+   * pushed, the build is marked FAILURE.
    * @param images images or {@code null} for none
    */
   public Artifacts setImages(java.util.List<java.lang.String> images) {
@@ -90,15 +76,10 @@ public final class Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of objects to be uploaded to Cloud Storage upon successful completion of all build
-   * steps.
-   *
-   * Files in the workspace matching specified paths globs will be uploaded to the specified Cloud
-   * Storage location using the builder service account's credentials.
-   *
-   * The location and generation of the uploaded objects will be stored in the Build resource's
-   * results field.
-   *
-   * If any objects fail to be pushed, the build is marked FAILURE.
+   * steps. Files in the workspace matching specified paths globs will be uploaded to the specified
+   * Cloud Storage location using the builder service account's credentials. The location and
+   * generation of the uploaded objects will be stored in the Build resource's results field. If any
+   * objects fail to be pushed, the build is marked FAILURE.
    * @return value or {@code null} for none
    */
   public ArtifactObjects getObjects() {
@@ -107,15 +88,10 @@ public final class Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of objects to be uploaded to Cloud Storage upon successful completion of all build
-   * steps.
-   *
-   * Files in the workspace matching specified paths globs will be uploaded to the specified Cloud
-   * Storage location using the builder service account's credentials.
-   *
-   * The location and generation of the uploaded objects will be stored in the Build resource's
-   * results field.
-   *
-   * If any objects fail to be pushed, the build is marked FAILURE.
+   * steps. Files in the workspace matching specified paths globs will be uploaded to the specified
+   * Cloud Storage location using the builder service account's credentials. The location and
+   * generation of the uploaded objects will be stored in the Build resource's results field. If any
+   * objects fail to be pushed, the build is marked FAILURE.
    * @param objects objects or {@code null} for none
    */
   public Artifacts setObjects(ArtifactObjects objects) {

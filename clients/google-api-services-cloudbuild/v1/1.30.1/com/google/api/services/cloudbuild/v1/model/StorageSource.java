@@ -46,9 +46,8 @@ public final class StorageSource extends com.google.api.client.json.GenericJson 
   private java.lang.Long generation;
 
   /**
-   * Google Cloud Storage object containing the source.
-   *
-   * This object must be a gzipped archive file (`.tar.gz`) containing source to build.
+   * Google Cloud Storage object containing the source. This object must be a gzipped archive file
+   * (`.tar.gz`) containing source to build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
@@ -93,9 +92,8 @@ public final class StorageSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Google Cloud Storage object containing the source.
-   *
-   * This object must be a gzipped archive file (`.tar.gz`) containing source to build.
+   * Google Cloud Storage object containing the source. This object must be a gzipped archive file
+   * (`.tar.gz`) containing source to build.
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -103,9 +101,8 @@ public final class StorageSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Google Cloud Storage object containing the source.
-   *
-   * This object must be a gzipped archive file (`.tar.gz`) containing source to build.
+   * Google Cloud Storage object containing the source. This object must be a gzipped archive file
+   * (`.tar.gz`) containing source to build.
    * @param object__ object__ or {@code null} for none
    */
   public StorageSource setObject(java.lang.String object__) {

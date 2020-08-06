@@ -31,30 +31,24 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class Volume extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the volume to mount.
-   *
-   * Volume names must be unique per build step and must be valid names for Docker volumes. Each
-   * named volume must be used by at least two build steps.
+   * Name of the volume to mount. Volume names must be unique per build step and must be valid names
+   * for Docker volumes. Each named volume must be used by at least two build steps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Path at which to mount the volume.
-   *
-   * Paths must be absolute and cannot conflict with other volume paths on the same build step or
-   * with certain reserved volume paths.
+   * Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume
+   * paths on the same build step or with certain reserved volume paths.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Name of the volume to mount.
-   *
-   * Volume names must be unique per build step and must be valid names for Docker volumes. Each
-   * named volume must be used by at least two build steps.
+   * Name of the volume to mount. Volume names must be unique per build step and must be valid names
+   * for Docker volumes. Each named volume must be used by at least two build steps.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,10 +56,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the volume to mount.
-   *
-   * Volume names must be unique per build step and must be valid names for Docker volumes. Each
-   * named volume must be used by at least two build steps.
+   * Name of the volume to mount. Volume names must be unique per build step and must be valid names
+   * for Docker volumes. Each named volume must be used by at least two build steps.
    * @param name name or {@code null} for none
    */
   public Volume setName(java.lang.String name) {
@@ -74,10 +66,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path at which to mount the volume.
-   *
-   * Paths must be absolute and cannot conflict with other volume paths on the same build step or
-   * with certain reserved volume paths.
+   * Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume
+   * paths on the same build step or with certain reserved volume paths.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -85,10 +75,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path at which to mount the volume.
-   *
-   * Paths must be absolute and cannot conflict with other volume paths on the same build step or
-   * with certain reserved volume paths.
+   * Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume
+   * paths on the same build step or with certain reserved volume paths.
    * @param path path or {@code null} for none
    */
   public Volume setPath(java.lang.String path) {

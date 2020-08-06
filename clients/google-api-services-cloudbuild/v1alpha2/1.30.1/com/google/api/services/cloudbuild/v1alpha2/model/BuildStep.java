@@ -30,26 +30,22 @@ package com.google.api.services.cloudbuild.v1alpha2.model;
 public final class BuildStep extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of arguments that will be presented to the step when it is started.
-   *
-   * If the image used to run the step's container has an entrypoint, the `args` are used as
-   * arguments to that entrypoint. If the image does not define an entrypoint, the first element in
-   * args is used as the entrypoint, and the remainder will be used as arguments.
+   * A list of arguments that will be presented to the step when it is started. If the image used to
+   * run the step's container has an entrypoint, the `args` are used as arguments to that
+   * entrypoint. If the image does not define an entrypoint, the first element in args is used as
+   * the entrypoint, and the remainder will be used as arguments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
 
   /**
-   * Working directory to use when running this step's container.
-   *
-   * If this value is a relative path, it is relative to the build's working directory. If this
-   * value is absolute, it may be outside the build's working directory, in which case the contents
-   * of the path may not be persisted across build step executions, unless a `volume` for that path
-   * is specified.
-   *
-   * If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an
-   * absolute path, the `RepoSource` `dir` is ignored for the step's execution.
+   * Working directory to use when running this step's container. If this value is a relative path,
+   * it is relative to the build's working directory. If this value is absolute, it may be outside
+   * the build's working directory, in which case the contents of the path may not be persisted
+   * across build step executions, unless a `volume` for that path is specified. If the build
+   * specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path,
+   * the `RepoSource` `dir` is ignored for the step's execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +60,8 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private java.lang.String entrypoint;
 
   /**
-   * A list of environment variable definitions to be used when running a step.
-   *
-   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
-   * value "VALUE".
+   * A list of environment variable definitions to be used when running a step. The elements are of
+   * the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,20 +76,16 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Required. The name of the container image that will run this particular build step.
-   *
-   * If the image is available in the host's Docker daemon's cache, it will be run directly. If not,
-   * the host will attempt to pull the image first, using the builder service account's credentials
-   * if necessary.
-   *
-   * The Docker daemon's cache will already have the latest versions of all of the officially
-   * supported build steps ([https://github.com/GoogleCloudPlatform/cloud-
+   * Required. The name of the container image that will run this particular build step. If the
+   * image is available in the host's Docker daemon's cache, it will be run directly. If not, the
+   * host will attempt to pull the image first, using the builder service account's credentials if
+   * necessary. The Docker daemon's cache will already have the latest versions of all of the
+   * officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-
    * builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also
    * have cached many of the layers for some popular images, like "ubuntu", "debian", but they will
-   * be refreshed at the time you attempt to use them.
-   *
-   * If you built an image in a previous build step, it will be stored in the host's Docker daemon's
-   * cache and is available to use as the name for a later build step.
+   * be refreshed at the time you attempt to use them. If you built an image in a previous build
+   * step, it will be stored in the host's Docker daemon's cache and is available to use as the name
+   * for a later build step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,13 +130,10 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private TimeSpan timing;
 
   /**
-   * List of volumes to mount into the build step.
-   *
-   * Each volume is created as an empty volume prior to execution of the build step. Upon completion
-   * of the build, volumes and their contents are discarded.
-   *
-   * Using a named volume in only one step is not valid as it is indicative of a build request with
-   * an incorrect configuration.
+   * List of volumes to mount into the build step. Each volume is created as an empty volume prior
+   * to execution of the build step. Upon completion of the build, volumes and their contents are
+   * discarded. Using a named volume in only one step is not valid as it is indicative of a build
+   * request with an incorrect configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,11 +150,10 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> waitFor;
 
   /**
-   * A list of arguments that will be presented to the step when it is started.
-   *
-   * If the image used to run the step's container has an entrypoint, the `args` are used as
-   * arguments to that entrypoint. If the image does not define an entrypoint, the first element in
-   * args is used as the entrypoint, and the remainder will be used as arguments.
+   * A list of arguments that will be presented to the step when it is started. If the image used to
+   * run the step's container has an entrypoint, the `args` are used as arguments to that
+   * entrypoint. If the image does not define an entrypoint, the first element in args is used as
+   * the entrypoint, and the remainder will be used as arguments.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -175,11 +161,10 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of arguments that will be presented to the step when it is started.
-   *
-   * If the image used to run the step's container has an entrypoint, the `args` are used as
-   * arguments to that entrypoint. If the image does not define an entrypoint, the first element in
-   * args is used as the entrypoint, and the remainder will be used as arguments.
+   * A list of arguments that will be presented to the step when it is started. If the image used to
+   * run the step's container has an entrypoint, the `args` are used as arguments to that
+   * entrypoint. If the image does not define an entrypoint, the first element in args is used as
+   * the entrypoint, and the remainder will be used as arguments.
    * @param args args or {@code null} for none
    */
   public BuildStep setArgs(java.util.List<java.lang.String> args) {
@@ -188,15 +173,12 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Working directory to use when running this step's container.
-   *
-   * If this value is a relative path, it is relative to the build's working directory. If this
-   * value is absolute, it may be outside the build's working directory, in which case the contents
-   * of the path may not be persisted across build step executions, unless a `volume` for that path
-   * is specified.
-   *
-   * If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an
-   * absolute path, the `RepoSource` `dir` is ignored for the step's execution.
+   * Working directory to use when running this step's container. If this value is a relative path,
+   * it is relative to the build's working directory. If this value is absolute, it may be outside
+   * the build's working directory, in which case the contents of the path may not be persisted
+   * across build step executions, unless a `volume` for that path is specified. If the build
+   * specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path,
+   * the `RepoSource` `dir` is ignored for the step's execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getDir() {
@@ -204,15 +186,12 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Working directory to use when running this step's container.
-   *
-   * If this value is a relative path, it is relative to the build's working directory. If this
-   * value is absolute, it may be outside the build's working directory, in which case the contents
-   * of the path may not be persisted across build step executions, unless a `volume` for that path
-   * is specified.
-   *
-   * If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an
-   * absolute path, the `RepoSource` `dir` is ignored for the step's execution.
+   * Working directory to use when running this step's container. If this value is a relative path,
+   * it is relative to the build's working directory. If this value is absolute, it may be outside
+   * the build's working directory, in which case the contents of the path may not be persisted
+   * across build step executions, unless a `volume` for that path is specified. If the build
+   * specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path,
+   * the `RepoSource` `dir` is ignored for the step's execution.
    * @param dir dir or {@code null} for none
    */
   public BuildStep setDir(java.lang.String dir) {
@@ -240,10 +219,8 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of environment variable definitions to be used when running a step.
-   *
-   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
-   * value "VALUE".
+   * A list of environment variable definitions to be used when running a step. The elements are of
+   * the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnv() {
@@ -251,10 +228,8 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of environment variable definitions to be used when running a step.
-   *
-   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
-   * value "VALUE".
+   * A list of environment variable definitions to be used when running a step. The elements are of
+   * the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
    * @param env env or {@code null} for none
    */
   public BuildStep setEnv(java.util.List<java.lang.String> env) {
@@ -282,20 +257,16 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the container image that will run this particular build step.
-   *
-   * If the image is available in the host's Docker daemon's cache, it will be run directly. If not,
-   * the host will attempt to pull the image first, using the builder service account's credentials
-   * if necessary.
-   *
-   * The Docker daemon's cache will already have the latest versions of all of the officially
-   * supported build steps ([https://github.com/GoogleCloudPlatform/cloud-
+   * Required. The name of the container image that will run this particular build step. If the
+   * image is available in the host's Docker daemon's cache, it will be run directly. If not, the
+   * host will attempt to pull the image first, using the builder service account's credentials if
+   * necessary. The Docker daemon's cache will already have the latest versions of all of the
+   * officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-
    * builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also
    * have cached many of the layers for some popular images, like "ubuntu", "debian", but they will
-   * be refreshed at the time you attempt to use them.
-   *
-   * If you built an image in a previous build step, it will be stored in the host's Docker daemon's
-   * cache and is available to use as the name for a later build step.
+   * be refreshed at the time you attempt to use them. If you built an image in a previous build
+   * step, it will be stored in the host's Docker daemon's cache and is available to use as the name
+   * for a later build step.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -303,20 +274,16 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the container image that will run this particular build step.
-   *
-   * If the image is available in the host's Docker daemon's cache, it will be run directly. If not,
-   * the host will attempt to pull the image first, using the builder service account's credentials
-   * if necessary.
-   *
-   * The Docker daemon's cache will already have the latest versions of all of the officially
-   * supported build steps ([https://github.com/GoogleCloudPlatform/cloud-
+   * Required. The name of the container image that will run this particular build step. If the
+   * image is available in the host's Docker daemon's cache, it will be run directly. If not, the
+   * host will attempt to pull the image first, using the builder service account's credentials if
+   * necessary. The Docker daemon's cache will already have the latest versions of all of the
+   * officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-
    * builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also
    * have cached many of the layers for some popular images, like "ubuntu", "debian", but they will
-   * be refreshed at the time you attempt to use them.
-   *
-   * If you built an image in a previous build step, it will be stored in the host's Docker daemon's
-   * cache and is available to use as the name for a later build step.
+   * be refreshed at the time you attempt to use them. If you built an image in a previous build
+   * step, it will be stored in the host's Docker daemon's cache and is available to use as the name
+   * for a later build step.
    * @param name name or {@code null} for none
    */
   public BuildStep setName(java.lang.String name) {
@@ -416,13 +383,10 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of volumes to mount into the build step.
-   *
-   * Each volume is created as an empty volume prior to execution of the build step. Upon completion
-   * of the build, volumes and their contents are discarded.
-   *
-   * Using a named volume in only one step is not valid as it is indicative of a build request with
-   * an incorrect configuration.
+   * List of volumes to mount into the build step. Each volume is created as an empty volume prior
+   * to execution of the build step. Upon completion of the build, volumes and their contents are
+   * discarded. Using a named volume in only one step is not valid as it is indicative of a build
+   * request with an incorrect configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<Volume> getVolumes() {
@@ -430,13 +394,10 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of volumes to mount into the build step.
-   *
-   * Each volume is created as an empty volume prior to execution of the build step. Upon completion
-   * of the build, volumes and their contents are discarded.
-   *
-   * Using a named volume in only one step is not valid as it is indicative of a build request with
-   * an incorrect configuration.
+   * List of volumes to mount into the build step. Each volume is created as an empty volume prior
+   * to execution of the build step. Upon completion of the build, volumes and their contents are
+   * discarded. Using a named volume in only one step is not valid as it is indicative of a build
+   * request with an incorrect configuration.
    * @param volumes volumes or {@code null} for none
    */
   public BuildStep setVolumes(java.util.List<Volume> volumes) {

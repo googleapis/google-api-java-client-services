@@ -38,7 +38,7 @@ public final class ObbFile extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. OBB file name which must conform to the format as specified by Android e.g.
-   * [main|patch].0300110.com.example.android.obb which will be installed into   \/Android/obb/\/ on
+   * [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on
    * the device.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class ObbFile extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. OBB file name which must conform to the format as specified by Android e.g.
-   * [main|patch].0300110.com.example.android.obb which will be installed into   \/Android/obb/\/ on
+   * [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on
    * the device.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class ObbFile extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. OBB file name which must conform to the format as specified by Android e.g.
-   * [main|patch].0300110.com.example.android.obb which will be installed into   \/Android/obb/\/ on
+   * [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on
    * the device.
    * @param obbFileName obbFileName or {@code null} for none
    */

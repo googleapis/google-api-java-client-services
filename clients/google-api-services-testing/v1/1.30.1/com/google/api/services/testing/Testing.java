@@ -286,13 +286,10 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Cancels unfinished test executions in a test matrix. This call returns immediately and
-       * cancellation proceeds asychronously. If the matrix is already final, this operation will have no
-       * effect.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-       * request is malformed - NOT_FOUND - if the Test Matrix does not exist
+       * cancellation proceeds asynchronously. If the matrix is already final, this operation will have no
+       * effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user
+       * is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND -
+       * if the Test Matrix does not exist
        *
        * Create a request for the method "testMatrices.cancel".
        *
@@ -315,13 +312,10 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Cancels unfinished test executions in a test matrix. This call returns immediately and
-         * cancellation proceeds asychronously. If the matrix is already final, this operation will have
-         * no effect.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
-         * request is malformed - NOT_FOUND - if the Test Matrix does not exist
+         * cancellation proceeds asynchronously. If the matrix is already final, this operation will have
+         * no effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the
+         * user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed -
+         * NOT_FOUND - if the Test Matrix does not exist
          *
          * Create a request for the method "testMatrices.cancel".
          *
@@ -435,13 +429,9 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Creates and runs a matrix of tests according to the given specifications. Unsupported
        * environments will be returned in the state UNSUPPORTED. Matrices are limited to at most 200
-       * supported executions.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-       * the request is malformed or if the matrix expands                      to more than 200 supported
-       * executions
+       * supported executions. May return any of the following canonical error codes: - PERMISSION_DENIED
+       * - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is
+       * malformed or if the matrix expands to more than 200 supported executions
        *
        * Create a request for the method "testMatrices.create".
        *
@@ -465,13 +455,9 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Creates and runs a matrix of tests according to the given specifications. Unsupported
          * environments will be returned in the state UNSUPPORTED. Matrices are limited to at most 200
-         * supported executions.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
-         * the request is malformed or if the matrix expands                      to more than 200
-         * supported executions
+         * supported executions. May return any of the following canonical error codes: -
+         * PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
+         * the request is malformed or if the matrix expands to more than 200 supported executions
          *
          * Create a request for the method "testMatrices.create".
          *
@@ -563,16 +549,14 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         /**
          * A string id used to detect duplicated requests. Ids are automatically scoped to a
          * project, so users should ensure the ID is unique per-project. A UUID is recommended.
-         *
          * Optional, but strongly recommended.
          */
         @com.google.api.client.util.Key
         private java.lang.String requestId;
 
         /** A string id used to detect duplicated requests. Ids are automatically scoped to a project, so users
-       should ensure the ID is unique per-project. A UUID is recommended.
-
-       Optional, but strongly recommended.
+       should ensure the ID is unique per-project. A UUID is recommended. Optional, but strongly
+       recommended.
          */
         public java.lang.String getRequestId() {
           return requestId;
@@ -581,7 +565,6 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         /**
          * A string id used to detect duplicated requests. Ids are automatically scoped to a
          * project, so users should ensure the ID is unique per-project. A UUID is recommended.
-         *
          * Optional, but strongly recommended.
          */
         public Create setRequestId(java.lang.String requestId) {
@@ -595,11 +578,8 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Checks the status of a test matrix.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
+       * Checks the status of a test matrix. May return any of the following canonical error codes: -
+       * PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
        * request is malformed - NOT_FOUND - if the Test Matrix does not exist
        *
        * Create a request for the method "testMatrices.get".
@@ -622,11 +602,8 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         private static final String REST_PATH = "v1/projects/{projectId}/testMatrices/{testMatrixId}";
 
         /**
-         * Checks the status of a test matrix.
-         *
-         * May return any of the following canonical error codes:
-         *
-         * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
+         * Checks the status of a test matrix. May return any of the following canonical error codes: -
+         * PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
          * request is malformed - NOT_FOUND - if the Test Matrix does not exist
          *
          * Create a request for the method "testMatrices.get".
@@ -773,12 +750,9 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
   public class TestEnvironmentCatalog {
 
     /**
-     * Gets the catalog of supported test environments.
-     *
-     * May return any of the following canonical error codes:
-     *
-     * - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not
-     * exist - INTERNAL - if an internal error occurred
+     * Gets the catalog of supported test environments. May return any of the following canonical error
+     * codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type
+     * does not exist - INTERNAL - if an internal error occurred
      *
      * Create a request for the method "testEnvironmentCatalog.get".
      *
@@ -799,12 +773,9 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "v1/testEnvironmentCatalog/{environmentType}";
 
       /**
-       * Gets the catalog of supported test environments.
-       *
-       * May return any of the following canonical error codes:
-       *
-       * - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not
-       * exist - INTERNAL - if an internal error occurred
+       * Gets the catalog of supported test environments. May return any of the following canonical
+       * error codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment
+       * type does not exist - INTERNAL - if an internal error occurred
        *
        * Create a request for the method "testEnvironmentCatalog.get".
        *

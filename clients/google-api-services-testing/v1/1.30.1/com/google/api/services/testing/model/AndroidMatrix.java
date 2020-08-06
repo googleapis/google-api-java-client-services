@@ -19,8 +19,7 @@ package com.google.api.services.testing.model;
 /**
  * A set of Android device configuration permutations is defined by the the cross-product of the
  * given axes. Internally, the given AndroidMatrix will be expanded into a set of AndroidDevices.
- *
- * Only supported permutations will be instantiated.  Invalid permutations (e.g., incompatible
+ * Only supported permutations will be instantiated. Invalid permutations (e.g., incompatible
  * models/versions) are ignored.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

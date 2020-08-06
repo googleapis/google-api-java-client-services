@@ -52,7 +52,6 @@ public final class ResultStorage extends com.google.api.client.json.GenericJson 
 
   /**
    * The tool results history that contains the tool results execution that results are written to.
-   *
    * If not provided, the service will choose an appropriate value.
    * The value may be {@code null}.
    */
@@ -112,7 +111,6 @@ public final class ResultStorage extends com.google.api.client.json.GenericJson 
 
   /**
    * The tool results history that contains the tool results execution that results are written to.
-   *
    * If not provided, the service will choose an appropriate value.
    * @return value or {@code null} for none
    */
@@ -122,7 +120,6 @@ public final class ResultStorage extends com.google.api.client.json.GenericJson 
 
   /**
    * The tool results history that contains the tool results execution that results are written to.
-   *
    * If not provided, the service will choose an appropriate value.
    * @param toolResultsHistory toolResultsHistory or {@code null} for none
    */

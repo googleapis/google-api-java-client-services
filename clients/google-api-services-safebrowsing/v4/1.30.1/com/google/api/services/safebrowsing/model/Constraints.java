@@ -54,7 +54,7 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size in number of entries. The update will not contain more entries than this
-   * value.  This should be a power of 2 between 2**10 and 2**20.  If zero, no update size limit is
+   * value. This should be a power of 2 between 2**10 and 2**20. If zero, no update size limit is
    * set.
    * The value may be {@code null}.
    */
@@ -133,7 +133,7 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size in number of entries. The update will not contain more entries than this
-   * value.  This should be a power of 2 between 2**10 and 2**20.  If zero, no update size limit is
+   * value. This should be a power of 2 between 2**10 and 2**20. If zero, no update size limit is
    * set.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size in number of entries. The update will not contain more entries than this
-   * value.  This should be a power of 2 between 2**10 and 2**20.  If zero, no update size limit is
+   * value. This should be a power of 2 between 2**10 and 2**20. If zero, no update size limit is
    * set.
    * @param maxUpdateEntries maxUpdateEntries or {@code null} for none
    */

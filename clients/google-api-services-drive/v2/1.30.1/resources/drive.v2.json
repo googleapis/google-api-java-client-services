@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/Y8vbFl0i1r1N0KsawuiIYIt6icM\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/a4Ez9tiFRSeZTVCssBYotIRGffk\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20200719",
+ "revision": "20200723",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -2100,6 +2100,10 @@
      "type": "string",
      "description": "The email address or domain name for the entity. This is used during inserts and is not populated in responses. When making a drive.permissions.insert request, exactly one of the id or value fields must be specified unless the permission type is anyone, in which case both id and value are ignored."
     },
+    "view": {
+     "type": "string",
+     "description": "Indicates the view for this permission. Only populated for permissions that belong to a view. published is the only supported value."
+    },
     "withLink": {
      "type": "boolean",
      "description": "Whether the link is required for this permission."
@@ -2815,6 +2819,11 @@
        "default": "false",
        "location": "query"
       },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
+      },
       "includeSubscribed": {
        "type": "boolean",
        "description": "Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes to files such as those in the Application Data folder or shared files which have not been added to My Drive are omitted from the result.",
@@ -2911,6 +2920,11 @@
        "type": "boolean",
        "description": "Whether both My Drive and shared drive items should be included in results.",
        "default": "false",
+       "location": "query"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
        "location": "query"
       },
       "includeSubscribed": {
@@ -3623,6 +3637,11 @@
        "required": true,
        "location": "path"
       },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
+      },
       "ocr": {
        "type": "boolean",
        "description": "Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads.",
@@ -3816,6 +3835,11 @@
        "required": true,
        "location": "path"
       },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
+      },
       "projection": {
        "type": "string",
        "description": "This parameter is deprecated and has no function.",
@@ -3888,6 +3912,11 @@
        "type": "boolean",
        "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. Requests that specify more than one parent fail.",
        "default": "false",
+       "location": "query"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
        "location": "query"
       },
       "ocr": {
@@ -4016,6 +4045,11 @@
        "default": "false",
        "location": "query"
       },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
+      },
       "includeTeamDriveItems": {
        "type": "boolean",
        "description": "Deprecated use includeItemsFromAllDrives instead.",
@@ -4123,6 +4157,11 @@
        "description": "The ID of the file to update.",
        "required": true,
        "location": "path"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
       },
       "modifiedDateBehavior": {
        "type": "string",
@@ -4244,6 +4283,11 @@
        "required": true,
        "location": "path"
       },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
+      },
       "supportsAllDrives": {
        "type": "boolean",
        "description": "Whether the requesting application supports both My Drives and shared drives.",
@@ -4283,6 +4327,11 @@
        "required": true,
        "location": "path"
       },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
+      },
       "supportsAllDrives": {
        "type": "boolean",
        "description": "Whether the requesting application supports both My Drives and shared drives.",
@@ -4320,6 +4369,11 @@
        "description": "The ID of the file to untrash.",
        "required": true,
        "location": "path"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
       },
       "supportsAllDrives": {
        "type": "boolean",
@@ -4375,6 +4429,11 @@
        "description": "The ID of the file to update.",
        "required": true,
        "location": "path"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
       },
       "modifiedDateBehavior": {
        "type": "string",
@@ -4518,6 +4577,11 @@
        "description": "The ID for the file in question.",
        "required": true,
        "location": "path"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
       },
       "projection": {
        "type": "string",
@@ -4940,6 +5004,11 @@
        "description": "The ID for the file or shared drive.",
        "required": true,
        "location": "path"
+      },
+      "includePermissionsForView": {
+       "type": "string",
+       "description": "Specifies which additional view's permissions to include in the response. Only 'published' is supported.",
+       "location": "query"
       },
       "maxResults": {
        "type": "integer",

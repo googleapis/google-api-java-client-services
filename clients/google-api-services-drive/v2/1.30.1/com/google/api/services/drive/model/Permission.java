@@ -177,6 +177,14 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
+   * Indicates the view for this permission. Only populated for permissions that belong to a view.
+   * published is the only supported value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String view;
+
+  /**
    * Whether the link is required for this permission.
    * The value may be {@code null}.
    */
@@ -501,6 +509,25 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    */
   public Permission setValue(java.lang.String value) {
     this.value = value;
+    return this;
+  }
+
+  /**
+   * Indicates the view for this permission. Only populated for permissions that belong to a view.
+   * published is the only supported value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getView() {
+    return view;
+  }
+
+  /**
+   * Indicates the view for this permission. Only populated for permissions that belong to a view.
+   * published is the only supported value.
+   * @param view view or {@code null} for none
+   */
+  public Permission setView(java.lang.String view) {
+    this.view = view;
     return this;
   }
 

@@ -698,6 +698,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+      }
+
+      /**
        * Whether to include changes indicating that items have been removed from the list of
        * changes, for example by deletion or loss of access.
        */
@@ -1216,6 +1239,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return includeItemsFromAllDrives;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public Watch setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
       }
 
       /**
@@ -3505,6 +3551,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public Copy setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+      }
+
+      /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
        * files with binary content in Google Drive. Only 200 revisions for the file can be kept
        * forever. If the limit is reached, try deleting pinned revisions.
@@ -3899,6 +3968,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return ignoreDefaultVisibility;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public Create setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
       }
 
       /**
@@ -4811,6 +4903,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return acknowledgeAbuse;
       }
 
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public Get setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+      }
+
       /** Whether the requesting application supports both My Drives and shared drives. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
@@ -5088,6 +5203,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return includeItemsFromAllDrives;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
       }
 
       /** Deprecated use includeItemsFromAllDrives instead. */
@@ -5589,6 +5727,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public Update setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+      }
+
+      /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
        * files with binary content in Google Drive. Only 200 revisions for the file can be kept
        * forever. If the limit is reached, try deleting pinned revisions.
@@ -5974,6 +6135,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return acknowledgeAbuse;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public Watch setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
       }
 
       /** Whether the requesting application supports both My Drives and shared drives. */
@@ -7166,6 +7350,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /** The ID of the file or shared drive. */
       public List setFileId(java.lang.String fileId) {
         this.fileId = fileId;
+        return this;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includePermissionsForView;
+
+      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+     supported.
+       */
+      public java.lang.String getIncludePermissionsForView() {
+        return includePermissionsForView;
+      }
+
+      /**
+       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * is supported.
+       */
+      public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
         return this;
       }
 

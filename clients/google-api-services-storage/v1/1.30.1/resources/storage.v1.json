@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/5Ir-e9ddNPcr5skzvRsSnJlvTYg\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/dTOCeIt1xMAjORhzKIzyAK55178\"",
  "discoveryVersion": "v1",
  "id": "storage:v1",
  "name": "storage",
  "version": "v1",
- "revision": "20200611",
+ "revision": "20200727",
  "title": "Cloud Storage JSON API",
  "description": "Stores and retrieves potentially large, immutable data objects.",
  "ownerDomain": "google.com",
@@ -271,8 +271,8 @@
            },
            "customTimeBefore": {
             "type": "string",
-            "description": "A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object is before this timestamp.",
-            "format": "date-time"
+            "description": "A date in RFC 3339 format with only the date part (for instance, \"2013-01-15\"). This condition is satisfied when the custom time on an object is before this date in UTC.",
+            "format": "date"
            },
            "daysSinceCustomTime": {
             "type": "integer",
@@ -301,8 +301,8 @@
            },
            "noncurrentTimeBefore": {
             "type": "string",
-            "description": "A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an object is before this timestamp. This condition is relevant only for versioned objects.",
-            "format": "date-time"
+            "description": "A date in RFC 3339 format with only the date part (for instance, \"2013-01-15\"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.",
+            "format": "date"
            },
            "numNewerVersions": {
             "type": "integer",

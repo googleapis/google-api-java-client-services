@@ -1417,8 +1417,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private com.google.api.client.util.DateTime createdBefore;
 
         /**
-         * A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object
-         * is before this timestamp.
+         * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
+         * is satisfied when the custom time on an object is before this date in UTC.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
@@ -1471,8 +1471,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private java.util.List<java.lang.String> matchesStorageClass;
 
         /**
-         * A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an
-         * object is before this timestamp. This condition is relevant only for versioned objects.
+         * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
+         * is satisfied when the noncurrent time on an object is before this date in UTC. This condition
+         * is relevant only for versioned objects.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
@@ -1525,8 +1526,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object
-         * is before this timestamp.
+         * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
+         * is satisfied when the custom time on an object is before this date in UTC.
          * @return value or {@code null} for none
          */
         public com.google.api.client.util.DateTime getCustomTimeBefore() {
@@ -1534,8 +1535,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * A timestamp in RFC 3339 format. This condition is satisfied when the custom time on an object
-         * is before this timestamp.
+         * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
+         * is satisfied when the custom time on an object is before this date in UTC.
          * @param customTimeBefore customTimeBefore or {@code null} for none
          */
         public Condition setCustomTimeBefore(com.google.api.client.util.DateTime customTimeBefore) {
@@ -1651,8 +1652,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an
-         * object is before this timestamp. This condition is relevant only for versioned objects.
+         * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
+         * is satisfied when the noncurrent time on an object is before this date in UTC. This condition
+         * is relevant only for versioned objects.
          * @return value or {@code null} for none
          */
         public com.google.api.client.util.DateTime getNoncurrentTimeBefore() {
@@ -1660,8 +1662,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * A timestamp in RFC 3339 format. This condition is satisfied when the noncurrent time on an
-         * object is before this timestamp. This condition is relevant only for versioned objects.
+         * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
+         * is satisfied when the noncurrent time on an object is before this date in UTC. This condition
+         * is relevant only for versioned objects.
          * @param noncurrentTimeBefore noncurrentTimeBefore or {@code null} for none
          */
         public Condition setNoncurrentTimeBefore(com.google.api.client.util.DateTime noncurrentTimeBefore) {

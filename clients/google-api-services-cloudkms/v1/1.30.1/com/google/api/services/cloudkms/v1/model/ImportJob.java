@@ -18,24 +18,19 @@ package com.google.api.services.cloudkms.v1.model;
 
 /**
  * An ImportJob can be used to create CryptoKeys and CryptoKeyVersions using pre-existing key
- * material, generated outside of Cloud KMS.
- *
- * When an ImportJob is created, Cloud KMS will generate a "wrapping key", which is a public/private
- * key pair. You use the wrapping key to encrypt (also known as wrap) the pre-existing key material
- * to protect it during the import process. The nature of the wrapping key depends on the choice of
- * import_method. When the wrapping key generation is complete, the state will be set to ACTIVE and
- * the public_key can be fetched. The fetched public key can then be used to wrap your pre-existing
- * key material.
- *
- * Once the key material is wrapped, it can be imported into a new CryptoKeyVersion in an existing
- * CryptoKey by calling ImportCryptoKeyVersion. Multiple CryptoKeyVersions can be imported with a
- * single ImportJob. Cloud KMS uses the private key portion of the wrapping key to unwrap the key
- * material. Only Cloud KMS has access to the private key.
- *
- * An ImportJob expires 3 days after it is created. Once expired, Cloud KMS will no longer be able
- * to import or unwrap any key material that was wrapped with the ImportJob's public key.
- *
- * For more information, see [Importing a key](https://cloud.google.com/kms/docs/importing-a-key).
+ * material, generated outside of Cloud KMS. When an ImportJob is created, Cloud KMS will generate a
+ * "wrapping key", which is a public/private key pair. You use the wrapping key to encrypt (also
+ * known as wrap) the pre-existing key material to protect it during the import process. The nature
+ * of the wrapping key depends on the choice of import_method. When the wrapping key generation is
+ * complete, the state will be set to ACTIVE and the public_key can be fetched. The fetched public
+ * key can then be used to wrap your pre-existing key material. Once the key material is wrapped, it
+ * can be imported into a new CryptoKeyVersion in an existing CryptoKey by calling
+ * ImportCryptoKeyVersion. Multiple CryptoKeyVersions can be imported with a single ImportJob. Cloud
+ * KMS uses the private key portion of the wrapping key to unwrap the key material. Only Cloud KMS
+ * has access to the private key. An ImportJob expires 3 days after it is created. Once expired,
+ * Cloud KMS will no longer be able to import or unwrap any key material that was wrapped with the
+ * ImportJob's public key. For more information, see [Importing a
+ * key](https://cloud.google.com/kms/docs/importing-a-key).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a

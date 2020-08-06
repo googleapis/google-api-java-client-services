@@ -17,9 +17,9 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * A Rule defines a name, and a boolean expression in [conjunctive normal
- * form](http://mathworld.wolfram.com/ConjunctiveNormalForm.html){.external} that can be applied to
- * a path event to determine if that name should be applied.
+ * A Rule defines a name, and a boolean expression in [conjunctive normal form](http:
+ * //mathworld.wolfram.com/ConjunctiveNormalForm.html){.external} that can be // applied to a path
+ * event to determine if that name should be applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed

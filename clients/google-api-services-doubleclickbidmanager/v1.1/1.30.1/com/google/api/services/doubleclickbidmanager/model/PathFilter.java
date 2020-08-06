@@ -18,10 +18,9 @@ package com.google.api.services.doubleclickbidmanager.model;
 
 /**
  * Path filters specify which paths to include in a report. A path is the result of combining DV360
- * events based on User ID to create a workflow of users' actions.
- *
- * When a path filter is set, the resulting report will only include paths that match the specified
- * event at the specified position. All other paths will be excluded.
+ * events based on User ID to create a workflow of users' actions. When a path filter is set, the
+ * resulting report will only include paths that match the specified event at the specified
+ * position. All other paths will be excluded.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed

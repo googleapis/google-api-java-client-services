@@ -19,10 +19,9 @@ package com.google.api.services.safebrowsing.model;
 /**
  * The uncompressed threat entries in hash format of a particular prefix length. Hashes can be
  * anywhere from 4 to 32 bytes in size. A large majority are 4 bytes, but some hashes are lengthened
- * if they collide with the hash of a popular URL.
- *
- * Used for sending ThreatEntrySet to clients that do not support compression, or when sending
- * non-4-byte hashes to clients that do support compression.
+ * if they collide with the hash of a popular URL. Used for sending ThreatEntrySet to clients that
+ * do not support compression, or when sending non-4-byte hashes to clients that do support
+ * compression.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Safe Browsing API. For a detailed explanation see:
@@ -35,7 +34,7 @@ package com.google.api.services.safebrowsing.model;
 public final class RawHashes extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of bytes for each prefix encoded below.  This field can be anywhere from 4 (shortest
+   * The number of bytes for each prefix encoded below. This field can be anywhere from 4 (shortest
    * prefix) to 32 (full SHA256 hash).
    * The value may be {@code null}.
    */
@@ -51,7 +50,7 @@ public final class RawHashes extends com.google.api.client.json.GenericJson {
   private java.lang.String rawHashes;
 
   /**
-   * The number of bytes for each prefix encoded below.  This field can be anywhere from 4 (shortest
+   * The number of bytes for each prefix encoded below. This field can be anywhere from 4 (shortest
    * prefix) to 32 (full SHA256 hash).
    * @return value or {@code null} for none
    */
@@ -60,7 +59,7 @@ public final class RawHashes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of bytes for each prefix encoded below.  This field can be anywhere from 4 (shortest
+   * The number of bytes for each prefix encoded below. This field can be anywhere from 4 (shortest
    * prefix) to 32 (full SHA256 hash).
    * @param prefixSize prefixSize or {@code null} for none
    */

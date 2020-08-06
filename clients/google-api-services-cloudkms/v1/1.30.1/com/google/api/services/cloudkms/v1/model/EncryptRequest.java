@@ -32,11 +32,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
-   * DecryptRequest.additional_authenticated_data.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
-   * be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
+   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
+   * combined length of the plaintext and additional_authenticated_data fields must be no larger
+   * than 8KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,20 +51,18 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
    * checksum. Note: This field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
-   * safely downconverted to uint32 in languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * safely downconverted to uint32 in languages that support this type. NOTE: This field is in
+   * Beta.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long additionalAuthenticatedDataCrc32c;
 
   /**
-   * Required. The data to encrypt. Must be no larger than 64KiB.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
-   * plaintext must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
+   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
+   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
+   * must be no larger than 8KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +77,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
    * This field is defined as int64 for reasons of compatibility across different languages.
    * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
-   * downconverted to uint32 in languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * downconverted to uint32 in languages that support this type. NOTE: This field is in Beta.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -90,11 +85,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
-   * DecryptRequest.additional_authenticated_data.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
-   * be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
+   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
+   * combined length of the plaintext and additional_authenticated_data fields must be no larger
+   * than 8KiB.
    * @see #decodeAdditionalAuthenticatedData()
    * @return value or {@code null} for none
    */
@@ -104,11 +98,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
-   * DecryptRequest.additional_authenticated_data.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
-   * be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
+   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
+   * combined length of the plaintext and additional_authenticated_data fields must be no larger
+   * than 8KiB.
    * @see #getAdditionalAuthenticatedData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -120,11 +113,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
-   * DecryptRequest.additional_authenticated_data.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
-   * be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
+   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
+   * combined length of the plaintext and additional_authenticated_data fields must be no larger
+   * than 8KiB.
    * @see #encodeAdditionalAuthenticatedData()
    * @param additionalAuthenticatedData additionalAuthenticatedData or {@code null} for none
    */
@@ -135,11 +127,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
-   * DecryptRequest.additional_authenticated_data.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
-   * be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
+   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
+   * combined length of the plaintext and additional_authenticated_data fields must be no larger
+   * than 8KiB.
    * @see #setAdditionalAuthenticatedData()
    *
    * <p>
@@ -163,9 +154,8 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
    * checksum. Note: This field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
-   * safely downconverted to uint32 in languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * safely downconverted to uint32 in languages that support this type. NOTE: This field is in
+   * Beta.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdditionalAuthenticatedDataCrc32c() {
@@ -182,9 +172,8 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
    * checksum. Note: This field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
-   * safely downconverted to uint32 in languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * safely downconverted to uint32 in languages that support this type. NOTE: This field is in
+   * Beta.
    * @param additionalAuthenticatedDataCrc32c additionalAuthenticatedDataCrc32c or {@code null} for none
    */
   public EncryptRequest setAdditionalAuthenticatedDataCrc32c(java.lang.Long additionalAuthenticatedDataCrc32c) {
@@ -193,11 +182,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The data to encrypt. Must be no larger than 64KiB.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
-   * plaintext must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
+   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
+   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
+   * must be no larger than 8KiB.
    * @see #decodePlaintext()
    * @return value or {@code null} for none
    */
@@ -206,11 +194,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The data to encrypt. Must be no larger than 64KiB.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
-   * plaintext must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
+   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
+   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
+   * must be no larger than 8KiB.
    * @see #getPlaintext()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -221,11 +208,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The data to encrypt. Must be no larger than 64KiB.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
-   * plaintext must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
+   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
+   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
+   * must be no larger than 8KiB.
    * @see #encodePlaintext()
    * @param plaintext plaintext or {@code null} for none
    */
@@ -235,11 +221,10 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The data to encrypt. Must be no larger than 64KiB.
-   *
-   * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the
-   * plaintext must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
-   * additional_authenticated_data fields must be no larger than 8KiB.
+   * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
+   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
+   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
+   * must be no larger than 8KiB.
    * @see #setPlaintext()
    *
    * <p>
@@ -262,9 +247,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
    * This field is defined as int64 for reasons of compatibility across different languages.
    * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
-   * downconverted to uint32 in languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * downconverted to uint32 in languages that support this type. NOTE: This field is in Beta.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPlaintextCrc32c() {
@@ -280,9 +263,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
    * This field is defined as int64 for reasons of compatibility across different languages.
    * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
-   * downconverted to uint32 in languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * downconverted to uint32 in languages that support this type. NOTE: This field is in Beta.
    * @param plaintextCrc32c plaintextCrc32c or {@code null} for none
    */
   public EncryptRequest setPlaintextCrc32c(java.lang.Long plaintextCrc32c) {

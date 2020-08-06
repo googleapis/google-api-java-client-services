@@ -45,9 +45,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
    * defined as int64 for reasons of compatibility across different languages. However, it is a non-
    * negative integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in
-   * languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * languages that support this type. NOTE: This field is in Beta.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -68,9 +66,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * that EncryptRequest.additional_authenticated_data_crc32c was left unset or that it was not
    * delivered to KeyManagementService. If you've set
    * EncryptRequest.additional_authenticated_data_crc32c but this field is still false, discard the
-   * response and perform a limited number of retries.
-   *
-   * NOTE: This field is in Beta.
+   * response and perform a limited number of retries. NOTE: This field is in Beta.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +78,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * false value of this field indicates either that EncryptRequest.plaintext_crc32c was left unset
    * or that it was not delivered to KeyManagementService. If you've set
    * EncryptRequest.plaintext_crc32c but this field is still false, discard the response and perform
-   * a limited number of retries.
-   *
-   * NOTE: This field is in Beta.
+   * a limited number of retries. NOTE: This field is in Beta.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,9 +137,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
    * defined as int64 for reasons of compatibility across different languages. However, it is a non-
    * negative integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in
-   * languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * languages that support this type. NOTE: This field is in Beta.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCiphertextCrc32c() {
@@ -160,9 +152,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
    * defined as int64 for reasons of compatibility across different languages. However, it is a non-
    * negative integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in
-   * languages that support this type.
-   *
-   * NOTE: This field is in Beta.
+   * languages that support this type. NOTE: This field is in Beta.
    * @param ciphertextCrc32c ciphertextCrc32c or {@code null} for none
    */
   public EncryptResponse setCiphertextCrc32c(java.lang.Long ciphertextCrc32c) {
@@ -196,9 +186,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * that EncryptRequest.additional_authenticated_data_crc32c was left unset or that it was not
    * delivered to KeyManagementService. If you've set
    * EncryptRequest.additional_authenticated_data_crc32c but this field is still false, discard the
-   * response and perform a limited number of retries.
-   *
-   * NOTE: This field is in Beta.
+   * response and perform a limited number of retries. NOTE: This field is in Beta.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerifiedAdditionalAuthenticatedDataCrc32c() {
@@ -212,9 +200,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * that EncryptRequest.additional_authenticated_data_crc32c was left unset or that it was not
    * delivered to KeyManagementService. If you've set
    * EncryptRequest.additional_authenticated_data_crc32c but this field is still false, discard the
-   * response and perform a limited number of retries.
-   *
-   * NOTE: This field is in Beta.
+   * response and perform a limited number of retries. NOTE: This field is in Beta.
    * @param verifiedAdditionalAuthenticatedDataCrc32c verifiedAdditionalAuthenticatedDataCrc32c or {@code null} for none
    */
   public EncryptResponse setVerifiedAdditionalAuthenticatedDataCrc32c(java.lang.Boolean verifiedAdditionalAuthenticatedDataCrc32c) {
@@ -228,9 +214,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * false value of this field indicates either that EncryptRequest.plaintext_crc32c was left unset
    * or that it was not delivered to KeyManagementService. If you've set
    * EncryptRequest.plaintext_crc32c but this field is still false, discard the response and perform
-   * a limited number of retries.
-   *
-   * NOTE: This field is in Beta.
+   * a limited number of retries. NOTE: This field is in Beta.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerifiedPlaintextCrc32c() {
@@ -243,9 +227,7 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    * false value of this field indicates either that EncryptRequest.plaintext_crc32c was left unset
    * or that it was not delivered to KeyManagementService. If you've set
    * EncryptRequest.plaintext_crc32c but this field is still false, discard the response and perform
-   * a limited number of retries.
-   *
-   * NOTE: This field is in Beta.
+   * a limited number of retries. NOTE: This field is in Beta.
    * @param verifiedPlaintextCrc32c verifiedPlaintextCrc32c or {@code null} for none
    */
   public EncryptResponse setVerifiedPlaintextCrc32c(java.lang.Boolean verifiedPlaintextCrc32c) {

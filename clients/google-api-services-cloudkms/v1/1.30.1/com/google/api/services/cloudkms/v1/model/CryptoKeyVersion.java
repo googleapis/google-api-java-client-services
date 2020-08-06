@@ -18,12 +18,10 @@ package com.google.api.services.cloudkms.v1.model;
 
 /**
  * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
- *
- * An ENABLED version can be used for cryptographic operations.
- *
- * For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can
- * never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an
- * authorized user or application invokes Cloud KMS.
+ * An ENABLED version can be used for cryptographic operations. For security reasons, the raw
+ * cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It
+ * can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes
+ * Cloud KMS.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a

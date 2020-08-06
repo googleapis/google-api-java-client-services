@@ -17,9 +17,8 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * A CryptoKey represents a logical key that can be used for cryptographic operations.
- *
- * A CryptoKey is made up of zero or more versions, which represent the actual key material used in
+ * A CryptoKey represents a logical key that can be used for cryptographic operations. A CryptoKey
+ * is made up of zero or more versions, which represent the actual key material used in
  * cryptographic operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -57,15 +56,11 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * At next_rotation_time, the Key Management Service will automatically:
-   *
-   * 1. Create a new version of this CryptoKey. 2. Mark the new version as primary.
-   *
-   * Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion
-   * do not affect next_rotation_time.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must
-   * be omitted.
+   * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version
+   * of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via
+   * CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys
+   * with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be
+   * omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,12 +68,9 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A copy of the "primary" CryptoKeyVersion that will be used by Encrypt when this
-   * CryptoKey is given in EncryptRequest.name.
-   *
-   * The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be
-   * omitted.
+   * CryptoKey is given in EncryptRequest.name. The CryptoKey's primary version can be updated via
+   * UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a primary. For other
+   * keys, this field will be omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,12 +85,9 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * next_rotation_time will be advanced by this period when the service automatically rotates a
-   * key. Must be at least 24 hours and at most 876,000 hours.
-   *
-   * If rotation_period is set, next_rotation_time must also be set.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must
-   * be omitted.
+   * key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set,
+   * next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic
+   * rotation. For other keys, this field must be omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,15 +158,11 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * At next_rotation_time, the Key Management Service will automatically:
-   *
-   * 1. Create a new version of this CryptoKey. 2. Mark the new version as primary.
-   *
-   * Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion
-   * do not affect next_rotation_time.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must
-   * be omitted.
+   * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version
+   * of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via
+   * CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys
+   * with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be
+   * omitted.
    * @return value or {@code null} for none
    */
   public String getNextRotationTime() {
@@ -185,15 +170,11 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * At next_rotation_time, the Key Management Service will automatically:
-   *
-   * 1. Create a new version of this CryptoKey. 2. Mark the new version as primary.
-   *
-   * Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion
-   * do not affect next_rotation_time.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must
-   * be omitted.
+   * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version
+   * of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via
+   * CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys
+   * with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be
+   * omitted.
    * @param nextRotationTime nextRotationTime or {@code null} for none
    */
   public CryptoKey setNextRotationTime(String nextRotationTime) {
@@ -203,12 +184,9 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A copy of the "primary" CryptoKeyVersion that will be used by Encrypt when this
-   * CryptoKey is given in EncryptRequest.name.
-   *
-   * The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be
-   * omitted.
+   * CryptoKey is given in EncryptRequest.name. The CryptoKey's primary version can be updated via
+   * UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a primary. For other
+   * keys, this field will be omitted.
    * @return value or {@code null} for none
    */
   public CryptoKeyVersion getPrimary() {
@@ -217,12 +195,9 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A copy of the "primary" CryptoKeyVersion that will be used by Encrypt when this
-   * CryptoKey is given in EncryptRequest.name.
-   *
-   * The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be
-   * omitted.
+   * CryptoKey is given in EncryptRequest.name. The CryptoKey's primary version can be updated via
+   * UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a primary. For other
+   * keys, this field will be omitted.
    * @param primary primary or {@code null} for none
    */
   public CryptoKey setPrimary(CryptoKeyVersion primary) {
@@ -249,12 +224,9 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * next_rotation_time will be advanced by this period when the service automatically rotates a
-   * key. Must be at least 24 hours and at most 876,000 hours.
-   *
-   * If rotation_period is set, next_rotation_time must also be set.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must
-   * be omitted.
+   * key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set,
+   * next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic
+   * rotation. For other keys, this field must be omitted.
    * @return value or {@code null} for none
    */
   public String getRotationPeriod() {
@@ -263,12 +235,9 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * next_rotation_time will be advanced by this period when the service automatically rotates a
-   * key. Must be at least 24 hours and at most 876,000 hours.
-   *
-   * If rotation_period is set, next_rotation_time must also be set.
-   *
-   * Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must
-   * be omitted.
+   * key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set,
+   * next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic
+   * rotation. For other keys, this field must be omitted.
    * @param rotationPeriod rotationPeriod or {@code null} for none
    */
   public CryptoKey setRotationPeriod(String rotationPeriod) {

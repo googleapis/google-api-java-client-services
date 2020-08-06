@@ -32,10 +32,9 @@ package com.google.api.services.cloudkms.v1.model;
 public final class CryptoKeyVersionTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Algorithm to use when creating a CryptoKeyVersion based on this template.
-   *
-   * For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is
-   * omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+   * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For
+   * backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted
+   * and CryptoKey.purpose is ENCRYPT_DECRYPT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +49,9 @@ public final class CryptoKeyVersionTemplate extends com.google.api.client.json.G
   private java.lang.String protectionLevel;
 
   /**
-   * Required. Algorithm to use when creating a CryptoKeyVersion based on this template.
-   *
-   * For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is
-   * omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+   * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For
+   * backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted
+   * and CryptoKey.purpose is ENCRYPT_DECRYPT.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlgorithm() {
@@ -61,10 +59,9 @@ public final class CryptoKeyVersionTemplate extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Algorithm to use when creating a CryptoKeyVersion based on this template.
-   *
-   * For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is
-   * omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+   * Required. Algorithm to use when creating a CryptoKeyVersion based on this template. For
+   * backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted
+   * and CryptoKey.purpose is ENCRYPT_DECRYPT.
    * @param algorithm algorithm or {@code null} for none
    */
   public CryptoKeyVersionTemplate setAlgorithm(java.lang.String algorithm) {

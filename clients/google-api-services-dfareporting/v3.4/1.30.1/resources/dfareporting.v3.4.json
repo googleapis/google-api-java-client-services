@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/qc9rDDh3ersvNrKbY8B0EqQ-tKo\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/PkTxU6cmNYCuywUBM2esTiF_8pQ\"",
  "discoveryVersion": "v1",
  "id": "dfareporting:v3.4",
  "name": "dfareporting",
  "version": "v3.4",
- "revision": "20200722",
+ "revision": "20200730",
  "title": "DCM/DFA Reporting And Trafficking API",
  "description": "Manages your DoubleClick Campaign Manager ad campaigns and reports.",
  "ownerDomain": "google.com",
@@ -19040,6 +19040,41 @@
      ],
      "response": {
       "$ref": "ReportList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/dfareporting"
+     ]
+    },
+    "patch": {
+     "id": "dfareporting.reports.patch",
+     "path": "userprofiles/{profileId}/reports/{reportId}",
+     "httpMethod": "PATCH",
+     "description": "Updates a report. This method supports patch semantics.",
+     "parameters": {
+      "profileId": {
+       "type": "string",
+       "description": "The DFA user profile ID.",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      },
+      "reportId": {
+       "type": "string",
+       "description": "The ID of the report.",
+       "required": true,
+       "format": "int64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "profileId",
+      "reportId"
+     ],
+     "request": {
+      "$ref": "Report"
+     },
+     "response": {
+      "$ref": "Report"
      },
      "scopes": [
       "https://www.googleapis.com/auth/dfareporting"

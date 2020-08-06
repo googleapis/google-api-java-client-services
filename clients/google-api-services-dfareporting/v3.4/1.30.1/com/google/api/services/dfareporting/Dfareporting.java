@@ -25250,6 +25250,123 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * Updates a report. This method supports patch semantics.
+     *
+     * Create a request for the method "reports.patch".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param profileId The DFA user profile ID.
+     * @param reportId The ID of the report.
+     * @param content the {@link com.google.api.services.dfareporting.model.Report}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long profileId, java.lang.Long reportId, com.google.api.services.dfareporting.model.Report content) throws java.io.IOException {
+      Patch result = new Patch(profileId, reportId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Report> {
+
+      private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}";
+
+      /**
+       * Updates a report. This method supports patch semantics.
+       *
+       * Create a request for the method "reports.patch".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param profileId The DFA user profile ID.
+       * @param reportId The ID of the report.
+       * @param content the {@link com.google.api.services.dfareporting.model.Report}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long profileId, java.lang.Long reportId, com.google.api.services.dfareporting.model.Report content) {
+        super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Report.class);
+        this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.reportId = com.google.api.client.util.Preconditions.checkNotNull(reportId, "Required parameter reportId must be specified.");
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUserIp(java.lang.String userIp) {
+        return (Patch) super.setUserIp(userIp);
+      }
+
+      /** The DFA user profile ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long profileId;
+
+      /** The DFA user profile ID.
+       */
+      public java.lang.Long getProfileId() {
+        return profileId;
+      }
+
+      /** The DFA user profile ID. */
+      public Patch setProfileId(java.lang.Long profileId) {
+        this.profileId = profileId;
+        return this;
+      }
+
+      /** The ID of the report. */
+      @com.google.api.client.util.Key
+      private java.lang.Long reportId;
+
+      /** The ID of the report.
+       */
+      public java.lang.Long getReportId() {
+        return reportId;
+      }
+
+      /** The ID of the report. */
+      public Patch setReportId(java.lang.Long reportId) {
+        this.reportId = reportId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
      * Runs a report.
      *
      * Create a request for the method "reports.run".

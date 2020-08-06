@@ -19,15 +19,11 @@ package com.google.api.services.runtimeconfig.v1beta1.model;
 /**
  * A Waiter resource waits for some end condition within a RuntimeConfig resource to be met before
  * it returns. For example, assume you have a distributed system where each node writes to a
- * Variable resource indicating the node's readiness as part of the startup process.
- *
- * You then configure a Waiter resource with the success condition set to wait until some number of
- * nodes have checked in. Afterwards, your application runs some arbitrary code after the condition
- * has been met and the waiter returns successfully.
- *
- * Once created, a Waiter resource is immutable.
- *
- * To learn more about using waiters, read the [Creating a Waiter](/deployment-manager/runtime-
+ * Variable resource indicating the node's readiness as part of the startup process. You then
+ * configure a Waiter resource with the success condition set to wait until some number of nodes
+ * have checked in. Afterwards, your application runs some arbitrary code after the condition has
+ * been met and the waiter returns successfully. Once created, a Waiter resource is immutable. To
+ * learn more about using waiters, read the [Creating a Waiter](/deployment-manager/runtime-
  * configurator/creating-a-waiter) documentation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -51,10 +47,8 @@ public final class Waiter extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. If the value is `false`, it means the waiter is still waiting for one of its
-   * conditions to be met.
-   *
-   * If true, the waiter has finished. If the waiter finished due to a timeout or failure, `error`
-   * will be set.
+   * conditions to be met. If true, the waiter has finished. If the waiter finished due to a timeout
+   * or failure, `error` will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,14 +73,11 @@ public final class Waiter extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Waiter resource, in the format:
-   *
-   *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]
-   *
-   * The `[PROJECT_ID]` must be a valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid
-   * RuntimeConfig resource, the `[WAITER_NAME]` must match RFC 1035 segment specification, and the
-   * length of `[WAITER_NAME]` must be less than 64 bytes.
-   *
-   * After you create a Waiter resource, you cannot change the resource name.
+   * projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME] The `[PROJECT_ID]` must be a
+   * valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid RuntimeConfig resource, the
+   * `[WAITER_NAME]` must match RFC 1035 segment specification, and the length of `[WAITER_NAME]`
+   * must be less than 64 bytes. After you create a Waiter resource, you cannot change the resource
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,10 +122,8 @@ public final class Waiter extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. If the value is `false`, it means the waiter is still waiting for one of its
-   * conditions to be met.
-   *
-   * If true, the waiter has finished. If the waiter finished due to a timeout or failure, `error`
-   * will be set.
+   * conditions to be met. If true, the waiter has finished. If the waiter finished due to a timeout
+   * or failure, `error` will be set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDone() {
@@ -143,10 +132,8 @@ public final class Waiter extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. If the value is `false`, it means the waiter is still waiting for one of its
-   * conditions to be met.
-   *
-   * If true, the waiter has finished. If the waiter finished due to a timeout or failure, `error`
-   * will be set.
+   * conditions to be met. If true, the waiter has finished. If the waiter finished due to a timeout
+   * or failure, `error` will be set.
    * @param done done or {@code null} for none
    */
   public Waiter setDone(java.lang.Boolean done) {
@@ -196,14 +183,11 @@ public final class Waiter extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Waiter resource, in the format:
-   *
-   *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]
-   *
-   * The `[PROJECT_ID]` must be a valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid
-   * RuntimeConfig resource, the `[WAITER_NAME]` must match RFC 1035 segment specification, and the
-   * length of `[WAITER_NAME]` must be less than 64 bytes.
-   *
-   * After you create a Waiter resource, you cannot change the resource name.
+   * projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME] The `[PROJECT_ID]` must be a
+   * valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid RuntimeConfig resource, the
+   * `[WAITER_NAME]` must match RFC 1035 segment specification, and the length of `[WAITER_NAME]`
+   * must be less than 64 bytes. After you create a Waiter resource, you cannot change the resource
+   * name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -212,14 +196,11 @@ public final class Waiter extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Waiter resource, in the format:
-   *
-   *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]
-   *
-   * The `[PROJECT_ID]` must be a valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid
-   * RuntimeConfig resource, the `[WAITER_NAME]` must match RFC 1035 segment specification, and the
-   * length of `[WAITER_NAME]` must be less than 64 bytes.
-   *
-   * After you create a Waiter resource, you cannot change the resource name.
+   * projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME] The `[PROJECT_ID]` must be a
+   * valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid RuntimeConfig resource, the
+   * `[WAITER_NAME]` must match RFC 1035 segment specification, and the length of `[WAITER_NAME]`
+   * must be less than 64 bytes. After you create a Waiter resource, you cannot change the resource
+   * name.
    * @param name name or {@code null} for none
    */
   public Waiter setName(java.lang.String name) {

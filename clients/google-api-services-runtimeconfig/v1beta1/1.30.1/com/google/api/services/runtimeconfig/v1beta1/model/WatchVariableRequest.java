@@ -32,10 +32,8 @@ public final class WatchVariableRequest extends com.google.api.client.json.Gener
 
   /**
    * If specified, checks the current timestamp of the variable and if the current timestamp is
-   * newer than `newerThan` timestamp, the method returns immediately.
-   *
-   * If not specified or the variable has an older timestamp, the watcher waits for a the value to
-   * change before returning.
+   * newer than `newerThan` timestamp, the method returns immediately. If not specified or the
+   * variable has an older timestamp, the watcher waits for a the value to change before returning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,10 +41,8 @@ public final class WatchVariableRequest extends com.google.api.client.json.Gener
 
   /**
    * If specified, checks the current timestamp of the variable and if the current timestamp is
-   * newer than `newerThan` timestamp, the method returns immediately.
-   *
-   * If not specified or the variable has an older timestamp, the watcher waits for a the value to
-   * change before returning.
+   * newer than `newerThan` timestamp, the method returns immediately. If not specified or the
+   * variable has an older timestamp, the watcher waits for a the value to change before returning.
    * @return value or {@code null} for none
    */
   public String getNewerThan() {
@@ -55,10 +51,8 @@ public final class WatchVariableRequest extends com.google.api.client.json.Gener
 
   /**
    * If specified, checks the current timestamp of the variable and if the current timestamp is
-   * newer than `newerThan` timestamp, the method returns immediately.
-   *
-   * If not specified or the variable has an older timestamp, the watcher waits for a the value to
-   * change before returning.
+   * newer than `newerThan` timestamp, the method returns immediately. If not specified or the
+   * variable has an older timestamp, the watcher waits for a the value to change before returning.
    * @param newerThan newerThan or {@code null} for none
    */
   public WatchVariableRequest setNewerThan(String newerThan) {

@@ -18,12 +18,7 @@ package com.google.api.services.serviceusage.v1beta1.model;
 
 /**
  * Defines a metric type and its schema. Once a metric descriptor is created, deleting or altering
- * it stops data collection and makes the metric type's existing data unusable. The following are
- * specific rules for service defined Monitoring metric descriptors: * `type`, `metric_kind`,
- * `value_type` and `description` fields are all required. The `unit` field must be specified if the
- * `value_type` is any of DOUBLE, INT64, DISTRIBUTION. * Maximum of default 500 metric descriptors
- * per service is allowed. * Maximum of default 10 labels per metric descriptor is allowed. The
- * default maximum limit can be overridden. Please follow https://cloud.google.com/monitoring/quotas
+ * it stops data collection and makes the metric type's existing data unusable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -52,12 +47,10 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   private java.lang.String displayName;
 
   /**
-   * The set of labels that can be used to describe a specific instance of this metric type. The
-   * label key name must follow: * Only upper and lower-case letters, digits and underscores (_) are
-   * allowed. * Label name must start with a letter or digit. * The maximum length of a label name
-   * is 100 characters. For example, the `appengine.googleapis.com/http/server/response_latencies`
-   * metric type has a label for the HTTP response code, `response_code`, so you can look at
-   * latencies for successful responses or just for responses that failed.
+   * The set of labels that can be used to describe a specific instance of this metric type. For
+   * example, the `appengine.googleapis.com/http/server/response_latencies` metric type has a label
+   * for the HTTP response code, `response_code`, so you can look at latencies for successful
+   * responses or just for responses that failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,13 +101,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * The metric type, including its DNS name prefix. The type is not URL-encoded. All service
-   * defined metrics must be prefixed with the service name, in the format of `{service
-   * name}/{relative metric name}`, such as `cloudsql.googleapis.com/database/cpu/utilization`. The
-   * relative metric name must follow: * Only upper and lower-case letters, digits, '/' and
-   * underscores '_' are allowed. * The maximum number of characters allowed for the
-   * relative_metric_name is 100. All user-defined metric types have the DNS name
-   * `custom.googleapis.com`, `external.googleapis.com`, or `logging.googleapis.com/user/`. Metric
+   * The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined
+   * metric types have the DNS name `custom.googleapis.com` or `external.googleapis.com`. Metric
    * types should use a natural hierarchical grouping. For example:
    * "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
@@ -214,12 +202,10 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The set of labels that can be used to describe a specific instance of this metric type. The
-   * label key name must follow: * Only upper and lower-case letters, digits and underscores (_) are
-   * allowed. * Label name must start with a letter or digit. * The maximum length of a label name
-   * is 100 characters. For example, the `appengine.googleapis.com/http/server/response_latencies`
-   * metric type has a label for the HTTP response code, `response_code`, so you can look at
-   * latencies for successful responses or just for responses that failed.
+   * The set of labels that can be used to describe a specific instance of this metric type. For
+   * example, the `appengine.googleapis.com/http/server/response_latencies` metric type has a label
+   * for the HTTP response code, `response_code`, so you can look at latencies for successful
+   * responses or just for responses that failed.
    * @return value or {@code null} for none
    */
   public java.util.List<LabelDescriptor> getLabels() {
@@ -227,12 +213,10 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The set of labels that can be used to describe a specific instance of this metric type. The
-   * label key name must follow: * Only upper and lower-case letters, digits and underscores (_) are
-   * allowed. * Label name must start with a letter or digit. * The maximum length of a label name
-   * is 100 characters. For example, the `appengine.googleapis.com/http/server/response_latencies`
-   * metric type has a label for the HTTP response code, `response_code`, so you can look at
-   * latencies for successful responses or just for responses that failed.
+   * The set of labels that can be used to describe a specific instance of this metric type. For
+   * example, the `appengine.googleapis.com/http/server/response_latencies` metric type has a label
+   * for the HTTP response code, `response_code`, so you can look at latencies for successful
+   * responses or just for responses that failed.
    * @param labels labels or {@code null} for none
    */
   public MetricDescriptor setLabels(java.util.List<LabelDescriptor> labels) {
@@ -332,13 +316,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The metric type, including its DNS name prefix. The type is not URL-encoded. All service
-   * defined metrics must be prefixed with the service name, in the format of `{service
-   * name}/{relative metric name}`, such as `cloudsql.googleapis.com/database/cpu/utilization`. The
-   * relative metric name must follow: * Only upper and lower-case letters, digits, '/' and
-   * underscores '_' are allowed. * The maximum number of characters allowed for the
-   * relative_metric_name is 100. All user-defined metric types have the DNS name
-   * `custom.googleapis.com`, `external.googleapis.com`, or `logging.googleapis.com/user/`. Metric
+   * The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined
+   * metric types have the DNS name `custom.googleapis.com` or `external.googleapis.com`. Metric
    * types should use a natural hierarchical grouping. For example:
    * "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
@@ -349,13 +328,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The metric type, including its DNS name prefix. The type is not URL-encoded. All service
-   * defined metrics must be prefixed with the service name, in the format of `{service
-   * name}/{relative metric name}`, such as `cloudsql.googleapis.com/database/cpu/utilization`. The
-   * relative metric name must follow: * Only upper and lower-case letters, digits, '/' and
-   * underscores '_' are allowed. * The maximum number of characters allowed for the
-   * relative_metric_name is 100. All user-defined metric types have the DNS name
-   * `custom.googleapis.com`, `external.googleapis.com`, or `logging.googleapis.com/user/`. Metric
+   * The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined
+   * metric types have the DNS name `custom.googleapis.com` or `external.googleapis.com`. Metric
    * types should use a natural hierarchical grouping. For example:
    * "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"

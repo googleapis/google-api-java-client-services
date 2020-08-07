@@ -20,7 +20,7 @@ package com.google.api.services.monitoring.v3.model;
  * Defines a metric type and its schema. Once a metric descriptor is created, deleting or altering
  * it stops data collection and makes the metric type's existing data unusable.The following are
  * specific rules for service defined Monitoring metric descriptors: type, metric_kind, value_type
- * and description  fields are all required. The unit field must be specified  if the value_type is
+ * and description fields are all required. The unit field must be specified if the value_type is
  * any of DOUBLE, INT64, DISTRIBUTION. Maximum of default 500 metric descriptors per service is
  * allowed. Maximum of default 10 labels per metric descriptor is allowed.The default maximum limit
  * can be overridden. Please follow https://cloud.google.com/monitoring/quotas
@@ -112,8 +112,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * metrics must be prefixed with the service name, in the format of {service name}/{relative
    * metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric
    * name must follow: Only upper and lower-case letters, digits, '/' and underscores '_' are
-   * allowed. The maximum number of characters allowed for the relative_metric_name is  100.All
-   * user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
+   * allowed. The maximum number of characters allowed for the relative_metric_name is 100.All user-
+   * defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
    * logging.googleapis.com/user/.Metric types should use a natural hierarchical grouping. For
    * example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
@@ -141,28 +141,24 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * micro (10^-6) n nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21)
    * y yocto (10^-24) Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi
    * (2^50)GrammarThe grammar also includes these connectors: / division or ratio (as an infix
-   * operator). For examples,  kBy/{email} or MiBy/10ms (although you should almost never  have /s
-   * in a metric unit; rates should always be computed at  query time from the underlying cumulative
-   * or delta value). . multiplication or composition (as an infix operator). For  examples, GBy.d
-   * or k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } {
-   * "/" Component } ;
-   *
-   * Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ]           | Annotation           | "1"
-   * ;
-   *
+   * operator). For examples, kBy/{email} or MiBy/10ms (although you should almost never have /s in
+   * a metric unit; rates should always be computed at query time from the underlying cumulative or
+   * delta value). . multiplication or composition (as an infix operator). For examples, GBy.d or
+   * k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } { "/"
+   * Component } ; Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ;
    * Annotation = "{" NAME "}" ; Notes: Annotation is just a comment if it follows a UNIT. If the
-   * annotation  is used alone, then the unit is equivalent to 1. For examples,  {request}/s == 1/s,
+   * annotation is used alone, then the unit is equivalent to 1. For examples, {request}/s == 1/s,
    * By{transmitted}/s == By/s. NAME is a sequence of non-blank printable ASCII characters not
-   * containing { or }. 1 represents a unitary dimensionless  unit
-   * (https://en.wikipedia.org/wiki/Dimensionless_quantity) of 1, such  as in 1/s. It is typically
-   * used when none of the basic units are  appropriate. For example, "new users per day" can be
-   * represented as  1/d or {new-users}/d (and a metric value 5 would mean "5 new  users).
-   * Alternatively, "thousands of page views per day" would be  represented as 1000/d or k1/d or
-   * k{page_views}/d (and a metric  value of 5.3 would mean "5300 page views per day"). % represents
-   * dimensionless value of 1/100, and annotates values giving  a percentage (so the metric values
-   * are typically in the range of 0..100,  and a metric value 3 means "3 percent"). 10^2.%
-   * indicates a metric contains a ratio, typically in the range  0..1, that will be multiplied by
-   * 100 and displayed as a percentage  (so a metric value 0.03 means "3 percent").
+   * containing { or }. 1 represents a unitary dimensionless unit
+   * (https://en.wikipedia.org/wiki/Dimensionless_quantity) of 1, such as in 1/s. It is typically
+   * used when none of the basic units are appropriate. For example, "new users per day" can be
+   * represented as 1/d or {new-users}/d (and a metric value 5 would mean "5 new users).
+   * Alternatively, "thousands of page views per day" would be represented as 1000/d or k1/d or
+   * k{page_views}/d (and a metric value of 5.3 would mean "5300 page views per day"). % represents
+   * dimensionless value of 1/100, and annotates values giving a percentage (so the metric values
+   * are typically in the range of 0..100, and a metric value 3 means "3 percent"). 10^2.% indicates
+   * a metric contains a ratio, typically in the range 0..1, that will be multiplied by 100 and
+   * displayed as a percentage (so a metric value 0.03 means "3 percent").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,8 +333,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * metrics must be prefixed with the service name, in the format of {service name}/{relative
    * metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric
    * name must follow: Only upper and lower-case letters, digits, '/' and underscores '_' are
-   * allowed. The maximum number of characters allowed for the relative_metric_name is  100.All
-   * user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
+   * allowed. The maximum number of characters allowed for the relative_metric_name is 100.All user-
+   * defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
    * logging.googleapis.com/user/.Metric types should use a natural hierarchical grouping. For
    * example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
@@ -353,8 +349,8 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * metrics must be prefixed with the service name, in the format of {service name}/{relative
    * metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric
    * name must follow: Only upper and lower-case letters, digits, '/' and underscores '_' are
-   * allowed. The maximum number of characters allowed for the relative_metric_name is  100.All
-   * user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
+   * allowed. The maximum number of characters allowed for the relative_metric_name is 100.All user-
+   * defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or
    * logging.googleapis.com/user/.Metric types should use a natural hierarchical grouping. For
    * example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up"
    * "appengine.googleapis.com/http/server/response_latencies"
@@ -384,28 +380,24 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * micro (10^-6) n nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21)
    * y yocto (10^-24) Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi
    * (2^50)GrammarThe grammar also includes these connectors: / division or ratio (as an infix
-   * operator). For examples,  kBy/{email} or MiBy/10ms (although you should almost never  have /s
-   * in a metric unit; rates should always be computed at  query time from the underlying cumulative
-   * or delta value). . multiplication or composition (as an infix operator). For  examples, GBy.d
-   * or k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } {
-   * "/" Component } ;
-   *
-   * Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ]           | Annotation           | "1"
-   * ;
-   *
+   * operator). For examples, kBy/{email} or MiBy/10ms (although you should almost never have /s in
+   * a metric unit; rates should always be computed at query time from the underlying cumulative or
+   * delta value). . multiplication or composition (as an infix operator). For examples, GBy.d or
+   * k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } { "/"
+   * Component } ; Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ;
    * Annotation = "{" NAME "}" ; Notes: Annotation is just a comment if it follows a UNIT. If the
-   * annotation  is used alone, then the unit is equivalent to 1. For examples,  {request}/s == 1/s,
+   * annotation is used alone, then the unit is equivalent to 1. For examples, {request}/s == 1/s,
    * By{transmitted}/s == By/s. NAME is a sequence of non-blank printable ASCII characters not
-   * containing { or }. 1 represents a unitary dimensionless  unit
-   * (https://en.wikipedia.org/wiki/Dimensionless_quantity) of 1, such  as in 1/s. It is typically
-   * used when none of the basic units are  appropriate. For example, "new users per day" can be
-   * represented as  1/d or {new-users}/d (and a metric value 5 would mean "5 new  users).
-   * Alternatively, "thousands of page views per day" would be  represented as 1000/d or k1/d or
-   * k{page_views}/d (and a metric  value of 5.3 would mean "5300 page views per day"). % represents
-   * dimensionless value of 1/100, and annotates values giving  a percentage (so the metric values
-   * are typically in the range of 0..100,  and a metric value 3 means "3 percent"). 10^2.%
-   * indicates a metric contains a ratio, typically in the range  0..1, that will be multiplied by
-   * 100 and displayed as a percentage  (so a metric value 0.03 means "3 percent").
+   * containing { or }. 1 represents a unitary dimensionless unit
+   * (https://en.wikipedia.org/wiki/Dimensionless_quantity) of 1, such as in 1/s. It is typically
+   * used when none of the basic units are appropriate. For example, "new users per day" can be
+   * represented as 1/d or {new-users}/d (and a metric value 5 would mean "5 new users).
+   * Alternatively, "thousands of page views per day" would be represented as 1000/d or k1/d or
+   * k{page_views}/d (and a metric value of 5.3 would mean "5300 page views per day"). % represents
+   * dimensionless value of 1/100, and annotates values giving a percentage (so the metric values
+   * are typically in the range of 0..100, and a metric value 3 means "3 percent"). 10^2.% indicates
+   * a metric contains a ratio, typically in the range 0..1, that will be multiplied by 100 and
+   * displayed as a percentage (so a metric value 0.03 means "3 percent").
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -431,28 +423,24 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    * micro (10^-6) n nano (10^-9) p pico (10^-12) f femto (10^-15) a atto (10^-18) z zepto (10^-21)
    * y yocto (10^-24) Ki kibi (2^10) Mi mebi (2^20) Gi gibi (2^30) Ti tebi (2^40) Pi pebi
    * (2^50)GrammarThe grammar also includes these connectors: / division or ratio (as an infix
-   * operator). For examples,  kBy/{email} or MiBy/10ms (although you should almost never  have /s
-   * in a metric unit; rates should always be computed at  query time from the underlying cumulative
-   * or delta value). . multiplication or composition (as an infix operator). For  examples, GBy.d
-   * or k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } {
-   * "/" Component } ;
-   *
-   * Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ]           | Annotation           | "1"
-   * ;
-   *
+   * operator). For examples, kBy/{email} or MiBy/10ms (although you should almost never have /s in
+   * a metric unit; rates should always be computed at query time from the underlying cumulative or
+   * delta value). . multiplication or composition (as an infix operator). For examples, GBy.d or
+   * k{watt}.h.The grammar for a unit is as follows: Expression = Component { "." Component } { "/"
+   * Component } ; Component = ( [ PREFIX ] UNIT | "%" ) [ Annotation ] | Annotation | "1" ;
    * Annotation = "{" NAME "}" ; Notes: Annotation is just a comment if it follows a UNIT. If the
-   * annotation  is used alone, then the unit is equivalent to 1. For examples,  {request}/s == 1/s,
+   * annotation is used alone, then the unit is equivalent to 1. For examples, {request}/s == 1/s,
    * By{transmitted}/s == By/s. NAME is a sequence of non-blank printable ASCII characters not
-   * containing { or }. 1 represents a unitary dimensionless  unit
-   * (https://en.wikipedia.org/wiki/Dimensionless_quantity) of 1, such  as in 1/s. It is typically
-   * used when none of the basic units are  appropriate. For example, "new users per day" can be
-   * represented as  1/d or {new-users}/d (and a metric value 5 would mean "5 new  users).
-   * Alternatively, "thousands of page views per day" would be  represented as 1000/d or k1/d or
-   * k{page_views}/d (and a metric  value of 5.3 would mean "5300 page views per day"). % represents
-   * dimensionless value of 1/100, and annotates values giving  a percentage (so the metric values
-   * are typically in the range of 0..100,  and a metric value 3 means "3 percent"). 10^2.%
-   * indicates a metric contains a ratio, typically in the range  0..1, that will be multiplied by
-   * 100 and displayed as a percentage  (so a metric value 0.03 means "3 percent").
+   * containing { or }. 1 represents a unitary dimensionless unit
+   * (https://en.wikipedia.org/wiki/Dimensionless_quantity) of 1, such as in 1/s. It is typically
+   * used when none of the basic units are appropriate. For example, "new users per day" can be
+   * represented as 1/d or {new-users}/d (and a metric value 5 would mean "5 new users).
+   * Alternatively, "thousands of page views per day" would be represented as 1000/d or k1/d or
+   * k{page_views}/d (and a metric value of 5.3 would mean "5300 page views per day"). % represents
+   * dimensionless value of 1/100, and annotates values giving a percentage (so the metric values
+   * are typically in the range of 0..100, and a metric value 3 means "3 percent"). 10^2.% indicates
+   * a metric contains a ratio, typically in the range 0..1, that will be multiplied by 100 and
+   * displayed as a percentage (so a metric value 0.03 means "3 percent").
    * @param unit unit or {@code null} for none
    */
   public MetricDescriptor setUnit(java.lang.String unit) {

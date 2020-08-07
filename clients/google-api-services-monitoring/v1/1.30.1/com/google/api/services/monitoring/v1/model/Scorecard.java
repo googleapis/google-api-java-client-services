@@ -51,12 +51,12 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
    * triggers above. Similarly, if x is above/below a warning threshold that triggers above/below,
    * then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger
    * trumps warning.)As an example, consider a scorecard with the following four thresholds: {
-   * value: 90,  category: 'DANGER',  trigger: 'ABOVE', }, {  value: 70,  category: 'WARNING',
-   * trigger: 'ABOVE', }, {  value: 10,  category: 'DANGER',  trigger: 'BELOW', }, {  value: 20,
-   * category: 'WARNING',  trigger: 'BELOW', }Then: values less than or equal to 10 would put the
-   * scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING
-   * state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but
-   * less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.
+   * value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger:
+   * 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category:
+   * 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in
+   * a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values
+   * strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a
+   * WARNING state, and values greater than or equal to 90 a DANGER state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,12 +110,12 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
    * triggers above. Similarly, if x is above/below a warning threshold that triggers above/below,
    * then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger
    * trumps warning.)As an example, consider a scorecard with the following four thresholds: {
-   * value: 90,  category: 'DANGER',  trigger: 'ABOVE', }, {  value: 70,  category: 'WARNING',
-   * trigger: 'ABOVE', }, {  value: 10,  category: 'DANGER',  trigger: 'BELOW', }, {  value: 20,
-   * category: 'WARNING',  trigger: 'BELOW', }Then: values less than or equal to 10 would put the
-   * scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING
-   * state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but
-   * less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.
+   * value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger:
+   * 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category:
+   * 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in
+   * a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values
+   * strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a
+   * WARNING state, and values greater than or equal to 90 a DANGER state.
    * @return value or {@code null} for none
    */
   public java.util.List<Threshold> getThresholds() {
@@ -129,12 +129,12 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
    * triggers above. Similarly, if x is above/below a warning threshold that triggers above/below,
    * then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger
    * trumps warning.)As an example, consider a scorecard with the following four thresholds: {
-   * value: 90,  category: 'DANGER',  trigger: 'ABOVE', }, {  value: 70,  category: 'WARNING',
-   * trigger: 'ABOVE', }, {  value: 10,  category: 'DANGER',  trigger: 'BELOW', }, {  value: 20,
-   * category: 'WARNING',  trigger: 'BELOW', }Then: values less than or equal to 10 would put the
-   * scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING
-   * state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but
-   * less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.
+   * value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger:
+   * 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category:
+   * 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in
+   * a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values
+   * strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a
+   * WARNING state, and values greater than or equal to 90 a DANGER state.
    * @param thresholds thresholds or {@code null} for none
    */
   public Scorecard setThresholds(java.util.List<Threshold> thresholds) {

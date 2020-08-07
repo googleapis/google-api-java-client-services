@@ -44,7 +44,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   private Distribution distributionValue;
 
   /**
-   * A 64-bit double-precision floating-point number. Its magnitude is approximately 10300 and it
+   * A 64-bit double-precision floating-point number. Its magnitude is approximately ±10±300 and it
    * has 16 significant digits of precision.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   private java.lang.Double doubleValue;
 
   /**
-   * A 64-bit integer. Its range is approximately 9.2x1018.
+   * A 64-bit integer. Its range is approximately ±9.2x1018.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -100,7 +100,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A 64-bit double-precision floating-point number. Its magnitude is approximately 10300 and it
+   * A 64-bit double-precision floating-point number. Its magnitude is approximately ±10±300 and it
    * has 16 significant digits of precision.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A 64-bit double-precision floating-point number. Its magnitude is approximately 10300 and it
+   * A 64-bit double-precision floating-point number. Its magnitude is approximately ±10±300 and it
    * has 16 significant digits of precision.
    * @param doubleValue doubleValue or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A 64-bit integer. Its range is approximately 9.2x1018.
+   * A 64-bit integer. Its range is approximately ±9.2x1018.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInt64Value() {
@@ -127,7 +127,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A 64-bit integer. Its range is approximately 9.2x1018.
+   * A 64-bit integer. Its range is approximately ±9.2x1018.
    * @param int64Value int64Value or {@code null} for none
    */
   public TypedValue setInt64Value(java.lang.Long int64Value) {

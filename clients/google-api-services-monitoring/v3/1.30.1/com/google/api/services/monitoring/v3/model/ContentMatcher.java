@@ -18,8 +18,8 @@ package com.google.api.services.monitoring.v3.model;
 
 /**
  * Optional. Used to perform content matching. This allows matching based on substrings and regular
- * expressions, together with their negations. Only the first 4MB of an HTTP or HTTPS check's
- * response (and the first 1MB of a TCP check's response) are examined for purposes of content
+ * expressions, together with their negations. Only the first 4 MB of an HTTP or HTTPS check's
+ * response (and the first 1 MB of a TCP check's response) are examined for purposes of content
  * matching.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

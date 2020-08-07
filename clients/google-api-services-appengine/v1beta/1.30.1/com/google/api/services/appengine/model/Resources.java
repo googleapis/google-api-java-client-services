@@ -44,6 +44,14 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   private java.lang.Double diskGb;
 
   /**
+   * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud
+   * Composer to encrypt the vm disk
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyReference;
+
+  /**
    * Memory (GB) needed.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class Resources extends com.google.api.client.json.GenericJson {
    */
   public Resources setDiskGb(java.lang.Double diskGb) {
     this.diskGb = diskGb;
+    return this;
+  }
+
+  /**
+   * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud
+   * Composer to encrypt the vm disk
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyReference() {
+    return kmsKeyReference;
+  }
+
+  /**
+   * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud
+   * Composer to encrypt the vm disk
+   * @param kmsKeyReference kmsKeyReference or {@code null} for none
+   */
+  public Resources setKmsKeyReference(java.lang.String kmsKeyReference) {
+    this.kmsKeyReference = kmsKeyReference;
     return this;
   }
 

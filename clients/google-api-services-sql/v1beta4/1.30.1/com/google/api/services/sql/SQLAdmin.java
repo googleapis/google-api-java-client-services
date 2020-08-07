@@ -55,7 +55,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://sqladmin.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/sql";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -5379,7 +5379,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the sql server.  After setting any optional
        * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
        *
-       * @param project ID of the project that contains the first generation instance.
+       * @param project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
        * @return the request
        */
@@ -5404,7 +5404,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
          * eClientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param project ID of the project that contains the first generation instance.
+         * @param project ID of the project that contains the instance.
          * @param instance Cloud SQL instance ID. This does not include the project ID.
          * @since 1.13
          */
@@ -5469,17 +5469,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return (StartExternalSync) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project that contains the first generation instance. */
+        /** ID of the project that contains the instance. */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** ID of the project that contains the first generation instance.
+        /** ID of the project that contains the instance.
          */
         public java.lang.String getProject() {
           return project;
         }
 
-        /** ID of the project that contains the first generation instance. */
+        /** ID of the project that contains the instance. */
         public StartExternalSync setProject(java.lang.String project) {
           this.project = project;
           return this;

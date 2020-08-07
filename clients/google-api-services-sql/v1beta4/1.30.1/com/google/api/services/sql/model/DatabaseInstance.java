@@ -46,9 +46,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String connectionName;
 
   /**
-   * The current disk usage of the instance in bytes. This property has been deprecated. Users
-   * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see this announcement for details.
+   * The current disk usage of the instance in bytes. This property has been deprecated. Use the
+   * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
+   * Please see this announcement for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -295,9 +295,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current disk usage of the instance in bytes. This property has been deprecated. Users
-   * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see this announcement for details.
+   * The current disk usage of the instance in bytes. This property has been deprecated. Use the
+   * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
+   * Please see this announcement for details.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCurrentDiskSize() {
@@ -305,9 +305,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current disk usage of the instance in bytes. This property has been deprecated. Users
-   * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see this announcement for details.
+   * The current disk usage of the instance in bytes. This property has been deprecated. Use the
+   * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
+   * Please see this announcement for details.
    * @param currentDiskSize currentDiskSize or {@code null} for none
    */
   public DatabaseInstance setCurrentDiskSize(java.lang.Long currentDiskSize) {

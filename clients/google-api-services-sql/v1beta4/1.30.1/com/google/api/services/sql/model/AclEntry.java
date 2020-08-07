@@ -52,7 +52,7 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The whitelisted value for the access control list.
+   * The allowlisted value for the access control list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The whitelisted value for the access control list.
+   * The allowlisted value for the access control list.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -120,7 +120,7 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The whitelisted value for the access control list.
+   * The allowlisted value for the access control list.
    * @param value value or {@code null} for none
    */
   public AclEntry setValue(java.lang.String value) {

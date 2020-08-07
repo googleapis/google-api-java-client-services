@@ -41,20 +41,12 @@ public final class GoogleCloudRecommendationengineV1beta1GcsSource extends com.g
   private java.util.List<java.lang.String> inputUris;
 
   /**
-   * Optional. The schema to use when parsing the data from the source.
-   *
-   * Supported values for catalog imports:
-   *
-   *  1: "catalog_recommendations_ai" using    https://cloud.google.com/recommendations-ai/docs
-   * /upload-catalog#json    (Default for catalogItems.import)
-   *
-   *  2: "catalog_merchant_center" using    https://cloud.google.com/recommendations-ai/docs/upload-
-   * catalog#mc
-   *
-   * Supported values for user events imports:
-   *
-   *  1: "user_events_recommendations_ai" using  https://cloud.google.com/recommendations-ai/docs
-   * /manage-user-events#import  (Default for userEvents.import)
+   * Optional. The schema to use when parsing the data from the source. Supported values for catalog
+   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-ai/docs
+   * /upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center" using
+   * https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for user
+   * events imports: 1: "user_events_recommendations_ai" using https://cloud.google.com
+   * /recommendations-ai/docs/manage-user-events#import (Default for userEvents.import)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,20 +78,12 @@ public final class GoogleCloudRecommendationengineV1beta1GcsSource extends com.g
   }
 
   /**
-   * Optional. The schema to use when parsing the data from the source.
-   *
-   * Supported values for catalog imports:
-   *
-   *  1: "catalog_recommendations_ai" using    https://cloud.google.com/recommendations-ai/docs
-   * /upload-catalog#json    (Default for catalogItems.import)
-   *
-   *  2: "catalog_merchant_center" using    https://cloud.google.com/recommendations-ai/docs/upload-
-   * catalog#mc
-   *
-   * Supported values for user events imports:
-   *
-   *  1: "user_events_recommendations_ai" using  https://cloud.google.com/recommendations-ai/docs
-   * /manage-user-events#import  (Default for userEvents.import)
+   * Optional. The schema to use when parsing the data from the source. Supported values for catalog
+   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-ai/docs
+   * /upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center" using
+   * https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for user
+   * events imports: 1: "user_events_recommendations_ai" using https://cloud.google.com
+   * /recommendations-ai/docs/manage-user-events#import (Default for userEvents.import)
    * @return value or {@code null} for none
    */
   public java.lang.String getJsonSchema() {
@@ -107,20 +91,12 @@ public final class GoogleCloudRecommendationengineV1beta1GcsSource extends com.g
   }
 
   /**
-   * Optional. The schema to use when parsing the data from the source.
-   *
-   * Supported values for catalog imports:
-   *
-   *  1: "catalog_recommendations_ai" using    https://cloud.google.com/recommendations-ai/docs
-   * /upload-catalog#json    (Default for catalogItems.import)
-   *
-   *  2: "catalog_merchant_center" using    https://cloud.google.com/recommendations-ai/docs/upload-
-   * catalog#mc
-   *
-   * Supported values for user events imports:
-   *
-   *  1: "user_events_recommendations_ai" using  https://cloud.google.com/recommendations-ai/docs
-   * /manage-user-events#import  (Default for userEvents.import)
+   * Optional. The schema to use when parsing the data from the source. Supported values for catalog
+   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-ai/docs
+   * /upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center" using
+   * https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for user
+   * events imports: 1: "user_events_recommendations_ai" using https://cloud.google.com
+   * /recommendations-ai/docs/manage-user-events#import (Default for userEvents.import)
    * @param jsonSchema jsonSchema or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1GcsSource setJsonSchema(java.lang.String jsonSchema) {

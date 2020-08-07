@@ -40,39 +40,27 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
 
   /**
    * Optional. Filter for restricting prediction results. Accepts values for tags and the
-   * `filterOutOfStockItems` flag.
-   *
-   *  * Tag expressions. Restricts predictions to items that match all of the    specified tags.
-   * Boolean operators `OR` and `NOT` are supported if the    expression is enclosed in parentheses,
-   * and must be separated from the    tag values by a space. `-"tagA"` is also supported and is
-   * equivalent to    `NOT "tagA"`. Tag values must be double quoted UTF-8 encoded strings    with a
-   * size limit of 1 KiB.
-   *
-   *  * filterOutOfStockItems. Restricts predictions to items that do not have a    stockState value
-   * of OUT_OF_STOCK.
-   *
-   * Examples:
-   *
-   *  * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional")  * filterOutOfStockItems
-   * tag=(-"promotional")  * filterOutOfStockItems
-   *
-   * If your filter blocks all prediction results, nothing will be returned. If you want generic
-   * (unfiltered) popular items to be returned instead, set `strictFiltering` to false in
-   * `PredictRequest.params`.
+   * `filterOutOfStockItems` flag. * Tag expressions. Restricts predictions to items that match all
+   * of the specified tags. Boolean operators `OR` and `NOT` are supported if the expression is
+   * enclosed in parentheses, and must be separated from the tag values by a space. `-"tagA"` is
+   * also supported and is equivalent to `NOT "tagA"`. Tag values must be double quoted UTF-8
+   * encoded strings with a size limit of 1 KiB. * filterOutOfStockItems. Restricts predictions to
+   * items that do not have a stockState value of OUT_OF_STOCK. Examples: * tag=("Red" OR "Blue")
+   * tag="New-Arrival" tag=(NOT "promotional") * filterOutOfStockItems tag=(-"promotional") *
+   * filterOutOfStockItems If your filter blocks all prediction results, nothing will be returned.
+   * If you want generic (unfiltered) popular items to be returned instead, set `strictFiltering` to
+   * false in `PredictRequest.params`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Optional. The labels for the predict request.
-   *
-   *  * Label keys can contain lowercase letters, digits and hyphens, must start    with a letter,
-   * and must end with a letter or digit.  * Non-zero label values can contain lowercase letters,
-   * digits and hyphens,    must start with a letter, and must end with a letter or digit.  * No
-   * more than 64 labels can be associated with a given request.
-   *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * Optional. The labels for the predict request. * Label keys can contain lowercase letters,
+   * digits and hyphens, must start with a letter, and must end with a letter or digit. * Non-zero
+   * label values can contain lowercase letters, digits and hyphens, must start with a letter, and
+   * must end with a letter or digit. * No more than 64 labels can be associated with a given
+   * request. See https://goo.gl/xmQnxf for more information on and examples of labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,18 +82,15 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   private java.lang.String pageToken;
 
   /**
-   * Optional. Additional domain specific parameters for the predictions.
-   *
-   * Allowed values:
-   *
-   * * `returnCatalogItem`: Boolean. If set to true, the associated catalogItem    object will be
-   * returned in the   `PredictResponse.PredictionResult.itemMetadata` object in the method
-   * response. * `returnItemScore`: Boolean. If set to true, the prediction 'score'    corresponding
-   * to each returned item will be set in the `metadata`    field in the prediction response. The
-   * given 'score' indicates the    probability of an item being clicked/purchased given the user's
-   * context    and history. * `strictFiltering`: Boolean. True by default. If set to false, the
-   * service    will return generic (unfiltered) popular items instead of empty if your    filter
-   * blocks all prediction results.
+   * Optional. Additional domain specific parameters for the predictions. Allowed values: *
+   * `returnCatalogItem`: Boolean. If set to true, the associated catalogItem object will be
+   * returned in the `PredictResponse.PredictionResult.itemMetadata` object in the method response.
+   * * `returnItemScore`: Boolean. If set to true, the prediction 'score' corresponding to each
+   * returned item will be set in the `metadata` field in the prediction response. The given 'score'
+   * indicates the probability of an item being clicked/purchased given the user's context and
+   * history. * `strictFiltering`: Boolean. True by default. If set to false, the service will
+   * return generic (unfiltered) popular items instead of empty if your filter blocks all prediction
+   * results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,25 +128,16 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
 
   /**
    * Optional. Filter for restricting prediction results. Accepts values for tags and the
-   * `filterOutOfStockItems` flag.
-   *
-   *  * Tag expressions. Restricts predictions to items that match all of the    specified tags.
-   * Boolean operators `OR` and `NOT` are supported if the    expression is enclosed in parentheses,
-   * and must be separated from the    tag values by a space. `-"tagA"` is also supported and is
-   * equivalent to    `NOT "tagA"`. Tag values must be double quoted UTF-8 encoded strings    with a
-   * size limit of 1 KiB.
-   *
-   *  * filterOutOfStockItems. Restricts predictions to items that do not have a    stockState value
-   * of OUT_OF_STOCK.
-   *
-   * Examples:
-   *
-   *  * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional")  * filterOutOfStockItems
-   * tag=(-"promotional")  * filterOutOfStockItems
-   *
-   * If your filter blocks all prediction results, nothing will be returned. If you want generic
-   * (unfiltered) popular items to be returned instead, set `strictFiltering` to false in
-   * `PredictRequest.params`.
+   * `filterOutOfStockItems` flag. * Tag expressions. Restricts predictions to items that match all
+   * of the specified tags. Boolean operators `OR` and `NOT` are supported if the expression is
+   * enclosed in parentheses, and must be separated from the tag values by a space. `-"tagA"` is
+   * also supported and is equivalent to `NOT "tagA"`. Tag values must be double quoted UTF-8
+   * encoded strings with a size limit of 1 KiB. * filterOutOfStockItems. Restricts predictions to
+   * items that do not have a stockState value of OUT_OF_STOCK. Examples: * tag=("Red" OR "Blue")
+   * tag="New-Arrival" tag=(NOT "promotional") * filterOutOfStockItems tag=(-"promotional") *
+   * filterOutOfStockItems If your filter blocks all prediction results, nothing will be returned.
+   * If you want generic (unfiltered) popular items to be returned instead, set `strictFiltering` to
+   * false in `PredictRequest.params`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -170,25 +146,16 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
 
   /**
    * Optional. Filter for restricting prediction results. Accepts values for tags and the
-   * `filterOutOfStockItems` flag.
-   *
-   *  * Tag expressions. Restricts predictions to items that match all of the    specified tags.
-   * Boolean operators `OR` and `NOT` are supported if the    expression is enclosed in parentheses,
-   * and must be separated from the    tag values by a space. `-"tagA"` is also supported and is
-   * equivalent to    `NOT "tagA"`. Tag values must be double quoted UTF-8 encoded strings    with a
-   * size limit of 1 KiB.
-   *
-   *  * filterOutOfStockItems. Restricts predictions to items that do not have a    stockState value
-   * of OUT_OF_STOCK.
-   *
-   * Examples:
-   *
-   *  * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional")  * filterOutOfStockItems
-   * tag=(-"promotional")  * filterOutOfStockItems
-   *
-   * If your filter blocks all prediction results, nothing will be returned. If you want generic
-   * (unfiltered) popular items to be returned instead, set `strictFiltering` to false in
-   * `PredictRequest.params`.
+   * `filterOutOfStockItems` flag. * Tag expressions. Restricts predictions to items that match all
+   * of the specified tags. Boolean operators `OR` and `NOT` are supported if the expression is
+   * enclosed in parentheses, and must be separated from the tag values by a space. `-"tagA"` is
+   * also supported and is equivalent to `NOT "tagA"`. Tag values must be double quoted UTF-8
+   * encoded strings with a size limit of 1 KiB. * filterOutOfStockItems. Restricts predictions to
+   * items that do not have a stockState value of OUT_OF_STOCK. Examples: * tag=("Red" OR "Blue")
+   * tag="New-Arrival" tag=(NOT "promotional") * filterOutOfStockItems tag=(-"promotional") *
+   * filterOutOfStockItems If your filter blocks all prediction results, nothing will be returned.
+   * If you want generic (unfiltered) popular items to be returned instead, set `strictFiltering` to
+   * false in `PredictRequest.params`.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1PredictRequest setFilter(java.lang.String filter) {
@@ -197,14 +164,11 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   }
 
   /**
-   * Optional. The labels for the predict request.
-   *
-   *  * Label keys can contain lowercase letters, digits and hyphens, must start    with a letter,
-   * and must end with a letter or digit.  * Non-zero label values can contain lowercase letters,
-   * digits and hyphens,    must start with a letter, and must end with a letter or digit.  * No
-   * more than 64 labels can be associated with a given request.
-   *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * Optional. The labels for the predict request. * Label keys can contain lowercase letters,
+   * digits and hyphens, must start with a letter, and must end with a letter or digit. * Non-zero
+   * label values can contain lowercase letters, digits and hyphens, must start with a letter, and
+   * must end with a letter or digit. * No more than 64 labels can be associated with a given
+   * request. See https://goo.gl/xmQnxf for more information on and examples of labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -212,14 +176,11 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   }
 
   /**
-   * Optional. The labels for the predict request.
-   *
-   *  * Label keys can contain lowercase letters, digits and hyphens, must start    with a letter,
-   * and must end with a letter or digit.  * Non-zero label values can contain lowercase letters,
-   * digits and hyphens,    must start with a letter, and must end with a letter or digit.  * No
-   * more than 64 labels can be associated with a given request.
-   *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * Optional. The labels for the predict request. * Label keys can contain lowercase letters,
+   * digits and hyphens, must start with a letter, and must end with a letter or digit. * Non-zero
+   * label values can contain lowercase letters, digits and hyphens, must start with a letter, and
+   * must end with a letter or digit. * No more than 64 labels can be associated with a given
+   * request. See https://goo.gl/xmQnxf for more information on and examples of labels.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1PredictRequest setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -264,18 +225,15 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   }
 
   /**
-   * Optional. Additional domain specific parameters for the predictions.
-   *
-   * Allowed values:
-   *
-   * * `returnCatalogItem`: Boolean. If set to true, the associated catalogItem    object will be
-   * returned in the   `PredictResponse.PredictionResult.itemMetadata` object in the method
-   * response. * `returnItemScore`: Boolean. If set to true, the prediction 'score'    corresponding
-   * to each returned item will be set in the `metadata`    field in the prediction response. The
-   * given 'score' indicates the    probability of an item being clicked/purchased given the user's
-   * context    and history. * `strictFiltering`: Boolean. True by default. If set to false, the
-   * service    will return generic (unfiltered) popular items instead of empty if your    filter
-   * blocks all prediction results.
+   * Optional. Additional domain specific parameters for the predictions. Allowed values: *
+   * `returnCatalogItem`: Boolean. If set to true, the associated catalogItem object will be
+   * returned in the `PredictResponse.PredictionResult.itemMetadata` object in the method response.
+   * * `returnItemScore`: Boolean. If set to true, the prediction 'score' corresponding to each
+   * returned item will be set in the `metadata` field in the prediction response. The given 'score'
+   * indicates the probability of an item being clicked/purchased given the user's context and
+   * history. * `strictFiltering`: Boolean. True by default. If set to false, the service will
+   * return generic (unfiltered) popular items instead of empty if your filter blocks all prediction
+   * results.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -283,18 +241,15 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   }
 
   /**
-   * Optional. Additional domain specific parameters for the predictions.
-   *
-   * Allowed values:
-   *
-   * * `returnCatalogItem`: Boolean. If set to true, the associated catalogItem    object will be
-   * returned in the   `PredictResponse.PredictionResult.itemMetadata` object in the method
-   * response. * `returnItemScore`: Boolean. If set to true, the prediction 'score'    corresponding
-   * to each returned item will be set in the `metadata`    field in the prediction response. The
-   * given 'score' indicates the    probability of an item being clicked/purchased given the user's
-   * context    and history. * `strictFiltering`: Boolean. True by default. If set to false, the
-   * service    will return generic (unfiltered) popular items instead of empty if your    filter
-   * blocks all prediction results.
+   * Optional. Additional domain specific parameters for the predictions. Allowed values: *
+   * `returnCatalogItem`: Boolean. If set to true, the associated catalogItem object will be
+   * returned in the `PredictResponse.PredictionResult.itemMetadata` object in the method response.
+   * * `returnItemScore`: Boolean. If set to true, the prediction 'score' corresponding to each
+   * returned item will be set in the `metadata` field in the prediction response. The given 'score'
+   * indicates the probability of an item being clicked/purchased given the user's context and
+   * history. * `strictFiltering`: Boolean. True by default. If set to false, the service will
+   * return generic (unfiltered) popular items instead of empty if your filter blocks all prediction
+   * results.
    * @param params params or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1PredictRequest setParams(java.util.Map<String, java.lang.Object> params) {

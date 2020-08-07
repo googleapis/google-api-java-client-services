@@ -31,13 +31,10 @@ public final class GoogleCloudRecommendationengineV1beta1PurchaseTransaction ext
 
   /**
    * Optional. All the costs associated with the product. These can be manufacturing costs, shipping
-   * expenses not borne by the end user, or any other costs.
-   *
-   * Total product cost such that   profit = revenue - (sum(taxes) + sum(costs)) If product_cost is
-   * not set, then   profit = revenue - tax - shipping - sum(CatalogItem.costs).
-   *
-   * If CatalogItem.cost is not specified for one of the items, CatalogItem.cost based profit
-   * *cannot* be calculated for this Transaction.
+   * expenses not borne by the end user, or any other costs. Total product cost such that profit =
+   * revenue - (sum(taxes) + sum(costs)) If product_cost is not set, then profit = revenue - tax -
+   * shipping - sum(CatalogItem.costs). If CatalogItem.cost is not specified for one of the items,
+   * CatalogItem.cost based profit *cannot* be calculated for this Transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,13 +73,10 @@ public final class GoogleCloudRecommendationengineV1beta1PurchaseTransaction ext
 
   /**
    * Optional. All the costs associated with the product. These can be manufacturing costs, shipping
-   * expenses not borne by the end user, or any other costs.
-   *
-   * Total product cost such that   profit = revenue - (sum(taxes) + sum(costs)) If product_cost is
-   * not set, then   profit = revenue - tax - shipping - sum(CatalogItem.costs).
-   *
-   * If CatalogItem.cost is not specified for one of the items, CatalogItem.cost based profit
-   * *cannot* be calculated for this Transaction.
+   * expenses not borne by the end user, or any other costs. Total product cost such that profit =
+   * revenue - (sum(taxes) + sum(costs)) If product_cost is not set, then profit = revenue - tax -
+   * shipping - sum(CatalogItem.costs). If CatalogItem.cost is not specified for one of the items,
+   * CatalogItem.cost based profit *cannot* be calculated for this Transaction.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Float> getCosts() {
@@ -91,13 +85,10 @@ public final class GoogleCloudRecommendationengineV1beta1PurchaseTransaction ext
 
   /**
    * Optional. All the costs associated with the product. These can be manufacturing costs, shipping
-   * expenses not borne by the end user, or any other costs.
-   *
-   * Total product cost such that   profit = revenue - (sum(taxes) + sum(costs)) If product_cost is
-   * not set, then   profit = revenue - tax - shipping - sum(CatalogItem.costs).
-   *
-   * If CatalogItem.cost is not specified for one of the items, CatalogItem.cost based profit
-   * *cannot* be calculated for this Transaction.
+   * expenses not borne by the end user, or any other costs. Total product cost such that profit =
+   * revenue - (sum(taxes) + sum(costs)) If product_cost is not set, then profit = revenue - tax -
+   * shipping - sum(CatalogItem.costs). If CatalogItem.cost is not specified for one of the items,
+   * CatalogItem.cost based profit *cannot* be calculated for this Transaction.
    * @param costs costs or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1PurchaseTransaction setCosts(java.util.Map<String, java.lang.Float> costs) {

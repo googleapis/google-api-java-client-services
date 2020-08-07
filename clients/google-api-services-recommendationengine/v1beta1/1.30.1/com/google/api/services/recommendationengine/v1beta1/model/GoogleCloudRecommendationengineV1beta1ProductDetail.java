@@ -32,11 +32,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductDetail extends c
   /**
    * Optional. Quantity of the products in stock when a user event happens. Optional. If provided,
    * this overrides the available quantity in Catalog for this event. and can only be set if
-   * `stock_status` is set to `IN_STOCK`.
-   *
-   * Note that if an item is out of stock, you must set the `stock_state` field to be
-   * `OUT_OF_STOCK`. Leaving this field unspecified / as zero is not sufficient to mark the item out
-   * of stock.
+   * `stock_status` is set to `IN_STOCK`. Note that if an item is out of stock, you must set the
+   * `stock_state` field to be `OUT_OF_STOCK`. Leaving this field unspecified / as zero is not
+   * sufficient to mark the item out of stock.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,11 +99,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductDetail extends c
   /**
    * Optional. Quantity of the products in stock when a user event happens. Optional. If provided,
    * this overrides the available quantity in Catalog for this event. and can only be set if
-   * `stock_status` is set to `IN_STOCK`.
-   *
-   * Note that if an item is out of stock, you must set the `stock_state` field to be
-   * `OUT_OF_STOCK`. Leaving this field unspecified / as zero is not sufficient to mark the item out
-   * of stock.
+   * `stock_status` is set to `IN_STOCK`. Note that if an item is out of stock, you must set the
+   * `stock_state` field to be `OUT_OF_STOCK`. Leaving this field unspecified / as zero is not
+   * sufficient to mark the item out of stock.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAvailableQuantity() {
@@ -115,11 +111,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductDetail extends c
   /**
    * Optional. Quantity of the products in stock when a user event happens. Optional. If provided,
    * this overrides the available quantity in Catalog for this event. and can only be set if
-   * `stock_status` is set to `IN_STOCK`.
-   *
-   * Note that if an item is out of stock, you must set the `stock_state` field to be
-   * `OUT_OF_STOCK`. Leaving this field unspecified / as zero is not sufficient to mark the item out
-   * of stock.
+   * `stock_status` is set to `IN_STOCK`. Note that if an item is out of stock, you must set the
+   * `stock_state` field to be `OUT_OF_STOCK`. Leaving this field unspecified / as zero is not
+   * sufficient to mark the item out of stock.
    * @param availableQuantity availableQuantity or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1ProductDetail setAvailableQuantity(java.lang.Integer availableQuantity) {

@@ -37,13 +37,10 @@ public final class GoogleCloudRecommendationengineV1beta1PredictResponsePredicti
   private java.lang.String id;
 
   /**
-   * Additional item metadata / annotations.
-   *
-   * Possible values:
-   *
-   * * `catalogItem`: JSON representation of the catalogItem. Will be set if   `returnCatalogItem`
-   * is set to true in `PredictRequest.params`. * `score`: Prediction score in double value. Will be
-   * set if   `returnItemScore` is set to true in `PredictRequest.params`.
+   * Additional item metadata / annotations. Possible values: * `catalogItem`: JSON representation
+   * of the catalogItem. Will be set if `returnCatalogItem` is set to true in
+   * `PredictRequest.params`. * `score`: Prediction score in double value. Will be set if
+   * `returnItemScore` is set to true in `PredictRequest.params`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,13 +64,10 @@ public final class GoogleCloudRecommendationengineV1beta1PredictResponsePredicti
   }
 
   /**
-   * Additional item metadata / annotations.
-   *
-   * Possible values:
-   *
-   * * `catalogItem`: JSON representation of the catalogItem. Will be set if   `returnCatalogItem`
-   * is set to true in `PredictRequest.params`. * `score`: Prediction score in double value. Will be
-   * set if   `returnItemScore` is set to true in `PredictRequest.params`.
+   * Additional item metadata / annotations. Possible values: * `catalogItem`: JSON representation
+   * of the catalogItem. Will be set if `returnCatalogItem` is set to true in
+   * `PredictRequest.params`. * `score`: Prediction score in double value. Will be set if
+   * `returnItemScore` is set to true in `PredictRequest.params`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getItemMetadata() {
@@ -81,13 +75,10 @@ public final class GoogleCloudRecommendationengineV1beta1PredictResponsePredicti
   }
 
   /**
-   * Additional item metadata / annotations.
-   *
-   * Possible values:
-   *
-   * * `catalogItem`: JSON representation of the catalogItem. Will be set if   `returnCatalogItem`
-   * is set to true in `PredictRequest.params`. * `score`: Prediction score in double value. Will be
-   * set if   `returnItemScore` is set to true in `PredictRequest.params`.
+   * Additional item metadata / annotations. Possible values: * `catalogItem`: JSON representation
+   * of the catalogItem. Will be set if `returnCatalogItem` is set to true in
+   * `PredictRequest.params`. * `score`: Prediction score in double value. Will be set if
+   * `returnItemScore` is set to true in `PredictRequest.params`.
    * @param itemMetadata itemMetadata or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult setItemMetadata(java.util.Map<String, java.lang.Object> itemMetadata) {

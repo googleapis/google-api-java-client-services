@@ -37,7 +37,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    * The number of days to look back to automatically refresh the data. For example, if
    * `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10,
    * today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports
-   * the feature. Set the value to  0 to use the default value.
+   * the feature. Set the value to 0 to use the default value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    * The number of days to look back to automatically refresh the data. For example, if
    * `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10,
    * today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports
-   * the feature. Set the value to  0 to use the default value.
+   * the feature. Set the value to 0 to use the default value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDataRefreshWindowDays() {
@@ -174,7 +174,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    * The number of days to look back to automatically refresh the data. For example, if
    * `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10,
    * today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports
-   * the feature. Set the value to  0 to use the default value.
+   * the feature. Set the value to 0 to use the default value.
    * @param dataRefreshWindowDays dataRefreshWindowDays or {@code null} for none
    */
   public TransferConfig setDataRefreshWindowDays(java.lang.Integer dataRefreshWindowDays) {

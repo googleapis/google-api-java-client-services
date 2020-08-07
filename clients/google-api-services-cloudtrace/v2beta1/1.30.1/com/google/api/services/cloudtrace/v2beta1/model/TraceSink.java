@@ -32,15 +32,9 @@ public final class TraceSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The canonical sink resource name, unique within the project. Must be of the form:
-   *
-   *   project/[PROJECT_NUMBER]/traceSinks/[SINK_ID].
-   *
-   * E.g.:
-   *
-   *   `"projects/12345/traceSinks/my-project-trace-sink"`.
-   *
-   * Sink identifiers are limited to 256 characters and can include only the following characters:
-   * upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+   * project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-
+   * trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following
+   * characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +54,7 @@ public final class TraceSink extends com.google.api.client.json.GenericJson {
    * roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create
    * tables and write data this account will need the dataEditor role. Read more about roles in the
    * [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.:
-   *
-   *    "service-00000001@00000002.iam.gserviceaccount.com"
+   * "service-00000001@00000002.iam.gserviceaccount.com"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,15 +62,9 @@ public final class TraceSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The canonical sink resource name, unique within the project. Must be of the form:
-   *
-   *   project/[PROJECT_NUMBER]/traceSinks/[SINK_ID].
-   *
-   * E.g.:
-   *
-   *   `"projects/12345/traceSinks/my-project-trace-sink"`.
-   *
-   * Sink identifiers are limited to 256 characters and can include only the following characters:
-   * upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+   * project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-
+   * trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following
+   * characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -86,15 +73,9 @@ public final class TraceSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The canonical sink resource name, unique within the project. Must be of the form:
-   *
-   *   project/[PROJECT_NUMBER]/traceSinks/[SINK_ID].
-   *
-   * E.g.:
-   *
-   *   `"projects/12345/traceSinks/my-project-trace-sink"`.
-   *
-   * Sink identifiers are limited to 256 characters and can include only the following characters:
-   * upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+   * project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-
+   * trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following
+   * characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
    * @param name name or {@code null} for none
    */
   public TraceSink setName(java.lang.String name) {
@@ -126,8 +107,7 @@ public final class TraceSink extends com.google.api.client.json.GenericJson {
    * roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create
    * tables and write data this account will need the dataEditor role. Read more about roles in the
    * [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.:
-   *
-   *    "service-00000001@00000002.iam.gserviceaccount.com"
+   * "service-00000001@00000002.iam.gserviceaccount.com"
    * @return value or {@code null} for none
    */
   public java.lang.String getWriterIdentity() {
@@ -141,8 +121,7 @@ public final class TraceSink extends com.google.api.client.json.GenericJson {
    * roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create
    * tables and write data this account will need the dataEditor role. Read more about roles in the
    * [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.:
-   *
-   *    "service-00000001@00000002.iam.gserviceaccount.com"
+   * "service-00000001@00000002.iam.gserviceaccount.com"
    * @param writerIdentity writerIdentity or {@code null} for none
    */
   public TraceSink setWriterIdentity(java.lang.String writerIdentity) {

@@ -32,7 +32,7 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of attributes on the link. You have have up to  32 attributes per link.
+   * A set of attributes on the link. You have have up to 32 attributes per link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * A set of attributes on the link. You have have up to  32 attributes per link.
+   * A set of attributes on the link. You have have up to 32 attributes per link.
    * @return value or {@code null} for none
    */
   public Attributes getAttributes() {
@@ -68,7 +68,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of attributes on the link. You have have up to  32 attributes per link.
+   * A set of attributes on the link. You have have up to 32 attributes per link.
    * @param attributes attributes or {@code null} for none
    */
   public Link setAttributes(Attributes attributes) {

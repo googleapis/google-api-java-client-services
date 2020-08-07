@@ -32,10 +32,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
    * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
-   * example:
-   *
-   *     "/instance_id": { "string_value": { "value": "my-instance" } }     "/http/request_bytes": {
-   * "int_value": 300 }     "abc.com/myattribute": { "bool_value": false }
+   * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
+   * { "int_value": 300 } "abc.com/myattribute": { "bool_value": false }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,10 +57,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
    * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
-   * example:
-   *
-   *     "/instance_id": { "string_value": { "value": "my-instance" } }     "/http/request_bytes": {
-   * "int_value": 300 }     "abc.com/myattribute": { "bool_value": false }
+   * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
+   * { "int_value": 300 } "abc.com/myattribute": { "bool_value": false }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AttributeValue> getAttributeMap() {
@@ -72,10 +68,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
    * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
-   * example:
-   *
-   *     "/instance_id": { "string_value": { "value": "my-instance" } }     "/http/request_bytes": {
-   * "int_value": 300 }     "abc.com/myattribute": { "bool_value": false }
+   * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
+   * { "int_value": 300 } "abc.com/myattribute": { "bool_value": false }
    * @param attributeMap attributeMap or {@code null} for none
    */
   public Attributes setAttributeMap(java.util.Map<String, AttributeValue> attributeMap) {

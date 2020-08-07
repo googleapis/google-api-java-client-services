@@ -31,6 +31,13 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
+   * Represents a list of available feature names for a given version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableFeatures;
+
+  /**
    * Whether this is currently the default version for Cloud Data Fusion
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String versionNumber;
+
+  /**
+   * Represents a list of available feature names for a given version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableFeatures() {
+    return availableFeatures;
+  }
+
+  /**
+   * Represents a list of available feature names for a given version.
+   * @param availableFeatures availableFeatures or {@code null} for none
+   */
+  public Version setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {
+    this.availableFeatures = availableFeatures;
+    return this;
+  }
 
   /**
    * Whether this is currently the default version for Cloud Data Fusion

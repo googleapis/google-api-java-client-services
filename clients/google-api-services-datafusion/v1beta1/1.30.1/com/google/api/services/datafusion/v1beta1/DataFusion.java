@@ -20,11 +20,7 @@ package com.google.api.services.datafusion.v1beta1;
  * Service definition for DataFusion (v1beta1).
  *
  * <p>
- * Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for
-    quickly building and managing data pipelines. It provides a graphical interface to increase
-    time efficiency and reduce complexity, and allows business users, developers, and data
-    scientists to easily and reliably build scalable data integration solutions to cleanse,
-    prepare, blend, transfer and transform data without having to wrestle with infrastructure.
+ * Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for quickly building and managing data pipelines. It provides a graphical interface to increase time efficiency and reduce complexity, and allows business users, developers, and data scientists to easily and reliably build scalable data integration solutions to cleanse, prepare, blend, transfer and transform data without having to wrestle with infrastructure.
  * </p>
  *
  * <p>
@@ -229,6 +225,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
         }
@@ -246,6 +247,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get setKey(java.lang.String key) {
           return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -357,6 +363,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
         }
@@ -374,6 +385,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         @Override
         public List setKey(java.lang.String key) {
           return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
         }
 
         @Override
@@ -433,9 +449,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUnrevealedLocations;
 
@@ -445,9 +459,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           return includeUnrevealedLocations;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
           this.includeUnrevealedLocations = includeUnrevealedLocations;
           return this;
@@ -519,8 +531,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The instance's project and location in the format
-        projects/{project}/locations/{location}.
+         * @param parent The instance's project and location in the format projects/{project}/locations/{location}.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.Instance}
          * @return the request
          */
@@ -548,8 +559,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The instance's project and location in the format
-        projects/{project}/locations/{location}.
+           * @param parent The instance's project and location in the format projects/{project}/locations/{location}.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.Instance}
            * @since 1.13
            */
@@ -566,6 +576,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Create set$Xgafv(java.lang.String $Xgafv) {
             return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
           }
 
           @Override
@@ -586,6 +601,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Create setKey(java.lang.String key) {
             return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -712,6 +732,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -729,6 +754,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -849,6 +879,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -866,6 +901,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -930,8 +970,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -960,8 +999,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -991,6 +1029,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public GetIamPolicy setAlt(java.lang.String alt) {
             return (GetIamPolicy) super.setAlt(alt);
           }
@@ -1008,6 +1051,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public GetIamPolicy setKey(java.lang.String key) {
             return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1059,42 +1107,32 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
-
-         To learn which resources support conditions in their IAM policies, see the [IAM
-         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -1115,12 +1153,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and location for which to retrieve instance information
-        in the format
-         *        projects/{project}/locations/{location}. If the location is
-        specified as '-' (wildcard),
-         *        then all regions available to the project
-        are queried, and the results are aggregated.
+         * @param parent The project and location for which to retrieve instance information in the format
+         *        projects/{project}/locations/{location}. If the location is specified as '-' (wildcard),
+         *        then all regions available to the project are queried, and the results are aggregated.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1146,12 +1181,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and location for which to retrieve instance information
-        in the format
-         *        projects/{project}/locations/{location}. If the location is
-        specified as '-' (wildcard),
-         *        then all regions available to the project
-        are queried, and the results are aggregated.
+           * @param parent The project and location for which to retrieve instance information in the format
+         *        projects/{project}/locations/{location}. If the location is specified as '-' (wildcard),
+         *        then all regions available to the project are queried, and the results are aggregated.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1180,6 +1212,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -1197,6 +1234,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1268,17 +1310,17 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Sort results. Supported values are "name", "name desc",  or "" (unsorted). */
+          /** Sort results. Supported values are "name", "name desc", or "" (unsorted). */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Sort results. Supported values are "name", "name desc",  or "" (unsorted).
+          /** Sort results. Supported values are "name", "name desc", or "" (unsorted).
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Sort results. Supported values are "name", "name desc",  or "" (unsorted). */
+          /** Sort results. Supported values are "name", "name desc", or "" (unsorted). */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -1385,6 +1427,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Patch setAlt(java.lang.String alt) {
             return (Patch) super.setAlt(alt);
           }
@@ -1402,6 +1449,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch setKey(java.lang.String key) {
             return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1546,6 +1598,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Restart setAccessToken(java.lang.String accessToken) {
+            return (Restart) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Restart setAlt(java.lang.String alt) {
             return (Restart) super.setAlt(alt);
           }
@@ -1563,6 +1620,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Restart setKey(java.lang.String key) {
             return (Restart) super.setKey(key);
+          }
+
+          @Override
+          public Restart setOauthToken(java.lang.String oauthToken) {
+            return (Restart) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1619,17 +1681,15 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "instances.setIamPolicy".
          *
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.SetIamPolicyRequest}
          * @return the request
@@ -1648,9 +1708,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "instances.setIamPolicy".
            *
@@ -1660,8 +1719,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1682,6 +1740,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public SetIamPolicy setAlt(java.lang.String alt) {
             return (SetIamPolicy) super.setAlt(alt);
           }
@@ -1699,6 +1762,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public SetIamPolicy setKey(java.lang.String key) {
             return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1756,18 +1824,16 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a `NOT_FOUND` error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "instances.testIamPermissions".
          *
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1787,10 +1853,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "instances.testIamPermissions".
            *
@@ -1800,8 +1865,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -1822,6 +1886,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public TestIamPermissions setAlt(java.lang.String alt) {
             return (TestIamPermissions) super.setAlt(alt);
           }
@@ -1839,6 +1908,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public TestIamPermissions setKey(java.lang.String key) {
             return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -1903,10 +1977,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
          *
          * @param name Name of the Data Fusion instance which need to be upgraded in the form of
-         *        projects/{project}/locations/{location}/instances/{instance}
-        Instance will be upgraded
-         *        with the latest stable version of the Data
-        Fusion.
+         *        projects/{project}/locations/{location}/instances/{instance} Instance will be upgraded
+         *        with the latest stable version of the Data Fusion.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.UpgradeInstanceRequest}
          * @return the request
          */
@@ -1935,10 +2007,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Name of the Data Fusion instance which need to be upgraded in the form of
-         *        projects/{project}/locations/{location}/instances/{instance}
-        Instance will be upgraded
-         *        with the latest stable version of the Data
-        Fusion.
+         *        projects/{project}/locations/{location}/instances/{instance} Instance will be upgraded
+         *        with the latest stable version of the Data Fusion.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.UpgradeInstanceRequest}
            * @since 1.13
            */
@@ -1955,6 +2025,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Upgrade set$Xgafv(java.lang.String $Xgafv) {
             return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
           }
 
           @Override
@@ -1975,6 +2050,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Upgrade setKey(java.lang.String key) {
             return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2056,9 +2136,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2087,13 +2167,13 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2123,6 +2203,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Cancel setAlt(java.lang.String alt) {
             return (Cancel) super.setAlt(alt);
           }
@@ -2140,6 +2225,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Cancel setKey(java.lang.String key) {
             return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2246,6 +2336,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
           }
@@ -2263,6 +2358,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Delete setKey(java.lang.String key) {
             return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2312,7 +2412,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2337,7 +2437,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2376,6 +2476,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
           }
@@ -2393,6 +2498,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get setKey(java.lang.String key) {
             return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2443,13 +2553,12 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2474,13 +2583,12 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -2518,6 +2626,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -2535,6 +2648,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
@@ -2661,8 +2779,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location for which to retrieve instance information
-        in the format
+         * @param parent Required. The project and location for which to retrieve instance information in the format
          *        projects/{project}/locations/{location}.
          * @return the request
          */
@@ -2689,8 +2806,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location for which to retrieve instance information
-        in the format
+           * @param parent Required. The project and location for which to retrieve instance information in the format
          *        projects/{project}/locations/{location}.
            * @since 1.13
            */
@@ -2720,6 +2836,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
           }
@@ -2737,6 +2858,11 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           @Override
           public List setKey(java.lang.String key) {
             return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override

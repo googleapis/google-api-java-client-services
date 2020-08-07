@@ -20,10 +20,9 @@ package com.google.api.services.bigqueryreservation.v1alpha2.model;
  * Slot pool is a way to purchase slots with some minimum committed period of usage. Slot pool is
  * immutable and cannot be deleted until the end of the commitment period. After the end of the
  * commitment period, slots are still available but can be freely removed any time. Annual
- * commitments will automatically be downgraded to monthly after the commitment ends.
- *
- * A slot pool resource exists as a child resource of a top-level reservation. Sum of all the ACTIVE
- * pools slot_count is always equal to the reservation slot_capacity.
+ * commitments will automatically be downgraded to monthly after the commitment ends. A slot pool
+ * resource exists as a child resource of a top-level reservation. Sum of all the ACTIVE pools
+ * slot_count is always equal to the reservation slot_capacity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery Reservation API. For a detailed explanation
@@ -53,7 +52,7 @@ public final class SlotPool extends com.google.api.client.json.GenericJson {
   private Status failureStatus;
 
   /**
-   * Output only. The resource name of the slot pool, e.g.,    projects/myproject/locations/us-
+   * Output only. The resource name of the slot pool, e.g., projects/myproject/locations/us-
    * central1/reservations/myreservation/slotPools/123
    * The value may be {@code null}.
    */
@@ -120,7 +119,7 @@ public final class SlotPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the slot pool, e.g.,    projects/myproject/locations/us-
+   * Output only. The resource name of the slot pool, e.g., projects/myproject/locations/us-
    * central1/reservations/myreservation/slotPools/123
    * @return value or {@code null} for none
    */
@@ -129,7 +128,7 @@ public final class SlotPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the slot pool, e.g.,    projects/myproject/locations/us-
+   * Output only. The resource name of the slot pool, e.g., projects/myproject/locations/us-
    * central1/reservations/myreservation/slotPools/123
    * @param name name or {@code null} for none
    */

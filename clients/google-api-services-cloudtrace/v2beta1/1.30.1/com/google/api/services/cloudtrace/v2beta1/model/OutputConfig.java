@@ -31,8 +31,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The destination for writing trace data. Currently only BigQuery is supported. E.g.:
-   *
-   *     "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+   * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The destination for writing trace data. Currently only BigQuery is supported. E.g.:
-   *
-   *     "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+   * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -50,8 +48,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The destination for writing trace data. Currently only BigQuery is supported. E.g.:
-   *
-   *     "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+   * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * @param destination destination or {@code null} for none
    */
   public OutputConfig setDestination(java.lang.String destination) {

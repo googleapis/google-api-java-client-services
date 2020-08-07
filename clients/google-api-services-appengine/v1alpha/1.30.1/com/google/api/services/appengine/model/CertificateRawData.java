@@ -32,7 +32,7 @@ public final class CertificateRawData extends com.google.api.client.json.Generic
   /**
    * Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and
    * then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer.
-   * Example:  -----BEGIN RSA PRIVATE KEY-----  -----END RSA PRIVATE KEY-----  @InputOnly
+   * Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class CertificateRawData extends com.google.api.client.json.Generic
 
   /**
    * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must
-   * include the header and footer. Example:  -----BEGIN CERTIFICATE-----  -----END CERTIFICATE-----
+   * include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class CertificateRawData extends com.google.api.client.json.Generic
   /**
    * Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and
    * then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer.
-   * Example:  -----BEGIN RSA PRIVATE KEY-----  -----END RSA PRIVATE KEY-----  @InputOnly
+   * Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKey() {
@@ -59,7 +59,7 @@ public final class CertificateRawData extends com.google.api.client.json.Generic
   /**
    * Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and
    * then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer.
-   * Example:  -----BEGIN RSA PRIVATE KEY-----  -----END RSA PRIVATE KEY-----  @InputOnly
+   * Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
    * @param privateKey privateKey or {@code null} for none
    */
   public CertificateRawData setPrivateKey(java.lang.String privateKey) {
@@ -69,7 +69,7 @@ public final class CertificateRawData extends com.google.api.client.json.Generic
 
   /**
    * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must
-   * include the header and footer. Example:  -----BEGIN CERTIFICATE-----  -----END CERTIFICATE-----
+   * include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicCertificate() {
@@ -78,7 +78,7 @@ public final class CertificateRawData extends com.google.api.client.json.Generic
 
   /**
    * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must
-   * include the header and footer. Example:  -----BEGIN CERTIFICATE-----  -----END CERTIFICATE-----
+   * include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
    * @param publicCertificate publicCertificate or {@code null} for none
    */
   public CertificateRawData setPublicCertificate(java.lang.String publicCertificate) {

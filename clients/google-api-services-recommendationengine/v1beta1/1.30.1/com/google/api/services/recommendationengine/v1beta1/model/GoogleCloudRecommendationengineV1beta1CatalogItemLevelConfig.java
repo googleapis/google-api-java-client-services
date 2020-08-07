@@ -17,8 +17,8 @@
 package com.google.api.services.recommendationengine.v1beta1.model;
 
 /**
- * Configures what level the catalog should be uploaded with regards to how users will be send
- * events and how predictions will be made.
+ * Configures the catalog level that users send events to, and the level at which predictions are
+ * made.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Recommendations AI. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.recommendationengine.v1beta1.model;
 public final class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. What level of the catalog are events uploaded at. See https://cloud.google.com
+   * Optional. Level of the catalog at which events are uploaded. See https://cloud.google.com
    * /recommendations-ai/docs/catalog#catalog-levels for more details.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig 
   private java.lang.String eventItemLevel;
 
   /**
-   * Optional. What level of the catalog are predictions made at. See https://cloud.google.com
+   * Optional. Level of the catalog at which predictions are made. See https://cloud.google.com
    * /recommendations-ai/docs/catalog#catalog-levels for more details.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig 
   private java.lang.String predictItemLevel;
 
   /**
-   * Optional. What level of the catalog are events uploaded at. See https://cloud.google.com
+   * Optional. Level of the catalog at which events are uploaded. See https://cloud.google.com
    * /recommendations-ai/docs/catalog#catalog-levels for more details.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig 
   }
 
   /**
-   * Optional. What level of the catalog are events uploaded at. See https://cloud.google.com
+   * Optional. Level of the catalog at which events are uploaded. See https://cloud.google.com
    * /recommendations-ai/docs/catalog#catalog-levels for more details.
    * @param eventItemLevel eventItemLevel or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig 
   }
 
   /**
-   * Optional. What level of the catalog are predictions made at. See https://cloud.google.com
+   * Optional. Level of the catalog at which predictions are made. See https://cloud.google.com
    * /recommendations-ai/docs/catalog#catalog-levels for more details.
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig 
   }
 
   /**
-   * Optional. What level of the catalog are predictions made at. See https://cloud.google.com
+   * Optional. Level of the catalog at which predictions are made. See https://cloud.google.com
    * /recommendations-ai/docs/catalog#catalog-levels for more details.
    * @param predictItemLevel predictItemLevel or {@code null} for none
    */

@@ -31,10 +31,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
 
   /**
    * Optional. The id or name of the associated shopping cart. This id is used to associate multiple
-   * items added or present in the cart before purchase.
-   *
-   * This can only be set for `add-to-cart`, `remove-from-cart`, `checkout-start`, `purchase-
-   * complete`, or `shopping-cart-page-view` events.
+   * items added or present in the cart before purchase. This can only be set for `add-to-cart`,
+   * `remove-from-cart`, `checkout-start`, `purchase-complete`, or `shopping-cart-page-view` events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,27 +63,17 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * The main product details related to the event.
-   *
-   * This field is required for the following event types:
-   *
-   * * `add-to-cart` * `add-to-list` * `checkout-start` * `detail-page-view` * `purchase-complete` *
-   * `refund` * `remove-from-cart` * `remove-from-list`
-   *
-   * This field is optional for the following event types:
-   *
-   * * `page-visit` * `shopping-cart-page-view` - note that 'product_details' should be set for
-   * this unless the shopping cart is empty. * `search` (highly encouraged)
-   *
-   * In a `search` event, this field represents the products returned to the end user on the current
-   * page (the end user may have not finished broswing the whole page yet). When a new page is
-   * returned to the end user, after pagination/filtering/ordering even for the same query, a new
-   * SEARCH event with different product_details is desired. The end user may have not finished
-   * broswing the whole page yet.
-   *
-   * This field is not allowed for the following event types:
-   *
-   * * `category-page-view` * `home-page-view`
+   * The main product details related to the event. This field is required for the following event
+   * types: * `add-to-cart` * `add-to-list` * `checkout-start` * `detail-page-view` * `purchase-
+   * complete` * `refund` * `remove-from-cart` * `remove-from-list` This field is optional for the
+   * following event types: * `page-visit` * `shopping-cart-page-view` - note that 'product_details'
+   * should be set for this unless the shopping cart is empty. * `search` (highly encouraged) In a
+   * `search` event, this field represents the products returned to the end user on the current page
+   * (the end user may have not finished broswing the whole page yet). When a new page is returned
+   * to the end user, after pagination/filtering/ordering even for the same query, a new SEARCH
+   * event with different product_details is desired. The end user may have not finished broswing
+   * the whole page yet. This field is not allowed for the following event types: * `category-page-
+   * view` * `home-page-view`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,10 +104,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
 
   /**
    * Optional. The id or name of the associated shopping cart. This id is used to associate multiple
-   * items added or present in the cart before purchase.
-   *
-   * This can only be set for `add-to-cart`, `remove-from-cart`, `checkout-start`, `purchase-
-   * complete`, or `shopping-cart-page-view` events.
+   * items added or present in the cart before purchase. This can only be set for `add-to-cart`,
+   * `remove-from-cart`, `checkout-start`, `purchase-complete`, or `shopping-cart-page-view` events.
    * @return value or {@code null} for none
    */
   public java.lang.String getCartId() {
@@ -128,10 +114,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
 
   /**
    * Optional. The id or name of the associated shopping cart. This id is used to associate multiple
-   * items added or present in the cart before purchase.
-   *
-   * This can only be set for `add-to-cart`, `remove-from-cart`, `checkout-start`, `purchase-
-   * complete`, or `shopping-cart-page-view` events.
+   * items added or present in the cart before purchase. This can only be set for `add-to-cart`,
+   * `remove-from-cart`, `checkout-start`, `purchase-complete`, or `shopping-cart-page-view` events.
    * @param cartId cartId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1ProductEventDetail setCartId(java.lang.String cartId) {
@@ -182,27 +166,17 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * The main product details related to the event.
-   *
-   * This field is required for the following event types:
-   *
-   * * `add-to-cart` * `add-to-list` * `checkout-start` * `detail-page-view` * `purchase-complete` *
-   * `refund` * `remove-from-cart` * `remove-from-list`
-   *
-   * This field is optional for the following event types:
-   *
-   * * `page-visit` * `shopping-cart-page-view` - note that 'product_details' should be set for
-   * this unless the shopping cart is empty. * `search` (highly encouraged)
-   *
-   * In a `search` event, this field represents the products returned to the end user on the current
-   * page (the end user may have not finished broswing the whole page yet). When a new page is
-   * returned to the end user, after pagination/filtering/ordering even for the same query, a new
-   * SEARCH event with different product_details is desired. The end user may have not finished
-   * broswing the whole page yet.
-   *
-   * This field is not allowed for the following event types:
-   *
-   * * `category-page-view` * `home-page-view`
+   * The main product details related to the event. This field is required for the following event
+   * types: * `add-to-cart` * `add-to-list` * `checkout-start` * `detail-page-view` * `purchase-
+   * complete` * `refund` * `remove-from-cart` * `remove-from-list` This field is optional for the
+   * following event types: * `page-visit` * `shopping-cart-page-view` - note that 'product_details'
+   * should be set for this unless the shopping cart is empty. * `search` (highly encouraged) In a
+   * `search` event, this field represents the products returned to the end user on the current page
+   * (the end user may have not finished broswing the whole page yet). When a new page is returned
+   * to the end user, after pagination/filtering/ordering even for the same query, a new SEARCH
+   * event with different product_details is desired. The end user may have not finished broswing
+   * the whole page yet. This field is not allowed for the following event types: * `category-page-
+   * view` * `home-page-view`
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecommendationengineV1beta1ProductDetail> getProductDetails() {
@@ -210,27 +184,17 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * The main product details related to the event.
-   *
-   * This field is required for the following event types:
-   *
-   * * `add-to-cart` * `add-to-list` * `checkout-start` * `detail-page-view` * `purchase-complete` *
-   * `refund` * `remove-from-cart` * `remove-from-list`
-   *
-   * This field is optional for the following event types:
-   *
-   * * `page-visit` * `shopping-cart-page-view` - note that 'product_details' should be set for
-   * this unless the shopping cart is empty. * `search` (highly encouraged)
-   *
-   * In a `search` event, this field represents the products returned to the end user on the current
-   * page (the end user may have not finished broswing the whole page yet). When a new page is
-   * returned to the end user, after pagination/filtering/ordering even for the same query, a new
-   * SEARCH event with different product_details is desired. The end user may have not finished
-   * broswing the whole page yet.
-   *
-   * This field is not allowed for the following event types:
-   *
-   * * `category-page-view` * `home-page-view`
+   * The main product details related to the event. This field is required for the following event
+   * types: * `add-to-cart` * `add-to-list` * `checkout-start` * `detail-page-view` * `purchase-
+   * complete` * `refund` * `remove-from-cart` * `remove-from-list` This field is optional for the
+   * following event types: * `page-visit` * `shopping-cart-page-view` - note that 'product_details'
+   * should be set for this unless the shopping cart is empty. * `search` (highly encouraged) In a
+   * `search` event, this field represents the products returned to the end user on the current page
+   * (the end user may have not finished broswing the whole page yet). When a new page is returned
+   * to the end user, after pagination/filtering/ordering even for the same query, a new SEARCH
+   * event with different product_details is desired. The end user may have not finished broswing
+   * the whole page yet. This field is not allowed for the following event types: * `category-page-
+   * view` * `home-page-view`
    * @param productDetails productDetails or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1ProductEventDetail setProductDetails(java.util.List<GoogleCloudRecommendationengineV1beta1ProductDetail> productDetails) {

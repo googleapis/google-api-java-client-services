@@ -44,12 +44,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItem exte
   private java.lang.String canonicalProductUri;
 
   /**
-   * Optional. A map to pass the costs associated with the product.
-   *
-   * For example: {"manufacturing": 45.5} The profit of selling this item is computed like so:
-   *
-   * * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is
-   * provided, profit = minPrice - sum(costs)
+   * Optional. A map to pass the costs associated with the product. For example: {"manufacturing":
+   * 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided,
+   * profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice -
+   * sum(costs)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,12 +130,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItem exte
   }
 
   /**
-   * Optional. A map to pass the costs associated with the product.
-   *
-   * For example: {"manufacturing": 45.5} The profit of selling this item is computed like so:
-   *
-   * * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is
-   * provided, profit = minPrice - sum(costs)
+   * Optional. A map to pass the costs associated with the product. For example: {"manufacturing":
+   * 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided,
+   * profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice -
+   * sum(costs)
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Float> getCosts() {
@@ -145,12 +141,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItem exte
   }
 
   /**
-   * Optional. A map to pass the costs associated with the product.
-   *
-   * For example: {"manufacturing": 45.5} The profit of selling this item is computed like so:
-   *
-   * * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is
-   * provided, profit = minPrice - sum(costs)
+   * Optional. A map to pass the costs associated with the product. For example: {"manufacturing":
+   * 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided,
+   * profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice -
+   * sum(costs)
    * @param costs costs or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1ProductCatalogItem setCosts(java.util.Map<String, java.lang.Float> costs) {

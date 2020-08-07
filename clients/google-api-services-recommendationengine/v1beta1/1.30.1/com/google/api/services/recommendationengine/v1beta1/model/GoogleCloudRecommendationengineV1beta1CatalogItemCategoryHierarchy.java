@@ -31,9 +31,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
 
   /**
    * Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length
-   * limit of 2 KiB.
-   *
-   * Note that the order in the list denotes the specificity (from least to most specific).
+   * limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most
+   * specific).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +40,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
 
   /**
    * Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length
-   * limit of 2 KiB.
-   *
-   * Note that the order in the list denotes the specificity (from least to most specific).
+   * limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most
+   * specific).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategories() {
@@ -52,9 +50,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
 
   /**
    * Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length
-   * limit of 2 KiB.
-   *
-   * Note that the order in the list denotes the specificity (from least to most specific).
+   * limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most
+   * specific).
    * @param categories categories or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy setCategories(java.util.List<java.lang.String> categories) {

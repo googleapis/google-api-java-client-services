@@ -31,13 +31,10 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Required. Catalog item categories. This field is repeated for supporting one catalog item
-   * belonging to several parallel category hierarchies.
-   *
-   * For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports
-   * & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as:
-   *
-   *      "categoryHierarchies": [        { "categories": ["Shoes & Accessories", "Shoes"]},
-   * { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] }      ]
+   * belonging to several parallel category hierarchies. For example, if a shoes product belongs to
+   * both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" ->
+   * "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes &
+   * Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,10 +48,9 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
   private java.lang.String description;
 
   /**
-   * Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes.
-   *
-   * This id must be unique among all catalog items within the same catalog. It should also be used
-   * when logging user events in order for the user events to be joined with the Catalog.
+   * Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This
+   * id must be unique among all catalog items within the same catalog. It should also be used when
+   * logging user events in order for the user events to be joined with the Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,10 +68,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length
-   * limit of 128 bytes.
-   *
-   * This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog
-   * #item-group-id).
+   * limit of 128 bytes. This field must be enabled before it can be used. [Learn more
+   * ](/recommendations-ai/docs/catalog#item-group-id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,10 +93,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded
-   * string with a length limit of 1 KiB.
-   *
-   * This tag can be used for filtering recommendation results by passing the tag as part of the
-   * predict request filter.
+   * string with a length limit of 1 KiB. This tag can be used for filtering recommendation results
+   * by passing the tag as part of the predict request filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,13 +109,10 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Required. Catalog item categories. This field is repeated for supporting one catalog item
-   * belonging to several parallel category hierarchies.
-   *
-   * For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports
-   * & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as:
-   *
-   *      "categoryHierarchies": [        { "categories": ["Shoes & Accessories", "Shoes"]},
-   * { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] }      ]
+   * belonging to several parallel category hierarchies. For example, if a shoes product belongs to
+   * both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" ->
+   * "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes &
+   * Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy> getCategoryHierarchies() {
@@ -132,13 +121,10 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Required. Catalog item categories. This field is repeated for supporting one catalog item
-   * belonging to several parallel category hierarchies.
-   *
-   * For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports
-   * & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as:
-   *
-   *      "categoryHierarchies": [        { "categories": ["Shoes & Accessories", "Shoes"]},
-   * { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] }      ]
+   * belonging to several parallel category hierarchies. For example, if a shoes product belongs to
+   * both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" ->
+   * "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes &
+   * Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
    * @param categoryHierarchies categoryHierarchies or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1CatalogItem setCategoryHierarchies(java.util.List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy> categoryHierarchies) {
@@ -164,10 +150,9 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
   }
 
   /**
-   * Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes.
-   *
-   * This id must be unique among all catalog items within the same catalog. It should also be used
-   * when logging user events in order for the user events to be joined with the Catalog.
+   * Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This
+   * id must be unique among all catalog items within the same catalog. It should also be used when
+   * logging user events in order for the user events to be joined with the Catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -175,10 +160,9 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
   }
 
   /**
-   * Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes.
-   *
-   * This id must be unique among all catalog items within the same catalog. It should also be used
-   * when logging user events in order for the user events to be joined with the Catalog.
+   * Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This
+   * id must be unique among all catalog items within the same catalog. It should also be used when
+   * logging user events in order for the user events to be joined with the Catalog.
    * @param id id or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1CatalogItem setId(java.lang.String id) {
@@ -211,10 +195,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length
-   * limit of 128 bytes.
-   *
-   * This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog
-   * #item-group-id).
+   * limit of 128 bytes. This field must be enabled before it can be used. [Learn more
+   * ](/recommendations-ai/docs/catalog#item-group-id).
    * @return value or {@code null} for none
    */
   public java.lang.String getItemGroupId() {
@@ -223,10 +205,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length
-   * limit of 128 bytes.
-   *
-   * This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog
-   * #item-group-id).
+   * limit of 128 bytes. This field must be enabled before it can be used. [Learn more
+   * ](/recommendations-ai/docs/catalog#item-group-id).
    * @param itemGroupId itemGroupId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1CatalogItem setItemGroupId(java.lang.String itemGroupId) {
@@ -274,10 +254,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded
-   * string with a length limit of 1 KiB.
-   *
-   * This tag can be used for filtering recommendation results by passing the tag as part of the
-   * predict request filter.
+   * string with a length limit of 1 KiB. This tag can be used for filtering recommendation results
+   * by passing the tag as part of the predict request filter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -286,10 +264,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded
-   * string with a length limit of 1 KiB.
-   *
-   * This tag can be used for filtering recommendation results by passing the tag as part of the
-   * predict request filter.
+   * string with a length limit of 1 KiB. This tag can be used for filtering recommendation results
+   * by passing the tag as part of the predict request filter.
    * @param tags tags or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1CatalogItem setTags(java.util.List<java.lang.String> tags) {

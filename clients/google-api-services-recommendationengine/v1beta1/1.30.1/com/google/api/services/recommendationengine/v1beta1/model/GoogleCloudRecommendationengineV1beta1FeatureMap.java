@@ -32,11 +32,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMap extends com.
 
   /**
    * Categorical features that can take on one of a limited number of possible values. Some examples
-   * would be the brand/maker of a product, or country of a customer.
-   *
-   * Feature names and values must be UTF-8 encoded strings.
-   *
-   * For example: `{ "colors": {"value": ["yellow", "green"]},                 "sizes":
+   * would be the brand/maker of a product, or country of a customer. Feature names and values must
+   * be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes":
    * {"value":["S", "M"]}`
    * The value may be {@code null}.
    */
@@ -45,12 +42,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMap extends com.
 
   /**
    * Numerical features. Some examples would be the height/weight of a product, or age of a
-   * customer.
-   *
-   * Feature names must be UTF-8 encoded strings.
-   *
-   * For example: `{ "lengths_cm": {"value":[2.3, 15.4]},                 "heights_cm":
-   * {"value":[8.1, 6.4]} }`
+   * customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm":
+   * {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,11 +51,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMap extends com.
 
   /**
    * Categorical features that can take on one of a limited number of possible values. Some examples
-   * would be the brand/maker of a product, or country of a customer.
-   *
-   * Feature names and values must be UTF-8 encoded strings.
-   *
-   * For example: `{ "colors": {"value": ["yellow", "green"]},                 "sizes":
+   * would be the brand/maker of a product, or country of a customer. Feature names and values must
+   * be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes":
    * {"value":["S", "M"]}`
    * @return value or {@code null} for none
    */
@@ -72,11 +62,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMap extends com.
 
   /**
    * Categorical features that can take on one of a limited number of possible values. Some examples
-   * would be the brand/maker of a product, or country of a customer.
-   *
-   * Feature names and values must be UTF-8 encoded strings.
-   *
-   * For example: `{ "colors": {"value": ["yellow", "green"]},                 "sizes":
+   * would be the brand/maker of a product, or country of a customer. Feature names and values must
+   * be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes":
    * {"value":["S", "M"]}`
    * @param categoricalFeatures categoricalFeatures or {@code null} for none
    */
@@ -87,12 +74,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMap extends com.
 
   /**
    * Numerical features. Some examples would be the height/weight of a product, or age of a
-   * customer.
-   *
-   * Feature names must be UTF-8 encoded strings.
-   *
-   * For example: `{ "lengths_cm": {"value":[2.3, 15.4]},                 "heights_cm":
-   * {"value":[8.1, 6.4]} }`
+   * customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm":
+   * {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList> getNumericalFeatures() {
@@ -101,12 +84,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMap extends com.
 
   /**
    * Numerical features. Some examples would be the height/weight of a product, or age of a
-   * customer.
-   *
-   * Feature names must be UTF-8 encoded strings.
-   *
-   * For example: `{ "lengths_cm": {"value":[2.3, 15.4]},                 "heights_cm":
-   * {"value":[8.1, 6.4]} }`
+   * customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm":
+   * {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`
    * @param numericalFeatures numericalFeatures or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1FeatureMap setNumericalFeatures(java.util.Map<String, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList> numericalFeatures) {

@@ -969,176 +969,9 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Method for getting the catalog items associated with item group id.
-           *
-           * Create a request for the method "catalogItems.getGroupIdItems".
-           *
-           * This request holds the parameters needed by the recommendationengine server.  After setting any
-           * optional parameters, call the {@link GetGroupIdItems#execute()} method to invoke the remote
-           * operation.
-           *
-           * @param parent Required. Parent resource name of group id item, such as
-           *        "projects/locations/global/catalogs/default_catalog".
-           * @return the request
-           */
-          public GetGroupIdItems getGroupIdItems(java.lang.String parent) throws java.io.IOException {
-            GetGroupIdItems result = new GetGroupIdItems(parent);
-            initialize(result);
-            return result;
-          }
-
-          public class GetGroupIdItems extends RecommendationsAIRequest<com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1GetCatalogItemsWithItemGroupIdResponse> {
-
-            private static final String REST_PATH = "v1beta1/{+parent}/catalogItems:groupIdItems";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
-
-            /**
-             * Method for getting the catalog items associated with item group id.
-             *
-             * Create a request for the method "catalogItems.getGroupIdItems".
-             *
-             * This request holds the parameters needed by the the recommendationengine server.  After setting
-             * any optional parameters, call the {@link GetGroupIdItems#execute()} method to invoke the remote
-             * operation. <p> {@link GetGroupIdItems#initialize(com.google.api.client.googleapis.services.Abst
-             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-             * the constructor. </p>
-             *
-             * @param parent Required. Parent resource name of group id item, such as
-           *        "projects/locations/global/catalogs/default_catalog".
-             * @since 1.13
-             */
-            protected GetGroupIdItems(java.lang.String parent) {
-              super(RecommendationsAI.this, "GET", REST_PATH, null, com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1GetCatalogItemsWithItemGroupIdResponse.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public GetGroupIdItems set$Xgafv(java.lang.String $Xgafv) {
-              return (GetGroupIdItems) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public GetGroupIdItems setAccessToken(java.lang.String accessToken) {
-              return (GetGroupIdItems) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public GetGroupIdItems setAlt(java.lang.String alt) {
-              return (GetGroupIdItems) super.setAlt(alt);
-            }
-
-            @Override
-            public GetGroupIdItems setCallback(java.lang.String callback) {
-              return (GetGroupIdItems) super.setCallback(callback);
-            }
-
-            @Override
-            public GetGroupIdItems setFields(java.lang.String fields) {
-              return (GetGroupIdItems) super.setFields(fields);
-            }
-
-            @Override
-            public GetGroupIdItems setKey(java.lang.String key) {
-              return (GetGroupIdItems) super.setKey(key);
-            }
-
-            @Override
-            public GetGroupIdItems setOauthToken(java.lang.String oauthToken) {
-              return (GetGroupIdItems) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public GetGroupIdItems setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (GetGroupIdItems) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public GetGroupIdItems setQuotaUser(java.lang.String quotaUser) {
-              return (GetGroupIdItems) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public GetGroupIdItems setUploadType(java.lang.String uploadType) {
-              return (GetGroupIdItems) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public GetGroupIdItems setUploadProtocol(java.lang.String uploadProtocol) {
-              return (GetGroupIdItems) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. Parent resource name of group id item, such as
-             * "projects/locations/global/catalogs/default_catalog".
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. Parent resource name of group id item, such as
-           "projects/locations/global/catalogs/default_catalog".
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /**
-             * Required. Parent resource name of group id item, such as
-             * "projects/locations/global/catalogs/default_catalog".
-             */
-            public GetGroupIdItems setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /** Required. Catalog item identifier for prediction results. */
-            @com.google.api.client.util.Key
-            private java.lang.String itemGroupId;
-
-            /** Required. Catalog item identifier for prediction results.
-             */
-            public java.lang.String getItemGroupId() {
-              return itemGroupId;
-            }
-
-            /** Required. Catalog item identifier for prediction results. */
-            public GetGroupIdItems setItemGroupId(java.lang.String itemGroupId) {
-              this.itemGroupId = itemGroupId;
-              return this;
-            }
-
-            @Override
-            public GetGroupIdItems set(String parameterName, Object value) {
-              return (GetGroupIdItems) super.set(parameterName, value);
-            }
-          }
-          /**
            * Bulk import of multiple catalog items. Request processing may be synchronous. No partial updating
-           * supported. Non-existing items will be created.
-           *
-           * Operation.response is of type ImportResponse. Note that it is possible for a subset of the items
-           * to be successfully updated.
+           * supported. Non-existing items will be created. Operation.response is of type ImportResponse. Note
+           * that it is possible for a subset of the items to be successfully updated.
            *
            * Create a request for the method "catalogItems.import".
            *
@@ -1146,10 +979,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link RecommendationsAIImport#execute()} method to invoke the
            * remote operation.
            *
-           * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog"
-          If no updateMask is specified,
-           *        requires catalogItems.create permission.
-          If updateMask is specified, requires
+           * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask is specified,
+           *        requires catalogItems.create permission. If updateMask is specified, requires
            *        catalogItems.update permission.
            * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest}
            * @return the request
@@ -1169,10 +1000,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Bulk import of multiple catalog items. Request processing may be synchronous. No partial
-             * updating supported. Non-existing items will be created.
-             *
-             * Operation.response is of type ImportResponse. Note that it is possible for a subset of the
-             * items to be successfully updated.
+             * updating supported. Non-existing items will be created. Operation.response is of type
+             * ImportResponse. Note that it is possible for a subset of the items to be successfully updated.
              *
              * Create a request for the method "catalogItems.import".
              *
@@ -1182,10 +1011,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog"
-          If no updateMask is specified,
-           *        requires catalogItems.create permission.
-          If updateMask is specified, requires
+             * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask is specified,
+           *        requires catalogItems.create permission. If updateMask is specified, requires
            *        catalogItems.update permission.
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest}
              * @since 1.13
@@ -1256,28 +1083,25 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. "projects/1234/locations/global/catalogs/default_catalog"
-             *
-             * If no updateMask is specified, requires catalogItems.create permission. If updateMask
-             * is specified, requires catalogItems.update permission.
+             * Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask
+             * is specified, requires catalogItems.create permission. If updateMask is specified,
+             * requires catalogItems.update permission.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. "projects/1234/locations/global/catalogs/default_catalog"
-
-           If no updateMask is specified, requires catalogItems.create permission. If updateMask is specified,
-           requires catalogItems.update permission.
+            /** Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask is specified,
+           requires catalogItems.create permission. If updateMask is specified, requires catalogItems.update
+           permission.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. "projects/1234/locations/global/catalogs/default_catalog"
-             *
-             * If no updateMask is specified, requires catalogItems.create permission. If updateMask
-             * is specified, requires catalogItems.update permission.
+             * Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask
+             * is specified, requires catalogItems.create permission. If updateMask is specified,
+             * requires catalogItems.update permission.
              */
             public RecommendationsAIImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1703,7 +1527,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
           public class Operations {
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -1728,7 +1552,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/eventStores/[^/]+/operations/[^/]+$");
 
               /**
-               * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+               * Gets the latest state of a long-running operation. Clients can use this method to poll the
                * operation result at intervals as recommended by the API service.
                *
                * Create a request for the method "operations.get".
@@ -1845,13 +1669,12 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-             * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+             * the binding to use different resource name schemes, such as `users/operations`. To override the
+             * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+             * configuration. For backwards compatibility, the default name includes the operations collection
+             * id, however overriding users must ensure the name binding is the parent resource, without the
+             * operations collection id.
              *
              * Create a request for the method "operations.list".
              *
@@ -1876,13 +1699,12 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Lists operations that match the specified filter in the request. If the server doesn't support
-               * this method, it returns `UNIMPLEMENTED`.
-               *
-               * NOTE: the `name` binding allows API services to override the binding to use different resource
-               * name schemes, such as `users/operations`. To override the binding, API services can add a
-               * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-               * compatibility, the default name includes the operations collection id, however overriding users
-               * must ensure the name binding is the parent resource, without the operations collection id.
+               * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+               * override the binding to use different resource name schemes, such as `users/operations`. To
+               * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+               * their service configuration. For backwards compatibility, the default name includes the
+               * operations collection id, however overriding users must ensure the name binding is the parent
+               * resource, without the operations collection id.
                *
                * Create a request for the method "operations.list".
                *
@@ -2078,39 +1900,21 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              *
              * @param name Required. Full resource name of the format:
              *        {name=projects/locations/global/catalogs/default_catalog/eventStores/default_event_store/p
-             *        lacements}
-            The id of the recommendation engine placement. This id is used to identify
-            the
-             *        set of models that will be used to make the prediction.
-            We currently support three
-             *        placements with the following IDs by default:
-            * `shopping_cart`: Predicts items frequently
-             *        bought together with one or
-              more catalog items in the same shopping session. Commonly
-             *        displayed after
-              `add-to-cart` events, on product detail pages, or on the shopping cart
-             *        page.
-            * `home_page`: Predicts the next product that a user will most likely
-              engage with
-             *        or purchase based on the shopping or viewing history of the
-              specified `userId` or
-             *        `visitorId`. For example - Recommendations for you.
-            * `product_detail`: Predicts the next
-             *        product that a user will most likely
-              engage with or purchase. The prediction is based on
-             *        the shopping or
-              viewing history of the specified `userId` or `visitorId` and its
-             *        relevance to a specified `CatalogItem`. Typically used on product detail
-              pages. For
-             *        example - More items like this.
-            * `recently_viewed_default`: Returns up to 75 items
-             *        recently viewed by the
-              specified `userId` or `visitorId`, most recent ones first.
-             *        Returns
-              nothing if neither of them has viewed any items yet. For example -
-              Recently
-             *        viewed.
-            The full list of available placements can be seen at
+             *        lacements} The id of the recommendation engine placement. This id is used to identify the
+             *        set of models that will be used to make the prediction. We currently support three
+             *        placements with the following IDs by default: * `shopping_cart`: Predicts items frequently
+             *        bought together with one or more catalog items in the same shopping session. Commonly
+             *        displayed after `add-to-cart` events, on product detail pages, or on the shopping cart
+             *        page. * `home_page`: Predicts the next product that a user will most likely engage with or
+             *        purchase based on the shopping or viewing history of the specified `userId` or
+             *        `visitorId`. For example - Recommendations for you. * `product_detail`: Predicts the next
+             *        product that a user will most likely engage with or purchase. The prediction is based on
+             *        the shopping or viewing history of the specified `userId` or `visitorId` and its relevance
+             *        to a specified `CatalogItem`. Typically used on product detail pages. For example - More
+             *        items like this. * `recently_viewed_default`: Returns up to 75 items recently viewed by
+             *        the specified `userId` or `visitorId`, most recent ones first. Returns nothing if neither
+             *        of them has viewed any items yet. For example - Recently viewed. The full list of
+             *        available placements can be seen at
              *        https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PredictRequest}
              * @return the request
@@ -2143,39 +1947,21 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                *
                * @param name Required. Full resource name of the format:
              *        {name=projects/locations/global/catalogs/default_catalog/eventStores/default_event_store/p
-             *        lacements}
-            The id of the recommendation engine placement. This id is used to identify
-            the
-             *        set of models that will be used to make the prediction.
-            We currently support three
-             *        placements with the following IDs by default:
-            * `shopping_cart`: Predicts items frequently
-             *        bought together with one or
-              more catalog items in the same shopping session. Commonly
-             *        displayed after
-              `add-to-cart` events, on product detail pages, or on the shopping cart
-             *        page.
-            * `home_page`: Predicts the next product that a user will most likely
-              engage with
-             *        or purchase based on the shopping or viewing history of the
-              specified `userId` or
-             *        `visitorId`. For example - Recommendations for you.
-            * `product_detail`: Predicts the next
-             *        product that a user will most likely
-              engage with or purchase. The prediction is based on
-             *        the shopping or
-              viewing history of the specified `userId` or `visitorId` and its
-             *        relevance to a specified `CatalogItem`. Typically used on product detail
-              pages. For
-             *        example - More items like this.
-            * `recently_viewed_default`: Returns up to 75 items
-             *        recently viewed by the
-              specified `userId` or `visitorId`, most recent ones first.
-             *        Returns
-              nothing if neither of them has viewed any items yet. For example -
-              Recently
-             *        viewed.
-            The full list of available placements can be seen at
+             *        lacements} The id of the recommendation engine placement. This id is used to identify the
+             *        set of models that will be used to make the prediction. We currently support three
+             *        placements with the following IDs by default: * `shopping_cart`: Predicts items frequently
+             *        bought together with one or more catalog items in the same shopping session. Commonly
+             *        displayed after `add-to-cart` events, on product detail pages, or on the shopping cart
+             *        page. * `home_page`: Predicts the next product that a user will most likely engage with or
+             *        purchase based on the shopping or viewing history of the specified `userId` or
+             *        `visitorId`. For example - Recommendations for you. * `product_detail`: Predicts the next
+             *        product that a user will most likely engage with or purchase. The prediction is based on
+             *        the shopping or viewing history of the specified `userId` or `visitorId` and its relevance
+             *        to a specified `CatalogItem`. Typically used on product detail pages. For example - More
+             *        items like this. * `recently_viewed_default`: Returns up to 75 items recently viewed by
+             *        the specified `userId` or `visitorId`, most recent ones first. Returns nothing if neither
+             *        of them has viewed any items yet. For example - Recently viewed. The full list of
+             *        available placements can be seen at
              *        https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PredictRequest}
                * @since 1.13
@@ -2249,28 +2035,21 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Required. Full resource name of the format: {name=projects/locations/global/catalog
                * s/default_catalog/eventStores/default_event_store/placements} The id of the
                * recommendation engine placement. This id is used to identify the set of models that
-               * will be used to make the prediction.
-               *
-               * We currently support three placements with the following IDs by default:
-               *
-               * * `shopping_cart`: Predicts items frequently bought together with one or more
-               * catalog items in the same shopping session. Commonly displayed after `add-to-cart`
-               * events, on product detail pages, or on the shopping cart page.
-               *
-               * * `home_page`: Predicts the next product that a user will most likely engage with
-               * or purchase based on the shopping or viewing history of the specified `userId` or
-               * `visitorId`. For example - Recommendations for you.
-               *
-               * * `product_detail`: Predicts the next product that a user will most likely engage
-               * with or purchase. The prediction is based on the shopping or viewing history of the
-               * specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`.
-               * Typically used on product detail pages. For example - More items like this.
-               *
-               * * `recently_viewed_default`: Returns up to 75 items recently viewed by the
-               * specified `userId` or `visitorId`, most recent ones first. Returns nothing if
-               * neither of them has viewed any items yet. For example - Recently viewed.
-               *
-               * The full list of available placements can be seen at
+               * will be used to make the prediction. We currently support three placements with the
+               * following IDs by default: * `shopping_cart`: Predicts items frequently bought
+               * together with one or more catalog items in the same shopping session. Commonly
+               * displayed after `add-to-cart` events, on product detail pages, or on the shopping
+               * cart page. * `home_page`: Predicts the next product that a user will most likely
+               * engage with or purchase based on the shopping or viewing history of the specified
+               * `userId` or `visitorId`. For example - Recommendations for you. * `product_detail`:
+               * Predicts the next product that a user will most likely engage with or purchase. The
+               * prediction is based on the shopping or viewing history of the specified `userId` or
+               * `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
+               * product detail pages. For example - More items like this. *
+               * `recently_viewed_default`: Returns up to 75 items recently viewed by the specified
+               * `userId` or `visitorId`, most recent ones first. Returns nothing if neither of them
+               * has viewed any items yet. For example - Recently viewed. The full list of available
+               * placements can be seen at
                * https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
                */
               @com.google.api.client.util.Key
@@ -2278,28 +2057,19 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /** Required. Full resource name of the format: {name=projects/locations/global/catalogs/default_catalo
              g/eventStores/default_event_store/placements} The id of the recommendation engine placement. This
-             id is used to identify the set of models that will be used to make the prediction.
-
-             We currently support three placements with the following IDs by default:
-
-             * `shopping_cart`: Predicts items frequently bought together with one or more catalog items in the
-             same shopping session. Commonly displayed after `add-to-cart` events, on product detail pages, or
-             on the shopping cart page.
-
-             * `home_page`: Predicts the next product that a user will most likely engage with or purchase based
+             id is used to identify the set of models that will be used to make the prediction. We currently
+             support three placements with the following IDs by default: * `shopping_cart`: Predicts items
+             frequently bought together with one or more catalog items in the same shopping session. Commonly
+             displayed after `add-to-cart` events, on product detail pages, or on the shopping cart page. *
+             `home_page`: Predicts the next product that a user will most likely engage with or purchase based
              on the shopping or viewing history of the specified `userId` or `visitorId`. For example -
-             Recommendations for you.
-
-             * `product_detail`: Predicts the next product that a user will most likely engage with or purchase.
-             The prediction is based on the shopping or viewing history of the specified `userId` or `visitorId`
-             and its relevance to a specified `CatalogItem`. Typically used on product detail pages. For example
-             - More items like this.
-
-             * `recently_viewed_default`: Returns up to 75 items recently viewed by the specified `userId` or
-             `visitorId`, most recent ones first. Returns nothing if neither of them has viewed any items yet.
-             For example - Recently viewed.
-
-             The full list of available placements can be seen at
+             Recommendations for you. * `product_detail`: Predicts the next product that a user will most likely
+             engage with or purchase. The prediction is based on the shopping or viewing history of the
+             specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
+             product detail pages. For example - More items like this. * `recently_viewed_default`: Returns up
+             to 75 items recently viewed by the specified `userId` or `visitorId`, most recent ones first.
+             Returns nothing if neither of them has viewed any items yet. For example - Recently viewed. The
+             full list of available placements can be seen at
              https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
                */
               public java.lang.String getName() {
@@ -2310,28 +2080,21 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Required. Full resource name of the format: {name=projects/locations/global/catalog
                * s/default_catalog/eventStores/default_event_store/placements} The id of the
                * recommendation engine placement. This id is used to identify the set of models that
-               * will be used to make the prediction.
-               *
-               * We currently support three placements with the following IDs by default:
-               *
-               * * `shopping_cart`: Predicts items frequently bought together with one or more
-               * catalog items in the same shopping session. Commonly displayed after `add-to-cart`
-               * events, on product detail pages, or on the shopping cart page.
-               *
-               * * `home_page`: Predicts the next product that a user will most likely engage with
-               * or purchase based on the shopping or viewing history of the specified `userId` or
-               * `visitorId`. For example - Recommendations for you.
-               *
-               * * `product_detail`: Predicts the next product that a user will most likely engage
-               * with or purchase. The prediction is based on the shopping or viewing history of the
-               * specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`.
-               * Typically used on product detail pages. For example - More items like this.
-               *
-               * * `recently_viewed_default`: Returns up to 75 items recently viewed by the
-               * specified `userId` or `visitorId`, most recent ones first. Returns nothing if
-               * neither of them has viewed any items yet. For example - Recently viewed.
-               *
-               * The full list of available placements can be seen at
+               * will be used to make the prediction. We currently support three placements with the
+               * following IDs by default: * `shopping_cart`: Predicts items frequently bought
+               * together with one or more catalog items in the same shopping session. Commonly
+               * displayed after `add-to-cart` events, on product detail pages, or on the shopping
+               * cart page. * `home_page`: Predicts the next product that a user will most likely
+               * engage with or purchase based on the shopping or viewing history of the specified
+               * `userId` or `visitorId`. For example - Recommendations for you. * `product_detail`:
+               * Predicts the next product that a user will most likely engage with or purchase. The
+               * prediction is based on the shopping or viewing history of the specified `userId` or
+               * `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
+               * product detail pages. For example - More items like this. *
+               * `recently_viewed_default`: Returns up to 75 items recently viewed by the specified
+               * `userId` or `visitorId`, most recent ones first. Returns nothing if neither of them
+               * has viewed any items yet. For example - Recently viewed. The full list of available
+               * placements can be seen at
                * https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
                */
               public Predict setName(java.lang.String name) {
@@ -2519,8 +2282,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the recommendationengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The API key to unregister including full resource path.
-            "projects/locations/global/catalog
+             * @param name Required. The API key to unregister including full resource path. "projects/locations/global/catalog
              *        s/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/"
              * @return the request
              */
@@ -2548,8 +2310,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The API key to unregister including full resource path.
-            "projects/locations/global/catalog
+               * @param name Required. The API key to unregister including full resource path. "projects/locations/global/catalog
              *        s/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/"
                * @since 1.13
                */
@@ -2864,10 +2625,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Writes a single user event from the browser. This uses a GET request to due to browser
-             * restriction of POST-ing to a 3rd party domain.
-             *
-             * This method is used only by the Recommendations AI JavaScript pixel. Users should not call this
-             * method directly.
+             * restriction of POST-ing to a 3rd party domain. This method is used only by the Recommendations AI
+             * JavaScript pixel. Users should not call this method directly.
              *
              * Create a request for the method "userEvents.collect".
              *
@@ -2893,10 +2652,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Writes a single user event from the browser. This uses a GET request to due to browser
-               * restriction of POST-ing to a 3rd party domain.
-               *
-               * This method is used only by the Recommendations AI JavaScript pixel. Users should not call this
-               * method directly.
+               * restriction of POST-ing to a 3rd party domain. This method is used only by the Recommendations
+               * AI JavaScript pixel. Users should not call this method directly.
                *
                * Create a request for the method "userEvents.collect".
                *
@@ -3089,10 +2846,9 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
             /**
              * Bulk import of User events. Request processing might be synchronous. Events that already exist
-             * are skipped. Use this method for backfilling historical user events.
-             *
-             * Operation.response is of type ImportResponse. Note that it is possible for a subset of the items
-             * to be successfully inserted. Operation.metadata is of type ImportMetadata.
+             * are skipped. Use this method for backfilling historical user events. Operation.response is of
+             * type ImportResponse. Note that it is possible for a subset of the items to be successfully
+             * inserted. Operation.metadata is of type ImportMetadata.
              *
              * Create a request for the method "userEvents.import".
              *
@@ -3119,10 +2875,9 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Bulk import of User events. Request processing might be synchronous. Events that already exist
-               * are skipped. Use this method for backfilling historical user events.
-               *
-               * Operation.response is of type ImportResponse. Note that it is possible for a subset of the
-               * items to be successfully inserted. Operation.metadata is of type ImportMetadata.
+               * are skipped. Use this method for backfilling historical user events. Operation.response is of
+               * type ImportResponse. Note that it is possible for a subset of the items to be successfully
+               * inserted. Operation.metadata is of type ImportMetadata.
                *
                * Create a request for the method "userEvents.import".
                *
@@ -3235,12 +2990,10 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
             /**
              * Gets a list of user events within a time range, with potential filtering. The method does not
-             * list unjoined user events.
-             *
-             * Unjoined user event definition: when a user event is ingested from Recommendations AI User Event
-             * APIs, the catalog item included in the user event is connected with the current catalog. If a
-             * catalog item of the ingested event is not in the current catalog, it could lead to degraded model
-             * quality. This is called an unjoined event.
+             * list unjoined user events. Unjoined user event definition: when a user event is ingested from
+             * Recommendations AI User Event APIs, the catalog item included in the user event is connected with
+             * the current catalog. If a catalog item of the ingested event is not in the current catalog, it
+             * could lead to degraded model quality. This is called an unjoined event.
              *
              * Create a request for the method "userEvents.list".
              *
@@ -3266,12 +3019,10 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Gets a list of user events within a time range, with potential filtering. The method does not
-               * list unjoined user events.
-               *
-               * Unjoined user event definition: when a user event is ingested from Recommendations AI User
-               * Event APIs, the catalog item included in the user event is connected with the current catalog.
-               * If a catalog item of the ingested event is not in the current catalog, it could lead to
-               * degraded model quality. This is called an unjoined event.
+               * list unjoined user events. Unjoined user event definition: when a user event is ingested from
+               * Recommendations AI User Event APIs, the catalog item included in the user event is connected
+               * with the current catalog. If a catalog item of the ingested event is not in the current
+               * catalog, it could lead to degraded model quality. This is called an unjoined event.
                *
                * Create a request for the method "userEvents.list".
                *
@@ -3393,24 +3144,16 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * is a sequence of terms, where each term applies some kind of a restriction to the
                * returned user events. Use this expression to restrict results to a specific time
                * range, or filter events by eventType. eg: eventTime > "2012-04-23T18:25:43.511Z"
-               * eventsMissingCatalogItems eventTime<"2012-04-23T18:25:43.511Z" eventType=search
-               *
-               * We expect only 3 types of fields:
-               *
-               * * eventTime: this can be specified a maximum of 2 times, once with a less than
-               * operator and once with a greater than operator. The eventTime restrict should
-               * result in one contiguous valid eventTime range.
-               *
-               * * eventType: only 1 eventType restriction can be specified.
-               *
-               * * eventsMissingCatalogItems: specififying this will restrict results to events for
+               * eventsMissingCatalogItems eventTime<"2012-04-23T18:25:43.511Z" eventType=search We
+               * expect only 3 types of fields: * eventTime: this can be specified a maximum of 2
+               * times, once with a less than operator and once with a greater than operator. The
+               * eventTime restrict should result in one contiguous valid eventTime range. *
+               * eventType: only 1 eventType restriction can be specified. *
+               * eventsMissingCatalogItems: specififying this will restrict results to events for
                * which catalog items were not found in the catalog. The default behavior is to
-               * return only those events for which catalog items were found.
-               *
-               * Some examples of valid filters expressions:
-               *
-               * * Example 1: eventTime > "2012-04-23T18:25:43.511Z" eventTime <
-               * "2012-04-23T18:30:43.511Z" * Example 2: eventTime > "2012-04-23T18:25:43.511Z"
+               * return only those events for which catalog items were found. Some examples of valid
+               * filters expressions: * Example 1: eventTime > "2012-04-23T18:25:43.511Z" eventTime
+               * < "2012-04-23T18:30:43.511Z" * Example 2: eventTime > "2012-04-23T18:25:43.511Z"
                * eventType = detail-page-view * Example 3: eventsMissingCatalogItems eventType =
                * search eventTime < "2018-04-23T18:30:43.511Z" * Example 4: eventTime >
                * "2012-04-23T18:25:43.511Z" * Example 5: eventType = search * Example 6:
@@ -3423,27 +3166,17 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              terms, where each term applies some kind of a restriction to the returned user events. Use this
              expression to restrict results to a specific time range, or filter events by eventType. eg:
              eventTime > "2012-04-23T18:25:43.511Z" eventsMissingCatalogItems
-             eventTime<"2012-04-23T18:25:43.511Z" eventType=search
-
-             We expect only 3 types of fields:
-
-             * eventTime: this can be specified a maximum of 2 times, once with a less than operator and once
-             with a greater than operator. The eventTime restrict should result in one contiguous valid
-             eventTime range.
-
-             * eventType: only 1 eventType restriction can be specified.
-
-             * eventsMissingCatalogItems: specififying this will restrict results to events for which catalog
-             items were not found in the catalog. The default behavior is to return only those events for which
-             catalog items were found.
-
-             Some examples of valid filters expressions:
-
-             * Example 1: eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z" *
-             Example 2: eventTime > "2012-04-23T18:25:43.511Z" eventType = detail-page-view * Example 3:
-             eventsMissingCatalogItems eventType = search eventTime < "2018-04-23T18:30:43.511Z" * Example 4:
-             eventTime > "2012-04-23T18:25:43.511Z" * Example 5: eventType = search * Example 6:
-             eventsMissingCatalogItems
+             eventTime<"2012-04-23T18:25:43.511Z" eventType=search We expect only 3 types of fields: *
+             eventTime: this can be specified a maximum of 2 times, once with a less than operator and once with
+             a greater than operator. The eventTime restrict should result in one contiguous valid eventTime
+             range. * eventType: only 1 eventType restriction can be specified. * eventsMissingCatalogItems:
+             specififying this will restrict results to events for which catalog items were not found in the
+             catalog. The default behavior is to return only those events for which catalog items were found.
+             Some examples of valid filters expressions: * Example 1: eventTime > "2012-04-23T18:25:43.511Z"
+             eventTime < "2012-04-23T18:30:43.511Z" * Example 2: eventTime > "2012-04-23T18:25:43.511Z"
+             eventType = detail-page-view * Example 3: eventsMissingCatalogItems eventType = search eventTime <
+             "2018-04-23T18:30:43.511Z" * Example 4: eventTime > "2012-04-23T18:25:43.511Z" * Example 5:
+             eventType = search * Example 6: eventsMissingCatalogItems
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -3454,24 +3187,16 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * is a sequence of terms, where each term applies some kind of a restriction to the
                * returned user events. Use this expression to restrict results to a specific time
                * range, or filter events by eventType. eg: eventTime > "2012-04-23T18:25:43.511Z"
-               * eventsMissingCatalogItems eventTime<"2012-04-23T18:25:43.511Z" eventType=search
-               *
-               * We expect only 3 types of fields:
-               *
-               * * eventTime: this can be specified a maximum of 2 times, once with a less than
-               * operator and once with a greater than operator. The eventTime restrict should
-               * result in one contiguous valid eventTime range.
-               *
-               * * eventType: only 1 eventType restriction can be specified.
-               *
-               * * eventsMissingCatalogItems: specififying this will restrict results to events for
+               * eventsMissingCatalogItems eventTime<"2012-04-23T18:25:43.511Z" eventType=search We
+               * expect only 3 types of fields: * eventTime: this can be specified a maximum of 2
+               * times, once with a less than operator and once with a greater than operator. The
+               * eventTime restrict should result in one contiguous valid eventTime range. *
+               * eventType: only 1 eventType restriction can be specified. *
+               * eventsMissingCatalogItems: specififying this will restrict results to events for
                * which catalog items were not found in the catalog. The default behavior is to
-               * return only those events for which catalog items were found.
-               *
-               * Some examples of valid filters expressions:
-               *
-               * * Example 1: eventTime > "2012-04-23T18:25:43.511Z" eventTime <
-               * "2012-04-23T18:30:43.511Z" * Example 2: eventTime > "2012-04-23T18:25:43.511Z"
+               * return only those events for which catalog items were found. Some examples of valid
+               * filters expressions: * Example 1: eventTime > "2012-04-23T18:25:43.511Z" eventTime
+               * < "2012-04-23T18:30:43.511Z" * Example 2: eventTime > "2012-04-23T18:25:43.511Z"
                * eventType = detail-page-view * Example 3: eventsMissingCatalogItems eventType =
                * search eventTime < "2018-04-23T18:30:43.511Z" * Example 4: eventTime >
                * "2012-04-23T18:25:43.511Z" * Example 5: eventType = search * Example 6:
@@ -3536,8 +3261,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the recommendationengine server.  After setting any
              * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the event_store under which the events are
-            created. The format is
+             * @param parent Required. The resource name of the event_store under which the events are created. The format is
              *        "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest}
              * @return the request
@@ -3568,8 +3292,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the event_store under which the events are
-            created. The format is
+               * @param parent Required. The resource name of the event_store under which the events are created. The format is
              *        "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest}
                * @since 1.13
@@ -3987,7 +3710,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
         public class Operations {
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -4012,7 +3735,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -4129,13 +3852,12 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -4160,13 +3882,12 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *

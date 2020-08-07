@@ -37,7 +37,7 @@ public final class GoogleCloudRecommendationengineV1beta1Catalog extends com.goo
   private GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig catalogItemLevelConfig;
 
   /**
-   * Required. The id of the default event store.
+   * Required. The ID of the default event store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class GoogleCloudRecommendationengineV1beta1Catalog extends com.goo
   }
 
   /**
-   * Required. The id of the default event store.
+   * Required. The ID of the default event store.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultEventStoreId() {
@@ -83,7 +83,7 @@ public final class GoogleCloudRecommendationengineV1beta1Catalog extends com.goo
   }
 
   /**
-   * Required. The id of the default event store.
+   * Required. The ID of the default event store.
    * @param defaultEventStoreId defaultEventStoreId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1Catalog setDefaultEventStoreId(java.lang.String defaultEventStoreId) {

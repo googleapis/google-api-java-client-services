@@ -30,11 +30,10 @@ package com.google.api.services.recommendationengine.v1beta1.model;
 public final class GoogleCloudRecommendationengineV1beta1EventDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Extra user event features to include in the recommendation model.
-   *
-   * For product recommendation, an example of extra user information is traffic_channel, i.e. how
-   * user arrives at the site. Users can arrive at the site by coming to the site directly, or
-   * coming through Google search, and etc.
+   * Optional. Extra user event features to include in the recommendation model. For product
+   * recommendation, an example of extra user information is traffic_channel, i.e. how user arrives
+   * at the site. Users can arrive at the site by coming to the site directly, or coming through
+   * Google search, and etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,18 +60,14 @@ public final class GoogleCloudRecommendationengineV1beta1EventDetail extends com
   private java.lang.String pageViewId;
 
   /**
-   * Optional. Recommendation token included in the recommendation prediction response.
-   *
-   * This field enables accurate attribution of recommendation model performance.
-   *
-   * This token enables us to accurately attribute page view or purchase back to the event and the
-   * particular predict response containing this clicked/purchased item. If user clicks on product K
-   * in the recommendation results, pass the `PredictResponse.recommendationToken` property as a url
+   * Optional. Recommendation token included in the recommendation prediction response. This field
+   * enables accurate attribution of recommendation model performance. This token enables us to
+   * accurately attribute page view or purchase back to the event and the particular predict
+   * response containing this clicked/purchased item. If user clicks on product K in the
+   * recommendation results, pass the `PredictResponse.recommendationToken` property as a url
    * parameter to product K's page. When recording events on product K's page, log the
-   * PredictResponse.recommendation_token to this field.
-   *
-   * Optional, but highly encouraged for user events that are the result of a recommendation
-   * prediction query.
+   * PredictResponse.recommendation_token to this field. Optional, but highly encouraged for user
+   * events that are the result of a recommendation prediction query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,11 +90,10 @@ public final class GoogleCloudRecommendationengineV1beta1EventDetail extends com
   private java.lang.String uri;
 
   /**
-   * Optional. Extra user event features to include in the recommendation model.
-   *
-   * For product recommendation, an example of extra user information is traffic_channel, i.e. how
-   * user arrives at the site. Users can arrive at the site by coming to the site directly, or
-   * coming through Google search, and etc.
+   * Optional. Extra user event features to include in the recommendation model. For product
+   * recommendation, an example of extra user information is traffic_channel, i.e. how user arrives
+   * at the site. Users can arrive at the site by coming to the site directly, or coming through
+   * Google search, and etc.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1FeatureMap getEventAttributes() {
@@ -107,11 +101,10 @@ public final class GoogleCloudRecommendationengineV1beta1EventDetail extends com
   }
 
   /**
-   * Optional. Extra user event features to include in the recommendation model.
-   *
-   * For product recommendation, an example of extra user information is traffic_channel, i.e. how
-   * user arrives at the site. Users can arrive at the site by coming to the site directly, or
-   * coming through Google search, and etc.
+   * Optional. Extra user event features to include in the recommendation model. For product
+   * recommendation, an example of extra user information is traffic_channel, i.e. how user arrives
+   * at the site. Users can arrive at the site by coming to the site directly, or coming through
+   * Google search, and etc.
    * @param eventAttributes eventAttributes or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1EventDetail setEventAttributes(GoogleCloudRecommendationengineV1beta1FeatureMap eventAttributes) {
@@ -166,18 +159,14 @@ public final class GoogleCloudRecommendationengineV1beta1EventDetail extends com
   }
 
   /**
-   * Optional. Recommendation token included in the recommendation prediction response.
-   *
-   * This field enables accurate attribution of recommendation model performance.
-   *
-   * This token enables us to accurately attribute page view or purchase back to the event and the
-   * particular predict response containing this clicked/purchased item. If user clicks on product K
-   * in the recommendation results, pass the `PredictResponse.recommendationToken` property as a url
+   * Optional. Recommendation token included in the recommendation prediction response. This field
+   * enables accurate attribution of recommendation model performance. This token enables us to
+   * accurately attribute page view or purchase back to the event and the particular predict
+   * response containing this clicked/purchased item. If user clicks on product K in the
+   * recommendation results, pass the `PredictResponse.recommendationToken` property as a url
    * parameter to product K's page. When recording events on product K's page, log the
-   * PredictResponse.recommendation_token to this field.
-   *
-   * Optional, but highly encouraged for user events that are the result of a recommendation
-   * prediction query.
+   * PredictResponse.recommendation_token to this field. Optional, but highly encouraged for user
+   * events that are the result of a recommendation prediction query.
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommendationToken() {
@@ -185,18 +174,14 @@ public final class GoogleCloudRecommendationengineV1beta1EventDetail extends com
   }
 
   /**
-   * Optional. Recommendation token included in the recommendation prediction response.
-   *
-   * This field enables accurate attribution of recommendation model performance.
-   *
-   * This token enables us to accurately attribute page view or purchase back to the event and the
-   * particular predict response containing this clicked/purchased item. If user clicks on product K
-   * in the recommendation results, pass the `PredictResponse.recommendationToken` property as a url
+   * Optional. Recommendation token included in the recommendation prediction response. This field
+   * enables accurate attribution of recommendation model performance. This token enables us to
+   * accurately attribute page view or purchase back to the event and the particular predict
+   * response containing this clicked/purchased item. If user clicks on product K in the
+   * recommendation results, pass the `PredictResponse.recommendationToken` property as a url
    * parameter to product K's page. When recording events on product K's page, log the
-   * PredictResponse.recommendation_token to this field.
-   *
-   * Optional, but highly encouraged for user events that are the result of a recommendation
-   * prediction query.
+   * PredictResponse.recommendation_token to this field. Optional, but highly encouraged for user
+   * events that are the result of a recommendation prediction query.
    * @param recommendationToken recommendationToken or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1EventDetail setRecommendationToken(java.lang.String recommendationToken) {

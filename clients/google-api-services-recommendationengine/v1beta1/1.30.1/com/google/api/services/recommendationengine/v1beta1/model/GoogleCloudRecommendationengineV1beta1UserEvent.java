@@ -53,38 +53,27 @@ public final class GoogleCloudRecommendationengineV1beta1UserEvent extends com.g
   private String eventTime;
 
   /**
-   * Required. User event type. Allowed values are:
-   *
-   * * `add-to-cart` Products being added to cart. * `add-to-list` Items being added to a list
-   * (shopping list, favorites   etc). * `category-page-view` Special pages such as sale or
-   * promotion pages   viewed. * `checkout-start` User starting a checkout process. * `detail-page-
-   * view` Products detail page viewed. * `home-page-view` Homepage viewed. * `page-visit` Generic
-   * page visits not included in the event types above. * `purchase-complete` User finishing a
-   * purchase. * `refund` Purchased items being refunded or returned. * `remove-from-cart` Products
-   * being removed from cart. * `remove-from-list` Items being removed from a list. * `search`
-   * Product search. * `shopping-cart-page-view` User viewing a shopping cart. * `impression` List
-   * of items displayed. Used by Google Tag Manager.
+   * Required. User event type. Allowed values are: * `add-to-cart` Products being added to cart. *
+   * `add-to-list` Items being added to a list (shopping list, favorites etc). * `category-page-
+   * view` Special pages such as sale or promotion pages viewed. * `checkout-start` User starting a
+   * checkout process. * `detail-page-view` Products detail page viewed. * `home-page-view` Homepage
+   * viewed. * `page-visit` Generic page visits not included in the event types above. * `purchase-
+   * complete` User finishing a purchase. * `refund` Purchased items being refunded or returned. *
+   * `remove-from-cart` Products being removed from cart. * `remove-from-list` Items being removed
+   * from a list. * `search` Product search. * `shopping-cart-page-view` User viewing a shopping
+   * cart. * `impression` List of items displayed. Used by Google Tag Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
 
   /**
-   * Optional. Retail product specific user event metadata.
-   *
-   * This field is required for the following event types:
-   *
-   * * `add-to-cart` * `add-to-list` * `category-page-view` * `checkout-start` * `detail-page-view`
-   * * `purchase-complete` * `refund` * `remove-from-cart` * `remove-from-list` * `search`
-   *
-   * This field is optional for the following event types:
-   *
-   * * `page-visit` * `shopping-cart-page-view` - note that 'product_event_detail' should be   set
-   * for this unless the shopping cart is empty.
-   *
-   * This field is not allowed for the following event types:
-   *
-   * * `home-page-view`
+   * Optional. Retail product specific user event metadata. This field is required for the following
+   * event types: * `add-to-cart` * `add-to-list` * `category-page-view` * `checkout-start` *
+   * `detail-page-view` * `purchase-complete` * `refund` * `remove-from-cart` * `remove-from-list` *
+   * `search` This field is optional for the following event types: * `page-visit` * `shopping-cart-
+   * page-view` - note that 'product_event_detail' should be set for this unless the shopping cart
+   * is empty. This field is not allowed for the following event types: * `home-page-view`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,17 +140,15 @@ public final class GoogleCloudRecommendationengineV1beta1UserEvent extends com.g
   }
 
   /**
-   * Required. User event type. Allowed values are:
-   *
-   * * `add-to-cart` Products being added to cart. * `add-to-list` Items being added to a list
-   * (shopping list, favorites   etc). * `category-page-view` Special pages such as sale or
-   * promotion pages   viewed. * `checkout-start` User starting a checkout process. * `detail-page-
-   * view` Products detail page viewed. * `home-page-view` Homepage viewed. * `page-visit` Generic
-   * page visits not included in the event types above. * `purchase-complete` User finishing a
-   * purchase. * `refund` Purchased items being refunded or returned. * `remove-from-cart` Products
-   * being removed from cart. * `remove-from-list` Items being removed from a list. * `search`
-   * Product search. * `shopping-cart-page-view` User viewing a shopping cart. * `impression` List
-   * of items displayed. Used by Google Tag Manager.
+   * Required. User event type. Allowed values are: * `add-to-cart` Products being added to cart. *
+   * `add-to-list` Items being added to a list (shopping list, favorites etc). * `category-page-
+   * view` Special pages such as sale or promotion pages viewed. * `checkout-start` User starting a
+   * checkout process. * `detail-page-view` Products detail page viewed. * `home-page-view` Homepage
+   * viewed. * `page-visit` Generic page visits not included in the event types above. * `purchase-
+   * complete` User finishing a purchase. * `refund` Purchased items being refunded or returned. *
+   * `remove-from-cart` Products being removed from cart. * `remove-from-list` Items being removed
+   * from a list. * `search` Product search. * `shopping-cart-page-view` User viewing a shopping
+   * cart. * `impression` List of items displayed. Used by Google Tag Manager.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -169,17 +156,15 @@ public final class GoogleCloudRecommendationengineV1beta1UserEvent extends com.g
   }
 
   /**
-   * Required. User event type. Allowed values are:
-   *
-   * * `add-to-cart` Products being added to cart. * `add-to-list` Items being added to a list
-   * (shopping list, favorites   etc). * `category-page-view` Special pages such as sale or
-   * promotion pages   viewed. * `checkout-start` User starting a checkout process. * `detail-page-
-   * view` Products detail page viewed. * `home-page-view` Homepage viewed. * `page-visit` Generic
-   * page visits not included in the event types above. * `purchase-complete` User finishing a
-   * purchase. * `refund` Purchased items being refunded or returned. * `remove-from-cart` Products
-   * being removed from cart. * `remove-from-list` Items being removed from a list. * `search`
-   * Product search. * `shopping-cart-page-view` User viewing a shopping cart. * `impression` List
-   * of items displayed. Used by Google Tag Manager.
+   * Required. User event type. Allowed values are: * `add-to-cart` Products being added to cart. *
+   * `add-to-list` Items being added to a list (shopping list, favorites etc). * `category-page-
+   * view` Special pages such as sale or promotion pages viewed. * `checkout-start` User starting a
+   * checkout process. * `detail-page-view` Products detail page viewed. * `home-page-view` Homepage
+   * viewed. * `page-visit` Generic page visits not included in the event types above. * `purchase-
+   * complete` User finishing a purchase. * `refund` Purchased items being refunded or returned. *
+   * `remove-from-cart` Products being removed from cart. * `remove-from-list` Items being removed
+   * from a list. * `search` Product search. * `shopping-cart-page-view` User viewing a shopping
+   * cart. * `impression` List of items displayed. Used by Google Tag Manager.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1UserEvent setEventType(java.lang.String eventType) {
@@ -188,21 +173,12 @@ public final class GoogleCloudRecommendationengineV1beta1UserEvent extends com.g
   }
 
   /**
-   * Optional. Retail product specific user event metadata.
-   *
-   * This field is required for the following event types:
-   *
-   * * `add-to-cart` * `add-to-list` * `category-page-view` * `checkout-start` * `detail-page-view`
-   * * `purchase-complete` * `refund` * `remove-from-cart` * `remove-from-list` * `search`
-   *
-   * This field is optional for the following event types:
-   *
-   * * `page-visit` * `shopping-cart-page-view` - note that 'product_event_detail' should be   set
-   * for this unless the shopping cart is empty.
-   *
-   * This field is not allowed for the following event types:
-   *
-   * * `home-page-view`
+   * Optional. Retail product specific user event metadata. This field is required for the following
+   * event types: * `add-to-cart` * `add-to-list` * `category-page-view` * `checkout-start` *
+   * `detail-page-view` * `purchase-complete` * `refund` * `remove-from-cart` * `remove-from-list` *
+   * `search` This field is optional for the following event types: * `page-visit` * `shopping-cart-
+   * page-view` - note that 'product_event_detail' should be set for this unless the shopping cart
+   * is empty. This field is not allowed for the following event types: * `home-page-view`
    * @return value or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1ProductEventDetail getProductEventDetail() {
@@ -210,21 +186,12 @@ public final class GoogleCloudRecommendationengineV1beta1UserEvent extends com.g
   }
 
   /**
-   * Optional. Retail product specific user event metadata.
-   *
-   * This field is required for the following event types:
-   *
-   * * `add-to-cart` * `add-to-list` * `category-page-view` * `checkout-start` * `detail-page-view`
-   * * `purchase-complete` * `refund` * `remove-from-cart` * `remove-from-list` * `search`
-   *
-   * This field is optional for the following event types:
-   *
-   * * `page-visit` * `shopping-cart-page-view` - note that 'product_event_detail' should be   set
-   * for this unless the shopping cart is empty.
-   *
-   * This field is not allowed for the following event types:
-   *
-   * * `home-page-view`
+   * Optional. Retail product specific user event metadata. This field is required for the following
+   * event types: * `add-to-cart` * `add-to-list` * `category-page-view` * `checkout-start` *
+   * `detail-page-view` * `purchase-complete` * `refund` * `remove-from-cart` * `remove-from-list` *
+   * `search` This field is optional for the following event types: * `page-visit` * `shopping-cart-
+   * page-view` - note that 'product_event_detail' should be set for this unless the shopping cart
+   * is empty. This field is not allowed for the following event types: * `home-page-view`
    * @param productEventDetail productEventDetail or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1UserEvent setProductEventDetail(GoogleCloudRecommendationengineV1beta1ProductEventDetail productEventDetail) {

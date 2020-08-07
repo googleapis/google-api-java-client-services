@@ -42,11 +42,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * Maximum slots available to this reservation and its children. A slot is a unit of computational
    * power in BigQuery, and serves as the unit of parallelism. In a scan of a multi-partitioned
-   * table, a single slot operates on a single partition of the table.
-   *
-   * If the new reservation's slot capacity exceed the parent's slot capacity or if total slot
-   * capacity of the new reservation and its siblings exceeds the parent's slot capacity, the
-   * request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
+   * table, a single slot operates on a single partition of the table. If the new reservation's slot
+   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
+   * its siblings exceeds the parent's slot capacity, the request will fail with
+   * `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -88,11 +87,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * Maximum slots available to this reservation and its children. A slot is a unit of computational
    * power in BigQuery, and serves as the unit of parallelism. In a scan of a multi-partitioned
-   * table, a single slot operates on a single partition of the table.
-   *
-   * If the new reservation's slot capacity exceed the parent's slot capacity or if total slot
-   * capacity of the new reservation and its siblings exceeds the parent's slot capacity, the
-   * request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
+   * table, a single slot operates on a single partition of the table. If the new reservation's slot
+   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
+   * its siblings exceeds the parent's slot capacity, the request will fail with
+   * `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSlotCapacity() {
@@ -102,11 +100,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * Maximum slots available to this reservation and its children. A slot is a unit of computational
    * power in BigQuery, and serves as the unit of parallelism. In a scan of a multi-partitioned
-   * table, a single slot operates on a single partition of the table.
-   *
-   * If the new reservation's slot capacity exceed the parent's slot capacity or if total slot
-   * capacity of the new reservation and its siblings exceeds the parent's slot capacity, the
-   * request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
+   * table, a single slot operates on a single partition of the table. If the new reservation's slot
+   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
+   * its siblings exceeds the parent's slot capacity, the request will fail with
+   * `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * @param slotCapacity slotCapacity or {@code null} for none
    */
   public Reservation setSlotCapacity(java.lang.Long slotCapacity) {

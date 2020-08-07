@@ -81,7 +81,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.lang.Long minValue;
 
   /**
-   * This is the name of the flag. Flag names always use underscores, not hyphens, e.g.
+   * This is the name of the flag. Flag names always use underscores, not hyphens, for example:
    * max_allowed_packet
    * The value may be {@code null}.
    */
@@ -228,7 +228,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is the name of the flag. Flag names always use underscores, not hyphens, e.g.
+   * This is the name of the flag. Flag names always use underscores, not hyphens, for example:
    * max_allowed_packet
    * @return value or {@code null} for none
    */
@@ -237,7 +237,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is the name of the flag. Flag names always use underscores, not hyphens, e.g.
+   * This is the name of the flag. Flag names always use underscores, not hyphens, for example:
    * max_allowed_packet
    * @param name name or {@code null} for none
    */

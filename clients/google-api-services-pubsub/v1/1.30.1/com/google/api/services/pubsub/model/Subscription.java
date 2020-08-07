@@ -65,6 +65,16 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private DeadLetterPolicy deadLetterPolicy;
 
   /**
+   * Indicates whether the subscription is detached from its topic. Detached subscriptions don't
+   * receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull`
+   * requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
+   * the endpoint will not be made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean detached;
+
+  /**
    * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered
    * to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise,
    * they may be delivered in any order.
@@ -233,6 +243,29 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setDeadLetterPolicy(DeadLetterPolicy deadLetterPolicy) {
     this.deadLetterPolicy = deadLetterPolicy;
+    return this;
+  }
+
+  /**
+   * Indicates whether the subscription is detached from its topic. Detached subscriptions don't
+   * receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull`
+   * requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
+   * the endpoint will not be made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDetached() {
+    return detached;
+  }
+
+  /**
+   * Indicates whether the subscription is detached from its topic. Detached subscriptions don't
+   * receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull`
+   * requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
+   * the endpoint will not be made.
+   * @param detached detached or {@code null} for none
+   */
+  public Subscription setDetached(java.lang.Boolean detached) {
+    this.detached = detached;
     return this;
   }
 

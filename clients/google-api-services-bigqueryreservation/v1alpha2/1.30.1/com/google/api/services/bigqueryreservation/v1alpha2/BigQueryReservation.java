@@ -164,13 +164,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
       /**
        * Look up grants for a specified resource for a particular region. If the request is about a
-       * project:   1) Grants created on the project will be returned if they exist.   2) Otherwise grants
-       * created on the closest ancestor will be returned.   3) Grants for different JobTypes will all be
+       * project: 1) Grants created on the project will be returned if they exist. 2) Otherwise grants
+       * created on the closest ancestor will be returned. 3) Grants for different JobTypes will all be
        * returned. Same logic applies if the request is about a folder. If the request is about an
        * organization, then grants created on the organization will be returned (organization doesn't have
-       * ancestors). Comparing to ListReservationGrants, there are two behavior differences:   1)
-       * permission on the grantee will be verified in this API.   2) Hierarchy lookup
-       * (project->folder->organization) happens in this API.
+       * ancestors). Comparing to ListReservationGrants, there are two behavior differences: 1) permission
+       * on the grantee will be verified in this API. 2) Hierarchy lookup (project->folder->organization)
+       * happens in this API.
        *
        * Create a request for the method "locations.searchReservationGrants".
        *
@@ -178,8 +178,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link SearchReservationGrants#execute()} method to invoke the
        * remote operation.
        *
-       * @param parent The parent resource name (containing project and location), which owns the
-      grants. e.g.:
+       * @param parent The parent resource name (containing project and location), which owns the grants. e.g.:
        *        "projects/myproject/locations/us-central1".
        * @return the request
        */
@@ -198,12 +197,12 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
         /**
          * Look up grants for a specified resource for a particular region. If the request is about a
-         * project:   1) Grants created on the project will be returned if they exist.   2) Otherwise
-         * grants created on the closest ancestor will be returned.   3) Grants for different JobTypes
-         * will all be returned. Same logic applies if the request is about a folder. If the request is
-         * about an organization, then grants created on the organization will be returned (organization
-         * doesn't have ancestors). Comparing to ListReservationGrants, there are two behavior
-         * differences:   1) permission on the grantee will be verified in this API.   2) Hierarchy lookup
+         * project: 1) Grants created on the project will be returned if they exist. 2) Otherwise grants
+         * created on the closest ancestor will be returned. 3) Grants for different JobTypes will all be
+         * returned. Same logic applies if the request is about a folder. If the request is about an
+         * organization, then grants created on the organization will be returned (organization doesn't
+         * have ancestors). Comparing to ListReservationGrants, there are two behavior differences: 1)
+         * permission on the grantee will be verified in this API. 2) Hierarchy lookup
          * (project->folder->organization) happens in this API.
          *
          * Create a request for the method "locations.searchReservationGrants".
@@ -214,8 +213,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name (containing project and location), which owns the
-      grants. e.g.:
+         * @param parent The parent resource name (containing project and location), which owns the grants. e.g.:
        *        "projects/myproject/locations/us-central1".
          * @since 1.13
          */
@@ -404,9 +402,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -434,13 +432,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -545,7 +543,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -570,7 +568,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -718,8 +716,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name of the reservation grant
-        E.g.: projects/myproject/location/eu.
+         * @param parent The parent resource name of the reservation grant E.g.: projects/myproject/location/eu.
          * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.ReservationGrant}
          * @return the request
          */
@@ -750,8 +747,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name of the reservation grant
-        E.g.: projects/myproject/location/eu.
+           * @param parent The parent resource name of the reservation grant E.g.: projects/myproject/location/eu.
            * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.ReservationGrant}
            * @since 1.13
            */
@@ -853,16 +849,15 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         /**
          * Deletes a reservation grant. No expansion will happen. E.g: organizationA contains project1 and
          * project2. Reservation res1 exists. CreateReservationGrant was invoked previously and following
-         * grants were created explicitly:       Then deletion of  won't affect . After deletion of ,
-         * queries from project1 will still use res1, while queries from project2 will use on-demand mode.
+         * grants were created explicitly: Then deletion of won't affect . After deletion of , queries from
+         * project1 will still use res1, while queries from project2 will use on-demand mode.
          *
          * Create a request for the method "reservationGrants.delete".
          *
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the resource, e.g.:
-          projects/myproject/locations/eu/reservationGrants/123
+         * @param name Name of the resource, e.g.: projects/myproject/locations/eu/reservationGrants/123
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -881,8 +876,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           /**
            * Deletes a reservation grant. No expansion will happen. E.g: organizationA contains project1 and
            * project2. Reservation res1 exists. CreateReservationGrant was invoked previously and following
-           * grants were created explicitly:       Then deletion of  won't affect . After deletion of ,
-           * queries from project1 will still use res1, while queries from project2 will use on-demand mode.
+           * grants were created explicitly: Then deletion of won't affect . After deletion of , queries
+           * from project1 will still use res1, while queries from project2 will use on-demand mode.
            *
            * Create a request for the method "reservationGrants.delete".
            *
@@ -892,8 +887,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the resource, e.g.:
-          projects/myproject/locations/eu/reservationGrants/123
+           * @param name Name of the resource, e.g.: projects/myproject/locations/eu/reservationGrants/123
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -961,9 +955,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Name of the resource, e.g.: projects/myproject/locations/eu/reservationGrants/123
-           */
+          /** Name of the resource, e.g.: projects/myproject/locations/eu/reservationGrants/123 */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -973,9 +965,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             return name;
           }
 
-          /**
-           * Name of the resource, e.g.: projects/myproject/locations/eu/reservationGrants/123
-           */
+          /** Name of the resource, e.g.: projects/myproject/locations/eu/reservationGrants/123 */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -994,8 +984,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         /**
          * Lists reservation grants. Only explicitly created grants will be returned. E.g: organizationA
          * contains project1 and project2. Reservation res1 exists. CreateReservationGrant was invoked
-         * previously and following grants were created explicitly:       Then this API will just return the
-         * above two grants for reservation res1, and no expansion/merge will happen.
+         * previously and following grants were created explicitly: Then this API will just return the above
+         * two grants for reservation res1, and no expansion/merge will happen.
          *
          * Create a request for the method "reservationGrants.list".
          *
@@ -1021,8 +1011,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           /**
            * Lists reservation grants. Only explicitly created grants will be returned. E.g: organizationA
            * contains project1 and project2. Reservation res1 exists. CreateReservationGrant was invoked
-           * previously and following grants were created explicitly:       Then this API will just return
-           * the above two grants for reservation res1, and no expansion/merge will happen.
+           * previously and following grants were created explicitly: Then this API will just return the
+           * above two grants for reservation res1, and no expansion/merge will happen.
            *
            * Create a request for the method "reservationGrants.list".
            *
@@ -1199,8 +1189,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Project, location, and (optionally) reservation name. E.g.,
-           projects/myproject/locations/us-
+         * @param parent Project, location, and (optionally) reservation name. E.g., projects/myproject/locations/us-
          *        central1/reservations/parent
          * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.Reservation}
          * @return the request
@@ -1230,8 +1219,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Project, location, and (optionally) reservation name. E.g.,
-           projects/myproject/locations/us-
+           * @param parent Project, location, and (optionally) reservation name. E.g., projects/myproject/locations/us-
          *        central1/reservations/parent
            * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.Reservation}
            * @since 1.13
@@ -1367,8 +1355,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link CreateReservation#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Project, location, and (optionally) reservation name. E.g.,
-           projects/myproject/locations/us-
+         * @param parent Project, location, and (optionally) reservation name. E.g., projects/myproject/locations/us-
          *        central1/reservations/parent
          * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.Reservation}
          * @return the request
@@ -1398,8 +1385,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Project, location, and (optionally) reservation name. E.g.,
-           projects/myproject/locations/us-
+           * @param parent Project, location, and (optionally) reservation name. E.g., projects/myproject/locations/us-
          *        central1/reservations/parent
            * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.Reservation}
            * @since 1.13
@@ -1526,9 +1512,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` in the following cases:   1.
-         * When reservation has child reservations. This check can be bypassed by      setting
-         * DeleteReservationRequest.force flag to true.   2. When top-level reservation with slot pools is
+         * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` in the following cases: 1.
+         * When reservation has child reservations. This check can be bypassed by setting
+         * DeleteReservationRequest.force flag to true. 2. When top-level reservation with slot pools is
          * being deleted.
          *
          * Create a request for the method "reservations.delete".
@@ -1536,8 +1522,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the reservation to retrieve. E.g.,
-           projects/myproject/locations/us-
+         * @param name Resource name of the reservation to retrieve. E.g., projects/myproject/locations/us-
          *        central1/reservations/my_reservation
          * @return the request
          */
@@ -1555,9 +1540,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.*$");
 
           /**
-           * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` in the following cases:
-           * 1. When reservation has child reservations. This check can be bypassed by      setting
-           * DeleteReservationRequest.force flag to true.   2. When top-level reservation with slot pools is
+           * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` in the following cases: 1.
+           * When reservation has child reservations. This check can be bypassed by setting
+           * DeleteReservationRequest.force flag to true. 2. When top-level reservation with slot pools is
            * being deleted.
            *
            * Create a request for the method "reservations.delete".
@@ -1568,8 +1553,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the reservation to retrieve. E.g.,
-           projects/myproject/locations/us-
+           * @param name Resource name of the reservation to retrieve. E.g., projects/myproject/locations/us-
          *        central1/reservations/my_reservation
            * @since 1.13
            */
@@ -1705,8 +1689,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the reservation to retrieve. E.g.,
-           projects/myproject/locations/us-
+         * @param name Resource name of the reservation to retrieve. E.g., projects/myproject/locations/us-
          *        central1/reservations/path/to/reserv
          * @return the request
          */
@@ -1734,8 +1717,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the reservation to retrieve. E.g.,
-           projects/myproject/locations/us-
+           * @param name Resource name of the reservation to retrieve. E.g., projects/myproject/locations/us-
          *        central1/reservations/path/to/reserv
            * @since 1.13
            */
@@ -1855,8 +1837,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name containing project and location, e.g.:
-          "projects/myproject/locations/us-
+         * @param parent The parent resource name containing project and location, e.g.: "projects/myproject/locations/us-
          *        central1"
          * @return the request
          */
@@ -1884,8 +1865,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name containing project and location, e.g.:
-          "projects/myproject/locations/us-
+           * @param parent The parent resource name containing project and location, e.g.: "projects/myproject/locations/us-
          *        central1"
            * @since 1.13
            */
@@ -2065,10 +2045,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the reservation, e.g.,
-        "projects/locations/reservations/dev/team/product".
-         *        Reservation names
-        (e.g., "dev/team/product") exceeding a depth of six will fail with
+         * @param name The resource name of the reservation, e.g., "projects/locations/reservations/dev/team/product".
+         *        Reservation names (e.g., "dev/team/product") exceeding a depth of six will fail with
          *        `google.rpc.Code.INVALID_ARGUMENT`.
          * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.Reservation}
          * @return the request
@@ -2097,10 +2075,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the reservation, e.g.,
-        "projects/locations/reservations/dev/team/product".
-         *        Reservation names
-        (e.g., "dev/team/product") exceeding a depth of six will fail with
+           * @param name The resource name of the reservation, e.g., "projects/locations/reservations/dev/team/product".
+         *        Reservation names (e.g., "dev/team/product") exceeding a depth of six will fail with
          *        `google.rpc.Code.INVALID_ARGUMENT`.
            * @param content the {@link com.google.api.services.bigqueryreservation.v1alpha2.model.Reservation}
            * @since 1.13
@@ -2254,8 +2230,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the slot pool to delete. E.g.,
-             projects/myproject/locations/us-
+           * @param name Resource name of the slot pool to delete. E.g., projects/myproject/locations/us-
            *        central1/reservations/my_reservation/slotPools/123
            * @return the request
            */
@@ -2284,8 +2259,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the slot pool to delete. E.g.,
-             projects/myproject/locations/us-
+             * @param name Resource name of the slot pool to delete. E.g., projects/myproject/locations/us-
            *        central1/reservations/my_reservation/slotPools/123
              * @since 1.13
              */
@@ -2395,8 +2369,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the slot pool to retrieve. E.g.,
-             projects/myproject/locations/us-
+           * @param name Resource name of the slot pool to retrieve. E.g., projects/myproject/locations/us-
            *        central1/reservations/my_reservation/slotPools/123
            * @return the request
            */
@@ -2424,8 +2397,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the slot pool to retrieve. E.g.,
-             projects/myproject/locations/us-
+             * @param name Resource name of the slot pool to retrieve. E.g., projects/myproject/locations/us-
            *        central1/reservations/my_reservation/slotPools/123
              * @since 1.13
              */
@@ -2545,8 +2517,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Resource name of the parent reservation. Only top-level reservations can
-          have slot pools. E.g.,
+           * @param parent Resource name of the parent reservation. Only top-level reservations can have slot pools. E.g.,
            *        projects/myproject/locations/us-central1/reservations/my_reservation
            * @return the request
            */
@@ -2574,8 +2545,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Resource name of the parent reservation. Only top-level reservations can
-          have slot pools. E.g.,
+             * @param parent Resource name of the parent reservation. Only top-level reservations can have slot pools. E.g.,
            *        projects/myproject/locations/us-central1/reservations/my_reservation
              * @since 1.13
              */

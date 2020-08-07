@@ -19,11 +19,9 @@ package com.google.api.services.bigqueryreservation.v1.model;
 /**
  * Capacity commitment is a way to purchase compute capacity for BigQuery jobs (in the form of
  * slots) with some committed period of usage. Annual commitments renew by default. Commitments can
- * be removed after their commitment end time passes.
- *
- * In order to remove annual commitment, its plan needs to be changed to monthly or flex first.
- *
- * A capacity commitment resource exists as a child resource of the admin project.
+ * be removed after their commitment end time passes. In order to remove annual commitment, its plan
+ * needs to be changed to monthly or flex first. A capacity commitment resource exists as a child
+ * resource of the admin project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery Reservation API. For a detailed explanation

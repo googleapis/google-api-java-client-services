@@ -17,7 +17,7 @@
 package com.google.api.services.datafusion.v1beta1.model;
 
 /**
- * Represents a Data Fusion instance. Next available ID: 23
+ * Represents a Data Fusion instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -131,6 +131,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> options;
 
   /**
+   * Output only. P4 service account for the customer project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String p4ServiceAccount;
+
+  /**
    * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion
    * nodes will have private IP addresses and will not be able to access the public internet.
    * The value may be {@code null}.
@@ -139,7 +146,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean privateInstance;
 
   /**
-   * Output only. Service account which will be used to access resources in the customer project."
+   * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,6 +173,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String stateMessage;
+
+  /**
+   * Output only. The name of the tenant project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tenantProjectId;
 
   /**
    * Required. Instance type.
@@ -423,6 +437,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. P4 service account for the customer project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getP4ServiceAccount() {
+    return p4ServiceAccount;
+  }
+
+  /**
+   * Output only. P4 service account for the customer project.
+   * @param p4ServiceAccount p4ServiceAccount or {@code null} for none
+   */
+  public Instance setP4ServiceAccount(java.lang.String p4ServiceAccount) {
+    this.p4ServiceAccount = p4ServiceAccount;
+    return this;
+  }
+
+  /**
    * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion
    * nodes will have private IP addresses and will not be able to access the public internet.
    * @return value or {@code null} for none
@@ -442,7 +473,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Service account which will be used to access resources in the customer project."
+   * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -450,7 +481,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Service account which will be used to access resources in the customer project."
+   * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Instance setServiceAccount(java.lang.String serviceAccount) {
@@ -508,6 +539,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setStateMessage(java.lang.String stateMessage) {
     this.stateMessage = stateMessage;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the tenant project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTenantProjectId() {
+    return tenantProjectId;
+  }
+
+  /**
+   * Output only. The name of the tenant project.
+   * @param tenantProjectId tenantProjectId or {@code null} for none
+   */
+  public Instance setTenantProjectId(java.lang.String tenantProjectId) {
+    this.tenantProjectId = tenantProjectId;
     return this;
   }
 

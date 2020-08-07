@@ -1690,20 +1690,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Defaults to all fields if not set.
        * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
-       * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests *
-       * locales * memberships * metadata * miscKeywords * names * nicknames * occupations *
-       * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills *
-       * urls * userDefined
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+       * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses
+       * * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Defaults to all fields if not set. Valid values are: *
-     addresses * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses *
-     events * externalIds * genders * imClients * interests * locales * memberships * metadata *
-     miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos * relations
-     * residences * sipAddresses * skills * urls * userDefined
+     addresses * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+     emailAddresses * events * externalIds * genders * imClients * interests * locales * memberships *
+     metadata * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
+     relations * residences * sipAddresses * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -1713,10 +1713,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Defaults to all fields if not set.
        * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
-       * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests *
-       * locales * memberships * metadata * miscKeywords * names * nicknames * occupations *
-       * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills *
-       * urls * userDefined
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+       * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses
+       * * skills * urls * userDefined
        */
       public CreateContact setPersonFields(String personFields) {
         this.personFields = personFields;
@@ -2008,10 +2008,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Optional. A field mask to restrict which fields on the person are returned. Multiple fields
        * can be specified by separating them with commas. Defaults to empty if not set, which will
        * skip the post mutate get. Valid values are: * addresses * ageRanges * biographies *
-       * birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-       * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames
-       * * occupations * organizations * phoneNumbers * photos * relations * residences *
-       * sipAddresses * skills * urls * userDefined
+       * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds
+       * * genders * imClients * interests * locales * memberships * metadata * miscKeywords * names
+       * * nicknames * occupations * organizations * phoneNumbers * photos * relations * residences
+       * * sipAddresses * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
@@ -2019,9 +2019,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /** Optional. A field mask to restrict which fields on the person are returned. Multiple fields can be
      specified by separating them with commas. Defaults to empty if not set, which will skip the post
      mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
-     coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests * locales *
-     memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
-     phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
+     clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests
+     * locales * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations
+     * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -2031,10 +2031,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Optional. A field mask to restrict which fields on the person are returned. Multiple fields
        * can be specified by separating them with commas. Defaults to empty if not set, which will
        * skip the post mutate get. Valid values are: * addresses * ageRanges * biographies *
-       * birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-       * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames
-       * * occupations * organizations * phoneNumbers * photos * relations * residences *
-       * sipAddresses * skills * urls * userDefined
+       * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds
+       * * genders * imClients * interests * locales * memberships * metadata * miscKeywords * names
+       * * nicknames * occupations * organizations * phoneNumbers * photos * relations * residences
+       * * sipAddresses * skills * urls * userDefined
        */
       public DeleteContactPhoto setPersonFields(String personFields) {
         this.personFields = personFields;
@@ -2231,8 +2231,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on the person are returned. Multiple fields
        * can be specified by separating them with commas. Valid values are: * addresses * ageRanges
-       * * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events *
-       * externalIds * genders * imClients * interests * locales * memberships * metadata *
+       * * biographies * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses *
+       * events * externalIds * genders * imClients * interests * locales * memberships * metadata *
        * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
        * relations * residences * sipAddresses * skills * urls * userDefined
        */
@@ -2241,10 +2241,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /** Required. A field mask to restrict which fields on the person are returned. Multiple fields can be
      specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
-     birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-     imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-     skills * urls * userDefined
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
+     nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+     sipAddresses * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -2253,8 +2253,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on the person are returned. Multiple fields
        * can be specified by separating them with commas. Valid values are: * addresses * ageRanges
-       * * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events *
-       * externalIds * genders * imClients * interests * locales * memberships * metadata *
+       * * biographies * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses *
+       * events * externalIds * genders * imClients * interests * locales * memberships * metadata *
        * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
        * relations * residences * sipAddresses * skills * urls * userDefined
        */
@@ -2423,20 +2423,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * addresses *
-       * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * metadata *
-       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * residences * sipAddresses * skills * urls * userDefined
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
-     birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-     imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-     skills * urls * userDefined
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
+     nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+     sipAddresses * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -2445,10 +2445,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * addresses *
-       * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * metadata *
-       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * residences * sipAddresses * skills * urls * userDefined
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       public GetBatchGet setPersonFields(String personFields) {
         this.personFields = personFields;
@@ -2720,20 +2720,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * addresses *
-       * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * metadata *
-       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * residences * sipAddresses * skills * urls * userDefined
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
-     birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-     imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-     skills * urls * userDefined
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
+     nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+     sipAddresses * skills * urls * userDefined
        */
       public String getReadMask() {
         return readMask;
@@ -2742,10 +2742,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * addresses *
-       * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * metadata *
-       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * residences * sipAddresses * skills * urls * userDefined
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       public ListDirectoryPeople setReadMask(String readMask) {
         this.readMask = readMask;
@@ -3029,20 +3029,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * addresses *
-       * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * metadata *
-       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * residences * sipAddresses * skills * urls * userDefined
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
-     birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-     imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-     skills * urls * userDefined
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
+     nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+     sipAddresses * skills * urls * userDefined
        */
       public String getReadMask() {
         return readMask;
@@ -3051,10 +3051,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * addresses *
-       * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * metadata *
-       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * residences * sipAddresses * skills * urls * userDefined
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls * userDefined
        */
       public SearchDirectoryPeople setReadMask(String readMask) {
         this.readMask = readMask;
@@ -3240,20 +3240,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Optional. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Defaults to all fields if not set.
        * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
-       * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests *
-       * locales * memberships * metadata * miscKeywords * names * nicknames * occupations *
-       * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills *
-       * urls * userDefined
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+       * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses
+       * * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
 
       /** Optional. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Defaults to all fields if not set. Valid values are: *
-     addresses * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses *
-     events * externalIds * genders * imClients * interests * locales * memberships * metadata *
-     miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos * relations
-     * residences * sipAddresses * skills * urls * userDefined
+     addresses * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+     emailAddresses * events * externalIds * genders * imClients * interests * locales * memberships *
+     metadata * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
+     relations * residences * sipAddresses * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -3263,10 +3263,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Optional. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Defaults to all fields if not set.
        * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
-       * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests *
-       * locales * memberships * metadata * miscKeywords * names * nicknames * occupations *
-       * organizations * phoneNumbers * photos * relations * residences * sipAddresses * skills *
-       * urls * userDefined
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
+       * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses
+       * * skills * urls * userDefined
        */
       public UpdateContact setPersonFields(String personFields) {
         this.personFields = personFields;
@@ -3299,20 +3299,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on the person are updated. Multiple fields
        * can be specified by separating them with commas. All updated fields will be replaced. Valid
-       * values are: * addresses * biographies * birthdays * calendarUrls * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * miscKeywords *
-       * names * nicknames * occupations * organizations * phoneNumbers * relations * residences *
-       * sipAddresses * urls * userDefined
+       * values are: * addresses * biographies * birthdays * calendarUrls * clientData *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers
+       * * relations * residences * sipAddresses * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String updatePersonFields;
 
       /** Required. A field mask to restrict which fields on the person are updated. Multiple fields can be
      specified by separating them with commas. All updated fields will be replaced. Valid values are: *
-     addresses * biographies * birthdays * calendarUrls * emailAddresses * events * externalIds *
-     genders * imClients * interests * locales * memberships * miscKeywords * names * nicknames *
-     occupations * organizations * phoneNumbers * relations * residences * sipAddresses * urls *
-     userDefined
+     addresses * biographies * birthdays * calendarUrls * clientData * emailAddresses * events *
+     externalIds * genders * imClients * interests * locales * memberships * miscKeywords * names *
+     nicknames * occupations * organizations * phoneNumbers * relations * residences * sipAddresses *
+     urls * userDefined
        */
       public String getUpdatePersonFields() {
         return updatePersonFields;
@@ -3321,10 +3321,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on the person are updated. Multiple fields
        * can be specified by separating them with commas. All updated fields will be replaced. Valid
-       * values are: * addresses * biographies * birthdays * calendarUrls * emailAddresses * events
-       * * externalIds * genders * imClients * interests * locales * memberships * miscKeywords *
-       * names * nicknames * occupations * organizations * phoneNumbers * relations * residences *
-       * sipAddresses * urls * userDefined
+       * values are: * addresses * biographies * birthdays * calendarUrls * clientData *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * memberships * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers
+       * * relations * residences * sipAddresses * urls * userDefined
        */
       public UpdateContact setUpdatePersonFields(String updatePersonFields) {
         this.updatePersonFields = updatePersonFields;
@@ -3675,20 +3675,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         /**
          * Required. A field mask to restrict which fields on each person are returned. Multiple
          * fields can be specified by separating them with commas. Valid values are: * addresses *
-         * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses *
-         * events * externalIds * genders * imClients * interests * locales * memberships * metadata
-         * * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos
-         * * relations * residences * sipAddresses * skills * urls * userDefined
+         * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+         * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+         * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+         * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls *
+         * userDefined
          */
         @com.google.api.client.util.Key
         private String personFields;
 
         /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
        specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
-       birthdays * calendarUrls * coverPhotos * emailAddresses * events * externalIds * genders *
-       imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-       occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
-       skills * urls * userDefined
+       birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+       genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
+       nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+       sipAddresses * skills * urls * userDefined
          */
         public String getPersonFields() {
           return personFields;
@@ -3697,10 +3698,11 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         /**
          * Required. A field mask to restrict which fields on each person are returned. Multiple
          * fields can be specified by separating them with commas. Valid values are: * addresses *
-         * ageRanges * biographies * birthdays * calendarUrls * coverPhotos * emailAddresses *
-         * events * externalIds * genders * imClients * interests * locales * memberships * metadata
-         * * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos
-         * * relations * residences * sipAddresses * skills * urls * userDefined
+         * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+         * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+         * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+         * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls *
+         * userDefined
          */
         public List setPersonFields(String personFields) {
           this.personFields = personFields;

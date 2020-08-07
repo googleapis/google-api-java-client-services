@@ -30,18 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name, in the form "spaces/threads".
-   *
-   * Example: spaces/AAAAMpdlehY/threads/UMxbHmzDlr4
+   * Resource name, in the form "spaces/threads". Example: spaces/AAAAMpdlehY/threads/UMxbHmzDlr4
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Resource name, in the form "spaces/threads".
-   *
-   * Example: spaces/AAAAMpdlehY/threads/UMxbHmzDlr4
+   * Resource name, in the form "spaces/threads". Example: spaces/AAAAMpdlehY/threads/UMxbHmzDlr4
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -49,9 +45,7 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name, in the form "spaces/threads".
-   *
-   * Example: spaces/AAAAMpdlehY/threads/UMxbHmzDlr4
+   * Resource name, in the form "spaces/threads". Example: spaces/AAAAMpdlehY/threads/UMxbHmzDlr4
    * @param name name or {@code null} for none
    */
   public Thread setName(java.lang.String name) {

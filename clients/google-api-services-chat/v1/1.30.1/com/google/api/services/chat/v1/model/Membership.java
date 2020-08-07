@@ -45,9 +45,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private User member;
 
   /**
-   * Resource name of the membership, in the form "spaces/members".
-   *
-   * Example: spaces/AAAAMpdlehY/members/105115627578887013105
+   * Resource name of the membership, in the form "spaces/members". Example:
+   * spaces/AAAAMpdlehY/members/105115627578887013105
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,9 +96,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the membership, in the form "spaces/members".
-   *
-   * Example: spaces/AAAAMpdlehY/members/105115627578887013105
+   * Resource name of the membership, in the form "spaces/members". Example:
+   * spaces/AAAAMpdlehY/members/105115627578887013105
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,9 +105,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the membership, in the form "spaces/members".
-   *
-   * Example: spaces/AAAAMpdlehY/members/105115627578887013105
+   * Resource name of the membership, in the form "spaces/members". Example:
+   * spaces/AAAAMpdlehY/members/105115627578887013105
    * @param name name or {@code null} for none
    */
   public Membership setName(java.lang.String name) {

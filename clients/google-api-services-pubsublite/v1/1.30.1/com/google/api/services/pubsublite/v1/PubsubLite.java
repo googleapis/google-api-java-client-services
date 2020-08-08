@@ -210,8 +210,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the pubsublite server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent location in which to create the subscription.
-          Structured like
+           * @param parent Required. The parent location in which to create the subscription. Structured like
            *        `projects/{project_number}/locations/{location}`.
            * @param content the {@link com.google.api.services.pubsublite.v1.model.Subscription}
            * @return the request
@@ -240,8 +239,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent location in which to create the subscription.
-          Structured like
+             * @param parent Required. The parent location in which to create the subscription. Structured like
            *        `projects/{project_number}/locations/{location}`.
              * @param content the {@link com.google.api.services.pubsublite.v1.model.Subscription}
              * @since 1.13
@@ -341,17 +339,13 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The ID to use for the subscription, which will become the final component
-             * of the subscription's name.
-             *
-             * This value is structured like: `my-sub-name`.
+             * of the subscription's name. This value is structured like: `my-sub-name`.
              */
             @com.google.api.client.util.Key
             private java.lang.String subscriptionId;
 
             /** Required. The ID to use for the subscription, which will become the final component of the
-           subscription's name.
-
-           This value is structured like: `my-sub-name`.
+           subscription's name. This value is structured like: `my-sub-name`.
              */
             public java.lang.String getSubscriptionId() {
               return subscriptionId;
@@ -359,9 +353,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The ID to use for the subscription, which will become the final component
-             * of the subscription's name.
-             *
-             * This value is structured like: `my-sub-name`.
+             * of the subscription's name. This value is structured like: `my-sub-name`.
              */
             public Create setSubscriptionId(java.lang.String subscriptionId) {
               this.subscriptionId = subscriptionId;
@@ -648,8 +640,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the pubsublite server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent whose subscriptions are to be listed.
-          Structured like
+           * @param parent Required. The parent whose subscriptions are to be listed. Structured like
            *        `projects/{project_number}/locations/{location}`.
            * @return the request
            */
@@ -676,8 +667,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent whose subscriptions are to be listed.
-          Structured like
+             * @param parent Required. The parent whose subscriptions are to be listed. Structured like
            *        `projects/{project_number}/locations/{location}`.
              * @since 1.13
              */
@@ -809,19 +799,15 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * A page token, received from a previous `ListSubscriptions` call. Provide this to
-             * retrieve the subsequent page.
-             *
-             * When paginating, all other parameters provided to `ListSubscriptions` must match the
-             * call that provided the page token.
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListSubscriptions` must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** A page token, received from a previous `ListSubscriptions` call. Provide this to retrieve the
-           subsequent page.
-
-           When paginating, all other parameters provided to `ListSubscriptions` must match the call that
-           provided the page token.
+           subsequent page. When paginating, all other parameters provided to `ListSubscriptions` must match
+           the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -829,10 +815,8 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * A page token, received from a previous `ListSubscriptions` call. Provide this to
-             * retrieve the subsequent page.
-             *
-             * When paginating, all other parameters provided to `ListSubscriptions` must match the
-             * call that provided the page token.
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListSubscriptions` must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -852,8 +836,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the pubsublite server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the subscription.
-          Structured like:
+           * @param name The name of the subscription. Structured like:
            *        projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
            * @param content the {@link com.google.api.services.pubsublite.v1.model.Subscription}
            * @return the request
@@ -882,8 +865,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the subscription.
-          Structured like:
+             * @param name The name of the subscription. Structured like:
            *        projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
              * @param content the {@link com.google.api.services.pubsublite.v1.model.Subscription}
              * @since 1.13
@@ -1032,8 +1014,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the pubsublite server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent location in which to create the topic.
-          Structured like
+           * @param parent Required. The parent location in which to create the topic. Structured like
            *        `projects/{project_number}/locations/{location}`.
            * @param content the {@link com.google.api.services.pubsublite.v1.model.Topic}
            * @return the request
@@ -1062,8 +1043,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent location in which to create the topic.
-          Structured like
+             * @param parent Required. The parent location in which to create the topic. Structured like
            *        `projects/{project_number}/locations/{location}`.
              * @param content the {@link com.google.api.services.pubsublite.v1.model.Topic}
              * @since 1.13
@@ -1163,15 +1143,12 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The ID to use for the topic, which will become the final component of the
-             * topic's name.
-             *
-             * This value is structured like: `my-topic-name`.
+             * topic's name. This value is structured like: `my-topic-name`.
              */
             @com.google.api.client.util.Key
             private java.lang.String topicId;
 
             /** Required. The ID to use for the topic, which will become the final component of the topic's name.
-
            This value is structured like: `my-topic-name`.
              */
             public java.lang.String getTopicId() {
@@ -1180,9 +1157,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The ID to use for the topic, which will become the final component of the
-             * topic's name.
-             *
-             * This value is structured like: `my-topic-name`.
+             * topic's name. This value is structured like: `my-topic-name`.
              */
             public Create setTopicId(java.lang.String topicId) {
               this.topicId = topicId;
@@ -1608,8 +1583,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the pubsublite server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent whose topics are to be listed.
-          Structured like
+           * @param parent Required. The parent whose topics are to be listed. Structured like
            *        `projects/{project_number}/locations/{location}`.
            * @return the request
            */
@@ -1636,8 +1610,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent whose topics are to be listed.
-          Structured like
+             * @param parent Required. The parent whose topics are to be listed. Structured like
            *        `projects/{project_number}/locations/{location}`.
              * @since 1.13
              */
@@ -1769,19 +1742,15 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * A page token, received from a previous `ListTopics` call. Provide this to retrieve
-             * the subsequent page.
-             *
-             * When paginating, all other parameters provided to `ListTopics` must match the call
-             * that provided the page token.
+             * the subsequent page. When paginating, all other parameters provided to `ListTopics`
+             * must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** A page token, received from a previous `ListTopics` call. Provide this to retrieve the subsequent
-           page.
-
-           When paginating, all other parameters provided to `ListTopics` must match the call that provided
-           the page token.
+           page. When paginating, all other parameters provided to `ListTopics` must match the call that
+           provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -1789,10 +1758,8 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * A page token, received from a previous `ListTopics` call. Provide this to retrieve
-             * the subsequent page.
-             *
-             * When paginating, all other parameters provided to `ListTopics` must match the call
-             * that provided the page token.
+             * the subsequent page. When paginating, all other parameters provided to `ListTopics`
+             * must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -1812,8 +1779,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the pubsublite server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the topic.
-          Structured like:
+           * @param name The name of the topic. Structured like:
            *        projects/{project_number}/locations/{location}/topics/{topic_id}
            * @param content the {@link com.google.api.services.pubsublite.v1.model.Topic}
            * @return the request
@@ -1842,8 +1808,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the topic.
-          Structured like:
+             * @param name The name of the topic. Structured like:
            *        projects/{project_number}/locations/{location}/topics/{topic_id}
              * @param content the {@link com.google.api.services.pubsublite.v1.model.Topic}
              * @since 1.13
@@ -2143,19 +2108,15 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
               /**
                * A page token, received from a previous `ListTopicSubscriptions` call. Provide this
-               * to retrieve the subsequent page.
-               *
-               * When paginating, all other parameters provided to `ListTopicSubscriptions` must
-               * match the call that provided the page token.
+               * to retrieve the subsequent page. When paginating, all other parameters provided to
+               * `ListTopicSubscriptions` must match the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
               /** A page token, received from a previous `ListTopicSubscriptions` call. Provide this to retrieve the
-             subsequent page.
-
-             When paginating, all other parameters provided to `ListTopicSubscriptions` must match the call that
-             provided the page token.
+             subsequent page. When paginating, all other parameters provided to `ListTopicSubscriptions` must
+             match the call that provided the page token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
@@ -2163,10 +2124,8 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
               /**
                * A page token, received from a previous `ListTopicSubscriptions` call. Provide this
-               * to retrieve the subsequent page.
-               *
-               * When paginating, all other parameters provided to `ListTopicSubscriptions` must
-               * match the call that provided the page token.
+               * to retrieve the subsequent page. When paginating, all other parameters provided to
+               * `ListTopicSubscriptions` must match the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -2293,8 +2252,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the pubsublite server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The subscription for which to retrieve cursors.
-            Structured like
+             * @param parent Required. The subscription for which to retrieve cursors. Structured like
              *        `projects/{project_number}/locations/{location}/subscriptions/{subscription_id}`.
              * @return the request
              */
@@ -2321,8 +2279,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The subscription for which to retrieve cursors.
-            Structured like
+               * @param parent Required. The subscription for which to retrieve cursors. Structured like
              *        `projects/{project_number}/locations/{location}/subscriptions/{subscription_id}`.
                * @since 1.13
                */
@@ -2454,19 +2411,15 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
               /**
                * A page token, received from a previous `ListPartitionCursors` call. Provide this to
-               * retrieve the subsequent page.
-               *
-               * When paginating, all other parameters provided to `ListPartitionCursors` must match
-               * the call that provided the page token.
+               * retrieve the subsequent page. When paginating, all other parameters provided to
+               * `ListPartitionCursors` must match the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
               /** A page token, received from a previous `ListPartitionCursors` call. Provide this to retrieve the
-             subsequent page.
-
-             When paginating, all other parameters provided to `ListPartitionCursors` must match the call that
-             provided the page token.
+             subsequent page. When paginating, all other parameters provided to `ListPartitionCursors` must
+             match the call that provided the page token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
@@ -2474,10 +2427,8 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
               /**
                * A page token, received from a previous `ListPartitionCursors` call. Provide this to
-               * retrieve the subsequent page.
-               *
-               * When paginating, all other parameters provided to `ListPartitionCursors` must match
-               * the call that provided the page token.
+               * retrieve the subsequent page. When paginating, all other parameters provided to
+               * `ListPartitionCursors` must match the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;

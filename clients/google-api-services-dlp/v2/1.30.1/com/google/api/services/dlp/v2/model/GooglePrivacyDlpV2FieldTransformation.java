@@ -33,13 +33,9 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   /**
    * Only apply the transformation if the condition evaluates to true for the given
    * `RecordCondition`. The conditions are allowed to reference fields that are not used in the
-   * actual transformation.
-   *
-   * Example Use Cases:
-   *
-   * - Apply a different bucket transformation to an age column if the zip code column for the same
-   * record is within a specific range. - Redact a field if the date of birth field is greater than
-   * 85.
+   * actual transformation. Example Use Cases: - Apply a different bucket transformation to an age
+   * column if the zip code column for the same record is within a specific range. - Redact a field
+   * if the date of birth field is greater than 85.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,13 +72,9 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   /**
    * Only apply the transformation if the condition evaluates to true for the given
    * `RecordCondition`. The conditions are allowed to reference fields that are not used in the
-   * actual transformation.
-   *
-   * Example Use Cases:
-   *
-   * - Apply a different bucket transformation to an age column if the zip code column for the same
-   * record is within a specific range. - Redact a field if the date of birth field is greater than
-   * 85.
+   * actual transformation. Example Use Cases: - Apply a different bucket transformation to an age
+   * column if the zip code column for the same record is within a specific range. - Redact a field
+   * if the date of birth field is greater than 85.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2RecordCondition getCondition() {
@@ -92,13 +84,9 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   /**
    * Only apply the transformation if the condition evaluates to true for the given
    * `RecordCondition`. The conditions are allowed to reference fields that are not used in the
-   * actual transformation.
-   *
-   * Example Use Cases:
-   *
-   * - Apply a different bucket transformation to an age column if the zip code column for the same
-   * record is within a specific range. - Redact a field if the date of birth field is greater than
-   * 85.
+   * actual transformation. Example Use Cases: - Apply a different bucket transformation to an age
+   * column if the zip code column for the same record is within a specific range. - Redact a field
+   * if the date of birth field is greater than 85.
    * @param condition condition or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldTransformation setCondition(GooglePrivacyDlpV2RecordCondition condition) {

@@ -307,9 +307,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /**
-       * The parent resource name. - Format:locations/[LOCATION-ID]
-       */
+      /** The parent resource name. - Format:locations/[LOCATION-ID] */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
@@ -319,9 +317,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         return parent;
       }
 
-      /**
-       * The parent resource name. - Format:locations/[LOCATION-ID]
-       */
+      /** The parent resource name. - Format:locations/[LOCATION-ID] */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;
@@ -384,8 +380,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name.
-      - Format:locations/[LOCATION-ID]
+       * @param parent The parent resource name. - Format:locations/[LOCATION-ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -412,8 +407,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name.
-      - Format:locations/[LOCATION-ID]
+         * @param parent The parent resource name. - Format:locations/[LOCATION-ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -491,9 +485,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The parent resource name. - Format:locations/[LOCATION-ID]
-         */
+        /** The parent resource name. - Format:locations/[LOCATION-ID] */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -503,9 +495,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return parent;
         }
 
-        /**
-         * The parent resource name. - Format:locations/[LOCATION-ID]
-         */
+        /** The parent resource name. - Format:locations/[LOCATION-ID] */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -637,12 +627,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
@@ -672,12 +658,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
@@ -792,10 +774,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -823,10 +803,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -940,10 +918,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -971,10 +947,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -1098,12 +1072,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -1131,12 +1101,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -1265,13 +1231,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -1280,14 +1241,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -1296,13 +1253,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -1367,10 +1319,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
        * @return the request
@@ -1399,10 +1349,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @since 1.13
@@ -1539,12 +1487,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
@@ -1573,12 +1517,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
@@ -1693,10 +1633,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -1724,10 +1662,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -1840,10 +1776,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -1871,10 +1805,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -1997,12 +1929,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -2029,12 +1957,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -2163,13 +2087,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -2178,14 +2097,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -2194,13 +2109,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -2265,10 +2175,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
        * @return the request
@@ -2297,10 +2205,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @since 1.13
@@ -2458,12 +2364,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
@@ -2493,12 +2395,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
@@ -2613,10 +2511,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -2644,10 +2540,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -2761,10 +2655,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -2792,10 +2684,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -2919,12 +2809,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -2952,12 +2838,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -3086,29 +2968,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -3117,15 +2990,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -3190,10 +3058,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @return the request
@@ -3222,10 +3088,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
            * @since 1.13
@@ -3362,12 +3226,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
@@ -3396,12 +3256,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
@@ -3516,10 +3372,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -3547,10 +3401,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -3663,10 +3515,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -3694,10 +3544,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -3820,12 +3668,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -3852,12 +3696,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -3986,29 +3826,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -4017,15 +3848,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -4088,10 +3914,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @return the request
@@ -4120,10 +3944,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
            * @since 1.13
@@ -4260,12 +4082,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
@@ -4294,12 +4112,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
@@ -4414,10 +4228,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -4445,10 +4257,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -4562,10 +4372,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -4593,10 +4401,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -4720,12 +4526,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -4753,12 +4555,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -4887,29 +4685,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc, display_name, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the most recent version of the resource was created. -
-         `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-         `display_name`: corresponds to info type's display name.
+         Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+         the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+         info type's display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -4918,15 +4708,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -4990,10 +4776,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @return the request
@@ -5023,10 +4807,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
            * @since 1.13
@@ -5164,12 +4946,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
@@ -5198,12 +4976,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
@@ -5318,10 +5092,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -5349,10 +5121,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -5466,10 +5236,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -5497,10 +5265,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -5624,12 +5390,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -5657,12 +5419,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -5791,29 +5549,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc, display_name, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the most recent version of the resource was created. -
-       `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-       `display_name`: corresponds to info type's display name.
+       Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+       the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+       info type's display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -5822,15 +5571,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -5859,9 +5603,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
@@ -5871,9 +5613,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return pageToken;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -5894,10 +5634,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
        * @return the request
@@ -5927,10 +5665,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @since 1.13
@@ -6083,7 +5819,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
        * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
-       *
        * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
        * choose what detectors to run. By default this may be all types, but may change over time as
        * detectors are updated.
@@ -6093,9 +5828,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
        *
-       * @param parent Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-ID]/locations
+       * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
        *        /[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
        * @return the request
@@ -6116,9 +5849,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
          * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
-         * more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
+         * more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will
          * automatically choose what detectors to run. By default this may be all types, but may change
          * over time as detectors are updated.
          *
@@ -6130,9 +5861,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-ID]/locations
+         * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
        *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @since 1.13
@@ -6237,23 +5966,18 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Finds potentially sensitive info in content. This method has limits on input size, processing
-       * time, and output size.
-       *
-       * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
-       *
-       * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-       * https://cloud.google.com/dlp/docs/inspecting-text,
+       * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+       * system will automatically choose what detectors to run. By default this may be all types, but may
+       * change over time as detectors are updated. For how to guides, see
+       * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+       * /inspecting-text,
        *
        * Create a request for the method "content.inspect".
        *
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
        *
-       * @param parent Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-ID]/locations
+       * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
        *        /[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
        * @return the request
@@ -6273,14 +5997,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Finds potentially sensitive info in content. This method has limits on input size, processing
-         * time, and output size.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
-         *
-         * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-         * https://cloud.google.com/dlp/docs/inspecting-text,
+         * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+         * system will automatically choose what detectors to run. By default this may be all types, but
+         * may change over time as detectors are updated. For how to guides, see
+         * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+         * /inspecting-text,
          *
          * Create a request for the method "content.inspect".
          *
@@ -6290,9 +6011,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-ID]/locations
+         * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
        *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @since 1.13
@@ -6405,9 +6124,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+       * @param parent Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
        * @return the request
@@ -6438,9 +6155,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Reidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+         * @param parent Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @since 1.13
@@ -6575,12 +6290,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
@@ -6610,12 +6321,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
@@ -6730,10 +6437,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -6761,10 +6466,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -6878,10 +6581,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -6909,10 +6610,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -7036,12 +6735,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -7069,12 +6764,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -7203,13 +6894,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -7218,14 +6904,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -7234,13 +6916,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -7305,10 +6982,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
        * @return the request
@@ -7337,10 +7012,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @since 1.13
@@ -7605,20 +7278,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * Creates a new job to inspect storage or calculate risk metrics. See
        * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-       * /compute-risk-analysis to learn more.
-       *
-       * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
+       * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+       * inspect jobs, the system will automatically choose what detectors to run. By default this may be
+       * all types, but may change over time as detectors are updated.
        *
        * Create a request for the method "dlpJobs.create".
        *
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
        * @return the request
@@ -7639,11 +7308,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Creates a new job to inspect storage or calculate risk metrics. See
          * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
+         * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+         * inspect jobs, the system will automatically choose what detectors to run. By default this may
+         * be all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "dlpJobs.create".
          *
@@ -7652,9 +7319,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @since 1.13
@@ -8039,9 +7704,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -8070,9 +7733,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -8180,81 +7841,59 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-         * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-         * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-         * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-         * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-         * finished. * The operator must be `=` or `!=`.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-         * OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR
-         * state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+         * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+         * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger that
+         * created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+         * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+         * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+         * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+         * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+         * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+         * cloud_storage AND (state = done OR state = canceled) * end_time >
+         * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state`
-       - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-       - `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
-       time the job finished. - 'start_time` - Corresponds to time the job finished. * Supported fields
-       for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to
-       time the job finished. - 'start_time` - Corresponds to time the job finished. * The operator must
-       be `=` or `!=`.
-
-       Examples:
-
+        /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+       Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+       implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+       fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+       `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the
+       trigger that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+       Corresponds to time the job finished. * Supported fields for risk analysis jobs: - `state` -
+       RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job finished. -
+       'start_time` - Corresponds to time the job finished. * The operator must be `=` or `!=`. Examples:
        * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR
        inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-       canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-
-       The length of this field should be no more than 500 characters.
+       canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+       than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-         * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-         * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-         * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-         * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-         * finished. * The operator must be `=` or `!=`.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-         * OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR
-         * state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+         * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+         * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger that
+         * created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+         * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+         * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+         * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+         * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+         * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+         * cloud_storage AND (state = done OR state = canceled) * end_time >
+         * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -8280,14 +7919,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, end_time asc, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-         * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
+         * are insignificant. Example: `name asc, end_time asc, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the job was created. - `end_time`: corresponds
+         * to time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
          * `state`
          */
         @com.google.api.client.util.Key
@@ -8295,13 +7929,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc, end_time asc, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to time the job
-       ended. - `name`: corresponds to job's name. - `state`: corresponds to `state`
+       Example: `name asc, end_time asc, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the job was created. - `end_time`: corresponds to time the job ended. - `name`:
+       corresponds to job's name. - `state`: corresponds to `state`
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -8310,14 +7940,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, end_time asc, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-         * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
+         * are insignificant. Example: `name asc, end_time asc, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the job was created. - `end_time`: corresponds
+         * to time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
          * `state`
          */
         public List setOrderBy(java.lang.String orderBy) {
@@ -8403,20 +8028,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * Redacts potentially sensitive info from an image. This method has limits on input size,
        * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-
-       * images to learn more.
-       *
-       * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
+       * images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the
+       * system will automatically choose what detectors to run. By default this may be all types, but may
+       * change over time as detectors are updated.
        *
        * Create a request for the method "image.redact".
        *
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-ID]/locations
+       * @param parent The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
        *        /[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
        * @return the request
@@ -8437,11 +8058,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Redacts potentially sensitive info from an image. This method has limits on input size,
          * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-
-         * data-images to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
+         * data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
+         * the system will automatically choose what detectors to run. By default this may be all types,
+         * but may change over time as detectors are updated.
          *
          * Create a request for the method "image.redact".
          *
@@ -8450,9 +8069,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Redact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-ID]/locations
+         * @param parent The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
        *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @since 1.13
@@ -8586,12 +8203,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
@@ -8620,12 +8233,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
@@ -8740,10 +8349,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -8771,10 +8378,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -8887,10 +8492,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -8918,10 +8521,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -9044,12 +8645,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -9076,12 +8673,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -9210,13 +8803,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -9225,14 +8813,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -9241,13 +8825,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -9312,10 +8891,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
        * @return the request
@@ -9344,10 +8921,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @since 1.13
@@ -9484,8 +9059,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the trigger to activate, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
        * @return the request
@@ -9515,8 +9089,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the trigger to activate, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
          * @since 1.13
@@ -9628,9 +9201,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
        * @return the request
@@ -9659,9 +9230,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @since 1.13
@@ -9772,8 +9341,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @return the request
        */
@@ -9801,8 +9369,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @since 1.13
          */
@@ -9912,8 +9479,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @return the request
        */
@@ -9940,8 +9506,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @since 1.13
          */
@@ -10061,9 +9626,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -10090,9 +9653,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
        *        ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -10200,75 +9761,51 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-         * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-         * 'error_count' - Number of errors that have occurred while running. * The operator must be
-         * `=` or `!=` for status and inspected_storage.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+         * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+         * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+         * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+         * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
          * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+         * length of this field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: -
-       `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
-       'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are
-       ignored. - 'error_count' - Number of errors that have occurred while running. * The operator must
-       be `=` or `!=` for status and inspected_storage.
-
-       Examples:
-
-       * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
+        /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+       Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+       implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+       fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
+       DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
+       quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
+       while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+       inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
        inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-       HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-
-       The length of this field should be no more than 500 characters.
+       HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+       than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-         * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-         * 'error_count' - Number of errors that have occurred while running. * The operator must be
-         * `=` or `!=` for status and inspected_storage.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+         * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+         * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+         * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+         * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
          * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+         * length of this field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -10294,33 +9831,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
          * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-         * space characters are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-         * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-         * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-         * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-         * JobTrigger's status.
+         * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+         * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created. -
+         * `update_time`: corresponds to time the JobTrigger was last updated. - `last_run_time`:
+         * corresponds to the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's
+         * name. - `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds
+         * to JobTrigger's status.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc` postfix. This
        list is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to
-       time the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the
-       JobTrigger ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to
-       JobTrigger's display name. - `status`: corresponds to JobTrigger's status.
+       insignificant. Example: `name asc,update_time, create_time desc` Supported fields are: -
+       `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to time
+       the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the JobTrigger
+       ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to JobTrigger's
+       display name. - `status`: corresponds to JobTrigger's status.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -10329,17 +9856,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
          * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-         * space characters are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-         * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-         * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-         * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-         * JobTrigger's status.
+         * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+         * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created. -
+         * `update_time`: corresponds to time the JobTrigger was last updated. - `last_run_time`:
+         * corresponds to the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's
+         * name. - `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds
+         * to JobTrigger's status.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -10398,8 +9920,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
        * @return the request
@@ -10428,8 +9949,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
          * @since 1.13
@@ -10577,7 +10097,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
          * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
-         *
          * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
          * choose what detectors to run. By default this may be all types, but may change over time as
          * detectors are updated.
@@ -10587,9 +10106,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
          *
-         * @param parent Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-ID]/locations
+         * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
          *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @return the request
@@ -10610,9 +10127,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
            * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
-           * more.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
+           * more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will
            * automatically choose what detectors to run. By default this may be all types, but may change
            * over time as detectors are updated.
            *
@@ -10624,9 +10139,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-ID]/locations
+           * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
          *        /[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
            * @since 1.13
@@ -10731,23 +10244,18 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Finds potentially sensitive info in content. This method has limits on input size, processing
-         * time, and output size.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
-         *
-         * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-         * https://cloud.google.com/dlp/docs/inspecting-text,
+         * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+         * system will automatically choose what detectors to run. By default this may be all types, but may
+         * change over time as detectors are updated. For how to guides, see
+         * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+         * /inspecting-text,
          *
          * Create a request for the method "content.inspect".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
          *
-         * @param parent Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-ID]/locations
+         * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
          *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @return the request
@@ -10767,14 +10275,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Finds potentially sensitive info in content. This method has limits on input size, processing
-           * time, and output size.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
-           *
-           * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-           * https://cloud.google.com/dlp/docs/inspecting-text,
+           * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+           * system will automatically choose what detectors to run. By default this may be all types, but
+           * may change over time as detectors are updated. For how to guides, see
+           * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+           * /inspecting-text,
            *
            * Create a request for the method "content.inspect".
            *
@@ -10784,9 +10289,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-ID]/locations
+           * @param parent Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
          *        /[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
            * @since 1.13
@@ -10899,9 +10402,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+         * @param parent Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @return the request
@@ -10932,9 +10433,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Reidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+           * @param parent Required. The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
            * @since 1.13
@@ -11069,12 +10568,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
@@ -11104,12 +10599,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
@@ -11224,10 +10715,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -11255,10 +10744,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -11372,10 +10859,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -11403,10 +10888,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -11530,12 +11013,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -11563,12 +11042,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -11697,29 +11172,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -11728,15 +11194,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -11801,10 +11262,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @return the request
@@ -11833,10 +11292,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
            * @since 1.13
@@ -12101,20 +11558,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Creates a new job to inspect storage or calculate risk metrics. See
          * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
+         * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+         * inspect jobs, the system will automatically choose what detectors to run. By default this may be
+         * all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "dlpJobs.create".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @return the request
@@ -12135,11 +11588,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Creates a new job to inspect storage or calculate risk metrics. See
            * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-           * /compute-risk-analysis to learn more.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
+           * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+           * inspect jobs, the system will automatically choose what detectors to run. By default this may
+           * be all types, but may change over time as detectors are updated.
            *
            * Create a request for the method "dlpJobs.create".
            *
@@ -12148,9 +11599,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
            * @since 1.13
@@ -12672,8 +12121,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the job to execute a hybrid inspect on, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the job to execute a hybrid inspect on, for example `projects/dlp-test-
          *        project/dlpJob/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest}
          * @return the request
@@ -12705,8 +12153,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name Required. Resource name of the job to execute a hybrid inspect on, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the job to execute a hybrid inspect on, for example `projects/dlp-test-
          *        project/dlpJob/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest}
            * @since 1.13
@@ -12819,9 +12266,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -12850,9 +12295,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -12960,81 +12403,59 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-           * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-           * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-           * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-           * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-           * finished. * The operator must be `=` or `!=`.
-           *
-           * Examples:
-           *
-           * * inspected_storage = cloud_storage AND state = done * inspected_storage =
-           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = done OR state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+           * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+           * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger
+           * that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+           * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+           * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+           * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+           * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+           * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+           * cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering.
-
-         Supported syntax:
-
-         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-         `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-         has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state`
-         - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-         - `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
-         time the job finished. - 'start_time` - Corresponds to time the job finished. * Supported fields
-         for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to
-         time the job finished. - 'start_time` - Corresponds to time the job finished. * The operator must
-         be `=` or `!=`.
-
-         Examples:
-
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+         `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the
+         trigger that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+         Corresponds to time the job finished. * Supported fields for risk analysis jobs: - `state` -
+         RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job finished. -
+         'start_time` - Corresponds to time the job finished. * The operator must be `=` or `!=`. Examples:
          * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR
          inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-         canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-
-         The length of this field should be no more than 500 characters.
+         canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+         than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-           * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-           * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-           * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-           * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-           * finished. * The operator must be `=` or `!=`.
-           *
-           * Examples:
-           *
-           * * inspected_storage = cloud_storage AND state = done * inspected_storage =
-           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = done OR state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+           * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+           * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger
+           * that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+           * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+           * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+           * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+           * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+           * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+           * cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -13060,28 +12481,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, end_time asc, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-           * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
-           * `state`
+           * characters are insignificant. Example: `name asc, end_time asc, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the job was created. -
+           * `end_time`: corresponds to time the job ended. - `name`: corresponds to job's name. -
+           * `state`: corresponds to `state`
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc, end_time asc, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to time the job
-         ended. - `name`: corresponds to job's name. - `state`: corresponds to `state`
+         Example: `name asc, end_time asc, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the job was created. - `end_time`: corresponds to time the job ended. - `name`:
+         corresponds to job's name. - `state`: corresponds to `state`
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -13090,15 +12502,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, end_time asc, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-           * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
-           * `state`
+           * characters are insignificant. Example: `name asc, end_time asc, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the job was created. -
+           * `end_time`: corresponds to time the job ended. - `name`: corresponds to job's name. -
+           * `state`: corresponds to `state`
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -13183,20 +12590,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Redacts potentially sensitive info from an image. This method has limits on input size,
          * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-
-         * images to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
+         * images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the
+         * system will automatically choose what detectors to run. By default this may be all types, but may
+         * change over time as detectors are updated.
          *
          * Create a request for the method "image.redact".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-ID]/locations
+         * @param parent The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
          *        /[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @return the request
@@ -13217,11 +12620,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Redacts potentially sensitive info from an image. This method has limits on input size,
            * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-
-           * data-images to learn more.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
+           * data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
+           * the system will automatically choose what detectors to run. By default this may be all types,
+           * but may change over time as detectors are updated.
            *
            * Create a request for the method "image.redact".
            *
@@ -13230,9 +12631,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Redact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-ID]/locations
+           * @param parent The parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations
          *        /[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
            * @since 1.13
@@ -13366,12 +12765,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
@@ -13400,12 +12795,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
@@ -13520,10 +12911,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -13551,10 +12940,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -13667,10 +13054,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -13698,10 +13083,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -13824,12 +13207,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -13856,12 +13235,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -13990,29 +13365,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -14021,15 +13387,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -14092,10 +13453,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @return the request
@@ -14124,10 +13483,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
            * @since 1.13
@@ -14264,8 +13621,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the trigger to activate, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
          * @return the request
@@ -14295,8 +13651,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the trigger to activate, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
            * @since 1.13
@@ -14408,9 +13763,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @return the request
@@ -14439,9 +13792,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
            * @since 1.13
@@ -14552,8 +13903,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @return the request
          */
@@ -14581,8 +13931,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @since 1.13
            */
@@ -14692,8 +14041,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @return the request
          */
@@ -14720,8 +14068,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @since 1.13
            */
@@ -14844,8 +14191,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        `projects/dlp-
+         * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example `projects/dlp-
          *        test-project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest}
          * @return the request
@@ -14877,8 +14223,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        `projects/dlp-
+           * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example `projects/dlp-
          *        test-project/jobTriggers/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest}
            * @since 1.13
@@ -14989,9 +14334,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -15018,9 +14361,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:projects/[PROJECT-
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:projects/[PROJECT-
          *        ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -15128,75 +14469,51 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-           * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-           * 'error_count' - Number of errors that have occurred while running. * The operator must
-           * be `=` or `!=` for status and inspected_storage.
-           *
-           * Examples:
-           *
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+           * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+           * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+           * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+           * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples:
            * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
            * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering.
-
-         Supported syntax:
-
-         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-         `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-         has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: -
-         `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
-         'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are
-         ignored. - 'error_count' - Number of errors that have occurred while running. * The operator must
-         be `=` or `!=` for status and inspected_storage.
-
-         Examples:
-
-         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
+         DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
+         quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
+         while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+         inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
          inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-         HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-
-         The length of this field should be no more than 500 characters.
+         HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+         than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-           * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-           * 'error_count' - Number of errors that have occurred while running. * The operator must
-           * be `=` or `!=` for status and inspected_storage.
-           *
-           * Examples:
-           *
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+           * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+           * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+           * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+           * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples:
            * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
            * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -15222,33 +14539,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
            * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-           * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-           * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-           * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-           * JobTrigger's status.
+           * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created.
+           * - `update_time`: corresponds to time the JobTrigger was last updated. -
+           * `last_run_time`: corresponds to the last time the JobTrigger ran. - `name`: corresponds
+           * to JobTrigger's name. - `display_name`: corresponds to JobTrigger's display name. -
+           * `status`: corresponds to JobTrigger's status.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc` postfix. This
          list is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to
-         time the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the
-         JobTrigger ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to
-         JobTrigger's display name. - `status`: corresponds to JobTrigger's status.
+         insignificant. Example: `name asc,update_time, create_time desc` Supported fields are: -
+         `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to time
+         the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the JobTrigger
+         ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to JobTrigger's
+         display name. - `status`: corresponds to JobTrigger's status.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -15257,17 +14564,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
            * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-           * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-           * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-           * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-           * JobTrigger's status.
+           * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created.
+           * - `update_time`: corresponds to time the JobTrigger was last updated. -
+           * `last_run_time`: corresponds to the last time the JobTrigger ran. - `name`: corresponds
+           * to JobTrigger's name. - `display_name`: corresponds to JobTrigger's display name. -
+           * `status`: corresponds to JobTrigger's status.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -15326,8 +14628,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
          * @return the request
@@ -15356,8 +14657,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
            * @since 1.13
@@ -15491,12 +14791,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
@@ -15525,12 +14821,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
@@ -15645,10 +14937,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -15676,10 +14966,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -15793,10 +15081,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -15824,10 +15110,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -15951,12 +15235,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @return the request
          */
@@ -15984,12 +15264,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        - Format:projects/[PROJECT-ID]
-        - Format:organizations/[ORGANIZATION-
-         *        ID]
-        - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-        - Format:organizations
+           * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+         *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
          *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
            * @since 1.13
            */
@@ -16118,29 +15394,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc, display_name, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the most recent version of the resource was created. -
-         `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-         `display_name`: corresponds to info type's display name.
+         Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+         the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+         info type's display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -16149,15 +15417,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -16221,10 +15485,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @return the request
@@ -16254,10 +15516,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
            * @since 1.13
@@ -16395,12 +15655,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
@@ -16429,12 +15685,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
@@ -16549,10 +15801,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -16580,10 +15830,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -16697,10 +15945,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -16728,10 +15974,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -16855,12 +16099,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+       * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
        * @return the request
        */
@@ -16888,12 +16128,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Parent resource name.
-      - Format:projects/[PROJECT-ID]
-      - Format:organizations/[ORGANIZATION-
-       *        ID]
-      - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-      - Format:organizations
+         * @param parent Required. Parent resource name. - Format:projects/[PROJECT-ID] - Format:organizations/[ORGANIZATION-
+       *        ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID] - Format:organizations
        *        /[ORGANIZATION-ID]/locations/[LOCATION-ID]
          * @since 1.13
          */
@@ -17022,29 +16258,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc, display_name, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the most recent version of the resource was created. -
-       `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-       `display_name`: corresponds to info type's display name.
+       Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+       the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+       info type's display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -17053,15 +16280,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -17090,9 +16312,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
@@ -17102,9 +16322,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return pageToken;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -17125,10 +16343,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
        * @return the request
@@ -17158,10 +16374,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @since 1.13

@@ -45,9 +45,8 @@ public final class GooglePrivacyDlpV2Key extends com.google.api.client.json.Gene
    * string or numerical identifier, which identify entities. The first element identifies a _root
    * entity_, the second element identifies a _child_ of the root entity, the third element
    * identifies a child of the second entity, and so forth. The entities identified by all prefixes
-   * of the path are called the element's _ancestors_.
-   *
-   * A path can never be empty, and a path can have at most 100 elements.
+   * of the path are called the element's _ancestors_. A path can never be empty, and a path can
+   * have at most 100 elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +76,8 @@ public final class GooglePrivacyDlpV2Key extends com.google.api.client.json.Gene
    * string or numerical identifier, which identify entities. The first element identifies a _root
    * entity_, the second element identifies a _child_ of the root entity, the third element
    * identifies a child of the second entity, and so forth. The entities identified by all prefixes
-   * of the path are called the element's _ancestors_.
-   *
-   * A path can never be empty, and a path can have at most 100 elements.
+   * of the path are called the element's _ancestors_. A path can never be empty, and a path can
+   * have at most 100 elements.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2PathElement> getPath() {
@@ -91,9 +89,8 @@ public final class GooglePrivacyDlpV2Key extends com.google.api.client.json.Gene
    * string or numerical identifier, which identify entities. The first element identifies a _root
    * entity_, the second element identifies a _child_ of the root entity, the third element
    * identifies a child of the second entity, and so forth. The entities identified by all prefixes
-   * of the path are called the element's _ancestors_.
-   *
-   * A path can never be empty, and a path can have at most 100 elements.
+   * of the path are called the element's _ancestors_. A path can never be empty, and a path can
+   * have at most 100 elements.
    * @param path path or {@code null} for none
    */
   public GooglePrivacyDlpV2Key setPath(java.util.List<GooglePrivacyDlpV2PathElement> path) {

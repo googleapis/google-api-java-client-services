@@ -17,10 +17,10 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * A DeltaPresenceEstimationHistogramBucket message with the following values:   min_probability:
- * 0.1   max_probability: 0.2   frequency: 42 means that there are 42 records for which δ is in
- * [0.1, 0.2). An important particular case is when min_probability = max_probability = 1: then,
- * every individual who shares this quasi-identifier combination is in the dataset.
+ * A DeltaPresenceEstimationHistogramBucket message with the following values: min_probability: 0.1
+ * max_probability: 0.2 frequency: 42 means that there are 42 records for which δ is in [0.1, 0.2).
+ * An important particular case is when min_probability = max_probability = 1: then, every
+ * individual who shares this quasi-identifier combination is in the dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

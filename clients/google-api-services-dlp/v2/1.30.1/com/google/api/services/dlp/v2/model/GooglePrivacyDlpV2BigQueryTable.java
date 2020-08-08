@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Message defining the location of a BigQuery table. A table is uniquely identified  by its
+ * Message defining the location of a BigQuery table. A table is uniquely identified by its
  * project_id, dataset_id, and table_name. Within a query a table is often referenced with a string
  * in the format of: `:.` or `..`.
  *

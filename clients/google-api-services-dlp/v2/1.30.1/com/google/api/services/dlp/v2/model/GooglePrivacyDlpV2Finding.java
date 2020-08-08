@@ -59,16 +59,10 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   private java.lang.String jobName;
 
   /**
-   * The labels associated with this `Finding`.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   *
-   * No more than 10 labels can be associated with a given finding.
-   *
+   * The labels associated with this `Finding`. Label keys must be between 1 and 63 characters long
+   * and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label
+   * values must be between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding.
    * Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
    * The value may be {@code null}.
    */
@@ -198,16 +192,10 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
-   * The labels associated with this `Finding`.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   *
-   * No more than 10 labels can be associated with a given finding.
-   *
+   * The labels associated with this `Finding`. Label keys must be between 1 and 63 characters long
+   * and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label
+   * values must be between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding.
    * Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
    * @return value or {@code null} for none
    */
@@ -216,16 +204,10 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
-   * The labels associated with this `Finding`.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   *
-   * No more than 10 labels can be associated with a given finding.
-   *
+   * The labels associated with this `Finding`. Label keys must be between 1 and 63 characters long
+   * and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label
+   * values must be between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding.
    * Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
    * @param labels labels or {@code null} for none
    */

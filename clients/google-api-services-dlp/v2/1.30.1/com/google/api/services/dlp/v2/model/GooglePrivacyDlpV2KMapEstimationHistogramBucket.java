@@ -17,8 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * A KMapEstimationHistogramBucket message with the following values:   min_anonymity: 3
- * max_anonymity: 5   frequency: 42 means that there are 42 records whose quasi-identifier values
+ * A KMapEstimationHistogramBucket message with the following values: min_anonymity: 3
+ * max_anonymity: 5 frequency: 42 means that there are 42 records whose quasi-identifier values
  * correspond to 3, 4 or 5 people in the overlying population. An important particular case is when
  * min_anonymity = max_anonymity = 1: the frequency field then corresponds to the number of uniquely
  * identifiable records.

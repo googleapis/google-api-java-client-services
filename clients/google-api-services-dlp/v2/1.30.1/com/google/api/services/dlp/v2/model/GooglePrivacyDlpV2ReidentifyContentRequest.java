@@ -66,9 +66,8 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    * message type that is used for de-identification, however its usage here is for the reversal of
    * the previous de-identification. Re-identification is performed by examining the transformations
    * used to de-identify the items and executing the reverse. This requires that only reversible
-   * transformations be provided here. The reversible transformations are:
-   *
-   *  - `CryptoDeterministicConfig`  - `CryptoReplaceFfxFpeConfig`
+   * transformations be provided here. The reversible transformations are: -
+   * `CryptoDeterministicConfig` - `CryptoReplaceFfxFpeConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,9 +163,8 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    * message type that is used for de-identification, however its usage here is for the reversal of
    * the previous de-identification. Re-identification is performed by examining the transformations
    * used to de-identify the items and executing the reverse. This requires that only reversible
-   * transformations be provided here. The reversible transformations are:
-   *
-   *  - `CryptoDeterministicConfig`  - `CryptoReplaceFfxFpeConfig`
+   * transformations be provided here. The reversible transformations are: -
+   * `CryptoDeterministicConfig` - `CryptoReplaceFfxFpeConfig`
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyConfig getReidentifyConfig() {
@@ -178,9 +176,8 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    * message type that is used for de-identification, however its usage here is for the reversal of
    * the previous de-identification. Re-identification is performed by examining the transformations
    * used to de-identify the items and executing the reverse. This requires that only reversible
-   * transformations be provided here. The reversible transformations are:
-   *
-   *  - `CryptoDeterministicConfig`  - `CryptoReplaceFfxFpeConfig`
+   * transformations be provided here. The reversible transformations are: -
+   * `CryptoDeterministicConfig` - `CryptoReplaceFfxFpeConfig`
    * @param reidentifyConfig reidentifyConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2ReidentifyContentRequest setReidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig reidentifyConfig) {

@@ -58,9 +58,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   /**
    * Required. Range of shift in days. Actual shift will be selected at random within this range
    * (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days
-   * (1000 years) each direction.
-   *
-   * For example, 3 means shift date to at most 3 days into the future.
+   * (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +124,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   /**
    * Required. Range of shift in days. Actual shift will be selected at random within this range
    * (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days
-   * (1000 years) each direction.
-   *
-   * For example, 3 means shift date to at most 3 days into the future.
+   * (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUpperBoundDays() {
@@ -138,9 +134,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   /**
    * Required. Range of shift in days. Actual shift will be selected at random within this range
    * (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days
-   * (1000 years) each direction.
-   *
-   * For example, 3 means shift date to at most 3 days into the future.
+   * (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
    * @param upperBoundDays upperBoundDays or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setUpperBoundDays(java.lang.Integer upperBoundDays) {

@@ -40,17 +40,12 @@ public final class GooglePrivacyDlpV2HybridOptions extends com.google.api.client
   private java.lang.String description;
 
   /**
-   * To organize findings, these labels will be added to each finding.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   *
-   * No more than 10 labels can be associated with a given finding.
-   *
-   * Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
+   * To organize findings, these labels will be added to each finding. Label keys must be between 1
+   * and 63 characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must
+   * conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can
+   * be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" :
+   * "etl"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,12 +53,9 @@ public final class GooglePrivacyDlpV2HybridOptions extends com.google.api.client
 
   /**
    * These are labels that each inspection request must include within their 'finding_labels' map.
-   * Request may contain others, but any missing one of these will be rejected.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * No more than 10 keys can be required.
+   * Request may contain others, but any missing one of these will be rejected. Label keys must be
+   * between 1 and 63 characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,17 +89,12 @@ public final class GooglePrivacyDlpV2HybridOptions extends com.google.api.client
   }
 
   /**
-   * To organize findings, these labels will be added to each finding.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   *
-   * No more than 10 labels can be associated with a given finding.
-   *
-   * Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
+   * To organize findings, these labels will be added to each finding. Label keys must be between 1
+   * and 63 characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must
+   * conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can
+   * be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" :
+   * "etl"`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -115,17 +102,12 @@ public final class GooglePrivacyDlpV2HybridOptions extends com.google.api.client
   }
 
   /**
-   * To organize findings, these labels will be added to each finding.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   *
-   * No more than 10 labels can be associated with a given finding.
-   *
-   * Examples: * `"environment" : "production"` * `"pipeline" : "etl"`
+   * To organize findings, these labels will be added to each finding. Label keys must be between 1
+   * and 63 characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must
+   * conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can
+   * be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" :
+   * "etl"`
    * @param labels labels or {@code null} for none
    */
   public GooglePrivacyDlpV2HybridOptions setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -135,12 +117,9 @@ public final class GooglePrivacyDlpV2HybridOptions extends com.google.api.client
 
   /**
    * These are labels that each inspection request must include within their 'finding_labels' map.
-   * Request may contain others, but any missing one of these will be rejected.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * No more than 10 keys can be required.
+   * Request may contain others, but any missing one of these will be rejected. Label keys must be
+   * between 1 and 63 characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequiredFindingLabelKeys() {
@@ -149,12 +128,9 @@ public final class GooglePrivacyDlpV2HybridOptions extends com.google.api.client
 
   /**
    * These are labels that each inspection request must include within their 'finding_labels' map.
-   * Request may contain others, but any missing one of these will be rejected.
-   *
-   * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.
-   *
-   * No more than 10 keys can be required.
+   * Request may contain others, but any missing one of these will be rejected. Label keys must be
+   * between 1 and 63 characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.
    * @param requiredFindingLabelKeys requiredFindingLabelKeys or {@code null} for none
    */
   public GooglePrivacyDlpV2HybridOptions setRequiredFindingLabelKeys(java.util.List<java.lang.String> requiredFindingLabelKeys) {

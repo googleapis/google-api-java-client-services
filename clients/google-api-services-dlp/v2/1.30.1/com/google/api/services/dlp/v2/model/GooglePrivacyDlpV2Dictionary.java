@@ -19,7 +19,6 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Custom information type based on a dictionary of words or phrases. This can be used to match
  * sensitive information specific to the data, such as a list of employee IDs or job titles.
- *
  * Dictionary words are case-insensitive and all characters other than letters and digits in the
  * unicode [Basic Multilingual
  * Plane](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane) will be
@@ -28,13 +27,11 @@ package com.google.api.services.dlp.v2.model;
  * characters surrounding any match must be of a different type than the adjacent characters within
  * the word, so letters must be next to non-letters and digits next to non-digits. For example, the
  * dictionary word "jen" will match the first three letters of the text "jen123" but will return no
- * matches for "jennifer".
- *
- * Dictionary words containing a large number of characters that are not letters or digits may
- * result in unexpected findings because such characters are treated as whitespace. The
- * [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of
- * dictionaries. For dictionaries that do not fit within these constraints, consider using
- * `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
+ * matches for "jennifer". Dictionary words containing a large number of characters that are not
+ * letters or digits may result in unexpected findings because such characters are treated as
+ * whitespace. The [limits](https://cloud.google.com/dlp/limits) page contains details about the
+ * size limits of dictionaries. For dictionaries that do not fit within these constraints, consider
+ * using `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

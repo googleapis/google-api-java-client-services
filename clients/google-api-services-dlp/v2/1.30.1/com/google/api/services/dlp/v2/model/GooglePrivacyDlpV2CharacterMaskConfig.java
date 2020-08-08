@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   private java.util.List<GooglePrivacyDlpV2CharsToIgnore> charactersToIgnore;
 
   /**
-   * Character to use to mask the sensitive valuesfor example, `*` for an alphabetic string such as
+   * Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as
    * a name, or `0` for a numeric string such as ZIP code or credit card number. This string must
    * have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for
    * digits.
@@ -92,7 +92,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * Character to use to mask the sensitive valuesfor example, `*` for an alphabetic string such as
+   * Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as
    * a name, or `0` for a numeric string such as ZIP code or credit card number. This string must
    * have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for
    * digits.
@@ -103,7 +103,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * Character to use to mask the sensitive valuesfor example, `*` for an alphabetic string such as
+   * Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as
    * a name, or `0` for a numeric string such as ZIP code or credit card number. This string must
    * have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for
    * digits.

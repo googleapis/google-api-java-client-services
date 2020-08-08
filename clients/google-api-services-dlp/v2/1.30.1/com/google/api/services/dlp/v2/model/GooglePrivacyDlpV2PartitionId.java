@@ -18,9 +18,8 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Datastore partition ID. A partition ID identifies a grouping of entities. The grouping is always
- * by project and namespace, however the namespace ID may be empty.
- *
- * A partition ID contains several dimensions: project ID and namespace ID.
+ * by project and namespace, however the namespace ID may be empty. A partition ID contains several
+ * dimensions: project ID and namespace ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

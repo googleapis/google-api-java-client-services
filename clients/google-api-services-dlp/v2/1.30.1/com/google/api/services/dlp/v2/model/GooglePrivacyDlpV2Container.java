@@ -48,8 +48,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The rest of the path after the root. Examples: - For BigQuery table
-   * `project_id:dataset_id.table_id`, the relative path is  `table_id` - Google Cloud Storage file
-   * `gs://bucket/folder/filename.txt`, the relative  path is `folder/filename.txt`
+   * `project_id:dataset_id.table_id`, the relative path is `table_id` - Google Cloud Storage file
+   * `gs://bucket/folder/filename.txt`, the relative path is `folder/filename.txt`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The root of the container. Examples: - For BigQuery table `project_id:dataset_id.table_id`, the
-   * root is  `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
-   * root  is `gs://bucket`
+   * root is `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
+   * root is `gs://bucket`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The rest of the path after the root. Examples: - For BigQuery table
-   * `project_id:dataset_id.table_id`, the relative path is  `table_id` - Google Cloud Storage file
-   * `gs://bucket/folder/filename.txt`, the relative  path is `folder/filename.txt`
+   * `project_id:dataset_id.table_id`, the relative path is `table_id` - Google Cloud Storage file
+   * `gs://bucket/folder/filename.txt`, the relative path is `folder/filename.txt`
    * @return value or {@code null} for none
    */
   public java.lang.String getRelativePath() {
@@ -135,8 +135,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The rest of the path after the root. Examples: - For BigQuery table
-   * `project_id:dataset_id.table_id`, the relative path is  `table_id` - Google Cloud Storage file
-   * `gs://bucket/folder/filename.txt`, the relative  path is `folder/filename.txt`
+   * `project_id:dataset_id.table_id`, the relative path is `table_id` - Google Cloud Storage file
+   * `gs://bucket/folder/filename.txt`, the relative path is `folder/filename.txt`
    * @param relativePath relativePath or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setRelativePath(java.lang.String relativePath) {
@@ -146,8 +146,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The root of the container. Examples: - For BigQuery table `project_id:dataset_id.table_id`, the
-   * root is  `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
-   * root  is `gs://bucket`
+   * root is `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
+   * root is `gs://bucket`
    * @return value or {@code null} for none
    */
   public java.lang.String getRootPath() {
@@ -156,8 +156,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The root of the container. Examples: - For BigQuery table `project_id:dataset_id.table_id`, the
-   * root is  `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
-   * root  is `gs://bucket`
+   * root is `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
+   * root is `gs://bucket`
    * @param rootPath rootPath or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setRootPath(java.lang.String rootPath) {

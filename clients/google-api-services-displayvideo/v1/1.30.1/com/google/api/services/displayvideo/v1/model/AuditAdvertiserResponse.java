@@ -32,7 +32,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE and PAUSED campaigns under this advertiser. These campaigns count towards
-   * the limit of 9,999 campaigns per advertiser.
+   * the limit of 9999 campaigns per advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -40,7 +40,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE, PAUSED and DRAFT insertion orders under this advertiser. These insertion
-   * orders count towards the limit of 9,999 insertion orders per advertiser.
+   * orders count towards the limit of 9999 insertion orders per advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -48,7 +48,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE, PAUSED, and DRAFT line items under this advertiser. These line items
-   * count towards the limit of 9,999 line items per advertiser.
+   * count towards the limit of 9999 line items per advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -56,7 +56,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE and PAUSED campaigns under this advertiser. These campaigns count towards
-   * the limit of 9,999 campaigns per advertiser.
+   * the limit of 9999 campaigns per advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUsedCampaignsCount() {
@@ -65,7 +65,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE and PAUSED campaigns under this advertiser. These campaigns count towards
-   * the limit of 9,999 campaigns per advertiser.
+   * the limit of 9999 campaigns per advertiser.
    * @param usedCampaignsCount usedCampaignsCount or {@code null} for none
    */
   public AuditAdvertiserResponse setUsedCampaignsCount(java.lang.Long usedCampaignsCount) {
@@ -75,7 +75,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE, PAUSED and DRAFT insertion orders under this advertiser. These insertion
-   * orders count towards the limit of 9,999 insertion orders per advertiser.
+   * orders count towards the limit of 9999 insertion orders per advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUsedInsertionOrdersCount() {
@@ -84,7 +84,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE, PAUSED and DRAFT insertion orders under this advertiser. These insertion
-   * orders count towards the limit of 9,999 insertion orders per advertiser.
+   * orders count towards the limit of 9999 insertion orders per advertiser.
    * @param usedInsertionOrdersCount usedInsertionOrdersCount or {@code null} for none
    */
   public AuditAdvertiserResponse setUsedInsertionOrdersCount(java.lang.Long usedInsertionOrdersCount) {
@@ -94,7 +94,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE, PAUSED, and DRAFT line items under this advertiser. These line items
-   * count towards the limit of 9,999 line items per advertiser.
+   * count towards the limit of 9999 line items per advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUsedLineItemsCount() {
@@ -103,7 +103,7 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
 
   /**
    * The number of ACTIVE, PAUSED, and DRAFT line items under this advertiser. These line items
-   * count towards the limit of 9,999 line items per advertiser.
+   * count towards the limit of 9999 line items per advertiser.
    * @param usedLineItemsCount usedLineItemsCount or {@code null} for none
    */
   public AuditAdvertiserResponse setUsedLineItemsCount(java.lang.Long usedLineItemsCount) {

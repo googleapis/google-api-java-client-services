@@ -31,6 +31,13 @@ package com.google.api.services.texttospeech.v1beta1.model;
 public final class SynthesizeSpeechResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The audio metadata of `audio_content`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AudioConfig audioConfig;
+
+  /**
    * The audio data bytes encoded as specified in the request, including the header for encodings
    * that are wrapped in containers (e.g. MP3, OGG_OPUS). For LINEAR16 audio, we include the WAV
    * header. Note: as with all bytes fields, protobuffers use a pure binary representation, whereas
@@ -39,6 +46,31 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String audioContent;
+
+  /**
+   * A link between a position in the original request input and a corresponding time in the output
+   * audio. It's only supported via  of SSML input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Timepoint> timepoints;
+
+  /**
+   * The audio metadata of `audio_content`.
+   * @return value or {@code null} for none
+   */
+  public AudioConfig getAudioConfig() {
+    return audioConfig;
+  }
+
+  /**
+   * The audio metadata of `audio_content`.
+   * @param audioConfig audioConfig or {@code null} for none
+   */
+  public SynthesizeSpeechResponse setAudioConfig(AudioConfig audioConfig) {
+    this.audioConfig = audioConfig;
+    return this;
+  }
 
   /**
    * The audio data bytes encoded as specified in the request, including the header for encodings
@@ -94,6 +126,25 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
    */
   public SynthesizeSpeechResponse encodeAudioContent(byte[] audioContent) {
     this.audioContent = com.google.api.client.util.Base64.encodeBase64URLSafeString(audioContent);
+    return this;
+  }
+
+  /**
+   * A link between a position in the original request input and a corresponding time in the output
+   * audio. It's only supported via  of SSML input.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Timepoint> getTimepoints() {
+    return timepoints;
+  }
+
+  /**
+   * A link between a position in the original request input and a corresponding time in the output
+   * audio. It's only supported via  of SSML input.
+   * @param timepoints timepoints or {@code null} for none
+   */
+  public SynthesizeSpeechResponse setTimepoints(java.util.List<Timepoint> timepoints) {
+    this.timepoints = timepoints;
     return this;
   }
 

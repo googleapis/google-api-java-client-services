@@ -38,6 +38,13 @@ public final class SynthesizeSpeechRequest extends com.google.api.client.json.Ge
   private AudioConfig audioConfig;
 
   /**
+   * Whether and what timepoints are returned in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> enableTimePointing;
+
+  /**
    * Required. The Synthesizer requires either plain text or SSML as input.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class SynthesizeSpeechRequest extends com.google.api.client.json.Ge
    */
   public SynthesizeSpeechRequest setAudioConfig(AudioConfig audioConfig) {
     this.audioConfig = audioConfig;
+    return this;
+  }
+
+  /**
+   * Whether and what timepoints are returned in the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEnableTimePointing() {
+    return enableTimePointing;
+  }
+
+  /**
+   * Whether and what timepoints are returned in the response.
+   * @param enableTimePointing enableTimePointing or {@code null} for none
+   */
+  public SynthesizeSpeechRequest setEnableTimePointing(java.util.List<java.lang.String> enableTimePointing) {
+    this.enableTimePointing = enableTimePointing;
     return this;
   }
 

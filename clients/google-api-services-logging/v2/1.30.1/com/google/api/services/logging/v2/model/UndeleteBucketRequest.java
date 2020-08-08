@@ -17,10 +17,7 @@
 package com.google.api.services.logging.v2.model;
 
 /**
- * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
- * APIs. A typical example is to use it as the request or the response type of an API method. For
- * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The
- * JSON representation for Empty is empty JSON object {}.
+ * The parameters to UndeleteBucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -30,16 +27,16 @@ package com.google.api.services.logging.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Empty extends com.google.api.client.json.GenericJson {
+public final class UndeleteBucketRequest extends com.google.api.client.json.GenericJson {
 
   @Override
-  public Empty set(String fieldName, Object value) {
-    return (Empty) super.set(fieldName, value);
+  public UndeleteBucketRequest set(String fieldName, Object value) {
+    return (UndeleteBucketRequest) super.set(fieldName, value);
   }
 
   @Override
-  public Empty clone() {
-    return (Empty) super.clone();
+  public UndeleteBucketRequest clone() {
+    return (UndeleteBucketRequest) super.clone();
   }
 
 }

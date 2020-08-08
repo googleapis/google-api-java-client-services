@@ -100,7 +100,7 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. A default monitored resource object that is assigned to all log entries in entries
-   * that do not specify a value for resource. Example: { "type": "gce_instance",   "labels": {
+   * that do not specify a value for resource. Example: { "type": "gce_instance", "labels": {
    * "zone": "us-central1-a", "instance_id": "00000000000000000000" }} See LogEntry.
    * The value may be {@code null}.
    */
@@ -250,7 +250,7 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. A default monitored resource object that is assigned to all log entries in entries
-   * that do not specify a value for resource. Example: { "type": "gce_instance",   "labels": {
+   * that do not specify a value for resource. Example: { "type": "gce_instance", "labels": {
    * "zone": "us-central1-a", "instance_id": "00000000000000000000" }} See LogEntry.
    * @return value or {@code null} for none
    */
@@ -260,7 +260,7 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. A default monitored resource object that is assigned to all log entries in entries
-   * that do not specify a value for resource. Example: { "type": "gce_instance",   "labels": {
+   * that do not specify a value for resource. Example: { "type": "gce_instance", "labels": {
    * "zone": "us-central1-a", "instance_id": "00000000000000000000" }} See LogEntry.
    * @param resource resource or {@code null} for none
    */

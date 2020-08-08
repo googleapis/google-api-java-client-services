@@ -36,7 +36,7 @@ public final class MonitoredResourceMetadata extends com.google.api.client.json.
    * Output only. Values for predefined system metadata labels. System labels are a kind of metadata
    * extracted by Google, including "machine_image", "vpc", "subnet_id", "security_group", "name",
    * etc. System label values can be only strings, Boolean values, or a list of strings. For
-   * example: { "name": "my-test-instance",   "security_group": ["a", "b", "c"],   "spot_instance":
+   * example: { "name": "my-test-instance", "security_group": ["a", "b", "c"], "spot_instance":
    * false }
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class MonitoredResourceMetadata extends com.google.api.client.json.
    * Output only. Values for predefined system metadata labels. System labels are a kind of metadata
    * extracted by Google, including "machine_image", "vpc", "subnet_id", "security_group", "name",
    * etc. System label values can be only strings, Boolean values, or a list of strings. For
-   * example: { "name": "my-test-instance",   "security_group": ["a", "b", "c"],   "spot_instance":
+   * example: { "name": "my-test-instance", "security_group": ["a", "b", "c"], "spot_instance":
    * false }
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class MonitoredResourceMetadata extends com.google.api.client.json.
    * Output only. Values for predefined system metadata labels. System labels are a kind of metadata
    * extracted by Google, including "machine_image", "vpc", "subnet_id", "security_group", "name",
    * etc. System label values can be only strings, Boolean values, or a list of strings. For
-   * example: { "name": "my-test-instance",   "security_group": ["a", "b", "c"],   "spot_instance":
+   * example: { "name": "my-test-instance", "security_group": ["a", "b", "c"], "spot_instance":
    * false }
    * @param systemLabels systemLabels or {@code null} for none
    */

@@ -73,6 +73,20 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disabled;
 
   /**
+   * Optional. Log entries that match any of the exclusion filters will not be exported. If a log
+   * entry is matched by both filter and one of exclusion_filters it will not be exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LogExclusion> exclusions;
+
+  static {
+    // hack to force ProGuard to consider LogExclusion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LogExclusion.class);
+  }
+
+  /**
    * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-
    * queries). The only exported log entries are those that are in the resource owning the sink and
    * that match the filter. For example: logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND
@@ -123,7 +137,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Output only. An IAM identitya service account or groupunder which Logging writes the exported
+   * Output only. An IAM identity—a service account or group—under which Logging writes the exported
    * log entries to the sink's destination. This field is set by sinks.create and sinks.update based
    * on the value of unique_writer_identity in those methods.Until you grant this identity write-
    * access to the destination, log entry exports from this sink will fail. For more information,
@@ -227,6 +241,25 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   public LogSink setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Optional. Log entries that match any of the exclusion filters will not be exported. If a log
+   * entry is matched by both filter and one of exclusion_filters it will not be exported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LogExclusion> getExclusions() {
+    return exclusions;
+  }
+
+  /**
+   * Optional. Log entries that match any of the exclusion filters will not be exported. If a log
+   * entry is matched by both filter and one of exclusion_filters it will not be exported.
+   * @param exclusions exclusions or {@code null} for none
+   */
+  public LogSink setExclusions(java.util.List<LogExclusion> exclusions) {
+    this.exclusions = exclusions;
     return this;
   }
 
@@ -346,7 +379,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An IAM identitya service account or groupunder which Logging writes the exported
+   * Output only. An IAM identity—a service account or group—under which Logging writes the exported
    * log entries to the sink's destination. This field is set by sinks.create and sinks.update based
    * on the value of unique_writer_identity in those methods.Until you grant this identity write-
    * access to the destination, log entry exports from this sink will fail. For more information,
@@ -360,7 +393,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An IAM identitya service account or groupunder which Logging writes the exported
+   * Output only. An IAM identity—a service account or group—under which Logging writes the exported
    * log entries to the sink's destination. This field is set by sinks.create and sinks.update based
    * on the value of unique_writer_identity in those methods.Until you grant this identity write-
    * access to the destination, log entry exports from this sink will fail. For more information,

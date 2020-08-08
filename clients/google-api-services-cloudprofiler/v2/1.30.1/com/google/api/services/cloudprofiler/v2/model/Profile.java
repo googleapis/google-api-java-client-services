@@ -49,8 +49,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Labels associated to this specific profile. These labels will get merged with the
-   * deployment labels for the final data set.  See documentation on deployment labels for
-   * validation rules and limits.
+   * deployment labels for the final data set. See documentation on deployment labels for validation
+   * rules and limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,8 +121,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Labels associated to this specific profile. These labels will get merged with the
-   * deployment labels for the final data set.  See documentation on deployment labels for
-   * validation rules and limits.
+   * deployment labels for the final data set. See documentation on deployment labels for validation
+   * rules and limits.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -131,8 +131,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Labels associated to this specific profile. These labels will get merged with the
-   * deployment labels for the final data set.  See documentation on deployment labels for
-   * validation rules and limits.
+   * deployment labels for the final data set. See documentation on deployment labels for validation
+   * rules and limits.
    * @param labels labels or {@code null} for none
    */
   public Profile setLabels(java.util.Map<String, java.lang.String> labels) {

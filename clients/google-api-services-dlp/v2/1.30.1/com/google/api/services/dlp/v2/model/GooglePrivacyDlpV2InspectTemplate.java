@@ -61,9 +61,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * Output only. The template name.
-   *
-   * The template will have one of the following formats:
+   * Output only. The template name. The template will have one of the following formats:
    * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
    * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
    * The value may be {@code null}.
@@ -147,9 +145,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * Output only. The template name.
-   *
-   * The template will have one of the following formats:
+   * Output only. The template name. The template will have one of the following formats:
    * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
    * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
    * @return value or {@code null} for none
@@ -159,9 +155,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * Output only. The template name.
-   *
-   * The template will have one of the following formats:
+   * Output only. The template name. The template will have one of the following formats:
    * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
    * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
    * @param name name or {@code null} for none

@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   private String createTime;
 
   /**
-   * / // The core content of the template  //
+   * / // The core content of the template //
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +60,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   private java.lang.String displayName;
 
   /**
-   * Output only. The template name.
-   *
-   * The template will have one of the following formats:
+   * Output only. The template name. The template will have one of the following formats:
    * `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR
    * `organizations/ORGANIZATION_ID/deidentifyTemplates/TEMPLATE_ID`
    * The value may be {@code null}.
@@ -95,7 +93,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * / // The core content of the template  //
+   * / // The core content of the template //
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyConfig getDeidentifyConfig() {
@@ -103,7 +101,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * / // The core content of the template  //
+   * / // The core content of the template //
    * @param deidentifyConfig deidentifyConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate setDeidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig) {
@@ -146,9 +144,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * Output only. The template name.
-   *
-   * The template will have one of the following formats:
+   * Output only. The template name. The template will have one of the following formats:
    * `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR
    * `organizations/ORGANIZATION_ID/deidentifyTemplates/TEMPLATE_ID`
    * @return value or {@code null} for none
@@ -158,9 +154,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * Output only. The template name.
-   *
-   * The template will have one of the following formats:
+   * Output only. The template name. The template will have one of the following formats:
    * `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR
    * `organizations/ORGANIZATION_ID/deidentifyTemplates/TEMPLATE_ID`
    * @param name name or {@code null} for none

@@ -39,14 +39,10 @@ public final class GooglePrivacyDlpV2FileSet extends com.google.api.client.json.
 
   /**
    * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing wildcard in the
-   * path is allowed.
-   *
-   * If the url ends in a trailing slash, the bucket or directory represented by the url will be
-   * scanned non-recursively (content in sub-directories will not be scanned). This means that
-   * `gs://mybucket/` is equivalent to `gs://mybucket`, and `gs://mybucket/directory/` is equivalent
-   * to `gs://mybucket/directory`.
-   *
-   * Exactly one of `url` or `regex_file_set` must be set.
+   * path is allowed. If the url ends in a trailing slash, the bucket or directory represented by
+   * the url will be scanned non-recursively (content in sub-directories will not be scanned). This
+   * means that `gs://mybucket/` is equivalent to `gs://mybucket`, and `gs://mybucket/directory/` is
+   * equivalent to `gs://mybucket/directory`. Exactly one of `url` or `regex_file_set` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,14 +67,10 @@ public final class GooglePrivacyDlpV2FileSet extends com.google.api.client.json.
 
   /**
    * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing wildcard in the
-   * path is allowed.
-   *
-   * If the url ends in a trailing slash, the bucket or directory represented by the url will be
-   * scanned non-recursively (content in sub-directories will not be scanned). This means that
-   * `gs://mybucket/` is equivalent to `gs://mybucket`, and `gs://mybucket/directory/` is equivalent
-   * to `gs://mybucket/directory`.
-   *
-   * Exactly one of `url` or `regex_file_set` must be set.
+   * path is allowed. If the url ends in a trailing slash, the bucket or directory represented by
+   * the url will be scanned non-recursively (content in sub-directories will not be scanned). This
+   * means that `gs://mybucket/` is equivalent to `gs://mybucket`, and `gs://mybucket/directory/` is
+   * equivalent to `gs://mybucket/directory`. Exactly one of `url` or `regex_file_set` must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -87,14 +79,10 @@ public final class GooglePrivacyDlpV2FileSet extends com.google.api.client.json.
 
   /**
    * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing wildcard in the
-   * path is allowed.
-   *
-   * If the url ends in a trailing slash, the bucket or directory represented by the url will be
-   * scanned non-recursively (content in sub-directories will not be scanned). This means that
-   * `gs://mybucket/` is equivalent to `gs://mybucket`, and `gs://mybucket/directory/` is equivalent
-   * to `gs://mybucket/directory`.
-   *
-   * Exactly one of `url` or `regex_file_set` must be set.
+   * path is allowed. If the url ends in a trailing slash, the bucket or directory represented by
+   * the url will be scanned non-recursively (content in sub-directories will not be scanned). This
+   * means that `gs://mybucket/` is equivalent to `gs://mybucket`, and `gs://mybucket/directory/` is
+   * equivalent to `gs://mybucket/directory`. Exactly one of `url` or `regex_file_set` must be set.
    * @param url url or {@code null} for none
    */
   public GooglePrivacyDlpV2FileSet setUrl(java.lang.String url) {

@@ -22,12 +22,12 @@ package com.google.api.services.logging.v2.model;
  * a type of "gce_instance" and specifies the use of the labels "instance_id" and "zone" to identify
  * particular VM instances.Different services can support different monitored resource types.The
  * following are specific rules to service defined monitored resources for Monitoring and Logging:
- * The type, display_name, description, labels and launch_stage  fields are all required. The first
- * label of the monitored resource descriptor must be  resource_container. There are legacy
- * monitored resource descritptors  start with project_id. It must include a location label. Maximum
- * of default 5 service defined monitored resource descriptors  is allowed per service. Maximum of
- * default 10 labels per monitored resource is allowed.The default maximum limit can be overridden.
- * Please follow https://cloud.google.com/monitoring/quotas
+ * The type, display_name, description, labels and launch_stage fields are all required. The first
+ * label of the monitored resource descriptor must be resource_container. There are legacy monitored
+ * resource descritptors start with project_id. It must include a location label. Maximum of default
+ * 5 service defined monitored resource descriptors is allowed per service. Maximum of default 10
+ * labels per monitored resource is allowed.The default maximum limit can be overridden. Please
+ * follow https://cloud.google.com/monitoring/quotas
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -96,8 +96,8 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
    * databases in Google Cloud SQL.All service defined monitored resource types must be prefixed
    * with the service name, in the format of {service name}/{relative resource name}. The relative
    * resource name must follow: Only upper and lower-case letters and digits are allowed. It must
-   * start with upper case character and is recommended to use Upper  Camel Case style. The maximum
-   * number of characters allowed for the relative_resource_name  is 100.Note there are legacy
+   * start with upper case character and is recommended to use Upper Camel Case style. The maximum
+   * number of characters allowed for the relative_resource_name is 100.Note there are legacy
    * service monitored resources not following this rule.
    * The value may be {@code null}.
    */
@@ -216,8 +216,8 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
    * databases in Google Cloud SQL.All service defined monitored resource types must be prefixed
    * with the service name, in the format of {service name}/{relative resource name}. The relative
    * resource name must follow: Only upper and lower-case letters and digits are allowed. It must
-   * start with upper case character and is recommended to use Upper  Camel Case style. The maximum
-   * number of characters allowed for the relative_resource_name  is 100.Note there are legacy
+   * start with upper case character and is recommended to use Upper Camel Case style. The maximum
+   * number of characters allowed for the relative_resource_name is 100.Note there are legacy
    * service monitored resources not following this rule.
    * @return value or {@code null} for none
    */
@@ -230,8 +230,8 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
    * databases in Google Cloud SQL.All service defined monitored resource types must be prefixed
    * with the service name, in the format of {service name}/{relative resource name}. The relative
    * resource name must follow: Only upper and lower-case letters and digits are allowed. It must
-   * start with upper case character and is recommended to use Upper  Camel Case style. The maximum
-   * number of characters allowed for the relative_resource_name  is 100.Note there are legacy
+   * start with upper case character and is recommended to use Upper Camel Case style. The maximum
+   * number of characters allowed for the relative_resource_name is 100.Note there are legacy
    * service monitored resources not following this rule.
    * @param type type or {@code null} for none
    */

@@ -41,7 +41,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * other log entries in the same project, with the same timestamp, and with the same insert_id to
    * be duplicates which are removed in a single query result. However, there are no guarantees of
    * de-duplication in the export of logs.If the insert_id is omitted when writing a log entry, the
-   * Logging API  assigns its own unique identifier in this field.In queries, the insert_id is also
+   * Logging API assigns its own unique identifier in this field.In queries, the insert_id is also
    * used to order log entries that have the same log_name and timestamp values.
    * The value may be {@code null}.
    */
@@ -213,7 +213,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * other log entries in the same project, with the same timestamp, and with the same insert_id to
    * be duplicates which are removed in a single query result. However, there are no guarantees of
    * de-duplication in the export of logs.If the insert_id is omitted when writing a log entry, the
-   * Logging API  assigns its own unique identifier in this field.In queries, the insert_id is also
+   * Logging API assigns its own unique identifier in this field.In queries, the insert_id is also
    * used to order log entries that have the same log_name and timestamp values.
    * @return value or {@code null} for none
    */
@@ -226,7 +226,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * other log entries in the same project, with the same timestamp, and with the same insert_id to
    * be duplicates which are removed in a single query result. However, there are no guarantees of
    * de-duplication in the export of logs.If the insert_id is omitted when writing a log entry, the
-   * Logging API  assigns its own unique identifier in this field.In queries, the insert_id is also
+   * Logging API assigns its own unique identifier in this field.In queries, the insert_id is also
    * used to order log entries that have the same log_name and timestamp values.
    * @param insertId insertId or {@code null} for none
    */

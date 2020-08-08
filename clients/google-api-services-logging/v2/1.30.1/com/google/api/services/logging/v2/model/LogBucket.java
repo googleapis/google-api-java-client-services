@@ -52,10 +52,18 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String lifecycleState;
 
   /**
+   * Whether the bucket has been locked. The retention period on a locked bucket may not be changed.
+   * Locked buckets may only be deleted if they are empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locked;
+
+  /**
    * The resource name of the bucket. For example: "projects/my-project-id/locations/my-
-   * location/buckets/my-bucket-id The supported locations are:  "global"  "us-central1"For the
-   * location of global it is unspecified where logs are actually stored. Once a bucket has been
-   * created, the location can not be changed.
+   * location/buckets/my-bucket-id The supported locations are: "global"For the location of global
+   * it is unspecified where logs are actually stored. Once a bucket has been created, the location
+   * can not be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,10 +139,29 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether the bucket has been locked. The retention period on a locked bucket may not be changed.
+   * Locked buckets may only be deleted if they are empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocked() {
+    return locked;
+  }
+
+  /**
+   * Whether the bucket has been locked. The retention period on a locked bucket may not be changed.
+   * Locked buckets may only be deleted if they are empty.
+   * @param locked locked or {@code null} for none
+   */
+  public LogBucket setLocked(java.lang.Boolean locked) {
+    this.locked = locked;
+    return this;
+  }
+
+  /**
    * The resource name of the bucket. For example: "projects/my-project-id/locations/my-
-   * location/buckets/my-bucket-id The supported locations are:  "global"  "us-central1"For the
-   * location of global it is unspecified where logs are actually stored. Once a bucket has been
-   * created, the location can not be changed.
+   * location/buckets/my-bucket-id The supported locations are: "global"For the location of global
+   * it is unspecified where logs are actually stored. Once a bucket has been created, the location
+   * can not be changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -143,9 +170,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the bucket. For example: "projects/my-project-id/locations/my-
-   * location/buckets/my-bucket-id The supported locations are:  "global"  "us-central1"For the
-   * location of global it is unspecified where logs are actually stored. Once a bucket has been
-   * created, the location can not be changed.
+   * location/buckets/my-bucket-id The supported locations are: "global"For the location of global
+   * it is unspecified where logs are actually stored. Once a bucket has been created, the location
+   * can not be changed.
    * @param name name or {@code null} for none
    */
   public LogBucket setName(java.lang.String name) {

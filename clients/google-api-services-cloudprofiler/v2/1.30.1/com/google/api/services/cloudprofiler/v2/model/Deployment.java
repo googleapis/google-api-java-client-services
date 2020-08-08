@@ -33,15 +33,12 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   /**
    * Labels identify the deployment within the user universe and same target. Validation regex for
    * label names: `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`. Value for an individual label must be <=
-   * 512 bytes, the total size of all label names and values must be <= 1024 bytes.
-   *
-   * Label named "language" can be used to record the programming language of the profiled
-   * deployment. The standard choices for the value include "java", "go", "python", "ruby",
-   * "nodejs", "php", "dotnet".
-   *
-   * For deployments running on Google Cloud Platform, "zone" or "region" label should be present
-   * describing the deployment location. An example of a zone is "us-central1-a", an example of a
-   * region is "us-central1" or "us-central".
+   * 512 bytes, the total size of all label names and values must be <= 1024 bytes. Label named
+   * "language" can be used to record the programming language of the profiled deployment. The
+   * standard choices for the value include "java", "go", "python", "ruby", "nodejs", "php",
+   * "dotnet". For deployments running on Google Cloud Platform, "zone" or "region" label should be
+   * present describing the deployment location. An example of a zone is "us-central1-a", an example
+   * of a region is "us-central1" or "us-central".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,15 +64,12 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   /**
    * Labels identify the deployment within the user universe and same target. Validation regex for
    * label names: `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`. Value for an individual label must be <=
-   * 512 bytes, the total size of all label names and values must be <= 1024 bytes.
-   *
-   * Label named "language" can be used to record the programming language of the profiled
-   * deployment. The standard choices for the value include "java", "go", "python", "ruby",
-   * "nodejs", "php", "dotnet".
-   *
-   * For deployments running on Google Cloud Platform, "zone" or "region" label should be present
-   * describing the deployment location. An example of a zone is "us-central1-a", an example of a
-   * region is "us-central1" or "us-central".
+   * 512 bytes, the total size of all label names and values must be <= 1024 bytes. Label named
+   * "language" can be used to record the programming language of the profiled deployment. The
+   * standard choices for the value include "java", "go", "python", "ruby", "nodejs", "php",
+   * "dotnet". For deployments running on Google Cloud Platform, "zone" or "region" label should be
+   * present describing the deployment location. An example of a zone is "us-central1-a", an example
+   * of a region is "us-central1" or "us-central".
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -85,15 +79,12 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   /**
    * Labels identify the deployment within the user universe and same target. Validation regex for
    * label names: `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`. Value for an individual label must be <=
-   * 512 bytes, the total size of all label names and values must be <= 1024 bytes.
-   *
-   * Label named "language" can be used to record the programming language of the profiled
-   * deployment. The standard choices for the value include "java", "go", "python", "ruby",
-   * "nodejs", "php", "dotnet".
-   *
-   * For deployments running on Google Cloud Platform, "zone" or "region" label should be present
-   * describing the deployment location. An example of a zone is "us-central1-a", an example of a
-   * region is "us-central1" or "us-central".
+   * 512 bytes, the total size of all label names and values must be <= 1024 bytes. Label named
+   * "language" can be used to record the programming language of the profiled deployment. The
+   * standard choices for the value include "java", "go", "python", "ruby", "nodejs", "php",
+   * "dotnet". For deployments running on Google Cloud Platform, "zone" or "region" label should be
+   * present describing the deployment location. An example of a zone is "us-central1-a", an example
+   * of a region is "us-central1" or "us-central".
    * @param labels labels or {@code null} for none
    */
   public Deployment setLabels(java.util.Map<String, java.lang.String> labels) {

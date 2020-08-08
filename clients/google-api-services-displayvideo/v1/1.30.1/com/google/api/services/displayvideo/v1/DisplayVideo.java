@@ -144,8 +144,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
     /**
      * Audits an advertiser. Returns the counts of used entities per resource type under the advertiser
-     * provided. Used entities count towards their [respective resource limit]:
-     * (https://support.google.com/displayvideo/answer/6071450?hl=en)
+     * provided. Used entities count towards their respective resource limit. See
+     * https://support.google.com/displayvideo/answer/6071450.
      *
      * Create a request for the method "advertisers.audit".
      *
@@ -170,8 +170,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Audits an advertiser. Returns the counts of used entities per resource type under the
-       * advertiser provided. Used entities count towards their [respective resource limit]:
-       * (https://support.google.com/displayvideo/answer/6071450?hl=en)
+       * advertiser provided. Used entities count towards their respective resource limit. See
+       * https://support.google.com/displayvideo/answer/6071450.
        *
        * Create a request for the method "advertisers.audit".
        *
@@ -12361,33 +12361,33 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm.
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm. */
       public Get setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
       }
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm. */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm.
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm. */
       public Get setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -12501,17 +12501,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the DV3 advertiser that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 advertiser that has access to the custom bidding algorithm. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** The ID of the DV3 advertiser that has access to the custom bidding algorithm.
+      /** The ID of the DV360 advertiser that has access to the custom bidding algorithm.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
-      /** The ID of the DV3 advertiser that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 advertiser that has access to the custom bidding algorithm. */
       public List setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -12647,17 +12647,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm. */
       @com.google.api.client.util.Key
       private java.lang.Long partnerId;
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm.
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm.
        */
       public java.lang.Long getPartnerId() {
         return partnerId;
       }
 
-      /** The ID of the DV3 partner that has access to the custom bidding algorithm. */
+      /** The ID of the DV360 partner that has access to the custom bidding algorithm. */
       public List setPartnerId(java.lang.Long partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -16654,9 +16654,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
     /**
      * Bulk edits targeting options under a single partner. The operation will delete the assigned
-     * targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.delete_requests and
+     * targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.deleteRequests and
      * then create the assigned targeting options provided in
-     * BulkEditPartnerAssignedTargetingOptionsRequest.create_requests .
+     * BulkEditPartnerAssignedTargetingOptionsRequest.createRequests .
      *
      * Create a request for the method "partners.bulkEditPartnerAssignedTargetingOptions".
      *
@@ -16683,9 +16683,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Bulk edits targeting options under a single partner. The operation will delete the assigned
-       * targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.delete_requests
-       * and then create the assigned targeting options provided in
-       * BulkEditPartnerAssignedTargetingOptionsRequest.create_requests .
+       * targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.deleteRequests and
+       * then create the assigned targeting options provided in
+       * BulkEditPartnerAssignedTargetingOptionsRequest.createRequests .
        *
        * Create a request for the method "partners.bulkEditPartnerAssignedTargetingOptions".
        *
@@ -20353,8 +20353,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
     /**
      * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in
-     * BulkEditAssignedUserRolesRequest.deleted_assigned_user_roles and then assign the user roles
-     * provided in BulkEditAssignedUserRolesRequest.created_assigned_user_roles.
+     * BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided
+     * in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
      *
      * Create a request for the method "users.bulkEditAssignedUserRoles".
      *
@@ -20381,8 +20381,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in
-       * BulkEditAssignedUserRolesRequest.deleted_assigned_user_roles and then assign the user roles
-       * provided in BulkEditAssignedUserRolesRequest.created_assigned_user_roles.
+       * BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles
+       * provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
        *
        * Create a request for the method "users.bulkEditAssignedUserRoles".
        *

@@ -509,10 +509,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name A reference to the POSIX account to update. POSIX accounts are identified
-      by the project ID they are
-       *        associated with. A reference to the POSIX
-      account is in format
+       * @param name A reference to the POSIX account to update. POSIX accounts are identified by the project ID they are
+       *        associated with. A reference to the POSIX account is in format
        *        `users/{user}/projects/{project}`.
        * @return the request
        */
@@ -539,10 +537,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name A reference to the POSIX account to update. POSIX accounts are identified
-      by the project ID they are
-       *        associated with. A reference to the POSIX
-      account is in format
+         * @param name A reference to the POSIX account to update. POSIX accounts are identified by the project ID they are
+       *        associated with. A reference to the POSIX account is in format
        *        `users/{user}/projects/{project}`.
          * @since 1.13
          */
@@ -693,8 +689,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The fingerprint of the public key to update. Public keys are identified by
-      their SHA-256
+       * @param name The fingerprint of the public key to update. Public keys are identified by their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
        * @return the request
@@ -722,8 +717,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fingerprint of the public key to update. Public keys are identified by
-      their SHA-256
+         * @param name The fingerprint of the public key to update. Public keys are identified by their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
          * @since 1.13
@@ -837,10 +831,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The fingerprint of the public key to retrieve. Public keys are identified
-      by their SHA-256
-       *        fingerprint. The fingerprint of the public key is in
-      format
+       * @param name The fingerprint of the public key to retrieve. Public keys are identified by their SHA-256
+       *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
        * @return the request
        */
@@ -867,10 +859,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fingerprint of the public key to retrieve. Public keys are identified
-      by their SHA-256
-       *        fingerprint. The fingerprint of the public key is in
-      format
+         * @param name The fingerprint of the public key to retrieve. Public keys are identified by their SHA-256
+       *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
          * @since 1.13
          */
@@ -994,8 +984,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The fingerprint of the public key to update. Public keys are identified by
-      their SHA-256
+       * @param name The fingerprint of the public key to update. Public keys are identified by their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
        * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SshPublicKey}
@@ -1025,8 +1014,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fingerprint of the public key to update. Public keys are identified by
-      their SHA-256
+         * @param name The fingerprint of the public key to update. Public keys are identified by their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
          * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SshPublicKey}

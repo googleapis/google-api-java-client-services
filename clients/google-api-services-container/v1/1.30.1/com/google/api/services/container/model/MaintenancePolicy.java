@@ -33,8 +33,8 @@ public final class MaintenancePolicy extends com.google.api.client.json.GenericJ
   /**
    * A hash identifying the version of this policy, so that updates to fields of the policy won't
    * accidentally undo intermediate changes (and so that users of the API unaware of some fields
-   * won't accidentally remove other fields). Make a get() request to the cluster to get the current
-   * resource version and include it with requests to set the policy.
+   * won't accidentally remove other fields). Make a `get()` request to the cluster to get the
+   * current resource version and include it with requests to set the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class MaintenancePolicy extends com.google.api.client.json.GenericJ
   /**
    * A hash identifying the version of this policy, so that updates to fields of the policy won't
    * accidentally undo intermediate changes (and so that users of the API unaware of some fields
-   * won't accidentally remove other fields). Make a get() request to the cluster to get the current
-   * resource version and include it with requests to set the policy.
+   * won't accidentally remove other fields). Make a `get()` request to the cluster to get the
+   * current resource version and include it with requests to set the policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -61,8 +61,8 @@ public final class MaintenancePolicy extends com.google.api.client.json.GenericJ
   /**
    * A hash identifying the version of this policy, so that updates to fields of the policy won't
    * accidentally undo intermediate changes (and so that users of the API unaware of some fields
-   * won't accidentally remove other fields). Make a get() request to the cluster to get the current
-   * resource version and include it with requests to set the policy.
+   * won't accidentally remove other fields). Make a `get()` request to the cluster to get the
+   * current resource version and include it with requests to set the policy.
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public MaintenancePolicy setResourceVersion(java.lang.String resourceVersion) {

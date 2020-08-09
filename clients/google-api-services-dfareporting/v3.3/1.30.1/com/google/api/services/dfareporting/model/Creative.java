@@ -219,10 +219,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * will either be assigned DISPLAY or DISPLAY_INTERSTITIAL instead. IN_STREAM_VIDEO refers to
    * rendering in in-stream video ads developed with the VAST standard. IN_STREAM_AUDIO refers to
    * rendering in in-stream audio ads developed with the VAST standard. Applicable to all creative
-   * types.
-   *
-   * Acceptable values are: - "APP" - "APP_INTERSTITIAL" - "IN_STREAM_VIDEO" - "IN_STREAM_AUDIO" -
-   * "DISPLAY" - "DISPLAY_INTERSTITIAL"
+   * types. Acceptable values are: - "APP" - "APP_INTERSTITIAL" - "IN_STREAM_VIDEO" -
+   * "IN_STREAM_AUDIO" - "DISPLAY" - "DISPLAY_INTERSTITIAL"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -567,9 +565,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalFileSize;
 
   /**
-   * Type of this creative. This is a required field. Applicable to all creative types.
-   *
-   * Note: FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
+   * Type of this creative. This is a required field. Applicable to all creative types. *Note:*
+   * FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
    * should use DISPLAY as a replacement for these types.
    * The value may be {@code null}.
    */
@@ -1014,10 +1011,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * will either be assigned DISPLAY or DISPLAY_INTERSTITIAL instead. IN_STREAM_VIDEO refers to
    * rendering in in-stream video ads developed with the VAST standard. IN_STREAM_AUDIO refers to
    * rendering in in-stream audio ads developed with the VAST standard. Applicable to all creative
-   * types.
-   *
-   * Acceptable values are: - "APP" - "APP_INTERSTITIAL" - "IN_STREAM_VIDEO" - "IN_STREAM_AUDIO" -
-   * "DISPLAY" - "DISPLAY_INTERSTITIAL"
+   * types. Acceptable values are: - "APP" - "APP_INTERSTITIAL" - "IN_STREAM_VIDEO" -
+   * "IN_STREAM_AUDIO" - "DISPLAY" - "DISPLAY_INTERSTITIAL"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCompatibility() {
@@ -1032,10 +1027,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * will either be assigned DISPLAY or DISPLAY_INTERSTITIAL instead. IN_STREAM_VIDEO refers to
    * rendering in in-stream video ads developed with the VAST standard. IN_STREAM_AUDIO refers to
    * rendering in in-stream audio ads developed with the VAST standard. Applicable to all creative
-   * types.
-   *
-   * Acceptable values are: - "APP" - "APP_INTERSTITIAL" - "IN_STREAM_VIDEO" - "IN_STREAM_AUDIO" -
-   * "DISPLAY" - "DISPLAY_INTERSTITIAL"
+   * types. Acceptable values are: - "APP" - "APP_INTERSTITIAL" - "IN_STREAM_VIDEO" -
+   * "IN_STREAM_AUDIO" - "DISPLAY" - "DISPLAY_INTERSTITIAL"
    * @param compatibility compatibility or {@code null} for none
    */
   public Creative setCompatibility(java.util.List<java.lang.String> compatibility) {
@@ -1840,9 +1833,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of this creative. This is a required field. Applicable to all creative types.
-   *
-   * Note: FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
+   * Type of this creative. This is a required field. Applicable to all creative types. *Note:*
+   * FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
    * should use DISPLAY as a replacement for these types.
    * @return value or {@code null} for none
    */
@@ -1851,9 +1843,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of this creative. This is a required field. Applicable to all creative types.
-   *
-   * Note: FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
+   * Type of this creative. This is a required field. Applicable to all creative types. *Note:*
+   * FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
    * should use DISPLAY as a replacement for these types.
    * @param type type or {@code null} for none
    */

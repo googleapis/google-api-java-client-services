@@ -113,7 +113,7 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter list of site IDs associated with this event tag. The siteFilterType determines whether
-   * this is a whitelist or blacklist filter.
+   * this is a allowlist or blocklist filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -363,7 +363,7 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter list of site IDs associated with this event tag. The siteFilterType determines whether
-   * this is a whitelist or blacklist filter.
+   * this is a allowlist or blocklist filter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getSiteIds() {
@@ -372,7 +372,7 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter list of site IDs associated with this event tag. The siteFilterType determines whether
-   * this is a whitelist or blacklist filter.
+   * this is a allowlist or blocklist filter.
    * @param siteIds siteIds or {@code null} for none
    */
   public EventTag setSiteIds(java.util.List<java.lang.Long> siteIds) {

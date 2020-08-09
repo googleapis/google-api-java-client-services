@@ -342,10 +342,9 @@ public final class Placement extends com.google.api.client.json.GenericJson {
 
   /**
    * VPAID adapter setting for this placement. Controls which VPAID format the measurement adapter
-   * will use for in-stream video creatives assigned to this placement.
-   *
-   * Note: Flash is no longer supported. This field now defaults to HTML5 when the following values
-   * are provided: FLASH, BOTH.
+   * will use for in-stream video creatives assigned to this placement. *Note:* Flash is no longer
+   * supported. This field now defaults to HTML5 when the following values are provided: FLASH,
+   * BOTH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1093,10 +1092,9 @@ public final class Placement extends com.google.api.client.json.GenericJson {
 
   /**
    * VPAID adapter setting for this placement. Controls which VPAID format the measurement adapter
-   * will use for in-stream video creatives assigned to this placement.
-   *
-   * Note: Flash is no longer supported. This field now defaults to HTML5 when the following values
-   * are provided: FLASH, BOTH.
+   * will use for in-stream video creatives assigned to this placement. *Note:* Flash is no longer
+   * supported. This field now defaults to HTML5 when the following values are provided: FLASH,
+   * BOTH.
    * @return value or {@code null} for none
    */
   public java.lang.String getVpaidAdapterChoice() {
@@ -1105,10 +1103,9 @@ public final class Placement extends com.google.api.client.json.GenericJson {
 
   /**
    * VPAID adapter setting for this placement. Controls which VPAID format the measurement adapter
-   * will use for in-stream video creatives assigned to this placement.
-   *
-   * Note: Flash is no longer supported. This field now defaults to HTML5 when the following values
-   * are provided: FLASH, BOTH.
+   * will use for in-stream video creatives assigned to this placement. *Note:* Flash is no longer
+   * supported. This field now defaults to HTML5 when the following values are provided: FLASH,
+   * BOTH.
    * @param vpaidAdapterChoice vpaidAdapterChoice or {@code null} for none
    */
   public Placement setVpaidAdapterChoice(java.lang.String vpaidAdapterChoice) {

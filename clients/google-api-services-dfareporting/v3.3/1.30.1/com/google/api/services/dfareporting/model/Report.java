@@ -1846,7 +1846,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
     private java.util.List<java.lang.String> metricNames;
 
     /**
-     * The list of names of  Reach By Frequency metrics the report should include.
+     * The list of names of Reach By Frequency metrics the report should include.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1976,7 +1976,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The list of names of  Reach By Frequency metrics the report should include.
+     * The list of names of Reach By Frequency metrics the report should include.
      * @return value or {@code null} for none
      */
     public java.util.List<java.lang.String> getReachByFrequencyMetricNames() {
@@ -1984,7 +1984,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The list of names of  Reach By Frequency metrics the report should include.
+     * The list of names of Reach By Frequency metrics the report should include.
      * @param reachByFrequencyMetricNames reachByFrequencyMetricNames or {@code null} for none
      */
     public ReachCriteria setReachByFrequencyMetricNames(java.util.List<java.lang.String> reachByFrequencyMetricNames) {
@@ -2026,7 +2026,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
     private java.lang.Integer every;
 
     /**
-     * The expiration date when the scheduled report stops running.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2034,8 +2033,8 @@ public final class Report extends com.google.api.client.json.GenericJson {
 
     /**
      * The interval for which the report is repeated. Note: - "DAILY" also requires field "every" to
-     * be set.  - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set.  -
-     * "MONTHLY" also requires fields "every" and "runsOnDayOfMonth" to be set.
+     * be set. - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set. - "MONTHLY"
+     * also requires fields "every" and "runsOnDayOfMonth" to be set.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2060,7 +2059,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
     private java.lang.String runsOnDayOfMonth;
 
     /**
-     * Start date of date range for which scheduled reports should be run.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2103,7 +2101,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The expiration date when the scheduled report stops running.
      * @return value or {@code null} for none
      */
     public com.google.api.client.util.DateTime getExpirationDate() {
@@ -2111,7 +2108,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The expiration date when the scheduled report stops running.
      * @param expirationDate expirationDate or {@code null} for none
      */
     public Schedule setExpirationDate(com.google.api.client.util.DateTime expirationDate) {
@@ -2121,8 +2117,8 @@ public final class Report extends com.google.api.client.json.GenericJson {
 
     /**
      * The interval for which the report is repeated. Note: - "DAILY" also requires field "every" to
-     * be set.  - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set.  -
-     * "MONTHLY" also requires fields "every" and "runsOnDayOfMonth" to be set.
+     * be set. - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set. - "MONTHLY"
+     * also requires fields "every" and "runsOnDayOfMonth" to be set.
      * @return value or {@code null} for none
      */
     public java.lang.String getRepeats() {
@@ -2131,8 +2127,8 @@ public final class Report extends com.google.api.client.json.GenericJson {
 
     /**
      * The interval for which the report is repeated. Note: - "DAILY" also requires field "every" to
-     * be set.  - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set.  -
-     * "MONTHLY" also requires fields "every" and "runsOnDayOfMonth" to be set.
+     * be set. - "WEEKLY" also requires fields "every" and "repeatsOnWeekDays" to be set. - "MONTHLY"
+     * also requires fields "every" and "runsOnDayOfMonth" to be set.
      * @param repeats repeats or {@code null} for none
      */
     public Schedule setRepeats(java.lang.String repeats) {
@@ -2183,7 +2179,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Start date of date range for which scheduled reports should be run.
      * @return value or {@code null} for none
      */
     public com.google.api.client.util.DateTime getStartDate() {
@@ -2191,7 +2186,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Start date of date range for which scheduled reports should be run.
      * @param startDate startDate or {@code null} for none
      */
     public Schedule setStartDate(com.google.api.client.util.DateTime startDate) {

@@ -53,20 +53,16 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   private DimensionValue idDimensionValue;
 
   /**
-   * Tag types for regular placements.
-   *
-   * Acceptable values are: - "STANDARD" - "IFRAME_JAVASCRIPT_INPAGE" - "INTERNAL_REDIRECT_INPAGE" -
-   * "JAVASCRIPT_INPAGE"
+   * Tag types for regular placements. Acceptable values are: - "STANDARD" -
+   * "IFRAME_JAVASCRIPT_INPAGE" - "INTERNAL_REDIRECT_INPAGE" - "JAVASCRIPT_INPAGE"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inpageTagFormats;
 
   /**
-   * Tag types for interstitial placements.
-   *
-   * Acceptable values are: - "IFRAME_JAVASCRIPT_INTERSTITIAL" - "INTERNAL_REDIRECT_INTERSTITIAL" -
-   * "JAVASCRIPT_INTERSTITIAL"
+   * Tag types for interstitial placements. Acceptable values are: -
+   * "IFRAME_JAVASCRIPT_INTERSTITIAL" - "INTERNAL_REDIRECT_INTERSTITIAL" - "JAVASCRIPT_INTERSTITIAL"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,10 +148,8 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag types for regular placements.
-   *
-   * Acceptable values are: - "STANDARD" - "IFRAME_JAVASCRIPT_INPAGE" - "INTERNAL_REDIRECT_INPAGE" -
-   * "JAVASCRIPT_INPAGE"
+   * Tag types for regular placements. Acceptable values are: - "STANDARD" -
+   * "IFRAME_JAVASCRIPT_INPAGE" - "INTERNAL_REDIRECT_INPAGE" - "JAVASCRIPT_INPAGE"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInpageTagFormats() {
@@ -163,10 +157,8 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag types for regular placements.
-   *
-   * Acceptable values are: - "STANDARD" - "IFRAME_JAVASCRIPT_INPAGE" - "INTERNAL_REDIRECT_INPAGE" -
-   * "JAVASCRIPT_INPAGE"
+   * Tag types for regular placements. Acceptable values are: - "STANDARD" -
+   * "IFRAME_JAVASCRIPT_INPAGE" - "INTERNAL_REDIRECT_INPAGE" - "JAVASCRIPT_INPAGE"
    * @param inpageTagFormats inpageTagFormats or {@code null} for none
    */
   public DirectorySite setInpageTagFormats(java.util.List<java.lang.String> inpageTagFormats) {
@@ -175,10 +167,8 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag types for interstitial placements.
-   *
-   * Acceptable values are: - "IFRAME_JAVASCRIPT_INTERSTITIAL" - "INTERNAL_REDIRECT_INTERSTITIAL" -
-   * "JAVASCRIPT_INTERSTITIAL"
+   * Tag types for interstitial placements. Acceptable values are: -
+   * "IFRAME_JAVASCRIPT_INTERSTITIAL" - "INTERNAL_REDIRECT_INTERSTITIAL" - "JAVASCRIPT_INTERSTITIAL"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInterstitialTagFormats() {
@@ -186,10 +176,8 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag types for interstitial placements.
-   *
-   * Acceptable values are: - "IFRAME_JAVASCRIPT_INTERSTITIAL" - "INTERNAL_REDIRECT_INTERSTITIAL" -
-   * "JAVASCRIPT_INTERSTITIAL"
+   * Tag types for interstitial placements. Acceptable values are: -
+   * "IFRAME_JAVASCRIPT_INTERSTITIAL" - "INTERNAL_REDIRECT_INTERSTITIAL" - "JAVASCRIPT_INTERSTITIAL"
    * @param interstitialTagFormats interstitialTagFormats or {@code null} for none
    */
   public DirectorySite setInterstitialTagFormats(java.util.List<java.lang.String> interstitialTagFormats) {

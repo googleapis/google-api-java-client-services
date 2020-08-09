@@ -226,9 +226,9 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
   /**
    * Value of the cat= parameter in the floodlight tag, which the ad servers use to identify the
    * activity. This is optional: if empty, a new tag string will be generated for you. This string
-   * must be 1 to 8 characters long, with valid characters being [a-z][A-Z][0-9][-][ _ ]. This tag
-   * string must also be unique among activities of the same activity group. This field is read-only
-   * after insertion.
+   * must be 1 to 8 characters long, with valid characters being a-z0-9[ _ ]. This tag string must
+   * also be unique among activities of the same activity group. This field is read-only after
+   * insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -710,9 +710,9 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
   /**
    * Value of the cat= parameter in the floodlight tag, which the ad servers use to identify the
    * activity. This is optional: if empty, a new tag string will be generated for you. This string
-   * must be 1 to 8 characters long, with valid characters being [a-z][A-Z][0-9][-][ _ ]. This tag
-   * string must also be unique among activities of the same activity group. This field is read-only
-   * after insertion.
+   * must be 1 to 8 characters long, with valid characters being a-z0-9[ _ ]. This tag string must
+   * also be unique among activities of the same activity group. This field is read-only after
+   * insertion.
    * @return value or {@code null} for none
    */
   public java.lang.String getTagString() {
@@ -722,9 +722,9 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
   /**
    * Value of the cat= parameter in the floodlight tag, which the ad servers use to identify the
    * activity. This is optional: if empty, a new tag string will be generated for you. This string
-   * must be 1 to 8 characters long, with valid characters being [a-z][A-Z][0-9][-][ _ ]. This tag
-   * string must also be unique among activities of the same activity group. This field is read-only
-   * after insertion.
+   * must be 1 to 8 characters long, with valid characters being a-z0-9[ _ ]. This tag string must
+   * also be unique among activities of the same activity group. This field is read-only after
+   * insertion.
    * @param tagString tagString or {@code null} for none
    */
   public FloodlightActivity setTagString(java.lang.String tagString) {

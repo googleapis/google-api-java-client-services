@@ -38,8 +38,6 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   private java.lang.String dimensionName;
 
   /**
-   * The end date of the date range for which to retrieve dimension values. A string of the format
-   * "yyyy-MM-dd".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,15 +57,13 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The kind of request this is, in this case dfareporting#dimensionValueRequest.
+   * The kind of request this is, in this case dfareporting#dimensionValueRequest .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The start date of the date range for which to retrieve dimension values. A string of the format
-   * "yyyy-MM-dd".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +87,6 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The end date of the date range for which to retrieve dimension values. A string of the format
-   * "yyyy-MM-dd".
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndDate() {
@@ -100,8 +94,6 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The end date of the date range for which to retrieve dimension values. A string of the format
-   * "yyyy-MM-dd".
    * @param endDate endDate or {@code null} for none
    */
   public DimensionValueRequest setEndDate(com.google.api.client.util.DateTime endDate) {
@@ -127,7 +119,7 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The kind of request this is, in this case dfareporting#dimensionValueRequest.
+   * The kind of request this is, in this case dfareporting#dimensionValueRequest .
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -135,7 +127,7 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The kind of request this is, in this case dfareporting#dimensionValueRequest.
+   * The kind of request this is, in this case dfareporting#dimensionValueRequest .
    * @param kind kind or {@code null} for none
    */
   public DimensionValueRequest setKind(java.lang.String kind) {
@@ -144,8 +136,6 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The start date of the date range for which to retrieve dimension values. A string of the format
-   * "yyyy-MM-dd".
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartDate() {
@@ -153,8 +143,6 @@ public final class DimensionValueRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The start date of the date range for which to retrieve dimension values. A string of the format
-   * "yyyy-MM-dd".
    * @param startDate startDate or {@code null} for none
    */
   public DimensionValueRequest setStartDate(com.google.api.client.util.DateTime startDate) {

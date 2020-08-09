@@ -31,7 +31,6 @@ package com.google.api.services.dfareporting.model;
 public final class DateRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end date of the date range, inclusive. A string of the format: "yyyy-MM-dd".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +51,12 @@ public final class DateRange extends com.google.api.client.json.GenericJson {
   private java.lang.String relativeDateRange;
 
   /**
-   * The start date of the date range, inclusive. A string of the format: "yyyy-MM-dd".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime startDate;
 
   /**
-   * The end date of the date range, inclusive. A string of the format: "yyyy-MM-dd".
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndDate() {
@@ -67,7 +64,6 @@ public final class DateRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end date of the date range, inclusive. A string of the format: "yyyy-MM-dd".
    * @param endDate endDate or {@code null} for none
    */
   public DateRange setEndDate(com.google.api.client.util.DateTime endDate) {
@@ -110,7 +106,6 @@ public final class DateRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start date of the date range, inclusive. A string of the format: "yyyy-MM-dd".
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartDate() {
@@ -118,7 +113,6 @@ public final class DateRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start date of the date range, inclusive. A string of the format: "yyyy-MM-dd".
    * @param startDate startDate or {@code null} for none
    */
   public DateRange setStartDate(com.google.api.client.util.DateTime startDate) {

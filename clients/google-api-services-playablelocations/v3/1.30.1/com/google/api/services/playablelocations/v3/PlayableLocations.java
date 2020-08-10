@@ -144,7 +144,6 @@ public class PlayableLocations extends com.google.api.client.googleapis.services
 
     /**
      * Logs new events when playable locations are displayed, and when they are interacted with.
-     *
      * Impressions are not partially saved; either all impressions are saved and this request succeeds,
      * or no impressions are saved, and this request fails.
      *
@@ -169,7 +168,6 @@ public class PlayableLocations extends com.google.api.client.googleapis.services
 
       /**
        * Logs new events when playable locations are displayed, and when they are interacted with.
-       *
        * Impressions are not partially saved; either all impressions are saved and this request
        * succeeds, or no impressions are saved, and this request fails.
        *
@@ -249,10 +247,8 @@ public class PlayableLocations extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Logs bad playable location reports submitted by players.
-     *
-     * Reports are not partially saved; either all reports are saved and this request succeeds, or no
-     * reports are saved, and this request fails.
+     * Logs bad playable location reports submitted by players. Reports are not partially saved; either
+     * all reports are saved and this request succeeds, or no reports are saved, and this request fails.
      *
      * Create a request for the method "v3.logPlayerReports".
      *
@@ -274,10 +270,9 @@ public class PlayableLocations extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v3:logPlayerReports";
 
       /**
-       * Logs bad playable location reports submitted by players.
-       *
-       * Reports are not partially saved; either all reports are saved and this request succeeds, or no
-       * reports are saved, and this request fails.
+       * Logs bad playable location reports submitted by players. Reports are not partially saved;
+       * either all reports are saved and this request succeeds, or no reports are saved, and this
+       * request fails.
        *
        * Create a request for the method "v3.logPlayerReports".
        *
@@ -356,10 +351,8 @@ public class PlayableLocations extends com.google.api.client.googleapis.services
     }
     /**
      * Returns a set of playable locations that lie within a specified area, that satisfy optional
-     * filter criteria.
-     *
-     * Note: Identical `SamplePlayableLocations` requests can return different results as the state of
-     * the world changes over time.
+     * filter criteria. Note: Identical `SamplePlayableLocations` requests can return different results
+     * as the state of the world changes over time.
      *
      * Create a request for the method "v3.samplePlayableLocations".
      *
@@ -382,10 +375,8 @@ public class PlayableLocations extends com.google.api.client.googleapis.services
 
       /**
        * Returns a set of playable locations that lie within a specified area, that satisfy optional
-       * filter criteria.
-       *
-       * Note: Identical `SamplePlayableLocations` requests can return different results as the state of
-       * the world changes over time.
+       * filter criteria. Note: Identical `SamplePlayableLocations` requests can return different
+       * results as the state of the world changes over time.
        *
        * Create a request for the method "v3.samplePlayableLocations".
        *

@@ -32,14 +32,10 @@ public final class GoogleMapsPlayablelocationsV3Impression extends com.google.ap
 
   /**
    * An arbitrary, developer-defined type identifier for each type of game object used in your game.
-   *
    * Since players interact with differ types of game objects in different ways, this field allows
-   * you to segregate impression data by type for analysis.
-   *
-   * You should assign a unique `game_object_type` ID to represent a distinct type of game object in
-   * your game.
-   *
-   * For example, 1=monster location, 2=powerup location.
+   * you to segregate impression data by type for analysis. You should assign a unique
+   * `game_object_type` ID to represent a distinct type of game object in your game. For example,
+   * 1=monster location, 2=powerup location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,14 +57,10 @@ public final class GoogleMapsPlayablelocationsV3Impression extends com.google.ap
 
   /**
    * An arbitrary, developer-defined type identifier for each type of game object used in your game.
-   *
    * Since players interact with differ types of game objects in different ways, this field allows
-   * you to segregate impression data by type for analysis.
-   *
-   * You should assign a unique `game_object_type` ID to represent a distinct type of game object in
-   * your game.
-   *
-   * For example, 1=monster location, 2=powerup location.
+   * you to segregate impression data by type for analysis. You should assign a unique
+   * `game_object_type` ID to represent a distinct type of game object in your game. For example,
+   * 1=monster location, 2=powerup location.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGameObjectType() {
@@ -77,14 +69,10 @@ public final class GoogleMapsPlayablelocationsV3Impression extends com.google.ap
 
   /**
    * An arbitrary, developer-defined type identifier for each type of game object used in your game.
-   *
    * Since players interact with differ types of game objects in different ways, this field allows
-   * you to segregate impression data by type for analysis.
-   *
-   * You should assign a unique `game_object_type` ID to represent a distinct type of game object in
-   * your game.
-   *
-   * For example, 1=monster location, 2=powerup location.
+   * you to segregate impression data by type for analysis. You should assign a unique
+   * `game_object_type` ID to represent a distinct type of game object in your game. For example,
+   * 1=monster location, 2=powerup location.
    * @param gameObjectType gameObjectType or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3Impression setGameObjectType(java.lang.Integer gameObjectType) {

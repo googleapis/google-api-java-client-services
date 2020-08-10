@@ -31,10 +31,9 @@ package com.google.api.services.playablelocations.v3.model;
 public final class GoogleMapsPlayablelocationsV3SamplePlayableLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The latitude and longitude associated with the center of the playable location.
-   *
-   * By default, the set of playable locations returned from SamplePlayableLocations use center-
-   * point coordinates.
+   * Required. The latitude and longitude associated with the center of the playable location. By
+   * default, the set of playable locations returned from SamplePlayableLocations use center-point
+   * coordinates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,19 +70,17 @@ public final class GoogleMapsPlayablelocationsV3SamplePlayableLocation extends c
 
   /**
    * A collection of [Playable Location Types](/maps/documentation/gaming/tt/types) for this
-   * playable location. The first type in the collection is the primary type.
-   *
-   * Type information might not be available for all playable locations.
+   * playable location. The first type in the collection is the primary type. Type information might
+   * not be available for all playable locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> types;
 
   /**
-   * Required. The latitude and longitude associated with the center of the playable location.
-   *
-   * By default, the set of playable locations returned from SamplePlayableLocations use center-
-   * point coordinates.
+   * Required. The latitude and longitude associated with the center of the playable location. By
+   * default, the set of playable locations returned from SamplePlayableLocations use center-point
+   * coordinates.
    * @return value or {@code null} for none
    */
   public GoogleTypeLatLng getCenterPoint() {
@@ -91,10 +88,9 @@ public final class GoogleMapsPlayablelocationsV3SamplePlayableLocation extends c
   }
 
   /**
-   * Required. The latitude and longitude associated with the center of the playable location.
-   *
-   * By default, the set of playable locations returned from SamplePlayableLocations use center-
-   * point coordinates.
+   * Required. The latitude and longitude associated with the center of the playable location. By
+   * default, the set of playable locations returned from SamplePlayableLocations use center-point
+   * coordinates.
    * @param centerPoint centerPoint or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3SamplePlayableLocation setCenterPoint(GoogleTypeLatLng centerPoint) {
@@ -174,9 +170,8 @@ public final class GoogleMapsPlayablelocationsV3SamplePlayableLocation extends c
 
   /**
    * A collection of [Playable Location Types](/maps/documentation/gaming/tt/types) for this
-   * playable location. The first type in the collection is the primary type.
-   *
-   * Type information might not be available for all playable locations.
+   * playable location. The first type in the collection is the primary type. Type information might
+   * not be available for all playable locations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTypes() {
@@ -185,9 +180,8 @@ public final class GoogleMapsPlayablelocationsV3SamplePlayableLocation extends c
 
   /**
    * A collection of [Playable Location Types](/maps/documentation/gaming/tt/types) for this
-   * playable location. The first type in the collection is the primary type.
-   *
-   * Type information might not be available for all playable locations.
+   * playable location. The first type in the collection is the primary type. Type information might
+   * not be available for all playable locations.
    * @param types types or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3SamplePlayableLocation setTypes(java.util.List<java.lang.String> types) {

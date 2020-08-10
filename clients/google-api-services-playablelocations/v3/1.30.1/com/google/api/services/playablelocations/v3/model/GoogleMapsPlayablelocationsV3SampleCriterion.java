@@ -31,17 +31,10 @@ package com.google.api.services.playablelocations.v3.model;
 public final class GoogleMapsPlayablelocationsV3SampleCriterion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies which `PlayableLocation` fields are returned.
-   *
-   * `name` (which is used for logging impressions), `center_point` and `place_id` (or `plus_code`)
-   * are always returned.
-   *
-   * The following fields are omitted unless you specify them here:
-   *
-   *   * snapped_point   * types
-   *
-   * Note: The more fields you include, the more expensive in terms of data and associated latency
-   * your query will be.
+   * Specifies which `PlayableLocation` fields are returned. `name` (which is used for logging
+   * impressions), `center_point` and `place_id` (or `plus_code`) are always returned. The following
+   * fields are omitted unless you specify them here: * snapped_point * types Note: The more fields
+   * you include, the more expensive in terms of data and associated latency your query will be.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,29 +50,19 @@ public final class GoogleMapsPlayablelocationsV3SampleCriterion extends com.goog
   /**
    * Required. An arbitrary, developer-defined identifier of the type of game object that the
    * playable location is used for. This field allows you to specify criteria per game object type
-   * when searching for playable locations.
-   *
-   * You should assign a unique `game_object_type` ID across all `request_criteria` to represent a
-   * distinct type of game object. For example, 1=monster location, 2=powerup location.
-   *
-   * The response contains a map.
+   * when searching for playable locations. You should assign a unique `game_object_type` ID across
+   * all `request_criteria` to represent a distinct type of game object. For example, 1=monster
+   * location, 2=powerup location. The response contains a map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer gameObjectType;
 
   /**
-   * Specifies which `PlayableLocation` fields are returned.
-   *
-   * `name` (which is used for logging impressions), `center_point` and `place_id` (or `plus_code`)
-   * are always returned.
-   *
-   * The following fields are omitted unless you specify them here:
-   *
-   *   * snapped_point   * types
-   *
-   * Note: The more fields you include, the more expensive in terms of data and associated latency
-   * your query will be.
+   * Specifies which `PlayableLocation` fields are returned. `name` (which is used for logging
+   * impressions), `center_point` and `place_id` (or `plus_code`) are always returned. The following
+   * fields are omitted unless you specify them here: * snapped_point * types Note: The more fields
+   * you include, the more expensive in terms of data and associated latency your query will be.
    * @return value or {@code null} for none
    */
   public String getFieldsToReturn() {
@@ -87,17 +70,10 @@ public final class GoogleMapsPlayablelocationsV3SampleCriterion extends com.goog
   }
 
   /**
-   * Specifies which `PlayableLocation` fields are returned.
-   *
-   * `name` (which is used for logging impressions), `center_point` and `place_id` (or `plus_code`)
-   * are always returned.
-   *
-   * The following fields are omitted unless you specify them here:
-   *
-   *   * snapped_point   * types
-   *
-   * Note: The more fields you include, the more expensive in terms of data and associated latency
-   * your query will be.
+   * Specifies which `PlayableLocation` fields are returned. `name` (which is used for logging
+   * impressions), `center_point` and `place_id` (or `plus_code`) are always returned. The following
+   * fields are omitted unless you specify them here: * snapped_point * types Note: The more fields
+   * you include, the more expensive in terms of data and associated latency your query will be.
    * @param fieldsToReturn fieldsToReturn or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3SampleCriterion setFieldsToReturn(String fieldsToReturn) {
@@ -125,12 +101,9 @@ public final class GoogleMapsPlayablelocationsV3SampleCriterion extends com.goog
   /**
    * Required. An arbitrary, developer-defined identifier of the type of game object that the
    * playable location is used for. This field allows you to specify criteria per game object type
-   * when searching for playable locations.
-   *
-   * You should assign a unique `game_object_type` ID across all `request_criteria` to represent a
-   * distinct type of game object. For example, 1=monster location, 2=powerup location.
-   *
-   * The response contains a map.
+   * when searching for playable locations. You should assign a unique `game_object_type` ID across
+   * all `request_criteria` to represent a distinct type of game object. For example, 1=monster
+   * location, 2=powerup location. The response contains a map.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGameObjectType() {
@@ -140,12 +113,9 @@ public final class GoogleMapsPlayablelocationsV3SampleCriterion extends com.goog
   /**
    * Required. An arbitrary, developer-defined identifier of the type of game object that the
    * playable location is used for. This field allows you to specify criteria per game object type
-   * when searching for playable locations.
-   *
-   * You should assign a unique `game_object_type` ID across all `request_criteria` to represent a
-   * distinct type of game object. For example, 1=monster location, 2=powerup location.
-   *
-   * The response contains a map.
+   * when searching for playable locations. You should assign a unique `game_object_type` ID across
+   * all `request_criteria` to represent a distinct type of game object. For example, 1=monster
+   * location, 2=powerup location. The response contains a map.
    * @param gameObjectType gameObjectType or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3SampleCriterion setGameObjectType(java.lang.Integer gameObjectType) {

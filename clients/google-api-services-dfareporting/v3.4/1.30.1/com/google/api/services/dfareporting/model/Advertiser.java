@@ -74,7 +74,7 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
    * configuration with this advertiser, so long as: - This advertiser's original floodlight
    * configuration is not already associated with floodlight activities or floodlight activity
-   * groups.  - This advertiser's original floodlight configuration is not already shared with
+   * groups. - This advertiser's original floodlight configuration is not already shared with
    * another advertiser.
    * The value may be {@code null}.
    */
@@ -247,7 +247,7 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
    * configuration with this advertiser, so long as: - This advertiser's original floodlight
    * configuration is not already associated with floodlight activities or floodlight activity
-   * groups.  - This advertiser's original floodlight configuration is not already shared with
+   * groups. - This advertiser's original floodlight configuration is not already shared with
    * another advertiser.
    * @return value or {@code null} for none
    */
@@ -261,7 +261,7 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
    * configuration with this advertiser, so long as: - This advertiser's original floodlight
    * configuration is not already associated with floodlight activities or floodlight activity
-   * groups.  - This advertiser's original floodlight configuration is not already shared with
+   * groups. - This advertiser's original floodlight configuration is not already shared with
    * another advertiser.
    * @param floodlightConfigurationId floodlightConfigurationId or {@code null} for none
    */

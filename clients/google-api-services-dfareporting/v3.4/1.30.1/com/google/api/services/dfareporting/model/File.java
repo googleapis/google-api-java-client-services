@@ -83,6 +83,18 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Long lastModifiedTime;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MediaRequestInfo mediaRequestInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MediaResponseInfo mediaResponseInfo;
+
+  /**
    * The ID of the report this file was generated from.
    * The value may be {@code null}.
    */
@@ -221,6 +233,36 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setLastModifiedTime(java.lang.Long lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public MediaRequestInfo getMediaRequestInfo() {
+    return mediaRequestInfo;
+  }
+
+  /**
+   * @param mediaRequestInfo mediaRequestInfo or {@code null} for none
+   */
+  public File setMediaRequestInfo(MediaRequestInfo mediaRequestInfo) {
+    this.mediaRequestInfo = mediaRequestInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public MediaResponseInfo getMediaResponseInfo() {
+    return mediaResponseInfo;
+  }
+
+  /**
+   * @param mediaResponseInfo mediaResponseInfo or {@code null} for none
+   */
+  public File setMediaResponseInfo(MediaResponseInfo mediaResponseInfo) {
+    this.mediaResponseInfo = mediaResponseInfo;
     return this;
   }
 

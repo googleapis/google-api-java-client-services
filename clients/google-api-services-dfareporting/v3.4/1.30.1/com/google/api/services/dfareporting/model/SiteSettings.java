@@ -75,10 +75,8 @@ public final class SiteSettings extends com.google.api.client.json.GenericJson {
    * new placement. Controls which VPAID format the measurement adapter will use for in-stream video
    * creatives assigned to the placement. The publisher's specifications will typically determine
    * this setting. For VPAID creatives, the adapter format will match the VPAID format (HTML5 VPAID
-   * creatives use the HTML5 adapter).
-   *
-   * Note: Flash is no longer supported. This field now defaults to HTML5 when the following values
-   * are provided: FLASH, BOTH.
+   * creatives use the HTML5 adapter). *Note:* Flash is no longer supported. This field now defaults
+   * to HTML5 when the following values are provided: FLASH, BOTH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,10 +181,8 @@ public final class SiteSettings extends com.google.api.client.json.GenericJson {
    * new placement. Controls which VPAID format the measurement adapter will use for in-stream video
    * creatives assigned to the placement. The publisher's specifications will typically determine
    * this setting. For VPAID creatives, the adapter format will match the VPAID format (HTML5 VPAID
-   * creatives use the HTML5 adapter).
-   *
-   * Note: Flash is no longer supported. This field now defaults to HTML5 when the following values
-   * are provided: FLASH, BOTH.
+   * creatives use the HTML5 adapter). *Note:* Flash is no longer supported. This field now defaults
+   * to HTML5 when the following values are provided: FLASH, BOTH.
    * @return value or {@code null} for none
    */
   public java.lang.String getVpaidAdapterChoiceTemplate() {
@@ -199,10 +195,8 @@ public final class SiteSettings extends com.google.api.client.json.GenericJson {
    * new placement. Controls which VPAID format the measurement adapter will use for in-stream video
    * creatives assigned to the placement. The publisher's specifications will typically determine
    * this setting. For VPAID creatives, the adapter format will match the VPAID format (HTML5 VPAID
-   * creatives use the HTML5 adapter).
-   *
-   * Note: Flash is no longer supported. This field now defaults to HTML5 when the following values
-   * are provided: FLASH, BOTH.
+   * creatives use the HTML5 adapter). *Note:* Flash is no longer supported. This field now defaults
+   * to HTML5 when the following values are provided: FLASH, BOTH.
    * @param vpaidAdapterChoiceTemplate vpaidAdapterChoiceTemplate or {@code null} for none
    */
   public SiteSettings setVpaidAdapterChoiceTemplate(java.lang.String vpaidAdapterChoiceTemplate) {

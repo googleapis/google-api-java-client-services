@@ -38,11 +38,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   private java.lang.String capCostOption;
 
   /**
-   * Placement end date. This date must be later than, or the same day as, the placement start date,
-   * but not later than the campaign end date. If, for example, you set 6/25/2015 as both the start
-   * and end dates, the effective placement date is just that day only, 6/25/2015. The hours,
-   * minutes, and seconds of the end date should not be set, as doing so will result in an error.
-   * This field is required on insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,17 +73,12 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   private java.lang.String pricingType;
 
   /**
-   * Placement start date. This date must be later than, or the same day as, the campaign start
-   * date. The hours, minutes, and seconds of the start date should not be set, as doing so will
-   * result in an error. This field is required on insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime startDate;
 
   /**
-   * Testing start date of this placement. The hours, minutes, and seconds of the start date should
-   * not be set, as doing so will result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,11 +102,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Placement end date. This date must be later than, or the same day as, the placement start date,
-   * but not later than the campaign end date. If, for example, you set 6/25/2015 as both the start
-   * and end dates, the effective placement date is just that day only, 6/25/2015. The hours,
-   * minutes, and seconds of the end date should not be set, as doing so will result in an error.
-   * This field is required on insertion.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndDate() {
@@ -124,11 +109,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Placement end date. This date must be later than, or the same day as, the placement start date,
-   * but not later than the campaign end date. If, for example, you set 6/25/2015 as both the start
-   * and end dates, the effective placement date is just that day only, 6/25/2015. The hours,
-   * minutes, and seconds of the end date should not be set, as doing so will result in an error.
-   * This field is required on insertion.
    * @param endDate endDate or {@code null} for none
    */
   public PricingSchedule setEndDate(com.google.api.client.util.DateTime endDate) {
@@ -207,9 +187,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Placement start date. This date must be later than, or the same day as, the campaign start
-   * date. The hours, minutes, and seconds of the start date should not be set, as doing so will
-   * result in an error. This field is required on insertion.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartDate() {
@@ -217,9 +194,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Placement start date. This date must be later than, or the same day as, the campaign start
-   * date. The hours, minutes, and seconds of the start date should not be set, as doing so will
-   * result in an error. This field is required on insertion.
    * @param startDate startDate or {@code null} for none
    */
   public PricingSchedule setStartDate(com.google.api.client.util.DateTime startDate) {
@@ -228,8 +202,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Testing start date of this placement. The hours, minutes, and seconds of the start date should
-   * not be set, as doing so will result in an error.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getTestingStartDate() {
@@ -237,8 +209,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Testing start date of this placement. The hours, minutes, and seconds of the start date should
-   * not be set, as doing so will result in an error.
    * @param testingStartDate testingStartDate or {@code null} for none
    */
   public PricingSchedule setTestingStartDate(com.google.api.client.util.DateTime testingStartDate) {

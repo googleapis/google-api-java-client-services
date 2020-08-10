@@ -1,6 +1,6 @@
 # DCM/DFA Reporting And Trafficking API Client Library for Java
 
-Manages your DoubleClick Campaign Manager ad campaigns and reports.
+Manage your DoubleClick Campaign Manager ad campaigns and reports.
 
 This page contains information about getting started with the DCM/DFA Reporting And Trafficking API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dfareporting</artifactId>
-      <version>v3.4-rev20200730-1.30.10</version>
+      <version>v3.4-rev20200804-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-dfareporting:v3.4-rev20200730-1.30.10'
+  compile 'com.google.apis:google-api-services-dfareporting:v3.4-rev20200804-1.30.10'
 }
 ```
 

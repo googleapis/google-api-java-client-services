@@ -20,7 +20,7 @@ package com.google.api.services.dfareporting;
  * Service definition for Dfareporting (v3.4).
  *
  * <p>
- * Manages your DoubleClick Campaign Manager ad campaigns and reports.
+ * Manage your DoubleClick Campaign Manager ad campaigns and reports.
  * </p>
  *
  * <p>
@@ -55,7 +55,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://dfareporting.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/dfareporting/v3.4";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -195,8 +195,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -225,8 +240,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -342,8 +362,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -372,8 +407,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -463,8 +503,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -493,8 +548,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -594,8 +654,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -624,8 +699,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -715,8 +795,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -745,8 +840,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -846,8 +946,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -876,8 +991,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -960,8 +1080,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -990,8 +1125,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -1065,8 +1205,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1095,8 +1250,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -1291,12 +1451,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id User profile ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AccountUserProfile}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AccountUserProfile content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AccountUserProfile content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -1317,19 +1476,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id User profile ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AccountUserProfile}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AccountUserProfile content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AccountUserProfile content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.AccountUserProfile.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -1358,8 +1530,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -1378,17 +1555,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** User profile ID. */
+      /** AccountUserProfile ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** User profile ID.
+      /** AccountUserProfile ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** User profile ID. */
+      /** AccountUserProfile ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -1442,8 +1619,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -1472,8 +1664,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -1573,8 +1770,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1603,8 +1815,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -1694,8 +1911,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1724,8 +1956,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -1892,12 +2129,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Account ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Account}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Account content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Account content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -1918,19 +2154,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Account ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Account}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Account content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Account content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Account.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -1959,8 +2208,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -2043,8 +2297,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -2073,8 +2342,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -2174,8 +2448,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2204,8 +2493,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -2288,8 +2582,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -2318,8 +2627,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -2393,8 +2707,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2423,8 +2752,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -2864,12 +3198,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Ad ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Ad}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Ad content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Ad content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -2890,19 +3223,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Ad ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Ad}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Ad content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Ad content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Ad.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -2931,8 +3277,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3015,8 +3366,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -3045,8 +3411,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3137,8 +3508,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -3167,8 +3553,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3261,8 +3652,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3291,8 +3697,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3375,8 +3786,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -3405,8 +3831,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3480,8 +3911,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3510,8 +3956,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3659,12 +4110,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Advertiser group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AdvertiserGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AdvertiserGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -3685,19 +4135,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Advertiser group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AdvertiserGroup content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AdvertiserGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.AdvertiserGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -3726,8 +4189,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3746,17 +4214,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Advertiser group ID. */
+      /** AdvertiserGroup ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Advertiser group ID.
+      /** AdvertiserGroup ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Advertiser group ID. */
+      /** AdvertiserGroup ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -3810,8 +4278,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -3840,8 +4323,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -3941,8 +4429,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3971,8 +4474,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4055,8 +4563,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -4085,8 +4608,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4160,8 +4688,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4190,8 +4733,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4401,7 +4949,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing landing page. This method supports patch semantics.
+     * Updates an existing advertiser landing page. This method supports patch semantics.
      *
      * Create a request for the method "advertiserLandingPages.patch".
      *
@@ -4409,12 +4957,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Landing page ID.
      * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.LandingPage content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.LandingPage content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -4424,7 +4971,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
 
       /**
-       * Updates an existing landing page. This method supports patch semantics.
+       * Updates an existing advertiser landing page. This method supports patch semantics.
        *
        * Create a request for the method "advertiserLandingPages.patch".
        *
@@ -4435,19 +4982,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Landing page ID.
        * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.LandingPage content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.LandingPage content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.LandingPage.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -4476,8 +5036,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4496,17 +5061,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Landing page ID. */
+      /** LandingPage ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Landing page ID.
+      /** LandingPage ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Landing page ID. */
+      /** LandingPage ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -4560,8 +5125,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -4590,8 +5170,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4691,8 +5276,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4721,8 +5321,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4805,8 +5410,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -4835,8 +5455,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -4910,8 +5535,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4940,8 +5580,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -5078,7 +5723,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * April 2015", or simply "advertiser 2015". Most of the searches also add wildcards
        * implicitly at the start and the end of the search string. For example, a search string of
        * "advertiser" will match objects with name "my advertiser", "advertiser 2015", or simply
-       * "advertiser".
+       * "advertiser" .
        */
       @com.google.api.client.util.Key
       private java.lang.String searchString;
@@ -5087,7 +5732,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      "advertiser*2015" will return objects with names like "advertiser June 2015", "advertiser April
      2015", or simply "advertiser 2015". Most of the searches also add wildcards implicitly at the start
      and the end of the search string. For example, a search string of "advertiser" will match objects
-     with name "my advertiser", "advertiser 2015", or simply "advertiser".
+     with name "my advertiser", "advertiser 2015", or simply "advertiser" .
        */
       public java.lang.String getSearchString() {
         return searchString;
@@ -5099,7 +5744,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * April 2015", or simply "advertiser 2015". Most of the searches also add wildcards
        * implicitly at the start and the end of the search string. For example, a search string of
        * "advertiser" will match objects with name "my advertiser", "advertiser 2015", or simply
-       * "advertiser".
+       * "advertiser" .
        */
       public List setSearchString(java.lang.String searchString) {
         this.searchString = searchString;
@@ -5184,12 +5829,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Advertiser ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Advertiser content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Advertiser content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -5210,19 +5854,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Advertiser ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Advertiser content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Advertiser content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Advertiser.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -5251,8 +5908,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -5335,8 +5997,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -5365,8 +6042,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -5463,8 +6145,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5493,8 +6190,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -5589,8 +6291,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -5619,8 +6336,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -5715,8 +6437,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5745,8 +6482,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -5910,8 +6652,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5940,8 +6697,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -6024,8 +6786,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -6054,8 +6831,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -6129,8 +6911,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -6159,8 +6956,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -6424,12 +7226,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Campaign ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Campaign content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Campaign content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -6450,19 +7251,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Campaign ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Campaign content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Campaign content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Campaign.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -6491,8 +7305,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -6575,8 +7394,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -6605,8 +7439,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -6706,8 +7545,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -6736,8 +7590,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -6827,8 +7686,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -6857,8 +7731,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7153,8 +8032,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -7183,8 +8077,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7348,8 +8247,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -7378,8 +8292,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7469,8 +8388,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -7499,8 +8433,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7591,8 +8530,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -7621,8 +8575,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7715,8 +8674,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -7745,8 +8719,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7829,8 +8808,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -7859,8 +8853,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -7934,8 +8933,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -7964,8 +8978,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8113,12 +9132,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Content category ID.
      * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.ContentCategory content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.ContentCategory content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -8139,19 +9157,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Content category ID.
        * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.ContentCategory content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.ContentCategory content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.ContentCategory.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -8180,8 +9211,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8200,17 +9236,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Content category ID. */
+      /** ContentCategory ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Content category ID.
+      /** ContentCategory ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Content category ID. */
+      /** ContentCategory ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -8264,8 +9300,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -8294,8 +9345,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8385,8 +9441,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Batchinsert set$Xgafv(java.lang.String $Xgafv) {
+        return (Batchinsert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Batchinsert setAccessToken(java.lang.String accessToken) {
+        return (Batchinsert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Batchinsert setAlt(java.lang.String alt) {
         return (Batchinsert) super.setAlt(alt);
+      }
+
+      @Override
+      public Batchinsert setCallback(java.lang.String callback) {
+        return (Batchinsert) super.setCallback(callback);
       }
 
       @Override
@@ -8415,8 +9486,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Batchinsert setUserIp(java.lang.String userIp) {
-        return (Batchinsert) super.setUserIp(userIp);
+      public Batchinsert setUploadType(java.lang.String uploadType) {
+        return (Batchinsert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Batchinsert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Batchinsert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8483,8 +9559,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Batchupdate set$Xgafv(java.lang.String $Xgafv) {
+        return (Batchupdate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Batchupdate setAccessToken(java.lang.String accessToken) {
+        return (Batchupdate) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Batchupdate setAlt(java.lang.String alt) {
         return (Batchupdate) super.setAlt(alt);
+      }
+
+      @Override
+      public Batchupdate setCallback(java.lang.String callback) {
+        return (Batchupdate) super.setCallback(callback);
       }
 
       @Override
@@ -8513,8 +9604,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Batchupdate setUserIp(java.lang.String userIp) {
-        return (Batchupdate) super.setUserIp(userIp);
+      public Batchupdate setUploadType(java.lang.String uploadType) {
+        return (Batchupdate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Batchupdate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Batchupdate) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8614,8 +9710,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -8644,8 +9755,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8735,8 +9851,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -8765,8 +9896,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -8910,8 +10046,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -8940,8 +10091,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9051,8 +10207,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -9081,8 +10252,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9194,8 +10370,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -9224,8 +10415,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9327,8 +10523,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -9357,8 +10568,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9451,8 +10667,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -9481,8 +10712,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9633,13 +10869,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param creativeFieldId Creative field ID for this creative field value.
-     * @param id Creative Field Value ID
+     * @param creativeFieldId CreativeField ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeFieldValue}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long creativeFieldId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeFieldValue content) throws java.io.IOException {
-      Patch result = new Patch(profileId, creativeFieldId, id, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long creativeFieldId, com.google.api.services.dfareporting.model.CreativeFieldValue content) throws java.io.IOException {
+      Patch result = new Patch(profileId, creativeFieldId, content);
       initialize(result);
       return result;
     }
@@ -9660,21 +10895,34 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param creativeFieldId Creative field ID for this creative field value.
-       * @param id Creative Field Value ID
+       * @param creativeFieldId CreativeField ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeFieldValue}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long creativeFieldId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeFieldValue content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long creativeFieldId, com.google.api.services.dfareporting.model.CreativeFieldValue content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.CreativeFieldValue.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
         this.creativeFieldId = com.google.api.client.util.Preconditions.checkNotNull(creativeFieldId, "Required parameter creativeFieldId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -9703,8 +10951,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9723,33 +10976,33 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Creative field ID for this creative field value. */
+      /** CreativeField ID. */
       @com.google.api.client.util.Key
       private java.lang.Long creativeFieldId;
 
-      /** Creative field ID for this creative field value.
+      /** CreativeField ID.
        */
       public java.lang.Long getCreativeFieldId() {
         return creativeFieldId;
       }
 
-      /** Creative field ID for this creative field value. */
+      /** CreativeField ID. */
       public Patch setCreativeFieldId(java.lang.Long creativeFieldId) {
         this.creativeFieldId = creativeFieldId;
         return this;
       }
 
-      /** Creative Field Value ID */
+      /** CreativeFieldValue ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Creative Field Value ID
+      /** CreativeFieldValue ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Creative Field Value ID */
+      /** CreativeFieldValue ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -9806,8 +11059,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -9836,8 +11104,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -9944,8 +11217,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -9974,8 +11262,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10068,8 +11361,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -10098,8 +11406,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10182,8 +11495,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -10212,8 +11540,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10287,8 +11620,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -10317,8 +11665,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10482,12 +11835,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Creative Field ID
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeField}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeField content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeField content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -10508,19 +11860,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Creative Field ID
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeField}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeField content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeField content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.CreativeField.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -10549,8 +11914,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10569,17 +11939,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Creative Field ID */
+      /** CreativeField ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Creative Field ID
+      /** CreativeField ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Creative Field ID */
+      /** CreativeField ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -10633,8 +12003,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -10663,8 +12048,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10764,8 +12154,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -10794,8 +12199,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10878,8 +12288,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -10908,8 +12333,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -10983,8 +12413,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -11013,8 +12458,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -11196,12 +12646,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Creative group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -11222,19 +12671,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Creative group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeGroup content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.CreativeGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -11263,8 +12725,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -11283,17 +12750,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Creative group ID. */
+      /** CreativeGroup ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Creative group ID.
+      /** CreativeGroup ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Creative group ID. */
+      /** CreativeGroup ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -11347,8 +12814,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -11377,8 +12859,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -11478,8 +12965,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -11508,8 +13010,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -11592,8 +13099,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -11622,8 +13144,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -11697,8 +13224,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -11727,8 +13269,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -12037,12 +13584,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Creative ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Creative}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Creative content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Creative content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -12063,19 +13609,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Creative ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Creative}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Creative content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Creative content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Creative.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -12104,8 +13663,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -12188,8 +13752,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -12218,8 +13797,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -12309,8 +13893,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Batchinsert set$Xgafv(java.lang.String $Xgafv) {
+        return (Batchinsert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Batchinsert setAccessToken(java.lang.String accessToken) {
+        return (Batchinsert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Batchinsert setAlt(java.lang.String alt) {
         return (Batchinsert) super.setAlt(alt);
+      }
+
+      @Override
+      public Batchinsert setCallback(java.lang.String callback) {
+        return (Batchinsert) super.setCallback(callback);
       }
 
       @Override
@@ -12339,8 +13938,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Batchinsert setUserIp(java.lang.String userIp) {
-        return (Batchinsert) super.setUserIp(userIp);
+      public Batchinsert setUploadType(java.lang.String uploadType) {
+        return (Batchinsert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Batchinsert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Batchinsert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -12430,8 +14034,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Query set$Xgafv(java.lang.String $Xgafv) {
+        return (Query) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Query setAccessToken(java.lang.String accessToken) {
+        return (Query) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Query setAlt(java.lang.String alt) {
         return (Query) super.setAlt(alt);
+      }
+
+      @Override
+      public Query setCallback(java.lang.String callback) {
+        return (Query) super.setCallback(callback);
       }
 
       @Override
@@ -12460,8 +14079,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Query setUserIp(java.lang.String userIp) {
-        return (Query) super.setUserIp(userIp);
+      public Query setUploadType(java.lang.String uploadType) {
+        return (Query) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Query setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Query) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -12593,8 +14217,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -12623,8 +14262,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -12707,8 +14351,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -12737,8 +14396,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -12812,8 +14476,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -12842,8 +14521,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13157,8 +14841,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -13187,8 +14886,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13314,8 +15018,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -13344,8 +15063,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13419,8 +15143,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -13449,8 +15188,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13605,8 +15349,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -13635,8 +15394,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13729,8 +15493,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -13759,8 +15538,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13843,8 +15627,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -13873,8 +15672,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -13948,8 +15752,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -13978,8 +15797,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -14232,12 +16056,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Event tag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.EventTag content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.EventTag content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -14258,19 +16081,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Event tag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.EventTag content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.EventTag content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.EventTag.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -14299,8 +16135,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -14319,17 +16160,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Event tag ID. */
+      /** EventTag ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Event tag ID.
+      /** EventTag ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Event tag ID. */
+      /** EventTag ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -14383,8 +16224,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -14413,8 +16269,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -14530,8 +16391,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -14560,8 +16436,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the report. */
@@ -14651,8 +16532,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -14681,8 +16577,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA profile ID. */
@@ -14853,8 +16754,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -14883,8 +16799,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -14965,8 +16886,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Generatetag set$Xgafv(java.lang.String $Xgafv) {
+        return (Generatetag) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Generatetag setAccessToken(java.lang.String accessToken) {
+        return (Generatetag) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Generatetag setAlt(java.lang.String alt) {
         return (Generatetag) super.setAlt(alt);
+      }
+
+      @Override
+      public Generatetag setCallback(java.lang.String callback) {
+        return (Generatetag) super.setCallback(callback);
       }
 
       @Override
@@ -14995,8 +16931,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Generatetag setUserIp(java.lang.String userIp) {
-        return (Generatetag) super.setUserIp(userIp);
+      public Generatetag setUploadType(java.lang.String uploadType) {
+        return (Generatetag) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Generatetag setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Generatetag) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -15089,8 +17030,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -15119,8 +17075,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -15203,8 +17164,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -15233,8 +17209,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -15308,8 +17289,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -15338,8 +17334,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -15624,12 +17625,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Floodlight activity ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivity content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivity content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -15650,19 +17650,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Floodlight activity ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivity content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivity content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.FloodlightActivity.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -15691,8 +17704,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -15711,17 +17729,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Floodlight activity ID. */
+      /** FloodlightActivity ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Floodlight activity ID.
+      /** FloodlightActivity ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Floodlight activity ID. */
+      /** FloodlightActivity ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -15775,8 +17793,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -15805,8 +17838,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -15906,8 +17944,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -15936,8 +17989,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16020,8 +18078,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -16050,8 +18123,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16125,8 +18203,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -16155,8 +18248,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16380,12 +18478,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Floodlight activity Group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -16406,19 +18503,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Floodlight activity Group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.FloodlightActivityGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -16447,8 +18557,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16467,17 +18582,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Floodlight activity Group ID. */
+      /** FloodlightActivityGroup ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Floodlight activity Group ID.
+      /** FloodlightActivityGroup ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Floodlight activity Group ID. */
+      /** FloodlightActivityGroup ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -16531,8 +18646,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -16561,8 +18691,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16662,8 +18797,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -16692,8 +18842,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16783,8 +18938,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -16813,8 +18983,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16870,12 +19045,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Floodlight configuration ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightConfiguration content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightConfiguration content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -16896,19 +19070,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Floodlight configuration ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightConfiguration content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightConfiguration content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.FloodlightConfiguration.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -16937,8 +19124,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -16957,17 +19149,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Floodlight configuration ID. */
+      /** FloodlightConfiguration ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Floodlight configuration ID.
+      /** FloodlightConfiguration ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Floodlight configuration ID. */
+      /** FloodlightConfiguration ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -17021,8 +19213,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -17051,8 +19258,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -17155,8 +19367,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -17185,8 +19412,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -17295,8 +19527,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -17325,8 +19572,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -17583,8 +19835,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -17613,8 +19880,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -17711,8 +19983,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -17741,8 +20028,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -17842,8 +20134,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -17872,8 +20179,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -17963,8 +20275,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -17993,8 +20320,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18189,8 +20521,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -18219,8 +20566,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18310,8 +20662,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -18340,8 +20707,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18441,8 +20813,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -18471,8 +20858,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18562,8 +20954,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -18592,8 +20999,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18693,8 +21105,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -18723,8 +21150,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18814,8 +21246,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -18844,8 +21291,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -18948,8 +21400,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -18978,8 +21445,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -19088,8 +21560,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -19118,8 +21605,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -19401,8 +21893,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -19431,8 +21938,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -19541,8 +22053,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -19571,8 +22098,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -19816,8 +22348,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -19846,8 +22393,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -19930,8 +22482,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -19960,8 +22527,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -20035,8 +22607,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -20065,8 +22652,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -20473,12 +23065,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Placement group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -20499,19 +23090,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Placement group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementGroup content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.PlacementGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -20540,8 +23144,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -20560,17 +23169,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Placement group ID. */
+      /** PlacementGroup ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Placement group ID.
+      /** PlacementGroup ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Placement group ID. */
+      /** PlacementGroup ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -20624,8 +23233,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -20654,8 +23278,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -20746,8 +23375,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -20776,8 +23420,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -20870,8 +23519,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -20900,8 +23564,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -20984,8 +23653,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -21014,8 +23698,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21089,8 +23778,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -21119,8 +23823,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21268,12 +23977,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Placement strategy ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementStrategy content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementStrategy content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -21294,19 +24002,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Placement strategy ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementStrategy content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementStrategy content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.PlacementStrategy.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -21335,8 +24056,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21355,17 +24081,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Placement strategy ID. */
+      /** PlacementStrategy ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Placement strategy ID.
+      /** PlacementStrategy ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Placement strategy ID. */
+      /** PlacementStrategy ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -21419,8 +24145,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -21449,8 +24190,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21538,8 +24284,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Generatetags set$Xgafv(java.lang.String $Xgafv) {
+        return (Generatetags) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Generatetags setAccessToken(java.lang.String accessToken) {
+        return (Generatetags) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Generatetags setAlt(java.lang.String alt) {
         return (Generatetags) super.setAlt(alt);
+      }
+
+      @Override
+      public Generatetags setCallback(java.lang.String callback) {
+        return (Generatetags) super.setCallback(callback);
       }
 
       @Override
@@ -21568,8 +24329,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Generatetags setUserIp(java.lang.String userIp) {
-        return (Generatetags) super.setUserIp(userIp);
+      public Generatetags setUploadType(java.lang.String uploadType) {
+        return (Generatetags) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Generatetags setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Generatetags) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21621,25 +24387,22 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Tag formats to generate for these placements.
-       *
-       * Note: PLACEMENT_TAG_STANDARD can only be generated for 1x1 placements.
+       * Tag formats to generate for these placements. *Note:* PLACEMENT_TAG_STANDARD can only be
+       * generated for 1x1 placements.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> tagFormats;
 
-      /** Tag formats to generate for these placements.
-
-     Note: PLACEMENT_TAG_STANDARD can only be generated for 1x1 placements.
+      /** Tag formats to generate for these placements. *Note:* PLACEMENT_TAG_STANDARD can only be generated
+     for 1x1 placements.
        */
       public java.util.List<java.lang.String> getTagFormats() {
         return tagFormats;
       }
 
       /**
-       * Tag formats to generate for these placements.
-       *
-       * Note: PLACEMENT_TAG_STANDARD can only be generated for 1x1 placements.
+       * Tag formats to generate for these placements. *Note:* PLACEMENT_TAG_STANDARD can only be
+       * generated for 1x1 placements.
        */
       public Generatetags setTagFormats(java.util.List<java.lang.String> tagFormats) {
         this.tagFormats = tagFormats;
@@ -21704,8 +24467,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -21734,8 +24512,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21818,8 +24601,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -21848,8 +24646,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -21923,8 +24726,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -21953,8 +24771,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -22300,7 +25123,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * "placement*2015" will return placements with names like "placement June 2015", "placement
        * May 2015", or simply "placements 2015". Most of the searches also add wildcards implicitly
        * at the start and the end of the search string. For example, a search string of "placement"
-       * will match placements with name "my placement", "placement 2015", or simply "placement".
+       * will match placements with name "my placement", "placement 2015", or simply "placement" .
        */
       @com.google.api.client.util.Key
       private java.lang.String searchString;
@@ -22309,7 +25132,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      "placement*2015" will return placements with names like "placement June 2015", "placement May
      2015", or simply "placements 2015". Most of the searches also add wildcards implicitly at the start
      and the end of the search string. For example, a search string of "placement" will match placements
-     with name "my placement", "placement 2015", or simply "placement".
+     with name "my placement", "placement 2015", or simply "placement" .
        */
       public java.lang.String getSearchString() {
         return searchString;
@@ -22320,7 +25143,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * "placement*2015" will return placements with names like "placement June 2015", "placement
        * May 2015", or simply "placements 2015". Most of the searches also add wildcards implicitly
        * at the start and the end of the search string. For example, a search string of "placement"
-       * will match placements with name "my placement", "placement 2015", or simply "placement".
+       * will match placements with name "my placement", "placement 2015", or simply "placement" .
        */
       public List setSearchString(java.lang.String searchString) {
         this.searchString = searchString;
@@ -22405,12 +25228,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Placement ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Placement}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Placement content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Placement content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -22431,19 +25253,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Placement ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Placement}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Placement content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Placement content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Placement.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -22472,8 +25307,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -22556,8 +25396,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -22586,8 +25441,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -22687,8 +25547,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -22717,8 +25592,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -22808,8 +25688,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -22838,8 +25733,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -22939,8 +25839,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -22969,8 +25884,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23060,8 +25980,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -23090,8 +26025,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23191,8 +26131,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -23221,8 +26176,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23263,7 +26223,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Retrieves a list of projects, possibly filtered. This method supports paging.
+     * Retrieves a list of projects, possibly filtered. This method supports paging .
      *
      * Create a request for the method "projects.list".
      *
@@ -23284,7 +26244,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "userprofiles/{profileId}/projects";
 
       /**
-       * Retrieves a list of projects, possibly filtered. This method supports paging.
+       * Retrieves a list of projects, possibly filtered. This method supports paging .
        *
        * Create a request for the method "projects.list".
        *
@@ -23312,8 +26272,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -23342,8 +26317,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23568,8 +26548,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -23598,8 +26593,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23699,8 +26699,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -23729,8 +26744,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23779,7 +26799,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param remarketingListId Remarketing list ID.
+     * @param remarketingListId RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
      * @return the request
      */
@@ -23791,7 +26811,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists/{remarketingListId}/remarketingListShares";
 
       /**
        * Updates an existing remarketing list share. This method supports patch semantics.
@@ -23805,7 +26825,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param remarketingListId Remarketing list ID.
+       * @param remarketingListId RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
        * @since 1.13
        */
@@ -23816,8 +26836,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -23846,8 +26881,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -23866,19 +26906,35 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Remarketing list ID. */
+      /** RemarketingList ID. */
       @com.google.api.client.util.Key
       private java.lang.Long remarketingListId;
 
-      /** Remarketing list ID.
+      /** RemarketingList ID.
        */
       public java.lang.Long getRemarketingListId() {
         return remarketingListId;
       }
 
-      /** Remarketing list ID. */
+      /** RemarketingList ID. */
       public Patch setRemarketingListId(java.lang.Long remarketingListId) {
         this.remarketingListId = remarketingListId;
+        return this;
+      }
+
+      /** RemarketingListShare ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long id;
+
+      /** RemarketingListShare ID.
+       */
+      public java.lang.Long getId() {
+        return id;
+      }
+
+      /** RemarketingListShare ID. */
+      public Patch setId(java.lang.Long id) {
+        this.id = id;
         return this;
       }
 
@@ -23930,8 +26986,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -23960,8 +27031,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -24061,8 +27137,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -24091,8 +27182,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -24175,8 +27271,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -24205,8 +27316,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -24283,8 +27399,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -24313,8 +27444,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -24494,12 +27630,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Remarketing list ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.RemarketingList content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.RemarketingList content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -24520,19 +27655,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Remarketing list ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.RemarketingList content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.RemarketingList content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.RemarketingList.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -24561,8 +27709,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -24581,17 +27734,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Remarketing list ID. */
+      /** RemarketingList ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Remarketing list ID.
+      /** RemarketingList ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Remarketing list ID. */
+      /** RemarketingList ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -24645,8 +27798,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -24675,8 +27843,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -24767,8 +27940,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -24797,8 +27985,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -24891,8 +28084,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -24921,8 +28129,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -25009,8 +28222,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -25039,8 +28267,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -25114,8 +28347,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -25144,8 +28392,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -25250,7 +28503,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates a report. This method supports patch semantics.
+     * Updates an existing report. This method supports patch semantics.
      *
      * Create a request for the method "reports.patch".
      *
@@ -25273,7 +28526,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}";
 
       /**
-       * Updates a report. This method supports patch semantics.
+       * Updates an existing report. This method supports patch semantics.
        *
        * Create a request for the method "reports.patch".
        *
@@ -25295,8 +28548,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -25325,8 +28593,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -25409,8 +28682,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Run set$Xgafv(java.lang.String $Xgafv) {
+        return (Run) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Run setAccessToken(java.lang.String accessToken) {
+        return (Run) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Run setAlt(java.lang.String alt) {
         return (Run) super.setAlt(alt);
+      }
+
+      @Override
+      public Run setCallback(java.lang.String callback) {
+        return (Run) super.setCallback(callback);
       }
 
       @Override
@@ -25439,8 +28727,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Run setUserIp(java.lang.String userIp) {
-        return (Run) super.setUserIp(userIp);
+      public Run setUploadType(java.lang.String uploadType) {
+        return (Run) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Run setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Run) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA profile ID. */
@@ -25581,8 +28874,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -25611,8 +28919,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The DFA user profile ID. */
@@ -25718,8 +29031,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         }
 
         @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Query setAlt(java.lang.String alt) {
           return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
         }
 
         @Override
@@ -25748,8 +29076,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Query setUserIp(java.lang.String userIp) {
-          return (Query) super.setUserIp(userIp);
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The DFA user profile ID. */
@@ -25867,8 +29200,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -25897,8 +29245,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The DFA user profile ID. */
@@ -26007,8 +29360,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -26037,8 +29405,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The DFA profile ID. */
@@ -26219,8 +29592,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -26249,8 +29637,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -26333,8 +29726,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -26363,8 +29771,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -26438,8 +29851,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -26468,8 +29896,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -26766,12 +30199,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Site ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Site}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Site content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Site content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -26792,19 +30224,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Site ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Site}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Site content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Site content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Site.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -26833,8 +30278,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -26917,8 +30367,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -26947,8 +30412,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27048,8 +30518,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -27078,8 +30563,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27162,8 +30652,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -27192,8 +30697,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27271,8 +30781,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -27301,8 +30826,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27470,8 +31000,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -27500,8 +31045,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27584,8 +31134,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -27614,8 +31179,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27689,8 +31259,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -27719,8 +31304,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -27793,7 +31383,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * April 2015", or simply "subaccount 2015". Most of the searches also add wildcards
        * implicitly at the start and the end of the search string. For example, a search string of
        * "subaccount" will match objects with name "my subaccount", "subaccount 2015", or simply
-       * "subaccount".
+       * "subaccount" .
        */
       @com.google.api.client.util.Key
       private java.lang.String searchString;
@@ -27802,7 +31392,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      "subaccount*2015" will return objects with names like "subaccount June 2015", "subaccount April
      2015", or simply "subaccount 2015". Most of the searches also add wildcards implicitly at the start
      and the end of the search string. For example, a search string of "subaccount" will match objects
-     with name "my subaccount", "subaccount 2015", or simply "subaccount".
+     with name "my subaccount", "subaccount 2015", or simply "subaccount" .
        */
       public java.lang.String getSearchString() {
         return searchString;
@@ -27814,7 +31404,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * April 2015", or simply "subaccount 2015". Most of the searches also add wildcards
        * implicitly at the start and the end of the search string. For example, a search string of
        * "subaccount" will match objects with name "my subaccount", "subaccount 2015", or simply
-       * "subaccount".
+       * "subaccount" .
        */
       public List setSearchString(java.lang.String searchString) {
         this.searchString = searchString;
@@ -27867,12 +31457,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Subaccount ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Subaccount content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Subaccount content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -27893,19 +31482,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Subaccount ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Subaccount content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Subaccount content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Subaccount.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -27934,8 +31536,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28018,8 +31625,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -28048,8 +31670,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28149,8 +31776,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -28179,8 +31821,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28274,8 +31921,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -28304,8 +31966,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28536,8 +32203,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -28566,8 +32248,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28650,8 +32337,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -28680,8 +32382,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28755,8 +32462,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -28785,8 +32507,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -28947,12 +32674,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Targeting template ID.
      * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.TargetingTemplate content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.TargetingTemplate content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -28973,19 +32699,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Targeting template ID.
        * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.TargetingTemplate content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.TargetingTemplate content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.TargetingTemplate.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -29014,8 +32753,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -29034,17 +32778,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Targeting template ID. */
+      /** TargetingTemplate ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Targeting template ID.
+      /** TargetingTemplate ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Targeting template ID. */
+      /** TargetingTemplate ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -29098,8 +32842,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -29128,8 +32887,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -29226,8 +32990,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -29256,8 +33035,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The user profile ID. */
@@ -29328,8 +33112,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -29358,8 +33157,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -29443,8 +33247,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -29473,8 +33292,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -29564,8 +33388,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -29594,8 +33433,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -29695,8 +33539,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -29725,8 +33584,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -29816,8 +33680,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -29846,8 +33725,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -29954,8 +33838,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -29984,8 +33883,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30078,8 +33982,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -30108,8 +34027,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30192,8 +34116,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -30222,8 +34161,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30297,8 +34241,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -30327,8 +34286,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30505,12 +34469,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id User role ID.
      * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.UserRole content) throws java.io.IOException {
-      Patch result = new Patch(profileId, id, content);
+    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.UserRole content) throws java.io.IOException {
+      Patch result = new Patch(profileId, content);
       initialize(result);
       return result;
     }
@@ -30531,19 +34494,32 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id User role ID.
        * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.UserRole content) {
+      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.UserRole content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.UserRole.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -30572,8 +34548,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30592,17 +34573,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** User role ID. */
+      /** UserRole ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** User role ID.
+      /** UserRole ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** User role ID. */
+      /** UserRole ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -30656,8 +34637,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -30686,8 +34682,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30787,8 +34788,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -30817,8 +34833,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */
@@ -30908,8 +34929,23 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -30938,8 +34974,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** User profile ID associated with this request. */

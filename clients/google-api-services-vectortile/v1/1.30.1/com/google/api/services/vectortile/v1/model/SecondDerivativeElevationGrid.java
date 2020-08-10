@@ -19,23 +19,14 @@ package com.google.api.services.vectortile.v1.model;
 /**
  * A packed representation of a 2D grid of uniformly spaced points containing elevation data. Each
  * point within the grid represents the altitude in meters above average sea level at that location
- * within the tile.
- *
- * Elevations provided are (generally) relative to the EGM96 geoid, however some areas will be
- * relative to NAVD88. EGM96 and NAVD88 are off by no more than 2 meters.
- *
- * The grid is oriented north-west to south-east, as illustrated:
- *
- *     rows[0].a[0]      rows[0].a[m]         +-----------------+         |                 |
- * |        N        |         |        ^        |         |        |        |         |   W <----->
- * E   |         |        |        |         |        v        |         |        S        |
- * |                 |         +-----------------+     rows[n].a[0]      rows[n].a[m]
- *
- * Rather than storing the altitudes directly, we store the diffs of the diffs between them as
- * integers at some requested level of precision to take advantage of integer packing.
- *
- * Note that the data is packed in such a way that is fast to decode in Unity and that further
- * optimizes wire size.
+ * within the tile. Elevations provided are (generally) relative to the EGM96 geoid, however some
+ * areas will be relative to NAVD88. EGM96 and NAVD88 are off by no more than 2 meters. The grid is
+ * oriented north-west to south-east, as illustrated: rows[0].a[0] rows[0].a[m] +-----------------+
+ * | | | N | | ^ | | | | | W <-----> E | | | | | v | | S | | | +-----------------+ rows[n].a[0]
+ * rows[n].a[m] Rather than storing the altitudes directly, we store the diffs of the diffs between
+ * them as integers at some requested level of precision to take advantage of integer packing. Note
+ * that the data is packed in such a way that is fast to decode in Unity and that further optimizes
+ * wire size.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Semantic Tile API. For a detailed explanation see:
@@ -65,26 +56,18 @@ public final class SecondDerivativeElevationGrid extends com.google.api.client.j
 
   /**
    * A stream of elements each representing a point on the tile running across each row from left to
-   * right, top to bottom.
-   *
-   * There will be precisely horizontal_resolution * vertical_resolution elements in the stream.
-   *
-   * The elements are not the heights, rather the second order derivative of the values one would
-   * expect in a stream of height data.
-   *
-   * Each element is a varint with the following encoding:
-   * ------------------------------------------------------------------------| | Head Nibble
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit 1
-   * | Bits 2-3                                   | | Terminator| Sign (1=neg) | Least significant 2
-   * bits of absolute error |
-   * ------------------------------------------------------------------------| | Tail Nibble #1
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit
-   * 1-3                                                   | | Terminator| Least significant 3 bits
-   * of absolute error                |
+   * right, top to bottom. There will be precisely horizontal_resolution * vertical_resolution
+   * elements in the stream. The elements are not the heights, rather the second order derivative of
+   * the values one would expect in a stream of height data. Each element is a varint with the
+   * following encoding: ------------------------------------------------------------------------| |
+   * Head Nibble | ------------------------------------------------------------------------| | Bit 0
+   * | Bit 1 | Bits 2-3 | | Terminator| Sign (1=neg) | Least significant 2 bits of absolute error |
+   * ------------------------------------------------------------------------| | Tail Nibble #1 |
+   * ------------------------------------------------------------------------| | Bit 0 | Bit 1-3 | |
+   * Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------| | ... | Tail Nibble
-   * #n                                                        |
-   * ------------------------------------------------------------------------| | Bit 0     | Bit 1-3
-   * | | Terminator| Least significant 3 bits of absolute error                |
+   * #n | ------------------------------------------------------------------------| | Bit 0 | Bit
+   * 1-3 | | Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------|
    * The value may be {@code null}.
    */
@@ -139,26 +122,18 @@ public final class SecondDerivativeElevationGrid extends com.google.api.client.j
 
   /**
    * A stream of elements each representing a point on the tile running across each row from left to
-   * right, top to bottom.
-   *
-   * There will be precisely horizontal_resolution * vertical_resolution elements in the stream.
-   *
-   * The elements are not the heights, rather the second order derivative of the values one would
-   * expect in a stream of height data.
-   *
-   * Each element is a varint with the following encoding:
-   * ------------------------------------------------------------------------| | Head Nibble
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit 1
-   * | Bits 2-3                                   | | Terminator| Sign (1=neg) | Least significant 2
-   * bits of absolute error |
-   * ------------------------------------------------------------------------| | Tail Nibble #1
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit
-   * 1-3                                                   | | Terminator| Least significant 3 bits
-   * of absolute error                |
+   * right, top to bottom. There will be precisely horizontal_resolution * vertical_resolution
+   * elements in the stream. The elements are not the heights, rather the second order derivative of
+   * the values one would expect in a stream of height data. Each element is a varint with the
+   * following encoding: ------------------------------------------------------------------------| |
+   * Head Nibble | ------------------------------------------------------------------------| | Bit 0
+   * | Bit 1 | Bits 2-3 | | Terminator| Sign (1=neg) | Least significant 2 bits of absolute error |
+   * ------------------------------------------------------------------------| | Tail Nibble #1 |
+   * ------------------------------------------------------------------------| | Bit 0 | Bit 1-3 | |
+   * Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------| | ... | Tail Nibble
-   * #n                                                        |
-   * ------------------------------------------------------------------------| | Bit 0     | Bit 1-3
-   * | | Terminator| Least significant 3 bits of absolute error                |
+   * #n | ------------------------------------------------------------------------| | Bit 0 | Bit
+   * 1-3 | | Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------|
    * @see #decodeEncodedData()
    * @return value or {@code null} for none
@@ -169,26 +144,18 @@ public final class SecondDerivativeElevationGrid extends com.google.api.client.j
 
   /**
    * A stream of elements each representing a point on the tile running across each row from left to
-   * right, top to bottom.
-   *
-   * There will be precisely horizontal_resolution * vertical_resolution elements in the stream.
-   *
-   * The elements are not the heights, rather the second order derivative of the values one would
-   * expect in a stream of height data.
-   *
-   * Each element is a varint with the following encoding:
-   * ------------------------------------------------------------------------| | Head Nibble
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit 1
-   * | Bits 2-3                                   | | Terminator| Sign (1=neg) | Least significant 2
-   * bits of absolute error |
-   * ------------------------------------------------------------------------| | Tail Nibble #1
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit
-   * 1-3                                                   | | Terminator| Least significant 3 bits
-   * of absolute error                |
+   * right, top to bottom. There will be precisely horizontal_resolution * vertical_resolution
+   * elements in the stream. The elements are not the heights, rather the second order derivative of
+   * the values one would expect in a stream of height data. Each element is a varint with the
+   * following encoding: ------------------------------------------------------------------------| |
+   * Head Nibble | ------------------------------------------------------------------------| | Bit 0
+   * | Bit 1 | Bits 2-3 | | Terminator| Sign (1=neg) | Least significant 2 bits of absolute error |
+   * ------------------------------------------------------------------------| | Tail Nibble #1 |
+   * ------------------------------------------------------------------------| | Bit 0 | Bit 1-3 | |
+   * Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------| | ... | Tail Nibble
-   * #n                                                        |
-   * ------------------------------------------------------------------------| | Bit 0     | Bit 1-3
-   * | | Terminator| Least significant 3 bits of absolute error                |
+   * #n | ------------------------------------------------------------------------| | Bit 0 | Bit
+   * 1-3 | | Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------|
    * @see #getEncodedData()
    * @return Base64 decoded value or {@code null} for none
@@ -201,26 +168,18 @@ public final class SecondDerivativeElevationGrid extends com.google.api.client.j
 
   /**
    * A stream of elements each representing a point on the tile running across each row from left to
-   * right, top to bottom.
-   *
-   * There will be precisely horizontal_resolution * vertical_resolution elements in the stream.
-   *
-   * The elements are not the heights, rather the second order derivative of the values one would
-   * expect in a stream of height data.
-   *
-   * Each element is a varint with the following encoding:
-   * ------------------------------------------------------------------------| | Head Nibble
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit 1
-   * | Bits 2-3                                   | | Terminator| Sign (1=neg) | Least significant 2
-   * bits of absolute error |
-   * ------------------------------------------------------------------------| | Tail Nibble #1
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit
-   * 1-3                                                   | | Terminator| Least significant 3 bits
-   * of absolute error                |
+   * right, top to bottom. There will be precisely horizontal_resolution * vertical_resolution
+   * elements in the stream. The elements are not the heights, rather the second order derivative of
+   * the values one would expect in a stream of height data. Each element is a varint with the
+   * following encoding: ------------------------------------------------------------------------| |
+   * Head Nibble | ------------------------------------------------------------------------| | Bit 0
+   * | Bit 1 | Bits 2-3 | | Terminator| Sign (1=neg) | Least significant 2 bits of absolute error |
+   * ------------------------------------------------------------------------| | Tail Nibble #1 |
+   * ------------------------------------------------------------------------| | Bit 0 | Bit 1-3 | |
+   * Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------| | ... | Tail Nibble
-   * #n                                                        |
-   * ------------------------------------------------------------------------| | Bit 0     | Bit 1-3
-   * | | Terminator| Least significant 3 bits of absolute error                |
+   * #n | ------------------------------------------------------------------------| | Bit 0 | Bit
+   * 1-3 | | Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------|
    * @see #encodeEncodedData()
    * @param encodedData encodedData or {@code null} for none
@@ -232,26 +191,18 @@ public final class SecondDerivativeElevationGrid extends com.google.api.client.j
 
   /**
    * A stream of elements each representing a point on the tile running across each row from left to
-   * right, top to bottom.
-   *
-   * There will be precisely horizontal_resolution * vertical_resolution elements in the stream.
-   *
-   * The elements are not the heights, rather the second order derivative of the values one would
-   * expect in a stream of height data.
-   *
-   * Each element is a varint with the following encoding:
-   * ------------------------------------------------------------------------| | Head Nibble
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit 1
-   * | Bits 2-3                                   | | Terminator| Sign (1=neg) | Least significant 2
-   * bits of absolute error |
-   * ------------------------------------------------------------------------| | Tail Nibble #1
-   * | ------------------------------------------------------------------------| | Bit 0     | Bit
-   * 1-3                                                   | | Terminator| Least significant 3 bits
-   * of absolute error                |
+   * right, top to bottom. There will be precisely horizontal_resolution * vertical_resolution
+   * elements in the stream. The elements are not the heights, rather the second order derivative of
+   * the values one would expect in a stream of height data. Each element is a varint with the
+   * following encoding: ------------------------------------------------------------------------| |
+   * Head Nibble | ------------------------------------------------------------------------| | Bit 0
+   * | Bit 1 | Bits 2-3 | | Terminator| Sign (1=neg) | Least significant 2 bits of absolute error |
+   * ------------------------------------------------------------------------| | Tail Nibble #1 |
+   * ------------------------------------------------------------------------| | Bit 0 | Bit 1-3 | |
+   * Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------| | ... | Tail Nibble
-   * #n                                                        |
-   * ------------------------------------------------------------------------| | Bit 0     | Bit 1-3
-   * | | Terminator| Least significant 3 bits of absolute error                |
+   * #n | ------------------------------------------------------------------------| | Bit 0 | Bit
+   * 1-3 | | Terminator| Least significant 3 bits of absolute error |
    * ------------------------------------------------------------------------|
    * @see #setEncodedData()
    *

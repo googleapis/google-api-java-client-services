@@ -42,9 +42,7 @@ public final class Line extends com.google.api.client.json.GenericJson {
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. In
    * general, larger and more important road features will have a higher z-order line associated
    * with them. This z-ordering can only be used to compare lines, and cannot be compared with the
-   * z_order field in the Area message.
-   *
-   * The z-order may be negative or zero.
+   * z_order field in the Area message. The z-order may be negative or zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +71,7 @@ public final class Line extends com.google.api.client.json.GenericJson {
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. In
    * general, larger and more important road features will have a higher z-order line associated
    * with them. This z-ordering can only be used to compare lines, and cannot be compared with the
-   * z_order field in the Area message.
-   *
-   * The z-order may be negative or zero.
+   * z_order field in the Area message. The z-order may be negative or zero.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getZOrder() {
@@ -88,9 +84,7 @@ public final class Line extends com.google.api.client.json.GenericJson {
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. In
    * general, larger and more important road features will have a higher z-order line associated
    * with them. This z-ordering can only be used to compare lines, and cannot be compared with the
-   * z_order field in the Area message.
-   *
-   * The z-order may be negative or zero.
+   * z_order field in the Area message. The z-order may be negative or zero.
    * @param zOrder zOrder or {@code null} for none
    */
   public Line setZOrder(java.lang.Integer zOrder) {

@@ -18,10 +18,8 @@ package com.google.api.services.vectortile.v1.model;
 
 /**
  * 2D vertex list used for lines and areas. Each entry represents an offset from the previous one in
- * local tile coordinates. The first entry is offset from (0, 0).
- *
- * For example, the list of vertices [(1,1), (2, 2), (1, 2)] would be encoded in vertex offsets as
- * [(1, 1), (1, 1), (-1, 0)].
+ * local tile coordinates. The first entry is offset from (0, 0). For example, the list of vertices
+ * [(1,1), (2, 2), (1, 2)] would be encoded in vertex offsets as [(1, 1), (1, 1), (-1, 0)].
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Semantic Tile API. For a detailed explanation see:

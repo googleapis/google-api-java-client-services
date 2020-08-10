@@ -20,9 +20,8 @@ package com.google.api.services.vectortile.v1.model;
  * Represents the geometry of a feature, that is, the shape that it has on the map. The local tile
  * coordinate system has the origin at the north-west (upper-left) corner of the tile, and is scaled
  * to 4096 units across each edge. The height (Z) axis has the same scale factor: an extruded area
- * with a max_z value of 4096 has the same height as the width of the tile that it is on.
- *
- * There is no clipping boundary, so it is possible that some coordinates will lie outside the tile
+ * with a max_z value of 4096 has the same height as the width of the tile that it is on. There is
+ * no clipping boundary, so it is possible that some coordinates will lie outside the tile
  * boundaries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

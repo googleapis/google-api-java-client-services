@@ -18,10 +18,9 @@ package com.google.api.services.vectortile.v1.model;
 
 /**
  * Represents a height-extruded area: a 3D prism with a constant X-Y plane cross section. Used to
- * represent extruded buildings. A single building may consist of several extruded areas.
- *
- * The min_z and max_z fields are scaled to the size of the tile. An extruded area with a max_z
- * value of 4096 has the same height as the width of the tile that it is on.
+ * represent extruded buildings. A single building may consist of several extruded areas. The min_z
+ * and max_z fields are scaled to the size of the tile. An extruded area with a max_z value of 4096
+ * has the same height as the width of the tile that it is on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Semantic Tile API. For a detailed explanation see:

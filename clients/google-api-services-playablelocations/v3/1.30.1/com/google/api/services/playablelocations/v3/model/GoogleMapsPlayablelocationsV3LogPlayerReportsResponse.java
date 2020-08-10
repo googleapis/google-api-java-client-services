@@ -17,9 +17,7 @@
 package com.google.api.services.playablelocations.v3.model;
 
 /**
- * A response for the LogPlayerReports method.
- *
- * This method returns no data upon success.
+ * A response for the LogPlayerReports method. This method returns no data upon success.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Playable Locations API. For a detailed explanation

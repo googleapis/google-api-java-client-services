@@ -40,9 +40,7 @@ public final class GoogleMapsPlayablelocationsV3SampleFilter extends com.google.
 
   /**
    * Specifies the maximum number of playable locations to return. This value must not be greater
-   * than 1000. The default value is 100.
-   *
-   * Only the top-ranking playable locations are returned.
+   * than 1000. The default value is 100. Only the top-ranking playable locations are returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +75,7 @@ public final class GoogleMapsPlayablelocationsV3SampleFilter extends com.google.
 
   /**
    * Specifies the maximum number of playable locations to return. This value must not be greater
-   * than 1000. The default value is 100.
-   *
-   * Only the top-ranking playable locations are returned.
+   * than 1000. The default value is 100. Only the top-ranking playable locations are returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxLocationCount() {
@@ -88,9 +84,7 @@ public final class GoogleMapsPlayablelocationsV3SampleFilter extends com.google.
 
   /**
    * Specifies the maximum number of playable locations to return. This value must not be greater
-   * than 1000. The default value is 100.
-   *
-   * Only the top-ranking playable locations are returned.
+   * than 1000. The default value is 100. Only the top-ranking playable locations are returned.
    * @param maxLocationCount maxLocationCount or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3SampleFilter setMaxLocationCount(java.lang.Integer maxLocationCount) {

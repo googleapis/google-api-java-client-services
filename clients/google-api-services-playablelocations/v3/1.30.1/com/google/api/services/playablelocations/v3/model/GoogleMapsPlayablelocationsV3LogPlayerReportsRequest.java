@@ -47,10 +47,8 @@ public final class GoogleMapsPlayablelocationsV3LogPlayerReportsRequest extends 
   /**
    * Required. A string that uniquely identifies the log player reports request. This allows you to
    * detect duplicate requests. We recommend that you use UUIDs for this value. The value must not
-   * exceed 50 characters.
-   *
-   * You should reuse the `request_id` only when retrying a request in the case of a failure. In
-   * that case, the request must be identical to the one that failed.
+   * exceed 50 characters. You should reuse the `request_id` only when retrying a request in the
+   * case of a failure. In that case, the request must be identical to the one that failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,10 +91,8 @@ public final class GoogleMapsPlayablelocationsV3LogPlayerReportsRequest extends 
   /**
    * Required. A string that uniquely identifies the log player reports request. This allows you to
    * detect duplicate requests. We recommend that you use UUIDs for this value. The value must not
-   * exceed 50 characters.
-   *
-   * You should reuse the `request_id` only when retrying a request in the case of a failure. In
-   * that case, the request must be identical to the one that failed.
+   * exceed 50 characters. You should reuse the `request_id` only when retrying a request in the
+   * case of a failure. In that case, the request must be identical to the one that failed.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -106,10 +102,8 @@ public final class GoogleMapsPlayablelocationsV3LogPlayerReportsRequest extends 
   /**
    * Required. A string that uniquely identifies the log player reports request. This allows you to
    * detect duplicate requests. We recommend that you use UUIDs for this value. The value must not
-   * exceed 50 characters.
-   *
-   * You should reuse the `request_id` only when retrying a request in the case of a failure. In
-   * that case, the request must be identical to the one that failed.
+   * exceed 50 characters. You should reuse the `request_id` only when retrying a request in the
+   * case of a failure. In that case, the request must be identical to the one that failed.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleMapsPlayablelocationsV3LogPlayerReportsRequest setRequestId(java.lang.String requestId) {

@@ -43,13 +43,10 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * into the vertices array, and denotes the start vertex of the internal edge (the next vertex in
    * the boundary loop is the end of the edge). If the selected vertex is the last vertex in the
    * boundary loop, then the edge between that vertex and the starting vertex of the loop is
-   * internal.
-   *
-   * This field may be used for styling. For example, building parapets could be placed only on the
-   * external edges of a building polygon, or water could be lighter colored near the external edges
-   * of a body of water.
-   *
-   * If has_external_edges is false, all edges are internal and this field will be empty.
+   * internal. This field may be used for styling. For example, building parapets could be placed
+   * only on the external edges of a building polygon, or water could be lighter colored near the
+   * external edges of a body of water. If has_external_edges is false, all edges are internal and
+   * this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +56,6 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * Identifies the boundary loops of the polygon. Only set for INDEXED_TRIANGLE polygons. Each
    * value is an index into the vertices array indicating the beginning of a loop. For instance,
    * values of [2, 5] would indicate loop_data contained 3 loops with indices 0-1, 2-4, and 5-end.
-   *
    * This may be used in conjunction with the internal_edges field for styling polygon boundaries.
    * Note that an edge may be on a polygon boundary but still internal to the feature. For example,
    * a feature split across multiple tiles will have an internal polygon boundary edge along the
@@ -96,9 +92,7 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * higher z-order. This z-ordering does not imply anything about the altitude of the line relative
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. This
    * z-ordering can only be used to compare areas, and cannot be compared with the z_order field in
-   * the Line message.
-   *
-   * The z-order may be negative or zero.
+   * the Line message. The z-order may be negative or zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,13 +123,10 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * into the vertices array, and denotes the start vertex of the internal edge (the next vertex in
    * the boundary loop is the end of the edge). If the selected vertex is the last vertex in the
    * boundary loop, then the edge between that vertex and the starting vertex of the loop is
-   * internal.
-   *
-   * This field may be used for styling. For example, building parapets could be placed only on the
-   * external edges of a building polygon, or water could be lighter colored near the external edges
-   * of a body of water.
-   *
-   * If has_external_edges is false, all edges are internal and this field will be empty.
+   * internal. This field may be used for styling. For example, building parapets could be placed
+   * only on the external edges of a building polygon, or water could be lighter colored near the
+   * external edges of a body of water. If has_external_edges is false, all edges are internal and
+   * this field will be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getInternalEdges() {
@@ -148,13 +139,10 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * into the vertices array, and denotes the start vertex of the internal edge (the next vertex in
    * the boundary loop is the end of the edge). If the selected vertex is the last vertex in the
    * boundary loop, then the edge between that vertex and the starting vertex of the loop is
-   * internal.
-   *
-   * This field may be used for styling. For example, building parapets could be placed only on the
-   * external edges of a building polygon, or water could be lighter colored near the external edges
-   * of a body of water.
-   *
-   * If has_external_edges is false, all edges are internal and this field will be empty.
+   * internal. This field may be used for styling. For example, building parapets could be placed
+   * only on the external edges of a building polygon, or water could be lighter colored near the
+   * external edges of a body of water. If has_external_edges is false, all edges are internal and
+   * this field will be empty.
    * @param internalEdges internalEdges or {@code null} for none
    */
   public Area setInternalEdges(java.util.List<java.lang.Integer> internalEdges) {
@@ -166,7 +154,6 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * Identifies the boundary loops of the polygon. Only set for INDEXED_TRIANGLE polygons. Each
    * value is an index into the vertices array indicating the beginning of a loop. For instance,
    * values of [2, 5] would indicate loop_data contained 3 loops with indices 0-1, 2-4, and 5-end.
-   *
    * This may be used in conjunction with the internal_edges field for styling polygon boundaries.
    * Note that an edge may be on a polygon boundary but still internal to the feature. For example,
    * a feature split across multiple tiles will have an internal polygon boundary edge along the
@@ -181,7 +168,6 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * Identifies the boundary loops of the polygon. Only set for INDEXED_TRIANGLE polygons. Each
    * value is an index into the vertices array indicating the beginning of a loop. For instance,
    * values of [2, 5] would indicate loop_data contained 3 loops with indices 0-1, 2-4, and 5-end.
-   *
    * This may be used in conjunction with the internal_edges field for styling polygon boundaries.
    * Note that an edge may be on a polygon boundary but still internal to the feature. For example,
    * a feature split across multiple tiles will have an internal polygon boundary edge along the
@@ -251,9 +237,7 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * higher z-order. This z-ordering does not imply anything about the altitude of the line relative
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. This
    * z-ordering can only be used to compare areas, and cannot be compared with the z_order field in
-   * the Line message.
-   *
-   * The z-order may be negative or zero.
+   * the Line message. The z-order may be negative or zero.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getZOrder() {
@@ -265,9 +249,7 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * higher z-order. This z-ordering does not imply anything about the altitude of the line relative
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. This
    * z-ordering can only be used to compare areas, and cannot be compared with the z_order field in
-   * the Line message.
-   *
-   * The z-order may be negative or zero.
+   * the Line message. The z-order may be negative or zero.
    * @param zOrder zOrder or {@code null} for none
    */
   public Area setZOrder(java.lang.Integer zOrder) {

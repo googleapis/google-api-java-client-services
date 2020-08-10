@@ -20,8 +20,7 @@ package com.google.api.services.vectortile.v1;
  * Service definition for SemanticTile (v1).
  *
  * <p>
- * Serves vector tiles containing geospatial data.
-
+ * Serves vector tiles containing geospatial data. 
  * </p>
  *
  * <p>
@@ -151,12 +150,9 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the vectortile server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the tile. The tile resource name is prefixed by
-    its collection ID
-     *        `tiles/` followed by the resource ID, which encodes the
-    tile's global x and y coordinates
-     *        and zoom level as `@,,z`.
-    For example, `tiles/@1,2,3z`.
+     * @param name Required. Resource name of the tile. The tile resource name is prefixed by its collection ID
+     *        `tiles/` followed by the resource ID, which encodes the tile's global x and y coordinates
+     *        and zoom level as `@,,z`. For example, `tiles/@1,2,3z`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -182,12 +178,9 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the tile. The tile resource name is prefixed by
-    its collection ID
-     *        `tiles/` followed by the resource ID, which encodes the
-    tile's global x and y coordinates
-     *        and zoom level as `@,,z`.
-    For example, `tiles/@1,2,3z`.
+       * @param name Required. Resource name of the tile. The tile resource name is prefixed by its collection ID
+     *        `tiles/` followed by the resource ID, which encodes the tile's global x and y coordinates
+     *        and zoom level as `@,,z`. For example, `tiles/@1,2,3z`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -361,9 +354,7 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * Device model as reported by the device. The exact format is platform-dependent.
-       */
+      /** Device model as reported by the device. The exact format is platform-dependent. */
       @com.google.api.client.util.Key("clientInfo.deviceModel")
       private java.lang.String clientInfoDeviceModel;
 
@@ -373,9 +364,7 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
         return clientInfoDeviceModel;
       }
 
-      /**
-       * Device model as reported by the device. The exact format is platform-dependent.
-       */
+      /** Device model as reported by the device. The exact format is platform-dependent. */
       public Get setClientInfoDeviceModel(java.lang.String clientInfoDeviceModel) {
         this.clientInfoDeviceModel = clientInfoDeviceModel;
         return this;
@@ -421,26 +410,27 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * A client-generated user ID. The ID should be generated and persisted during the first user
-       * session or whenever a pre-existing ID is not found. The exact format is up to the client.
-       * This must be non-empty in a GetFeatureTileRequest (whether via the header or
+       * Required. A client-generated user ID. The ID should be generated and persisted during the
+       * first user session or whenever a pre-existing ID is not found. The exact format is up to
+       * the client. This must be non-empty in a GetFeatureTileRequest (whether via the header or
        * GetFeatureTileRequest.client_info).
        */
       @com.google.api.client.util.Key("clientInfo.userId")
       private java.lang.String clientInfoUserId;
 
-      /** A client-generated user ID. The ID should be generated and persisted during the first user session
-     or whenever a pre-existing ID is not found. The exact format is up to the client. This must be non-
-     empty in a GetFeatureTileRequest (whether via the header or GetFeatureTileRequest.client_info).
+      /** Required. A client-generated user ID. The ID should be generated and persisted during the first
+     user session or whenever a pre-existing ID is not found. The exact format is up to the client. This
+     must be non-empty in a GetFeatureTileRequest (whether via the header or
+     GetFeatureTileRequest.client_info).
        */
       public java.lang.String getClientInfoUserId() {
         return clientInfoUserId;
       }
 
       /**
-       * A client-generated user ID. The ID should be generated and persisted during the first user
-       * session or whenever a pre-existing ID is not found. The exact format is up to the client.
-       * This must be non-empty in a GetFeatureTileRequest (whether via the header or
+       * Required. A client-generated user ID. The ID should be generated and persisted during the
+       * first user session or whenever a pre-existing ID is not found. The exact format is up to
+       * the client. This must be non-empty in a GetFeatureTileRequest (whether via the header or
        * GetFeatureTileRequest.client_info).
        */
       public Get setClientInfoUserId(java.lang.String clientInfoUserId) {
@@ -451,20 +441,17 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       /**
        * Optional version id identifying the tile that is already in the client's cache. This field
        * should be populated with the most recent version_id value returned by the API for the
-       * requested tile.
-       *
-       * If the version id is empty the server always returns a newly rendered tile. If it is
-       * provided the server checks if the tile contents would be identical to one that's already on
-       * the client, and if so, returns a stripped-down response tile with STATUS_OK_DATA_UNCHANGED
-       * instead.
+       * requested tile. If the version id is empty the server always returns a newly rendered tile.
+       * If it is provided the server checks if the tile contents would be identical to one that's
+       * already on the client, and if so, returns a stripped-down response tile with
+       * STATUS_OK_DATA_UNCHANGED instead.
        */
       @com.google.api.client.util.Key
       private java.lang.String clientTileVersionId;
 
       /** Optional version id identifying the tile that is already in the client's cache. This field should
-     be populated with the most recent version_id value returned by the API for the requested tile.
-
-     If the version id is empty the server always returns a newly rendered tile. If it is provided the
+     be populated with the most recent version_id value returned by the API for the requested tile. If
+     the version id is empty the server always returns a newly rendered tile. If it is provided the
      server checks if the tile contents would be identical to one that's already on the client, and if
      so, returns a stripped-down response tile with STATUS_OK_DATA_UNCHANGED instead.
        */
@@ -475,12 +462,10 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       /**
        * Optional version id identifying the tile that is already in the client's cache. This field
        * should be populated with the most recent version_id value returned by the API for the
-       * requested tile.
-       *
-       * If the version id is empty the server always returns a newly rendered tile. If it is
-       * provided the server checks if the tile contents would be identical to one that's already on
-       * the client, and if so, returns a stripped-down response tile with STATUS_OK_DATA_UNCHANGED
-       * instead.
+       * requested tile. If the version id is empty the server always returns a newly rendered tile.
+       * If it is provided the server checks if the tile contents would be identical to one that's
+       * already on the client, and if so, returns a stripped-down response tile with
+       * STATUS_OK_DATA_UNCHANGED instead.
        */
       public Get setClientTileVersionId(java.lang.String clientTileVersionId) {
         this.clientTileVersionId = clientTileVersionId;
@@ -490,18 +475,14 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       /**
        * Flag indicating whether detailed highway types should be returned. If this is set, the
        * CONTROLLED_ACCESS_HIGHWAY type may be returned. If not, then these highways will have the
-       * generic HIGHWAY type.
-       *
-       * This exists for backwards compatibility reasons.
+       * generic HIGHWAY type. This exists for backwards compatibility reasons.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enableDetailedHighwayTypes;
 
       /** Flag indicating whether detailed highway types should be returned. If this is set, the
      CONTROLLED_ACCESS_HIGHWAY type may be returned. If not, then these highways will have the generic
-     HIGHWAY type.
-
-     This exists for backwards compatibility reasons.
+     HIGHWAY type. This exists for backwards compatibility reasons.
        */
       public java.lang.Boolean getEnableDetailedHighwayTypes() {
         return enableDetailedHighwayTypes;
@@ -510,9 +491,7 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       /**
        * Flag indicating whether detailed highway types should be returned. If this is set, the
        * CONTROLLED_ACCESS_HIGHWAY type may be returned. If not, then these highways will have the
-       * generic HIGHWAY type.
-       *
-       * This exists for backwards compatibility reasons.
+       * generic HIGHWAY type. This exists for backwards compatibility reasons.
        */
       public Get setEnableDetailedHighwayTypes(java.lang.Boolean enableDetailedHighwayTypes) {
         this.enableDetailedHighwayTypes = enableDetailedHighwayTypes;
@@ -634,17 +613,15 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
 
       /**
        * Required. The BCP-47 language code corresponding to the language in which the name was
-       * requested, such as "en-US" or "sr-Latn".
-       *
-       * For more information, see http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+       * requested, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** Required. The BCP-47 language code corresponding to the language in which the name was requested,
-     such as "en-US" or "sr-Latn".
-
-     For more information, see http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     such as "en-US" or "sr-Latn". For more information, see
+     http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -652,9 +629,8 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
 
       /**
        * Required. The BCP-47 language code corresponding to the language in which the name was
-       * requested, such as "en-US" or "sr-Latn".
-       *
-       * For more information, see http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+       * requested, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
        */
       public Get setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -663,17 +639,15 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
 
       /**
        * Required. The Unicode country/region code (CLDR) of the location from which the request is
-       * coming from, such as "US" and "419".
-       *
-       * For more information, see http://www.unicode.org/reports/tr35/#unicode_region_subtag.
+       * coming from, such as "US" and "419". For more information, see
+       * http://www.unicode.org/reports/tr35/#unicode_region_subtag.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
       /** Required. The Unicode country/region code (CLDR) of the location from which the request is coming
-     from, such as "US" and "419".
-
-     For more information, see http://www.unicode.org/reports/tr35/#unicode_region_subtag.
+     from, such as "US" and "419". For more information, see
+     http://www.unicode.org/reports/tr35/#unicode_region_subtag.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
@@ -681,9 +655,8 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
 
       /**
        * Required. The Unicode country/region code (CLDR) of the location from which the request is
-       * coming from, such as "US" and "419".
-       *
-       * For more information, see http://www.unicode.org/reports/tr35/#unicode_region_subtag.
+       * coming from, such as "US" and "419". For more information, see
+       * http://www.unicode.org/reports/tr35/#unicode_region_subtag.
        */
       public Get setRegionCode(java.lang.String regionCode) {
         this.regionCode = regionCode;
@@ -726,12 +699,9 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the vectortile server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the tile. The tile resource name is prefixed by
-    its collection ID
-     *        `terraintiles/` followed by the resource ID, which
-    encodes the tile's global x and y
-     *        coordinates and zoom level as
-    `@,,z`. For example, `terraintiles/@1,2,3z`.
+     * @param name Required. Resource name of the tile. The tile resource name is prefixed by its collection ID
+     *        `terraintiles/` followed by the resource ID, which encodes the tile's global x and y
+     *        coordinates and zoom level as `@,,z`. For example, `terraintiles/@1,2,3z`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -757,12 +727,9 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the tile. The tile resource name is prefixed by
-    its collection ID
-     *        `terraintiles/` followed by the resource ID, which
-    encodes the tile's global x and y
-     *        coordinates and zoom level as
-    `@,,z`. For example, `terraintiles/@1,2,3z`.
+       * @param name Required. Resource name of the tile. The tile resource name is prefixed by its collection ID
+     *        `terraintiles/` followed by the resource ID, which encodes the tile's global x and y
+     *        coordinates and zoom level as `@,,z`. For example, `terraintiles/@1,2,3z`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -959,9 +926,7 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * Device model as reported by the device. The exact format is platform-dependent.
-       */
+      /** Device model as reported by the device. The exact format is platform-dependent. */
       @com.google.api.client.util.Key("clientInfo.deviceModel")
       private java.lang.String clientInfoDeviceModel;
 
@@ -971,9 +936,7 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
         return clientInfoDeviceModel;
       }
 
-      /**
-       * Device model as reported by the device. The exact format is platform-dependent.
-       */
+      /** Device model as reported by the device. The exact format is platform-dependent. */
       public Get setClientInfoDeviceModel(java.lang.String clientInfoDeviceModel) {
         this.clientInfoDeviceModel = clientInfoDeviceModel;
         return this;
@@ -1019,26 +982,27 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * A client-generated user ID. The ID should be generated and persisted during the first user
-       * session or whenever a pre-existing ID is not found. The exact format is up to the client.
-       * This must be non-empty in a GetFeatureTileRequest (whether via the header or
+       * Required. A client-generated user ID. The ID should be generated and persisted during the
+       * first user session or whenever a pre-existing ID is not found. The exact format is up to
+       * the client. This must be non-empty in a GetFeatureTileRequest (whether via the header or
        * GetFeatureTileRequest.client_info).
        */
       @com.google.api.client.util.Key("clientInfo.userId")
       private java.lang.String clientInfoUserId;
 
-      /** A client-generated user ID. The ID should be generated and persisted during the first user session
-     or whenever a pre-existing ID is not found. The exact format is up to the client. This must be non-
-     empty in a GetFeatureTileRequest (whether via the header or GetFeatureTileRequest.client_info).
+      /** Required. A client-generated user ID. The ID should be generated and persisted during the first
+     user session or whenever a pre-existing ID is not found. The exact format is up to the client. This
+     must be non-empty in a GetFeatureTileRequest (whether via the header or
+     GetFeatureTileRequest.client_info).
        */
       public java.lang.String getClientInfoUserId() {
         return clientInfoUserId;
       }
 
       /**
-       * A client-generated user ID. The ID should be generated and persisted during the first user
-       * session or whenever a pre-existing ID is not found. The exact format is up to the client.
-       * This must be non-empty in a GetFeatureTileRequest (whether via the header or
+       * Required. A client-generated user ID. The ID should be generated and persisted during the
+       * first user session or whenever a pre-existing ID is not found. The exact format is up to
+       * the client. This must be non-empty in a GetFeatureTileRequest (whether via the header or
        * GetFeatureTileRequest.client_info).
        */
       public Get setClientInfoUserId(java.lang.String clientInfoUserId) {
@@ -1050,10 +1014,9 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
        * The maximum allowed resolution for the returned elevation heightmap. Possible values:
        * between 1 and 1024 (and not less than min_elevation_resolution_cells). Over-sized
        * heightmaps will be non-uniformly down-sampled such that each edge is no longer than this
-       * value. Non-uniformity is chosen to maximise the amount of preserved data.
-       *
-       * For example: Original resolution: 100px (width) * 30px (height) max_elevation_resolution:
-       * 30 New resolution: 30px (width) * 30px (height)
+       * value. Non-uniformity is chosen to maximise the amount of preserved data. For example:
+       * Original resolution: 100px (width) * 30px (height) max_elevation_resolution: 30 New
+       * resolution: 30px (width) * 30px (height)
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxElevationResolutionCells;
@@ -1061,10 +1024,8 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       /** The maximum allowed resolution for the returned elevation heightmap. Possible values: between 1 and
      1024 (and not less than min_elevation_resolution_cells). Over-sized heightmaps will be non-
      uniformly down-sampled such that each edge is no longer than this value. Non-uniformity is chosen
-     to maximise the amount of preserved data.
-
-     For example: Original resolution: 100px (width) * 30px (height) max_elevation_resolution: 30 New
-     resolution: 30px (width) * 30px (height)
+     to maximise the amount of preserved data. For example: Original resolution: 100px (width) * 30px
+     (height) max_elevation_resolution: 30 New resolution: 30px (width) * 30px (height)
        */
       public java.lang.Integer getMaxElevationResolutionCells() {
         return maxElevationResolutionCells;
@@ -1074,10 +1035,9 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
        * The maximum allowed resolution for the returned elevation heightmap. Possible values:
        * between 1 and 1024 (and not less than min_elevation_resolution_cells). Over-sized
        * heightmaps will be non-uniformly down-sampled such that each edge is no longer than this
-       * value. Non-uniformity is chosen to maximise the amount of preserved data.
-       *
-       * For example: Original resolution: 100px (width) * 30px (height) max_elevation_resolution:
-       * 30 New resolution: 30px (width) * 30px (height)
+       * value. Non-uniformity is chosen to maximise the amount of preserved data. For example:
+       * Original resolution: 100px (width) * 30px (height) max_elevation_resolution: 30 New
+       * resolution: 30px (width) * 30px (height)
        */
       public Get setMaxElevationResolutionCells(java.lang.Integer maxElevationResolutionCells) {
         this.maxElevationResolutionCells = maxElevationResolutionCells;
@@ -1089,10 +1049,8 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
        * between 0 and 1024 (and not more than max_elevation_resolution_cells). Zero is supported
        * for backward compatibility. Under-sized heightmaps will be non-uniformly up-sampled such
        * that each edge is no shorter than this value. Non-uniformity is chosen to maximise the
-       * amount of preserved data.
-       *
-       * For example: Original resolution: 30px (width) * 10px (height) min_elevation_resolution: 30
-       * New resolution: 30px (width) * 30px (height)
+       * amount of preserved data. For example: Original resolution: 30px (width) * 10px (height)
+       * min_elevation_resolution: 30 New resolution: 30px (width) * 30px (height)
        */
       @com.google.api.client.util.Key
       private java.lang.Integer minElevationResolutionCells;
@@ -1100,9 +1058,8 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       /** The minimum allowed resolution for the returned elevation heightmap. Possible values: between 0 and
      1024 (and not more than max_elevation_resolution_cells). Zero is supported for backward
      compatibility. Under-sized heightmaps will be non-uniformly up-sampled such that each edge is no
-     shorter than this value. Non-uniformity is chosen to maximise the amount of preserved data.
-
-     For example: Original resolution: 30px (width) * 10px (height) min_elevation_resolution: 30 New
+     shorter than this value. Non-uniformity is chosen to maximise the amount of preserved data. For
+     example: Original resolution: 30px (width) * 10px (height) min_elevation_resolution: 30 New
      resolution: 30px (width) * 30px (height)
        */
       public java.lang.Integer getMinElevationResolutionCells() {
@@ -1114,10 +1071,8 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
        * between 0 and 1024 (and not more than max_elevation_resolution_cells). Zero is supported
        * for backward compatibility. Under-sized heightmaps will be non-uniformly up-sampled such
        * that each edge is no shorter than this value. Non-uniformity is chosen to maximise the
-       * amount of preserved data.
-       *
-       * For example: Original resolution: 30px (width) * 10px (height) min_elevation_resolution: 30
-       * New resolution: 30px (width) * 30px (height)
+       * amount of preserved data. For example: Original resolution: 30px (width) * 10px (height)
+       * min_elevation_resolution: 30 New resolution: 30px (width) * 30px (height)
        */
       public Get setMinElevationResolutionCells(java.lang.Integer minElevationResolutionCells) {
         this.minElevationResolutionCells = minElevationResolutionCells;

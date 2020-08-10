@@ -19,12 +19,8 @@ package com.google.api.services.vectortile.v1.model;
 /**
  * Represents a strip of triangles. Each triangle uses the last edge of the previous one. The
  * following diagram shows an example of a triangle strip, with each vertex labeled with its index
- * in the vertex_index array.
- *
- *              (1)-----(3)              / \     / \             /   \   /   \            /     \ /
- * \          (0)-----(2)-----(4)
- *
- * Vertices may be in either clockwise or counter-clockwise order.
+ * in the vertex_index array. (1)-----(3) / \ / \ / \ / \ / \ / \ (0)-----(2)-----(4) Vertices may
+ * be in either clockwise or counter-clockwise order.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Semantic Tile API. For a detailed explanation see:

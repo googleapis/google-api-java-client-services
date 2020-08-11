@@ -17,9 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Inserts a table at the specified location.
- *
- * A newline character will be inserted before the inserted table.
+ * Inserts a table at the specified location. A newline character will be inserted before the
+ * inserted table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -40,25 +39,18 @@ public final class InsertTableRequest extends com.google.api.client.json.Generic
 
   /**
    * Inserts the table at the end of the given header, footer or document body. A newline character
-   * will be inserted before the inserted table.
-   *
-   * Tables cannot be inserted inside a footnote.
+   * will be inserted before the inserted table. Tables cannot be inserted inside a footnote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts the table at a specific model index.
-   *
-   * A newline character will be inserted before the inserted table, therefore the table start index
-   * will be at the specified location index + 1.
-   *
+   * Inserts the table at a specific model index. A newline character will be inserted before the
+   * inserted table, therefore the table start index will be at the specified location index + 1.
    * The table must be inserted inside the bounds of an existing Paragraph. For instance, it cannot
    * be inserted at a table's start index (i.e. between an existing table and its preceding
-   * paragraph).
-   *
-   * Tables cannot be inserted inside a footnote or equation.
+   * paragraph). Tables cannot be inserted inside a footnote or equation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +82,7 @@ public final class InsertTableRequest extends com.google.api.client.json.Generic
 
   /**
    * Inserts the table at the end of the given header, footer or document body. A newline character
-   * will be inserted before the inserted table.
-   *
-   * Tables cannot be inserted inside a footnote.
+   * will be inserted before the inserted table. Tables cannot be inserted inside a footnote.
    * @return value or {@code null} for none
    */
   public EndOfSegmentLocation getEndOfSegmentLocation() {
@@ -101,9 +91,7 @@ public final class InsertTableRequest extends com.google.api.client.json.Generic
 
   /**
    * Inserts the table at the end of the given header, footer or document body. A newline character
-   * will be inserted before the inserted table.
-   *
-   * Tables cannot be inserted inside a footnote.
+   * will be inserted before the inserted table. Tables cannot be inserted inside a footnote.
    * @param endOfSegmentLocation endOfSegmentLocation or {@code null} for none
    */
   public InsertTableRequest setEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
@@ -112,16 +100,11 @@ public final class InsertTableRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Inserts the table at a specific model index.
-   *
-   * A newline character will be inserted before the inserted table, therefore the table start index
-   * will be at the specified location index + 1.
-   *
+   * Inserts the table at a specific model index. A newline character will be inserted before the
+   * inserted table, therefore the table start index will be at the specified location index + 1.
    * The table must be inserted inside the bounds of an existing Paragraph. For instance, it cannot
    * be inserted at a table's start index (i.e. between an existing table and its preceding
-   * paragraph).
-   *
-   * Tables cannot be inserted inside a footnote or equation.
+   * paragraph). Tables cannot be inserted inside a footnote or equation.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -129,16 +112,11 @@ public final class InsertTableRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Inserts the table at a specific model index.
-   *
-   * A newline character will be inserted before the inserted table, therefore the table start index
-   * will be at the specified location index + 1.
-   *
+   * Inserts the table at a specific model index. A newline character will be inserted before the
+   * inserted table, therefore the table start index will be at the specified location index + 1.
    * The table must be inserted inside the bounds of an existing Paragraph. For instance, it cannot
    * be inserted at a table's start index (i.e. between an existing table and its preceding
-   * paragraph).
-   *
-   * Tables cannot be inserted inside a footnote or equation.
+   * paragraph). Tables cannot be inserted inside a footnote or equation.
    * @param location location or {@code null} for none
    */
   public InsertTableRequest setLocation(Location location) {

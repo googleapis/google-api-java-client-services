@@ -37,29 +37,24 @@ public final class InsertTextRequest extends com.google.api.client.json.GenericJ
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts the text at a specific index in the document.
-   *
-   * Text must be inserted inside the bounds of an existing Paragraph. For instance, text cannot be
-   * inserted at a table's start index (i.e. between the table and its preceding paragraph). The
-   * text must be inserted in the preceding paragraph.
+   * Inserts the text at a specific index in the document. Text must be inserted inside the bounds
+   * of an existing Paragraph. For instance, text cannot be inserted at a table's start index (i.e.
+   * between the table and its preceding paragraph). The text must be inserted in the preceding
+   * paragraph.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Location location;
 
   /**
-   * The text to be inserted.
-   *
-   * Inserting a newline character will implicitly create a new Paragraph at that index. The
-   * paragraph style of the new paragraph will be copied from the paragraph at the current insertion
-   * index, including lists and bullets.
-   *
-   * Text styles for inserted text will be determined automatically, generally preserving the
-   * styling of neighboring text. In most cases, the text style for the inserted text will match the
-   * text immediately before the insertion index.
-   *
-   * Some control characters (U+0000-U+0008, U+000C-U+001F) and characters from the Unicode Basic
-   * Multilingual Plane Private Use Area (U+E000-U+F8FF) will be stripped out of the inserted text.
+   * The text to be inserted. Inserting a newline character will implicitly create a new Paragraph
+   * at that index. The paragraph style of the new paragraph will be copied from the paragraph at
+   * the current insertion index, including lists and bullets. Text styles for inserted text will be
+   * determined automatically, generally preserving the styling of neighboring text. In most cases,
+   * the text style for the inserted text will match the text immediately before the insertion
+   * index. Some control characters (U+0000-U+0008, U+000C-U+001F) and characters from the Unicode
+   * Basic Multilingual Plane Private Use Area (U+E000-U+F8FF) will be stripped out of the inserted
+   * text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,11 +78,10 @@ public final class InsertTextRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Inserts the text at a specific index in the document.
-   *
-   * Text must be inserted inside the bounds of an existing Paragraph. For instance, text cannot be
-   * inserted at a table's start index (i.e. between the table and its preceding paragraph). The
-   * text must be inserted in the preceding paragraph.
+   * Inserts the text at a specific index in the document. Text must be inserted inside the bounds
+   * of an existing Paragraph. For instance, text cannot be inserted at a table's start index (i.e.
+   * between the table and its preceding paragraph). The text must be inserted in the preceding
+   * paragraph.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -95,11 +89,10 @@ public final class InsertTextRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Inserts the text at a specific index in the document.
-   *
-   * Text must be inserted inside the bounds of an existing Paragraph. For instance, text cannot be
-   * inserted at a table's start index (i.e. between the table and its preceding paragraph). The
-   * text must be inserted in the preceding paragraph.
+   * Inserts the text at a specific index in the document. Text must be inserted inside the bounds
+   * of an existing Paragraph. For instance, text cannot be inserted at a table's start index (i.e.
+   * between the table and its preceding paragraph). The text must be inserted in the preceding
+   * paragraph.
    * @param location location or {@code null} for none
    */
   public InsertTextRequest setLocation(Location location) {
@@ -108,18 +101,14 @@ public final class InsertTextRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The text to be inserted.
-   *
-   * Inserting a newline character will implicitly create a new Paragraph at that index. The
-   * paragraph style of the new paragraph will be copied from the paragraph at the current insertion
-   * index, including lists and bullets.
-   *
-   * Text styles for inserted text will be determined automatically, generally preserving the
-   * styling of neighboring text. In most cases, the text style for the inserted text will match the
-   * text immediately before the insertion index.
-   *
-   * Some control characters (U+0000-U+0008, U+000C-U+001F) and characters from the Unicode Basic
-   * Multilingual Plane Private Use Area (U+E000-U+F8FF) will be stripped out of the inserted text.
+   * The text to be inserted. Inserting a newline character will implicitly create a new Paragraph
+   * at that index. The paragraph style of the new paragraph will be copied from the paragraph at
+   * the current insertion index, including lists and bullets. Text styles for inserted text will be
+   * determined automatically, generally preserving the styling of neighboring text. In most cases,
+   * the text style for the inserted text will match the text immediately before the insertion
+   * index. Some control characters (U+0000-U+0008, U+000C-U+001F) and characters from the Unicode
+   * Basic Multilingual Plane Private Use Area (U+E000-U+F8FF) will be stripped out of the inserted
+   * text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -127,18 +116,14 @@ public final class InsertTextRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The text to be inserted.
-   *
-   * Inserting a newline character will implicitly create a new Paragraph at that index. The
-   * paragraph style of the new paragraph will be copied from the paragraph at the current insertion
-   * index, including lists and bullets.
-   *
-   * Text styles for inserted text will be determined automatically, generally preserving the
-   * styling of neighboring text. In most cases, the text style for the inserted text will match the
-   * text immediately before the insertion index.
-   *
-   * Some control characters (U+0000-U+0008, U+000C-U+001F) and characters from the Unicode Basic
-   * Multilingual Plane Private Use Area (U+E000-U+F8FF) will be stripped out of the inserted text.
+   * The text to be inserted. Inserting a newline character will implicitly create a new Paragraph
+   * at that index. The paragraph style of the new paragraph will be copied from the paragraph at
+   * the current insertion index, including lists and bullets. Text styles for inserted text will be
+   * determined automatically, generally preserving the styling of neighboring text. In most cases,
+   * the text style for the inserted text will match the text immediately before the insertion
+   * index. Some control characters (U+0000-U+0008, U+000C-U+001F) and characters from the Unicode
+   * Basic Multilingual Plane Private Use Area (U+E000-U+F8FF) will be stripped out of the inserted
+   * text.
    * @param text text or {@code null} for none
    */
   public InsertTextRequest setText(java.lang.String text) {

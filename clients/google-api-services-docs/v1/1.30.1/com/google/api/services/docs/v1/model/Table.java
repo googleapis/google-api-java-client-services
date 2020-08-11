@@ -30,10 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of columns in the table.
-   *
-   * It is possible for a table to be non-rectangular, so some rows may have a different number of
-   * cells.
+   * Number of columns in the table. It is possible for a table to be non-rectangular, so some rows
+   * may have a different number of cells.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,10 +74,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private TableStyle tableStyle;
 
   /**
-   * Number of columns in the table.
-   *
-   * It is possible for a table to be non-rectangular, so some rows may have a different number of
-   * cells.
+   * Number of columns in the table. It is possible for a table to be non-rectangular, so some rows
+   * may have a different number of cells.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumns() {
@@ -87,10 +83,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of columns in the table.
-   *
-   * It is possible for a table to be non-rectangular, so some rows may have a different number of
-   * cells.
+   * Number of columns in the table. It is possible for a table to be non-rectangular, so some rows
+   * may have a different number of cells.
    * @param columns columns or {@code null} for none
    */
   public Table setColumns(java.lang.Integer columns) {

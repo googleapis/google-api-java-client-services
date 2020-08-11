@@ -30,10 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class TableStyle extends com.google.api.client.json.GenericJson {
 
   /**
-   * The properties of each column.
-   *
-   * Note that in Docs, tables contain rows and rows contain cells, similar to HTML. So the
-   * properties for a row can be found on the row's table_row_style.
+   * The properties of each column. Note that in Docs, tables contain rows and rows contain cells,
+   * similar to HTML. So the properties for a row can be found on the row's table_row_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,10 +44,8 @@ public final class TableStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties of each column.
-   *
-   * Note that in Docs, tables contain rows and rows contain cells, similar to HTML. So the
-   * properties for a row can be found on the row's table_row_style.
+   * The properties of each column. Note that in Docs, tables contain rows and rows contain cells,
+   * similar to HTML. So the properties for a row can be found on the row's table_row_style.
    * @return value or {@code null} for none
    */
   public java.util.List<TableColumnProperties> getTableColumnProperties() {
@@ -57,10 +53,8 @@ public final class TableStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties of each column.
-   *
-   * Note that in Docs, tables contain rows and rows contain cells, similar to HTML. So the
-   * properties for a row can be found on the row's table_row_style.
+   * The properties of each column. Note that in Docs, tables contain rows and rows contain cells,
+   * similar to HTML. So the properties for a row can be found on the row's table_row_style.
    * @param tableColumnProperties tableColumnProperties or {@code null} for none
    */
   public TableStyle setTableColumnProperties(java.util.List<TableColumnProperties> tableColumnProperties) {

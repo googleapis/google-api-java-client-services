@@ -30,21 +30,18 @@ package com.google.api.services.docs.v1.model;
 public final class InsertInlineImageRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inserts the text at the end of a header, footer or the document body.
-   *
-   * Inline images cannot be inserted inside a footnote.
+   * Inserts the text at the end of a header, footer or the document body. Inline images cannot be
+   * inserted inside a footnote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts the image at a specific index in the document.
-   *
-   * The image must be inserted inside the bounds of an existing Paragraph. For instance, it cannot
-   * be inserted at a table's start index (i.e. between the table and its preceding paragraph).
-   *
-   * Inline images cannot be inserted inside a footnote or equation.
+   * Inserts the image at a specific index in the document. The image must be inserted inside the
+   * bounds of an existing Paragraph. For instance, it cannot be inserted at a table's start index
+   * (i.e. between the table and its preceding paragraph). Inline images cannot be inserted inside a
+   * footnote or equation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,34 +49,29 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
 
   /**
    * The size that the image should appear as in the document. This property is optional and the
-   * final size of the image in the document is determined by the following rules:  * If neither
-   * width nor height is specified, then a default size of the  image is calculated based on its
-   * resolution.  * If one dimension is specified then the other dimension is calculated to
-   * preserve the aspect ratio of the image.  * If both width and height are specified, the image is
-   * scaled to fit  within the provided dimensions while maintaining its aspect ratio.
+   * final size of the image in the document is determined by the following rules: * If neither
+   * width nor height is specified, then a default size of the image is calculated based on its
+   * resolution. * If one dimension is specified then the other dimension is calculated to preserve
+   * the aspect ratio of the image. * If both width and height are specified, the image is scaled to
+   * fit within the provided dimensions while maintaining its aspect ratio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Size objectSize;
 
   /**
-   * The image URI.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in
-   * one of PNG, JPEG, or GIF format.
-   *
-   * The provided URI can be at most 2 kB in length. The URI itself is saved with the image, and
-   * exposed via the ImageProperties.content_uri field.
+   * The image URI. The image is fetched once at insertion time and a copy is stored for display
+   * inside the document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and
+   * must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2 kB in length. The
+   * URI itself is saved with the image, and exposed via the ImageProperties.content_uri field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Inserts the text at the end of a header, footer or the document body.
-   *
-   * Inline images cannot be inserted inside a footnote.
+   * Inserts the text at the end of a header, footer or the document body. Inline images cannot be
+   * inserted inside a footnote.
    * @return value or {@code null} for none
    */
   public EndOfSegmentLocation getEndOfSegmentLocation() {
@@ -87,9 +79,8 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Inserts the text at the end of a header, footer or the document body.
-   *
-   * Inline images cannot be inserted inside a footnote.
+   * Inserts the text at the end of a header, footer or the document body. Inline images cannot be
+   * inserted inside a footnote.
    * @param endOfSegmentLocation endOfSegmentLocation or {@code null} for none
    */
   public InsertInlineImageRequest setEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
@@ -98,12 +89,10 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Inserts the image at a specific index in the document.
-   *
-   * The image must be inserted inside the bounds of an existing Paragraph. For instance, it cannot
-   * be inserted at a table's start index (i.e. between the table and its preceding paragraph).
-   *
-   * Inline images cannot be inserted inside a footnote or equation.
+   * Inserts the image at a specific index in the document. The image must be inserted inside the
+   * bounds of an existing Paragraph. For instance, it cannot be inserted at a table's start index
+   * (i.e. between the table and its preceding paragraph). Inline images cannot be inserted inside a
+   * footnote or equation.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -111,12 +100,10 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Inserts the image at a specific index in the document.
-   *
-   * The image must be inserted inside the bounds of an existing Paragraph. For instance, it cannot
-   * be inserted at a table's start index (i.e. between the table and its preceding paragraph).
-   *
-   * Inline images cannot be inserted inside a footnote or equation.
+   * Inserts the image at a specific index in the document. The image must be inserted inside the
+   * bounds of an existing Paragraph. For instance, it cannot be inserted at a table's start index
+   * (i.e. between the table and its preceding paragraph). Inline images cannot be inserted inside a
+   * footnote or equation.
    * @param location location or {@code null} for none
    */
   public InsertInlineImageRequest setLocation(Location location) {
@@ -126,11 +113,11 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
 
   /**
    * The size that the image should appear as in the document. This property is optional and the
-   * final size of the image in the document is determined by the following rules:  * If neither
-   * width nor height is specified, then a default size of the  image is calculated based on its
-   * resolution.  * If one dimension is specified then the other dimension is calculated to
-   * preserve the aspect ratio of the image.  * If both width and height are specified, the image is
-   * scaled to fit  within the provided dimensions while maintaining its aspect ratio.
+   * final size of the image in the document is determined by the following rules: * If neither
+   * width nor height is specified, then a default size of the image is calculated based on its
+   * resolution. * If one dimension is specified then the other dimension is calculated to preserve
+   * the aspect ratio of the image. * If both width and height are specified, the image is scaled to
+   * fit within the provided dimensions while maintaining its aspect ratio.
    * @return value or {@code null} for none
    */
   public Size getObjectSize() {
@@ -139,11 +126,11 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
 
   /**
    * The size that the image should appear as in the document. This property is optional and the
-   * final size of the image in the document is determined by the following rules:  * If neither
-   * width nor height is specified, then a default size of the  image is calculated based on its
-   * resolution.  * If one dimension is specified then the other dimension is calculated to
-   * preserve the aspect ratio of the image.  * If both width and height are specified, the image is
-   * scaled to fit  within the provided dimensions while maintaining its aspect ratio.
+   * final size of the image in the document is determined by the following rules: * If neither
+   * width nor height is specified, then a default size of the image is calculated based on its
+   * resolution. * If one dimension is specified then the other dimension is calculated to preserve
+   * the aspect ratio of the image. * If both width and height are specified, the image is scaled to
+   * fit within the provided dimensions while maintaining its aspect ratio.
    * @param objectSize objectSize or {@code null} for none
    */
   public InsertInlineImageRequest setObjectSize(Size objectSize) {
@@ -152,14 +139,10 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The image URI.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in
-   * one of PNG, JPEG, or GIF format.
-   *
-   * The provided URI can be at most 2 kB in length. The URI itself is saved with the image, and
-   * exposed via the ImageProperties.content_uri field.
+   * The image URI. The image is fetched once at insertion time and a copy is stored for display
+   * inside the document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and
+   * must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2 kB in length. The
+   * URI itself is saved with the image, and exposed via the ImageProperties.content_uri field.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -167,14 +150,10 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The image URI.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in
-   * one of PNG, JPEG, or GIF format.
-   *
-   * The provided URI can be at most 2 kB in length. The URI itself is saved with the image, and
-   * exposed via the ImageProperties.content_uri field.
+   * The image URI. The image is fetched once at insertion time and a copy is stored for display
+   * inside the document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and
+   * must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2 kB in length. The
+   * URI itself is saved with the image, and exposed via the ImageProperties.content_uri field.
    * @param uri uri or {@code null} for none
    */
   public InsertInlineImageRequest setUri(java.lang.String uri) {

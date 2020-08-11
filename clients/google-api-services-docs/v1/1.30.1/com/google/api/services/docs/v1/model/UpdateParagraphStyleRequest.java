@@ -30,25 +30,19 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateParagraphStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `paragraph_style` is implied and should not be
-   * specified.
-   *
-   * For example, to update the paragraph style's alignment property, set `fields` to `"alignment"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `paragraph_style` is implied and should not be specified. For example, to update the paragraph
+   * style's alignment property, set `fields` to `"alignment"`. To reset a property to its default
+   * value, include its field name in the field mask but leave the field itself unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String fields;
 
   /**
-   * The styles to set on the paragraphs.
-   *
-   * Certain paragraph style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of ParagraphStyle for more information.
+   * The styles to set on the paragraphs. Certain paragraph style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of ParagraphStyle for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,15 +56,10 @@ public final class UpdateParagraphStyleRequest extends com.google.api.client.jso
   private Range range;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `paragraph_style` is implied and should not be
-   * specified.
-   *
-   * For example, to update the paragraph style's alignment property, set `fields` to `"alignment"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `paragraph_style` is implied and should not be specified. For example, to update the paragraph
+   * style's alignment property, set `fields` to `"alignment"`. To reset a property to its default
+   * value, include its field name in the field mask but leave the field itself unset.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -78,15 +67,10 @@ public final class UpdateParagraphStyleRequest extends com.google.api.client.jso
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `paragraph_style` is implied and should not be
-   * specified.
-   *
-   * For example, to update the paragraph style's alignment property, set `fields` to `"alignment"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `paragraph_style` is implied and should not be specified. For example, to update the paragraph
+   * style's alignment property, set `fields` to `"alignment"`. To reset a property to its default
+   * value, include its field name in the field mask but leave the field itself unset.
    * @param fields fields or {@code null} for none
    */
   public UpdateParagraphStyleRequest setFields(String fields) {
@@ -95,10 +79,9 @@ public final class UpdateParagraphStyleRequest extends com.google.api.client.jso
   }
 
   /**
-   * The styles to set on the paragraphs.
-   *
-   * Certain paragraph style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of ParagraphStyle for more information.
+   * The styles to set on the paragraphs. Certain paragraph style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of ParagraphStyle for
+   * more information.
    * @return value or {@code null} for none
    */
   public ParagraphStyle getParagraphStyle() {
@@ -106,10 +89,9 @@ public final class UpdateParagraphStyleRequest extends com.google.api.client.jso
   }
 
   /**
-   * The styles to set on the paragraphs.
-   *
-   * Certain paragraph style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of ParagraphStyle for more information.
+   * The styles to set on the paragraphs. Certain paragraph style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of ParagraphStyle for
+   * more information.
    * @param paragraphStyle paragraphStyle or {@code null} for none
    */
   public UpdateParagraphStyleRequest setParagraphStyle(ParagraphStyle paragraphStyle) {

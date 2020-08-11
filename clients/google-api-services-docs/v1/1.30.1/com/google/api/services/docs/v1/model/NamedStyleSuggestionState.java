@@ -30,10 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class NamedStyleSuggestionState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The named style type that this suggestion state corresponds to.
-   *
-   * This field is provided as a convenience for matching the NamedStyleSuggestionState with its
-   * corresponding NamedStyle.
+   * The named style type that this suggestion state corresponds to. This field is provided as a
+   * convenience for matching the NamedStyleSuggestionState with its corresponding NamedStyle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +53,8 @@ public final class NamedStyleSuggestionState extends com.google.api.client.json.
   private TextStyleSuggestionState textStyleSuggestionState;
 
   /**
-   * The named style type that this suggestion state corresponds to.
-   *
-   * This field is provided as a convenience for matching the NamedStyleSuggestionState with its
-   * corresponding NamedStyle.
+   * The named style type that this suggestion state corresponds to. This field is provided as a
+   * convenience for matching the NamedStyleSuggestionState with its corresponding NamedStyle.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedStyleType() {
@@ -66,10 +62,8 @@ public final class NamedStyleSuggestionState extends com.google.api.client.json.
   }
 
   /**
-   * The named style type that this suggestion state corresponds to.
-   *
-   * This field is provided as a convenience for matching the NamedStyleSuggestionState with its
-   * corresponding NamedStyle.
+   * The named style type that this suggestion state corresponds to. This field is provided as a
+   * convenience for matching the NamedStyleSuggestionState with its corresponding NamedStyle.
    * @param namedStyleType namedStyleType or {@code null} for none
    */
   public NamedStyleSuggestionState setNamedStyleType(java.lang.String namedStyleType) {

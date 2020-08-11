@@ -30,9 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * The zero-based index, in UTF-16 code units.
-   *
-   * The index is relative to the beginning of the segment specified by segment_id.
+   * The zero-based index, in UTF-16 code units. The index is relative to the beginning of the
+   * segment specified by segment_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +46,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentId;
 
   /**
-   * The zero-based index, in UTF-16 code units.
-   *
-   * The index is relative to the beginning of the segment specified by segment_id.
+   * The zero-based index, in UTF-16 code units. The index is relative to the beginning of the
+   * segment specified by segment_id.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -57,9 +55,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based index, in UTF-16 code units.
-   *
-   * The index is relative to the beginning of the segment specified by segment_id.
+   * The zero-based index, in UTF-16 code units. The index is relative to the beginning of the
+   * segment specified by segment_id.
    * @param index index or {@code null} for none
    */
   public Location setIndex(java.lang.Integer index) {

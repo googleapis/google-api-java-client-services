@@ -30,10 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class CreateNamedRangeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the NamedRange. Names do not need to be unique.
-   *
-   * Names must be at least 1 character and no more than 256 characters, measured in UTF-16 code
-   * units.
+   * The name of the NamedRange. Names do not need to be unique. Names must be at least 1 character
+   * and no more than 256 characters, measured in UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +45,8 @@ public final class CreateNamedRangeRequest extends com.google.api.client.json.Ge
   private Range range;
 
   /**
-   * The name of the NamedRange. Names do not need to be unique.
-   *
-   * Names must be at least 1 character and no more than 256 characters, measured in UTF-16 code
-   * units.
+   * The name of the NamedRange. Names do not need to be unique. Names must be at least 1 character
+   * and no more than 256 characters, measured in UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -58,10 +54,8 @@ public final class CreateNamedRangeRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The name of the NamedRange. Names do not need to be unique.
-   *
-   * Names must be at least 1 character and no more than 256 characters, measured in UTF-16 code
-   * units.
+   * The name of the NamedRange. Names do not need to be unique. Names must be at least 1 character
+   * and no more than 256 characters, measured in UTF-16 code units.
    * @param name name or {@code null} for none
    */
   public CreateNamedRangeRequest setName(java.lang.String name) {

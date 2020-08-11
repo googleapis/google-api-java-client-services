@@ -30,28 +30,25 @@ package com.google.api.services.docs.v1.model;
 public final class InsertTableRowRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to insert new row below the reference cell location.
-   *
-   * - `True`: insert below the cell. - `False`: insert above the cell.
+   * Whether to insert new row below the reference cell location. - `True`: insert below the cell. -
+   * `False`: insert above the cell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean insertBelow;
 
   /**
-   * The reference table cell location from which rows will be inserted.
-   *
-   * A new row will be inserted above (or below) the row where the reference cell is. If the
-   * reference cell is a merged cell, a new row will be inserted above (or below) the merged cell.
+   * The reference table cell location from which rows will be inserted. A new row will be inserted
+   * above (or below) the row where the reference cell is. If the reference cell is a merged cell, a
+   * new row will be inserted above (or below) the merged cell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableCellLocation tableCellLocation;
 
   /**
-   * Whether to insert new row below the reference cell location.
-   *
-   * - `True`: insert below the cell. - `False`: insert above the cell.
+   * Whether to insert new row below the reference cell location. - `True`: insert below the cell. -
+   * `False`: insert above the cell.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInsertBelow() {
@@ -59,9 +56,8 @@ public final class InsertTableRowRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether to insert new row below the reference cell location.
-   *
-   * - `True`: insert below the cell. - `False`: insert above the cell.
+   * Whether to insert new row below the reference cell location. - `True`: insert below the cell. -
+   * `False`: insert above the cell.
    * @param insertBelow insertBelow or {@code null} for none
    */
   public InsertTableRowRequest setInsertBelow(java.lang.Boolean insertBelow) {
@@ -70,10 +66,9 @@ public final class InsertTableRowRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The reference table cell location from which rows will be inserted.
-   *
-   * A new row will be inserted above (or below) the row where the reference cell is. If the
-   * reference cell is a merged cell, a new row will be inserted above (or below) the merged cell.
+   * The reference table cell location from which rows will be inserted. A new row will be inserted
+   * above (or below) the row where the reference cell is. If the reference cell is a merged cell, a
+   * new row will be inserted above (or below) the merged cell.
    * @return value or {@code null} for none
    */
   public TableCellLocation getTableCellLocation() {
@@ -81,10 +76,9 @@ public final class InsertTableRowRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The reference table cell location from which rows will be inserted.
-   *
-   * A new row will be inserted above (or below) the row where the reference cell is. If the
-   * reference cell is a merged cell, a new row will be inserted above (or below) the merged cell.
+   * The reference table cell location from which rows will be inserted. A new row will be inserted
+   * above (or below) the row where the reference cell is. If the reference cell is a merged cell, a
+   * new row will be inserted above (or below) the merged cell.
    * @param tableCellLocation tableCellLocation or {@code null} for none
    */
   public InsertTableRowRequest setTableCellLocation(TableCellLocation tableCellLocation) {

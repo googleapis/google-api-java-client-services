@@ -30,12 +30,10 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateTableRowStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableRowStyle` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the minimum row height, set `fields` to `"min_row_height"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableRowStyle` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the minimum row height, set `fields` to
+   * `"min_row_height"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,12 +62,10 @@ public final class UpdateTableRowStyleRequest extends com.google.api.client.json
   private Location tableStartLocation;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableRowStyle` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the minimum row height, set `fields` to `"min_row_height"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableRowStyle` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the minimum row height, set `fields` to
+   * `"min_row_height"`.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -77,12 +73,10 @@ public final class UpdateTableRowStyleRequest extends com.google.api.client.json
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableRowStyle` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the minimum row height, set `fields` to `"min_row_height"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableRowStyle` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the minimum row height, set `fields` to
+   * `"min_row_height"`.
    * @param fields fields or {@code null} for none
    */
   public UpdateTableRowStyleRequest setFields(String fields) {

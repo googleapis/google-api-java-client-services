@@ -30,30 +30,24 @@ package com.google.api.services.docs.v1.model;
 public final class MergeTableCellsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The table range specifying which cells of the table to merge.
-   *
-   * Any text in the cells being merged will be concatenated and stored in the "head" cell of the
-   * range. This is the upper-left cell of the range when the content direction is left to right,
-   * and the upper-right cell of the range otherwise.
-   *
-   * If the range is non-rectangular (which can occur in some cases where the range covers cells
-   * that are already merged or where the table is non-rectangular), a 400 bad request error is
-   * returned.
+   * The table range specifying which cells of the table to merge. Any text in the cells being
+   * merged will be concatenated and stored in the "head" cell of the range. This is the upper-left
+   * cell of the range when the content direction is left to right, and the upper-right cell of the
+   * range otherwise. If the range is non-rectangular (which can occur in some cases where the range
+   * covers cells that are already merged or where the table is non-rectangular), a 400 bad request
+   * error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableRange tableRange;
 
   /**
-   * The table range specifying which cells of the table to merge.
-   *
-   * Any text in the cells being merged will be concatenated and stored in the "head" cell of the
-   * range. This is the upper-left cell of the range when the content direction is left to right,
-   * and the upper-right cell of the range otherwise.
-   *
-   * If the range is non-rectangular (which can occur in some cases where the range covers cells
-   * that are already merged or where the table is non-rectangular), a 400 bad request error is
-   * returned.
+   * The table range specifying which cells of the table to merge. Any text in the cells being
+   * merged will be concatenated and stored in the "head" cell of the range. This is the upper-left
+   * cell of the range when the content direction is left to right, and the upper-right cell of the
+   * range otherwise. If the range is non-rectangular (which can occur in some cases where the range
+   * covers cells that are already merged or where the table is non-rectangular), a 400 bad request
+   * error is returned.
    * @return value or {@code null} for none
    */
   public TableRange getTableRange() {
@@ -61,15 +55,12 @@ public final class MergeTableCellsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The table range specifying which cells of the table to merge.
-   *
-   * Any text in the cells being merged will be concatenated and stored in the "head" cell of the
-   * range. This is the upper-left cell of the range when the content direction is left to right,
-   * and the upper-right cell of the range otherwise.
-   *
-   * If the range is non-rectangular (which can occur in some cases where the range covers cells
-   * that are already merged or where the table is non-rectangular), a 400 bad request error is
-   * returned.
+   * The table range specifying which cells of the table to merge. Any text in the cells being
+   * merged will be concatenated and stored in the "head" cell of the range. This is the upper-left
+   * cell of the range when the content direction is left to right, and the upper-right cell of the
+   * range otherwise. If the range is non-rectangular (which can occur in some cases where the range
+   * covers cells that are already merged or where the table is non-rectangular), a 400 bad request
+   * error is returned.
    * @param tableRange tableRange or {@code null} for none
    */
   public MergeTableCellsRequest setTableRange(TableRange tableRange) {

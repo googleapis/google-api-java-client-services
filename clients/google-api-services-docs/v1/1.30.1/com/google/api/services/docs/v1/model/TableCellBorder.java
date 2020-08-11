@@ -17,9 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * A border around a table cell.
- *
- * Table cell borders cannot be transparent. To hide a table cell border, make its width 0.
+ * A border around a table cell. Table cell borders cannot be transparent. To hide a table cell
+ * border, make its width 0.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -32,9 +31,7 @@ package com.google.api.services.docs.v1.model;
 public final class TableCellBorder extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color of the border.
-   *
-   * This color cannot be transparent.
+   * The color of the border. This color cannot be transparent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +52,7 @@ public final class TableCellBorder extends com.google.api.client.json.GenericJso
   private Dimension width;
 
   /**
-   * The color of the border.
-   *
-   * This color cannot be transparent.
+   * The color of the border. This color cannot be transparent.
    * @return value or {@code null} for none
    */
   public OptionalColor getColor() {
@@ -65,9 +60,7 @@ public final class TableCellBorder extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The color of the border.
-   *
-   * This color cannot be transparent.
+   * The color of the border. This color cannot be transparent.
    * @param color color or {@code null} for none
    */
   public TableCellBorder setColor(OptionalColor color) {

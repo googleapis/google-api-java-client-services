@@ -37,18 +37,16 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private Background background;
 
   /**
-   * The ID of the default footer. If not set, there is no default footer.
-   *
-   * This property is read-only.
+   * The ID of the default footer. If not set, there is no default footer. This property is read-
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultFooterId;
 
   /**
-   * The ID of the default header. If not set, there is no default header.
-   *
-   * This property is read-only.
+   * The ID of the default header. If not set, there is no default header. This property is read-
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +55,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
-   * not set, there is no even page footer.
-   *
-   * This property is read-only.
+   * not set, there is no even page footer. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +64,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_header_id or this value for the header on even pages. If
-   * not set, there is no even page header.
-   *
-   * This property is read-only.
+   * not set, there is no even page header. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +74,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    * The ID of the footer used only for the first page. If not set then a unique footer for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
    * the default_footer_id or this value for the footer on the first page. If not set, there is no
-   * first page footer.
-   *
-   * This property is read-only.
+   * first page footer. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,19 +84,15 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    * The ID of the header used only for the first page. If not set then a unique header for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
    * the default_header_id or this value for the header on the first page. If not set, there is no
-   * first page header.
-   *
-   * This property is read-only.
+   * first page header. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firstPageHeaderId;
 
   /**
-   * The bottom page margin.
-   *
-   * Updating the bottom page margin on the document style clears the bottom page margin on all
-   * section styles.
+   * The bottom page margin. Updating the bottom page margin on the document style clears the bottom
+   * page margin on all section styles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,30 +113,24 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private Dimension marginHeader;
 
   /**
-   * The left page margin.
-   *
-   * Updating the left page margin on the document style clears the left page margin on all section
-   * styles. It may also cause columns to resize in all sections.
+   * The left page margin. Updating the left page margin on the document style clears the left page
+   * margin on all section styles. It may also cause columns to resize in all sections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginLeft;
 
   /**
-   * The right page margin.
-   *
-   * Updating the right page margin on the document style clears the right page margin on all
-   * section styles. It may also cause columns to resize in all sections.
+   * The right page margin. Updating the right page margin on the document style clears the right
+   * page margin on all section styles. It may also cause columns to resize in all sections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginRight;
 
   /**
-   * The top page margin.
-   *
-   * Updating the top page margin on the document style clears the top page margin on all section
-   * styles.
+   * The top page margin. Updating the top page margin on the document style clears the top page
+   * margin on all section styles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,9 +153,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
    * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
-   * Docs editor for header and footer margin are used.
-   *
-   * This property is read-only.
+   * Docs editor for header and footer margin are used. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,9 +191,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default footer. If not set, there is no default footer.
-   *
-   * This property is read-only.
+   * The ID of the default footer. If not set, there is no default footer. This property is read-
+   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultFooterId() {
@@ -221,9 +200,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default footer. If not set, there is no default footer.
-   *
-   * This property is read-only.
+   * The ID of the default footer. If not set, there is no default footer. This property is read-
+   * only.
    * @param defaultFooterId defaultFooterId or {@code null} for none
    */
   public DocumentStyle setDefaultFooterId(java.lang.String defaultFooterId) {
@@ -232,9 +210,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default header. If not set, there is no default header.
-   *
-   * This property is read-only.
+   * The ID of the default header. If not set, there is no default header. This property is read-
+   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultHeaderId() {
@@ -242,9 +219,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the default header. If not set, there is no default header.
-   *
-   * This property is read-only.
+   * The ID of the default header. If not set, there is no default header. This property is read-
+   * only.
    * @param defaultHeaderId defaultHeaderId or {@code null} for none
    */
   public DocumentStyle setDefaultHeaderId(java.lang.String defaultHeaderId) {
@@ -255,9 +231,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
-   * not set, there is no even page footer.
-   *
-   * This property is read-only.
+   * not set, there is no even page footer. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvenPageFooterId() {
@@ -267,9 +241,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
-   * not set, there is no even page footer.
-   *
-   * This property is read-only.
+   * not set, there is no even page footer. This property is read-only.
    * @param evenPageFooterId evenPageFooterId or {@code null} for none
    */
   public DocumentStyle setEvenPageFooterId(java.lang.String evenPageFooterId) {
@@ -280,9 +252,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_header_id or this value for the header on even pages. If
-   * not set, there is no even page header.
-   *
-   * This property is read-only.
+   * not set, there is no even page header. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvenPageHeaderId() {
@@ -292,9 +262,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * The ID of the header used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_header_id or this value for the header on even pages. If
-   * not set, there is no even page header.
-   *
-   * This property is read-only.
+   * not set, there is no even page header. This property is read-only.
    * @param evenPageHeaderId evenPageHeaderId or {@code null} for none
    */
   public DocumentStyle setEvenPageHeaderId(java.lang.String evenPageHeaderId) {
@@ -306,9 +274,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    * The ID of the footer used only for the first page. If not set then a unique footer for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
    * the default_footer_id or this value for the footer on the first page. If not set, there is no
-   * first page footer.
-   *
-   * This property is read-only.
+   * first page footer. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstPageFooterId() {
@@ -319,9 +285,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    * The ID of the footer used only for the first page. If not set then a unique footer for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
    * the default_footer_id or this value for the footer on the first page. If not set, there is no
-   * first page footer.
-   *
-   * This property is read-only.
+   * first page footer. This property is read-only.
    * @param firstPageFooterId firstPageFooterId or {@code null} for none
    */
   public DocumentStyle setFirstPageFooterId(java.lang.String firstPageFooterId) {
@@ -333,9 +297,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    * The ID of the header used only for the first page. If not set then a unique header for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
    * the default_header_id or this value for the header on the first page. If not set, there is no
-   * first page header.
-   *
-   * This property is read-only.
+   * first page header. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstPageHeaderId() {
@@ -346,9 +308,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    * The ID of the header used only for the first page. If not set then a unique header for the
    * first page does not exist. The value of use_first_page_header_footer determines whether to use
    * the default_header_id or this value for the header on the first page. If not set, there is no
-   * first page header.
-   *
-   * This property is read-only.
+   * first page header. This property is read-only.
    * @param firstPageHeaderId firstPageHeaderId or {@code null} for none
    */
   public DocumentStyle setFirstPageHeaderId(java.lang.String firstPageHeaderId) {
@@ -357,10 +317,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The bottom page margin.
-   *
-   * Updating the bottom page margin on the document style clears the bottom page margin on all
-   * section styles.
+   * The bottom page margin. Updating the bottom page margin on the document style clears the bottom
+   * page margin on all section styles.
    * @return value or {@code null} for none
    */
   public Dimension getMarginBottom() {
@@ -368,10 +326,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The bottom page margin.
-   *
-   * Updating the bottom page margin on the document style clears the bottom page margin on all
-   * section styles.
+   * The bottom page margin. Updating the bottom page margin on the document style clears the bottom
+   * page margin on all section styles.
    * @param marginBottom marginBottom or {@code null} for none
    */
   public DocumentStyle setMarginBottom(Dimension marginBottom) {
@@ -414,10 +370,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The left page margin.
-   *
-   * Updating the left page margin on the document style clears the left page margin on all section
-   * styles. It may also cause columns to resize in all sections.
+   * The left page margin. Updating the left page margin on the document style clears the left page
+   * margin on all section styles. It may also cause columns to resize in all sections.
    * @return value or {@code null} for none
    */
   public Dimension getMarginLeft() {
@@ -425,10 +379,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The left page margin.
-   *
-   * Updating the left page margin on the document style clears the left page margin on all section
-   * styles. It may also cause columns to resize in all sections.
+   * The left page margin. Updating the left page margin on the document style clears the left page
+   * margin on all section styles. It may also cause columns to resize in all sections.
    * @param marginLeft marginLeft or {@code null} for none
    */
   public DocumentStyle setMarginLeft(Dimension marginLeft) {
@@ -437,10 +389,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The right page margin.
-   *
-   * Updating the right page margin on the document style clears the right page margin on all
-   * section styles. It may also cause columns to resize in all sections.
+   * The right page margin. Updating the right page margin on the document style clears the right
+   * page margin on all section styles. It may also cause columns to resize in all sections.
    * @return value or {@code null} for none
    */
   public Dimension getMarginRight() {
@@ -448,10 +398,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The right page margin.
-   *
-   * Updating the right page margin on the document style clears the right page margin on all
-   * section styles. It may also cause columns to resize in all sections.
+   * The right page margin. Updating the right page margin on the document style clears the right
+   * page margin on all section styles. It may also cause columns to resize in all sections.
    * @param marginRight marginRight or {@code null} for none
    */
   public DocumentStyle setMarginRight(Dimension marginRight) {
@@ -460,10 +408,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The top page margin.
-   *
-   * Updating the top page margin on the document style clears the top page margin on all section
-   * styles.
+   * The top page margin. Updating the top page margin on the document style clears the top page
+   * margin on all section styles.
    * @return value or {@code null} for none
    */
   public Dimension getMarginTop() {
@@ -471,10 +417,8 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The top page margin.
-   *
-   * Updating the top page margin on the document style clears the top page margin on all section
-   * styles.
+   * The top page margin. Updating the top page margin on the document style clears the top page
+   * margin on all section styles.
    * @param marginTop marginTop or {@code null} for none
    */
   public DocumentStyle setMarginTop(Dimension marginTop) {
@@ -519,9 +463,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
    * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
-   * Docs editor for header and footer margin are used.
-   *
-   * This property is read-only.
+   * Docs editor for header and footer margin are used. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseCustomHeaderFooterMargins() {
@@ -531,9 +473,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
    * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
-   * Docs editor for header and footer margin are used.
-   *
-   * This property is read-only.
+   * Docs editor for header and footer margin are used. This property is read-only.
    * @param useCustomHeaderFooterMargins useCustomHeaderFooterMargins or {@code null} for none
    */
   public DocumentStyle setUseCustomHeaderFooterMargins(java.lang.Boolean useCustomHeaderFooterMargins) {

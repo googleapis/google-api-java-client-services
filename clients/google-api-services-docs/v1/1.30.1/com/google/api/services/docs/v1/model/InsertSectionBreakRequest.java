@@ -17,9 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Inserts a section break at the given location.
- *
- * A newline character will be inserted before the section break.
+ * Inserts a section break at the given location. A newline character will be inserted before the
+ * section break.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -32,24 +31,20 @@ package com.google.api.services.docs.v1.model;
 public final class InsertSectionBreakRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inserts a newline and a section break at the end of the document body.
-   *
-   * Section breaks cannot be inserted inside a footnote, header or footer. Because section breaks
-   * can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts a newline and a section break at the end of the document body. Section breaks cannot be
+   * inserted inside a footnote, header or footer. Because section breaks can only be inserted
+   * inside the body, the segment ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts a newline and a section break at a specific index in the document.
-   *
-   * The section break must be inserted inside the bounds of an existing Paragraph. For instance, it
-   * cannot be inserted at a table's start index (i.e. between the table and its preceding
-   * paragraph).
-   *
-   * Section breaks cannot be inserted inside a table, equation, footnote, header, or footer. Since
-   * section breaks can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts a newline and a section break at a specific index in the document. The section break
+   * must be inserted inside the bounds of an existing Paragraph. For instance, it cannot be
+   * inserted at a table's start index (i.e. between the table and its preceding paragraph). Section
+   * breaks cannot be inserted inside a table, equation, footnote, header, or footer. Since section
+   * breaks can only be inserted inside the body, the segment ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,10 +58,9 @@ public final class InsertSectionBreakRequest extends com.google.api.client.json.
   private java.lang.String sectionType;
 
   /**
-   * Inserts a newline and a section break at the end of the document body.
-   *
-   * Section breaks cannot be inserted inside a footnote, header or footer. Because section breaks
-   * can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts a newline and a section break at the end of the document body. Section breaks cannot be
+   * inserted inside a footnote, header or footer. Because section breaks can only be inserted
+   * inside the body, the segment ID field must be empty.
    * @return value or {@code null} for none
    */
   public EndOfSegmentLocation getEndOfSegmentLocation() {
@@ -74,10 +68,9 @@ public final class InsertSectionBreakRequest extends com.google.api.client.json.
   }
 
   /**
-   * Inserts a newline and a section break at the end of the document body.
-   *
-   * Section breaks cannot be inserted inside a footnote, header or footer. Because section breaks
-   * can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts a newline and a section break at the end of the document body. Section breaks cannot be
+   * inserted inside a footnote, header or footer. Because section breaks can only be inserted
+   * inside the body, the segment ID field must be empty.
    * @param endOfSegmentLocation endOfSegmentLocation or {@code null} for none
    */
   public InsertSectionBreakRequest setEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
@@ -86,14 +79,11 @@ public final class InsertSectionBreakRequest extends com.google.api.client.json.
   }
 
   /**
-   * Inserts a newline and a section break at a specific index in the document.
-   *
-   * The section break must be inserted inside the bounds of an existing Paragraph. For instance, it
-   * cannot be inserted at a table's start index (i.e. between the table and its preceding
-   * paragraph).
-   *
-   * Section breaks cannot be inserted inside a table, equation, footnote, header, or footer. Since
-   * section breaks can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts a newline and a section break at a specific index in the document. The section break
+   * must be inserted inside the bounds of an existing Paragraph. For instance, it cannot be
+   * inserted at a table's start index (i.e. between the table and its preceding paragraph). Section
+   * breaks cannot be inserted inside a table, equation, footnote, header, or footer. Since section
+   * breaks can only be inserted inside the body, the segment ID field must be empty.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -101,14 +91,11 @@ public final class InsertSectionBreakRequest extends com.google.api.client.json.
   }
 
   /**
-   * Inserts a newline and a section break at a specific index in the document.
-   *
-   * The section break must be inserted inside the bounds of an existing Paragraph. For instance, it
-   * cannot be inserted at a table's start index (i.e. between the table and its preceding
-   * paragraph).
-   *
-   * Section breaks cannot be inserted inside a table, equation, footnote, header, or footer. Since
-   * section breaks can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts a newline and a section break at a specific index in the document. The section break
+   * must be inserted inside the bounds of an existing Paragraph. For instance, it cannot be
+   * inserted at a table's start index (i.e. between the table and its preceding paragraph). Section
+   * breaks cannot be inserted inside a table, equation, footnote, header, or footer. Since section
+   * breaks can only be inserted inside the body, the segment ID field must be empty.
    * @param location location or {@code null} for none
    */
   public InsertSectionBreakRequest setLocation(Location location) {

@@ -30,22 +30,20 @@ package com.google.api.services.docs.v1.model;
 public final class DeleteTableColumnRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reference table cell location from which the column will be deleted.
-   *
-   * The column this cell spans will be deleted. If this is a merged cell that spans multiple
-   * columns, all columns that the cell spans will be deleted. If no columns remain in the table
-   * after this deletion, the whole table is deleted.
+   * The reference table cell location from which the column will be deleted. The column this cell
+   * spans will be deleted. If this is a merged cell that spans multiple columns, all columns that
+   * the cell spans will be deleted. If no columns remain in the table after this deletion, the
+   * whole table is deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableCellLocation tableCellLocation;
 
   /**
-   * The reference table cell location from which the column will be deleted.
-   *
-   * The column this cell spans will be deleted. If this is a merged cell that spans multiple
-   * columns, all columns that the cell spans will be deleted. If no columns remain in the table
-   * after this deletion, the whole table is deleted.
+   * The reference table cell location from which the column will be deleted. The column this cell
+   * spans will be deleted. If this is a merged cell that spans multiple columns, all columns that
+   * the cell spans will be deleted. If no columns remain in the table after this deletion, the
+   * whole table is deleted.
    * @return value or {@code null} for none
    */
   public TableCellLocation getTableCellLocation() {
@@ -53,11 +51,10 @@ public final class DeleteTableColumnRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The reference table cell location from which the column will be deleted.
-   *
-   * The column this cell spans will be deleted. If this is a merged cell that spans multiple
-   * columns, all columns that the cell spans will be deleted. If no columns remain in the table
-   * after this deletion, the whole table is deleted.
+   * The reference table cell location from which the column will be deleted. The column this cell
+   * spans will be deleted. If this is a merged cell that spans multiple columns, all columns that
+   * the cell spans will be deleted. If no columns remain in the table after this deletion, the
+   * whole table is deleted.
    * @param tableCellLocation tableCellLocation or {@code null} for none
    */
   public DeleteTableColumnRequest setTableCellLocation(TableCellLocation tableCellLocation) {

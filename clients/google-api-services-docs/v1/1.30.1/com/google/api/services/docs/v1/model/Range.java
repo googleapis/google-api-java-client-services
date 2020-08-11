@@ -30,10 +30,9 @@ package com.google.api.services.docs.v1.model;
 public final class Range extends com.google.api.client.json.GenericJson {
 
   /**
-   * The zero-based end index of this range, exclusive, in UTF-16 code units.
-   *
-   * In all current uses, an end index must be provided. This field is an Int32Value in order to
-   * accommodate future use cases with open-ended ranges.
+   * The zero-based end index of this range, exclusive, in UTF-16 code units. In all current uses,
+   * an end index must be provided. This field is an Int32Value in order to accommodate future use
+   * cases with open-ended ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,20 +47,18 @@ public final class Range extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentId;
 
   /**
-   * The zero-based start index of this range, in UTF-16 code units.
-   *
-   * In all current uses, a start index must be provided. This field is an Int32Value in order to
-   * accommodate future use cases with open-ended ranges.
+   * The zero-based start index of this range, in UTF-16 code units. In all current uses, a start
+   * index must be provided. This field is an Int32Value in order to accommodate future use cases
+   * with open-ended ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startIndex;
 
   /**
-   * The zero-based end index of this range, exclusive, in UTF-16 code units.
-   *
-   * In all current uses, an end index must be provided. This field is an Int32Value in order to
-   * accommodate future use cases with open-ended ranges.
+   * The zero-based end index of this range, exclusive, in UTF-16 code units. In all current uses,
+   * an end index must be provided. This field is an Int32Value in order to accommodate future use
+   * cases with open-ended ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -69,10 +66,9 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based end index of this range, exclusive, in UTF-16 code units.
-   *
-   * In all current uses, an end index must be provided. This field is an Int32Value in order to
-   * accommodate future use cases with open-ended ranges.
+   * The zero-based end index of this range, exclusive, in UTF-16 code units. In all current uses,
+   * an end index must be provided. This field is an Int32Value in order to accommodate future use
+   * cases with open-ended ranges.
    * @param endIndex endIndex or {@code null} for none
    */
   public Range setEndIndex(java.lang.Integer endIndex) {
@@ -100,10 +96,9 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based start index of this range, in UTF-16 code units.
-   *
-   * In all current uses, a start index must be provided. This field is an Int32Value in order to
-   * accommodate future use cases with open-ended ranges.
+   * The zero-based start index of this range, in UTF-16 code units. In all current uses, a start
+   * index must be provided. This field is an Int32Value in order to accommodate future use cases
+   * with open-ended ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -111,10 +106,9 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based start index of this range, in UTF-16 code units.
-   *
-   * In all current uses, a start index must be provided. This field is an Int32Value in order to
-   * accommodate future use cases with open-ended ranges.
+   * The zero-based start index of this range, in UTF-16 code units. In all current uses, a start
+   * index must be provided. This field is an Int32Value in order to accommodate future use cases
+   * with open-ended ranges.
    * @param startIndex startIndex or {@code null} for none
    */
   public Range setStartIndex(java.lang.Integer startIndex) {

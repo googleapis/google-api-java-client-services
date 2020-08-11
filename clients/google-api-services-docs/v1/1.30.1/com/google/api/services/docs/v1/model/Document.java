@@ -110,14 +110,12 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * Output only. The revision ID of the document. Can be used in update requests to specify which
    * revision of a document to apply updates to and how the request should behave if the document
    * has been edited since that revision. Only populated if the user has edit access to the
-   * document.
-   *
-   * The format of the revision ID may change over time, so it should be treated opaquely. A
-   * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
-   * cannot be shared across users. If the revision ID is unchanged between calls, then the document
-   * has not changed. Conversely, a changed ID (for the same document and user) usually means the
-   * document has been updated; however, a changed ID can also be due to internal factors such as ID
-   * format changes.
+   * document. The format of the revision ID may change over time, so it should be treated opaquely.
+   * A returned revision ID is only guaranteed to be valid for 24 hours after it has been returned
+   * and cannot be shared across users. If the revision ID is unchanged between calls, then the
+   * document has not changed. Conversely, a changed ID (for the same document and user) usually
+   * means the document has been updated; however, a changed ID can also be due to internal factors
+   * such as ID format changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +136,8 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges;
 
   /**
-   * Output only. The suggestions view mode applied to the document.
-   *
-   * Note: When editing a document, changes must be based on a document with SUGGESTIONS_INLINE.
+   * Output only. The suggestions view mode applied to the document. Note: When editing a document,
+   * changes must be based on a document with SUGGESTIONS_INLINE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -344,14 +341,12 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * Output only. The revision ID of the document. Can be used in update requests to specify which
    * revision of a document to apply updates to and how the request should behave if the document
    * has been edited since that revision. Only populated if the user has edit access to the
-   * document.
-   *
-   * The format of the revision ID may change over time, so it should be treated opaquely. A
-   * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
-   * cannot be shared across users. If the revision ID is unchanged between calls, then the document
-   * has not changed. Conversely, a changed ID (for the same document and user) usually means the
-   * document has been updated; however, a changed ID can also be due to internal factors such as ID
-   * format changes.
+   * document. The format of the revision ID may change over time, so it should be treated opaquely.
+   * A returned revision ID is only guaranteed to be valid for 24 hours after it has been returned
+   * and cannot be shared across users. If the revision ID is unchanged between calls, then the
+   * document has not changed. Conversely, a changed ID (for the same document and user) usually
+   * means the document has been updated; however, a changed ID can also be due to internal factors
+   * such as ID format changes.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -362,14 +357,12 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * Output only. The revision ID of the document. Can be used in update requests to specify which
    * revision of a document to apply updates to and how the request should behave if the document
    * has been edited since that revision. Only populated if the user has edit access to the
-   * document.
-   *
-   * The format of the revision ID may change over time, so it should be treated opaquely. A
-   * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
-   * cannot be shared across users. If the revision ID is unchanged between calls, then the document
-   * has not changed. Conversely, a changed ID (for the same document and user) usually means the
-   * document has been updated; however, a changed ID can also be due to internal factors such as ID
-   * format changes.
+   * document. The format of the revision ID may change over time, so it should be treated opaquely.
+   * A returned revision ID is only guaranteed to be valid for 24 hours after it has been returned
+   * and cannot be shared across users. If the revision ID is unchanged between calls, then the
+   * document has not changed. Conversely, a changed ID (for the same document and user) usually
+   * means the document has been updated; however, a changed ID can also be due to internal factors
+   * such as ID format changes.
    * @param revisionId revisionId or {@code null} for none
    */
   public Document setRevisionId(java.lang.String revisionId) {
@@ -412,9 +405,8 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The suggestions view mode applied to the document.
-   *
-   * Note: When editing a document, changes must be based on a document with SUGGESTIONS_INLINE.
+   * Output only. The suggestions view mode applied to the document. Note: When editing a document,
+   * changes must be based on a document with SUGGESTIONS_INLINE.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuggestionsViewMode() {
@@ -422,9 +414,8 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The suggestions view mode applied to the document.
-   *
-   * Note: When editing a document, changes must be based on a document with SUGGESTIONS_INLINE.
+   * Output only. The suggestions view mode applied to the document. Note: When editing a document,
+   * changes must be based on a document with SUGGESTIONS_INLINE.
    * @param suggestionsViewMode suggestionsViewMode or {@code null} for none
    */
   public Document setSuggestionsViewMode(java.lang.String suggestionsViewMode) {

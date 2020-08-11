@@ -30,31 +30,23 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateTableCellStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableCellStyle` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the table cell background color, set `fields` to `"backgroundColor"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableCellStyle` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the table cell background color, set
+   * `fields` to `"backgroundColor"`. To reset a property to its default value, include its field
+   * name in the field mask but leave the field itself unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String fields;
 
   /**
-   * The style to set on the table cells.
-   *
-   * When updating borders, if a cell shares a border with an adjacent cell, the corresponding
-   * border property of the adjacent cell is updated as well. Borders that are merged and invisible
-   * are not updated.
-   *
-   * Since updating a border shared by adjacent cells in the same request can cause conflicting
-   * border updates, border updates are applied in the following order:
-   *
-   * - `border_right` - `border_left` - `border_bottom` - `border_top`
+   * The style to set on the table cells. When updating borders, if a cell shares a border with an
+   * adjacent cell, the corresponding border property of the adjacent cell is updated as well.
+   * Borders that are merged and invisible are not updated. Since updating a border shared by
+   * adjacent cells in the same request can cause conflicting border updates, border updates are
+   * applied in the following order: - `border_right` - `border_left` - `border_bottom` -
+   * `border_top`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,15 +68,11 @@ public final class UpdateTableCellStyleRequest extends com.google.api.client.jso
   private Location tableStartLocation;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableCellStyle` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the table cell background color, set `fields` to `"backgroundColor"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableCellStyle` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the table cell background color, set
+   * `fields` to `"backgroundColor"`. To reset a property to its default value, include its field
+   * name in the field mask but leave the field itself unset.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -92,15 +80,11 @@ public final class UpdateTableCellStyleRequest extends com.google.api.client.jso
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableCellStyle` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the table cell background color, set `fields` to `"backgroundColor"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableCellStyle` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the table cell background color, set
+   * `fields` to `"backgroundColor"`. To reset a property to its default value, include its field
+   * name in the field mask but leave the field itself unset.
    * @param fields fields or {@code null} for none
    */
   public UpdateTableCellStyleRequest setFields(String fields) {
@@ -109,16 +93,12 @@ public final class UpdateTableCellStyleRequest extends com.google.api.client.jso
   }
 
   /**
-   * The style to set on the table cells.
-   *
-   * When updating borders, if a cell shares a border with an adjacent cell, the corresponding
-   * border property of the adjacent cell is updated as well. Borders that are merged and invisible
-   * are not updated.
-   *
-   * Since updating a border shared by adjacent cells in the same request can cause conflicting
-   * border updates, border updates are applied in the following order:
-   *
-   * - `border_right` - `border_left` - `border_bottom` - `border_top`
+   * The style to set on the table cells. When updating borders, if a cell shares a border with an
+   * adjacent cell, the corresponding border property of the adjacent cell is updated as well.
+   * Borders that are merged and invisible are not updated. Since updating a border shared by
+   * adjacent cells in the same request can cause conflicting border updates, border updates are
+   * applied in the following order: - `border_right` - `border_left` - `border_bottom` -
+   * `border_top`
    * @return value or {@code null} for none
    */
   public TableCellStyle getTableCellStyle() {
@@ -126,16 +106,12 @@ public final class UpdateTableCellStyleRequest extends com.google.api.client.jso
   }
 
   /**
-   * The style to set on the table cells.
-   *
-   * When updating borders, if a cell shares a border with an adjacent cell, the corresponding
-   * border property of the adjacent cell is updated as well. Borders that are merged and invisible
-   * are not updated.
-   *
-   * Since updating a border shared by adjacent cells in the same request can cause conflicting
-   * border updates, border updates are applied in the following order:
-   *
-   * - `border_right` - `border_left` - `border_bottom` - `border_top`
+   * The style to set on the table cells. When updating borders, if a cell shares a border with an
+   * adjacent cell, the corresponding border property of the adjacent cell is updated as well.
+   * Borders that are merged and invisible are not updated. Since updating a border shared by
+   * adjacent cells in the same request can cause conflicting border updates, border updates are
+   * applied in the following order: - `border_right` - `border_left` - `border_bottom` -
+   * `border_top`
    * @param tableCellStyle tableCellStyle or {@code null} for none
    */
   public UpdateTableCellStyleRequest setTableCellStyle(TableCellStyle tableCellStyle) {

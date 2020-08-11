@@ -30,11 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
-   * The section's columns properties.
-   *
-   * If empty, the section contains one column with the default properties in the Docs editor. A
-   * section can be updated to have no more than three columns.
-   *
+   * The section's columns properties. If empty, the section contains one column with the default
+   * properties in the Docs editor. A section can be updated to have no more than three columns.
    * When updating this property, setting a concrete value is required. Unsetting this property will
    * result in a 400 bad request error.
    * The value may be {@code null}.
@@ -49,22 +46,18 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of column separators.
-   *
-   * This style can be set even when there is one column in the section.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The style of column separators. This style can be set even when there is one column in the
+   * section. When updating this property, setting a concrete value is required. Unsetting this
+   * property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String columnSeparatorStyle;
 
   /**
-   * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT. When
+   * updating this property, setting a concrete value is required. Unsetting this property results
+   * in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +66,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the default footer. If unset, the value inherits from the previous SectionBreak's
    * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * default_footer_id.
-   *
-   * This property is read-only.
+   * default_footer_id. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,9 +75,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the default header. If unset, the value inherits from the previous SectionBreak's
    * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * default_header_id.
-   *
-   * This property is read-only.
+   * default_header_id. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,9 +86,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * use_even_page_header_footer is true, this value is used for the footers on even pages in the
    * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
-   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id.
-   *
-   * This property is read-only.
+   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id. This property is
+   * read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +98,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * use_even_page_header_footer is true, this value is used for the headers on even pages in the
    * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
-   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id.
-   *
-   * This property is read-only.
+   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id. This property is
+   * read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,9 +111,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * the section. If it is false, the footer on the first page of the section uses the
    * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * first_page_footer_id.
-   *
-   * This property is read-only.
+   * first_page_footer_id. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,19 +123,16 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * the section. If it is false, the header on the first page of the section uses the
    * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * first_page_header_id.
-   *
-   * This property is read-only.
+   * first_page_header_id. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firstPageHeaderId;
 
   /**
-   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle. When
+   * updating this property, setting a concrete value is required. Unsetting this property results
+   * in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,10 +142,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
    * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
    * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
-   * respected for this section
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * respected for this section When updating this property, setting a concrete value is required.
+   * Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,10 +153,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
    * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
    * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
-   * respected for this section.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * respected for this section. When updating this property, setting a concrete value is required.
+   * Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,10 +163,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
    * left margin causes columns in this section to resize. Since the margin affects column width, it
-   * is applied before column properties.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * is applied before column properties. When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,20 +173,17 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
    * right margin causes columns in this section to resize. Since the margin affects column width,
-   * it is applied before column properties.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * it is applied before column properties. When updating this property, setting a concrete value
+   * is required. Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimension marginRight;
 
   /**
-   * The top page margin of the section. If unset, uses margin_top from DocumentStyle.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The top page margin of the section. If unset, uses margin_top from DocumentStyle. When updating
+   * this property, setting a concrete value is required. Unsetting this property results in a 400
+   * bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,10 +192,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The page number from which to start counting the number of pages for this section. If unset,
    * page numbering continues from the previous section. If the value is unset in the first
-   * SectionBreak, refer to DocumentStyle's page_number_start.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * SectionBreak, refer to DocumentStyle's page_number_start. When updating this property, setting
+   * a concrete value is required. Unsetting this property results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,21 +209,17 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to use the first page header / footer IDs for the first page of the section.
    * If unset, it inherits from DocumentStyle's use_first_page_header_footer for the first section.
-   * If the value is unset for subsequent sectors, it should be interpreted as false.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * If the value is unset for subsequent sectors, it should be interpreted as false. When updating
+   * this property, setting a concrete value is required. Unsetting this property results in a 400
+   * bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useFirstPageHeaderFooter;
 
   /**
-   * The section's columns properties.
-   *
-   * If empty, the section contains one column with the default properties in the Docs editor. A
-   * section can be updated to have no more than three columns.
-   *
+   * The section's columns properties. If empty, the section contains one column with the default
+   * properties in the Docs editor. A section can be updated to have no more than three columns.
    * When updating this property, setting a concrete value is required. Unsetting this property will
    * result in a 400 bad request error.
    * @return value or {@code null} for none
@@ -262,11 +229,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The section's columns properties.
-   *
-   * If empty, the section contains one column with the default properties in the Docs editor. A
-   * section can be updated to have no more than three columns.
-   *
+   * The section's columns properties. If empty, the section contains one column with the default
+   * properties in the Docs editor. A section can be updated to have no more than three columns.
    * When updating this property, setting a concrete value is required. Unsetting this property will
    * result in a 400 bad request error.
    * @param columnProperties columnProperties or {@code null} for none
@@ -277,12 +241,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of column separators.
-   *
-   * This style can be set even when there is one column in the section.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The style of column separators. This style can be set even when there is one column in the
+   * section. When updating this property, setting a concrete value is required. Unsetting this
+   * property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumnSeparatorStyle() {
@@ -290,12 +251,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of column separators.
-   *
-   * This style can be set even when there is one column in the section.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The style of column separators. This style can be set even when there is one column in the
+   * section. When updating this property, setting a concrete value is required. Unsetting this
+   * property results in a 400 bad request error.
    * @param columnSeparatorStyle columnSeparatorStyle or {@code null} for none
    */
   public SectionStyle setColumnSeparatorStyle(java.lang.String columnSeparatorStyle) {
@@ -304,10 +262,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT. When
+   * updating this property, setting a concrete value is required. Unsetting this property results
+   * in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentDirection() {
@@ -315,10 +272,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT. When
+   * updating this property, setting a concrete value is required. Unsetting this property results
+   * in a 400 bad request error.
    * @param contentDirection contentDirection or {@code null} for none
    */
   public SectionStyle setContentDirection(java.lang.String contentDirection) {
@@ -329,9 +285,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the default footer. If unset, the value inherits from the previous SectionBreak's
    * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * default_footer_id.
-   *
-   * This property is read-only.
+   * default_footer_id. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultFooterId() {
@@ -341,9 +295,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the default footer. If unset, the value inherits from the previous SectionBreak's
    * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * default_footer_id.
-   *
-   * This property is read-only.
+   * default_footer_id. This property is read-only.
    * @param defaultFooterId defaultFooterId or {@code null} for none
    */
   public SectionStyle setDefaultFooterId(java.lang.String defaultFooterId) {
@@ -354,9 +306,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the default header. If unset, the value inherits from the previous SectionBreak's
    * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * default_header_id.
-   *
-   * This property is read-only.
+   * default_header_id. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultHeaderId() {
@@ -366,9 +316,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the default header. If unset, the value inherits from the previous SectionBreak's
    * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * default_header_id.
-   *
-   * This property is read-only.
+   * default_header_id. This property is read-only.
    * @param defaultHeaderId defaultHeaderId or {@code null} for none
    */
   public SectionStyle setDefaultHeaderId(java.lang.String defaultHeaderId) {
@@ -381,9 +329,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * use_even_page_header_footer is true, this value is used for the footers on even pages in the
    * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
-   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id.
-   *
-   * This property is read-only.
+   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id. This property is
+   * read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvenPageFooterId() {
@@ -395,9 +342,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * use_even_page_header_footer is true, this value is used for the footers on even pages in the
    * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
-   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id.
-   *
-   * This property is read-only.
+   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id. This property is
+   * read-only.
    * @param evenPageFooterId evenPageFooterId or {@code null} for none
    */
   public SectionStyle setEvenPageFooterId(java.lang.String evenPageFooterId) {
@@ -410,9 +356,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * use_even_page_header_footer is true, this value is used for the headers on even pages in the
    * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
-   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id.
-   *
-   * This property is read-only.
+   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id. This property is
+   * read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvenPageHeaderId() {
@@ -424,9 +369,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * use_even_page_header_footer is true, this value is used for the headers on even pages in the
    * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
    * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
-   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id.
-   *
-   * This property is read-only.
+   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id. This property is
+   * read-only.
    * @param evenPageHeaderId evenPageHeaderId or {@code null} for none
    */
   public SectionStyle setEvenPageHeaderId(java.lang.String evenPageHeaderId) {
@@ -440,9 +384,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * the section. If it is false, the footer on the first page of the section uses the
    * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * first_page_footer_id.
-   *
-   * This property is read-only.
+   * first_page_footer_id. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstPageFooterId() {
@@ -455,9 +397,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * the section. If it is false, the footer on the first page of the section uses the
    * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * first_page_footer_id.
-   *
-   * This property is read-only.
+   * first_page_footer_id. This property is read-only.
    * @param firstPageFooterId firstPageFooterId or {@code null} for none
    */
   public SectionStyle setFirstPageFooterId(java.lang.String firstPageFooterId) {
@@ -471,9 +411,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * the section. If it is false, the header on the first page of the section uses the
    * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * first_page_header_id.
-   *
-   * This property is read-only.
+   * first_page_header_id. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstPageHeaderId() {
@@ -486,9 +424,7 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * the section. If it is false, the header on the first page of the section uses the
    * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
    * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
-   * first_page_header_id.
-   *
-   * This property is read-only.
+   * first_page_header_id. This property is read-only.
    * @param firstPageHeaderId firstPageHeaderId or {@code null} for none
    */
   public SectionStyle setFirstPageHeaderId(java.lang.String firstPageHeaderId) {
@@ -497,10 +433,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle. When
+   * updating this property, setting a concrete value is required. Unsetting this property results
+   * in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginBottom() {
@@ -508,10 +443,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle. When
+   * updating this property, setting a concrete value is required. Unsetting this property results
+   * in a 400 bad request error.
    * @param marginBottom marginBottom or {@code null} for none
    */
   public SectionStyle setMarginBottom(Dimension marginBottom) {
@@ -523,10 +457,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
    * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
    * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
-   * respected for this section
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * respected for this section When updating this property, setting a concrete value is required.
+   * Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginFooter() {
@@ -537,10 +469,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
    * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
    * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
-   * respected for this section
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * respected for this section When updating this property, setting a concrete value is required.
+   * Unsetting this property results in a 400 bad request error.
    * @param marginFooter marginFooter or {@code null} for none
    */
   public SectionStyle setMarginFooter(Dimension marginFooter) {
@@ -552,10 +482,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
    * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
    * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
-   * respected for this section.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * respected for this section. When updating this property, setting a concrete value is required.
+   * Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginHeader() {
@@ -566,10 +494,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
    * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
    * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
-   * respected for this section.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * respected for this section. When updating this property, setting a concrete value is required.
+   * Unsetting this property results in a 400 bad request error.
    * @param marginHeader marginHeader or {@code null} for none
    */
   public SectionStyle setMarginHeader(Dimension marginHeader) {
@@ -580,10 +506,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
    * left margin causes columns in this section to resize. Since the margin affects column width, it
-   * is applied before column properties.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * is applied before column properties. When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginLeft() {
@@ -593,10 +517,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
    * left margin causes columns in this section to resize. Since the margin affects column width, it
-   * is applied before column properties.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * is applied before column properties. When updating this property, setting a concrete value is
+   * required. Unsetting this property results in a 400 bad request error.
    * @param marginLeft marginLeft or {@code null} for none
    */
   public SectionStyle setMarginLeft(Dimension marginLeft) {
@@ -607,10 +529,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
    * right margin causes columns in this section to resize. Since the margin affects column width,
-   * it is applied before column properties.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * it is applied before column properties. When updating this property, setting a concrete value
+   * is required. Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginRight() {
@@ -620,10 +540,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
    * right margin causes columns in this section to resize. Since the margin affects column width,
-   * it is applied before column properties.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * it is applied before column properties. When updating this property, setting a concrete value
+   * is required. Unsetting this property results in a 400 bad request error.
    * @param marginRight marginRight or {@code null} for none
    */
   public SectionStyle setMarginRight(Dimension marginRight) {
@@ -632,10 +550,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The top page margin of the section. If unset, uses margin_top from DocumentStyle.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The top page margin of the section. If unset, uses margin_top from DocumentStyle. When updating
+   * this property, setting a concrete value is required. Unsetting this property results in a 400
+   * bad request error.
    * @return value or {@code null} for none
    */
   public Dimension getMarginTop() {
@@ -643,10 +560,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The top page margin of the section. If unset, uses margin_top from DocumentStyle.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * The top page margin of the section. If unset, uses margin_top from DocumentStyle. When updating
+   * this property, setting a concrete value is required. Unsetting this property results in a 400
+   * bad request error.
    * @param marginTop marginTop or {@code null} for none
    */
   public SectionStyle setMarginTop(Dimension marginTop) {
@@ -657,10 +573,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The page number from which to start counting the number of pages for this section. If unset,
    * page numbering continues from the previous section. If the value is unset in the first
-   * SectionBreak, refer to DocumentStyle's page_number_start.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * SectionBreak, refer to DocumentStyle's page_number_start. When updating this property, setting
+   * a concrete value is required. Unsetting this property results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageNumberStart() {
@@ -670,10 +584,8 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The page number from which to start counting the number of pages for this section. If unset,
    * page numbering continues from the previous section. If the value is unset in the first
-   * SectionBreak, refer to DocumentStyle's page_number_start.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * SectionBreak, refer to DocumentStyle's page_number_start. When updating this property, setting
+   * a concrete value is required. Unsetting this property results in a 400 bad request error.
    * @param pageNumberStart pageNumberStart or {@code null} for none
    */
   public SectionStyle setPageNumberStart(java.lang.Integer pageNumberStart) {
@@ -701,10 +613,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to use the first page header / footer IDs for the first page of the section.
    * If unset, it inherits from DocumentStyle's use_first_page_header_footer for the first section.
-   * If the value is unset for subsequent sectors, it should be interpreted as false.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * If the value is unset for subsequent sectors, it should be interpreted as false. When updating
+   * this property, setting a concrete value is required. Unsetting this property results in a 400
+   * bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseFirstPageHeaderFooter() {
@@ -714,10 +625,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to use the first page header / footer IDs for the first page of the section.
    * If unset, it inherits from DocumentStyle's use_first_page_header_footer for the first section.
-   * If the value is unset for subsequent sectors, it should be interpreted as false.
-   *
-   * When updating this property, setting a concrete value is required. Unsetting this property
-   * results in a 400 bad request error.
+   * If the value is unset for subsequent sectors, it should be interpreted as false. When updating
+   * this property, setting a concrete value is required. Unsetting this property results in a 400
+   * bad request error.
    * @param useFirstPageHeaderFooter useFirstPageHeaderFooter or {@code null} for none
    */
   public SectionStyle setUseFirstPageHeaderFooter(java.lang.Boolean useFirstPageHeaderFooter) {

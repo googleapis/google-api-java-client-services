@@ -59,11 +59,9 @@ public final class InlineObjectElement extends com.google.api.client.json.Generi
   private java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
 
   /**
-   * The text style of this InlineObjectElement.
-   *
-   * Similar to text content, like text runs and footnote references, the text style of an inline
-   * object element can affect content layout as well as the styling of text inserted adjacent to
-   * it.
+   * The text style of this InlineObjectElement. Similar to text content, like text runs and
+   * footnote references, the text style of an inline object element can affect content layout as
+   * well as the styling of text inserted adjacent to it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,11 +138,9 @@ public final class InlineObjectElement extends com.google.api.client.json.Generi
   }
 
   /**
-   * The text style of this InlineObjectElement.
-   *
-   * Similar to text content, like text runs and footnote references, the text style of an inline
-   * object element can affect content layout as well as the styling of text inserted adjacent to
-   * it.
+   * The text style of this InlineObjectElement. Similar to text content, like text runs and
+   * footnote references, the text style of an inline object element can affect content layout as
+   * well as the styling of text inserted adjacent to it.
    * @return value or {@code null} for none
    */
   public TextStyle getTextStyle() {
@@ -152,11 +148,9 @@ public final class InlineObjectElement extends com.google.api.client.json.Generi
   }
 
   /**
-   * The text style of this InlineObjectElement.
-   *
-   * Similar to text content, like text runs and footnote references, the text style of an inline
-   * object element can affect content layout as well as the styling of text inserted adjacent to
-   * it.
+   * The text style of this InlineObjectElement. Similar to text content, like text runs and
+   * footnote references, the text style of an inline object element can affect content layout as
+   * well as the styling of text inserted adjacent to it.
    * @param textStyle textStyle or {@code null} for none
    */
   public InlineObjectElement setTextStyle(TextStyle textStyle) {

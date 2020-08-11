@@ -17,14 +17,12 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates bullets for all of the paragraphs that overlap with the given range.
- *
- * The nesting level of each paragraph will be determined by counting leading tabs in front of each
- * paragraph. To avoid excess space between the bullet and the corresponding paragraph, these
- * leading tabs are removed by this request. This may change the indices of parts of the text.
- *
- * If the paragraph immediately before paragraphs being updated is in a list with a matching preset,
- * the paragraphs being updated are added to that preceding list.
+ * Creates bullets for all of the paragraphs that overlap with the given range. The nesting level of
+ * each paragraph will be determined by counting leading tabs in front of each paragraph. To avoid
+ * excess space between the bullet and the corresponding paragraph, these leading tabs are removed
+ * by this request. This may change the indices of parts of the text. If the paragraph immediately
+ * before paragraphs being updated is in a list with a matching preset, the paragraphs being updated
+ * are added to that preceding list.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

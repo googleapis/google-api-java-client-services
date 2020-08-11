@@ -30,28 +30,24 @@ package com.google.api.services.docs.v1.model;
 public final class UnmergeTableCellsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The table range specifying which cells of the table to unmerge.
-   *
-   * All merged cells in this range will be unmerged, and cells that are already unmerged will not
-   * be affected. If the range has no merged cells, the request will do nothing.
-   *
-   * If there is text in any of the merged cells, the text will remain in the "head" cell of the
-   * resulting block of unmerged cells. The "head" cell is the upper-left cell when the content
-   * direction is from left to right, and the upper-right otherwise.
+   * The table range specifying which cells of the table to unmerge. All merged cells in this range
+   * will be unmerged, and cells that are already unmerged will not be affected. If the range has no
+   * merged cells, the request will do nothing. If there is text in any of the merged cells, the
+   * text will remain in the "head" cell of the resulting block of unmerged cells. The "head" cell
+   * is the upper-left cell when the content direction is from left to right, and the upper-right
+   * otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableRange tableRange;
 
   /**
-   * The table range specifying which cells of the table to unmerge.
-   *
-   * All merged cells in this range will be unmerged, and cells that are already unmerged will not
-   * be affected. If the range has no merged cells, the request will do nothing.
-   *
-   * If there is text in any of the merged cells, the text will remain in the "head" cell of the
-   * resulting block of unmerged cells. The "head" cell is the upper-left cell when the content
-   * direction is from left to right, and the upper-right otherwise.
+   * The table range specifying which cells of the table to unmerge. All merged cells in this range
+   * will be unmerged, and cells that are already unmerged will not be affected. If the range has no
+   * merged cells, the request will do nothing. If there is text in any of the merged cells, the
+   * text will remain in the "head" cell of the resulting block of unmerged cells. The "head" cell
+   * is the upper-left cell when the content direction is from left to right, and the upper-right
+   * otherwise.
    * @return value or {@code null} for none
    */
   public TableRange getTableRange() {
@@ -59,14 +55,12 @@ public final class UnmergeTableCellsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The table range specifying which cells of the table to unmerge.
-   *
-   * All merged cells in this range will be unmerged, and cells that are already unmerged will not
-   * be affected. If the range has no merged cells, the request will do nothing.
-   *
-   * If there is text in any of the merged cells, the text will remain in the "head" cell of the
-   * resulting block of unmerged cells. The "head" cell is the upper-left cell when the content
-   * direction is from left to right, and the upper-right otherwise.
+   * The table range specifying which cells of the table to unmerge. All merged cells in this range
+   * will be unmerged, and cells that are already unmerged will not be affected. If the range has no
+   * merged cells, the request will do nothing. If there is text in any of the merged cells, the
+   * text will remain in the "head" cell of the resulting block of unmerged cells. The "head" cell
+   * is the upper-left cell when the content direction is from left to right, and the upper-right
+   * otherwise.
    * @param tableRange tableRange or {@code null} for none
    */
   public UnmergeTableCellsRequest setTableRange(TableRange tableRange) {

@@ -30,34 +30,29 @@ package com.google.api.services.docs.v1.model;
 public final class InsertPageBreakRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inserts the page break at the end of the document body.
-   *
-   * Page breaks cannot be inserted inside a footnote, header or footer. Since page breaks can only
-   * be inserted inside the body, the segment ID field must be empty.
+   * Inserts the page break at the end of the document body. Page breaks cannot be inserted inside a
+   * footnote, header or footer. Since page breaks can only be inserted inside the body, the segment
+   * ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts the page break at a specific index in the document.
-   *
-   * The page break must be inserted inside the bounds of an existing Paragraph. For instance, it
-   * cannot be inserted at a table's start index (i.e. between the table and its preceding
-   * paragraph).
-   *
-   * Page breaks cannot be inserted inside a table, equation, footnote, header or footer. Since page
-   * breaks can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts the page break at a specific index in the document. The page break must be inserted
+   * inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a table's
+   * start index (i.e. between the table and its preceding paragraph). Page breaks cannot be
+   * inserted inside a table, equation, footnote, header or footer. Since page breaks can only be
+   * inserted inside the body, the segment ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Location location;
 
   /**
-   * Inserts the page break at the end of the document body.
-   *
-   * Page breaks cannot be inserted inside a footnote, header or footer. Since page breaks can only
-   * be inserted inside the body, the segment ID field must be empty.
+   * Inserts the page break at the end of the document body. Page breaks cannot be inserted inside a
+   * footnote, header or footer. Since page breaks can only be inserted inside the body, the segment
+   * ID field must be empty.
    * @return value or {@code null} for none
    */
   public EndOfSegmentLocation getEndOfSegmentLocation() {
@@ -65,10 +60,9 @@ public final class InsertPageBreakRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Inserts the page break at the end of the document body.
-   *
-   * Page breaks cannot be inserted inside a footnote, header or footer. Since page breaks can only
-   * be inserted inside the body, the segment ID field must be empty.
+   * Inserts the page break at the end of the document body. Page breaks cannot be inserted inside a
+   * footnote, header or footer. Since page breaks can only be inserted inside the body, the segment
+   * ID field must be empty.
    * @param endOfSegmentLocation endOfSegmentLocation or {@code null} for none
    */
   public InsertPageBreakRequest setEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
@@ -77,14 +71,11 @@ public final class InsertPageBreakRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Inserts the page break at a specific index in the document.
-   *
-   * The page break must be inserted inside the bounds of an existing Paragraph. For instance, it
-   * cannot be inserted at a table's start index (i.e. between the table and its preceding
-   * paragraph).
-   *
-   * Page breaks cannot be inserted inside a table, equation, footnote, header or footer. Since page
-   * breaks can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts the page break at a specific index in the document. The page break must be inserted
+   * inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a table's
+   * start index (i.e. between the table and its preceding paragraph). Page breaks cannot be
+   * inserted inside a table, equation, footnote, header or footer. Since page breaks can only be
+   * inserted inside the body, the segment ID field must be empty.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -92,14 +83,11 @@ public final class InsertPageBreakRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Inserts the page break at a specific index in the document.
-   *
-   * The page break must be inserted inside the bounds of an existing Paragraph. For instance, it
-   * cannot be inserted at a table's start index (i.e. between the table and its preceding
-   * paragraph).
-   *
-   * Page breaks cannot be inserted inside a table, equation, footnote, header or footer. Since page
-   * breaks can only be inserted inside the body, the segment ID field must be empty.
+   * Inserts the page break at a specific index in the document. The page break must be inserted
+   * inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a table's
+   * start index (i.e. between the table and its preceding paragraph). Page breaks cannot be
+   * inserted inside a table, equation, footnote, header or footer. Since page breaks can only be
+   * inserted inside the body, the segment ID field must be empty.
    * @param location location or {@code null} for none
    */
   public InsertPageBreakRequest setLocation(Location location) {

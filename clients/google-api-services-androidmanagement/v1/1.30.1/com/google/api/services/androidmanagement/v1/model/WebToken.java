@@ -32,9 +32,9 @@ public final class WebToken extends com.google.api.client.json.GenericJson {
 
   /**
    * The features to enable. Use this if you want to control exactly which feature(s) will be
-   * activated; leave empty to allow all features.Restrictions / things to note:   If no features
-   * are listed here, all features are enabled — this is the  default behavior where you give access
-   * to all features to your admins.  This must not contain any FEATURE_UNSPECIFIED values.
+   * activated; leave empty to allow all features.Restrictions / things to note: - If no features
+   * are listed here, all features are enabled — this is the default behavior where you give access
+   * to all features to your admins. - This must not contain any FEATURE_UNSPECIFIED values. -
    * Repeated values are ignored
    * The value may be {@code null}.
    */
@@ -75,9 +75,9 @@ public final class WebToken extends com.google.api.client.json.GenericJson {
 
   /**
    * The features to enable. Use this if you want to control exactly which feature(s) will be
-   * activated; leave empty to allow all features.Restrictions / things to note:   If no features
-   * are listed here, all features are enabled — this is the  default behavior where you give access
-   * to all features to your admins.  This must not contain any FEATURE_UNSPECIFIED values.
+   * activated; leave empty to allow all features.Restrictions / things to note: - If no features
+   * are listed here, all features are enabled — this is the default behavior where you give access
+   * to all features to your admins. - This must not contain any FEATURE_UNSPECIFIED values. -
    * Repeated values are ignored
    * @return value or {@code null} for none
    */
@@ -87,9 +87,9 @@ public final class WebToken extends com.google.api.client.json.GenericJson {
 
   /**
    * The features to enable. Use this if you want to control exactly which feature(s) will be
-   * activated; leave empty to allow all features.Restrictions / things to note:   If no features
-   * are listed here, all features are enabled — this is the  default behavior where you give access
-   * to all features to your admins.  This must not contain any FEATURE_UNSPECIFIED values.
+   * activated; leave empty to allow all features.Restrictions / things to note: - If no features
+   * are listed here, all features are enabled — this is the default behavior where you give access
+   * to all features to your admins. - This must not contain any FEATURE_UNSPECIFIED values. -
    * Repeated values are ignored
    * @param enabledFeatures enabledFeatures or {@code null} for none
    */

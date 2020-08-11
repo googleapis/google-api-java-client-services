@@ -31,7 +31,7 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class ManagedConfigurationTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional, a map containing  configuration variables defined for the configuration.
+   * Optional, a map containing configuration variables defined for the configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class ManagedConfigurationTemplate extends com.google.api.client.js
   private java.lang.String templateId;
 
   /**
-   * Optional, a map containing  configuration variables defined for the configuration.
+   * Optional, a map containing configuration variables defined for the configuration.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getConfigurationVariables() {
@@ -53,7 +53,7 @@ public final class ManagedConfigurationTemplate extends com.google.api.client.js
   }
 
   /**
-   * Optional, a map containing  configuration variables defined for the configuration.
+   * Optional, a map containing configuration variables defined for the configuration.
    * @param configurationVariables configurationVariables or {@code null} for none
    */
   public ManagedConfigurationTemplate setConfigurationVariables(java.util.Map<String, java.lang.String> configurationVariables) {

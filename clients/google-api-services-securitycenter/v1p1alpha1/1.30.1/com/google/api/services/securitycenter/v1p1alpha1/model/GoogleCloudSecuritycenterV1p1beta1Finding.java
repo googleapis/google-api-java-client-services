@@ -105,6 +105,13 @@ public final class GoogleCloudSecuritycenterV1p1beta1Finding extends com.google.
   private GoogleCloudSecuritycenterV1p1beta1SecurityMarks securityMarks;
 
   /**
+   * The severity of the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
    * Source specific properties. These properties are managed by the source that writes the finding.
    * The key names in the source_properties map must be between 1 and 255 characters, and must start
    * with a letter and contain alphanumeric characters or underscores only.
@@ -283,6 +290,23 @@ public final class GoogleCloudSecuritycenterV1p1beta1Finding extends com.google.
    */
   public GoogleCloudSecuritycenterV1p1beta1Finding setSecurityMarks(GoogleCloudSecuritycenterV1p1beta1SecurityMarks securityMarks) {
     this.securityMarks = securityMarks;
+    return this;
+  }
+
+  /**
+   * The severity of the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * The severity of the finding.
+   * @param severity severity or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1p1beta1Finding setSeverity(java.lang.String severity) {
+    this.severity = severity;
     return this;
   }
 

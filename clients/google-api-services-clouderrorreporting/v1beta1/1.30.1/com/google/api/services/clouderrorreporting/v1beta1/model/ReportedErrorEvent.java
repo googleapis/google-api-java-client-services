@@ -49,12 +49,10 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * contain a header (typically consisting of the exception type name and an error message) and an
    * exception stack trace in one of the supported programming languages and formats. Supported
    * languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go. Supported stack trace formats
-   * are:
-   *
-   * * **Java**: Must be the return value of [`Throwable.printStackTrace()`](https://docs.oracle.com
-   * /javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29). * **Python**: Must be the
-   * return value of [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#tra
-   * ceback.format_exc). * **JavaScript**: Must be the value of
+   * are: * **Java**: Must be the return value of [`Throwable.printStackTrace()`](https://docs.oracl
+   * e.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29). * **Python**: Must be
+   * the return value of [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html
+   * #traceback.format_exc). * **JavaScript**: Must be the value of
    * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned by V8. * **Ruby**:
    * Must contain frames returned by [`Exception.backtrace`](https://ruby-
    * doc.org/core-2.2.0/Exception.html#method-i-backtrace). * **C#**: Must be the return value of
@@ -116,12 +114,10 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * contain a header (typically consisting of the exception type name and an error message) and an
    * exception stack trace in one of the supported programming languages and formats. Supported
    * languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go. Supported stack trace formats
-   * are:
-   *
-   * * **Java**: Must be the return value of [`Throwable.printStackTrace()`](https://docs.oracle.com
-   * /javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29). * **Python**: Must be the
-   * return value of [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#tra
-   * ceback.format_exc). * **JavaScript**: Must be the value of
+   * are: * **Java**: Must be the return value of [`Throwable.printStackTrace()`](https://docs.oracl
+   * e.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29). * **Python**: Must be
+   * the return value of [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html
+   * #traceback.format_exc). * **JavaScript**: Must be the value of
    * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned by V8. * **Ruby**:
    * Must contain frames returned by [`Exception.backtrace`](https://ruby-
    * doc.org/core-2.2.0/Exception.html#method-i-backtrace). * **C#**: Must be the return value of
@@ -141,12 +137,10 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * contain a header (typically consisting of the exception type name and an error message) and an
    * exception stack trace in one of the supported programming languages and formats. Supported
    * languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go. Supported stack trace formats
-   * are:
-   *
-   * * **Java**: Must be the return value of [`Throwable.printStackTrace()`](https://docs.oracle.com
-   * /javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29). * **Python**: Must be the
-   * return value of [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#tra
-   * ceback.format_exc). * **JavaScript**: Must be the value of
+   * are: * **Java**: Must be the return value of [`Throwable.printStackTrace()`](https://docs.oracl
+   * e.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29). * **Python**: Must be
+   * the return value of [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html
+   * #traceback.format_exc). * **JavaScript**: Must be the value of
    * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned by V8. * **Ruby**:
    * Must contain frames returned by [`Exception.backtrace`](https://ruby-
    * doc.org/core-2.2.0/Exception.html#method-i-backtrace). * **C#**: Must be the return value of

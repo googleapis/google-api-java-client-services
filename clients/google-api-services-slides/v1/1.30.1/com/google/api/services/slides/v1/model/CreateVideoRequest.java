@@ -17,10 +17,8 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Creates a video.
- *
- * NOTE: Creating a video from Google Drive requires that the requesting app have at least one of
- * the drive, drive.readonly, or drive.file OAuth scopes.
+ * Creates a video. NOTE: Creating a video from Google Drive requires that the requesting app have
+ * at least one of the drive, drive.readonly, or drive.file OAuth scopes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -33,12 +31,9 @@ package com.google.api.services.slides.v1.model;
 public final class CreateVideoRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The element properties for the video.
-   *
-   * The PageElementProperties.size property is optional. If you don't specify a size, a default
-   * size is chosen by the server.
-   *
-   * The PageElementProperties.transform property is optional. The transform must not have shear
+   * The element properties for the video. The PageElementProperties.size property is optional. If
+   * you don't specify a size, a default size is chosen by the server. The
+   * PageElementProperties.transform property is optional. The transform must not have shear
    * components. If you don't specify a transform, the video will be placed at the top left corner
    * of the page.
    * The value may be {@code null}.
@@ -47,25 +42,21 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   private PageElementProperties elementProperties;
 
   /**
-   * The video source's unique identifier for this video.
-   *
-   * e.g. For YouTube video https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For
-   * a Google Drive video https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID
-   * is 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
+   * The video source's unique identifier for this video. e.g. For YouTube video
+   * https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For a Google Drive video
+   * https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID is
+   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,12 +70,9 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   private java.lang.String source;
 
   /**
-   * The element properties for the video.
-   *
-   * The PageElementProperties.size property is optional. If you don't specify a size, a default
-   * size is chosen by the server.
-   *
-   * The PageElementProperties.transform property is optional. The transform must not have shear
+   * The element properties for the video. The PageElementProperties.size property is optional. If
+   * you don't specify a size, a default size is chosen by the server. The
+   * PageElementProperties.transform property is optional. The transform must not have shear
    * components. If you don't specify a transform, the video will be placed at the top left corner
    * of the page.
    * @return value or {@code null} for none
@@ -94,12 +82,9 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The element properties for the video.
-   *
-   * The PageElementProperties.size property is optional. If you don't specify a size, a default
-   * size is chosen by the server.
-   *
-   * The PageElementProperties.transform property is optional. The transform must not have shear
+   * The element properties for the video. The PageElementProperties.size property is optional. If
+   * you don't specify a size, a default size is chosen by the server. The
+   * PageElementProperties.transform property is optional. The transform must not have shear
    * components. If you don't specify a transform, the video will be placed at the top left corner
    * of the page.
    * @param elementProperties elementProperties or {@code null} for none
@@ -110,11 +95,10 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The video source's unique identifier for this video.
-   *
-   * e.g. For YouTube video https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For
-   * a Google Drive video https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID
-   * is 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
+   * The video source's unique identifier for this video. e.g. For YouTube video
+   * https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For a Google Drive video
+   * https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID is
+   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -122,11 +106,10 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The video source's unique identifier for this video.
-   *
-   * e.g. For YouTube video https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For
-   * a Google Drive video https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID
-   * is 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
+   * The video source's unique identifier for this video. e.g. For YouTube video
+   * https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For a Google Drive video
+   * https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID is
+   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
    * @param id id or {@code null} for none
    */
   public CreateVideoRequest setId(java.lang.String id) {
@@ -135,14 +118,11 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -150,14 +130,11 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateVideoRequest setObjectId(java.lang.String objectId) {

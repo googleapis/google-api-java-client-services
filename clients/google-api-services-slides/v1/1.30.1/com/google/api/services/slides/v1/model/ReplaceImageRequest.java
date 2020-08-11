@@ -17,9 +17,8 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Replaces an existing image with a new image.
- *
- * Replacing an image removes some image effects from the existing image.
+ * Replaces an existing image with a new image. Replacing an image removes some image effects from
+ * the existing image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -46,14 +45,10 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   private java.lang.String imageReplaceMethod;
 
   /**
-   * The image URL.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length. The URL itself is saved with the image, and
-   * exposed via the Image.source_url field.
+   * The image URL. The image is fetched once at insertion time and a copy is stored for display
+   * inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels,
+   * and must be in one of PNG, JPEG, or GIF format. The provided URL can be at most 2 kB in length.
+   * The URL itself is saved with the image, and exposed via the Image.source_url field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,14 +89,10 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The image URL.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length. The URL itself is saved with the image, and
-   * exposed via the Image.source_url field.
+   * The image URL. The image is fetched once at insertion time and a copy is stored for display
+   * inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels,
+   * and must be in one of PNG, JPEG, or GIF format. The provided URL can be at most 2 kB in length.
+   * The URL itself is saved with the image, and exposed via the Image.source_url field.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -109,14 +100,10 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The image URL.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length. The URL itself is saved with the image, and
-   * exposed via the Image.source_url field.
+   * The image URL. The image is fetched once at insertion time and a copy is stored for display
+   * inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels,
+   * and must be in one of PNG, JPEG, or GIF format. The provided URL can be at most 2 kB in length.
+   * The URL itself is saved with the image, and exposed via the Image.source_url field.
    * @param url url or {@code null} for none
    */
   public ReplaceImageRequest setUrl(java.lang.String url) {

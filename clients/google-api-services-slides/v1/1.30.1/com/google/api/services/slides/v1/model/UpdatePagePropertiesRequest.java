@@ -30,16 +30,11 @@ package com.google.api.services.slides.v1.model;
 public final class UpdatePagePropertiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `pageProperties` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the page background solid fill color, set `fields` to
-   * `"pageBackgroundFill.solidFill.color"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `pageProperties` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the page background solid fill color, set
+   * `fields` to `"pageBackgroundFill.solidFill.color"`. To reset a property to its default value,
+   * include its field name in the field mask but leave the field itself unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,16 +55,11 @@ public final class UpdatePagePropertiesRequest extends com.google.api.client.jso
   private PageProperties pageProperties;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `pageProperties` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the page background solid fill color, set `fields` to
-   * `"pageBackgroundFill.solidFill.color"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `pageProperties` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the page background solid fill color, set
+   * `fields` to `"pageBackgroundFill.solidFill.color"`. To reset a property to its default value,
+   * include its field name in the field mask but leave the field itself unset.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -77,16 +67,11 @@ public final class UpdatePagePropertiesRequest extends com.google.api.client.jso
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `pageProperties` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the page background solid fill color, set `fields` to
-   * `"pageBackgroundFill.solidFill.color"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `pageProperties` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the page background solid fill color, set
+   * `fields` to `"pageBackgroundFill.solidFill.color"`. To reset a property to its default value,
+   * include its field name in the field mask but leave the field itself unset.
    * @param fields fields or {@code null} for none
    */
   public UpdatePagePropertiesRequest setFields(String fields) {

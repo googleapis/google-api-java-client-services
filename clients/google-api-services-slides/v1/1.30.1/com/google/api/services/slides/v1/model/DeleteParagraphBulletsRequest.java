@@ -17,10 +17,9 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Deletes bullets from all of the paragraphs that overlap with the given text index range.
- *
- * The nesting level of each paragraph will be visually preserved by adding indent to the start of
- * the corresponding paragraph.
+ * Deletes bullets from all of the paragraphs that overlap with the given text index range. The
+ * nesting level of each paragraph will be visually preserved by adding indent to the start of the
+ * corresponding paragraph.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

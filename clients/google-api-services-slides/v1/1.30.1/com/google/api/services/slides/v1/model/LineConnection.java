@@ -30,36 +30,29 @@ package com.google.api.services.slides.v1.model;
 public final class LineConnection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The object ID of the connected page element.
-   *
-   * Some page elements, such as groups, tables, and lines do not have connection sites and
-   * therefore cannot be connected to a connector line.
+   * The object ID of the connected page element. Some page elements, such as groups, tables, and
+   * lines do not have connection sites and therefore cannot be connected to a connector line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectedObjectId;
 
   /**
-   * The index of the connection site on the connected page element.
-   *
-   * In most cases, it corresponds to the predefined connection site index from the ECMA-376
-   * standard. More information on those connection sites can be found in the description of the
-   * "cnx" attribute in section 20.1.9.9 and Annex H. "Predefined DrawingML Shape and Text
-   * Geometries" of "Office Open XML File Formats-Fundamentals and Markup Language Reference", part
-   * 1 of [ECMA-376 5th edition] (http://www.ecma-
-   * international.org/publications/standards/Ecma-376.htm).
-   *
-   * The position of each connection site can also be viewed from Slides editor.
+   * The index of the connection site on the connected page element. In most cases, it corresponds
+   * to the predefined connection site index from the ECMA-376 standard. More information on those
+   * connection sites can be found in the description of the "cnx" attribute in section 20.1.9.9 and
+   * Annex H. "Predefined DrawingML Shape and Text Geometries" of "Office Open XML File Formats-
+   * Fundamentals and Markup Language Reference", part 1 of [ECMA-376 5th edition] (http://www.ecma-
+   * international.org/publications/standards/Ecma-376.htm). The position of each connection site
+   * can also be viewed from Slides editor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer connectionSiteIndex;
 
   /**
-   * The object ID of the connected page element.
-   *
-   * Some page elements, such as groups, tables, and lines do not have connection sites and
-   * therefore cannot be connected to a connector line.
+   * The object ID of the connected page element. Some page elements, such as groups, tables, and
+   * lines do not have connection sites and therefore cannot be connected to a connector line.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectedObjectId() {
@@ -67,10 +60,8 @@ public final class LineConnection extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The object ID of the connected page element.
-   *
-   * Some page elements, such as groups, tables, and lines do not have connection sites and
-   * therefore cannot be connected to a connector line.
+   * The object ID of the connected page element. Some page elements, such as groups, tables, and
+   * lines do not have connection sites and therefore cannot be connected to a connector line.
    * @param connectedObjectId connectedObjectId or {@code null} for none
    */
   public LineConnection setConnectedObjectId(java.lang.String connectedObjectId) {
@@ -79,16 +70,13 @@ public final class LineConnection extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The index of the connection site on the connected page element.
-   *
-   * In most cases, it corresponds to the predefined connection site index from the ECMA-376
-   * standard. More information on those connection sites can be found in the description of the
-   * "cnx" attribute in section 20.1.9.9 and Annex H. "Predefined DrawingML Shape and Text
-   * Geometries" of "Office Open XML File Formats-Fundamentals and Markup Language Reference", part
-   * 1 of [ECMA-376 5th edition] (http://www.ecma-
-   * international.org/publications/standards/Ecma-376.htm).
-   *
-   * The position of each connection site can also be viewed from Slides editor.
+   * The index of the connection site on the connected page element. In most cases, it corresponds
+   * to the predefined connection site index from the ECMA-376 standard. More information on those
+   * connection sites can be found in the description of the "cnx" attribute in section 20.1.9.9 and
+   * Annex H. "Predefined DrawingML Shape and Text Geometries" of "Office Open XML File Formats-
+   * Fundamentals and Markup Language Reference", part 1 of [ECMA-376 5th edition] (http://www.ecma-
+   * international.org/publications/standards/Ecma-376.htm). The position of each connection site
+   * can also be viewed from Slides editor.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConnectionSiteIndex() {
@@ -96,16 +84,13 @@ public final class LineConnection extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The index of the connection site on the connected page element.
-   *
-   * In most cases, it corresponds to the predefined connection site index from the ECMA-376
-   * standard. More information on those connection sites can be found in the description of the
-   * "cnx" attribute in section 20.1.9.9 and Annex H. "Predefined DrawingML Shape and Text
-   * Geometries" of "Office Open XML File Formats-Fundamentals and Markup Language Reference", part
-   * 1 of [ECMA-376 5th edition] (http://www.ecma-
-   * international.org/publications/standards/Ecma-376.htm).
-   *
-   * The position of each connection site can also be viewed from Slides editor.
+   * The index of the connection site on the connected page element. In most cases, it corresponds
+   * to the predefined connection site index from the ECMA-376 standard. More information on those
+   * connection sites can be found in the description of the "cnx" attribute in section 20.1.9.9 and
+   * Annex H. "Predefined DrawingML Shape and Text Geometries" of "Office Open XML File Formats-
+   * Fundamentals and Markup Language Reference", part 1 of [ECMA-376 5th edition] (http://www.ecma-
+   * international.org/publications/standards/Ecma-376.htm). The position of each connection site
+   * can also be viewed from Slides editor.
    * @param connectionSiteIndex connectionSiteIndex or {@code null} for none
    */
   public LineConnection setConnectionSiteIndex(java.lang.Integer connectionSiteIndex) {

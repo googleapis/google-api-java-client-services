@@ -17,10 +17,8 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Creates an embedded Google Sheets chart.
- *
- * NOTE: Chart creation requires at least one of the spreadsheets.readonly, spreadsheets,
- * drive.readonly, drive.file, or drive OAuth scopes.
+ * Creates an embedded Google Sheets chart. NOTE: Chart creation requires at least one of the
+ * spreadsheets.readonly, spreadsheets, drive.readonly, drive.file, or drive OAuth scopes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -40,11 +38,9 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   private java.lang.Integer chartId;
 
   /**
-   * The element properties for the chart.
-   *
-   * When the aspect ratio of the provided size does not match the chart aspect ratio, the chart is
-   * scaled and centered with respect to the size in order to maintain aspect ratio. The provided
-   * transform is applied after this operation.
+   * The element properties for the chart. When the aspect ratio of the provided size does not match
+   * the chart aspect ratio, the chart is scaled and centered with respect to the size in order to
+   * maintain aspect ratio. The provided transform is applied after this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,12 +55,10 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   private java.lang.String linkingMode;
 
   /**
-   * A user-supplied object ID.
-   *
-   * If specified, the ID must be unique among all pages and page elements in the presentation. The
-   * ID should start with a word character [a-zA-Z0-9_] and then followed by any number of the
-   * following characters [a-zA-Z0-9_-:]. The length of the ID should not be less than 5 or greater
-   * than 50. If empty, a unique identifier will be generated.
+   * A user-supplied object ID. If specified, the ID must be unique among all pages and page
+   * elements in the presentation. The ID should start with a word character [a-zA-Z0-9_] and then
+   * followed by any number of the following characters [a-zA-Z0-9_-:]. The length of the ID should
+   * not be less than 5 or greater than 50. If empty, a unique identifier will be generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,11 +89,9 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The element properties for the chart.
-   *
-   * When the aspect ratio of the provided size does not match the chart aspect ratio, the chart is
-   * scaled and centered with respect to the size in order to maintain aspect ratio. The provided
-   * transform is applied after this operation.
+   * The element properties for the chart. When the aspect ratio of the provided size does not match
+   * the chart aspect ratio, the chart is scaled and centered with respect to the size in order to
+   * maintain aspect ratio. The provided transform is applied after this operation.
    * @return value or {@code null} for none
    */
   public PageElementProperties getElementProperties() {
@@ -107,11 +99,9 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The element properties for the chart.
-   *
-   * When the aspect ratio of the provided size does not match the chart aspect ratio, the chart is
-   * scaled and centered with respect to the size in order to maintain aspect ratio. The provided
-   * transform is applied after this operation.
+   * The element properties for the chart. When the aspect ratio of the provided size does not match
+   * the chart aspect ratio, the chart is scaled and centered with respect to the size in order to
+   * maintain aspect ratio. The provided transform is applied after this operation.
    * @param elementProperties elementProperties or {@code null} for none
    */
   public CreateSheetsChartRequest setElementProperties(PageElementProperties elementProperties) {
@@ -139,12 +129,10 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If specified, the ID must be unique among all pages and page elements in the presentation. The
-   * ID should start with a word character [a-zA-Z0-9_] and then followed by any number of the
-   * following characters [a-zA-Z0-9_-:]. The length of the ID should not be less than 5 or greater
-   * than 50. If empty, a unique identifier will be generated.
+   * A user-supplied object ID. If specified, the ID must be unique among all pages and page
+   * elements in the presentation. The ID should start with a word character [a-zA-Z0-9_] and then
+   * followed by any number of the following characters [a-zA-Z0-9_-:]. The length of the ID should
+   * not be less than 5 or greater than 50. If empty, a unique identifier will be generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -152,12 +140,10 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If specified, the ID must be unique among all pages and page elements in the presentation. The
-   * ID should start with a word character [a-zA-Z0-9_] and then followed by any number of the
-   * following characters [a-zA-Z0-9_-:]. The length of the ID should not be less than 5 or greater
-   * than 50. If empty, a unique identifier will be generated.
+   * A user-supplied object ID. If specified, the ID must be unique among all pages and page
+   * elements in the presentation. The ID should start with a word character [a-zA-Z0-9_] and then
+   * followed by any number of the following characters [a-zA-Z0-9_-:]. The length of the ID should
+   * not be less than 5 or greater than 50. If empty, a unique identifier will be generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateSheetsChartRequest setObjectId(java.lang.String objectId) {

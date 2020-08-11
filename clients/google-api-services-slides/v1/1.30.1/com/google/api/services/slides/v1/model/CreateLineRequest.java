@@ -30,17 +30,11 @@ package com.google.api.services.slides.v1.model;
 public final class CreateLineRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The category of the line to be created.
-   *
-   * The exact line type created is determined based on the category and how it's routed to connect
-   * to other page elements.
-   *
-   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
-   *
-   * If you do not specify a value for `category`, but specify a value for `line_category`, then the
-   * specified `line_category` value is used.
-   *
-   * If you do not specify either, then STRAIGHT is used.
+   * The category of the line to be created. The exact line type created is determined based on the
+   * category and how it's routed to connect to other page elements. If you specify both a
+   * `category` and a `line_category`, the `category` takes precedence. If you do not specify a
+   * value for `category`, but specify a value for `line_category`, then the specified
+   * `line_category` value is used. If you do not specify either, then STRAIGHT is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,45 +48,32 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   private PageElementProperties elementProperties;
 
   /**
-   * The category of the line to be created.
-   *
-   * Deprecated: use `category` instead.
-   *
-   * The exact line type created is determined based on the category and how it's routed to connect
-   * to other page elements.
-   *
-   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
+   * The category of the line to be created. *Deprecated*: use `category` instead. The exact line
+   * type created is determined based on the category and how it's routed to connect to other page
+   * elements. If you specify both a `category` and a `line_category`, the `category` takes
+   * precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lineCategory;
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectId;
 
   /**
-   * The category of the line to be created.
-   *
-   * The exact line type created is determined based on the category and how it's routed to connect
-   * to other page elements.
-   *
-   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
-   *
-   * If you do not specify a value for `category`, but specify a value for `line_category`, then the
-   * specified `line_category` value is used.
-   *
-   * If you do not specify either, then STRAIGHT is used.
+   * The category of the line to be created. The exact line type created is determined based on the
+   * category and how it's routed to connect to other page elements. If you specify both a
+   * `category` and a `line_category`, the `category` takes precedence. If you do not specify a
+   * value for `category`, but specify a value for `line_category`, then the specified
+   * `line_category` value is used. If you do not specify either, then STRAIGHT is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -100,17 +81,11 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The category of the line to be created.
-   *
-   * The exact line type created is determined based on the category and how it's routed to connect
-   * to other page elements.
-   *
-   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
-   *
-   * If you do not specify a value for `category`, but specify a value for `line_category`, then the
-   * specified `line_category` value is used.
-   *
-   * If you do not specify either, then STRAIGHT is used.
+   * The category of the line to be created. The exact line type created is determined based on the
+   * category and how it's routed to connect to other page elements. If you specify both a
+   * `category` and a `line_category`, the `category` takes precedence. If you do not specify a
+   * value for `category`, but specify a value for `line_category`, then the specified
+   * `line_category` value is used. If you do not specify either, then STRAIGHT is used.
    * @param category category or {@code null} for none
    */
   public CreateLineRequest setCategory(java.lang.String category) {
@@ -136,14 +111,10 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The category of the line to be created.
-   *
-   * Deprecated: use `category` instead.
-   *
-   * The exact line type created is determined based on the category and how it's routed to connect
-   * to other page elements.
-   *
-   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
+   * The category of the line to be created. *Deprecated*: use `category` instead. The exact line
+   * type created is determined based on the category and how it's routed to connect to other page
+   * elements. If you specify both a `category` and a `line_category`, the `category` takes
+   * precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getLineCategory() {
@@ -151,14 +122,10 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The category of the line to be created.
-   *
-   * Deprecated: use `category` instead.
-   *
-   * The exact line type created is determined based on the category and how it's routed to connect
-   * to other page elements.
-   *
-   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
+   * The category of the line to be created. *Deprecated*: use `category` instead. The exact line
+   * type created is determined based on the category and how it's routed to connect to other page
+   * elements. If you specify both a `category` and a `line_category`, the `category` takes
+   * precedence.
    * @param lineCategory lineCategory or {@code null} for none
    */
   public CreateLineRequest setLineCategory(java.lang.String lineCategory) {
@@ -167,14 +134,11 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -182,14 +146,11 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateLineRequest setObjectId(java.lang.String objectId) {

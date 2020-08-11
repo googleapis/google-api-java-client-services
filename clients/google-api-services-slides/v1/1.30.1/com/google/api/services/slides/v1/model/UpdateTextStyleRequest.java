@@ -38,15 +38,11 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   private TableCellLocation cellLocation;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `style` is implied and should not be specified.
-   * A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example, to update the text style to bold, set `fields` to `"bold"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root `style` is
+   * implied and should not be specified. A single `"*"` can be used as short-hand for listing every
+   * field. For example, to update the text style to bold, set `fields` to `"bold"`. To reset a
+   * property to its default value, include its field name in the field mask but leave the field
+   * itself unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,25 +56,19 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   private java.lang.String objectId;
 
   /**
-   * The style(s) to set on the text.
-   *
-   * If the value for a particular style matches that of the parent, that style will be set to
-   * inherit.
-   *
-   * Certain text style changes may cause other changes meant to mirror the behavior of the Slides
-   * editor. See the documentation of TextStyle for more information.
+   * The style(s) to set on the text. If the value for a particular style matches that of the
+   * parent, that style will be set to inherit. Certain text style changes may cause other changes
+   * meant to mirror the behavior of the Slides editor. See the documentation of TextStyle for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextStyle style;
 
   /**
-   * The range of text to style.
-   *
-   * The range may be extended to include adjacent newlines.
-   *
-   * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
-   * updated with the matching text style.
+   * The range of text to style. The range may be extended to include adjacent newlines. If the
+   * range fully contains a paragraph belonging to a list, the paragraph's bullet is also updated
+   * with the matching text style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,15 +94,11 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `style` is implied and should not be specified.
-   * A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example, to update the text style to bold, set `fields` to `"bold"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root `style` is
+   * implied and should not be specified. A single `"*"` can be used as short-hand for listing every
+   * field. For example, to update the text style to bold, set `fields` to `"bold"`. To reset a
+   * property to its default value, include its field name in the field mask but leave the field
+   * itself unset.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -120,15 +106,11 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `style` is implied and should not be specified.
-   * A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example, to update the text style to bold, set `fields` to `"bold"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root `style` is
+   * implied and should not be specified. A single `"*"` can be used as short-hand for listing every
+   * field. For example, to update the text style to bold, set `fields` to `"bold"`. To reset a
+   * property to its default value, include its field name in the field mask but leave the field
+   * itself unset.
    * @param fields fields or {@code null} for none
    */
   public UpdateTextStyleRequest setFields(String fields) {
@@ -154,13 +136,10 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The style(s) to set on the text.
-   *
-   * If the value for a particular style matches that of the parent, that style will be set to
-   * inherit.
-   *
-   * Certain text style changes may cause other changes meant to mirror the behavior of the Slides
-   * editor. See the documentation of TextStyle for more information.
+   * The style(s) to set on the text. If the value for a particular style matches that of the
+   * parent, that style will be set to inherit. Certain text style changes may cause other changes
+   * meant to mirror the behavior of the Slides editor. See the documentation of TextStyle for more
+   * information.
    * @return value or {@code null} for none
    */
   public TextStyle getStyle() {
@@ -168,13 +147,10 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The style(s) to set on the text.
-   *
-   * If the value for a particular style matches that of the parent, that style will be set to
-   * inherit.
-   *
-   * Certain text style changes may cause other changes meant to mirror the behavior of the Slides
-   * editor. See the documentation of TextStyle for more information.
+   * The style(s) to set on the text. If the value for a particular style matches that of the
+   * parent, that style will be set to inherit. Certain text style changes may cause other changes
+   * meant to mirror the behavior of the Slides editor. See the documentation of TextStyle for more
+   * information.
    * @param style style or {@code null} for none
    */
   public UpdateTextStyleRequest setStyle(TextStyle style) {
@@ -183,12 +159,9 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The range of text to style.
-   *
-   * The range may be extended to include adjacent newlines.
-   *
-   * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
-   * updated with the matching text style.
+   * The range of text to style. The range may be extended to include adjacent newlines. If the
+   * range fully contains a paragraph belonging to a list, the paragraph's bullet is also updated
+   * with the matching text style.
    * @return value or {@code null} for none
    */
   public Range getTextRange() {
@@ -196,12 +169,9 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The range of text to style.
-   *
-   * The range may be extended to include adjacent newlines.
-   *
-   * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
-   * updated with the matching text style.
+   * The range of text to style. The range may be extended to include adjacent newlines. If the
+   * range fully contains a paragraph belonging to a list, the paragraph's bullet is also updated
+   * with the matching text style.
    * @param textRange textRange or {@code null} for none
    */
   public UpdateTextStyleRequest setTextRange(Range textRange) {

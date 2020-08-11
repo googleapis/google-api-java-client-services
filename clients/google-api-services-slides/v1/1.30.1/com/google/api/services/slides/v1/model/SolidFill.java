@@ -18,7 +18,6 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * A solid color fill. The page or page element is filled entirely with the specified color value.
- *
  * If any field is unset, its value may be inherited from a parent placeholder if it exists.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -33,12 +32,9 @@ public final class SolidFill extends com.google.api.client.json.GenericJson {
 
   /**
    * The fraction of this `color` that should be applied to the pixel. That is, the final pixel
-   * color is defined by the equation:
-   *
-   *   pixel color = alpha * (color) + (1.0 - alpha) * (background color)
-   *
-   * This means that a value of 1.0 corresponds to a solid color, whereas a value of 0.0 corresponds
-   * to a completely transparent color.
+   * color is defined by the equation: pixel color = alpha * (color) + (1.0 - alpha) * (background
+   * color) This means that a value of 1.0 corresponds to a solid color, whereas a value of 0.0
+   * corresponds to a completely transparent color.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,12 +49,9 @@ public final class SolidFill extends com.google.api.client.json.GenericJson {
 
   /**
    * The fraction of this `color` that should be applied to the pixel. That is, the final pixel
-   * color is defined by the equation:
-   *
-   *   pixel color = alpha * (color) + (1.0 - alpha) * (background color)
-   *
-   * This means that a value of 1.0 corresponds to a solid color, whereas a value of 0.0 corresponds
-   * to a completely transparent color.
+   * color is defined by the equation: pixel color = alpha * (color) + (1.0 - alpha) * (background
+   * color) This means that a value of 1.0 corresponds to a solid color, whereas a value of 0.0
+   * corresponds to a completely transparent color.
    * @return value or {@code null} for none
    */
   public java.lang.Float getAlpha() {
@@ -67,12 +60,9 @@ public final class SolidFill extends com.google.api.client.json.GenericJson {
 
   /**
    * The fraction of this `color` that should be applied to the pixel. That is, the final pixel
-   * color is defined by the equation:
-   *
-   *   pixel color = alpha * (color) + (1.0 - alpha) * (background color)
-   *
-   * This means that a value of 1.0 corresponds to a solid color, whereas a value of 0.0 corresponds
-   * to a completely transparent color.
+   * color is defined by the equation: pixel color = alpha * (color) + (1.0 - alpha) * (background
+   * color) This means that a value of 1.0 corresponds to a solid color, whereas a value of 0.0
+   * corresponds to a completely transparent color.
    * @param alpha alpha or {@code null} for none
    */
   public SolidFill setAlpha(java.lang.Float alpha) {

@@ -37,27 +37,21 @@ public final class CreateTableRequest extends com.google.api.client.json.Generic
   private java.lang.Integer columns;
 
   /**
-   * The element properties for the table.
-   *
-   * The table will be created at the provided size, subject to a minimum size. If no size is
-   * provided, the table will be automatically sized.
-   *
-   * Table transforms must have a scale of 1 and no shear components. If no transform is provided,
-   * the table will be centered on the page.
+   * The element properties for the table. The table will be created at the provided size, subject
+   * to a minimum size. If no size is provided, the table will be automatically sized. Table
+   * transforms must have a scale of 1 and no shear components. If no transform is provided, the
+   * table will be centered on the page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PageElementProperties elementProperties;
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,13 +82,10 @@ public final class CreateTableRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The element properties for the table.
-   *
-   * The table will be created at the provided size, subject to a minimum size. If no size is
-   * provided, the table will be automatically sized.
-   *
-   * Table transforms must have a scale of 1 and no shear components. If no transform is provided,
-   * the table will be centered on the page.
+   * The element properties for the table. The table will be created at the provided size, subject
+   * to a minimum size. If no size is provided, the table will be automatically sized. Table
+   * transforms must have a scale of 1 and no shear components. If no transform is provided, the
+   * table will be centered on the page.
    * @return value or {@code null} for none
    */
   public PageElementProperties getElementProperties() {
@@ -102,13 +93,10 @@ public final class CreateTableRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The element properties for the table.
-   *
-   * The table will be created at the provided size, subject to a minimum size. If no size is
-   * provided, the table will be automatically sized.
-   *
-   * Table transforms must have a scale of 1 and no shear components. If no transform is provided,
-   * the table will be centered on the page.
+   * The element properties for the table. The table will be created at the provided size, subject
+   * to a minimum size. If no size is provided, the table will be automatically sized. Table
+   * transforms must have a scale of 1 and no shear components. If no transform is provided, the
+   * table will be centered on the page.
    * @param elementProperties elementProperties or {@code null} for none
    */
   public CreateTableRequest setElementProperties(PageElementProperties elementProperties) {
@@ -117,14 +105,11 @@ public final class CreateTableRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -132,14 +117,11 @@ public final class CreateTableRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateTableRequest setObjectId(java.lang.String objectId) {

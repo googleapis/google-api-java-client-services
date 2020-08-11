@@ -30,9 +30,8 @@ package com.google.api.services.slides.v1.model;
 public final class PageElement extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of the page element. Combined with title to display alt text.
-   *
-   * The field is not supported for Group elements.
+   * The description of the page element. Combined with title to display alt text. The field is not
+   * supported for Group elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,23 +95,19 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   private Table table;
 
   /**
-   * The title of the page element. Combined with description to display alt text.
-   *
-   * The field is not supported for Group elements.
+   * The title of the page element. Combined with description to display alt text. The field is not
+   * supported for Group elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The transform of the page element.
-   *
-   * The visual appearance of the page element is determined by its absolute transform. To compute
-   * the absolute transform, preconcatenate a page element's transform with the transforms of all of
-   * its parent groups. If the page element is not in a group, its absolute transform is the same as
-   * the value in this field.
-   *
-   * The initial transform for the newly created Group is always the identity transform.
+   * The transform of the page element. The visual appearance of the page element is determined by
+   * its absolute transform. To compute the absolute transform, preconcatenate a page element's
+   * transform with the transforms of all of its parent groups. If the page element is not in a
+   * group, its absolute transform is the same as the value in this field. The initial transform for
+   * the newly created Group is always the identity transform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,9 +128,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   private WordArt wordArt;
 
   /**
-   * The description of the page element. Combined with title to display alt text.
-   *
-   * The field is not supported for Group elements.
+   * The description of the page element. Combined with title to display alt text. The field is not
+   * supported for Group elements.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -143,9 +137,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the page element. Combined with title to display alt text.
-   *
-   * The field is not supported for Group elements.
+   * The description of the page element. Combined with title to display alt text. The field is not
+   * supported for Group elements.
    * @param description description or {@code null} for none
    */
   public PageElement setDescription(java.lang.String description) {
@@ -292,9 +285,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the page element. Combined with description to display alt text.
-   *
-   * The field is not supported for Group elements.
+   * The title of the page element. Combined with description to display alt text. The field is not
+   * supported for Group elements.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -302,9 +294,8 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the page element. Combined with description to display alt text.
-   *
-   * The field is not supported for Group elements.
+   * The title of the page element. Combined with description to display alt text. The field is not
+   * supported for Group elements.
    * @param title title or {@code null} for none
    */
   public PageElement setTitle(java.lang.String title) {
@@ -313,14 +304,11 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transform of the page element.
-   *
-   * The visual appearance of the page element is determined by its absolute transform. To compute
-   * the absolute transform, preconcatenate a page element's transform with the transforms of all of
-   * its parent groups. If the page element is not in a group, its absolute transform is the same as
-   * the value in this field.
-   *
-   * The initial transform for the newly created Group is always the identity transform.
+   * The transform of the page element. The visual appearance of the page element is determined by
+   * its absolute transform. To compute the absolute transform, preconcatenate a page element's
+   * transform with the transforms of all of its parent groups. If the page element is not in a
+   * group, its absolute transform is the same as the value in this field. The initial transform for
+   * the newly created Group is always the identity transform.
    * @return value or {@code null} for none
    */
   public AffineTransform getTransform() {
@@ -328,14 +316,11 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transform of the page element.
-   *
-   * The visual appearance of the page element is determined by its absolute transform. To compute
-   * the absolute transform, preconcatenate a page element's transform with the transforms of all of
-   * its parent groups. If the page element is not in a group, its absolute transform is the same as
-   * the value in this field.
-   *
-   * The initial transform for the newly created Group is always the identity transform.
+   * The transform of the page element. The visual appearance of the page element is determined by
+   * its absolute transform. To compute the absolute transform, preconcatenate a page element's
+   * transform with the transforms of all of its parent groups. If the page element is not in a
+   * group, its absolute transform is the same as the value in this field. The initial transform for
+   * the newly created Group is always the identity transform.
    * @param transform transform or {@code null} for none
    */
   public PageElement setTransform(AffineTransform transform) {

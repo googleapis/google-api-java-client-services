@@ -18,10 +18,9 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * Replaces all shapes that match the given criteria with the provided Google Sheets chart. The
- * chart will be scaled and centered to fit within the bounds of the original shape.
- *
- * NOTE: Replacing shapes with a chart requires at least one of the spreadsheets.readonly,
- * spreadsheets, drive.readonly, or drive OAuth scopes.
+ * chart will be scaled and centered to fit within the bounds of the original shape. NOTE: Replacing
+ * shapes with a chart requires at least one of the spreadsheets.readonly, spreadsheets,
+ * drive.readonly, or drive OAuth scopes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -57,10 +56,9 @@ public final class ReplaceAllShapesWithSheetsChartRequest extends com.google.api
   private java.lang.String linkingMode;
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes page or a notes master,
-   * or if a page with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes page or a notes master, or if a page with
+   * that object ID doesn't exist in the presentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,10 +127,9 @@ public final class ReplaceAllShapesWithSheetsChartRequest extends com.google.api
   }
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes page or a notes master,
-   * or if a page with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes page or a notes master, or if a page with
+   * that object ID doesn't exist in the presentation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageObjectIds() {
@@ -140,10 +137,9 @@ public final class ReplaceAllShapesWithSheetsChartRequest extends com.google.api
   }
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes page or a notes master,
-   * or if a page with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes page or a notes master, or if a page with
+   * that object ID doesn't exist in the presentation.
    * @param pageObjectIds pageObjectIds or {@code null} for none
    */
   public ReplaceAllShapesWithSheetsChartRequest setPageObjectIds(java.util.List<java.lang.String> pageObjectIds) {

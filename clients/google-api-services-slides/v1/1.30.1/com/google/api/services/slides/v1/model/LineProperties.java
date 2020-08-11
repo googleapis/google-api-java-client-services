@@ -17,10 +17,8 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * The properties of the Line.
- *
- * When unset, these fields default to values that match the appearance of new lines created in the
- * Slides editor.
+ * The properties of the Line. When unset, these fields default to values that match the appearance
+ * of new lines created in the Slides editor.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -47,9 +45,8 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   private java.lang.String endArrow;
 
   /**
-   * The connection at the end of the line. If unset, there is no connection.
-   *
-   * Only lines with a Type indicating it is a "connector" can have an `end_connection`.
+   * The connection at the end of the line. If unset, there is no connection. Only lines with a Type
+   * indicating it is a "connector" can have an `end_connection`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +75,8 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   private java.lang.String startArrow;
 
   /**
-   * The connection at the beginning of the line. If unset, there is no connection.
-   *
-   * Only lines with a Type indicating it is a "connector" can have a `start_connection`.
+   * The connection at the beginning of the line. If unset, there is no connection. Only lines with
+   * a Type indicating it is a "connector" can have a `start_connection`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +124,8 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The connection at the end of the line. If unset, there is no connection.
-   *
-   * Only lines with a Type indicating it is a "connector" can have an `end_connection`.
+   * The connection at the end of the line. If unset, there is no connection. Only lines with a Type
+   * indicating it is a "connector" can have an `end_connection`.
    * @return value or {@code null} for none
    */
   public LineConnection getEndConnection() {
@@ -138,9 +133,8 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The connection at the end of the line. If unset, there is no connection.
-   *
-   * Only lines with a Type indicating it is a "connector" can have an `end_connection`.
+   * The connection at the end of the line. If unset, there is no connection. Only lines with a Type
+   * indicating it is a "connector" can have an `end_connection`.
    * @param endConnection endConnection or {@code null} for none
    */
   public LineProperties setEndConnection(LineConnection endConnection) {
@@ -202,9 +196,8 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The connection at the beginning of the line. If unset, there is no connection.
-   *
-   * Only lines with a Type indicating it is a "connector" can have a `start_connection`.
+   * The connection at the beginning of the line. If unset, there is no connection. Only lines with
+   * a Type indicating it is a "connector" can have a `start_connection`.
    * @return value or {@code null} for none
    */
   public LineConnection getStartConnection() {
@@ -212,9 +205,8 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The connection at the beginning of the line. If unset, there is no connection.
-   *
-   * Only lines with a Type indicating it is a "connector" can have a `start_connection`.
+   * The connection at the beginning of the line. If unset, there is no connection. Only lines with
+   * a Type indicating it is a "connector" can have a `start_connection`.
    * @param startConnection startConnection or {@code null} for none
    */
   public LineProperties setStartConnection(LineConnection startConnection) {

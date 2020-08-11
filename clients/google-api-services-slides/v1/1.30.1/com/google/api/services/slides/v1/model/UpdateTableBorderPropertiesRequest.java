@@ -38,16 +38,11 @@ public final class UpdateTableBorderPropertiesRequest extends com.google.api.cli
   private java.lang.String borderPosition;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableBorderProperties` is implied and should
-   * not be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the table border solid fill color, set `fields` to
-   * `"tableBorderFill.solidFill.color"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableBorderProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the table border solid fill color,
+   * set `fields` to `"tableBorderFill.solidFill.color"`. To reset a property to its default value,
+   * include its field name in the field mask but leave the field itself unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,16 +90,11 @@ public final class UpdateTableBorderPropertiesRequest extends com.google.api.cli
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableBorderProperties` is implied and should
-   * not be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the table border solid fill color, set `fields` to
-   * `"tableBorderFill.solidFill.color"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableBorderProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the table border solid fill color,
+   * set `fields` to `"tableBorderFill.solidFill.color"`. To reset a property to its default value,
+   * include its field name in the field mask but leave the field itself unset.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -112,16 +102,11 @@ public final class UpdateTableBorderPropertiesRequest extends com.google.api.cli
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableBorderProperties` is implied and should
-   * not be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the table border solid fill color, set `fields` to
-   * `"tableBorderFill.solidFill.color"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableBorderProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the table border solid fill color,
+   * set `fields` to `"tableBorderFill.solidFill.color"`. To reset a property to its default value,
+   * include its field name in the field mask but leave the field itself unset.
    * @param fields fields or {@code null} for none
    */
   public UpdateTableBorderPropertiesRequest setFields(String fields) {

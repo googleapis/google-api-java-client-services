@@ -17,10 +17,8 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Common properties for a page element.
- *
- * Note: When you initially create a PageElement, the API may modify the values of both `size` and
- * `transform`, but the visual size will be unchanged.
+ * Common properties for a page element. Note: When you initially create a PageElement, the API may
+ * modify the values of both `size` and `transform`, but the visual size will be unchanged.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

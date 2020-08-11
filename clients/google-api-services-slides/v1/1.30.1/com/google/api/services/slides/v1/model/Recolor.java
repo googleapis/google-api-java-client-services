@@ -30,20 +30,17 @@ package com.google.api.services.slides.v1.model;
 public final class Recolor extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the recolor effect.
-   *
-   * The name is determined from the `recolor_stops` by matching the gradient against the colors in
-   * the page's current color scheme. This property is read-only.
+   * The name of the recolor effect. The name is determined from the `recolor_stops` by matching the
+   * gradient against the colors in the page's current color scheme. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The recolor effect is represented by a gradient, which is a list of color stops.
-   *
-   * The colors in the gradient will replace the corresponding colors at the same position in the
-   * color palette and apply to the image. This property is read-only.
+   * The recolor effect is represented by a gradient, which is a list of color stops. The colors in
+   * the gradient will replace the corresponding colors at the same position in the color palette
+   * and apply to the image. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +53,8 @@ public final class Recolor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the recolor effect.
-   *
-   * The name is determined from the `recolor_stops` by matching the gradient against the colors in
-   * the page's current color scheme. This property is read-only.
+   * The name of the recolor effect. The name is determined from the `recolor_stops` by matching the
+   * gradient against the colors in the page's current color scheme. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -67,10 +62,8 @@ public final class Recolor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the recolor effect.
-   *
-   * The name is determined from the `recolor_stops` by matching the gradient against the colors in
-   * the page's current color scheme. This property is read-only.
+   * The name of the recolor effect. The name is determined from the `recolor_stops` by matching the
+   * gradient against the colors in the page's current color scheme. This property is read-only.
    * @param name name or {@code null} for none
    */
   public Recolor setName(java.lang.String name) {
@@ -79,10 +72,9 @@ public final class Recolor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recolor effect is represented by a gradient, which is a list of color stops.
-   *
-   * The colors in the gradient will replace the corresponding colors at the same position in the
-   * color palette and apply to the image. This property is read-only.
+   * The recolor effect is represented by a gradient, which is a list of color stops. The colors in
+   * the gradient will replace the corresponding colors at the same position in the color palette
+   * and apply to the image. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<ColorStop> getRecolorStops() {
@@ -90,10 +82,9 @@ public final class Recolor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The recolor effect is represented by a gradient, which is a list of color stops.
-   *
-   * The colors in the gradient will replace the corresponding colors at the same position in the
-   * color palette and apply to the image. This property is read-only.
+   * The recolor effect is represented by a gradient, which is a list of color stops. The colors in
+   * the gradient will replace the corresponding colors at the same position in the color palette
+   * and apply to the image. This property is read-only.
    * @param recolorStops recolorStops or {@code null} for none
    */
   public Recolor setRecolorStops(java.util.List<ColorStop> recolorStops) {

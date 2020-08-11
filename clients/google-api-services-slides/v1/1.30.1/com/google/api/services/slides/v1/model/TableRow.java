@@ -37,11 +37,9 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   private Dimension rowHeight;
 
   /**
-   * Properties and contents of each cell.
-   *
-   * Cells that span multiple columns are represented only once with a column_span greater than 1.
-   * As a result, the length of this collection does not always match the number of columns of the
-   * entire table.
+   * Properties and contents of each cell. Cells that span multiple columns are represented only
+   * once with a column_span greater than 1. As a result, the length of this collection does not
+   * always match the number of columns of the entire table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,11 +76,9 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties and contents of each cell.
-   *
-   * Cells that span multiple columns are represented only once with a column_span greater than 1.
-   * As a result, the length of this collection does not always match the number of columns of the
-   * entire table.
+   * Properties and contents of each cell. Cells that span multiple columns are represented only
+   * once with a column_span greater than 1. As a result, the length of this collection does not
+   * always match the number of columns of the entire table.
    * @return value or {@code null} for none
    */
   public java.util.List<TableCell> getTableCells() {
@@ -90,11 +86,9 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties and contents of each cell.
-   *
-   * Cells that span multiple columns are represented only once with a column_span greater than 1.
-   * As a result, the length of this collection does not always match the number of columns of the
-   * entire table.
+   * Properties and contents of each cell. Cells that span multiple columns are represented only
+   * once with a column_span greater than 1. As a result, the length of this collection does not
+   * always match the number of columns of the entire table.
    * @param tableCells tableCells or {@code null} for none
    */
   public TableRow setTableCells(java.util.List<TableCell> tableCells) {

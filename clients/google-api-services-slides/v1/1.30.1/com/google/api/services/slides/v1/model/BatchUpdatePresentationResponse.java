@@ -37,8 +37,8 @@ public final class BatchUpdatePresentationResponse extends com.google.api.client
   private java.lang.String presentationId;
 
   /**
-   * The reply of the updates.  This maps 1:1 with the updates, although replies to some requests
-   * may be empty.
+   * The reply of the updates. This maps 1:1 with the updates, although replies to some requests may
+   * be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class BatchUpdatePresentationResponse extends com.google.api.client
   }
 
   /**
-   * The reply of the updates.  This maps 1:1 with the updates, although replies to some requests
-   * may be empty.
+   * The reply of the updates. This maps 1:1 with the updates, although replies to some requests may
+   * be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Response> getReplies() {
@@ -78,8 +78,8 @@ public final class BatchUpdatePresentationResponse extends com.google.api.client
   }
 
   /**
-   * The reply of the updates.  This maps 1:1 with the updates, although replies to some requests
-   * may be empty.
+   * The reply of the updates. This maps 1:1 with the updates, although replies to some requests may
+   * be empty.
    * @param replies replies or {@code null} for none
    */
   public BatchUpdatePresentationResponse setReplies(java.util.List<Response> replies) {

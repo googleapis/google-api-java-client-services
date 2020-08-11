@@ -31,20 +31,18 @@ package com.google.api.services.slides.v1.model;
 public final class RerouteLineRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The object ID of the line to reroute.
-   *
-   * Only a line with a category indicating it is a "connector" can be rerouted. The start and end
-   * connections of the line must be on different page elements.
+   * The object ID of the line to reroute. Only a line with a category indicating it is a
+   * "connector" can be rerouted. The start and end connections of the line must be on different
+   * page elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectId;
 
   /**
-   * The object ID of the line to reroute.
-   *
-   * Only a line with a category indicating it is a "connector" can be rerouted. The start and end
-   * connections of the line must be on different page elements.
+   * The object ID of the line to reroute. Only a line with a category indicating it is a
+   * "connector" can be rerouted. The start and end connections of the line must be on different
+   * page elements.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -52,10 +50,9 @@ public final class RerouteLineRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The object ID of the line to reroute.
-   *
-   * Only a line with a category indicating it is a "connector" can be rerouted. The start and end
-   * connections of the line must be on different page elements.
+   * The object ID of the line to reroute. Only a line with a category indicating it is a
+   * "connector" can be rerouted. The start and end connections of the line must be on different
+   * page elements.
    * @param objectId objectId or {@code null} for none
    */
   public RerouteLineRequest setObjectId(java.lang.String objectId) {

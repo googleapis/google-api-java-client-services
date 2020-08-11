@@ -31,19 +31,13 @@ package com.google.api.services.slides.v1.model;
 public final class StretchedPictureFill extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reading the content_url:
-   *
-   * An URL to a picture with a default lifetime of 30 minutes. This URL is tagged with the account
-   * of the requester. Anyone with the URL effectively accesses the picture as the original
-   * requester. Access to the picture may be lost if the presentation's sharing settings change.
-   *
-   * Writing the content_url:
-   *
-   * The picture is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Pictures must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length.
+   * Reading the content_url: An URL to a picture with a default lifetime of 30 minutes. This URL is
+   * tagged with the account of the requester. Anyone with the URL effectively accesses the picture
+   * as the original requester. Access to the picture may be lost if the presentation's sharing
+   * settings change. Writing the content_url: The picture is fetched once at insertion time and a
+   * copy is stored for display inside the presentation. Pictures must be less than 50MB in size,
+   * cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or GIF format. The provided URL
+   * can be at most 2 kB in length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,19 +51,13 @@ public final class StretchedPictureFill extends com.google.api.client.json.Gener
   private Size size;
 
   /**
-   * Reading the content_url:
-   *
-   * An URL to a picture with a default lifetime of 30 minutes. This URL is tagged with the account
-   * of the requester. Anyone with the URL effectively accesses the picture as the original
-   * requester. Access to the picture may be lost if the presentation's sharing settings change.
-   *
-   * Writing the content_url:
-   *
-   * The picture is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Pictures must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length.
+   * Reading the content_url: An URL to a picture with a default lifetime of 30 minutes. This URL is
+   * tagged with the account of the requester. Anyone with the URL effectively accesses the picture
+   * as the original requester. Access to the picture may be lost if the presentation's sharing
+   * settings change. Writing the content_url: The picture is fetched once at insertion time and a
+   * copy is stored for display inside the presentation. Pictures must be less than 50MB in size,
+   * cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or GIF format. The provided URL
+   * can be at most 2 kB in length.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentUrl() {
@@ -77,19 +65,13 @@ public final class StretchedPictureFill extends com.google.api.client.json.Gener
   }
 
   /**
-   * Reading the content_url:
-   *
-   * An URL to a picture with a default lifetime of 30 minutes. This URL is tagged with the account
-   * of the requester. Anyone with the URL effectively accesses the picture as the original
-   * requester. Access to the picture may be lost if the presentation's sharing settings change.
-   *
-   * Writing the content_url:
-   *
-   * The picture is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Pictures must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length.
+   * Reading the content_url: An URL to a picture with a default lifetime of 30 minutes. This URL is
+   * tagged with the account of the requester. Anyone with the URL effectively accesses the picture
+   * as the original requester. Access to the picture may be lost if the presentation's sharing
+   * settings change. Writing the content_url: The picture is fetched once at insertion time and a
+   * copy is stored for display inside the presentation. Pictures must be less than 50MB in size,
+   * cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or GIF format. The provided URL
+   * can be at most 2 kB in length.
    * @param contentUrl contentUrl or {@code null} for none
    */
   public StretchedPictureFill setContentUrl(java.lang.String contentUrl) {

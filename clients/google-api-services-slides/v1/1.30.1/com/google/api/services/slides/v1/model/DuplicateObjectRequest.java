@@ -17,11 +17,9 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Duplicates a slide or page element.
- *
- * When duplicating a slide, the duplicate slide will be created immediately following the specified
- * slide. When duplicating a page element, the duplicate will be placed on the same page at the same
- * position as the original.
+ * Duplicates a slide or page element. When duplicating a slide, the duplicate slide will be created
+ * immediately following the specified slide. When duplicating a page element, the duplicate will be
+ * placed on the same page at the same position as the original.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -46,15 +44,12 @@ public final class DuplicateObjectRequest extends com.google.api.client.json.Gen
    * keys are the IDs of the original objects and its values are the IDs that will be assigned to
    * the corresponding duplicate object. The ID of the source object's duplicate may be specified in
    * this map as well, using the same value of the `object_id` field as a key and the newly desired
-   * ID as the value.
-   *
-   * All keys must correspond to existing IDs in the presentation. All values must be unique in the
-   * presentation and must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the new ID must not be less than 5 or greater than 50.
-   *
-   * If any IDs of source objects are omitted from the map, a new random ID will be assigned. If the
-   * map is empty or unset, all duplicate objects will receive a new random ID.
+   * ID as the value. All keys must correspond to existing IDs in the presentation. All values must
+   * be unique in the presentation and must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the new ID must not be less than 5 or
+   * greater than 50. If any IDs of source objects are omitted from the map, a new random ID will be
+   * assigned. If the map is empty or unset, all duplicate objects will receive a new random ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,15 +78,12 @@ public final class DuplicateObjectRequest extends com.google.api.client.json.Gen
    * keys are the IDs of the original objects and its values are the IDs that will be assigned to
    * the corresponding duplicate object. The ID of the source object's duplicate may be specified in
    * this map as well, using the same value of the `object_id` field as a key and the newly desired
-   * ID as the value.
-   *
-   * All keys must correspond to existing IDs in the presentation. All values must be unique in the
-   * presentation and must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the new ID must not be less than 5 or greater than 50.
-   *
-   * If any IDs of source objects are omitted from the map, a new random ID will be assigned. If the
-   * map is empty or unset, all duplicate objects will receive a new random ID.
+   * ID as the value. All keys must correspond to existing IDs in the presentation. All values must
+   * be unique in the presentation and must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the new ID must not be less than 5 or
+   * greater than 50. If any IDs of source objects are omitted from the map, a new random ID will be
+   * assigned. If the map is empty or unset, all duplicate objects will receive a new random ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getObjectIds() {
@@ -104,15 +96,12 @@ public final class DuplicateObjectRequest extends com.google.api.client.json.Gen
    * keys are the IDs of the original objects and its values are the IDs that will be assigned to
    * the corresponding duplicate object. The ID of the source object's duplicate may be specified in
    * this map as well, using the same value of the `object_id` field as a key and the newly desired
-   * ID as the value.
-   *
-   * All keys must correspond to existing IDs in the presentation. All values must be unique in the
-   * presentation and must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the new ID must not be less than 5 or greater than 50.
-   *
-   * If any IDs of source objects are omitted from the map, a new random ID will be assigned. If the
-   * map is empty or unset, all duplicate objects will receive a new random ID.
+   * ID as the value. All keys must correspond to existing IDs in the presentation. All values must
+   * be unique in the presentation and must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the new ID must not be less than 5 or
+   * greater than 50. If any IDs of source objects are omitted from the map, a new random ID will be
+   * assigned. If the map is empty or unset, all duplicate objects will receive a new random ID.
    * @param objectIds objectIds or {@code null} for none
    */
   public DuplicateObjectRequest setObjectIds(java.util.Map<String, java.lang.String> objectIds) {

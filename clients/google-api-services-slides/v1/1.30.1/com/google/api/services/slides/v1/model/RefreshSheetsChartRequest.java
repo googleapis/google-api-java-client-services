@@ -18,10 +18,8 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * Refreshes an embedded Google Sheets chart by replacing it with the latest version of the chart
- * from Google Sheets.
- *
- * NOTE: Refreshing charts requires  at least one of the spreadsheets.readonly, spreadsheets,
- * drive.readonly, or drive OAuth scopes.
+ * from Google Sheets. NOTE: Refreshing charts requires at least one of the spreadsheets.readonly,
+ * spreadsheets, drive.readonly, or drive OAuth scopes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

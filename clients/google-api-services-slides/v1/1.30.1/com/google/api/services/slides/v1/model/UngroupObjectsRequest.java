@@ -30,22 +30,18 @@ package com.google.api.services.slides.v1.model;
 public final class UngroupObjectsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The object IDs of the objects to ungroup.
-   *
-   * Only groups that are not inside other groups can be ungrouped. All the groups should be on the
-   * same page. The group itself is deleted. The visual sizes and positions of all the children are
-   * preserved.
+   * The object IDs of the objects to ungroup. Only groups that are not inside other groups can be
+   * ungrouped. All the groups should be on the same page. The group itself is deleted. The visual
+   * sizes and positions of all the children are preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> objectIds;
 
   /**
-   * The object IDs of the objects to ungroup.
-   *
-   * Only groups that are not inside other groups can be ungrouped. All the groups should be on the
-   * same page. The group itself is deleted. The visual sizes and positions of all the children are
-   * preserved.
+   * The object IDs of the objects to ungroup. Only groups that are not inside other groups can be
+   * ungrouped. All the groups should be on the same page. The group itself is deleted. The visual
+   * sizes and positions of all the children are preserved.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getObjectIds() {
@@ -53,11 +49,9 @@ public final class UngroupObjectsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The object IDs of the objects to ungroup.
-   *
-   * Only groups that are not inside other groups can be ungrouped. All the groups should be on the
-   * same page. The group itself is deleted. The visual sizes and positions of all the children are
-   * preserved.
+   * The object IDs of the objects to ungroup. Only groups that are not inside other groups can be
+   * ungrouped. All the groups should be on the same page. The group itself is deleted. The visual
+   * sizes and positions of all the children are preserved.
    * @param objectIds objectIds or {@code null} for none
    */
   public UngroupObjectsRequest setObjectIds(java.util.List<java.lang.String> objectIds) {

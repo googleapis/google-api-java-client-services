@@ -37,11 +37,10 @@ public final class MergeTableCellsRequest extends com.google.api.client.json.Gen
   private java.lang.String objectId;
 
   /**
-   * The table range specifying which cells of the table to merge.
-   *
-   * Any text in the cells being merged will be concatenated and stored in the upper-left ("head")
-   * cell of the range. If the range is non-rectangular (which can occur in some cases where the
-   * range covers cells that are already merged), a 400 bad request error is returned.
+   * The table range specifying which cells of the table to merge. Any text in the cells being
+   * merged will be concatenated and stored in the upper-left ("head") cell of the range. If the
+   * range is non-rectangular (which can occur in some cases where the range covers cells that are
+   * already merged), a 400 bad request error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,11 +64,10 @@ public final class MergeTableCellsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The table range specifying which cells of the table to merge.
-   *
-   * Any text in the cells being merged will be concatenated and stored in the upper-left ("head")
-   * cell of the range. If the range is non-rectangular (which can occur in some cases where the
-   * range covers cells that are already merged), a 400 bad request error is returned.
+   * The table range specifying which cells of the table to merge. Any text in the cells being
+   * merged will be concatenated and stored in the upper-left ("head") cell of the range. If the
+   * range is non-rectangular (which can occur in some cases where the range covers cells that are
+   * already merged), a 400 bad request error is returned.
    * @return value or {@code null} for none
    */
   public TableRange getTableRange() {
@@ -77,11 +75,10 @@ public final class MergeTableCellsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The table range specifying which cells of the table to merge.
-   *
-   * Any text in the cells being merged will be concatenated and stored in the upper-left ("head")
-   * cell of the range. If the range is non-rectangular (which can occur in some cases where the
-   * range covers cells that are already merged), a 400 bad request error is returned.
+   * The table range specifying which cells of the table to merge. Any text in the cells being
+   * merged will be concatenated and stored in the upper-left ("head") cell of the range. If the
+   * range is non-rectangular (which can occur in some cases where the range covers cells that are
+   * already merged), a 400 bad request error is returned.
    * @param tableRange tableRange or {@code null} for none
    */
   public MergeTableCellsRequest setTableRange(TableRange tableRange) {

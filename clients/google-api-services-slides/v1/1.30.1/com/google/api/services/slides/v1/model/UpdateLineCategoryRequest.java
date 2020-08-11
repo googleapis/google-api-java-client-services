@@ -30,31 +30,24 @@ package com.google.api.services.slides.v1.model;
 public final class UpdateLineCategoryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The line category to update to.
-   *
-   * The exact line type is determined based on the category to update to and how it's routed to
-   * connect to other page elements.
+   * The line category to update to. The exact line type is determined based on the category to
+   * update to and how it's routed to connect to other page elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lineCategory;
 
   /**
-   * The object ID of the line the update is applied to.
-   *
-   * Only a line with a category indicating it is a "connector" can be updated.
-   *
-   * The line may be rerouted after updating its category.
+   * The object ID of the line the update is applied to. Only a line with a category indicating it
+   * is a "connector" can be updated. The line may be rerouted after updating its category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectId;
 
   /**
-   * The line category to update to.
-   *
-   * The exact line type is determined based on the category to update to and how it's routed to
-   * connect to other page elements.
+   * The line category to update to. The exact line type is determined based on the category to
+   * update to and how it's routed to connect to other page elements.
    * @return value or {@code null} for none
    */
   public java.lang.String getLineCategory() {
@@ -62,10 +55,8 @@ public final class UpdateLineCategoryRequest extends com.google.api.client.json.
   }
 
   /**
-   * The line category to update to.
-   *
-   * The exact line type is determined based on the category to update to and how it's routed to
-   * connect to other page elements.
+   * The line category to update to. The exact line type is determined based on the category to
+   * update to and how it's routed to connect to other page elements.
    * @param lineCategory lineCategory or {@code null} for none
    */
   public UpdateLineCategoryRequest setLineCategory(java.lang.String lineCategory) {
@@ -74,11 +65,8 @@ public final class UpdateLineCategoryRequest extends com.google.api.client.json.
   }
 
   /**
-   * The object ID of the line the update is applied to.
-   *
-   * Only a line with a category indicating it is a "connector" can be updated.
-   *
-   * The line may be rerouted after updating its category.
+   * The object ID of the line the update is applied to. Only a line with a category indicating it
+   * is a "connector" can be updated. The line may be rerouted after updating its category.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -86,11 +74,8 @@ public final class UpdateLineCategoryRequest extends com.google.api.client.json.
   }
 
   /**
-   * The object ID of the line the update is applied to.
-   *
-   * Only a line with a category indicating it is a "connector" can be updated.
-   *
-   * The line may be rerouted after updating its category.
+   * The object ID of the line the update is applied to. Only a line with a category indicating it
+   * is a "connector" can be updated. The line may be rerouted after updating its category.
    * @param objectId objectId or {@code null} for none
    */
   public UpdateLineCategoryRequest setObjectId(java.lang.String objectId) {

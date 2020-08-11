@@ -37,11 +37,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Integer columns;
 
   /**
-   * Properties of horizontal cell borders.
-   *
-   * A table's horizontal cell borders are represented as a grid. The grid has one more row than the
-   * number of rows in the table and the same number of columns as the table. For example, if the
-   * table is 3 x 3, its horizontal borders will be represented as a grid with 4 rows and 3 columns.
+   * Properties of horizontal cell borders. A table's horizontal cell borders are represented as a
+   * grid. The grid has one more row than the number of rows in the table and the same number of
+   * columns as the table. For example, if the table is 3 x 3, its horizontal borders will be
+   * represented as a grid with 4 rows and 3 columns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,21 +61,18 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.util.List<TableColumnProperties> tableColumns;
 
   /**
-   * Properties and contents of each row.
-   *
-   * Cells that span multiple rows are contained in only one of these rows and have a row_span
-   * greater than 1.
+   * Properties and contents of each row. Cells that span multiple rows are contained in only one of
+   * these rows and have a row_span greater than 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TableRow> tableRows;
 
   /**
-   * Properties of vertical cell borders.
-   *
-   * A table's vertical cell borders are represented as a grid. The grid has the same number of rows
-   * as the table and one more column than the number of columns in the table. For example, if the
-   * table is 3 x 3, its vertical borders will be represented as a grid with 3 rows and 4 columns.
+   * Properties of vertical cell borders. A table's vertical cell borders are represented as a grid.
+   * The grid has the same number of rows as the table and one more column than the number of
+   * columns in the table. For example, if the table is 3 x 3, its vertical borders will be
+   * represented as a grid with 3 rows and 4 columns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,11 +96,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties of horizontal cell borders.
-   *
-   * A table's horizontal cell borders are represented as a grid. The grid has one more row than the
-   * number of rows in the table and the same number of columns as the table. For example, if the
-   * table is 3 x 3, its horizontal borders will be represented as a grid with 4 rows and 3 columns.
+   * Properties of horizontal cell borders. A table's horizontal cell borders are represented as a
+   * grid. The grid has one more row than the number of rows in the table and the same number of
+   * columns as the table. For example, if the table is 3 x 3, its horizontal borders will be
+   * represented as a grid with 4 rows and 3 columns.
    * @return value or {@code null} for none
    */
   public java.util.List<TableBorderRow> getHorizontalBorderRows() {
@@ -112,11 +107,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties of horizontal cell borders.
-   *
-   * A table's horizontal cell borders are represented as a grid. The grid has one more row than the
-   * number of rows in the table and the same number of columns as the table. For example, if the
-   * table is 3 x 3, its horizontal borders will be represented as a grid with 4 rows and 3 columns.
+   * Properties of horizontal cell borders. A table's horizontal cell borders are represented as a
+   * grid. The grid has one more row than the number of rows in the table and the same number of
+   * columns as the table. For example, if the table is 3 x 3, its horizontal borders will be
+   * represented as a grid with 4 rows and 3 columns.
    * @param horizontalBorderRows horizontalBorderRows or {@code null} for none
    */
   public Table setHorizontalBorderRows(java.util.List<TableBorderRow> horizontalBorderRows) {
@@ -159,10 +153,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties and contents of each row.
-   *
-   * Cells that span multiple rows are contained in only one of these rows and have a row_span
-   * greater than 1.
+   * Properties and contents of each row. Cells that span multiple rows are contained in only one of
+   * these rows and have a row_span greater than 1.
    * @return value or {@code null} for none
    */
   public java.util.List<TableRow> getTableRows() {
@@ -170,10 +162,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties and contents of each row.
-   *
-   * Cells that span multiple rows are contained in only one of these rows and have a row_span
-   * greater than 1.
+   * Properties and contents of each row. Cells that span multiple rows are contained in only one of
+   * these rows and have a row_span greater than 1.
    * @param tableRows tableRows or {@code null} for none
    */
   public Table setTableRows(java.util.List<TableRow> tableRows) {
@@ -182,11 +172,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties of vertical cell borders.
-   *
-   * A table's vertical cell borders are represented as a grid. The grid has the same number of rows
-   * as the table and one more column than the number of columns in the table. For example, if the
-   * table is 3 x 3, its vertical borders will be represented as a grid with 3 rows and 4 columns.
+   * Properties of vertical cell borders. A table's vertical cell borders are represented as a grid.
+   * The grid has the same number of rows as the table and one more column than the number of
+   * columns in the table. For example, if the table is 3 x 3, its vertical borders will be
+   * represented as a grid with 3 rows and 4 columns.
    * @return value or {@code null} for none
    */
   public java.util.List<TableBorderRow> getVerticalBorderRows() {
@@ -194,11 +183,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties of vertical cell borders.
-   *
-   * A table's vertical cell borders are represented as a grid. The grid has the same number of rows
-   * as the table and one more column than the number of columns in the table. For example, if the
-   * table is 3 x 3, its vertical borders will be represented as a grid with 3 rows and 4 columns.
+   * Properties of vertical cell borders. A table's vertical cell borders are represented as a grid.
+   * The grid has the same number of rows as the table and one more column than the number of
+   * columns in the table. For example, if the table is 3 x 3, its vertical borders will be
+   * represented as a grid with 3 rows and 4 columns.
    * @param verticalBorderRows verticalBorderRows or {@code null} for none
    */
   public Table setVerticalBorderRows(java.util.List<TableBorderRow> verticalBorderRows) {

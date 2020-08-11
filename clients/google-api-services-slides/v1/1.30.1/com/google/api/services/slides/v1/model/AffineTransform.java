@@ -18,16 +18,10 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * AffineTransform uses a 3x3 matrix with an implied last row of [ 0 0 1 ] to transform source
- * coordinates (x,y) into destination coordinates (x', y') according to:
- *
- *       x'  x  =   shear_y  scale_y  translate_y         1  [ 1 ]
- *
- * After transformation,
- *
- *      x' = scale_x * x + shear_x * y + translate_x;      y' = scale_y * y + shear_y * x +
- * translate_y;
- *
- * This message is therefore composed of these six matrix elements.
+ * coordinates (x,y) into destination coordinates (x', y') according to: x' x = shear_y scale_y
+ * translate_y 1 [ 1 ] After transformation, x' = scale_x * x + shear_x * y + translate_x; y' =
+ * scale_y * y + shear_y * x + translate_y; This message is therefore composed of these six matrix
+ * elements.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

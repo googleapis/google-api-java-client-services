@@ -40,7 +40,7 @@ public final class UserFacingMessage extends com.google.api.client.json.GenericJ
   private java.lang.String defaultMessage;
 
   /**
-   * A map containing  pairs, where locale is a well-formed BCP 47 language
+   * A map containing pairs, where locale is a well-formed BCP 47 language
    * (https://www.w3.org/International/articles/language-tags/) code, such as en-US, es-ES, or fr.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class UserFacingMessage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A map containing  pairs, where locale is a well-formed BCP 47 language
+   * A map containing pairs, where locale is a well-formed BCP 47 language
    * (https://www.w3.org/International/articles/language-tags/) code, such as en-US, es-ES, or fr.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class UserFacingMessage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A map containing  pairs, where locale is a well-formed BCP 47 language
+   * A map containing pairs, where locale is a well-formed BCP 47 language
    * (https://www.w3.org/International/articles/language-tags/) code, such as en-US, es-ES, or fr.
    * @param localizedMessages localizedMessages or {@code null} for none
    */

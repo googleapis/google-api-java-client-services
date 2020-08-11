@@ -41,8 +41,8 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
    * For settings with nested fields, if a particular nested field is out of compliance, this
    * specifies the full path to the offending field. The path is formatted in the same way the
    * policy JSON field would be referenced in JavaScript, that is: 1) For object-typed fields, the
-   * field name is followed by a dot then by a  subfield name. 2) For array-typed fields, the field
-   * name is followed by the array index  enclosed in brackets. For example, to indicate a problem
+   * field name is followed by a dot then by a subfield name. 2) For array-typed fields, the field
+   * name is followed by the array index enclosed in brackets. For example, to indicate a problem
    * with the url field in the externalData field in the 3rd application, the path would be
    * applications[2].externalData.url
    * The value may be {@code null}.
@@ -73,7 +73,7 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
   private java.lang.String packageName;
 
   /**
-   * The name of the policy setting. This is the JSON field name of a top-level Policy  field.
+   * The name of the policy setting. This is the JSON field name of a top-level Policy field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
    * For settings with nested fields, if a particular nested field is out of compliance, this
    * specifies the full path to the offending field. The path is formatted in the same way the
    * policy JSON field would be referenced in JavaScript, that is: 1) For object-typed fields, the
-   * field name is followed by a dot then by a  subfield name. 2) For array-typed fields, the field
-   * name is followed by the array index  enclosed in brackets. For example, to indicate a problem
+   * field name is followed by a dot then by a subfield name. 2) For array-typed fields, the field
+   * name is followed by the array index enclosed in brackets. For example, to indicate a problem
    * with the url field in the externalData field in the 3rd application, the path would be
    * applications[2].externalData.url
    * @return value or {@code null} for none
@@ -114,8 +114,8 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
    * For settings with nested fields, if a particular nested field is out of compliance, this
    * specifies the full path to the offending field. The path is formatted in the same way the
    * policy JSON field would be referenced in JavaScript, that is: 1) For object-typed fields, the
-   * field name is followed by a dot then by a  subfield name. 2) For array-typed fields, the field
-   * name is followed by the array index  enclosed in brackets. For example, to indicate a problem
+   * field name is followed by a dot then by a subfield name. 2) For array-typed fields, the field
+   * name is followed by the array index enclosed in brackets. For example, to indicate a problem
    * with the url field in the externalData field in the 3rd application, the path would be
    * applications[2].externalData.url
    * @param fieldPath fieldPath or {@code null} for none
@@ -179,7 +179,7 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the policy setting. This is the JSON field name of a top-level Policy  field.
+   * The name of the policy setting. This is the JSON field name of a top-level Policy field.
    * @return value or {@code null} for none
    */
   public java.lang.String getSettingName() {
@@ -187,7 +187,7 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the policy setting. This is the JSON field name of a top-level Policy  field.
+   * The name of the policy setting. This is the JSON field name of a top-level Policy field.
    * @param settingName settingName or {@code null} for none
    */
   public NonComplianceDetail setSettingName(java.lang.String settingName) {

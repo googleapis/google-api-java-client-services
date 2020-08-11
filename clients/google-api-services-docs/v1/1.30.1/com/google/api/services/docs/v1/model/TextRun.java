@@ -30,9 +30,8 @@ package com.google.api.services.docs.v1.model;
 public final class TextRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text of this run.
-   *
-   * Any non-text elements in the run are replaced with the Unicode character U+E907.
+   * The text of this run. Any non-text elements in the run are replaced with the Unicode character
+   * U+E907.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,9 +73,8 @@ public final class TextRun extends com.google.api.client.json.GenericJson {
   private TextStyle textStyle;
 
   /**
-   * The text of this run.
-   *
-   * Any non-text elements in the run are replaced with the Unicode character U+E907.
+   * The text of this run. Any non-text elements in the run are replaced with the Unicode character
+   * U+E907.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -84,9 +82,8 @@ public final class TextRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text of this run.
-   *
-   * Any non-text elements in the run are replaced with the Unicode character U+E907.
+   * The text of this run. Any non-text elements in the run are replaced with the Unicode character
+   * U+E907.
    * @param content content or {@code null} for none
    */
   public TextRun setContent(java.lang.String content) {

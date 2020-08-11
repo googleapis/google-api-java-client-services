@@ -30,32 +30,28 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateDocumentStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The styles to set on the document.
-   *
-   * Certain document style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of DocumentStyle for more information.
+   * The styles to set on the document. Certain document style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of DocumentStyle for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DocumentStyle documentStyle;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `document_style` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the background, set `fields` to `"background"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `document_style` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the background, set `fields` to
+   * `"background"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String fields;
 
   /**
-   * The styles to set on the document.
-   *
-   * Certain document style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of DocumentStyle for more information.
+   * The styles to set on the document. Certain document style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of DocumentStyle for
+   * more information.
    * @return value or {@code null} for none
    */
   public DocumentStyle getDocumentStyle() {
@@ -63,10 +59,9 @@ public final class UpdateDocumentStyleRequest extends com.google.api.client.json
   }
 
   /**
-   * The styles to set on the document.
-   *
-   * Certain document style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of DocumentStyle for more information.
+   * The styles to set on the document. Certain document style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of DocumentStyle for
+   * more information.
    * @param documentStyle documentStyle or {@code null} for none
    */
   public UpdateDocumentStyleRequest setDocumentStyle(DocumentStyle documentStyle) {
@@ -75,12 +70,10 @@ public final class UpdateDocumentStyleRequest extends com.google.api.client.json
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `document_style` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the background, set `fields` to `"background"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `document_style` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the background, set `fields` to
+   * `"background"`.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -88,12 +81,10 @@ public final class UpdateDocumentStyleRequest extends com.google.api.client.json
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `document_style` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the background, set `fields` to `"background"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `document_style` is implied and should not be specified. A single `"*"` can be used as short-
+   * hand for listing every field. For example to update the background, set `fields` to
+   * `"background"`.
    * @param fields fields or {@code null} for none
    */
   public UpdateDocumentStyleRequest setFields(String fields) {

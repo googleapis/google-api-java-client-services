@@ -30,29 +30,25 @@ package com.google.api.services.docs.v1.model;
 public final class InsertTableColumnRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to insert new column to the right of the reference cell location.
-   *
-   * - `True`: insert to the right. - `False`: insert to the left.
+   * Whether to insert new column to the right of the reference cell location. - `True`: insert to
+   * the right. - `False`: insert to the left.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean insertRight;
 
   /**
-   * The reference table cell location from which columns will be inserted.
-   *
-   * A new column will be inserted to the left (or right) of the column where the reference cell is.
-   * If the reference cell is a merged cell, a new column will be inserted to the left (or right) of
-   * the merged cell.
+   * The reference table cell location from which columns will be inserted. A new column will be
+   * inserted to the left (or right) of the column where the reference cell is. If the reference
+   * cell is a merged cell, a new column will be inserted to the left (or right) of the merged cell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableCellLocation tableCellLocation;
 
   /**
-   * Whether to insert new column to the right of the reference cell location.
-   *
-   * - `True`: insert to the right. - `False`: insert to the left.
+   * Whether to insert new column to the right of the reference cell location. - `True`: insert to
+   * the right. - `False`: insert to the left.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInsertRight() {
@@ -60,9 +56,8 @@ public final class InsertTableColumnRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Whether to insert new column to the right of the reference cell location.
-   *
-   * - `True`: insert to the right. - `False`: insert to the left.
+   * Whether to insert new column to the right of the reference cell location. - `True`: insert to
+   * the right. - `False`: insert to the left.
    * @param insertRight insertRight or {@code null} for none
    */
   public InsertTableColumnRequest setInsertRight(java.lang.Boolean insertRight) {
@@ -71,11 +66,9 @@ public final class InsertTableColumnRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The reference table cell location from which columns will be inserted.
-   *
-   * A new column will be inserted to the left (or right) of the column where the reference cell is.
-   * If the reference cell is a merged cell, a new column will be inserted to the left (or right) of
-   * the merged cell.
+   * The reference table cell location from which columns will be inserted. A new column will be
+   * inserted to the left (or right) of the column where the reference cell is. If the reference
+   * cell is a merged cell, a new column will be inserted to the left (or right) of the merged cell.
    * @return value or {@code null} for none
    */
   public TableCellLocation getTableCellLocation() {
@@ -83,11 +76,9 @@ public final class InsertTableColumnRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The reference table cell location from which columns will be inserted.
-   *
-   * A new column will be inserted to the left (or right) of the column where the reference cell is.
-   * If the reference cell is a merged cell, a new column will be inserted to the left (or right) of
-   * the merged cell.
+   * The reference table cell location from which columns will be inserted. A new column will be
+   * inserted to the left (or right) of the column where the reference cell is. If the reference
+   * cell is a merged cell, a new column will be inserted to the left (or right) of the merged cell.
    * @param tableCellLocation tableCellLocation or {@code null} for none
    */
   public InsertTableColumnRequest setTableCellLocation(TableCellLocation tableCellLocation) {

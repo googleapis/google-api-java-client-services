@@ -32,10 +32,8 @@ public final class ListPropertiesSuggestionState extends com.google.api.client.j
 
   /**
    * A mask that indicates which of the fields on the corresponding NestingLevel in nesting_levels
-   * have been changed in this suggestion.
-   *
-   * The nesting level suggestion states are returned in ascending order of the nesting level with
-   * the least nested returned first.
+   * have been changed in this suggestion. The nesting level suggestion states are returned in
+   * ascending order of the nesting level with the least nested returned first.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,10 +41,8 @@ public final class ListPropertiesSuggestionState extends com.google.api.client.j
 
   /**
    * A mask that indicates which of the fields on the corresponding NestingLevel in nesting_levels
-   * have been changed in this suggestion.
-   *
-   * The nesting level suggestion states are returned in ascending order of the nesting level with
-   * the least nested returned first.
+   * have been changed in this suggestion. The nesting level suggestion states are returned in
+   * ascending order of the nesting level with the least nested returned first.
    * @return value or {@code null} for none
    */
   public java.util.List<NestingLevelSuggestionState> getNestingLevelsSuggestionStates() {
@@ -55,10 +51,8 @@ public final class ListPropertiesSuggestionState extends com.google.api.client.j
 
   /**
    * A mask that indicates which of the fields on the corresponding NestingLevel in nesting_levels
-   * have been changed in this suggestion.
-   *
-   * The nesting level suggestion states are returned in ascending order of the nesting level with
-   * the least nested returned first.
+   * have been changed in this suggestion. The nesting level suggestion states are returned in
+   * ascending order of the nesting level with the least nested returned first.
    * @param nestingLevelsSuggestionStates nestingLevelsSuggestionStates or {@code null} for none
    */
   public ListPropertiesSuggestionState setNestingLevelsSuggestionStates(java.util.List<NestingLevelSuggestionState> nestingLevelsSuggestionStates) {

@@ -72,10 +72,9 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents and style of each cell in this row.
-   *
-   * It is possible for a table to be non-rectangular, so some rows may have a different number of
-   * cells than other rows in the same table.
+   * The contents and style of each cell in this row. It is possible for a table to be non-
+   * rectangular, so some rows may have a different number of cells than other rows in the same
+   * table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,10 +181,9 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents and style of each cell in this row.
-   *
-   * It is possible for a table to be non-rectangular, so some rows may have a different number of
-   * cells than other rows in the same table.
+   * The contents and style of each cell in this row. It is possible for a table to be non-
+   * rectangular, so some rows may have a different number of cells than other rows in the same
+   * table.
    * @return value or {@code null} for none
    */
   public java.util.List<TableCell> getTableCells() {
@@ -193,10 +191,9 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents and style of each cell in this row.
-   *
-   * It is possible for a table to be non-rectangular, so some rows may have a different number of
-   * cells than other rows in the same table.
+   * The contents and style of each cell in this row. It is possible for a table to be non-
+   * rectangular, so some rows may have a different number of cells than other rows in the same
+   * table.
    * @param tableCells tableCells or {@code null} for none
    */
   public TableRow setTableCells(java.util.List<TableCell> tableCells) {

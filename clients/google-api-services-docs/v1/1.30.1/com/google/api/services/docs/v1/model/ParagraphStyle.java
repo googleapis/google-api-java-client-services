@@ -17,19 +17,15 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Styles that apply to a whole paragraph.
- *
- * Inherited paragraph styles are represented as unset fields in this message. A paragraph style's
- * parent depends on where the paragraph style is defined:
- *
- *   * The ParagraphStyle on a Paragraph     inherits from the paragraph's corresponding named style
- * type.   * The ParagraphStyle on a named style     inherits from the normal text named style.   *
- * The ParagraphStyle of the normal text named style inherits     from the default paragraph style
- * in the Docs editor.   * The ParagraphStyle on a Paragraph     element that is contained in a
- * table may inherit its paragraph style from     the table style.
- *
- * If the paragraph style does not inherit from a parent, unsetting fields will revert the style to
- * a value matching the defaults in the Docs editor.
+ * Styles that apply to a whole paragraph. Inherited paragraph styles are represented as unset
+ * fields in this message. A paragraph style's parent depends on where the paragraph style is
+ * defined: * The ParagraphStyle on a Paragraph inherits from the paragraph's corresponding named
+ * style type. * The ParagraphStyle on a named style inherits from the normal text named style. *
+ * The ParagraphStyle of the normal text named style inherits from the default paragraph style in
+ * the Docs editor. * The ParagraphStyle on a Paragraph element that is contained in a table may
+ * inherit its paragraph style from the table style. If the paragraph style does not inherit from a
+ * parent, unsetting fields will revert the style to a value matching the defaults in the Docs
+ * editor.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -58,13 +54,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border between this paragraph and the next and previous paragraphs. If unset, the value is
-   * inherited from the parent.
-   *
-   * The between border is rendered when the adjacent paragraph has the same border and indent
-   * properties.
-   *
-   * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
-   * new border must be specified in its entirety.
+   * inherited from the parent. The between border is rendered when the adjacent paragraph has the
+   * same border and indent properties. Paragraph borders cannot be partially updated. When making
+   * changes to a paragraph border the new border must be specified in its entirety.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,12 +64,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border at the bottom of this paragraph. If unset, the value is inherited from the parent.
-   *
    * The bottom border is rendered when the paragraph below has different border and indent
-   * properties.
-   *
-   * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
-   * new border must be specified in its entirety.
+   * properties. Paragraph borders cannot be partially updated. When making changes to a paragraph
+   * border the new border must be specified in its entirety.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +74,6 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border to the left of this paragraph. If unset, the value is inherited from the parent.
-   *
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * The value may be {@code null}.
@@ -95,7 +83,6 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border to the right of this paragraph. If unset, the value is inherited from the parent.
-   *
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * The value may be {@code null}.
@@ -104,10 +91,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private ParagraphBorder borderRight;
 
   /**
-   * The border at the top of this paragraph. If unset, the value is inherited from the parent.
-   *
-   * The top border is rendered when the paragraph above has different border and indent properties.
-   *
+   * The border at the top of this paragraph. If unset, the value is inherited from the parent. The
+   * top border is rendered when the paragraph above has different border and indent properties.
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * The value may be {@code null}.
@@ -124,9 +109,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private java.lang.String direction;
 
   /**
-   * The heading ID of the paragraph. If empty, then this paragraph is not a heading.
-   *
-   * This property is read-only.
+   * The heading ID of the paragraph. If empty, then this paragraph is not a heading. This property
+   * is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,10 +167,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private java.lang.Float lineSpacing;
 
   /**
-   * The named style type of the paragraph.
-   *
-   * Since updating the named style type affects other properties within ParagraphStyle, the named
-   * style type is applied before the other properties are updated.
+   * The named style type of the paragraph. Since updating the named style type affects other
+   * properties within ParagraphStyle, the named style type is applied before the other properties
+   * are updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,9 +206,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private java.lang.String spacingMode;
 
   /**
-   * A list of the tab stops for this paragraph. The list of tab stops is not inherited.
-   *
-   * This property is read-only.
+   * A list of the tab stops for this paragraph. The list of tab stops is not inherited. This
+   * property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -269,13 +251,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border between this paragraph and the next and previous paragraphs. If unset, the value is
-   * inherited from the parent.
-   *
-   * The between border is rendered when the adjacent paragraph has the same border and indent
-   * properties.
-   *
-   * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
-   * new border must be specified in its entirety.
+   * inherited from the parent. The between border is rendered when the adjacent paragraph has the
+   * same border and indent properties. Paragraph borders cannot be partially updated. When making
+   * changes to a paragraph border the new border must be specified in its entirety.
    * @return value or {@code null} for none
    */
   public ParagraphBorder getBorderBetween() {
@@ -284,13 +262,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border between this paragraph and the next and previous paragraphs. If unset, the value is
-   * inherited from the parent.
-   *
-   * The between border is rendered when the adjacent paragraph has the same border and indent
-   * properties.
-   *
-   * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
-   * new border must be specified in its entirety.
+   * inherited from the parent. The between border is rendered when the adjacent paragraph has the
+   * same border and indent properties. Paragraph borders cannot be partially updated. When making
+   * changes to a paragraph border the new border must be specified in its entirety.
    * @param borderBetween borderBetween or {@code null} for none
    */
   public ParagraphStyle setBorderBetween(ParagraphBorder borderBetween) {
@@ -300,12 +274,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border at the bottom of this paragraph. If unset, the value is inherited from the parent.
-   *
    * The bottom border is rendered when the paragraph below has different border and indent
-   * properties.
-   *
-   * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
-   * new border must be specified in its entirety.
+   * properties. Paragraph borders cannot be partially updated. When making changes to a paragraph
+   * border the new border must be specified in its entirety.
    * @return value or {@code null} for none
    */
   public ParagraphBorder getBorderBottom() {
@@ -314,12 +285,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border at the bottom of this paragraph. If unset, the value is inherited from the parent.
-   *
    * The bottom border is rendered when the paragraph below has different border and indent
-   * properties.
-   *
-   * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
-   * new border must be specified in its entirety.
+   * properties. Paragraph borders cannot be partially updated. When making changes to a paragraph
+   * border the new border must be specified in its entirety.
    * @param borderBottom borderBottom or {@code null} for none
    */
   public ParagraphStyle setBorderBottom(ParagraphBorder borderBottom) {
@@ -329,7 +297,6 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border to the left of this paragraph. If unset, the value is inherited from the parent.
-   *
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * @return value or {@code null} for none
@@ -340,7 +307,6 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border to the left of this paragraph. If unset, the value is inherited from the parent.
-   *
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * @param borderLeft borderLeft or {@code null} for none
@@ -352,7 +318,6 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border to the right of this paragraph. If unset, the value is inherited from the parent.
-   *
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * @return value or {@code null} for none
@@ -363,7 +328,6 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * The border to the right of this paragraph. If unset, the value is inherited from the parent.
-   *
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * @param borderRight borderRight or {@code null} for none
@@ -374,10 +338,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The border at the top of this paragraph. If unset, the value is inherited from the parent.
-   *
-   * The top border is rendered when the paragraph above has different border and indent properties.
-   *
+   * The border at the top of this paragraph. If unset, the value is inherited from the parent. The
+   * top border is rendered when the paragraph above has different border and indent properties.
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * @return value or {@code null} for none
@@ -387,10 +349,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The border at the top of this paragraph. If unset, the value is inherited from the parent.
-   *
-   * The top border is rendered when the paragraph above has different border and indent properties.
-   *
+   * The border at the top of this paragraph. If unset, the value is inherited from the parent. The
+   * top border is rendered when the paragraph above has different border and indent properties.
    * Paragraph borders cannot be partially updated. When making changes to a paragraph border the
    * new border must be specified in its entirety.
    * @param borderTop borderTop or {@code null} for none
@@ -420,9 +380,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The heading ID of the paragraph. If empty, then this paragraph is not a heading.
-   *
-   * This property is read-only.
+   * The heading ID of the paragraph. If empty, then this paragraph is not a heading. This property
+   * is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadingId() {
@@ -430,9 +389,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The heading ID of the paragraph. If empty, then this paragraph is not a heading.
-   *
-   * This property is read-only.
+   * The heading ID of the paragraph. If empty, then this paragraph is not a heading. This property
+   * is read-only.
    * @param headingId headingId or {@code null} for none
    */
   public ParagraphStyle setHeadingId(java.lang.String headingId) {
@@ -559,10 +517,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The named style type of the paragraph.
-   *
-   * Since updating the named style type affects other properties within ParagraphStyle, the named
-   * style type is applied before the other properties are updated.
+   * The named style type of the paragraph. Since updating the named style type affects other
+   * properties within ParagraphStyle, the named style type is applied before the other properties
+   * are updated.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedStyleType() {
@@ -570,10 +527,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The named style type of the paragraph.
-   *
-   * Since updating the named style type affects other properties within ParagraphStyle, the named
-   * style type is applied before the other properties are updated.
+   * The named style type of the paragraph. Since updating the named style type affects other
+   * properties within ParagraphStyle, the named style type is applied before the other properties
+   * are updated.
    * @param namedStyleType namedStyleType or {@code null} for none
    */
   public ParagraphStyle setNamedStyleType(java.lang.String namedStyleType) {
@@ -654,9 +610,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of the tab stops for this paragraph. The list of tab stops is not inherited.
-   *
-   * This property is read-only.
+   * A list of the tab stops for this paragraph. The list of tab stops is not inherited. This
+   * property is read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<TabStop> getTabStops() {
@@ -664,9 +619,8 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of the tab stops for this paragraph. The list of tab stops is not inherited.
-   *
-   * This property is read-only.
+   * A list of the tab stops for this paragraph. The list of tab stops is not inherited. This
+   * property is read-only.
    * @param tabStops tabStops or {@code null} for none
    */
   public ParagraphStyle setTabStops(java.util.List<TabStop> tabStops) {

@@ -30,57 +30,42 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateTextStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `text_style` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example, to update the text style to bold, set `fields` to `"bold"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root `text_style`
+   * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
+   * every field. For example, to update the text style to bold, set `fields` to `"bold"`. To reset
+   * a property to its default value, include its field name in the field mask but leave the field
+   * itself unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String fields;
 
   /**
-   * The range of text to style.
-   *
-   * The range may be extended to include adjacent newlines.
-   *
-   * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
-   * updated with the matching text style.
-   *
-   * Ranges cannot be inserted inside a relative UpdateTextStyleRequest.
+   * The range of text to style. The range may be extended to include adjacent newlines. If the
+   * range fully contains a paragraph belonging to a list, the paragraph's bullet is also updated
+   * with the matching text style. Ranges cannot be inserted inside a relative
+   * UpdateTextStyleRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Range range;
 
   /**
-   * The styles to set on the text.
-   *
-   * If the value for a particular style matches that of the parent, that style will be set to
-   * inherit.
-   *
-   * Certain text style changes may cause other changes in order to to mirror the behavior of the
-   * Docs editor. See the documentation of TextStyle for more information.
+   * The styles to set on the text. If the value for a particular style matches that of the parent,
+   * that style will be set to inherit. Certain text style changes may cause other changes in order
+   * to to mirror the behavior of the Docs editor. See the documentation of TextStyle for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextStyle textStyle;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `text_style` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example, to update the text style to bold, set `fields` to `"bold"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root `text_style`
+   * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
+   * every field. For example, to update the text style to bold, set `fields` to `"bold"`. To reset
+   * a property to its default value, include its field name in the field mask but leave the field
+   * itself unset.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -88,15 +73,11 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `text_style` is implied and should not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example, to update the text style to bold, set `fields` to `"bold"`.
-   *
-   * To reset a property to its default value, include its field name in the field mask but leave
-   * the field itself unset.
+   * The fields that should be updated. At least one field must be specified. The root `text_style`
+   * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
+   * every field. For example, to update the text style to bold, set `fields` to `"bold"`. To reset
+   * a property to its default value, include its field name in the field mask but leave the field
+   * itself unset.
    * @param fields fields or {@code null} for none
    */
   public UpdateTextStyleRequest setFields(String fields) {
@@ -105,14 +86,10 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The range of text to style.
-   *
-   * The range may be extended to include adjacent newlines.
-   *
-   * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
-   * updated with the matching text style.
-   *
-   * Ranges cannot be inserted inside a relative UpdateTextStyleRequest.
+   * The range of text to style. The range may be extended to include adjacent newlines. If the
+   * range fully contains a paragraph belonging to a list, the paragraph's bullet is also updated
+   * with the matching text style. Ranges cannot be inserted inside a relative
+   * UpdateTextStyleRequest.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -120,14 +97,10 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The range of text to style.
-   *
-   * The range may be extended to include adjacent newlines.
-   *
-   * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
-   * updated with the matching text style.
-   *
-   * Ranges cannot be inserted inside a relative UpdateTextStyleRequest.
+   * The range of text to style. The range may be extended to include adjacent newlines. If the
+   * range fully contains a paragraph belonging to a list, the paragraph's bullet is also updated
+   * with the matching text style. Ranges cannot be inserted inside a relative
+   * UpdateTextStyleRequest.
    * @param range range or {@code null} for none
    */
   public UpdateTextStyleRequest setRange(Range range) {
@@ -136,13 +109,10 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The styles to set on the text.
-   *
-   * If the value for a particular style matches that of the parent, that style will be set to
-   * inherit.
-   *
-   * Certain text style changes may cause other changes in order to to mirror the behavior of the
-   * Docs editor. See the documentation of TextStyle for more information.
+   * The styles to set on the text. If the value for a particular style matches that of the parent,
+   * that style will be set to inherit. Certain text style changes may cause other changes in order
+   * to to mirror the behavior of the Docs editor. See the documentation of TextStyle for more
+   * information.
    * @return value or {@code null} for none
    */
   public TextStyle getTextStyle() {
@@ -150,13 +120,10 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The styles to set on the text.
-   *
-   * If the value for a particular style matches that of the parent, that style will be set to
-   * inherit.
-   *
-   * Certain text style changes may cause other changes in order to to mirror the behavior of the
-   * Docs editor. See the documentation of TextStyle for more information.
+   * The styles to set on the text. If the value for a particular style matches that of the parent,
+   * that style will be set to inherit. Certain text style changes may cause other changes in order
+   * to to mirror the behavior of the Docs editor. See the documentation of TextStyle for more
+   * information.
    * @param textStyle textStyle or {@code null} for none
    */
   public UpdateTextStyleRequest setTextStyle(TextStyle textStyle) {

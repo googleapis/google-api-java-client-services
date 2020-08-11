@@ -17,10 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * The style of a TableCell.
- *
- * Inherited table cell styles are represented as unset fields in this message. A table cell style
- * can inherit from the table's style.
+ * The style of a TableCell. Inherited table cell styles are represented as unset fields in this
+ * message. A table cell style can inherit from the table's style.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -68,9 +66,7 @@ public final class TableCellStyle extends com.google.api.client.json.GenericJson
   private TableCellBorder borderTop;
 
   /**
-   * The column span of the cell.
-   *
-   * This property is read-only.
+   * The column span of the cell. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,9 +109,7 @@ public final class TableCellStyle extends com.google.api.client.json.GenericJson
   private Dimension paddingTop;
 
   /**
-   * The row span of the cell.
-   *
-   * This property is read-only.
+   * The row span of the cell. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,9 +201,7 @@ public final class TableCellStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The column span of the cell.
-   *
-   * This property is read-only.
+   * The column span of the cell. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumnSpan() {
@@ -217,9 +209,7 @@ public final class TableCellStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The column span of the cell.
-   *
-   * This property is read-only.
+   * The column span of the cell. This property is read-only.
    * @param columnSpan columnSpan or {@code null} for none
    */
   public TableCellStyle setColumnSpan(java.lang.Integer columnSpan) {
@@ -315,9 +305,7 @@ public final class TableCellStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The row span of the cell.
-   *
-   * This property is read-only.
+   * The row span of the cell. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRowSpan() {
@@ -325,9 +313,7 @@ public final class TableCellStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The row span of the cell.
-   *
-   * This property is read-only.
+   * The row span of the cell. This property is read-only.
    * @param rowSpan rowSpan or {@code null} for none
    */
   public TableCellStyle setRowSpan(java.lang.Integer rowSpan) {

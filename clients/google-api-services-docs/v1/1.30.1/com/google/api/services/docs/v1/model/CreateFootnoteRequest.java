@@ -17,9 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates a Footnote segment and inserts a new FootnoteReference to it at the given location.
- *
- * The new Footnote segment will contain a space followed by a newline character.
+ * Creates a Footnote segment and inserts a new FootnoteReference to it at the given location. The
+ * new Footnote segment will contain a space followed by a newline character.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -32,34 +31,29 @@ package com.google.api.services.docs.v1.model;
 public final class CreateFootnoteRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inserts the footnote reference at the end of the document body.
-   *
-   * Footnote references cannot be inserted inside a header, footer or footnote. Since footnote
-   * references can only be inserted in the body, the segment ID field must be empty.
+   * Inserts the footnote reference at the end of the document body. Footnote references cannot be
+   * inserted inside a header, footer or footnote. Since footnote references can only be inserted in
+   * the body, the segment ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts the footnote reference at a specific index in the document.
-   *
-   * The footnote reference must be inserted inside the bounds of an existing Paragraph. For
-   * instance, it cannot be inserted at a table's start index (i.e. between the table and its
-   * preceding paragraph).
-   *
-   * Footnote references cannot be inserted inside an equation, header, footer or footnote. Since
-   * footnote references can only be inserted in the body, the segment ID field must be empty.
+   * Inserts the footnote reference at a specific index in the document. The footnote reference must
+   * be inserted inside the bounds of an existing Paragraph. For instance, it cannot be inserted at
+   * a table's start index (i.e. between the table and its preceding paragraph). Footnote references
+   * cannot be inserted inside an equation, header, footer or footnote. Since footnote references
+   * can only be inserted in the body, the segment ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Location location;
 
   /**
-   * Inserts the footnote reference at the end of the document body.
-   *
-   * Footnote references cannot be inserted inside a header, footer or footnote. Since footnote
-   * references can only be inserted in the body, the segment ID field must be empty.
+   * Inserts the footnote reference at the end of the document body. Footnote references cannot be
+   * inserted inside a header, footer or footnote. Since footnote references can only be inserted in
+   * the body, the segment ID field must be empty.
    * @return value or {@code null} for none
    */
   public EndOfSegmentLocation getEndOfSegmentLocation() {
@@ -67,10 +61,9 @@ public final class CreateFootnoteRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Inserts the footnote reference at the end of the document body.
-   *
-   * Footnote references cannot be inserted inside a header, footer or footnote. Since footnote
-   * references can only be inserted in the body, the segment ID field must be empty.
+   * Inserts the footnote reference at the end of the document body. Footnote references cannot be
+   * inserted inside a header, footer or footnote. Since footnote references can only be inserted in
+   * the body, the segment ID field must be empty.
    * @param endOfSegmentLocation endOfSegmentLocation or {@code null} for none
    */
   public CreateFootnoteRequest setEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
@@ -79,14 +72,11 @@ public final class CreateFootnoteRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Inserts the footnote reference at a specific index in the document.
-   *
-   * The footnote reference must be inserted inside the bounds of an existing Paragraph. For
-   * instance, it cannot be inserted at a table's start index (i.e. between the table and its
-   * preceding paragraph).
-   *
-   * Footnote references cannot be inserted inside an equation, header, footer or footnote. Since
-   * footnote references can only be inserted in the body, the segment ID field must be empty.
+   * Inserts the footnote reference at a specific index in the document. The footnote reference must
+   * be inserted inside the bounds of an existing Paragraph. For instance, it cannot be inserted at
+   * a table's start index (i.e. between the table and its preceding paragraph). Footnote references
+   * cannot be inserted inside an equation, header, footer or footnote. Since footnote references
+   * can only be inserted in the body, the segment ID field must be empty.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -94,14 +84,11 @@ public final class CreateFootnoteRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Inserts the footnote reference at a specific index in the document.
-   *
-   * The footnote reference must be inserted inside the bounds of an existing Paragraph. For
-   * instance, it cannot be inserted at a table's start index (i.e. between the table and its
-   * preceding paragraph).
-   *
-   * Footnote references cannot be inserted inside an equation, header, footer or footnote. Since
-   * footnote references can only be inserted in the body, the segment ID field must be empty.
+   * Inserts the footnote reference at a specific index in the document. The footnote reference must
+   * be inserted inside the bounds of an existing Paragraph. For instance, it cannot be inserted at
+   * a table's start index (i.e. between the table and its preceding paragraph). Footnote references
+   * cannot be inserted inside an equation, header, footer or footnote. Since footnote references
+   * can only be inserted in the body, the segment ID field must be empty.
    * @param location location or {@code null} for none
    */
   public CreateFootnoteRequest setLocation(Location location) {

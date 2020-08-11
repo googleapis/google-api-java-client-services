@@ -30,44 +30,37 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateSectionStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `section_style` is implied and must not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the left margin, set `fields` to `"margin_left"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `section_style` is implied and must not be specified. A single `"*"` can be used as short-hand
+   * for listing every field. For example to update the left margin, set `fields` to
+   * `"margin_left"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String fields;
 
   /**
-   * The range overlapping the sections to style.
-   *
-   * Because section breaks can only be inserted inside the body, the segment ID field must be
-   * empty.
+   * The range overlapping the sections to style. Because section breaks can only be inserted inside
+   * the body, the segment ID field must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Range range;
 
   /**
-   * The styles to  be set on the section.
-   *
-   * Certain section style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of SectionStyle for more information.
+   * The styles to be set on the section. Certain section style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of SectionStyle for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SectionStyle sectionStyle;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `section_style` is implied and must not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the left margin, set `fields` to `"margin_left"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `section_style` is implied and must not be specified. A single `"*"` can be used as short-hand
+   * for listing every field. For example to update the left margin, set `fields` to
+   * `"margin_left"`.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -75,12 +68,10 @@ public final class UpdateSectionStyleRequest extends com.google.api.client.json.
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `section_style` is implied and must not be
-   * specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the left margin, set `fields` to `"margin_left"`.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `section_style` is implied and must not be specified. A single `"*"` can be used as short-hand
+   * for listing every field. For example to update the left margin, set `fields` to
+   * `"margin_left"`.
    * @param fields fields or {@code null} for none
    */
   public UpdateSectionStyleRequest setFields(String fields) {
@@ -89,10 +80,8 @@ public final class UpdateSectionStyleRequest extends com.google.api.client.json.
   }
 
   /**
-   * The range overlapping the sections to style.
-   *
-   * Because section breaks can only be inserted inside the body, the segment ID field must be
-   * empty.
+   * The range overlapping the sections to style. Because section breaks can only be inserted inside
+   * the body, the segment ID field must be empty.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -100,10 +89,8 @@ public final class UpdateSectionStyleRequest extends com.google.api.client.json.
   }
 
   /**
-   * The range overlapping the sections to style.
-   *
-   * Because section breaks can only be inserted inside the body, the segment ID field must be
-   * empty.
+   * The range overlapping the sections to style. Because section breaks can only be inserted inside
+   * the body, the segment ID field must be empty.
    * @param range range or {@code null} for none
    */
   public UpdateSectionStyleRequest setRange(Range range) {
@@ -112,10 +99,9 @@ public final class UpdateSectionStyleRequest extends com.google.api.client.json.
   }
 
   /**
-   * The styles to  be set on the section.
-   *
-   * Certain section style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of SectionStyle for more information.
+   * The styles to be set on the section. Certain section style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of SectionStyle for more
+   * information.
    * @return value or {@code null} for none
    */
   public SectionStyle getSectionStyle() {
@@ -123,10 +109,9 @@ public final class UpdateSectionStyleRequest extends com.google.api.client.json.
   }
 
   /**
-   * The styles to  be set on the section.
-   *
-   * Certain section style changes may cause other changes in order to mirror the behavior of the
-   * Docs editor. See the documentation of SectionStyle for more information.
+   * The styles to be set on the section. Certain section style changes may cause other changes in
+   * order to mirror the behavior of the Docs editor. See the documentation of SectionStyle for more
+   * information.
    * @param sectionStyle sectionStyle or {@code null} for none
    */
   public UpdateSectionStyleRequest setSectionStyle(SectionStyle sectionStyle) {

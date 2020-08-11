@@ -53,10 +53,9 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
 
   /**
-   * The text style of this PageBreak.
-   *
-   * Similar to text content, like text runs and footnote references, the text style of a page break
-   * can affect content layout as well as the styling of text inserted adjacent to it.
+   * The text style of this PageBreak. Similar to text content, like text runs and footnote
+   * references, the text style of a page break can affect content layout as well as the styling of
+   * text inserted adjacent to it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,10 +115,9 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text style of this PageBreak.
-   *
-   * Similar to text content, like text runs and footnote references, the text style of a page break
-   * can affect content layout as well as the styling of text inserted adjacent to it.
+   * The text style of this PageBreak. Similar to text content, like text runs and footnote
+   * references, the text style of a page break can affect content layout as well as the styling of
+   * text inserted adjacent to it.
    * @return value or {@code null} for none
    */
   public TextStyle getTextStyle() {
@@ -127,10 +125,9 @@ public final class PageBreak extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text style of this PageBreak.
-   *
-   * Similar to text content, like text runs and footnote references, the text style of a page break
-   * can affect content layout as well as the styling of text inserted adjacent to it.
+   * The text style of this PageBreak. Similar to text content, like text runs and footnote
+   * references, the text style of a page break can affect content layout as well as the styling of
+   * text inserted adjacent to it.
    * @param textStyle textStyle or {@code null} for none
    */
   public PageBreak setTextStyle(TextStyle textStyle) {

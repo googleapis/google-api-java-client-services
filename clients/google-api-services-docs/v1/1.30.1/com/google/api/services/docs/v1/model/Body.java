@@ -17,9 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * The document body.
- *
- * The body typically contains the full document contents except for headers, footers and footnotes.
+ * The document body. The body typically contains the full document contents except for headers,
+ * footers and footnotes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -32,18 +31,14 @@ package com.google.api.services.docs.v1.model;
 public final class Body extends com.google.api.client.json.GenericJson {
 
   /**
-   * The contents of the body.
-   *
-   * The indexes for the body's content begin at zero.
+   * The contents of the body. The indexes for the body's content begin at zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StructuralElement> content;
 
   /**
-   * The contents of the body.
-   *
-   * The indexes for the body's content begin at zero.
+   * The contents of the body. The indexes for the body's content begin at zero.
    * @return value or {@code null} for none
    */
   public java.util.List<StructuralElement> getContent() {
@@ -51,9 +46,7 @@ public final class Body extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents of the body.
-   *
-   * The indexes for the body's content begin at zero.
+   * The contents of the body. The indexes for the body's content begin at zero.
    * @param content content or {@code null} for none
    */
   public Body setContent(java.util.List<StructuralElement> content) {

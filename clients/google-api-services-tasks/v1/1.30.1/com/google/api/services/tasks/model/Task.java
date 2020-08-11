@@ -438,7 +438,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   public static final class Links extends com.google.api.client.json.GenericJson {
 
     /**
-     * The description. In HTML speak: Everything between a and /a.
+     * The description. In HTML speak: Everything between  and .
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -459,7 +459,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     private java.lang.String type;
 
     /**
-     * The description. In HTML speak: Everything between a and /a.
+     * The description. In HTML speak: Everything between  and .
      * @return value or {@code null} for none
      */
     public java.lang.String getDescription() {
@@ -467,7 +467,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The description. In HTML speak: Everything between a and /a.
+     * The description. In HTML speak: Everything between  and .
      * @param description description or {@code null} for none
      */
     public Links setDescription(java.lang.String description) {
